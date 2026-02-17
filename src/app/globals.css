@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+body p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.margin-box {
+  margin-bottom: 70px;
+}
+
+:root {
+  --primary: #fdc115;
+  --secondary: #1b1b1b;
+  --text: black;
+  --color1: #f6f6f6;
+  --color2: #6a6a6a;
+  --color3: #34a852;
+  --color4: #3f2fee;
+  --color5: #ea4334;
+  --color6: #e4edf9;
+  --color7: #ba77eb;
+  --color8: #2567e8;
+  --stroke: #d9d9d9;
+  --white: #ffffff;
+  font-family: var(--neue-haas);
+}
+
+.buttons {
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 60px;
+  padding: 16px 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+  width: fit-content;
+  font-weight: 400;
+  border: 1px solid var(--primary);
+  text-transform: capitalize;
+}
+
+.buttons__icon-wrapper {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: var(--secondary);
+  background-color: var(--white);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.buttons__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.buttons:hover .buttons__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.buttons:hover .buttons__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .buttons {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .margin-box {
+    margin-bottom: 40px;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

@@ -1,0 +1,50 @@
+.marquee-img-wrapper {
+  height: 220px;
+  width: 380px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 15px;
+}
+
+.marquee-img-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .marquee-img-wrapper {
+    margin-right: 15px;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .marquee-img-wrapper {
+    height: 150px;
+    width: 240px;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .marquee-img-wrapper {
+    height: 180px;
+    width: 280px;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}
