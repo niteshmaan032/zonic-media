@@ -1,65 +1,56 @@
-// import "../style/loader.css";
-
-// function Loader() {
-//   return (
-//     <>
-//       <div className="loader-wrapper">
-//         <div className="loader"></div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Loader;
-
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import "../style/loader.css";
 
 function Loader() {
-  const [isLoaded, setIsLoaded] = useState(false); // Browser signal
-  const [timerDone, setTimerDone] = useState(false); // 3-second signal
-  const [render, setRender] = useState(true); // Component mounting
-  const [isVisible, setIsVisible] = useState(true); // CSS Opacity
+  const pathname = usePathname();
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [render, setRender] = useState(true);
 
   useEffect(() => {
+    // 1. Reset everything when route changes
+    setIsLoaded(false);
+    setRender(true);
+
+    // 2. Define the minimum time you want the loader to show (in milliseconds)
+    // 1000ms = 1 second.
+    const minLoadTime = 1000;
+
+    // 3. Start the timer
     const timer = setTimeout(() => {
-      setTimerDone(true);
-    }, 2000);
+      // 4. AFTER 1 second, check if the browser is actually done
+      if (document.readyState === "complete") {
+        // If browser is done, hide loader immediately
+        setIsLoaded(true);
+      } else {
+        // If browser is NOT done (slow page), wait for it to finish
+        window.addEventListener("load", () => setIsLoaded(true));
+      }
+    }, minLoadTime);
 
-    const handleLoad = () => {
-      setIsLoaded(true);
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
+    // Cleanup to prevent memory leaks
     return () => {
-      window.removeEventListener("load", handleLoad);
       clearTimeout(timer);
+      window.removeEventListener("load", () => setIsLoaded(true));
     };
-  }, []);
+  }, [pathname]);
 
+  // Handle the fade-out animation
   useEffect(() => {
-    if (isLoaded && timerDone) {
-      setIsVisible(false);
-
+    if (isLoaded) {
       const unmountTimer = setTimeout(() => {
         setRender(false);
-      }, 500);
-
+      }, 500); // Matches CSS transition duration
       return () => clearTimeout(unmountTimer);
     }
-  }, [isLoaded, timerDone]);
+  }, [isLoaded]);
 
   if (!render) return null;
 
   return (
-    <div className={`loader-wrapper ${!isVisible ? "loader-hidden" : ""}`}>
+    <div className={`loader-wrapper ${isLoaded ? "loader-hidden" : ""}`}>
       <div className="loader"></div>
     </div>
   );
