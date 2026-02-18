@@ -179,16 +179,9 @@ h4 {
     margin-bottom: 40px;
   }
 
-  /*testimonial-section*/
-  .testimonial-heading {
-    font-size: 42px;
-    line-height: 46px;
-    width: 100%;
-  }
-
   /*global-faqs-section*/
   .faq-heading {
-    font-size: 44px;
+    font-size: 38px;
   }
 
   .global-faqs-accordion button {
@@ -197,6 +190,11 @@ h4 {
 
   .global-faqs-accordion .accordion-body {
     padding: 10px;
+  }
+
+  /*testimonial-section*/
+  .testimonial-heading {
+    width: 100%;
   }
 }
 
@@ -207,16 +205,18 @@ h4 {
     padding: 0px 20px 40px 20px;
   }
 
-  .faq-heading {
-    font-size: 44px;
-  }
-
   .global-faqs-accordion button {
     padding: 10px;
   }
 
   .global-faqs-accordion .accordion-body {
     padding: 10px;
+  }
+
+  /*testimonial-section*/
+  .testimonial-heading {
+    font-size: 36px;
+    line-height: 44px;
   }
 }
 
@@ -225,6 +225,12 @@ h4 {
   /*global-faqs-seciton*/
   .global-faqs-section {
     padding: 0px 40px 40px 40px;
+  }
+
+  /*testimonial-section*/
+  .testimonial-heading {
+    font-size: 42px;
+    line-height: 52px;
   }
 }
 
