@@ -83,6 +83,89 @@ h4 {
   transform: translate(0);
 }
 
+/*testimonial-section*/
+.testimonial-heading {
+  font-size: 52px;
+  line-height: 68px;
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.testimonial-heading span {
+  color: var(--color2);
+  line-height: inherit;
+}
+
+/*global-faqs-seciton*/
+.global-faqs-section {
+  padding: 0px 100px 70px 100px;
+}
+
+.global-faqs-accordion .accordion-item {
+  border-bottom: 1px solid var(--stroke);
+  margin-bottom: 10px;
+  padding-bottom: 12px;
+}
+
+.global-faqs-accordion .accordion-body {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+}
+
+.global-faqs-accordion {
+  --bs-accordion-border-width: none !important;
+
+  --bs-accordion-btn-icon-width: 1.3rem !important;
+  --bs-accordion-btn-icon-transition: transform 0.5s ease-in-out;
+
+  --bs-accordion-btn-focus-box-shadow: none !important;
+}
+
+.faq-heading {
+  font-size: 52px;
+  margin-bottom: 32px;
+}
+
+.global-faqs-accordion button {
+  background: transparent;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.global-faqs-accordion .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: var(--color2);
+}
+
+.faqs-question-box {
+  background-color: var(--secondary);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  color: var(--white);
+  text-align: center;
+}
+
+.faqs-question-box h4 {
+  font-size: 22px;
+}
+
+.faqs-question-box p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.faqs-question-box .buttons {
+  width: 100%;
+  justify-content: center;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
 /*responsive*/
 
 /* mobile phones to tablet devices*/
@@ -95,14 +178,54 @@ h4 {
   .margin-box {
     margin-bottom: 40px;
   }
+
+  /*testimonial-section*/
+  .testimonial-heading {
+    font-size: 42px;
+    line-height: 46px;
+    width: 100%;
+  }
+
+  /*global-faqs-section*/
+  .faq-heading {
+    font-size: 44px;
+  }
+
+  .global-faqs-accordion button {
+    padding: 10px;
+  }
+
+  .global-faqs-accordion .accordion-body {
+    padding: 10px;
+  }
 }
 
 /*mobile devices*/
 @media (max-width: 575.98px) {
+  /*global-faqs-seciton*/
+  .global-faqs-section {
+    padding: 0px 20px 40px 20px;
+  }
+
+  .faq-heading {
+    font-size: 44px;
+  }
+
+  .global-faqs-accordion button {
+    padding: 10px;
+  }
+
+  .global-faqs-accordion .accordion-body {
+    padding: 10px;
+  }
 }
 
 /*table devices*/
 @media (min-width: 575.99px) and (max-width: 991.98px) {
+  /*global-faqs-seciton*/
+  .global-faqs-section {
+    padding: 0px 40px 40px 40px;
+  }
 }
 
 /*large desktop devices*/

@@ -365,7 +365,7 @@ export default function Home() {
 
       {/*home-section-7*/}
       <div className="home-section-7">
-        <h2 className="home-sec7-heading">
+        <h2 className="testimonial-heading">
           Hear what our clients say about
           <span> working with Zonic Media.</span>
         </h2>

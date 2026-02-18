@@ -117,10 +117,10 @@ function Navbar() {
               <nav className="menu-items">
                 <ul>
                   <li>
-                    <Link href="#!">Home</Link>
+                    <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="#!">About Us</Link>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li
                     className="services-dropdown"
