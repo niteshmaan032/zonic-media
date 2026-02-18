@@ -100,7 +100,7 @@ function Footer() {
             <div className="footer-socials">
               <ul>
                 <li>
-                  <Link href="#!">Linked In </Link>
+                  <Link href="#!">LinkedIn </Link>
                 </li>
                 <li>
                   <Link href="#!">facebook </Link>
@@ -116,7 +116,7 @@ function Footer() {
 
             <div className="footer-cta">
               <p>
-                Lets work together <br />
+                Let's work together <br />
                 <Link href="#!">
                   Call Zonic Media <BsArrowUpRightCircle />
                 </Link>

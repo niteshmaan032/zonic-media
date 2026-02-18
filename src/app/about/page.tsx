@@ -13,7 +13,7 @@ function page() {
       <div className="about-sec1">
         <div className="about-sec1-content">
           <Row className="justify-content-between align-items-center ">
-            <Col lg={3}>
+            <Col xs="auto">
               <h1 className="about-sec1-heading">About Us</h1>
             </Col>
 
