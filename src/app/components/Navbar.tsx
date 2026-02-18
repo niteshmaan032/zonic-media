@@ -266,12 +266,12 @@ function Navbar() {
         <div className="mob-tab-nav-menus">
           <ul>
             <li>
-              <Link href="#!" onClick={() => handleToggleMobileMenu(false)}>
+              <Link href="/" onClick={() => handleToggleMobileMenu(false)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#!" onClick={() => handleToggleMobileMenu(false)}>
+              <Link href="/about" onClick={() => handleToggleMobileMenu(false)}>
                 About Us
               </Link>
             </li>
