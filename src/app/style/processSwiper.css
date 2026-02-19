@@ -1,0 +1,123 @@
+.process-swiper-wrapper {
+  padding: 70px 0px 70px 100px;
+  background-color: var(--color1);
+}
+
+.process-swiper-heading {
+  font-size: 46px;
+  text-transform: capitalize;
+  width: 70%;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.process-swiper-heading span {
+  color: var(--color2);
+  line-height: inherit;
+}
+
+.process-card-cont {
+  background-color: var(--white);
+  padding: 32px;
+}
+
+.process-card-content-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.process-card-numbr {
+  font-weight: 500;
+  color: var(--color2);
+  font-size: 24px;
+  margin-bottom: 80px;
+}
+
+.process-card-heading {
+  font-size: 24px;
+}
+
+.process-card-descrp {
+  font-size: 18px;
+  color: var(--color2);
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.process-card-list {
+  padding-left: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.process-card-list li {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.processCardSwiper .swiper-wrapper {
+  padding-bottom: 60px;
+}
+
+.processCardSwiper > .swiper-pagination > span {
+  height: 16px;
+  width: 16px;
+  background-color: var(--secondary);
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .process-swiper-heading {
+    width: 100%;
+    line-height: 48px;
+  }
+
+  .process-card-numbr {
+    margin-bottom: 40px;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .process-swiper-wrapper {
+    padding: 40px 20px;
+  }
+
+  .process-swiper-heading {
+    font-size: 36px;
+    width: 100%;
+    line-height: 48px;
+  }
+
+  .process-card-numbr {
+    margin-bottom: 40px;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .process-swiper-wrapper {
+    padding: 60px 40px;
+  }
+
+  .process-swiper-heading {
+    font-size: 42px;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

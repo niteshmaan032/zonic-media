@@ -13,24 +13,28 @@ const services = [
     label: "google my business (GMB)",
     image: "/images/gmb.webp",
     alt: "google my business",
+    link: "/google-my-business",
   },
   {
     id: "web",
     label: "web design",
     image: "/images/web-design.webp",
     alt: "web design",
+    link: "#!",
   },
   {
     id: "seo",
     label: "local SEO",
     image: "/images/local-seo.webp",
     alt: "local seo",
+    link: "#!",
   },
   {
     id: "ppc",
     label: "Google ADS (PPC)",
     image: "/images/google-ads.webp",
     alt: "google ads",
+    link: "#!",
   },
 ];
 
@@ -138,7 +142,7 @@ function Navbar() {
                               {services.map((s) => (
                                 <li key={s.id}>
                                   <Link
-                                    href="#!"
+                                    href={s.link}
                                     onMouseEnter={() => setActiveService(s)}
                                   >
                                     {s.label}
@@ -289,7 +293,7 @@ function Navbar() {
                       {services.map((s) => (
                         <li key={s.id}>
                           <Link
-                            href="#!"
+                            href={s.link}
                             onClick={() => handleToggleMobileMenu(false)}
                           >
                             {s.label}

@@ -1,18 +1,30 @@
 "use client";
 
-import { h3 } from "framer-motion/client";
-import Link from "next/link";
 import { Accordion, Col, Row } from "react-bootstrap";
-import { FaMessage } from "react-icons/fa6";
+import "../style/whywork.css";
+import Image from "next/image";
+import { h3 } from "framer-motion/client";
 
-function Faqs() {
+function WhyWork() {
   return (
     <>
-      <div className="global-faqs-section">
-        <h2 className="faq-heading">Frequently asked questions </h2>
-        <Row className="justify-content-between gap-5 gap-lg-0">
-          <Col lg={8}>
-            <div className="why-work-faq-wrapper">
+      <div className="why-work-wrapper">
+        <Row>
+          <Col lg={5}>
+            <div className="why-work-img-wrapper">
+              <Image
+                src="/images/gmb-3.jpg"
+                fill
+                alt="google my buisness recovery"
+              ></Image>
+            </div>
+          </Col>
+
+          <Col lg={7}>
+            <div className="why-work-content-wrapper">
+              <h2 className="why-work-heading">
+                Why Work With <span> Zonic Media LLC </span> for GMB Recovery
+              </h2>
               <Accordion defaultActiveKey="0" className="global-faqs-accordion">
                 <Accordion.Item eventKey="0">
                   <Accordion.Header as={h3}>Accordion Item #1</Accordion.Header>
@@ -69,24 +81,10 @@ function Faqs() {
               </Accordion>
             </div>
           </Col>
-
-          <Col lg={3}>
-            <div className="faqs-question-box">
-              <FaMessage size={48} />
-              <h4> Do you have question </h4>
-              <p>
-                End-to-end payments and financial management in a single
-                solution. Meet the right platform to help realize.
-              </p>
-              <Link href="#!" className="buttons">
-                Shoot a direct mail
-              </Link>
-            </div>
-          </Col>
         </Row>
       </div>
     </>
   );
 }
 
-export default Faqs;
+export default WhyWork;

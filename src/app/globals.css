@@ -5,14 +5,14 @@
   line-height: normal;
 }
 
-body p,
-h1,
-h2,
-h3,
-h4 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body p {
   margin: 0;
 }
-
 .margin-box {
   margin-bottom: 70px;
 }
