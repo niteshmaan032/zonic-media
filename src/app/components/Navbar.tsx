@@ -20,7 +20,7 @@ const services = [
     label: "web design",
     image: "/images/web-design.webp",
     alt: "web design",
-    link: "#!",
+    link: "web-design",
   },
   {
     id: "seo",
