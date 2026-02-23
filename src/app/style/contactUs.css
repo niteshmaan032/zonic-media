@@ -143,10 +143,6 @@
     padding: 50px 20px;
   }
 
-  .contact-us-section-2 {
-    padding: 40px;
-  }
-
   .contact-us-sec2-heading {
     font-size: 42px;
     margin-bottom: 24px;
@@ -168,6 +164,15 @@
   .contact-us-form-email-link {
     display: none;
   }
+
+  .contact-us-section-2 {
+    background-color: var(--primary);
+    padding: 40px 20px;
+  }
+
+  .contact-us-form-points li a {
+    align-items: start;
+  }
 }
 
 /* tablet devices */
@@ -184,6 +189,11 @@
 
   .contact-us-form-email-link {
     display: block;
+  }
+
+  .contact-us-section-2 {
+    background-color: var(--primary);
+    padding: 40px;
   }
 }
 
