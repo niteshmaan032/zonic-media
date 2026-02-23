@@ -9,6 +9,7 @@ import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
+
 function page() {
   const [services, setServices] = useState<string[]>([]);
 
@@ -32,17 +33,17 @@ function page() {
 
   return (
     <>
-      {/*contac-us-section-1*/}
-      <div className="contact-form-section">
-        <Row className="contact-form-row m-0">
+      {/* contact-us-section-1 */}
+      <div className="contact-us-form-section">
+        <Row className="contact-us-form-row m-0">
           {/* Left Side: Content */}
           <Col xs={12} lg={5} className="p-0">
-            <div className="contact-form-content">
-              <h1 className="contact-form-heading">
-                Have a project ? <br /> <span> Let's talk </span>
+            <div className="contact-us-form-content">
+              <h1 className="contact-us-form-heading">
+                Have a project ? <br /> <span> Let&apos;s talk </span>
               </h1>
 
-              <ul className="contact-form-points">
+              <ul className="contact-us-form-points">
                 <li>
                   <Link href="#!">
                     <FiPhone size={20} /> +1 (302) 244-5494
@@ -50,7 +51,7 @@ function page() {
                 </li>
                 <li>
                   <Link href="#!">
-                    <IoMailOutline size={20} />  contact@zonicllc.com
+                    <IoMailOutline size={20} /> contact@zonicllc.com
                   </Link>
                 </li>
                 <li>
@@ -61,7 +62,7 @@ function page() {
                 </li>
               </ul>
 
-              <div className="contact-form-button">
+              <div className="contact-us-form-button">
                 <p>Schedule meeting :</p>
 
                 <Link href="#" className="buttons">
@@ -99,7 +100,7 @@ function page() {
 
           {/* Right Side: Form */}
           <Col xs={12} lg={6} className="p-0">
-            <div className="contact-form-wrapper">
+            <div className="contact-us-form-wrapper">
               <form className="row g-4">
                 <Col md={6}>
                   <input
@@ -162,7 +163,7 @@ function page() {
                         onChange={() => toggleService(service)}
                       />
                       <label
-                        className="btn form-services-buttons btn-outline-secondary"
+                        className="btn contact-us-form-services-buttons btn-outline-secondary"
                         htmlFor={`service-${index}`}
                       >
                         {service}
@@ -178,9 +179,10 @@ function page() {
                   <button type="submit" className="buttons">
                     Send Message <FaArrowRightLong />
                   </button>
-                  <p className="contact-form-email-link">
+
+                  <p className="contact-us-form-email-link">
                     Prefer email ? <br />
-                    <Link href="#!">zonicmediallc@gmail.com </Link>
+                    <Link href="#!">zonicmediallc@gmail.com</Link>
                   </p>
                 </Col>
               </form>
@@ -189,12 +191,12 @@ function page() {
         </Row>
       </div>
 
-      {/*contact-us-section-2*/}
+      {/* contact-us-section-2 */}
       <div className="contact-us-section-2">
         <Row className="justify-content-between align-items-end">
           <Col lg={7}>
             <h2 className="contact-us-sec2-heading">
-              From startup to enterprise, grow your business with{" "}
+              From startup to enterprise, grow your business with{" "}
               <span> fast and creative designs!</span>
             </h2>
           </Col>
