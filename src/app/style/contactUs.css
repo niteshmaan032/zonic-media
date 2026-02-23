@@ -1,0 +1,197 @@
+.contact-form-section {
+  padding: 140px 100px 70px 100px;
+  background-color: var(--color1);
+  background-image: url("/images/bg-1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.contact-form-row {
+  justify-content: space-between;
+}
+
+.contact-form-heading {
+  font-size: 52px;
+  margin-bottom: 28px;
+}
+
+.contact-form-heading span {
+  color: var(--color2);
+}
+
+.contact-form-points {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-points li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  transition: 0.4 ease;
+}
+
+.contact-form-points li a:hover {
+  color: var(--text);
+}
+
+.contact-form-points li svg {
+  color: var(--primary);
+}
+
+.contact-form-button p {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.contact-form-wrapper {
+  background-color: var(--white);
+  padding: 50px 40px;
+}
+
+.contact-form-wrapper form .form-control {
+  padding: 14px 14px;
+  border: 1px solid var(--stroke);
+}
+
+.contact-form-wrapper .btn-check:checked + .btn {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.contact-form-wrapper .btn {
+  border-color: var(--stroke);
+  padding: 8px 12px;
+}
+
+.contact-form-wrapper .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  margin-top: 20px;
+}
+
+.contact-form-email-link {
+  text-align: end;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact-form-email-link a {
+  color: var(--color2);
+}
+
+.contact-us-section-2 {
+  background-color: var(--primary);
+  padding: 60px 100px;
+}
+
+.contact-us-sec2-heading {
+  font-size: 54px;
+  color: var(--white);
+}
+
+.contact-us-sec2-heading span {
+  color: var(--text);
+}
+
+.contact-us-sec2-descrp {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.contact-us-section-2 .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  margin-top: 30px;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .contact-form-section {
+    background-color: var(--white);
+  }
+
+  .contact-form-wrapper {
+    background-color: var(--color1);
+  }
+
+  .contact-form-row {
+    gap: 60px;
+  }
+
+  .contact-form-points {
+    list-style-type: none;
+    margin-bottom: 60px;
+  }
+
+  .contact-form-wrapper {
+    padding: 50px 20px;
+  }
+
+  .contact-us-section-2 {
+    padding: 40px;
+  }
+
+  .contact-us-sec2-heading {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .contact-form-section {
+    padding: 40px 20px;
+    background-image: none;
+  }
+  .contact-form-heading {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form-email-link {
+    display: none;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .contact-form-section {
+    padding: 120px 40px;
+    background-image: none;
+  }
+  .contact-form-heading {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form-email-link {
+    display: block;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

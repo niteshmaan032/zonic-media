@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Script from "next/script";
 import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
 import SmoothScroll from "./components/SmoothScroll";
 import Loader from "./components/Loader";
 
@@ -44,7 +42,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={neueHaas.className}>
         <SmoothScroll>
-          <Navbar />
           <Loader />
 
           {children}

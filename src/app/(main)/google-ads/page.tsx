@@ -2,12 +2,12 @@ import Link from "next/link";
 import { Row, Col } from "react-bootstrap";
 import { PiShieldCheckBold } from "react-icons/pi";
 import Image from "next/image";
-import "../style/googleAds.css";
-import ProcessSwiper from "../components/ProcessSwiper";
-import WhyWork from "../components/WhyWork";
-import Faqs from "../components/Faqs";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import "../../style/googleAds.css";
+import ProcessSwiper from "../../components/ProcessSwiper";
+import WhyWork from "../../components/WhyWork";
+import Faqs from "../../components/Faqs";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
 
 function page() {
   return (

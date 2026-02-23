@@ -1,11 +1,11 @@
 import Link from "next/link";
-import "../style/webDesign.css";
+import "../../style/webDesign.css";
 import Image from "next/image";
 import { Row, Col } from "react-bootstrap";
-import ProcessSwiper from "../components/ProcessSwiper";
-import Faqs from "../components/Faqs";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import ProcessSwiper from "../../components/ProcessSwiper";
+import Faqs from "../../components/Faqs";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
 function page() {
   return (
     <>

@@ -199,10 +199,10 @@ function Navbar() {
                     </div>
                   </li>
                   <li>
-                    <Link href="#!">Blogs</Link>
+                    <Link href="/coming-soon">Blogs</Link>
                   </li>
                   <li>
-                    <Link href="#!">Contact Us</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </li>
                 </ul>
               </nav>
@@ -306,12 +306,18 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Link href="#!" onClick={() => handleToggleMobileMenu(false)}>
+              <Link
+                href="/coming-soon"
+                onClick={() => handleToggleMobileMenu(false)}
+              >
                 Blogs
               </Link>
             </li>
             <li>
-              <Link href="#!" onClick={() => handleToggleMobileMenu(false)}>
+              <Link
+                href="/contact-us"
+                onClick={() => handleToggleMobileMenu(false)}
+              >
                 Contact Us
               </Link>
             </li>

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import "./page.css";
-import ImageMarquee from "./components/ImageMarquee";
+import ImageMarquee from "../components/ImageMarquee";
 import { FaArrowRight, FaArrowDown } from "react-icons/fa6";
 import Image from "next/image";
-import Testimonials from "./components/Testimonials";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
+import Testimonials from "../components/Testimonials";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 import { Row, Col } from "react-bootstrap";
 
 export default function Home() {

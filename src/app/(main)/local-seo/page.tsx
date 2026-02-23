@@ -2,13 +2,13 @@ import Link from "next/link";
 import { Row, Col } from "react-bootstrap";
 import { PiShieldCheckBold } from "react-icons/pi";
 import Image from "next/image";
-import "../style/localseoservice.css";
+import "../../style/localseoservice.css";
 import { FiUser } from "react-icons/fi";
-import ProcessSwiper from "../components/ProcessSwiper";
-import WhyWork from "../components/WhyWork";
-import Faqs from "../components/Faqs";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import ProcessSwiper from "../../components/ProcessSwiper";
+import WhyWork from "../../components/WhyWork";
+import Faqs from "../../components/Faqs";
+import ContactForm from "../../components/ContactForm";
+import Footer from "../../components/Footer";
 
 function page() {
   return (
