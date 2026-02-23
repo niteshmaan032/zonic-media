@@ -27,14 +27,14 @@ const services = [
     label: "local SEO",
     image: "/images/local-seo.webp",
     alt: "local seo",
-    link: "#!",
+    link: "local-seo",
   },
   {
     id: "ppc",
     label: "Google ADS (PPC)",
     image: "/images/google-ads.webp",
     alt: "google ads",
-    link: "#!",
+    link: "google-ads",
   },
 ];
 

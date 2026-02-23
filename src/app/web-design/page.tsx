@@ -95,7 +95,7 @@ function page() {
             </div>
 
             <div className="web-service-box-img-cont">
-              <Image src="/images/web-1.jpg" fill alt="website design"></Image>
+              <Image src="/images/web-1.png" fill alt="website design"></Image>
             </div>
           </div>
 

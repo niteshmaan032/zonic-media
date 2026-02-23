@@ -1,0 +1,50 @@
+.mapContainer {
+  position: relative;
+  padding: 60px 100px;
+  overflow: hidden;
+  background-color: var(--secondary);
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.map-heading {
+  font-size: 52px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.map-descrp {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color2);
+  width: 35%;
+  text-align: center;
+  line-height: 26px;
+}
+
+/* Don't clip tooltip */
+.svgWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.svgWrap svg {
+  width: auto;
+  height: 100%;
+}
+
+.svgLabelText {
+  fill: white;
+  font-size: 12px;
+  font-weight: 600;
+}

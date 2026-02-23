@@ -178,9 +178,6 @@
 
 /*responsive*/
 
-/* ==========================================================
-   COMMON STYLES: Mobile & Tablet (up to 991.98px)
-   ========================================================== */
 @media (max-width: 991.98px) {
   .web-design-sec1-content {
     background-image: none;
@@ -244,9 +241,6 @@
   }
 }
 
-/* ==========================================================
-   TABLET ONLY STYLES (575.99px to 991.98px)
-   ========================================================== */
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .web-design-sec1-content {
     padding: 120px 40px 40px 40px;
@@ -285,9 +279,6 @@
   }
 }
 
-/* ==========================================================
-   MOBILE ONLY STYLES (up to 575.98px)
-   ========================================================== */
 @media (max-width: 575.98px) {
   .web-design-sec1-content {
     padding: 100px 20px 40px 20px;
