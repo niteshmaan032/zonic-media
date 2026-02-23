@@ -156,7 +156,7 @@
 /* mobile devices */
 @media (max-width: 575.98px) {
   .contact-us-form-section {
-    padding: 40px 20px;
+    padding: 100px 20px 40px 20px;
     background-image: none;
   }
 
@@ -173,7 +173,7 @@
 /* tablet devices */
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .contact-us-form-section {
-    padding: 120px 40px;
+    padding: 120px 40px 60px 40px;
     background-image: none;
   }
 
