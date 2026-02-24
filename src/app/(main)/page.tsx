@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import { Row, Col } from "react-bootstrap";
+import WorldMap from "../components/WorldMap";
 
 export default function Home() {
   return (
@@ -362,6 +363,9 @@ export default function Home() {
           </Col>
         </Row>
       </div>
+
+      {/*world-map*/}
+      <WorldMap />
 
       {/*home-section-7*/}
       <div className="home-section-7">
