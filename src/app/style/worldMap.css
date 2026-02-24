@@ -42,7 +42,6 @@
 
 .map-marker {
   position: absolute;
-  z-index: 5;
   padding: 5px;
   border: 1px dashed var(--text);
   border-radius: 50%;
@@ -58,14 +57,12 @@
   transform: translateX(-50%) translateY(6px);
   min-width: 180px;
   max-width: 240px;
-
   padding: 10px 12px;
   background: #0f172a; /* dark */
   color: #fff;
   border-radius: 10px;
   font-size: 13px;
   line-height: 1.3;
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none; /* avoid flicker */
@@ -131,12 +128,165 @@
 .is-dubai {
   left: 60.39%;
   top: 54.1%;
+  z-index: 10;
 }
 .is-ind {
   left: 65.57%;
   top: 55.74%;
 }
 .is-aus {
-  left: 78.35%;
+  left: 75%;
   top: 79.51%;
+  z-index: 10;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .world-map-wrapper {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .world-map-cont {
+    position: relative;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .world-map-heading {
+    font-size: 32px;
+  }
+
+  /* map container */
+  .world-img-cont {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    transform: scale(1);
+  }
+
+  .world-map-img {
+    object-fit: contain;
+  }
+
+  .map-marker {
+    padding: 1px;
+  }
+
+  /* tooltip box hidden by default */
+  .tooltip-box {
+    min-width: 140px;
+  }
+
+  /* optional heading styles */
+  .tooltip-box h6 {
+    font-size: 12px;
+  }
+
+  .tooltip-box p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .g-tooltip {
+    position: relative;
+    width: 15px;
+    height: 15px;
+  }
+
+  .is-canada {
+    left: 20%;
+    top: 31%;
+  }
+  .is-us {
+    left: 20%;
+    top: 45.9%;
+  }
+  .is-uk {
+    left: 47.2%;
+    top: 36.8%;
+  }
+  .is-dubai {
+    left: 60.39%;
+    top: 54.1%;
+    z-index: 10;
+  }
+  .is-ind {
+    left: 67%;
+    top: 55.74%;
+    z-index: 10;
+  }
+  .is-aus {
+    left: 80%;
+    top: 72%;
+    z-index: 12;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .world-map-wrapper {
+    padding: 40px;
+  }
+
+  .world-map-cont {
+    position: absolute;
+    bottom: 40;
+    left: 40;
+    width: 50%;
+  }
+
+  .world-map-heading {
+    font-size: 32px;
+  }
+
+  /* map container */
+  .world-img-cont {
+    height: 400px;
+  }
+
+  .map-marker {
+    padding: 3px;
+  }
+
+  .g-tooltip {
+    width: 20px;
+    height: 20px;
+  }
+
+  .is-canada {
+    left: 20%;
+    top: 30%;
+  }
+  .is-us {
+    left: 20%;
+  }
+
+  .is-ind {
+    left: 67.57%;
+  }
+  .is-aus {
+    left: 80%;
+    top: 75%;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }
