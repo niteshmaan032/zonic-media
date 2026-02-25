@@ -150,7 +150,7 @@ function Navbar() {
                                 </li>
                               ))}
                             </ul>
-                            <Link href="#" className="buttons">
+                            <Link href="/services" className="buttons">
                               <span>View all services</span>
                               <span className="buttons__icon-wrapper">
                                 <svg
