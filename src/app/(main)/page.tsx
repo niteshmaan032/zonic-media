@@ -20,22 +20,23 @@ export default function Home() {
               Zonic Media your growth partner for your business
             </p>
             <h1 className="home-sec1-heading">
-              Global UX design agency digital partner for
-              <span> future unicorns</span>
+              From Website to Rankings to Ads, We{" "}
+              <span>Grow Your Business Online</span>
             </h1>
           </Col>
 
           <Col xs={12} lg={3}>
             <p className="home-sec1-descrp">
-              We help brands grow faster by using data-driven digital marketing
-              strategies, delivering results and sustainable growth.
+              Zonic Media helps businesses scale with high converting websites,
+              local SEO, paid advertising, Google Business optimization, and
+              creative design, all focused on driving real leads and revenue.
             </p>
           </Col>
 
           <Col xs={12}>
             <div className="home-sec1-buttons">
-              <Link href="#" className="buttons">
-                Get in touch
+              <Link href="/contact-us" className="buttons">
+                Get Free Strategy Call
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -64,7 +65,7 @@ export default function Home() {
                 </span>
               </Link>
 
-              <Link href="#" className="buttons">
+              <Link href="/services" className="buttons">
                 Our Services
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -113,14 +114,24 @@ export default function Home() {
 
           <Col xs={12} lg={7}>
             <h2 className="home-sec3-heading">
-              We visually position your brand powerfully in a market that’s
-              becoming <span> increasingly digital. </span>
+              We Position Your Brand to Win in{" "}
+              <span> Today’s Digital-First Market</span>
             </h2>
             <p className="home-sec3-descrp">
-              Zonic Media is a dynamic digital agency specializing in website
-              development, social media, graphic design, and online marketing.
-              With a results-driven, creative approach, we partner with brands
-              to build a strong, impactful online presence.
+              In a world where customers search online before making decisions,
+              your brand’s digital presence determines your growth. Zonic Media
+              helps businesses stand out with strategic design, powerful SEO,
+              and data-driven marketing campaigns that generate measurable
+              results.
+            </p>
+            <p className="home-sec3-descrp">
+              We combine creative design with performance marketing to build a
+              strong online presence that attracts, converts, and retains
+              customers.
+            </p>
+            <p className="home-sec3-descrp">
+              From local businesses to national brands, we create digital
+              strategies that drive long-term growth and predictable leads.
             </p>
           </Col>
         </Row>
@@ -131,9 +142,10 @@ export default function Home() {
               <h3> Discover</h3>
               <h4> (strategy & research) </h4>
               <p>
-                We start by deeply understanding your brand, goals, audience,
-                and competitors to define a clear, data-driven strategic
-                direction for success.
+                We begin by understanding your business, target audience, and
+                competitors. Our team conducts in-depth keyword research, market
+                analysis, and conversion audits to build a strategy designed to
+                generate leads and revenue.
               </p>
             </div>
           </Col>
@@ -141,11 +153,11 @@ export default function Home() {
           <Col xs={12} lg={4}>
             <div className="info-card">
               <h3> Design</h3>
-              <h4> (branding, web & content)</h4>
+              <h4> ( Branding, Website & Content )</h4>
               <p>
-                We transform ideas into impactful branding, high-performing
-                websites, and engaging content crafted with purpose, precision,
-                and user experience in mind.
+                Our designers and developers create fast, mobile-responsive,
+                SEO-optimized websites and brand assets that improve user
+                experience and increase conversions.
               </p>
             </div>
           </Col>
@@ -153,7 +165,7 @@ export default function Home() {
           <Col xs={12} lg={4}>
             <div className="info-card">
               <h3> Deliver</h3>
-              <h4> (launch, growth & optimization) </h4>
+              <h4> (Launch, Optimize & Scale ) </h4>
               <p>
                 We launch, optimize, and scale your digital presence through
                 performance-driven strategies to deliver measurable growth and

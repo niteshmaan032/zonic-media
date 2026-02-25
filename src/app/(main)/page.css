@@ -10,12 +10,12 @@
   font-weight: 500;
   font-size: 20px;
   color: var(--text);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .home-sec1-heading {
-  font-size: 82px;
-  line-height: 86px;
+  font-size: 74px;
+  line-height: 80px;
 }
 
 .home-sec1-heading span {
@@ -66,7 +66,8 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
-  width: 80%;
+  width: 85%;
+  margin-bottom: 12px;
 }
 
 .info-card-row {
@@ -76,7 +77,7 @@
 .info-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   padding: 0px 16px;
 }
 
@@ -89,6 +90,7 @@
 
 .info-card > h4 {
   font-size: 18px;
+  text-transform: lowercase;
 }
 
 .info-card > p {
