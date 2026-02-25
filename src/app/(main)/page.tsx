@@ -1,13 +1,13 @@
 import Link from "next/link";
 import "./page.css";
-import ImageMarquee from "../components/ImageMarquee";
+import ImageMarquee from "@/app/components/ImageMarquee";
 import { FaArrowRight, FaArrowDown } from "react-icons/fa6";
 import Image from "next/image";
-import Testimonials from "../components/Testimonials";
-import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
+import Testimonials from "@/app/components/Testimonials";
+import ContactForm from "@/app/components/ContactForm";
+import Footer from "@/app/components/Footer";
 import { Row, Col } from "react-bootstrap";
-import WorldMap from "../components/WorldMap";
+import WorldMap from "@/app/components/WorldMap";
 
 export default function Home() {
   return (

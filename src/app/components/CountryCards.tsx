@@ -1,6 +1,6 @@
 "use client";
 
-import "../style/countryCards.css";
+import "@/app/style/countryCards.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import "../style/loader.css";
+import "@/app/style/loader.css";
 
 function Loader() {
   const pathname = usePathname();

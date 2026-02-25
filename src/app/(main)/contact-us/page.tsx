@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
-import "../../style/contactUs.css";
+import "@/app/style/contactUs.css";
 import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";

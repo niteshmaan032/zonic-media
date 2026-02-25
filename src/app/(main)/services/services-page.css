@@ -1,0 +1,233 @@
+/* service-page-section-1 */
+.service-page-section-1-content {
+  padding: 180px 100px 70px 100px;
+}
+
+.service-page-section-1-heading {
+  font-size: 62px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.service-page-section-1-descrp {
+  font-size: 28px;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.service-page-section-1-descrp span {
+  color: var(--color2);
+  line-height: inherit;
+}
+
+/* service-page-section-3 */
+
+.service-page-section-3-wrapper {
+  gap: 0px;
+  margin-bottom: 40px;
+}
+
+.service-page-section-3-box {
+  display: flex;
+  background-color: var(--white);
+  padding: 40px 0px;
+}
+
+/* borders per box */
+.service-page-section-3-box-1 {
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.service-page-section-3-box-3 {
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.service-page-section-3-box-4 {
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.service-page-section-3-content {
+  width: 55%;
+  color: var(--white);
+  padding: 40px 40px 40px 100px;
+}
+
+.service-page-section-3-heading {
+  color: var(--text);
+  font-size: 44px;
+  width: 70%;
+  text-transform: capitalize;
+}
+
+.service-page-section-3-descrp {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 30px 0px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.service-page-section-3-link {
+  color: var(--text);
+  font-weight: 500;
+  margin-top: 80px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.service-page-section-3-img-cont {
+  position: relative;
+  width: 45%;
+}
+
+.service-page-section-3-img-cont img {
+  object-fit: cover;
+  object-position: left;
+}
+
+.service-page-section-3-key-points {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 80%;
+}
+
+.service-page-section-3-key-points li {
+  padding: 8px 14px;
+  background-color: var(--color1);
+  color: var(--color2);
+  border-radius: 20px;
+}
+
+/* responsive */
+
+/* mobile phones to tablet devices */
+@media (max-width: 991.98px) {
+  /* service-page-section-1 */
+  .service-page-section-1 {
+    background-image: none;
+  }
+
+  /* (You had this in your CSS, but it looks like a typo: ".about-sec1- .about-sec1-img")
+     I’m converting it to service-page naming while keeping the same intent. */
+  .service-page-section-1-img {
+    height: 55svh;
+  }
+
+  /* service-page-section-3 */
+  .service-page-section-3-wrapper {
+    gap: 0px;
+  }
+
+  .service-page-section-3-box-1,
+  .service-page-section-3-box-2,
+  .service-page-section-3-box-3,
+  .service-page-section-3-box-4 {
+    position: relative;
+  }
+
+  .service-page-section-3-box {
+    flex-direction: column;
+  }
+
+  .service-page-section-3-content,
+  .service-page-section-3-heading,
+  .service-page-section-3-img-cont {
+    width: 100%;
+  }
+}
+
+/* mobile devices */
+@media (max-width: 575.98px) {
+  /* service-page-section-1 */
+  .service-page-section-1-content {
+    padding: 100px 20px 40px 20px;
+  }
+
+  .service-page-section-1-heading {
+    font-size: 44px;
+    margin-bottom: 14px;
+  }
+
+  .service-page-section-1-descrp {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  /* service-page-section-3 */
+  .service-page-section-3-content {
+    padding: 0px 20px;
+    margin-bottom: 40px;
+  }
+
+  .service-page-section-3-heading {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .service-page-section-3-descrp {
+    margin: 20px 0px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .service-page-section-3-link {
+    margin-top: 10px;
+  }
+
+  .service-page-section-3-img-cont {
+    height: 320px;
+  }
+}
+
+/* tablet devices */
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .service-page-section-1-content {
+    padding: 120px 40px 50px 40px;
+  }
+
+  .service-page-section-1-heading {
+    font-size: 52px;
+    margin-bottom: 20px;
+  }
+
+  .service-page-section-1-descrp {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  /* service-page-section-3 */
+  .service-page-section-3-content {
+    padding: 40px;
+  }
+
+  .service-page-section-3-heading {
+    font-size: 42px;
+  }
+
+  .service-page-section-3-link {
+    margin-top: 40px;
+  }
+
+  .service-page-section-3-img-cont {
+    height: 420px;
+  }
+}
+
+/* large desktop devices */
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/* extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import "../style/testimonials.css";
+import "@/app/style/testimonials.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaUserCircle } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";

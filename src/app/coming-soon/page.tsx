@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
-import "../style/comingSoon.css";
+import "@/app/style/comingSoon.css";
 import { useState } from "react";
 
 function Page() {

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import "../style/contactform.css";
+import "@/app/style/contactform.css";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";

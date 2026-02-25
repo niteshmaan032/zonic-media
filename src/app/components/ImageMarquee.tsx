@@ -1,5 +1,5 @@
 import Marquee from "react-fast-marquee";
-import "../style/imagemarquee.css";
+import "@/app/style/imagemarquee.css";
 import Image from "next/image";
 
 function ImageMarquee() {

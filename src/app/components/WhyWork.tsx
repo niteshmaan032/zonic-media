@@ -1,7 +1,7 @@
 "use client";
 
 import { Accordion, Col, Row } from "react-bootstrap";
-import "../style/whywork.css";
+import "@/app/style/whywork.css";
 import Image from "next/image";
 import { h3 } from "framer-motion/client";
 

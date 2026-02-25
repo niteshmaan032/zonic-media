@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import "../../style/gmbservice.css";
+import "@/app/style/gmbservice.css";
 import Link from "next/link";
 
 import Image from "next/image";
@@ -8,12 +8,12 @@ import { LuKeyRound, LuPhoneMissed } from "react-icons/lu";
 import { MdPhoneAndroid } from "react-icons/md";
 import { GrCopy } from "react-icons/gr";
 import { FaRegAddressBook } from "react-icons/fa6";
-import ProcessSwiper from "../../components/ProcessSwiper";
-import WhyWork from "../../components/WhyWork";
+import ProcessSwiper from "@/app/components/ProcessSwiper";
+import WhyWork from "@/app/components/WhyWork";
 import Marquee from "react-fast-marquee";
-import Faqs from "../../components/Faqs";
-import ContactForm from "../../components/ContactForm";
-import Footer from "../../components/Footer";
+import Faqs from "@/app/components/Faqs";
+import ContactForm from "@/app/components/ContactForm";
+import Footer from "@/app/components/Footer";
 
 function page() {
   const workIMages = [

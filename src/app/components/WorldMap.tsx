@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../style/worldMap.css";
+import "@/app/style/worldMap.css";
 
 function WorldMap() {
   return (

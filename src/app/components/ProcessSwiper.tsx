@@ -1,9 +1,8 @@
 "use client";
 
-import "../style/processSwiper.css";
+import "@/app/style/processSwiper.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FaStar } from "react-icons/fa6";
-import { FaUserCircle } from "react-icons/fa";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";

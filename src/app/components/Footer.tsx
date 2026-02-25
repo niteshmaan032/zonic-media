@@ -1,4 +1,4 @@
-import "../style/footer.css";
+import "@/app/style/footer.css";
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";

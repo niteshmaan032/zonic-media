@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
-import "../style/navbar.css";
+import "@/app/style/navbar.css";
 
 const services = [
   {
@@ -13,28 +13,28 @@ const services = [
     label: "google my business (GMB)",
     image: "/images/gmb.webp",
     alt: "google my business",
-    link: "/google-my-business",
+    link: "/services/google-my-business",
   },
   {
     id: "web",
     label: "web design",
     image: "/images/web-design.webp",
     alt: "web design",
-    link: "web-design",
+    link: "/services/web-design",
   },
   {
     id: "seo",
     label: "local SEO",
     image: "/images/local-seo.webp",
     alt: "local seo",
-    link: "local-seo",
+    link: "/services/local-seo",
   },
   {
     id: "ppc",
     label: "Google ADS (PPC)",
     image: "/images/google-ads.webp",
     alt: "google ads",
-    link: "google-ads",
+    link: "/services/google-ads",
   },
 ];
 
@@ -130,7 +130,7 @@ function Navbar() {
                     className="services-dropdown"
                     onMouseLeave={() => setActiveService(defaultService)}
                   >
-                    <Link href="#!">
+                    <Link href="/services">
                       Services <MdArrowOutward size={16} />
                     </Link>
                     <div className="services-dropdown-container">

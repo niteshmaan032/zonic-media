@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import localFont from "next/font/local";
-import SmoothScroll from "./components/SmoothScroll";
-import Loader from "./components/Loader";
+import SmoothScroll from "@/app/components/SmoothScroll";
+import Loader from "@/app/components/Loader";
 
 const neueHaas = localFont({
   src: [
