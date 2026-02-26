@@ -179,7 +179,7 @@
   }
 
   .localseo-sec1-img-cont img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   /*localseo-section-2*/
