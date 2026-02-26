@@ -8,6 +8,7 @@ import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import { Row, Col } from "react-bootstrap";
 import WorldMap from "@/app/components/WorldMap";
+import { GoDotFill } from "react-icons/go";
 
 export default function Home() {
   return (
@@ -181,18 +182,20 @@ export default function Home() {
         <Row className="align-items-center justify-content-between">
           <Col xs={12} lg={7}>
             <h2 className="home-sec4-heading">
-              From startup to enterprise, grow your business with
-              <span> fast and creative designs! </span>
+              From startups to established brands, accelerate your growth with
+              high-converting,
+              <span> performance-driven digital solutions.</span>
             </h2>
           </Col>
 
           <Col xs={12} lg={4}>
             <p className="home-sec4-descrp">
-              Zonic Media is a fantastic design team, with a healthy blend of UI
-              and UX skills. Highly recommended
+              Zonic Media delivers expert UI/UX design combined with
+              results-focused marketing strategies. Highly trusted by growing
+              businesses.
             </p>
             <Link href="#" className="buttons">
-              Book a call
+              Book a Free Strategy Call
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -230,17 +233,39 @@ export default function Home() {
         <div className="home-sec5-service-wrapper">
           <div className="home-sec5-service-content">
             <div>
-              <h2 className="home-sec5-service-heading">Web Design </h2>
+              <h2 className="home-sec5-service-heading">
+                Web Design & Development
+              </h2>
               <p className="home-sec5-service-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Get a high-performing website designed to convert visitors into
+                customers. Our websites are fast, mobile-friendly, SEO-ready,
+                and built for long-term growth.
               </p>
+
+              <ul className="home-sec5-list">
+                <li>
+                  <GoDotFill size={16} />
+                  Business Websites
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Landing Pages
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  WordPress Websites
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Conversion-Focused Design
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  SEO-Friendly Development
+                </li>
+              </ul>
             </div>
-            <Link href="#!">Get your Website </Link>
+            <Link href="/services/web-design">view web design service </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
@@ -256,18 +281,36 @@ export default function Home() {
           <div className="home-sec5-service-content">
             <div>
               <h2 className="home-sec5-service-heading">
-                google my business (GMB)
+                Google Business Profile Optimization
               </h2>
               <p className="home-sec5-service-descrp">
-                Get a fully optimized Google My Business profile that increases
-                visibility and drives real local results. With accurate
-                listings, compelling visuals, keyword optimization, and review
-                management, your business attracts more customers, boosts calls
-                and visits, builds trust, and strengthens your local online
-                presence.
+                We optimize your Google Business Profile to improve local
+                rankings, increase calls, and drive more customers.
               </p>
+              <ul className="home-sec5-list list-white">
+                <li>
+                  <GoDotFill size={16} />
+                  Profile Optimization
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Keyword Targeting
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Review Strategy
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Local Ranking Improvements
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Ongoing Updates
+                </li>
+              </ul>
             </div>
-            <Link href="#!">grow your business </Link>
+            <Link href="#!">View GMB optimization service </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
@@ -282,16 +325,35 @@ export default function Home() {
         <div className="home-sec5-service-wrapper">
           <div className="home-sec5-service-content">
             <div>
-              <h2 className="home-sec5-service-heading">google Ads (PPC)</h2>
+              <h2 className="home-sec5-service-heading">Google Ads (PPC)</h2>
               <p className="home-sec5-service-descrp">
-                Get high-performing Google Ads campaigns that drive real
-                results. With smart targeting, compelling ad creatives,
-                strategic keyword selection, and continuous optimization, we
-                help you attract qualified traffic, maximize conversions, reduce
-                wasted spend, and achieve measurable ROI faster.
+                Generate instant leads with high-converting Google Ads campaigns
+                managed by experienced PPC specialists.
               </p>
+              <ul className="home-sec5-list list-white">
+                <li>
+                  <GoDotFill size={16} />
+                  Campaign Setup
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Keyword Targeting
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Conversion Tracking
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Ad Optimization
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  ROI Tracking
+                </li>
+              </ul>
             </div>
-            <Link href="#!">get more leads </Link>
+            <Link href="#!">view google ads (PPC) service </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
@@ -306,16 +368,31 @@ export default function Home() {
         <div className="home-sec5-service-wrapper">
           <div className="home-sec5-service-content">
             <div>
-              <h2 className="home-sec5-service-heading">local SEO</h2>
+              <h2 className="home-sec5-service-heading">Local SEO Services</h2>
               <p className="home-sec5-service-descrp">
-                Get high-performing Google Ads campaigns that drive real
-                results. With smart targeting, compelling ad creatives,
-                strategic keyword selection, and continuous optimization, we
-                help you attract qualified traffic, maximize conversions, reduce
-                wasted spend, and achieve measurable ROI faster.
+                Rank higher in Google Maps and local search results with our
+                data-driven local SEO strategies.
               </p>
+              <ul className="home-sec5-list list-white">
+                <li>
+                  <GoDotFill size={16} />
+                  Rank in Local Searches
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Get More Calls
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Increase Website Traffic
+                </li>
+                <li>
+                  <GoDotFill size={16} />
+                  Generate Qualified Leads
+                </li>
+              </ul>
             </div>
-            <Link href="#!">rank your business</Link>
+            <Link href="#!">view local SEO service</Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
@@ -349,28 +426,28 @@ export default function Home() {
           <Col xs={12} lg={3}>
             <div className="home-sec6-card">
               <p> 01 </p>
-              <h3>140+ International design awards</h3>
+              <h3>95+ proven growth strategies implemented</h3>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="home-sec6-card">
               <p> 02 </p>
-              <h3>300%+ Average conversion uplift</h3>
+              <h3>Up to 300% higher conversion rates achieved</h3>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="home-sec6-card">
               <p> 03 </p>
-              <h3>$10B+ raisedUX-led launches </h3>
+              <h3>200%+ increase in online visibility for clients</h3>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="home-sec6-card border-0">
               <p> 04 </p>
-              <h3>100M+ Global users reached</h3>
+              <h3>90% long-term client retention rate</h3>
             </div>
           </Col>
         </Row>

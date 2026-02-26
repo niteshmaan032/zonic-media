@@ -107,7 +107,7 @@
 }
 
 .home-sec4-heading {
-  font-size: 52px;
+  font-size: 48px;
   line-height: 58px;
   color: var(--white);
 }
@@ -139,7 +139,6 @@
 
 .home-sec5-service-heading {
   font-size: 42px;
-  margin-bottom: 24px;
   text-transform: capitalize;
 }
 
@@ -148,6 +147,29 @@
   font-weight: 400;
   line-height: 32px;
   width: 80%;
+  margin: 24px 0px;
+}
+
+.home-sec5-list {
+  list-style: none;
+  padding: 0;
+}
+
+.home-sec5-list li {
+  font-weight: 400;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.home-sec5-list svg {
+  color: var(--color2);
+}
+
+.list-white li svg {
+  color: var(--white);
 }
 
 .home-sec5-service-content a {

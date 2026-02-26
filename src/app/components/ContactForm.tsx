@@ -36,7 +36,7 @@ export default function ContactForm() {
         <Col xs={12} lg={5} className="p-0">
           <div className="contact-form-content">
             <h2 className="contact-form-heading">
-              Have a project ? <br /> <span> Let's talk </span>
+              Have a Project in Mind? <br /> <span> Let's talk </span>
             </h2>
 
             <ul className="contact-form-points">

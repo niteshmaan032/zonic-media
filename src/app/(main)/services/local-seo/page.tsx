@@ -64,7 +64,7 @@ function page() {
 
           <Col lg={6}>
             <div className="localseo-sec1-img-cont">
-              <Image src="/images/seo-1.png" fill alt="local seo mobile" />
+              <Image src="/images/seo-head.png" fill alt="local seo mobile" />
             </div>
           </Col>
         </Row>

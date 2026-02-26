@@ -16,10 +16,12 @@ function Footer() {
           <Row className="justify-content-between g-5 g-lg-0">
             <Col xs={12} lg={5}>
               <p className="footer-zonic-desc">
-                Zonic Media is a results-driven digital agency creating
-                user-friendly, effective solutions that strengthen brands, build
-                trust, drive deliver consistent measurable growth, and support
-                long-term business success globally.
+                Zonic Media is a results-driven digital marketing agency in
+                Dover, Delaware providing web design, local SEO, Google Business
+                Profile optimization, and PPC services for businesses across the
+                United States. We create user-friendly digital experiences that
+                strengthen brands, increase visibility, generate leads, and
+                deliver long-term measurable growth.
               </p>
 
               <ul className="footer-contact-info">
@@ -34,7 +36,7 @@ function Footer() {
                 <li>
                   <FaLocationDot size={20} />
                   <Link href="#!">
-                    8 The Green, STE B Dover Kent, DE 19901 United States
+                    8 The Green, STE B Dover, Kent, DE 19901
                   </Link>
                 </li>
               </ul>

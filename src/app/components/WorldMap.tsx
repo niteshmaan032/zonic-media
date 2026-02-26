@@ -5,12 +5,13 @@ function WorldMap() {
   return (
     <div className="world-map-wrapper">
       <div className="world-map-cont">
-        <h2 className="world-map-heading">world wide expertise</h2>
+        <h2 className="world-map-heading">Serving Clients Across the globe</h2>
 
         <p className="world-map-descrp">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-          pariatur quisquam velit odit facilis atque corrupti nam, porro
-          perspiciatis.
+          Zonic Media works with businesses across the US, providing web design,
+          SEO, and PPC services that generate real results. Our remote-first
+          model allows us to deliver high-quality digital solutions regardless
+          of location.
         </p>
       </div>
 
@@ -35,7 +36,10 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>Canada</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p>
+              Web design and SEO services helping Canadian businesses grow
+              online.
+            </p>
           </div>
         </div>
 
@@ -51,7 +55,7 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>UAE</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p> Strategic SEO and paid ads services for growing UAE brands.</p>
           </div>
         </div>
 
@@ -67,7 +71,11 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>USA</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p>
+              {" "}
+              Performance-driven digital marketing solutions across the United
+              States.
+            </p>
           </div>
         </div>
 
@@ -83,7 +91,9 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>Australia</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p>
+              Conversion-focused websites and marketing for Australian companies
+            </p>
           </div>
         </div>
 
@@ -99,7 +109,10 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>India</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p>
+              {" "}
+              SEO, PPC, and web design services for businesses across India.
+            </p>
           </div>
         </div>
 
@@ -115,7 +128,7 @@ function WorldMap() {
           </div>
           <div className="tooltip-box">
             <h6>United Kingdom</h6>
-            <p>This is your content. You can put anything here.</p>
+            <p> Modern web development and SEO services for UK businesses.</p>
           </div>
         </div>
       </div>
