@@ -19,8 +19,12 @@ function page() {
 
             <Col lg={6}>
               <p className="about-sec1-descrp">
-                A team with <span> passion , knowledge </span> & a lot of
-                <span> fun </span> all over the world.
+                A global team driven by{" "}
+                <span>
+                  {" "}
+                  passion, expertise, and creativity — building digital{" "}
+                </span>{" "}
+                success worldwide.
               </p>
             </Col>
           </Row>
@@ -50,31 +54,33 @@ function page() {
 
           <Col xs={12} lg={7}>
             <h2 className="about-sec2-heading">
-              Not another brand consultancy. A new model for
-              <span> growth.</span>
+              Not just another digital agency. A{" "}
+              <span> smarter model for sustainable growth.</span>
             </h2>
             <p className="about-sec2-descrp">
-              Zonic Media is a results-driven digital agency focused on helping
-              brands grow in an increasingly competitive digital landscape. We
-              believe a strong digital presence is built on clarity, strategy,
-              and user-first thinking—not guesswork. Our approach combines
-              creative vision with data-driven insights to craft meaningful
-              digital experiences that strengthen brand identity, build trust,
-              and create lasting value.
+              Zonic Media is a performance-focused digital agency helping
+              businesses grow in an increasingly competitive online world. We
+              believe a powerful digital presence is built through strategy,
+              clarity, and user-centered experiences — never guesswork. Our
+              approach blends creative innovation with data-backed insights to
+              create meaningful digital solutions that strengthen brand
+              identity, build credibility, and deliver long-term business value
+              across global markets.
             </p>
 
             <p className="about-sec2-descrp">
-              Every project begins with understanding the brand’s purpose,
-              audience, and goals, ensuring our solutions are aligned with real
-              business outcomes. We believe great digital work is intentional,
-              measurable, and designed to perform. Every decision is guided by
-              strategy, creativity, and performance-focused thinking.
+              Every project starts with understanding a brand’s vision, audience
+              behavior, and growth objectives, ensuring every strategy aligns
+              with measurable business outcomes. We believe successful digital
+              experiences are intentional, scalable, and designed to perform in
+              real-world environments. Each decision we make is guided by
+              strategy, creativity, and performance-driven execution.
             </p>
 
             <p className="about-sec2-descrp">
-              From planning to execution and continuous optimization, we stay
-              focused on long-term growth, meaningful engagement, and
-              sustainable success for every brand we work with.
+              From research and planning to launch and continuous optimization,
+              our focus remains on sustainable growth, stronger engagement, and
+              measurable success for every business we partner with worldwide.
             </p>
           </Col>
         </Row>
@@ -95,14 +101,16 @@ function page() {
 
           <Col xs={12} lg={7}>
             <h2 className="about-sec3-heading">
-              We visually position your brand powerfully in a market that’s
-              becoming<span> increasingly digital.</span>
+              We position your brand to stand out in an{" "}
+              <span> increasingly digital-first world. </span>
             </h2>
             <p className="about-sec3-descrp">
-              Zonic Media is a dynamic digital agency specializing in website
-              development, social media, graphic design, and online marketing.
-              With a results-driven, creative approach, we partner with brands
-              to build a strong, impactful online presence.
+              Zonic Media is a global digital marketing agency specializing in
+              website development, SEO, branding, and performance marketing
+              solutions. With a strategy-first and results-driven approach, we
+              collaborate with businesses across the USA, UAE, India, Australia,
+              the United Kingdom, and Canada to build strong, scalable online
+              presences that drive growth.
             </p>
           </Col>
         </Row>
@@ -113,9 +121,10 @@ function page() {
               <h3> Discover</h3>
               <h4> (strategy & research) </h4>
               <p>
-                We start by deeply understanding your brand, goals, audience,
-                and competitors to define a clear, data-driven strategic
-                direction for success.
+                We begin by analyzing your business, audience, competitors, and
+                market opportunities to build a clear, data-driven roadmap
+                designed to achieve sustainable digital growth and measurable
+                success.
               </p>
             </div>
           </Col>
@@ -125,9 +134,10 @@ function page() {
               <h3> Design</h3>
               <h4> (branding, web & content)</h4>
               <p>
-                We transform ideas into impactful branding, high-performing
-                websites, and engaging content crafted with purpose, precision,
-                and user experience in mind.
+                Our team transforms ideas into impactful brand identities,
+                conversion-focused websites, and engaging digital content
+                crafted with precision, creativity, and user experience at the
+                core.
               </p>
             </div>
           </Col>
@@ -137,9 +147,10 @@ function page() {
               <h3> Deliver</h3>
               <h4> (launch, growth & optimization) </h4>
               <p>
-                We launch, optimize, and scale your digital presence through
-                performance-driven strategies to deliver measurable growth and
-                long-term business results.
+                We launch, monitor, and continuously optimize your digital
+                ecosystem using performance-driven strategies that increase
+                visibility, generate leads, and support long-term business
+                growth.
               </p>
             </div>
           </Col>
@@ -149,8 +160,8 @@ function page() {
       {/*about-section4*/}
       <div className="about-section-4">
         <h2 className="about-sec4-heading">
-          Bold UX design, billion-dollar proof. We measure impact,{" "}
-          <span> not just ship pixels. </span>
+          Bold digital experiences backed by real results.{" "}
+          <span> We measure success through impact — not just design. </span>
         </h2>
 
         {/*features-grid*/}
@@ -162,7 +173,8 @@ function page() {
               <div>
                 <h3 className="feature-head">92%</h3>
                 <p className="feature-descrp">
-                  client satisfactionin post-project reviews.
+                  client satisfaction rate based on post-project feedback and
+                  long-term partnerships.
                 </p>
               </div>
             </div>
@@ -175,7 +187,8 @@ function page() {
               <div>
                 <h3 className="feature-head">10+</h3>
                 <p className="feature-descrp">
-                  years of real-world digital experience
+                  years of combined digital marketing and web development
+                  expertise.
                 </p>
               </div>
             </div>
@@ -188,7 +201,8 @@ function page() {
               <div>
                 <h3 className="feature-head">1K</h3>
                 <p className="feature-descrp">
-                  online customer reviews across platforms
+                  verified client interactions and reviews across multiple
+                  digital platforms.
                 </p>
               </div>
             </div>
@@ -201,7 +215,7 @@ function page() {
               <div>
                 <h3 className="feature-head">20K</h3>
                 <p className="feature-descrp">
-                  monthly visits on client platforms worldwide
+                  monthly visitors generated across client websites worldwide.
                 </p>
               </div>
             </div>
@@ -214,7 +228,8 @@ function page() {
               <div>
                 <h3 className="feature-head">100+ global project</h3>
                 <p className="feature-descrp">
-                  delivering diverse digital projects for clients worldwide.
+                  successfully delivered for businesses across multiple
+                  industries and countries.
                 </p>
               </div>
             </div>

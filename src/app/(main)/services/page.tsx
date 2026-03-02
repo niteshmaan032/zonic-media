@@ -34,7 +34,7 @@ function page() {
                 </span>
               </p>
 
-              <Link href="#" className="buttons">
+              <Link href="/contact-us" className="buttons">
                 Book a call
                 <span className="buttons__icon-wrapper">
                   <svg
