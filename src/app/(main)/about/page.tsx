@@ -12,7 +12,7 @@ function page() {
       {/*about-section-1*/}
       <div className="about-sec1">
         <div className="about-sec1-content">
-          <Row className="justify-content-between align-items-center ">
+          <Row className="justify-content-between align-items-start ">
             <Col xs="auto">
               <h1 className="about-sec1-heading">About Us</h1>
             </Col>
