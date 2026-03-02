@@ -396,7 +396,7 @@ export default function Home() {
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/home-service-4.jpg"
+              src="/images/seo-head.png"
               fill
               alt="web design"
               sizes="(max-width: 991.98px) 100vw, 40vw"

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Row, Col } from "react-bootstrap";
 import { PiShieldCheckBold } from "react-icons/pi";
@@ -9,8 +11,19 @@ import WhyWork from "@/app/components/WhyWork";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { useRef, useState } from "react";
 
 function page() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
   return (
     <>
       {/*localseo-section-1*/}
@@ -64,10 +77,29 @@ function page() {
 
           <Col lg={6}>
             <div className="localseo-sec1-img-cont">
-              <Image src="/images/seo-head.png" fill alt="local seo mobile" />
+              <Image src="/images/header.gif" fill alt="local seo mobile" />
             </div>
           </Col>
         </Row>
+      </div>
+
+      {/*localseo-video-section*/}
+      <div className="localseo-section-video">
+        {!isPlaying && (
+          <div className="video-layer" onClick={handlePlay}>
+            <FaRegCirclePlay size={62} />
+          </div>
+        )}
+
+        <video
+          ref={videoRef}
+          playsInline
+          loop
+          poster="/images/video-prv.png"
+          controls={isPlaying}
+          className="seo-video"
+          src="/video/seo-video.mp4"
+        />
       </div>
 
       {/*localseo-section-2*/}

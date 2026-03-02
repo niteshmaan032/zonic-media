@@ -11,17 +11,20 @@ function page() {
       <div className="service-page-section-1">
         <div className="service-page-section-1-content">
           <Row className="justify-content-between align-items-start ">
-            <Col xs="auto">
-              <h1 className="service-page-section-1-heading">Our Services</h1>
+            <Col lg="6">
+              <h1 className="service-page-section-1-heading">
+                Our Digital Marketing Services
+              </h1>
             </Col>
 
             <Col lg={6}>
               <p className="service-page-section-1-descrp">
-                We deliver end-to-end digital services designed to grow your
-                brand,
+                We provide end-to-end digital solutions designed to strengthen
+                your brand, increase online visibility, and generate measurable
                 <span>
-                  increase visibility, and drive real, measurable business
-                  results online.
+                  {" "}
+                  business growth through strategy, technology, and
+                  performance-driven marketing.{" "}
                 </span>
               </p>
 
@@ -66,27 +69,28 @@ function page() {
           <div className="service-page-section-3-box service-page-section-3-box-1">
             <div className="service-page-section-3-content">
               <h3 className="service-page-section-3-heading">
-                custom web development
+                Google Business Profile Optimization
               </h3>
 
               <p className="service-page-section-3-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Improve your local visibility and attract more customers through
+                a fully optimized Google Business Profile. We enhance your
+                listing to increase rankings, drive calls, and build credibility
+                with customers actively searching for your services.
               </p>
 
               <ul className="service-page-section-3-key-points">
-                <li> optimization </li>
-                <li> Profile optimization </li>
-                <li> optimization </li>
-                <li> Profile optimization </li>
+                <li> Profile setup & optimization </li>
+                <li> Business information optimization</li>
+                <li> Image & content enhancement </li>
+                <li> Review strategy implementation</li>
               </ul>
 
-              <Link className="service-page-section-3-link" href="#!">
-                Get your website
+              <Link
+                className="service-page-section-3-link"
+                href="/services/google-my-business"
+              >
+                Explore GBP Optimization
               </Link>
             </div>
 
@@ -103,31 +107,33 @@ function page() {
           <div className="service-page-section-3-box service-page-section-3-box-2">
             <div className="service-page-section-3-content">
               <h3 className="service-page-section-3-heading">
-                Custom UI/UX Design
+                Custom Web Development
               </h3>
 
               <p className="service-page-section-3-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Build a website designed not just to look impressive but to
+                perform. Our custom web development services focus on speed,
+                user experience, and conversion optimization to help businesses
+                attract visitors, build trust, and turn traffic into qualified
+                leads across all digital platforms.
               </p>
 
               <ul className="service-page-section-3-key-points">
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
+                <li> Custom website design & development </li>
+                <li> Mobile-responsive optimization</li>
+                <li> SEO-ready website structure </li>
+                <li> Performance & speed optimization</li>
               </ul>
 
-              <Link className="service-page-section-3-link" href="#!">
-                Get your website
+              <Link
+                className="service-page-section-3-link"
+                href="/services/web-design"
+              >
+                Explore Web Development
               </Link>
             </div>
 
-            <div className="service-page-section-3-img-cont">
+            <div className="service-page-section-3-img-cont service-box-2-img">
               <Image src="/images/m-5.webp" fill alt="website design" />
             </div>
           </div>
@@ -136,27 +142,28 @@ function page() {
           <div className="service-page-section-3-box service-page-section-3-box-3">
             <div className="service-page-section-3-content">
               <h3 className="service-page-section-3-heading">
-                Responsive & Mobile Optimize Design
+                Local SEO Services
               </h3>
 
               <p className="service-page-section-3-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Increase your visibility in local search results and connect
+                with customers near you. Our local SEO strategies improve search
+                rankings, drive targeted traffic, and help businesses generate
+                consistent leads organically.
               </p>
 
               <ul className="service-page-section-3-key-points">
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
+                <li> Local keyword research</li>
+                <li> On-page SEO optimization </li>
+                <li> Citation building & consistency</li>
+                <li> Local ranking strategy</li>
               </ul>
 
-              <Link className="service-page-section-3-link" href="#!">
-                Get your website
+              <Link
+                className="service-page-section-3-link"
+                href="/services/local-seo"
+              >
+                Explore Local SEO
               </Link>
             </div>
 
@@ -169,27 +176,28 @@ function page() {
           <div className="service-page-section-3-box service-page-section-3-box-4">
             <div className="service-page-section-3-content">
               <h3 className="service-page-section-3-heading">
-                Responsive & Mobile Optimize Design
+                Google Ads Management (PPC)
               </h3>
 
               <p className="service-page-section-3-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Drive immediate traffic and high-quality leads with
+                strategically managed Google Ads campaigns. Our PPC specialists
+                create, optimize, and scale campaigns focused on maximizing
+                conversions while reducing wasted ad spend.
               </p>
 
               <ul className="service-page-section-3-key-points">
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
-                <li> Profile optimization </li>
+                <li>Google Ads campaign setup</li>
+                <li> Keyword targeting & bidding strategy</li>
+                <li> Ad copy optimization</li>
+                <li> Conversion tracking & reporting </li>
               </ul>
 
-              <Link className="service-page-section-3-link" href="#!">
-                Get your website
+              <Link
+                className="service-page-section-3-link"
+                href="/services/google-ads"
+              >
+                Explore Google Ads Service
               </Link>
             </div>
 
