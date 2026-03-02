@@ -3,6 +3,12 @@ import "./services-page.css";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Digital Marketing Services | Web Design, SEO & PPC | Zonic Media",
+  description:
+    "Explore Zonic Media’s digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
+};
 
 function page() {
   return (
