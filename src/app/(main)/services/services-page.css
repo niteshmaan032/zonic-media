@@ -94,6 +94,10 @@
   object-position: center;
 }
 
+.service-box-3-img img {
+  object-position: top;
+}
+
 .service-page-section-3-key-points {
   display: flex;
   list-style: none;

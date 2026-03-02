@@ -210,7 +210,7 @@ function Navbar() {
 
             <Col xs="auto">
               <div className="header-button d-none d-lg-flex">
-                <Link href="#" className="buttons">
+                <Link href="/contact-us" className="buttons">
                   <span>Get In Touch</span>
                   <span className="buttons__icon-wrapper">
                     <svg

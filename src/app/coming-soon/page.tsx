@@ -40,9 +40,9 @@ function Page() {
                 </h1>
 
                 <p>
-                  Our blogs are is coming soon—bringing you actionable insights,
-                  data-driven strategies, and emerging digital trends designed
-                  to help your business grow and scale online.
+                  Coming soon—bringing you actionable insights, data-driven
+                  strategies, and emerging digital trends designed to help your
+                  business grow and scale online.
                 </p>
 
                 <p>

@@ -173,7 +173,7 @@ function page() {
               </Link>
             </div>
 
-            <div className="service-page-section-3-img-cont">
+            <div className="service-page-section-3-img-cont service-box-3-img">
               <Image src="/images/local-seo.webp" fill alt="website design" />
             </div>
           </div>
