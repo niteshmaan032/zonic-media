@@ -6,7 +6,41 @@ import Testimonials from "@/app/components/Testimonials";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import Faqs from "@/app/components/Faqs";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About Zonic Media | Global Web Design & Digital Marketing Agency",
+  description:
+    "Learn about Zonic Media, a global digital marketing agency delivering web design, SEO, and PPC solutions helping businesses grow worldwide.",
+};
+
 function page() {
+  const aboutFaqs = [
+    {
+      question: "What industries does Zonic Media work with?",
+      answer:
+        "We work with startups, local businesses, service providers, and growing brands across multiple industries including technology, real estate, healthcare, e-commerce, and professional services worldwide.",
+    },
+    {
+      question: "Do you work with international clients?",
+      answer:
+        "Yes. Zonic Media provides digital marketing and web design services globally, supporting clients across the USA, UAE, India, Australia, the United Kingdom, and Canada.",
+    },
+    {
+      question: "What makes Zonic Media different from other agencies?",
+      answer:
+        "Our strategy-first approach combines creative design, SEO expertise, and performance marketing to deliver measurable growth instead of vanity metrics.",
+    },
+    {
+      question: "How do you measure project success?",
+      answer:
+        "We track real business KPIs such as traffic growth, lead generation, conversion rates, and return on investment to ensure measurable results.",
+    },
+    {
+      question: "Do you provide ongoing support after project completion?",
+      answer:
+        "Yes. We offer continuous optimization, performance monitoring, and long-term digital growth support to help businesses scale consistently.",
+    },
+  ];
   return (
     <>
       {/*about-section-1*/}
@@ -248,7 +282,7 @@ function page() {
 
       {/*about-section6*/}
       <div className="about-section-6">
-        <Faqs />
+        <Faqs items={aboutFaqs} />
       </div>
 
       {/*about-section7*/}

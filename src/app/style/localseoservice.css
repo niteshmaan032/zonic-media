@@ -77,10 +77,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: rgba(235, 235, 235, 0.1);
 }
 
 .video-layer svg {
-  color: var(--primary);
+  color: var(--white);
   z-index: 2;
 }
 
@@ -172,6 +173,9 @@
 
 /* mobile phones + tablets */
 @media (max-width: 991.98px) {
+  .localseo-section-video {
+    height: 50vh;
+  }
 }
 
 /*mobile only*/

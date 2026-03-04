@@ -9,6 +9,13 @@ import Footer from "@/app/components/Footer";
 import { Row, Col } from "react-bootstrap";
 import WorldMap from "@/app/components/WorldMap";
 import { GoDotFill } from "react-icons/go";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title:
+    "Digital Marketing Agency | Web Design, SEO & PPC Services | Zonic Media",
+  description:
+    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call (302) 244-5494 today.",
+};
 
 export default function Home() {
   return (
@@ -194,7 +201,7 @@ export default function Home() {
               results-focused marketing strategies. Highly trusted by growing
               businesses.
             </p>
-            <Link href="#" className="buttons">
+            <Link href="/contact-us" className="buttons">
               Book a Free Strategy Call
               <span className="buttons__icon-wrapper">
                 <svg

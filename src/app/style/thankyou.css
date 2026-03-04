@@ -1,0 +1,129 @@
+.thank-wrapper {
+  background-color: var(--color1);
+  height: 100vh;
+  padding: 0px 100px;
+}
+
+.thank-img-cont {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 550px;
+  height: 550px;
+}
+
+.thank-img-cont img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.thank-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.thank-heading {
+  font-size: 72px;
+  line-height: inherit;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+.thank-descrp {
+  font-weight: 500;
+  color: var(--secondary);
+  font-size: 20px;
+  width: 80%;
+  line-height: 30px;
+}
+
+.thank-content-wrapper .buttons {
+  margin: 20px 0px 32px 0px;
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.thank-content-wrapper .buttons:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.thank-social-heading {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+.thank-social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.thank-social-icons svg {
+  color: var(--secondary);
+  transition: 0.4s ease;
+}
+
+.thank-social-icons svg:hover {
+  color: var(--primary);
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+  .thank-img-cont {
+    display: none;
+  }
+
+  .thank-heading {
+    font-size: 62px;
+  }
+
+  .thank-descrp {
+    width: 100%;
+    line-height: 28px;
+  }
+
+  .thank-content-wrapper .buttons {
+    margin: 20px 0px 32px 0px;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+
+  .thank-content-wrapper .buttons:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .thank-wrapper {
+    padding: 80px 20px;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .thank-wrapper {
+    padding: 80px 40px;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}
