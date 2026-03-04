@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/contactUs.css";
@@ -10,8 +10,29 @@ import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
 
+type ContactUsFormValues = {
+  fullName: string;
+  email: string;
+  contact: string;
+  message: string;
+  services: string[];
+};
+
 function Page() {
-  const [services, setServices] = useState<string[]>([]);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactUsFormValues>({
+    defaultValues: {
+      fullName: "",
+      email: "",
+      contact: "",
+      message: "",
+      services: [],
+    },
+  });
 
   const serviceList: string[] = [
     "Web Design",
@@ -23,12 +44,8 @@ function Page() {
     "Local SEO",
   ];
 
-  const toggleService = (service: string) => {
-    setServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service],
-    );
+  const onSubmit = () => {
+    reset();
   };
 
   return (
@@ -101,51 +118,90 @@ function Page() {
           {/* Right Side: Form */}
           <Col xs={12} lg={6} className="p-0">
             <div className="contact-us-form-wrapper">
-              <form className="row g-4">
+              <form
+                className="row g-4"
+                onSubmit={handleSubmit(onSubmit)}
+                noValidate
+              >
                 <Col md={6}>
                   <input
                     type="text"
-                    name="fullName"
                     className="form-control"
                     placeholder="Full Name"
-                    required
+                    aria-invalid={errors.fullName ? "true" : "false"}
+                    {...register("fullName", {
+                      required: "Full name is required.",
+                    })}
                   />
+                  {errors.fullName && (
+                    <p className="text-danger mt-2 mb-0">
+                      {errors.fullName.message}
+                    </p>
+                  )}
                 </Col>
 
                 <Col md={6}>
                   <input
                     type="email"
-                    name="email"
                     className="form-control"
                     placeholder="Email"
-                    required
+                    aria-invalid={errors.email ? "true" : "false"}
+                    {...register("email", {
+                      required: "Email is required.",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Enter a valid email address.",
+                      },
+                    })}
                   />
+                  {errors.email && (
+                    <p className="text-danger mt-2 mb-0">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </Col>
 
                 <Col xs={12}>
                   <input
                     type="tel"
-                    name="contact"
                     className="form-control"
                     placeholder="Contact Number"
                     inputMode="numeric"
-                    pattern="[0-9]*"
+                    aria-invalid={errors.contact ? "true" : "false"}
                     onInput={(e: React.FormEvent<HTMLInputElement>) => {
                       const target = e.currentTarget;
                       target.value = target.value.replace(/[^0-9]/g, "");
                     }}
-                    required
+                    {...register("contact", {
+                      required: "Contact number is required.",
+                      minLength: {
+                        value: 7,
+                        message: "Contact number must be at least 7 digits.",
+                      },
+                    })}
                   />
+                  {errors.contact && (
+                    <p className="text-danger mt-2 mb-0">
+                      {errors.contact.message}
+                    </p>
+                  )}
                 </Col>
 
                 <Col xs={12}>
                   <textarea
-                    name="message"
                     className="form-control"
                     rows={5}
                     placeholder="Message"
-                    required
+                    aria-invalid={errors.message ? "true" : "false"}
+                    {...register("message", {
+                      required: "Message is required.",
+                    })}
                   />
+                  {errors.message && (
+                    <p className="text-danger mt-2 mb-0">
+                      {errors.message.message}
+                    </p>
+                  )}
                 </Col>
 
                 <Col xs={12}>
@@ -156,11 +212,14 @@ function Page() {
                     >
                       <input
                         type="checkbox"
-                        name="services"
                         className="btn-check"
                         id={`service-${index}`}
-                        checked={services.includes(service)}
-                        onChange={() => toggleService(service)}
+                        value={service}
+                        {...register("services", {
+                          validate: (value) =>
+                            (value && value.length > 0) ||
+                            "Select at least one service.",
+                        })}
                       />
                       <label
                         className="btn contact-us-form-services-buttons btn-outline-secondary"
@@ -170,6 +229,11 @@ function Page() {
                       </label>
                     </div>
                   ))}
+                  {errors.services && (
+                    <p className="text-danger mt-2 mb-0">
+                      {errors.services.message}
+                    </p>
+                  )}
                 </Col>
 
                 <Col
@@ -246,4 +310,3 @@ function Page() {
 }
 
 export default Page;
-

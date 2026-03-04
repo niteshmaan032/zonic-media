@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/app/components/Footer";
 import type { Metadata } from "next";
+import ContactForm from "@/app/components/ContactForm";
 export const metadata: Metadata = {
   title: "Digital Marketing Services | Web Design, SEO & PPC | Zonic Media",
   description:
@@ -214,10 +215,11 @@ function Page() {
         </div>
       </div>
 
+      <ContactForm />
+
       <Footer />
     </>
   );
 }
 
 export default Page;
-
