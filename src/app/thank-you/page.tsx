@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
-function page() {
+function Page() {
   return (
     <>
       <div className="thank-wrapper">
@@ -77,4 +77,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

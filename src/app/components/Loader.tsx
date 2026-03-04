@@ -10,6 +10,8 @@ function Loader() {
   const [render, setRender] = useState(true);
 
   useEffect(() => {
+    const handleWindowLoad = () => setIsLoaded(true);
+
     // 1. Reset everything when route changes
     setIsLoaded(false);
     setRender(true);
@@ -26,14 +28,14 @@ function Loader() {
         setIsLoaded(true);
       } else {
         // If browser is NOT done (slow page), wait for it to finish
-        window.addEventListener("load", () => setIsLoaded(true));
+        window.addEventListener("load", handleWindowLoad);
       }
     }, minLoadTime);
 
     // Cleanup to prevent memory leaks
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("load", () => setIsLoaded(true));
+      window.removeEventListener("load", handleWindowLoad);
     };
   }, [pathname]);
 

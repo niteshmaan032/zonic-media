@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Explore Zonic Media’s digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
 };
 
-function page() {
+function Page() {
   return (
     <>
       {/* service-page-section-1 */}
@@ -219,4 +219,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

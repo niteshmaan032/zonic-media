@@ -14,7 +14,7 @@ import Footer from "@/app/components/Footer";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { useRef, useState } from "react";
 
-function page() {
+function Page() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -310,4 +310,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

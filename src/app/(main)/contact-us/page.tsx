@@ -10,7 +10,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
 
-function page() {
+function Page() {
   const [services, setServices] = useState<string[]>([]);
 
   const serviceList: string[] = [
@@ -245,4 +245,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

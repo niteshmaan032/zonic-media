@@ -6,7 +6,7 @@ import ProcessSwiper from "@/app/components/ProcessSwiper";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
-function page() {
+function Page() {
   const WebFaqs = [
     {
       question: "What industries does Zonic Media work with?",
@@ -245,4 +245,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

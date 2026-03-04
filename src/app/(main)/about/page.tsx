@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Learn about Zonic Media, a global digital marketing agency delivering web design, SEO, and PPC solutions helping businesses grow worldwide.",
 };
 
-function page() {
+function Page() {
   const aboutFaqs = [
     {
       question: "What industries does Zonic Media work with?",
@@ -294,4 +294,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+

@@ -15,7 +15,7 @@ import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 
-function page() {
+function Page() {
   const workIMages = [
     { src: "/images/work-1.png", alt: "recovered gmb account" },
     { src: "/images/work-2.png", alt: "recovered gmb account" },
@@ -354,4 +354,5 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
+
