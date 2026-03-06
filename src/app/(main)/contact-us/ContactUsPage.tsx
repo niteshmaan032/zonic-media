@@ -348,7 +348,11 @@ function ContactUsPageClient() {
               and UX skills. Highly recommended
             </p>
 
-            <Link href="#" className="buttons">
+            <Link
+              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+              target="blank"
+              className="buttons"
+            >
               <span>book a call</span>
               <span className="buttons__icon-wrapper">
                 <svg
