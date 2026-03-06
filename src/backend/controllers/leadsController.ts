@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { enqueueOwnerLeadEmail } from "@/backend/queues/ownerLeadQueue";
 
 export type LeadPayload = {
   fullName: string;
@@ -14,6 +15,13 @@ const getTransporter = () => {
   const secure = process.env.SMTP_SECURE !== "false";
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
+  const connectionTimeout = Number(
+    process.env.SMTP_CONNECTION_TIMEOUT_MS ?? "15000",
+  );
+  const greetingTimeout = Number(
+    process.env.SMTP_GREETING_TIMEOUT_MS ?? "10000",
+  );
+  const socketTimeout = Number(process.env.SMTP_SOCKET_TIMEOUT_MS ?? "20000");
 
   if (!host || !user || !pass) {
     throw new Error("SMTP env variables are not configured.");
@@ -23,6 +31,9 @@ const getTransporter = () => {
     host,
     port,
     secure,
+    connectionTimeout,
+    greetingTimeout,
+    socketTimeout,
     auth: {
       user,
       pass,
@@ -95,6 +106,20 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 
 export const createLead = async (payload: LeadPayload) => {
   await sendUserThankYouEmail(payload);
+
+  try {
+    const queueResult = await enqueueOwnerLeadEmail(payload);
+
+    if (queueResult.queued) {
+      return {
+        success: true,
+        message: "Thank-you email sent and owner lead email queued successfully.",
+      };
+    }
+  } catch (error) {
+    console.error("Failed to queue owner lead email, falling back to direct send.", error);
+  }
+
   await sendOwnerLeadEmail(payload);
 
   return {

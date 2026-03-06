@@ -16,7 +16,6 @@ import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
 
 const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
-const THANK_YOU_ACCESS_TTL_MS = 60 * 1000;
 const THANK_YOU_RENDER_KEY = "thank_you_page_render_allowed";
 
 function Page() {
@@ -25,20 +24,16 @@ function Page() {
   const [isCheckingAccess, setIsCheckingAccess] = useState(true);
 
   useEffect(() => {
-    const hasRecentSubmission = () => {
+    const hasSuccessfulSubmission = () => {
       const allowedAt = Number(sessionStorage.getItem(THANK_YOU_ACCESS_KEY));
-      return (
-        Number.isFinite(allowedAt) &&
-        Date.now() - allowedAt >= 0 &&
-        Date.now() - allowedAt <= THANK_YOU_ACCESS_TTL_MS
-      );
+      return Number.isFinite(allowedAt) && allowedAt > 0;
     };
 
     const hasRenderAccess = () =>
       sessionStorage.getItem(THANK_YOU_RENDER_KEY) === "true";
 
     const evaluateAccess = () => {
-      if (hasRecentSubmission()) {
+      if (hasSuccessfulSubmission()) {
         sessionStorage.setItem(THANK_YOU_RENDER_KEY, "true");
         sessionStorage.removeItem(THANK_YOU_ACCESS_KEY);
       }

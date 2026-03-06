@@ -11,6 +11,7 @@ import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ContactUsFormValues = {
   fullName: string;
@@ -18,16 +19,20 @@ type ContactUsFormValues = {
   contact: string;
   message: string;
   services: string[];
+  captchaToken: string;
 };
 
 function ContactUsPageClient() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [captchaResetSignal, setCaptchaResetSignal] = useState(0);
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isValid },
+    setValue,
+    watch,
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactUsFormValues>({
     mode: "onChange",
@@ -38,8 +43,11 @@ function ContactUsPageClient() {
       contact: "",
       message: "",
       services: [],
+      captchaToken: "",
     },
   });
+
+  const captchaToken = watch("captchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -61,11 +69,16 @@ function ContactUsPageClient() {
         body: JSON.stringify(data),
       });
 
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string }
+        | null;
+
       if (!response.ok) {
-        throw new Error("Failed to submit form.");
+        throw new Error(result?.message || "Failed to submit form.");
       }
 
       reset();
+      setCaptchaResetSignal((current) => current + 1);
       sessionStorage.setItem(
         "thank_you_access_allowed_at",
         Date.now().toString(),
@@ -73,7 +86,12 @@ function ContactUsPageClient() {
       router.push("/thank-you");
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      setSubmitError("Something went wrong. Please try again.");
+      setCaptchaResetSignal((current) => current + 1);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
     }
   };
 
@@ -290,6 +308,27 @@ function ContactUsPageClient() {
                   )}
                 </Col>
 
+                <Col xs={12}>
+                  <input
+                    type="hidden"
+                    {...register("captchaToken", {
+                      required: "Please complete the CAPTCHA checkbox.",
+                    })}
+                  />
+                  <RecaptchaCheckbox
+                    value={captchaToken}
+                    onChange={(token) => {
+                      setValue("captchaToken", token, {
+                        shouldValidate: true,
+                        shouldDirty: true,
+                        shouldTouch: true,
+                      });
+                    }}
+                    resetSignal={captchaResetSignal}
+                    error={errors.captchaToken?.message}
+                  />
+                </Col>
+
                 <Col
                   xs={12}
                   className="d-flex justify-content-between align-items-center"
@@ -297,7 +336,7 @@ function ContactUsPageClient() {
                   <button
                     type="submit"
                     className="buttons"
-                    disabled={isSubmitting || !isValid}
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       <>

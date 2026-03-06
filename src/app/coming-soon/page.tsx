@@ -7,6 +7,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/comingSoon.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ComingSoonFormValues = {
   fullName: string;
@@ -14,17 +15,21 @@ type ComingSoonFormValues = {
   contact: string;
   message: string;
   services: string[];
+  captchaToken: string;
 };
 
 function Page() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [captchaResetSignal, setCaptchaResetSignal] = useState(0);
   const {
     register,
     handleSubmit,
+    setValue,
+    watch,
     reset,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<ComingSoonFormValues>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -34,8 +39,11 @@ function Page() {
       contact: "",
       message: "",
       services: [],
+      captchaToken: "",
     },
   });
+
+  const captchaToken = watch("captchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -62,16 +70,26 @@ function Page() {
         body: JSON.stringify(data),
       });
 
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string }
+        | null;
+
       if (!response.ok) {
-        throw new Error("Failed to submit form.");
+        throw new Error(result?.message || "Failed to submit form.");
       }
 
       reset();
+      setCaptchaResetSignal((current) => current + 1);
       sessionStorage.setItem("thank_you_access_allowed_at", Date.now().toString());
       router.push("/thank-you");
     } catch (error) {
       console.error("Coming soon form submission failed:", error);
-      setSubmitError("Something went wrong. Please try again.");
+      setCaptchaResetSignal((current) => current + 1);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
       setIsSubmitting(false);
     }
   };
@@ -259,6 +277,27 @@ function Page() {
                     )}
                   </Col>
 
+                  <Col xs={12}>
+                    <input
+                      type="hidden"
+                      {...register("captchaToken", {
+                        required: "Please complete the CAPTCHA checkbox.",
+                      })}
+                    />
+                    <RecaptchaCheckbox
+                      value={captchaToken}
+                      onChange={(token) => {
+                        setValue("captchaToken", token, {
+                          shouldValidate: true,
+                          shouldDirty: true,
+                          shouldTouch: true,
+                        });
+                      }}
+                      resetSignal={captchaResetSignal}
+                      error={errors.captchaToken?.message}
+                    />
+                  </Col>
+
                   <Col
                     xs={12}
                     className="d-flex justify-content-between align-items-center"
@@ -266,7 +305,7 @@ function Page() {
                     <button
                       type="submit"
                       className="buttons"
-                      disabled={isSubmitting || !isValid}
+                      disabled={isSubmitting}
                     >
                       {isSubmitting ? (
                         <>

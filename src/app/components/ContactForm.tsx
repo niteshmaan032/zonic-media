@@ -8,6 +8,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Row, Col } from "react-bootstrap";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ContactFormValues = {
   fullName: string;
@@ -15,16 +16,20 @@ type ContactFormValues = {
   contact: string;
   message: string;
   services: string[];
+  captchaToken: string;
 };
 
 export default function ContactForm() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [captchaResetSignal, setCaptchaResetSignal] = useState(0);
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isValid },
+    setValue,
+    watch,
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactFormValues>({
     mode: "onChange",
@@ -35,8 +40,11 @@ export default function ContactForm() {
       contact: "",
       message: "",
       services: [],
+      captchaToken: "",
     },
   });
+
+  const captchaToken = watch("captchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -58,11 +66,16 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
+      const result = (await response.json().catch(() => null)) as
+        | { message?: string }
+        | null;
+
       if (!response.ok) {
-        throw new Error("Failed to submit form.");
+        throw new Error(result?.message || "Failed to submit form.");
       }
 
       reset();
+      setCaptchaResetSignal((current) => current + 1);
       sessionStorage.setItem(
         "thank_you_access_allowed_at",
         Date.now().toString(),
@@ -70,7 +83,12 @@ export default function ContactForm() {
       router.push("/thank-you");
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      setSubmitError("Something went wrong. Please try again.");
+      setCaptchaResetSignal((current) => current + 1);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
     }
   };
 
@@ -271,6 +289,27 @@ export default function ContactForm() {
                 )}
               </Col>
 
+              <Col xs={12}>
+                <input
+                  type="hidden"
+                  {...register("captchaToken", {
+                    required: "Please complete the CAPTCHA checkbox.",
+                  })}
+                />
+                <RecaptchaCheckbox
+                  value={captchaToken}
+                  onChange={(token) => {
+                    setValue("captchaToken", token, {
+                      shouldValidate: true,
+                      shouldDirty: true,
+                      shouldTouch: true,
+                    });
+                  }}
+                  resetSignal={captchaResetSignal}
+                  error={errors.captchaToken?.message}
+                />
+              </Col>
+
               <Col
                 xs={12}
                 className="d-flex justify-content-between align-items-center"
@@ -278,7 +317,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   className="buttons"
-                  disabled={isSubmitting || !isValid}
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>

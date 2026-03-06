@@ -83,6 +83,18 @@ body p {
   transform: translate(0);
 }
 
+.recaptcha-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.captcha-hint {
+  color: var(--color2);
+  font-size: 14px;
+}
+
 /*testimonial-section*/
 .testimonial-heading {
   font-size: 52px;
@@ -201,6 +213,11 @@ body p {
 
 /*mobile devices*/
 @media (max-width: 575.98px) {
+  .recaptcha-widget {
+    transform: scale(0.92);
+    transform-origin: left top;
+  }
+
   /*global-faqs-seciton*/
   .global-faqs-section {
     padding: 0px 20px 40px 20px;
