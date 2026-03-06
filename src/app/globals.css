@@ -90,11 +90,6 @@ body p {
   gap: 10px;
 }
 
-.captcha-hint {
-  color: var(--color2);
-  font-size: 14px;
-}
-
 /*testimonial-section*/
 .testimonial-heading {
   font-size: 52px;

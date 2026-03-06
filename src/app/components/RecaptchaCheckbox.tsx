@@ -101,13 +101,7 @@ export default function RecaptchaCheckbox({
         <p className="text-danger mb-0">reCAPTCHA is not configured.</p>
       )}
 
-      {error ? (
-        <p className="text-danger mb-0">{error}</p>
-      ) : (
-        <p className="captcha-hint mb-0">
-          Complete the CAPTCHA checkbox to enable submit.
-        </p>
-      )}
+      {error ? <p className="text-danger mb-0">{error}</p> : null}
     </div>
   );
 }

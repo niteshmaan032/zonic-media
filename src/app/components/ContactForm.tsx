@@ -66,9 +66,9 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      const result = (await response.json().catch(() => null)) as
-        | { message?: string }
-        | null;
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
 
       if (!response.ok) {
         throw new Error(result?.message || "Failed to submit form.");
@@ -98,7 +98,7 @@ export default function ContactForm() {
         <Col xs={12} lg={5} className="p-0">
           <div className="contact-form-content">
             <h2 className="contact-form-heading">
-              Have a Project in Mind? <br /> <span> Let&apos;s talk </span>
+              Grow Your Business <br /> <span> Let&apos;s talk </span>
             </h2>
 
             <ul className="contact-form-points">
