@@ -32,7 +32,7 @@ const services = [
   {
     id: "ppc",
     label: "Google ADS (PPC)",
-    image: "/images/google-ads.webp",
+    image: "/images/ad-4.jpg",
     alt: "google ads",
     link: "/services/google-ads",
   },
