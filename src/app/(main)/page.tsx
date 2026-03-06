@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import "./page.css";
 import ImageMarquee from "@/app/components/ImageMarquee";
 import { FaArrowRight, FaArrowDown } from "react-icons/fa6";
@@ -43,8 +43,12 @@ export default function Home() {
 
           <Col xs={12}>
             <div className="home-sec1-buttons">
-              <Link href="/contact-us" className="buttons">
-                Get Free Strategy Call
+              <Link
+                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                target="blank"
+                className="buttons"
+              >
+                Book a Strategy Call
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -123,13 +127,13 @@ export default function Home() {
           <Col xs={12} lg={7}>
             <h2 className="home-sec3-heading">
               We Position Your Brand to Win in{" "}
-              <span> Today’s Digital-First Market</span>
+              <span> Today&apos;s Digital-First Market</span>
             </h2>
             <p className="home-sec3-descrp">
               In a world where customers search online before making decisions,
-              your brand’s digital presence determines your growth. Zonic Media
-              helps businesses stand out with strategic design, powerful SEO,
-              and data-driven marketing campaigns that generate measurable
+              your brand&apos;s digital presence determines your growth. Zonic
+              Media helps businesses stand out with strategic design, powerful
+              SEO, and data-driven marketing campaigns that generate measurable
               results.
             </p>
             <p className="home-sec3-descrp">
@@ -201,8 +205,12 @@ export default function Home() {
               results-focused marketing strategies. Highly trusted by growing
               businesses.
             </p>
-            <Link href="/contact-us" className="buttons">
-              Book a Free Strategy Call
+            <Link
+              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+              target="blank"
+              className="buttons"
+            >
+              Book a Strategy Call
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -317,7 +325,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <Link href="#!">View GMB optimization service </Link>
+            <Link href="/services/google-my-business">
+              View GMB optimization service{" "}
+            </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
@@ -360,11 +370,13 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <Link href="#!">view google ads (PPC) service </Link>
+            <Link href="/services/google-ads">
+              view google ads (PPC) service{" "}
+            </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/google-ads.webp"
+              src="/images/ad-4.jpg"
               fill
               alt="web design"
               sizes="(max-width: 991.98px) 100vw, 40vw"
@@ -399,11 +411,11 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <Link href="#!">view local SEO service</Link>
+            <Link href="/services/local-seo">view local SEO service</Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/seo-head.png"
+              src="/images/seo-4.jpg"
               fill
               alt="web design"
               sizes="(max-width: 991.98px) 100vw, 40vw"

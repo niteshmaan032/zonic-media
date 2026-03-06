@@ -1,13 +1,41 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/comingSoon.css";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+type ComingSoonFormValues = {
+  fullName: string;
+  email: string;
+  contact: string;
+  message: string;
+  services: string[];
+};
 
 function Page() {
-  const [services, setServices] = useState<string[]>([]);
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm<ComingSoonFormValues>({
+    mode: "onChange",
+    reValidateMode: "onChange",
+    defaultValues: {
+      fullName: "",
+      email: "",
+      contact: "",
+      message: "",
+      services: [],
+    },
+  });
 
   const serviceList: string[] = [
     "Web Design",
@@ -19,12 +47,33 @@ function Page() {
     "Local SEO",
   ];
 
-  const toggleService = (service: string) => {
-    setServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service],
-    );
+  const onSubmit = async (data: ComingSoonFormValues) => {
+    if (isSubmitting) return;
+
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form.");
+      }
+
+      reset();
+      sessionStorage.setItem("thank_you_access_allowed_at", Date.now().toString());
+      router.push("/thank-you");
+    } catch (error) {
+      console.error("Coming soon form submission failed:", error);
+      setSubmitError("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -40,14 +89,14 @@ function Page() {
                 </h1>
 
                 <p>
-                  Coming soon—bringing you actionable insights, data-driven
+                  Coming soon-bringing you actionable insights, data-driven
                   strategies, and emerging digital trends designed to help your
                   business grow and scale online.
                 </p>
 
                 <p>
-                  No worries—we’re here and ready to work with you. Connect with
-                  us to get started.
+                  No worries-we&apos;re here and ready to work with you. Connect
+                  with us to get started.
                 </p>
 
                 <div className="coming-soon-button">
@@ -89,51 +138,95 @@ function Page() {
             {/* Right Side: Form */}
             <Col xs={12} lg={6} className="p-0">
               <div className="coming-soon-form-wrapper">
-                <form className="row g-4">
+                <form className="row g-4" onSubmit={handleSubmit(onSubmit)} noValidate>
                   <Col md={6}>
                     <input
                       type="text"
-                      name="fullName"
                       className="form-control"
                       placeholder="Full Name"
-                      required
+                      aria-invalid={errors.fullName ? "true" : "false"}
+                      {...register("fullName", {
+                        required: "Full name is required.",
+                        minLength: {
+                          value: 2,
+                          message: "Full name must be at least 2 characters.",
+                        },
+                        maxLength: {
+                          value: 100,
+                          message: "Full name must be at most 100 characters.",
+                        },
+                      })}
                     />
+                    {errors.fullName && (
+                      <p className="text-danger mt-2 mb-0">{errors.fullName.message}</p>
+                    )}
                   </Col>
 
                   <Col md={6}>
                     <input
                       type="email"
-                      name="email"
                       className="form-control"
                       placeholder="Email"
-                      required
+                      aria-invalid={errors.email ? "true" : "false"}
+                      {...register("email", {
+                        required: "Email is required.",
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Enter a valid email address.",
+                        },
+                      })}
                     />
+                    {errors.email && (
+                      <p className="text-danger mt-2 mb-0">{errors.email.message}</p>
+                    )}
                   </Col>
 
                   <Col xs={12}>
                     <input
                       type="tel"
-                      name="contact"
                       className="form-control"
                       placeholder="Contact Number"
                       inputMode="numeric"
-                      pattern="[0-9]*"
+                      aria-invalid={errors.contact ? "true" : "false"}
                       onInput={(e: React.FormEvent<HTMLInputElement>) => {
                         const target = e.currentTarget;
                         target.value = target.value.replace(/[^0-9]/g, "");
                       }}
-                      required
+                      {...register("contact", {
+                        required: "Contact number is required.",
+                        pattern: {
+                          value: /^[0-9]{7,15}$/,
+                          message:
+                            "Contact number must contain only digits (7 to 15).",
+                        },
+                      })}
                     />
+                    {errors.contact && (
+                      <p className="text-danger mt-2 mb-0">{errors.contact.message}</p>
+                    )}
                   </Col>
 
                   <Col xs={12}>
                     <textarea
-                      name="message"
                       className="form-control"
                       rows={5}
                       placeholder="Message"
-                      required
+                      aria-invalid={errors.message ? "true" : "false"}
+                      {...register("message", {
+                        required: "Message is required.",
+                        minLength: {
+                          value: 5,
+                          message: "Message must be at least 5 characters.",
+                        },
+                        maxLength: {
+                          value: 2000,
+                          message: "Message must be at most 2000 characters.",
+                        },
+                      })}
                     />
+                    {errors.message && (
+                      <p className="text-danger mt-2 mb-0">{errors.message.message}</p>
+                    )}
                   </Col>
 
                   <Col xs={12}>
@@ -144,11 +237,14 @@ function Page() {
                       >
                         <input
                           type="checkbox"
-                          name="services"
                           className="btn-check"
                           id={`service-${index}`}
-                          checked={services.includes(service)}
-                          onChange={() => toggleService(service)}
+                          value={service}
+                          {...register("services", {
+                            validate: (value) =>
+                              (value && value.length > 0) ||
+                              "Select at least one service.",
+                          })}
                         />
                         <label
                           className="btn coming-soon-services-button btn-outline-secondary"
@@ -158,14 +254,34 @@ function Page() {
                         </label>
                       </div>
                     ))}
+                    {errors.services && (
+                      <p className="text-danger mt-2 mb-0">{errors.services.message}</p>
+                    )}
                   </Col>
 
                   <Col
                     xs={12}
                     className="d-flex justify-content-between align-items-center"
                   >
-                    <button type="submit" className="buttons">
-                      Send Message <FaArrowRightLong />
+                    <button
+                      type="submit"
+                      className="buttons"
+                      disabled={isSubmitting || !isValid}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span
+                            className="spinner-border spinner-border-sm me-2"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message <FaArrowRightLong />
+                        </>
+                      )}
                     </button>
 
                     <p className="coming-soon-email-link">
@@ -173,6 +289,12 @@ function Page() {
                       <Link href="#!">zonicmediallc@gmail.com </Link>
                     </p>
                   </Col>
+
+                  {submitError && (
+                    <Col xs={12}>
+                      <p className="text-danger mb-0">{submitError}</p>
+                    </Col>
+                  )}
                 </form>
               </div>
             </Col>

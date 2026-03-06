@@ -14,6 +14,12 @@ import Marquee from "react-fast-marquee";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Google Business Profile Reinstatement Service | Fix Suspended GBP",
+  description:
+    "Fix your suspended Google Business Profile with expert reinstatement support. We identify violations, submit appeals, and restore your GBP quickly and safely.",
+};
 
 function Page() {
   const workIMages = [
@@ -23,34 +29,130 @@ function Page() {
     { src: "/images/work-4.png", alt: "recovered gmb account" },
   ];
 
-  const GmbFaqs = [
+  const gmbFaqs = [
     {
-      question: "What industries does Zonic Media work with?",
+      question: "Why was my Google Business Profile suspended?",
       answer:
-        "We work with startups, local businesses, service providers, and growing brands across multiple industries including technology, real estate, healthcare, e-commerce, and professional services worldwide.",
+        "A Google Business Profile can be suspended if it violates Google's guidelines. Common reasons include incorrect business information, using a virtual address, keyword stuffing in the business name, duplicate listings, or suspicious account activity.",
     },
     {
-      question: "Do you work with international clients?",
+      question:
+        "How long does it take to reinstate a suspended Google Business Profile?",
       answer:
-        "Yes. Zonic Media provides digital marketing and web design services globally, supporting clients across the USA, UAE, India, Australia, the United Kingdom, and Canada.",
+        "The reinstatement process usually takes between 3 to 14 business days, depending on the complexity of the issue and how quickly Google reviews the appeal request.",
     },
     {
-      question: "What makes Zonic Media different from other agencies?",
+      question:
+        "Can I recover a permanently suspended Google Business Profile?",
       answer:
-        "Our strategy-first approach combines creative design, SEO expertise, and performance marketing to deliver measurable growth instead of vanity metrics.",
+        "Yes, in many cases a suspended Google Business Profile can be reinstated if the policy violations are corrected and a proper reinstatement appeal is submitted with supporting documentation.",
     },
     {
-      question: "How do you measure project success?",
+      question:
+        "How can I prevent my Google Business Profile from being suspended again?",
       answer:
-        "We track real business KPIs such as traffic growth, lead generation, conversion rates, and return on investment to ensure measurable results.",
+        "To avoid future suspensions, ensure your business information is accurate, follow Google's guidelines, avoid duplicate listings, maintain a legitimate business address, and keep your profile updated regularly.",
     },
     {
-      question: "Do you provide ongoing support after project completion?",
+      question:
+        "Do you provide help for agencies managing multiple suspended profiles?",
       answer:
-        "Yes. We offer continuous optimization, performance monitoring, and long-term digital growth support to help businesses scale consistently.",
+        "Yes. Zonic Media works with marketing agencies and multi-location businesses to recover multiple suspended Google Business Profiles while ensuring compliance with Google's policies.",
     },
   ];
 
+  const GmbProcessData = {
+    heading:
+      "Our Proven 5-Step Google Business Profile Suspension Recovery Process",
+    items: [
+      {
+        number: "01",
+        title: "In-Depth Profile Audit",
+        description:
+          "We perform a detailed audit of your Google Business Profile, guidelines compliance, listing history, and potential violations to identify the exact reason behind the suspension.",
+        bullets: [
+          "NAP accuracy check",
+          "Listing history review",
+          "Suspension trigger analysis",
+        ],
+      },
+      {
+        number: "02",
+        title: "Issue Identification & Compliance Fix",
+        description:
+          "Our experts identify policy violations and correct inaccurate business information, categories, address details, or other elements that may have triggered the suspension.",
+        bullets: [
+          "Business info corrections",
+          "Category compliance fixes",
+          "Policy violation removal",
+        ],
+      },
+      {
+        number: "03",
+        title: "Profile Optimization & Documentation",
+        description:
+          "We optimize your Google Business Profile and prepare the required supporting documentation to ensure your listing aligns with Google’s policies and verification requirements.",
+        bullets: [
+          "Profile detail optimization",
+          "Verification documents preparation",
+          "Compliance standard alignment",
+        ],
+      },
+      {
+        number: "04",
+        title: "Reinstatement Appeal Submission",
+        description:
+          "Our team prepares and submits a professional reinstatement request to Google, ensuring the appeal clearly explains the issue resolution and meets Google’s reinstatement guidelines.",
+        bullets: [
+          "Appeal documentation preparation",
+          "Reinstatement request submission",
+          "Supporting evidence submission",
+        ],
+      },
+      {
+        number: "05",
+        title: "Monitoring & Listing Recovery",
+        description:
+          "We track the reinstatement request, communicate with Google if needed, and ensure your Google Business Profile is successfully restored and fully operational.",
+        bullets: [
+          "Appeal status monitoring",
+          "Google response handling",
+          "Listing recovery confirmation",
+        ],
+      },
+    ],
+  };
+
+  const WhygmbData = {
+    heading: "Why Work With Zonic Media for GMB Recovery:",
+    image: {
+      src: "/images/gmb-3.jpg",
+      alt: "google my business recovery",
+    },
+    defaultActiveKey: "0",
+    items: [
+      {
+        title: "Proven Google Business Profile Reinstatement Expertise",
+        content:
+          "Our specialists understand Google's latest policies and suspension triggers, helping businesses recover suspended listings through a structured and compliant reinstatement process.",
+      },
+      {
+        title: "Root Cause Analysis Before Appeal",
+        content:
+          "We conduct a detailed audit of your Google Business Profile to identify the exact reason for the suspension and resolve all violations before submitting the reinstatement request.",
+      },
+      {
+        title: "Safe & Policy-Compliant Recovery Process",
+        content:
+          "Our reinstatement strategy follows Google's official guidelines to ensure your profile is restored safely without risking additional penalties or repeated suspensions.",
+      },
+      {
+        title: "Long-Term Local SEO Stability",
+        content:
+          "Beyond reinstatement, we help optimize your Google Business Profile to improve local rankings, maintain compliance, and generate consistent calls, leads, and customer engagement.",
+      },
+    ],
+  };
   return (
     <>
       {/*gmb-section-1*/}
@@ -60,19 +162,23 @@ function Page() {
             <div className="gmb-sec1-content">
               <p className="gmb-sec1-title">
                 <PiShieldCheckBold size={16} />
-                95% success rate
+                95% Reinstatement Success Rate
               </p>
               <h1 className="gmb-sec1-heading">
-                Google My Business Profile Suspension Help
+                Google Business Profile Suspension & Reinstatement Experts
               </h1>
               <p className="gmb-sec1-descrp">
-                Get your suspended GMB listing reinstated by certified experts.
-                We handle the complex appeals process while you focus on growing
-                your business.
-                <span> Trusted by 500+ agencies nationwide. </span>
+                Get your suspended Google Business Profile reinstated with the
+                help of experienced specialists. We manage the entire appeal and
+                reinstatement process while you focus on running your business.
+                <span>Trusted by agencies and business owners worldwide.</span>
               </p>
-              <Link href="#" className="buttons">
-                Request a Free Consultation
+              <Link
+                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                className="buttons"
+                target="blank"
+              >
+                Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -103,7 +209,7 @@ function Page() {
             </div>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
               <Image src="/images/gmb-1.png" fill alt="google my business" />
             </div>
@@ -115,11 +221,13 @@ function Page() {
       <div className="gmb-section-2 ">
         <div className="gmb-sec2-head-cont">
           <h2 className="gmb-sec2-heading">
-            What are Causes of GMB Suspensions?
+            What Causes Google Business Profile Suspensions?
           </h2>
           <p className="gmb-sec2-descrp">
-            As we’ve seen with Google’s evolving policies, common causes
-            include:
+            Google Business Profile listings can be suspended when they violate
+            Google's guidelines or contain inconsistent business information.
+            Based on Google's policies and common industry cases, some of the
+            most frequent causes of suspension include:
           </p>
 
           <div className="gmb-sec2-cards">
@@ -131,9 +239,13 @@ function Page() {
                 <Col lg={4}>
                   <div className="gmb-cause-card-cont">
                     <LuPhoneMissed size={32} />
-                    <h3 className="gmb-cause-card-heading"> Phone Issues </h3>
+                    <h3 className="gmb-cause-card-heading">
+                      {" "}
+                      Category & Service Misrepresentation
+                    </h3>
                     <p className="gmb-cause-card-descrp">
-                      Phone number disapprovals or missing critical attributes
+                      Selecting inaccurate business categories or adding
+                      services that do not match the actual business operations.
                     </p>
                   </div>
                 </Col>
@@ -143,9 +255,14 @@ function Page() {
                   <div className="gmb-cause-card-cont">
                     <LuKeyRound size={32} />
 
-                    <h3 className="gmb-cause-card-heading"> Phone Issues </h3>
+                    <h3 className="gmb-cause-card-heading">
+                      {" "}
+                      Website & Verification Problems
+                    </h3>
                     <p className="gmb-cause-card-descrp">
-                      Phone number disapprovals or missing critical attributes
+                      Broken website links, domain issues, or suspicious
+                      verification activity that may trigger a listing
+                      suspension.
                     </p>
                   </div>
                 </Col>
@@ -154,9 +271,14 @@ function Page() {
                   <div className="gmb-cause-card-cont">
                     <MdPhoneAndroid size={32} />
 
-                    <h3 className="gmb-cause-card-heading"> Phone Issues </h3>
+                    <h3 className="gmb-cause-card-heading">
+                      {" "}
+                      Business Information Issues
+                    </h3>
                     <p className="gmb-cause-card-descrp">
-                      Phone number disapprovals or missing critical attributes
+                      Incorrect business name, address, or phone number (NAP)
+                      details that do not match official records or website
+                      information.
                     </p>
                   </div>
                 </Col>
@@ -167,9 +289,13 @@ function Page() {
                   <div className="gmb-cause-card-cont">
                     <GrCopy size={32} />
 
-                    <h3 className="gmb-cause-card-heading"> Phone Issues </h3>
+                    <h3 className="gmb-cause-card-heading">
+                      {" "}
+                      Multiple or Duplicate Listings
+                    </h3>
                     <p className="gmb-cause-card-descrp">
-                      Phone number disapprovals or missing critical attributes
+                      Creating duplicate Google Business Profiles for the same
+                      business location or service area.
                     </p>
                   </div>
                 </Col>
@@ -178,9 +304,13 @@ function Page() {
                   <div className="gmb-cause-card-cont">
                     <FaRegAddressBook size={32} />
 
-                    <h3 className="gmb-cause-card-heading"> Phone Issues </h3>
+                    <h3 className="gmb-cause-card-heading">
+                      {" "}
+                      Address & Location Violations{" "}
+                    </h3>
                     <p className="gmb-cause-card-descrp">
-                      Phone number disapprovals or missing critical attributes
+                      Using virtual offices, shared workspaces, or locations
+                      where the business is not physically operating.
                     </p>
                   </div>
                 </Col>
@@ -191,21 +321,26 @@ function Page() {
       </div>
 
       {/*gmb-section-3*/}
-      <ProcessSwiper />
+      <ProcessSwiper processData={GmbProcessData} />
 
       {/*gmb-section-4*/}
-      <WhyWork />
+      <WhyWork items={WhygmbData} />
 
       {/*gmb-section-5*/}
       <div className="gmb-section-5">
         <Row>
           <Col lg={5}>
             <h2 className="gmb-sec5-heading">
-              <span> Trusted </span> GMB Suspension Recovery Across Industries
+              Google Business Profile Suspension{" "}
+              <span> Recovery for Local Businesses Across Industries </span>
             </h2>
 
-            <Link href="#" className="buttons">
-              Request a Free Consultation
+            <Link
+              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+              className="buttons"
+              target="blank"
+            >
+              Request a Consultation
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -238,37 +373,37 @@ function Page() {
           <Col lg={6}>
             <div className="gmb-sec5-descrp">
               <p>
-                Whether you’re an
-                <span>
-                  HVAC technician, locksmith, roofer, health clinic, or home
-                  service professional
-                </span>
-                , Zonic Media LLC helps businesses across industries recover
-                suspended Google Business Profiles quickly and safely.
-                <span>
-                  From plumbers, electricians, and landscapers to dentists, med
-                  spas, realtors, auto repair shops, movers, and cleaning
-                  companies
-                </span>
-                —we’ve helped local businesses regain visibility and customer
-                trust without risking further penalties.
+                Zonic Media helps businesses across multiple industries recover
+                suspended Google Business Profiles quickly and safely. Whether
+                you operate in home services, healthcare, real estate,
+                automotive, or professional services, our specialists understand
+                the unique challenges businesses face when their Google listing
+                is suspended.
               </p>
               <p>
-                A suspended Google Business Profile directly impacts your local
-                visibility, incoming leads, and brand credibility. Lost rankings
-                mean fewer calls, fewer visits, and missed revenue
-                opportunities. At <span> Zonic Media LLC </span> , we understand
-                how urgent reinstatement is—and why it must be handled correctly
-                to avoid repeat suspensions or long-term damage.
+                We have successfully helped companies such as plumbers,
+                electricians, HVAC contractors, roofers, locksmiths, dentists,
+                medical clinics, realtors, auto repair shops, movers,
+                landscapers, and cleaning companies restore their Google
+                Business Profiles and regain their local search visibility.
               </p>
               <p>
-                We specialize in reinstating Google Business Profiles for
-                single-location businesses, multi-location brands, and
-                service-area businesses alike.
-                <span> No matter your industry </span> , if your profile is
-                suspended, our experts follow Google’s latest 2025 policies to
-                reinstate your listing efficiently and keep it fully compliant
-                for long-term local success.
+                A suspended Google Business Profile can significantly impact
+                your online presence. When your listing disappears from Google
+                Maps and local search results, it can lead to fewer customer
+                calls, reduced website traffic, and lost revenue opportunities.
+                That’s why fast and accurate reinstatement is critical for
+                protecting your business reputation and maintaining consistent
+                lead generation.
+              </p>
+
+              <p>
+                At Zonic Media, our experts follow Google’s latest policies and
+                reinstatement guidelines to recover suspended listings without
+                risking further penalties. We help single-location businesses,
+                service-area businesses, and multi-location companies restore
+                their profiles and maintain long-term compliance to ensure
+                continued success in local search results.
               </p>
             </div>
           </Col>
@@ -279,7 +414,7 @@ function Page() {
       <div className="gmb-section-6">
         <div className="gmb-sec6-head">
           <h2 className="gmb-sec6-heading">
-            Our Successful GMB Appeal & Reinstatement
+            Successful Google Business Profile Reinstatement Cases
           </h2>
         </div>
 
@@ -306,8 +441,8 @@ function Page() {
           <p className="gmb-sec7-descrp">
             Talk to a Google my Business expert and get your profile reinstated.
           </p>
-          <Link href="#" className="buttons">
-            Request a Free Consultation
+          <Link href="/contact-us" className="buttons">
+            Connect with GMB expert
             <span className="buttons__icon-wrapper">
               <svg
                 viewBox="0 0 14 15"
@@ -343,7 +478,7 @@ function Page() {
       </div>
 
       {/*gmb-section-8*/}
-      <Faqs items={GmbFaqs} />
+      <Faqs items={gmbFaqs} />
 
       {/*gmb-section-9*/}
       <ContactForm />
@@ -355,4 +490,3 @@ function Page() {
 }
 
 export default Page;
-

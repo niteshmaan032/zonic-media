@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 160px 100px 0px 100px;
-  height: 90vh;
+  height: 95vh;
   overflow: hidden;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .gmb-sec1-heading {
-  font-size: 56px;
-  line-height: 70px;
+  font-size: 46px;
+  line-height: 54px;
   text-transform: capitalize;
 }
 
@@ -54,7 +54,7 @@
 
 .gmb-sec1-img-cont {
   position: relative;
-  width: 100%;
+  width: 85%;
   height: 100%;
   overflow: hidden;
 }
@@ -85,7 +85,8 @@
 .gmb-sec2-descrp {
   font-size: 20px;
   font-weight: 500;
-  width: 30%;
+  line-height: 30px;
+  width: 60%;
 }
 
 .gmb-sec2-cards {
@@ -177,6 +178,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 40px;
 }
 
@@ -184,7 +186,6 @@
   font-size: 42px;
   width: 40%;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .gmb-sec6-work-img {

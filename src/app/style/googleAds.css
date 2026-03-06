@@ -30,8 +30,8 @@
 }
 
 .ads-section-1__heading {
-  font-size: 56px;
-  line-height: 70px;
+  font-size: 50px;
+  line-height: 68px;
   text-transform: capitalize;
 }
 
@@ -124,6 +124,10 @@
   z-index: 10;
 }
 
+.ads-section-3__box a {
+  text-transform: capitalize;
+}
+
 /* Box 2 overrides (text colors) */
 .ads-section-3__box--2 .ads-section-3__content {
   color: var(--text);
@@ -182,6 +186,10 @@
   background-color: var(--white);
   color: var(--color2);
   border-radius: 20px;
+}
+
+.why-ad-img-wrapper img {
+  object-position: bottom !important;
 }
 
 /* responsive */

@@ -6,7 +6,7 @@
 }
 
 .web-design-sec1-heading {
-  font-size: 62px;
+  font-size: 56px;
 }
 
 .web-design-sec1-descrp {
@@ -83,6 +83,14 @@
   top: 50px;
   z-index: 10;
 }
+
+.web-box-4 {
+  background-color: var(--secondary);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
 .web-design-services-box {
   display: flex;
 }
@@ -95,7 +103,7 @@
 
 .web-serv-heading {
   font-size: 44px;
-  width: 70%;
+  width: 85%;
   text-transform: capitalize;
 }
 
@@ -168,6 +176,12 @@
   font-size: 32px;
   font-weight: 400;
   color: var(--text);
+  margin-bottom: 12px;
+}
+
+.web-design-sec4-card .card-descrp {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /*web-design-section-5*/

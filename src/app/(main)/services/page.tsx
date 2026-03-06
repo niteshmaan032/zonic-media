@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+﻿import { Row, Col } from "react-bootstrap";
 import "./services-page.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import ContactForm from "@/app/components/ContactForm";
 export const metadata: Metadata = {
   title: "Digital Marketing Services | Web Design, SEO & PPC | Zonic Media",
   description:
-    "Explore Zonic Media’s digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
+    "Explore Zonic Media's digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
 };
 
 function Page() {
@@ -174,8 +174,8 @@ function Page() {
               </Link>
             </div>
 
-            <div className="service-page-section-3-img-cont service-box-3-img">
-              <Image src="/images/local-seo.webp" fill alt="website design" />
+            <div className="service-page-section-3-img-cont service-box-3-img ">
+              <Image src="/images/seo-4.jpg" fill alt="seo" />
             </div>
           </div>
 

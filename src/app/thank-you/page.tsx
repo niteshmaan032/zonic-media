@@ -1,6 +1,10 @@
+"use client";
+
 import "@/app/style/thankyou.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { FaFacebookSquare } from "react-icons/fa";
 import {
@@ -10,18 +14,75 @@ import {
 } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
+
+const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
+const THANK_YOU_ACCESS_TTL_MS = 60 * 1000;
+const THANK_YOU_RENDER_KEY = "thank_you_page_render_allowed";
+
 function Page() {
+  const router = useRouter();
+  const [canAccess, setCanAccess] = useState(false);
+  const [isCheckingAccess, setIsCheckingAccess] = useState(true);
+
+  useEffect(() => {
+    const hasRecentSubmission = () => {
+      const allowedAt = Number(sessionStorage.getItem(THANK_YOU_ACCESS_KEY));
+      return (
+        Number.isFinite(allowedAt) &&
+        Date.now() - allowedAt >= 0 &&
+        Date.now() - allowedAt <= THANK_YOU_ACCESS_TTL_MS
+      );
+    };
+
+    const hasRenderAccess = () =>
+      sessionStorage.getItem(THANK_YOU_RENDER_KEY) === "true";
+
+    const evaluateAccess = () => {
+      if (hasRecentSubmission()) {
+        sessionStorage.setItem(THANK_YOU_RENDER_KEY, "true");
+        sessionStorage.removeItem(THANK_YOU_ACCESS_KEY);
+      }
+
+      if (!hasRenderAccess()) {
+        router.replace("/");
+        return;
+      }
+
+      setCanAccess(true);
+      setIsCheckingAccess(false);
+    };
+
+    const handlePageShow = () => {
+      if (!hasRenderAccess()) {
+        router.replace("/");
+      }
+    };
+
+    const handlePageHide = () => {
+      sessionStorage.removeItem(THANK_YOU_RENDER_KEY);
+    };
+
+    evaluateAccess();
+    window.addEventListener("pageshow", handlePageShow);
+    window.addEventListener("pagehide", handlePageHide);
+
+    return () => {
+      window.removeEventListener("pageshow", handlePageShow);
+      window.removeEventListener("pagehide", handlePageHide);
+    };
+  }, [router]);
+
+  if (isCheckingAccess || !canAccess) {
+    return null;
+  }
+
   return (
     <>
       <div className="thank-wrapper">
         <Row className="m-0 h-100 align-items-center pb-5 ">
           <Col lg={6}>
             <div className="thank-img-cont">
-              <Image
-                src="/images/thank.png"
-                fill
-                alt="thank you envelope"
-              ></Image>
+              <Image src="/images/thank.png" fill alt="thank you envelope"></Image>
             </div>
           </Col>
 
@@ -35,11 +96,11 @@ function Page() {
               ></Image>
               <h1 className="thank-heading">Thank You !</h1>
               <p className="thank-descrp">
-                Your submission was successful, and we’ll be in touch soon.
-                We’re excited to connect with you.
+                Your submission was successful, and we&apos;ll be in touch soon.
+                We&apos;re excited to connect with you.
               </p>
               <div>
-                <Link href="/" className="buttons">
+                <Link href="/" replace className="buttons">
                   Back to home <GoHomeFill size={18} />
                 </Link>
               </div>
@@ -78,4 +139,3 @@ function Page() {
 }
 
 export default Page;
-

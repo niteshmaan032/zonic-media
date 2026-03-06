@@ -7,6 +7,7 @@ import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { Row, Col } from "react-bootstrap";
+import { MdCopyright } from "react-icons/md";
 
 function Footer() {
   return (
@@ -31,12 +32,18 @@ function Footer() {
                 </li>
                 <li>
                   <IoMdMail size={20} />
-                  <Link href="#!"> contact@zonicllc.com </Link>
+                  <Link href="mailto:contact@zonicllc.com">
+                    contact@zonicllc.com
+                  </Link>
                 </li>
                 <li>
                   <FaLocationDot size={20} />
-                  <Link href="#!">
-                    8 The Green, STE B Dover, Kent, DE 19901
+                  <Link
+                    href="https://www.google.com/maps/search/?api=1&query=8+The+Green,+STE+B,+Dover,+Kent,+DE+19901,+United+States"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    8 The Green, STE B Dover, Kent, DE 19901 United States
                   </Link>
                 </li>
               </ul>
@@ -47,38 +54,38 @@ function Footer() {
                 <ul>
                   <li className="footer-menus-head">Services</li>
                   <li>
-                    <Link href="#!">Web Design</Link>
+                    <Link href="/services/web-design">Web Design</Link>
+                  </li>
+
+                  <li>
+                    <Link href="/services/google-my-business">
+                      Google My Business (GMB)
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#!">UI/UX Design</Link>
+                    <Link href="/services/google-ads">Pay Per Click (PPC)</Link>
                   </li>
                   <li>
-                    <Link href="#!">Google My Business (GMB)</Link>
-                  </li>
-                  <li>
-                    <Link href="#!">Pay Per Click (PPC)</Link>
-                  </li>
-                  <li>
-                    <Link href="#!">Google Ads</Link>
+                    <Link href="/services/local-seo">Local Seo</Link>
                   </li>
                 </ul>
 
                 <ul>
                   <li className="footer-menus-head">Others</li>
                   <li>
-                    <Link href="#!">About Us</Link>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li>
-                    <Link href="#!">Blogs</Link>
+                    <Link href="/comming-soon">Blogs</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#!">Pricing</Link>
+                  </li> */}
+                  <li>
+                    <Link href="/services">Services</Link>
                   </li>
                   <li>
-                    <Link href="#!">Services</Link>
-                  </li>
-                  <li>
-                    <Link href="#!">Contact Us</Link>
+                    <Link href="/contact-us">Contact Us</Link>
                   </li>
                 </ul>
 
@@ -102,29 +109,58 @@ function Footer() {
             <div className="footer-socials">
               <ul>
                 <li>
-                  <Link href="#!">LinkedIn </Link>
+                  <Link
+                    href="https://www.linkedin.com/company/zonic-media/"
+                    target="blank"
+                  >
+                    LinkedIn
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#!">facebook </Link>
+                  <Link
+                    href="https://www.facebook.com/zonicmediallc/?rdid=KDHW5CqF87EH3bDP"
+                    target="blank"
+                  >
+                    facebook
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#!">instagram </Link>
+                  <Link
+                    href="https://www.instagram.com/zoniclocalseo?igsh=dXVndXJ3ZnlleHRp"
+                    target="blank"
+                  >
+                    instagram
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#!">pinterest </Link>
+                  <Link
+                    href="https://www.youtube.com/@ZonicMediaDelware"
+                    target="blank"
+                  >
+                    Youtube
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="footer-cta">
               <p>
-                Let's work together <br />
-                <Link href="#!">
-                  Call Zonic Media <BsArrowUpRightCircle />
+                Let&apos;s work together <br />
+                <Link
+                  href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                  target="blank"
+                >
+                  Contact Zonic Media <BsArrowUpRightCircle />
                 </Link>
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="footer-copyright mt-4 ">
+          <p className="text-white d-flex align-item-center gap-1 justify-content-lg-end">
+            <MdCopyright /> 2026 . All Rights Reserved
+          </p>
         </div>
 
         {/* Mobile Logo Marquee */}

@@ -11,29 +11,30 @@ function Loader() {
 
   useEffect(() => {
     const handleWindowLoad = () => setIsLoaded(true);
+    const resetTimer = setTimeout(() => {
+      setIsLoaded(false);
+      setRender(true);
+    }, 0);
 
-    // 1. Reset everything when route changes
-    setIsLoaded(false);
-    setRender(true);
-
-    // 2. Define the minimum time you want the loader to show (in milliseconds)
+    // Define the minimum time you want the loader to show (in milliseconds)
     // 1000ms = 1 second.
     const minLoadTime = 1000;
 
-    // 3. Start the timer
+    // Start the timer
     const timer = setTimeout(() => {
-      // 4. AFTER 1 second, check if the browser is actually done
+      // After 1 second, check if the browser is actually done.
       if (document.readyState === "complete") {
-        // If browser is done, hide loader immediately
+        // If browser is done, hide loader immediately.
         setIsLoaded(true);
       } else {
-        // If browser is NOT done (slow page), wait for it to finish
+        // If browser is not done (slow page), wait for it to finish.
         window.addEventListener("load", handleWindowLoad);
       }
     }, minLoadTime);
 
-    // Cleanup to prevent memory leaks
+    // Cleanup to prevent memory leaks.
     return () => {
+      clearTimeout(resetTimer);
       clearTimeout(timer);
       window.removeEventListener("load", handleWindowLoad);
     };

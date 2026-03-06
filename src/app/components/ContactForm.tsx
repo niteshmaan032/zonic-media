@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import "@/app/style/contactform.css";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { useForm } from "react-hook-form";
@@ -16,12 +18,17 @@ type ContactFormValues = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
+  const [submitError, setSubmitError] = useState("");
+
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting, isValid },
     reset,
   } = useForm<ContactFormValues>({
+    mode: "onChange",
+    reValidateMode: "onChange",
     defaultValues: {
       fullName: "",
       email: "",
@@ -33,16 +40,38 @@ export default function ContactForm() {
 
   const serviceList: string[] = [
     "Web Design",
-    "UI/UX Design",
     "Pay Per Click (PPC)",
-    "Branding",
     "Google My Business (GMB)",
     "Web Development",
     "Local SEO",
   ];
 
-  const onSubmit = () => {
-    reset();
+  const onSubmit = async (data: ContactFormValues) => {
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form.");
+      }
+
+      reset();
+      sessionStorage.setItem(
+        "thank_you_access_allowed_at",
+        Date.now().toString(),
+      );
+      router.push("/thank-you");
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      setSubmitError("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -59,8 +88,8 @@ export default function ContactForm() {
                 <FaRegCircleCheck size={18} /> Long-term support beyond launch
               </li>
               <li>
-                <FaRegCircleCheck size={18} /> We&apos;ll respond in 24 hours fast
-                & focused.
+                <FaRegCircleCheck size={18} /> We&apos;ll respond in 24 hours
+                fast & focused.
               </li>
               <li>
                 <FaRegCircleCheck size={18} /> Work with senior UX experts, not
@@ -71,8 +100,12 @@ export default function ContactForm() {
             <div className="contact-form-button">
               <p>Schedule meeting :</p>
 
-              <Link href="#" className="buttons">
-                <span>book a call</span>
+              <Link
+                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                target="blank"
+                className="buttons"
+              >
+                Book a Strategy Call
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -106,7 +139,11 @@ export default function ContactForm() {
 
         <Col xs={12} lg={6} className="p-0">
           <div className="contact-form-wrapper">
-            <form className="row g-4" onSubmit={handleSubmit(onSubmit)} noValidate>
+            <form
+              className="row g-4"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+            >
               <Col md={6}>
                 <input
                   type="text"
@@ -115,10 +152,20 @@ export default function ContactForm() {
                   aria-invalid={errors.fullName ? "true" : "false"}
                   {...register("fullName", {
                     required: "Full name is required.",
+                    minLength: {
+                      value: 2,
+                      message: "Full name must be at least 2 characters.",
+                    },
+                    maxLength: {
+                      value: 100,
+                      message: "Full name must be at most 100 characters.",
+                    },
                   })}
                 />
                 {errors.fullName && (
-                  <p className="text-danger mt-2 mb-0">{errors.fullName.message}</p>
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.fullName.message}
+                  </p>
                 )}
               </Col>
 
@@ -137,7 +184,9 @@ export default function ContactForm() {
                   })}
                 />
                 {errors.email && (
-                  <p className="text-danger mt-2 mb-0">{errors.email.message}</p>
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.email.message}
+                  </p>
                 )}
               </Col>
 
@@ -154,14 +203,17 @@ export default function ContactForm() {
                   }}
                   {...register("contact", {
                     required: "Contact number is required.",
-                    minLength: {
-                      value: 7,
-                      message: "Contact number must be at least 7 digits.",
+                    pattern: {
+                      value: /^[0-9]{7,15}$/,
+                      message:
+                        "Contact number must contain only digits (7 to 15).",
                     },
                   })}
                 />
                 {errors.contact && (
-                  <p className="text-danger mt-2 mb-0">{errors.contact.message}</p>
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.contact.message}
+                  </p>
                 )}
               </Col>
 
@@ -173,10 +225,20 @@ export default function ContactForm() {
                   aria-invalid={errors.message ? "true" : "false"}
                   {...register("message", {
                     required: "Message is required.",
+                    minLength: {
+                      value: 5,
+                      message: "Message must be at least 5 characters.",
+                    },
+                    maxLength: {
+                      value: 2000,
+                      message: "Message must be at most 2000 characters.",
+                    },
                   })}
                 />
                 {errors.message && (
-                  <p className="text-danger mt-2 mb-0">{errors.message.message}</p>
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.message.message}
+                  </p>
                 )}
               </Col>
 
@@ -203,7 +265,9 @@ export default function ContactForm() {
                   </div>
                 ))}
                 {errors.services && (
-                  <p className="text-danger mt-2 mb-0">{errors.services.message}</p>
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.services.message}
+                  </p>
                 )}
               </Col>
 
@@ -211,14 +275,37 @@ export default function ContactForm() {
                 xs={12}
                 className="d-flex justify-content-between align-items-center"
               >
-                <button type="submit" className="buttons">
-                  Send Message <FaArrowRightLong />
+                <button
+                  type="submit"
+                  className="buttons"
+                  disabled={isSubmitting || !isValid}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span
+                        className="spinner-border spinner-border-sm me-2"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message <FaArrowRightLong />
+                    </>
+                  )}
                 </button>
                 <p className="contact-form-email-link">
                   Prefer email ? <br />
-                  <Link href="#!">zonicmediallc@gmail.com </Link>
+                  <Link href="#!">contact@zonicllc.com </Link>
                 </p>
               </Col>
+
+              {submitError && (
+                <Col xs={12}>
+                  <p className="text-danger mb-0">{submitError}</p>
+                </Col>
+              )}
             </form>
           </div>
         </Col>

@@ -6,34 +6,101 @@ import ProcessSwiper from "@/app/components/ProcessSwiper";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Web Design Services | Custom Websites That Drive Results",
+  description:
+    "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+};
 function Page() {
   const WebFaqs = [
     {
-      question: "What industries does Zonic Media work with?",
+      question: "How long does it take to design and develop a website?",
       answer:
-        "We work with startups, local businesses, service providers, and growing brands across multiple industries including technology, real estate, healthcare, e-commerce, and professional services worldwide.",
+        "The timeline for website design and development typically ranges from 2 to 6 weeks, depending on the complexity of the project, number of pages, and required features.",
     },
     {
-      question: "Do you work with international clients?",
+      question: "Will my website be mobile-friendly and responsive?",
       answer:
-        "Yes. Zonic Media provides digital marketing and web design services globally, supporting clients across the USA, UAE, India, Australia, the United Kingdom, and Canada.",
+        "Yes. Every website we build is fully mobile-responsive, ensuring it works seamlessly across desktops, tablets, and smartphones while providing an optimal user experience.",
     },
     {
-      question: "What makes Zonic Media different from other agencies?",
+      question: "Do you build SEO-friendly websites?",
       answer:
-        "Our strategy-first approach combines creative design, SEO expertise, and performance marketing to deliver measurable growth instead of vanity metrics.",
+        "Absolutely. Our websites are built with SEO best practices, including fast loading speeds, optimized structure, clean code, and proper heading hierarchy to help improve search engine visibility.",
     },
     {
-      question: "How do you measure project success?",
+      question: "Can you redesign my existing website?",
       answer:
-        "We track real business KPIs such as traffic growth, lead generation, conversion rates, and return on investment to ensure measurable results.",
+        "Yes. We offer website redesign services to improve design, performance, user experience, and search engine optimization while maintaining your brand identity.",
     },
     {
-      question: "Do you provide ongoing support after project completion?",
+      question: "What platforms do you use for website development?",
       answer:
-        "Yes. We offer continuous optimization, performance monitoring, and long-term digital growth support to help businesses scale consistently.",
+        "We build websites using industry-leading platforms such as WordPress, Shopify, and custom development frameworks, depending on your business needs and goals.",
     },
   ];
+
+  const WebProcessData = {
+    heading: "Our Proven 5-Step Website Design & Development Process",
+    items: [
+      {
+        number: "01",
+        title: "Discovery & Strategy",
+        description:
+          "We begin by understanding your business goals, audience, and competitors to build a clear strategy for designing a website that supports your growth and online visibility.",
+        bullets: [
+          "Business goal analysis",
+          "Competitor research",
+          "Website strategy planning",
+        ],
+      },
+      {
+        number: "02",
+        title: "Planning & Wireframing",
+        description:
+          "Our team creates the website structure and layout to ensure a smooth user experience and logical content flow before development begins.",
+        bullets: [
+          "Website structure planning",
+          "Wireframe layout creation",
+          "User journey mapping",
+        ],
+      },
+      {
+        number: "03",
+        title: "UI/UX Design",
+        description:
+          "We design a modern, visually engaging interface focused on usability, branding, and conversion optimization to deliver a seamless user experience.",
+        bullets: [
+          "Custom UI design",
+          "UX optimization",
+          "Brand-focused visuals",
+        ],
+      },
+      {
+        number: "04",
+        title: "Development & Optimization",
+        description:
+          "Our developers build a fast, responsive, and SEO-friendly website using modern technologies to ensure optimal performance across all devices.",
+        bullets: [
+          "Responsive development",
+          "Speed optimization",
+          "SEO-ready structure",
+        ],
+      },
+      {
+        number: "05",
+        title: "Testing & Website Launch",
+        description:
+          "Before launch, we thoroughly test your website to ensure functionality, performance, and security, then deploy it for a smooth public launch.",
+        bullets: [
+          "Cross-device testing",
+          "Performance checks",
+          "Website launch deployment",
+        ],
+      },
+    ],
+  };
   return (
     <>
       {/*web-design-section-1*/}
@@ -42,21 +109,26 @@ function Page() {
           <Row className="justify-content-between">
             <Col lg={6}>
               <h1 className="web-design-sec1-heading">
-                Web Design services that drive results
+                Web Design Services That Drive Real Business Growth
               </h1>
             </Col>
 
             <Col lg={5}>
               <p className="web-design-sec1-descrp">
-                Get a
+                Get a high-performing website built by experienced web design
+                professionals.{" "}
                 <span>
-                  high-performing website designed by experienced
-                  professionals.{" "}
+                  {" "}
+                  We create modern, SEO-friendly, and user-focused websites
+                  designed to turn visitors into customers
                 </span>
-                We create modern, user-friendly websites that convert visitors
-                into customers—while you focus on growing your business.
+                —so you can focus on scaling your business.
               </p>
-              <Link href="#" className="buttons">
+              <Link
+                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                className="buttons"
+                target="blank"
+              >
                 launch your website
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -99,25 +171,24 @@ function Page() {
       {/*web-design-section-2*/}
       <div className="web-design-section-2">
         <h2 className="web-design-sec2-heading">
-          What’s included in our <span> website design services</span>
+          What’s Included in Our <span> Website Design Services </span>
         </h2>
 
         <div className="web-design-services-wrapper">
           <div className="web-design-services-box web-box-1">
             <div className="web-service-box-content">
-              <h3 className="web-serv-heading">custom web development</h3>
+              <h3 className="web-serv-heading">Custom Web Development</h3>
 
               <p className="web-serv-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                Build a website designed for performance and growth. Our custom
+                web development solutions focus on fast loading speeds, seamless
+                functionality, and optimized user experience to help your
+                business attract visitors, increase engagement, and generate
+                more leads online.
               </p>
 
-              <Link className="serv-box-link" href="#!">
-                Get your website
+              <Link className="serv-box-link" href="/contact-us">
+                Start Your Website Project
               </Link>
             </div>
 
@@ -131,16 +202,15 @@ function Page() {
               <h3 className="web-serv-heading">Custom UI/UX Design</h3>
 
               <p className="web-serv-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                We design intuitive user interfaces and engaging user
+                experiences that make your website easy to navigate and visually
+                impactful. Our UI/UX design approach improves usability,
+                increases customer engagement, and helps convert website
+                visitors into loyal customers.
               </p>
 
-              <Link className="serv-box-link" href="#!">
-                Get your website
+              <Link className="serv-box-link" href="/contact-us">
+                Start Your Website Project
               </Link>
             </div>
 
@@ -156,32 +226,62 @@ function Page() {
           <div className="web-design-services-box web-box-3">
             <div className="web-service-box-content">
               <h3 className="web-serv-heading">
-                Responsive & Mobile Optimize Design
+                WordPress Responsive Websites
               </h3>
 
               <p className="web-serv-descrp">
-                Get a website that looks great and drives real results. With
-                responsive, user-friendly design, your site will engage
-                visitors, boost conversions, enhance your brand’s online
-                presence, build credibility, improve user experience, and
-                support long-term business growth across all digital
-                touchpoints.
+                We build fully responsive WordPress websites that work
+                seamlessly across desktops, tablets, and mobile devices. Our
+                websites are optimized for speed, SEO performance, and easy
+                content management so your business can grow online with
+                confidence.
               </p>
 
-              <Link className="serv-box-link" href="#!">
-                Get your website
+              <Link className="serv-box-link" href="/contact-us">
+                Start Your Website Project
               </Link>
             </div>
 
             <div className="web-service-box-img-cont">
-              <Image src="/images/web-3.png" fill alt="website design"></Image>
+              <Image
+                src="/images/wordpress.png"
+                fill
+                alt="wordpress website design"
+              ></Image>
+            </div>
+          </div>
+
+          <div className="web-design-services-box web-box-4">
+            <div className="web-service-box-content">
+              <h3 className="web-serv-heading">
+                Responsive Shopify eCommerce Stores
+              </h3>
+
+              <p className="web-serv-descrp">
+                Launch a powerful Shopify eCommerce store designed to sell more
+                products online. We create responsive, conversion-focused online
+                stores with optimized product pages, secure checkout, and a
+                seamless shopping experience for your customers.
+              </p>
+
+              <Link className="serv-box-link" href="/contact-us">
+                Start Your Website Project
+              </Link>
+            </div>
+
+            <div className="web-service-box-img-cont">
+              <Image
+                src="/images/shopify.jpg"
+                fill
+                alt="shopify website design"
+              ></Image>
             </div>
           </div>
         </div>
       </div>
 
       {/*web-design-section-3*/}
-      <ProcessSwiper />
+      <ProcessSwiper processData={WebProcessData} />
 
       {/*web-design-section-4*/}
       <div className="web-design-section-4 marign-box">
@@ -204,28 +304,52 @@ function Page() {
           <Col xs={12} lg={3}>
             <div className="web-design-sec4-card">
               <p> 01 </p>
-              <h3>140+ International design awards</h3>
+              <div>
+                <h3>120+ successful website projects</h3>
+                <p className="card-descrp">
+                  Delivered high-performing websites for businesses across
+                  multiple industries.
+                </p>
+              </div>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="web-design-sec4-card">
               <p> 02 </p>
-              <h3>300%+ Average conversion uplift</h3>
+              <div>
+                <h3>250%+ average conversion growth</h3>
+                <p className="card-descrp">
+                  Improved website engagement and lead generation through
+                  optimized design.
+                </p>
+              </div>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="web-design-sec4-card">
               <p> 03 </p>
-              <h3>$10B+ raisedUX-led launches </h3>
+              <div>
+                <h3>8+ years digital experience</h3>
+                <p className="card-descrp">
+                  Helping businesses build stronger online presence and scalable
+                  websites.
+                </p>
+              </div>
             </div>
           </Col>
 
           <Col xs={12} lg={3}>
             <div className="web-design-sec4-card border-0">
               <p> 04 </p>
-              <h3>100M+ Global users reached</h3>
+              <div>
+                <h3>1M+ global users reached</h3>
+                <p className="card-descrp">
+                  Driving traffic and engagement across client websites
+                  worldwide.
+                </p>
+              </div>
             </div>
           </Col>
         </Row>
@@ -246,4 +370,3 @@ function Page() {
 }
 
 export default Page;
-

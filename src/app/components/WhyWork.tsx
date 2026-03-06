@@ -3,81 +3,73 @@
 import { Accordion, Col, Row } from "react-bootstrap";
 import "@/app/style/whywork.css";
 import Image from "next/image";
-import { h3 } from "framer-motion/client";
+import React from "react";
 
-function WhyWork() {
+export type WhyWorkItem = {
+  title: string;
+  content: string | React.ReactNode;
+};
+
+export type WhyWorkImage = {
+  src: string;
+  alt: string;
+};
+
+export type WhyWorkData = {
+  heading?: string | React.ReactNode;
+  image?: WhyWorkImage;
+  items: WhyWorkItem[];
+  defaultActiveKey?: string;
+};
+
+type WhyWorkProps = {
+  items?: WhyWorkItem[] | WhyWorkData;
+  heading?: string | React.ReactNode;
+  image?: WhyWorkImage;
+  defaultActiveKey?: string;
+};
+
+function WhyWork({ items, heading, image, defaultActiveKey }: WhyWorkProps) {
+  const resolvedHeading = Array.isArray(items)
+    ? heading
+    : (items?.heading ?? heading);
+  const resolvedImage = Array.isArray(items) ? image : (items?.image ?? image);
+  const resolvedItems = Array.isArray(items) ? items : (items?.items ?? []);
+  const resolvedDefaultActiveKey = Array.isArray(items)
+    ? defaultActiveKey
+    : (items?.defaultActiveKey ?? defaultActiveKey);
+
   return (
     <>
       <div className="why-work-wrapper">
         <Row>
           <Col lg={5}>
-            <div className="why-work-img-wrapper">
-              <Image
-                src="/images/gmb-3.jpg"
-                fill
-                alt="google my buisness recovery"
-              ></Image>
+            <div className="why-work-img-wrapper why-ad-img-wrapper ">
+              {resolvedImage ? (
+                <Image
+                  src={resolvedImage.src}
+                  fill
+                  alt={resolvedImage.alt}
+                ></Image>
+              ) : null}
             </div>
           </Col>
 
           <Col lg={7}>
             <div className="why-work-content-wrapper">
-              <h2 className="why-work-heading">
-                Why Work With <span> Zonic Media LLC </span> for GMB Recovery
-              </h2>
-              <Accordion defaultActiveKey="0" className="global-faqs-accordion">
-                <Accordion.Item eventKey="0">
-                  <Accordion.Header as={h3}>Accordion Item #1</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header as={h3}>Accordion Item #2</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="2">
-                  <Accordion.Header as={h3}>Accordion Item #3</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="3">
-                  <Accordion.Header as={h3}>Accordion Item #4</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
+              {resolvedHeading ? (
+                <h2 className="why-work-heading">{resolvedHeading}</h2>
+              ) : null}
+              <Accordion
+                defaultActiveKey={resolvedDefaultActiveKey ?? "0"}
+                className="global-faqs-accordion"
+              >
+                {resolvedItems.map((item, index) => (
+                  <Accordion.Item eventKey={String(index)} key={index}>
+                    <Accordion.Header as="h3">{item.title}</Accordion.Header>
+                    <Accordion.Body>{item.content}</Accordion.Body>
+                  </Accordion.Item>
+                ))}
               </Accordion>
             </div>
           </Col>

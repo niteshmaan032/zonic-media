@@ -25,7 +25,7 @@ const services = [
   {
     id: "seo",
     label: "local SEO",
-    image: "/images/local-seo.webp",
+    image: "/images/seo-3.png",
     alt: "local seo",
     link: "/services/local-seo",
   },
@@ -44,8 +44,8 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [scrollDownDistance, setScrollDownDistance] = useState(0);
-  const [scrollUpDistance, setScrollUpDistance] = useState(0);
+  const [, setScrollDownDistance] = useState(0);
+  const [, setScrollUpDistance] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const [accordionKey, setAccordionKey] = useState<string | null>(null);
@@ -107,14 +107,16 @@ function Navbar() {
         <Container fluid className="p-0">
           <Row className="align-items-center justify-content-between g-0">
             <Col xs="auto">
-              <Image
-                src="/images/logo.svg"
-                width={132}
-                height={50}
-                alt="logo"
-                className="logo-img"
-                priority
-              />
+              <Link href="/">
+                <Image
+                  src="/images/logo.svg"
+                  width={132}
+                  height={50}
+                  alt="logo"
+                  className="logo-img"
+                  priority
+                />
+              </Link>
             </Col>
 
             <Col className="d-none d-lg-block">
@@ -284,7 +286,11 @@ function Navbar() {
                 flush
                 id="mobileServicesAccordion"
                 activeKey={accordionKey}
-                onSelect={(eventKey: any) => setAccordionKey(eventKey)}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
               >
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Services</Accordion.Header>
