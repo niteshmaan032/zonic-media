@@ -42,11 +42,7 @@ export default function Home() {
 
           <Col xs={12}>
             <div className="home-sec1-buttons">
-              <Link
-                href="/contact-us"
-                target="blank"
-                className="buttons"
-              >
+              <Link href="/contact-us" target="blank" className="buttons">
                 Book a Strategy Call
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -204,11 +200,7 @@ export default function Home() {
               results-focused marketing strategies. Highly trusted by growing
               businesses.
             </p>
-            <Link
-              href="/contact-us"
-              target="blank"
-              className="buttons"
-            >
+            <Link href="/contact-us" target="blank" className="buttons">
               Book a Strategy Call
               <span className="buttons__icon-wrapper">
                 <svg
@@ -329,12 +321,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="home-sec5-service-img-cont">
-            <Image
-              src="/images/home-service-2.webp"
-              fill
-              alt="web design"
-              sizes="(max-width: 991.98px) 100vw, 40vw"
-            />
+            <Image src="/images/vv.png" fill alt="web design" />
           </div>
         </div>
 
@@ -414,7 +401,7 @@ export default function Home() {
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/seo-4.jpg"
+              src="/images/dd.png"
               fill
               alt="web design"
               sizes="(max-width: 991.98px) 100vw, 40vw"
