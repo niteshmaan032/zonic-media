@@ -11,7 +11,6 @@ import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
-import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactUsFormValues = {
@@ -20,19 +19,15 @@ type ContactUsFormValues = {
   contact: string;
   message: string;
   services: string[];
-  captchaToken: string;
 };
 
 function ContactUsPageClient() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
-  const [captchaResetSignal, setCaptchaResetSignal] = useState(0);
 
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<ContactUsFormValues>({
@@ -44,11 +39,8 @@ function ContactUsPageClient() {
       contact: "",
       message: "",
       services: [],
-      captchaToken: "",
     },
   });
-
-  const captchaToken = watch("captchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -79,7 +71,6 @@ function ContactUsPageClient() {
       }
 
       reset();
-      setCaptchaResetSignal((current) => current + 1);
       sessionStorage.setItem(
         "thank_you_access_allowed_at",
         Date.now().toString(),
@@ -87,7 +78,6 @@ function ContactUsPageClient() {
       router.push("/thank-you");
     } catch (error) {
       console.error("Contact form submission failed:", error);
-      setCaptchaResetSignal((current) => current + 1);
       setSubmitError(
         error instanceof Error
           ? error.message
@@ -305,27 +295,6 @@ function ContactUsPageClient() {
                       {errors.services.message}
                     </p>
                   )}
-                </Col>
-
-                <Col xs={12}>
-                  <input
-                    type="hidden"
-                    {...register("captchaToken", {
-                      required: "Please complete the CAPTCHA checkbox.",
-                    })}
-                  />
-                  <RecaptchaCheckbox
-                    value={captchaToken}
-                    onChange={(token) => {
-                      setValue("captchaToken", token, {
-                        shouldValidate: true,
-                        shouldDirty: true,
-                        shouldTouch: true,
-                      });
-                    }}
-                    resetSignal={captchaResetSignal}
-                    error={errors.captchaToken?.message}
-                  />
                 </Col>
 
                 <Col

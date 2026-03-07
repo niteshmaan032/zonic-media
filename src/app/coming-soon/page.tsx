@@ -7,7 +7,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/comingSoon.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ComingSoonFormValues = {
@@ -16,19 +15,15 @@ type ComingSoonFormValues = {
   contact: string;
   message: string;
   services: string[];
-  captchaToken: string;
 };
 
 function Page() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [captchaResetSignal, setCaptchaResetSignal] = useState(0);
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     reset,
     formState: { errors },
   } = useForm<ComingSoonFormValues>({
@@ -40,11 +35,8 @@ function Page() {
       contact: "",
       message: "",
       services: [],
-      captchaToken: "",
     },
   });
-
-  const captchaToken = watch("captchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -80,12 +72,10 @@ function Page() {
       }
 
       reset();
-      setCaptchaResetSignal((current) => current + 1);
       sessionStorage.setItem("thank_you_access_allowed_at", Date.now().toString());
       router.push("/thank-you");
     } catch (error) {
       console.error("Coming soon form submission failed:", error);
-      setCaptchaResetSignal((current) => current + 1);
       setSubmitError(
         error instanceof Error
           ? error.message
@@ -276,27 +266,6 @@ function Page() {
                     {errors.services && (
                       <p className="text-danger mt-2 mb-0">{errors.services.message}</p>
                     )}
-                  </Col>
-
-                  <Col xs={12}>
-                    <input
-                      type="hidden"
-                      {...register("captchaToken", {
-                        required: "Please complete the CAPTCHA checkbox.",
-                      })}
-                    />
-                    <RecaptchaCheckbox
-                      value={captchaToken}
-                      onChange={(token) => {
-                        setValue("captchaToken", token, {
-                          shouldValidate: true,
-                          shouldDirty: true,
-                          shouldTouch: true,
-                        });
-                      }}
-                      resetSignal={captchaResetSignal}
-                      error={errors.captchaToken?.message}
-                    />
                   </Col>
 
                   <Col
