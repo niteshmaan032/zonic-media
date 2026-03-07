@@ -206,6 +206,10 @@
     width: 100%;
   }
 
+  .ads-section-1__content {
+    padding-bottom: 0px;
+  }
+
   /* Section 2 */
   .ads-section-2 .buttons {
     margin-bottom: 40px;
