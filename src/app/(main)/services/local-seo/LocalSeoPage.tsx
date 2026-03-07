@@ -95,7 +95,7 @@ function Page() {
   const WhylocalData = {
     heading: "Why Work With Zonic Media for Local SEO Services",
     image: {
-      src: "/images/seo-4.jpg",
+      src: "/images/home-seo.png",
       alt: "google my business recovery",
     },
     defaultActiveKey: "0",
@@ -174,11 +174,7 @@ function Page() {
                 and turn high-intent searches into consistent leads and revenue
                 growth through proven local SEO strategies.
               </p>
-              <Link
-                href="/contact-us"
-                target="blank"
-                className="buttons"
-              >
+              <Link href="/contact-us" target="blank" className="buttons">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg

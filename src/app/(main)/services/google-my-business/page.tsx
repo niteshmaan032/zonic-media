@@ -173,11 +173,7 @@ function Page() {
                 reinstatement process while you focus on running your business.
                 <span>Trusted by agencies and business owners worldwide.</span>
               </p>
-              <Link
-                href="/contact-us"
-                className="buttons"
-                target="blank"
-              >
+              <Link href="/contact-us" className="buttons" target="blank">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -211,7 +207,7 @@ function Page() {
 
           <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
-              <Image src="/images/gmb-head.png" fill alt="google my business" />
+              <Image src="/images/re.png" fill alt="google my business" />
             </div>
           </Col>
         </Row>
@@ -227,8 +223,7 @@ function Page() {
             Google Business Profile listings can be suspended when they violate
             Google&apos;s guidelines or contain inconsistent business
             information. Based on Google&apos;s policies and common industry
-            cases, some of the
-            most frequent causes of suspension include:
+            cases, some of the most frequent causes of suspension include:
           </p>
 
           <div className="gmb-sec2-cards">
@@ -336,11 +331,7 @@ function Page() {
               <span> Recovery for Local Businesses Across Industries </span>
             </h2>
 
-            <Link
-              href="/contact-us"
-              className="buttons"
-              target="blank"
-            >
+            <Link href="/contact-us" className="buttons" target="blank">
               Request a Consultation
               <span className="buttons__icon-wrapper">
                 <svg

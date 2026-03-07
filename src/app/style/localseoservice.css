@@ -195,6 +195,10 @@
   .localseo-card-wrapper {
     min-height: 100%;
   }
+
+  .localseo-sec1-content {
+    padding-bottom: 0px;
+  }
 }
 
 /*mobile only*/

@@ -266,6 +266,10 @@
     width: 100%;
   }
 
+  .gmb-sec1-content {
+    padding-bottom: 0px;
+  }
+
   /* Section 2 */
   .gmb-section-2 {
     background-color: var(--color6);

@@ -102,11 +102,7 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont">
-              <Image
-                src="/images/home-service-2.webp"
-                fill
-                alt="website design"
-              />
+              <Image src="/images/vv.png" fill alt="website design" />
             </div>
           </div>
 
@@ -175,7 +171,7 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont service-box-3-img ">
-              <Image src="/images/seo-4.jpg" fill alt="seo" />
+              <Image src="/images/home-seo.png" fill alt="seo" />
             </div>
           </div>
 

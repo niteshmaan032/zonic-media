@@ -86,7 +86,6 @@
 
 .service-page-section-3-img-cont img {
   object-fit: cover;
-  object-position: left;
 }
 
 .service-box-2-img img {
@@ -94,7 +93,7 @@
 }
 
 .service-box-3-img img {
-  object-position: left;
+  object-position: center;
 }
 
 .service-page-section-3-key-points {
