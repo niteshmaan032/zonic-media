@@ -115,9 +115,27 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .process-swiper-wrapper {
+    padding: 40px 0px 40px 30px;
+  }
+
+  .process-swiper-heading {
+    font-size: 34px;
+    width: 70%;
+    line-height: 46px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1498.98px) {
+  .process-swiper-wrapper {
+    padding: 50px 0px 50px 40px;
+  }
+
+  .process-swiper-heading {
+    font-size: 42px;
+    width: 70%;
+    line-height: 52px;
+  }
 }
 
 /*extra large desktop devices */

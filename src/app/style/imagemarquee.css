@@ -40,6 +40,13 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .marquee-img-wrapper {
+    height: 190px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 12px;
+  }
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {

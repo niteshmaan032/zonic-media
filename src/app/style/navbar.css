@@ -355,9 +355,23 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .navbar-wrapper {
+    padding: 20px 30px 14px 30px;
+  }
+
+  .navbar-wrapper .menu-items > ul {
+    gap: 24px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .navbar-wrapper {
+    padding: 20px 40px 14px 40px;
+  }
+
+  .navbar-wrapper .menu-items > ul {
+    gap: 28px;
+  }
 }
 
 /*extra large desktop devices */

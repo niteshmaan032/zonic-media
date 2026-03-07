@@ -3,7 +3,6 @@ import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import localFont from "next/font/local";
 import SmoothScroll from "@/app/components/SmoothScroll";
-import Loader from "@/app/components/Loader";
 
 const neueHaas = localFont({
   src: [
@@ -40,11 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={neueHaas.className}>
-        <SmoothScroll>
-          <Loader />
-
-          {children}
-        </SmoothScroll>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

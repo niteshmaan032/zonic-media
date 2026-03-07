@@ -30,7 +30,7 @@ function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
     <div className="global-faqs-section">
       <h2 className="faq-heading">Frequently asked questions</h2>
 
-      <Row className="justify-content-between gap-5 gap-lg-0">
+      <Row className="justify-content-between ">
         {/* LEFT FAQ */}
         <Col lg={8}>
           <div className="why-work-faq-wrapper">
@@ -49,7 +49,7 @@ function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
         </Col>
 
         {/* RIGHT BOX (UNCHANGED) */}
-        <Col lg={3}>
+        <Col lg={4}>
           <div className="faqs-question-box">
             <FaMessage size={48} />
 

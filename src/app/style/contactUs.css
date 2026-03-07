@@ -197,13 +197,13 @@
   }
 }
 
-/* large desktop devices */
+/*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {
 }
 
-/* extra large desktop devices */
+/*extra large desktop devices */
 @media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

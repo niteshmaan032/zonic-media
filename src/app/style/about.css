@@ -352,9 +352,143 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .about-sec1-content {
+    padding: 160px 30px 40px 30px;
+  }
+
+  .about-sec1-heading {
+    font-size: 52px;
+  }
+
+  .about-sec1-descrp {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  /*about-section-2*/
+
+  .about-section-2 {
+    padding: 40px 30px;
+  }
+
+  .about-sec2-heading {
+    font-size: 42px;
+    line-height: 58px;
+  }
+
+  .about-sec2-descrp {
+    font-size: 18px;
+  }
+
+  /*about-section-3*/
+  .about-section-3 {
+    padding: 0px 30px;
+  }
+
+  .about-sec3-heading {
+    font-size: 42px;
+  }
+
+  .info-card-row {
+    margin-top: 80px;
+  }
+
+  /*about-section-4*/
+  .about-section-4 {
+    padding: 40px 30px;
+  }
+
+  /*section4*/
+  .about-sec4-heading {
+    font-size: 42px;
+  }
+
+  .feature-head {
+    font-size: 48px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .feature-descrp {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  /*about-section-5*/
+
+  .about-section-5 {
+    padding: 40px 0px 40px 30px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .about-sec1-content {
+    padding: 160px 40px 60px 40px;
+  }
+
+  .about-sec1-heading {
+    font-size: 58px;
+  }
+
+  .about-sec1-descrp {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  /*about-section-2*/
+
+  .about-section-2 {
+    padding: 50px 40px;
+  }
+
+  .about-sec2-heading {
+    font-size: 42px;
+    line-height: 58px;
+  }
+
+  .about-sec2-descrp {
+    font-size: 18px;
+  }
+
+  /*about-section-3*/
+  .about-section-3 {
+    padding: 0px 40px;
+  }
+
+  .about-sec3-heading {
+    font-size: 42px;
+  }
+
+  .info-card-row {
+    margin-top: 80px;
+  }
+
+  /*about-section-4*/
+  .about-section-4 {
+    padding: 50px 40px;
+  }
+
+  /*section4*/
+  .about-sec4-heading {
+    font-size: 42px;
+  }
+
+  .feature-head {
+    font-size: 48px;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .feature-descrp {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  /*about-section-5*/
+
+  .about-section-5 {
+    padding: 50px 0px 50px 40px;
+  }
 }
 
 /*extra large desktop devices */

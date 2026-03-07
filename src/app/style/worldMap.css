@@ -283,9 +283,53 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .world-map-wrapper {
+    padding: 40px 30px;
+  }
+
+  .world-map-cont {
+    position: absolute;
+    bottom: 60;
+    left: 30;
+  }
+
+  .world-map-heading {
+    font-size: 32px;
+  }
+
+  .world-map-descrp {
+    font-size: 16px;
+  }
+
+  /* map container */
+  .world-img-cont {
+    height: 500px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .world-map-wrapper {
+    padding: 40px;
+  }
+
+  .world-map-cont {
+    position: absolute;
+    bottom: 60;
+    left: 40;
+  }
+
+  .world-map-heading {
+    font-size: 36px;
+  }
+
+  .world-map-descrp {
+    font-size: 16px;
+  }
+
+  /* map container */
+  .world-img-cont {
+    height: 500px;
+  }
 }
 
 /*extra large desktop devices */

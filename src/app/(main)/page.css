@@ -15,7 +15,7 @@
 
 .home-sec1-heading {
   font-size: 74px;
-  line-height: 80px;
+  line-height: 82px;
 }
 
 .home-sec1-heading span {
@@ -56,6 +56,7 @@
 .home-sec3-heading {
   font-size: 52px;
   margin-bottom: 18px;
+  line-height: 62px;
 }
 
 .home-sec3-heading span {
@@ -114,6 +115,7 @@
 
 .home-sec4-heading span {
   color: var(--color2);
+  line-height: inherit;
 }
 
 .home-sec4-descrp {
@@ -292,18 +294,6 @@
 
 .home-section-7 {
   padding: 70px 0px 70px 100px;
-}
-
-.home-sec7-heading {
-  font-size: 52px;
-  line-height: 68px;
-  width: 70%;
-  margin-bottom: 40px;
-}
-
-.home-sec7-heading span {
-  color: var(--color2);
-  line-height: inherit;
 }
 
 /*responsive*/
@@ -587,9 +577,201 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .home-section-1 {
+    padding: 160px 30px 80px 30px;
+  }
+
+  .home-sec1-subtitle {
+    font-size: 18px;
+  }
+
+  .home-sec1-heading {
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .home-sec1-descrp {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /*home-section-3*/
+
+  .home-section-3 {
+    padding: 0px 30px;
+  }
+
+  .home-sec3-descrp {
+    width: 90%;
+  }
+
+  .info-card-row {
+    margin-top: 80px;
+  }
+
+  /*home-section-4*/
+  .home-section-4 {
+    background-color: var(--secondary);
+    padding: 80px 30px;
+  }
+
+  .home-sec4-heading {
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  .home-sec4-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /*home-section-5*/
+
+  .home-sec5-service-content {
+    flex-basis: 60%;
+    padding: 40px 0px 40px 30px;
+    gap: 80px;
+  }
+
+  .home-sec5-service-heading {
+    font-size: 34px;
+  }
+
+  .home-sec5-service-descrp {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .home-sec5-service-img-cont {
+    height: auto;
+  }
+
+  .home-section-5 .home-sec5-service-wrapper:nth-child(2) img {
+    object-position: right;
+  }
+
+  /*home-section-6*/
+
+  .home-section-6 {
+    padding: 40px 30px;
+  }
+
+  .home-sec6-heading {
+    font-size: 90px;
+  }
+
+  .home-sec6-card {
+    gap: 140px;
+  }
+
+  .home-sec6-card h3 {
+    font-size: 26px;
+  }
+
+  /*home-section-7*/
+
+  .home-section-7 {
+    padding: 40px 0px 40px 30px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .home-section-1 {
+    padding: 160px 40px 80px 40px;
+  }
+
+  .home-sec1-subtitle {
+    font-size: 20px;
+  }
+
+  .home-sec1-heading {
+    font-size: 66px;
+    line-height: 74px;
+  }
+
+  .home-sec1-descrp {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /*home-section-3*/
+
+  .home-section-3 {
+    padding: 0px 40px;
+  }
+
+  .home-sec3-descrp {
+    width: 85%;
+  }
+
+  .info-card-row {
+    margin-top: 80px;
+  }
+
+  /*home-section-4*/
+  .home-section-4 {
+    background-color: var(--secondary);
+    padding: 80px 40px;
+  }
+
+  .home-sec4-heading {
+    font-size: 38px;
+    line-height: 52px;
+  }
+
+  .home-sec4-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /*home-section-5*/
+
+  .home-sec5-service-content {
+    flex-basis: 60%;
+    padding: 40px 0px 40px 40px;
+    gap: 80px;
+  }
+
+  .home-sec5-service-heading {
+    font-size: 34px;
+  }
+
+  .home-sec5-service-descrp {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .home-sec5-service-img-cont {
+    height: auto;
+  }
+
+  .home-section-5 .home-sec5-service-wrapper:nth-child(2) img {
+    object-position: right;
+  }
+
+  /*home-section-6*/
+
+  .home-section-6 {
+    padding: 40px 40px;
+  }
+
+  .home-sec6-heading {
+    font-size: 90px;
+  }
+
+  .home-sec6-card {
+    gap: 150px;
+  }
+
+  .home-sec6-card h3 {
+    font-size: 26px;
+  }
+
+  /*home-section-7*/
+
+  .home-section-7 {
+    padding: 40px 0px 40px 40px;
+  }
 }
 
 /*extra large desktop devices */

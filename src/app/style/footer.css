@@ -200,9 +200,31 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .footer-wrapper {
+    padding: 70px 30px 0px 30px;
+  }
+
+  .footer-zonic-desc {
+    font-size: 18px;
+  }
+
+  .footer-logo-img-cont {
+    height: 110px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .footer-wrapper {
+    padding: 70px 40px 0px 40px;
+  }
+
+  .footer-zonic-desc {
+    font-size: 18px;
+  }
+
+  .footer-logo-img-cont {
+    height: 115px;
+  }
 }
 
 /*extra large desktop devices */

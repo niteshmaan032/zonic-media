@@ -36,8 +36,7 @@ export default function Home() {
           <Col xs={12} lg={3}>
             <p className="home-sec1-descrp">
               Zonic Media helps businesses scale with high converting websites,
-              local SEO, paid advertising, Google Business optimization, and
-              creative design, all focused on driving real leads and revenue.
+              local SEO, paid advertising.
             </p>
           </Col>
 

@@ -157,7 +157,7 @@ function Page() {
     <>
       {/*gmb-section-1*/}
       <div className="gmb-section-1">
-        <Row className="justify-content-between h-100">
+        <Row className="justify-content-between ">
           <Col lg={6}>
             <div className="gmb-sec1-content">
               <p className="gmb-sec1-title">
@@ -211,7 +211,7 @@ function Page() {
 
           <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
-              <Image src="/images/gmb-1.png" fill alt="google my business" />
+              <Image src="/images/gmb-head.png" fill alt="google my business" />
             </div>
           </Col>
         </Row>

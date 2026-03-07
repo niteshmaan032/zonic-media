@@ -88,9 +88,31 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .why-work-wrapper {
+    padding: 40px 30px;
+  }
+
+  .why-work-img-wrapper {
+    height: 500px;
+  }
+
+  .why-work-img-wrapper img {
+    object-position: center;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1498.98px) {
+  .why-work-wrapper {
+    padding: 50px 40px;
+  }
+
+  .why-work-img-wrapper {
+    height: 500px;
+  }
+
+  .why-work-img-wrapper img {
+    object-position: center;
+  }
 }
 
 /*extra large desktop devices */
