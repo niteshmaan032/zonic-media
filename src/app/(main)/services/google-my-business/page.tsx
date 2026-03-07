@@ -174,7 +174,7 @@ function Page() {
                 <span>Trusted by agencies and business owners worldwide.</span>
               </p>
               <Link
-                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                href="/contact-us"
                 className="buttons"
                 target="blank"
               >
@@ -225,8 +225,9 @@ function Page() {
           </h2>
           <p className="gmb-sec2-descrp">
             Google Business Profile listings can be suspended when they violate
-            Google's guidelines or contain inconsistent business information.
-            Based on Google's policies and common industry cases, some of the
+            Google&apos;s guidelines or contain inconsistent business
+            information. Based on Google&apos;s policies and common industry
+            cases, some of the
             most frequent causes of suspension include:
           </p>
 
@@ -336,7 +337,7 @@ function Page() {
             </h2>
 
             <Link
-              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+              href="/contact-us"
               className="buttons"
               target="blank"
             >

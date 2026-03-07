@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Row, Col } from "react-bootstrap";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactFormValues = {
   fullName: string;
@@ -119,8 +120,7 @@ export default function ContactForm() {
               <p>Schedule meeting :</p>
 
               <Link
-                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
-                target="blank"
+                href={SITE_CONTACT.bookCallHref}
                 className="buttons"
               >
                 Book a Strategy Call
@@ -336,7 +336,7 @@ export default function ContactForm() {
                 </button>
                 <p className="contact-form-email-link">
                   Prefer email ? <br />
-                  <Link href="#!">contact@zonicllc.com </Link>
+                  <Link href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</Link>
                 </p>
               </Col>
 

@@ -8,6 +8,11 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { Row, Col } from "react-bootstrap";
 import { MdCopyright } from "react-icons/md";
+import {
+  SITE_CONTACT,
+  SITE_PATHS,
+  SITE_SOCIAL_LINKS,
+} from "@/shared/siteConfig";
 
 function Footer() {
   return (
@@ -28,22 +33,22 @@ function Footer() {
               <ul className="footer-contact-info">
                 <li>
                   <FaPhone size={20} />
-                  <Link href="#!">+1 (302) 244-5494 </Link>
+                  <Link href={SITE_CONTACT.phoneHref}>
+                    {SITE_CONTACT.phoneDisplay}
+                  </Link>
                 </li>
                 <li>
                   <IoMdMail size={20} />
-                  <Link href="mailto:contact@zonicllc.com">
-                    contact@zonicllc.com
-                  </Link>
+                  <Link href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</Link>
                 </li>
                 <li>
                   <FaLocationDot size={20} />
                   <Link
-                    href="https://www.google.com/maps/search/?api=1&query=8+The+Green,+STE+B,+Dover,+Kent,+DE+19901,+United+States"
+                    href={SITE_CONTACT.mapHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    8 The Green, STE B Dover, Kent, DE 19901 United States
+                    {SITE_CONTACT.address}
                   </Link>
                 </li>
               </ul>
@@ -73,32 +78,38 @@ function Footer() {
                 <ul>
                   <li className="footer-menus-head">Others</li>
                   <li>
-                    <Link href="/about">About Us</Link>
+                    <Link href={SITE_PATHS.about}>About Us</Link>
                   </li>
                   <li>
-                    <Link href="/comming-soon">Blogs</Link>
+                    <Link href={SITE_PATHS.blogs}>Blogs</Link>
                   </li>
                   {/* <li>
                     <Link href="#!">Pricing</Link>
                   </li> */}
                   <li>
-                    <Link href="/services">Services</Link>
+                    <Link href={SITE_PATHS.services}>Services</Link>
                   </li>
                   <li>
-                    <Link href="/contact-us">Contact Us</Link>
+                    <Link href={SITE_PATHS.contact}>Contact Us</Link>
                   </li>
                 </ul>
 
                 <ul>
                   <li className="footer-menus-head">Legal</li>
                   <li>
-                    <Link href="#!">Terms & Condition</Link>
+                    <Link href={SITE_PATHS.legalPlaceholder}>
+                      Terms & Condition
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#!">Privacy Policy</Link>
+                    <Link href={SITE_PATHS.legalPlaceholder}>
+                      Privacy Policy
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#!">Fair Use Policy</Link>
+                    <Link href={SITE_PATHS.legalPlaceholder}>
+                      Fair Use Policy
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -108,48 +119,24 @@ function Footer() {
           <div className="d-flex align-items-center flex-wrap justify-content-between">
             <div className="footer-socials">
               <ul>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/company/zonic-media/"
-                    target="blank"
-                  >
-                    LinkedIn
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.facebook.com/zonicmediallc/?rdid=KDHW5CqF87EH3bDP"
-                    target="blank"
-                  >
-                    facebook
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.instagram.com/zoniclocalseo?igsh=dXVndXJ3ZnlleHRp"
-                    target="blank"
-                  >
-                    instagram
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.youtube.com/@ZonicMediaDelware"
-                    target="blank"
-                  >
-                    Youtube
-                  </Link>
-                </li>
+                {SITE_SOCIAL_LINKS.map((social) => (
+                  <li key={social.label}>
+                    <Link
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {social.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="footer-cta">
               <p>
                 Let&apos;s work together <br />
-                <Link
-                  href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
-                  target="blank"
-                >
+                <Link href={SITE_CONTACT.bookCallHref}>
                   Contact Zonic Media <BsArrowUpRightCircle />
                 </Link>
               </p>

@@ -43,7 +43,7 @@ export default function Home() {
           <Col xs={12}>
             <div className="home-sec1-buttons">
               <Link
-                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                href="/contact-us"
                 target="blank"
                 className="buttons"
               >
@@ -205,7 +205,7 @@ export default function Home() {
               businesses.
             </p>
             <Link
-              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+              href="/contact-us"
               target="blank"
               className="buttons"
             >

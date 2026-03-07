@@ -161,7 +161,7 @@ function Page() {
               </p>
 
               <Link
-                href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                href="/contact-us"
                 className="buttons"
                 target="blank"
               >

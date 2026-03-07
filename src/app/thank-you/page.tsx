@@ -6,17 +6,20 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { FaFacebookSquare } from "react-icons/fa";
-import {
-  FaSquareXTwitter,
-  FaLinkedin,
-  FaSquarePinterest,
-} from "react-icons/fa6";
+import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
+import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 
 const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
 const THANK_YOU_RENDER_KEY = "thank_you_page_render_allowed";
+const socialIcons = {
+  LinkedIn: FaLinkedin,
+  Facebook: FaFacebookSquare,
+  Instagram: RiInstagramFill,
+  YouTube: FaYoutube,
+} as const;
 
 function Page() {
   const router = useRouter();
@@ -39,7 +42,7 @@ function Page() {
       }
 
       if (!hasRenderAccess()) {
-        router.replace("/");
+        router.replace(SITE_PATHS.home);
         return;
       }
 
@@ -49,7 +52,7 @@ function Page() {
 
     const handlePageShow = () => {
       if (!hasRenderAccess()) {
-        router.replace("/");
+        router.replace(SITE_PATHS.home);
       }
     };
 
@@ -77,7 +80,11 @@ function Page() {
         <Row className="m-0 h-100 align-items-center pb-5 ">
           <Col lg={6}>
             <div className="thank-img-cont">
-              <Image src="/images/thank.png" fill alt="thank you envelope"></Image>
+              <Image
+                src="/images/thank.png"
+                fill
+                alt="thank you envelope"
+              ></Image>
             </div>
           </Col>
 
@@ -94,9 +101,42 @@ function Page() {
                 Your submission was successful, and we&apos;ll be in touch soon.
                 We&apos;re excited to connect with you.
               </p>
-              <div>
-                <Link href="/" replace className="buttons">
+              <div className="d-flex gap-2 align-items-center">
+                <Link href={SITE_PATHS.home} replace className="buttons">
                   Back to home <GoHomeFill size={18} />
+                </Link>
+
+                <Link
+                  href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                  className="buttons"
+                >
+                  Book a Strategy Call
+                  <span className="buttons__icon-wrapper">
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg"
+                      width="8"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      width="8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
                 </Link>
               </div>
 
@@ -104,25 +144,21 @@ function Page() {
                 <p className="thank-social-heading">Connect with us</p>
 
                 <div className="thank-social-icons">
-                  <Link href="https://facebook.com" target="_blank">
-                    <FaFacebookSquare size={28} />
-                  </Link>
+                  {SITE_SOCIAL_LINKS.map((social) => {
+                    const Icon = socialIcons[social.label];
 
-                  <Link href="https://instagram.com" target="_blank">
-                    <RiInstagramFill size={28} />
-                  </Link>
-
-                  <Link href="https://twitter.com" target="_blank">
-                    <FaSquareXTwitter size={28} />
-                  </Link>
-
-                  <Link href="https://linkedin.com" target="_blank">
-                    <FaLinkedin size={28} />
-                  </Link>
-
-                  <Link href="https://pinterest.com" target="_blank">
-                    <FaSquarePinterest size={28} />
-                  </Link>
+                    return (
+                      <Link
+                        key={social.label}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.label}
+                      >
+                        <Icon size={28} />
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             </div>

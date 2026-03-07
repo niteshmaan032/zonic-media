@@ -8,6 +8,7 @@ import "@/app/style/comingSoon.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ComingSoonFormValues = {
   fullName: string;
@@ -325,7 +326,9 @@ function Page() {
 
                     <p className="coming-soon-email-link">
                       Prefer email ? <br />
-                      <Link href="#!">zonicmediallc@gmail.com </Link>
+                      <Link href={SITE_CONTACT.emailHref}>
+                        {SITE_CONTACT.email}
+                      </Link>
                     </p>
                   </Col>
 

@@ -333,9 +333,107 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .web-design-sec1-content {
+    padding: 160px 30px 80px 30px;
+  }
+
+  .web-design-sec1-heading {
+    font-size: 44px;
+  }
+
+  /*web-design-section-2*/
+
+  .web-design-section-2 {
+    background-color: var(--secondary);
+    padding: 50px 30px;
+  }
+  .web-design-sec2-heading {
+    font-size: 42px;
+  }
+
+  .web-serv-heading {
+    font-size: 32px;
+  }
+
+  /*web-design-section-4*/
+  .web-design-section-4 {
+    padding: 40px 30px;
+  }
+
+  .web-design-sec4-heading {
+    font-size: 90px;
+  }
+
+  .web-design-sec4-card {
+    gap: 140px;
+  }
+
+  .web-design-sec4-card h3 {
+    font-size: 26px;
+  }
+
+  .web-design-sec4-card .card-descrp {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  /*web-design-section-5*/
+
+  .web-design-section-5 {
+    padding-top: 40px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1498.98px) {
+  .web-design-sec1-content {
+    padding: 160px 40px 100px 40px;
+  }
+
+  .web-design-sec1-heading {
+    font-size: 52px;
+  }
+
+  /*web-design-section-2*/
+
+  .web-design-section-2 {
+    background-color: var(--secondary);
+    padding: 60px 40px;
+  }
+  .web-design-sec2-heading {
+    font-size: 48px;
+  }
+
+  .web-serv-heading {
+    font-size: 36px;
+  }
+
+  /*web-design-section-4*/
+  .web-design-section-4 {
+    padding: 50px 40px;
+  }
+
+  .web-design-sec4-heading {
+    font-size: 90px;
+  }
+
+  .web-design-sec4-card {
+    gap: 140px;
+  }
+
+  .web-design-sec4-card h3 {
+    font-size: 32px;
+  }
+
+  .web-design-sec4-card .card-descrp {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /*web-design-section-5*/
+
+  .web-design-section-5 {
+    padding-top: 50px;
+  }
 }
 
 /*extra large desktop devices */

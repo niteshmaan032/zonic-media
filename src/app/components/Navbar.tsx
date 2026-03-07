@@ -6,6 +6,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 import "@/app/style/navbar.css";
+import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 
 const services = [
   {
@@ -123,16 +124,16 @@ function Navbar() {
               <nav className="menu-items">
                 <ul>
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href={SITE_PATHS.home}>Home</Link>
                   </li>
                   <li>
-                    <Link href="/about">About Us</Link>
+                    <Link href={SITE_PATHS.about}>About Us</Link>
                   </li>
                   <li
                     className="services-dropdown"
                     onMouseLeave={() => setActiveService(defaultService)}
                   >
-                    <Link href="/services">
+                    <Link href={SITE_PATHS.services}>
                       Services <MdArrowOutward size={16} />
                     </Link>
                     <div className="services-dropdown-container">
@@ -152,7 +153,7 @@ function Navbar() {
                                 </li>
                               ))}
                             </ul>
-                            <Link href="/services" className="buttons">
+                            <Link href={SITE_PATHS.services} className="buttons">
                               <span>View all services</span>
                               <span className="buttons__icon-wrapper">
                                 <svg
@@ -201,10 +202,10 @@ function Navbar() {
                     </div>
                   </li>
                   <li>
-                    <Link href="/coming-soon">Blogs</Link>
+                    <Link href={SITE_PATHS.blogs}>Blogs</Link>
                   </li>
                   <li>
-                    <Link href="/contact-us">Contact Us</Link>
+                    <Link href={SITE_PATHS.contact}>Contact Us</Link>
                   </li>
                 </ul>
               </nav>
@@ -212,7 +213,7 @@ function Navbar() {
 
             <Col xs="auto">
               <div className="header-button d-none d-lg-flex">
-                <Link href="/contact-us" className="buttons">
+                <Link href={SITE_PATHS.contact} className="buttons">
                   <span>Get In Touch</span>
                   <span className="buttons__icon-wrapper">
                     <svg
@@ -277,7 +278,10 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/about" onClick={() => handleToggleMobileMenu(false)}>
+              <Link
+                href={SITE_PATHS.about}
+                onClick={() => handleToggleMobileMenu(false)}
+              >
                 About Us
               </Link>
             </li>
@@ -313,7 +317,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="/coming-soon"
+                href={SITE_PATHS.blogs}
                 onClick={() => handleToggleMobileMenu(false)}
               >
                 Blogs
@@ -321,7 +325,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                href="/contact-us"
+                href={SITE_PATHS.contact}
                 onClick={() => handleToggleMobileMenu(false)}
               >
                 Contact Us
@@ -331,18 +335,17 @@ function Navbar() {
         </div>
         <div className="mob-tab-nav-socials">
           <ul>
-            <li>
-              <Link href="#!">LinkedIn</Link>
-            </li>
-            <li>
-              <Link href="#!">Facebook</Link>
-            </li>
-            <li>
-              <Link href="#!">Instagram</Link>
-            </li>
-            <li>
-              <Link href="#!">Pinterest</Link>
-            </li>
+            {SITE_SOCIAL_LINKS.map((social) => (
+              <li key={social.label}>
+                <Link
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {social.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

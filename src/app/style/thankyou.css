@@ -90,17 +90,6 @@
     width: 100%;
     line-height: 28px;
   }
-
-  .thank-content-wrapper .buttons {
-    margin: 20px 0px 32px 0px;
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-  }
-
-  .thank-content-wrapper .buttons:hover {
-    background-color: var(--primary);
-    border-color: var(--primary);
-  }
 }
 
 /*mobile devices*/
@@ -117,13 +106,3 @@
   }
 }
 
-/*large desktop devices*/
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-}
-
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
-}
-
-/*extra large desktop devices */
-@media (min-width: 1366.98px) and (max-width: 1512.98px) {
-}

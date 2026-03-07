@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { enqueueOwnerLeadEmail } from "@/backend/queues/ownerLeadQueue";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 
 export type LeadPayload = {
   fullName: string;
@@ -46,7 +47,7 @@ const toServicesText = (services: string[]) =>
 
 const getMailConfig = () => {
   const from = process.env.MAIL_FROM ?? process.env.SMTP_USER;
-  const ownerEmail = process.env.MAIL_TO_OWNER ?? "niteshmaan032@gmail.com";
+  const ownerEmail = process.env.MAIL_TO_OWNER ?? SITE_CONTACT.email;
 
   if (!from) {
     throw new Error("MAIL_FROM or SMTP_USER must be configured.");

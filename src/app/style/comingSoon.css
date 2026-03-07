@@ -133,9 +133,23 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .coming-soon-section {
+    padding: 60px 30px 0px 30px;
+  }
+
+  .coming-soon-heading {
+    font-size: 42px;
+  }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1498.98px) {
+  .coming-soon-section {
+    padding: 60px 40px 0px 40px;
+  }
+
+  .coming-soon-heading {
+    font-size: 42px;
+  }
 }
 
 /*extra large desktop devices */

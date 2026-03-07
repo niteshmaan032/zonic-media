@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Accordion, Col, Row } from "react-bootstrap";
 import { FaMessage } from "react-icons/fa6";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type FaqItem = {
   question: string;
@@ -61,7 +62,7 @@ function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
               online.
             </p>
 
-            <Link href="mailto:contact@zonicllc.com" className="buttons">
+            <Link href={SITE_CONTACT.emailHref} className="buttons">
               Send Us an Email
             </Link>
           </div>

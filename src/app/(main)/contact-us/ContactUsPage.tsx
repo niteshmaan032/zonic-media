@@ -12,6 +12,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactUsFormValues = {
   fullName: string;
@@ -109,23 +110,22 @@ function ContactUsPageClient() {
 
               <ul className="contact-us-form-points">
                 <li>
-                  <Link href="#!">
-                    <FiPhone size={20} /> +1 (302) 244-5494
+                  <Link href={SITE_CONTACT.phoneHref}>
+                    <FiPhone size={20} /> {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:contact@zonicllc.com">
-                    <IoMailOutline size={20} /> contact@zonicllc.com
+                  <Link href={SITE_CONTACT.emailHref}>
+                    <IoMailOutline size={20} /> {SITE_CONTACT.email}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.google.com/maps/search/?api=1&query=8+The+Green,+STE+B,+Dover,+Kent,+DE+19901,+United+States"
+                    href={SITE_CONTACT.mapHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <GrLocation size={20} /> 8 The Green, STE B Dover Kent, DE
-                    19901 United States
+                    <GrLocation size={20} /> {SITE_CONTACT.address}
                   </Link>
                 </li>
               </ul>
@@ -134,9 +134,8 @@ function ContactUsPageClient() {
                 <p>Schedule meeting :</p>
 
                 <Link
-                  href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                  href={SITE_CONTACT.bookCallHref}
                   className="buttons"
-                  target="blank"
                 >
                   <span>book a strategy call</span>
                   <span className="buttons__icon-wrapper">
@@ -356,7 +355,9 @@ function ContactUsPageClient() {
 
                   <p className="contact-us-form-email-link">
                     Prefer email ? <br />
-                    <Link href="#!">zonicmediallc@gmail.com</Link>
+                    <Link href={SITE_CONTACT.emailHref}>
+                      {SITE_CONTACT.email}
+                    </Link>
                   </p>
                 </Col>
 
@@ -387,11 +388,7 @@ function ContactUsPageClient() {
               and UX skills. Highly recommended
             </p>
 
-            <Link
-              href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
-              target="blank"
-              className="buttons"
-            >
+            <Link href={SITE_CONTACT.bookCallHref} className="buttons">
               <span>book a call</span>
               <span className="buttons__icon-wrapper">
                 <svg

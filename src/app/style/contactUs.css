@@ -199,9 +199,51 @@
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .contact-us-form-section {
+    padding: 140px 30px 40px 30px;
+  }
+
+  .contact-us-form-heading {
+    font-size: 42px;
+  }
+
+  .contact-us-form-wrapper {
+    padding: 30px;
+  }
+
+  .contact-us-section-2 {
+    background-color: var(--primary);
+    padding: 50px 30px;
+  }
+
+  .contact-us-sec2-heading {
+    font-size: 48px;
+    color: var(--white);
+  }
 }
 
 @media (min-width: 1199.98px) and (max-width: 1366.98px) {
+  .contact-us-form-section {
+    padding: 140px 40px 50px 40px;
+  }
+
+  .contact-us-form-heading {
+    font-size: 42px;
+  }
+
+  .contact-us-form-wrapper {
+    padding: 30px;
+  }
+
+  .contact-us-section-2 {
+    background-color: var(--primary);
+    padding: 50px 30px;
+  }
+
+  .contact-us-sec2-heading {
+    font-size: 48px;
+    color: var(--white);
+  }
 }
 
 /*extra large desktop devices */
