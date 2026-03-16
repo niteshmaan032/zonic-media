@@ -62,9 +62,9 @@ function ContactUsPageClient() {
         body: JSON.stringify(data),
       });
 
-      const result = (await response.json().catch(() => null)) as
-        | { message?: string }
-        | null;
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
 
       if (!response.ok) {
         throw new Error(result?.message || "Failed to submit form.");
@@ -124,7 +124,8 @@ function ContactUsPageClient() {
                 <p>Schedule meeting :</p>
 
                 <Link
-                  href={SITE_CONTACT.bookCallHref}
+                  href="https://calendar.app.google/EGNcQQMvMU3DGP5R6"
+                  target="blank"
                   className="buttons"
                 >
                   <span>book a strategy call</span>
