@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import localFont from "next/font/local";
+import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
 
 const neueHaas = localFont({
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={neueHaas.className}>
+        <Loader />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
