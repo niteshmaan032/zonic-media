@@ -10,14 +10,26 @@ import { Row, Col } from "react-bootstrap";
 import WorldMap from "@/app/components/WorldMap";
 import { GoDotFill } from "react-icons/go";
 import { Metadata } from "next";
+import ClutchWidget from "../components/ClutchWidget";
+
 export const metadata: Metadata = {
   title:
     "Digital Marketing Agency | Web Design, SEO & PPC Services | Zonic Media",
   description:
-    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call (302) 244-5494 today.",
+    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call +1 (302) 726-9376 today.",
 };
 
 export default function Home() {
+  const ContactGlobal = {
+    heading: "Lets Start Your Project",
+    highlightedHeading: "",
+    points: [
+      "Dedicated team focused on your business growth",
+      "Long-term support and ongoing optimization",
+      "Clear communication and fast response times",
+    ],
+  };
+
   return (
     <>
       {/*home-section-1*/}
@@ -38,6 +50,9 @@ export default function Home() {
               Zonic Media helps businesses scale with high converting websites,
               local SEO, paid advertising.
             </p>
+            <div className="pt-3">
+              <ClutchWidget />
+            </div>
           </Col>
 
           <Col xs={12}>
@@ -471,7 +486,7 @@ export default function Home() {
       </div>
 
       {/*home-section-8 contact-form*/}
-      <ContactForm />
+      <ContactForm content={ContactGlobal} />
 
       {/*home-section-9 footer*/}
       <Footer />

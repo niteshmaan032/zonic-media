@@ -18,9 +18,20 @@ type ContactFormValues = {
   services: string[];
 };
 
-export default function ContactForm() {
+export type ContactFormContent = {
+  heading: string;
+  highlightedHeading?: string;
+  points: string[];
+};
+
+type ContactFormProps = {
+  content: ContactFormContent;
+};
+
+export default function ContactForm({ content }: ContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const { heading, highlightedHeading, points } = content;
 
   const {
     register,
@@ -89,21 +100,20 @@ export default function ContactForm() {
         <Col xs={12} lg={5} className="p-0">
           <div className="contact-form-content">
             <h2 className="contact-form-heading">
-              Grow Your Business <br /> <span> Let&apos;s talk </span>
+              {heading}
+              {highlightedHeading && (
+                <>
+                  <br /> <span>{highlightedHeading}</span>
+                </>
+              )}
             </h2>
 
             <ul className="contact-form-points">
-              <li>
-                <FaRegCircleCheck size={18} /> Long-term support beyond launch
-              </li>
-              <li>
-                <FaRegCircleCheck size={18} /> We&apos;ll respond in 24 hours
-                fast & focused.
-              </li>
-              <li>
-                <FaRegCircleCheck size={18} /> Work with senior UX experts, not
-                juniors.
-              </li>
+              {points.map((point) => (
+                <li key={point}>
+                  <FaRegCircleCheck size={18} /> {point}
+                </li>
+              ))}
             </ul>
 
             <div className="contact-form-button">

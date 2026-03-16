@@ -149,6 +149,16 @@ function Page() {
         "Yes. Local SEO targets high-intent searches from customers in your area, helping your business appear when people are actively looking for your services, which leads to more calls, inquiries, and conversions.",
     },
   ];
+
+  const SeoContact = {
+    heading: "Boost Your Google Maps Ranking",
+    highlightedHeading: "",
+    points: [
+      "Get more local customers from Google search",
+      "Clear strategy call within 24 hours",
+      "Work directly with experienced SEO professionals",
+    ],
+  };
   return (
     <>
       {/*localseo-section-1*/}
@@ -422,7 +432,7 @@ function Page() {
       <Faqs items={LocalFaqs} />
 
       {/*localseo-section-7*/}
-      <ContactForm />
+      <ContactForm content={SeoContact} />
 
       {/*localseo-section-8*/}
       <Footer />

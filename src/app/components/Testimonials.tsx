@@ -20,11 +20,11 @@ function Testimonials() {
           slidesPerView={1}
           spaceBetween={10}
           loop={false}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{
+          //   delay: 2500,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           pagination={{
             clickable: true,
           }}
@@ -61,45 +61,47 @@ function Testimonials() {
                 <FaStar size={24} />
                 <FaStar size={24} />
               </div>
-              <p className="testimonial-rating-text"> 200+ reviews</p>
+              <p className="testimonial-rating-text"> reviews</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="testimonial-card-wrapper">
-              <p className="testimonial-agency-name"> NY Roofing </p>
+              <p className="testimonial-agency-name"> CEO, MXD Marketing </p>
               <blockquote className="testimonial-text">
-                “Zonic Media delivered a modern, high-performing website that
-                truly drives results.”
+                "Zonic Media fulfilled what previous consultants had promised."
               </blockquote>
               <cite className="testimonial-author">
                 <FaUserCircle />
-                Nick Fisher
+                Randy Roberts
               </cite>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="testimonial-card-wrapper">
-              <p className="testimonial-agency-name"> Zonic Media </p>
+              <p className="testimonial-agency-name"> CMO, Digital Toolbag </p>
               <blockquote className="testimonial-text">
-                “Their digital strategy and ads generated quality leads and
-                strong ROI.”
+                "Their knowledge of the different types of Google campaigns is
+                great."
               </blockquote>
               <cite className="testimonial-author">
                 <FaUserCircle />
-                David Finch
+                Tom LeeZmuda
               </cite>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="testimonial-card-wrapper">
-              <p className="testimonial-agency-name"> Digital Agency </p>
+              <p className="testimonial-agency-name">
+                {" "}
+                Executive, Peace of Mind{" "}
+              </p>
               <blockquote className="testimonial-text">
-                “Great design, clear communication, and attention to every
-                detail.”
+                "They’ve taken the time to explain what they’re doing and why it
+                matters for our online presence."
               </blockquote>
               <cite className="testimonial-author">
                 <FaUserCircle />
-                Sam
+                Anonymous
               </cite>
             </div>
           </SwiperSlide>

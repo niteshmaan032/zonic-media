@@ -17,6 +17,16 @@ export const metadata: Metadata = {
 };
 
 function Page() {
+  const ContactAds = {
+    heading: "Get Instant Leads with Google Ads",
+    highlightedHeading: "",
+    points: [
+      "Target high-intent customers searching for your services",
+      "Data-driven campaigns to maximize ROI",
+      "Continuous optimization for better conversions and lower costs",
+    ],
+  };
+
   const AdsProcessData = {
     heading: "Our Proven 5-Step Google Ads Management Process",
     items: [
@@ -353,7 +363,7 @@ function Page() {
       <Faqs items={AdsFaqs} />
 
       {/* ads-section-7 */}
-      <ContactForm />
+      <ContactForm content={ContactAds} />
 
       {/* ads-section-8 */}
       <Footer />

@@ -22,6 +22,16 @@ export const metadata: Metadata = {
 };
 
 function Page() {
+  const GmbContact = {
+    heading: "Get Found on Google Maps",
+    highlightedHeading: "",
+    points: [
+      "Optimize and manage your Google Business Profile",
+      "Improve local rankings and visibility on Google Maps",
+      "Get more calls, reviews, and local customers",
+    ],
+  };
+
   const workIMages = [
     { src: "/images/work-1.png", alt: "recovered gmb account" },
     { src: "/images/work-2.png", alt: "recovered gmb account" },
@@ -477,7 +487,7 @@ function Page() {
       <Faqs items={gmbFaqs} />
 
       {/*gmb-section-9*/}
-      <ContactForm />
+      <ContactForm content={GmbContact} />
 
       {/*gmb-section-8*/}
       <Footer />

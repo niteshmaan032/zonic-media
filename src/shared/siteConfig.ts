@@ -1,8 +1,8 @@
 export const SITE_CONTACT = {
   email: "contact@zonicllc.com",
   emailHref: "mailto:contact@zonicllc.com",
-  phoneDisplay: "+1 (302) 244-5494",
-  phoneHref: "tel:+13022445494",
+  phoneDisplay: "+1 (302) 726-9376",
+  phoneHref: "tel:+13027269376",
   address: "8 The Green, STE B Dover, Kent, DE 19901 United States",
   mapHref:
     "https://www.google.com/maps/search/?api=1&query=8+The+Green,+STE+B,+Dover,+Kent,+DE+19901,+United+States",

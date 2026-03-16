@@ -39,7 +39,9 @@ function Footer() {
                 </li>
                 <li>
                   <IoMdMail size={20} />
-                  <Link href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</Link>
+                  <Link href={SITE_CONTACT.emailHref}>
+                    {SITE_CONTACT.email}
+                  </Link>
                 </li>
                 <li>
                   <FaLocationDot size={20} />
@@ -112,6 +114,16 @@ function Footer() {
                     </Link>
                   </li>
                 </ul>
+                <div></div>
+              </div>
+              <div>
+                <iframe
+                  className="mt-4"
+                  width="85"
+                  height="85"
+                  src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
+                  title="Top Clutch Digital Marketing Company Delaware 2026"
+                ></iframe>
               </div>
             </Col>
           </Row>

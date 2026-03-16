@@ -12,6 +12,16 @@ export const metadata: Metadata = {
 };
 
 function Page() {
+  const ContactGlobal = {
+    heading: "Lets Start Your Project",
+    highlightedHeading: "",
+    points: [
+      "Dedicated team focused on your business growth",
+      "Long-term support and ongoing optimization",
+      "Clear communication and fast response times",
+    ],
+  };
+
   return (
     <>
       {/* service-page-section-1 */}
@@ -219,7 +229,7 @@ function Page() {
         </div>
       </div>
 
-      <ContactForm />
+      <ContactForm content={ContactGlobal} />
 
       <Footer />
     </>

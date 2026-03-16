@@ -41,6 +41,16 @@ function Page() {
         "Yes. We offer continuous optimization, performance monitoring, and long-term digital growth support to help businesses scale consistently.",
     },
   ];
+
+  const ContactGlobal = {
+    heading: "Lets Start Your Project",
+    highlightedHeading: "",
+    points: [
+      "Dedicated team focused on your business growth",
+      "Long-term support and ongoing optimization",
+      "Clear communication and fast response times",
+    ],
+  };
   return (
     <>
       {/*about-section-1*/}
@@ -65,11 +75,7 @@ function Page() {
         </div>
 
         <div className="about-sec1-img">
-          <Image
-            src="/images/about-img-1.jpg"
-            fill
-            alt="agency employee working"
-          />
+          <Image src="/images/agency.jpg" fill alt="agency employee working" />
         </div>
       </div>
 
@@ -286,7 +292,7 @@ function Page() {
       </div>
 
       {/*about-section7*/}
-      <ContactForm />
+      <ContactForm content={ContactGlobal} />
 
       {/*about-section8*/}
       <Footer />

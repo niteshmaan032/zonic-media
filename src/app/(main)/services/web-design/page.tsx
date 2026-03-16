@@ -13,6 +13,16 @@ export const metadata: Metadata = {
     "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
 };
 function Page() {
+  const WebContact = {
+    heading: "High-Converting Business Websites",
+    highlightedHeading: "",
+    points: [
+      "Modern, fast, and mobile-friendly website design",
+      "SEO-ready structure to help you rank on Google",
+      "Designed to convert visitors into leads and customers",
+    ],
+  };
+
   const WebFaqs = [
     {
       question: "How long does it take to design and develop a website?",
@@ -357,7 +367,7 @@ function Page() {
       </div>
 
       {/*web-design-section-6*/}
-      <ContactForm />
+      <ContactForm content={WebContact} />
 
       {/*web-design-section-7*/}
       <Footer />
