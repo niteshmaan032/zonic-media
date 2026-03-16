@@ -31,8 +31,7 @@ function Page() {
   };
 
   const LocalProcessData = {
-    heading:
-      "Our Proven 5-Step Google Business Profile Suspension Recovery Process",
+    heading: "Our Proven 5 Step Local SEO Growth Process",
     items: [
       {
         number: "01",
@@ -162,7 +161,8 @@ function Page() {
                 95% Local Visibility Growth
               </p>
               <h1 className="localseo-sec1-heading">
-                Local SEO That Puts Your Business on the Map
+                Rank Higher on Google Maps and Get More Local Customers With
+                Proven Local SEO
               </h1>
               <p className="localseo-sec1-descrp">
                 We help businesses{" "}
