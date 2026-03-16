@@ -95,7 +95,7 @@ function Page() {
   const WhylocalData = {
     heading: "Why Work With Zonic Media for Local SEO Services",
     image: {
-      src: "/images/home-seo.png",
+      src: "/images/home-seo-2.jpg",
       alt: "google my business recovery",
     },
     defaultActiveKey: "0",
@@ -208,7 +208,7 @@ function Page() {
 
           <Col lg={6}>
             <div className="localseo-sec1-img-cont">
-              <Image src="/images/header.gif" fill alt="local seo mobile" />
+              <Image src="/images/seo-1.gif" fill alt="local seo " />
             </div>
           </Col>
         </Row>

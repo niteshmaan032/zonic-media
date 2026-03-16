@@ -20,7 +20,7 @@ function Page() {
           <Row className="justify-content-between align-items-start ">
             <Col lg="6">
               <h1 className="service-page-section-1-heading">
-                Our Digital Marketing Services
+                Our Digital Marketing <br /> Services
               </h1>
             </Col>
 
@@ -102,7 +102,11 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont">
-              <Image src="/images/vv.png" fill alt="website design" />
+              <Image
+                src="/images/home-gmb-1.jpg"
+                fill
+                alt="google my business service"
+              />
             </div>
           </div>
 
@@ -171,7 +175,7 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont service-box-3-img ">
-              <Image src="/images/home-seo.png" fill alt="seo" />
+              <Image src="/images/home-seo-2.jpg" fill alt="seo" />
             </div>
           </div>
 
@@ -205,7 +209,11 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont">
-              <Image src="/images/ad-4.jpg" fill alt="website design" />
+              <Image
+                src="/images/service-ads-2.jpg"
+                fill
+                alt="google ads service"
+              />
             </div>
           </div>
         </div>

@@ -124,11 +124,7 @@ function Page() {
                 </span>
                 —so you can focus on scaling your business.
               </p>
-              <Link
-                href="/contact-us"
-                className="buttons"
-                target="blank"
-              >
+              <Link href="/contact-us" className="buttons" target="blank">
                 launch your website
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -216,7 +212,7 @@ function Page() {
 
             <div className="web-service-box-img-cont">
               <Image
-                src="/images/web-design.webp"
+                src="/images/header-web.jpg"
                 fill
                 alt="website design"
               ></Image>

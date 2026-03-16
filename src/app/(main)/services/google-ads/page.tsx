@@ -108,7 +108,7 @@ function Page() {
   const WhyAdsData = {
     heading: "Why Work With Zonic Media for Google Ads Management",
     image: {
-      src: "/images/ad-5.jpg",
+      src: "/images/header-ad-2.webp",
       alt: "google ads management",
     },
     defaultActiveKey: "0",
@@ -160,11 +160,7 @@ function Page() {
                 strategic Google Ads management.
               </p>
 
-              <Link
-                href="/contact-us"
-                className="buttons"
-                target="blank"
-              >
+              <Link href="/contact-us" className="buttons" target="blank">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -198,7 +194,7 @@ function Page() {
 
           <Col lg={6}>
             <div className="ads-section-1__img-cont">
-              <Image src="/images/ad-main.png" fill alt="google ads" />
+              <Image src="/images/ad-page-1.png" fill alt="google ads" />
             </div>
           </Col>
         </Row>
@@ -280,7 +276,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/ad-2.jpg" fill alt="website design" />
+              <Image src="/images/home-ads.jpg" fill alt="ads" />
             </div>
           </div>
 
@@ -311,7 +307,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/ad-3.svg" fill alt="website design" />
+              <Image src="/images/service-ads-2.jpg" fill alt="google ads" />
             </div>
           </div>
 
@@ -341,7 +337,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/ad-4.jpg" fill alt="website design" />
+              <Image src="/images/ad-3.jpg" fill alt="google ad dashboard" />
             </div>
           </div>
         </div>

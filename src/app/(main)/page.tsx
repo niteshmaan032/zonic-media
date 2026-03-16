@@ -275,7 +275,7 @@ export default function Home() {
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/home-service-1.webp"
+              src="/images/m-5.webp"
               fill
               alt="web design"
               sizes="(max-width: 991.98px) 100vw, 40vw"
@@ -321,7 +321,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="home-sec5-service-img-cont">
-            <Image src="/images/vv.png" fill alt="web design" />
+            <Image src="/images/home-gmb-1.jpg" fill alt="google my business" />
           </div>
         </div>
 
@@ -362,9 +362,9 @@ export default function Home() {
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/ad-4.jpg"
+              src="/images/home-ads.jpg"
               fill
-              alt="web design"
+              alt="google ads"
               sizes="(max-width: 991.98px) 100vw, 40vw"
             />
           </div>
@@ -401,9 +401,9 @@ export default function Home() {
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
-              src="/images/home-seo.png"
+              src="/images/home-seo-2.jpg"
               fill
-              alt="web design"
+              alt="local seo"
               sizes="(max-width: 991.98px) 100vw, 40vw"
             />
           </div>

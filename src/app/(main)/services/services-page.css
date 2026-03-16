@@ -162,6 +162,10 @@
     margin-bottom: 14px;
   }
 
+  .service-page-section1-heading br {
+    display: none;
+  }
+
   .service-page-section-1-descrp {
     font-size: 22px;
     line-height: 30px;

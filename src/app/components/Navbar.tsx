@@ -12,28 +12,28 @@ const services = [
   {
     id: "gmb",
     label: "google my business (GMB)",
-    image: "/images/gmb.webp",
+    image: "/images/header-gmb.webp",
     alt: "google my business",
     link: "/services/google-my-business",
   },
   {
     id: "web",
     label: "web design",
-    image: "/images/web-design.webp",
+    image: "/images/header-web.jpg",
     alt: "web design",
     link: "/services/web-design",
   },
   {
     id: "seo",
     label: "local SEO",
-    image: "/images/seo-3.png",
+    image: "/images/header-seo.webp",
     alt: "local seo",
     link: "/services/local-seo",
   },
   {
     id: "ppc",
     label: "Google ADS (PPC)",
-    image: "/images/ad-4.jpg",
+    image: "/images/header-ad-2.webp",
     alt: "google ads",
     link: "/services/google-ads",
   },
@@ -153,7 +153,10 @@ function Navbar() {
                                 </li>
                               ))}
                             </ul>
-                            <Link href={SITE_PATHS.services} className="buttons">
+                            <Link
+                              href={SITE_PATHS.services}
+                              className="buttons"
+                            >
                               <span>View all services</span>
                               <span className="buttons__icon-wrapper">
                                 <svg

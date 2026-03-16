@@ -59,7 +59,7 @@
 }
 
 .ads-section-1__img-cont img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* ads-section-2 */
@@ -248,7 +248,7 @@
   }
 
   .ads-section-1__content {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   .ads-section-1__title {
@@ -266,7 +266,7 @@
   }
 
   .ads-section-1__img-cont {
-    height: 280px;
+    height: 420px;
   }
 
   /* Section 2 */

@@ -126,7 +126,7 @@ function Page() {
   const WhygmbData = {
     heading: "Why Work With Zonic Media for GMB Recovery:",
     image: {
-      src: "/images/gmb-3.jpg",
+      src: "/images/header-gmb.webp",
       alt: "google my business recovery",
     },
     defaultActiveKey: "0",
@@ -207,7 +207,11 @@ function Page() {
 
           <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
-              <Image src="/images/re.png" fill alt="google my business" />
+              <Image
+                src="/images/gmb-page-1.png"
+                fill
+                alt="google my business"
+              />
             </div>
           </Col>
         </Row>

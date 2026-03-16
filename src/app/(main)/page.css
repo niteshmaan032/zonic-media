@@ -642,10 +642,6 @@
     height: auto;
   }
 
-  .home-section-5 .home-sec5-service-wrapper:nth-child(2) img {
-    object-position: right;
-  }
-
   /*home-section-6*/
 
   .home-section-6 {
@@ -739,10 +735,6 @@
 
   .home-sec5-service-img-cont {
     height: auto;
-  }
-
-  .home-section-5 .home-sec5-service-wrapper:nth-child(2) img {
-    object-position: right;
   }
 
   /*home-section-6*/
