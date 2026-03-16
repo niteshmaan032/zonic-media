@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MdArrowOutward } from "react-icons/md";
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 import "@/app/style/navbar.css";
 import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -40,6 +41,7 @@ const services = [
 ];
 
 function Navbar() {
+  const pathname = usePathname();
   const defaultService = services[0];
   const [activeService, setActiveService] = useState(defaultService);
   const [scrolled, setScrolled] = useState(false);
@@ -50,10 +52,48 @@ function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const [accordionKey, setAccordionKey] = useState<string | null>(null);
+  const isFirstPathnameRenderRef = useRef(true);
+  const mobileOpenRef = useRef(mobileOpen);
+  const closeMenuFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
   }, [mobileOpen]);
+
+  useEffect(() => {
+    mobileOpenRef.current = mobileOpen;
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    if (isFirstPathnameRenderRef.current) {
+      isFirstPathnameRenderRef.current = false;
+      return;
+    }
+
+    if (!mobileOpenRef.current) {
+      return;
+    }
+
+    closeMenuFrameRef.current = window.requestAnimationFrame(() => {
+      setMobileOpen(false);
+      setAccordionKey(null);
+    });
+
+    return () => {
+      if (closeMenuFrameRef.current !== null) {
+        window.cancelAnimationFrame(closeMenuFrameRef.current);
+        closeMenuFrameRef.current = null;
+      }
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    return () => {
+      if (closeMenuFrameRef.current !== null) {
+        window.cancelAnimationFrame(closeMenuFrameRef.current);
+      }
+    };
+  }, []);
 
   const handleToggleMobileMenu = (isOpen: boolean) => {
     setMobileOpen(isOpen);
@@ -300,7 +340,10 @@ function Navbar() {
                 }
               >
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header>Services</Accordion.Header>
+                  <Accordion.Header>
+                    {" "}
+                    <Link href="/services">Services </Link>{" "}
+                  </Accordion.Header>
                   <Accordion.Body>
                     <ul>
                       {services.map((s) => (
