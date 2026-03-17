@@ -204,7 +204,7 @@ function Page() {
 
           <Col lg={6}>
             <div className="ads-section-1__img-cont">
-              <Image src="/images/ad-page-1.png" fill alt="google ads" />
+              <Image src="/images/ad-page-1.webp" fill alt="google ads" />
             </div>
           </Col>
         </Row>
@@ -286,7 +286,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/home-ads.jpg" fill alt="ads" />
+              <Image src="/images/home-ads.webp" fill alt="ads" />
             </div>
           </div>
 
@@ -317,7 +317,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/service-ads-2.jpg" fill alt="google ads" />
+              <Image src="/images/service-ads-2.webp" fill alt="google ads" />
             </div>
           </div>
 
@@ -347,7 +347,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/ad-3.jpg" fill alt="google ad dashboard" />
+              <Image src="/images/ad-3.webp" fill alt="google ad dashboard" />
             </div>
           </div>
         </div>

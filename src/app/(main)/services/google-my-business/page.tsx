@@ -33,10 +33,10 @@ function Page() {
   };
 
   const workIMages = [
-    { src: "/images/work-1.png", alt: "recovered gmb account" },
-    { src: "/images/work-2.png", alt: "recovered gmb account" },
-    { src: "/images/work-3.png", alt: "recovered gmb account" },
-    { src: "/images/work-4.png", alt: "recovered gmb account" },
+    { src: "/images/work-1.webp", alt: "recovered gmb account" },
+    { src: "/images/work-2.webp", alt: "recovered gmb account" },
+    { src: "/images/work-3.webp", alt: "recovered gmb account" },
+    { src: "/images/work-4.webp", alt: "recovered gmb account" },
   ];
 
   const gmbFaqs = [
@@ -218,7 +218,7 @@ function Page() {
           <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
               <Image
-                src="/images/gmb-page-1.png"
+                src="/images/gmb-page-1.webp"
                 fill
                 alt="google my business"
               />
@@ -242,7 +242,7 @@ function Page() {
 
           <div className="gmb-sec2-cards">
             <div className="gmb-sec2-img-cont">
-              <Image src="/images/gmb-2.png" fill alt="gmb phone " />
+              <Image src="/images/gmb-2.webp" fill alt="gmb phone " />
             </div>
             <Row>
               <Row className="justify-content-center ">
@@ -479,7 +479,7 @@ function Page() {
         </div>
 
         <div className="gmb-sec7-img-cont">
-          <Image src="/images/gmb-4.png" fill alt="gmb"></Image>
+          <Image src="/images/gmb-4.webp" fill alt="gmb"></Image>
         </div>
       </div>
 

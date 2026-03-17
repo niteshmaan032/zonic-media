@@ -167,7 +167,7 @@ function Footer() {
           <Marquee>
             <div className="footer-logo-img-cont">
               <Image
-                src="/images/footer-logo.svg"
+                src="/images/footer-logo.webp"
                 fill
                 alt="zonic media logo"
               />
@@ -178,7 +178,7 @@ function Footer() {
         {/* Desktop Logo Static */}
         <div className="footer-logo d-none d-lg-block">
           <div className="footer-logo-img-cont">
-            <Image src="/images/footer-logo.svg" fill alt="zonic media logo" />
+            <Image src="/images/footer-logo.webp" fill alt="zonic media logo" />
           </div>
         </div>
       </div>

@@ -94,7 +94,7 @@ function Page() {
   const WhylocalData = {
     heading: "Why Work With Zonic Media for Local SEO Services",
     image: {
-      src: "/images/home-seo-2.jpg",
+      src: "/images/home-seo-2.webp",
       alt: "google my business recovery",
     },
     defaultActiveKey: "0",
@@ -242,7 +242,7 @@ function Page() {
             ref={videoRef}
             playsInline
             loop
-            poster="/images/video-prv.png"
+            poster="/images/video-prv.webp"
             controls={isPlaying}
             className="seo-video"
             src="/video/seo-video.mp4"

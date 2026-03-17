@@ -199,7 +199,7 @@ function Page() {
             </div>
 
             <div className="web-service-box-img-cont">
-              <Image src="/images/web-1.png" fill alt="website design"></Image>
+              <Image src="/images/web-1.webp" fill alt="website design"></Image>
             </div>
           </div>
 
@@ -222,7 +222,7 @@ function Page() {
 
             <div className="web-service-box-img-cont">
               <Image
-                src="/images/header-web.jpg"
+                src="/images/header-web.webp"
                 fill
                 alt="website design"
               ></Image>
@@ -250,7 +250,7 @@ function Page() {
 
             <div className="web-service-box-img-cont">
               <Image
-                src="/images/wordpress.png"
+                src="/images/wordpress.webp"
                 fill
                 alt="wordpress website design"
               ></Image>
@@ -277,7 +277,7 @@ function Page() {
 
             <div className="web-service-box-img-cont">
               <Image
-                src="/images/shopify.jpg"
+                src="/images/shopify.webp"
                 fill
                 alt="shopify website design"
               ></Image>
@@ -296,7 +296,7 @@ function Page() {
           <span>
             Delivering
             <Image
-              src="/images/icon.png"
+              src="/images/icon.webp"
               width={95}
               height={90}
               alt="zonic icon"

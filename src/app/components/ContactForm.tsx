@@ -5,10 +5,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import "@/app/style/contactform.css";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Row, Col } from "react-bootstrap";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ContactFormValues = {
   fullName: string;
@@ -16,6 +17,7 @@ type ContactFormValues = {
   contact: string;
   message: string;
   services: string[];
+  recaptchaToken: string;
 };
 
 export type ContactFormContent = {
@@ -31,13 +33,16 @@ type ContactFormProps = {
 export default function ContactForm({ content }: ContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
   const { heading, highlightedHeading, points } = content;
 
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
   } = useForm<ContactFormValues>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -47,8 +52,10 @@ export default function ContactForm({ content }: ContactFormProps) {
       contact: "",
       message: "",
       services: [],
+      recaptchaToken: "",
     },
   });
+  const recaptchaToken = watch("recaptchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -91,6 +98,8 @@ export default function ContactForm({ content }: ContactFormProps) {
           ? error.message
           : "Something went wrong. Please try again.",
       );
+    } finally {
+      setRecaptchaResetSignal((value) => value + 1);
     }
   };
 
@@ -261,6 +270,25 @@ export default function ContactForm({ content }: ContactFormProps) {
               </Col>
 
               <Col xs={12}>
+                <Controller
+                  control={control}
+                  name="recaptchaToken"
+                  rules={{
+                    validate: (value) =>
+                      value || "Please complete the reCAPTCHA verification.",
+                  }}
+                  render={({ field }) => (
+                    <RecaptchaCheckbox
+                      value={field.value}
+                      onChange={field.onChange}
+                      resetSignal={recaptchaResetSignal}
+                      error={errors.recaptchaToken?.message}
+                    />
+                  )}
+                />
+              </Col>
+
+              <Col xs={12}>
                 {serviceList.map((service, index) => (
                   <div key={index} className="d-inline-block me-2 me-lg-3 my-2">
                     <input
@@ -296,7 +324,7 @@ export default function ContactForm({ content }: ContactFormProps) {
                 <button
                   type="submit"
                   className="buttons"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !recaptchaToken}
                 >
                   {isSubmitting ? (
                     <>

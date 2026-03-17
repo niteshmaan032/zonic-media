@@ -27,7 +27,7 @@ function WorldMap() {
         <div className="map-marker is-canada">
           <div className="g-tooltip">
             <Image
-              src="/images/canada.png"
+              src="/images/canada.webp"
               fill
               alt="Canada"
               className="flag-img"
@@ -46,7 +46,7 @@ function WorldMap() {
         <div className="map-marker is-dubai">
           <div className="g-tooltip">
             <Image
-              src="/images/dubai-flag.png"
+              src="/images/dubai-flag.webp"
               fill
               alt="Dubai / UAE"
               className="flag-img"
@@ -62,7 +62,7 @@ function WorldMap() {
         <div className="map-marker is-us">
           <div className="g-tooltip">
             <Image
-              src="/images/united-states.png"
+              src="/images/united-states.webp"
               fill
               alt="United States"
               className="flag-img"
@@ -82,7 +82,7 @@ function WorldMap() {
         <div className="map-marker is-aus">
           <div className="g-tooltip">
             <Image
-              src="/images/australia.png"
+              src="/images/australia.webp"
               fill
               alt="Australia"
               className="flag-img"
@@ -100,7 +100,7 @@ function WorldMap() {
         <div className="map-marker is-ind">
           <div className="g-tooltip">
             <Image
-              src="/images/india.png"
+              src="/images/india.webp"
               fill
               alt="India"
               className="flag-img"
@@ -119,7 +119,7 @@ function WorldMap() {
         <div className="map-marker is-uk">
           <div className="g-tooltip">
             <Image
-              src="/images/united-kingdom.png"
+              src="/images/united-kingdom.webp"
               fill
               alt="India"
               className="flag-img"

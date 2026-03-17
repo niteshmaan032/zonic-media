@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/contactUs.css";
@@ -11,6 +11,7 @@ import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactUsFormValues = {
@@ -19,17 +20,21 @@ type ContactUsFormValues = {
   contact: string;
   message: string;
   services: string[];
+  recaptchaToken: string;
 };
 
 function ContactUsPageClient() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
 
   const {
+    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    watch,
   } = useForm<ContactUsFormValues>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -39,8 +44,10 @@ function ContactUsPageClient() {
       contact: "",
       message: "",
       services: [],
+      recaptchaToken: "",
     },
   });
+  const recaptchaToken = watch("recaptchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -83,6 +90,8 @@ function ContactUsPageClient() {
           ? error.message
           : "Something went wrong. Please try again.",
       );
+    } finally {
+      setRecaptchaResetSignal((value) => value + 1);
     }
   };
 
@@ -267,6 +276,25 @@ function ContactUsPageClient() {
                 </Col>
 
                 <Col xs={12}>
+                  <Controller
+                    control={control}
+                    name="recaptchaToken"
+                    rules={{
+                      validate: (value) =>
+                        value || "Please complete the reCAPTCHA verification.",
+                    }}
+                    render={({ field }) => (
+                      <RecaptchaCheckbox
+                        value={field.value}
+                        onChange={field.onChange}
+                        resetSignal={recaptchaResetSignal}
+                        error={errors.recaptchaToken?.message}
+                      />
+                    )}
+                  />
+                </Col>
+
+                <Col xs={12}>
                   {serviceList.map((service, index) => (
                     <div
                       key={index}
@@ -305,7 +333,7 @@ function ContactUsPageClient() {
                   <button
                     type="submit"
                     className="buttons"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !recaptchaToken}
                   >
                     {isSubmitting ? (
                       <>

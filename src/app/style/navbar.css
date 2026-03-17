@@ -27,6 +27,10 @@
   transition: 0.4s ease;
 }
 
+.logo-img {
+  object-fit: contain;
+}
+
 .navbar-wrapper .menu-items > ul {
   padding: 0;
   margin: 0;

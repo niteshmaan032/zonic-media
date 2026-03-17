@@ -1,4 +1,5 @@
 import { createLead, type LeadPayload } from "@/backend/controllers/leadsController";
+import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
 
 const ALLOWED_SERVICES = new Set([
   "Web Design",
@@ -39,8 +40,11 @@ export const leadsRoute = async (body: Record<string, unknown>) => {
   const contact = typeof body.contact === "string" ? sanitizeText(body.contact) : "";
   const message = typeof body.message === "string" ? sanitizeText(body.message) : "";
   const services = normalizeServices(body.services);
+  const recaptchaToken =
+    typeof body.recaptchaToken === "string" ? body.recaptchaToken.trim() : "";
 
   if (
+    !recaptchaToken ||
     !isLengthValid(fullName, 2, 100) ||
     !EMAIL_REGEX.test(email) ||
     !CONTACT_REGEX.test(contact) ||
@@ -52,6 +56,18 @@ export const leadsRoute = async (body: Record<string, unknown>) => {
       body: {
         success: false,
         message: "Invalid request body. Please check your inputs.",
+      },
+    };
+  }
+
+  const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
+
+  if (!recaptchaResult.success) {
+    return {
+      status: 400,
+      body: {
+        success: false,
+        message: recaptchaResult.message,
       },
     };
   }

@@ -20,7 +20,7 @@ const services = [
   {
     id: "web",
     label: "web design",
-    image: "/images/header-web.jpg",
+    image: "/images/header-web.webp",
     alt: "web design",
     link: "/services/web-design",
   },
@@ -150,7 +150,7 @@ function Navbar() {
             <Col xs="auto">
               <Link href="/">
                 <Image
-                  src="/images/logo.svg"
+                  src="/images/logo.webp"
                   width={132}
                   height={50}
                   alt="logo"

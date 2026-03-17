@@ -113,7 +113,7 @@ function Page() {
 
             <div className="service-page-section-3-img-cont">
               <Image
-                src="/images/home-gmb-1.jpg"
+                src="/images/home-gmb-1.webp"
                 fill
                 alt="google my business service"
               />
@@ -185,7 +185,7 @@ function Page() {
             </div>
 
             <div className="service-page-section-3-img-cont service-box-3-img ">
-              <Image src="/images/home-seo-2.jpg" fill alt="seo" />
+              <Image src="/images/home-seo-2.webp" fill alt="seo" />
             </div>
           </div>
 
@@ -220,7 +220,7 @@ function Page() {
 
             <div className="service-page-section-3-img-cont">
               <Image
-                src="/images/service-ads-2.jpg"
+                src="/images/service-ads-2.webp"
                 fill
                 alt="google ads service"
               />

@@ -75,7 +75,7 @@ function Page() {
         </div>
 
         <div className="about-sec1-img">
-          <Image src="/images/agency.jpg" fill alt="agency employee working" />
+          <Image src="/images/agency.webp" fill alt="agency employee working" />
         </div>
       </div>
 
