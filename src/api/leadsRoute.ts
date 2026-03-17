@@ -34,7 +34,18 @@ const normalizeServices = (value: unknown): string[] => {
   return Array.from(new Set(normalized));
 };
 
-export const leadsRoute = async (body: Record<string, unknown>) => {
+type LeadsRouteResult = {
+  status: number;
+  body: {
+    success: boolean;
+    message: string;
+  };
+  thankYouPayload?: LeadPayload;
+};
+
+export const leadsRoute = async (
+  body: Record<string, unknown>,
+): Promise<LeadsRouteResult> => {
   const fullName = typeof body.fullName === "string" ? sanitizeText(body.fullName) : "";
   const email = typeof body.email === "string" ? sanitizeText(body.email).toLowerCase() : "";
   const contact = typeof body.contact === "string" ? sanitizeText(body.contact) : "";
@@ -67,7 +78,9 @@ export const leadsRoute = async (body: Record<string, unknown>) => {
       status: 400,
       body: {
         success: false,
-        message: recaptchaResult.message,
+        message:
+          recaptchaResult.message ??
+          "reCAPTCHA verification failed. Please try again.",
       },
     };
   }
@@ -80,10 +93,24 @@ export const leadsRoute = async (body: Record<string, unknown>) => {
     services,
   };
 
-  const result = await createLead(payload);
+  try {
+    const result = await createLead(payload);
 
-  return {
-    status: 200,
-    body: result,
-  };
+    return {
+      status: 200,
+      body: result,
+      thankYouPayload: payload,
+    };
+  } catch (error) {
+    console.error("Lead creation failed.", error);
+
+    return {
+      status: 500,
+      body: {
+        success: false,
+        message:
+          "We verified your details, but could not send the emails right now. Please try again.",
+      },
+    };
+  }
 };

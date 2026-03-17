@@ -3,8 +3,13 @@ type RecaptchaVerifyResponse = {
   ["error-codes"]?: string[];
 };
 
+const RECAPTCHA_TEST_SECRET_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe";
+
 export const verifyRecaptchaToken = async (token: string) => {
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
+  const secret =
+    process.env.NODE_ENV !== "production"
+      ? RECAPTCHA_TEST_SECRET_KEY
+      : process.env.RECAPTCHA_SECRET_KEY?.trim();
 
   if (!secret) {
     return {

@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import { enqueueOwnerLeadEmail } from "@/backend/queues/ownerLeadQueue";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 export type LeadPayload = {
@@ -106,25 +105,10 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 };
 
 export const createLead = async (payload: LeadPayload) => {
-  await sendUserThankYouEmail(payload);
-
-  try {
-    const queueResult = await enqueueOwnerLeadEmail(payload);
-
-    if (queueResult.queued) {
-      return {
-        success: true,
-        message: "Thank-you email sent and owner lead email queued successfully.",
-      };
-    }
-  } catch (error) {
-    console.error("Failed to queue owner lead email, falling back to direct send.", error);
-  }
-
   await sendOwnerLeadEmail(payload);
 
   return {
     success: true,
-    message: "Thank-you and owner lead emails sent successfully.",
+    message: "Lead email sent successfully.",
   };
 };

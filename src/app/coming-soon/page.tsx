@@ -8,6 +8,7 @@ import "@/app/style/comingSoon.css";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { validateRecaptchaToken } from "@/shared/contactFormValidation";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ComingSoonFormValues = {
@@ -29,7 +30,6 @@ function Page() {
     register,
     handleSubmit,
     reset,
-    watch,
     formState: { errors },
   } = useForm<ComingSoonFormValues>({
     mode: "onChange",
@@ -43,7 +43,6 @@ function Page() {
       recaptchaToken: "",
     },
   });
-  const recaptchaToken = watch("recaptchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -252,8 +251,7 @@ function Page() {
                       control={control}
                       name="recaptchaToken"
                       rules={{
-                        validate: (value) =>
-                          value || "Please complete the reCAPTCHA verification.",
+                        validate: validateRecaptchaToken,
                       }}
                       render={({ field }) => (
                         <RecaptchaCheckbox
@@ -303,7 +301,7 @@ function Page() {
                     <button
                       type="submit"
                       className="buttons"
-                      disabled={isSubmitting || !recaptchaToken}
+                      disabled={isSubmitting}
                     >
                       {isSubmitting ? (
                         <>

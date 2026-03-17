@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
@@ -81,7 +82,7 @@ function Page() {
           <Col lg={6}>
             <div className="thank-img-cont">
               <Image
-                src="/images/thank.png"
+                src="/images/thank.webp"
                 fill
                 alt="thank you envelope"
               ></Image>
@@ -90,12 +91,7 @@ function Page() {
 
           <Col lg={6}>
             <div className="thank-content-wrapper">
-              <Image
-                src="/images/check.png"
-                width={100}
-                height={100}
-                alt="check mark"
-              ></Image>
+              <FaCircleCheck size={100} aria-hidden="true" />
               <h1 className="thank-heading">Thank You !</h1>
               <p className="thank-descrp">
                 Your submission was successful, and we&apos;ll be in touch soon.

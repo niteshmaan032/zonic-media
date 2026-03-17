@@ -12,6 +12,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import { validateRecaptchaToken } from "@/shared/contactFormValidation";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactUsFormValues = {
@@ -34,7 +35,6 @@ function ContactUsPageClient() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-    watch,
   } = useForm<ContactUsFormValues>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -47,7 +47,6 @@ function ContactUsPageClient() {
       recaptchaToken: "",
     },
   });
-  const recaptchaToken = watch("recaptchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -280,8 +279,7 @@ function ContactUsPageClient() {
                     control={control}
                     name="recaptchaToken"
                     rules={{
-                      validate: (value) =>
-                        value || "Please complete the reCAPTCHA verification.",
+                      validate: validateRecaptchaToken,
                     }}
                     render={({ field }) => (
                       <RecaptchaCheckbox
@@ -333,7 +331,7 @@ function ContactUsPageClient() {
                   <button
                     type="submit"
                     className="buttons"
-                    disabled={isSubmitting || !recaptchaToken}
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       <>

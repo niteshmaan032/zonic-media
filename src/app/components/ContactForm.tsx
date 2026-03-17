@@ -9,6 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Row, Col } from "react-bootstrap";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { validateRecaptchaToken } from "@/shared/contactFormValidation";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ContactFormValues = {
@@ -42,7 +43,6 @@ export default function ContactForm({ content }: ContactFormProps) {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-    watch,
   } = useForm<ContactFormValues>({
     mode: "onChange",
     reValidateMode: "onChange",
@@ -55,7 +55,6 @@ export default function ContactForm({ content }: ContactFormProps) {
       recaptchaToken: "",
     },
   });
-  const recaptchaToken = watch("recaptchaToken");
 
   const serviceList: string[] = [
     "Web Design",
@@ -274,8 +273,7 @@ export default function ContactForm({ content }: ContactFormProps) {
                   control={control}
                   name="recaptchaToken"
                   rules={{
-                    validate: (value) =>
-                      value || "Please complete the reCAPTCHA verification.",
+                    validate: validateRecaptchaToken,
                   }}
                   render={({ field }) => (
                     <RecaptchaCheckbox
@@ -324,7 +322,7 @@ export default function ContactForm({ content }: ContactFormProps) {
                 <button
                   type="submit"
                   className="buttons"
-                  disabled={isSubmitting || !recaptchaToken}
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
