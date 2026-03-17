@@ -57,7 +57,7 @@ export default function Home() {
 
           <Col xs={12}>
             <div className="home-sec1-buttons">
-              <Link href="/contact-us" target="blank" className="buttons">
+              <Link href="/contact-us" className="buttons">
                 Book a Strategy Call
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -215,7 +215,7 @@ export default function Home() {
               results-focused marketing strategies. Highly trusted by growing
               businesses.
             </p>
-            <Link href="/contact-us" target="blank" className="buttons">
+            <Link href="/contact-us" className="buttons">
               Book a Strategy Call
               <span className="buttons__icon-wrapper">
                 <svg

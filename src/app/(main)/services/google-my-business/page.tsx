@@ -183,7 +183,7 @@ function Page() {
                 reinstatement process while you focus on running your business.
                 <span>Trusted by agencies and business owners worldwide.</span>
               </p>
-              <Link href="/contact-us" className="buttons" target="blank">
+              <Link href="/contact-us" className="buttons">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -345,7 +345,7 @@ function Page() {
               <span> Recovery for Local Businesses Across Industries </span>
             </h2>
 
-            <Link href="/contact-us" className="buttons" target="blank">
+            <Link href="/contact-us" className="buttons">
               Request a Consultation
               <span className="buttons__icon-wrapper">
                 <svg

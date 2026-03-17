@@ -184,7 +184,7 @@ function Page() {
                 and turn high-intent searches into consistent leads and revenue
                 growth through proven local SEO strategies.
               </p>
-              <Link href="/contact-us" target="blank" className="buttons">
+              <Link href="/contact-us" className="buttons">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg

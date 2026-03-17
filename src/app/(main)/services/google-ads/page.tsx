@@ -170,7 +170,7 @@ function Page() {
                 strategic Google Ads management.
               </p>
 
-              <Link href="/contact-us" className="buttons" target="blank">
+              <Link href="/contact-us" className="buttons">
                 Request a Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
