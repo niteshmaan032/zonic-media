@@ -27,6 +27,10 @@
   gap: 8px;
 }
 
+.thank-content-wrapper svg {
+  color: var(--color3);
+}
+
 .thank-heading {
   font-size: 72px;
   line-height: inherit;
@@ -105,4 +109,3 @@
     padding: 80px 40px;
   }
 }
-
