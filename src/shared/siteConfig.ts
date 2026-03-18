@@ -15,6 +15,7 @@ export const SITE_PATHS = {
   services: "/services",
   contact: "/contact-us",
   blogs: "/coming-soon",
+  seo: "/services/local-seo",
   legalPlaceholder: "/coming-soon",
 } as const;
 

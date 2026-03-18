@@ -245,6 +245,9 @@ function Navbar() {
                     </div>
                   </li>
                   <li>
+                    <Link href={SITE_PATHS.seo}>Local Seo</Link>
+                  </li>
+                  <li>
                     <Link href={SITE_PATHS.blogs}>Blogs</Link>
                   </li>
                   <li>
