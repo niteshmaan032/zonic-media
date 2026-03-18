@@ -91,7 +91,7 @@ function Page() {
 
           <Col lg={6}>
             <div className="thank-content-wrapper">
-              <FaCircleCheck size={100} aria-hidden="true" />
+              <FaCircleCheck className="check" size={100} aria-hidden="true" />
               <h1 className="thank-heading">Thank You !</h1>
               <p className="thank-descrp">
                 Your submission was successful, and we&apos;ll be in touch soon.

@@ -27,7 +27,7 @@
   gap: 8px;
 }
 
-.thank-content-wrapper svg {
+.thank-content-wrapper .check {
   color: var(--color3);
 }
 
