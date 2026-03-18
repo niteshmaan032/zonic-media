@@ -167,7 +167,7 @@ function Footer() {
           <Marquee>
             <div className="footer-logo-img-cont">
               <Image
-                src="/images/footer-logo.webp"
+                src="/images/footer-logo.svg"
                 fill
                 alt="zonic media logo"
               />
