@@ -9,6 +9,11 @@ export type LeadPayload = {
   services: string[];
 };
 
+const OWNER_LEAD_CC_EMAILS = [
+  "man2k19ish@gmail.com",
+  "samrunads@gmail.com",
+];
+
 const getTransporter = () => {
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT ?? "465");
@@ -65,6 +70,7 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
   await transporter.sendMail({
     from,
     to: ownerEmail,
+    cc: OWNER_LEAD_CC_EMAILS,
     subject: `New Lead: ${fullName}`,
     text: [
       "You received a new lead from the contact form.",
