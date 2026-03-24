@@ -204,6 +204,10 @@ body p {
     padding: 10px;
   }
 
+  .faqs-question-box {
+    margin-top: 20px;
+  }
+
   /*testimonial-section*/
   .testimonial-heading {
     width: 100%;

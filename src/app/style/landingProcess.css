@@ -1,0 +1,76 @@
+.landing-process-wrapper {
+  margin-top: 40px;
+}
+
+.landing-process-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--stroke);
+  padding: 32px;
+  border-radius: 20px;
+  height: 280px;
+}
+
+.landing-process-numb {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.landing-process-content {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.LandingProcessSwiper .swiper-wrapper {
+  padding-bottom: 60px;
+}
+
+.LandingProcessSwiper > .swiper-pagination > span {
+  height: 16px;
+  width: 16px;
+  background-color: var(--secondary);
+}
+
+/*responsive*/
+
+/*--mobile and tablet--*/
+
+@media (max-width: 991.98px) {
+  .landing-process-card {
+    height: 350px;
+  }
+}
+
+/*--mobile--*/
+
+@media (max-width: 575.98px) {
+}
+
+/*--tablet--*/
+
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .landing-process-card {
+    height: 380px;
+  }
+}
+
+@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .landing-process-card {
+    height: 350px;
+  }
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}

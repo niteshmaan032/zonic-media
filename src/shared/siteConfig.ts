@@ -5,7 +5,7 @@ export const SITE_CONTACT = {
   phoneHref: "tel:+13027269376",
   address: "8 The Green, STE B Dover, Kent, DE 19901 United States",
   mapHref:
-    "https://www.google.com/maps/search/?api=1&query=8+The+Green,+STE+B,+Dover,+Kent,+DE+19901,+United+States",
+    "https://maps.app.goo.gl/wWvgJJjzki7kjT8A9",
   bookCallHref: "/contact-us",
 } as const;
 

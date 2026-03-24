@@ -20,11 +20,11 @@ function Testimonials() {
           slidesPerView={1}
           spaceBetween={10}
           loop={false}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          //   pauseOnMouseEnter: true,
-          // }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           pagination={{
             clickable: true,
           }}

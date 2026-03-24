@@ -1,0 +1,201 @@
+{
+  "slug": "roofing",
+  "meta": {
+    "title": "Roofing Marketing Agency | Zonic Media",
+    "description": "Scale your roofing business with results-driven marketing. Get more leads, more calls, and more booked roofing jobs with Zonic Media."
+  },
+  "hero": {
+    "backgroundImage": "/images/roofing-banner.png",
+    "heading": "Scale Your Roofing Business with Results Driven Marketing",
+    "description": "Boost your roofing business with targeted SEO, ads, and proven strategies that generate consistent leads, increase calls, and grow revenue faster.",
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us"
+  },
+  "section2": {
+    "subHeading": "Why local SEO",
+    "heading": "Why Local SEO Matters for Roofing Companies",
+    "shortDescription": "Most homeowners search online when they need roofing services, often using terms like “roof repair near me” or “best roofing company nearby.” Local SEO ensures your business appears at the top of these searches.",
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us",
+    "image": "/images/landing-seo.jpg",
+    "imageAlt": "google ads",
+    "paragraphs": [
+      "Most homeowners search online when they need roofing services, often using terms like “roof repair near me” or “best roofing company nearby.” Local SEO ensures your business appears at the top of these searches, putting you directly in front of high-intent customers who are ready to take action. Without it, you’re missing out on valuable leads every single day. A strong local SEO strategy helps your roofing business dominate your service area. By optimizing your Google Business Profile, website, and local listings, you increase your visibility, build trust, and stand out from competitors. This not only drives more traffic but also brings in higher-quality leads who are actively looking for your services.",
+      "With consistent local visibility, your business gains a steady flow of calls, inquiries, and booked jobs. Instead of relying on referrals or unpredictable marketing, local SEO creates a reliable system that works for you 24/7—helping your roofing company grow faster and more sustainably. Beyond visibility, local SEO also strengthens your online reputation. Positive reviews, accurate business information, and engaging content build credibility and influence customer decisions. When potential clients see a well-optimized profile with strong ratings and recent activity, they are far more likely to choose your roofing services over competitors.",
+      "Mobile search plays a huge role in how customers find roofing companies today. Many users search for services while on the go, especially during emergencies like leaks or storm damage. A well-optimized local SEO strategy ensures your business shows up instantly on mobile devices, making it easy for customers to call or request a quote within seconds. Additionally, local SEO provides long-term value compared to paid advertising. While ads can stop generating leads once your budget runs out, organic local rankings continue to bring in traffic consistently. By investing in local SEO, you’re building a strong digital foundation that keeps delivering results and supports the long-term growth of your roofing business."
+    ]
+  },
+  "section3": {
+    "subHeading": "Growth & Result",
+    "heading": "More Leads. More Calls. More Jobs.",
+    "description": "We follow a proven, step-by-step approach designed to consistently generate high-quality roofing leads, increase inbound calls, and turn prospects into paying customers. By combining strategic planning, targeted marketing, and continuous optimization.",
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us",
+    "cards": [
+      {
+        "icon": "trendUp",
+        "title": "Consistent High-Quality Leads",
+        "description": "We help you attract homeowners actively searching for roofing services, ensuring every lead has real potential to convert."
+      },
+      {
+        "icon": "badgeCheck",
+        "title": "More Calls & Booked Jobs",
+        "description": "We optimize your online presence so more visitors call, inquire, and turn into scheduled roofing jobs."
+      },
+      {
+        "icon": "call",
+        "title": "Better Roofing Conversions",
+        "description": "From search to contact, every step is designed to help more local roofing prospects take action."
+      }
+    ]
+  },
+  "section4": {
+    "heading": "Consistent Growth: Scaling a Roofing Business with Zonic Media",
+    "description": "Recognizing the lack of consistent leads and reliance on referrals, we partnered with a roofing company to build a predictable lead generation system using SEO and targeted ads.",
+    "stats": [
+      {
+        "number": "65%",
+        "description": "Increase in qualified roofing leads within the first 60 days, bringing in more high-intent customers."
+      },
+      {
+        "number": "3X Growth",
+        "description": "Increase in booked roofing opportunities by improving local visibility and conversion quality."
+      }
+    ],
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us",
+    "image": "/images/landing-seo2.png",
+    "imageAlt": "seo"
+  },
+  "section5": {
+    "subHeading": "Our Process",
+    "heading": "Our Simple Steps for Growth Process",
+    "description": "We follow a proven, step-by-step approach designed to consistently generate high-quality roofing leads.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Audit & Strategy",
+        "description": "We start by deeply analyzing your roofing business, local market, competitors, and current online presence."
+      },
+      {
+        "number": "2",
+        "title": "Setup & Optimization",
+        "description": "We optimize your website, local SEO, and campaigns to attract high-quality leads."
+      },
+      {
+        "number": "3",
+        "title": "Launch & Lead Generation",
+        "description": "We launch campaigns that bring consistent roofing calls and inquiries."
+      },
+      {
+        "number": "4",
+        "title": "Tracking & Scaling",
+        "description": "We track performance and scale what works to maximize growth."
+      }
+    ]
+  },
+  "section6": {
+    "subHeading": "Why local SEO",
+    "heading": "Why Local SEO Matters for Roofing Companies",
+    "description": "Most homeowners search online when they need roofing services, often using terms like “roof repair near me” or “best roofing company nearby.” Local SEO ensures your business appears at the top of these searches. Most homeowners search online when they need roofing.",
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us",
+    "cards": [
+      {
+        "title": "Roofing Industry Focus",
+        "description": "We build strategies tailored specifically for roofing businesses and local service demand."
+      },
+      {
+        "title": "Proven Lead Generation System",
+        "description": "Our campaigns are designed to generate calls, form submissions, and booked roofing jobs."
+      },
+      {
+        "title": "Transparent Growth Tracking",
+        "description": "You can clearly see what is working, where leads come from, and how your campaigns are performing."
+      },
+      {
+        "title": "Long-Term Local Visibility",
+        "description": "We help roofing companies build a strong foundation that keeps generating business over time."
+      }
+    ]
+  },
+  "section7": {
+    "subHeading": "why Zonic Media",
+    "heading": "Why Zonic Media Beats Other Roofing Marketing Agencies",
+    "description": "We deliver real roofing leads, transparent strategies, consistent results, and long-term growth—unlike generic agencies focused only on traffic and empty promises.",
+    "ctaText": "Book a Strategy Call",
+    "ctaLink": "/contact-us",
+    "paragraphs": [
+      "Most homeowners search online when they need roofing services, often using terms like “roof repair near me” or “best roofing company nearby.” Local SEO ensures your business appears at the top of these searches, putting you directly in front of high-intent customers who are ready to take action. Without it, you’re missing out on valuable leads every single day. A strong local SEO strategy helps your roofing business dominate your service area. By optimizing your Google Business Profile, website, and local listings, you increase your visibility, build trust, and stand out from competitors. This not only drives more traffic but also brings in higher-quality leads who are actively looking for your services.",
+      "With consistent local visibility, your business gains a steady flow of calls, inquiries, and booked jobs. Instead of relying on referrals or unpredictable marketing, local SEO creates a reliable system that works for you 24/7—helping your roofing company grow faster and more sustainably. Beyond visibility, local SEO also strengthens your online reputation. Positive reviews, accurate business information, and engaging content build credibility and influence customer decisions. When potential clients see a well-optimized profile with strong ratings and recent activity, they are far more likely to choose your roofing services over competitors."
+    ]
+  },
+  "section10": {
+    "heading": "Our Digital Marketing Services",
+    "services": [
+      {
+        "number": "1",
+        "title": "UI/UX Design",
+        "description": "We design user-friendly digital experiences that improve engagement and help convert more roofing visitors into leads.",
+        "linkText": "View Web Design Services",
+        "link": "/service/web-desing"
+      },
+      {
+        "number": "2",
+        "title": "Local SEO",
+        "description": "We improve your local search presence so homeowners in your service area can find and contact you faster.",
+        "linkText": "View Local SEO Services",
+        "link": "/service/web-desing"
+      },
+      {
+        "number": "3",
+        "title": "Web Design",
+        "description": "We create fast, modern, and conversion-focused roofing websites that support growth and lead generation.",
+        "linkText": "View Web Design Services",
+        "link": "/service/web-desing"
+      },
+      {
+        "number": "4",
+        "title": "Google Ads",
+        "description": "We run targeted campaigns to generate high-intent roofing leads and drive more inquiries from paid traffic.",
+        "linkText": "View Google Ads Services",
+        "link": "/service/web-desing"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Hear what our clients say about",
+    "highlightedHeading": " working with Zonic Media."
+  },
+  "faqs": [
+    {
+      "question": "How long does it take to see results from roofing marketing?",
+      "answer": "Results depend on the strategy, but many roofing businesses begin seeing traction within the first few weeks, with stronger momentum building over the following months."
+    },
+    {
+      "question": "Will local SEO help me get more roofing calls?",
+      "answer": "Yes. Local SEO helps your roofing business appear in front of nearby customers actively searching for services, which can increase calls, leads, and quote requests."
+    },
+    {
+      "question": "Do you only work with roofing companies?",
+      "answer": "We work with service businesses in multiple industries, but your roofing page can be fully customized with messaging specific to roofing customers."
+    },
+    {
+      "question": "Can you improve my existing roofing website?",
+      "answer": "Yes. We can improve structure, messaging, speed, and conversion elements so your website performs better and supports lead generation."
+    },
+    {
+      "question": "Do I need paid ads along with SEO?",
+      "answer": "That depends on your goals. SEO builds long-term visibility, while paid ads can help you get leads faster. Many businesses benefit from using both together."
+    }
+  ],
+  "contact": {
+    "heading": "High-Converting Business Websites",
+    "highlightedHeading": "",
+    "points": [
+      "Modern, fast, and mobile-friendly website design",
+      "SEO-ready structure to help you rank on Google",
+      "Designed to convert visitors into leads and customers"
+    ]
+  }
+}
