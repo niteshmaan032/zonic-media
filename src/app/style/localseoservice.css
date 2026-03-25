@@ -294,7 +294,7 @@
   }
 }
 
-/*table devices*/
+/*tablet devices*/
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .localseo-section-1 {
     background-image: none;
@@ -310,7 +310,7 @@
   }
 
   .localseo-sec1-heading {
-    font-size: 54px;
+    font-size: 46px;
   }
 
   .localseo-sec1-descrp {

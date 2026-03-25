@@ -713,7 +713,7 @@
   }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1499.98px) {
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
   .landing-hero-section-content {
     padding: 0px 40px 60px 40px;
   }
@@ -726,11 +726,6 @@
 
   .landing-hero-descrip-container {
     flex-basis: 35%;
-  }
-
-  .landing-hero-descrp {
-    font-size: 16px;
-    line-height: 28px;
   }
 
   /*content-wrapper-landing-page*/
@@ -808,5 +803,5 @@
 }
 
 /*extra large desktop devices */
-@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+@media (min-width: 1399.98px) and (max-width: 1512.98px) {
 }

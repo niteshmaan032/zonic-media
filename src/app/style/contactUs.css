@@ -222,7 +222,7 @@
   }
 }
 
-@media (min-width: 1199.98px) and (max-width: 1366.98px) {
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
   .contact-us-form-section {
     padding: 140px 40px 50px 40px;
   }
@@ -247,5 +247,5 @@
 }
 
 /*extra large desktop devices */
-@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+@media (min-width: 1399.98px) and (max-width: 1512.98px) {
 }
