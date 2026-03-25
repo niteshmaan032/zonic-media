@@ -439,6 +439,39 @@ function Navbar() {
                 </Accordion.Item>
               </Accordion>
             </li>
+            <li>
+              <Accordion
+                flush
+                id="mobileServicesAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
+              >
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>
+                    {" "}
+                    <Link href={SITE_PATHS.seo}>Local SEO </Link>{" "}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      {localSeoServices.map((s) => (
+                        <li key={s.id}>
+                          <Link
+                            href={s.link}
+                            onClick={() => handleToggleMobileMenu(false)}
+                          >
+                            {s.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </li>
 
             <li>
               <Link
