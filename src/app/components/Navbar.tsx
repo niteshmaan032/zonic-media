@@ -40,6 +40,16 @@ const services = [
   },
 ];
 
+const localSeoServices = [
+  {
+    id: "Roofing SEO",
+    label: "Roofing Local SEO",
+    image: "/images/roofing-banner.png",
+    alt: "on page seo",
+    link: "/roofing-seo-services",
+  },
+];
+
 function Navbar() {
   const pathname = usePathname();
   const defaultService = services[0];
@@ -55,6 +65,8 @@ function Navbar() {
   const isFirstPathnameRenderRef = useRef(true);
   const mobileOpenRef = useRef(mobileOpen);
   const closeMenuFrameRef = useRef<number | null>(null);
+
+  const [activeLocalSeo, setActiveLocalSeo] = useState(localSeoServices[0]);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -244,8 +256,71 @@ function Navbar() {
                       </Row>
                     </div>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={SITE_PATHS.seo}>Local SEO</Link>
+                  </li> */}
+                  <li
+                    className="services-dropdown"
+                    onMouseLeave={() => setActiveLocalSeo(localSeoServices[0])}
+                  >
+                    <Link href={SITE_PATHS.seo}>
+                      Local SEO <MdArrowOutward size={16} />
+                    </Link>
+
+                    <div className="services-dropdown-container local-seo-service-dropdown">
+                      <Row className="h-100">
+                        {/* LEFT MENU */}
+                        <Col lg={7}>
+                          <div className="services-dropdown-menus">
+                            <p>Local SEO Services</p>
+                            <ul>
+                              {localSeoServices.map((s) => (
+                                <li key={s.id}>
+                                  <Link
+                                    href={s.link}
+                                    onMouseEnter={() => setActiveLocalSeo(s)}
+                                  >
+                                    {s.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+
+                            <Link
+                              href={SITE_PATHS.services}
+                              className="buttons"
+                            >
+                              <span>View all services</span>
+                              <span className="buttons__icon-wrapper">
+                                <svg viewBox="0 0 14 15" width="8">
+                                  <path
+                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                    fill="currentColor"
+                                  />
+                                </svg>
+                              </span>
+                            </Link>
+                          </div>
+                        </Col>
+
+                        {/* RIGHT IMAGE PREVIEW */}
+                        <Col lg={5}>
+                          <div className="services-dropdown-img-container">
+                            {localSeoServices.map((s) => (
+                              <Image
+                                key={s.id}
+                                src={s.image}
+                                alt={s.alt}
+                                fill
+                                className={`dropdown-preview-img ${
+                                  activeLocalSeo.id === s.id ? "active" : ""
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        </Col>
+                      </Row>
+                    </div>
                   </li>
                   <li>
                     <Link href={SITE_PATHS.blogs}>Blogs</Link>
@@ -364,6 +439,7 @@ function Navbar() {
                 </Accordion.Item>
               </Accordion>
             </li>
+
             <li>
               <Link
                 href={SITE_PATHS.blogs}
@@ -372,6 +448,7 @@ function Navbar() {
                 Blogs
               </Link>
             </li>
+
             <li>
               <Link
                 href={SITE_PATHS.contact}
