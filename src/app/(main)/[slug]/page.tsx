@@ -22,6 +22,12 @@ type PageProps = {
   }>;
 };
 
+const landingPageList = Object.values(landingPages);
+
+function getLandingPageBySlug(slug: string) {
+  return landingPageList.find((page) => page.slug === slug);
+}
+
 function ArrowIcon() {
   return (
     <span className="buttons__icon-wrapper">
@@ -84,8 +90,8 @@ function getCardIcon(icon: string) {
 }
 
 export async function generateStaticParams() {
-  return Object.keys(landingPages).map((slug) => ({
-    slug,
+  return landingPageList.map((page) => ({
+    slug: page.slug,
   }));
 }
 
@@ -93,7 +99,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const pageData = landingPages[slug as keyof typeof landingPages];
+  const pageData = getLandingPageBySlug(slug);
 
   if (!pageData) {
     return {
@@ -110,7 +116,7 @@ export async function generateMetadata({
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
-  const pageData = landingPages[slug as keyof typeof landingPages];
+  const pageData = getLandingPageBySlug(slug);
 
   if (!pageData) {
     notFound();

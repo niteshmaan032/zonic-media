@@ -12,6 +12,7 @@ type Step = {
   number: string;
   title: string;
   description: string;
+  bullets?: string[];
 };
 
 type Props = {
@@ -26,7 +27,7 @@ function LandingProcess({ steps }: Props) {
         spaceBetween={10}
         loop={false}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -34,12 +35,12 @@ function LandingProcess({ steps }: Props) {
           clickable: true,
         }}
         breakpoints={{
-          640: {
-            slidesPerView: 1.8,
+          575: {
+            slidesPerView: 1.5,
             spaceBetween: 10,
           },
           992: {
-            slidesPerView: 2,
+            slidesPerView: 1.8,
             spaceBetween: 10,
           },
           1025: {
@@ -47,19 +48,26 @@ function LandingProcess({ steps }: Props) {
             spaceBetween: 10,
           },
           1200: {
-            slidesPerView: 2.5,
-            spaceBetween: 20,
+            slidesPerView: 3.5,
+            spaceBetween: 10,
           },
         }}
         modules={[Pagination, Autoplay]}
         className="LandingProcessSwiper"
       >
         {steps.map((step, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={`${step.number}-${step.title}-${index}`}>
             <div className="landing-process-card">
               <p className="landing-process-numb">{step.number}</p>
               <h3 className="landing-process-heading">{step.title}</h3>
               <p className="landing-process-content">{step.description}</p>
+              {step.bullets?.length ? (
+                <ul className="landing-process-bullets">
+                  {step.bullets.map((item, bulletIndex) => (
+                    <li key={`${step.number}-bullet-${bulletIndex}`}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           </SwiperSlide>
         ))}
