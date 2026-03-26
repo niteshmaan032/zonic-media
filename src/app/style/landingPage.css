@@ -80,7 +80,7 @@
 
 .landing-head-descrp {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: 500;
   margin: 10px 0px 32px 0px;
 }
@@ -102,8 +102,6 @@
   font-size: 18px;
   margin-bottom: 14px;
   line-height: 32px;
-  font-weight: 500;
-  color: var(--text);
 }
 
 /*--landing-section-3*/
@@ -140,8 +138,7 @@
 
 .landing-sec3-card-content {
   font-size: 18px;
-  line-height: 30px;
-  font-weight: 500;
+  line-height: 28px;
 }
 
 /*--landing-section-4*/
@@ -242,9 +239,7 @@
 
 .landing-sec6-card-cont {
   font-size: 18px;
-  line-height: 28px;
-  font-weight: 500;
-  color: var(--color2);
+  line-height: 26px;
 }
 
 /*landing-section-7*/
@@ -262,10 +257,6 @@
 
 .landing-section-7 .landing-head-descrp {
   font-weight: 400;
-}
-
-.landing-section-7 .landing-sec2-content p {
-  color: var(--white);
 }
 
 /*--landing-section-8--*/
