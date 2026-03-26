@@ -4,7 +4,7 @@ import "@/app/style/thankyou.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
@@ -13,7 +13,7 @@ import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
 import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 
-const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
+// const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
 const THANK_YOU_RENDER_KEY = "thank_you_page_render_allowed";
 const socialIcons = {
   LinkedIn: FaLinkedin,
@@ -24,58 +24,53 @@ const socialIcons = {
 
 function Page() {
   const router = useRouter();
-  const [canAccess, setCanAccess] = useState(false);
-  const [isCheckingAccess, setIsCheckingAccess] = useState(true);
+
+  // Temporarily disabled URL access guard for the thank-you page.
+  // useEffect(() => {
+  //   const hasSuccessfulSubmission = () => {
+  //     const allowedAt = Number(sessionStorage.getItem(THANK_YOU_ACCESS_KEY));
+  //     return Number.isFinite(allowedAt) && allowedAt > 0;
+  //   };
+  //
+  //   const hasRenderAccess = () =>
+  //     sessionStorage.getItem(THANK_YOU_RENDER_KEY) === "true";
+  //
+  //   const evaluateAccess = () => {
+  //     if (hasSuccessfulSubmission()) {
+  //       sessionStorage.setItem(THANK_YOU_RENDER_KEY, "true");
+  //       sessionStorage.removeItem(THANK_YOU_ACCESS_KEY);
+  //     }
+  //
+  //     if (!hasRenderAccess()) {
+  //       router.replace(SITE_PATHS.home);
+  //       return;
+  //     }
+  //
+  //     setCanAccess(true);
+  //     setIsCheckingAccess(false);
+  //   };
+  //
+  //   const handlePageShow = () => {
+  //     if (!hasRenderAccess()) {
+  //       router.replace(SITE_PATHS.home);
+  //     }
+  //   };
+  //
+  //   const handlePageHide = () => {
+  //     sessionStorage.removeItem(THANK_YOU_RENDER_KEY);
+  //   };
+  //
+  //   evaluateAccess();
+  //   window.addEventListener("pageshow", handlePageShow);
+  //   window.addEventListener("pagehide", handlePageHide);
+  //
+  //   return () => {
+  //     window.removeEventListener("pageshow", handlePageShow);
+  //     window.removeEventListener("pagehide", handlePageHide);
+  //   };
+  // }, [router]);
 
   useEffect(() => {
-    const hasSuccessfulSubmission = () => {
-      const allowedAt = Number(sessionStorage.getItem(THANK_YOU_ACCESS_KEY));
-      return Number.isFinite(allowedAt) && allowedAt > 0;
-    };
-
-    const hasRenderAccess = () =>
-      sessionStorage.getItem(THANK_YOU_RENDER_KEY) === "true";
-
-    const evaluateAccess = () => {
-      if (hasSuccessfulSubmission()) {
-        sessionStorage.setItem(THANK_YOU_RENDER_KEY, "true");
-        sessionStorage.removeItem(THANK_YOU_ACCESS_KEY);
-      }
-
-      if (!hasRenderAccess()) {
-        router.replace(SITE_PATHS.home);
-        return;
-      }
-
-      setCanAccess(true);
-      setIsCheckingAccess(false);
-    };
-
-    const handlePageShow = () => {
-      if (!hasRenderAccess()) {
-        router.replace(SITE_PATHS.home);
-      }
-    };
-
-    const handlePageHide = () => {
-      sessionStorage.removeItem(THANK_YOU_RENDER_KEY);
-    };
-
-    evaluateAccess();
-    window.addEventListener("pageshow", handlePageShow);
-    window.addEventListener("pagehide", handlePageHide);
-
-    return () => {
-      window.removeEventListener("pageshow", handlePageShow);
-      window.removeEventListener("pagehide", handlePageHide);
-    };
-  }, [router]);
-
-  useEffect(() => {
-    if (!canAccess) {
-      return;
-    }
-
     const redirectTimer = window.setTimeout(() => {
       sessionStorage.removeItem(THANK_YOU_RENDER_KEY);
       router.replace(SITE_PATHS.home);
@@ -84,11 +79,7 @@ function Page() {
     return () => {
       window.clearTimeout(redirectTimer);
     };
-  }, [canAccess, router]);
-
-  if (isCheckingAccess || !canAccess) {
-    return null;
-  }
+  }, [router]);
 
   return (
     <>
