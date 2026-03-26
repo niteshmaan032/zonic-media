@@ -4,6 +4,7 @@ import "@/app/style/thankyou.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Script from "next/script";
 import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
@@ -83,6 +84,19 @@ function Page() {
 
   return (
     <>
+      <Script
+        id="google-ads-thank-you-conversion"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', {
+                send_to: 'AW-17618392446/lhzyCOW75LAbEP6qjdFB'
+              });
+            }
+          `,
+        }}
+      />
       <div className="thank-wrapper">
         <Row className="m-0 h-100 align-items-center pb-5 ">
           <Col lg={6}>
