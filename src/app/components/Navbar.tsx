@@ -48,6 +48,13 @@ const localSeoServices = [
     alt: "on page seo",
     link: "/roofing-seo-services",
   },
+  {
+    id: "Dentist SEO",
+    label: "Dentist Local SEO",
+    image: "/images/dd.jpg",
+    alt: "on page seo",
+    link: "/dentist-seo-services",
+  },
 ];
 
 function Navbar() {

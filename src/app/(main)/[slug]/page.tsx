@@ -62,7 +62,7 @@ function ArrowIcon() {
 function CTAButton({
   href,
   text,
-  className = "buttons",
+  className = "buttons ",
 }: {
   href: string;
   text: string;
