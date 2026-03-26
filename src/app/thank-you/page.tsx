@@ -71,6 +71,21 @@ function Page() {
     };
   }, [router]);
 
+  useEffect(() => {
+    if (!canAccess) {
+      return;
+    }
+
+    const redirectTimer = window.setTimeout(() => {
+      sessionStorage.removeItem(THANK_YOU_RENDER_KEY);
+      router.replace(SITE_PATHS.home);
+    }, 60_000);
+
+    return () => {
+      window.clearTimeout(redirectTimer);
+    };
+  }, [canAccess, router]);
+
   if (isCheckingAccess || !canAccess) {
     return null;
   }
