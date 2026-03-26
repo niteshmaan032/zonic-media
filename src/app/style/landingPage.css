@@ -205,9 +205,9 @@
   padding-left: 40px;
 }
 
-.landing-sec6-cards-wrapper .landing-sec6-card-row-1:nth-child(2) {
+/* .landing-sec6-cards-wrapper .landing-sec6-card-row-1:nth-child(2) {
   margin-top: 60px;
-}
+} */
 
 .landing-sec6-card-row-1 {
   display: flex;
