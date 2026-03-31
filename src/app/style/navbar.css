@@ -11,6 +11,11 @@
   background: transparent;
 }
 
+.navbar-wrapper .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
 /* when page scrolled */
 .navbar-wrapper.scrolled {
   background: var(--white);

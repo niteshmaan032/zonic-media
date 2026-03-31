@@ -45,14 +45,14 @@ const localSeoServices = [
     id: "Roofing SEO",
     label: "Roofing Local SEO",
     image: "/images/roofing-banner.png",
-    alt: "on page seo",
+    alt: "roofing agency seo",
     link: "/roofing-seo-services",
   },
   {
     id: "Dentist SEO",
     label: "Dentist Local SEO",
     image: "/images/dd.jpg",
-    alt: "on page seo",
+    alt: "dentist seo",
     link: "/dentist-seo-services",
   },
 ];
