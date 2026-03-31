@@ -211,7 +211,7 @@ function Page() {
               <HashScrollLink
                 href="#gmb-contact-form"
                 className="buttons"
-                offset={20}
+                offset={10}
               >
                 Get Free Suspension Analysis
                 <span className="buttons__icon-wrapper">
@@ -377,7 +377,7 @@ function Page() {
             <HashScrollLink
               href="#gmb-contact-form"
               className="buttons"
-              offset={20}
+              offset={10}
             >
               Get Free Suspension Analysis
               <span className="buttons__icon-wrapper">
@@ -485,7 +485,7 @@ function Page() {
           <HashScrollLink
             href="#gmb-contact-form"
             className="buttons"
-            offset={20}
+            offset={10}
           >
             Talk to a Reinstatement Expert
             <span className="buttons__icon-wrapper">
