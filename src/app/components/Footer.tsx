@@ -99,20 +99,16 @@ function Footer() {
                 <ul>
                   <li className="footer-menus-head">Legal</li>
                   <li>
-                    <Link href={SITE_PATHS.legalPlaceholder}>
-                      Terms & Condition
-                    </Link>
+                    <Link href={SITE_PATHS.terms}>Terms & Condition</Link>
                   </li>
                   <li>
-                    <Link href={SITE_PATHS.legalPlaceholder}>
-                      Privacy Policy
-                    </Link>
+                    <Link href={SITE_PATHS.privacy}>Privacy Policy</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={SITE_PATHS.legalPlaceholder}>
                       Fair Use Policy
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
                 <div></div>
               </div>

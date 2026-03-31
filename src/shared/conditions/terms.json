@@ -1,0 +1,267 @@
+{
+  "slug": "terms-conditions",
+  "title": "Terms & Conditions",
+  "intro": [
+    "Welcome to Zonic Media LLC (\"Company\", \"we\", \"our\", or \"us\"). By accessing or using our website and services, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website or services."
+  ],
+  "sections": [
+    {
+      "heading": "1. Use of Our Website",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "By using our website, you agree to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use the website for lawful purposes only",
+            "Not engage in any activity that may harm or disrupt the website",
+            "Provide accurate and complete information when filling out forms"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We reserve the right to restrict access to users who violate these terms."
+        }
+      ]
+    },
+    {
+      "heading": "2. Services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC provides digital marketing services including, but not limited to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Web design and development",
+            "Local SEO services",
+            "Google Business Profile optimization",
+            "Pay-per-click (PPC) advertising"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All services are subject to individual agreements, proposals, or contracts where applicable."
+        }
+      ]
+    },
+    {
+      "heading": "3. No Guarantee of Results",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "While we use proven strategies and best practices, we do not guarantee specific results such as rankings, leads, or revenue. Results may vary based on industry, competition, and market conditions."
+        }
+      ]
+    },
+    {
+      "heading": "4. User Responsibilities",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You agree to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide accurate business information",
+            "Cooperate during service delivery",
+            "Not misuse or duplicate any content, materials, or strategies provided"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Failure to comply may impact service outcomes."
+        }
+      ]
+    },
+    {
+      "heading": "5. Payments & Billing",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Payments must be made as agreed in your service contract or proposal",
+            "Late or missed payments may result in service delays or suspension",
+            "All fees are non-refundable unless otherwise stated in writing"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "6. Intellectual Property",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All content, designs, strategies, and materials created by Zonic Media LLC remain the property of the Company unless otherwise agreed."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may not copy, reproduce, or distribute any materials without prior written consent."
+        }
+      ]
+    },
+    {
+      "heading": "7. Limitation of Liability",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC is not liable for:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Any indirect, incidental, or consequential damages",
+            "Loss of revenue, data, or business opportunities",
+            "Third-party platform changes (e.g., Google algorithm updates, ad policy changes)"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Your use of our services is at your own risk."
+        }
+      ]
+    },
+    {
+      "heading": "8. Third-Party Services",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Our services may involve third-party platforms such as Google, Meta, or other tools. We are not responsible for:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Changes in third-party policies",
+            "Platform outages or disruptions",
+            "Account suspensions beyond our control"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "9. SMS Terms & Conditions",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "SMS Consent"
+        },
+        {
+          "type": "paragraph",
+          "text": "By providing your phone number through our website forms and opting in, you agree to receive SMS messages from Zonic Media LLC."
+        },
+        {
+          "type": "subheading",
+          "text": "Types of Messages"
+        },
+        {
+          "type": "paragraph",
+          "text": "You may receive messages related to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Consultation reminders",
+            "Service updates",
+            "Follow-ups",
+            "Promotional offers"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Message Frequency"
+        },
+        {
+          "type": "paragraph",
+          "text": "Message frequency may vary depending on your interaction with our services."
+        },
+        {
+          "type": "subheading",
+          "text": "Fees"
+        },
+        {
+          "type": "paragraph",
+          "text": "Standard message and data rates may apply based on your mobile carrier."
+        },
+        {
+          "type": "subheading",
+          "text": "Opt-Out"
+        },
+        {
+          "type": "paragraph",
+          "text": "You can opt out at any time by replying \"STOP\" to any message."
+        },
+        {
+          "type": "subheading",
+          "text": "Support"
+        },
+        {
+          "type": "paragraph",
+          "text": "Reply \"HELP\" or contact us for assistance."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not share SMS consent or phone numbers with third parties for marketing purposes."
+        }
+      ]
+    },
+    {
+      "heading": "10. Privacy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Your use of our website is also governed by our Privacy Policy. Please review it to understand how we collect and use your information."
+        }
+      ]
+    },
+    {
+      "heading": "11. Termination",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We reserve the right to terminate or suspend access to our services at any time if you violate these Terms and Conditions."
+        }
+      ]
+    },
+    {
+      "heading": "12. Changes to Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC may update these Terms and Conditions at any time. Continued use of the website after changes constitutes acceptance of the updated terms."
+        }
+      ]
+    },
+    {
+      "heading": "13. Governing Law",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "These Terms and Conditions are governed by the laws of the State of Delaware, United States."
+        }
+      ]
+    },
+    {
+      "heading": "14. Contact Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you have any questions about these Terms and Conditions, please contact us:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC"
+        },
+        {
+          "type": "contact",
+          "address": "8 The Green, STE B Dover, Kent, DE 19901, United States",
+          "phone": "(302) 726-9376",
+          "email": "contact@zonicllc.com"
+        }
+      ]
+    }
+  ]
+}

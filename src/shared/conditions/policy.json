@@ -1,0 +1,250 @@
+{
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "intro": [
+    "Zonic Media LLC (\"Company\", \"we\", \"our\", or \"us\") values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, maintain, and disclose information collected from users (\"User\", \"you\") of our website and services.",
+    "This policy applies to all users globally and is designed to comply with applicable data protection laws, including the General Data Protection Regulation (GDPR) and other relevant privacy regulations."
+  ],
+  "sections": [
+    {
+      "heading": "Information We Collect",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may collect personal and non-personal information from users in various ways, including when you:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fill out forms on our website",
+            "Request a consultation",
+            "Subscribe to communications (email or SMS)",
+            "Interact with our services"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Personal Information May Include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Name",
+            "Email address",
+            "Phone number",
+            "Business details (if provided)"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Non-Personal Information May Include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Browser type",
+            "Device information",
+            "IP address",
+            "Pages visited and time spent"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "SMS Consent & Communication",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "When you provide your phone number through our website forms and opt-in, you consent to receive SMS messages from Zonic Media LLC."
+        },
+        {
+          "type": "subheading",
+          "text": "SMS Communications May Include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Consultation reminders",
+            "Follow-up messages",
+            "Service-related updates",
+            "Marketing or promotional messages"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Important SMS Disclosures:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Message frequency may vary",
+            "Message and data rates may apply",
+            "You can opt out at any time by replying \"STOP\"",
+            "For assistance, reply \"HELP\" or contact us directly"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not share phone numbers or SMS consent data with third parties for marketing purposes."
+        }
+      ]
+    },
+    {
+      "heading": "How We Use Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use the information we collect to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Respond to inquiries and provide customer support",
+            "Improve our services and website experience",
+            "Send updates, marketing messages, and service communications",
+            "Run campaigns and measure performance",
+            "Ensure security and prevent fraud"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Cookies & Tracking Technologies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Our website may use cookies and similar technologies to enhance your experience. These may include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Website analytics tools (e.g., Google Analytics)",
+            "Tracking user behavior for performance improvements"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You can disable cookies in your browser settings, though some features of the site may not function properly."
+        }
+      ]
+    },
+    {
+      "heading": "How We Protect Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, or disclosure. Only authorized personnel have access to your data."
+        }
+      ]
+    },
+    {
+      "heading": "Sharing Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC does not sell, rent, or trade your personal information."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may share limited information with:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Trusted service providers (for business operations)",
+            "Legal authorities when required by law"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All third parties are required to keep your data secure and use it only for specified purposes."
+        }
+      ]
+    },
+    {
+      "heading": "GDPR & User Rights (Global Compliance)",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you are located in the European Economic Area (EEA) or other regions with similar laws, you have the right to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access your personal data",
+            "Request correction or deletion",
+            "Withdraw consent at any time",
+            "Request data portability"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "To exercise these rights, contact us using the details below."
+        }
+      ]
+    },
+    {
+      "heading": "Opt-Out & Data Removal",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You may opt out of communications at any time:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Email: Click the unsubscribe link in emails",
+            "SMS: Reply \"STOP\" to any message",
+            "Direct Request: Email us to request data removal"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Children’s Privacy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children."
+        }
+      ]
+    },
+    {
+      "heading": "Changes to This Privacy Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page. Continued use of our website indicates acceptance of the updated policy."
+        }
+      ]
+    },
+    {
+      "heading": "Your Consent",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "By using our website and submitting your information, you consent to the collection and use of your information as outlined in this Privacy Policy."
+        }
+      ]
+    },
+    {
+      "heading": "Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you have any questions about this Privacy Policy or your data, please contact us:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC"
+        },
+        {
+          "type": "contact",
+          "address": "8 The Green, STE B Dover, Kent, DE 19901, United States",
+          "phone": "(302) 726-9376",
+          "email": "contact@zonicllc.com"
+        }
+      ]
+    }
+  ]
+}

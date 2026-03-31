@@ -1,0 +1,132 @@
+.conditions-head-wrapper {
+  background-color: var(--color1);
+  padding: 80px 100px 80px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 90px;
+}
+
+.conditions-heading {
+  font-size: 45px;
+  color: var(--text);
+}
+
+.conditions-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.conditions-descrp {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.conditions-content-list-wrapper {
+  margin-top: 20px;
+}
+
+.conditions-main-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conditions-main-list-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.conditions-sub-head {
+  font-size: 24px;
+}
+
+.condition-content-sub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: disc;
+}
+
+.condition-content-sub-list li {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .conditions-head-wrapper {
+    background-color: var(--color1);
+    padding: 40px 20px 40px 20px;
+  }
+
+  .conditions-heading {
+    font-size: 32px;
+  }
+
+  .conditions-content-wrapper {
+    margin-bottom: 20px;
+    padding: 0px 20px;
+  }
+
+  .conditions-main-list {
+    padding: 0;
+  }
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .conditions-head-wrapper {
+    background-color: var(--color1);
+    padding: 60px 40px;
+  }
+
+  .conditions-heading {
+    font-size: 38px;
+  }
+
+  .conditions-content-wrapper {
+    margin-bottom: 20px;
+    padding: 0px 40px;
+  }
+
+  .conditions-main-list {
+    padding: 0;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .conditions-head-wrapper {
+    background-color: var(--color1);
+    padding: 60px 40px;
+  }
+
+  .conditions-heading {
+    font-size: 38px;
+  }
+
+  .conditions-content-wrapper {
+    margin-bottom: 20px;
+    padding: 0px 40px;
+  }
+
+  .conditions-main-list {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+}
