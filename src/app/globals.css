@@ -44,7 +44,7 @@ body p {
   background-color: var(--primary);
   color: var(--white);
   border-radius: 60px;
-  padding: 16px 22px;
+  padding: 15px 22px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

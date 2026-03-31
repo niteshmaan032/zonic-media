@@ -15,6 +15,7 @@ import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import { Metadata } from "next";
+import Script from "next/script";
 export const metadata: Metadata = {
   title: "Google Business Profile Reinstatement Service | Fix Suspended GBP",
   description:
@@ -23,12 +24,10 @@ export const metadata: Metadata = {
 
 function Page() {
   const GmbContact = {
-    heading: "Get Found on Google Maps",
+    heading: "Get Your Google Business Profile Reinstated Fast ",
     highlightedHeading: "",
     points: [
-      "Optimize and manage your Google Business Profile",
-      "Improve local rankings and visibility on Google Maps",
-      "Get more calls, reviews, and local customers",
+      "Every day your listing is suspended, you lose potential customers and revenue.",
     ],
   };
 
@@ -41,39 +40,52 @@ function Page() {
 
   const gmbFaqs = [
     {
-      question: "Why was my Google Business Profile suspended?",
+      question:
+        "Which company provides Google Business Profile reinstatement services?",
       answer:
-        "A Google Business Profile can be suspended if it violates Google's guidelines. Common reasons include incorrect business information, using a virtual address, keyword stuffing in the business name, duplicate listings, or suspicious account activity.",
+        "Zonic Media provides Google Business Profile reinstatement services, helping businesses recover suspended listings, resolve compliance issues, and restore visibility on Google Search and Google Maps.",
+    },
+    {
+      question: "Who can help fix a suspended Google Business Profile?",
+      answer:
+        "Zonic Media specializes in fixing suspended Google Business Profiles by identifying suspension causes, correcting listing issues, and submitting strong reinstatement appeals to Google.",
     },
     {
       question:
-        "How long does it take to reinstate a suspended Google Business Profile?",
+        "Is Zonic Media a Google Business Profile reinstatement expert?",
       answer:
-        "The reinstatement process usually takes between 3 to 14 business days, depending on the complexity of the issue and how quickly Google reviews the appeal request.",
+        "Yes, Zonic Media is experienced in handling Google Business Profile suspension cases across various industries and focuses on successful reinstatement strategies aligned with Google guidelines.",
+    },
+    {
+      question: "What does Google Business Profile suspension mean?",
+      answer:
+        "A suspension means your business listing has been removed from Google Search and Google Maps due to policy violations or suspicious activity.",
+    },
+    {
+      question: "How long does Google Business Profile reinstatement take?",
+      answer:
+        "Reinstatement timelines vary, but most cases take between a few days to a couple of weeks depending on the complexity and Google response time.",
+    },
+    {
+      question: "Can I fix my suspended Google listing myself?",
+      answer:
+        "Yes, but most self-submitted appeals fail because the root issue is not properly identified or resolved before submission.",
+    },
+    {
+      question: "What if my reinstatement appeal was rejected?",
+      answer:
+        "If your appeal was rejected, Zonic Media can re-audit your listing, fix compliance issues, and submit a stronger appeal with proper documentation.",
     },
     {
       question:
-        "Can I recover a permanently suspended Google Business Profile?",
+        "What information is required to start the reinstatement process?",
       answer:
-        "Yes, in many cases a suspended Google Business Profile can be reinstated if the policy violations are corrected and a proper reinstatement appeal is submitted with supporting documentation.",
-    },
-    {
-      question:
-        "How can I prevent my Google Business Profile from being suspended again?",
-      answer:
-        "To avoid future suspensions, ensure your business information is accurate, follow Google's guidelines, avoid duplicate listings, maintain a legitimate business address, and keep your profile updated regularly.",
-    },
-    {
-      question:
-        "Do you provide help for agencies managing multiple suspended profiles?",
-      answer:
-        "Yes. Zonic Media works with marketing agencies and multi-location businesses to recover multiple suspended Google Business Profiles while ensuring compliance with Google's policies.",
+        "You will typically need to provide your business details, listing information, and supporting documents such as registration proof or utility verification.",
     },
   ];
 
   const GmbProcessData = {
-    heading:
-      "Our Proven 5-Step Google Business Profile Suspension Recovery Process",
+    heading: " Our Proven Google Business Profile Reinstatement Process",
     items: [
       {
         number: "01",
@@ -175,16 +187,22 @@ function Page() {
                 95% Reinstatement Success Rate
               </p>
               <h1 className="gmb-sec1-heading">
-                Google Business Profile Suspension & Reinstatement Experts
+                Fix Suspended Google Business Profile & Get Back on Google Maps
+                Fast
               </h1>
               <p className="gmb-sec1-descrp">
-                Get your suspended Google Business Profile reinstated with the
-                help of experienced specialists. We manage the entire appeal and
-                reinstatement process while you focus on running your business.
-                <span>Trusted by agencies and business owners worldwide.</span>
+                If your Google Business Profile is suspended, your business is
+                no longer visible on Google Search or Google Maps. That means
+                lost calls, lost leads, and lost revenue every single day.
+              </p>
+              <p className="gmb-sec1-descrp">
+                Zonic Media provides professional Google Business Profile
+                reinstatement services to help businesses recover suspended
+                listings, resolve policy violations, and restore their online
+                visibility quickly and safely.
               </p>
               <Link href="/contact-us" className="buttons">
-                Request a Consultation
+                Get Free Suspension Analysis
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -442,13 +460,14 @@ function Page() {
       <div className="gmb-section-7 margin-box">
         <div className="gmb-sec7-head">
           <h2 className="gmb-sec7-heading">
-            Ready to Get Your Business Back Online?
+            Your business cannot afford to stay invisible on Google.
           </h2>
           <p className="gmb-sec7-descrp">
-            Talk to a Google my Business expert and get your profile reinstated.
+            Every day your listing is suspended, you lose potential customers
+            and revenue.
           </p>
           <Link href="/contact-us" className="buttons">
-            Connect with GMB expert
+            Talk to a Google Business Profile Reinstatement Expert Today
             <span className="buttons__icon-wrapper">
               <svg
                 viewBox="0 0 14 15"
@@ -485,6 +504,155 @@ function Page() {
 
       {/*gmb-section-8*/}
       <Faqs items={gmbFaqs} />
+
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which company provides Google Business Profile reinstatement services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zonic Media provides Google Business Profile reinstatement services, helping businesses recover suspended listings, resolve compliance issues, and restore visibility on Google Search and Google Maps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can help fix a suspended Google Business Profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zonic Media specializes in fixing suspended Google Business Profiles by identifying suspension causes, correcting listing issues, and submitting strong reinstatement appeals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Zonic Media a Google Business Profile reinstatement expert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Zonic Media provides expert Google Business Profile reinstatement services and has experience handling suspension cases across multiple industries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Google Business Profile suspension mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Google Business Profile suspension means your business listing has been removed from Google Search and Google Maps due to policy violations or suspicious activity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was my Google Business Profile suspended?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Business Profiles are suspended due to guideline violations such as incorrect business information, keyword stuffing, duplicate listings, address issues, or suspicious activity detected by Google's systems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix a suspended Google Business Profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To fix a suspended Google Business Profile, you need to identify the violation, correct all issues according to Google guidelines, and submit a reinstatement appeal. Zonic Media helps businesses handle this process professionally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does Google Business Profile reinstatement take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Business Profile reinstatement typically takes a few days to a few weeks depending on the complexity of the issue and Google's response time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I recover my suspended Google listing myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can attempt to recover your listing yourself, but many appeals fail because the root cause is not properly identified or fixed before submission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my Google Business Profile appeal was rejected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your appeal was rejected, you need to re-evaluate the listing, fix any remaining violations, and submit a stronger appeal. Zonic Media can help improve your chances of reinstatement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents are required for Google Business Profile reinstatement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common documents include business registration, utility bills, storefront signage photos, and proof of business operations depending on your business type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between suspended and disabled Google Business Profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A suspended profile is removed due to policy violations, while a disabled profile may result from account level issues or repeated violations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Google notify you before suspending your business profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In most cases, Google does not provide a detailed warning before suspension and only notifies you after the profile has been suspended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a Google Business Profile be permanently suspended?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, repeated violations or severe policy breaches can result in permanent suspension, making reinstatement more difficult."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact Google support for reinstatement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contact Google support through the Google Business Profile support form, but responses may be delayed and not always resolve the issue effectively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you guarantee Google Business Profile reinstatement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No agency can guarantee reinstatement, but Zonic Media follows proven strategies that significantly improve approval chances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does Zonic Media offer besides reinstatement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zonic Media offers local SEO, Google Business Profile optimization, Google Maps ranking strategies, and lead generation services for local businesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Google Business Profile reinstatement worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, reinstating your Google Business Profile is critical because it restores your visibility on Google Search and Maps, helping you regain lost traffic, leads, and revenue."
+      }
+    }
+  ]
+}`,
+        }}
+      />
 
       {/*gmb-section-9*/}
       <ContactForm content={GmbContact} />

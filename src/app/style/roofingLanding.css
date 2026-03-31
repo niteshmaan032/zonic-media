@@ -1,0 +1,128 @@
+:root {
+  --roof-sec-1: rgba(198, 215, 231, 0.13);
+  --roof-sec-2: rgba(250, 227, 175, 0.27);
+  --roof-sec-3: rgba(202, 232, 255, 0.17);
+}
+
+.roofing-sec-1 {
+  padding: 140px 100px 100px 100px;
+  height: 95svh;
+  background-image: url("/images/roofing/roof-hero-img.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-color: var(--roof-sec-1);
+}
+
+.roofing-sec-1-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roofing-sec-1 h1 {
+  font-size: 58px;
+  line-height: 70px;
+}
+
+.roofing-sec-1 h1 span {
+  color: var(--primary);
+}
+
+.roofing-sec-1 p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  padding-right: 170px;
+}
+
+.roofing-sec-1 .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  margin-top: 10px;
+}
+
+/*--roofing-sec-2--*/
+.roofing-sec-2 {
+  background-color: var(--roof-sec-2);
+  padding: 60px 100px;
+}
+
+.roof-img-container {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+}
+
+.roof-img-container img {
+  object-fit: cover;
+}
+
+.roofing-sec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.roofing-sec-heading {
+  font-size: 42px;
+  line-height: 58px;
+}
+
+.roofing-sec-descrp {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.roofing-sec-list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roofing-sec-list li {
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roofing-sec-list svg {
+  font-size: 10px;
+  color: var(--primary);
+}
+/*--roofing-sec-3--*/
+.roofing-sec-3 {
+  background-color: var(--roof-sec-3);
+  padding: 70px 100px;
+}
+
+/*responsive*/
+
+/* mobile phones to tablet devices*/
+@media (max-width: 991.98px) {
+}
+
+/*mobile devices*/
+@media (max-width: 575.98px) {
+}
+
+/*table devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
+}
