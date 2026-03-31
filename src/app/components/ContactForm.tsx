@@ -25,6 +25,11 @@ export type ContactFormContent = {
   heading: string;
   highlightedHeading?: string;
   points: string[];
+  cta?: {
+    eyebrow?: string;
+    label: string;
+    href: string;
+  };
 };
 
 type ContactFormProps = {
@@ -35,7 +40,12 @@ export default function ContactForm({ content }: ContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
   const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
-  const { heading, highlightedHeading, points } = content;
+  const { heading, highlightedHeading, points, cta } = content;
+  const contactCta = {
+    eyebrow: cta?.eyebrow ?? "Schedule meeting :",
+    label: cta?.label ?? "Book a Strategy Call",
+    href: cta?.href ?? SITE_CONTACT.bookCallHref,
+  };
 
   const {
     control,
@@ -125,13 +135,10 @@ export default function ContactForm({ content }: ContactFormProps) {
             </ul>
 
             <div className="contact-form-button">
-              <p>Schedule meeting :</p>
+              <p>{contactCta.eyebrow}</p>
 
-              <Link
-                href={SITE_CONTACT.bookCallHref}
-                className="buttons"
-              >
-                Book a Strategy Call
+              <Link href={contactCta.href} className="buttons">
+                {contactCta.label}
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -341,7 +348,9 @@ export default function ContactForm({ content }: ContactFormProps) {
                 </button>
                 <p className="contact-form-email-link">
                   Prefer email ? <br />
-                  <Link href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</Link>
+                  <Link href={SITE_CONTACT.emailHref}>
+                    {SITE_CONTACT.email}
+                  </Link>
                 </p>
               </Col>
 

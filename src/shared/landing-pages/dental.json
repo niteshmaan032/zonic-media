@@ -216,6 +216,11 @@
       "Modern, fast, mobile-friendly design",
       "SEO-optimized structure for higher rankings",
       "Conversion-focused layout for more bookings"
-    ]
+    ],
+    "cta": {
+      "eyebrow": "Schedule meeting :",
+      "label": "Book a Strategy Call",
+      "href": "/contact-us"
+    }
   }
 }

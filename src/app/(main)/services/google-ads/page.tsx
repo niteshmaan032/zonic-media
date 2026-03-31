@@ -25,6 +25,11 @@ function Page() {
       "Data-driven campaigns to maximize ROI",
       "Continuous optimization for better conversions and lower costs",
     ],
+    cta: {
+      eyebrow: "Schedule meeting :",
+      label: "Book a Strategy Call",
+      href: "/contact-us",
+    },
   };
 
   const AdsProcessData = {

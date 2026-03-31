@@ -21,6 +21,11 @@ function Page() {
       "SEO-ready structure to help you rank on Google",
       "Designed to convert visitors into leads and customers",
     ],
+    cta: {
+      eyebrow: "Schedule meeting :",
+      label: "Book a Strategy Call",
+      href: "/contact-us",
+    },
   };
 
   const WebFaqs = [

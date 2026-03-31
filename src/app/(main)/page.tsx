@@ -28,6 +28,11 @@ export default function Home() {
       "Long-term support and ongoing optimization",
       "Clear communication and fast response times",
     ],
+    cta: {
+      eyebrow: "Schedule meeting :",
+      label: "Book a Strategy Call",
+      href: "/contact-us",
+    },
   };
 
   return (

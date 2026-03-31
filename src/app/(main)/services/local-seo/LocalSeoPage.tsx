@@ -158,6 +158,11 @@ function Page() {
       "Clear strategy call within 24 hours",
       "Work directly with experienced SEO professionals",
     ],
+    cta: {
+      eyebrow: "Schedule meeting :",
+      label: "Book a Strategy Call",
+      href: "/contact-us",
+    },
   };
   return (
     <>

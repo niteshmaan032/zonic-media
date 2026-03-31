@@ -14,6 +14,11 @@
   padding-bottom: 60px;
 }
 
+.gmb-sec1-content .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
 .gmb-sec1-title {
   display: flex;
   align-items: center;
@@ -219,7 +224,7 @@
 .gmb-sec7-heading {
   font-size: 52px;
   color: var(--text);
-  width: 40%;
+  width: 60%;
   text-align: center;
   font-weight: 600;
 }

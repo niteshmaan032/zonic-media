@@ -1,7 +1,5 @@
 import { Col, Row } from "react-bootstrap";
 import "@/app/style/gmbservice.css";
-import Link from "next/link";
-
 import Image from "next/image";
 import { PiShieldCheckBold } from "react-icons/pi";
 import { LuKeyRound, LuPhoneMissed } from "react-icons/lu";
@@ -14,6 +12,7 @@ import Marquee from "react-fast-marquee";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
+import HashScrollLink from "@/app/components/HashScrollLink";
 import { Metadata } from "next";
 import Script from "next/script";
 export const metadata: Metadata = {
@@ -27,8 +26,15 @@ function Page() {
     heading: "Get Your Google Business Profile Reinstated Fast ",
     highlightedHeading: "",
     points: [
-      "Every day your listing is suspended, you lose potential customers and revenue.",
+      "Identify the root cause of your suspension with precision.",
+      "Accelerate your Google Business Profile reinstatement process.",
+      "Regain lost rankings, calls, and customer inquiries fast.",
     ],
+    cta: {
+      eyebrow: "Schedule meeting :",
+      label: "(302) 726-9376",
+      href: "tel:+1(302)726-9376",
+    },
   };
 
   const workIMages = [
@@ -175,6 +181,7 @@ function Page() {
       },
     ],
   };
+
   return (
     <>
       {/*gmb-section-1*/}
@@ -201,7 +208,11 @@ function Page() {
                 listings, resolve policy violations, and restore their online
                 visibility quickly and safely.
               </p>
-              <Link href="/contact-us" className="buttons">
+              <HashScrollLink
+                href="#gmb-contact-form"
+                className="buttons"
+                offset={20}
+              >
                 Get Free Suspension Analysis
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -229,7 +240,7 @@ function Page() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </HashScrollLink>
             </div>
           </Col>
 
@@ -363,8 +374,12 @@ function Page() {
               <span> Recovery for Local Businesses Across Industries </span>
             </h2>
 
-            <Link href="/contact-us" className="buttons">
-              Request a Consultation
+            <HashScrollLink
+              href="#gmb-contact-form"
+              className="buttons"
+              offset={20}
+            >
+              Get Free Suspension Analysis
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -391,7 +406,7 @@ function Page() {
                   />
                 </svg>
               </span>
-            </Link>
+            </HashScrollLink>
           </Col>
 
           <Col lg={6}>
@@ -466,8 +481,13 @@ function Page() {
             Every day your listing is suspended, you lose potential customers
             and revenue.
           </p>
-          <Link href="/contact-us" className="buttons">
-            Talk to a Google Business Profile Reinstatement Expert Today
+
+          <HashScrollLink
+            href="#gmb-contact-form"
+            className="buttons"
+            offset={20}
+          >
+            Talk to a Reinstatement Expert
             <span className="buttons__icon-wrapper">
               <svg
                 viewBox="0 0 14 15"
@@ -494,7 +514,7 @@ function Page() {
                 />
               </svg>
             </span>
-          </Link>
+          </HashScrollLink>
         </div>
 
         <div className="gmb-sec7-img-cont">
@@ -655,7 +675,9 @@ function Page() {
       />
 
       {/*gmb-section-9*/}
-      <ContactForm content={GmbContact} />
+      <div id="gmb-contact-form">
+        <ContactForm content={GmbContact} />
+      </div>
 
       {/*gmb-section-8*/}
       <Footer />
