@@ -11,23 +11,33 @@ import { Col, Row } from "react-bootstrap";
 import { FaCircle } from "react-icons/fa";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zonicllc.com"),
+
   title: "Roofing SEO Services | Get More Roofing Leads & Calls",
   description:
     "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
+
   openGraph: {
+    title: "Roofing SEO Services | Get More Roofing Leads & Calls",
+    description: "Get more roofing leads with proven local SEO.",
+    url: "https://zonicllc.com/roofing-seo-services", // <-- update your actual slug
+    siteName: "Zonic LLC",
     images: [
       {
-        url: "/images/roofing/roof-banner.svg",
+        url: "/images/roofing/roof-banner.jpg",
+        width: 1200,
+        height: 630,
         alt: "Roofing SEO banner",
       },
     ],
+    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Roofing SEO Services | Get More Roofing Leads & Calls",
-    description:
-      "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
-    images: ["/images/roofing/roof-banner.svg"],
+    title: "Roofing SEO Services",
+    description: "Get more roofing leads with proven local SEO.",
+    images: ["/images/roofing/roof-banner.jpg"],
   },
 };
 
