@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   description:
     "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
   openGraph: {
-    title: "Roofing SEO Services | Get More Roofing Leads & Calls",
-    description:
-      "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
     images: [
       {
         url: "/images/roofing/roof-banner.svg",
