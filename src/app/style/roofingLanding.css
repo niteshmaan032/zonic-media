@@ -253,43 +253,11 @@
 
 /*responsive*/
 
-/* mobile phones to tablet devices*/
+/* mobile + tablet common */
 @media (max-width: 991.98px) {
-}
-
-/*mobile devices*/
-@media (max-width: 575.98px) {
-  .roofing-sec-1 {
-    padding: 100px 20px 40px 20px;
-    background-image: none;
-  }
-
-  .roofing-sec-1-content {
-    gap: 14px;
-  }
-
-  .roofing-sec-1 h1 {
-    font-size: 42px;
-    line-height: 44px;
-  }
-
-  .roofing-sec-1 p {
-    font-size: 18px;
-    line-height: 26px;
-    padding-right: 0px;
-  }
-
   /*--roofing-sec-2--*/
   .roofing-sec-2 {
     background-color: var(--roof-sec-2);
-    padding: 40px 20px;
-  }
-
-  .roof-img-container {
-    position: relative;
-    width: 100%;
-    min-height: 300px;
-    scale: 1.1;
   }
 
   .roofing-sec-heading {
@@ -314,46 +282,20 @@
 
   /*--roofing-sec-3--*/
   .roofing-sec-3 {
-    padding: 40px 20px;
     gap: 40px;
-  }
-
-  /*--roofing-sec-4--*/
-  .roofing-sec-4 {
-    padding: 40px 20px;
-  }
-
-  .roofing-sec-4 .roof-img-container {
-    min-height: 300px;
   }
 
   /*--roofing-sec-5--*/
   .roofing-sec-5 {
-    padding: 40px 20px;
     gap: 40px;
   }
 
-  /*--roofing-sec-6--*/
-  .roofing-sec-6 {
-    padding: 40px 20px;
-  }
-
   /*--roofing-sec-7--*/
-  .roofing-sec-7 {
-    padding: 60px 20px;
-    height: 100%;
-    background-image: none;
-  }
-
   .roofing-sec-7 .roofing-sec-descrp {
     margin: 20px 0px;
   }
 
   /*--roofing-sec-8--*/
-  .roofing-sec-8 {
-    padding: 40px 20px;
-  }
-
   .roofing-sec-8-head-cont {
     margin-bottom: 40px;
     text-align: start;
@@ -364,9 +306,6 @@
   }
 
   .roofing-process-box {
-    padding: 26px;
-    background-color: var(--white);
-    position: relative;
     height: 100%;
   }
 
@@ -387,11 +326,6 @@
     position: relative;
   }
 
-  /*--roofing-sec-10--*/
-  .roofing-sec-10 {
-    padding: 40px 20px;
-  }
-
   /*roofing-sec-11--*/
   .roofing-sec-11 .contact-form-heading {
     font-size: 36px;
@@ -399,15 +333,287 @@
   }
 }
 
+/*mobile devices*/
+@media (max-width: 575.98px) {
+  .roofing-sec-1 {
+    padding: 100px 20px 40px 20px;
+    background-image: none;
+    height: 100%;
+  }
+
+  .roofing-sec-1-content {
+    gap: 14px;
+  }
+
+  .roofing-sec-1 h1 {
+    font-size: 42px;
+    line-height: 44px;
+  }
+
+  .roofing-sec-1 p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-right: 0px;
+  }
+
+  .roofing-sec-2 {
+    padding: 40px 20px;
+  }
+
+  .roof-img-container {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    scale: 1.1;
+  }
+
+  .roofing-sec-3,
+  .roofing-sec-4,
+  .roofing-sec-5,
+  .roofing-sec-6,
+  .roofing-sec-8,
+  .roofing-sec-10 {
+    padding: 40px 20px;
+  }
+
+  .roofing-sec-7 {
+    padding: 60px 20px;
+    height: 100%;
+    background-image: none;
+  }
+
+  .roofing-process-box {
+    padding: 26px;
+  }
+
+  .roofing-sec-4 .roof-img-container {
+    min-height: 300px;
+  }
+}
+
 /*table devices*/
 @media (min-width: 575.99px) and (max-width: 991.98px) {
+  .roofing-sec-1 {
+    padding: 100px 40px 40px 40px;
+    height: 100svh;
+  }
+
+  .roofing-sec-1-content {
+    gap: 18px;
+  }
+
+  .roofing-sec-1 h1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .roofing-sec-1 p {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 60px;
+  }
+
+  .roofing-sec-2,
+  .roofing-sec-3,
+  .roofing-sec-4,
+  .roofing-sec-5,
+  .roofing-sec-6,
+  .roofing-sec-7,
+  .roofing-sec-8,
+  .roofing-sec-10 {
+    padding: 40px;
+  }
+
+  .roofing-sec-7 {
+    height: 65svh;
+  }
+
+  .roofing-process-box {
+    padding: 32px;
+  }
+
+  .roofing-sec-4 .roof-img-container {
+    min-height: 400px;
+  }
 }
 
 /*large desktop devices*/
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .roofing-sec-1 {
+    padding: 120px 30px 100px 30px;
+    height: 95svh;
+  }
+
+  .roofing-sec-1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .roofing-sec-1 h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+
+  .roofing-sec-1 p {
+    padding-right: 40px;
+  }
+
+  /*--roofing-sec-2--*/
+  .roofing-sec-2 {
+    background-color: var(--roof-sec-2);
+    padding: 40px 30px;
+  }
+
+  .roofing-sec-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /*--roofing-sec-3--*/
+  .roofing-sec-3 {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  /*--roofing-sec-4--*/
+  .roofing-sec-4 {
+    padding: 40px 30px;
+  }
+
+  /*--roofing-sec-5--*/
+  .roofing-sec-5 {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  /*--roofing-sec-6--*/
+  .roofing-sec-6 {
+    padding: 40px 30px;
+  }
+
+  /*--roofing-sec-7--*/
+  .roofing-sec-7 {
+    padding: 40px 30px;
+    height: 85svh;
+  }
+
+  /*--roofing-sec-8--*/
+  .roofing-sec-8 {
+    padding: 40px 30px;
+  }
+
+  .roofing-sec-8-head-cont {
+    margin-bottom: 40px;
+  }
+
+  .roofing-sec-8-head-cont .roofing-sec-descrp {
+    padding: 0px;
+  }
+
+  .roofing-process-box {
+    padding: 45px;
+  }
+
+  /*--roofing-sec-9--*/
+  .roofing-sec-9 {
+    padding-top: 40px;
+  }
+
+  /*--roofing-sec-10--*/
+  .roofing-sec-10 {
+    padding: 40px 0px 40px 30px;
+  }
 }
 
 @media (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .roofing-sec-1 {
+    padding: 120px 30px 100px 30px;
+    height: 95svh;
+  }
+
+  .roofing-sec-1-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .roofing-sec-1 h1 {
+    font-size: 46px;
+    line-height: 56px;
+  }
+
+  .roofing-sec-1 p {
+    padding-right: 40px;
+  }
+
+  /*--roofing-sec-2--*/
+  .roofing-sec-2 {
+    background-color: var(--roof-sec-2);
+    padding: 40px 30px;
+  }
+
+  .roofing-sec-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  /*--roofing-sec-3--*/
+  .roofing-sec-3 {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  /*--roofing-sec-4--*/
+  .roofing-sec-4 {
+    padding: 40px 30px;
+  }
+
+  /*--roofing-sec-5--*/
+  .roofing-sec-5 {
+    padding: 40px 30px;
+    gap: 40px;
+  }
+
+  /*--roofing-sec-6--*/
+  .roofing-sec-6 {
+    padding: 40px 30px;
+  }
+
+  /*--roofing-sec-7--*/
+  .roofing-sec-7 {
+    padding: 40px 30px;
+    height: 85svh;
+  }
+
+  /*--roofing-sec-8--*/
+  .roofing-sec-8 {
+    padding: 40px 30px;
+  }
+
+  .roofing-sec-8-head-cont {
+    margin-bottom: 40px;
+  }
+
+  .roofing-sec-8-head-cont .roofing-sec-descrp {
+    padding: 0px;
+  }
+
+  .roofing-process-box {
+    padding: 45px;
+  }
+
+  /*--roofing-sec-9--*/
+  .roofing-sec-9 {
+    padding-top: 40px;
+  }
+
+  /*--roofing-sec-10--*/
+  .roofing-sec-10 {
+    padding: 40px 0px 40px 30px;
+  }
 }
 
 /*extra large desktop devices */
