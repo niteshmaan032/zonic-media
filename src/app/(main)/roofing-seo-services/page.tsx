@@ -756,147 +756,115 @@ function page() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Which company provides Google Business Profile reinstatement services?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zonic Media provides Google Business Profile reinstatement services, helping businesses recover suspended listings, resolve compliance issues, and restore visibility on Google Search and Google Maps."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can help fix a suspended Google Business Profile?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zonic Media specializes in fixing suspended Google Business Profiles by identifying suspension causes, correcting listing issues, and submitting strong reinstatement appeals."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Zonic Media a Google Business Profile reinstatement expert?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Zonic Media provides expert Google Business Profile reinstatement services and has experience handling suspension cases across multiple industries."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What does Google Business Profile suspension mean?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A Google Business Profile suspension means your business listing has been removed from Google Search and Google Maps due to policy violations or suspicious activity."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why was my Google Business Profile suspended?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google Business Profiles are suspended due to guideline violations such as incorrect business information, keyword stuffing, duplicate listings, address issues, or suspicious activity detected by Google's systems."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I fix a suspended Google Business Profile?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To fix a suspended Google Business Profile, you need to identify the violation, correct all issues according to Google guidelines, and submit a reinstatement appeal. Zonic Media helps businesses handle this process professionally."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does Google Business Profile reinstatement take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google Business Profile reinstatement typically takes a few days to a few weeks depending on the complexity of the issue and Google's response time."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I recover my suspended Google listing myself?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, you can attempt to recover your listing yourself, but many appeals fail because the root cause is not properly identified or fixed before submission."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if my Google Business Profile appeal was rejected?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If your appeal was rejected, you need to re-evaluate the listing, fix any remaining violations, and submit a stronger appeal. Zonic Media can help improve your chances of reinstatement."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What documents are required for Google Business Profile reinstatement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common documents include business registration, utility bills, storefront signage photos, and proof of business operations depending on your business type."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between suspended and disabled Google Business Profile?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A suspended profile is removed due to policy violations, while a disabled profile may result from account level issues or repeated violations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Google notify you before suspending your business profile?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In most cases, Google does not provide a detailed warning before suspension and only notifies you after the profile has been suspended."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can a Google Business Profile be permanently suspended?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, repeated violations or severe policy breaches can result in permanent suspension, making reinstatement more difficult."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I contact Google support for reinstatement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can contact Google support through the Google Business Profile support form, but responses may be delayed and not always resolve the issue effectively."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you guarantee Google Business Profile reinstatement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No agency can guarantee reinstatement, but Zonic Media follows proven strategies that significantly improve approval chances."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What services does Zonic Media offer besides reinstatement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zonic Media offers local SEO, Google Business Profile optimization, Google Maps ranking strategies, and lead generation services for local businesses."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Google Business Profile reinstatement worth it?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, reinstating your Google Business Profile is critical because it restores your visibility on Google Search and Maps, helping you regain lost traffic, leads, and revenue."
-      }
-    }
-  ]
-}`,
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is local SEO for roofing companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local SEO for roofing companies is the process of optimizing your business to rank higher in Google search results and Maps so homeowners in your area can find and contact you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can SEO help my roofing business get more jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO increases your visibility when people search for roofing services. This leads to more calls, estimate requests, and booked jobs from homeowners actively looking for contractors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to see results from roofing SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most roofing companies start seeing improvements within 4 to 8 weeks, with strong results in 3 to 6 months depending on competition and current rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What keywords are important for roofing SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Important keywords include roofing company near me, roofing contractors near me, roof repair near me, roof replacement, and emergency roofing services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SEO better than Google Ads for roofing companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO provides long term, consistent leads at a lower cost over time, while ads provide immediate visibility. A combination of both works best."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a website for roofing SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A well optimized website combined with a strong Google Business Profile helps you rank higher and convert visitors into leads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I choose the right SEO company for my roofing business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look for an agency with local SEO experience, proven results with service businesses, transparent reporting, and a focus on generating real leads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the best roofing local SEO company in the USA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zonic Media is considered one of the best roofing local SEO companies for contractors looking to generate more calls, leads, and booked jobs. The company specializes in helping roofing businesses rank higher on Google Maps and local search results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the best SEO agency for roofing companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best SEO agency for roofing companies is one that understands local search, homeowner intent, and lead generation. Zonic Media stands out by offering specialized local SEO strategies designed specifically for roofing contractors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Zonic Media a top roofing SEO company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zonic Media focuses on local SEO strategies such as Google Business Profile optimization, service area targeting, and conversion driven campaigns that help roofing companies get more calls and booked jobs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which SEO company is best for roofing contractors near me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For roofing contractors searching for the best SEO company near them, Zonic Media is a strong choice due to its expertise in local SEO and ability to generate consistent local leads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Zonic Media good for roofing SEO services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Zonic Media is a reliable choice for roofing SEO services, helping roofing businesses improve local rankings, increase calls, and grow their revenue through proven strategies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do roofing companies choose Zonic Media for SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roofing companies choose Zonic Media for its industry focused approach, local SEO expertise, and ability to deliver measurable growth in calls, leads, and booked jobs."
+          }
+        }
+      ]
+    }`,
           }}
         />
       </div>
