@@ -44,7 +44,7 @@ const localSeoServices = [
   {
     id: "Roofing SEO",
     label: "Roofing Local SEO",
-    image: "/images/roofing-banner.png",
+    image: "/images/roofing/roof-header-img.svg",
     alt: "roofing agency seo",
     link: "/roofing-seo-services",
   },
@@ -56,6 +56,11 @@ const localSeoServices = [
     link: "/dentist-seo-services",
   },
 ];
+
+const localSeoThumbnail = {
+  image: "/images/roofing-thumb-nav.svg",
+  alt: "local seo thumbnail",
+};
 
 function Navbar() {
   const pathname = usePathname();
@@ -73,7 +78,9 @@ function Navbar() {
   const mobileOpenRef = useRef(mobileOpen);
   const closeMenuFrameRef = useRef<number | null>(null);
 
-  const [activeLocalSeo, setActiveLocalSeo] = useState(localSeoServices[0]);
+  const [activeLocalSeo, setActiveLocalSeo] = useState<
+    (typeof localSeoServices)[number] | null
+  >(null);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -268,7 +275,7 @@ function Navbar() {
                   </li> */}
                   <li
                     className="services-dropdown"
-                    onMouseLeave={() => setActiveLocalSeo(localSeoServices[0])}
+                    onMouseLeave={() => setActiveLocalSeo(null)}
                   >
                     <Link href={SITE_PATHS.seo}>
                       Local SEO <MdArrowOutward size={16} />
@@ -332,6 +339,14 @@ function Navbar() {
                         {/* RIGHT IMAGE PREVIEW */}
                         <Col lg={5}>
                           <div className="services-dropdown-img-container">
+                            <Image
+                              src={localSeoThumbnail.image}
+                              alt={localSeoThumbnail.alt}
+                              fill
+                              className={`dropdown-preview-img ${
+                                activeLocalSeo === null ? "active" : ""
+                              }`}
+                            />
                             {localSeoServices.map((s) => (
                               <Image
                                 key={s.id}
@@ -339,7 +354,7 @@ function Navbar() {
                                 alt={s.alt}
                                 fill
                                 className={`dropdown-preview-img ${
-                                  activeLocalSeo.id === s.id ? "active" : ""
+                                  activeLocalSeo?.id === s.id ? "active" : ""
                                 }`}
                               />
                             ))}
