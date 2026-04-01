@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ContactForm from "@/app/components/ContactForm";
 import Faqs from "@/app/components/Faqs";
 import Footer from "@/app/components/Footer";
@@ -8,6 +9,30 @@ import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import { FaCircle } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "Roofing SEO Services | Get More Roofing Leads & Calls",
+  description:
+    "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
+  openGraph: {
+    title: "Roofing SEO Services | Get More Roofing Leads & Calls",
+    description:
+      "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
+    images: [
+      {
+        url: "/images/roofing/roof-banner.svg",
+        alt: "Roofing SEO banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing SEO Services | Get More Roofing Leads & Calls",
+    description:
+      "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
+    images: ["/images/roofing/roof-banner.svg"],
+  },
+};
 
 function page() {
   const roofFaqs = [
