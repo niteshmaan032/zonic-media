@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Zonic LLC",
     images: [
       {
-        url: "/images/roofing/roof-banner.svg",
+        url: "roof-banner.jpg",
         width: 1200,
         height: 630,
         alt: "Roofing SEO banner",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Roofing SEO Services",
     description: "Get more roofing leads with proven local SEO.",
-    images: ["/images/roofing/roof-banner.svg"],
+    images: ["roof-banner.jpg"],
   },
 };
 
