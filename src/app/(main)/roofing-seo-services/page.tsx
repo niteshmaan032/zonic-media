@@ -194,32 +194,33 @@ function page() {
           <Col xs={12} lg={6}>
             <div className="roofing-sec-content">
               <h2 className="roofing-sec-heading">
-                Struggling to Get Consistent Roofing Leads?
+                Turn Google Searches Into Roofing Jobs
               </h2>
-              <p className="roofing-sec-descrp">
-                Most roofing contractors face the same challenges:
-              </p>
+              <p className="roofing-sec-descrp">When homeowners search for:</p>
               <ul className="roofing-sec-list">
                 <li>
                   <FaCircle />
-                  Not ranking on Google Maps for roofing searches
+                  Roofing company near me
                 </li>
                 <li>
                   <FaCircle />
-                  Competitors getting more calls and jobs
+                  Roof repair near me
                 </li>
                 <li>
                   <FaCircle />
-                  Relying too much on referrals or lead platforms
+                  Emergency roof repair
                 </li>
                 <li>
                   <FaCircle />
-                  Inconsistent flow of estimates and bookings
+                  Roof replacement services
                 </li>
               </ul>
               <p className="roofing-sec-descrp">
-                If this sounds familiar, your problem is not demand, it is
-                visibility.
+                They are ready to take action.
+              </p>
+              <p className="roofing-sec-descrp">
+                We position your roofing business in front of these high intent
+                customers at the exact moment they need your services.
               </p>
             </div>
           </Col>
