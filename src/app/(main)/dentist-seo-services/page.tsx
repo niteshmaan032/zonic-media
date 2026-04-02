@@ -456,7 +456,7 @@ function page() {
           <Col xs={12} lg={6}>
             <div className="landing-sec-content">
               <h2 className="landing-heading">
-                Dominate Google Maps for â€œDentist Near Meâ€ Searches
+                Dominate Google Maps for “Dentist Near Me” Searches
               </h2>
               <p className="landing-description">
                 Most patients choose from the top results on Google Maps.
