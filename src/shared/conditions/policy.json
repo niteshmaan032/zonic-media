@@ -51,15 +51,23 @@
       ]
     },
     {
-      "heading": "SMS Consent & Communication",
+      "heading": "SMS Terms & Conditions",
       "blocks": [
+        {
+          "type": "subheading",
+          "text": "SMS Consent & Communication"
+        },
         {
           "type": "paragraph",
           "text": "When you provide your phone number through our website forms and opt-in, you consent to receive SMS messages from Zonic Media LLC."
         },
         {
           "type": "subheading",
-          "text": "SMS Communications May Include:"
+          "text": "Types of SMS Communications"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you have consented to receive SMS communications from Zonic Media LLC, you may receive messages related to the following:"
         },
         {
           "type": "list",
@@ -72,6 +80,14 @@
         },
         {
           "type": "subheading",
+          "text": "Examples of SMS Communications:"
+        },
+        {
+          "type": "paragraph",
+          "text": "“Hello, this is a reminder for your consultation with Zonic Media. You chose a [time] slot. If you have any questions or changes, please reply to this message or give us a call.”"
+        },
+        {
+          "type": "subheading",
           "text": "Important SMS Disclosures:"
         },
         {
@@ -79,9 +95,57 @@
           "items": [
             "Message frequency may vary",
             "Message and data rates may apply",
-            "You can opt out at any time by replying \"STOP\"",
-            "For assistance, reply \"HELP\" or contact us directly"
+            "Message Frequency may vary depending on the type of communication. For example, you may receive (10) messages in a week regarding your consultation or service-related updates.",
+            "Example: Message frequency may vary. You may receive up to (3) messages per week related to follow-up messages regarding your consultation or services."
           ]
+        },
+        {
+          "type": "subheading",
+          "text": "Potential Fees For Messages:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Please note that standard message and data rates may apply, depending on your carrier’s pricing plan. These fees may vary if the message is sent domestically or internationally."
+        },
+        {
+          "type": "subheading",
+          "text": "Opt-In Methods"
+        },
+        {
+          "type": "paragraph",
+          "text": "You may opt-in to receive messages from Zonic Media LLC in the following ways:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "By filling out a paper form",
+            "By requesting to opt-in by email",
+            "By signing up for messages when you choose your consultation or services"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Opt-Out Methods"
+        },
+        {
+          "type": "paragraph",
+          "text": "You can opt out of receiving SMS messages at any time. Alternatively, you can contact us directly to request removal from our messaging list."
+        },
+        {
+          "type": "list",
+          "items": [
+            "You can opt out at any time by replying \"STOP\"",
+            "For assistance, reply \"HELP\" or contact us directly",
+            "If you are experiencing any issues, you can reply with the keyword HELP. Or, you can get help directly by visiting our Contact Us page. Visit our privacy policy and terms and conditions page for more information or help."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Additional Options:"
+        },
+        {
+          "type": "paragraph",
+          "text": "If you do not wish to receive SMS messages, you can choose not to check the SMS consent box on our forms."
         },
         {
           "type": "paragraph",
