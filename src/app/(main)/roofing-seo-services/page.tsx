@@ -3,7 +3,7 @@ import ContactForm from "@/app/components/ContactForm";
 import Faqs from "@/app/components/Faqs";
 import Footer from "@/app/components/Footer";
 import Testimonials from "@/app/components/Testimonials";
-import "@/app/style/roofingLanding.css";
+import "@/app/style/landingServices.css";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -124,10 +124,10 @@ function page() {
     },
   };
   return (
-    <>
-      <div className="roofing-sec-1">
+    <div className="landing landing--roofing">
+      <div className="landing-sec-1">
         <Col xs={12} lg={7}>
-          <div className="roofing-sec-1-content">
+          <div className="landing-sec-1-content">
             <h1>
               Get More Roofing Leads Every Month With
               <span> Proven Local SEO </span>
@@ -175,10 +175,10 @@ function page() {
         </Col>
       </div>
 
-      <div className="roofing-sec-2">
+      <div className="landing-sec-2">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0 ">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-2.svg"
                 fill
@@ -187,14 +187,14 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Struggling to Get Consistent Roofing Leads?
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Most roofing contractors face the same challenges:
               </p>
-              <ul className="roofing-sec-list">
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Not ranking on Google Maps for roofing searches
@@ -212,7 +212,7 @@ function page() {
                   Inconsistent flow of estimates and bookings
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 If this sounds familiar, your problem is not demand, it is
                 visibility.
               </p>
@@ -221,15 +221,15 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-3">
+      <div className="landing-sec-3">
         <Row>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Turn Google Searches Into Roofing Jobs
               </h2>
-              <p className="roofing-sec-descrp">When homeowners search for:</p>
-              <ul className="roofing-sec-list">
+              <p className="landing-description">When homeowners search for:</p>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Roofing company near me
@@ -247,17 +247,17 @@ function page() {
                   Roof replacement services
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 They are ready to take action.
               </p>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We position your roofing business in front of these high intent
                 customers at the exact moment they need your services.
               </p>
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-4.svg"
                 fill
@@ -269,7 +269,7 @@ function page() {
 
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0 ">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-6.svg"
                 fill
@@ -278,17 +278,17 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Our Roofing Local SEO Services
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We provide specialized local SEO services designed specifically
                 for roofing companies and contractors.
               </p>
 
-              <h3 className="roofing-sec-sub-head">What we do</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">What we do</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Google Business Profile optimization to rank in Maps
@@ -328,20 +328,20 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-4">
+      <div className="landing-sec-4">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Why Roofing Companies Choose Zonic Media
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We are not a generic SEO agency. We understand how homeowners
                 search and choose roofing contractors.
               </p>
 
-              <h3 className="roofing-sec-sub-head">You Get</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">You Get</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   More calls from homeowners ready to hire
@@ -395,7 +395,7 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-7.svg"
                 fill
@@ -406,10 +406,10 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-5">
+      <div className="landing-sec-5">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-8.svg"
                 fill
@@ -419,16 +419,16 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Real Growth for Roofing Contractors
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Our strategies are designed to deliver measurable results.
               </p>
 
-              <h3 className="roofing-sec-sub-head">What You Can Expect</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">What You Can Expect</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Higher rankings on Google Maps
@@ -446,7 +446,7 @@ function page() {
                   Consistent lead flow without relying only on ads
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Even a few additional roofing projects each month can
                 significantly increase your revenue.
               </p>
@@ -456,16 +456,16 @@ function page() {
 
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Dominate Google Maps for Roofing Searches
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Most homeowners choose from the top results on Google Maps.
               </p>
 
-              <h3 className="roofing-sec-sub-head">We help your business:</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">We help your business:</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Rank in the local pack
@@ -487,7 +487,7 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-9.svg"
                 fill
@@ -498,10 +498,10 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-6">
+      <div className="landing-sec-6">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-11.svg"
                 fill
@@ -510,10 +510,10 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">Trust Signals</h2>
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">Trust Signals</h2>
 
-              <ul className="roofing-sec-list">
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   6+ years of digital marketing experience
@@ -540,12 +540,12 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-7">
+      <div className="landing-sec-7">
         <Col xs={12} lg={6}>
-          <h2 className="roofing-sec-heading">
+          <h2 className="landing-heading">
             Limited Availability Per Service Area
           </h2>
-          <p className="roofing-sec-descrp">
+          <p className="landing-description">
             We work with a limited number of roofing companies in each location
             to ensure strong results and avoid competition conflicts.
           </p>
@@ -581,13 +581,13 @@ function page() {
         </Col>
       </div>
 
-      <div className="roofing-sec-8">
-        <div className="roofing-sec-8-head-cont">
+      <div className="landing-sec-8">
+        <div className="landing-sec-8-head-cont">
           <Col xs={12} lg={6}>
-            <h2 className="roofing-sec-heading">
+            <h2 className="landing-heading">
               Our Proven Local SEO Process for Roofing Companies
             </h2>
-            <p className="roofing-sec-descrp">
+            <p className="landing-description">
               We follow a structured, results driven approach to help roofing
               businesses rank higher, generate more calls, and book more jobs
               consistently.
@@ -597,15 +597,15 @@ function page() {
 
         <Row className="g-4">
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>01</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Local SEO Audit & Competitor Analysis
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We analyze your current rankings, Google Business Profile,
                   website performance, and competitors to identify gaps and
                   opportunities for growth.
@@ -614,15 +614,15 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>02</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Keyword Strategy for Roofing Services
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We target high intent keywords like roofing company near me,
                   roof repair, and roof replacement to attract homeowners ready
                   to hire.
@@ -631,15 +631,15 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>03</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Google Business Profile Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We fully optimize your profile to improve visibility in Google
                   Maps, increase calls, and rank in the local pack.
                 </p>
@@ -647,15 +647,15 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>04</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
-                   Website & On Page SEO Optimization
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
+                  Â Website & On Page SEO Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We optimize your service pages, content, and structure to
                   improve rankings and convert visitors into leads.
                 </p>
@@ -664,15 +664,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>05</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Local Citations & Listings
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We build and optimize business listings across trusted
                   directories to strengthen your local authority and
                   consistency.
@@ -682,15 +682,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>06</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Reviews & Reputation Management
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We help you generate more positive reviews and improve trust,
                   which directly impacts rankings and conversions.
                 </p>
@@ -699,13 +699,13 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>07</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">Local Link Building</h3>
-                <p className="roofing-process-descrp">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">Local Link Building</h3>
+                <p className="landing-process-description">
                   We create high quality backlinks to improve your domain
                   authority and strengthen your position in search results.
                 </p>
@@ -714,15 +714,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>08</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Conversion Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We optimize your website and landing pages to increase calls,
                   form submissions, and booked roofing jobs.
                 </p>
@@ -731,15 +731,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>09</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Tracking, Reporting & Scaling
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We track rankings, calls, and leads, then continuously
                   optimize your campaign to scale results over time.
                 </p>
@@ -749,7 +749,7 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-9">
+      <div className="landing-sec-9">
         <Faqs items={roofFaqs} />
         <Script
           id="faq-schema"
@@ -869,7 +869,7 @@ function page() {
         />
       </div>
 
-      <div className="roofing-sec-10">
+      <div className="landing-sec-10">
         <h2 className="testimonial-heading">
           Hear what our clients say about
           <span> working with Zonic Media.</span>
@@ -877,12 +877,12 @@ function page() {
         <Testimonials />
       </div>
 
-      <div className="roofing-sec-11">
+      <div className="landing-sec-11">
         <ContactForm content={ContactRoof} />
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

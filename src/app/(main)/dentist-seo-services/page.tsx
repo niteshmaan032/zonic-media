@@ -1,4 +1,4 @@
-import "@/app/style/dentalLanding.css";
+import "@/app/style/landingServices.css";
 import Link from "next/link";
 import { Col, Row } from "react-bootstrap";
 import { FaCircle } from "react-icons/fa6";
@@ -122,10 +122,10 @@ function page() {
     },
   };
   return (
-    <>
-      <div className="roofing-sec-1">
+    <div className="landing landing--dental">
+      <div className="landing-sec-1">
         <Col xs={12} lg={7}>
-          <div className="roofing-sec-1-content">
+          <div className="landing-sec-1-content">
             <h1>
               Get More <span> High Value Dental Patients </span> Every Month
               With Proven Local SEO
@@ -173,10 +173,10 @@ function page() {
         </Col>
       </div>
 
-      <div className="roofing-sec-2">
+      <div className="landing-sec-2">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0 ">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-2.svg"
                 fill
@@ -185,14 +185,14 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Struggling to Get Consistent Patient Bookings?
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Most dental clinics face the same challenges:
               </p>
-              <ul className="roofing-sec-list">
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Not ranking on Google Maps for dental searches
@@ -210,7 +210,7 @@ function page() {
                   Empty chair time and inconsistent bookings
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 If this sounds familiar, your issue is not demand, it is
                 visibility.
               </p>
@@ -219,15 +219,15 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-3">
+      <div className="landing-sec-3">
         <Row>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Turn Google Searches Into Booked Appointments
               </h2>
-              <p className="roofing-sec-descrp">When patients search for:</p>
-              <ul className="roofing-sec-list">
+              <p className="landing-description">When patients search for:</p>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Dentist near me
@@ -245,17 +245,17 @@ function page() {
                   Invisalign provider
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 They are actively looking for treatment.
               </p>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We position your clinic in front of these high intent patients
                 at the exact moment they are ready to choose a dentist.
               </p>
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-3.svg"
                 fill
@@ -267,7 +267,7 @@ function page() {
 
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0 ">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-4.svg"
                 fill
@@ -276,17 +276,17 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Our Dentist Local SEO Services
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We provide specialized local SEO services designed specifically
                 for dental clinics and practices.
               </p>
 
-              <h3 className="roofing-sec-sub-head">What we do</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">What we do</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Google Business Profile optimization to rank in Maps
@@ -326,20 +326,20 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-4">
+      <div className="landing-sec-4">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Why Dental Clinics Choose Zonic Media
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 We are not a generic SEO agency. We understand how patients
                 search, compare, and choose dental providers.
               </p>
 
-              <h3 className="roofing-sec-sub-head">You Get</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">You Get</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   More calls from patients ready to book
@@ -392,7 +392,7 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-5.svg"
                 fill
@@ -403,10 +403,10 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-5">
+      <div className="landing-sec-5">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-6.svg"
                 fill
@@ -416,16 +416,16 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
                 Real Growth for Dental Practices
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Our strategies are designed to deliver measurable results.
               </p>
 
-              <h3 className="roofing-sec-sub-head">What You Can Expect</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">What You Can Expect</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Higher rankings on Google Maps
@@ -444,7 +444,7 @@ function page() {
                   Consistent patient flow without relying only on ads
                 </li>
               </ul>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Even a few additional high value treatments each month can
                 significantly increase your revenue.
               </p>
@@ -454,16 +454,16 @@ function page() {
 
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">
-                Dominate Google Maps for “Dentist Near Me” Searches
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
+                Dominate Google Maps for â€œDentist Near Meâ€ Searches
               </h2>
-              <p className="roofing-sec-descrp">
+              <p className="landing-description">
                 Most patients choose from the top results on Google Maps.
               </p>
 
-              <h3 className="roofing-sec-sub-head">We help your clinic:</h3>
-              <ul className="roofing-sec-list">
+              <h3 className="landing-sub-head">We help your clinic:</h3>
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   Rank in the local pack
@@ -485,7 +485,7 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/dental/dental-img-7.svg"
                 fill
@@ -496,10 +496,10 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-6">
+      <div className="landing-sec-6">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
-            <div className="roof-img-container">
+            <div className="landing-img-container">
               <Image
                 src="/images/roofing/roof-img-11.svg"
                 fill
@@ -508,10 +508,10 @@ function page() {
             </div>
           </Col>
           <Col xs={12} lg={6}>
-            <div className="roofing-sec-content">
-              <h2 className="roofing-sec-heading">Trust Signals</h2>
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">Trust Signals</h2>
 
-              <ul className="roofing-sec-list">
+              <ul className="landing-list">
                 <li>
                   <FaCircle />
                   6+ years of digital marketing experience
@@ -538,12 +538,12 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-7">
+      <div className="landing-sec-7">
         <Col xs={12} lg={6}>
-          <h2 className="roofing-sec-heading">
+          <h2 className="landing-heading">
             Limited Availability Per Service Area
           </h2>
-          <p className="roofing-sec-descrp">
+          <p className="landing-description">
             We work with a limited number of dental clinics in each area to
             ensure strong results and avoid conflicts.
           </p>
@@ -579,13 +579,13 @@ function page() {
         </Col>
       </div>
 
-      <div className="roofing-sec-8">
-        <div className="roofing-sec-8-head-cont">
+      <div className="landing-sec-8">
+        <div className="landing-sec-8-head-cont">
           <Col xs={12} lg={6}>
-            <h2 className="roofing-sec-heading">
+            <h2 className="landing-heading">
               Our Proven Local SEO Process for Dental Clinics
             </h2>
-            <p className="roofing-sec-descrp">
+            <p className="landing-description">
               We follow a structured, results driven approach to help dental
               practices rank higher, attract more patients, and grow
               consistently.
@@ -595,15 +595,15 @@ function page() {
 
         <Row className="g-4">
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>01</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Local SEO Audit & Competitor Analysis
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We evaluate your current rankings, Google Business Profile,
                   website performance, and competing clinics to identify
                   opportunities.
@@ -613,15 +613,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>02</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Keyword Strategy for Dental Services
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We target high intent searches like dentist near me, dental
                   implants, Invisalign, and emergency dental care.
                 </p>
@@ -630,15 +630,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>03</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Google Business Profile Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We optimize your profile to improve visibility in Google Maps
                   and increase calls and appointment requests.
                 </p>
@@ -647,15 +647,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>04</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Website & On Page SEO Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We improve your service pages, content, and structure to rank
                   higher and convert visitors into patients.
                 </p>
@@ -664,15 +664,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>05</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Local Citations & Listings
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We ensure your clinic is accurately listed across trusted
                   directories to strengthen local authority.
                 </p>
@@ -681,15 +681,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>06</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Reviews & Reputation Management
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We help generate positive patient reviews to improve trust and
                   influence patient decisions.
                 </p>
@@ -698,13 +698,13 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>07</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">Local Link Building</h3>
-                <p className="roofing-process-descrp">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">Local Link Building</h3>
+                <p className="landing-process-description">
                   We build relevant backlinks to improve your website authority
                   and rankings.
                 </p>
@@ -713,15 +713,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>08</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Conversion Optimization
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We optimize your website to increase calls, appointment
                   bookings, and patient inquiries.
                 </p>
@@ -730,15 +730,15 @@ function page() {
           </Col>
 
           <Col xs={12} lg={6}>
-            <div className="roofing-process-box">
-              <div className="roofing-process-numb">
+            <div className="landing-process-box">
+              <div className="landing-process-number">
                 <p>09</p>
               </div>
-              <div className="roofing-process-content">
-                <h3 className="roofing-process-heading">
+              <div className="landing-process-content">
+                <h3 className="landing-process-heading">
                   Tracking, Reporting & Scaling
                 </h3>
-                <p className="roofing-process-descrp">
+                <p className="landing-process-description">
                   We track performance and continuously optimize to scale
                   patient acquisition over time.
                 </p>
@@ -748,7 +748,7 @@ function page() {
         </Row>
       </div>
 
-      <div className="roofing-sec-9">
+      <div className="landing-sec-9">
         <Faqs items={dentalFaqs} />
         <Script
           id="faq-schema"
@@ -868,7 +868,7 @@ function page() {
         />
       </div>
 
-      <div className="roofing-sec-10">
+      <div className="landing-sec-10">
         <h2 className="testimonial-heading">
           Hear what our clients say about
           <span> working with Zonic Media.</span>
@@ -876,12 +876,12 @@ function page() {
         <Testimonials />
       </div>
 
-      <div className="roofing-sec-11">
+      <div className="landing-sec-11">
         <ContactForm content={ContactDental} />
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 
