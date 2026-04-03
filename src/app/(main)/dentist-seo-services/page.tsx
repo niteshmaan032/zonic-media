@@ -496,6 +496,71 @@ function page() {
         </Row>
       </div>
 
+      <div className="landing-sec-12">
+        <Row className="g-4 g-lg-0">
+          <Col xs={12} lg={6}>
+            <div className="landing-sec-content">
+              <h2 className="landing-heading">
+                SEO vs Paid Ads for Dental Clinics
+              </h2>
+              <p className="landing-description">
+                Many dental clinics rely heavily on ads, but SEO builds long
+                term growth.
+              </p>
+              <div className="landing-comparison">
+                <div className="landing-comp-cont">
+                  <h3 className="landing-sub-head">SEO</h3>
+                  <ul className="landing-list">
+                    <li>
+                      <FaCircle />
+                      Long term visibility
+                    </li>
+                    <li>
+                      <FaCircle />
+                      Lower cost per patient over time
+                    </li>
+                    <li>
+                      <FaCircle />
+                      Consistent inbound patient flow
+                    </li>
+                  </ul>
+                </div>
+                <div className="landing-comp-cont">
+                  <h3 className="landing-sub-head">Ads</h3>
+                  <ul className="landing-list">
+                    <li>
+                      <FaCircle />
+                      Stops when budget stops
+                    </li>
+                    <li>
+                      <FaCircle />
+                      Higher cost per lead
+                    </li>
+                    <li>
+                      <FaCircle />
+                      Short term results
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p className="landing-description">
+                The best strategy combines both, with SEO as the foundation.
+              </p>
+            </div>
+          </Col>
+
+          <Col xs={12} lg={6} className="order-1 order-lg-0 ">
+            <div className="landing-img-container">
+              <Image
+                src="/images/dental/dental-img-8.svg"
+                fill
+                alt="roofing seo"
+              />
+            </div>
+          </Col>
+        </Row>
+      </div>
+
       <div className="landing-sec-6">
         <Row className="g-4 g-lg-0">
           <Col xs={12} lg={6} className="order-1 order-lg-0">
