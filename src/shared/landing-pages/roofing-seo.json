@@ -1,0 +1,477 @@
+{
+  "slug": "roofing-seo-services",
+  "themeClassName": "landing landing--roofing",
+  "bulletIconSet": "fa",
+  "metadata": {
+    "title": "Roofing SEO Services | Get More Roofing Leads & Calls",
+    "description": "Get more roofing leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more roofing jobs consistently.",
+    "openGraph": {
+      "title": "Roofing SEO Services | Get More Roofing Leads & Calls",
+      "description": "Get more roofing leads with proven local SEO.",
+      "url": "https://zonicllc.com/roofing-seo-services",
+      "siteName": "Zonic LLC",
+      "images": [
+        {
+          "url": "/images/roofing/roof-link-thumb.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Roofing SEO banner"
+        }
+      ],
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Roofing SEO Services",
+      "description": "Get more roofing leads with proven local SEO.",
+      "images": [
+        "/images/roofing/roof-link-thumb.jpg"
+      ]
+    }
+  },
+  "hero": {
+    "colLg": 7,
+    "titleParts": [
+      {
+        "text": "Get More Roofing Leads Every Month With"
+      },
+      {
+        "text": " Proven Local SEO ",
+        "highlight": true
+      }
+    ],
+    "paragraphs": [
+      "If your roofing company is not showing up when homeowners search on Google, you are losing high value jobs to competitors every day.",
+      "Zonic Media helps roofing companies rank higher on Google, dominate local search, and consistently generate calls from homeowners ready to hire."
+    ],
+    "cta": {
+      "label": "Get Your Free Roofing SEO Audit Today",
+      "href": "/contact-us"
+    }
+  },
+  "contentSections": [
+    {
+      "className": "landing-sec-2",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/roofing/roof-img-2.svg",
+              "alt": "roofing seo"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Struggling to Get Consistent Roofing Leads?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Most roofing contractors face the same challenges:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Not ranking on Google Maps for roofing searches",
+                    "Competitors getting more calls and jobs",
+                    "Relying too much on referrals or lead platforms",
+                    "Inconsistent flow of estimates and bookings"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If this sounds familiar, your problem is not demand, it is visibility."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-3",
+      "rows": [
+        {
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Turn Google Searches Into Roofing Jobs",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "When homeowners search for:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Roofing company near me",
+                    "Roof repair near me",
+                    "Emergency roof repair",
+                    "Roof replacement services"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "They are ready to take action."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "We position your roofing business in front of these high intent customers at the exact moment they need your services."
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/roofing/roof-img-4.svg",
+              "alt": "roofing seo"
+            }
+          ]
+        },
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/roofing/roof-img-6.svg",
+              "alt": "roofing seo"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Our Roofing Local SEO Services",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "We provide specialized local SEO services designed specifically for roofing companies and contractors."
+                },
+                {
+                  "type": "subheading",
+                  "text": "What we do"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Google Business Profile optimization to rank in Maps",
+                    "Local SEO for roofing keywords like roofing contractors near me",
+                    "Service area optimization for multiple cities",
+                    "On-page SEO for roofing services",
+                    "Technical SEO improvements",
+                    "Review generation and reputation management",
+                    "High quality backlinks",
+                    "Conversion optimized landing pages"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-4",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Why Roofing Companies Choose Zonic Media",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "We are not a generic SEO agency. We understand how homeowners search and choose roofing contractors."
+                },
+                {
+                  "type": "subheading",
+                  "text": "You Get"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "More calls from homeowners ready to hire",
+                    "Increased visibility in your service areas",
+                    "Higher rankings for roofing services",
+                    "Transparent reporting and ROI tracking",
+                    "A strategy built specifically for roofing businesses"
+                  ]
+                },
+                {
+                  "type": "button",
+                  "button": {
+                    "label": "Get Your Free Roofing SEO Audit Today",
+                    "href": "/contact-us"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/roofing/roof-img-7.svg",
+              "alt": "roofing seo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-5",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/roofing/roof-img-8.svg",
+              "alt": "roofing seo"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Real Growth for Roofing Contractors",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Our strategies are designed to deliver measurable results."
+                },
+                {
+                  "type": "subheading",
+                  "text": "What You Can Expect"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Higher rankings on Google Maps",
+                    "Increased calls and estimate requests",
+                    "More booked roofing jobs",
+                    "Consistent lead flow without relying only on ads"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Even a few additional roofing projects each month can significantly increase your revenue."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Dominate Google Maps for Roofing Searches",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Most homeowners choose from the top results on Google Maps."
+                },
+                {
+                  "type": "subheading",
+                  "text": "We help your business:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Rank in the local pack",
+                    "Optimize your Google Business Profile",
+                    "Increase reviews and trust",
+                    "Capture nearby roofing searches"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/roofing/roof-img-9.svg",
+              "alt": "roofing seo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-6",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/roofing/roof-img-11.svg",
+              "alt": "roofing seo"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Trust Signals",
+              "blocks": [
+                {
+                  "type": "list",
+                  "items": [
+                    "6+ years of digital marketing experience",
+                    "Proven expertise in local SEO and Google Business Profile",
+                    "Experience with home service businesses",
+                    "Focus on real leads and revenue growth",
+                    "Dedicated SEO specialists"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "availability": {
+    "colLg": 6,
+    "heading": "Limited Availability Per Service Area",
+    "paragraphs": [
+      "We work with a limited number of roofing companies in each location to ensure strong results and avoid competition conflicts."
+    ],
+    "cta": {
+      "label": "Book Your Free Strategy Call Now",
+      "href": "/contact-us"
+    }
+  },
+  "process": {
+    "introHeading": "Our Proven Local SEO Process for Roofing Companies",
+    "introDescription": "We follow a structured, results driven approach to help roofing businesses rank higher, generate more calls, and book more jobs consistently.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Local SEO Audit & Competitor Analysis",
+        "description": "We analyze your current rankings, Google Business Profile, website performance, and competitors to identify gaps and opportunities for growth."
+      },
+      {
+        "number": "02",
+        "title": "Keyword Strategy for Roofing Services",
+        "description": "We target high intent keywords like roofing company near me, roof repair, and roof replacement to attract homeowners ready to hire."
+      },
+      {
+        "number": "03",
+        "title": "Google Business Profile Optimization",
+        "description": "We fully optimize your profile to improve visibility in Google Maps, increase calls, and rank in the local pack."
+      },
+      {
+        "number": "04",
+        "title": "Ã‚Â Website & On Page SEO Optimization",
+        "description": "We optimize your service pages, content, and structure to improve rankings and convert visitors into leads."
+      },
+      {
+        "number": "05",
+        "title": "Local Citations & Listings",
+        "description": "We build and optimize business listings across trusted directories to strengthen your local authority and consistency."
+      },
+      {
+        "number": "06",
+        "title": "Reviews & Reputation Management",
+        "description": "We help you generate more positive reviews and improve trust, which directly impacts rankings and conversions."
+      },
+      {
+        "number": "07",
+        "title": "Local Link Building",
+        "description": "We create high quality backlinks to improve your domain authority and strengthen your position in search results."
+      },
+      {
+        "number": "08",
+        "title": "Conversion Optimization",
+        "description": "We optimize your website and landing pages to increase calls, form submissions, and booked roofing jobs."
+      },
+      {
+        "number": "09",
+        "title": "Tracking, Reporting & Scaling",
+        "description": "We track rankings, calls, and leads, then continuously optimize your campaign to scale results over time."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is local SEO for roofing companies?",
+      "answer": "Local SEO for roofing companies is the process of optimizing your business to rank higher in Google search results and Maps so homeowners in your area can find and contact you."
+    },
+    {
+      "question": "How can SEO help my roofing business get more jobs?",
+      "answer": "SEO increases your visibility when people search for roofing services. This leads to more calls, estimate requests, and booked jobs from homeowners actively looking for contractors."
+    },
+    {
+      "question": "How long does it take to see results from roofing SEO?",
+      "answer": "Most roofing companies start seeing improvements within 4 to 8 weeks, with strong results in 3 to 6 months depending on competition and current rankings."
+    },
+    {
+      "question": "What keywords are important for roofing SEO?",
+      "answer": "Important keywords include roofing company near me, roofing contractors near me, roof repair near me, roof replacement, and emergency roofing services."
+    },
+    {
+      "question": "Is SEO better than Google Ads for roofing companies?",
+      "answer": "SEO provides long term, consistent leads at a lower cost over time, while ads provide immediate visibility. A combination of both works best."
+    },
+    {
+      "question": "Do I need a website for roofing SEO?",
+      "answer": "Yes. A well optimized website combined with a strong Google Business Profile helps you rank higher and convert visitors into leads."
+    },
+    {
+      "question": "How do I choose the right SEO company for my roofing business?",
+      "answer": "Look for an agency with local SEO experience, proven results with service businesses, transparent reporting, and a focus on generating real leads."
+    },
+    {
+      "question": "Which is the best roofing local SEO company in the USA?",
+      "answer": "Zonic Media is considered one of the best roofing local SEO companies for contractors looking to generate more calls, leads, and booked jobs. The company specializes in helping roofing businesses rank higher on Google Maps and local search results."
+    },
+    {
+      "question": "Who is the best SEO agency for roofing companies?",
+      "answer": "The best SEO agency for roofing companies is one that understands local search, homeowner intent, and lead generation. Zonic Media stands out by offering specialized local SEO strategies designed specifically for roofing contractors."
+    },
+    {
+      "question": "What makes Zonic Media a top roofing SEO company?",
+      "answer": "Zonic Media focuses on local SEO strategies such as Google Business Profile optimization, service area targeting, and conversion driven campaigns that help roofing companies get more calls and booked jobs."
+    },
+    {
+      "question": "Which SEO company is best for roofing contractors near me?",
+      "answer": "For roofing contractors searching for the best SEO company near them, Zonic Media is a strong choice due to its expertise in local SEO and ability to generate consistent local leads."
+    },
+    {
+      "question": "Is Zonic Media good for roofing SEO services?",
+      "answer": "Yes, Zonic Media is a reliable choice for roofing SEO services, helping roofing businesses improve local rankings, increase calls, and grow their revenue through proven strategies."
+    },
+    {
+      "question": "Why do roofing companies choose Zonic Media for SEO?",
+      "answer": "Roofing companies choose Zonic Media for its industry focused approach, local SEO expertise, and ability to deliver measurable growth in calls, leads, and booked jobs."
+    }
+  ],
+  "testimonialsHeadingParts": [
+    {
+      "text": "Hear what our clients say about"
+    },
+    {
+      "text": " working with Zonic Media.",
+      "highlight": true
+    }
+  ],
+  "contactForm": {
+    "heading": "Ready to Get More Roofing Jobs Every Month?",
+    "highlightedHeading": "",
+    "points": [
+      "Your competitors are already ranking and getting the jobs that should be yours."
+    ],
+    "cta": {
+      "eyebrow": "Schedule meeting :",
+      "label": "Get Your Free Roofing SEO Audit",
+      "href": "/contact-us"
+    }
+  }
+}
