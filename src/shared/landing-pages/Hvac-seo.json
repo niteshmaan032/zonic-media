@@ -1,0 +1,528 @@
+{
+  "slug": "hvac-seo-services",
+  "themeClassName": "landing landing-hvac",
+  "bulletIconSet": "fa6",
+  "metadata": {
+    "title": "HVAC SEO Services | Get More HVAC Leads & Calls",
+    "description": "Get more HVAC leads with proven local SEO. Rank higher on Google Maps, increase calls, and book more heating and cooling services consistently.",
+    "openGraph": {
+      "title": "HVAC SEO Services | Get More HVAC Leads & Calls",
+      "description": "Get more HVAC leads with proven local SEO.",
+      "url": "https://zonicllc.com/hvac-seo-services",
+      "siteName": "Zonic LLC",
+      "images": [
+        {
+          "url": "/images/hvac/hvac-link-thumb.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "HVAC SEO banner"
+        }
+      ],
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "HVAC SEO Services",
+      "description": "Get more HVAC leads with proven local SEO.",
+      "images": ["/images/hvac/hvac-link-thumb.jpg"]
+    }
+  },
+  "hero": {
+    "colLg": 7,
+    "titleParts": [
+      {
+        "text": " Get More HVAC Leads  ",
+        "highlight": true
+      },
+      {
+        "text": "Every Month With Proven Local SEO"
+      }
+    ],
+    "paragraphs": [
+      "If your HVAC business is not showing up when customers search on Google, you are losing service calls and installations to competitors every day.",
+      "Zonic Media helps HVAC companies rank higher on Google, dominate local search, and consistently generate calls from customers who need heating and cooling services."
+    ],
+    "cta": {
+      "label": "Get Your Free HVAC SEO Audit Today",
+      "href": "/contact-us"
+    }
+  },
+  "contentSections": [
+    {
+      "className": "landing-sec-2",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/hvac/hvac-img-2.svg",
+              "alt": "HVAC SEO"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Struggling to Get Consistent HVAC Leads?",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Most HVAC companies face the same challenges:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Not ranking on Google Maps for HVAC searches",
+                    "Competitors getting more calls and service requests",
+                    "Dependence on referrals or third party lead platforms",
+                    "Slow seasons with inconsistent bookings"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "If this sounds familiar, your issue is not demand, it is visibility."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-3",
+      "rows": [
+        {
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Turn Google Searches Into HVAC Service Calls",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "When customers search for:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "HVAC company near me",
+                    "AC repair near me",
+                    "Furnace repair services",
+                    "Emergency HVAC services"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "They are ready to book."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "We position your HVAC business in front of these high intent customers at the exact moment they need your services."
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/hvac/hvac-img-3.svg",
+              "alt": "HVAC SEO"
+            }
+          ]
+        },
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/hvac/hvac-img-4.svg",
+              "alt": "HVAC SEO"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Our HVAC Local SEO Services",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "We provide specialized local SEO services designed specifically for HVAC companies and contractors."
+                },
+                {
+                  "type": "subheading",
+                  "text": "What We Do"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Google Business Profile optimization to rank in Maps",
+                    "Local SEO for HVAC keywords like AC repair and heating services",
+                    "Service area optimization for multiple locations",
+                    "On page SEO for HVAC services",
+                    "Technical SEO improvements",
+                    "Review generation and reputation management",
+                    "High quality backlinks",
+                    "Conversion optimized landing pages"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-4",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Why HVAC Companies Choose Zonic Media",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "We are not a generic SEO agency. We understand how customers search for heating and cooling services."
+                },
+                {
+                  "type": "subheading",
+                  "text": "You Get"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "More calls from customers ready to book",
+                    "Increased visibility in your service areas",
+                    "Higher rankings for HVAC services",
+                    "Transparent reporting and performance tracking",
+                    "A strategy built specifically for HVAC businesses"
+                  ]
+                },
+                {
+                  "type": "button",
+                  "button": {
+                    "label": "Get Your Free HVAC SEO Audit Today",
+                    "href": "/contact-us"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/hvac/hvac-img-5.svg",
+              "alt": "HVAC SEO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-5",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/hvac/hvac-img-6.svg",
+              "alt": "HVAC SEO"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Real Growth for HVAC Contractors",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Our strategies are designed to deliver measurable results."
+                },
+                {
+                  "type": "subheading",
+                  "text": "What You Can Expect"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Higher rankings on Google Maps",
+                    "Increased service calls and inquiries",
+                    "More booked installations and repairs",
+                    "Consistent lead flow throughout the year"
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Even a few additional service calls or installations each week can significantly increase your revenue."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Dominate Google Maps for HVAC Searches",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Most customers choose from the top results on Google Maps."
+                },
+                {
+                  "type": "subheading",
+                  "text": "We help your business:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "Rank in the local pack",
+                    "Optimize your Google Business Profile",
+                    "Increase reviews and trust",
+                    "Capture nearby HVAC searches"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "src": "/images/dental/dental-img-7.svg",
+              "alt": "HVAC SEO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-12",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "SEO vs Paid Ads for HVAC Companies",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Many HVAC businesses rely heavily on ads, but SEO builds long term growth."
+                },
+                {
+                  "type": "comparison",
+                  "items": [
+                    {
+                      "title": "SEO",
+                      "items": [
+                        "Long term visibility",
+                        "Lower cost per lead over time",
+                        "Consistent inbound leads"
+                      ]
+                    },
+                    {
+                      "title": "Ads",
+                      "items": [
+                        "Stops when budget stops",
+                        "Higher cost per lead",
+                        "Short term results"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "The best strategy combines both, with SEO as the foundation."
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/dental/dental-img-8.svg",
+              "alt": "HVAC SEO"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "landing-sec-6",
+      "rows": [
+        {
+          "className": "g-4 g-lg-0",
+          "columns": [
+            {
+              "type": "image",
+              "lg": 6,
+              "orderClassName": "order-1 order-lg-0",
+              "src": "/images/roofing/roof-img-11.svg",
+              "alt": "HVAC SEO"
+            },
+            {
+              "type": "text",
+              "lg": 6,
+              "heading": "Trust Signals",
+              "blocks": [
+                {
+                  "type": "list",
+                  "items": [
+                    "6+ years of digital marketing experience",
+                    "Proven expertise in local SEO and Google Business Profile",
+                    "Experience with home service businesses",
+                    "Focus on real leads and revenue growth",
+                    "Dedicated SEO specialists"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "availability": {
+    "colLg": 6,
+    "heading": "Limited Availability Per Service Area",
+    "paragraphs": [
+      "We work with a limited number of HVAC companies in each location to ensure strong results and avoid competition conflicts."
+    ],
+    "cta": {
+      "label": "Book Your Free Strategy Call Now",
+      "href": "/contact-us"
+    }
+  },
+  "process": {
+    "introHeading": "Our Proven Local SEO Process for HVAC Companies",
+    "introDescription": "We follow a structured, results driven approach to help HVAC businesses rank higher, generate more calls, and grow consistently.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Local SEO Audit & Competitor Analysis",
+        "description": "We evaluate your current rankings, Google Business Profile, website performance, and competitors to identify growth opportunities."
+      },
+      {
+        "number": "02",
+        "title": "Keyword Strategy for HVAC Services",
+        "description": "We target high intent searches like AC repair, furnace repair, HVAC installation, and emergency services."
+      },
+      {
+        "number": "03",
+        "title": "Google Business Profile Optimization",
+        "description": "We optimize your profile to improve visibility in Google Maps and increase calls and bookings."
+      },
+      {
+        "number": "04",
+        "title": "Website & On Page SEO Optimization",
+        "description": "We improve your service pages and website structure to rank higher and convert visitors into customers."
+      },
+      {
+        "number": "05",
+        "title": "Local Citations & Listings",
+        "description": "We build consistent listings across trusted directories to strengthen your local authority."
+      },
+      {
+        "number": "06",
+        "title": "Reviews & Reputation Management",
+        "description": "We help generate positive customer reviews to improve trust and increase conversions."
+      },
+      {
+        "number": "07",
+        "title": "Local Link Building",
+        "description": "We build high quality backlinks to improve your website authority and rankings."
+      },
+      {
+        "number": "08",
+        "title": "Conversion Optimization",
+        "description": "We optimize your website to increase calls, form submissions, and booked services."
+      },
+      {
+        "number": "09",
+        "title": "Tracking, Reporting & Scaling",
+        "description": "We track performance and continuously improve your campaign to scale results."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is HVAC SEO?",
+      "answer": "HVAC SEO is the process of optimizing your business to rank higher in Google search results and Maps so customers can find and contact you for heating and cooling services."
+    },
+    {
+      "question": "How can SEO help my HVAC business get more leads?",
+      "answer": "SEO increases your visibility when customers search for HVAC services, leading to more calls, service requests, and booked jobs."
+    },
+    {
+      "question": "How long does it take to see results from HVAC SEO?",
+      "answer": "Most HVAC businesses start seeing improvements within 4 to 8 weeks, with strong results in 3 to 6 months depending on competition."
+    },
+    {
+      "question": "What keywords are important for HVAC SEO?",
+      "answer": "Important keywords include HVAC company near me, AC repair, furnace repair, HVAC installation, and emergency HVAC services."
+    },
+    {
+      "question": "Is SEO better than Google Ads for HVAC companies?",
+      "answer": "SEO provides long term results and lower cost per lead over time, while ads provide immediate visibility. A combination works best."
+    },
+    {
+      "question": "Do I need a website for HVAC SEO?",
+      "answer": "Yes. A well optimized website combined with a strong Google Business Profile is essential for ranking and conversions."
+    },
+    {
+      "question": "How do I choose the right HVAC SEO company?",
+      "answer": "Look for an agency with local SEO experience, clear strategy, transparent reporting, and a focus on generating real leads."
+    },
+    {
+      "question": "Which is the best HVAC SEO company in the USA?",
+      "answer": "Zonic Media is considered one of the best HVAC SEO companies for businesses looking to generate more service calls, increase visibility, and grow revenue through local SEO."
+    },
+    {
+      "question": "Who is the best SEO agency for HVAC companies?",
+      "answer": "The best SEO agency for HVAC companies understands local search behavior and customer intent. Zonic Media provides tailored strategies designed for HVAC contractors."
+    },
+    {
+      "question": "What makes Zonic Media a top HVAC SEO company?",
+      "answer": "Zonic Media focuses on local SEO strategies, Google Business Profile optimization, and conversion driven campaigns that help HVAC companies generate more leads."
+    },
+    {
+      "question": "Which SEO company is best for HVAC contractors near me?",
+      "answer": "For HVAC contractors searching for a reliable SEO company, Zonic Media is a strong choice due to its expertise in local SEO and lead generation."
+    },
+    {
+      "question": "Is Zonic Media good for HVAC SEO services?",
+      "answer": "Yes, Zonic Media helps HVAC businesses improve rankings, increase calls, and generate consistent leads through proven SEO strategies."
+    },
+    {
+      "question": "Why do HVAC companies choose Zonic Media for SEO?",
+      "answer": "HVAC companies choose Zonic Media for its industry focused approach, local SEO expertise, and ability to deliver measurable growth in calls and bookings."
+    }
+  ],
+  "testimonialsHeadingParts": [
+    {
+      "text": "Hear what our clients say about"
+    },
+    {
+      "text": " working with Zonic Media.",
+      "highlight": true
+    }
+  ],
+  "contactForm": {
+    "heading": "Ready to Get More HVAC Leads Every Month?",
+    "highlightedHeading": "",
+    "points": [
+      "Your competitors are already ranking and getting the customers that should be yours."
+    ],
+    "cta": {
+      "eyebrow": "Schedule meeting :",
+      "label": "Get Your Free HVAC SEO Audit",
+      "href": "/contact-us"
+    }
+  }
+}

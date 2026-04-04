@@ -111,7 +111,10 @@ function renderTextBlock(
       return (
         <div className="landing-comparison" key={key}>
           {block.items.map((comparisonItem, index) => (
-            <div className="landing-comp-cont" key={`${comparisonItem.title}-${index}`}>
+            <div
+              className="landing-comp-cont"
+              key={`${comparisonItem.title}-${index}`}
+            >
               <h3 className="landing-sub-head">{comparisonItem.title}</h3>
               <ul className="landing-list">
                 {comparisonItem.items.map((item, itemIndex) => (
@@ -153,7 +156,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const pageData = getLandingPageBySlug(slug);
 
@@ -192,7 +197,10 @@ export default async function Page({ params }: PageProps) {
       {pageData.contentSections.map((section) => (
         <div className={section.className} key={section.className}>
           {section.rows.map((row, rowIndex) => (
-            <Row className={row.className} key={`${section.className}-${rowIndex}`}>
+            <Row
+              className={row.className}
+              key={`${section.className}-${rowIndex}`}
+            >
               {row.columns.map((column, columnIndex) => (
                 <Col
                   xs={12}
@@ -231,7 +239,10 @@ export default async function Page({ params }: PageProps) {
               {paragraph}
             </p>
           ))}
-          {renderButton(pageData.availability.cta.label, pageData.availability.cta.href)}
+          {renderButton(
+            pageData.availability.cta.label,
+            pageData.availability.cta.href,
+          )}
         </Col>
       </div>
 
@@ -239,7 +250,9 @@ export default async function Page({ params }: PageProps) {
         <div className="landing-sec-8-head-cont">
           <Col xs={12} lg={6}>
             <h2 className="landing-heading">{pageData.process.introHeading}</h2>
-            <p className="landing-description">{pageData.process.introDescription}</p>
+            <p className="landing-description">
+              {pageData.process.introDescription}
+            </p>
           </Col>
         </div>
 
@@ -252,7 +265,9 @@ export default async function Page({ params }: PageProps) {
                 </div>
                 <div className="landing-process-content">
                   <h3 className="landing-process-heading">{step.title}</h3>
-                  <p className="landing-process-description">{step.description}</p>
+                  <p className="landing-process-description">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             </Col>

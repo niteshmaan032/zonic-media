@@ -1,5 +1,6 @@
 import type { ContactFormContent } from "@/app/components/ContactForm";
 import dentistSeo from "./dentist-seo.json";
+import hvacSeo from "./Hvac-seo.json";
 import roofingSeo from "./roofing-seo.json";
 
 export type HeadingPart = {
@@ -131,6 +132,7 @@ export type LandingPageContent = {
 export const landingPages: LandingPageContent[] = [
   roofingSeo as LandingPageContent,
   dentistSeo as LandingPageContent,
+  hvacSeo as LandingPageContent,
 ];
 
 export function getLandingPageBySlug(slug: string) {

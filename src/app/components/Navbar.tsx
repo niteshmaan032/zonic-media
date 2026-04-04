@@ -55,6 +55,13 @@ const localSeoServices = [
     alt: "dentist seo",
     link: "/dentist-seo-services",
   },
+  {
+    id: "Hvac SEO",
+    label: "HVAC Local SEO",
+    image: "/images/hvac/hvac-link-thumb.jpg",
+    alt: "hvac-seo",
+    link: "/hvac-seo-services",
+  },
 ];
 
 const localSeoThumbnail = {

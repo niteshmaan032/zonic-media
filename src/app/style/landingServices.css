@@ -38,6 +38,20 @@
   --landing-sec-7-button-bg: #ea4334;
 }
 
+.landing-hvac {
+  --landing-accent: #fad337;
+  --landing-sec-1-image: url("/images/hvac/hvac-hero-img.svg");
+  --landing-sec-1-bg: rgba(181, 226, 251, 0.2);
+  --landing-sec-2-bg: #fdfdfd;
+
+  --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
+  --landing-sec-5-bg: rgba(181, 226, 251, 0.2);
+  --landing-sec-6-bg: rgba(226, 231, 253, 0.61);
+  --landing-sec-7-bg: #f2f7fe;
+
+  --landing-sec-7-image: url("/images/hvac/hvac-banner.svg");
+}
+
 .landing-sec-1 {
   padding: 140px 100px 100px 100px;
   height: 95svh;
@@ -417,6 +431,7 @@
 
   .landing-comparison {
     gap: 20px;
+    flex-direction: column;
   }
 }
 
