@@ -41,7 +41,7 @@
 .landing-hvac {
   --landing-accent: #0b2e77;
   --landing-sec-1-image: url("/images/hvac/hvac-hero-img.svg");
-  --landing-sec-1-bg: rgba(181, 226, 251, 0.2);
+  --landing-sec-1-bg: rgba(181, 226, 251, 0.1);
   --landing-sec-2-bg: #fdfdfd;
 
   --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
