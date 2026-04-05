@@ -31,6 +31,7 @@ body p {
   --color8: #2567e8;
   --stroke: #d9d9d9;
   --white: #ffffff;
+  --admin-primary: #009cff;
   font-family: var(--neue-haas);
 }
 

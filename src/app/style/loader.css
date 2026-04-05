@@ -21,6 +21,14 @@
   visibility: hidden;
 }
 
+.loader-wrapper--admin {
+  --admin-primary: #009cff;
+}
+
+.loader-wrapper--admin .loader {
+  --loader-color: var(--admin-primary);
+}
+
 .loader {
   display: block;
   --height-of-loader: 4px;

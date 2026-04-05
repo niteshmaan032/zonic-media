@@ -1,0 +1,177 @@
+.admin-auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  gap: 80px;
+}
+
+.admin-auth-img {
+  flex: 1.5;
+  width: 100%;
+  height: 700px;
+}
+
+.admin-auth-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.admin-auth-form {
+  flex: 1;
+}
+
+.admin-auth-form-head {
+  margin-bottom: 32px;
+}
+
+.admin-form-head {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.admin-form-sub-head {
+  font-size: 15px;
+  width: 80%;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.admin-auth-form label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.admin-auth-form input {
+  border: 1px solid var(--stroke);
+  padding: 14px 10px;
+  border-radius: 10px;
+}
+
+.admin-auth-form label span {
+  color: var(--color5);
+}
+
+.admin-auth-form input::placeholder {
+  font-size: 12px;
+}
+
+.admin-auth-form .button {
+  width: 100%;
+  margin-top: 18px;
+  border: none;
+  background-color: var(--admin-primary);
+  padding: 16px 8px;
+  color: var(--white);
+}
+
+.admin-auth-form .error-text {
+  color: var(--color5);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.admin-auth-form .success-text {
+  color: var(--color3);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.admin-auth-form .forgot-psswrd {
+  text-align: end;
+}
+
+.admin-auth-form .forgot-psswrd button {
+  width: fit-content;
+  color: var(--admin-primary);
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.back-login {
+  margin-top: 20px;
+}
+
+.back-login button {
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--admin-primary);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 8px;
+}
+
+.input-password-container {
+  position: relative;
+}
+
+.password-toggle-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  line-height: 0;
+}
+
+.password-toggle-icon {
+  color: #666;
+  font-size: 20px;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+  .admin-auth-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .admin-auth-img {
+    flex: none;
+    height: auto;
+    max-height: 420px;
+  }
+
+  .admin-auth-form {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .admin-auth-wrapper {
+    gap: 24px;
+  }
+
+  .admin-form-head {
+    font-size: 30px;
+  }
+
+  .admin-form-sub-head {
+    width: 100%;
+  }
+}
