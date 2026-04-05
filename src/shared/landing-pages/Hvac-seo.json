@@ -369,7 +369,7 @@
             {
               "type": "text",
               "lg": 6,
-              "heading": "Trust Signals",
+
               "blocks": [
                 {
                   "type": "list",

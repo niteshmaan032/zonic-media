@@ -24,9 +24,7 @@
       "card": "summary_large_image",
       "title": "Roofing SEO Services",
       "description": "Get more roofing leads with proven local SEO.",
-      "images": [
-        "/images/roofing/roof-link-thumb.jpg"
-      ]
+      "images": ["/images/roofing/roof-link-thumb.jpg"]
     }
   },
   "hero": {
@@ -318,7 +316,7 @@
             {
               "type": "text",
               "lg": 6,
-              "heading": "Trust Signals",
+
               "blocks": [
                 {
                   "type": "list",
@@ -369,7 +367,7 @@
       },
       {
         "number": "04",
-        "title": "Ã‚Â Website & On Page SEO Optimization",
+        "title": "A Website & On Page SEO Optimization",
         "description": "We optimize your service pages, content, and structure to improve rankings and convert visitors into leads."
       },
       {
