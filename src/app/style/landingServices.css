@@ -2,12 +2,12 @@
   --landing-accent: var(--primary);
   --landing-sec-1-bg: transparent;
   --landing-sec-1-image: none;
-  --landing-sec-2-bg: transparent;
-  --landing-sec-3-bg: transparent;
-  --landing-sec-4-bg: transparent;
-  --landing-sec-5-bg: transparent;
-  --landing-sec-6-bg: transparent;
-  --landing-sec-7-bg: transparent;
+  --landing-sec-2-bg: #fdfdfd;
+  --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
+  --landing-sec-4-bg: #fdfdfd;
+  --landing-sec-5-bg: rgba(199, 220, 249, 0.24);
+  --landing-sec-12-bg: var(--landing-sec-3-bg);
+  --landing-sec-7-bg: #f2f7fe;
   --landing-sec-7-image: none;
   --landing-sec-7-button-bg: var(--primary);
   --landing-trust-bg: rgba(226, 231, 253, 0.8);
@@ -17,11 +17,6 @@
   --landing-accent: #2f82f9;
   --landing-sec-1-bg: rgba(154, 208, 255, 0.26);
   --landing-sec-1-image: url("/images/dental/dental-hero-banner.svg");
-  --landing-sec-2-bg: #fdfdfd;
-  --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
-  --landing-sec-4-bg: #fdfdfd;
-  --landing-sec-5-bg: rgba(199, 220, 249, 0.24);
-
   --landing-sec-7-bg: #f2f7fe;
   --landing-sec-7-image: url("/images/dental/dental-banner-2.svg");
 }
@@ -42,10 +37,8 @@
   --landing-accent: #0b2e77;
   --landing-sec-1-image: url("/images/hvac/hvac-hero-img.svg");
   --landing-sec-1-bg: rgba(181, 226, 251, 0.1);
-  --landing-sec-2-bg: #fdfdfd;
-  --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
+  --landing-sec-4-bg: transparent;
   --landing-sec-5-bg: rgba(181, 226, 251, 0.2);
-  --landing-sec-7-bg: #f2f7fe;
   --landing-sec-7-image: url("/images/hvac/hvac-banner.svg");
 }
 
@@ -54,11 +47,19 @@
   --landing-sec-1-image: url("/images/plumber/plumber-hero-banner.svg");
   --landing-sec-1-bg: rgba(205, 230, 250, 0.28);
   --landing-sec-2-bg: #fefefe;
-  --landing-sec-3-bg: rgba(154, 208, 255, 0.23);
-  --landing-sec-4-bg: #fdfdfd;
   --landing-sec-5-bg: #fcfafb;
   --landing-sec-7-bg: rgba(209, 233, 239, 0.5);
   --landing-sec-7-image: url("/images/plumber/plumber-banner-2.svg");
+}
+
+.landing-pest {
+  --landing-accent: #f42542;
+  --landing-sec-1-image: url("/images/pest/pest-hero-banner.svg");
+  --landing-sec-1-bg: #fffbf1;
+  --landing-sec-2-bg: #fefefe;
+  --landing-sec-5-bg: rgba(154, 208, 255, 0.23);
+  --landing-sec-7-bg: #fffbf1;
+  --landing-sec-7-image: url("/images/pest/pest-banner-2.svg");
 }
 
 .landing-sec-1 {
@@ -297,7 +298,7 @@
 
 .landing-sec-12 {
   padding: 60px 100px;
-  background-color: var(--landing-sec-3-bg);
+  background-color: var(--landing-sec-12-bg);
 }
 
 .landing-sec-12 .landing-img-container {

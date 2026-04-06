@@ -69,6 +69,13 @@ const localSeoServices = [
     alt: "plumber seo",
     link: "/plumber-seo-services",
   },
+  {
+    id: "Pest SEO",
+    label: "Pest Control Local SEO",
+    image: "/images/pest/pest-thumb-link.jpg",
+    alt: "pest control seo",
+    link: "/pest-seo-services",
+  },
 ];
 
 const localSeoThumbnail = {
@@ -298,7 +305,7 @@ function Navbar() {
                     <div className="services-dropdown-container local-seo-service-dropdown">
                       <Row className="h-100">
                         {/* LEFT MENU */}
-                        <Col lg={7}>
+                        <Col lg={6}>
                           <div className="services-dropdown-menus">
                             <p>Local SEO Services</p>
                             <ul>
@@ -351,7 +358,7 @@ function Navbar() {
                         </Col>
 
                         {/* RIGHT IMAGE PREVIEW */}
-                        <Col lg={5}>
+                        <Col lg={6}>
                           <div className="services-dropdown-img-container">
                             <Image
                               src={localSeoThumbnail.image}
