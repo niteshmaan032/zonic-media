@@ -10,7 +10,7 @@
   --landing-sec-7-bg: transparent;
   --landing-sec-7-image: none;
   --landing-sec-7-button-bg: var(--primary);
-  --landing-trust-bg: rgba(226, 231, 253, 0.61);
+  --landing-trust-bg: rgba(226, 231, 253, 0.8);
 }
 
 .landing--dental {
