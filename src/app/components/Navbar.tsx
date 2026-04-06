@@ -44,7 +44,7 @@ const localSeoServices = [
   {
     id: "Roofing SEO",
     label: "Roofing Local SEO",
-    image: "/images/roofing/roof-nav-thumb.svg",
+    image: "/images/roofing/roof-link-thumb.jpg",
     alt: "roofing agency seo",
     link: "/roofing-seo-services",
   },
@@ -61,6 +61,13 @@ const localSeoServices = [
     image: "/images/hvac/hvac-link-thumb.jpg",
     alt: "hvac-seo",
     link: "/hvac-seo-services",
+  },
+  {
+    id: "Plumber SEO",
+    label: "Plumber Local SEO",
+    image: "/images/plumber/plumber-link-thumb.jpg",
+    alt: "plumber seo",
+    link: "/plumber-seo-services",
   },
 ];
 

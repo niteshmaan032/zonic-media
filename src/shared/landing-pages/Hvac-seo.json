@@ -346,8 +346,8 @@
               "type": "image",
               "lg": 6,
               "orderClassName": "order-1 order-lg-0",
-              "src": "/images/dental/dental-img-8.svg",
-              "alt": "HVAC SEO"
+              "src": "/images/seo-vs-ads.svg",
+              "alt": "SEO vs paid ads"
             }
           ]
         }
@@ -363,8 +363,8 @@
               "type": "image",
               "lg": 6,
               "orderClassName": "order-1 order-lg-0",
-              "src": "/images/roofing/roof-img-11.svg",
-              "alt": "HVAC SEO"
+              "src": "/images/trust-signal-img.svg",
+              "alt": "Trust signals"
             },
             {
               "type": "text",
