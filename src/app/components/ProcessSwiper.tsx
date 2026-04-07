@@ -37,7 +37,7 @@ export default function ProcessSwiper({
       Our Proven 5-Step GMB Suspension <span> Recovery Process </span>
     </>
   ),
-  autoplayDelay = 2500,
+  autoplayDelay = 5500,
 }: ProcessSwiperProps) {
   const resolvedItems = processData?.items ?? items ?? [];
   const resolvedHeading = processData?.heading ?? heading;

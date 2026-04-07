@@ -15,6 +15,7 @@ import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 export const metadata: Metadata = {
   title: "Google Business Profile Reinstatement Service | Fix Suspended GBP",
   description:
@@ -154,7 +155,7 @@ function Page() {
   const WhygmbData = {
     heading: "Why Work With Zonic Media for GMB Recovery:",
     image: {
-      src: "/images/header-gmb.webp",
+      src: "/images/sus-gmb-3.svg",
       alt: "google my business recovery",
     },
     defaultActiveKey: "0",
@@ -247,7 +248,7 @@ function Page() {
           <Col lg={6} className="d-flex justify-content-center">
             <div className="gmb-sec1-img-cont">
               <Image
-                src="/images/gmb-page-1.webp"
+                src="/images/gmb-sus-1.svg"
                 fill
                 alt="google my business"
               />
@@ -271,7 +272,7 @@ function Page() {
 
           <div className="gmb-sec2-cards">
             <div className="gmb-sec2-img-cont">
-              <Image src="/images/gmb-2.webp" fill alt="gmb phone " />
+              <Image src="/images/sus-gmb-2.png" fill alt="gmb phone " />
             </div>
             <Row>
               <Row className="justify-content-center ">
@@ -361,6 +362,104 @@ function Page() {
 
       {/*gmb-section-3*/}
       <ProcessSwiper processData={GmbProcessData} />
+
+      {/*gmb-section-9*/}
+      <div className="gmb-section-5">
+        <Row>
+          <Col lg={12}>
+            <h2 className="gmb-sec5-heading">
+              Expert Google My Business Suspension & Reinstatement Services in
+              the USA
+            </h2>
+
+            {/* <HashScrollLink
+              href="#gmb-contact-form"
+              className="buttons"
+              offset={0}
+            >
+              Get Free Suspension Analysis
+              <span className="buttons__icon-wrapper">
+                <svg
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="buttons__icon-svg"
+                  width="8"
+                >
+                  <path
+                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="buttons__icon-svg buttons__icon-svg--copy"
+                >
+                  <path
+                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </HashScrollLink> */}
+          </Col>
+
+          <Col lg={12}>
+            <div className="gmb-sec5-descrp">
+              <p>
+                A suspended Google Business Profile (formerly Google My
+                Business) can have a serious impact on your business. When your
+                listing is suspended, your business disappears from Google
+                Search and Google Maps, which means potential customers can no
+                longer find your services, read reviews, or contact you
+                directly. For many local businesses, this results in an
+                immediate drop in calls, website visits, and walk-in customers.
+                At Zonic Media, we specialize in helping businesses across the
+                United States recover suspended Google Business Profiles and
+                restore their local visibility quickly and safely. Google may
+                suspend a listing for several reasons, including address
+                violations, keyword stuffing in the business name, duplicate
+                listings, suspicious activity, or service area issues. Sometimes
+                even small changes to your listing—such as editing the address
+                or updating categories—can trigger an automatic suspension.
+                Understanding the exact cause is critical because submitting an
+                incorrect reinstatement request can delay recovery or even lead
+                to permanent suspension.
+              </p>
+              <p>
+                Our team at Zonic Media follows a proven, Google-compliant
+                process to diagnose and resolve suspension issues. We start with
+                a complete audit of your business profile to identify violations
+                or inconsistencies. Once the problem is identified, we fix
+                guideline issues, prepare the necessary documentation, and
+                submit a professional Google Business Profile reinstatement
+                request on your behalf. With 100+ successful reinstatements, we
+                have helped businesses from various industries regain their
+                presence on Google and start generating leads again.
+              </p>
+
+              <p>
+                Beyond reinstatement, we also provide Google review removal
+                support, GMB optimization, verification issue resolution, and
+                local SEO services to help strengthen your online presence. Our
+                goal is not only to recover your listing but also to optimize it
+                for long-term visibility and protection against future
+                suspensions. If your Google Business Profile is suspended, don’t
+                risk further delays by trying random fixes. Contact Zonic Media
+                today at <Link href="tel:3027269376">(302) 726-9376</Link> or
+                email{" "}
+                <Link href="mailto:contact@zonicllc.com">
+                  contact@zonicllc.com
+                </Link>{" "}
+                for expert assistance and get your business back on Google.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </div>
 
       {/*gmb-section-4*/}
       <WhyWork items={WhygmbData} />
