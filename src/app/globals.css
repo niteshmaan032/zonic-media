@@ -36,7 +36,7 @@ body p {
 }
 
 .grecaptcha-badge {
-  z-index: 999 !important;
+  z-index: 999;
 }
 
 .buttons {
