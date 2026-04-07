@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 
-const RECAPTCHA_TEST_SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+const RECAPTCHA_SITE_KEY = "6Lf5yqosAAAAAI9aDDWc-lPqVVKoOBriFsL3EUJA";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
@@ -42,9 +42,7 @@ export default function RecaptchaCheckbox({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const widgetIdRef = useRef<number | null>(null);
   const siteKey =
-    process.env.NODE_ENV !== "production"
-      ? RECAPTCHA_TEST_SITE_KEY
-      : process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
+    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || RECAPTCHA_SITE_KEY;
 
   useEffect(() => {
     if (

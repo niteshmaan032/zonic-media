@@ -247,24 +247,6 @@ function Page() {
                   </Col>
 
                   <Col xs={12}>
-                    <Controller
-                      control={control}
-                      name="recaptchaToken"
-                      rules={{
-                        validate: validateRecaptchaToken,
-                      }}
-                      render={({ field }) => (
-                        <RecaptchaCheckbox
-                          value={field.value}
-                          onChange={field.onChange}
-                          resetSignal={recaptchaResetSignal}
-                          error={errors.recaptchaToken?.message}
-                        />
-                      )}
-                    />
-                  </Col>
-
-                  <Col xs={12}>
                     {serviceList.map((service, index) => (
                       <div
                         key={index}
@@ -292,6 +274,24 @@ function Page() {
                     {errors.services && (
                       <p className="text-danger mt-2 mb-0">{errors.services.message}</p>
                     )}
+                  </Col>
+
+                  <Col xs={12}>
+                    <Controller
+                      control={control}
+                      name="recaptchaToken"
+                      rules={{
+                        validate: validateRecaptchaToken,
+                      }}
+                      render={({ field }) => (
+                        <RecaptchaCheckbox
+                          value={field.value}
+                          onChange={field.onChange}
+                          resetSignal={recaptchaResetSignal}
+                          error={errors.recaptchaToken?.message}
+                        />
+                      )}
+                    />
                   </Col>
 
                   <Col

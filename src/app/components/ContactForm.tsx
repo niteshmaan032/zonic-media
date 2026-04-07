@@ -276,24 +276,6 @@ export default function ContactForm({ content }: ContactFormProps) {
               </Col>
 
               <Col xs={12}>
-                <Controller
-                  control={control}
-                  name="recaptchaToken"
-                  rules={{
-                    validate: validateRecaptchaToken,
-                  }}
-                  render={({ field }) => (
-                    <RecaptchaCheckbox
-                      value={field.value}
-                      onChange={field.onChange}
-                      resetSignal={recaptchaResetSignal}
-                      error={errors.recaptchaToken?.message}
-                    />
-                  )}
-                />
-              </Col>
-
-              <Col xs={12}>
                 {serviceList.map((service, index) => (
                   <div key={index} className="d-inline-block me-2 me-lg-3 my-2">
                     <input
@@ -320,6 +302,24 @@ export default function ContactForm({ content }: ContactFormProps) {
                     {errors.services.message}
                   </p>
                 )}
+              </Col>
+
+              <Col xs={12}>
+                <Controller
+                  control={control}
+                  name="recaptchaToken"
+                  rules={{
+                    validate: validateRecaptchaToken,
+                  }}
+                  render={({ field }) => (
+                    <RecaptchaCheckbox
+                      value={field.value}
+                      onChange={field.onChange}
+                      resetSignal={recaptchaResetSignal}
+                      error={errors.recaptchaToken?.message}
+                    />
+                  )}
+                />
               </Col>
 
               <Col
