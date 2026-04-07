@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 
-const RECAPTCHA_SITE_KEY = "6LcV06osAAAAAOintbuZMBlDCPVqgQFNRDMq7jAn";
+const RECAPTCHA_SITE_KEY = "6Ldj3aosAAAAABKXmvYgO85tVuQrkvCdtBAOKShY";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
