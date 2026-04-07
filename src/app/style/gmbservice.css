@@ -256,6 +256,18 @@
   object-fit: contain;
 }
 
+.gmb-section-9 .gmb-section-5 {
+  background-color: var(--color1);
+}
+
+.gmb-section-9 .gmb-sec5-heading {
+  color: var(--text);
+}
+
+.gmb-section-9 .gmb-sec5-descrp p {
+  color: var(--text);
+}
+
 /*responsive*/
 
 /* mobile phones + tablets */
