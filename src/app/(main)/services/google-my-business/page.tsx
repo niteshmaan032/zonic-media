@@ -418,17 +418,22 @@ function Page() {
                   can no longer find your services, read reviews, or contact you
                   directly. For many local businesses, this results in an
                   immediate drop in calls, website visits, and walk-in
-                  customers. At Zonic Media, we specialize in helping businesses
-                  across the United States recover suspended Google Business
-                  Profiles and restore their local visibility quickly and
-                  safely. Google may suspend a listing for several reasons,
-                  including address violations, keyword stuffing in the business
-                  name, duplicate listings, suspicious activity, or service area
-                  issues. Sometimes even small changes to your listing—such as
-                  editing the address or updating categories—can trigger an
-                  automatic suspension. Understanding the exact cause is
-                  critical because submitting an incorrect reinstatement request
-                  can delay recovery or even lead to permanent suspension.
+                  customers.
+                </p>
+
+                <p>
+                  {" "}
+                  At Zonic Media, we specialize in helping businesses across the
+                  United States recover suspended Google Business Profiles and
+                  restore their local visibility quickly and safely. Google may
+                  suspend a listing for several reasons, including address
+                  violations, keyword stuffing in the business name, duplicate
+                  listings, suspicious activity, or service area issues.
+                  Sometimes even small changes to your listing—such as editing
+                  the address or updating categories—can trigger an automatic
+                  suspension. Understanding the exact cause is critical because
+                  submitting an incorrect reinstatement request can delay
+                  recovery or even lead to permanent suspension.
                 </p>
                 <p>
                   Our team at Zonic Media follows a proven, Google-compliant
