@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/contactUs.css";
@@ -12,7 +12,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
-import { validateRecaptchaToken } from "@/shared/contactFormValidation";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type ContactUsFormValues = {
@@ -21,16 +21,14 @@ type ContactUsFormValues = {
   contact: string;
   message: string;
   services: string[];
-  recaptchaToken: string;
 };
 
 function ContactUsPageClient() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
-  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
+  const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -44,7 +42,6 @@ function ContactUsPageClient() {
       contact: "",
       message: "",
       services: [],
-      recaptchaToken: "",
     },
   });
 
@@ -60,12 +57,21 @@ function ContactUsPageClient() {
     setSubmitError("");
 
     try {
+      const recaptchaToken = await recaptchaExecutorRef.current?.();
+
+      if (!recaptchaToken) {
+        throw new Error("reCAPTCHA is not ready yet. Please try again.");
+      }
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+        }),
       });
 
       const result = (await response.json().catch(() => null)) as {
@@ -89,8 +95,6 @@ function ContactUsPageClient() {
           ? error.message
           : "Something went wrong. Please try again.",
       );
-    } finally {
-      setRecaptchaResetSignal((value) => value + 1);
     }
   };
 
@@ -307,20 +311,11 @@ function ContactUsPageClient() {
                 </Col>
 
                 <Col xs={12}>
-                  <Controller
-                    control={control}
-                    name="recaptchaToken"
-                    rules={{
-                      validate: validateRecaptchaToken,
+                  <RecaptchaCheckbox
+                    action={RECAPTCHA_ACTION}
+                    onExecutorReady={(executor) => {
+                      recaptchaExecutorRef.current = executor;
                     }}
-                    render={({ field }) => (
-                      <RecaptchaCheckbox
-                        value={field.value}
-                        onChange={field.onChange}
-                        resetSignal={recaptchaResetSignal}
-                        error={errors.recaptchaToken?.message}
-                      />
-                    )}
                   />
                 </Col>
 

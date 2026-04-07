@@ -1,22 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Script from "next/script";
 
 const RECAPTCHA_SITE_KEY = "6Ldj3aosAAAAABKXmvYgO85tVuQrkvCdtBAOKShY";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
-  render: (
-    container: HTMLElement,
-    parameters: {
-      sitekey: string;
-      callback: (token: string) => void;
-      "expired-callback": () => void;
-      "error-callback": () => void;
+  execute: (
+    siteKey: string,
+    options: {
+      action: string;
     },
-  ) => number;
-  reset: (widgetId?: number) => void;
+  ) => Promise<string>;
 };
 
 declare global {
@@ -26,84 +22,78 @@ declare global {
 }
 
 type RecaptchaCheckboxProps = {
-  value: string;
-  onChange: (token: string) => void;
-  resetSignal?: number;
-  error?: string;
+  action: string;
+  onExecutorReady?: (executor: (() => Promise<string>) | null) => void;
 };
 
 export default function RecaptchaCheckbox({
-  value,
-  onChange,
-  resetSignal = 0,
-  error,
+  action,
+  onExecutorReady,
 }: RecaptchaCheckboxProps) {
   const [scriptReady, setScriptReady] = useState(false);
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const widgetIdRef = useRef<number | null>(null);
   const siteKey =
     process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || RECAPTCHA_SITE_KEY;
 
-  useEffect(() => {
-    if (
-      !scriptReady ||
-      !siteKey ||
-      !containerRef.current ||
-      !window.grecaptcha ||
-      widgetIdRef.current !== null
-    ) {
-      return;
+  const execute = useCallback(async () => {
+    if (!siteKey || !scriptReady || !window.grecaptcha) {
+      throw new Error("reCAPTCHA is not ready yet. Please try again.");
     }
 
-    window.grecaptcha.ready(() => {
-      if (
-        !containerRef.current ||
-        !window.grecaptcha ||
-        widgetIdRef.current !== null
-      ) {
-        return;
-      }
-
-      widgetIdRef.current = window.grecaptcha.render(containerRef.current, {
-        sitekey: siteKey,
-        callback: (token: string) => onChange(token),
-        "expired-callback": () => onChange(""),
-        "error-callback": () => onChange(""),
+    return await new Promise<string>((resolve, reject) => {
+      window.grecaptcha?.ready(() => {
+        window.grecaptcha
+          ?.execute(siteKey, { action })
+          .then(resolve)
+          .catch(() => {
+            reject(
+              new Error("Unable to verify reCAPTCHA right now. Please try again."),
+            );
+          });
       });
     });
-  }, [onChange, scriptReady, siteKey]);
+  }, [action, scriptReady, siteKey]);
 
   useEffect(() => {
-    if (
-      resetSignal === 0 ||
-      widgetIdRef.current === null ||
-      !window.grecaptcha
-    ) {
+    if (!onExecutorReady) {
       return;
     }
 
-    window.grecaptcha.reset(widgetIdRef.current);
+    onExecutorReady(siteKey ? execute : null);
 
-    if (value) {
-      onChange("");
-    }
-  }, [onChange, resetSignal, value]);
+    return () => onExecutorReady(null);
+  }, [execute, onExecutorReady, siteKey]);
 
   return (
     <div className="recaptcha-field">
       <Script
-        src="https://www.google.com/recaptcha/api.js?render=explicit"
+        src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
         strategy="afterInteractive"
         onReady={() => setScriptReady(true)}
       />
 
       {siteKey ? (
-        <div className="recaptcha-widget" ref={containerRef} />
+        <p className="mb-0 text-muted small">
+          Protected by reCAPTCHA. Google{" "}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Terms of Service
+          </a>{" "}
+          apply.
+        </p>
       ) : (
         <p className="text-danger mb-0">reCAPTCHA is not configured.</p>
       )}
-
-      {error ? <p className="text-danger mb-0">{error}</p> : null}
     </div>
   );
 }

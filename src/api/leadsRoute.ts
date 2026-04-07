@@ -1,5 +1,6 @@
 import { createLead, type LeadPayload } from "@/backend/controllers/leadsController";
 import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
 const ALLOWED_SERVICES = new Set([
   "Web Design",
@@ -71,7 +72,10 @@ export const leadsRoute = async (
     };
   }
 
-  const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
+  const recaptchaResult = await verifyRecaptchaToken(
+    recaptchaToken,
+    RECAPTCHA_ACTION,
+  );
 
   if (!recaptchaResult.success) {
     return {

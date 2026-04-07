@@ -1,11 +1,18 @@
+import { RECAPTCHA_MIN_SCORE } from "@/shared/recaptcha";
+
 type RecaptchaVerifyResponse = {
   success?: boolean;
+  score?: number;
+  action?: string;
   ["error-codes"]?: string[];
 };
 
 const RECAPTCHA_SECRET_KEY = "6Ldj3aosAAAAAMnyEkFBDk8ORER_ZK8oOWR3sB4f";
 
-export const verifyRecaptchaToken = async (token: string) => {
+export const verifyRecaptchaToken = async (
+  token: string,
+  expectedAction?: string,
+) => {
   const secret = process.env.RECAPTCHA_SECRET_KEY?.trim() || RECAPTCHA_SECRET_KEY;
 
   if (!secret) {
@@ -44,6 +51,23 @@ export const verifyRecaptchaToken = async (token: string) => {
       return {
         success: false,
         message: "reCAPTCHA verification failed. Please try again.",
+      };
+    }
+
+    if (expectedAction && result.action !== expectedAction) {
+      return {
+        success: false,
+        message: "reCAPTCHA action mismatch. Please try again.",
+      };
+    }
+
+    if (
+      typeof result.score !== "number" ||
+      result.score < RECAPTCHA_MIN_SCORE
+    ) {
+      return {
+        success: false,
+        message: "reCAPTCHA score was too low. Please try again.",
       };
     }
 

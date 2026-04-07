@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { Row, Col } from "react-bootstrap";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "@/app/style/comingSoon.css";
-import { useState } from "react";
-import { Controller, useForm } from "react-hook-form";
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { validateRecaptchaToken } from "@/shared/contactFormValidation";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ComingSoonFormValues = {
@@ -17,16 +17,14 @@ type ComingSoonFormValues = {
   contact: string;
   message: string;
   services: string[];
-  recaptchaToken: string;
 };
 
 function Page() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
+  const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
   const {
-    control,
     register,
     handleSubmit,
     reset,
@@ -40,7 +38,6 @@ function Page() {
       contact: "",
       message: "",
       services: [],
-      recaptchaToken: "",
     },
   });
 
@@ -61,12 +58,21 @@ function Page() {
     setIsSubmitting(true);
 
     try {
+      const recaptchaToken = await recaptchaExecutorRef.current?.();
+
+      if (!recaptchaToken) {
+        throw new Error("reCAPTCHA is not ready yet. Please try again.");
+      }
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+        }),
       });
 
       const result = (await response.json().catch(() => null)) as
@@ -88,7 +94,6 @@ function Page() {
           : "Something went wrong. Please try again.",
       );
     } finally {
-      setRecaptchaResetSignal((value) => value + 1);
       setIsSubmitting(false);
     }
   };
@@ -277,20 +282,11 @@ function Page() {
                   </Col>
 
                   <Col xs={12}>
-                    <Controller
-                      control={control}
-                      name="recaptchaToken"
-                      rules={{
-                        validate: validateRecaptchaToken,
+                    <RecaptchaCheckbox
+                      action={RECAPTCHA_ACTION}
+                      onExecutorReady={(executor) => {
+                        recaptchaExecutorRef.current = executor;
                       }}
-                      render={({ field }) => (
-                        <RecaptchaCheckbox
-                          value={field.value}
-                          onChange={field.onChange}
-                          resetSignal={recaptchaResetSignal}
-                          error={errors.recaptchaToken?.message}
-                        />
-                      )}
                     />
                   </Col>
 

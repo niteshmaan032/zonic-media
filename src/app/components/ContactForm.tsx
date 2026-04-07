@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import "@/app/style/contactform.css";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Row, Col } from "react-bootstrap";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { validateRecaptchaToken } from "@/shared/contactFormValidation";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 
 type ContactFormValues = {
@@ -18,7 +18,6 @@ type ContactFormValues = {
   contact: string;
   message: string;
   services: string[];
-  recaptchaToken: string;
 };
 
 export type ContactFormContent = {
@@ -39,7 +38,7 @@ type ContactFormProps = {
 export default function ContactForm({ content }: ContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
-  const [recaptchaResetSignal, setRecaptchaResetSignal] = useState(0);
+  const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
   const { heading, highlightedHeading, points, cta } = content;
   const contactCta = {
     eyebrow: cta?.eyebrow ?? "Schedule meeting :",
@@ -48,7 +47,6 @@ export default function ContactForm({ content }: ContactFormProps) {
   };
 
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -62,7 +60,6 @@ export default function ContactForm({ content }: ContactFormProps) {
       contact: "",
       message: "",
       services: [],
-      recaptchaToken: "",
     },
   });
 
@@ -78,12 +75,21 @@ export default function ContactForm({ content }: ContactFormProps) {
     setSubmitError("");
 
     try {
+      const recaptchaToken = await recaptchaExecutorRef.current?.();
+
+      if (!recaptchaToken) {
+        throw new Error("reCAPTCHA is not ready yet. Please try again.");
+      }
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken,
+        }),
       });
 
       const result = (await response.json().catch(() => null)) as {
@@ -107,8 +113,6 @@ export default function ContactForm({ content }: ContactFormProps) {
           ? error.message
           : "Something went wrong. Please try again.",
       );
-    } finally {
-      setRecaptchaResetSignal((value) => value + 1);
     }
   };
 
@@ -305,20 +309,11 @@ export default function ContactForm({ content }: ContactFormProps) {
               </Col>
 
               <Col xs={12}>
-                <Controller
-                  control={control}
-                  name="recaptchaToken"
-                  rules={{
-                    validate: validateRecaptchaToken,
+                <RecaptchaCheckbox
+                  action={RECAPTCHA_ACTION}
+                  onExecutorReady={(executor) => {
+                    recaptchaExecutorRef.current = executor;
                   }}
-                  render={({ field }) => (
-                    <RecaptchaCheckbox
-                      value={field.value}
-                      onChange={field.onChange}
-                      resetSignal={recaptchaResetSignal}
-                      error={errors.recaptchaToken?.message}
-                    />
-                  )}
                 />
               </Col>
 
