@@ -53,9 +53,9 @@
 }
 
 .landing-pest {
-  --landing-accent: var(--primary);
+  --landing-accent: #ea4334;
   --landing-sec-1-image: url("/images/pest/pest-hero-banner.svg");
-  --landing-sec-1-bg: #f2fcf9;
+  --landing-sec-1-bg: #fff9ea;
   --landing-sec-2-bg: #fefefe;
   --landing-sec-5-bg: rgba(154, 208, 255, 0.23);
   --landing-sec-7-bg: #fffbf1;
