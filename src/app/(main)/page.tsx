@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title:
     "Digital Marketing Agency | Web Design, SEO & PPC Services | Zonic Media",
   description:
-    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call +1 (302) 726-9376 today.",
+    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call (302) 726-9736 today.",
 };
 
 export default function Home() {

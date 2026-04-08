@@ -33,8 +33,8 @@ function Page() {
     ],
     cta: {
       eyebrow: "Schedule meeting :",
-      label: "(302) 726-9376",
-      href: "tel:+1(302)726-9376",
+      label: "(302) 726-9736",
+      href: "tel:+13027269736",
     },
   };
 
@@ -457,7 +457,7 @@ function Page() {
                   future suspensions. If your Google Business Profile is
                   suspended, don’t risk further delays by trying random fixes.
                   Contact Zonic Media today at{" "}
-                  <Link href="tel:3027269376">(302) 726-9376</Link> or email{" "}
+                  <Link href="tel:+13027269736">(302) 726-9736</Link> or email{" "}
                   <Link href="mailto:contact@zonicllc.com">
                     contact@zonicllc.com
                   </Link>{" "}
