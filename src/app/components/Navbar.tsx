@@ -396,8 +396,8 @@ function Navbar() {
 
             <Col xs="auto">
               <div className="header-button d-none d-lg-flex">
-                <Link href={SITE_PATHS.contact} className="buttons">
-                  <span>Get In Touch</span>
+                <Link href="tel:3027269736" className="buttons">
+                  <span>(302) 726-9736</span>
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
