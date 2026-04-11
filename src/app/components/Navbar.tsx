@@ -383,7 +383,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li>
-                    <Link href="/services/gmb-reinstatement">
+                    <Link href="/services/gmb-reinstatement-help">
                       GMB Reinstatement
                     </Link>
                   </li>
@@ -540,7 +540,7 @@ function Navbar() {
             </li>
 
             <li>
-              <Link href="/services/gmb-reinstatement">GMB Reinstatement</Link>
+              <Link href="/services/gmb-reinstatement-help">GMB Reinstatement</Link>
             </li>
 
             <li>

@@ -92,8 +92,15 @@ export default async function Page({ params }: PageProps) {
 
       <div className="conditions-content-wrapper">
         <Col xs={12} lg={7}>
-          {pageData.intro.map((paragraph) => (
-            <p className="conditions-descrp" key={paragraph}>
+          {pageData.intro.map((paragraph, index) => (
+            <p
+              className={`conditions-descrp ${
+                slug === "refund-policy" && index < 3
+                  ? "conditions-descrp--strong"
+                  : ""
+              }`.trim()}
+              key={paragraph}
+            >
               {paragraph}
             </p>
           ))}

@@ -26,6 +26,10 @@
   line-height: 30px;
 }
 
+.conditions-descrp--strong {
+  font-weight: 700;
+}
+
 .conditions-content-list-wrapper {
   margin-top: 20px;
 }

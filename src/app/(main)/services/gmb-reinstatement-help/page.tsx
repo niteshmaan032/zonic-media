@@ -121,6 +121,11 @@ function page() {
                 Average Resolution Time
               </p>
             </div>
+
+            {/*--gmb-reinst-mob-form--*/}
+            <div className="gmb-reinst-mob-form d-block d-lg-none">
+              <LeadContactForm />
+            </div>
           </div>
 
           {/*gmb-reinst-section-2*/}
@@ -176,8 +181,8 @@ function page() {
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
-                violate Google's guidelines or contain inconsistent business
-                information. Based on Google's policies and common industry
+                violate Google&apos;s guidelines or contain inconsistent business
+                information. Based on Google&apos;s policies and common industry
                 cases, some of the most frequent causes of suspension include:
               </p>
             </div>
@@ -295,8 +300,8 @@ function page() {
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
-                violate Google's guidelines or contain inconsistent business
-                information. Based on Google's policies and common industry
+                violate Google&apos;s guidelines or contain inconsistent business
+                information. Based on Google&apos;s policies and common industry
                 cases, some of the most frequent causes of suspension include:
               </p>
             </div>
@@ -445,8 +450,8 @@ function page() {
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
-                violate Google's guidelines or contain inconsistent business
-                information. Based on Google's policies and common industry
+                violate Google&apos;s guidelines or contain inconsistent business
+                information. Based on Google&apos;s policies and common industry
                 cases, some of the most frequent causes of suspension include:
               </p>
             </div>
@@ -744,7 +749,7 @@ function page() {
               <p className="label-head">
                 {" "}
                 <FaBoltLightning />
-                We're So Confident, We Back It Up
+                We&apos;re So Confident, We Back It Up
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
@@ -760,7 +765,7 @@ function page() {
                     Money-Back Guarantee
                   </h3>
                   <p>
-                    If we can't get your listing reinstated, you pay nothing. We
+                    If we can&apos;t get your listing reinstated, you pay nothing. We
                     only win when you win.
                     <Link href="/legal/refund-policy">
                       Visit our refund policy page.
@@ -775,7 +780,7 @@ function page() {
                   </h3>
                   <p>
                     Our average reinstatement time is 5–7 business days. We
-                    follow up aggressively so Google doesn't leave your case
+                    follow up aggressively so Google doesn&apos;t leave your case
                     idle.
                   </p>
                 </li>
@@ -830,9 +835,9 @@ function page() {
           Back on Google. Back in Business.
         </h2>
         <p className="gmb-reisnt-banner-3-descrp">
-          "Every day your listing is suspended, customers are finding your
+          &quot;Every day your listing is suspended, customers are finding your
           competitors instead. We fix that — with a proven process, zero
-          guesswork, and results that speak for themselves."
+          guesswork, and results that speak for themselves.&quot;
         </p>
 
         <div className="gmb-reinst-banner-3-ctas">

@@ -65,7 +65,7 @@ function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/services/google-my-business">
+                    <Link href="/services/gmb-reinstatement-help">
                       Google My Business (GMB)
                     </Link>
                   </li>

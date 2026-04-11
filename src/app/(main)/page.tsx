@@ -336,7 +336,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <Link href="/services/google-my-business">
+            <Link href="/services/gmb-reinstatement-help">
               View GMB optimization service{" "}
             </Link>
           </div>

@@ -110,7 +110,7 @@ function Page() {
 
               <Link
                 className="service-page-section-3-link"
-                href="/services/google-my-business"
+                href="/services/gmb-reinstatement-help"
               >
                 Explore GBP Optimization
               </Link>
