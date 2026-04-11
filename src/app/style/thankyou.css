@@ -8,14 +8,16 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 550px;
-  height: 550px;
 }
 
-.thank-img-cont img {
-  object-fit: cover;
+.thank-lottie {
   width: 100%;
   height: 100%;
+}
+
+.thank-lottie svg {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .thank-content-wrapper {
@@ -82,8 +84,10 @@
 
 /* mobile phones to tablet devices*/
 @media (max-width: 991.98px) {
-  .thank-img-cont {
-    display: none;
+  .thank-wrapper {
+    background-color: #eff6ff;
+    height: 100%;
+    padding: 0px 100px;
   }
 
   .thank-heading {

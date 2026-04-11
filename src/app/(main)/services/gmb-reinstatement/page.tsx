@@ -3,12 +3,7 @@ import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
 import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaArrowRight,
-  FaPhoneAlt,
-  FaStar,
-  FaUserAlt,
-} from "react-icons/fa";
+import { FaArrowRight, FaPhoneAlt, FaStar, FaUserAlt } from "react-icons/fa";
 import {
   FaBoltLightning,
   FaCircleExclamation,
@@ -76,7 +71,7 @@ function page() {
                 Connect with a Google My Business specialist for quick
                 reactivation support. One call can help recover your lost
                 business visibility.{" "}
-                <Link href="#!"> Call Now:(302) 726-9736 </Link>
+                <Link href="tel:+13027269736"> Call Now:(302) 726-9736 </Link>
               </p>
             </div>
 
@@ -366,7 +361,7 @@ function page() {
               </h2>
 
               <div className="gmb-reinst-sec-4-banner-ctas">
-                <Link href="/contact-us" className="buttons">
+                <Link href="tel:+13027269736" className="buttons">
                   <IoCall />
                   Call: (302) 726-9736
                   <span className="buttons__icon-wrapper">
@@ -841,7 +836,7 @@ function page() {
         </p>
 
         <div className="gmb-reinst-banner-3-ctas">
-          <Link href="/contact-us" className="buttons">
+          <Link href="tel:+13027269736" className="buttons">
             Call Now : (302) 726-9736
             <span className="buttons__icon-wrapper">
               <svg
