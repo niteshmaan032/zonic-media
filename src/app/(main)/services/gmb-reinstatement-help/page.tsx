@@ -614,9 +614,7 @@ function page() {
                   <li>
                     <GoDotFill /> Profile health check
                   </li>
-                  <li>
-                    <GoDotFill /> CTA: Start Reinstatement
-                  </li>
+                  
                 </ul>
               </div>
 
@@ -653,9 +651,7 @@ function page() {
                   <li>
                     <GoDotFill /> Ongoing monitoring (30 days)
                   </li>
-                  <li>
-                    <GoDotFill /> CTA: Get Started Today
-                  </li>
+                
                 </ul>
               </div>
 
@@ -692,9 +688,8 @@ function page() {
                   <li>
                     <GoDotFill /> Monthly reporting
                   </li>
-                  <li>
-                    <GoDotFill /> CTA: Contact for Pricing
-                  </li>
+                
+                  
                 </ul>
               </div>
 
