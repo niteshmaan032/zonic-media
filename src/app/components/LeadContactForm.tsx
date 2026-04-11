@@ -268,7 +268,7 @@ export default function LeadContactForm() {
         <p className="lead-call-text">
           One call can help recover your lost business visibility.{" "}
           <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-            Call Now:{SITE_CONTACT.phoneDisplay} (Toll-Free)
+            Call Now:{SITE_CONTACT.phoneDisplay}
           </a>
         </p>
       </form>
