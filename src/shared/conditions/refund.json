@@ -1,15 +1,19 @@
 {
   "slug": "refund-policy",
   "title": "Refund Policy",
-  "intro": [
-    "Money-Back Assurance",
-    "If we are unable to reinstate your Google Business Profile, you will receive a 50% refund within 25 days.",
-    "At Zonic Media, we stand behind every case we take on. Our veteran GMB specialists work relentlessly to get your listing reinstated - and if we can't, you don't pay. This policy explains exactly how refunds work and what qualifies."
-  ],
+  "intro": [],
   "sections": [
     {
       "heading": "1. Our Commitment",
       "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Money-Back Assurance",
+            "If we are unable to reinstate your Google Business Profile, you will receive a 50% refund within 25 days.",
+            "At Zonic Media, we stand behind every case we take on. Our veteran GMB specialists work relentlessly to get your listing reinstated - and if we can't, you don't pay. This policy explains exactly how refunds work and what qualifies."
+          ]
+        },
         {
           "type": "paragraph",
           "text": "If our team is unable to successfully reinstate your suspended Google Business Profile after exhausting all available reinstatement methods, you will be eligible for a 50% refund of the fees paid or we create a new Google Business profile and get verified. Refunds are processed within 25 days of written confirmation that your case could not be completed successfully."
