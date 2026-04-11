@@ -3,6 +3,7 @@ import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
 import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 import { FaArrowRight, FaPhoneAlt, FaStar, FaUserAlt } from "react-icons/fa";
 import {
   FaBoltLightning,
@@ -17,15 +18,23 @@ import { LuUserRound } from "react-icons/lu";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import GmbReinstFaqs from "@/app/components/GmbReinstFaqs";
 import Footer from "@/app/components/Footer";
+import HashScrollLink from "@/app/components/HashScrollLink";
 import { MdLocalOffer } from "react-icons/md";
 import { BsExclamationCircleFill, BsQuestionCircleFill } from "react-icons/bs";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { IoIosCloseCircle } from "react-icons/io";
 import { AiFillStop } from "react-icons/ai";
 
+export const metadata: Metadata = {
+  title: "GBP Suspension Recovery Experts | Zonic Media LLC",
+  description:
+    "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
+};
+
 function page() {
   return (
     <>
+      <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">
         {/*gmb-content-wrapper left-content*/}
         <div className="gmb-reinst-content-wrapper">
@@ -53,10 +62,13 @@ function page() {
             </h1>
 
             <p className="gmb-reinst-descrp">
-              Zonic Media provides professional Google Business Profile
-              reinstatement services to help businesses recover suspended
-              listings, resolve policy violations, and restore their online
-              visibility quickly and safely.
+              Zonic Media provides expert Google Business Profile reinstatement
+              services to help businesses recover suspended listings, resolve
+              compliance issues, and restore lost visibility, calls, and local
+              leads quickly and safely. Our specialists have deep platform
+              expertise, including prior Google ecosystem experience, helping
+              resolve suspensions faster. Our proven process gets your business
+              back online with minimal downtime.
             </p>
 
             <div className="gmb-reinst-sec-1-box">
@@ -64,18 +76,19 @@ function page() {
                 <span>
                   <FaPhoneAlt />
                 </span>
-                Need Immediate GMB Help? Call Now!
+                Need Immediate GBP Suspension Help? Call Now!
               </p>
 
               <p>
-                Connect with a Google My Business specialist for quick
-                reactivation support. One call can help recover your lost
-                business visibility.{" "}
-                <Link href="tel:+13027269736"> Call Now:(302) 726-9736 </Link>
+                Speak directly with a Google Business Profile specialist for
+                fast recovery guidance and professional reinstatement support.
+                One call can help restore your rankings, visibility, and
+                customer inquiries quickly.{" "}
+                <Link href="tel:+13027269736"> Call Now: (302) 726-9736 </Link>
               </p>
             </div>
 
-            <Link href="/contact-us" className="buttons">
+            <HashScrollLink href="#gmb-reinst-top" className="buttons">
               Get a Free Suspension Audit
               <span className="buttons__icon-wrapper">
                 <svg
@@ -103,11 +116,11 @@ function page() {
                   />
                 </svg>
               </span>
-            </Link>
+            </HashScrollLink>
 
             <div className="gmb-reinst-sec-1-stats">
               <p>
-                <span> 2,500+ </span>
+                <span> 1500+ </span>
                 Listing Restored
               </p>
 
@@ -165,7 +178,7 @@ function page() {
                 height={20}
                 alt="shield logo"
               ></Image>{" "}
-              2,500+ Listings Successfully Restored
+              1500+ Listings Successfully Restored
             </p>
           </div>
 
@@ -173,17 +186,19 @@ function page() {
           <div className="gmb-reinst-sec-3 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaCircleExclamation /> GMB Suspension Issues
+                <FaCircleExclamation /> Google Business Profile Suspension
+                Issues
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                What Causes Google Business Profile Suspensions?
+                Common Reasons Google Business Profiles Get Suspended
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings can be suspended when they
-                violate Google&apos;s guidelines or contain inconsistent business
-                information. Based on Google&apos;s policies and common industry
-                cases, some of the most frequent causes of suspension include:
+                Google Business Profile listings may be suspended when business
+                details conflict with Google’s guidelines, verification
+                standards, or trust signals. Our experts regularly resolve
+                suspensions caused by the most common compliance and listing
+                issues.
               </p>
             </div>
 
@@ -194,12 +209,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Address Verification Issues
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Incorrect addresses, virtual offices, P.O. boxes, or
+                  inconsistent location details can trigger suspension. We help
+                  correct and verify your business information properly.
                 </p>
               </div>
 
@@ -209,12 +224,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Guideline Violations
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Keyword stuffing, misleading business names, or restricted
+                  practices can lead to suspension. We identify violations and
+                  bring your profile into compliance.
                 </p>
               </div>
 
@@ -224,12 +239,25 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Frequent Listing Changes
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Repeated edits to business name, category, phone number, or
+                  address may flag suspicious activity. We stabilize your
+                  profile and correct risky changes.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <IoIosCloseCircle />
+                </p>
+
+                <h3 className="gmb-reinst-card-heading">Duplicate Listings</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Multiple profiles for the same business location can create
+                  conflicts and suspension risks. We resolve duplicates and
+                  clean up your listing presence.
                 </p>
               </div>
 
@@ -239,27 +267,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Ownership & Access Disputes
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
-                </p>
-              </div>
-
-              <div className="gmb-reinst-card-wrapper">
-                <p className="gmb-reinst-card-icon">
-                  <IoIosCloseCircle />
-                </p>
-
-                <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
-                </h3>
-                <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Former employees, agencies, or multiple admins can create
+                  ownership conflicts. We help secure control and restore proper
+                  account access.
                 </p>
               </div>
 
@@ -269,12 +282,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Review & Trust Signals
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Spam reviews, unusual activity, or weak trust signals may
+                  impact profile status. We strengthen profile credibility and
+                  support successful recovery.
                 </p>
               </div>
             </div>
@@ -300,9 +313,10 @@ function page() {
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
-                violate Google&apos;s guidelines or contain inconsistent business
-                information. Based on Google&apos;s policies and common industry
-                cases, some of the most frequent causes of suspension include:
+                violate Google&apos;s guidelines or contain inconsistent
+                business information. Based on Google&apos;s policies and common
+                industry cases, some of the most frequent causes of suspension
+                include:
               </p>
             </div>
 
@@ -361,8 +375,8 @@ function page() {
 
             <div className="gmb-reinst-sec-4-cta-banner">
               <h2>
-                Your profile can be restored quickly. Start with a free review
-                today.
+                Every Hour Your Profile Stays Suspended, You Lose Customers.
+                Start Your Case Review Today.
               </h2>
 
               <div className="gmb-reinst-sec-4-banner-ctas">
@@ -396,7 +410,7 @@ function page() {
                     </svg>
                   </span>
                 </Link>
-                <Link href="/contact-us" className="buttons">
+                <HashScrollLink href="#gmb-reinst-top" className="buttons">
                   <FaUserAlt />
                   Get Expert Help
                   <span className="buttons__icon-wrapper">
@@ -425,7 +439,7 @@ function page() {
                       />
                     </svg>
                   </span>
-                </Link>
+                </HashScrollLink>
               </div>
             </div>
 
@@ -442,17 +456,17 @@ function page() {
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaUserAlt /> GMB Suspension Issues
+                <FaUserAlt /> Why Choose Zonic Media
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                What Causes Google Business Profile Suspensions?
+                Why Businesses Trust Zonic Media for GBP Reinstatement
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings can be suspended when they
-                violate Google&apos;s guidelines or contain inconsistent business
-                information. Based on Google&apos;s policies and common industry
-                cases, some of the most frequent causes of suspension include:
+                When your Google Business Profile is suspended, choosing the
+                right recovery partner matters. Our team combines deep platform
+                expertise, compliance-focused strategies, and fast action to
+                help restore your listing with minimal downtime.
               </p>
             </div>
 
@@ -468,12 +482,11 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Experienced Reinstatement Specialists
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  We understand suspension triggers, policy requirements, and
+                  the right recovery steps needed for faster approvals.
                 </p>
               </div>
 
@@ -488,12 +501,11 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Faster Resolution Process
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  Our structured reinstatement process helps reduce delays and
+                  gets your profile back online quickly.
                 </p>
               </div>
 
@@ -508,12 +520,11 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Compliance-First Approach
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  We fix the root cause of suspension and align your profile
+                  with Google guidelines to prevent repeat issues.
                 </p>
               </div>
 
@@ -528,12 +539,11 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address & Location Problems
+                  Real Business Growth Focus
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Listings using virtual offices, P.O. boxes, or inconsistent
-                  address details often get suspended. We help correct and
-                  verify your location.
+                  We don’t just recover listings we help restore your rankings,
+                  calls, leads, and long-term local visibility.
                 </p>
               </div>
             </div>
@@ -692,7 +702,7 @@ function page() {
                   Don’t Let a Suspended Listing Cost You More Customers
                 </h3>
 
-                <Link href="/contact-us" className="buttons">
+                <HashScrollLink href="#gmb-reinst-top" className="buttons">
                   Get a Free Suspension Audit
                   <span className="buttons__icon-wrapper">
                     <svg
@@ -720,7 +730,7 @@ function page() {
                       />
                     </svg>
                   </span>
-                </Link>
+                </HashScrollLink>
               </div>
             </div>
           </div>
@@ -765,8 +775,8 @@ function page() {
                     Money-Back Guarantee
                   </h3>
                   <p>
-                    If we can&apos;t get your listing reinstated, you pay nothing. We
-                    only win when you win.
+                    If we can&apos;t get your listing reinstated, you pay
+                    nothing. We only win when you win.
                     <Link href="/legal/refund-policy">
                       Visit our refund policy page.
                     </Link>
@@ -780,8 +790,8 @@ function page() {
                   </h3>
                   <p>
                     Our average reinstatement time is 5–7 business days. We
-                    follow up aggressively so Google doesn&apos;t leave your case
-                    idle.
+                    follow up aggressively so Google doesn&apos;t leave your
+                    case idle.
                   </p>
                 </li>
 
@@ -871,7 +881,7 @@ function page() {
             </span>
           </Link>
 
-          <Link href="/contact-us" className="buttons">
+          <HashScrollLink href="#gmb-reinst-top" className="buttons">
             Get a Free Suspension Audit
             <span className="buttons__icon-wrapper">
               <svg
@@ -899,7 +909,7 @@ function page() {
                 />
               </svg>
             </span>
-          </Link>
+          </HashScrollLink>
         </div>
       </div>
 

@@ -88,10 +88,10 @@ function Navbar() {
   const defaultService = services[0];
   const [activeService, setActiveService] = useState(defaultService);
   const [scrolled, setScrolled] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [, setScrollDownDistance] = useState(0);
-  const [, setScrollUpDistance] = useState(0);
+  // const [showNavbar, setShowNavbar] = useState(true);
+  // const [lastScrollY, setLastScrollY] = useState(0);
+  // const [, setScrollDownDistance] = useState(0);
+  // const [, setScrollUpDistance] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const [accordionKey, setAccordionKey] = useState<string | null>(null);
@@ -151,6 +151,9 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+
+      /*
       if (mobileOpen) {
         setShowNavbar(true);
         return;
@@ -181,16 +184,17 @@ function Navbar() {
         setScrollDownDistance(0);
       }
       setLastScrollY(currentScrollY);
+      */
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, mobileOpen]);
+  }, []);
 
   return (
     <>
       <div
-        className={`navbar-wrapper ${showNavbar ? "show" : "hide"} ${scrolled ? "scrolled" : ""}`}
+        className={`navbar-wrapper show ${scrolled ? "scrolled" : ""}`}
       >
         <Container fluid className="p-0">
           <Row className="align-items-center justify-content-between g-0">
