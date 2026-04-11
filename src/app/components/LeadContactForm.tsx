@@ -95,7 +95,7 @@ export default function LeadContactForm() {
       <h3 className="lead-form-title">Get Your Free GMB Suspension Audit</h3>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className="mb-3">
+        <div className="mb-2">
           <label className="form-label">
             Full Name <span className="text-danger">*</span>
           </label>
@@ -122,7 +122,7 @@ export default function LeadContactForm() {
         </div>
 
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-2">
             <label className="form-label">
               Phone number <span className="text-danger">*</span>
             </label>
@@ -140,8 +140,7 @@ export default function LeadContactForm() {
                 required: "Phone number is required.",
                 pattern: {
                   value: /^[0-9]{7,15}$/,
-                  message:
-                    "Phone number must contain only digits (7 to 15).",
+                  message: "Phone number must contain only digits (7 to 15).",
                 },
               })}
             />
@@ -150,7 +149,7 @@ export default function LeadContactForm() {
             )}
           </div>
 
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-2">
             <label className="form-label">
               Email <span className="text-danger">*</span>
             </label>
@@ -173,7 +172,7 @@ export default function LeadContactForm() {
           </div>
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <label className="form-label">
             Business Name <span className="text-danger">*</span>
           </label>
@@ -201,13 +200,13 @@ export default function LeadContactForm() {
           )}
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <label className="form-label">
             Your Message <span className="text-danger">*</span>
           </label>
           <textarea
             className="form-control"
-            rows={4}
+            rows={2}
             placeholder="Explain Your Issue"
             aria-invalid={errors.message ? "true" : "false"}
             {...register("message", {
@@ -227,7 +226,7 @@ export default function LeadContactForm() {
           )}
         </div>
 
-        <div className="mb-3">
+        <div className="mb-2">
           <RecaptchaCheckbox
             action={RECAPTCHA_ACTION}
             onExecutorReady={(executor) => {
@@ -236,8 +235,12 @@ export default function LeadContactForm() {
           />
         </div>
 
-        <div className="d-grid mb-3">
-          <button type="submit" className="lead-submit-btn" disabled={isSubmitting}>
+        <div className="d-grid mb-2">
+          <button
+            type="submit"
+            className="lead-submit-btn"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? (
               <>
                 <span

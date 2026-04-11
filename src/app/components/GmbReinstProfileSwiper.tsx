@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const sliderImages = [
+  "/images/recent-work.jpeg",
   "/images/work-1.webp",
   "/images/work-2.webp",
   "/images/work-3.webp",
@@ -22,7 +23,7 @@ export default function GmbReinstProfileSwiper() {
       spaceBetween={16}
       loop={false}
       autoplay={{
-        delay: 5500,
+        delay: 8500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
