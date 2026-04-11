@@ -226,7 +226,7 @@ export default function LeadContactForm() {
           )}
         </div>
 
-        <div className="mb-2">
+        <div className="mb-3">
           <RecaptchaCheckbox
             action={RECAPTCHA_ACTION}
             onExecutorReady={(executor) => {
@@ -235,7 +235,7 @@ export default function LeadContactForm() {
           />
         </div>
 
-        <div className="d-grid mb-2">
+        <div className="d-grid mb-3">
           <button
             type="submit"
             className="lead-submit-btn"
