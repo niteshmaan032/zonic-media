@@ -104,6 +104,9 @@ function Footer() {
                   <li>
                     <Link href={SITE_PATHS.privacy}>Privacy Policy</Link>
                   </li>
+                  <li>
+                    <Link href={SITE_PATHS.refund}>Refund Policy</Link>
+                  </li>
                   {/* <li>
                     <Link href={SITE_PATHS.legalPlaceholder}>
                       Fair Use Policy

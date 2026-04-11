@@ -1,5 +1,6 @@
 import terms from "./terms.json";
 import policy from "./policy.json";
+import refund from "./refund.json";
 
 export type ConditionBlock =
   | {
@@ -12,9 +13,11 @@ export type ConditionBlock =
     }
   | {
       type: "contact";
-      address: string;
-      phone: string;
-      email: string;
+      address?: string;
+      phone?: string;
+      email?: string;
+      website?: string;
+      websiteHref?: string;
     };
 
 export type ConditionSection = {
@@ -32,6 +35,7 @@ export type ConditionPage = {
 export const conditionPages: ConditionPage[] = [
   terms as ConditionPage,
   policy as ConditionPage,
+  refund as ConditionPage,
 ];
 
 export function getConditionPageBySlug(slug: string) {

@@ -18,6 +18,7 @@ export const SITE_PATHS = {
   terms: "/legal/terms-conditions",
   legalPlaceholder: "/coming-soon",
   privacy: "/legal/privacy-policy",
+  refund: "/legal/refund-policy",
 } as const;
 
 export const SITE_SOCIAL_LINKS = [

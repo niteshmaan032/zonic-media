@@ -183,6 +183,93 @@ body p {
   padding-right: 60px;
 }
 
+/*--lead contact form -- */
+
+/* Wrapper */
+.lead-form-wrapper {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px 28px;
+  border: 1px solid var(--stroke);
+}
+
+.lead-form-wrapper .form-label {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.lead-form-wrapper input {
+  padding: 12px;
+}
+
+.lead-form-wrapper textarea {
+  padding: 12px;
+  resize: vertical;
+}
+
+.lead-form-wrapper input::placeholder {
+  font-size: 14px;
+}
+
+.lead-form-wrapper textarea::placeholder {
+  font-size: 14px;
+}
+
+.lead-form-wrapper .lead-form-title {
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.lead-form-wrapper .lead-submit-btn {
+  background: var(--gmb-color-4);
+  color: var(--white);
+  font-weight: 500;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lead-form-wrapper .lead-confidential-box {
+  background: var(--gmb-color-9);
+  color: var(--gmb-color-10);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.lead-form-wrapper .lead-confidential-box svg {
+  flex-shrink: 0;
+}
+
+/* Call text */
+.lead-form-wrapper .lead-call-text {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Call link */
+.lead-form-wrapper .lead-call-link {
+  color: var(--gmb-color-4);
+  font-weight: 500;
+  text-decoration: none;
+}
+
 /*responsive*/
 
 /* mobile phones to tablet devices*/
@@ -225,6 +312,26 @@ body p {
 
 /*mobile devices*/
 @media (max-width: 575.98px) {
+  /*--lead contact form -- */
+
+  /* Wrapper */
+  .lead-form-wrapper {
+    padding: 20px;
+  }
+
+  .lead-form-wrapper .lead-form-title {
+    line-height: 32px;
+  }
+
+  .lead-form-wrapper .lead-confidential-box {
+    align-items: start;
+  }
+
+  /* Call text */
+  .lead-form-wrapper .lead-call-text {
+    text-align: center;
+  }
+
   .recaptcha-widget {
     transform: scale(0.92);
     transform-origin: left top;

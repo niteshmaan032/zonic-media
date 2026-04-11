@@ -1,0 +1,128 @@
+{
+  "slug": "refund-policy",
+  "title": "Refund Policy",
+  "intro": [
+    "Money-Back Assurance",
+    "If we are unable to reinstate your Google Business Profile, you will receive a 50% refund within 25 days.",
+    "At Zonic Media, we stand behind every case we take on. Our veteran GMB specialists work relentlessly to get your listing reinstated - and if we can't, you don't pay. This policy explains exactly how refunds work and what qualifies."
+  ],
+  "sections": [
+    {
+      "heading": "1. Our Commitment",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If our team is unable to successfully reinstate your suspended Google Business Profile after exhausting all available reinstatement methods, you will be eligible for a 50% refund of the fees paid or we create a new Google Business profile and get verified. Refunds are processed within 25 days of written confirmation that your case could not be completed successfully."
+        }
+      ]
+    },
+    {
+      "heading": "2. Refund Eligibility",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To qualify for a refund, all of the following conditions must be met:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "All information provided by you must be accurate, truthful, and complete",
+            "Required access, documents, and permissions must be provided to our team in a timely manner",
+            "You must respond to our requests for information within a reasonable timeframe",
+            "You must follow our guidance and avoid taking independent actions that could interfere with the reinstatement process",
+            "The suspension must not be related to illegal, fraudulent, or policy-violating business activity",
+            "If you do not make the changes to your document, website or profile requested by our expert we will be unable to reinstate the Business profile. In this case we will offer to create a new Business profile first and get verified."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "3. Refund Process",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If your case qualifies for a refund, the following steps will apply:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Notification: You will receive written confirmation via email if your case cannot be resolved",
+            "Initiation: The refund is initiated within 5 business days of that confirmation",
+            "Processing: Funds are returned within 25 days to your original payment method",
+            "Confirmation: A confirmation email will be sent once the refund has been completed"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "4. Non-Eligible Cases",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Refunds will not be issued in the following situations:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lack of Cooperation: Failure to provide required documents, access, or timely responses",
+            "Client Interference: Any independent actions taken by the client that disrupt or negatively impact the reinstatement process",
+            "Illegal or Fraudulent Activity: Cases where the suspension is linked to violations of Google's policies, fraud, or unlawful business practices",
+            "Service Cancellation: If the service is canceled by the client before completion (a partial refund may apply - see Section 5)",
+            "New Suspensions: Suspensions that occur after a successful reinstatement due to the client's own actions or policy violations",
+            "GMB Optimization Services: Refunds apply to reinstatement services only. GMB optimization packages are non-refundable once work has commenced"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "5. Partial Refunds",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you choose to cancel the service before our team has completed the reinstatement process, a partial refund may be offered based on the volume of work already completed. The applicable refund amount will be clearly communicated to you in writing before processing."
+        }
+      ]
+    },
+    {
+      "heading": "6. Disputes",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you believe a refund decision was made in error, you may submit a written dispute request within 14 days of receiving our decision. Our team will review your request and respond within 10 business days with a final resolution."
+        }
+      ]
+    },
+    {
+      "heading": "7. Refund Method",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All refunds are issued to the original payment method used at the time of purchase. If the original payment method is unavailable, Zonic Media will arrange an alternative refund option such as a bank transfer."
+        }
+      ]
+    },
+    {
+      "heading": "8. Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For refund requests, questions, or disputes, please reach out to us:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zonic Media"
+        },
+        {
+          "type": "contact",
+          "email": "contact@zonicmedia.com",
+          "website": "www.zonicllc.com",
+          "websiteHref": "https://www.zonicllc.com"
+        },
+        {
+          "type": "paragraph",
+          "text": "Google and Google Business Profile are trademarks of Google LLC. Zonic Media is an independent GMB specialist agency and is not affiliated with or endorsed by Google."
+        }
+      ]
+    }
+  ]
+}

@@ -36,15 +36,33 @@ function renderBlock(block: ConditionBlock, index: number) {
     case "contact":
       return (
         <div key={index}>
-          <p className="conditions-descrp">
-            <Link href={SITE_CONTACT.mapHref}>{block.address}</Link>
-          </p>
-          <p className="conditions-descrp">
-            Phone: <Link href={SITE_CONTACT.phoneHref}>{block.phone}</Link>
-          </p>
-          <p className="conditions-descrp">
-            Email: <Link href={SITE_CONTACT.emailHref}>{block.email}</Link>
-          </p>
+          {block.address ? (
+            <p className="conditions-descrp">
+              <Link href={SITE_CONTACT.mapHref}>{block.address}</Link>
+            </p>
+          ) : null}
+          {block.phone ? (
+            <p className="conditions-descrp">
+              Phone: <Link href={SITE_CONTACT.phoneHref}>{block.phone}</Link>
+            </p>
+          ) : null}
+          {block.email ? (
+            <p className="conditions-descrp">
+              Email: <Link href={`mailto:${block.email}`}>{block.email}</Link>
+            </p>
+          ) : null}
+          {block.website ? (
+            <p className="conditions-descrp">
+              Website:{" "}
+              <Link
+                href={block.websiteHref ?? `https://${block.website}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {block.website}
+              </Link>
+            </p>
+          ) : null}
         </div>
       );
     default:
