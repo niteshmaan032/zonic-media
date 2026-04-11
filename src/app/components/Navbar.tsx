@@ -291,9 +291,7 @@ function Navbar() {
                       </Row>
                     </div>
                   </li>
-                  {/* <li>
-                    <Link href={SITE_PATHS.seo}>Local SEO</Link>
-                  </li> */}
+
                   <li
                     className="services-dropdown"
                     onMouseLeave={() => setActiveLocalSeo(null)}
@@ -385,6 +383,11 @@ function Navbar() {
                     </div>
                   </li>
                   <li>
+                    <Link href="/services/gmb-reinstatement">
+                      GMB Reinstatement
+                    </Link>
+                  </li>
+                  <li>
                     <Link href={SITE_PATHS.blogs}>Blogs</Link>
                   </li>
                   <li>
@@ -468,6 +471,7 @@ function Navbar() {
                 About Us
               </Link>
             </li>
+
             <li>
               <Accordion
                 flush
@@ -533,6 +537,10 @@ function Navbar() {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+            </li>
+
+            <li>
+              <Link href="/services/gmb-reinstatement">GMB Reinstatement</Link>
             </li>
 
             <li>
