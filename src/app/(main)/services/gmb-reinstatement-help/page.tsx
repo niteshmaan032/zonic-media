@@ -4,6 +4,7 @@ import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import Script from "next/script";
 import { FaArrowRight, FaPhoneAlt, FaStar, FaUserAlt } from "react-icons/fa";
 import {
   FaBoltLightning,
@@ -830,6 +831,67 @@ function page() {
             <div className="gmb-reinst-faqs-wrapper">
               <GmbReinstFaqs />
             </div>
+
+            <Script
+              id="gmb-reinst-faq-schema"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: `{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of GMB suspensions do you handle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We handle all suspension types including soft suspensions, hard suspensions, disabled listings, and suspended pending verification profiles. If your listing is suspended, our team has likely handled a similar case before."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does reinstatement take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Google Business Profile reinstatement cases are resolved within 5 to 7 business days. More complex cases or those requiring video verification may take up to 14 days. We provide a realistic timeline after your audit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if Google rejects the appeal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We do not stop after one appeal. If Google rejects the request, we review the reason, improve the strategy, correct any issues, and resubmit with stronger documentation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to provide anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We usually require basic business documents such as a utility bill, business registration, or other proof of legitimacy to support the appeal. We will guide you on exactly what is needed after the audit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GMB Optimization and why do I need it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After reinstatement, we optimize your Google Business Profile with the right categories, keywords, images, posts, and Q&A. This helps improve local rankings, visibility, and customer inquiries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We work with digital marketing agencies managing multiple Google Business Profiles for clients. Contact us for agency pricing and partnership options."
+      }
+    }
+  ]
+}`,
+              }}
+            />
           </div>
         </div>
 
