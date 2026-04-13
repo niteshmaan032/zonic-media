@@ -57,9 +57,11 @@ export default function LeadContactForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          formType: "gmb-reinstatement",
           fullName: data.fullName,
           email: data.email,
           contact: data.contact,
+          businessName: data.businessName,
           message: `Business Name: ${data.businessName}. Issue: ${data.message}`,
           services: [DEFAULT_SERVICE],
           recaptchaToken,

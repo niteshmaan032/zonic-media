@@ -47,19 +47,25 @@ type LeadsRouteResult = {
 export const leadsRoute = async (
   body: Record<string, unknown>,
 ): Promise<LeadsRouteResult> => {
+  const formType =
+    typeof body.formType === "string" ? sanitizeText(body.formType) : "";
   const fullName = typeof body.fullName === "string" ? sanitizeText(body.fullName) : "";
   const email = typeof body.email === "string" ? sanitizeText(body.email).toLowerCase() : "";
   const contact = typeof body.contact === "string" ? sanitizeText(body.contact) : "";
+  const businessName =
+    typeof body.businessName === "string" ? sanitizeText(body.businessName) : "";
   const message = typeof body.message === "string" ? sanitizeText(body.message) : "";
   const services = normalizeServices(body.services);
   const recaptchaToken =
     typeof body.recaptchaToken === "string" ? body.recaptchaToken.trim() : "";
+  const isGmbReinstatementForm = formType === "gmb-reinstatement";
 
   if (
     !recaptchaToken ||
     !isLengthValid(fullName, 2, 100) ||
     !EMAIL_REGEX.test(email) ||
     !CONTACT_REGEX.test(contact) ||
+    (isGmbReinstatementForm && !isLengthValid(businessName, 2, 100)) ||
     !isLengthValid(message, 5, 2000) ||
     services.length === 0
   ) {
@@ -90,9 +96,11 @@ export const leadsRoute = async (
   }
 
   const payload: LeadPayload = {
+    formType,
     fullName,
     email,
     contact,
+    businessName,
     message,
     services,
   };

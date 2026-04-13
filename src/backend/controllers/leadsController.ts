@@ -2,9 +2,11 @@ import nodemailer from "nodemailer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 export type LeadPayload = {
+  formType?: string;
   fullName: string;
   email: string;
   contact: string;
+  businessName?: string;
   message: string;
   services: string[];
 };
@@ -49,6 +51,19 @@ const getTransporter = () => {
 const toServicesText = (services: string[]) =>
   services.length > 0 ? services.join(", ") : "Not provided";
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const getFirstName = (fullName: string) => {
+  const [firstName] = fullName.trim().split(/\s+/);
+  return firstName || fullName;
+};
+
 const getMailConfig = () => {
   const from = process.env.MAIL_FROM ?? process.env.SMTP_USER;
   const ownerEmail = process.env.MAIL_TO_OWNER ?? SITE_CONTACT.email;
@@ -64,7 +79,7 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
   const transporter = getTransporter();
   const { from, ownerEmail } = getMailConfig();
 
-  const { fullName, email, contact, message, services } = payload;
+  const { fullName, email, contact, businessName, message, services } = payload;
   const servicesText = toServicesText(services);
 
   await transporter.sendMail({
@@ -78,6 +93,7 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
       `Name: ${fullName}`,
       `Email: ${email}`,
       `Contact: ${contact}`,
+      `Business Name: ${businessName || "Not provided"}`,
       `Services: ${servicesText}`,
       `Message: ${message}`,
     ].join("\n"),
@@ -87,8 +103,90 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
 export const sendUserThankYouEmail = async (payload: LeadPayload) => {
   const transporter = getTransporter();
   const { from } = getMailConfig();
-  const { fullName, email, contact, message, services } = payload;
+  const { formType, fullName, email, contact, businessName, message, services } = payload;
   const servicesText = toServicesText(services);
+
+  if (formType === "gmb-reinstatement") {
+    const firstName = escapeHtml(getFirstName(fullName));
+    const safeBusinessName = escapeHtml(
+      businessName?.trim() || "your business",
+    );
+
+    await transporter.sendMail({
+      from,
+      to: email,
+      subject: "Your GMB Case is Being Reviewed - Zonic Media",
+      text: [
+        `Hi ${getFirstName(fullName)},`,
+        "",
+        `Thank you for reaching out to Zonic Media. We've received your GMB suspension audit request for ${businessName?.trim() || "your business"} and our team is already on it. One of our GMB suspension experts will call or email you shortly.`,
+        "",
+        "We know how stressful a suspended listing feels. You've come to the right place. Our veteran specialists will review your case and get back to you with a clear action plan, fast.",
+        "",
+        `If you'd like to speak with an expert right away, feel free to call us at ${SITE_CONTACT.phoneDisplay}.`,
+        "",
+        "Talk soon,",
+        "The Zonic Media Team",
+        "GMB Suspension & Local Growth Specialists",
+        `${SITE_CONTACT.email} | ${SITE_CONTACT.phoneDisplay}`,
+      ].join("\n"),
+      html: `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>Your GMB Case is Being Reviewed - Zonic Media</title>
+</head>
+<body style="margin:0; padding:0; background:#f4f2ee; font-family: Arial, sans-serif; font-size:16px; color:#1a1a1a;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f2ee; padding:40px 16px;">
+  <tr>
+    <td align="center">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:580px; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.08);">
+        <tr>
+          <td style="padding:28px 40px 24px; border-bottom:1px solid #f0ede8;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:#e8401c;">Zonic</span>Media</span></td>
+                <td align="right"><span style="font-size:11px; color:#999;">GMB Suspension Specialists</span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 40px 32px;">
+            <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${firstName}</strong>,</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">Thank you for reaching out to Zonic Media. We've received your GMB suspension audit request for <strong>${safeBusinessName}</strong> and our team is already on it. One of our GMB suspension experts will call or email you shortly.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">We know how stressful a suspended listing feels - the lost calls, the missing walk-ins, the confusion. You've come to the right place. Our veteran specialists will review your case and get back to you with a clear action plan, fast.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with an expert right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:#e8401c; font-weight:700; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a>.</p>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
+            <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
+            <p style="font-size:15px; font-weight:700; color:#0d0d0d; margin:0 0 4px;">The Zonic Media Team</p>
+            <p style="font-size:13px; color:#888; margin:0 0 16px; line-height:1.6;">GMB Suspension &amp; Local Growth Specialists</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;"><a href="${SITE_CONTACT.emailHref}" style="font-size:13px; color:#555; text-decoration:none;">${escapeHtml(SITE_CONTACT.email)}</a></td>
+                <td style="color:#ddd; font-size:13px; padding-right:12px;">|</td>
+                <td><a href="${SITE_CONTACT.phoneHref}" style="font-size:13px; color:#555; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px; background:#f9f7f3; border-top:1px solid #f0ede8;">
+            <p style="font-size:11px; color:#ccc; margin:0; line-height:1.7; text-align:center;">Zonic Media is an independent GMB specialist agency, not affiliated with Google.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`,
+    });
+
+    return;
+  }
 
   await transporter.sendMail({
     from,
