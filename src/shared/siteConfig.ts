@@ -32,7 +32,7 @@ export const SITE_SOCIAL_LINKS = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/zoniclocalseo?igsh=dXVndXJ3ZnlleHRp",
+    href: "https://www.instagram.com/zonicmedia?igsh=dXVndXJ3ZnlleHRp",
   },
   {
     label: "YouTube",
