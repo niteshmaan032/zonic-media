@@ -152,7 +152,7 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
           <td style="padding:28px 40px 24px; border-bottom:1px solid #f0ede8;">
             <table width="100%" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:var(--primary);">Zonic</span>Media</span></td>
+                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:#fdc115;">Zonic</span>Media</span></td>
                 <td align="right"><span style="font-size:11px; color:#999;">GMB Suspension Specialists</span></td>
               </tr>
             </table>
@@ -163,7 +163,7 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
             <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${firstName}</strong>,</p>
             <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">Thank you for reaching out to Zonic Media. We've received your GMB suspension audit request for <strong>${safeBusinessName}</strong> and our team is already on it. One of our GMB suspension experts will call or email you shortly.</p>
             <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">We know how stressful a suspended listing feels - the lost calls, the missing walk-ins, the confusion. You've come to the right place. Our veteran specialists will review your case and get back to you with a clear action plan, fast.</p>
-            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with an expert right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:var(--primary); font-weight:700; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a>.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with an expert right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:#fdc115; font-weight:700; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a>.</p>
             <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
             <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
             <p style="font-size:15px; font-weight:700; color:#0d0d0d; margin:0 0 4px;">The Zonic Media Team</p>
