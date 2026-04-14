@@ -1,89 +1,95 @@
-import GmbReviews from "@/app/components/GmbReviews";
+﻿import GmbReviews from "@/app/components/GmbReviews";
 import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
 import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import Script from "next/script";
-import { FaArrowRight, FaPhoneAlt, FaStar, FaUserAlt } from "react-icons/fa";
 import {
-  FaBoltLightning,
-  FaCircleExclamation,
-  FaGear,
-  FaLocationDot,
-  FaTriangleExclamation,
-} from "react-icons/fa6";
-import { GoDotFill, GoShieldCheck } from "react-icons/go";
+  FaAlignLeft,
+  FaArrowRight,
+  FaBriefcase,
+  FaImage,
+  FaKey,
+  FaLink,
+  FaListUl,
+  FaMapMarkedAlt,
+  FaPhoneAlt,
+  FaPhotoVideo,
+  FaQuestionCircle,
+  FaRegNewspaper,
+  FaSearch,
+  FaStar,
+  FaUserAlt,
+} from "react-icons/fa";
+import { FaBoltLightning, FaCircleExclamation, FaGear } from "react-icons/fa6";
+import { GoDotFill } from "react-icons/go";
 import { IoCall } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
-import LeadContactForm from "@/app/components/LeadContactForm";
 import GmbFaqs from "@/app/components/GmbFaqs";
+import LeadContactForm from "@/app/components/LeadContactForm";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { MdLocalOffer } from "react-icons/md";
-import { BsExclamationCircleFill, BsQuestionCircleFill } from "react-icons/bs";
-import { HiMiniUserGroup } from "react-icons/hi2";
-import { IoIosCloseCircle } from "react-icons/io";
-import { AiFillStop } from "react-icons/ai";
+import { BsQuestionCircleFill } from "react-icons/bs";
 
-const GmbResinstFaqs = [
+const GmbOptimFaqs = [
   {
-    question: "What types of GMB suspensions do you handle?",
+    question: "How long before I see results from GMB optimization?",
     answer:
-      "We handle all suspension types including soft suspensions, hard suspensions, disabled listings, and suspended pending verification profiles. If your listing is suspended, our team has likely handled a similar case before.",
+      "Most clients see measurable improvements in profile views and ranking within 2-4 weeks of optimization. Local SEO results compound over time - the longer your profile stays optimized and active, the stronger it performs.",
   },
   {
-    question: "How long does reinstatement take?",
+    question: "My profile is already set up - do I still need optimization?",
     answer:
-      "Most Google Business Profile reinstatement cases are resolved within 5 to 7 business days. More complex cases or those requiring video verification may take up to 14 days. We provide a realistic timeline after your audit.",
+      'Yes. Having a profile is just the baseline. Most "set up" profiles are missing critical ranking signals - wrong categories, weak descriptions, no keyword strategy, minimal photos. A proper optimization can dramatically improve your visibility.',
   },
   {
-    question: "What if Google rejects the appeal?",
+    question: "Do you manage reviews as part of optimization?",
     answer:
-      "We do not stop after one appeal. If Google rejects the request, we review the reason, improve the strategy, correct any issues, and resubmit with stronger documentation.",
+      "Yes - in our Optimize + Manage package, we provide a review generation strategy to help you consistently earn 5-star reviews from happy customers, which is one of Google's top local ranking factors.",
   },
   {
-    question: "Do I need to provide anything?",
+    question: "What industries do you optimize for?",
     answer:
-      "Yes. We usually require basic business documents such as a utility bill, business registration, or other proof of legitimacy to support the appeal. We will guide you on exactly what is needed after the audit.",
+      "We optimize profiles across all local service industries - restaurants, medical practices, law firms, home services, retail, and more. Our strategy is always tailored to your specific industry and local market.",
   },
   {
-    question: "What is GMB Optimization and why do I need it?",
+    question: "Can you optimize multiple locations?",
     answer:
-      "After reinstatement, we optimize your Google Business Profile with the right categories, keywords, images, posts, and Q&A. This helps improve local rankings, visibility, and customer inquiries.",
+      "Yes. We work with multi-location businesses and agencies managing large numbers of profiles. Contact us for bulk pricing and white-label options.",
   },
   {
-    question: "Do you work with agencies?",
+    question: "What's the difference between GMB optimization and Local SEO?",
     answer:
-      "Yes. We work with digital marketing agencies managing multiple Google Business Profiles for clients. Contact us for agency pricing and partnership options.",
+      "GMB optimization focuses specifically on your Google Business Profile - categories, photos, posts, reviews. Local SEO is broader and includes your website, citations, and backlinks. Both work together - we offer both services.",
   },
 ];
 
-const GmbReinstReviews = [
+const GmbOptimReviews = [
   {
-    review:
-      '"Our restaurant was suspended for 3 weeks and we had no idea why. Zonic Media diagnosed the issue within hours and had us back on Google Maps in 6 days. The difference in walk-ins was immediate."',
-    author: "Kim",
-    role: "Restaurant Owner, Los Angeles",
+    review: `"Our GMB profile had been live for years but we were barely getting any calls from it. After Zonic Media optimized it, we jumped into the top 3 on Google Maps within 3 weeks. The calls haven't stopped since."`,
+    author: "Marcus D.",
+    role: "HVAC Company Owner, Texas",
+  },
+  {
+    review: `"I didn't realize how much we were leaving on the table with a half-optimized profile. Zonic rebuilt everything from scratch - categories, photos, posts, the lot. Our profile views doubled in the first month."`,
+    author: "Sarah K.",
+    role: "Dental Practice Manager, Florida",
   },
   {
     review:
-      `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
-    author: "Dan .",
-    role: "Appliance Repair Service, Canada",
-  },
-  {
-    review:
-      '"We manage GMB profiles for 12 client locations. Zonic Media is our go-to partner for any suspension issue. Fast, professional, and they actually explain what went wrong."',
-    author: "Randy.",
-    role: "MXD Digital Marketing Agency, Utah",
+      '"We manage GMB profiles for 20+ clients. Zonic Media is the only team we trust for optimization work. They know the platform inside out and the results show."',
+    author: "James R.",
+    role: "Digital Marketing Agency, New York",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "GBP Suspension Recovery Experts | Zonic Media LLC",
+  title:
+    "Google Business Profile Optimization Service | Rank Higher on Google Maps",
   description:
-    "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
+    "Zonic Media optimizes your Google Business Profile to rank in the local 3-Pack, get more calls, and convert more customers. Expert GMB optimization. Free audit.",
 };
 
 function page() {
@@ -96,34 +102,31 @@ function page() {
           {/*gmb-reinst-section-1*/}
           <div className="gmb-reinst-sec-1">
             <div className="gmb-reinst-sec-1-label-head">
-              <p className="label-head">
+              {/* <p className="label-head">
                 <span>
                   <GoShieldCheck />
                 </span>
                 95% Reinstatement Success Rate
-              </p>
+              </p> */}
 
               <p className="label-head">
                 <span>
                   <LuUserRound />
                 </span>
-                Google Business Profile Specialists
+                Google Business Profile Optimization Experts
               </p>
             </div>
 
             <h1 className="gmb-reinst-main-heading">
-              Fix Suspended Google Business Profile & Get Back on Google Maps
-              Fast
+              Your GMB is Live. But Is It Actually Working?
             </h1>
 
             <p className="gmb-reinst-descrp">
-              Zonic Media provides expert Google Business Profile reinstatement
-              services to help businesses recover suspended listings, resolve
-              compliance issues, and restore lost visibility, calls, and local
-              leads quickly and safely. Our specialists have deep platform
-              expertise, including prior Google ecosystem experience, helping
-              resolve suspensions faster. Our proven process gets your business
-              back online with minimal downtime.
+              Having a Google Business Profile and having one that ranks,
+              converts, and drives real customers are two very different things.
+              Zonic Media&apos;s GMB optimization specialists fine-tune every
+              element of your profile - so you show up higher on Google Maps,
+              get more calls, and turn profile visitors into paying customers.
             </p>
 
             <div className="gmb-reinst-sec-1-box">
@@ -144,7 +147,7 @@ function page() {
             </div>
 
             <HashScrollLink href="#gmb-reinst-top" className="buttons">
-              Get a Free Suspension Audit
+              Get a Free Verification Consultation
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -176,17 +179,17 @@ function page() {
             <div className="gmb-reinst-sec-1-stats">
               <p>
                 <span> 1500+ </span>
-                Listing Restored
+                Profiles Optimized
               </p>
 
               <p>
                 <span> 95% </span>
-                Success Rate
+                Client Satisfaction
               </p>
 
               <p>
                 <span> 48hrs </span>
-                Average Resolution Time
+                Optimization Turnaround
               </p>
             </div>
 
@@ -215,7 +218,7 @@ function page() {
                 height={20}
                 alt="rating star"
               ></Image>{" "}
-              4.9/5 Client Satisfaction Rating
+              5 Client Satisfaction Rating
             </p>
             <p>
               <Image
@@ -241,16 +244,17 @@ function page() {
           <div className="gmb-reinst-sec-3 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaCircleExclamation /> Google Business Profile Suspension
-                Issues
+                <FaCircleExclamation />
+                Why Most GMB Profiles Underperform
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Common Reasons Google Business Profiles Get Suspended
+                A Live Profile Isn&apos;t Enough - Here&apos;s What&apos;s
+                Holding You Back
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings may be suspended when business
-                details conflict with Google’s guidelines, verification
+                details conflict with Google&apos;s guidelines, verification
                 standards, or trust signals. Our experts regularly resolve
                 suspensions caused by the most common compliance and listing
                 issues.
@@ -260,89 +264,95 @@ function page() {
             <div className="gmb-reinst-cards">
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <FaLocationDot />
+                  <FaListUl /> {/* Categories */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address Verification Issues
+                  Wrong Business Categories
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Incorrect addresses, virtual offices, P.O. boxes, or
-                  inconsistent location details can trigger suspension. We help
-                  correct and verify your business information properly.
+                  Most businesses pick the first category that sounds right -
+                  but Google uses categories as one of its strongest ranking
+                  signals. The wrong primary or secondary category means
+                  you&apos;re invisible for your most valuable searches.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <FaTriangleExclamation />
+                  <FaSearch /> {/* Keywords */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Guideline Violations
+                  Weak or Missing Keywords
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Keyword stuffing, misleading business names, or restricted
-                  practices can lead to suspension. We identify violations and
-                  bring your profile into compliance.
+                  Your business description, services, and posts need to include
+                  the exact terms your customers are searching for. Without
+                  strategic keyword placement, Google doesn&apos;t know when to
+                  show your profile.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <BsExclamationCircleFill />
+                  <FaImage /> {/* Photos */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Frequent Listing Changes
+                  Poor Photo Quality & Quantity
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Repeated edits to business name, category, phone number, or
-                  address may flag suspicious activity. We stabilize your
-                  profile and correct risky changes.
+                  Profiles with 10+ high-quality photos get significantly more
+                  clicks and direction requests than those with 1-2 stock
+                  images. Most businesses either skip photos or upload the wrong
+                  types entirely.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <IoIosCloseCircle />
+                  <FaRegNewspaper /> {/* Posts */}
                 </p>
 
-                <h3 className="gmb-reinst-card-heading">Duplicate Listings</h3>
+                <h3 className="gmb-reinst-card-heading">
+                  No Google Posts Activity
+                </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Multiple profiles for the same business location can create
-                  conflicts and suspension risks. We resolve duplicates and
-                  clean up your listing presence.
+                  Google Posts signal to Google that your business is active and
+                  relevant. Inactive profiles - no posts, no updates - are
+                  deprioritized in local rankings. Most businesses post once and
+                  forget.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <HiMiniUserGroup />
+                  <FaQuestionCircle /> {/* Q&A */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Ownership & Access Disputes
+                  Unanswered Q&A Section
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Former employees, agencies, or multiple admins can create
-                  ownership conflicts. We help secure control and restore proper
-                  account access.
+                  Google&apos;s Q&amp;A section is publicly visible and directly
+                  affects trust and conversions. Leaving it empty or unanswered
+                  - or worse, letting competitors answer for you - costs you
+                  customers.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <AiFillStop />
+                  <FaStar /> {/* Reviews */}
                 </p>
 
-                <h3 className="gmb-reinst-card-heading">
-                  Review & Trust Signals
-                </h3>
+                <h3 className="gmb-reinst-card-heading">No Review Strategy</h3>
                 <p className="gmb-reinst-card-descrp">
-                  Spam reviews, unusual activity, or weak trust signals may
-                  impact profile status. We strengthen profile credibility and
-                  support successful recovery.
+                  Reviews are one of Google&apos;s top local ranking factors.
+                  Businesses without a consistent review generation strategy
+                  fall behind competitors who actively manage their online
+                  reputation.
                 </p>
               </div>
             </div>
@@ -360,11 +370,11 @@ function page() {
           <div className="gmb-reinst-sec-4 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaGear /> How it works
+                <FaGear /> How It Works
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Back on Google in 4 Proven Steps
+                A Fully Optimized GMB in 4 Steps
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
@@ -380,12 +390,13 @@ function page() {
                 <p className="gmb-reinst-card-icon">1</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Free Suspension Audit (Same Day)
+                  Free GMB Audit (Same Day)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We review your profile, identify the exact suspension reason,
-                  and assess your reinstatement options — completely free, no
-                  commitment.
+                  We do a full health check of your current profile -
+                  categories, keywords, photos, posts, reviews, Q&amp;A, and
+                  completeness score - and identify exactly what&apos;s holding
+                  you back.
                 </p>
               </div>
 
@@ -393,12 +404,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">2</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Custom Reinstatement Strategy (24–48 Hours)
+                  Custom Optimization Strategy (24-48 Hours)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Our veteran experts build a tailored appeal with the right
-                  documentation, language, and evidence Google actually responds
-                  to.
+                  Our specialists build a tailored optimization plan based on
+                  your business type, service area, target keywords, and
+                  competitive landscape.
                 </p>
               </div>
 
@@ -406,11 +417,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">3</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Appeal Submission & Follow-Up (3–7 Days)
+                  Full Profile Optimization (3-5 Days)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We submit your appeal and actively follow up with Google,
-                  making adjustments as needed until reinstatement is achieved.
+                  We implement everything - categories, business description,
+                  keyword placement, services, photos, Q&amp;A, Google Posts,
+                  and attributes - leaving nothing on the table.
                 </p>
               </div>
 
@@ -418,12 +430,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">4</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  GMB Optimization (Post-Reinstatement)
+                  Monitoring & Ongoing Growth
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Once live, we optimize your profile — categories, keywords,
-                  photos, posts — so you rank higher and attract more customers
-                  than before.
+                  We monitor your profile performance, track ranking
+                  improvements, and make ongoing adjustments to keep you at the
+                  top of local search long-term.
                 </p>
               </div>
             </div>
@@ -511,11 +523,12 @@ function page() {
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaUserAlt /> Why Choose Zonic Media
+                <FaUserAlt />
+                Why Choose Zonic Media
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Why Businesses Trust Zonic Media for GBP Reinstatement
+                Why Businesses Choose Zonic Media for GMB Optimization
               </h2>
               <p className="gmb-reinst-descrp">
                 When your Google Business Profile is suspended, choosing the
@@ -537,11 +550,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Experienced Reinstatement Specialists
+                  Deep Platform Expertise
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We understand suspension triggers, policy requirements, and
-                  the right recovery steps needed for faster approvals.
+                  Our specialists have optimized 1,500+ Google Business Profiles
+                  across dozens of industries. We know what Google&apos;s
+                  algorithm actually responds to - not what worked 3 years ago.
                 </p>
               </div>
 
@@ -556,11 +570,13 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Faster Resolution Process
+                  Industry-Specific Strategy
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Our structured reinstatement process helps reduce delays and
-                  gets your profile back online quickly.
+                  Optimizing a restaurant profile is completely different from
+                  optimizing a law firm or a roofing company. We tailor every
+                  strategy to your specific industry, competitors, and local
+                  market.
                 </p>
               </div>
 
@@ -575,11 +591,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Compliance-First Approach
+                  Rankings You Can Measure
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We fix the root cause of suspension and align your profile
-                  with Google guidelines to prevent repeat issues.
+                  We don&apos;t just make your profile look better - we track
+                  ranking improvements, profile views, call clicks, and
+                  direction requests so you can see the real impact.
                 </p>
               </div>
 
@@ -594,11 +611,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Real Business Growth Focus
+                  Long-Term Results Focus
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We don’t just recover listings we help restore your rankings,
-                  calls, leads, and long-term local visibility.
+                  We build profiles that maintain rankings over time - not quick
+                  fixes that fade. Consistent posts, review management, and
+                  ongoing monitoring keep you ahead of competitors.
                 </p>
               </div>
             </div>
@@ -609,7 +627,6 @@ function page() {
                 height="315"
                 src="https://www.youtube.com/embed/FnCtQnCis6M?si=8HwlibLCyeYTr0-7"
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -623,6 +640,143 @@ function page() {
 
               <div className="gmb-reinst-profile-swiper-wrapper">
                 <GmbReinstProfileSwiper />
+              </div>
+            </div>
+          </div>
+
+          <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
+            <div className="gmb-reinst-common-sec-head">
+              <p className="label-head">
+                <MdLocalOffer />
+                What We Do
+              </p>
+
+              <h2 className="gmb-reinst-sec-heading">
+                Every Element. Fully Optimized.
+              </h2>
+              <p className="gmb-reinst-descrp">
+                We optimize every ranking signal inside your Google Business
+                Profile so the listing is complete, competitive, and built to
+                convert local search traffic into real customers.
+              </p>
+            </div>
+
+            <div className="gmb-reinst-cards">
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaListUl /> {/* Categories */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Business Categories</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Primary and secondary categories strategically selected for
+                  maximum ranking.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaAlignLeft /> {/* Description */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">
+                  Business Description
+                </h3>
+                <p className="gmb-reinst-card-descrp">
+                  Keyword-rich, compelling description written to rank and
+                  convert.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaPhotoVideo /> {/* Media */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Photos &amp; Videos</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Right types, right quantity, right naming for clicks and
+                  rankings.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaKey /> {/* Keywords */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">
+                  Keywords &amp; Attributes
+                </h3>
+                <p className="gmb-reinst-card-descrp">
+                  Strategic placement across every profile element Google
+                  indexes.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaRegNewspaper /> {/* Posts */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Google Posts</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Regular, optimized posts that signal activity and drive
+                  engagement.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaQuestionCircle /> {/* Q&A */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Q&amp;A Management</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Pre-populated answers to common questions that build trust and
+                  convert.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaStar /> {/* Reviews */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Review Strategy</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Proven system to generate consistent 5-star reviews from happy
+                  customers.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaMapMarkedAlt /> {/* Service Area */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">Service Area Setup</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Correctly configured service areas for maximum local
+                  visibility.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaBriefcase /> {/* Services */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">
+                  Services &amp; Products
+                </h3>
+                <p className="gmb-reinst-card-descrp">
+                  Fully built-out services section with descriptions and
+                  pricing.
+                </p>
+              </div>
+
+              <div className="gmb-reinst-card-wrapper">
+                <p className="gmb-reinst-card-icon">
+                  <FaLink /> {/* Links */}
+                </p>
+                <h3 className="gmb-reinst-card-heading">
+                  Website &amp; Link Signals
+                </h3>
+                <p className="gmb-reinst-card-descrp">
+                  Correct NAP consistency and citation alignment across the web.
+                </p>
               </div>
             </div>
           </div>
@@ -646,29 +800,36 @@ function page() {
                   <span> 01 </span>
                 </p>
 
-                <h3 className="gmb-reinst-price-heading"> Suspension Fix</h3>
+                <h3 className="gmb-reinst-price-heading">
+                  One-Time Optimization
+                </h3>
 
                 <p className="gmb-reinst-descrp">
-                  For businesses that just need their listing back
+                  For businesses that want a fully optimized profile
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Full suspension audit
+                    <GoDotFill /> Complete GMB audit
                   </li>
                   <li>
-                    <GoDotFill /> Custom reinstatement appeal
+                    <GoDotFill /> Category & keyword optimization
                   </li>
                   <li>
-                    <GoDotFill /> Documentation preparation
+                    <GoDotFill /> Business description rewrite
                   </li>
                   <li>
-                    <GoDotFill /> Google liaison & follow-up
+                    <GoDotFill /> Photo optimization guidance
                   </li>
                   <li>
-                    <GoDotFill /> Profile health check
+                    <GoDotFill /> Services & attributes setup
                   </li>
-                  
+                  <li>
+                    <GoDotFill /> Q&amp;A population
+                  </li>
+                  <li>
+                    <GoDotFill /> One month of Google Posts
+                  </li>
                 </ul>
               </div>
 
@@ -678,34 +839,32 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-price-heading">
-                  {" "}
-                  Fix + Optimize ⭐ Most Popular
+                  Optimize + Manage - Most Popular
                 </h3>
 
                 <p className="gmb-reinst-descrp">
-                  For businesses that want to come back stronger
+                  For businesses that want ongoing dominance
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Everything in Suspension Fix
+                    <GoDotFill /> Everything in One-Time Optimization
                   </li>
                   <li>
-                    <GoDotFill /> Full GMB profile optimization
+                    <GoDotFill /> Monthly Google Posts (4 per month)
                   </li>
                   <li>
-                    <GoDotFill /> Category & keyword optimization
+                    <GoDotFill /> Review generation strategy
                   </li>
                   <li>
-                    <GoDotFill /> Photo & description overhaul
+                    <GoDotFill /> Monthly performance report
                   </li>
                   <li>
-                    <GoDotFill /> Google Posts setup
+                    <GoDotFill /> Ongoing keyword updates
                   </li>
                   <li>
-                    <GoDotFill /> Ongoing monitoring (30 days)
+                    <GoDotFill /> Competitor monitoring
                   </li>
-                
                 </ul>
               </div>
 
@@ -715,23 +874,19 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-price-heading">
-                  {" "}
                   Agency / Multi-Location
                 </h3>
 
                 <p className="gmb-reinst-descrp">
-                  For agencies or businesses with multiple listings
+                  For agencies or multi-location businesses
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Everything in Fix + Optimize
+                    <GoDotFill /> Everything in Optimize + Manage
                   </li>
                   <li>
-                    <GoDotFill /> Multiple location handling
-                  </li>
-                  <li>
-                    <GoDotFill /> Bulk reinstatement strategy
+                    <GoDotFill /> Multiple location optimization
                   </li>
                   <li>
                     <GoDotFill /> Dedicated account manager
@@ -740,20 +895,18 @@ function page() {
                     <GoDotFill /> Priority support
                   </li>
                   <li>
-                    <GoDotFill /> Monthly reporting
+                    <GoDotFill /> White-label reporting available
                   </li>
-                
-                  
                 </ul>
               </div>
 
               <div className="gmb-reinst-price-card-wrapper gmb-reinst-price-banner">
                 <h3 className="gmb-reinst-price-banner-heading">
-                  Don’t Let a Suspended Listing Cost You More Customers
+                  Don&apos;t Let a Suspended Listing Cost You More Customers
                 </h3>
 
                 <HashScrollLink href="#gmb-reinst-top" className="buttons">
-                  Get a Free Suspension Audit
+                  Get Verified Now
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -799,7 +952,7 @@ function page() {
             </div>
 
             <div className="gmb-reinst-testimonial-wrapper">
-              <GmbReviews items={GmbReinstReviews} />
+              <GmbReviews items={GmbOptimReviews} />
             </div>
           </div>
 
@@ -822,7 +975,7 @@ function page() {
                 <li>
                   <h3>
                     <FaArrowRight />
-                    Money-Back Guarantee
+                    Results-Driven Approach
                   </h3>
                   <p>
                     If we can&apos;t get your listing reinstated, you pay
@@ -839,7 +992,7 @@ function page() {
                     No Long Waits
                   </h3>
                   <p>
-                    Our average reinstatement time is 5–7 business days. We
+                    Our average reinstatement time is 5 to 7 business days. We
                     follow up aggressively so Google doesn&apos;t leave your
                     case idle.
                   </p>
@@ -852,7 +1005,7 @@ function page() {
                   </h3>
                   <p>
                     Every case is handled personally by a veteran GMB specialist
-                    — not a junior freelancer or an automated tool.
+                    - not a junior freelancer or an automated tool.
                   </p>
                 </li>
               </ul>
@@ -878,7 +1031,7 @@ function page() {
             </div>
 
             <div className="gmb-reinst-faqs-wrapper">
-              <GmbFaqs items={GmbResinstFaqs} />
+              <GmbFaqs items={GmbOptimFaqs} />
             </div>
 
             <Script
@@ -888,7 +1041,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  mainEntity: GmbResinstFaqs.map((faq) => ({
+                  mainEntity: GmbOptimFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,
                     acceptedAnswer: {
@@ -911,12 +1064,12 @@ function page() {
       {/*gmb-reinst-banner-3*/}
       <div className="gmb-reinst-banner-3">
         <h2 className="gmb-reisnt-banner-3-heading">
-          Back on Google. Back in Business.
+          Your Competitors Are Optimized. Are You?
         </h2>
         <p className="gmb-reisnt-banner-3-descrp">
-          &quot;Every day your listing is suspended, customers are finding your
-          competitors instead. We fix that — with a proven process, zero
-          guesswork, and results that speak for themselves.&quot;
+          Right now, customers in your area are searching for exactly what you
+          offer. Make sure your Google Business Profile is the one they find,
+          click, and call.
         </p>
 
         <div className="gmb-reinst-banner-3-ctas">
@@ -951,7 +1104,7 @@ function page() {
           </Link>
 
           <HashScrollLink href="#gmb-reinst-top" className="buttons">
-            Get a Free Suspension Audit
+            Get a Free GMB Audit
             <span className="buttons__icon-wrapper">
               <svg
                 viewBox="0 0 14 15"

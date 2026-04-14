@@ -209,7 +209,7 @@ export default function LeadContactForm() {
           <textarea
             className="form-control"
             rows={2}
-            placeholder="Explain Your Issue"
+            placeholder="Write your message"
             aria-invalid={errors.message ? "true" : "false"}
             {...register("message", {
               required: "Message is required.",

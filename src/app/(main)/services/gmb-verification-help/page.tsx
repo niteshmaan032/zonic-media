@@ -1,11 +1,22 @@
-import GmbReviews from "@/app/components/GmbReviews";
+﻿import GmbReviews from "@/app/components/GmbReviews";
 import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
 import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import Script from "next/script";
-import { FaArrowRight, FaPhoneAlt, FaStar, FaUserAlt } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaMailBulk,
+  FaMapSigns,
+  FaPhoneAlt,
+  FaPhoneSlash,
+  FaPlusCircle,
+  FaRedoAlt,
+  FaStar,
+  FaUserAlt,
+  FaVideo,
+} from "react-icons/fa";
 import {
   FaBoltLightning,
   FaCircleExclamation,
@@ -13,11 +24,11 @@ import {
   FaLocationDot,
   FaTriangleExclamation,
 } from "react-icons/fa6";
-import { GoDotFill, GoShieldCheck } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import { IoCall } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
-import LeadContactForm from "@/app/components/LeadContactForm";
 import GmbFaqs from "@/app/components/GmbFaqs";
+import LeadContactForm from "@/app/components/LeadContactForm";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { MdLocalOffer } from "react-icons/md";
@@ -26,40 +37,41 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 import { IoIosCloseCircle } from "react-icons/io";
 import { AiFillStop } from "react-icons/ai";
 
-const GmbResinstFaqs = [
+const GmbVerifiFaqs = [
   {
-    question: "What types of GMB suspensions do you handle?",
+    question: "What verification methods does Google offer?",
     answer:
-      "We handle all suspension types including soft suspensions, hard suspensions, disabled listings, and suspended pending verification profiles. If your listing is suspended, our team has likely handled a similar case before.",
+      "Google offers several methods depending on your business type: postcard by mail, video recording, phone call, email, and in some cases instant verification. We'll identify which options are available for your specific profile and guide you through the right one.",
   },
   {
-    question: "How long does reinstatement take?",
+    question: "My postcard keeps getting lost - what can I do?",
     answer:
-      "Most Google Business Profile reinstatement cases are resolved within 5 to 7 business days. More complex cases or those requiring video verification may take up to 14 days. We provide a realistic timeline after your audit.",
+      "We help businesses unlock alternative verification methods so you're not stuck waiting on a postcard that never arrives. In most cases, we can get you verified without a postcard at all.",
   },
   {
-    question: "What if Google rejects the appeal?",
+    question: "What does video verification involve?",
     answer:
-      "We do not stop after one appeal. If Google rejects the request, we review the reason, improve the strategy, correct any issues, and resubmit with stronger documentation.",
+      "Google requires a short video showing your business location, signage, equipment, and proof of operation. We give you a precise checklist of exactly what to film so it gets approved first time.",
   },
   {
-    question: "Do I need to provide anything?",
+    question: "My verification got revoked after passing - why?",
     answer:
-      "Yes. We usually require basic business documents such as a utility bill, business registration, or other proof of legitimacy to support the appeal. We will guide you on exactly what is needed after the audit.",
+      "This usually indicates a deeper compliance issue - a duplicate listing conflict, a policy violation, or inconsistent business data. We diagnose the root cause and fix it so your verification sticks.",
   },
   {
-    question: "What is GMB Optimization and why do I need it?",
+    question:
+      "I run a service area business with no storefront - can I still get verified?",
     answer:
-      "After reinstatement, we optimize your Google Business Profile with the right categories, keywords, images, posts, and Q&A. This helps improve local rankings, visibility, and customer inquiries.",
+      "Yes. Service area businesses can be verified without displaying a physical address. We specialize in SAB verification and know exactly how to get these listings live on Google Maps.",
   },
   {
-    question: "Do you work with agencies?",
+    question: "How long does verification take?",
     answer:
-      "Yes. We work with digital marketing agencies managing multiple Google Business Profiles for clients. Contact us for agency pricing and partnership options.",
+      "Most cases are resolved within 5-7 business days depending on the verification method. We'll give you a realistic timeline after your free audit.",
   },
 ];
 
-const GmbReinstReviews = [
+const GmbVerifReviews = [
   {
     review:
       '"Our restaurant was suspended for 3 weeks and we had no idea why. Zonic Media diagnosed the issue within hours and had us back on Google Maps in 6 days. The difference in walk-ins was immediate."',
@@ -67,8 +79,7 @@ const GmbReinstReviews = [
     role: "Restaurant Owner, Los Angeles",
   },
   {
-    review:
-      `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
+    review: `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
     author: "Dan .",
     role: "Appliance Repair Service, Canada",
   },
@@ -81,9 +92,9 @@ const GmbReinstReviews = [
 ];
 
 export const metadata: Metadata = {
-  title: "GBP Suspension Recovery Experts | Zonic Media LLC",
+  title: "Fix Google Business Profile Verification Issues & Get Verified Fast",
   description:
-    "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
+    "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
 };
 
 function page() {
@@ -96,34 +107,31 @@ function page() {
           {/*gmb-reinst-section-1*/}
           <div className="gmb-reinst-sec-1">
             <div className="gmb-reinst-sec-1-label-head">
-              <p className="label-head">
+              {/* <p className="label-head">
                 <span>
                   <GoShieldCheck />
                 </span>
                 95% Reinstatement Success Rate
-              </p>
+              </p> */}
 
               <p className="label-head">
                 <span>
                   <LuUserRound />
                 </span>
-                Google Business Profile Specialists
+                Google Business Profile Verification Experts
               </p>
             </div>
 
             <h1 className="gmb-reinst-main-heading">
-              Fix Suspended Google Business Profile & Get Back on Google Maps
-              Fast
+              Can&apos;t Verify Your Google Business Profile? We Solve That.
             </h1>
 
             <p className="gmb-reinst-descrp">
-              Zonic Media provides expert Google Business Profile reinstatement
-              services to help businesses recover suspended listings, resolve
-              compliance issues, and restore lost visibility, calls, and local
-              leads quickly and safely. Our specialists have deep platform
-              expertise, including prior Google ecosystem experience, helping
-              resolve suspensions faster. Our proven process gets your business
-              back online with minimal downtime.
+              Zonic Media helps businesses resolve all types of Google Business
+              Profile verification failures - postcard not arriving, video
+              verification rejected, phone or email options unavailable. Our
+              specialists have deep platform expertise and know exactly how to
+              get your profile verified and live on Google Maps fast.
             </p>
 
             <div className="gmb-reinst-sec-1-box">
@@ -144,7 +152,7 @@ function page() {
             </div>
 
             <HashScrollLink href="#gmb-reinst-top" className="buttons">
-              Get a Free Suspension Audit
+              Get a Free Verification Consultation
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -176,7 +184,7 @@ function page() {
             <div className="gmb-reinst-sec-1-stats">
               <p>
                 <span> 1500+ </span>
-                Listing Restored
+                Listings Verified & Restored
               </p>
 
               <p>
@@ -215,7 +223,7 @@ function page() {
                 height={20}
                 alt="rating star"
               ></Image>{" "}
-              4.9/5 Client Satisfaction Rating
+              5 Client Satisfaction Rating
             </p>
             <p>
               <Image
@@ -241,16 +249,16 @@ function page() {
           <div className="gmb-reinst-sec-3 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaCircleExclamation /> Google Business Profile Suspension
+                <FaCircleExclamation /> Google Business Profile Verification
                 Issues
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Common Reasons Google Business Profiles Get Suspended
+                Common Reasons Google Business Profile Verification Fails
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings may be suspended when business
-                details conflict with Google’s guidelines, verification
+                details conflict with Google&apos;s guidelines, verification
                 standards, or trust signals. Our experts regularly resolve
                 suspensions caused by the most common compliance and listing
                 issues.
@@ -260,89 +268,96 @@ function page() {
             <div className="gmb-reinst-cards">
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <FaLocationDot />
+                  <FaMailBulk /> {/* Postcard */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Address Verification Issues
+                  Postcard Never Arrives
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Incorrect addresses, virtual offices, P.O. boxes, or
-                  inconsistent location details can trigger suspension. We help
-                  correct and verify your business information properly.
+                  Google&apos;s verification postcard can take weeks - and often
+                  gets lost, sent to the wrong address, or expires before you
+                  can use it. We help businesses navigate alternative
+                  verification paths and get the process moving again.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <FaTriangleExclamation />
+                  <FaVideo /> {/* Video verification */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Guideline Violations
+                  Video Verification Rejected
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Keyword stuffing, misleading business names, or restricted
-                  practices can lead to suspension. We identify violations and
-                  bring your profile into compliance.
+                  Video verification is Google&apos;s newer method - and one of
+                  the most confusing. Incorrect footage, wrong angles, or
+                  missing storefront signage are common reasons for rejection.
+                  We guide you through exactly what Google needs to approve it.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <BsExclamationCircleFill />
+                  <FaPhoneSlash /> {/* Phone/email unavailable */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Frequent Listing Changes
+                  Phone & Email Options Unavailable
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Repeated edits to business name, category, phone number, or
-                  address may flag suspicious activity. We stabilize your
-                  profile and correct risky changes.
+                  Some businesses find phone and email verification options
+                  simply don&apos;t appear in their dashboard. This is often
+                  tied to profile age, business category, or flagged activity.
+                  Our specialists know how to unlock these options.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <IoIosCloseCircle />
+                  <FaRedoAlt /> {/* Revoked / repeat */}
                 </p>
 
-                <h3 className="gmb-reinst-card-heading">Duplicate Listings</h3>
+                <h3 className="gmb-reinst-card-heading">
+                  Verification Keeps Getting Revoked
+                </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Multiple profiles for the same business location can create
-                  conflicts and suspension risks. We resolve duplicates and
-                  clean up your listing presence.
+                  Passing verification only to have it revoked shortly after is
+                  a sign of a deeper compliance issue. We identify the root
+                  cause - whether it&apos;s a policy conflict, duplicate
+                  listing, or data inconsistency - and fix it properly.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <HiMiniUserGroup />
+                  <FaPlusCircle /> {/* New business */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Ownership & Access Disputes
+                  New Business Listing Can&apos;t Get Verified
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Former employees, agencies, or multiple admins can create
-                  ownership conflicts. We help secure control and restore proper
-                  account access.
+                  Brand new listings sometimes get stuck in a verification loop
+                  with no clear resolution path. We help new businesses get
+                  their first verified listing live quickly and correctly.
                 </p>
               </div>
 
               <div className="gmb-reinst-card-wrapper">
                 <p className="gmb-reinst-card-icon">
-                  <AiFillStop />
+                  <FaMapSigns /> {/* Service area */}
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Review & Trust Signals
+                  Service Area Business Verification
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Spam reviews, unusual activity, or weak trust signals may
-                  impact profile status. We strengthen profile credibility and
-                  support successful recovery.
+                  Service area businesses (SABs) - plumbers, roofers, cleaners -
+                  face unique verification challenges since they don&apos;t
+                  serve customers at a physical storefront. We specialize in SAB
+                  verification strategies that work.
                 </p>
               </div>
             </div>
@@ -360,11 +375,11 @@ function page() {
           <div className="gmb-reinst-sec-4 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaGear /> How it works
+                <FaGear /> How It Works
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Back on Google in 4 Proven Steps
+                Get Verified in 4 Clear Steps
               </h2>
               <p className="gmb-reinst-descrp">
                 Google Business Profile listings can be suspended when they
@@ -380,12 +395,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">1</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Free Suspension Audit (Same Day)
+                  Free Verification Audit (Same Day)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We review your profile, identify the exact suspension reason,
-                  and assess your reinstatement options — completely free, no
-                  commitment.
+                  We review your profile setup, business category, verification
+                  history, and current status to identify exactly what&apos;s
+                  blocking verification and the fastest path forward.
                 </p>
               </div>
 
@@ -393,12 +408,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">2</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Custom Reinstatement Strategy (24–48 Hours)
+                  Custom Verification Strategy (24-48 Hours)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Our veteran experts build a tailored appeal with the right
-                  documentation, language, and evidence Google actually responds
-                  to.
+                  Our specialists map out the right verification method for your
+                  specific business type - whether that&apos;s postcard, video,
+                  phone, email, or a direct escalation to Google support.
                 </p>
               </div>
 
@@ -406,11 +421,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">3</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Appeal Submission & Follow-Up (3–7 Days)
+                  Guided Implementation & Support (3-7 Days)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We submit your appeal and actively follow up with Google,
-                  making adjustments as needed until reinstatement is achieved.
+                  We walk you through every step of the verification process,
+                  prepare you for video verification if needed, and actively
+                  follow up with Google until your profile is verified and live.
                 </p>
               </div>
 
@@ -418,12 +434,12 @@ function page() {
                 <p className="gmb-reinst-card-icon">4</p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  GMB Optimization (Post-Reinstatement)
+                  Profile Optimization (Post-Verification)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Once live, we optimize your profile — categories, keywords,
-                  photos, posts — so you rank higher and attract more customers
-                  than before.
+                  Once verified, we optimize your profile - categories,
+                  keywords, photos, posts - so you start ranking in local search
+                  and attracting customers from day one.
                 </p>
               </div>
             </div>
@@ -511,11 +527,12 @@ function page() {
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
               <p className="label-head">
-                <FaUserAlt /> Why Choose Zonic Media
+                <FaUserAlt />
+                Why Choose Zonic Media
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Why Businesses Trust Zonic Media for GBP Reinstatement
+                Why Businesses Trust Zonic Media for GBP Verification
               </h2>
               <p className="gmb-reinst-descrp">
                 When your Google Business Profile is suspended, choosing the
@@ -537,11 +554,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Experienced Reinstatement Specialists
+                  All Verification Methods Covered
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We understand suspension triggers, policy requirements, and
-                  the right recovery steps needed for faster approvals.
+                  Whether it&apos;s postcard, video, phone, email, or instant
+                  verification - we know every method and which one works best
+                  for your business type.
                 </p>
               </div>
 
@@ -556,11 +574,12 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-card-heading">
-                  Faster Resolution Process
+                  Service Area Business Experts
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Our structured reinstatement process helps reduce delays and
-                  gets your profile back online quickly.
+                  SAB verification is complex and different from standard
+                  listings. We have proven strategies specifically for
+                  businesses without a public-facing address.
                 </p>
               </div>
 
@@ -578,8 +597,9 @@ function page() {
                   Compliance-First Approach
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We fix the root cause of suspension and align your profile
-                  with Google guidelines to prevent repeat issues.
+                  We fix verification the right way - making sure your profile
+                  fully aligns with Google&apos;s guidelines so it stays
+                  verified long-term and doesn&apos;t get revoked.
                 </p>
               </div>
 
@@ -597,8 +617,9 @@ function page() {
                   Real Business Growth Focus
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  We don’t just recover listings we help restore your rankings,
-                  calls, leads, and long-term local visibility.
+                  Getting verified is just the start. We make sure your newly
+                  verified profile is optimized to rank, generate calls, and
+                  drive real local leads.
                 </p>
               </div>
             </div>
@@ -609,7 +630,6 @@ function page() {
                 height="315"
                 src="https://www.youtube.com/embed/FnCtQnCis6M?si=8HwlibLCyeYTr0-7"
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -646,21 +666,21 @@ function page() {
                   <span> 01 </span>
                 </p>
 
-                <h3 className="gmb-reinst-price-heading"> Suspension Fix</h3>
+                <h3 className="gmb-reinst-price-heading">Verification Fix</h3>
 
                 <p className="gmb-reinst-descrp">
-                  For businesses that just need their listing back
+                  For businesses that just need to get verified
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Full suspension audit
+                    <GoDotFill /> Full verification audit
                   </li>
                   <li>
-                    <GoDotFill /> Custom reinstatement appeal
+                    <GoDotFill /> Custom verification strategy
                   </li>
                   <li>
-                    <GoDotFill /> Documentation preparation
+                    <GoDotFill /> Video verification guidance
                   </li>
                   <li>
                     <GoDotFill /> Google liaison & follow-up
@@ -668,7 +688,6 @@ function page() {
                   <li>
                     <GoDotFill /> Profile health check
                   </li>
-                  
                 </ul>
               </div>
 
@@ -678,17 +697,16 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-price-heading">
-                  {" "}
-                  Fix + Optimize ⭐ Most Popular
+                  Verify + Optimize - Most Popular
                 </h3>
 
                 <p className="gmb-reinst-descrp">
-                  For businesses that want to come back stronger
+                  For businesses that want to verify and rank
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Everything in Suspension Fix
+                    <GoDotFill /> Everything in Verification Fix
                   </li>
                   <li>
                     <GoDotFill /> Full GMB profile optimization
@@ -705,7 +723,6 @@ function page() {
                   <li>
                     <GoDotFill /> Ongoing monitoring (30 days)
                   </li>
-                
                 </ul>
               </div>
 
@@ -715,23 +732,22 @@ function page() {
                 </p>
 
                 <h3 className="gmb-reinst-price-heading">
-                  {" "}
                   Agency / Multi-Location
                 </h3>
 
                 <p className="gmb-reinst-descrp">
-                  For agencies or businesses with multiple listings
+                  For agencies managing multiple unverified listings
                 </p>
 
                 <ul className="gmb-reinst-price-list">
                   <li>
-                    <GoDotFill /> Everything in Fix + Optimize
+                    <GoDotFill /> Everything in Verify + Optimize
                   </li>
                   <li>
                     <GoDotFill /> Multiple location handling
                   </li>
                   <li>
-                    <GoDotFill /> Bulk reinstatement strategy
+                    <GoDotFill /> Bulk verification strategy
                   </li>
                   <li>
                     <GoDotFill /> Dedicated account manager
@@ -742,18 +758,16 @@ function page() {
                   <li>
                     <GoDotFill /> Monthly reporting
                   </li>
-                
-                  
                 </ul>
               </div>
 
               <div className="gmb-reinst-price-card-wrapper gmb-reinst-price-banner">
                 <h3 className="gmb-reinst-price-banner-heading">
-                  Don’t Let a Suspended Listing Cost You More Customers
+                  Don&apos;t Let a Suspended Listing Cost You More Customers
                 </h3>
 
                 <HashScrollLink href="#gmb-reinst-top" className="buttons">
-                  Get a Free Suspension Audit
+                  Get Verified Now
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -799,7 +813,7 @@ function page() {
             </div>
 
             <div className="gmb-reinst-testimonial-wrapper">
-              <GmbReviews items={GmbReinstReviews} />
+              <GmbReviews items={GmbVerifReviews} />
             </div>
           </div>
 
@@ -839,7 +853,7 @@ function page() {
                     No Long Waits
                   </h3>
                   <p>
-                    Our average reinstatement time is 5–7 business days. We
+                    Our average reinstatement time is 5-7 business days. We
                     follow up aggressively so Google doesn&apos;t leave your
                     case idle.
                   </p>
@@ -852,7 +866,7 @@ function page() {
                   </h3>
                   <p>
                     Every case is handled personally by a veteran GMB specialist
-                    — not a junior freelancer or an automated tool.
+                    - not a junior freelancer or an automated tool.
                   </p>
                 </li>
               </ul>
@@ -878,7 +892,7 @@ function page() {
             </div>
 
             <div className="gmb-reinst-faqs-wrapper">
-              <GmbFaqs items={GmbResinstFaqs} />
+              <GmbFaqs items={GmbVerifiFaqs} />
             </div>
 
             <Script
@@ -888,7 +902,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  mainEntity: GmbResinstFaqs.map((faq) => ({
+                  mainEntity: GmbVerifiFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,
                     acceptedAnswer: {
@@ -911,12 +925,11 @@ function page() {
       {/*gmb-reinst-banner-3*/}
       <div className="gmb-reinst-banner-3">
         <h2 className="gmb-reisnt-banner-3-heading">
-          Back on Google. Back in Business.
+          Every Day Unverified is a Day You&apos;re Invisible on Google.
         </h2>
         <p className="gmb-reisnt-banner-3-descrp">
-          &quot;Every day your listing is suspended, customers are finding your
-          competitors instead. We fix that — with a proven process, zero
-          guesswork, and results that speak for themselves.&quot;
+          Your competitors are showing up on Google Maps right now. Get your
+          profile verified and start winning local customers today.
         </p>
 
         <div className="gmb-reinst-banner-3-ctas">
@@ -951,7 +964,7 @@ function page() {
           </Link>
 
           <HashScrollLink href="#gmb-reinst-top" className="buttons">
-            Get a Free Suspension Audit
+            Get a Free Verification Consultation
             <span className="buttons__icon-wrapper">
               <svg
                 viewBox="0 0 14 15"
