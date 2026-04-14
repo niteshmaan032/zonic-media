@@ -980,9 +980,9 @@ function page() {
                   <p>
                     If we can&apos;t get your listing reinstated, you pay
                     nothing. We only win when you win.
-                    <Link href="/legal/refund-policy">
+                    {/* <Link href="/legal/refund-policy">
                       Visit our refund policy page.
-                    </Link>
+                    </Link> */}
                   </p>
                 </li>
 
