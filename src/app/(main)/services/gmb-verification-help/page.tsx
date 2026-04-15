@@ -36,6 +36,7 @@ import { BsExclamationCircleFill, BsQuestionCircleFill } from "react-icons/bs";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { IoIosCloseCircle } from "react-icons/io";
 import { AiFillStop } from "react-icons/ai";
+import ClutchWidget from "@/app/components/ClutchWidget";
 
 const GmbVerifiFaqs = [
   {
@@ -151,14 +152,14 @@ function page() {
                 <span>
                   <FaPhoneAlt />
                 </span>
-                Need Immediate GBP Suspension Help? Call Now!
+                Need Immediate GBP Verification Help? Call Now!
               </p>
 
               <p>
-                Speak directly with a Google Business Profile specialist for
-                fast recovery guidance and professional reinstatement support.
-                One call can help restore your rankings, visibility, and
-                customer inquiries quickly.{" "}
+                Speak directly with a Google Business Profile verification
+                specialist for fast, step-by-step guidance and expert support.
+                One call can help you get verified faster, go live on Google
+                Maps, and start attracting real customer inquiries.{" "}
                 <Link href="tel:+13027269736"> Call Now: (302) 726-9736 </Link>
               </p>
             </div>
@@ -272,11 +273,11 @@ function page() {
                 Common Reasons Google Business Profile Verification Fails
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings may be suspended when business
-                details conflict with Google&apos;s guidelines, verification
-                standards, or trust signals. Our experts regularly resolve
-                suspensions caused by the most common compliance and listing
-                issues.
+                Google Business Profile verification can fail when business
+                details are incomplete, inconsistent, or don’t meet Google’s
+                verification requirements. Our experts identify and fix the most
+                common issues, helping you successfully verify your profile and
+                get it live on Google Maps without delays.
               </p>
             </div>
 
@@ -379,9 +380,9 @@ function page() {
 
             <div className="gmb-reinst-sec-3-img-cont">
               <Image
-                src="/images/gmb-reinst/gmb-reinst-banner.svg"
+                src="/images/gmb-verify-1.png"
                 fill
-                alt="gmb-account-recover"
+                alt="gmb-verify-account"
               ></Image>
             </div>
           </div>
@@ -397,11 +398,11 @@ function page() {
                 Get Verified in 4 Clear Steps
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings can be suspended when they
-                violate Google&apos;s guidelines or contain inconsistent
-                business information. Based on Google&apos;s policies and common
-                industry cases, some of the most frequent causes of suspension
-                include:
+                Verifying your Google Business Profile can feel confusing
+                without the right guidance. Our proven step-by-step process
+                simplifies everything—from choosing the correct verification
+                method to meeting Google’s requirements—so your profile gets
+                verified quickly and goes live on Google Maps without delays.
               </p>
             </div>
 
@@ -461,8 +462,8 @@ function page() {
 
             <div className="gmb-reinst-sec-4-cta-banner">
               <h2>
-                Every Hour Your Profile Stays Suspended, You Lose Customers.
-                Start Your Case Review Today.
+                Every Day Your Profile Stays Unverified, You Lose Customers.
+                Start Your Verification Process Today.
               </h2>
 
               <div className="gmb-reinst-sec-4-banner-ctas">
@@ -531,9 +532,9 @@ function page() {
 
             <div className="gmb-reinst-sec-4-img-cont">
               <Image
-                src="/images/gmb-reinst/gmb-reinst-banner-2.svg"
+                src="/images/gmb-verify-2.png"
                 fill
-                alt="gmb-account-recover"
+                alt="gmb-verify-account"
               ></Image>
             </div>
           </div>
@@ -550,10 +551,11 @@ function page() {
                 Why Businesses Trust Zonic Media for GBP Verification
               </h2>
               <p className="gmb-reinst-descrp">
-                When your Google Business Profile is suspended, choosing the
-                right recovery partner matters. Our team combines deep platform
-                expertise, compliance-focused strategies, and fast action to
-                help restore your listing with minimal downtime.
+                When your Google Business Profile isn’t verified, choosing the
+                right partner makes all the difference. Our team combines deep
+                platform expertise, proven verification strategies, and hands-on
+                support to help you get verified quickly and ensure your listing
+                goes live on Google Maps without unnecessary delays.
               </p>
             </div>
 
@@ -651,15 +653,15 @@ function page() {
               ></iframe>
             </div>
 
-            <div className="gmb-reinst-profile-slider">
+            {/* <div className="gmb-reinst-profile-slider">
               <h2 className="gmb-reinst-sec-heading">
-                Successful Google Business Profile Reinstatement Cases
+                Successful Google Business Profile Verification Cases
               </h2>
 
               <div className="gmb-reinst-profile-swiper-wrapper">
-                <GmbReinstProfileSwiper />
+               
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/*gmb-reinst-section-6*/}
@@ -778,7 +780,7 @@ function page() {
 
               <div className="gmb-reinst-price-card-wrapper gmb-reinst-price-banner">
                 <h3 className="gmb-reinst-price-banner-heading">
-                  Don&apos;t Let a Suspended Listing Cost You More Customers
+                  Don&apos;t Let an Unverified Profile Cost You More Customers
                 </h3>
 
                 <HashScrollLink href="#gmb-reinst-top" className="buttons">
@@ -823,12 +825,17 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Real Businesses. Real Reinstatements.
+                Successful Google Business Profile Verification Cases
               </h2>
             </div>
 
             <div className="gmb-reinst-testimonial-wrapper">
-              <GmbReviews items={GmbVerifReviews} />
+              <ClutchWidget
+                widgetType="12"
+                height="375"
+                primaryColor="#f7c00a"
+                reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714"
+              />
             </div>
           </div>
 
@@ -856,9 +863,9 @@ function page() {
                   <p>
                     If we can&apos;t get your listing reinstated, you pay
                     nothing. We only win when you win.
-                    <Link href="/legal/refund-policy">
+                    {/* <Link href="/legal/refund-policy">
                       Visit our refund policy page.
-                    </Link>
+                    </Link> */}
                   </p>
                 </li>
 
