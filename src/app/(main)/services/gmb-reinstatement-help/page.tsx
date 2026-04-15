@@ -80,6 +80,18 @@ const GmbReinstReviews = [
   },
 ];
 
+const GmbReinsFormHead = {
+  leadFormTitle: "Get Your Free GMB Suspension Audit",
+  leadCallText: (
+    <>
+      One call can help recover your lost business visibility.{" "}
+      <a href="tel:+13027269736" className="lead-call-link">
+        Call Now:(302) 726-9736
+      </a>
+    </>
+  ),
+};
+
 export const metadata: Metadata = {
   title: "GBP Suspension Recovery Experts | Zonic Media LLC",
   description:
@@ -192,7 +204,10 @@ function page() {
 
             {/*--gmb-reinst-mob-form--*/}
             <div className="gmb-reinst-mob-form d-block d-lg-none">
-              <LeadContactForm />
+              <LeadContactForm
+                leadFormTitle={GmbReinsFormHead.leadFormTitle}
+                leadCallText={GmbReinsFormHead.leadCallText}
+              />
             </div>
           </div>
 
@@ -904,7 +919,10 @@ function page() {
 
         {/*gmb-reinst-contact-form-wrapper right-content*/}
         <div className="gmb-reinst-contact-form">
-          <LeadContactForm />
+          <LeadContactForm
+            leadFormTitle={GmbReinsFormHead.leadFormTitle}
+            leadCallText={GmbReinsFormHead.leadCallText}
+          />
         </div>
       </div>
 

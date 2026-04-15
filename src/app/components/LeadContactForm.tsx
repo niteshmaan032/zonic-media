@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -17,9 +18,24 @@ type LeadContactFormValues = {
   message: string;
 };
 
+type LeadContactFormProps = {
+  leadFormTitle?: string;
+  leadCallText?: ReactNode;
+};
+
 const DEFAULT_SERVICE = "Google My Business (GMB)";
 
-export default function LeadContactForm() {
+export default function LeadContactForm({
+  leadFormTitle = "Get Your Free GMB Suspension Audit",
+  leadCallText = (
+    <>
+      One call can help recover your lost business visibility.{" "}
+      <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
+        Call Now:{SITE_CONTACT.phoneDisplay}
+      </a>
+    </>
+  ),
+}: LeadContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
@@ -94,7 +110,7 @@ export default function LeadContactForm() {
 
   return (
     <div className="lead-form-wrapper">
-      <h3 className="lead-form-title">Get Your Free GMB Suspension Audit</h3>
+      <h3 className="lead-form-title">{leadFormTitle}</h3>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="mb-2">
@@ -267,12 +283,7 @@ export default function LeadContactForm() {
           Your information is 100% confidential. We never share your data.
         </div>
 
-        <p className="lead-call-text">
-          One call can help recover your lost business visibility.{" "}
-          <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-            Call Now:{SITE_CONTACT.phoneDisplay}
-          </a>
-        </p>
+        <p className="lead-call-text">{leadCallText}</p>
       </form>
     </div>
   );

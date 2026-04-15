@@ -28,6 +28,7 @@ import { IoCall } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { MdLocalOffer } from "react-icons/md";
@@ -85,6 +86,18 @@ const GmbOptimReviews = [
   },
 ];
 
+const GmbOptiFormHead = {
+  leadFormTitle: "Get Your Free GMB Optimization Audit",
+  leadCallText: (
+    <>
+      One call can help grow your business visibility.{" "}
+      <a href="tel:+13027269736" className="lead-call-link">
+        Call Now:(302) 726-9736
+      </a>
+    </>
+  ),
+};
+
 export const metadata: Metadata = {
   title:
     "Google Business Profile Optimization Service | Rank Higher on Google Maps",
@@ -134,20 +147,21 @@ function page() {
                 <span>
                   <FaPhoneAlt />
                 </span>
-                Need Immediate GBP Suspension Help? Call Now!
+                Want More Calls from Your Google Business Profile? Let’s Talk.
               </p>
 
               <p>
-                Speak directly with a Google Business Profile specialist for
-                fast recovery guidance and professional reinstatement support.
-                One call can help restore your rankings, visibility, and
-                customer inquiries quickly.{" "}
+                Speak directly with a Google Business Profile optimization
+                expert and discover exactly what’s holding your listing back.
+                We’ll walk you through proven strategies to improve your Google
+                Maps rankings, increase profile visibility, and turn searches
+                into real customer calls.{" "}
                 <Link href="tel:+13027269736"> Call Now: (302) 726-9736 </Link>
               </p>
             </div>
 
             <HashScrollLink href="#gmb-reinst-top" className="buttons">
-              Get a Free Verification Consultation
+              Get a Free GMB Audit
               <span className="buttons__icon-wrapper">
                 <svg
                   viewBox="0 0 14 15"
@@ -195,7 +209,10 @@ function page() {
 
             {/*--gmb-reinst-mob-form--*/}
             <div className="gmb-reinst-mob-form d-block d-lg-none">
-              <LeadContactForm />
+              <LeadContactForm
+                leadFormTitle={GmbOptiFormHead.leadFormTitle}
+                leadCallText={GmbOptiFormHead.leadCallText}
+              />
             </div>
           </div>
 
@@ -253,11 +270,13 @@ function page() {
                 Holding You Back
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings may be suspended when business
-                details conflict with Google&apos;s guidelines, verification
-                standards, or trust signals. Our experts regularly resolve
-                suspensions caused by the most common compliance and listing
-                issues.
+                Most Google Business Profiles underperform not because they’re
+                inactive, but because they’re not fully optimized. From
+                incorrect categories and weak keyword targeting to missing
+                content and low engagement signals, small gaps can significantly
+                impact your visibility. Our experts identify and fix these
+                issues to help your profile rank higher on Google Maps, attract
+                more local searches, and convert visitors into real customers.
               </p>
             </div>
 
@@ -359,7 +378,7 @@ function page() {
 
             <div className="gmb-reinst-sec-3-img-cont">
               <Image
-                src="/images/gmb-reinst/gmb-reinst-banner.svg"
+                src="/images/gmb-optim-1.png"
                 fill
                 alt="gmb-account-recover"
               ></Image>
@@ -377,11 +396,13 @@ function page() {
                 A Fully Optimized GMB in 4 Steps
               </h2>
               <p className="gmb-reinst-descrp">
-                Google Business Profile listings can be suspended when they
-                violate Google&apos;s guidelines or contain inconsistent
-                business information. Based on Google&apos;s policies and common
-                industry cases, some of the most frequent causes of suspension
-                include:
+                Optimizing your Google Business Profile isn’t about making
+                random updates — it’s a structured process focused on improving
+                visibility, relevance, and engagement. Our step-by-step approach
+                ensures every element of your profile is aligned with Google’s
+                ranking factors, helping you rank higher on Google Maps, attract
+                more local traffic, and convert searches into consistent
+                customer inquiries.
               </p>
             </div>
 
@@ -442,8 +463,8 @@ function page() {
 
             <div className="gmb-reinst-sec-4-cta-banner">
               <h2>
-                Every Hour Your Profile Stays Suspended, You Lose Customers.
-                Start Your Case Review Today.
+                Every Day Your Google Business Profile Isn’t Optimized, You’re
+                Losing Customers. Start Ranking Higher Today.
               </h2>
 
               <div className="gmb-reinst-sec-4-banner-ctas">
@@ -512,9 +533,9 @@ function page() {
 
             <div className="gmb-reinst-sec-4-img-cont">
               <Image
-                src="/images/gmb-reinst/gmb-reinst-banner-2.svg"
+                src="/images/gmb-optim-2.png"
                 fill
-                alt="gmb-account-recover"
+                alt="gmb opimization service"
               ></Image>
             </div>
           </div>
@@ -531,10 +552,13 @@ function page() {
                 Why Businesses Choose Zonic Media for GMB Optimization
               </h2>
               <p className="gmb-reinst-descrp">
-                When your Google Business Profile is suspended, choosing the
-                right recovery partner matters. Our team combines deep platform
-                expertise, compliance-focused strategies, and fast action to
-                help restore your listing with minimal downtime.
+                Choosing the right Google Business Profile optimization partner
+                can directly impact your local rankings and lead flow. At Zonic
+                Media, we combine data-driven strategies, industry-specific
+                expertise, and proven optimization techniques to help your
+                business rank higher on Google Maps, increase profile
+                visibility, and consistently generate more calls, leads, and
+                customers.
               </p>
             </div>
 
@@ -621,7 +645,7 @@ function page() {
               </div>
             </div>
 
-            <div className="gmb-reinst-video">
+            {/* <div className="gmb-reinst-video">
               <iframe
                 width="100%"
                 height="315"
@@ -631,9 +655,9 @@ function page() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
-            </div>
+            </div> */}
 
-            <div className="gmb-reinst-profile-slider">
+            {/* <div className="gmb-reinst-profile-slider">
               <h2 className="gmb-reinst-sec-heading">
                 Successful Google Business Profile Reinstatement Cases
               </h2>
@@ -641,7 +665,7 @@ function page() {
               <div className="gmb-reinst-profile-swiper-wrapper">
                 <GmbReinstProfileSwiper />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
@@ -902,11 +926,11 @@ function page() {
 
               <div className="gmb-reinst-price-card-wrapper gmb-reinst-price-banner">
                 <h3 className="gmb-reinst-price-banner-heading">
-                  Don&apos;t Let a Suspended Listing Cost You More Customers
+                  Don&apos;t Let an Unoptimized Profile Cost You More Customers
                 </h3>
 
                 <HashScrollLink href="#gmb-reinst-top" className="buttons">
-                  Get Verified Now
+                  Optimize Profile Now
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -947,13 +971,16 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Real Businesses. Real Reinstatements.
+                Real Businesses. Real Results.
               </h2>
             </div>
 
-            <div className="gmb-reinst-testimonial-wrapper">
-              <GmbReviews items={GmbOptimReviews} />
-            </div>
+            <ClutchWidget
+              widgetType="12"
+              height="375"
+              primaryColor="#f7c00a"
+              reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714"
+            />
           </div>
 
           {/*gmb-reinst-section-8*/}
@@ -1057,7 +1084,10 @@ function page() {
 
         {/*gmb-reinst-contact-form-wrapper right-content*/}
         <div className="gmb-reinst-contact-form">
-          <LeadContactForm />
+          <LeadContactForm
+            leadFormTitle={GmbOptiFormHead.leadFormTitle}
+            leadCallText={GmbOptiFormHead.leadCallText}
+          />
         </div>
       </div>
 

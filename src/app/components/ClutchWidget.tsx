@@ -86,7 +86,19 @@ declare global {
   }
 }
 
-export default function ClutchWidget() {
+type ClutchWidgetProps = {
+  widgetType?: string;
+  height?: string;
+  primaryColor?: string;
+  reviews?: string;
+};
+
+export default function ClutchWidget({
+  widgetType = "14",
+  height = "50",
+  primaryColor,
+  reviews,
+}: ClutchWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -130,11 +142,13 @@ export default function ClutchWidget() {
       ref={widgetRef}
       className="clutch-widget"
       data-url="https://widget.clutch.co"
-      data-widget-type="14"
-      data-height="50"
+      data-widget-type={widgetType}
+      data-height={height}
       data-nofollow="false"
       data-expandifr="true"
       data-scale="100"
+      data-primary-color={primaryColor}
+      data-reviews={reviews}
       data-clutchcompany-id="2617344"
     />
   );

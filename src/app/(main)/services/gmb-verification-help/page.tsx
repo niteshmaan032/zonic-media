@@ -91,6 +91,18 @@ const GmbVerifReviews = [
   },
 ];
 
+const GmbVeriFormHead = {
+  leadFormTitle: "Get Your Free GMB Suspension Audit",
+  leadCallText: (
+    <>
+      One call can help recover your lost business visibility.{" "}
+      <a href="tel:+13027269736" className="lead-call-link">
+        Call Now:(302) 726-9736
+      </a>
+    </>
+  ),
+};
+
 export const metadata: Metadata = {
   title: "Fix Google Business Profile Verification Issues & Get Verified Fast",
   description:
@@ -200,7 +212,10 @@ function page() {
 
             {/*--gmb-reinst-mob-form--*/}
             <div className="gmb-reinst-mob-form d-block d-lg-none">
-              <LeadContactForm />
+              <LeadContactForm
+                leadFormTitle={GmbVeriFormHead.leadFormTitle}
+                leadCallText={GmbVeriFormHead.leadCallText}
+              />
             </div>
           </div>
 
@@ -918,7 +933,10 @@ function page() {
 
         {/*gmb-reinst-contact-form-wrapper right-content*/}
         <div className="gmb-reinst-contact-form">
-          <LeadContactForm />
+          <LeadContactForm
+            leadFormTitle={GmbVeriFormHead.leadFormTitle}
+            leadCallText={GmbVeriFormHead.leadCallText}
+          />
         </div>
       </div>
 
