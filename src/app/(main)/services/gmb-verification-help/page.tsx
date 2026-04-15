@@ -1,6 +1,4 @@
-﻿import GmbReviews from "@/app/components/GmbReviews";
-import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
-import "@/app/style/gmb-reinstatement.css";
+﻿import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -17,13 +15,7 @@ import {
   FaUserAlt,
   FaVideo,
 } from "react-icons/fa";
-import {
-  FaBoltLightning,
-  FaCircleExclamation,
-  FaGear,
-  FaLocationDot,
-  FaTriangleExclamation,
-} from "react-icons/fa6";
+import { FaBoltLightning, FaCircleExclamation, FaGear } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
 import { IoCall } from "react-icons/io5";
 import { LuUserRound } from "react-icons/lu";
@@ -32,10 +24,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { MdLocalOffer } from "react-icons/md";
-import { BsExclamationCircleFill, BsQuestionCircleFill } from "react-icons/bs";
-import { HiMiniUserGroup } from "react-icons/hi2";
-import { IoIosCloseCircle } from "react-icons/io";
-import { AiFillStop } from "react-icons/ai";
+import { BsQuestionCircleFill } from "react-icons/bs";
 import ClutchWidget from "@/app/components/ClutchWidget";
 
 const GmbVerifiFaqs = [
@@ -72,31 +61,12 @@ const GmbVerifiFaqs = [
   },
 ];
 
-const GmbVerifReviews = [
-  {
-    review:
-      '"Our restaurant was suspended for 3 weeks and we had no idea why. Zonic Media diagnosed the issue within hours and had us back on Google Maps in 6 days. The difference in walk-ins was immediate."',
-    author: "Kim",
-    role: "Restaurant Owner, Los Angeles",
-  },
-  {
-    review: `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
-    author: "Dan .",
-    role: "Appliance Repair Service, Canada",
-  },
-  {
-    review:
-      '"We manage GMB profiles for 12 client locations. Zonic Media is our go-to partner for any suspension issue. Fast, professional, and they actually explain what went wrong."',
-    author: "Randy.",
-    role: "MXD Digital Marketing Agency, Utah",
-  },
-];
-
 const GmbVeriFormHead = {
-  leadFormTitle: "Get Your Free GMB Suspension Audit",
+  leadFormTitle: "Get Your Free GMB Verification Audit",
   leadCallText: (
     <>
-      One call can help recover your lost business visibility.{" "}
+      One call can help get your profile verified faster.
+      <br />{" "}
       <a href="tel:+13027269736" className="lead-call-link">
         Call Now:(302) 726-9736
       </a>
@@ -120,13 +90,6 @@ function page() {
           {/*gmb-reinst-section-1*/}
           <div className="gmb-reinst-sec-1">
             <div className="gmb-reinst-sec-1-label-head">
-              {/* <p className="label-head">
-                <span>
-                  <GoShieldCheck />
-                </span>
-                95% Reinstatement Success Rate
-              </p> */}
-
               <p className="label-head">
                 <span>
                   <LuUserRound />
@@ -653,15 +616,6 @@ function page() {
               ></iframe>
             </div>
 
-            {/* <div className="gmb-reinst-profile-slider">
-              <h2 className="gmb-reinst-sec-heading">
-                Successful Google Business Profile Verification Cases
-              </h2>
-
-              <div className="gmb-reinst-profile-swiper-wrapper">
-               
-              </div>
-            </div> */}
           </div>
 
           {/*gmb-reinst-section-6*/}
@@ -863,9 +817,6 @@ function page() {
                   <p>
                     If we can&apos;t get your listing reinstated, you pay
                     nothing. We only win when you win.
-                    {/* <Link href="/legal/refund-policy">
-                      Visit our refund policy page.
-                    </Link> */}
                   </p>
                 </li>
 

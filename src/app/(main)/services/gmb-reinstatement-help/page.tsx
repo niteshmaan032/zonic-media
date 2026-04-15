@@ -67,8 +67,7 @@ const GmbReinstReviews = [
     role: "Restaurant Owner, Los Angeles",
   },
   {
-    review:
-      `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
+    review: `"I tried to appeal myself twice and it made things worse. Zonic's team knew exactly what to say to Google. Reinstated in under a week. Highly recommend to any business owner."`,
     author: "Dan .",
     role: "Appliance Repair Service, Canada",
   },
@@ -84,7 +83,7 @@ const GmbReinsFormHead = {
   leadFormTitle: "Get Your Free GMB Suspension Audit",
   leadCallText: (
     <>
-      One call can help recover your lost business visibility.{" "}
+      One call can help recover your lost business visibility. <br />{" "}
       <a href="tel:+13027269736" className="lead-call-link">
         Call Now:(302) 726-9736
       </a>
@@ -683,7 +682,6 @@ function page() {
                   <li>
                     <GoDotFill /> Profile health check
                   </li>
-                  
                 </ul>
               </div>
 
@@ -720,7 +718,6 @@ function page() {
                   <li>
                     <GoDotFill /> Ongoing monitoring (30 days)
                   </li>
-                
                 </ul>
               </div>
 
@@ -757,8 +754,6 @@ function page() {
                   <li>
                     <GoDotFill /> Monthly reporting
                   </li>
-                
-                  
                 </ul>
               </div>
 

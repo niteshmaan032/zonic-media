@@ -1,6 +1,4 @@
-﻿import GmbReviews from "@/app/components/GmbReviews";
-import GmbReinstProfileSwiper from "@/app/components/GmbReinstProfileSwiper";
-import "@/app/style/gmb-reinstatement.css";
+﻿import "@/app/style/gmb-reinstatement.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -67,30 +65,12 @@ const GmbOptimFaqs = [
   },
 ];
 
-const GmbOptimReviews = [
-  {
-    review: `"Our GMB profile had been live for years but we were barely getting any calls from it. After Zonic Media optimized it, we jumped into the top 3 on Google Maps within 3 weeks. The calls haven't stopped since."`,
-    author: "Marcus D.",
-    role: "HVAC Company Owner, Texas",
-  },
-  {
-    review: `"I didn't realize how much we were leaving on the table with a half-optimized profile. Zonic rebuilt everything from scratch - categories, photos, posts, the lot. Our profile views doubled in the first month."`,
-    author: "Sarah K.",
-    role: "Dental Practice Manager, Florida",
-  },
-  {
-    review:
-      '"We manage GMB profiles for 20+ clients. Zonic Media is the only team we trust for optimization work. They know the platform inside out and the results show."',
-    author: "James R.",
-    role: "Digital Marketing Agency, New York",
-  },
-];
-
 const GmbOptiFormHead = {
   leadFormTitle: "Get Your Free GMB Optimization Audit",
   leadCallText: (
     <>
-      One call can help grow your business visibility.{" "}
+      One call can help grow your business visibility.
+      <br />{" "}
       <a href="tel:+13027269736" className="lead-call-link">
         Call Now:(302) 726-9736
       </a>
@@ -115,13 +95,6 @@ function page() {
           {/*gmb-reinst-section-1*/}
           <div className="gmb-reinst-sec-1">
             <div className="gmb-reinst-sec-1-label-head">
-              {/* <p className="label-head">
-                <span>
-                  <GoShieldCheck />
-                </span>
-                95% Reinstatement Success Rate
-              </p> */}
-
               <p className="label-head">
                 <span>
                   <LuUserRound />
@@ -645,27 +618,6 @@ function page() {
               </div>
             </div>
 
-            {/* <div className="gmb-reinst-video">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/FnCtQnCis6M?si=8HwlibLCyeYTr0-7"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div> */}
-
-            {/* <div className="gmb-reinst-profile-slider">
-              <h2 className="gmb-reinst-sec-heading">
-                Successful Google Business Profile Reinstatement Cases
-              </h2>
-
-              <div className="gmb-reinst-profile-swiper-wrapper">
-                <GmbReinstProfileSwiper />
-              </div>
-            </div> */}
           </div>
 
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
@@ -1007,9 +959,6 @@ function page() {
                   <p>
                     If we can&apos;t get your listing reinstated, you pay
                     nothing. We only win when you win.
-                    {/* <Link href="/legal/refund-policy">
-                      Visit our refund policy page.
-                    </Link> */}
                   </p>
                 </li>
 

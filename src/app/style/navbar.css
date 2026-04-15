@@ -82,7 +82,7 @@
   top: 38px;
   left: 50%;
   transform: translateX(-50%) translateY(-20px);
-  min-width: 750px;
+  min-width: 850px;
   min-height: 100%;
   opacity: 0;
   visibility: hidden;
@@ -118,6 +118,10 @@
   list-style: none;
 }
 
+.services-dropdown-menus > ul > li {
+  width: 100% !important;
+}
+
 .services-dropdown-menus ul > li > a {
   font-size: 26px;
   text-transform: capitalize;
@@ -129,6 +133,52 @@
 
 .services-dropdown-menus ul > li > a:hover {
   color: var(--color2);
+}
+
+.desktop-services-accordion .accordion-item {
+  border: none;
+  background-color: transparent;
+}
+
+.desktop-services-accordion .accordion-button {
+  padding: 0;
+  font-size: 26px;
+  text-transform: capitalize;
+  color: var(--text);
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.desktop-services-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.desktop-services-accordion .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.desktop-services-accordion .accordion-button::after {
+  --bs-accordion-btn-icon-width: 1rem;
+}
+
+.desktop-services-accordion .accordion-body {
+  padding: 12px 0 6px 18px;
+}
+
+.desktop-services-submenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.desktop-services-submenu li a {
+  font-size: 18px !important;
 }
 
 .services-dropdown-menus .buttons {
@@ -251,6 +301,7 @@
   z-index: 90;
   transform: translateY(-100%);
   transition: ease 0.5s;
+  overflow-y: scroll;
 }
 
 .mob-tab-navbar-wrapper.show-mob-tab {
@@ -336,6 +387,52 @@
   color: var(--text);
   display: block;
   transition: color 0.3s ease;
+}
+
+.mobile-services-nested-accordion .accordion-item {
+  border: none;
+  background-color: transparent;
+}
+
+.mobile-services-nested-accordion .accordion-button {
+  padding: 0;
+  font-size: 24px !important;
+  background-color: transparent;
+  color: var(--text);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.mobile-services-nested-accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.mobile-services-nested-accordion .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.mobile-services-nested-accordion .accordion-button::after {
+  --bs-accordion-btn-icon-width: 1.1rem;
+}
+
+.mobile-services-nested-accordion .accordion-body {
+  padding: 14px 0 4px 18px;
+}
+
+.mobile-services-submenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-services-submenu li {
+  margin-bottom: 8px !important;
+}
+
+.mobile-services-submenu li a {
+  font-size: 20px !important;
 }
 
 /*responsive*/

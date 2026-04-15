@@ -40,6 +40,24 @@ const services = [
   },
 ];
 
+const gmbServiceLinks = [
+  // {
+  //   id: "gmb-overview",
+  //   label: "google my business overview",
+  //   link: "/services/google-my-business",
+  // },
+  {
+    id: "gmb-verification-help",
+    label: "GMB Verification Help",
+    link: "/services/gmb-verification-help",
+  },
+  {
+    id: "gmb-optimization",
+    label: "GMB Optimization",
+    link: "/services/gmb-optimization",
+  },
+];
+
 const localSeoServices = [
   {
     id: "Roofing SEO",
@@ -95,6 +113,11 @@ function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const [accordionKey, setAccordionKey] = useState<string | null>(null);
+  const [mobileServicesNestedKey, setMobileServicesNestedKey] = useState<
+    string | null
+  >(null);
+  const [desktopServicesAccordionKey, setDesktopServicesAccordionKey] =
+    useState<string | null>("gmb");
   const isFirstPathnameRenderRef = useRef(true);
   const mobileOpenRef = useRef(mobileOpen);
   const closeMenuFrameRef = useRef<number | null>(null);
@@ -146,6 +169,7 @@ function Navbar() {
     setMobileOpen(isOpen);
     if (!isOpen) {
       setAccordionKey(null);
+      setMobileServicesNestedKey(null);
     }
   };
 
@@ -193,9 +217,7 @@ function Navbar() {
 
   return (
     <>
-      <div
-        className={`navbar-wrapper show ${scrolled ? "scrolled" : ""}`}
-      >
+      <div className={`navbar-wrapper show ${scrolled ? "scrolled" : ""}`}>
         <Container fluid className="p-0">
           <Row className="align-items-center justify-content-between g-0">
             <Col xs="auto">
@@ -222,7 +244,10 @@ function Navbar() {
                   </li>
                   <li
                     className="services-dropdown"
-                    onMouseLeave={() => setActiveService(defaultService)}
+                    onMouseLeave={() => {
+                      setActiveService(defaultService);
+                      setDesktopServicesAccordionKey("gmb");
+                    }}
                   >
                     <Link href={SITE_PATHS.services}>
                       Services <MdArrowOutward size={16} />
@@ -235,12 +260,47 @@ function Navbar() {
                             <ul>
                               {services.map((s) => (
                                 <li key={s.id}>
-                                  <Link
-                                    href={s.link}
-                                    onMouseEnter={() => setActiveService(s)}
-                                  >
-                                    {s.label}
-                                  </Link>
+                                  {s.id === "gmb" ? (
+                                    <Accordion
+                                      flush
+                                      className="desktop-services-accordion"
+                                      activeKey={desktopServicesAccordionKey}
+                                      onSelect={(eventKey) =>
+                                        setDesktopServicesAccordionKey(
+                                          typeof eventKey === "string"
+                                            ? eventKey
+                                            : null,
+                                        )
+                                      }
+                                    >
+                                      <Accordion.Item
+                                        eventKey="gmb"
+                                        onMouseEnter={() => setActiveService(s)}
+                                      >
+                                        <Accordion.Header>
+                                          {s.label}
+                                        </Accordion.Header>
+                                        <Accordion.Body>
+                                          <ul className="desktop-services-submenu">
+                                            {gmbServiceLinks.map((gmbLink) => (
+                                              <li key={gmbLink.id}>
+                                                <Link href={gmbLink.link}>
+                                                  {gmbLink.label}
+                                                </Link>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </Accordion.Body>
+                                      </Accordion.Item>
+                                    </Accordion>
+                                  ) : (
+                                    <Link
+                                      href={s.link}
+                                      onMouseEnter={() => setActiveService(s)}
+                                    >
+                                      {s.label}
+                                    </Link>
+                                  )}
                                 </li>
                               ))}
                             </ul>
@@ -496,12 +556,47 @@ function Navbar() {
                     <ul>
                       {services.map((s) => (
                         <li key={s.id}>
-                          <Link
-                            href={s.link}
-                            onClick={() => handleToggleMobileMenu(false)}
-                          >
-                            {s.label}
-                          </Link>
+                          {s.id === "gmb" ? (
+                            <Accordion
+                              flush
+                              className="mobile-services-nested-accordion"
+                              activeKey={mobileServicesNestedKey}
+                              onSelect={(eventKey) =>
+                                setMobileServicesNestedKey(
+                                  typeof eventKey === "string"
+                                    ? eventKey
+                                    : null,
+                                )
+                              }
+                            >
+                              <Accordion.Item eventKey="gmb-mobile">
+                                <Accordion.Header>{s.label}</Accordion.Header>
+                                <Accordion.Body>
+                                  <ul className="mobile-services-submenu">
+                                    {gmbServiceLinks.map((gmbLink) => (
+                                      <li key={gmbLink.id}>
+                                        <Link
+                                          href={gmbLink.link}
+                                          onClick={() =>
+                                            handleToggleMobileMenu(false)
+                                          }
+                                        >
+                                          {gmbLink.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </Accordion.Body>
+                              </Accordion.Item>
+                            </Accordion>
+                          ) : (
+                            <Link
+                              href={s.link}
+                              onClick={() => handleToggleMobileMenu(false)}
+                            >
+                              {s.label}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -544,7 +639,9 @@ function Navbar() {
             </li>
 
             <li>
-              <Link href="/services/gmb-reinstatement-help">GMB Reinstatement</Link>
+              <Link href="/services/gmb-reinstatement-help">
+                GMB Reinstatement
+              </Link>
             </li>
 
             <li>
