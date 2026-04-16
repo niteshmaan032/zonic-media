@@ -3,6 +3,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 
 export type LeadPayload = {
   formType?: string;
+  sourcePage?: string;
   fullName: string;
   email: string;
   contact: string;
@@ -102,6 +103,7 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
   const { from } = getMailConfig();
   const {
     formType,
+    sourcePage,
     fullName,
     email,
     contact,
@@ -111,7 +113,10 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
   } = payload;
   const servicesText = toServicesText(services);
 
-  if (formType === "gmb-reinstatement") {
+  if (
+    formType === "gmb-reinstatement" &&
+    sourcePage === "/services/gmb-reinstatement-help"
+  ) {
     const firstName = escapeHtml(getFirstName(fullName));
     const safeBusinessName = escapeHtml(
       businessName?.trim() || "your business",

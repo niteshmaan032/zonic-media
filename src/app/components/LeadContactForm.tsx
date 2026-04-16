@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 
@@ -39,6 +39,7 @@ export default function LeadContactForm({
   submitButtonText = "Get Case Review",
 }: LeadContactFormProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
@@ -76,6 +77,7 @@ export default function LeadContactForm({
         },
         body: JSON.stringify({
           formType: "gmb-reinstatement",
+          sourcePage: pathname,
           fullName: data.fullName,
           email: data.email,
           contact: data.contact,

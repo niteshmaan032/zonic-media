@@ -523,8 +523,10 @@
   padding: 0px 100px 60px 100px;
 }
 
-.local-seo-home-sec-9 .testimonialSwiper .swiper-slide {
-  background-color: var(--white);
+.local-seo-home-testimonial-widget {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 /*--local-seo-home-sec-10--*/

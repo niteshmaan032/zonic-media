@@ -5,7 +5,6 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import LocalSeoSec8BannerAnimation from "@/app/components/LocalSeoSec8BannerAnimation";
-import Testimonials from "@/app/components/Testimonials";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
 import { Metadata } from "next";
@@ -763,7 +762,14 @@ function page() {
             Hear what our clients say about
             <span> working with Zonic Media.</span>
           </h2>
-          <Testimonials />
+          <div className="local-seo-home-testimonial-widget">
+            <ClutchWidget
+              widgetType="12"
+              height="375"
+              primaryColor="#f7c00a"
+              reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+            />
+          </div>
         </div>
 
         {/*--local-seo-home-sec-10--*/}

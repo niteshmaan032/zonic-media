@@ -49,6 +49,8 @@ export const leadsRoute = async (
 ): Promise<LeadsRouteResult> => {
   const formType =
     typeof body.formType === "string" ? sanitizeText(body.formType) : "";
+  const sourcePage =
+    typeof body.sourcePage === "string" ? sanitizeText(body.sourcePage) : "";
   const fullName = typeof body.fullName === "string" ? sanitizeText(body.fullName) : "";
   const email = typeof body.email === "string" ? sanitizeText(body.email).toLowerCase() : "";
   const contact = typeof body.contact === "string" ? sanitizeText(body.contact) : "";
@@ -97,6 +99,7 @@ export const leadsRoute = async (
 
   const payload: LeadPayload = {
     formType,
+    sourcePage,
     fullName,
     email,
     contact,
