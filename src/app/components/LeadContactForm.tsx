@@ -21,6 +21,7 @@ type LeadContactFormValues = {
 type LeadContactFormProps = {
   leadFormTitle?: string;
   leadCallText?: ReactNode;
+  submitButtonText?: string;
 };
 
 const DEFAULT_SERVICE = "Google My Business (GMB)";
@@ -35,6 +36,7 @@ export default function LeadContactForm({
       </a>
     </>
   ),
+  submitButtonText = "Get Case Review",
 }: LeadContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
@@ -269,7 +271,7 @@ export default function LeadContactForm({
                 Sending...
               </>
             ) : (
-              "Get Case Review"
+              submitButtonText
             )}
           </button>
         </div>

@@ -307,7 +307,7 @@
   border: 1px solid var(--seo-home-color-3);
   border-radius: 10px;
   padding: 22px;
-  min-height: 380px;
+  height: 380px;
 }
 
 .local-seo-home-cards-indust-heading {
@@ -768,7 +768,7 @@
   }
 
   .local-seo-home-cards-indust-cont {
-    min-height: 100%;
+    height: 100%;
   }
 
   .local-seo-home-sec-6 .local-seo-card-banner-ctas .buttons:nth-child(1) {
@@ -1002,7 +1002,7 @@
   }
 
   .local-seo-home-card-container {
-    min-height: 300px;
+    height: 300px;
   }
 
   .local-seo-home-card-container svg {
@@ -1086,6 +1086,117 @@
 /*--Large Desktop--*/
 
 @media (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .local-seo-home-sec-1 {
+    padding: 120px 40px 0px 40px;
+    gap: 40px;
+  }
+
+  /*--local-seo-home-contact-form-top--*/
+
+  .local-seo-home-content {
+    padding-right: 20px;
+  }
+
+  .local-seo-home-main-heading {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .local-seo-home-sec-1-stats {
+    gap: 20px;
+  }
+
+  /*--local-seo-home-sec-2--*/
+
+  .local-seo-home-sec-2 {
+    margin-top: 40px;
+  }
+
+  /*--local-seo-home-sec-3--*/
+  .local-seo-home-sec-3 {
+    padding: 40px;
+  }
+
+  .local-seo-home-card-container {
+    height: 300px;
+  }
+
+  .local-seo-home-card-container svg {
+    flex-shrink: 0;
+  }
+
+  .local-seo-card-banner {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-4--*/
+
+  .local-seo-home-sec-4 {
+    padding: 0px 40px;
+  }
+
+  /*--local-seo-home-sec-5--*/
+
+  .local-seo-home-sec-5 {
+    padding: 40px 30px;
+  }
+
+  .local-seo-home-center-head .local-seo-home-sec-head {
+    width: 60%;
+  }
+
+  /*--local-seo-home-sec-6--*/
+
+  .local-seo-home-sec-6 {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-7--*/
+
+  .local-seo-home-sec-7 {
+    padding: 40px;
+  }
+
+  .local-seo-home-pricing-card-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  /*--local-seo-home-sec-8--*/
+  .local-seo-home-sec-8 {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-9--*/
+  .local-seo-home-sec-9 {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-10--*/
+  .local-seo-home-sec-10 {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-11--*/
+  .local-seo-home-sec-11 {
+    padding: 40px;
+  }
+
+  /*--local-seo-home-sec-12--*/
+
+  .local-seo-home-sec-12 {
+    background-image: url("/images/bg-3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
 }
 /*--Extra Large Desktop--*/
 

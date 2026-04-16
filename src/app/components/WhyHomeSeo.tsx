@@ -108,7 +108,9 @@ function WhyHomeSeo() {
           <Col lg={7}>
             <div className="why-home-seo-content-wrapper">
               <p className="local-seo-home-label">
-                95% Proven Growth Success Rate
+                <p className="local-seo-home-label">
+                  Get More Calls from Local Customers
+                </p>
               </p>
               <h2 className="why-home-seo-heading">
                 Why Home Service Businesses Need a Local SEO Company

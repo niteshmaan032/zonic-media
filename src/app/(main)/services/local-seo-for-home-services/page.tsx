@@ -83,6 +83,19 @@ const SeoHomeFaqs = [
   },
 ];
 
+const LocalSeoHomeFormHead = {
+  leadFormTitle: "Get Your Free Local SEO Audit",
+  leadCallText: (
+    <>
+      One call can help you get more local rankings, calls, and booked jobs.
+      <br />{" "}
+      <a href="tel:+13027269736" className="lead-call-link">
+        Call Now:(302) 726-9736
+      </a>
+    </>
+  ),
+};
+
 export const metadata: Metadata = {
   title: "Local SEO for Home Services | More Calls & Local Rankings",
   description:
@@ -152,24 +165,28 @@ function page() {
 
             <div className="local-seo-home-sec-1-stats">
               <p>
-                <span> 1500+ </span>
-                Home Service Businesses <br /> Ranked
+                <span> 500+ </span>
+                500+ Businesses Ranked <br /> on Google
               </p>
 
               <p>
-                <span> 95% </span>
-                Clients See Lead Growth
+                <span>4.9/5 </span>
+                Client Satisfaction Rating
               </p>
 
               <p>
-                <span> 3-6 Months </span>
+                <span> 3-4 Months </span>
                 Average SEO Results Time
               </p>
             </div>
           </div>
 
           <div className="local-seo-home-contact-form">
-            <LeadContactForm />
+            <LeadContactForm
+              leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
+              leadCallText={LocalSeoHomeFormHead.leadCallText}
+              submitButtonText="Contact Us"
+            />
           </div>
         </div>
         {/*--local-seo-home-sec-2--*/}
@@ -851,7 +868,11 @@ function page() {
           </div>
 
           <div className="local-seo-home-contact-form">
-            <LeadContactForm />
+            <LeadContactForm
+              leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
+              leadCallText={LocalSeoHomeFormHead.leadCallText}
+              submitButtonText="Contact Us"
+            />
           </div>
         </div>
 
