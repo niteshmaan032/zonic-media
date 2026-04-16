@@ -183,7 +183,7 @@ function Page() {
 
               <Link
                 className="service-page-section-3-link"
-                href="/services/local-seo"
+                href="/services/local-seo-for-home-services"
               >
                 Explore Local SEO
               </Link>

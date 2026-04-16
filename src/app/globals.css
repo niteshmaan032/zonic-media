@@ -31,6 +31,7 @@ body p {
   --color8: #2567e8;
   --stroke: #d9d9d9;
   --white: #ffffff;
+  --lead-form-confi: #c6fdbd;
   --admin-primary: #009cff;
   font-family: var(--neue-haas);
 }
@@ -224,7 +225,7 @@ body p {
 }
 
 .lead-form-wrapper .lead-submit-btn {
-  background: var(--gmb-color-4);
+  background: var(--color8);
   color: var(--white);
   font-weight: 500;
   padding: 14px;
@@ -237,8 +238,8 @@ body p {
 }
 
 .lead-form-wrapper .lead-confidential-box {
-  background: var(--gmb-color-9);
-  color: var(--gmb-color-10);
+  background: var(--lead-form-confi);
+  color: var(--secondary);
   border-radius: 8px;
   padding: 8px;
   font-size: 14px;
@@ -252,6 +253,7 @@ body p {
 
 .lead-form-wrapper .lead-confidential-box svg {
   flex-shrink: 0;
+  color: var(--color3);
 }
 
 /* Call text */
@@ -265,7 +267,7 @@ body p {
 
 /* Call link */
 .lead-form-wrapper .lead-call-link {
-  color: var(--gmb-color-4);
+  color: var(--color8);
   font-weight: 500;
   text-decoration: none;
 }

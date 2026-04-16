@@ -14,7 +14,7 @@ export const SITE_PATHS = {
   services: "/services",
   contact: "/contact-us",
   blogs: "/coming-soon",
-  seo: "/services/local-seo",
+  seo: "/services/local-seo-for-home-services",
   terms: "/legal/terms-conditions",
   legalPlaceholder: "/coming-soon",
   privacy: "/legal/privacy-policy",

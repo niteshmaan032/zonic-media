@@ -73,7 +73,9 @@ function Footer() {
                     <Link href="/services/google-ads">Pay Per Click (PPC)</Link>
                   </li>
                   <li>
-                    <Link href="/services/local-seo">Local Seo</Link>
+                    <Link href="/services/local-seo-for-home-services">
+                      Local Seo
+                    </Link>
                   </li>
                 </ul>
 

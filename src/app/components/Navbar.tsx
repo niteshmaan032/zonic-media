@@ -29,7 +29,7 @@ const services = [
     label: "local SEO",
     image: "/images/header-seo.webp",
     alt: "local seo",
-    link: "/services/local-seo",
+    link: "/services/local-seo-for-home-services",
   },
   {
     id: "ppc",

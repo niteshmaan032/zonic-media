@@ -421,7 +421,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <Link href="/services/local-seo">view local SEO service</Link>
+            <Link href="/services/local-seo-for-home-services">
+              view local SEO service
+            </Link>
           </div>
           <div className="home-sec5-service-img-cont">
             <Image
