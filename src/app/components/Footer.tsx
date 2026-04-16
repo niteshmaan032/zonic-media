@@ -74,7 +74,7 @@ function Footer() {
                   </li>
                   <li>
                     <Link href="/services/local-seo-for-home-services">
-                      Local Seo
+                      Local SEO
                     </Link>
                   </li>
                 </ul>
