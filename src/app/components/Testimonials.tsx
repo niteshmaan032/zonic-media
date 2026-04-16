@@ -53,7 +53,7 @@ function Testimonials() {
         >
           <SwiperSlide>
             <div className="testimonial-rating-card">
-              <p className="testimonial-rating-number">4.8</p>
+              <p className="testimonial-rating-number">5.0</p>
               <div className="testimonial-rating-stars">
                 <FaStar size={24} />
                 <FaStar size={24} />
