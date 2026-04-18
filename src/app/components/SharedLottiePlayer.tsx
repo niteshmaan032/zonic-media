@@ -6,7 +6,9 @@ import { useEffect, useRef, useState } from "react";
 type SharedLottiePlayerProps = {
   className: string;
   src: string;
+  eager?: boolean;
   loop?: boolean;
+  pauseWhenOffscreen?: boolean;
   rootMargin?: string;
   speed?: number;
   threshold?: number;
@@ -15,16 +17,19 @@ type SharedLottiePlayerProps = {
 function SharedLottiePlayer({
   className,
   src,
+  eager = true,
   loop = true,
-  rootMargin = "200px 0px",
+  pauseWhenOffscreen = false,
+  rootMargin = "600px 0px",
   speed = 1,
   threshold = 0.05,
 }: SharedLottiePlayerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const animationRef = useRef<DotLottie | null>(null);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [shouldLoad, setShouldLoad] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(eager);
   const [isInView, setIsInView] = useState(false);
+  const [hasMeasuredVisibility, setHasMeasuredVisibility] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -50,9 +55,10 @@ function SharedLottiePlayer({
     const observer = new IntersectionObserver(
       ([entry]) => {
         const visible = entry?.isIntersecting ?? false;
+        setHasMeasuredVisibility(true);
         setIsInView(visible);
 
-        if (visible) {
+        if (!eager && visible) {
           setShouldLoad(true);
         }
       },
@@ -67,7 +73,7 @@ function SharedLottiePlayer({
     return () => {
       observer.disconnect();
     };
-  }, [rootMargin, threshold]);
+  }, [eager, rootMargin, threshold]);
 
   useEffect(() => {
     const animation = animationRef.current;
@@ -79,13 +85,25 @@ function SharedLottiePlayer({
     animation.setLoop(loop);
     animation.setSpeed(speed);
 
-    if (prefersReducedMotion || !isInView) {
+    if (prefersReducedMotion) {
+      animation.pause();
+      return;
+    }
+
+    if (pauseWhenOffscreen && hasMeasuredVisibility && !isInView) {
       animation.pause();
       return;
     }
 
     animation.play();
-  }, [isInView, loop, prefersReducedMotion, speed]);
+  }, [
+    hasMeasuredVisibility,
+    isInView,
+    loop,
+    pauseWhenOffscreen,
+    prefersReducedMotion,
+    speed,
+  ]);
 
   return (
     <div ref={containerRef} className={className} aria-hidden="true">
@@ -93,7 +111,7 @@ function SharedLottiePlayer({
         <DotLottieReact
           src={src}
           loop={loop}
-          autoplay={false}
+          autoplay={!prefersReducedMotion}
           dotLottieRefCallback={(instance) => {
             animationRef.current = instance;
 
@@ -104,7 +122,12 @@ function SharedLottiePlayer({
             instance.setLoop(loop);
             instance.setSpeed(speed);
 
-            if (prefersReducedMotion || !isInView) {
+            if (prefersReducedMotion) {
+              instance.pause();
+              return;
+            }
+
+            if (pauseWhenOffscreen && hasMeasuredVisibility && !isInView) {
               instance.pause();
               return;
             }

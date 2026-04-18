@@ -902,10 +902,9 @@ function page() {
           </h2>
 
           <p className="local-seo-home-sec-12-descrp">
-            When homeowners search for services like yours, they choose the
-            businesses they see first on Google. We position your company at the
-            top of local search and maps, helping you attract more calls, more
-            jobs, and consistent growth without relying on ads.
+            We rank your business at the top of Google—so you get more calls,
+            more jobs, and steady growth without ads, consistently attracting
+            homeowners ready to hire.
           </p>
 
           <div className="local-seo-home-sec-12-ctas">
