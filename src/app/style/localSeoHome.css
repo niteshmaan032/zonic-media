@@ -66,6 +66,7 @@
 .local-seo-sec-1-cta-clutch .buttons {
   background-color: var(--secondary);
   border-color: var(--secondary);
+  flex-shrink: 0;
 }
 
 .local-seo-home-sec-1-stats {
