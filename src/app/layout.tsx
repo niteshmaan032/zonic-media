@@ -47,6 +47,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          id="clutch-widget-script"
+          src="https://widget.clutch.co/static/js/widget.js"
+          strategy="beforeInteractive"
+        />
         {isProd && (
           <>
             <Script

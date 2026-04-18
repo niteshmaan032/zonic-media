@@ -75,7 +75,7 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 
 declare global {
   interface Window {
@@ -91,10 +91,10 @@ type ClutchWidgetProps = {
   height?: string;
   primaryColor?: string;
   reviews?: string;
-  rootMargin?: string;
 };
 
 let clutchScriptPromise: Promise<void> | null = null;
+let clutchInitScheduled = false;
 
 function loadClutchScript(): Promise<void> {
   if (typeof window === "undefined") {
@@ -142,69 +142,88 @@ function loadClutchScript(): Promise<void> {
   return clutchScriptPromise;
 }
 
+function scheduleClutchInit(): void {
+  if (clutchInitScheduled || typeof window === "undefined") {
+    return;
+  }
+
+  clutchInitScheduled = true;
+
+  requestAnimationFrame(() => {
+    clutchInitScheduled = false;
+
+    if (window.CLUTCHCO?.Init) {
+      window.CLUTCHCO.Init();
+    } else if (window.CLUTCHCO?.init) {
+      window.CLUTCHCO.init();
+    }
+  });
+}
+
 export default function ClutchWidget({
   widgetType = "14",
   height = "50",
   primaryColor,
   reviews,
-  rootMargin = "300px 0px",
 }: ClutchWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
   const initializedRef = useRef(false);
-  const [shouldInit, setShouldInit] = useState(false);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+
+  const isWidgetFilled = () => {
+    const widget = widgetRef.current;
+
+    if (!widget) return false;
+
+    return (
+      widget.dataset.clutchReady === "true" ||
+      widget.childElementCount > 0 ||
+      Boolean(widget.querySelector("iframe"))
+    );
+  };
 
   useEffect(() => {
     const widget = widgetRef.current;
 
-    if (!widget) return;
+    if (!mounted || !widget || initializedRef.current) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setShouldInit(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin,
-        threshold: 0.01,
-      },
-    );
+    if (isWidgetFilled()) {
+      initializedRef.current = true;
+      widget.dataset.clutchReady = "true";
+      return;
+    }
 
-    observer.observe(widget);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [rootMargin]);
-
-  useEffect(() => {
-    if (!shouldInit || !widgetRef.current || initializedRef.current) return;
-
-    const initWidget = () => {
-      const widget = widgetRef.current;
-
-      if (!widget || initializedRef.current) return;
-
-      if (window.CLUTCHCO?.Init) {
-        window.CLUTCHCO.Init();
-      } else if (window.CLUTCHCO?.init) {
-        window.CLUTCHCO.init();
+    let cancelled = false;
+    const observer = new MutationObserver(() => {
+      if (!widgetRef.current || !isWidgetFilled()) {
+        return;
       }
 
       initializedRef.current = true;
-    };
+      widgetRef.current.dataset.clutchReady = "true";
+      observer.disconnect();
+    });
 
-    let cancelled = false;
+    observer.observe(widget, {
+      childList: true,
+      subtree: true,
+    });
 
     loadClutchScript()
       .then(() => {
         if (cancelled) return;
 
-        requestAnimationFrame(() => {
-          if (cancelled) return;
-          initWidget();
-        });
+        if (isWidgetFilled()) {
+          initializedRef.current = true;
+          widget.dataset.clutchReady = "true";
+          return;
+        }
+
+        scheduleClutchInit();
       })
       .catch(() => {
         initializedRef.current = false;
@@ -212,10 +231,21 @@ export default function ClutchWidget({
 
     return () => {
       cancelled = true;
+      observer.disconnect();
     };
-  }, [shouldInit]);
+  }, [mounted]);
 
   const minHeight = Number(height);
+
+  if (!mounted) {
+    return (
+      <div
+        className="clutch-widget"
+        style={Number.isFinite(minHeight) ? { minHeight } : undefined}
+        suppressHydrationWarning
+      />
+    );
+  }
 
   return (
     <div
