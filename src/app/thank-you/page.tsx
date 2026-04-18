@@ -1,12 +1,12 @@
 "use client";
 
 import "@/app/style/thankyou.css";
+import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import ThankYouEmailAnimation from "@/app/components/ThankYouEmailAnimation";
 import { FaFacebookSquare, FaYoutube } from "react-icons/fa";
 import { FaCircleCheck } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
@@ -101,7 +101,10 @@ function Page() {
         <Row className="m-0 h-100 align-items-center pb-5 ">
           <Col lg={6}>
             <div className="thank-img-cont">
-              <ThankYouEmailAnimation />
+              <SharedLottiePlayer
+                className="thank-lottie"
+                src="/lottie/email.lottie"
+              />
             </div>
           </Col>
 

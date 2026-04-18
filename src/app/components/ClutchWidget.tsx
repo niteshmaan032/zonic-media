@@ -75,7 +75,7 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 declare global {
   interface Window {
@@ -91,56 +91,137 @@ type ClutchWidgetProps = {
   height?: string;
   primaryColor?: string;
   reviews?: string;
+  rootMargin?: string;
 };
 
-export default function ClutchWidget({
-  widgetType = "14",
-  height = "50",
-  primaryColor,
-  reviews,
-}: ClutchWidgetProps) {
-  const widgetRef = useRef<HTMLDivElement>(null);
+let clutchScriptPromise: Promise<void> | null = null;
 
-  useEffect(() => {
-    if (!widgetRef.current) return;
+function loadClutchScript(): Promise<void> {
+  if (typeof window === "undefined") {
+    return Promise.resolve();
+  }
 
-    const initWidget = () => {
-      if (!widgetRef.current) return;
-      widgetRef.current.innerHTML = "";
+  if (window.CLUTCHCO?.Init || window.CLUTCHCO?.init) {
+    return Promise.resolve();
+  }
 
-      if (window.CLUTCHCO?.Init) {
-        window.CLUTCHCO.Init();
-      } else if (window.CLUTCHCO?.init) {
-        window.CLUTCHCO.init();
-      }
-    };
+  if (clutchScriptPromise) {
+    return clutchScriptPromise;
+  }
 
+  clutchScriptPromise = new Promise((resolve, reject) => {
     const existingScript = document.querySelector(
       'script[src="https://widget.clutch.co/static/js/widget.js"]',
     ) as HTMLScriptElement | null;
 
+    const handleLoad = () => resolve();
+    const handleError = () => {
+      clutchScriptPromise = null;
+      reject(new Error("Failed to load Clutch widget script."));
+    };
+
     if (existingScript) {
-      initWidget();
+      existingScript.addEventListener("load", handleLoad, { once: true });
+      existingScript.addEventListener("error", handleError, { once: true });
+
+      if (window.CLUTCHCO?.Init || window.CLUTCHCO?.init) {
+        resolve();
+      }
+
       return;
     }
 
     const script = document.createElement("script");
     script.src = "https://widget.clutch.co/static/js/widget.js";
     script.async = true;
-    script.onload = initWidget;
+    script.addEventListener("load", handleLoad, { once: true });
+    script.addEventListener("error", handleError, { once: true });
     document.body.appendChild(script);
+  });
+
+  return clutchScriptPromise;
+}
+
+export default function ClutchWidget({
+  widgetType = "14",
+  height = "50",
+  primaryColor,
+  reviews,
+  rootMargin = "300px 0px",
+}: ClutchWidgetProps) {
+  const widgetRef = useRef<HTMLDivElement>(null);
+  const initializedRef = useRef(false);
+  const [shouldInit, setShouldInit] = useState(false);
+
+  useEffect(() => {
+    const widget = widgetRef.current;
+
+    if (!widget) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setShouldInit(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin,
+        threshold: 0.01,
+      },
+    );
+
+    observer.observe(widget);
 
     return () => {
-      if (widgetRef.current) {
-        widgetRef.current.innerHTML = "";
-      }
+      observer.disconnect();
     };
-  }, []);
+  }, [rootMargin]);
+
+  useEffect(() => {
+    if (!shouldInit || !widgetRef.current || initializedRef.current) return;
+
+    const initWidget = () => {
+      const widget = widgetRef.current;
+
+      if (!widget || initializedRef.current) return;
+
+      if (window.CLUTCHCO?.Init) {
+        window.CLUTCHCO.Init();
+      } else if (window.CLUTCHCO?.init) {
+        window.CLUTCHCO.init();
+      }
+
+      initializedRef.current = true;
+    };
+
+    let cancelled = false;
+
+    loadClutchScript()
+      .then(() => {
+        if (cancelled) return;
+
+        requestAnimationFrame(() => {
+          if (cancelled) return;
+          initWidget();
+        });
+      })
+      .catch(() => {
+        initializedRef.current = false;
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [shouldInit]);
+
+  const minHeight = Number(height);
 
   return (
     <div
       ref={widgetRef}
       className="clutch-widget"
+      style={Number.isFinite(minHeight) ? { minHeight } : undefined}
       data-url="https://widget.clutch.co"
       data-widget-type={widgetType}
       data-height={height}

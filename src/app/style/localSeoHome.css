@@ -225,14 +225,18 @@
   border-radius: 10px;
   overflow: hidden;
   background: var(--white);
+  contain: paint;
 }
 
 .why-home-seo-lottie {
   width: 100%;
   height: 100%;
+  contain: layout paint;
 }
 
+.why-home-seo-lottie canvas,
 .why-home-seo-lottie svg {
+  display: block;
   width: 100% !important;
   height: 100% !important;
 }
@@ -307,7 +311,7 @@
   border: 1px solid var(--seo-home-color-3);
   border-radius: 10px;
   padding: 22px;
-  height: 380px;
+  min-height: 380px;
 }
 
 .local-seo-home-cards-indust-heading {
@@ -357,24 +361,15 @@
 }
 
 .local-seo-home-pricing-card-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 60px;
 }
 
-.local-seo-home-pricing-card-cont {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
 .local-seo-home-pricing-card {
-  min-width: 380px;
   padding: 24px;
   border-radius: 20px;
   background: var(--white);
   border: 1px solid var(--seo-home-color-3);
+  min-height: 600px;
 }
 
 .local-seo-home-pricing-card--dominate {
@@ -510,10 +505,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  contain: layout paint;
 }
 
 .local-seo-home-sec-8-banner-lottie canvas,
 .local-seo-home-sec-8-banner-lottie svg {
+  display: block;
   width: 100% !important;
   height: 100% !important;
 }
@@ -527,6 +524,8 @@
   width: 100%;
   min-width: 0;
   overflow: hidden;
+  contain: layout paint;
+  isolation: isolate;
 }
 
 /*--local-seo-home-sec-10--*/
@@ -581,6 +580,7 @@
 .local-seo-home-sec-12-heading {
   font-size: 42px;
   font-weight: 500;
+  text-align: center;
 }
 
 .local-seo-home-sec-12-descrp {
@@ -617,20 +617,26 @@
 @media (max-width: 991.98px) {
   .local-seo-home-sec-1 {
     flex-direction: column;
-    padding: 100px 20px 0px 20px;
+    gap: 32px;
+    padding: 100px 20px 0;
   }
 
   /*--local-seo-home-contact-form-top--*/
 
-  .local-seo-home-contact-form {
+  .local-seo-home-contact-form,
+  .local-seo-home-content {
     flex-basis: 100%;
+    width: 100%;
+  }
+
+  .local-seo-home-contact-form {
     position: relative;
-    height: 100%;
+    top: auto;
+    height: auto;
   }
 
   .local-seo-home-content {
-    flex-basis: 100%;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .local-seo-home-main-heading {
@@ -639,9 +645,8 @@
   }
 
   .local-seo-sec-1-cta-clutch {
-    display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 20px;
   }
 
@@ -654,19 +659,26 @@
   }
 
   /*--local-seo-home-sec-3--*/
-  .local-seo-home-sec-3 {
+
+  .local-seo-home-sec-3,
+  .local-seo-home-sec-5,
+  .local-seo-home-sec-6 {
     padding: 40px 20px;
+  }
+
+  .local-seo-home-sec-4,
+  .local-seo-home-sec-7,
+  .local-seo-home-sec-8,
+  .local-seo-home-sec-9,
+  .local-seo-home-sec-10,
+  .local-seo-home-sec-11 {
+    padding: 0 20px 40px;
   }
 
   .local-seo-home-head-wrapper {
     flex-direction: column;
-    align-items: start;
-  }
-
-  .local-seo-home-heading-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .local-seo-home-sec-head {
@@ -681,7 +693,7 @@
 
   .local-seo-home-card-container {
     padding: 20px;
-    height: 100%;
+    height: auto;
   }
 
   .local-seo-card-banner {
@@ -695,6 +707,8 @@
   }
 
   .local-seo-card-banner-ctas {
+    align-items: stretch;
+    flex-wrap: wrap;
     margin-top: 10px;
   }
 
@@ -704,22 +718,18 @@
 
   /*--local-seo-home-sec-4--*/
 
-  .local-seo-home-sec-4 {
-    padding: 0px 20px 40px 20px;
-  }
-
   .why-home-seo-visual-wrapper {
     position: relative;
-    top: 0px;
+    top: auto;
   }
 
   .why-home-seo-visual {
-    height: 100%;
+    height: clamp(280px, 55vw, 420px);
     margin-bottom: 40px;
   }
 
   .why-home-seo-content-wrapper {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .why-home-seo-heading {
@@ -734,15 +744,10 @@
 
   /*--local-seo-home-sec-5--*/
 
-  .local-seo-home-sec-5 {
-    padding: 40px 20px;
-  }
-
   .local-seo-home-center-head {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    text-align: start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
   }
 
   .local-seo-home-sec-5 .local-seo-card-banner-ctas .buttons:nth-child(1) {
@@ -759,18 +764,12 @@
 
   /*--local-seo-home-sec-6--*/
 
-  .local-seo-home-sec-6 {
-    padding: 40px 20px;
-  }
-
   .local-seo-home-cards-industries-wrapper {
     margin-top: 20px;
-    flex-direction: column;
-    align-items: start;
   }
 
   .local-seo-home-cards-indust-cont {
-    height: 100%;
+    height: auto;
   }
 
   .local-seo-home-sec-6 .local-seo-card-banner-ctas .buttons:nth-child(1) {
@@ -779,62 +778,37 @@
 
   /*--local-seo-home-sec-7--*/
 
-  .local-seo-home-sec-7 {
-    padding: 0px 20px 40px 20px;
-  }
-
   .local-seo-home-pricing-card-wrapper {
     margin-top: 40px;
   }
 
-  .local-seo-home-pricing-card-cont {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
   .local-seo-home-pricing-card {
-    min-width: 350px;
+    min-width: 0;
+    min-height: 0;
   }
 
   /*--local-seo-home-sec-8--*/
-  .local-seo-home-sec-8 {
-    padding: 0px 20px 40px 20px;
-  }
 
   .local-seo-home-sec-8 .local-seo-card-banner {
     justify-content: center;
-    height: 100%;
+    height: auto;
   }
 
   .local-seo-home-sec-8-banner-lottie {
     width: 100%;
-    height: 400px;
-  }
-
-  /*--local-seo-home-sec-9--*/
-  .local-seo-home-sec-9 {
-    padding: 0px 20px 40px 20px;
-  }
-
-  /*--local-seo-home-sec-10--*/
-  .local-seo-home-sec-10 {
-    padding: 0px 20px 40px 20px;
-  }
-
-  .local-seo-home-faq-wrapper {
-    margin-top: 20px;
+    height: clamp(220px, 52vw, 340px);
   }
 
   /*--local-seo-home-sec-11--*/
-  .local-seo-home-sec-11 {
-    padding: 0px 20px 40px 20px;
-    margin-bottom: 40px;
-  }
 
   .local-seo-home-trust-badges {
     margin-top: 20px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .local-seo-home-trust-badges p {
+    text-wrap: wrap;
   }
 
   /*--local-seo-home-sec-12--*/
@@ -855,35 +829,79 @@
 
   .local-seo-home-sec-12-ctas {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .local-seo-home-sec-12-ctas .buttons {
+    justify-content: center;
+    width: 100%;
   }
 }
 
 /*--mobile--*/
 @media (max-width: 575.98px) {
+  .local-seo-home-sec-1 {
+    padding-top: 96px;
+  }
+
+  .local-seo-home-main-heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .local-seo-home-sec-head,
+  .why-home-seo-heading,
+  .local-seo-card-banner-heading,
+  .local-seo-home-sec-12-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .local-seo-home-descrp,
+  .local-seo-card-descrp,
+  .local-seo-home-sec-12-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .why-home-seo-visual {
+    height: clamp(260px, 70vw, 340px);
+    margin-bottom: 32px;
+  }
+
+  .local-seo-home-sec-8-banner-lottie {
+    height: clamp(200px, 62vw, 280px);
+  }
 }
 
 /*--Tab--*/
 
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .local-seo-home-sec-1 {
-    flex-direction: column;
-    padding: 120px 40px 0px 40px;
-  }
-
-  /*--local-seo-home-contact-form-top--*/
-
-  .local-seo-home-contact-form {
-    width: 100%;
+    padding: 120px 40px 0;
   }
 
   .local-seo-home-sec-1-stats {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   /*--local-seo-home-sec-3--*/
-  .local-seo-home-sec-3 {
+
+  .local-seo-home-sec-3,
+  .local-seo-home-sec-5,
+  .local-seo-home-sec-6 {
     padding: 40px;
+  }
+
+  .local-seo-home-sec-4,
+  .local-seo-home-sec-7,
+  .local-seo-home-sec-8,
+  .local-seo-home-sec-9,
+  .local-seo-home-sec-10,
+  .local-seo-home-sec-11 {
+    padding: 0 40px 40px;
   }
 
   .local-seo-card-banner-ctas .buttons:nth-child(1) {
@@ -892,65 +910,12 @@
 
   /*--local-seo-home-sec-4--*/
 
-  .local-seo-home-sec-4 {
-    padding: 0px 40px 40px 40px;
-  }
-
-  .why-home-seo-visual-wrapper {
-    position: relative;
-    top: 0px;
-  }
-
   .why-home-seo-visual {
-    height: 400px;
+    height: clamp(320px, 45vw, 400px);
   }
 
   .why-home-seo-content-wrapper .global-faqs-accordion button {
     padding: 14px;
-  }
-
-  /*--local-seo-home-sec-5--*/
-
-  .local-seo-home-sec-5 {
-    padding: 40px;
-  }
-
-  /*--local-seo-home-sec-6--*/
-
-  .local-seo-home-sec-6 {
-    padding: 40px;
-  }
-
-  /*--local-seo-home-sec-7--*/
-
-  .local-seo-home-sec-7 {
-    padding: 0px 40px 40px 40px;
-  }
-
-  .local-seo-home-pricing-card-cont {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  /*--local-seo-home-sec-8--*/
-  .local-seo-home-sec-8 {
-    padding: 0px 40px 40px 40px;
-  }
-
-  /*--local-seo-home-sec-9--*/
-  .local-seo-home-sec-9 {
-    padding: 0px 40px 40px 40px;
-  }
-
-  /*--local-seo-home-sec-10--*/
-  .local-seo-home-sec-10 {
-    padding: 0px 40px 40px 40px;
-  }
-
-  /*--local-seo-home-sec-11--*/
-  .local-seo-home-sec-11 {
-    padding: 0px 40px 40px 40px;
   }
 
   /*--local-seo-home-sec-12--*/
@@ -961,6 +926,11 @@
 
   .local-seo-home-sec-12-ctas {
     flex-direction: row;
+    width: auto;
+  }
+
+  .local-seo-home-sec-12-ctas .buttons {
+    width: auto;
   }
 }
 
@@ -968,19 +938,23 @@
 
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
   .local-seo-home-sec-1 {
-    padding: 120px 30px 0px 30px;
+    padding: 120px 30px 0;
     flex-direction: column;
     gap: 40px;
   }
 
   .local-seo-home-contact-form {
+    position: relative;
+    top: auto;
+    height: auto;
     width: 100%;
   }
 
   /*--local-seo-home-contact-form-top--*/
 
   .local-seo-home-content {
-    padding-right: 20px;
+    padding-right: 0;
+    width: 100%;
   }
 
   .local-seo-home-main-heading {
@@ -999,12 +973,25 @@
   }
 
   /*--local-seo-home-sec-3--*/
-  .local-seo-home-sec-3 {
+
+  .local-seo-home-sec-3,
+  .local-seo-home-sec-5,
+  .local-seo-home-sec-6 {
     padding: 40px 30px;
   }
 
+  .local-seo-home-sec-4,
+  .local-seo-home-sec-7,
+  .local-seo-home-sec-8,
+  .local-seo-home-sec-9,
+  .local-seo-home-sec-10,
+  .local-seo-home-sec-11 {
+    padding: 0 30px 40px;
+  }
+
   .local-seo-home-card-container {
-    height: 300px;
+    height: auto;
+    min-height: 300px;
   }
 
   .local-seo-home-card-container svg {
@@ -1017,15 +1004,7 @@
 
   /*--local-seo-home-sec-4--*/
 
-  .local-seo-home-sec-4 {
-    padding: 0px 30px 40px 30px;
-  }
-
   /*--local-seo-home-sec-5--*/
-
-  .local-seo-home-sec-5 {
-    padding: 40px 30px;
-  }
 
   .local-seo-home-center-head .local-seo-home-sec-head {
     width: 60%;
@@ -1033,55 +1012,10 @@
 
   /*--local-seo-home-sec-6--*/
 
-  .local-seo-home-sec-6 {
-    padding: 40px 30px;
-  }
-
-  /*--local-seo-home-sec-7--*/
-
-  .local-seo-home-sec-7 {
-    padding: 0px 30px 40px 30px;
-  }
-
-  .local-seo-home-pricing-card-cont {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-
-  /*--local-seo-home-sec-8--*/
-  .local-seo-home-sec-8 {
-    padding: 0px 30px 40px 30px;
-  }
-
-  /*--local-seo-home-sec-9--*/
-  .local-seo-home-sec-9 {
-    padding: 0px 30px 40px 30px;
-  }
-
-  /*--local-seo-home-sec-10--*/
-  .local-seo-home-sec-10 {
-    padding: 0px 30px 40px 30px;
-  }
-
-  /*--local-seo-home-sec-11--*/
-  .local-seo-home-sec-11 {
-    padding: 0px 30px 40px 30px;
-  }
-
   /*--local-seo-home-sec-12--*/
 
   .local-seo-home-sec-12 {
-    background-image: url("/images/bg-3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
     padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
   }
 }
 
@@ -1089,7 +1023,7 @@
 
 @media (min-width: 1199.98px) and (max-width: 1399.98px) {
   .local-seo-home-sec-1 {
-    padding: 120px 40px 0px 40px;
+    padding: 120px 40px 0;
     gap: 40px;
   }
 
@@ -1120,7 +1054,8 @@
   }
 
   .local-seo-home-card-container {
-    height: 300px;
+    height: auto;
+    min-height: 300px;
   }
 
   .local-seo-home-card-container svg {
@@ -1159,12 +1094,6 @@
     padding: 40px;
   }
 
-  .local-seo-home-pricing-card-cont {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-
   /*--local-seo-home-sec-8--*/
   .local-seo-home-sec-8 {
     padding: 40px;
@@ -1188,19 +1117,6 @@
   /*--local-seo-home-sec-12--*/
 
   .local-seo-home-sec-12 {
-    background-image: url("/images/bg-3.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
     padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
   }
-}
-/*--Extra Large Desktop--*/
-
-@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

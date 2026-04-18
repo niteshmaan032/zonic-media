@@ -1,32 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Script from "next/script";
 import { Accordion, Col, Row } from "react-bootstrap";
 
 import "@/app/style/localSeoHome.css";
-import localSeoAnimation from "@/shared/lottie-files/local-seo-1.json";
-
-type LottieAnimationInstance = {
-  destroy: () => void;
-  setSpeed?: (speed: number) => void;
-};
-
-type LottiePlayer = {
-  loadAnimation: (config: {
-    container: HTMLElement;
-    renderer: "svg" | "canvas" | "html";
-    loop: boolean;
-    autoplay: boolean;
-    animationData: unknown;
-  }) => LottieAnimationInstance;
-};
-
-declare global {
-  interface Window {
-    lottie?: LottiePlayer;
-  }
-}
+import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 
 const whyHomeSeoItems = [
   {
@@ -62,45 +39,15 @@ const whyHomeSeoItems = [
 ];
 
 function WhyHomeSeo() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isScriptReady, setIsScriptReady] = useState(false);
-
-  useEffect(() => {
-    if (!isScriptReady || !containerRef.current || !window.lottie) {
-      return;
-    }
-
-    const animation = window.lottie.loadAnimation({
-      container: containerRef.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: localSeoAnimation,
-    });
-
-    animation.setSpeed?.(1);
-
-    return () => {
-      animation.destroy();
-    };
-  }, [isScriptReady]);
-
   return (
     <>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
-        strategy="afterInteractive"
-        onReady={() => setIsScriptReady(true)}
-      />
-
       <div className="why-home-seo-wrapper">
         <Row className="align-items-start">
           <Col lg={5} className="why-home-seo-visual-wrapper">
             <div className="why-home-seo-visual">
-              <div
-                ref={containerRef}
+              <SharedLottiePlayer
                 className="why-home-seo-lottie"
-                aria-hidden="true"
+                src="/lottie/local-seo-1.lottie"
               />
             </div>
           </Col>

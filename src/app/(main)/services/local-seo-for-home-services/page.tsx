@@ -4,7 +4,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
 import LeadContactForm from "@/app/components/LeadContactForm";
-import LocalSeoSec8BannerAnimation from "@/app/components/LocalSeoSec8BannerAnimation";
+import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
 import { Metadata } from "next";
@@ -561,107 +561,115 @@ function page() {
           </div>
 
           <div className="local-seo-home-pricing-card-wrapper">
-            <div className="local-seo-home-pricing-card-cont">
+            <Row className="g-4 justify-content-center">
               {/* STARTER PLAN */}
-              <div className="local-seo-home-pricing-card">
-                <div className="local-seo-home-price-badge">STARTER PLAN</div>
+              <Col xs={12} md={12} lg={4}>
+                <div className="local-seo-home-pricing-card">
+                  <div className="local-seo-home-price-badge">STARTER PLAN</div>
 
-                <h1 className="local-seo-home-price">
-                  $350 <span>/ month</span>
-                </h1>
+                  <h1 className="local-seo-home-price">
+                    $350 <span>/ month</span>
+                  </h1>
 
-                <p className="local-seo-home-price-subtitle">
-                  Best for small businesses targeting one service area.
-                </p>
+                  <p className="local-seo-home-price-subtitle">
+                    Best for small businesses targeting one service area.
+                  </p>
 
-                <h5 className="local-seo-home-price-section-title">
-                  What’s Included
-                </h5>
+                  <h5 className="local-seo-home-price-section-title">
+                    What’s Included
+                  </h5>
 
-                <ul className="local-seo-home-price-features">
-                  <li>Google Business Profile optimization</li>
-                  <li>Local keyword targeting</li>
-                  <li>Basic on-page SEO updates</li>
-                  <li>Citation cleanup & consistency</li>
-                  <li>Monthly reporting</li>
-                  <li>Email support</li>
-                </ul>
+                  <ul className="local-seo-home-price-features">
+                    <li>Google Business Profile optimization</li>
+                    <li>Local keyword targeting</li>
+                    <li>Basic on-page SEO updates</li>
+                    <li>Citation cleanup & consistency</li>
+                    <li>Monthly reporting</li>
+                    <li>Email support</li>
+                  </ul>
 
-                <HashScrollLink
-                  href="#local-seo-home-top"
-                  className="local-seo-home-price-cta-btn"
-                >
-                  Get This Plan
-                </HashScrollLink>
-              </div>
+                  <HashScrollLink
+                    href="#local-seo-home-top"
+                    className="local-seo-home-price-cta-btn"
+                  >
+                    Get This Plan
+                  </HashScrollLink>
+                </div>
+              </Col>
 
               {/* GROWTH PLAN */}
-              <div className="local-seo-home-pricing-card">
-                <div className="local-seo-home-price-badge">GROWTH PLAN</div>
+              <Col xs={12} md={12} lg={4}>
+                <div className="local-seo-home-pricing-card">
+                  <div className="local-seo-home-price-badge">GROWTH PLAN</div>
 
-                <h1 className="local-seo-home-price">
-                  $650 <span>/ month</span>
-                </h1>
+                  <h1 className="local-seo-home-price">
+                    $650 <span>/ month</span>
+                  </h1>
 
-                <p className="local-seo-home-price-subtitle">
-                  Best for growing companies ready for more calls and booked
-                  jobs.
-                </p>
+                  <p className="local-seo-home-price-subtitle">
+                    Best for growing companies ready for more calls and booked
+                    jobs.
+                  </p>
 
-                <h5 className="local-seo-home-price-section-title">
-                  What’s Included
-                </h5>
+                  <h5 className="local-seo-home-price-section-title">
+                    What’s Included
+                  </h5>
 
-                <ul className="local-seo-home-price-features">
-                  <li>Everything in Starter Plan</li>
-                  <li>Multi-service keyword targeting</li>
-                  <li>Advanced local SEO strategy</li>
-                  <li>Review growth support</li>
-                  <li>Competitor tracking</li>
-                  <li>Priority support</li>
-                </ul>
+                  <ul className="local-seo-home-price-features">
+                    <li>Everything in Starter Plan</li>
+                    <li>Multi-service keyword targeting</li>
+                    <li>Advanced local SEO strategy</li>
+                    <li>Review growth support</li>
+                    <li>Competitor tracking</li>
+                    <li>Priority support</li>
+                  </ul>
 
-                <HashScrollLink
-                  href="#local-seo-home-top"
-                  className="local-seo-home-price-cta-btn"
-                >
-                  Get This Plan
-                </HashScrollLink>
-              </div>
+                  <HashScrollLink
+                    href="#local-seo-home-top"
+                    className="local-seo-home-price-cta-btn"
+                  >
+                    Get This Plan
+                  </HashScrollLink>
+                </div>
+              </Col>
 
               {/* DOMINATE PLAN */}
-              <div className="local-seo-home-pricing-card local-seo-home-pricing-card--dominate">
-                <div className="local-seo-home-price-badge">DOMINATE PLAN</div>
+              <Col xs={12} md={12} lg={4}>
+                <div className="local-seo-home-pricing-card local-seo-home-pricing-card--dominate">
+                  <div className="local-seo-home-price-badge">
+                    DOMINATE PLAN
+                  </div>
 
-                <h1 className="local-seo-home-price">
-                  $950 <span>/ month</span>
-                </h1>
+                  <h1 className="local-seo-home-price">
+                    $950 <span>/ month</span>
+                  </h1>
 
-                <p className="local-seo-home-price-subtitle">
-                  Best for competitive markets and multi-location growth.
-                </p>
+                  <p className="local-seo-home-price-subtitle">
+                    Best for competitive markets and multi-location growth.
+                  </p>
 
-                <h5 className="local-seo-home-price-section-title">
-                  What’s Included
-                </h5>
+                  <h5 className="local-seo-home-price-section-title">
+                    What’s Included
+                  </h5>
 
-                <ul className="local-seo-home-price-features">
-                  <li>Everything in Growth Plan</li>
-                  <li>Multi-location SEO campaigns</li>
-                  <li>High-authority backlink outreach</li>
-                  <li>Conversion optimization</li>
-                  <li>Aggressive ranking growth strategy</li>
-                  <li>Dedicated account manager</li>
-                </ul>
+                  <ul className="local-seo-home-price-features">
+                    <li>Everything in Growth Plan</li>
+                    <li>Multi-location SEO campaigns</li>
+                    <li>High-authority backlink outreach</li>
+                    <li>Conversion optimization</li>
+                    <li>Aggressive ranking growth strategy</li>
+                    <li>Dedicated account manager</li>
+                  </ul>
 
-                <HashScrollLink
-                  href="#local-seo-home-top"
-                  className="local-seo-home-price-cta-btn"
-                >
-                  Get This Plan
-                </HashScrollLink>
-              </div>
-            </div>
+                  <HashScrollLink
+                    href="#local-seo-home-top"
+                    className="local-seo-home-price-cta-btn"
+                  >
+                    Get This Plan
+                  </HashScrollLink>
+                </div>
+              </Col>
+            </Row>
           </div>
         </div>
 
@@ -735,7 +743,10 @@ function page() {
 
             <Col lg={7}>
               <div className="local-seo-home-card-container local-seo-card-banner">
-                <LocalSeoSec8BannerAnimation />
+                <SharedLottiePlayer
+                  className="local-seo-home-sec-8-banner-lottie"
+                  src="/lottie/local-seo-2.lottie"
+                />
               </div>
             </Col>
 

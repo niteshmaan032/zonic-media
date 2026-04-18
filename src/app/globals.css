@@ -109,6 +109,18 @@ body p {
   line-height: inherit;
 }
 
+.clutch-widget {
+  display: block;
+  width: 100%;
+  contain: layout paint;
+  isolation: isolate;
+}
+
+.clutch-widget iframe {
+  display: block;
+  width: 100%;
+}
+
 /*global-faqs-seciton*/
 .global-faqs-section {
   padding: 0px 100px 70px 100px;

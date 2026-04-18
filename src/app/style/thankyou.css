@@ -15,7 +15,9 @@
   height: 100%;
 }
 
+.thank-lottie canvas,
 .thank-lottie svg {
+  display: block;
   width: 100% !important;
   height: 100% !important;
 }
