@@ -829,67 +829,69 @@ function page() {
         </div>
 
         {/*--local-seo-home-sec-11--*/}
-        <div className="local-seo-home-sec-1 local-seo-home-sec-11">
-          <div className="local-seo-home-content">
-            <p className="local-seo-home-label">95% Growth Success Rate</p>
-            <h1 className="local-seo-home-main-heading">
-              Local SEO Built to Grow Home Service Businesses
-            </h1>
-            <p className="local-seo-home-descrp">
-              Homeowners search online every day for reliable local
-              professionals they can trust. If your business is not appearing in
-              those searches, you are missing calls, estimates, and booked jobs
-              that are going directly to competitors in your area.
-            </p>
-            <div className="local-seo-home-trust-badges">
-              <p>
-                <Image
-                  src="/images/gmb-reinst/trust-img-1.svg"
-                  width={20}
-                  height={20}
-                  alt="google logo"
-                />{" "}
-                Google Business Profile Experts
+        <div className="local-seo-home-sec-11-wrapper">
+          <div className="local-seo-home-sec-1 local-seo-home-sec-11">
+            <div className="local-seo-home-content">
+              <p className="local-seo-home-label">95% Growth Success Rate</p>
+              <h1 className="local-seo-home-main-heading">
+                Local SEO Built to Grow Home Service Businesses
+              </h1>
+              <p className="local-seo-home-descrp">
+                Homeowners search online every day for reliable local
+                professionals they can trust. If your business is not appearing
+                in those searches, you are missing calls, estimates, and booked
+                jobs that are going directly to competitors in your area.
               </p>
+              <div className="local-seo-home-trust-badges">
+                <p>
+                  <Image
+                    src="/images/gmb-reinst/trust-img-1.svg"
+                    width={20}
+                    height={20}
+                    alt="google logo"
+                  />{" "}
+                  Google Business Profile Experts
+                </p>
 
-              <p>
-                <Image
-                  src="/images/gmb-reinst/trust-img-3.svg"
-                  width={20}
-                  height={20}
-                  alt="rating star"
-                />{" "}
-                4.9/5 Client Satisfaction Rating
-              </p>
+                <p>
+                  <Image
+                    src="/images/gmb-reinst/trust-img-3.svg"
+                    width={20}
+                    height={20}
+                    alt="rating star"
+                  />{" "}
+                  4.9/5 Client Satisfaction Rating
+                </p>
 
-              <p>
-                <Image
-                  src="/images/gmb-reinst/trust-img-4.svg"
-                  width={20}
-                  height={20}
-                  alt="verified badge"
-                />{" "}
-                Proven Local SEO Strategies
-              </p>
+                <p>
+                  <Image
+                    src="/images/gmb-reinst/trust-img-4.svg"
+                    width={20}
+                    height={20}
+                    alt="verified badge"
+                  />{" "}
+                  Proven Local SEO Strategies
+                </p>
 
-              <p>
-                <Image
-                  src="/images/gmb-reinst/trust-img-2.svg"
-                  width={20}
-                  height={20}
-                  alt="shield logo"
-                />{" "}
-                500+ Businesses Ranked on Google
-              </p>
+                <p>
+                  <Image
+                    src="/images/gmb-reinst/trust-img-2.svg"
+                    width={20}
+                    height={20}
+                    alt="shield logo"
+                  />{" "}
+                  500+ Businesses Ranked on Google
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="local-seo-home-contact-form">
-            <LeadContactForm
-              leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
-              leadCallText={LocalSeoHomeFormHead.leadCallText}
-              submitButtonText="Contact Us"
-            />
+            <div className="local-seo-home-contact-form">
+              <LeadContactForm
+                leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
+                leadCallText={LocalSeoHomeFormHead.leadCallText}
+                submitButtonText="Contact Us"
+              />
+            </div>
           </div>
         </div>
 
