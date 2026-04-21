@@ -41,6 +41,7 @@ export default function LeadContactForm({
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
+  const [smsConsent, setSmsConsent] = useState(true);
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
   const {
@@ -84,6 +85,7 @@ export default function LeadContactForm({
           businessName: data.businessName,
           message: `Business Name: ${data.businessName}. Issue: ${data.message}`,
           services: [DEFAULT_SERVICE],
+          smsConsent,
           recaptchaToken,
         }),
       });
@@ -254,6 +256,7 @@ export default function LeadContactForm({
             onExecutorReady={(executor) => {
               recaptchaExecutorRef.current = executor;
             }}
+            onSmsConsentChange={setSmsConsent}
           />
         </div>
 

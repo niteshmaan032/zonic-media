@@ -10,6 +10,7 @@ export type LeadPayload = {
   businessName?: string;
   message: string;
   services: string[];
+  smsConsent?: boolean;
 };
 
 const OWNER_LEAD_CC_EMAILS = ["man2k19ish@gmail.com", "samrunads@gmail.com"];
@@ -77,7 +78,15 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
   const transporter = getTransporter();
   const { from, ownerEmail } = getMailConfig();
 
-  const { fullName, email, contact, businessName, message, services } = payload;
+  const {
+    fullName,
+    email,
+    contact,
+    businessName,
+    message,
+    services,
+    smsConsent,
+  } = payload;
   const servicesText = toServicesText(services);
 
   await transporter.sendMail({
@@ -94,6 +103,7 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
       `Business Name: ${businessName || "Not provided"}`,
       `Services: ${servicesText}`,
       `Message: ${message}`,
+      ...(smsConsent ? ["", `${fullName} has opted for the SMS service.`] : []),
     ].join("\n"),
   });
 };
@@ -178,6 +188,174 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
                 <td style="padding-right:12px;"><a href="${SITE_CONTACT.emailHref}" style="font-size:13px; color:#555; text-decoration:none;">${escapeHtml(SITE_CONTACT.email)}</a></td>
                 <td style="color:#ddd; font-size:13px; padding-right:12px;">|</td>
                 <td><a href="${SITE_CONTACT.phoneHref}" style="font-size:13px; color:#555; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px; background:#f9f7f3; border-top:1px solid #f0ede8;">
+            <p style="font-size:11px; color:#ccc; margin:0; line-height:1.7; text-align:center;">Zonic Media is an independent GMB specialist agency, not affiliated with Google.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`,
+    });
+
+    return;
+  }
+
+  if (
+    formType === "gmb-reinstatement" &&
+    sourcePage === "/services/gmb-verification-help"
+  ) {
+    const firstName = escapeHtml(getFirstName(fullName));
+    const plainBusinessName = businessName?.trim() || "your business";
+    const safeBusinessName = escapeHtml(plainBusinessName);
+
+    await transporter.sendMail({
+      from,
+      to: email,
+      subject: "Your GMB Verification Request - Zonic Media",
+      text: [
+        `Hi ${getFirstName(fullName)},`,
+        "",
+        `Thank you for reaching out to Zonic Media. We've received your GMB verification request for ${plainBusinessName} and our team is already reviewing it. One of our Google Business Profile verification specialists will call or email you shortly.`,
+        "",
+        "We understand how frustrating verification issues can be - whether your postcard isn't arriving, your video verification keeps getting rejected, or your phone and email options simply aren't showing up. Every day your profile stays unverified is a day you're invisible on Google Maps. You've come to the right place. Our specialists know exactly how to get your profile verified and live, fast.",
+        "",
+        "If you'd like to speak with a specialist right away, feel free to call us at 302-726-9736.",
+        "",
+        "Talk soon,",
+        "The Zonic Media Team",
+        "GMB Verification & Local Growth Specialists",
+        `${SITE_CONTACT.email} | 302-726-9736`,
+      ].join("\n"),
+      html: `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>Your GMB Verification Request &mdash; Zonic Media</title>
+</head>
+<body style="margin:0; padding:0; background:#f4f2ee; font-family: Arial, sans-serif; font-size:16px; color:#1a1a1a;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f2ee; padding:40px 16px;">
+  <tr>
+    <td align="center">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:580px; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.08);">
+        <tr>
+          <td style="padding:28px 40px 24px; border-bottom:1px solid #f0ede8;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:#e8401c;">Zonic</span>Media</span></td>
+                <td align="right"><span style="font-size:11px; color:#999;">GMB Verification Specialists</span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 40px 32px;">
+            <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${firstName}</strong>,</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">Thank you for reaching out to Zonic Media. We've received your GMB verification request for <strong>${safeBusinessName}</strong> and our team is already reviewing it. One of our Google Business Profile verification specialists will call or email you shortly.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">We understand how frustrating verification issues can be &mdash; whether your postcard isn't arriving, your video verification keeps getting rejected, or your phone and email options simply aren't showing up. Every day your profile stays unverified is a day you're invisible on Google Maps. You've come to the right place. Our specialists know exactly how to get your profile verified and live, fast.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with a specialist right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:#e8401c; font-weight:700; text-decoration:none;">302-726-9736</a>.</p>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
+            <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
+            <p style="font-size:15px; font-weight:700; color:#0d0d0d; margin:0 0 4px;">The Zonic Media Team</p>
+            <p style="font-size:13px; color:#888; margin:0 0 16px; line-height:1.6;">GMB Verification &amp; Local Growth Specialists</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;"><a href="${SITE_CONTACT.emailHref}" style="font-size:13px; color:#555; text-decoration:none;">&#9993; ${escapeHtml(SITE_CONTACT.email)}</a></td>
+                <td style="color:#ddd; font-size:13px; padding-right:12px;">|</td>
+                <td><a href="${SITE_CONTACT.phoneHref}" style="font-size:13px; color:#555; text-decoration:none;">&#9742; 302-726-9736</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px; background:#f9f7f3; border-top:1px solid #f0ede8;">
+            <p style="font-size:11px; color:#ccc; margin:0; line-height:1.7; text-align:center;">Zonic Media is an independent GMB specialist agency, not affiliated with Google.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`,
+    });
+
+    return;
+  }
+
+  if (
+    formType === "gmb-reinstatement" &&
+    sourcePage === "/services/gmb-optimization"
+  ) {
+    const firstName = escapeHtml(getFirstName(fullName));
+    const plainBusinessName = businessName?.trim() || "your business";
+    const safeBusinessName = escapeHtml(plainBusinessName);
+
+    await transporter.sendMail({
+      from,
+      to: email,
+      subject: "Your GMB Optimization Request - Zonic Media",
+      text: [
+        `Hi ${getFirstName(fullName)},`,
+        "",
+        `Thank you for reaching out to Zonic Media. We've received your GMB Optimization inquiry for ${plainBusinessName} and our team is already reviewing it. One of our Google Business Profile optimization specialists will call or email you shortly.`,
+        "",
+        "Having a Google Business Profile and having one that actually ranks, converts, and drives real customers are two very different things. If your listing isn't showing up in the Google Maps 3-Pack, not getting enough calls, or simply not turning profile views into customers - it almost always comes down to how well your profile is optimized. Wrong categories, weak keywords, missing photos, no posts, and an untouched Q&A section are the most common culprits. Our specialists know exactly what Google's algorithm responds to and will fine-tune every element of your profile to fix it.",
+        "",
+        "If you'd like to speak with a specialist right away, feel free to call us at 302-726-9736.",
+        "",
+        "Talk soon,",
+        "The Zonic Media Team",
+        "GMB Optimization & Local Growth Specialists",
+        `${SITE_CONTACT.email} | 302-726-9736`,
+      ].join("\n"),
+      html: `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>Your GMB Optimization Request &mdash; Zonic Media</title>
+</head>
+<body style="margin:0; padding:0; background:#f4f2ee; font-family: Arial, sans-serif; font-size:16px; color:#1a1a1a;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f2ee; padding:40px 16px;">
+  <tr>
+    <td align="center">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:580px; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.08);">
+        <tr>
+          <td style="padding:28px 40px 24px; border-bottom:1px solid #f0ede8;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:#e8401c;">Zonic</span>Media</span></td>
+                <td align="right"><span style="font-size:11px; color:#999;">GMB Optimization Specialists</span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 40px 32px;">
+            <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${firstName}</strong>,</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">Thank you for reaching out to Zonic Media. We've received your GMB Optimization inquiry for <strong>${safeBusinessName}</strong> and our team is already reviewing it. One of our Google Business Profile optimization specialists will call or email you shortly.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">Having a Google Business Profile and having one that actually ranks, converts, and drives real customers are two very different things. If your listing isn't showing up in the Google Maps 3-Pack, not getting enough calls, or simply not turning profile views into customers &mdash; it almost always comes down to how well your profile is optimized. Wrong categories, weak keywords, missing photos, no posts, and an untouched Q&amp;A section are the most common culprits. Our specialists know exactly what Google's algorithm responds to and will fine-tune every element of your profile to fix it.</p>
+            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with a specialist right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:#e8401c; font-weight:700; text-decoration:none;">302-726-9736</a>.</p>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
+            <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
+            <p style="font-size:15px; font-weight:700; color:#0d0d0d; margin:0 0 4px;">The Zonic Media Team</p>
+            <p style="font-size:13px; color:#888; margin:0 0 16px; line-height:1.6;">GMB Optimization &amp; Local Growth Specialists</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;"><a href="${SITE_CONTACT.emailHref}" style="font-size:13px; color:#555; text-decoration:none;">&#9993; ${escapeHtml(SITE_CONTACT.email)}</a></td>
+                <td style="color:#ddd; font-size:13px; padding-right:12px;">|</td>
+                <td><a href="${SITE_CONTACT.phoneHref}" style="font-size:13px; color:#555; text-decoration:none;">&#9742; 302-726-9736</a></td>
               </tr>
             </table>
           </td>

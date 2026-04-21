@@ -38,6 +38,7 @@ type ContactFormProps = {
 export default function ContactForm({ content }: ContactFormProps) {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [smsConsent, setSmsConsent] = useState(true);
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
   const { heading, highlightedHeading, points, cta } = content;
   const contactCta = {
@@ -88,6 +89,7 @@ export default function ContactForm({ content }: ContactFormProps) {
         },
         body: JSON.stringify({
           ...data,
+          smsConsent,
           recaptchaToken,
         }),
       });
@@ -314,6 +316,7 @@ export default function ContactForm({ content }: ContactFormProps) {
                   onExecutorReady={(executor) => {
                     recaptchaExecutorRef.current = executor;
                   }}
+                  onSmsConsentChange={setSmsConsent}
                 />
               </Col>
 

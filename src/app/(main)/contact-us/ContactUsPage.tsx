@@ -26,6 +26,7 @@ type ContactUsFormValues = {
 function ContactUsPageClient() {
   const router = useRouter();
   const [submitError, setSubmitError] = useState("");
+  const [smsConsent, setSmsConsent] = useState(true);
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
   const {
@@ -70,6 +71,7 @@ function ContactUsPageClient() {
         },
         body: JSON.stringify({
           ...data,
+          smsConsent,
           recaptchaToken,
         }),
       });
@@ -316,6 +318,7 @@ function ContactUsPageClient() {
                     onExecutorReady={(executor) => {
                       recaptchaExecutorRef.current = executor;
                     }}
+                    onSmsConsentChange={setSmsConsent}
                   />
                 </Col>
 

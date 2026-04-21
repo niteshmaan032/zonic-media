@@ -23,6 +23,7 @@ function Page() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [smsConsent, setSmsConsent] = useState(true);
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
   const {
     register,
@@ -71,6 +72,7 @@ function Page() {
         },
         body: JSON.stringify({
           ...data,
+          smsConsent,
           recaptchaToken,
         }),
       });
@@ -287,6 +289,7 @@ function Page() {
                       onExecutorReady={(executor) => {
                         recaptchaExecutorRef.current = executor;
                       }}
+                      onSmsConsentChange={setSmsConsent}
                     />
                   </Col>
 

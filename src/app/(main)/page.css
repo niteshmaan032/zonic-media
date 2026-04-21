@@ -196,7 +196,7 @@
 .home-section-5 .home-sec5-service-wrapper:nth-child(1) {
   background-color: var(--color1);
   position: sticky;
-  top: 0;
+  top: 86px;
   left: 0;
 }
 
@@ -208,7 +208,7 @@
   background-color: var(--color4);
   color: var(--white);
   position: sticky;
-  top: 0;
+  top: 86px;
   left: 0;
   z-index: 10;
 }
@@ -223,7 +223,7 @@
   background-color: var(--color5);
   color: var(--white);
   position: sticky;
-  top: 0;
+  top: 86px;
   left: 0;
   z-index: 15;
 }
@@ -232,7 +232,7 @@
   background-color: var(--secondary);
   color: var(--white);
   position: sticky;
-  top: 0;
+  top: 86px;
   left: 0;
   z-index: 20;
 }

@@ -35,6 +35,9 @@ const normalizeServices = (value: unknown): string[] => {
   return Array.from(new Set(normalized));
 };
 
+const normalizeSmsConsent = (value: unknown) =>
+  value === true || value === "true" || value === "yes";
+
 type LeadsRouteResult = {
   status: number;
   body: {
@@ -58,6 +61,7 @@ export const leadsRoute = async (
     typeof body.businessName === "string" ? sanitizeText(body.businessName) : "";
   const message = typeof body.message === "string" ? sanitizeText(body.message) : "";
   const services = normalizeServices(body.services);
+  const smsConsent = normalizeSmsConsent(body.smsConsent);
   const recaptchaToken =
     typeof body.recaptchaToken === "string" ? body.recaptchaToken.trim() : "";
   const isGmbReinstatementForm = formType === "gmb-reinstatement";
@@ -106,6 +110,7 @@ export const leadsRoute = async (
     businessName,
     message,
     services,
+    smsConsent,
   };
 
   try {

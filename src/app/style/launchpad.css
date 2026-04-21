@@ -1,0 +1,337 @@
+:root {
+  --launchpad-color-1: #ff6600;
+  --launchpad-color-2: #d4e7fb;
+  --launchpad-color-3: #f4f4f4;
+  --launchpad-color-4: #b1b1b1;
+  --launchpad-color-5: #fffaef;
+}
+
+.launchpad-sec-1 {
+  padding: 160px 100px 60px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bg-label {
+  background-color: var(--launchpad-color-1);
+  color: var(--white);
+  border-color: var(--white) !important;
+}
+
+.launchpad-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 2px solid var(--secondary);
+  width: fit-content;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: capitalize;
+}
+
+.launchpad-label svg {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.launchpad-sec-1-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.launchpad-main-heading {
+  font-size: 64px;
+  line-height: 76px;
+}
+
+.launchpad-descrp {
+  font-size: 20px;
+  width: 65%;
+  font-weight: 500;
+  color: var(--color2);
+  line-height: 28px;
+}
+
+.launchpad-descrp span {
+  color: var(--text);
+}
+
+.launchpad-sec1-ctas {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.launchpad-sec1-ctas .buttons:nth-child(1) {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.launchpad-sec1-ctas .buttons:nth-child(2) {
+  background-color: var(--launchpad-color-1);
+  border-color: var(--launchpad-color-1);
+}
+
+/*--launchpad-sec-2--*/
+.launchpad-sec-2 {
+  padding: 0px 100px 60px 100px;
+}
+
+.launchpad-sec-1-card-wrapper {
+  height: 100%;
+  min-height: 315px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.launch-sec-1-card-1 {
+  background-color: var(--launchpad-color-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.launchpad-rocket-lottie {
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+}
+
+.launchpad-rocket-lottie canvas,
+.launchpad-rocket-lottie svg {
+  width: 100%;
+  height: 100%;
+}
+
+.launch-sec-1-card-2 {
+  background-color: var(--text);
+}
+
+.launch-sec-1-card-2 iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+  border: 0;
+}
+
+.launch-sec-1-card-3 {
+  background-color: var(--launchpad-color-1);
+  padding: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 26px;
+  border-radius: 10px;
+}
+
+.launch-sec-1-card-3 h2 {
+  font-size: 36px;
+  color: var(--white);
+  line-height: 48px;
+}
+
+.launch-sec-1-card-3 .buttons {
+  background-color: var(--white);
+  color: var(--text);
+  font-weight: 500;
+  border-color: var(--white);
+}
+
+/*--launchpad-sec-3--*/
+
+.launchpad-sec-3 {
+  padding: 0px 100px 60px 100px;
+}
+
+.launchpad-center-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.launchpad-center-head-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.launchpad-sec-heading {
+  font-size: 42px;
+  line-height: 54px;
+}
+
+.launchpad-box-card {
+  height: 600px;
+}
+
+.launchpad-box-card-content-wrapper {
+  border: 1px solid var(--stroke);
+  height: 100%;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.launchpad-box-card-heading-container {
+  background-color: var(--color1);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.launchpad-box-card-heading {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-transform: capitalize;
+}
+
+.launchpad-box-card-heading svg {
+  flex-shrink: 0;
+}
+
+.launchpad-box-card-sub-head {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.launchpad-box-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.launchpad-box-card-list li {
+  display: flex;
+  align-items: start;
+  gap: 14px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.launchpad-box-card-list li svg {
+  flex-shrink: 0;
+  color: var(--launchpad-color-4);
+}
+
+.launchpad-box-card-2 .launchpad-box-card-heading-container {
+  background-color: var(--launchpad-color-1);
+  color: var(--white);
+}
+
+.launchpad-box-card-2 .launchpad-box-card-list li svg {
+  color: var(--text);
+}
+
+.launchpad-box-card-cta {
+  margin-top: 32px;
+}
+
+.launchpad-box-card-cta .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.launchpad-box-card-3 {
+  padding-right: 60px;
+  height: 100%;
+}
+
+.launchpad-box-card-3 .launchpad-box-card-heading-container {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.launchpad-box-card-3 .launchpad-box-card-list li svg {
+  color: var(--text);
+}
+
+.launchpad-box-card-3-img-cont {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.launchpad-box-card-3-img-cont img {
+  object-fit: cover;
+}
+
+.launchpad-sec-4 {
+  background-color: var(--launchpad-color-5);
+  padding: 60px 100px;
+}
+
+.launchpad-sec-4-card-wrapper {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid var(--stroke);
+}
+
+.launchpad-sec-4-card-number {
+  padding: 14px 20px;
+  background-color: var(--launchpad-color-1);
+  width: fit-content;
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--white);
+}
+
+.launchpad-sec-4-card-heading {
+  font-size: 26px;
+}
+
+.launchpad-sec-4-card-descrp {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.launchpad-sec-4-card-descrp-2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.launchpad-sec-4-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.launchpad-sec-4-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.launchpad-sec-4-list li svg {
+  flex-shrink: 0;
+}
+
+.launchpad-sec-4-card-wrapper-3 {
+  border: none;
+}
