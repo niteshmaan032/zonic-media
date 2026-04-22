@@ -119,9 +119,10 @@ function Footer() {
               </div>
               <div>
                 <iframe
-                  className="mt-4"
+                  className="footer-clutch-badge mt-4"
                   width="85"
                   height="85"
+                  loading="eager"
                   src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
                   title="Top Clutch Digital Marketing Company Delaware 2026"
                 ></iframe>

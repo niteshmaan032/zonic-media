@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useSyncExternalStore } from "react";
+import { useEffect, useRef } from "react";
 
 declare global {
   interface Window {
@@ -18,54 +18,7 @@ type ClutchWidgetProps = {
   reviews?: string;
 };
 
-let clutchScriptPromise: Promise<void> | null = null;
 let clutchInitScheduled = false;
-
-function loadClutchScript(): Promise<void> {
-  if (typeof window === "undefined") {
-    return Promise.resolve();
-  }
-
-  if (window.CLUTCHCO?.Init || window.CLUTCHCO?.init) {
-    return Promise.resolve();
-  }
-
-  if (clutchScriptPromise) {
-    return clutchScriptPromise;
-  }
-
-  clutchScriptPromise = new Promise((resolve, reject) => {
-    const existingScript = document.querySelector(
-      'script[src="https://widget.clutch.co/static/js/widget.js"]',
-    ) as HTMLScriptElement | null;
-
-    const handleLoad = () => resolve();
-    const handleError = () => {
-      clutchScriptPromise = null;
-      reject(new Error("Failed to load Clutch widget script."));
-    };
-
-    if (existingScript) {
-      existingScript.addEventListener("load", handleLoad, { once: true });
-      existingScript.addEventListener("error", handleError, { once: true });
-
-      if (window.CLUTCHCO?.Init || window.CLUTCHCO?.init) {
-        resolve();
-      }
-
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://widget.clutch.co/static/js/widget.js";
-    script.async = true;
-    script.addEventListener("load", handleLoad, { once: true });
-    script.addEventListener("error", handleError, { once: true });
-    document.body.appendChild(script);
-  });
-
-  return clutchScriptPromise;
-}
 
 function scheduleClutchInit(): void {
   if (clutchInitScheduled || typeof window === "undefined") {
@@ -93,11 +46,8 @@ export default function ClutchWidget({
 }: ClutchWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
   const initializedRef = useRef(false);
-  const mounted = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  );
+  const minHeight = Number(height);
+  const reservedHeight = Number.isFinite(minHeight) ? minHeight : undefined;
 
   const isWidgetFilled = () => {
     const widget = widgetRef.current;
@@ -114,7 +64,7 @@ export default function ClutchWidget({
   useEffect(() => {
     const widget = widgetRef.current;
 
-    if (!mounted || !widget || initializedRef.current) return;
+    if (!widget || initializedRef.current) return;
 
     if (isWidgetFilled()) {
       initializedRef.current = true;
@@ -138,49 +88,46 @@ export default function ClutchWidget({
       subtree: true,
     });
 
-    loadClutchScript()
-      .then(() => {
-        if (cancelled) return;
+    const initTimer = window.setInterval(() => {
+      if (cancelled) return;
 
-        if (isWidgetFilled()) {
-          initializedRef.current = true;
-          widget.dataset.clutchReady = "true";
-          return;
-        }
+      if (isWidgetFilled()) {
+        initializedRef.current = true;
+        widget.dataset.clutchReady = "true";
+        window.clearInterval(initTimer);
+        return;
+      }
 
+      if (window.CLUTCHCO?.Init || window.CLUTCHCO?.init) {
         scheduleClutchInit();
-      })
-      .catch(() => {
-        initializedRef.current = false;
-      });
+      }
+    }, 100);
 
     return () => {
       cancelled = true;
+      window.clearInterval(initTimer);
       observer.disconnect();
     };
-  }, [mounted]);
-
-  const minHeight = Number(height);
-
-  if (!mounted) {
-    return (
-      <div
-        className="clutch-widget"
-        style={Number.isFinite(minHeight) ? { minHeight } : undefined}
-      />
-    );
-  }
+  }, []);
 
   return (
     <div
       ref={widgetRef}
       className="clutch-widget"
-      style={Number.isFinite(minHeight) ? { minHeight } : undefined}
+      suppressHydrationWarning
+      style={
+        reservedHeight
+          ? {
+              height: reservedHeight,
+              minHeight: reservedHeight,
+            }
+          : undefined
+      }
       data-url="https://widget.clutch.co"
       data-widget-type={widgetType}
       data-height={height}
       data-nofollow="false"
-      data-expandifr="true"
+      data-expandifr="false"
       data-scale="100"
       data-primary-color={primaryColor}
       data-reviews={reviews}

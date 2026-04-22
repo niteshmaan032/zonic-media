@@ -113,11 +113,11 @@ export default function RecaptchaCheckbox({
         />
         <span>
           By submitting this form, you agree to receive personalized text
-          messages (e.g., call notifications, service updates, replies) from us
-          at the cell number used when signing up. Consent is not a condition of
-          any purchase. Msg frequency varies. SMS Msg and data rates may apply.
-          To opt out at any time, reply STOP; no more messages will be sent.
-          Reply &quot;HELP&quot; for help. Call{" "}
+          messages, emails, and calls (e.g., call notifications, service
+          updates, replies) from us at the cell number used when signing up.
+          Consent is not a condition of any purchase. Msg frequency varies. SMS
+          Msg and data rates may apply. To opt out at any time, reply STOP; no
+          more messages will be sent. Reply &quot;HELP&quot; for help. Call{" "}
           <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> or
           email at <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>{" "}
           for more info. Visit{" "}

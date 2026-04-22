@@ -138,6 +138,14 @@
   object-fit: contain;
 }
 
+.footer-clutch-badge {
+  display: block;
+  width: 85px;
+  height: 85px;
+  border: 0;
+  overflow: hidden;
+}
+
 /*responsive*/
 
 /* mobile phones to tablet devices*/

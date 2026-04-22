@@ -47,6 +47,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://widget.clutch.co" />
+        <link rel="dns-prefetch" href="https://widget.clutch.co" />
+        <Script
+          id="clutch-widget-script"
+          src="https://widget.clutch.co/static/js/widget.js"
+          strategy="afterInteractive"
+        />
         {isProd && (
           <>
             <Script

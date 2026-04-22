@@ -1,7 +1,34 @@
 import type { NextConfig } from "next";
 
+const contentSecurityPolicyReportOnly = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+  "script-src-elem 'self' 'unsafe-inline' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "connect-src 'self' https://widget.clutch.co https://clutch.co https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net",
+  "frame-src 'self' https://widget.clutch.co https://clutch.co https://www.youtube.com https://www.google.com https://www.googletagmanager.com",
+  "worker-src 'self' blob:",
+].join("; ");
+
 const nextConfig: NextConfig = {
   reactCompiler: true,
+
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy-Report-Only",
+            value: contentSecurityPolicyReportOnly,
+          },
+        ],
+      },
+    ];
+  },
 
   async redirects() {
     return [

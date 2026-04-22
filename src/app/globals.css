@@ -137,6 +137,7 @@ body p {
 .clutch-widget {
   display: block;
   width: 100%;
+  overflow: hidden;
   contain: layout paint;
   isolation: isolate;
 }
@@ -144,6 +145,8 @@ body p {
 .clutch-widget iframe {
   display: block;
   width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /*global-faqs-seciton*/

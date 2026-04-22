@@ -4,6 +4,7 @@
   --launchpad-color-3: #f4f4f4;
   --launchpad-color-4: #b1b1b1;
   --launchpad-color-5: #fffaef;
+  --launchpad-home-bg: #eff6ff;
 }
 
 .launchpad-sec-1 {
@@ -114,6 +115,7 @@
 
 .launch-sec-1-card-2 {
   background-color: var(--text);
+  aspect-ratio: 16 / 9;
 }
 
 .launch-sec-1-card-2 iframe {
@@ -277,9 +279,11 @@
   object-fit: cover;
 }
 
+/*--launchpad-sec-4--*/
+
 .launchpad-sec-4 {
   background-color: var(--launchpad-color-5);
-  padding: 60px 100px;
+  padding: 60px 100px 0px 100px;
 }
 
 .launchpad-sec-4-card-wrapper {
@@ -334,4 +338,416 @@
 
 .launchpad-sec-4-card-wrapper-3 {
   border: none;
+}
+
+/*--launchpad-sec-5--*/
+.launchpad-sec-5 {
+  background-image: url("/images/launch-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.launchpad-sec-5-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.launchpad-banner-heading {
+  font-size: 54px;
+  color: var(--white);
+  line-height: 72px;
+}
+
+.launchpad-banner-descrp {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  width: 65%;
+  color: var(--white);
+}
+
+.launchpad-banner-ctas {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.launchpad-banner-ctas .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/*--launchpad-sec-6--*/
+.launchpad-sec-6 {
+  padding: 60px 100px;
+}
+
+.launchpad-pricing-wrapper {
+  margin-top: 60px;
+}
+
+.launchpad-pricing-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  min-height: 600px;
+  height: 100%;
+}
+
+.launchpad-pricing-card--dominate {
+  background: var(--launchpad-color-1);
+  color: var(--white);
+}
+
+.launchpad-pricing-card--dominate .launchpad-price,
+.launchpad-pricing-card--dominate .launchpad-price span,
+.launchpad-pricing-card--dominate .launchpad-price-subtitle,
+.launchpad-pricing-card--dominate .launchpad-price-section-title,
+.launchpad-pricing-card--dominate .launchpad-price-features li {
+  color: var(--white);
+}
+
+.launchpad-pricing-card--dominate .launchpad-price-badge {
+  background: var(--white);
+  color: var(--secondary);
+}
+
+.launchpad-pricing-card--dominate .launchpad-price-cta-btn {
+  background: var(--white);
+  color: var(--secondary);
+  border-color: var(--white);
+}
+
+.launchpad-pricing-card--dominate .launchpad-price-cta-btn:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.launchpad-price-badge {
+  display: inline-block;
+  background: var(--launchpad-color-1);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.launchpad-price {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.launchpad-price span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.launchpad-price-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color2);
+  margin: 10px 0 24px;
+}
+
+.launchpad-price-section-title {
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.launchpad-price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 42px;
+}
+
+.launchpad-price-features li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.launchpad-price-features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--secondary);
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.launchpad-pricing-card--dominate .launchpad-price-features li::before {
+  border-color: var(--white);
+}
+
+.launchpad-price-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--secondary);
+  background: transparent;
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.launchpad-price-cta-btn:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+/*--launchpad-sec-7--*/
+.launchpad-sec-7 {
+  padding: 0px 100px 60px 100px;
+}
+
+.launchpad-sec-descrp {
+  color: var(--color2);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.launchpad-faq-wrapper {
+  margin-top: 40px;
+}
+
+.launchpad-faq-wrapper .accordion-item {
+  background: transparent;
+}
+
+/*--launchpad-sec-9--*/
+.launchpad-sec-9 {
+  background-color: var(--launchpad-home-bg);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 120px 100px 60px 100px;
+}
+
+.launchpad-home-contact-form {
+  flex-basis: 40%;
+  position: sticky;
+  top: 32px;
+  height: 100%;
+}
+
+.launchpad-home-content {
+  flex-basis: 55%;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.launchpad-home-label {
+  padding: 14px 20px;
+  width: fit-content;
+  border-radius: 50px;
+  display: flex;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: capitalize;
+  background-color: var(--launchpad-color-1);
+  color: var(--white);
+}
+
+.launchpad-home-main-heading {
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.launchpad-home-descrp {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.launchpad-home-cta-clutch {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0px;
+}
+
+.launchpad-home-cta-clutch .buttons {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.launchpad-home-sec-9-stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.launchpad-home-sec-9-stats p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color2);
+  text-align: center;
+}
+
+.launchpad-home-sec-9-stats p span {
+  font-size: 32px;
+  color: var(--text);
+}
+
+@media (max-width: 991.98px) {
+  .launchpad-sec-9 {
+    flex-direction: column;
+    padding: 80px 20px 60px 20px;
+    gap: 40px;
+  }
+
+  .launchpad-home-contact-form,
+  .launchpad-home-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .launchpad-home-contact-form {
+    position: static;
+  }
+
+  .launchpad-home-content {
+    padding-right: 0;
+  }
+
+  .launchpad-home-main-heading {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .launchpad-home-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .launchpad-home-cta-clutch {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .launchpad-sec-9 {
+    padding: 60px 16px 50px 16px;
+  }
+
+  .launchpad-home-main-heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .launchpad-home-sec-9-stats {
+    gap: 22px;
+  }
+
+  .launchpad-home-sec-9-stats p {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/*--launchpad-sec-8--*/
+.launchpad-sec-8 {
+  padding: 60px 100px;
+}
+
+.launchpad-sec-8 .launchpad-box-card-content-wrapper {
+  padding: 20px;
+  min-height: 350px !important;
+}
+
+.launchpad-sec-8 .launchpad-box-card-heading {
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.launchpad-sec-8 .launchpad-box-card {
+  height: 100%;
+}
+
+.launch-box-card-banner {
+  background-image: url("/images/launch-banner-2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 100px !important;
+  gap: 20px;
+}
+
+.launch-box-card-banner-heading {
+  font-size: 48px;
+  color: var(--white);
+}
+
+.launch-box-card-banner-descrp {
+  color: var(--white);
+  font-size: 18px;
+  width: 70%;
+  line-height: 28px;
+}
+
+.launch-box-card-banner .buttons {
+  background-color: var(--launchpad-color-1);
+  border-color: var(--launchpad-color-1);
+}
+
+/*--launchpad-section-10--*/
+.launchpad-sec-10 .launchpad-sec-5 {
+  background-image: url("/images/launch-banner-2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.launchpad-sec-10
+  .launchpad-sec-5
+  .launchpad-banner-ctas
+  .buttons:nth-child(2) {
+  background-color: var(--launchpad-color-1);
+  border-color: var(--launchpad-color-1);
 }
