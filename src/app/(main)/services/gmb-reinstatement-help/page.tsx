@@ -111,7 +111,7 @@ function page() {
                 <span>
                   <GoShieldCheck />
                 </span>
-                95% Reinstatement Success Rate
+                99% Reinstatement Success Rate
               </p>
 
               <p className="label-head">
@@ -191,7 +191,7 @@ function page() {
               </p>
 
               <p>
-                <span> 95% </span>
+                <span> 99% </span>
                 Success Rate
               </p>
 
