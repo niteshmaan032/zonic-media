@@ -14,69 +14,124 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 
 const LaunchpadServiceFaqItems = [
   {
-    question: "What is Zonic LaunchPad?",
+    question: "How much does it cost to start a business with Zonic LaunchPad?",
     answer:
-      "Zonic LaunchPad is a done-for-you business launch service that helps new businesses get essential branding, website, Google presence, and marketing foundations ready quickly.",
+      "The cost depends on your business needs, but most clients invest between $1,500 and $3,000 for a complete setup that includes website, branding, and local presence.",
   },
   {
-    question: "Who is Zonic LaunchPad best for?",
+    question: "What do I need before getting started?",
     answer:
-      "It is best for startups, local businesses, service providers, and entrepreneurs who need a professional online presence without managing multiple vendors or confusing setup steps.",
+      "You only need a basic idea of your business. We handle everything else from branding to setup and launch.",
   },
   {
-    question: "How long does it take to launch my business setup?",
+    question: "How long does it take to launch my business?",
     answer:
-      "Most LaunchPad projects are completed within 7 to 14 days, depending on how quickly content, business details, and approvals are provided.",
+      "Most businesses are ready within 7 to 14 days depending on the scope and feedback speed.",
   },
   {
-    question: "What is included in a LaunchPad package?",
+    question: "Will my business start getting customers immediately?",
     answer:
-      "LaunchPad can include branding, website setup, Google Business Profile support, basic local SEO foundations, social media setup, and launch-ready marketing assets.",
+      "We build your business with a strong foundation for visibility and lead generation. Results can vary, but many clients start seeing inquiries within the first few weeks.",
   },
   {
-    question: "Do I need to have content ready before starting?",
+    question: "Do you provide support after the launch?",
     answer:
-      "No. If you do not have content ready, the Zonic Media team can help structure your messaging, service details, and launch copy during the onboarding process.",
+      "Yes, we offer ongoing support and marketing services including SEO and paid ads to help you grow.",
   },
   {
-    question: "Can you help with Google Business Profile setup?",
+    question: "Can you help if I already have a business but need improvement?",
     answer:
-      "Yes. We can help set up or improve your Google Business Profile so customers can find your business more easily in Google Search and Maps.",
+      "Yes, we can upgrade your existing setup, improve your website, and optimize your online presence.",
   },
   {
-    question: "Is LaunchPad only for new businesses?",
+    question: "Do I need technical or marketing knowledge?",
     answer:
-      "No. It also works for existing businesses that need a cleaner brand, better website, stronger online presence, or a faster relaunch.",
+      "No, our team handles everything. You can focus on running your business while we manage the setup.",
   },
   {
-    question: "Can I customize the package based on my needs?",
+    question: "What makes Zonic different from freelancers?",
     answer:
-      "Yes. LaunchPad plans can be adjusted based on your business type, goals, service area, and what assets you already have.",
+      "Instead of hiring multiple people, you get one team that handles everything with a structured process focused on results.",
   },
   {
-    question: "What happens after the launch is complete?",
+    question: "Can I scale my business after launch?",
     answer:
-      "After launch, you can continue with ongoing SEO, marketing, website updates, Google profile optimization, or paid ads depending on your growth goals.",
+      "Yes, you can upgrade to advanced marketing services like SEO and ads anytime as your business grows.",
   },
   {
-    question: "How do I get started with Zonic LaunchPad?",
+    question: "Do you work with US-based businesses?",
     answer:
-      "You can start by contacting Zonic Media, sharing your business details, and choosing the LaunchPad plan that best matches your goals.",
+      "Yes, we primarily work with US clients and understand local market requirements and competition.",
   },
 ];
 
 const LaunchpadHomeFormHead = {
-  leadFormTitle: "Get Your Free Local SEO Audit",
+  leadFormTitle: "Start Your Business with Zonic LaunchPad ",
   leadCallText: (
     <>
-      One call can help you get more local rankings, calls, and booked jobs.
+      One quick call can help you plan, build, and launch your business faster.
       <br />{" "}
       <a href="tel:+13027269736" className="lead-call-link">
-        Call Now:(302) 726-9736
+        Call Now: (302) 726-9736
       </a>
     </>
   ),
 };
+
+const launchpadPricingPlans = [
+  {
+    name: "Starter Launch",
+    price: "$950",
+    description:
+      "Best for getting your business online with a solid foundation",
+    features: [
+      "Logo design with basic branding",
+      "2 to 5 page website",
+      "Google Business Profile setup",
+      "Contact form integration",
+      "Mobile optimized layout",
+    ],
+    ideal: "Ideal if you want a simple and professional start",
+    cta: "Get Started",
+    featured: false,
+  },
+  {
+    name: "Growth Launch",
+    price: "$1,750",
+    description:
+      "Designed for business owners who want visibility and real leads",
+    features: [
+      "Everything in Starter",
+      "5 to 7 page website built for conversions",
+      "Full Google Business optimization",
+      "Social media setup and branding",
+      "Local SEO foundation setup",
+      "Lead capture system integration",
+    ],
+    ideal: "Ideal if you want customers from day one",
+    cta: "Book Free Consultation",
+    featured: true,
+  },
+  {
+    name: "Pro Launch",
+    price: "$4,200",
+    description:
+      "Built for businesses that want fast growth and a competitive edge",
+    features: [
+      "Everything in Growth",
+      "Premium custom website design",
+      "Advanced local SEO setup",
+      "Google Ads campaign setup",
+      "Meta Ads campaign setup",
+      "Dedicated landing page for ads",
+      "Lead tracking system",
+      "30 day post launch support",
+    ],
+    ideal: "Ideal if you want to scale quickly",
+    cta: "Scale My Business",
+    featured: false,
+  },
+];
 
 function page() {
   return (
@@ -111,7 +166,7 @@ function page() {
 
             <div className="launchpad-sec1-ctas">
               <Link href="/contact-us" className="buttons">
-                launch your website
+                Get Started Today
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -141,7 +196,7 @@ function page() {
               </Link>
 
               <Link href="/contact-us" className="buttons">
-                launch your website
+                Book Free Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -201,9 +256,9 @@ function page() {
 
           <Col lg={4}>
             <div className="launchpad-sec-1-card-wrapper launch-sec-1-card-3">
-              <h2>Start Your Business in 7 to 14 Days </h2>
+              <h2>Launch Your Business Online in 7 to 14 Days </h2>
               <Link href="/contact-us" className="buttons">
-                launch your website
+                Book Free Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -244,11 +299,11 @@ function page() {
                 <span>
                   <FaArrowTrendUp />
                 </span>
-                Zonic Media Your Growth Partner
+                Zonic LaunchPad Business Setup System
               </p>
 
               <h2 className="launchpad-sec-heading">
-                Start Your Business in 7 to 14 Days Without the Confusion
+                From Idea to Launch: Build Your Business the Right Way
               </h2>
             </div>
           </Col>
@@ -359,7 +414,7 @@ function page() {
 
                 <div className="launchpad-box-card-cta">
                   <Link href="/contact-us" className="buttons">
-                    launch your website
+                    Get started Today
                     <span className="buttons__icon-wrapper">
                       <svg
                         viewBox="0 0 14 15"
@@ -444,7 +499,7 @@ function page() {
                     </ul>
                     <div className="launchpad-box-card-cta">
                       <Link href="/contact-us" className="buttons">
-                        launch your website
+                        Book free Consultation
                         <span className="buttons__icon-wrapper">
                           <svg
                             viewBox="0 0 14 15"
@@ -499,11 +554,11 @@ function page() {
                 <span>
                   <FaArrowTrendUp />
                 </span>
-                Zonic Media Your Growth Partner
+                How Zonic LaunchPad Works
               </p>
 
               <h2 className="launchpad-sec-heading">
-                Start Your Business in 7 to 14 Days Without the Confusion
+                A Simple 3-Step Process to Launch Your Business Online
               </h2>
             </div>
           </Col>
@@ -514,12 +569,10 @@ function page() {
             <div className="launchpad-sec-4-card-wrapper">
               <p className="launchpad-sec-4-card-number"> 1 </p>
 
-              <h3 className="launchpad-sec-4-card-heading">
-                Design your waitlist
-              </h3>
+              <h3 className="launchpad-sec-4-card-heading">Share Your Idea</h3>
               <p className="launchpad-sec-4-card-descrp">
-                Customize your waitlist page or form with our intuitive
-                drag-and-drop editor — no coding required.
+                Tell us about your business, your goals, and your target
+                audience
               </p>
 
               <p className="launchpad-sec-4-card-descrp-2">
@@ -531,21 +584,21 @@ function page() {
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Business idea consultation and strategy planning
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Target audience and service area research
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Competitor analysis for better positioning
                 </li>
               </ul>
             </div>
@@ -553,14 +606,14 @@ function page() {
 
           <Col lg={4}>
             <div className="launchpad-sec-4-card-wrapper">
-              <p className="launchpad-sec-4-card-number"> 1 </p>
+              <p className="launchpad-sec-4-card-number"> 2 </p>
 
               <h3 className="launchpad-sec-4-card-heading">
-                Design your waitlist
+                We Build Your Foundation
               </h3>
               <p className="launchpad-sec-4-card-descrp">
-                Customize your waitlist page or form with our intuitive
-                drag-and-drop editor — no coding required.
+                Our team creates your brand, website, and complete online
+                presence
               </p>
 
               <p className="launchpad-sec-4-card-descrp-2">
@@ -572,21 +625,21 @@ function page() {
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Professional logo and brand identity creation
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Conversion-focused website development
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Google Business Profile setup and optimization
                 </li>
               </ul>
             </div>
@@ -594,14 +647,12 @@ function page() {
 
           <Col lg={4}>
             <div className="launchpad-sec-4-card-wrapper launchpad-sec-4-card-wrapper-3">
-              <p className="launchpad-sec-4-card-number"> 1 </p>
+              <p className="launchpad-sec-4-card-number"> 3 </p>
 
-              <h3 className="launchpad-sec-4-card-heading">
-                Design your waitlist
-              </h3>
+              <h3 className="launchpad-sec-4-card-heading">Launch and Grow</h3>
               <p className="launchpad-sec-4-card-descrp">
-                Customize your waitlist page or form with our intuitive
-                drag-and-drop editor — no coding required.
+                You receive a fully ready business setup designed to attract
+                customers
               </p>
 
               <p className="launchpad-sec-4-card-descrp-2">
@@ -613,21 +664,21 @@ function page() {
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Local SEO setup to improve search visibility
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Lead capture system for calls and inquiries
                 </li>
 
                 <li>
                   <span>
                     <FaCheck />
                   </span>
-                  Landing pages
+                  Launch support and growth-ready foundation
                 </li>
               </ul>
             </div>
@@ -639,17 +690,17 @@ function page() {
         <Col lg={7}>
           <div className="launchpad-sec-5-content-wrapper">
             <h2 className="launchpad-banner-heading">
-              Start Your Business in 7 to 14 Days Without the Confusion
+              Build, Launch, and Start Getting Customers in 7 to 14 Days
             </h2>
             <p className="launchpad-banner-descrp">
-              At Zonic LaunchPad We build everything you need from branding and
-              website to Google presence and marketing so you can focus on
-              growing your business
+              Zonic LaunchPad builds your complete online presence—from branding
+              and website to Google visibility—so you can start getting
+              customers faster without the hassle.
             </p>
 
             <div className="launchpad-banner-ctas">
               <Link href="/contact-us" className="buttons">
-                launch your website
+                Launch My Business
                 <span className="buttons__icon-wrapper">
                   <svg
                     viewBox="0 0 14 15"
@@ -692,11 +743,11 @@ function page() {
                 <span>
                   <FaArrowTrendUp />
                 </span>
-                Zonic Media Your Growth Partner
+                Business Launch & Growth Insights
               </p>
 
               <h2 className="launchpad-sec-heading">
-                Start Your Business in 7 to 14 Days Without the Confusion
+                What It Takes to Launch and Grow a Successful Business Online
               </h2>
             </div>
           </Col>
@@ -826,7 +877,7 @@ function page() {
                 </p>
 
                 <Link href="/contact-us" className="buttons">
-                  launch your website
+                  Get started today
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -859,7 +910,7 @@ function page() {
           </Col>
 
           <Col lg={4}>
-            <div className="launchpad-box-card">
+            <div className="launchpad-box-card launchpad-box-card-5">
               <div className="launchpad-box-card-content-wrapper">
                 <div className="launchpad-box-card-heading-container">
                   <h3 className="launchpad-box-card-heading">
@@ -898,111 +949,53 @@ function page() {
                 <span>
                   <FaArrowTrendUp />
                 </span>
-                Zonic Media Your Growth Partner
+                Zonic Launchpad Pricing
               </p>
 
               <h2 className="launchpad-sec-heading">
-                Start Your Business in 7 to 14 Days Without the Confusion
+                Choose Your Business Launch Plan
               </h2>
+
+              <p className="launchpad-sec-descrp">
+                Simple packages designed to take you from idea to a fully
+                operational, market-ready business.
+              </p>
             </div>
           </Col>
         </div>
 
         <div className="launchpad-pricing-wrapper">
           <Row className="g-4 justify-content-center">
-            <Col xs={12} md={12} lg={4}>
-              <div className="launchpad-pricing-card">
-                <div className="launchpad-price-badge">STARTER PLAN</div>
+            {launchpadPricingPlans.map((plan) => (
+              <Col xs={12} md={12} lg={4} key={plan.name}>
+                <div
+                  className={`launchpad-pricing-card${plan.featured ? " launchpad-pricing-card--dominate" : ""}`}
+                >
+                  <div className="launchpad-price-badge">
+                    {plan.name}
+                    {plan.featured ? " | Most Popular" : ""}
+                  </div>
 
-                <h1 className="launchpad-price">
-                  $350 <span>/ month</span>
-                </h1>
+                  <p className="launchpad-price-prefix">Starting at</p>
 
-                <p className="launchpad-price-subtitle">
-                  Best for small businesses targeting one service area.
-                </p>
+                  <h2 className="launchpad-price">{plan.price}</h2>
 
-                <h5 className="launchpad-price-section-title">
-                  What&apos;s Included
-                </h5>
+                  <p className="launchpad-price-subtitle">{plan.description}</p>
 
-                <ul className="launchpad-price-features">
-                  <li>Google Business Profile optimization</li>
-                  <li>Local keyword targeting</li>
-                  <li>Basic on-page SEO updates</li>
-                  <li>Citation cleanup & consistency</li>
-                  <li>Monthly reporting</li>
-                  <li>Email support</li>
-                </ul>
+                  <ul className="launchpad-price-features">
+                    {plan.features.map((feature) => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
 
-                <Link href="/contact-us" className="launchpad-price-cta-btn">
-                  Get This Plan
-                </Link>
-              </div>
-            </Col>
+                  <p className="launchpad-price-ideal">{plan.ideal}</p>
 
-            <Col xs={12} md={12} lg={4}>
-              <div className="launchpad-pricing-card">
-                <div className="launchpad-price-badge">GROWTH PLAN</div>
-
-                <h1 className="launchpad-price">
-                  $650 <span>/ month</span>
-                </h1>
-
-                <p className="launchpad-price-subtitle">
-                  Best for growing companies ready for more calls and booked
-                  jobs.
-                </p>
-
-                <h5 className="launchpad-price-section-title">
-                  What&apos;s Included
-                </h5>
-
-                <ul className="launchpad-price-features">
-                  <li>Everything in Starter Plan</li>
-                  <li>Multi-service keyword targeting</li>
-                  <li>Advanced local SEO strategy</li>
-                  <li>Review growth support</li>
-                  <li>Competitor tracking</li>
-                  <li>Priority support</li>
-                </ul>
-
-                <Link href="/contact-us" className="launchpad-price-cta-btn">
-                  Get This Plan
-                </Link>
-              </div>
-            </Col>
-
-            <Col xs={12} md={12} lg={4}>
-              <div className="launchpad-pricing-card launchpad-pricing-card--dominate">
-                <div className="launchpad-price-badge">DOMINATE PLAN</div>
-
-                <h1 className="launchpad-price">
-                  $950 <span>/ month</span>
-                </h1>
-
-                <p className="launchpad-price-subtitle">
-                  Best for competitive markets and multi-location growth.
-                </p>
-
-                <h5 className="launchpad-price-section-title">
-                  What&apos;s Included
-                </h5>
-
-                <ul className="launchpad-price-features">
-                  <li>Everything in Growth Plan</li>
-                  <li>Multi-location SEO campaigns</li>
-                  <li>High-authority backlink outreach</li>
-                  <li>Conversion optimization</li>
-                  <li>Aggressive ranking growth strategy</li>
-                  <li>Dedicated account manager</li>
-                </ul>
-
-                <Link href="/contact-us" className="launchpad-price-cta-btn">
-                  Get This Plan
-                </Link>
-              </div>
-            </Col>
+                  <Link href="/contact-us" className="launchpad-price-cta-btn">
+                    {plan.cta}
+                  </Link>
+                </div>
+              </Col>
+            ))}
           </Row>
         </div>
       </div>
@@ -1057,27 +1050,28 @@ function page() {
 
       <div className="launchpad-sec-9">
         <div className="launchpad-home-content">
-          <p className="launchpad-home-label">95% Growth Success Rate</p>
+          <p className="launchpad-home-label">
+            Launch Your Business with Confidence
+          </p>
           <h1 className="launchpad-home-main-heading">
-            Local SEO Built to Grow Home Service Businesses
+            Everything You Need to Start and Grow Your Business — All in One
+            Place
           </h1>
           <p className="launchpad-home-descrp">
-            Homeowners search online every day for reliable local professionals
-            they can trust. If your business is not appearing in those searches,
-            you are missing calls, estimates, and booked jobs that are going
-            directly to competitors in your area.
+            Starting a business is more than just building a website. You need
+            the right setup, strong branding, and a system that helps you
+            attract real customers from day one.
           </p>
 
           <p className="launchpad-home-descrp">
-            Zonic Media helps home service companies generate more leads through
-            strategic local SEO. We improve your rankings on Google Search and
-            Maps, increase visibility in your service areas, and turn
-            high-intent searches into real customers for roofing, HVAC,
-            plumbing, electrical, pest control, and other service businesses.
+            Zonic LaunchPad gives you a complete done-for-you business
+            setup—from branding and website to Google presence and lead
+            generation—so you can launch faster and focus on growing your
+            business.
           </p>
 
           <div className="launchpad-home-cta-clutch">
-            <Link href="/contact-us" className="buttons">
+            <Link href="tel:+13027269736" className="buttons">
               Call Now: (302) 726-9736
               <span className="buttons__icon-wrapper">
                 <svg
@@ -1135,7 +1129,7 @@ function page() {
 
               <div className="launchpad-banner-ctas">
                 <Link href="/contact-us" className="buttons">
-                  launch your website
+                  Get Started Today
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -1164,8 +1158,8 @@ function page() {
                   </span>
                 </Link>
 
-                <Link href="/contact-us" className="buttons">
-                  launch your website
+                <Link href="tel:+13027269736" className="buttons">
+                  Call Now: (302) 726-9736
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"

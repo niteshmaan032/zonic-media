@@ -328,7 +328,7 @@
 
 .launchpad-sec-4-list li {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 10px;
   font-weight: 500;
 }
@@ -390,7 +390,7 @@
 
 /*--launchpad-sec-6--*/
 .launchpad-sec-6 {
-  padding: 60px 100px;
+  padding: 0px 100px 60px 100px;
 }
 
 .launchpad-pricing-wrapper {
@@ -441,7 +441,7 @@
   color: var(--white);
   font-size: 12px;
   font-weight: 400;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 20px;
   margin-bottom: 16px;
 }
@@ -452,9 +452,10 @@
   margin: 0;
 }
 
-.launchpad-price span {
-  font-size: 18px;
-  font-weight: 500;
+.launchpad-price-prefix {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 6px;
 }
 
 .launchpad-price-subtitle {
@@ -462,6 +463,7 @@
   font-weight: 500;
   color: var(--color2);
   margin: 10px 0 24px;
+  line-height: 26px;
 }
 
 .launchpad-price-section-title {
@@ -500,6 +502,12 @@
 
 .launchpad-pricing-card--dominate .launchpad-price-features li::before {
   border-color: var(--white);
+}
+
+.launchpad-price-ideal {
+  font-size: 16px;
+  font-weight: 500;
+  margin: auto 0 24px;
 }
 
 .launchpad-price-cta-btn {
@@ -633,6 +641,10 @@
 .launchpad-sec-8 .launchpad-box-card-content-wrapper {
   padding: 20px;
   min-height: 350px !important;
+}
+
+.launchpad-box-card-5 .launchpad-box-card-heading-container {
+  background-color: var(--primary);
 }
 
 .launchpad-sec-8 .launchpad-box-card-heading {
