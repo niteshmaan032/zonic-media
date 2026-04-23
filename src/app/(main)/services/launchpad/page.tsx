@@ -11,6 +11,7 @@ import { IoRocket } from "react-icons/io5";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import SquareBgLaunch from "@/app/components/SquareBgLaunch";
 
 const LaunchpadServiceFaqItems = [
   {
@@ -137,6 +138,8 @@ function page() {
   return (
     <>
       <div className="launchpad-sec-1">
+        <SquareBgLaunch />
+
         <Col lg={8}>
           <div className="launchpad-sec-1-content-wrapper">
             <p className="launchpad-label">

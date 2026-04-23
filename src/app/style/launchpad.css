@@ -5,14 +5,54 @@
   --launchpad-color-4: #b1b1b1;
   --launchpad-color-5: #fffaef;
   --launchpad-home-bg: #eff6ff;
+  --launchpad-square: rgba(255, 102, 0, 0.2);
 }
 
 .launchpad-sec-1 {
+  position: relative;
   padding: 160px 100px 60px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.launchpad-sec-1 > .col-lg-8 {
+  position: relative;
+  z-index: 1;
+}
+
+.launchpad-square-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.launchpad-square {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--white);
+  animation: launchpadSquareGlow 2s infinite steps(1, end);
+  will-change: box-shadow;
+  box-shadow: inset 0 0 0 0 var(--launchpad-square);
+}
+
+@keyframes launchpadSquareGlow {
+  0%,
+  24%,
+  62%,
+  100% {
+    box-shadow: inset 0 0 0 0 var(--launchpad-square);
+  }
+
+  25%,
+  63% {
+    box-shadow: inset 0 0 0 30px var(--launchpad-square);
+  }
 }
 
 .bg-label {
@@ -80,6 +120,12 @@
 .launchpad-sec1-ctas .buttons:nth-child(2) {
   background-color: var(--launchpad-color-1);
   border-color: var(--launchpad-color-1);
+}
+
+@media (max-width: 768px) {
+  .launchpad-square {
+    opacity: 0.5;
+  }
 }
 
 /*--launchpad-sec-2--*/
