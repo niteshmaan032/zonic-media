@@ -366,7 +366,7 @@
   top: 0px;
   left: 0;
   width: 100%;
-  min-height: 100svh;
+  height: 100svh;
   background-color: var(--white);
   padding: 110px 20px 20px 20px;
   display: flex;
@@ -375,7 +375,8 @@
   z-index: 90;
   transform: translateY(-100%);
   transition: ease 0.5s;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .mob-tab-navbar-wrapper.show-mob-tab {
@@ -383,8 +384,12 @@
 }
 
 .mob-tab-nav-menus {
+  flex: 1;
+  min-height: 0;
   border-bottom: 1px solid var(--primary);
-  padding-bottom: 40px;
+  padding-bottom: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .mob-tab-nav-menus ul {
@@ -398,7 +403,7 @@
 }
 
 .mob-tab-nav-menus ul li a {
-  font-size: 36px;
+  font-size: 22px;
   font-weight: 500;
   text-decoration: none;
   color: var(--text);
@@ -423,40 +428,39 @@
   font-weight: 500;
 }
 
-#mobileServicesAccordion .accordion-item {
+.mob-tab-nav-menus .accordion-item {
   border: none;
   background-color: transparent;
 }
 
-#mobileServicesAccordion .accordion-button {
-  font-size: 36px;
+.mob-tab-nav-menus .accordion-button {
+  font-size: 22px;
   background-color: transparent;
   color: var(--text);
   font-weight: 500;
   padding: 0;
 }
 
-#mobileServicesAccordion .accordion-button:not(.collapsed) {
+.mob-tab-nav-menus .accordion-button:not(.collapsed) {
   box-shadow: none;
   background-color: transparent;
 }
 
-#mobileServicesAccordion .accordion-button:focus {
+.mob-tab-nav-menus .accordion-button:focus {
   box-shadow: none;
   border: none;
 }
 
-/* Adjust the arrow icon size/color */
-#mobileServicesAccordion .accordion-button::after {
-  --bs-accordion-btn-icon-width: 1.8rem;
+.mob-tab-nav-menus .accordion-button::after {
+  --bs-accordion-btn-icon-width: 1.2rem;
 }
 
-#mobileServicesAccordion .accordion-body {
-  padding: 24px 0px 5px 10px;
+.mob-tab-nav-menus .accordion-body {
+  padding: 12px 0 0;
 }
 
-#mobileServicesAccordion .accordion-body ul li a {
-  font-size: 24px;
+.mob-tab-nav-menus .accordion-body ul li a {
+  font-size: 22px;
   text-decoration: none;
   color: var(--text);
   display: block;
@@ -470,7 +474,7 @@
 
 .mobile-services-nested-accordion .accordion-button {
   padding: 0;
-  font-size: 24px !important;
+  font-size: 22px !important;
   background-color: transparent;
   color: var(--text);
   font-weight: 500;
@@ -492,7 +496,7 @@
 }
 
 .mobile-services-nested-accordion .accordion-body {
-  padding: 14px 0 4px 18px;
+  padding: 12px 0 0;
 }
 
 .mobile-services-submenu {
