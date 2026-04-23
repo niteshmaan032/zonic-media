@@ -321,7 +321,7 @@ function page() {
                     <span>
                       <PiBagSimple />
                     </span>{" "}
-                    Starting a business feels exciting at first{" "}
+                    Starting a business feels exciting at first
                   </h3>
                 </div>
 
@@ -339,29 +339,20 @@ function page() {
                     <span>
                       <FaCircleExclamation />
                     </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
+                    Most people get stuck before they even begin
                   </li>
                   <li>
                     <span>
                       <FaCircleExclamation />
                     </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
+                    They spend weeks researching, hire multiple freelancers, or
+                    end up with something incomplete that never performs
                   </li>
                   <li>
                     <span>
                       <FaCircleExclamation />
                     </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
-                  </li>
-                  <li>
-                    <span>
-                      <FaCircleExclamation />
-                    </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
+                    That is why many great ideas never turn into real businesses
                   </li>
                 </ul>
               </div>
@@ -376,42 +367,46 @@ function page() {
                     <span>
                       <IoRocket />
                     </span>{" "}
-                    Starting a business feels exciting at first{" "}
+                    Introducing Zonic LaunchPad™
                   </h3>
                 </div>
 
-                <p className="launchpad-box-card-sub-head">Then reality hits</p>
+                <p className="launchpad-box-card-sub-head">
+                  A complete business setup solution designed for people who
+                  want to launch the right way from day one
+                </p>
 
                 <ul className="launchpad-box-card-list">
                   <li>
                     <span>
                       <FaCheck />
                     </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
-                  </li>
-
-                  <li>
-                    <span>
-                      <FaCheck />
-                    </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
-                  </li>
-
-                  <li>
-                    <span>
-                      <FaCheck />
-                    </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
+                    We take your idea and turn it into a fully built and ready
+                    to launch business
                   </li>
                   <li>
                     <span>
                       <FaCheck />
                     </span>
-                    You need a logo, a website, a Google listing, social media
-                    profiles, branding, and a way to get customers
+                    No confusion
+                  </li>
+                  <li>
+                    <span>
+                      <FaCheck />
+                    </span>
+                    No multiple vendors
+                  </li>
+                  <li>
+                    <span>
+                      <FaCheck />
+                    </span>
+                    No wasted time
+                  </li>
+                  <li>
+                    <span>
+                      <FaCheck />
+                    </span>
+                    Just one team handling everything
                   </li>
                 </ul>
 
@@ -460,12 +455,12 @@ function page() {
                         <span>
                           <FaArrowTrendUp />
                         </span>{" "}
-                        Starting a business feels exciting at first{" "}
+                        Everything Required to Launch Your Business
                       </h3>
                     </div>
 
                     <p className="launchpad-box-card-sub-head">
-                      Then reality hits
+                      Everything you need in one complete system
                     </p>
 
                     <ul className="launchpad-box-card-list">
@@ -473,33 +468,45 @@ function page() {
                         <span>
                           <FaCheck />
                         </span>
-                        You need a logo, a website, a Google listing, social
-                        media profiles, branding, and a way to get customers
+                        Professional logo and brand identity
                       </li>
 
                       <li>
                         <span>
                           <FaCheck />
                         </span>
-                        You need a logo, a website, a Google listing, social
-                        media profiles, branding, and a way to get customers
+                        Mobile optimized website designed for conversions
                       </li>
 
                       <li>
                         <span>
                           <FaCheck />
                         </span>
-                        You need a logo, a website, a Google listing, social
-                        media profiles, branding, and a way to get customers
+                        Google Business Profile setup and optimization
                       </li>
+
                       <li>
                         <span>
                           <FaCheck />
                         </span>
-                        You need a logo, a website, a Google listing, social
-                        media profiles, branding, and a way to get customers
+                        Social media account setup and branding
+                      </li>
+
+                      <li>
+                        <span>
+                          <FaCheck />
+                        </span>
+                        Local SEO foundation to improve visibility
+                      </li>
+
+                      <li>
+                        <span>
+                          <FaCheck />
+                        </span>
+                        Lead capture system so customers can reach you easily
                       </li>
                     </ul>
+
                     <div className="launchpad-box-card-cta">
                       <Link href="/contact-us" className="buttons">
                         Book free Consultation
@@ -539,8 +546,8 @@ function page() {
                     <Image
                       src="/images/launchpad-2.jpg"
                       fill
-                      alt="launchpad business lauch"
-                    ></Image>
+                      alt="launchpad business launch"
+                    />
                   </div>
                 </Col>
               </Row>
