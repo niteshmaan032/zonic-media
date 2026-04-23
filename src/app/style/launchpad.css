@@ -624,64 +624,6 @@
   color: var(--text);
 }
 
-@media (max-width: 991.98px) {
-  .launchpad-sec-9 {
-    flex-direction: column;
-    padding: 80px 20px 60px 20px;
-    gap: 40px;
-  }
-
-  .launchpad-home-contact-form,
-  .launchpad-home-content {
-    flex-basis: auto;
-    width: 100%;
-  }
-
-  .launchpad-home-contact-form {
-    position: static;
-  }
-
-  .launchpad-home-content {
-    padding-right: 0;
-  }
-
-  .launchpad-home-main-heading {
-    font-size: 38px;
-    line-height: 48px;
-  }
-
-  .launchpad-home-descrp {
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  .launchpad-home-cta-clutch {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .launchpad-sec-9 {
-    padding: 60px 16px 50px 16px;
-  }
-
-  .launchpad-home-main-heading {
-    font-size: 32px;
-    line-height: 40px;
-  }
-
-  .launchpad-home-sec-9-stats {
-    gap: 22px;
-  }
-
-  .launchpad-home-sec-9-stats p {
-    align-items: flex-start;
-    text-align: left;
-    width: 100%;
-  }
-}
-
 /*--launchpad-sec-8--*/
 .launchpad-sec-8 {
   padding: 60px 100px;
@@ -750,4 +692,601 @@
   .buttons:nth-child(2) {
   background-color: var(--launchpad-color-1);
   border-color: var(--launchpad-color-1);
+}
+
+/*responsive*/
+
+/* mobile phones + tablets */
+@media (max-width: 991.98px) {
+}
+
+/*mobile only*/
+@media (max-width: 575.98px) {
+  .launchpad-sec-1 {
+    padding: 100px 20px 40px 20px;
+    align-items: start;
+  }
+
+  .launchpad-sec-1-content-wrapper {
+    align-items: start;
+    text-align: start;
+  }
+
+  .launchpad-main-heading {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  .launchpad-main-heading span img {
+    width: 42px;
+    height: 42px;
+    margin: 0px 4px;
+  }
+
+  .launchpad-descrp {
+    width: 100%;
+  }
+
+  .launchpad-sec1-ctas {
+    flex-direction: column;
+  }
+
+  .launchpad-sec1-ctas .buttons:nth-child(1) {
+    display: none;
+  }
+
+  /*--launchpad-sec-2--*/
+  .launchpad-sec-2 {
+    padding: 0px 20px 40px 20px;
+  }
+
+  .launchpad-sec-1-card-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .launch-sec-1-card-1 {
+    background-color: var(--launchpad-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .launchpad-rocket-lottie {
+    width: 100%;
+  }
+
+  .launch-sec-1-card-2 {
+    background-color: var(--text);
+    aspect-ratio: 16 / 9;
+  }
+
+  .launch-sec-1-card-3 {
+    padding: 32px;
+  }
+
+  .launch-sec-1-card-3 h2 {
+    font-size: 38px;
+  }
+
+  /*--launchpad-sec-3--*/
+
+  .launchpad-sec-3 {
+    padding: 0px 20px 40px 20px;
+  }
+
+  .launchpad-center-head-content-wrapper {
+    align-items: start;
+    text-align: start;
+  }
+
+  .launchpad-sec-heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .launchpad-box-card {
+    height: 100%;
+  }
+
+  .launchpad-box-card-content-wrapper {
+    padding: 20px;
+  }
+
+  .launchpad-box-card-heading {
+    align-items: start;
+  }
+
+  .launchpad-box-card-3 {
+    padding-right: 20px;
+    height: 100%;
+  }
+
+  .launchpad-box-card-3-img-cont {
+    position: relative;
+    height: 250px;
+    margin-top: 20px;
+  }
+
+  /*--launchpad-sec-4--*/
+
+  .launchpad-sec-4 {
+    background-color: var(--launchpad-color-5);
+    padding: 40px 20px 0px 20px;
+  }
+
+  .launchpad-sec-4-card-wrapper {
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  /*--launchpad-sec-5--*/
+  .launchpad-sec-5 {
+    padding: 100px 20px;
+  }
+
+  .launchpad-sec-5-content-wrapper {
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+
+  .launchpad-banner-heading {
+    font-size: 42px;
+    color: var(--white);
+    line-height: 54px;
+  }
+
+  .launchpad-banner-descrp {
+    width: 100%;
+  }
+
+  .launchpad-banner-ctas {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .launchpad-banner-ctas .buttons {
+    order: 2;
+  }
+
+  /*--launchpad-sec-6--*/
+  .launchpad-sec-6 {
+    padding: 40px 20px;
+  }
+
+  .launchpad-pricing-wrapper {
+    margin-top: 40px;
+  }
+
+  /*--launchpad-sec-7--*/
+  .launchpad-sec-7 {
+    padding: 0px 20px 40px 20px;
+  }
+
+  .launchpad-sec-9 {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .launchpad-home-contact-form,
+  .launchpad-home-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .launchpad-home-contact-form {
+    position: static;
+  }
+
+  .launchpad-home-content {
+    padding-right: 0;
+  }
+
+  .launchpad-home-main-heading {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .launchpad-home-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .launchpad-home-cta-clutch {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  /*--launchpad-sec-8--*/
+  .launchpad-sec-8 {
+    padding: 40px 20px;
+  }
+
+  .launchpad-sec-8 .launchpad-box-card-content-wrapper {
+    padding: 20px;
+    height: 100%;
+  }
+
+  .launch-box-card-banner {
+    padding: 20px !important;
+    gap: 20px;
+  }
+
+  .launch-box-card-banner-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .launch-box-card-banner-descrp {
+    width: 100%;
+  }
+
+  /*--launchpad-section-10--*/
+  .launchpad-sec-10 .launchpad-sec-5 {
+    padding: 40px 20px;
+  }
+}
+
+/*tablet devices*/
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .launchpad-sec-1 {
+    padding: 120px 40px 40px 40px;
+  }
+
+  .launchpad-main-heading {
+    font-size: 54px;
+    line-height: 64px;
+  }
+
+  .launchpad-main-heading span img {
+    width: 52px;
+    height: 52px;
+    margin: 0px 4px;
+  }
+
+  .launchpad-descrp {
+    width: 80%;
+  }
+
+  .launchpad-sec1-ctas .buttons:nth-child(1) {
+    display: flex;
+  }
+
+  /*--launchpad-sec-2--*/
+  .launchpad-sec-2 {
+    padding: 0px 40px 40px 40px;
+  }
+
+  .launchpad-sec-1-card-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .launch-sec-1-card-3 h2 {
+    font-size: 42px;
+    line-height: 62px;
+  }
+
+  /*--launchpad-sec-3--*/
+
+  .launchpad-sec-3 {
+    padding: 0px 40px 40px 40px;
+  }
+
+  .launchpad-center-head-content-wrapper {
+    align-items: start;
+    text-align: start;
+  }
+
+  .launchpad-sec-heading {
+    font-size: 42px;
+    line-height: 54px;
+  }
+
+  .launchpad-box-card {
+    height: 100%;
+  }
+
+  .launchpad-box-card-content-wrapper {
+    padding: 20px;
+  }
+
+  .launchpad-box-card-heading {
+    align-items: start;
+  }
+
+  .launchpad-box-card-3 {
+    padding-right: 20px;
+    height: 100%;
+  }
+
+  .launchpad-box-card-3-img-cont {
+    position: relative;
+    height: 450px;
+    margin-top: 20px;
+  }
+
+  /*--launchpad-sec-4--*/
+
+  .launchpad-sec-4 {
+    background-color: var(--launchpad-color-5);
+    padding: 40px 40px 0px 40px;
+  }
+
+  .launchpad-sec-4-card-wrapper {
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  /*--launchpad-sec-5--*/
+  .launchpad-sec-5 {
+    padding: 100px 40px;
+  }
+
+  .launchpad-sec-5-content-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .launchpad-banner-heading {
+    font-size: 42px;
+    color: var(--white);
+    line-height: 54px;
+  }
+
+  .launchpad-banner-descrp {
+    width: 100%;
+  }
+
+  .launchpad-banner-ctas {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*--launchpad-sec-6--*/
+  .launchpad-sec-6 {
+    padding: 40px;
+  }
+
+  .launchpad-pricing-wrapper {
+    margin-top: 40px;
+  }
+
+  /*--launchpad-sec-7--*/
+  .launchpad-sec-7 {
+    padding: 0px 40px 40px 40px;
+  }
+
+  .launchpad-sec-9 {
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .launchpad-home-contact-form,
+  .launchpad-home-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .launchpad-home-contact-form {
+    position: static;
+  }
+
+  .launchpad-home-content {
+    padding-right: 0;
+  }
+
+  .launchpad-home-main-heading {
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  .launchpad-home-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /*--launchpad-sec-8--*/
+  .launchpad-sec-8 {
+    padding: 40px;
+  }
+
+  .launchpad-sec-8 .launchpad-box-card-content-wrapper {
+    padding: 20px;
+    height: 100%;
+  }
+
+  .launch-box-card-banner {
+    padding: 20px !important;
+    gap: 20px;
+  }
+
+  .launch-box-card-banner-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .launch-box-card-banner-descrp {
+    width: 100%;
+  }
+
+  /*--launchpad-section-10--*/
+  .launchpad-sec-10 .launchpad-sec-5 {
+    padding: 40px;
+  }
+}
+
+/*large desktop devices*/
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .launchpad-sec-1 {
+    padding: 120px 30px 40px 30px;
+  }
+
+  .launchpad-main-heading {
+    font-size: 54px;
+    line-height: 64px;
+  }
+
+  .launchpad-main-heading span img {
+    width: 52px;
+    height: 52px;
+    margin: 0px 4px;
+  }
+
+  .launchpad-descrp {
+    width: 85%;
+  }
+
+  /*--launchpad-sec-2--*/
+  .launchpad-sec-2 {
+    padding: 0px 30px 40px 30px;
+  }
+
+  .launchpad-sec-1-card-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*--launchpad-sec-3--*/
+
+  .launchpad-sec-3 {
+    padding: 0px 30px 30px 30px;
+  }
+
+  /*--launchpad-sec-4--*/
+
+  .launchpad-sec-4 {
+    padding: 40px 30px 0px 30px;
+  }
+
+  /*--launchpad-sec-5--*/
+  .launchpad-sec-5 {
+    padding: 100px 30px;
+  }
+
+  .launchpad-banner-descrp {
+    width: 80%;
+  }
+
+  /*--launchpad-sec-6--*/
+  .launchpad-sec-6 {
+    padding: 40px 30px;
+  }
+
+  /*--launchpad-sec-7--*/
+  .launchpad-sec-7 {
+    padding: 0px 30px 40px 30px;
+  }
+
+  .launchpad-sec-9 {
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .launchpad-home-contact-form,
+  .launchpad-home-content {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .launchpad-home-contact-form {
+    position: static;
+  }
+
+  .launchpad-home-content {
+    padding-right: 0;
+  }
+
+  /*--launchpad-sec-8--*/
+  .launchpad-sec-8 {
+    padding: 40px 30px;
+  }
+
+  .launch-box-card-banner-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .launch-box-card-banner-descrp {
+    width: 100%;
+  }
+
+  /*--launchpad-section-10--*/
+  .launchpad-sec-10 .launchpad-sec-5 {
+    padding: 40px 30px;
+  }
+}
+
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .launchpad-sec-1 {
+    padding: 120px 40px 60px 40px;
+  }
+
+  /*--launchpad-sec-2--*/
+  .launchpad-sec-2 {
+    padding: 0px 40px 60px 40px;
+  }
+
+  .launchpad-sec-1-card-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*--launchpad-sec-3--*/
+
+  .launchpad-sec-3 {
+    padding: 0px 40px 60px 40px;
+  }
+
+  /*--launchpad-sec-4--*/
+
+  .launchpad-sec-4 {
+    padding: 60px 40px 0px 40px;
+  }
+
+  /*--launchpad-sec-5--*/
+  .launchpad-sec-5 {
+    padding: 100px 40px;
+  }
+
+  .launchpad-banner-descrp {
+    width: 80%;
+  }
+
+  /*--launchpad-sec-6--*/
+  .launchpad-sec-6 {
+    padding: 60px 40px;
+  }
+
+  /*--launchpad-sec-7--*/
+  .launchpad-sec-7 {
+    padding: 0px 40px 60px 40px;
+  }
+
+  /*--launchpad-sec-9--*/
+
+  .launchpad-sec-9 {
+    padding: 60px 40px;
+  }
+
+  /*--launchpad-sec-8--*/
+  .launchpad-sec-8 {
+    padding: 60px 40px;
+  }
+
+  /*--launchpad-section-10--*/
+  .launchpad-sec-10 .launchpad-sec-5 {
+    padding: 60px 40px;
+  }
+}
+
+/*extra large desktop devices */
+@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

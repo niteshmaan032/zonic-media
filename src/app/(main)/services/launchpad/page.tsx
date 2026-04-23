@@ -175,7 +175,7 @@ function page() {
       </div>
 
       <div className="launchpad-sec-2">
-        <Row>
+        <Row className="g-4">
           <Col lg={3}>
             <div className="launchpad-sec-1-card-wrapper launch-sec-1-card-1">
               <SharedLottiePlayer
