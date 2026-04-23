@@ -115,7 +115,7 @@
 
 .launch-sec-1-card-2 {
   background-color: var(--text);
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 14/ 9;
 }
 
 .launch-sec-1-card-2 iframe {
@@ -124,6 +124,7 @@
   height: 100%;
   min-height: 315px;
   border: 0;
+  overflow: hidden;
 }
 
 .launch-sec-1-card-3 {
@@ -1232,11 +1233,6 @@
   /*--launchpad-sec-2--*/
   .launchpad-sec-2 {
     padding: 0px 40px 60px 40px;
-  }
-
-  .launchpad-sec-1-card-wrapper {
-    height: 100%;
-    width: 100%;
   }
 
   /*--launchpad-sec-3--*/
