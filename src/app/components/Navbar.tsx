@@ -3,7 +3,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaBug, FaFan, FaTooth, FaWrench } from "react-icons/fa6";
+import { FaRegNewspaper } from "react-icons/fa6";
+import { FaStore } from "react-icons/fa6";
+import { HiMiniRocketLaunch } from "react-icons/hi2";
+import { IoSearchOutline } from "react-icons/io5";
+import { IoDesktopOutline } from "react-icons/io5";
 import { MdArrowOutward } from "react-icons/md";
+import { MdOutlineMail } from "react-icons/md";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlineInfo } from "react-icons/md";
+import { MdRoofing } from "react-icons/md";
+import { RiMapPinLine } from "react-icons/ri";
+import { SiGoogleads } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 import "@/app/style/navbar.css";
@@ -41,11 +53,11 @@ const services = [
 ];
 
 const gmbServiceLinks = [
-  // {
-  //   id: "gmb-overview",
-  //   label: "google my business overview",
-  //   link: "/services/google-my-business",
-  // },
+  {
+    id: "gmb-reinstatement-help",
+    label: "GMB Reinstatement",
+    link: "/services/gmb-reinstatement-help",
+  },
   {
     id: "gmb-verification-help",
     label: "GMB Verification Help",
@@ -96,15 +108,8 @@ const localSeoServices = [
   },
 ];
 
-const localSeoThumbnail = {
-  image: "/images/seo-service-thumb.svg",
-  alt: "local seo thumbnail",
-};
-
 function Navbar() {
   const pathname = usePathname();
-  const defaultService = services[0];
-  const [activeService, setActiveService] = useState(defaultService);
   const [scrolled, setScrolled] = useState(false);
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
@@ -116,15 +121,9 @@ function Navbar() {
   const [mobileServicesNestedKey, setMobileServicesNestedKey] = useState<
     string | null
   >(null);
-  const [desktopServicesAccordionKey, setDesktopServicesAccordionKey] =
-    useState<string | null>("gmb");
   const isFirstPathnameRenderRef = useRef(true);
   const mobileOpenRef = useRef(mobileOpen);
   const closeMenuFrameRef = useRef<number | null>(null);
-
-  const [activeLocalSeo, setActiveLocalSeo] = useState<
-    (typeof localSeoServices)[number] | null
-  >(null);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "auto";
@@ -236,214 +235,212 @@ function Navbar() {
             <Col className="d-none d-lg-block">
               <nav className="menu-items">
                 <ul>
-                  <li>
-                    <Link href={SITE_PATHS.home}>Home</Link>
-                  </li>
-                  <li>
-                    <Link href={SITE_PATHS.about}>About Us</Link>
-                  </li>
-                  <li
-                    className="services-dropdown"
-                    onMouseLeave={() => {
-                      setActiveService(defaultService);
-                      setDesktopServicesAccordionKey("gmb");
-                    }}
-                  >
+                  <li className="services-dropdown">
                     <Link href={SITE_PATHS.services}>
                       Services <MdArrowOutward size={16} />
                     </Link>
-                    <div className="services-dropdown-container">
-                      <Row className="h-100">
-                        <Col lg={7}>
-                          <div className="services-dropdown-menus">
-                            <p>Core Services</p>
-                            <ul>
-                              {services.map((s) => (
-                                <li key={s.id}>
-                                  {s.id === "gmb" ? (
-                                    <Accordion
-                                      flush
-                                      className="desktop-services-accordion"
-                                      activeKey={desktopServicesAccordionKey}
-                                      onSelect={(eventKey) =>
-                                        setDesktopServicesAccordionKey(
-                                          typeof eventKey === "string"
-                                            ? eventKey
-                                            : null,
-                                        )
-                                      }
-                                    >
-                                      <Accordion.Item
-                                        eventKey="gmb"
-                                        onMouseEnter={() => setActiveService(s)}
-                                      >
-                                        <Accordion.Header>
-                                          {s.label}
-                                        </Accordion.Header>
-                                        <Accordion.Body>
-                                          <ul className="desktop-services-submenu">
-                                            {gmbServiceLinks.map((gmbLink) => (
-                                              <li key={gmbLink.id}>
-                                                <Link href={gmbLink.link}>
-                                                  {gmbLink.label}
-                                                </Link>
-                                              </li>
-                                            ))}
-                                          </ul>
-                                        </Accordion.Body>
-                                      </Accordion.Item>
-                                    </Accordion>
-                                  ) : (
-                                    <Link
-                                      href={s.link}
-                                      onMouseEnter={() => setActiveService(s)}
-                                    >
-                                      {s.label}
-                                    </Link>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                            <Link
-                              href={SITE_PATHS.services}
-                              className="buttons"
-                            >
-                              <span>View all services</span>
-                              <span className="buttons__icon-wrapper">
-                                <svg
-                                  viewBox="0 0 14 15"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="buttons__icon-svg"
-                                  width="8"
-                                >
-                                  <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
+                    <div className="services-dropdown-container services-core-dropdown">
+                      <div className="services-core-label">Core Services</div>
 
-                                <svg
-                                  viewBox="0 0 14 15"
-                                  fill="none"
-                                  width="8"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="buttons__icon-svg buttons__icon-svg--copy"
+                      <div className="services-core-grid">
+                        <Link
+                          href="/services/web-design"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <IoDesktopOutline />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Web Design</strong>
+                            <span>
+                              Conversion-focused websites built to give your
+                              business a polished online presence.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/services/google-ads"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <SiGoogleads />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Google Ads</strong>
+                            <span>
+                              Paid campaigns designed to bring qualified leads
+                              and faster visibility.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <div className="services-core-card">
+                          <span className="services-core-icon">
+                            <FaStore />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Google My Business</strong>
+                            <span>
+                              Profile setup, recovery, and optimization to help
+                              customers find you locally.
+                            </span>
+
+                            <span className="services-core-tags">
+                              {gmbServiceLinks.map((gmbLink) => (
+                                <Link
+                                  key={gmbLink.id}
+                                  href={gmbLink.link}
+                                  className="services-core-tag"
                                 >
-                                  <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </span>
-                            </Link>
-                          </div>
-                        </Col>
-                        <Col lg={5}>
-                          <div className="services-dropdown-img-container">
-                            {services.map((s) => (
-                              <Image
-                                key={s.id}
-                                src={s.image}
-                                alt={s.alt}
-                                fill
-                                className={`dropdown-preview-img ${activeService.id === s.id ? "active" : ""}`}
-                              />
-                            ))}
-                          </div>
-                        </Col>
-                      </Row>
+                                  {gmbLink.label}
+                                </Link>
+                              ))}
+                            </span>
+                          </span>
+                        </div>
+
+                        <Link
+                          href="/services/local-seo-for-home-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <RiMapPinLine />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Local SEO</strong>
+                            <span>
+                              Local search strategies that help service
+                              businesses rank and generate consistent calls.
+                            </span>
+                          </span>
+                        </Link>
+                      </div>
+
+                      <div className="services-core-divider" />
+
+                      <div className="services-core-bottom">
+                        <p className="services-core-bottom-copy">
+                          Let&apos;s Start a project with{" "}
+                          <strong>Zonic Media</strong>
+                        </p>
+
+                        <Link
+                          href="/contact-us"
+                          className="services-core-cta"
+                        >
+                          Get Started Today
+                        </Link>
+                      </div>
                     </div>
                   </li>
-
-                  <li
-                    className="services-dropdown"
-                    onMouseLeave={() => setActiveLocalSeo(null)}
-                  >
+                  <li className="services-dropdown">
                     <Link href={SITE_PATHS.seo}>
                       Local SEO <MdArrowOutward size={16} />
                     </Link>
 
-                    <div className="services-dropdown-container local-seo-service-dropdown">
-                      <Row className="h-100">
-                        {/* LEFT MENU */}
-                        <Col lg={6}>
-                          <div className="services-dropdown-menus">
-                            <p>Local SEO Services</p>
-                            <ul>
-                              {localSeoServices.map((s) => (
-                                <li key={s.id}>
-                                  <Link
-                                    href={s.link}
-                                    onMouseEnter={() => setActiveLocalSeo(s)}
-                                  >
-                                    {s.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
+                      <div className="services-core-label">
+                        Local SEO Services
+                      </div>
 
-                            <Link
-                              href={SITE_PATHS.services}
-                              className="buttons"
-                            >
-                              <span>View all services</span>
-                              <span className="buttons__icon-wrapper">
-                                <svg
-                                  viewBox="0 0 14 15"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="buttons__icon-svg"
-                                  width="8"
-                                >
-                                  <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
+                      <div className="services-core-grid local-seo-core-grid">
+                        <Link
+                          href="/roofing-seo-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <MdRoofing />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Roofing Local SEO</strong>
+                            <span>
+                              Help roofing companies rank locally and turn
+                              search traffic into booked estimates.
+                            </span>
+                          </span>
+                        </Link>
 
-                                <svg
-                                  viewBox="0 0 14 15"
-                                  fill="none"
-                                  width="8"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  className="buttons__icon-svg buttons__icon-svg--copy"
-                                >
-                                  <path
-                                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </span>
-                            </Link>
-                          </div>
-                        </Col>
+                        <Link
+                          href="/dentist-seo-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaTooth />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Dentist Local SEO</strong>
+                            <span>
+                              Improve map visibility and patient leads for
+                              dental practices in competitive markets.
+                            </span>
+                          </span>
+                        </Link>
 
-                        {/* RIGHT IMAGE PREVIEW */}
-                        <Col lg={6}>
-                          <div className="services-dropdown-img-container">
-                            <Image
-                              src={localSeoThumbnail.image}
-                              alt={localSeoThumbnail.alt}
-                              fill
-                              className={`dropdown-preview-img ${
-                                activeLocalSeo === null ? "active" : ""
-                              }`}
-                            />
-                            {localSeoServices.map((s) => (
-                              <Image
-                                key={s.id}
-                                src={s.image}
-                                alt={s.alt}
-                                fill
-                                className={`dropdown-preview-img ${
-                                  activeLocalSeo?.id === s.id ? "active" : ""
-                                }`}
-                              />
-                            ))}
-                          </div>
-                        </Col>
-                      </Row>
+                        <Link
+                          href="/hvac-seo-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaFan />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>HVAC Local SEO</strong>
+                            <span>
+                              Generate more calls for heating and cooling
+                              services with stronger local rankings.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/plumber-seo-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaWrench />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Plumber Local SEO</strong>
+                            <span>
+                              Build consistent local visibility that helps
+                              plumbing businesses win urgent service calls.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/pest-seo-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaBug />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Pest Control Local SEO</strong>
+                            <span>
+                              Reach nearby homeowners searching for fast pest
+                              control help and recurring service plans.
+                            </span>
+                          </span>
+                        </Link>
+                      </div>
+
+                      <div className="services-core-divider" />
+
+                      <div className="services-core-bottom">
+                        <p className="services-core-bottom-copy">
+                          Grow your local rankings with{" "}
+                          <strong>Zonic Media</strong>
+                        </p>
+
+                        <Link
+                          href="/contact-us"
+                          className="services-core-cta"
+                        >
+                          Get Started Today
+                        </Link>
+                      </div>
                     </div>
                   </li>
                   <li>
@@ -452,10 +449,117 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={SITE_PATHS.blogs}>Blogs</Link>
+                    <Link
+                      href="/services/launchpad"
+                      className="nav-link-with-icon"
+                    >
+                      <HiMiniRocketLaunch />
+                      <span>Launchpad</span>
+                    </Link>
                   </li>
-                  <li>
-                    <Link href={SITE_PATHS.contact}>Contact Us</Link>
+                  <li className="services-dropdown">
+                    <Link href="/coming-soon">
+                      Areas We Serve <MdArrowOutward size={16} />
+                    </Link>
+
+                    <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
+                      <div className="services-core-label">Areas We Serve</div>
+
+                      <div className="services-core-grid areas-core-grid">
+                        <Link
+                          href="/coming-soon"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>
+                              Digital Marketing Agency in Philadelphia
+                            </strong>
+                            <span>
+                              Explore our upcoming local market pages and city-
+                              focused service coverage.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/coming-soon"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <IoSearchOutline />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Local SEO Agency Philadelphia</strong>
+                            <span>
+                              A dedicated local SEO service page for
+                              Philadelphia is coming soon.
+                            </span>
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="services-dropdown">
+                    <Link href={SITE_PATHS.about}>
+                      Others <MdArrowOutward size={16} />
+                    </Link>
+
+                    <div className="services-dropdown-container services-core-dropdown others-core-dropdown">
+                      <div className="services-core-label">Others</div>
+
+                      <div className="services-core-grid others-core-grid">
+                        <Link
+                          href={SITE_PATHS.about}
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <MdOutlineInfo />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>About Us</strong>
+                            <span>
+                              Learn about Zonic Media, our process, and how we
+                              help businesses grow online.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href={SITE_PATHS.blogs}
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaRegNewspaper />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Blogs</strong>
+                            <span>
+                              Read insights, guides, and updates around SEO,
+                              websites, ads, and local growth.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href={SITE_PATHS.contact}
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <MdOutlineMail />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Contact Us</strong>
+                            <span>
+                              Reach out to Zonic Media for your next website,
+                              SEO, or ads project.
+                            </span>
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </nav>
@@ -522,20 +626,6 @@ function Navbar() {
       >
         <div className="mob-tab-nav-menus">
           <ul>
-            <li>
-              <Link href="/" onClick={() => handleToggleMobileMenu(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={SITE_PATHS.about}
-                onClick={() => handleToggleMobileMenu(false)}
-              >
-                About Us
-              </Link>
-            </li>
-
             <li>
               <Accordion
                 flush
@@ -637,30 +727,107 @@ function Navbar() {
                 </Accordion.Item>
               </Accordion>
             </li>
+            <li>
+              <Accordion
+                flush
+                id="mobileOthersAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
+              >
+                <Accordion.Item eventKey="2">
+                  <Accordion.Header>
+                    {" "}
+                    <Link href={SITE_PATHS.about}>Others </Link>{" "}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.about}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          About Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.blogs}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Blogs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.contact}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Contact Us
+                        </Link>
+                      </li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </li>
 
             <li>
               <Link href="/services/gmb-reinstatement-help">
                 GMB Reinstatement
               </Link>
             </li>
-
             <li>
               <Link
-                href={SITE_PATHS.blogs}
+                href="/services/launchpad"
                 onClick={() => handleToggleMobileMenu(false)}
               >
-                Blogs
+                Launchpad
               </Link>
+            </li>
+            <li>
+              <Accordion
+                flush
+                id="mobileAreasAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
+              >
+                <Accordion.Item eventKey="3">
+                  <Accordion.Header>
+                    {" "}
+                    <Link href="/coming-soon">Areas We Serve </Link>{" "}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>
+                        <Link
+                          href="/coming-soon"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Digital Marketing Agency in Philadelphia
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/coming-soon"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Local SEO Agency Philadelphia
+                        </Link>
+                      </li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </li>
 
-            <li>
-              <Link
-                href={SITE_PATHS.contact}
-                onClick={() => handleToggleMobileMenu(false)}
-              >
-                Contact Us
-              </Link>
-            </li>
           </ul>
         </div>
         <div className="mob-tab-nav-socials">

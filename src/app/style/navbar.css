@@ -36,6 +36,10 @@
   object-fit: contain;
 }
 
+.navbar-wrapper .menu-items {
+  position: relative;
+}
+
 .navbar-wrapper .menu-items > ul {
   padding: 0;
   margin: 0;
@@ -74,15 +78,16 @@
 /*services-dropdown*/
 
 .services-dropdown {
-  position: relative;
+  position: static;
 }
 
 .services-dropdown-container {
   position: absolute;
-  top: 38px;
+  top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(-20px);
-  min-width: 850px;
+  width: 100%;
+  min-width: 0;
   min-height: 100%;
   opacity: 0;
   visibility: hidden;
@@ -101,123 +106,192 @@
   transform: translateX(-50%) translateY(0);
 }
 
-.services-dropdown-menus p {
-  font-size: 16px;
-  color: var(--color2);
-  margin-bottom: 30px;
-}
-
-.services-dropdown-menus > ul {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 12px;
-  list-style: none;
-}
-
-.services-dropdown-menus > ul > li {
-  width: 100% !important;
-}
-
-.services-dropdown-menus ul > li > a {
-  font-size: 26px;
-  text-transform: capitalize;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: ease 0.5s;
-}
-
-.services-dropdown-menus ul > li > a:hover {
-  color: var(--color2);
-}
-
-.desktop-services-accordion .accordion-item {
-  border: none;
-  background-color: transparent;
-}
-
-.desktop-services-accordion .accordion-button {
-  padding: 0;
-  font-size: 26px;
-  text-transform: capitalize;
-  color: var(--text);
-  font-weight: 500;
-  background-color: transparent;
-}
-
-.desktop-services-accordion .accordion-button:not(.collapsed) {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text);
-}
-
-.desktop-services-accordion .accordion-button:focus {
-  box-shadow: none;
-  border: none;
-}
-
-.desktop-services-accordion .accordion-button::after {
-  --bs-accordion-btn-icon-width: 1rem;
-}
-
-.desktop-services-accordion .accordion-body {
-  padding: 12px 0 6px 18px;
-}
-
-.desktop-services-submenu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.desktop-services-submenu li a {
-  font-size: 18px !important;
-}
-
-.services-dropdown-menus .buttons {
-  margin-top: 42px;
-  background-color: var(--secondary);
-  font-size: 14px;
-  border: 1px solid var(--secondary);
-  padding: 12px 20px;
-}
-
-.services-dropdown-menus .buttons__icon-wrapper {
-  height: 18px;
-  width: 18px;
-}
-
-.services-dropdown-img-container {
-  position: relative;
+.services-core-dropdown {
   width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: var(--white);
+  max-width: 100%;
+  padding: 22px;
+  border-radius: 24px;
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  box-sizing: border-box;
 }
 
-.dropdown-preview-img {
-  position: absolute;
-  inset: 0;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0;
-  transform: scale(1.05);
+.services-core-label,
+.services-core-grid,
+.services-core-divider,
+.services-core-bottom {
+  width: min(100%, 980px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-core-label {
+  color: var(--color2);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.services-core-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.others-core-dropdown {
+  min-width: 640px;
+}
+
+.others-core-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.areas-core-dropdown {
+  min-width: 560px;
+}
+
+.areas-core-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.local-seo-core-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav-link-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: inherit;
+  padding: 0 !important;
+  vertical-align: baseline;
+}
+
+.nav-link-with-icon span {
+  display: block;
+}
+
+.nav-link-with-icon svg {
+  font-size: 15px;
+  position: static;
+  flex-shrink: 0;
+}
+
+.services-core-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 12px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.services-core-card:hover {
+  background: var(--color9);
+}
+
+.services-core-card--highlight {
+  background: var(--color9);
+}
+
+.services-core-icon {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.services-core-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-core-content strong {
+  font-size: 17px;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.services-core-content > span {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color2);
+  font-weight: 400;
+}
+
+.services-core-tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.services-core-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: var(--white);
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
   transition:
-    opacity 0.4s ease,
-    transform 0.4s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.dropdown-preview-img.active {
-  opacity: 1;
-  transform: scale(1);
+.services-core-tag:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+}
+
+.services-core-divider {
+  margin: 25px 0;
+  border-top: 1px solid #e2e2e2;
+}
+
+.services-core-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.services-core-bottom-copy {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.services-core-bottom-copy strong {
+  color: #222;
+}
+
+.services-core-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #111;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 /*mobile-tab-navbar*/

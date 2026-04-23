@@ -140,7 +140,7 @@ function page() {
       <div className="launchpad-sec-1">
         <SquareBgLaunch />
 
-        <Col lg={8}>
+        <Col lg={8} className="launch-col">
           <div className="launchpad-sec-1-content-wrapper">
             <p className="launchpad-label">
               <span>

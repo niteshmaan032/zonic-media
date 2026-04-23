@@ -19,7 +19,7 @@
   isolation: isolate;
 }
 
-.launchpad-sec-1 > .col-lg-8 {
+.launchpad-sec-1 .launch-col {
   position: relative;
   z-index: 1;
 }
