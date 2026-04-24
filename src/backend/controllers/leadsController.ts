@@ -4,6 +4,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 export type LeadPayload = {
   formType?: string;
   sourcePage?: string;
+  pageUrl?: string;
   fullName: string;
   email: string;
   contact: string;
@@ -13,7 +14,11 @@ export type LeadPayload = {
   smsConsent?: boolean;
 };
 
-const OWNER_LEAD_CC_EMAILS = ["man2k19ish@gmail.com", "samrunads@gmail.com"];
+const OWNER_LEAD_CC_EMAILS = [
+  "man2k19ish@gmail.com",
+  "samrunads@gmail.com",
+  "josef@zonicllc.com",
+];
 
 const getTransporter = () => {
   const host = process.env.SMTP_HOST;
@@ -74,6 +79,14 @@ const getMailConfig = () => {
   return { from, ownerEmail };
 };
 
+const getOwnerLeadCcEmails = (ownerEmail: string) =>
+  OWNER_LEAD_CC_EMAILS.filter(
+    (email, index, emails) =>
+      email.toLowerCase() !== ownerEmail.toLowerCase() &&
+      emails.findIndex((item) => item.toLowerCase() === email.toLowerCase()) ===
+        index,
+  );
+
 export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
   const transporter = getTransporter();
   const { from, ownerEmail } = getMailConfig();
@@ -86,17 +99,19 @@ export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
     message,
     services,
     smsConsent,
+    pageUrl,
   } = payload;
   const servicesText = toServicesText(services);
 
   await transporter.sendMail({
     from,
     to: ownerEmail,
-    cc: OWNER_LEAD_CC_EMAILS,
+    cc: getOwnerLeadCcEmails(ownerEmail),
     subject: `New Lead: ${fullName}`,
     text: [
       "You received a new lead from the contact form.",
       "",
+      `Page URL: ${pageUrl || "Not provided"}`,
       `Name: ${fullName}`,
       `Email: ${email}`,
       `Contact: ${contact}`,

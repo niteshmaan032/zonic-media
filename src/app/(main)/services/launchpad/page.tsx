@@ -10,6 +10,7 @@ import { PiBagSimple } from "react-icons/pi";
 import { IoRocket } from "react-icons/io5";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import SquareBgLaunch from "@/app/components/SquareBgLaunch";
 
@@ -134,6 +135,8 @@ const launchpadPricingPlans = [
   },
 ];
 
+const LAUNCHPAD_LEAD_FORM_HASH = "#launchpad-lead-form" as const;
+
 function page() {
   return (
     <>
@@ -168,7 +171,10 @@ function page() {
             </p>
 
             <div className="launchpad-sec1-ctas">
-              <Link href="/contact-us" className="buttons">
+              <HashScrollLink
+                href={LAUNCHPAD_LEAD_FORM_HASH}
+                className="buttons"
+              >
                 Get Started Today
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -196,9 +202,12 @@ function page() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </HashScrollLink>
 
-              <Link href="/contact-us" className="buttons">
+              <HashScrollLink
+                href={LAUNCHPAD_LEAD_FORM_HASH}
+                className="buttons"
+              >
                 Book Free Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -226,7 +235,7 @@ function page() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </HashScrollLink>
             </div>
           </div>
         </Col>
@@ -260,7 +269,10 @@ function page() {
           <Col lg={4}>
             <div className="launchpad-sec-1-card-wrapper launch-sec-1-card-3">
               <h2>Launch Your Business Online in 7 to 14 Days </h2>
-              <Link href="/contact-us" className="buttons">
+              <HashScrollLink
+                href={LAUNCHPAD_LEAD_FORM_HASH}
+                className="buttons"
+              >
                 Book Free Consultation
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -288,7 +300,7 @@ function page() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </HashScrollLink>
             </div>
           </Col>
         </Row>
@@ -411,7 +423,10 @@ function page() {
                 </ul>
 
                 <div className="launchpad-box-card-cta">
-                  <Link href="/contact-us" className="buttons">
+                  <HashScrollLink
+                    href={LAUNCHPAD_LEAD_FORM_HASH}
+                    className="buttons"
+                  >
                     Get started Today
                     <span className="buttons__icon-wrapper">
                       <svg
@@ -439,7 +454,7 @@ function page() {
                         />
                       </svg>
                     </span>
-                  </Link>
+                  </HashScrollLink>
                 </div>
               </div>
             </div>
@@ -508,7 +523,10 @@ function page() {
                     </ul>
 
                     <div className="launchpad-box-card-cta">
-                      <Link href="/contact-us" className="buttons">
+                      <HashScrollLink
+                        href={LAUNCHPAD_LEAD_FORM_HASH}
+                        className="buttons"
+                      >
                         Book free Consultation
                         <span className="buttons__icon-wrapper">
                           <svg
@@ -536,7 +554,7 @@ function page() {
                             />
                           </svg>
                         </span>
-                      </Link>
+                      </HashScrollLink>
                     </div>
                   </div>
                 </Col>
@@ -709,7 +727,10 @@ function page() {
             </p>
 
             <div className="launchpad-banner-ctas">
-              <Link href="/contact-us" className="buttons">
+              <HashScrollLink
+                href={LAUNCHPAD_LEAD_FORM_HASH}
+                className="buttons"
+              >
                 Launch My Business
                 <span className="buttons__icon-wrapper">
                   <svg
@@ -737,7 +758,7 @@ function page() {
                     />
                   </svg>
                 </span>
-              </Link>
+              </HashScrollLink>
 
               <ClutchWidget />
             </div>
@@ -886,7 +907,10 @@ function page() {
                   consistently
                 </p>
 
-                <Link href="/contact-us" className="buttons">
+                <HashScrollLink
+                  href={LAUNCHPAD_LEAD_FORM_HASH}
+                  className="buttons"
+                >
                   Get started today
                   <span className="buttons__icon-wrapper">
                     <svg
@@ -914,7 +938,7 @@ function page() {
                       />
                     </svg>
                   </span>
-                </Link>
+                </HashScrollLink>
               </div>
             </div>
           </Col>
@@ -1000,9 +1024,12 @@ function page() {
 
                   <p className="launchpad-price-ideal">{plan.ideal}</p>
 
-                  <Link href="/contact-us" className="launchpad-price-cta-btn">
+                  <HashScrollLink
+                    href={LAUNCHPAD_LEAD_FORM_HASH}
+                    className="launchpad-price-cta-btn"
+                  >
                     {plan.cta}
-                  </Link>
+                  </HashScrollLink>
                 </div>
               </Col>
             ))}
@@ -1115,7 +1142,10 @@ function page() {
           </div>
         </div>
 
-        <div className="launchpad-home-contact-form">
+        <div
+          id={LAUNCHPAD_LEAD_FORM_HASH.slice(1)}
+          className="launchpad-home-contact-form"
+        >
           <LeadContactForm
             leadFormTitle={LaunchpadHomeFormHead.leadFormTitle}
             leadCallText={LaunchpadHomeFormHead.leadCallText}
@@ -1138,7 +1168,10 @@ function page() {
               </p>
 
               <div className="launchpad-banner-ctas">
-                <Link href="/contact-us" className="buttons">
+                <HashScrollLink
+                  href={LAUNCHPAD_LEAD_FORM_HASH}
+                  className="buttons"
+                >
                   Get Started Today
                   <span className="buttons__icon-wrapper">
                     <svg
@@ -1166,7 +1199,7 @@ function page() {
                       />
                     </svg>
                   </span>
-                </Link>
+                </HashScrollLink>
 
                 <Link href="tel:+13027269736" className="buttons">
                   Call Now: (302) 726-9736

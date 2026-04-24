@@ -71,6 +71,7 @@ function ContactUsPageClient() {
         },
         body: JSON.stringify({
           ...data,
+          pageUrl: window.location.href,
           smsConsent,
           recaptchaToken,
         }),

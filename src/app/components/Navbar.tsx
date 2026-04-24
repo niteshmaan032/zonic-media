@@ -7,7 +7,6 @@ import { FaBug, FaFan, FaTooth, FaWrench } from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
-import { IoSearchOutline } from "react-icons/io5";
 import { IoDesktopOutline } from "react-icons/io5";
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
@@ -111,6 +110,8 @@ const localSeoServices = [
 function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const forceWhiteNavbar =
+    pathname === "/services/philadelphia/digital-marketing";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);
@@ -216,7 +217,9 @@ function Navbar() {
 
   return (
     <>
-      <div className={`navbar-wrapper show ${scrolled ? "scrolled" : ""}`}>
+      <div
+        className={`navbar-wrapper show ${scrolled ? "scrolled" : ""} ${forceWhiteNavbar ? "force-white" : ""}`}
+      >
         <Container fluid className="p-0">
           <Row className="align-items-center justify-content-between g-0">
             <Col xs="auto">
@@ -466,39 +469,34 @@ function Navbar() {
                       <div className="services-core-label">Areas We Serve</div>
 
                       <div className="services-core-grid areas-core-grid">
-                        <Link
-                          href="/coming-soon"
-                          className="services-core-card"
-                        >
+                        <div className="services-core-card">
                           <span className="services-core-icon">
                             <MdOutlineLocationOn />
                           </span>
                           <span className="services-core-content">
                             <strong>
-                              Digital Marketing Agency in Philadelphia
+                              <Link
+                                href="/coming-soon"
+                                className="services-core-title-link"
+                              >
+                                Digital Marketing Agency in Philadelphia
+                              </Link>
                             </strong>
                             <span>
                               Explore our upcoming local market pages and city-
                               focused service coverage.
                             </span>
-                          </span>
-                        </Link>
 
-                        <Link
-                          href="/coming-soon"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <IoSearchOutline />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Local SEO Agency Philadelphia</strong>
-                            <span>
-                              A dedicated local SEO service page for
-                              Philadelphia is coming soon.
+                            <span className="services-core-tags">
+                              <Link
+                                href="/coming-soon"
+                                className="services-core-tag"
+                              >
+                                Local SEO Agency Philadelphia
+                              </Link>
                             </span>
                           </span>
-                        </Link>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -728,54 +726,6 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Accordion
-                flush
-                id="mobileOthersAccordion"
-                activeKey={accordionKey}
-                onSelect={(eventKey) =>
-                  setAccordionKey(
-                    typeof eventKey === "string" ? eventKey : null,
-                  )
-                }
-              >
-                <Accordion.Item eventKey="2">
-                  <Accordion.Header>
-                    {" "}
-                    <Link href={SITE_PATHS.about}>Others </Link>{" "}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      <li>
-                        <Link
-                          href={SITE_PATHS.about}
-                          onClick={() => handleToggleMobileMenu(false)}
-                        >
-                          About Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href={SITE_PATHS.blogs}
-                          onClick={() => handleToggleMobileMenu(false)}
-                        >
-                          Blogs
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href={SITE_PATHS.contact}
-                          onClick={() => handleToggleMobileMenu(false)}
-                        >
-                          Contact Us
-                        </Link>
-                      </li>
-                    </ul>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </li>
-
-            <li>
               <Link href="/services/gmb-reinstatement-help">
                 GMB Reinstatement
               </Link>
@@ -820,6 +770,53 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Local SEO Agency Philadelphia
+                        </Link>
+                      </li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </li>
+            <li>
+              <Accordion
+                flush
+                id="mobileOthersAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
+              >
+                <Accordion.Item eventKey="2">
+                  <Accordion.Header>
+                    {" "}
+                    <Link href={SITE_PATHS.about}>Others </Link>{" "}
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.about}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          About Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.blogs}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Blogs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.contact}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Contact Us
                         </Link>
                       </li>
                     </ul>

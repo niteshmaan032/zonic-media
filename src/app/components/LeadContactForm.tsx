@@ -79,6 +79,7 @@ export default function LeadContactForm({
         body: JSON.stringify({
           formType: "gmb-reinstatement",
           sourcePage: pathname,
+          pageUrl: window.location.href,
           fullName: data.fullName,
           email: data.email,
           contact: data.contact,

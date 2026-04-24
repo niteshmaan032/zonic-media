@@ -89,6 +89,7 @@ export default function ContactForm({ content }: ContactFormProps) {
         },
         body: JSON.stringify({
           ...data,
+          pageUrl: window.location.href,
           smsConsent,
           recaptchaToken,
         }),

@@ -1,0 +1,855 @@
+.phila-sec-1 {
+  background-image: url("/images/philadelphia/phila-banner-1.jpg");
+  height: 100svh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.phila-sec-1-layer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0.9) 52%,
+    rgba(0, 0, 0, 0.7) 62%,
+    rgba(0, 0, 0, 0) 85%
+  );
+  height: 100%;
+  padding: 60px 100px 60px 100px;
+  margin-top: 85px;
+}
+
+.phila-sec-1-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.phila-sec-1-heading {
+  font-size: 60px;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+.phila-sec-1-heading span {
+  color: var(--primary);
+}
+
+.phila-sec-1-sub-head {
+  text-transform: capitalize;
+  color: var(--white);
+  font-size: 25px;
+}
+
+.phila-sec-1-descrp {
+  font-size: 18px;
+  color: var(--white);
+  width: 80%;
+  line-height: 32px;
+}
+
+.phila-sec-1-ctas {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.phila-sec-1-ctas .buttons:nth-child(2) {
+  background-color: transparent;
+  border-color: var(--white);
+}
+
+.phila-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.phila-feature-grid .feature-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid var(--stroke);
+  color: var(--white);
+  padding-right: 10px;
+}
+
+.phila-feature-grid .feature-card p {
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.phila-feature-grid .icon-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.phila-feature-grid .feature-card:nth-child(4) {
+  border: none;
+}
+
+/*--phila-sec-2--*/
+
+.phila-sec-2 {
+  padding: 60px 100px;
+}
+
+.phila-label {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+
+.phila-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  width: 100px;
+  height: 2px;
+  background-color: var(--primary);
+  transform: translateY(-50%);
+}
+
+.phila-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  width: 100px;
+  height: 2px;
+  background-color: var(--primary);
+  transform: translateY(-50%);
+}
+
+.phila-center-head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.phila-center-head-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.phila-sec-heading {
+  font-size: 40px;
+}
+
+.phila-sec-descrp {
+  font-size: 18px;
+  width: 70%;
+  line-height: 28px;
+}
+
+.phila-card {
+  padding: 25px 28px;
+  border-radius: 12px;
+  /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); */
+  height: 100%;
+  border: 1px solid var(--stroke);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.phila-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TOP ROW (ICON + TITLE) */
+.phila-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.phila-card-icon {
+  width: 75px;
+  height: 75px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* TITLE */
+.phila-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.phila-card-desc {
+  color: var(--color2);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/*--phila-sec-3--*/
+
+.phila-sec-3 {
+  padding: 0px 100px 60px 100px;
+}
+
+.phila-sec-3-img-cont {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.phila-sec-3-img-cont img {
+  object-fit: cover;
+}
+
+.phila-sec-3-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.phila-sec-3-heading {
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.phila-sec-3-sub-head {
+  color: var(--primary);
+  font-weight: 400;
+}
+
+.phila-sec-3-descrp {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/*--phila-sec-4--*/
+.phila-sec-4 {
+  padding: 20px 100px 60px 100px;
+}
+
+.phila-sec-4-heading {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+/* ROW CENTER LINE */
+.phila-sec-4-row {
+  position: relative;
+}
+
+.phila-sec-4-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: var(--stroke);
+  transform: translateX(-50%);
+}
+
+/* SIDE BOX */
+
+.phila-sec-4-box.right {
+  margin-left: auto;
+  padding-left: 40px;
+}
+
+/* TEXT */
+.phila-sec-4-text {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.phila-sec-4-sub {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* LIST */
+.phila-list {
+  position: relative;
+  padding-left: 25px;
+}
+
+/* vertical line for dots */
+.phila-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--primary);
+}
+
+/* ITEM */
+.phila-item {
+  position: relative;
+  margin-bottom: 22px;
+  font-size: 18px;
+}
+
+.phila-item:last-child {
+  margin-bottom: 0;
+}
+
+.phila-dot {
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+/*--phila-sec-5--*/
+.phila-sec-5 {
+  background-color: var(--secondary);
+  padding: 80px 100px;
+}
+
+.phila-sec-5 .phila-sec-heading {
+  color: var(--white);
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+.phila-strategy-row {
+  align-items: flex-start;
+}
+
+.phila-strategy-card {
+  color: var(--stroke);
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* CIRCLE */
+.phila-strategy-circle {
+  width: 130px;
+  height: 130px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NUMBER BADGE */
+.phila-strategy-step {
+  position: absolute;
+  top: -12px;
+  background: var(--primary);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+
+/* ICON */
+.phila-strategy-icon {
+  font-size: 48px;
+  color: var(--primary);
+}
+
+/* TEXT */
+.phila-strategy-card h4 {
+  color: var(--white);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.phila-strategy-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ARROWS BETWEEN ITEMS */
+.phila-strategy-col {
+  position: relative;
+}
+
+.phila-strategy-col:not(:last-child)::after {
+  content: "››";
+  position: absolute;
+  right: -10px;
+  top: 0px;
+  color: var(--color2);
+  font-size: 100px;
+}
+
+/*--phila-sec-6--*/
+.phila-sec-6 {
+  padding: 60px 100px;
+}
+
+/* ROW */
+.phila-sec-6-row {
+  margin-top: 120px;
+}
+
+/* CARD */
+.phila-sec-6-card {
+  background: var(--white);
+  padding: 50px 40px;
+  border-radius: 16px;
+  position: relative;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+  text-align: center;
+  border: 1px solid var(--stroke);
+  height: 300px;
+}
+
+.phila-sec-6-card.right {
+  background: #f3f0e9;
+}
+
+/* TOP ICON */
+.phila-sec-6-top-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -100px auto 20px;
+  font-size: 28px;
+}
+
+.phila-sec-6-top-icon.gray {
+  background: #e5e5e5;
+}
+
+.phila-sec-6-top-icon.yellow {
+  background: var(--primary);
+}
+
+/* TITLE */
+.phila-sec-6-title {
+  margin-bottom: 40px;
+}
+
+/* FEATURES */
+.phila-sec-6-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FEATURE ITEM */
+.phila-sec-6-feature {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.phila-sec-6-feature p {
+  margin-top: 10px;
+}
+
+/* ICON */
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 22px;
+}
+
+.icon.gray {
+  background: #e5e5e5;
+}
+
+.icon.yellow {
+  background: var(--primary);
+}
+
+.icon.big {
+  width: 80px;
+  height: 80px;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  height: 60px;
+  background: var(--stroke);
+}
+
+/* RIGHT SIDE */
+.phila-sec-6-main h5 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.phila-sec-6-main p {
+  color: var(--color2);
+  margin-top: 10px;
+}
+
+/*--phila-sec-7--*/
+.phila-sec-7 {
+  background-color: var(--secondary);
+  padding: 80px 100px;
+}
+
+.phila-sec-7 .phila-sec-heading {
+  width: 80%;
+  color: var(--white);
+}
+
+.phila-sec-7-row {
+  margin-top: 60px;
+}
+
+/* CARD */
+.phila-sec-7-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 360px;
+}
+
+.phila-sec-7-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 1) 50%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* IMAGE */
+
+.phila-sec-7-img {
+  position: relative;
+}
+.phila-sec-7-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* OVERLAY */
+.phila-sec-7-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 155px 30px 20px 30px;
+
+  color: var(--white);
+  z-index: 2;
+  height: 100%;
+}
+
+/* HEAD (ICON + TITLE SAME LINE) */
+.phila-sec-7-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.phila-sec-7-head h4 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+/* ICON */
+.phila-sec-7-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* TEXT */
+.phila-sec-7-overlay p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* CTA */
+.phila-sec-7-link {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.phila-sec-7-link span {
+  margin-left: 8px;
+}
+
+/* OPTIONAL HOVER EFFECT */
+.phila-sec-7-card img {
+  transition: transform 0.4s ease;
+}
+
+.phila-sec-7-card:hover img {
+  transform: scale(1.05);
+}
+
+/*--phila-sec-8--*/
+.phila-sec-8 {
+  padding: 60px 100px;
+}
+
+.phila-sec-8-heading {
+  font-size: 40px;
+}
+
+.phila-test {
+  width: 100%;
+  min-width: 0;
+  margin-top: 32px;
+  overflow: hidden;
+  contain: layout paint;
+  isolation: isolate;
+}
+
+/*---phila-sec-9--*/
+.phila-sec-9 {
+  padding: 0px 100px 60px 100px;
+}
+
+/*--phila-sec-9--*/
+.phila-sec-9 {
+  padding: 0px 100px 60px 100px;
+}
+
+/*--phila-sec-10--*/
+.phila-sec-10 {
+  padding: 0 100px 60px;
+}
+
+.phila-sec-10-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.phila-sec-10-content {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.phila-sec-10-label {
+  padding: 14px 20px;
+  width: fit-content;
+  border-radius: 50px;
+  display: flex;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: capitalize;
+  background-color: var(--primary);
+}
+
+.phila-sec-10-heading {
+  font-size: 48px;
+  line-height: 60px;
+  margin: 0;
+}
+
+.phila-sec-10-descrp {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0;
+}
+
+.phila-sec-10-info-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.phila-sec-10-info-card {
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--white);
+}
+
+.phila-sec-10-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.phila-sec-10-info-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.phila-sec-10-info-card h3 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.phila-sec-10-info-card a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.phila-sec-10-info-card a:hover {
+  color: var(--secondary);
+}
+
+.phila-sec-10-map {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.phila-sec-10-map iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+}
+
+.phila-sec-10-contact-form {
+  flex-basis: 40%;
+  position: sticky;
+  top: 32px;
+  height: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .phila-sec-10 {
+    padding: 0 30px 60px;
+  }
+
+  .phila-sec-10-inner {
+    flex-direction: column;
+  }
+
+  .phila-sec-10-content,
+  .phila-sec-10-contact-form {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .phila-sec-10-contact-form {
+    position: relative;
+    top: auto;
+    height: auto;
+  }
+
+  .phila-sec-10-heading {
+    font-size: 40px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .phila-sec-10 {
+    padding: 0 20px 40px;
+  }
+
+  .phila-sec-10-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .phila-sec-10-map iframe {
+    height: 320px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .phila-sec-10-heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .phila-sec-10-descrp {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .phila-sec-10-info-card {
+    padding: 20px;
+  }
+
+  .phila-sec-10-info-card h3 {
+    font-size: 22px;
+  }
+
+  .phila-sec-10-info-card a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .phila-sec-10-map iframe {
+    height: 280px;
+  }
+}
