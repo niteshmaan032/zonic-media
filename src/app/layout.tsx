@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
+import AnalyticsProvider from "@/app/components/AnalyticsProvider";
 
 const neueHaas = localFont({
   src: [
@@ -37,8 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-const isProd = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
-
 export default function RootLayout({
   children,
 }: {
@@ -55,66 +54,11 @@ export default function RootLayout({
           src="https://widget.clutch.co/static/js/widget.js"
           strategy="afterInteractive"
         />
-
-        {isProd && (
-          <>
-            {/* Google Ads Tag */}
-            <Script
-              id="google-ads-tag-src"
-              src="https://www.googletagmanager.com/gtag/js?id=AW-17618392446"
-              strategy="afterInteractive"
-            />
-
-            <Script
-              id="google-ads-tag-config"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-
-                  gtag('config', 'AW-17618392446', {
-                    linker: {
-                      domains: ['zonicllc.com']
-                    }
-                  });
-                `,
-              }}
-            />
-
-            {/* Google Tag Manager */}
-            <Script
-              id="gtm-script"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  (function(w,d,s,l,i){w[l]=w[l]||[];
-                  w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-                  var f=d.getElementsByTagName(s)[0],
-                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                  j.async=true;
-                  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                  f.parentNode.insertBefore(j,f);
-                  })(window,document,'script','dataLayer','GTM-TSLH7NKW');
-                `,
-              }}
-            />
-          </>
-        )}
       </head>
 
       <body className={neueHaas.className}>
-        {isProd && (
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-TSLH7NKW"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
-        )}
+        {/* ✅ Analytics only on real domain */}
+        <AnalyticsProvider />
 
         <Loader />
         <SmoothScroll>{children}</SmoothScroll>
