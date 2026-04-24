@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 const TRACKING_ID = "AW-17618392446";
-const GTM_ID = "GTM-5DBPHLRL";
+const GTM_ID = "GTM-TSLH7NKW";
 
 export default function AnalyticsProvider() {
   const isBrowser = typeof window !== "undefined";
@@ -36,6 +36,18 @@ export default function AnalyticsProvider() {
               linker: {
                 domains: ['zonicllc.com']
               }
+            });
+          `,
+        }}
+      />
+
+      <Script
+        id="gtag-phone-config"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            gtag('config', 'AW-17618392446/lC5eCJvcxJQcEP6qjdFB', {
+              'phone_conversion_number': '(302) 726-9736'
             });
           `,
         }}
