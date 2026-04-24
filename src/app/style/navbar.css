@@ -59,6 +59,7 @@
   padding: 0px 0px 20px 0px;
   color: var(--text);
   font-weight: 500;
+  cursor: pointer;
   transition: 0.4s ease;
 }
 
@@ -166,6 +167,7 @@
   line-height: inherit;
   padding: 0 !important;
   vertical-align: baseline;
+  cursor: pointer;
 }
 
 .nav-link-with-icon span {
@@ -186,6 +188,7 @@
   border-radius: 12px;
   color: var(--text);
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 0.2s ease;
 }
 
@@ -226,6 +229,7 @@
 .services-core-title-link {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .services-core-content > span {
@@ -253,6 +257,7 @@
   color: #333;
   font-size: 13px;
   text-decoration: none;
+  cursor: pointer;
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -298,6 +303,7 @@
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /*mobile-tab-navbar*/
@@ -414,6 +420,7 @@
   text-decoration: none;
   color: var(--text);
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .mob-tab-nav-socials ul {
@@ -432,6 +439,7 @@
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .mob-tab-nav-menus .accordion-item {
@@ -445,6 +453,7 @@
   color: var(--text);
   font-weight: 500;
   padding: 0;
+  cursor: pointer;
 }
 
 .mob-tab-nav-menus .accordion-button:not(.collapsed) {
@@ -486,6 +495,7 @@
   color: var(--text);
   font-weight: 500;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .mobile-services-nested-accordion .accordion-button:not(.collapsed) {
