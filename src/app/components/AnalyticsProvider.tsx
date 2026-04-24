@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 const TRACKING_ID = "AW-17618392446";
-const GTM_ID = "GTM-TSLH7NKW";
+const GTM_ID = "GTM-5DBPHLRL";
 
 export default function AnalyticsProvider() {
   const isBrowser = typeof window !== "undefined";
