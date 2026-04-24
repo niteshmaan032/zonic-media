@@ -461,9 +461,9 @@ function Navbar() {
                     </Link>
                   </li>
                   <li className="services-dropdown">
-                    <Link href="/coming-soon">
+                    <span className="nav-link-with-icon">
                       Areas We Serve <MdArrowOutward size={16} />
-                    </Link>
+                    </span>
 
                     <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
                       <div className="services-core-label">Areas We Serve</div>
@@ -751,8 +751,7 @@ function Navbar() {
               >
                 <Accordion.Item eventKey="3">
                   <Accordion.Header>
-                    {" "}
-                    <Link href="/coming-soon">Areas We Serve </Link>{" "}
+                    Areas We Serve
                   </Accordion.Header>
                   <Accordion.Body>
                     <ul>

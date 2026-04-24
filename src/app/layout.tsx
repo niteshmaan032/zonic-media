@@ -49,18 +49,22 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://widget.clutch.co" />
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
+
         <Script
           id="clutch-widget-script"
           src="https://widget.clutch.co/static/js/widget.js"
           strategy="afterInteractive"
         />
+
         {isProd && (
           <>
+            {/* Google Ads Tag */}
             <Script
               id="google-ads-tag-src"
               src="https://www.googletagmanager.com/gtag/js?id=AW-17618392446"
               strategy="afterInteractive"
             />
+
             <Script
               id="google-ads-tag-config"
               strategy="afterInteractive"
@@ -69,10 +73,17 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', 'AW-17618392446');
+
+                  gtag('config', 'AW-17618392446', {
+                    linker: {
+                      domains: ['zonicllc.com']
+                    }
+                  });
                 `,
               }}
             />
+
+            {/* Google Tag Manager */}
             <Script
               id="gtm-script"
               strategy="afterInteractive"

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /legal/privacy-policy
+Disallow: /legal/terms-conditions
+Disallow: /legal/refund-policy
+Disallow: /coming-soon
+Disallow: /terms-conditions
+
+Sitemap: https://zonicllc.com/sitemap.xml

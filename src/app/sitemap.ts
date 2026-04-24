@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { conditionPages } from "@/shared/conditions";
 import { landingPages } from "@/shared/landing-pages";
 
 const SITE_URL = "https://zonicllc.com";
@@ -43,12 +42,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const legalEntries: MetadataRoute.Sitemap = conditionPages.map(({ slug }) => ({
-    url: `${SITE_URL}/legal/${slug}`,
-    lastModified,
-    changeFrequency: "yearly",
-    priority: 0.4,
-  }));
-
-  return [...staticEntries, ...landingEntries, ...legalEntries];
+  return [...staticEntries, ...landingEntries];
 }
