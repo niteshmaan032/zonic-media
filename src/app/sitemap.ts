@@ -12,8 +12,9 @@ const staticRoutes = [
   { path: "/services/gmb-reinstatement-help", priority: 0.8 },
   { path: "/services/gmb-verification-help", priority: 0.8 },
   { path: "/services/google-ads", priority: 0.8 },
-  { path: "/services/google-my-business", priority: 0.8 },
+  { path: "/services/launchpad", priority: 0.8 },
   { path: "/services/local-seo-for-home-services", priority: 0.8 },
+  { path: "/services/philadelphia/digital-marketing", priority: 0.8 },
   { path: "/services/web-design", priority: 0.8 },
 ] as const;
 
