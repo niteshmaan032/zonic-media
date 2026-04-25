@@ -476,7 +476,7 @@ function Navbar() {
                           <span className="services-core-content">
                             <strong>
                               <Link
-                                href="/coming-soon"
+                                href="/services/philadelphia/digital-marketing"
                                 className="services-core-title-link"
                               >
                                 Digital Marketing Agency in Philadelphia
@@ -757,7 +757,7 @@ function Navbar() {
                     <ul>
                       <li>
                         <Link
-                          href="/coming-soon"
+                          href="/services/philadelphia/digital-marketing"
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Digital Marketing Agency in Philadelphia

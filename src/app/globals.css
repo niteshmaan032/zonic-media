@@ -150,6 +150,14 @@ body p {
   border: 0;
 }
 
+.clutch-wrapper iframe {
+  pointer-events: auto;
+}
+
+.clutch-wrapper.is-scrolling iframe {
+  pointer-events: none;
+}
+
 /*global-faqs-seciton*/
 .global-faqs-section {
   padding: 0px 100px 70px 100px;

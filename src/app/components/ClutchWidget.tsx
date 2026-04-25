@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import type Lenis from "lenis";
 
 declare global {
   interface Window {
@@ -8,6 +9,7 @@ declare global {
       Init?: () => void;
       init?: () => void;
     };
+    __appLenis?: Lenis;
   }
 }
 
@@ -110,10 +112,80 @@ export default function ClutchWidget({
     };
   }, []);
 
+  useEffect(() => {
+    const wrapper = widgetRef.current;
+    if (!wrapper) return;
+
+    let isHovered = false;
+    let timeoutId: number | undefined;
+    let unsubscribe: (() => void) | undefined;
+
+    const clearScrollingState = () => {
+      wrapper.classList.remove("is-scrolling");
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+        timeoutId = undefined;
+      }
+    };
+
+    const markScrolling = () => {
+      if (!isHovered) return;
+
+      wrapper.classList.add("is-scrolling");
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+
+      timeoutId = window.setTimeout(() => {
+        wrapper.classList.remove("is-scrolling");
+        timeoutId = undefined;
+      }, 80);
+    };
+
+    const handleMouseEnter = () => {
+      isHovered = true;
+    };
+
+    const handleMouseLeave = () => {
+      isHovered = false;
+      clearScrollingState();
+    };
+
+    const attachLenis = (lenis: Lenis) => {
+      unsubscribe?.();
+      unsubscribe = lenis.on("scroll", markScrolling);
+    };
+
+    const handleLenisReady = (event: Event) => {
+      const lenis = (event as CustomEvent<Lenis>).detail;
+      if (lenis) {
+        attachLenis(lenis);
+      }
+    };
+
+    wrapper.addEventListener("mouseenter", handleMouseEnter);
+    wrapper.addEventListener("mouseleave", handleMouseLeave);
+
+    if (window.__appLenis) {
+      attachLenis(window.__appLenis);
+    }
+
+    window.addEventListener("app:lenis-ready", handleLenisReady);
+
+    return () => {
+      clearScrollingState();
+      unsubscribe?.();
+      wrapper.removeEventListener("mouseenter", handleMouseEnter);
+      wrapper.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("app:lenis-ready", handleLenisReady);
+    };
+  }, []);
+
   return (
     <div
       ref={widgetRef}
-      className="clutch-widget"
+      className="clutch-widget clutch-wrapper"
       suppressHydrationWarning
       style={
         reservedHeight
