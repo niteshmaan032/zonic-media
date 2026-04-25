@@ -109,7 +109,7 @@ function page() {
         {/*--local-seo-home-sec-1--*/}
         <div className="local-seo-home-sec-1">
           <div className="local-seo-home-content">
-            <p className="local-seo-home-label">95% Growth Success Rate</p>
+            <p className="local-seo-home-label">Grow your Business </p>
             <h1 className="local-seo-home-main-heading">
               Local SEO Built to Grow Home Service Businesses
             </h1>
