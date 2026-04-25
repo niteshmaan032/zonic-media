@@ -12,6 +12,7 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import SquareBgLaunch from "@/app/components/SquareBgLaunch";
 
 const LaunchpadServiceFaqItems = [
@@ -253,7 +254,7 @@ function page() {
           </Col>
 
           <Col lg={5}>
-            <div className="launch-sec-1-card-2 launchpad-sec-1-card-wrapper">
+            <LenisIframeGuard className="launch-sec-1-card-2 launchpad-sec-1-card-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/8XloRxwawiw?si=SGxO16MpdXp7-KN5"
                 title="YouTube video player"
@@ -263,7 +264,7 @@ function page() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
-            </div>
+            </LenisIframeGuard>
           </Col>
 
           <Col lg={4}>

@@ -158,6 +158,14 @@ body p {
   pointer-events: none;
 }
 
+.lenis-iframe-guard iframe {
+  pointer-events: auto;
+}
+
+.lenis-iframe-guard.is-scrolling iframe {
+  pointer-events: none;
+}
+
 /*global-faqs-seciton*/
 .global-faqs-section {
   padding: 0px 100px 70px 100px;

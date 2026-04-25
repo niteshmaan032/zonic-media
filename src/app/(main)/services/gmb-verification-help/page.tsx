@@ -23,6 +23,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import ClutchWidget from "@/app/components/ClutchWidget";
@@ -604,7 +605,7 @@ function page() {
               </div>
             </div>
 
-            <div className="gmb-reinst-video">
+            <LenisIframeGuard className="gmb-reinst-video">
               <iframe
                 width="100%"
                 height="315"
@@ -616,7 +617,7 @@ function page() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
-            </div>
+            </LenisIframeGuard>
 
           </div>
 

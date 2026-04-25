@@ -4,6 +4,7 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
 
@@ -1190,7 +1191,7 @@ function page() {
               </div>
             </div>
 
-            <div className="phila-sec-10-map">
+            <LenisIframeGuard className="phila-sec-10-map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.828947392318!2d-75.5245087!3d39.155871999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c76560e5bf48df%3A0x49d58c7e4301bcd!2sZonic%20Media!5e0!3m2!1sen!2sin!4v1777032391834!5m2!1sen!2sin"
                 width="600"
@@ -1201,7 +1202,7 @@ function page() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Zonic Media office location"
               />
-            </div>
+            </LenisIframeGuard>
           </div>
 
           <div
