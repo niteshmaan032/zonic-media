@@ -160,7 +160,7 @@ function page() {
                   <div className="icon-box">
                     <MdOutlineLocationOn />
                   </div>
-                  <p>RANK HIGHER ON GOOGLE</p>
+                  <p>RANK HIGHER ON GOOGLE this is test </p>
                 </div>
 
                 <div className="feature-card">
