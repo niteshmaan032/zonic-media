@@ -245,7 +245,7 @@ function Navbar() {
                     <div className="services-dropdown-container services-core-dropdown">
                       <div className="services-core-label">Core Services</div>
 
-                      <div className="services-core-grid">
+                      <div className="services-core-grid services-main-grid">
                         <Link
                           href="/services/web-design"
                           className="services-core-card"
@@ -278,7 +278,23 @@ function Navbar() {
                           </span>
                         </Link>
 
-                        <div className="services-core-card">
+                        <Link
+                          href="/services/local-seo-for-home-services"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <RiMapPinLine />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Local SEO</strong>
+                            <span>
+                              Local search strategies that help service
+                              businesses rank and generate consistent calls.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <div className="services-core-card services-core-card--with-tags">
                           <span className="services-core-icon">
                             <FaStore />
                           </span>
@@ -302,22 +318,6 @@ function Navbar() {
                             </span>
                           </span>
                         </div>
-
-                        <Link
-                          href="/services/local-seo-for-home-services"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <RiMapPinLine />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Local SEO</strong>
-                            <span>
-                              Local search strategies that help service
-                              businesses rank and generate consistent calls.
-                            </span>
-                          </span>
-                        </Link>
                       </div>
 
                       <div className="services-core-divider" />
@@ -469,7 +469,7 @@ function Navbar() {
                       <div className="services-core-label">Areas We Serve</div>
 
                       <div className="services-core-grid areas-core-grid">
-                        <div className="services-core-card">
+                        <div className="services-core-card services-core-card--with-tags">
                           <span className="services-core-icon">
                             <MdOutlineLocationOn />
                           </span>

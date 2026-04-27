@@ -1,5 +1,5 @@
 .phila-sec-1 {
-  background-image: url("/images/philadelphia/phila-banner-1.jpg");
+  background-image: url("/images/philadelphia/phila-digital/phila-banner-1.jpg");
   min-height: 100svh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -961,8 +961,8 @@
 
 .phila-sec-10-contact-form {
   flex-basis: 40%;
-  position: sticky;
-  top: 32px;
+  position: relative;
+  top: auto;
   height: 100%;
 }
 

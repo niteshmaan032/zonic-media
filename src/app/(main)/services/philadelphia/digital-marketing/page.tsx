@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/app/style/philadelphia.css";
+import "@/app/style/philadelphia/philaDigital.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -156,8 +156,7 @@ const PhilaIndustries = [
   {
     icon: <FaUserDoctor />,
     title: "Healthcare & Wellness",
-    description:
-      "Dentists, med spas, clinics, chiropractors, wellness brands.",
+    description: "Dentists, med spas, clinics, chiropractors, wellness brands.",
   },
   {
     icon: <FaStore />,
@@ -191,8 +190,7 @@ const PhilaLeadBenefits = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Digital Marketing Agency Philadelphia | SEO, Google Ads & Web Design",
+  title: "Digital Marketing Agency Philadelphia | SEO, Google Ads & Web Design",
   description:
     "Philadelphia digital marketing agency helping businesses grow with SEO, Google Ads, web design, local SEO, content marketing, and conversion-focused strategies.",
 };
@@ -281,7 +279,7 @@ function page() {
                   className="buttons"
                   offset={120}
                 >
-                  Get A Quote
+                  Get A Free Quote
                   <span className="buttons__icon-wrapper">
                     <svg
                       viewBox="0 0 14 15"
@@ -482,7 +480,7 @@ function page() {
           <Col lg={5}>
             <div className="phila-sec-3-img-cont">
               <Image
-                src="/images/philadelphia/phila-img-2.jpg"
+                src="/images/philadelphia/phila-digital/phila-img-2.jpg"
                 fill
                 alt="philadelphia digital marketing"
               ></Image>
@@ -797,8 +795,8 @@ function page() {
             </p>
             <p className="phila-sec-11-lead">
               Whether you are a startup or an established company, we create
-              strategies built around your goals, market competition, and
-              target audience in Philadelphia.
+              strategies built around your goals, market competition, and target
+              audience in Philadelphia.
             </p>
           </div>
         </div>
@@ -840,15 +838,15 @@ function page() {
             <p className="phila-sec-12-text">
               Our Philadelphia digital marketing strategies help your business
               rank higher, generate more calls, improve conversion rates, and
-              build long-term brand authority. We combine SEO, Google Ads,
-              local SEO, content marketing, and website optimization to create
+              build long-term brand authority. We combine SEO, Google Ads, local
+              SEO, content marketing, and website optimization to create
               consistent growth.
             </p>
             <p className="phila-sec-12-text">
-              Instead of relying on referrals or unpredictable traffic, we
-              build systems that generate leads month after month. If you want
-              more visibility, stronger ROI, and scalable growth, Zonic Media
-              is ready to help.
+              Instead of relying on referrals or unpredictable traffic, we build
+              systems that generate leads month after month. If you want more
+              visibility, stronger ROI, and scalable growth, Zonic Media is
+              ready to help.
             </p>
           </div>
 
@@ -885,7 +883,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-1.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-1.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -922,7 +920,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-2.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-2.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -959,7 +957,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-3.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-3.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -996,7 +994,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-4.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-4.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -1033,7 +1031,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-5.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-5.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -1070,7 +1068,7 @@ function page() {
             <div className="phila-sec-7-card">
               <div className="phila-sec-7-img">
                 <Image
-                  src="/images/philadelphia/phila-digital-6.jpg"
+                  src="/images/philadelphia/phila-digital/phila-digital-6.jpg"
                   alt="service"
                   width={500}
                   height={350}
@@ -1126,7 +1124,7 @@ function page() {
         </div>
 
         <div className="phila-sec-9-faq-wrapper">
-          <GmbFaqs items={PhilaDigitalFaqs} />
+          <GmbFaqs items={PhilaDigitalFaqs} columns={2} />
         </div>
 
         <Script
