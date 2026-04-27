@@ -461,7 +461,7 @@ function Navbar() {
                     </span>
 
                     <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
-                      <div className="services-core-label">Areas We Serve</div>
+                      <div className="services-core-label">Locations</div>
 
                       <div className="services-core-grid areas-core-grid">
                         <div className="services-core-card services-core-card--with-tags">
