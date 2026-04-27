@@ -3,7 +3,6 @@ import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
-import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import "@/app/style/philadelphia/philaSeo.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import type { Metadata } from "next";
@@ -59,8 +58,7 @@ const PhilaSeoFaqs = [
   },
   {
     question: "Do I need a website for local SEO?",
-    answer:
-      "A strong website helps rankings, conversions, and trust signals.",
+    answer: "A strong website helps rankings, conversions, and trust signals.",
   },
   {
     question: "Does local SEO work better than ads?",
@@ -132,9 +130,9 @@ function page() {
               </p>
               <p className="phila-seo-sec-1-descrp">
                 Looking for a trusted Local SEO agency in Philadelphia? Zonic
-                Media helps businesses rank higher on Google Maps, improve
-                local visibility, and generate consistent local leads through
-                proven SEO strategies.
+                Media helps businesses rank higher on Google Maps, improve local
+                visibility, and generate consistent local leads through proven
+                SEO strategies.
               </p>
 
               <p className="phila-seo-sec-1-descrp">
@@ -257,9 +255,9 @@ function page() {
             </h2>
 
             <p className="phila-seo-sec-descrp">
-              We are not just another SEO company. We build local growth
-              systems designed to generate calls, leads, and measurable
-              revenue for Philadelphia businesses.
+              We are not just another SEO company. We build local growth systems
+              designed to generate calls, leads, and measurable revenue for
+              Philadelphia businesses.
             </p>
           </div>
         </div>
@@ -272,7 +270,9 @@ function page() {
                   <div className="phila-seo-card-icon">
                     <FaSearch />
                   </div>
-                  <h3 className="phila-seo-card-title">Search Engine Optimization</h3>
+                  <h3 className="phila-seo-card-title">
+                    Search Engine Optimization
+                  </h3>
                 </div>
                 <p className="phila-seo-card-desc">
                   Improve local rankings, increase organic traffic, and build
@@ -363,8 +363,8 @@ function page() {
               </div>
               <h4>Fix Core SEO Issues</h4>
               <p>
-                We optimize your Google Business Profile, website structure,
-                and local trust signals.
+                We optimize your Google Business Profile, website structure, and
+                local trust signals.
               </p>
             </div>
           </Col>
@@ -422,9 +422,9 @@ function page() {
               <p className="phila-seo-sec-4-descrp">
                 If your business is not showing in Google Maps or local search
                 results, you are losing customers every day. In a competitive
-                market like Philadelphia, simply having a website is not
-                enough. Your business needs to appear exactly when potential
-                customers search for nearby services.
+                market like Philadelphia, simply having a website is not enough.
+                Your business needs to appear exactly when potential customers
+                search for nearby services.
               </p>
 
               <p className="phila-seo-sec-4-descrp">
@@ -521,9 +521,7 @@ function page() {
                 <span>Local SEO + AI SEO</span> Advantage
               </h2>
 
-              <p className="phila-seo-sec-6-descrp">
-                Search is changing fast.
-              </p>
+              <p className="phila-seo-sec-6-descrp">Search is changing fast.</p>
 
               <p className="phila-seo-sec-6-descrp">
                 Customers now ask AI tools:
@@ -813,8 +811,8 @@ function page() {
             <p className="phila-seo-sec-11-lead">
               Local SEO helps your business appear when people search for
               services in your area. Whether someone needs a roofer in Center
-              City, a dentist in Northeast Philadelphia, or an HVAC company
-              near South Philly, showing up at the right time creates real
+              City, a dentist in Northeast Philadelphia, or an HVAC company near
+              South Philly, showing up at the right time creates real
               opportunities.
             </p>
             <p className="phila-seo-sec-11-lead">
@@ -840,9 +838,9 @@ function page() {
               jobs, and qualified leads through proven local SEO systems.
             </p>
             <p className="phila-seo-sec-12-text">
-              We do not chase vanity metrics like impressions or random
-              traffic. Our strategies are built around ranking for high-intent
-              local keywords, improving Google Business Profile visibility,
+              We do not chase vanity metrics like impressions or random traffic.
+              Our strategies are built around ranking for high-intent local
+              keywords, improving Google Business Profile visibility,
               strengthening trust signals, and converting visitors into
               customers.
             </p>
@@ -974,18 +972,6 @@ function page() {
               </div>
             </div>
 
-            <LenisIframeGuard className="phila-seo-sec-10-map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.828947392318!2d-75.5245087!3d39.155871999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c76560e5bf48df%3A0x49d58c7e4301bcd!2sZonic%20Media!5e0!3m2!1sen!2sin!4v1777032391834!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Zonic Media office location"
-              />
-            </LenisIframeGuard>
           </div>
 
           <div
