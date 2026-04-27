@@ -6,6 +6,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import "@/app/style/philadelphia/philaSeo.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
@@ -34,36 +35,37 @@ import {
 } from "react-icons/md";
 import { RiLineChartLine } from "react-icons/ri";
 
+export const metadata: Metadata = {
+  title: "Local SEO Philadelphia | Best Local SEO Company Philadelphia",
+  description:
+    "Grow your business with expert Local SEO in Philadelphia. Zonic Media helps businesses rank higher on Google Maps, generate more calls, and get consistent local leads.",
+};
+
 const PhilaSeoFaqs = [
   {
-    question: "What does a local SEO agency in Philadelphia do?",
+    question: "How long does local SEO take in Philadelphia?",
     answer:
-      "A local SEO agency helps Philadelphia businesses improve visibility in Google Search, Google Maps, and location-based searches to generate more qualified calls, leads, and inquiries.",
+      "Most businesses begin seeing improvements within 3 to 6 months depending on competition and starting position.",
   },
   {
-    question: "Why is local SEO important for Philadelphia businesses?",
+    question: "Can local SEO help small businesses compete in Philadelphia?",
     answer:
-      "Philadelphia is a competitive market. Local SEO helps your business appear when nearby customers search for your services, which increases visibility, trust, and lead volume.",
+      "Yes. Local SEO helps small businesses rank against larger competitors by targeting nearby searches and Google Maps.",
   },
   {
-    question: "How long does local SEO take to show results?",
+    question: "Is Google Maps ranking important?",
     answer:
-      "Most businesses begin seeing early movement within a few months, while stronger rankings, map visibility, and lead growth typically build over a longer period depending on competition and current site health.",
+      "Yes. Many customers choose businesses from the top 3 Google Maps results.",
   },
   {
-    question: "Can local SEO help me rank on Google Maps?",
+    question: "Do I need a website for local SEO?",
     answer:
-      "Yes. Local SEO improves your Google Business Profile, local relevance, reviews, citations, and on-site location signals to help strengthen your Google Maps visibility.",
+      "A strong website helps rankings, conversions, and trust signals.",
   },
   {
-    question: "Do I need local SEO if I already run Google Ads?",
+    question: "Does local SEO work better than ads?",
     answer:
-      "Yes. Google Ads can deliver short-term traffic, while local SEO builds long-term organic visibility and reduces dependence on paid lead sources over time.",
-  },
-  {
-    question: "What types of businesses benefit from local SEO in Philadelphia?",
-    answer:
-      "Home service companies, dentists, legal firms, contractors, cleaning companies, medical practices, and other local service businesses all benefit from stronger local rankings.",
+      "Local SEO creates long-term traffic, while ads generate faster short-term leads. Both can work together.",
   },
 ];
 
@@ -80,6 +82,29 @@ const PhilaSeoFormHead = {
     </>
   ),
 };
+
+const PhilaSeoGrowthBenefits = [
+  {
+    icon: <FaMapLocationDot />,
+    title: "Higher rankings on Google Maps",
+  },
+  {
+    icon: <FiPhoneCall />,
+    title: "More phone calls and inquiries",
+  },
+  {
+    icon: <FaStar />,
+    title: "Better trust through reviews",
+  },
+  {
+    icon: <FaSearch />,
+    title: "Increased traffic from nearby customers",
+  },
+  {
+    icon: <RiLineChartLine />,
+    title: "Long-term lead generation without relying only on ads",
+  },
+];
 
 function page() {
   return (
@@ -103,12 +128,19 @@ function page() {
                 <span>More Local Leads in 2026</span>
               </h1>
               <p className="phila-seo-sec-1-sub-head">
-                Local SEO Agency Philadelphia | Zonic Media
+                Best Local SEO Company Philadelphia | Zonic Media
               </p>
               <p className="phila-seo-sec-1-descrp">
-                Looking for a Local SEO agency in Philadelphia? Zonic Media
-                helps businesses rank higher on Google Maps and generate
-                consistent local leads.
+                Looking for a trusted Local SEO agency in Philadelphia? Zonic
+                Media helps businesses rank higher on Google Maps, improve
+                local visibility, and generate consistent local leads through
+                proven SEO strategies.
+              </p>
+
+              <p className="phila-seo-sec-1-descrp">
+                Whether you run a law firm, dental clinic, contractor business,
+                med spa, or local service company, we help you dominate local
+                search and turn online traffic into paying customers.
               </p>
 
               <div className="phila-seo-sec-1-ctas">
@@ -193,7 +225,7 @@ function page() {
                   <div className="icon-box">
                     <FiPhoneCall />
                   </div>
-                  <p>GET MORE CALLS FROM LOCAL CUSTOMBERS</p>
+                  <p>GET MORE CALLS FROM LOCAL CUSTOMERS</p>
                 </div>
 
                 <div className="feature-card">
@@ -207,7 +239,7 @@ function page() {
                   <div className="icon-box">
                     <RiLineChartLine />
                   </div>
-                  <p>SUSTAINABLE GROWTH THAT LAST</p>
+                  <p>SUSTAINABLE GROWTH THAT LASTS</p>
                 </div>
               </div>
             </Col>
@@ -225,7 +257,9 @@ function page() {
             </h2>
 
             <p className="phila-seo-sec-descrp">
-              We are not just another SEO company.
+              We are not just another SEO company. We build local growth
+              systems designed to generate calls, leads, and measurable
+              revenue for Philadelphia businesses.
             </p>
           </div>
         </div>
@@ -238,13 +272,11 @@ function page() {
                   <div className="phila-seo-card-icon">
                     <FaSearch />
                   </div>
-                  <h3 className="phila-seo-card-title">
-                    Search Engine <br /> Optimization
-                  </h3>
+                  <h3 className="phila-seo-card-title">Search Engine Optimization</h3>
                 </div>
                 <p className="phila-seo-card-desc">
-                  Improve rankings, increase organic traffic, and build
-                  long-term visibility.
+                  Improve local rankings, increase organic traffic, and build
+                  long-term Google visibility in Philadelphia.
                 </p>
               </div>
             </Col>
@@ -253,15 +285,13 @@ function page() {
               <div className="phila-seo-card">
                 <div className="phila-seo-card-top">
                   <div className="phila-seo-card-icon">
-                    <FaMousePointer />
+                    <MdOutlineLocationOn />
                   </div>
-                  <h3 className="phila-seo-card-title">
-                    Pay Per Click <br /> Advertising
-                  </h3>
+                  <h3 className="phila-seo-card-title">Google Maps Rankings</h3>
                 </div>
                 <p className="phila-seo-card-desc">
-                  Improve rankings, increase organic traffic, and build
-                  long-term visibility.
+                  Improve your presence in Google Maps and attract customers
+                  searching for nearby businesses.
                 </p>
               </div>
             </Col>
@@ -277,8 +307,8 @@ function page() {
                   </h3>
                 </div>
                 <p className="phila-seo-card-desc">
-                  Improve rankings, increase organic traffic, and build
-                  long-term visibility.
+                  Turn more visitors into calls and leads through stronger
+                  landing pages and user experience.
                 </p>
               </div>
             </Col>
@@ -294,8 +324,8 @@ function page() {
                   </h3>
                 </div>
                 <p className="phila-seo-card-desc">
-                  Improve rankings, increase organic traffic, and build
-                  long-term visibility.
+                  Optimize your Google profile to generate more calls, clicks,
+                  reviews, and local trust.
                 </p>
               </div>
             </Col>
@@ -307,7 +337,7 @@ function page() {
         <div className="phila-seo-center-head">
           <div className="phila-seo-center-head-content-wrapper">
             <h2 className="phila-seo-sec-heading">
-              Our Digital Marketing Strategy Framework
+              Our Local SEO Growth Framework
             </h2>
           </div>
         </div>
@@ -319,7 +349,10 @@ function page() {
                 <span className="phila-seo-strategy-number">01</span>
               </div>
               <h4>Audit Your Current Presence</h4>
-              <p>We analyze your rankings, competitors, and gaps.</p>
+              <p>
+                We analyze rankings, competitors, citations, website SEO, and
+                missed growth opportunities.
+              </p>
             </div>
           </Col>
 
@@ -328,8 +361,11 @@ function page() {
               <div className="phila-seo-strategy-circle">
                 <span className="phila-seo-strategy-number">02</span>
               </div>
-              <h4>Fix Core Issues</h4>
-              <p>We optimize your GBP, website, and citations.</p>
+              <h4>Fix Core SEO Issues</h4>
+              <p>
+                We optimize your Google Business Profile, website structure,
+                and local trust signals.
+              </p>
             </div>
           </Col>
 
@@ -338,8 +374,11 @@ function page() {
               <div className="phila-seo-strategy-circle">
                 <span className="phila-seo-strategy-number">03</span>
               </div>
-              <h4>Build Authority</h4>
-              <p>We strengthen local signals and content.</p>
+              <h4>Build Local Authority</h4>
+              <p>
+                We strengthen citations, backlinks, reviews, and content
+                authority for stronger rankings.
+              </p>
             </div>
           </Col>
 
@@ -349,7 +388,10 @@ function page() {
                 <span className="phila-seo-strategy-number">04</span>
               </div>
               <h4>Scale Visibility</h4>
-              <p>We expand into multiple service areas.</p>
+              <p>
+                We expand rankings across multiple keywords, nearby areas, and
+                service searches.
+              </p>
             </div>
           </Col>
 
@@ -359,7 +401,10 @@ function page() {
                 <span className="phila-seo-strategy-number">05</span>
               </div>
               <h4>Optimize Conversions</h4>
-              <p>We turn traffic into calls and leads.</p>
+              <p>
+                We turn traffic into calls, leads, bookings, and measurable
+                business growth.
+              </p>
             </div>
           </Col>
         </Row>
@@ -375,18 +420,17 @@ function page() {
               </h2>
 
               <p className="phila-seo-sec-4-descrp">
-                If your business is not showing up in Google Maps or local
-                search results, you are losing customers every single day. In a
-                competitive market like Philadelphia, simply having a website is
-                not enough. Your business needs to appear exactly when potential
-                customers search for services near them.
+                If your business is not showing in Google Maps or local search
+                results, you are losing customers every day. In a competitive
+                market like Philadelphia, simply having a website is not
+                enough. Your business needs to appear exactly when potential
+                customers search for nearby services.
               </p>
 
               <p className="phila-seo-sec-4-descrp">
-                That is where local SEO becomes critical. At Zonic Media, we
-                help Philadelphia businesses dominate local search, increase
-                visibility, and generate consistent high-quality leads without
-                relying only on paid ads.
+                That is where Zonic Media helps. We improve local visibility,
+                increase rankings, and generate consistent high-quality leads
+                without relying only on paid ads.
               </p>
             </div>
           </Col>
@@ -419,22 +463,14 @@ function page() {
             <div className="phila-seo-sec-5-icon">
               <MdRoofing />
             </div>
-            <h3>
-              Roofing
-              <br />
-              Companies
-            </h3>
+            <h3>Roofing Companies</h3>
           </div>
 
           <div className="phila-seo-sec-5-item">
             <div className="phila-seo-sec-5-icon">
               <FaFan />
             </div>
-            <h3>
-              HVAC
-              <br />
-              Repair
-            </h3>
+            <h3>HVAC Repair</h3>
           </div>
 
           <div className="phila-seo-sec-5-item">
@@ -448,11 +484,7 @@ function page() {
             <div className="phila-seo-sec-5-icon">
               <MdCleaningServices />
             </div>
-            <h3>
-              Cleaning
-              <br />
-              Services
-            </h3>
+            <h3>Cleaning Services</h3>
           </div>
 
           <div className="phila-seo-sec-5-item">
@@ -466,11 +498,7 @@ function page() {
             <div className="phila-seo-sec-5-icon">
               <FaScaleBalanced />
             </div>
-            <h3>
-              Legal
-              <br />
-              Services
-            </h3>
+            <h3>Legal Services</h3>
           </div>
         </div>
       </div>
@@ -493,15 +521,19 @@ function page() {
                 <span>Local SEO + AI SEO</span> Advantage
               </h2>
 
-              <p className="phila-seo-sec-6-descrp">Search is evolving.</p>
+              <p className="phila-seo-sec-6-descrp">
+                Search is changing fast.
+              </p>
 
               <p className="phila-seo-sec-6-descrp">
-                Customers are now asking AI tools:
+                Customers now ask AI tools:
               </p>
 
               <ul className="phila-seo-sec-6-list">
-                <li>“best roofing company in Philadelphia”</li>
-                <li>“top dentist near me”</li>
+                <li>Best roofer in Philadelphia</li>
+                <li>Top dentist near me</li>
+                <li>Best HVAC company Philadelphia</li>
+                <li>Trusted lawyer near me</li>
               </ul>
 
               <p className="phila-seo-sec-6-descrp">
@@ -509,13 +541,16 @@ function page() {
               </p>
 
               <ul className="phila-seo-sec-6-list">
-                <li>Google</li>
-                <li>AI search engines</li>
-                <li>ChatGPT and Gemini discovery</li>
+                <li>Google Search</li>
+                <li>Google Maps</li>
+                <li>AI Search Engines</li>
+                <li>ChatGPT &amp; Gemini Discovery</li>
+                <li>Voice Search Results</li>
               </ul>
 
               <p className="phila-seo-sec-6-descrp">
-                This future-proofs your growth.
+                This helps future-proof your growth and keeps you ahead of
+                competitors.
               </p>
             </div>
           </Col>
@@ -552,8 +587,8 @@ function page() {
                 </div>
 
                 <p>
-                  We help your business rank on Google Search and Maps to
-                  generate consistent organic leads.
+                  We optimize your profile to rank higher in Google Search and
+                  Maps while generating more calls.
                 </p>
 
                 <HashScrollLink
@@ -587,8 +622,8 @@ function page() {
                 </div>
 
                 <p>
-                  We run targeted paid campaigns that bring immediate high
-                  intent traffic.
+                  We improve local rankings so nearby customers find your
+                  business before competitors.
                 </p>
 
                 <HashScrollLink
@@ -622,9 +657,8 @@ function page() {
                 </div>
 
                 <p>
-                  Traffic alone is not enough. We optimize your website to:
-                  increase conversions, reduce bounce rates, generate more
-                  inquiries
+                  We target high-intent Philadelphia keywords that bring
+                  qualified local traffic.
                 </p>
 
                 <HashScrollLink
@@ -658,8 +692,8 @@ function page() {
                 </div>
 
                 <p>
-                  We prepare your business for: AI search engines, ChatGPT
-                  recommendations, Google AI Overviews
+                  We build optimized city and service pages that rank across
+                  multiple nearby areas.
                 </p>
 
                 <HashScrollLink
@@ -693,8 +727,8 @@ function page() {
                 </div>
 
                 <p>
-                  We create strategic content that: builds trust, improves
-                  rankings, attracts qualified leads.
+                  We help generate positive reviews that improve trust, clicks,
+                  and local rankings.
                 </p>
 
                 <HashScrollLink
@@ -728,8 +762,8 @@ function page() {
                 </div>
 
                 <p>
-                  We create strategic content that: builds trust, improves
-                  rankings, attracts qualified leads.
+                  We build consistent listings across trusted directories to
+                  strengthen local authority.
                 </p>
 
                 <HashScrollLink
@@ -743,6 +777,117 @@ function page() {
             </div>
           </Col>
         </Row>
+      </div>
+
+      <div className="phila-seo-sec-11">
+        <div className="phila-seo-sec-11-inner">
+          <div className="phila-seo-sec-11-panel">
+            <div className="phila-seo-sec-11-panel-head">
+              <p className="phila-seo-label">WHY IT MATTERS</p>
+              <h3>Benefits of Local SEO in Philadelphia</h3>
+            </div>
+
+            <div className="phila-seo-sec-12-benefits">
+              {PhilaSeoGrowthBenefits.map((benefit) => (
+                <div className="phila-seo-sec-12-benefit" key={benefit.title}>
+                  <div className="phila-seo-sec-12-benefit-icon">
+                    {benefit.icon}
+                  </div>
+                  <p>{benefit.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="phila-seo-sec-11-copy">
+            <h2 className="phila-seo-sec-heading">
+              Why Businesses in Philadelphia Need Local SEO to Grow
+            </h2>
+            <p className="phila-seo-sec-11-lead">
+              Philadelphia is one of the most competitive local markets in
+              Pennsylvania. Customers search online every day for nearby
+              businesses they can trust, compare reviews, and contact quickly.
+              If your business is not visible in Google Search or Google Maps,
+              those leads are going to competitors.
+            </p>
+            <p className="phila-seo-sec-11-lead">
+              Local SEO helps your business appear when people search for
+              services in your area. Whether someone needs a roofer in Center
+              City, a dentist in Northeast Philadelphia, or an HVAC company
+              near South Philly, showing up at the right time creates real
+              opportunities.
+            </p>
+            <p className="phila-seo-sec-11-lead">
+              Unlike paid ads that stop when budget ends, Local SEO builds
+              long-term visibility and consistent lead flow. It helps your
+              business rank higher, earn trust through reviews, and generate
+              calls from customers already ready to buy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="phila-seo-sec-12">
+        <div className="phila-seo-sec-12-inner">
+          <div className="phila-seo-sec-12-copy">
+            <h2 className="phila-seo-sec-heading">
+              Why Choose Zonic Media for Local SEO in Philadelphia
+            </h2>
+            <p className="phila-seo-sec-12-text">
+              Many agencies offer SEO, but very few understand how local
+              businesses actually generate revenue. At Zonic Media, we focus on
+              one thing-helping Philadelphia businesses get more calls, booked
+              jobs, and qualified leads through proven local SEO systems.
+            </p>
+            <p className="phila-seo-sec-12-text">
+              We do not chase vanity metrics like impressions or random
+              traffic. Our strategies are built around ranking for high-intent
+              local keywords, improving Google Business Profile visibility,
+              strengthening trust signals, and converting visitors into
+              customers.
+            </p>
+            <p className="phila-seo-sec-12-text">
+              Whether you are a contractor, lawyer, dentist, med spa, or home
+              service company, we create a custom growth plan based on your
+              market, competition, and goals.
+            </p>
+          </div>
+
+          <div className="phila-seo-sec-12-panel">
+            <p className="phila-seo-label">OUR APPROACH</p>
+            <h3>Built Around Real Local Revenue</h3>
+
+            <div className="phila-seo-sec-12-benefits">
+              <div className="phila-seo-sec-12-benefit">
+                <div className="phila-seo-sec-12-benefit-icon">
+                  <FaSearch />
+                </div>
+                <p>Rank for high-intent Philadelphia keywords</p>
+              </div>
+
+              <div className="phila-seo-sec-12-benefit">
+                <div className="phila-seo-sec-12-benefit-icon">
+                  <FaGoogle />
+                </div>
+                <p>Improve Google Business Profile visibility</p>
+              </div>
+
+              <div className="phila-seo-sec-12-benefit">
+                <div className="phila-seo-sec-12-benefit-icon">
+                  <FaStar />
+                </div>
+                <p>Strengthen trust signals and reviews</p>
+              </div>
+
+              <div className="phila-seo-sec-12-benefit">
+                <div className="phila-seo-sec-12-benefit-icon">
+                  <FaHandPointer />
+                </div>
+                <p>Convert visitors into calls and booked jobs</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="phila-seo-sec-8">
@@ -795,14 +940,11 @@ function page() {
         <div className="phila-seo-sec-10-inner">
           <div className="phila-seo-sec-10-content">
             <h2 className="phila-seo-sec-10-heading">
-              Looking to Grow Your Business with a Local SEO Agency in
-              Philadelphia?
+              Looking to Grow Your Business in Philadelphia?
             </h2>
             <p className="phila-seo-sec-10-descrp">
               Book a discovery call with Zonic Media and let&apos;s build a
-              local SEO strategy focused on higher map visibility, stronger
-              search rankings, and more qualified leads from Philadelphia
-              customers.
+              local SEO strategy that drives real results.
             </p>
 
             <div className="phila-seo-sec-10-info-grid">

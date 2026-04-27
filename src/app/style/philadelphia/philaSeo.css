@@ -376,7 +376,7 @@
 .phila-seo-sec-6-img-cont {
   position: relative;
   width: 100%;
-  height: 420px;
+  height: 480px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -522,6 +522,161 @@
   transform: scale(1.05);
 }
 
+.phila-seo-sec-11 {
+  padding: 80px 100px;
+}
+
+.phila-seo-sec-11-inner {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.phila-seo-sec-11-panel {
+  padding: 36px;
+  border-radius: 28px;
+  background: var(--secondary);
+}
+
+.phila-seo-sec-11-panel-head {
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.phila-seo-sec-11-panel-head .phila-seo-label {
+  color: var(--primary);
+  background: transparent;
+  margin: 0 auto;
+}
+
+.phila-seo-sec-11-panel-head .phila-seo-label::before,
+.phila-seo-sec-11-panel-head .phila-seo-label::after {
+  display: none;
+}
+
+.phila-seo-sec-11-panel-head h3 {
+  margin: 18px 0 0;
+  font-size: 34px;
+  color: var(--white);
+}
+
+.phila-seo-sec-11-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.phila-seo-sec-11-copy .phila-seo-sec-heading {
+  margin: 0;
+  width: 88%;
+}
+
+.phila-seo-sec-11-lead {
+  width: 88%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color2);
+}
+
+.phila-seo-sec-12 {
+  padding: 0 100px 80px;
+}
+
+.phila-seo-sec-12-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.phila-seo-sec-12-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.phila-seo-sec-12-copy .phila-seo-sec-heading {
+  margin: 0;
+  width: 100%;
+}
+
+.phila-seo-sec-12-copy .phila-seo-label::before,
+.phila-seo-sec-12-copy .phila-seo-label::after,
+.phila-seo-sec-12-panel .phila-seo-label::before,
+.phila-seo-sec-12-panel .phila-seo-label::after {
+  display: none;
+}
+
+.phila-seo-sec-12-text {
+  width: 88%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--color2);
+}
+
+.phila-seo-sec-12-panel {
+  padding: 32px;
+  border-radius: 26px;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(247, 192, 10, 0.18),
+      transparent 36%
+    ),
+    var(--secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.phila-seo-sec-12-panel .phila-seo-label {
+  color: var(--primary);
+  background: transparent;
+}
+
+.phila-seo-sec-12-panel h3 {
+  margin: 18px 0 0;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.phila-seo-sec-12-benefits {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.phila-seo-sec-12-benefit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.phila-seo-sec-12-benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.phila-seo-sec-12-benefit p {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--white);
+}
+
 .phila-seo-sec-8 {
   padding: 60px 100px;
 }
@@ -627,7 +782,7 @@
 }
 
 .phila-seo-sec-10-info-card a:hover {
-  color: var(--secondary);
+  color: var(--color2);
 }
 
 .phila-seo-sec-10-map {
@@ -654,7 +809,7 @@
 /*--mobile and Tab--*/
 @media (max-width: 991.98px) {
   .phila-seo-sec-1-layer {
-    padding: 40px 20px;
+    padding: 40px 20px 60px;
     margin-top: 78px;
     background: linear-gradient(
       180deg,
@@ -714,7 +869,9 @@
   .phila-seo-sec-4,
   .phila-seo-sec-6,
   .phila-seo-sec-9,
-  .phila-seo-sec-10 {
+  .phila-seo-sec-10,
+  .phila-seo-sec-11,
+  .phila-seo-sec-12 {
     padding: 40px 20px;
   }
 
@@ -837,6 +994,50 @@
     margin-top: 24px;
   }
 
+  .phila-seo-sec-11-lead {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .phila-seo-sec-11-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .phila-seo-sec-11-copy {
+    gap: 16px;
+  }
+
+  .phila-seo-sec-11-copy .phila-seo-sec-heading {
+    width: 100%;
+  }
+
+  .phila-seo-sec-11-panel-head h3 {
+    font-size: 30px;
+  }
+
+  .phila-seo-sec-12-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .phila-seo-sec-12-copy {
+    gap: 16px;
+  }
+
+  .phila-seo-sec-12-text {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .phila-seo-sec-12-panel {
+    padding: 28px;
+  }
+
+  .phila-seo-sec-12-panel h3 {
+    font-size: 28px;
+  }
+
   .phila-seo-sec-10 {
     padding: 0 20px 40px;
   }
@@ -870,7 +1071,7 @@
 /*--mobile--*/
 @media (max-width: 575.98px) {
   .phila-seo-sec-1-layer {
-    padding: 24px 20px 32px;
+    padding: 24px 20px 60px;
   }
 
   .phila-seo-sec-1-heading {
@@ -907,6 +1108,12 @@
 
   .phila-seo-card,
   .phila-seo-sec-10-info-card {
+    padding: 20px;
+  }
+
+  .phila-seo-sec-11-panel,
+  .phila-seo-sec-12-panel,
+  .phila-seo-sec-12-benefit {
     padding: 20px;
   }
 
@@ -979,6 +1186,41 @@
     margin-top: 6px;
   }
 
+  .phila-seo-sec-11-panel-head h3 {
+    font-size: 26px;
+  }
+
+  .phila-seo-sec-11-copy {
+    gap: 14px;
+  }
+
+  .phila-seo-sec-12-panel h3 {
+    font-size: 24px;
+  }
+
+  .phila-seo-sec-12-copy {
+    gap: 14px;
+  }
+
+  .phila-seo-sec-12-benefits {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .phila-seo-sec-12-benefit {
+    align-items: flex-start;
+  }
+
+  .phila-seo-sec-12-benefit-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .phila-seo-sec-12-benefit p {
+    font-size: 16px;
+  }
+
   .phila-seo-sec-10-descrp {
     font-size: 18px;
     line-height: 26px;
@@ -1001,7 +1243,7 @@
 /*--Tab--*/
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .phila-seo-sec-1-layer {
-    padding: 40px;
+    padding: 40px 40px 60px;
   }
 
   .phila-seo-sec-1-heading {
@@ -1025,7 +1267,9 @@
   .phila-seo-sec-4,
   .phila-seo-sec-6,
   .phila-seo-sec-9,
-  .phila-seo-sec-10 {
+  .phila-seo-sec-10,
+  .phila-seo-sec-11,
+  .phila-seo-sec-12 {
     padding: 40px;
   }
 }
@@ -1073,7 +1317,9 @@
   .phila-seo-sec-4,
   .phila-seo-sec-6,
   .phila-seo-sec-9,
-  .phila-seo-sec-10 {
+  .phila-seo-sec-10,
+  .phila-seo-sec-11,
+  .phila-seo-sec-12 {
     padding: 40px 30px;
   }
 
@@ -1131,6 +1377,24 @@
 
   .phila-seo-sec-10-inner {
     flex-direction: column;
+  }
+
+  .phila-seo-sec-11-panel {
+    padding: 28px;
+  }
+
+  .phila-seo-sec-11-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .phila-seo-sec-12-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .phila-seo-sec-12-panel {
+    padding: 28px;
   }
 
   .phila-seo-sec-10-content,
@@ -1193,7 +1457,9 @@
   .phila-seo-sec-4,
   .phila-seo-sec-6,
   .phila-seo-sec-9,
-  .phila-seo-sec-10 {
+  .phila-seo-sec-10,
+  .phila-seo-sec-11,
+  .phila-seo-sec-12 {
     padding: 40px;
   }
 
@@ -1240,6 +1506,30 @@
 
   .phila-seo-sec-7-overlay {
     padding: 145px 24px 20px;
+  }
+
+  .phila-seo-sec-11-lead,
+  .phila-seo-sec-12-text {
+    width: 88%;
+  }
+
+  .phila-seo-sec-11-copy .phila-seo-sec-heading {
+    width: 88%;
+  }
+
+  .phila-seo-sec-11-panel,
+  .phila-seo-sec-12-panel {
+    padding: 30px;
+  }
+
+  .phila-seo-sec-11-inner {
+    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .phila-seo-sec-12-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.95fr);
+    gap: 28px;
   }
 
   .phila-seo-sec-10-heading {

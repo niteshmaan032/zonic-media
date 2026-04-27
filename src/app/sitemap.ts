@@ -15,6 +15,7 @@ const staticRoutes = [
   { path: "/services/launchpad", priority: 0.8 },
   { path: "/services/local-seo-for-home-services", priority: 0.8 },
   { path: "/services/philadelphia/digital-marketing", priority: 0.8 },
+  { path: "/services/philadelphia/local-seo", priority: 0.8 },
   { path: "/services/web-design", priority: 0.8 },
 ] as const;
 
