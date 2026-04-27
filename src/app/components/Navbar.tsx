@@ -111,7 +111,8 @@ function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const forceWhiteNavbar =
-    pathname === "/services/philadelphia/digital-marketing";
+    pathname === "/services/philadelphia/digital-marketing" ||
+    pathname === "/services/philadelphia/local-seo";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);

@@ -99,7 +99,8 @@ function page() {
           <div className="phila-seo-sec-1-content">
             <Col lg={9} className="phila-seo-sec-1-content-wrapper">
               <h1 className="phila-seo-sec-1-heading">
-                Local SEO Agency Philadelphia: Get More Local Leads in 2026
+                Local SEO Agency Philadelphia: Get{" "}
+                <span>More Local Leads in 2026</span>
               </h1>
               <p className="phila-seo-sec-1-sub-head">
                 Local SEO Agency Philadelphia | Zonic Media
