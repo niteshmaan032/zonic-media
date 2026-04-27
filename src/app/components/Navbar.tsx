@@ -329,10 +329,7 @@ function Navbar() {
                           <strong>Zonic Media</strong>
                         </p>
 
-                        <Link
-                          href="/contact-us"
-                          className="services-core-cta"
-                        >
+                        <Link href="/contact-us" className="services-core-cta">
                           Get Started Today
                         </Link>
                       </div>
@@ -438,10 +435,7 @@ function Navbar() {
                           <strong>Zonic Media</strong>
                         </p>
 
-                        <Link
-                          href="/contact-us"
-                          className="services-core-cta"
-                        >
+                        <Link href="/contact-us" className="services-core-cta">
                           Get Started Today
                         </Link>
                       </div>
@@ -463,7 +457,7 @@ function Navbar() {
                   </li>
                   <li className="services-dropdown">
                     <span className="nav-link-with-icon">
-                      Areas We Serve <MdArrowOutward size={16} />
+                      Locations <MdArrowOutward size={16} />
                     </span>
 
                     <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
@@ -751,9 +745,7 @@ function Navbar() {
                 }
               >
                 <Accordion.Item eventKey="3">
-                  <Accordion.Header>
-                    Areas We Serve
-                  </Accordion.Header>
+                  <Accordion.Header>Areas We Serve</Accordion.Header>
                   <Accordion.Body>
                     <ul>
                       <li>
@@ -824,7 +816,6 @@ function Navbar() {
                 </Accordion.Item>
               </Accordion>
             </li>
-
           </ul>
         </div>
         <div className="mob-tab-nav-socials">
