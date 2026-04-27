@@ -482,7 +482,7 @@ function page() {
               <Image
                 src="/images/philadelphia/phila-digital/phila-img-2.jpg"
                 fill
-                alt="philadelphia digital marketing"
+                alt="Philadelphia digital marketing agency strategy session"
               ></Image>
             </div>
           </Col>
@@ -884,7 +884,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-1.jpg"
-                  alt="service"
+                  alt="PPC campaign management service for Philadelphia businesses"
                   width={500}
                   height={350}
                 />
@@ -921,7 +921,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-2.jpg"
-                  alt="service"
+                  alt="Website conversion optimization service in Philadelphia"
                   width={500}
                   height={350}
                 />
@@ -958,7 +958,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-3.jpg"
-                  alt="service"
+                  alt="AI SEO optimization service for Philadelphia companies"
                   width={500}
                   height={350}
                 />
@@ -995,7 +995,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-4.jpg"
-                  alt="service"
+                  alt="Content and authority building service in Philadelphia"
                   width={500}
                   height={350}
                 />
@@ -1032,7 +1032,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-5.jpg"
-                  alt="service"
+                  alt="Social media marketing service for Philadelphia brands"
                   width={500}
                   height={350}
                 />
@@ -1069,7 +1069,7 @@ function page() {
               <div className="phila-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-digital/phila-digital-6.jpg"
-                  alt="service"
+                  alt="Local SEO and organic growth service in Philadelphia"
                   width={500}
                   height={350}
                 />

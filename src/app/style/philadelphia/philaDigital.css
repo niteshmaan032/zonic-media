@@ -961,8 +961,8 @@
 
 .phila-sec-10-contact-form {
   flex-basis: 40%;
-  position: relative;
-  top: auto;
+  position: sticky;
+  top: 32px;
   height: 100%;
 }
 

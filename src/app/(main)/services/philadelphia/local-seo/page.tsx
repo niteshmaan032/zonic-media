@@ -89,7 +89,7 @@ function page() {
           <div className="phila-seo-sec-1-banner-image">
             <Image
               src="/images/philadelphia/phila-seo/phila-seo-banner-img-2.png"
-              alt="Philadelphia local SEO"
+              alt="Philadelphia local SEO agency hero illustration"
               width={680}
               height={680}
               priority
@@ -396,7 +396,7 @@ function page() {
               <Image
                 src="/images/philadelphia/phila-seo/phila-seo-img-2.jpg"
                 fill
-                alt="Philadelphia local SEO strategy"
+                alt="Philadelphia local SEO lead generation strategy"
               />
             </div>
           </Col>
@@ -482,7 +482,7 @@ function page() {
               <Image
                 src="/images/philadelphia/phila-seo/phila-seo-img-3.jpg"
                 fill
-                alt="AI SEO and local SEO strategy"
+                alt="AI SEO and local SEO advantage for Philadelphia businesses"
               />
             </div>
           </Col>
@@ -537,7 +537,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-1.jpg"
-                  alt="Google Business Profile Optimization"
+                  alt="Google Business Profile optimization service in Philadelphia"
                   width={500}
                   height={350}
                 />
@@ -572,7 +572,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-2.jpg"
-                  alt="Google Maps Ranking Strategy"
+                  alt="Google Maps ranking strategy service in Philadelphia"
                   width={500}
                   height={350}
                 />
@@ -607,7 +607,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-3.jpg"
-                  alt="Local Keyword Targeting"
+                  alt="Local keyword targeting service for Philadelphia SEO"
                   width={500}
                   height={350}
                 />
@@ -643,7 +643,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-4.jpg"
-                  alt="City Based Landing Pages"
+                  alt="City based landing pages service for Philadelphia local SEO"
                   width={500}
                   height={350}
                 />
@@ -678,7 +678,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-5.jpg"
-                  alt="Review Growth Strategy"
+                  alt="Review growth strategy service for Philadelphia businesses"
                   width={500}
                   height={350}
                 />
@@ -713,7 +713,7 @@ function page() {
               <div className="phila-seo-sec-7-img">
                 <Image
                   src="/images/philadelphia/phila-seo/phila-seo-serv-6.jpg"
-                  alt="Local Citations and Directory Management"
+                  alt="Local citations and directory management service in Philadelphia"
                   width={500}
                   height={350}
                 />

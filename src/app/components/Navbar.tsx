@@ -490,7 +490,7 @@ function Navbar() {
 
                             <span className="services-core-tags">
                               <Link
-                                href="/coming-soon"
+                                href="/services/philadelphia/local-seo"
                                 className="services-core-tag"
                               >
                                 Local SEO Agency Philadelphia
@@ -766,7 +766,7 @@ function Navbar() {
                       </li>
                       <li>
                         <Link
-                          href="/coming-soon"
+                          href="/services/philadelphia/local-seo"
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Local SEO Agency Philadelphia
