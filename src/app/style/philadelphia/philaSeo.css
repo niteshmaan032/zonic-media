@@ -1,6 +1,6 @@
 .phila-seo-sec-1 {
   background-image: url("/images/philadelphia/phila-seo/phila-seo-banner.jpg");
-  height: 100svh;
+  min-height: 100svh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -808,6 +808,10 @@
 
 /*--mobile and Tab--*/
 @media (max-width: 991.98px) {
+  .phila-seo-sec-1 {
+    min-height: auto;
+  }
+
   .phila-seo-sec-1-layer {
     padding: 40px 20px 60px;
     margin-top: 78px;
@@ -1070,6 +1074,10 @@
 
 /*--mobile--*/
 @media (max-width: 575.98px) {
+  .phila-seo-sec-1-banner-image {
+    display: none !important;
+  }
+
   .phila-seo-sec-1-layer {
     padding: 24px 20px 60px;
   }
@@ -1242,6 +1250,10 @@
 
 /*--Tab--*/
 @media (min-width: 575.99px) and (max-width: 991.98px) {
+  .phila-seo-sec-1-banner-image {
+    display: none !important;
+  }
+
   .phila-seo-sec-1-layer {
     padding: 40px 40px 60px;
   }
