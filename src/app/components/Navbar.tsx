@@ -107,13 +107,23 @@ const localSeoServices = [
   },
 ];
 
+const industryLinks = [
+  {
+    id: "real-estate",
+    title: "Real Estate SEO",
+    description:
+      "SEO and lead generation strategies built for agents, teams, and brokerages.",
+    link: "/services/industry/real-estate-seo-services",
+  },
+];
+
 function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const forceWhiteNavbar =
     pathname === "/services/philadelphia/digital-marketing" ||
     pathname === "/services/philadelphia/local-seo" ||
-    pathname === "/services/real-estate";
+    pathname === "/services/industry/real-estate-seo-services";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);
@@ -497,6 +507,39 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="services-dropdown">
+                    <span className="nav-link-with-icon">
+                      Industries <MdArrowOutward size={16} />
+                    </span>
+
+                    <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
+                      <div className="services-core-label">Industries</div>
+
+                      <div className="services-core-grid areas-core-grid">
+                        {industryLinks.map((industry) => (
+                          <div
+                            className="services-core-card services-core-card--with-tags"
+                            key={industry.id}
+                          >
+                            <span className="services-core-icon">
+                              <FaStore />
+                            </span>
+                            <span className="services-core-content">
+                              <strong>
+                                <Link
+                                  href={industry.link}
+                                  className="services-core-title-link"
+                                >
+                                  {industry.title}
+                                </Link>
+                              </strong>
+                              <span>{industry.description}</span>
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </li>
+                  <li className="services-dropdown">
                     <Link href={SITE_PATHS.about}>
                       Others <MdArrowOutward size={16} />
                     </Link>
@@ -744,9 +787,9 @@ function Navbar() {
                     typeof eventKey === "string" ? eventKey : null,
                   )
                 }
-              >
+                >
                 <Accordion.Item eventKey="3">
-                  <Accordion.Header>Areas We Serve</Accordion.Header>
+                  <Accordion.Header>Locations</Accordion.Header>
                   <Accordion.Body>
                     <ul>
                       <li>
@@ -765,6 +808,36 @@ function Navbar() {
                           Local SEO Agency Philadelphia
                         </Link>
                       </li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </li>
+            <li>
+              <Accordion
+                flush
+                id="mobileIndustriesAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
+              >
+                <Accordion.Item eventKey="4">
+                  <Accordion.Header>Industries</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      {industryLinks.map((industry) => (
+                        <li key={industry.id}>
+                          <Link
+                            href={industry.link}
+                            onClick={() => handleToggleMobileMenu(false)}
+                          >
+                            {industry.title}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </Accordion.Body>
                 </Accordion.Item>

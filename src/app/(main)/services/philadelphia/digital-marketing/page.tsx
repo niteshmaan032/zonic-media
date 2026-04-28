@@ -211,6 +211,137 @@ const PhilaDigitalFormHead = {
 function page() {
   return (
     <>
+      <div className="phila-sec-1">
+        <div className="phila-sec-1-layer">
+          <div className="phila-sec-1-content">
+            <Col lg={9} className="phila-sec-1-content-wrapper">
+              <h1 className="phila-sec-1-heading">
+                Digital Marketing Agency Philadelphia That Helps{" "}
+                <span>Businesses Grow Faster </span>
+              </h1>
+              <p className="phila-sec-1-sub-head">
+                Top-Rated Digital Marketing Agency Philadelphia | Zonic Media
+              </p>
+              <p className="phila-sec-1-descrp">
+                Looking for a trusted digital marketing agency in Philadelphia
+                that delivers real results? Zonic Media helps local businesses
+                generate more leads, increase revenue, and scale faster through
+                expert SEO, Google Ads, web design, and full-service digital
+                marketing strategies built for growth.
+              </p>
+
+              <p className="phila-sec-1-descrp">
+                We work with Philadelphia businesses that want more calls,
+                better online visibility, and a consistent stream of qualified
+                customers. Whether you need stronger rankings, better ad
+                performance, or a website that converts, our team builds systems
+                designed to grow your business in 2026 and beyond.
+              </p>
+
+              <div className="phila-sec-1-ctas">
+                <HashScrollLink
+                  href="#phila-digital-contact-form"
+                  className="buttons"
+                  offset={120}
+                >
+                  Get A Free Call
+                  <span className="buttons__icon-wrapper">
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg"
+                      width="8"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      width="8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </HashScrollLink>
+
+                <HashScrollLink
+                  href="#phila-digital-contact-form"
+                  className="buttons"
+                  offset={120}
+                >
+                  Get A Free Quote
+                  <span className="buttons__icon-wrapper">
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg"
+                      width="8"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      width="8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </HashScrollLink>
+              </div>
+
+              <div className="phila-feature-grid">
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <MdOutlineLocationOn />
+                  </div>
+                  <p>RANK HIGHER ON GOOGLE</p>
+                </div>
+
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <FiPhoneCall />
+                  </div>
+                  <p>GET MORE LEADS FROM PHILADELPHIA CUSTOMERS</p>
+                </div>
+
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <LuCalendarCheck2 />
+                  </div>
+                  <p>INCREASE SALES &amp; BUSINESS GROWTH</p>
+                </div>
+
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <RiLineChartLine />
+                  </div>
+                  <p>LONG-TERM RESULTS THAT SCALE</p>
+                </div>
+              </div>
+            </Col>
+          </div>
+        </div>
+      </div>
+
       <div className="phila-sec-2">
         <div className="phila-center-head">
           <div className="phila-center-head-content-wrapper">
