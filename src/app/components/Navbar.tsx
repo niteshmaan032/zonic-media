@@ -346,17 +346,94 @@ function Navbar() {
                       </div>
                     </div>
                   </li>
-                  <li className="services-dropdown">
-                    <Link href={SITE_PATHS.seo}>
-                      Local SEO <MdArrowOutward size={16} />
+                  <li>
+                    <Link href={SITE_PATHS.seo}>Local SEO</Link>
+                  </li>
+                  <li>
+                    <Link href="/services/gmb-reinstatement-help">
+                      GMB Reinstatement
                     </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/launchpad"
+                      className="nav-link-with-icon"
+                    >
+                      <HiMiniRocketLaunch />
+                      <span>Launchpad</span>
+                    </Link>
+                  </li>
+                  <li className="services-dropdown">
+                    <span className="nav-link-with-icon">
+                      Locations <MdArrowOutward size={16} />
+                    </span>
+
+                    <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
+                      <div className="services-core-label">Locations</div>
+
+                      <div className="services-core-grid areas-core-grid">
+                        <div className="services-core-card services-core-card--with-tags">
+                          <span className="services-core-icon">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>
+                              <Link
+                                href="/services/philadelphia/digital-marketing"
+                                className="services-core-title-link"
+                              >
+                                Digital Marketing Agency in Philadelphia
+                              </Link>
+                            </strong>
+                            <span>
+                              Explore our upcoming local market pages and city-
+                              focused service coverage.
+                            </span>
+
+                            <span className="services-core-tags">
+                              <Link
+                                href="/services/philadelphia/local-seo"
+                                className="services-core-tag"
+                              >
+                                Local SEO Agency Philadelphia
+                              </Link>
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="services-dropdown">
+                    <span className="nav-link-with-icon">
+                      Industries <MdArrowOutward size={16} />
+                    </span>
 
                     <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
-                      <div className="services-core-label">
-                        Local SEO Services
-                      </div>
+                      <div className="services-core-label">Industries</div>
 
                       <div className="services-core-grid local-seo-core-grid">
+                        {industryLinks.map((industry) => (
+                          <div
+                            className="services-core-card services-core-card--with-tags"
+                            key={industry.id}
+                          >
+                            <span className="services-core-icon">
+                              <FaStore />
+                            </span>
+                            <span className="services-core-content">
+                              <strong>
+                                <Link
+                                  href={industry.link}
+                                  className="services-core-title-link"
+                                >
+                                  {industry.title}
+                                </Link>
+                              </strong>
+                              <span>{industry.description}</span>
+                            </span>
+                          </div>
+                        ))}
+
                         <Link
                           href="/roofing-seo-services"
                           className="services-core-card"
@@ -436,106 +513,6 @@ function Navbar() {
                             </span>
                           </span>
                         </Link>
-                      </div>
-
-                      <div className="services-core-divider" />
-
-                      <div className="services-core-bottom">
-                        <p className="services-core-bottom-copy">
-                          Grow your local rankings with{" "}
-                          <strong>Zonic Media</strong>
-                        </p>
-
-                        <Link href="/contact-us" className="services-core-cta">
-                          Get Started Today
-                        </Link>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <Link href="/services/gmb-reinstatement-help">
-                      GMB Reinstatement
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/launchpad"
-                      className="nav-link-with-icon"
-                    >
-                      <HiMiniRocketLaunch />
-                      <span>Launchpad</span>
-                    </Link>
-                  </li>
-                  <li className="services-dropdown">
-                    <span className="nav-link-with-icon">
-                      Locations <MdArrowOutward size={16} />
-                    </span>
-
-                    <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
-                      <div className="services-core-label">Locations</div>
-
-                      <div className="services-core-grid areas-core-grid">
-                        <div className="services-core-card services-core-card--with-tags">
-                          <span className="services-core-icon">
-                            <MdOutlineLocationOn />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>
-                              <Link
-                                href="/services/philadelphia/digital-marketing"
-                                className="services-core-title-link"
-                              >
-                                Digital Marketing Agency in Philadelphia
-                              </Link>
-                            </strong>
-                            <span>
-                              Explore our upcoming local market pages and city-
-                              focused service coverage.
-                            </span>
-
-                            <span className="services-core-tags">
-                              <Link
-                                href="/services/philadelphia/local-seo"
-                                className="services-core-tag"
-                              >
-                                Local SEO Agency Philadelphia
-                              </Link>
-                            </span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="services-dropdown">
-                    <span className="nav-link-with-icon">
-                      Industries <MdArrowOutward size={16} />
-                    </span>
-
-                    <div className="services-dropdown-container services-core-dropdown areas-core-dropdown">
-                      <div className="services-core-label">Industries</div>
-
-                      <div className="services-core-grid areas-core-grid">
-                        {industryLinks.map((industry) => (
-                          <div
-                            className="services-core-card services-core-card--with-tags"
-                            key={industry.id}
-                          >
-                            <span className="services-core-icon">
-                              <FaStore />
-                            </span>
-                            <span className="services-core-content">
-                              <strong>
-                                <Link
-                                  href={industry.link}
-                                  className="services-core-title-link"
-                                >
-                                  {industry.title}
-                                </Link>
-                              </strong>
-                              <span>{industry.description}</span>
-                            </span>
-                          </div>
-                        ))}
                       </div>
                     </div>
                   </li>
@@ -732,37 +709,12 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Accordion
-                flush
-                id="mobileServicesAccordion"
-                activeKey={accordionKey}
-                onSelect={(eventKey) =>
-                  setAccordionKey(
-                    typeof eventKey === "string" ? eventKey : null,
-                  )
-                }
+              <Link
+                href={SITE_PATHS.seo}
+                onClick={() => handleToggleMobileMenu(false)}
               >
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>
-                    {" "}
-                    <Link href={SITE_PATHS.seo}>Local SEO </Link>{" "}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      {localSeoServices.map((s) => (
-                        <li key={s.id}>
-                          <Link
-                            href={s.link}
-                            onClick={() => handleToggleMobileMenu(false)}
-                          >
-                            {s.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
+                Local SEO
+              </Link>
             </li>
             <li>
               <Link href="/services/gmb-reinstatement-help">
@@ -835,6 +787,16 @@ function Navbar() {
                             onClick={() => handleToggleMobileMenu(false)}
                           >
                             {industry.title}
+                          </Link>
+                        </li>
+                      ))}
+                      {localSeoServices.map((service) => (
+                        <li key={service.id}>
+                          <Link
+                            href={service.link}
+                            onClick={() => handleToggleMobileMenu(false)}
+                          >
+                            {service.label}
                           </Link>
                         </li>
                       ))}

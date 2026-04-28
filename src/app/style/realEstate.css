@@ -9,6 +9,7 @@
 }
 
 .realest-sec-1-layer {
+  min-height: 100svh;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 15%,
@@ -17,6 +18,7 @@
     rgba(0, 0, 0, 0) 85%
   );
   height: 100%;
+  box-sizing: border-box;
   padding: 60px 100px;
 }
 
@@ -602,6 +604,7 @@
   margin: 0;
   font-size: 24px;
   line-height: 34px;
+  text-transform: capitalize;
 }
 
 .realest-sec-8-icon {
@@ -786,6 +789,7 @@
   }
 
   .realest-sec-1-layer {
+    min-height: auto;
     padding: 118px 20px 60px;
     background: linear-gradient(
       180deg,

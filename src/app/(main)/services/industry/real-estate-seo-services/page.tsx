@@ -659,7 +659,7 @@ function page() {
                   <div className="realest-sec-8-icon">
                     <FaGoogle />
                   </div>
-                  <h4>Google Business Profile Verification and Optimization</h4>
+                  <h4>google business Profile verfication</h4>
                 </div>
 
                 <p>
@@ -667,13 +667,12 @@ function page() {
                   generate consistent organic leads.
                 </p>
 
-                <HashScrollLink
-                  href="#realest-contact-form"
+                <Link
+                  href="/services/gmb-verification-help"
                   className="realest-sec-8-link"
-                  offset={120}
                 >
                   LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
+                </Link>
               </div>
             </div>
           </Col>
@@ -702,13 +701,12 @@ function page() {
                   intent traffic.
                 </p>
 
-                <HashScrollLink
-                  href="#realest-contact-form"
+                <Link
+                  href="/services/gmb-optimization"
                   className="realest-sec-8-link"
-                  offset={120}
                 >
                   LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
+                </Link>
               </div>
             </div>
           </Col>
