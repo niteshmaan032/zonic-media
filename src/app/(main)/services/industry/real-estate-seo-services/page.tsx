@@ -101,130 +101,132 @@ function page() {
   return (
     <>
       <div className="realest-sec-1">
-        <div className="realest-sec-1-content">
-          <Col lg={8} className="realest-sec-1-content-wrapper">
-            <h1 className="realest-sec-1-heading">
-              Get More Buyers and Sellers Without Chasing Leads
-            </h1>
-            <p className="realest-sec-1-sub-head">
-              Dedicated Real Estate SEO Company | Zonic Media
-            </p>
-            <p className="realest-sec-1-descrp">
-              Most real estate agents waste money on generic marketing that
-              never produces consistent leads. Zonic Media is not an average
-              real estate SEO company, we are a dedicated growth partner built
-              specifically for real estate agents, brokers, teams, and agencies
-              across the United States.
-            </p>
+        <div className="realest-sec-1-layer">
+          <div className="realest-sec-1-content">
+            <Col lg={8} className="realest-sec-1-content-wrapper">
+              <h1 className="realest-sec-1-heading">
+                Get More Buyers and Sellers Without Chasing Leads
+              </h1>
+              <p className="realest-sec-1-sub-head">
+                Dedicated Real Estate SEO Company | Zonic Media
+              </p>
+              <p className="realest-sec-1-descrp">
+                Most real estate agents waste money on generic marketing that
+                never produces consistent leads. Zonic Media is not an average
+                real estate SEO company, we are a dedicated growth partner
+                built specifically for real estate agents, brokers, teams, and
+                agencies across the United States.
+              </p>
 
-            <p className="realest-sec-1-descrp">
-              We help real estate professionals dominate Google search,
-              strengthen online visibility, and generate high-quality buyer and
-              seller inquiries every month through strategic SEO, Google
-              Business Profile optimization, website SEO, and data-driven
-              marketing systems.
-            </p>
+              <p className="realest-sec-1-descrp">
+                We help real estate professionals dominate Google search,
+                strengthen online visibility, and generate high-quality buyer
+                and seller inquiries every month through strategic SEO, Google
+                Business Profile optimization, website SEO, and data-driven
+                marketing systems.
+              </p>
 
-            <div className="realest-sec-1-ctas">
-              <HashScrollLink
-                href="#realest-contact-form"
-                className="buttons"
-                offset={120}
-              >
-                Get Free Strategy Call
-                <span className="buttons__icon-wrapper">
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg"
-                    width="8"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    width="8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg buttons__icon-svg--copy"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-              </HashScrollLink>
+              <div className="realest-sec-1-ctas">
+                <HashScrollLink
+                  href="#realest-contact-form"
+                  className="buttons"
+                  offset={120}
+                >
+                  Get Free Strategy Call
+                  <span className="buttons__icon-wrapper">
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg"
+                      width="8"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      width="8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </HashScrollLink>
 
-              <HashScrollLink
-                href="#realest-contact-form"
-                className="buttons"
-                offset={120}
-              >
-                See How It Works
-                <span className="buttons__icon-wrapper">
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg"
-                    width="8"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    width="8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg buttons__icon-svg--copy"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-              </HashScrollLink>
-            </div>
-
-            <div className="realest-feature-grid">
-              <div className="feature-card">
-                <div className="icon-box">
-                  <MdOutlineLocationOn />
-                </div>
-                <p>RANK HIGHER ON GOOGLE</p>
+                <HashScrollLink
+                  href="#realest-contact-form"
+                  className="buttons"
+                  offset={120}
+                >
+                  See How It Works
+                  <span className="buttons__icon-wrapper">
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg"
+                      width="8"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <svg
+                      viewBox="0 0 14 15"
+                      fill="none"
+                      width="8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    >
+                      <path
+                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </HashScrollLink>
               </div>
 
-              <div className="feature-card">
-                <div className="icon-box">
-                  <FiPhoneCall />
+              <div className="realest-feature-grid">
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <MdOutlineLocationOn />
+                  </div>
+                  <p>RANK HIGHER ON GOOGLE</p>
                 </div>
-                <p>GET MORE CALLS FROM LOCAL BUYERS &amp; SELLERS</p>
-              </div>
 
-              <div className="feature-card">
-                <div className="icon-box">
-                  <LuCalendarCheck2 />
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <FiPhoneCall />
+                  </div>
+                  <p>GET MORE CALLS FROM LOCAL BUYERS &amp; SELLERS</p>
                 </div>
-                <p>BOOK MORE DEALS &amp; GROW YOUR BUSINESS</p>
-              </div>
 
-              <div className="feature-card">
-                <div className="icon-box">
-                  <RiLineChartLine />
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <LuCalendarCheck2 />
+                  </div>
+                  <p>BOOK MORE DEALS &amp; GROW YOUR BUSINESS</p>
                 </div>
-                <p>SUSTAINABLE GROWTH THAT LASTS</p>
+
+                <div className="feature-card">
+                  <div className="icon-box">
+                    <RiLineChartLine />
+                  </div>
+                  <p>SUSTAINABLE GROWTH THAT LASTS</p>
+                </div>
               </div>
-            </div>
-          </Col>
+            </Col>
+          </div>
         </div>
       </div>
 
@@ -377,8 +379,7 @@ function page() {
         <div className="realest-sec-4-grid">
           <div className="realest-sec-4-left">
             <h2 className="realest-sec-4-heading">
-              Why Real Estate SEO Is Critical for Long-Term Buyer and Seller
-              Lead Generation
+              Why SEO is Essential for Your Real Estate Business
             </h2>
 
             <div className="realest-sec-4-image-wrap">
