@@ -1,4 +1,5 @@
 import Footer from "@/app/components/Footer";
+import LeadContactForm from "@/app/components/LeadContactForm";
 import "@/app/style/conditions.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -111,6 +112,26 @@ export default async function Page({ params }: PageProps) {
                 <li className="conditions-main-list-cont" key={section.heading}>
                   <h2 className="conditions-sub-head">{section.heading}</h2>
                   {section.blocks.map((block, index) => renderBlock(block, index))}
+                  {slug === "privacy-policy" &&
+                  section.heading === "Opt-Out & Data Removal" ? (
+                    <div className="conditions-form-wrapper">
+                      <LeadContactForm
+                        leadFormTitle="Get in touch"
+                        leadCallText={
+                          <>
+                            grow you business with zonic media
+                            <br />{" "}
+                            <a
+                              href={SITE_CONTACT.phoneHref}
+                              className="lead-call-link"
+                            >
+                              Call Now:{SITE_CONTACT.phoneDisplay}
+                            </a>
+                          </>
+                        }
+                      />
+                    </div>
+                  ) : null}
                 </li>
               ))}
             </ul>
