@@ -8,16 +8,8 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
-import {
-  FaSearch,
-  FaLink,
-  FaStar,
-  FaChartBar,
-} from "react-icons/fa";
-import {
-  FaGoogle,
-  FaHouseChimney,
-} from "react-icons/fa6";
+import { FaSearch, FaLink, FaStar, FaChartBar } from "react-icons/fa";
+import { FaGoogle, FaHouseChimney } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2, LuShieldCheck } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -130,7 +122,8 @@ const RoofingServices = [
 ];
 
 export const metadata: Metadata = {
-  title: "Local SEO for Roofing Companies | Get More Roofing Leads | Zonic Media",
+  title:
+    "Local SEO for Roofing Companies | Get More Roofing Leads | Zonic Media",
   description:
     "Local SEO services for roofing companies. Zonic Media helps roofers rank higher on Google, dominate local search, and generate consistent calls from homeowners ready to hire.",
 };
@@ -262,8 +255,7 @@ function page() {
         <div className="roof-center-head">
           <div className="roof-center-head-content-wrapper">
             <h2 className="roof-sec-2-heading">
-              Turn Google Searches Into{" "}
-              <span>Roofing Jobs</span>
+              Turn Google Searches Into <span>Roofing Jobs</span>
             </h2>
             <p className="roof-sec-2-descrp">
               Turn local Google searches into real roofing jobs with a strategy
@@ -273,8 +265,9 @@ function page() {
               From improving your visibility on search results to building trust
               through reviews and accurate listings, we help convert clicks into
               calls and inquiries into confirmed projects. It&apos;s not just
-              about traffic &mdash; it&apos;s about attracting the right customers at
-              the right time and turning every search into a potential job.
+              about traffic &mdash; it&apos;s about attracting the right
+              customers at the right time and turning every search into a
+              potential job.
             </p>
           </div>
         </div>
@@ -387,8 +380,8 @@ function page() {
                 <p>
                   We position your business in the Google 3 Pack, where real
                   roofing leads happen. From keyword targeting to local
-                  authority building, we make sure your company shows up when
-                  it matters.
+                  authority building, we make sure your company shows up when it
+                  matters.
                 </p>
               </div>
 
@@ -584,8 +577,8 @@ function page() {
                 next month&apos;s ad spend.
               </p>
               <h2 className="roof-sec-8-heading">
-                <span>Real Growth</span> for Roofing Contractors. Our
-                strategies are designed to deliver measurable results.
+                <span>Real Growth</span> for Roofing Contractors. Our strategies
+                are designed to deliver measurable results.
               </h2>
               <HashScrollLink
                 href="#roof-contact-form"
