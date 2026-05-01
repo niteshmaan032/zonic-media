@@ -556,7 +556,7 @@ function page() {
       {/* SECTION 9 - REAL GROWTH / PARTNERSHIP */}
       <div className="roof-sec-8">
         <Row className="align-items-stretch g-0">
-          <Col lg={6}>
+          <Col lg={4}>
             <div className="roof-sec-8-img-cont">
               <Image
                 src="/images/roofing-seo/roofing-seo-img-5.jpg"
@@ -567,7 +567,7 @@ function page() {
             </div>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={8}>
             <div className="roof-sec-8-content">
               <p className="roof-sec-8-tagline">
                 Every client engagement begins a long-term partnership.
