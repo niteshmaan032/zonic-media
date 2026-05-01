@@ -18,7 +18,7 @@
 
 .deldg-sec-1-title {
   margin: 0;
-  font-size: 66px;
+  font-size: 58px;
   line-height: 1.05;
   font-weight: 600;
   color: #070707;
@@ -1099,6 +1099,17 @@
   }
 }
 
+@media (min-width: 576px) {
+  .deldg-sec-1-cta-row {
+    flex-wrap: nowrap;
+  }
+
+  .deldg-sec-1-watch {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 991.99px) and (max-width: 1199.98px) {
   .deldg-sec-1-copy {
     padding: 92px 26px 150px 30px;
@@ -1198,7 +1209,7 @@
   }
 
   .deldg-sec-1-title {
-    font-size: 58px;
+    font-size: 54px;
   }
 
   .deldg-sec-6-copy h2 {
