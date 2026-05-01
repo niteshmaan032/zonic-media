@@ -1,0 +1,998 @@
+.dent-sec-1 {
+  background-image: url("/images/dental-seo/dental-seo-banner-1.jpg");
+  min-height: 100svh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.dent-sec-1-layer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0.9) 52%,
+    rgba(0, 0, 0, 0.7) 62%,
+    rgba(0, 0, 0, 0) 85%
+  );
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 145px 100px 60px;
+}
+
+.dent-sec-1-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.dent-sec-1-heading {
+  font-size: 60px;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: capitalize;
+  line-height: 1.14;
+}
+
+.dent-sec-1-heading span,
+.dent-sec-copy span,
+.dent-sec-2-heading span,
+.dent-sec-4-heading span,
+.dent-sec-7 h2 span {
+  color: var(--primary);
+}
+
+.dent-sec-1-sub-head {
+  text-transform: capitalize;
+  color: var(--white);
+  font-size: 25px;
+  margin: 0;
+}
+
+.dent-sec-1-descrp {
+  font-size: 18px;
+  color: var(--white);
+  width: 80%;
+  line-height: 32px;
+  margin: 0;
+}
+
+.dent-sec-1-ctas {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.dent-sec-1-ctas .buttons:nth-child(2) {
+  background-color: transparent;
+  border-color: var(--white);
+}
+
+.dent-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dent-feature-grid .feature-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid var(--stroke);
+  color: var(--white);
+  padding-right: 10px;
+}
+
+.dent-feature-grid .feature-card:last-child {
+  border: none;
+}
+
+.dent-feature-grid .feature-card p {
+  line-height: 22px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.dent-feature-grid .icon-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.dent-center-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.dent-center-head h2,
+.dent-sec-copy h2,
+.dent-sec-4-heading,
+.dent-sec-8 h2,
+.dent-sec-contact h2,
+.dent-testimonial-heading {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 52px;
+  color: var(--text);
+}
+
+.dent-center-head p,
+.dent-sec-copy p,
+.dent-sec-contact p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+}
+
+.dent-sec-2 {
+  padding: 60px 100px;
+}
+
+.dent-sec-2-descrp,
+.dent-sec-7 .dent-center-head p {
+  width: 78%;
+}
+
+.dent-sec-3,
+.dent-sec-5,
+.dent-sec-9 {
+  padding: 0 100px 60px;
+}
+
+.dent-sec-9 {
+  padding-top: 60px;
+}
+
+.dent-sec-img,
+.dent-sec-4-image,
+.dent-sec-8-image,
+.dent-sec-9-image,
+.dent-contact-image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.dent-sec-img {
+  height: 440px;
+}
+
+.dent-sec-img img,
+.dent-sec-4-image img,
+.dent-sec-8-image img,
+.dent-sec-9-image img,
+.dent-contact-image {
+  object-fit: cover;
+}
+
+.dent-sec-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.dent-sec-copy h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.dent-outline-cta,
+.dent-yellow-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.dent-outline-cta {
+  border: 2px solid var(--text);
+  color: var(--text);
+}
+
+.dent-outline-cta:hover {
+  background: var(--text);
+  color: var(--white);
+}
+
+.dent-yellow-cta {
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: var(--text);
+}
+
+.dent-yellow-cta:hover {
+  background: #e7ae00;
+  color: var(--text);
+}
+
+.dent-sec-4 {
+  padding: 20px 100px 60px;
+}
+
+.dent-sec-4-heading {
+  text-align: center;
+  font-size: 56px;
+  line-height: 1.3;
+  margin-bottom: 48px;
+}
+
+.dent-choose-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dent-choose-card {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 28px;
+  min-height: 94px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dent-choose-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.dent-choose-icon.yellow {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.dent-choose-icon.dark {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.dent-choose-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.dent-choose-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.dent-sec-4-image {
+  height: 420px;
+}
+
+.dent-sec-6 {
+  background: var(--secondary);
+  padding: 80px 100px;
+}
+
+.dent-sec-6 .dent-center-head h2 {
+  color: var(--white);
+  width: 55%;
+}
+
+.dent-process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.dent-process-step {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  color: var(--white);
+}
+
+.dent-process-circle {
+  width: 110px;
+  height: 110px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 0 auto 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dent-process-arrow {
+  position: absolute;
+  top: 27px;
+  right: -24px;
+  color: rgba(255, 255, 255, 0.16);
+  font-size: 54px;
+}
+
+.dent-process-step p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.dent-sec-7 {
+  padding: 60px 100px;
+}
+
+.dent-compare-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.dent-compare-panel {
+  padding: 0 40px;
+}
+
+.dent-compare-panel:first-child {
+  padding-left: 0;
+}
+
+.dent-compare-panel:last-child {
+  padding-right: 0;
+}
+
+.dent-compare-panel h3 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 36px;
+}
+
+.dent-compare-panel p {
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+}
+
+.dent-compare-divider {
+  width: 1px;
+  background: var(--stroke);
+  align-self: stretch;
+}
+
+.dent-timeline-list {
+  position: relative;
+  padding-left: 44px;
+}
+
+.dent-timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 21px;
+  width: 2px;
+  background: var(--primary);
+}
+
+.dent-timeline-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.dent-timeline-item span {
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.dent-timeline-item p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.dent-sec-8 {
+  background: var(--secondary);
+  padding: 80px 96px;
+  color: var(--white);
+}
+
+.dent-sec-8-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.dent-sec-8-top p {
+  margin: 0;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dent-sec-8-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: 58px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.dent-sec-8-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
+  gap: 34px;
+  align-items: stretch;
+}
+
+.dent-sec-8 h2 {
+  color: var(--white);
+  margin: 0;
+  font-size: 46px;
+  line-height: 1.15;
+}
+
+.dent-sec-8 p {
+  margin: 0;
+  color: var(--stroke);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.dent-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 20px;
+  height: 100%;
+}
+
+.dent-service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 72px;
+  padding: 18px 24px;
+  background: var(--white);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.dent-service-item.active {
+  background: var(--primary);
+}
+
+.dent-sec-8-image {
+  height: 100%;
+  min-height: 356px;
+}
+
+.dent-sec-9-image {
+  height: 356px;
+}
+
+.dent-sec-testimonial {
+  padding: 60px 100px;
+}
+
+.dent-test {
+  width: 100%;
+  min-width: 0;
+  margin-top: 32px;
+  overflow: hidden;
+  contain: layout paint;
+  isolation: isolate;
+}
+
+.dent-sec-faq {
+  padding: 0 100px 60px;
+}
+
+.dent-sec-faq .dent-center-head h2 {
+  width: 76%;
+}
+
+.dent-sec-contact {
+  padding: 0 100px 60px;
+}
+
+.dent-sec-contact-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.dent-sec-contact-content {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dent-sec-contact h2 {
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.dent-sec-contact p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dent-contact-info-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.dent-contact-info-card {
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--white);
+}
+
+.dent-contact-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dent-contact-info-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.dent-contact-info-card h3 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.dent-contact-info-card a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+}
+
+.dent-contact-image-wrap {
+  width: 100%;
+  height: 320px;
+  margin-top: 28px;
+  border-radius: 20px;
+}
+
+.dent-contact-form {
+  flex-basis: 40%;
+  position: sticky;
+  top: 32px;
+}
+
+@media (max-width: 991.98px) {
+  .dent-sec-1-layer {
+    min-height: auto;
+    padding: 118px 20px 60px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.82) 52%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
+
+  .dent-sec-1-heading {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  .dent-sec-1-sub-head {
+    font-size: 22px;
+  }
+
+  .dent-sec-1-descrp {
+    width: 100%;
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .dent-sec-1-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dent-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dent-feature-grid .feature-card {
+    border-right: none;
+  }
+
+  .dent-sec-2,
+  .dent-sec-6,
+  .dent-sec-7,
+  .dent-sec-8,
+  .dent-sec-testimonial {
+    padding: 40px 20px;
+  }
+
+  .dent-sec-3,
+  .dent-sec-4,
+  .dent-sec-5,
+  .dent-sec-9,
+  .dent-sec-faq,
+  .dent-sec-contact {
+    padding: 0 20px 40px;
+  }
+
+  .dent-sec-9 {
+    padding-top: 40px;
+  }
+
+  .dent-center-head {
+    margin-bottom: 40px;
+  }
+
+  .dent-center-head h2,
+  .dent-sec-copy h2,
+  .dent-sec-4-heading,
+  .dent-sec-8 h2,
+  .dent-testimonial-heading {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .dent-center-head p,
+  .dent-sec-2-descrp,
+  .dent-sec-7 .dent-center-head p,
+  .dent-sec-faq .dent-center-head h2 {
+    width: 100%;
+  }
+
+  .dent-sec-img,
+  .dent-sec-4-image,
+  .dent-sec-8-image,
+  .dent-sec-9-image {
+    height: clamp(280px, 55vw, 420px);
+    min-height: 0;
+  }
+
+  .dent-sec-copy {
+    gap: 18px;
+  }
+
+  .dent-sec-4-heading {
+    margin-bottom: 32px;
+  }
+
+  .dent-process-steps {
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+
+  .dent-process-step {
+    flex: 0 0 28%;
+  }
+
+  .dent-process-arrow {
+    display: none;
+  }
+
+  .dent-sec-6 .dent-center-head h2 {
+    width: 100%;
+  }
+
+  .dent-compare-inner,
+  .dent-sec-8-inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .dent-sec-8-intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 34px;
+  }
+
+  .dent-compare-panel {
+    padding: 0;
+  }
+
+  .dent-compare-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .dent-sec-8-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dent-sec-contact-inner {
+    flex-direction: column;
+  }
+
+  .dent-sec-contact-content,
+  .dent-contact-form {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .dent-contact-form {
+    position: relative;
+    top: auto;
+  }
+
+  .dent-sec-contact h2 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .dent-contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dent-sec-1-layer {
+    padding: 102px 20px 60px;
+  }
+
+  .dent-sec-1-heading {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .dent-sec-1-sub-head {
+    font-size: 20px;
+  }
+
+  .dent-feature-grid,
+  .dent-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dent-feature-grid .feature-card {
+    border-bottom: 1px solid var(--stroke);
+    padding-bottom: 12px;
+  }
+
+  .dent-feature-grid .feature-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .dent-center-head h2,
+  .dent-sec-copy h2,
+  .dent-sec-4-heading,
+  .dent-sec-8 h2,
+  .dent-testimonial-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .dent-choose-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .dent-process-step {
+    flex: 0 0 44%;
+  }
+
+  .dent-process-circle {
+    width: 96px;
+    height: 96px;
+    font-size: 24px;
+  }
+
+  .dent-process-step p {
+    font-size: 16px;
+  }
+
+  .dent-service-item {
+    font-size: 18px;
+  }
+
+  .dent-sec-contact h2 {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .dent-sec-contact p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .dent-sec-1-layer {
+    padding: 118px 40px 60px;
+  }
+
+  .dent-sec-2,
+  .dent-sec-6,
+  .dent-sec-7,
+  .dent-sec-8,
+  .dent-sec-testimonial {
+    padding: 40px;
+  }
+
+  .dent-sec-3,
+  .dent-sec-4,
+  .dent-sec-5,
+  .dent-sec-9,
+  .dent-sec-faq,
+  .dent-sec-contact {
+    padding: 0 40px 40px;
+  }
+
+  .dent-sec-9 {
+    padding-top: 40px;
+  }
+}
+
+@media (min-width: 991.99px) and (max-width: 1199.98px) {
+  .dent-sec-1-layer {
+    padding: 135px 30px 50px;
+  }
+
+  .dent-sec-1-heading {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .dent-sec-1-descrp {
+    width: 100%;
+  }
+
+  .dent-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dent-sec-2,
+  .dent-sec-6,
+  .dent-sec-7,
+  .dent-sec-8,
+  .dent-sec-testimonial {
+    padding: 40px 30px;
+  }
+
+  .dent-sec-3,
+  .dent-sec-4,
+  .dent-sec-5,
+  .dent-sec-9,
+  .dent-sec-faq,
+  .dent-sec-contact {
+    padding: 0 30px 40px;
+  }
+
+  .dent-sec-9 {
+    padding-top: 40px;
+  }
+
+  .dent-center-head h2,
+  .dent-sec-copy h2,
+  .dent-sec-4-heading,
+  .dent-sec-8 h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .dent-sec-contact-inner {
+    flex-direction: column;
+  }
+
+  .dent-sec-contact-content,
+  .dent-contact-form {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .dent-contact-form {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (min-width: 1199.99px) and (max-width: 1399.98px) {
+  .dent-sec-1-layer {
+    padding: 135px 40px 50px;
+  }
+
+  .dent-sec-1-heading {
+    font-size: 52px;
+    line-height: 64px;
+  }
+
+  .dent-sec-1-descrp {
+    width: 92%;
+  }
+
+  .dent-sec-2,
+  .dent-sec-6,
+  .dent-sec-7,
+  .dent-sec-8,
+  .dent-sec-testimonial {
+    padding: 40px;
+  }
+
+  .dent-sec-3,
+  .dent-sec-4,
+  .dent-sec-5,
+  .dent-sec-9,
+  .dent-sec-faq,
+  .dent-sec-contact {
+    padding: 0 40px 40px;
+  }
+
+  .dent-sec-9 {
+    padding-top: 40px;
+  }
+
+  .dent-center-head h2,
+  .dent-sec-copy h2,
+  .dent-sec-8 h2 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+}

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBug, FaFan, FaTooth, FaWrench } from "react-icons/fa6";
+import { FaBug, FaFan, FaTooth, FaUserDoctor, FaWrench } from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
@@ -75,14 +75,21 @@ const localSeoServices = [
     label: "Roofing Local SEO",
     image: "/images/roofing/roof-link-thumb.jpg",
     alt: "roofing agency seo",
-    link: "/roofing-seo-services",
+    link: "/services/industry/local-seo-for-roofing-companies",
   },
   {
     id: "Dentist SEO",
     label: "Dentist Local SEO",
     image: "/images/dental/dental-link-thumb.jpg",
     alt: "dentist seo",
-    link: "/dentist-seo-services",
+    link: "/services/industry/dental-seo-services",
+  },
+  {
+    id: "Pediatricians",
+    label: "Pediatrician Marketing",
+    image: "/images/pediatricians/pedis-serv-img-1.jpg",
+    alt: "pediatrician marketing",
+    link: "/services/industry/pediatricians",
   },
   {
     id: "Hvac SEO",
@@ -122,7 +129,13 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const forceWhiteNavbar =
     pathname === "/services/philadelphia/digital-marketing" ||
+    pathname === "/services/philadelphia/sem" ||
+    pathname === "/services/philadelphia/ppc" ||
     pathname === "/services/philadelphia/local-seo" ||
+    pathname === "/services/delaware/digital-marketing" ||
+    pathname === "/services/industry/local-seo-for-roofing-companies" ||
+    pathname === "/services/industry/dental-seo-services" ||
+    pathname === "/services/industry/pediatricians" ||
     pathname === "/services/industry/real-estate-seo-services";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
@@ -379,6 +392,27 @@ function Navbar() {
                           <span className="services-core-content">
                             <strong>
                               <Link
+                                href="/services/delaware/digital-marketing"
+                                className="services-core-title-link"
+                              >
+                                Digital Marketing Agency in Delaware
+                              </Link>
+                            </strong>
+                            <span>
+                              Full-service digital marketing strategies for
+                              Delaware businesses focused on visibility, leads,
+                              and long-term growth.
+                            </span>
+                          </span>
+                        </div>
+
+                        <div className="services-core-card services-core-card--with-tags">
+                          <span className="services-core-icon">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>
+                              <Link
                                 href="/services/philadelphia/digital-marketing"
                                 className="services-core-title-link"
                               >
@@ -396,6 +430,18 @@ function Navbar() {
                                 className="services-core-tag"
                               >
                                 Local SEO Agency Philadelphia
+                              </Link>
+                              <Link
+                                href="/services/philadelphia/sem"
+                                className="services-core-tag"
+                              >
+                                SEM Agency Philadelphia
+                              </Link>
+                              <Link
+                                href="/services/philadelphia/ppc"
+                                className="services-core-tag"
+                              >
+                                PPC Agency Philadelphia
                               </Link>
                             </span>
                           </span>
@@ -435,7 +481,7 @@ function Navbar() {
                         ))}
 
                         <Link
-                          href="/roofing-seo-services"
+                          href="/services/industry/local-seo-for-roofing-companies"
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
@@ -451,7 +497,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href="/dentist-seo-services"
+                          href="/services/industry/dental-seo-services"
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
@@ -462,6 +508,22 @@ function Navbar() {
                             <span>
                               Improve map visibility and patient leads for
                               dental practices in competitive markets.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/services/industry/pediatricians"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaUserDoctor />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Pediatrician Marketing</strong>
+                            <span>
+                              Help pediatric clinics improve local visibility
+                              and generate more patient appointments.
                             </span>
                           </span>
                         </Link>
@@ -746,6 +808,14 @@ function Navbar() {
                     <ul>
                       <li>
                         <Link
+                          href="/services/delaware/digital-marketing"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Digital Marketing Agency in Delaware
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
                           href="/services/philadelphia/digital-marketing"
                           onClick={() => handleToggleMobileMenu(false)}
                         >
@@ -758,6 +828,22 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Local SEO Agency Philadelphia
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/philadelphia/sem"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          SEM Agency Philadelphia
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/philadelphia/ppc"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          PPC Agency Philadelphia
                         </Link>
                       </li>
                     </ul>

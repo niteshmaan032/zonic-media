@@ -1187,6 +1187,15 @@ function page() {
                 <a href={SITE_CONTACT.phoneHref}>(302) 726-9736</a>
               </div>
             </div>
+
+            <div className="phila-sec-10-image-wrap">
+              <Image
+                src="/images/real-est-industries/realest-img-5.jpg"
+                fill
+                alt="Philadelphia marketing consultation and contact"
+                className="phila-sec-10-image"
+              />
+            </div>
           </div>
 
           <div

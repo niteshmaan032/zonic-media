@@ -14,8 +14,14 @@ const staticRoutes = [
   { path: "/services/google-ads", priority: 0.8 },
   { path: "/services/launchpad", priority: 0.8 },
   { path: "/services/local-seo-for-home-services", priority: 0.8 },
+  { path: "/services/industry/dental-seo-services", priority: 0.8 },
+  { path: "/services/industry/local-seo-for-roofing-companies", priority: 0.8 },
+  { path: "/services/industry/pediatricians", priority: 0.8 },
+  { path: "/services/delaware/digital-marketing", priority: 0.8 },
   { path: "/services/philadelphia/digital-marketing", priority: 0.8 },
   { path: "/services/philadelphia/local-seo", priority: 0.8 },
+  { path: "/services/philadelphia/ppc", priority: 0.8 },
+  { path: "/services/philadelphia/sem", priority: 0.8 },
   { path: "/services/web-design", priority: 0.8 },
 ] as const;
 
