@@ -4,6 +4,7 @@
   grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.75fr);
   min-height: 100svh;
   background: #fff;
+  margin-top: -10px;
 }
 
 .deldg-sec-1-copy {
@@ -128,7 +129,7 @@
   position: absolute;
   left: 96px;
   right: 66px;
-  bottom: 30px;
+  bottom: 14px;
   z-index: 3;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -153,13 +154,13 @@
 
 .deldg-strip-card h3 {
   margin: 0 0 6px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .deldg-strip-card p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.45;
 }
 
@@ -784,12 +785,20 @@
 
   .deldg-sec-1-strip {
     position: static;
-    margin: -20px 20px 0;
+    margin: -36px 20px 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .deldg-strip-card {
     border-bottom: 1px solid #d8d8d8;
+  }
+
+  .deldg-strip-card h3 {
+    font-size: 15px;
+  }
+
+  .deldg-strip-card p {
+    font-size: 13px;
   }
 
   .deldg-strip-card:nth-child(2) {
@@ -960,7 +969,7 @@
 
   .deldg-sec-1-strip {
     grid-template-columns: 1fr;
-    margin-top: -10px;
+    margin-top: -26px;
   }
 
   .deldg-strip-card,
