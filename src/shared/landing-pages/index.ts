@@ -1,5 +1,4 @@
 import type { ContactFormContent } from "@/app/components/ContactForm";
-import hvacSeo from "./Hvac-seo.json";
 import pestSeo from "./pest-seo.json";
 import plumberSeo from "./plumber-seo.json";
 
@@ -130,7 +129,6 @@ export type LandingPageContent = {
 };
 
 export const landingPages: LandingPageContent[] = [
-  hvacSeo as LandingPageContent,
   pestSeo as LandingPageContent,
   plumberSeo as LandingPageContent,
 ];

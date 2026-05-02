@@ -15,6 +15,7 @@ const staticRoutes = [
   { path: "/services/launchpad", priority: 0.8 },
   { path: "/services/local-seo-for-home-services", priority: 0.8 },
   { path: "/services/industry/dental-seo-services", priority: 0.8 },
+  { path: "/services/industry/local-seo-services-for-hvac", priority: 0.8 },
   { path: "/services/industry/local-seo-for-roofing-companies", priority: 0.8 },
   { path: "/services/industry/pediatricians", priority: 0.8 },
   { path: "/services/delaware/digital-marketing", priority: 0.8 },

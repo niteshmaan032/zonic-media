@@ -1,0 +1,296 @@
+.hvac-hero {
+  background-image: url("/images/hvac-seo/hvac-seo-banner-1.jpg");
+  min-height: 100svh;
+}
+
+.hvac-hero-layer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.92) 10%,
+    rgba(0, 0, 0, 0.84) 44%,
+    rgba(0, 0, 0, 0.58) 62%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  min-height: 100svh;
+  height: 100%;
+}
+
+.hvac-hero-copy {
+  margin-top: -10px;
+}
+
+.hvac-sec-2,
+.hvac-sec-3,
+.hvac-sec-4,
+.hvac-sec-5,
+.hvac-sec-6 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.hvac-sec-2 {
+  padding-top: 60px;
+  padding-bottom: 56px;
+}
+
+.hvac-center-copy {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hvac-center-copy h2,
+.hvac-growth-copy h2,
+.hvac-results-copy h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 44px;
+  line-height: 1.18;
+  font-weight: 600;
+}
+
+.hvac-center-copy p,
+.hvac-growth-copy p,
+.hvac-results-copy p,
+.hvac-intro-copy p {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.hvac-accent-copy {
+  margin: 18px 0 16px;
+  color: var(--primary) !important;
+  font-size: 17px !important;
+  font-weight: 500;
+}
+
+.hvac-sec-3 {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.hvac-intro-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  gap: 42px;
+  align-items: center;
+}
+
+.hvac-intro-image,
+.hvac-map-image,
+.hvac-results-image,
+.hvac-growth-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.hvac-intro-image {
+  min-height: 320px;
+}
+
+.hvac-intro-image img,
+.hvac-map-image img,
+.hvac-results-image img,
+.hvac-growth-image img {
+  object-fit: cover;
+}
+
+.hvac-intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hvac-intro-copy h2,
+.hvac-sec-4-heading {
+  margin: 0;
+  color: var(--text);
+  font-size: 42px;
+  line-height: 1.16;
+  font-weight: 600;
+}
+
+.hvac-sec-4 {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.hvac-map-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.hvac-benefit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hvac-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.hvac-benefit-badge {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(247, 192, 10, 0.16);
+  border: 1px solid rgba(247, 192, 10, 0.35);
+  color: #a06b00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.hvac-benefit-card h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.hvac-benefit-card p {
+  margin: 0;
+  color: #5f5f5f;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.hvac-map-image {
+  min-height: 420px;
+}
+
+.hvac-sec-5 {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.hvac-results-image {
+  min-height: 430px;
+}
+
+.hvac-results-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hvac-results-copy h2 span {
+  color: var(--primary);
+}
+
+.hvac-results-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.hvac-results-cta:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text);
+}
+
+.hvac-sec-6 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hvac-growth-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hvac-growth-image {
+  min-height: 320px;
+}
+
+@media (max-width: 991.98px) {
+  .hvac-sec-2,
+  .hvac-sec-3,
+  .hvac-sec-4,
+  .hvac-sec-5,
+  .hvac-sec-6 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hvac-center-copy h2,
+  .hvac-growth-copy h2,
+  .hvac-results-copy h2,
+  .hvac-intro-copy h2,
+  .hvac-sec-4-heading {
+    font-size: 34px;
+  }
+
+  .hvac-intro-card,
+  .hvac-map-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hvac-intro-image,
+  .hvac-map-image,
+  .hvac-results-image,
+  .hvac-growth-image {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hvac-center-copy h2,
+  .hvac-growth-copy h2,
+  .hvac-results-copy h2,
+  .hvac-intro-copy h2,
+  .hvac-sec-4-heading {
+    font-size: 28px;
+    line-height: 1.22;
+  }
+
+  .hvac-center-copy p,
+  .hvac-growth-copy p,
+  .hvac-results-copy p,
+  .hvac-intro-copy p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .hvac-benefit-card {
+    padding: 16px;
+  }
+
+  .hvac-benefit-card h3 {
+    font-size: 19px;
+  }
+
+  .hvac-results-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

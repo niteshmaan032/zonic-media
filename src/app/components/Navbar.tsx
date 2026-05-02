@@ -96,7 +96,7 @@ const localSeoServices = [
     label: "HVAC Local SEO",
     image: "/images/hvac/hvac-link-thumb.jpg",
     alt: "hvac-seo",
-    link: "/hvac-seo-services",
+    link: "/services/industry/local-seo-services-for-hvac",
   },
   {
     id: "Plumber SEO",
@@ -133,6 +133,8 @@ function Navbar() {
     pathname === "/services/philadelphia/ppc" ||
     pathname === "/services/philadelphia/local-seo" ||
     pathname === "/services/delaware/digital-marketing" ||
+    pathname === "/services/local-seo-services-for-hvac" ||
+    pathname === "/services/industry/local-seo-services-for-hvac" ||
     pathname === "/services/industry/local-seo-for-roofing-companies" ||
     pathname === "/services/industry/dental-seo-services" ||
     pathname === "/services/industry/pediatricians" ||
@@ -529,7 +531,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href="/hvac-seo-services"
+                          href="/services/industry/local-seo-services-for-hvac"
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
