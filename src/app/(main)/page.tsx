@@ -1,505 +1,1164 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import "./page.css";
-import ImageMarquee from "@/app/components/ImageMarquee";
-import { FaArrowRight, FaArrowDown } from "react-icons/fa6";
 import Image from "next/image";
-import Testimonials from "@/app/components/Testimonials";
-import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
-import { Row, Col } from "react-bootstrap";
 import WorldMap from "@/app/components/WorldMap";
-import { GoDotFill } from "react-icons/go";
+import ClutchWidget from "@/app/components/ClutchWidget";
+import {
+  FaArrowRight,
+  FaCode,
+  FaBullhorn,
+  FaMagnifyingGlass,
+  FaRocket,
+  FaChartLine,
+  FaStar,
+  FaCircleCheck,
+  FaStore,
+  FaBuilding,
+  FaCloudArrowUp,
+  FaHouse,
+  FaBriefcase,
+  FaPaintbrush,
+  FaCheck,
+  FaClipboardCheck,
+  FaHandshake,
+  FaLaptopCode,
+} from "react-icons/fa6";
 import { Metadata } from "next";
-import ClutchWidget from "../components/ClutchWidget";
 
 export const metadata: Metadata = {
-  title:
-    "Digital Marketing Agency | Web Design, SEO & PPC Services | Zonic Media",
+  title: "Digital Agency | Web Design, SEO & Growth Solutions | Zonic LLC",
   description:
-    "Zonic Media provides web design, local SEO, Google Business Profile optimization, and PPC services to help businesses grow online. Call (302) 726-9736 today.",
+    "Zonic LLC delivers premium web design, UI/UX, branding, SEO, and custom software solutions to help businesses scale online.",
 };
 
-export default function Home() {
-  const ContactGlobal = {
-    heading: "Lets Start Your Project",
-    highlightedHeading: "",
-    points: [
-      "Dedicated team focused on your business growth",
-      "Long-term support and ongoing optimization",
-      "Clear communication and fast response times",
-    ],
-    cta: {
-      eyebrow: "Schedule meeting :",
-      label: "Book a Strategy Call",
-      href: "/contact-us",
-    },
-  };
+function BtnArrow() {
+  return (
+    <span className="buttons__icon-wrapper">
+      <svg
+        viewBox="0 0 14 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="buttons__icon-svg"
+        width="8"
+      >
+        <path
+          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+          fill="currentColor"
+        />
+      </svg>
+      <svg
+        viewBox="0 0 14 15"
+        fill="none"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+        className="buttons__icon-svg buttons__icon-svg--copy"
+      >
+        <path
+          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
+}
 
+/* ── data ─────────────────────────────────────────────────── */
+
+const heroStats = [
+  { value: "95%+", label: "Client Success Rate" },
+  { value: "100+", label: "Brands Grown" },
+  { value: "50+", label: "Projects Delivered" },
+  { value: "24/7", label: "Dedicated Support" },
+];
+
+const services = [
+  {
+    icon: <FaCode />,
+    title: "Web Design & Development",
+    desc: "High-performing, conversion-optimized websites built fast, mobile-first, and SEO-ready. We engineer digital experiences that turn visitors into paying customers.",
+    href: "/services/web-design",
+    features: [
+      "Landing Pages & Business Sites",
+      "WordPress & Custom CMS",
+      "Conversion-Focused Layouts",
+    ],
+  },
+  {
+    icon: <FaPaintbrush />,
+    title: "UI/UX Design",
+    desc: "Intuitive, engaging interfaces crafted with user psychology and conversion principles in mind. Every pixel has a purpose — guiding users toward action.",
+    href: "/services",
+    features: [
+      "User Research & Wireframing",
+      "Prototype & Design Systems",
+      "Accessibility-First Design",
+    ],
+  },
+  {
+    icon: <FaStar />,
+    title: "Branding",
+    desc: "Strategic brand identities that build instant recognition and lasting trust. From logo design to brand guidelines, we craft the visual language of your business.",
+    href: "/services",
+    features: [
+      "Logo & Visual Identity",
+      "Brand Guidelines",
+      "Messaging & Positioning",
+    ],
+  },
+  {
+    icon: <FaBullhorn />,
+    title: "Digital Marketing",
+    desc: "Data-driven campaigns that generate measurable traffic, qualified leads, and compounding revenue growth across every relevant digital channel.",
+    href: "/services",
+    features: [
+      "Campaign Strategy & Execution",
+      "Content Marketing",
+      "Performance Analytics & Reporting",
+    ],
+  },
+  {
+    icon: <FaMagnifyingGlass />,
+    title: "SEO Optimization",
+    desc: "Rank higher in local and national search with proven strategies. We build sustainable organic visibility that compounds over time and outlasts paid channels.",
+    href: "/services/local-seo-for-home-services",
+    features: [
+      "Local & Technical SEO",
+      "Keyword Strategy & Content",
+      "On-Page & Off-Page Optimization",
+    ],
+  },
+  {
+    icon: <FaCloudArrowUp />,
+    title: "Custom Software Solutions",
+    desc: "Scalable, purpose-built software engineered to solve your unique business challenges. From workflow automation to full-stack applications built to last.",
+    href: "/services",
+    features: [
+      "Web Applications & Portals",
+      "API Integrations",
+      "Workflow Automation Tools",
+    ],
+  },
+];
+
+const whyPoints = [
+  {
+    title: "Strategy-First Approach",
+    desc: "We begin with deep discovery — your goals, market, and audience — before writing a single line of code. Strategy is built in, not bolted on after launch.",
+  },
+  {
+    title: "Scalable Development",
+    desc: "Every project is engineered for performance and long-term scale. The systems we build today are designed to grow seamlessly with your business tomorrow.",
+  },
+  {
+    title: "Conversion-Focused Design",
+    desc: "Our design decisions are grounded in user psychology and data — built to maximize engagement, trust signals, and lead generation at every scroll depth.",
+  },
+  {
+    title: "Transparent Process",
+    desc: "Clear milestones, open communication, and full project visibility at every stage. You will always know exactly where things stand — no surprises.",
+  },
+  {
+    title: "Long-Term Support",
+    desc: "We don't disappear after launch. Ongoing optimization, updates, and strategic reviews keep your results compounding month over month.",
+  },
+];
+
+const whyStats = [
+  { value: "90%", label: "Client Retention Rate" },
+  { value: "4.9★", label: "Average Client Rating" },
+];
+
+const growthSystems = [
+  {
+    icon: <FaMagnifyingGlass />,
+    title: "Audit the Growth Gaps",
+    desc: "We review your website, search visibility, conversion path, and paid traffic opportunities to find the fastest routes to better leads.",
+  },
+  {
+    icon: <FaClipboardCheck />,
+    title: "Build the Action Plan",
+    desc: "You get a clear roadmap with priorities, timelines, creative direction, campaign structure, and the metrics that define success.",
+  },
+  {
+    icon: <FaRocket />,
+    title: "Launch with Momentum",
+    desc: "Our team ships the assets, tracking, pages, content, and campaigns needed to move from strategy into measurable execution.",
+  },
+];
+
+const deliveryPillars = [
+  {
+    icon: <FaLaptopCode />,
+    title: "Performance Infrastructure",
+    desc: "Fast pages, clean analytics, conversion tracking, and scalable technical foundations keep every campaign accountable.",
+  },
+  {
+    icon: <FaBullhorn />,
+    title: "Demand Generation",
+    desc: "SEO, PPC, local visibility, and content work together so your business can capture demand across every high-intent channel.",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Continuous Partnership",
+    desc: "We keep optimizing after launch with reporting, testing, updates, and strategy reviews that protect long-term growth.",
+  },
+];
+
+const processSteps = [
+  {
+    num: "01",
+    title: "Discover",
+    desc: "Deep research into your business, competitors, and audience to build a strategy rooted in real data — not guesswork or assumptions.",
+  },
+  {
+    num: "02",
+    title: "Design",
+    desc: "Wireframes, brand assets, and pixel-perfect interfaces designed for conversion, visual clarity, and brand alignment at every touchpoint.",
+  },
+  {
+    num: "03",
+    title: "Develop",
+    desc: "Clean, fast, accessible, SEO-optimized code built to perform flawlessly across every device, browser, and screen size.",
+  },
+  {
+    num: "04",
+    title: "Launch",
+    desc: "Rigorous QA, smooth deployment, full cross-device testing, and a seamless go-live experience with zero disruption to your business.",
+  },
+  {
+    num: "05",
+    title: "Grow",
+    desc: "Post-launch SEO, analytics tracking, ongoing A/B testing, and continuous optimization to keep your results compounding over time.",
+  },
+];
+
+const capabilities = [
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_33_30 PM.png",
+    category: "Web Design & Development",
+    title: "Websites That Win Clients",
+    desc: "We design and develop fast, mobile-first websites that convert visitors into customers. Built with clean code, technical SEO foundations, and conversion-focused UX from day one — not as an afterthought.",
+    features: [
+      "Pixel-perfect responsive design",
+      "Core Web Vitals & speed optimized",
+      "Integrated SEO & analytics setup",
+      "Conversion-rate optimized layouts",
+    ],
+    href: "/services/web-design",
+  },
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_34_31 PM.png",
+    category: "Google Ads & PPC",
+    title: "Ads That Drive Real Revenue",
+    desc: "Our PPC specialists engineer campaigns that attract high-intent buyers and turn ad spend into measurable revenue. Every dollar of your budget is optimized for maximum ROAS with full transparency.",
+    features: [
+      "Strategic keyword targeting & bidding",
+      "ROAS-focused campaign management",
+      "A/B tested landing pages & copy",
+      "Full conversion tracking & reporting",
+    ],
+    href: "/services/google-ads",
+  },
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_35_28 PM.png",
+    category: "Local SEO & GMB",
+    title: "Dominate Local Search Results",
+    desc: "We get your business into the Google Map Pack and top local results. From GMB optimization to citation building and review strategies — we make your phone ring with qualified, ready-to-buy leads.",
+    features: [
+      "Google Business Profile optimization",
+      "Map Pack & local rank strategy",
+      "Citation building & cleanup",
+      "Review generation system",
+    ],
+    href: "/services/local-seo-for-home-services",
+  },
+];
+
+const industries = [
+  {
+    icon: <FaRocket />,
+    title: "Startups",
+    desc: "Launch fast with messaging, product pages, investor-ready design, and acquisition systems that help early users understand your value quickly.",
+  },
+  {
+    icon: <FaBriefcase />,
+    title: "Agencies",
+    desc: "White-label design, development support, partner-ready builds, and scalable design systems for agencies that need reliable delivery capacity.",
+  },
+  {
+    icon: <FaStore />,
+    title: "E-commerce",
+    desc: "Conversion-focused storefronts, product pages, SEO foundations, and paid traffic funnels built to increase average order value and repeat sales.",
+  },
+  {
+    icon: <FaCloudArrowUp />,
+    title: "SaaS",
+    desc: "Product-led landing pages, onboarding flows, feature positioning, and lifecycle touchpoints that convert signups and support retention.",
+  },
+  {
+    icon: <FaHouse />,
+    title: "Real Estate",
+    desc: "Local SEO, listing funnels, neighborhood pages, and lead capture systems that help agents and brokerages attract qualified buyers and sellers.",
+  },
+  {
+    icon: <FaBuilding />,
+    title: "Local Businesses",
+    desc: "Google Maps visibility, local SEO, review strategy, and high-converting service pages built to turn nearby searches into calls and bookings.",
+  },
+];
+
+const projects = [
+  {
+    category: "Web Design & SEO",
+    title: "MXD Marketing — Agency Rebrand",
+    impact:
+      "Redesigned site architecture, optimized for conversions, and executed a full technical SEO overhaul across the entire domain.",
+    result: "300% increase in organic traffic within 90 days of launch.",
+    href: "/contact-us",
+  },
+  {
+    category: "Google Ads & PPC",
+    title: "Digital Toolbag — Lead Generation",
+    impact:
+      "Built high-converting landing pages, restructured campaign architecture, and implemented comprehensive conversion tracking.",
+    result: "4.2x ROAS achieved with fully managed campaigns.",
+    href: "/contact-us",
+  },
+  {
+    category: "Local SEO & GMB",
+    title: "Peace of Mind — Local Visibility",
+    impact:
+      "Complete GMB optimization, local citation cleanup, and a targeted content strategy across high-value service pages.",
+    result: "Top 3 Google rankings across 15 target keywords.",
+    href: "/contact-us",
+  },
+];
+
+const insights = [
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_33_30 PM.png",
+    category: "Web Design",
+    date: "May 2025",
+    title:
+      "Why Conversion-Focused Design Outperforms Beautiful Design Every Time",
+    excerpt:
+      "Most agencies prioritize how a website looks. We'll show you why the highest-performing sites are built around user behavior — not aesthetics — and how to apply this thinking to your next project.",
+  },
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_35_28 PM.png",
+    category: "Local SEO",
+    date: "Apr 2025",
+    title:
+      "The Local SEO Playbook That Gets Businesses into the Google Map Pack",
+    excerpt:
+      "Ranking in the Map Pack is not luck — it is a repeatable, systematic process. Here is exactly how we do it for our clients, and what you can start implementing today.",
+  },
+  {
+    img: "/images/new-home/ChatGPT Image May 4, 2026, 02_34_31 PM.png",
+    category: "Google Ads",
+    date: "Mar 2025",
+    title: "How We Achieve 4x ROAS on Google Ads Without Burning Your Budget",
+    excerpt:
+      "Smart bidding alone will not save a poorly structured campaign. The real wins come from landing page alignment, audience segmentation, and intent mapping.",
+  },
+];
+
+/* ── page ─────────────────────────────────────────────────── */
+
+export default function Home() {
   return (
     <>
-      {/*home-section-1*/}
-      <div className="home-section-1">
-        <Row className="align-items-end justify-content-between">
-          <Col xs={12} lg={8}>
-            <p className="home-sec1-subtitle">
-              Zonic Media your growth partner for your business
-            </p>
-            <h1 className="home-sec1-heading">
-              From Website to Rankings to Ads, We{" "}
-              <span>Grow Your Business Online</span>
-            </h1>
-          </Col>
+      {/* ── HERO ──────────────────────────────────────────── */}
+      <section className="nh-hero">
+        <div className="nh-hero-inner">
+          <p className="nh-eyebrow">Digital Agency · Web · SEO · Growth</p>
+          <h1 className="nh-hero-heading">
+            Building Digital Brands <br className="nh-hero-br" />
+            That <span className="nh-hero-accent">Win Online</span>
+          </h1>
+          <p className="nh-hero-sub">
+            Zonic LLC designs and builds high-performing digital experiences —
+            from conversion-focused websites to full-scale marketing systems
+            that generate measurable, predictable growth.
+          </p>
 
-          <Col xs={12} lg={3}>
-            <p className="home-sec1-descrp">
-              Zonic Media helps businesses scale with high converting websites,
-              local SEO, paid advertising.
-            </p>
-            <div className="pt-3">
-              <ClutchWidget />
+          <div className="nh-hero-cta-row">
+            <Link href="/contact-us" className="buttons nh-btn-dark">
+              Start Your Project <BtnArrow />
+            </Link>
+            <div className="nh-clutch-wrap">
+              <ClutchWidget height="50" />
             </div>
-          </Col>
+          </div>
 
-          <Col xs={12}>
-            <div className="home-sec1-buttons">
-              <Link href="/contact-us" className="buttons">
-                Book a Strategy Call
-                <span className="buttons__icon-wrapper">
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg"
-                    width="8"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    width="8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg buttons__icon-svg--copy"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
+          {/* inline stats */}
+          <div className="nh-hero-stats">
+            {heroStats.map((s, i) => (
+              <div key={i} className="nh-hero-stat">
+                <p className="nh-hero-stat-val">{s.value}</p>
+                <p className="nh-hero-stat-lbl">{s.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* 6 floating badges */}
+          <div className="nh-float nh-float-code" aria-hidden="true">
+            <FaCode size={13} /> Web Dev
+          </div>
+          <div className="nh-float nh-float-seo" aria-hidden="true">
+            <FaMagnifyingGlass size={12} /> SEO
+          </div>
+          <div className="nh-float nh-float-ads" aria-hidden="true">
+            <FaChartLine size={12} /> Analytics
+          </div>
+          <div className="nh-float nh-float-design" aria-hidden="true">
+            <FaPaintbrush size={12} /> Design
+          </div>
+          <div className="nh-float nh-float-brand" aria-hidden="true">
+            <FaStar size={12} /> Branding
+          </div>
+          <div className="nh-float nh-float-ppc" aria-hidden="true">
+            <FaBullhorn size={12} /> PPC
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES ──────────────────────────────────────── */}
+      <section className="nh-section nh-services-section">
+        <div className="nh-container">
+          <div className="nh-section-header">
+            <p className="nh-label">Services</p>
+            <h2 className="nh-section-heading">Turning Ideas into Impact</h2>
+            <p className="nh-section-sub">
+              We turn ideas into impactful digital experiences that engage
+              audiences and fuel measurable, long-term growth for your business.
+            </p>
+          </div>
+          <div className="nh-services-grid">
+            {services.map((svc, i) => (
+              <div key={i} className="nh-service-card">
+                <div className="nh-service-card-top">
+                  <h3 className="nh-service-title">{svc.title}</h3>
+                  <p className="nh-service-desc">{svc.desc}</p>
+                  <ul className="nh-service-features">
+                    {svc.features.map((f, j) => (
+                      <li key={j}>
+                        <FaCheck size={10} />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="nh-service-card-bottom">
+                  <Link href={svc.href} className="nh-learn-more">
+                    Learn more <FaArrowRight size={11} />
+                  </Link>
+                  <div className="nh-service-bg-icon">{svc.icon}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="nh-process-outer">
+        <div className="nh-container">
+          <div className="nh-process-wrap">
+            <div className="nh-process-top">
+              <div className="nh-process-top-left">
+                <p className="nh-label nh-label-accent">5 Simple Steps</p>
+                <h2 className="nh-process-heading">
+                  Effortless Process,
+                  <br />
+                  Exceptional Results
+                </h2>
+              </div>
+              <div className="nh-process-rule" />
+            </div>
+            <div className="nh-process-grid">
+              {processSteps.map((step, i) => (
+                <div key={i} className="nh-process-card">
+                  <p className="nh-process-num">{step.num}</p>
+                  <h3 className="nh-process-title">{step.title}</h3>
+                  <p className="nh-process-desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="nh-process-footer">
+              <div className="nh-proof">
+                <div className="nh-avatars">
+                  <span>R</span>
+                  <span>T</span>
+                  <span>A</span>
+                  <span>M</span>
+                </div>
+                <p>Trusted by 100+ businesses that choose growth</p>
+              </div>
+              <Link href="/contact-us" className="buttons nh-btn-process">
+                Start Now <BtnArrow />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <Link href="/services" className="buttons">
-                Our Services
-                <span className="buttons__icon-wrapper">
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg"
-                    width="8"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    width="8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg buttons__icon-svg--copy"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
+      {/* ── WHY CHOOSE ────────────────────────────────────── */}
+      <section className="nh-section nh-why-section">
+        <div className="nh-container">
+          <div className="nh-why-inner">
+            {/* visual column */}
+            <div className="nh-why-visual">
+              <div className="nh-why-img-main">
+                <Image
+                  src="/images/ChatGPT Image May 4, 2026, 03_12_21 PM.png"
+                  fill
+                  alt="Zonic LLC web design and development process"
+                  sizes="(max-width: 991px) 100vw, 42vw"
+                  style={{ objectFit: "contain", padding: "20px" }}
+                />
+              </div>
+              <div className="nh-why-stats-card">
+                {whyStats.map((s, i) => (
+                  <div key={i} className="nh-why-stat-item">
+                    <p className="nh-why-stat-val">{s.value}</p>
+                    <p className="nh-why-stat-lbl">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* content column */}
+            <div className="nh-why-content">
+              <p className="nh-label">Why Zonic LLC</p>
+              <h2 className="nh-why-heading">
+                The Growth Partner Built for Results
+              </h2>
+              <p className="nh-why-sub">
+                We combine deep strategy, premium design, and performance-first
+                development to deliver results that matter to your bottom line —
+                not just your portfolio page. Every decision we make is in
+                service of your measurable business outcomes.
+              </p>
+              <div className="nh-why-list">
+                {whyPoints.map((pt, i) => (
+                  <div key={i} className="nh-why-item">
+                    <div className="nh-why-check">
+                      <FaCircleCheck size={15} />
+                    </div>
+                    <div>
+                      <p className="nh-why-item-title">{pt.title}</p>
+                      <p className="nh-why-item-desc">{pt.desc}</p>
+                    </div>
+                  </div>
+                ))}
+                <Link href="/contact-us" className="nh-why-cta-tile">
+                  <span>Ready for a cleaner growth plan?</span>
+                  <strong>Book a Strategy Call</strong>
+                  <em>
+                    Tell us what you want to improve and we will map the fastest
+                    next step.
+                  </em>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROCESS ───────────────────────────────────────── */}
+      <section className="nh-process-outer">
+        <div className="nh-container">
+          <div className="nh-process-wrap">
+            <div className="nh-process-top">
+              <div className="nh-process-top-left">
+                <p className="nh-label nh-label-accent">5 Simple Steps</p>
+                <h2 className="nh-process-heading">
+                  Effortless Process,
+                  <br />
+                  Exceptional Results
+                </h2>
+              </div>
+              <div className="nh-process-rule" />
+            </div>
+            <div className="nh-process-grid">
+              {processSteps.map((step, i) => (
+                <div key={i} className="nh-process-card">
+                  <p className="nh-process-num">{step.num}</p>
+                  <h3 className="nh-process-title">{step.title}</h3>
+                  <p className="nh-process-desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="nh-process-footer">
+              <div className="nh-proof">
+                <div className="nh-avatars">
+                  <span>R</span>
+                  <span>T</span>
+                  <span>A</span>
+                  <span>M</span>
+                </div>
+                <p>Trusted by 100+ businesses that choose growth</p>
+              </div>
+              <Link href="/contact-us" className="buttons nh-btn-process">
+                Start Now <BtnArrow />
               </Link>
             </div>
-          </Col>
-        </Row>
-      </div>
+          </div>
+        </div>
+      </section>
 
-      {/*home-section-2*/}
-      <div className="home-section-2 margin-box">
-        <ImageMarquee />
-      </div>
-
-      {/*home-section-3*/}
-      <div className="home-section-3 margin-box">
-        <Row className="justify-content-between">
-          <Col xs={12} lg={4}>
-            <FaArrowRight className="d-none d-lg-block" size={40} />
-            <FaArrowDown className="d-block d-lg-none mb-4" size={36} />
-          </Col>
-
-          <Col xs={12} lg={7}>
-            <h2 className="home-sec3-heading">
-              We Position Your Brand to Win in{" "}
-              <span> Today&apos;s Digital-First Market</span>
+      <section className="nh-between-banner">
+        <div className="nh-container">
+          <div className="nh-between-banner-inner">
+            <p className="nh-label">Ready to Start?</p>
+            <h2>
+              Turn your strategy into shipped work that grows{" "}
+              <strong className="nh-heading-highlight">
+                traffic, leads, and revenue.
+              </strong>
             </h2>
-            <p className="home-sec3-descrp">
-              In a world where customers search online before making decisions,
-              your brand&apos;s digital presence determines your growth. Zonic
-              Media helps businesses stand out with strategic design, powerful
-              SEO, and data-driven marketing campaigns that generate measurable
-              results.
-            </p>
-            <p className="home-sec3-descrp">
-              We combine creative design with performance marketing to build a
-              strong online presence that attracts, converts, and retains
-              customers.
-            </p>
-            <p className="home-sec3-descrp">
-              From local businesses to national brands, we create digital
-              strategies that drive long-term growth and predictable leads.
-            </p>
-          </Col>
-        </Row>
-
-        <Row className="info-card-row">
-          <Col xs={12} lg={4}>
-            <div className="info-card">
-              <h3> Discover</h3>
-              <h4> (strategy & research) </h4>
-              <p>
-                We begin by understanding your business, target audience, and
-                competitors. Our team conducts in-depth keyword research, market
-                analysis, and conversion audits to build a strategy designed to
-                generate leads and revenue.
-              </p>
+            <span>
+              Bring us the goal, the challenge, or the campaign you want to
+              improve. We will help you turn it into a clear plan, a stronger
+              digital presence, and measurable next steps.
+            </span>
+            <div className="nh-between-banner-actions">
+              <Link
+                href="/contact-us"
+                className="buttons nh-between-banner-btn"
+              >
+                Start Your Project <BtnArrow />
+              </Link>
             </div>
-          </Col>
+          </div>
+        </div>
+      </section>
 
-          <Col xs={12} lg={4}>
-            <div className="info-card">
-              <h3> Design</h3>
-              <h4> ( Branding, Website & Content )</h4>
-              <p>
-                Our designers and developers create fast, mobile-responsive,
-                SEO-optimized websites and brand assets that improve user
-                experience and increase conversions.
-              </p>
-            </div>
-          </Col>
-
-          <Col xs={12} lg={4}>
-            <div className="info-card">
-              <h3> Deliver</h3>
-              <h4> (Launch, Optimize & Scale ) </h4>
-              <p>
-                We launch, optimize, and scale your digital presence through
-                performance-driven strategies to deliver measurable growth and
-                long-term business results.
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      {/*home-section-4*/}
-      <div className="home-section-4">
-        <Row className="align-items-center justify-content-between">
-          <Col xs={12} lg={7}>
-            <h2 className="home-sec4-heading">
-              From startups to established brands, accelerate your growth with
-              high-converting,
-              <span> performance-driven digital solutions.</span>
+      <section className="nh-dark-process nh-growth-system-section">
+        <div className="nh-container">
+          <div className="nh-dark-process-head">
+            <p className="nh-label nh-label-accent">Growth System</p>
+            <h2 className="nh-dark-process-heading">
+              A Clear Plan Before We Build
             </h2>
-          </Col>
-
-          <Col xs={12} lg={4}>
-            <p className="home-sec4-descrp">
-              Zonic Media delivers expert UI/UX design combined with
-              results-focused marketing strategies. Highly trusted by growing
-              businesses.
+            <p className="nh-dark-process-sub">
+              We connect strategy, creative, technology, and marketing before
+              production starts, so every deliverable has a measurable job.
             </p>
-            <Link href="/contact-us" className="buttons">
-              Book a Strategy Call
-              <span className="buttons__icon-wrapper">
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="buttons__icon-svg"
-                  width="8"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  width="8"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="buttons__icon-svg buttons__icon-svg--copy"
-                >
-                  <path
-                    d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-            </Link>
-          </Col>
-        </Row>
-      </div>
+          </div>
+          <div className="nh-dark-process-grid">
+            {growthSystems.map((item, i) => (
+              <div key={item.title} className="nh-dark-process-card">
+                <span className="nh-dark-process-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="nh-dark-process-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/*home-section-5*/}
-
-      <div className="home-section-5">
-        <div className="home-sec5-service-wrapper">
-          <div className="home-sec5-service-content">
-            <div>
-              <h2 className="home-sec5-service-heading">
-                Web Design & Development
+      {/* ── CAPABILITIES (redesigned with images) ─────────── */}
+      <section className="nh-section nh-local-growth-section">
+        <div className="nh-container">
+          <div className="nh-local-growth-inner">
+            <div className="nh-local-growth-media">
+              <Image
+                src="/images/new-home/ChatGPT Image May 4, 2026, 02_34_31 PM.png"
+                fill
+                alt="Digital marketing campaign dashboard and growth planning"
+                sizes="(max-width: 991px) 100vw, 42vw"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
+            <div className="nh-local-growth-copy">
+              <p className="nh-label">Digital Growth Engine</p>
+              <h2>
+                Visibility built for better leads, stronger funnels, and more
+                revenue.
               </h2>
-              <p className="home-sec5-service-descrp">
-                Get a high-performing website designed to convert visitors into
-                customers. Our websites are fast, mobile-friendly, SEO-ready,
-                and built for long-term growth.
+              <h3>
+                A digital marketing agency should connect the channels that
+                create demand with the pages that convert it.
+              </h3>
+              <p>
+                We align SEO, paid search, landing pages, analytics, content,
+                brand messaging, and conversion tracking into one growth system.
+                Instead of treating each channel as a separate task, we build a
+                marketing foundation where every campaign has a clear audience,
+                offer, journey, and measurable outcome.
               </p>
-
-              <ul className="home-sec5-list">
+              <ul>
                 <li>
-                  <GoDotFill size={16} />
-                  Business Websites
+                  <FaCircleCheck /> SEO and paid media planned around revenue
+                  goals
                 </li>
                 <li>
-                  <GoDotFill size={16} />
-                  Landing Pages
+                  <FaCircleCheck /> Landing pages designed for qualified lead
+                  flow
                 </li>
                 <li>
-                  <GoDotFill size={16} />
-                  WordPress Websites
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Conversion-Focused Design
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  SEO-Friendly Development
+                  <FaCircleCheck /> Reporting that shows what is actually
+                  working
                 </li>
               </ul>
+              <Link href="/contact-us" className="buttons nh-section-cta">
+                Build My Growth Engine <BtnArrow />
+              </Link>
             </div>
-            <Link href="/services/web-design">view web design service </Link>
-          </div>
-          <div className="home-sec5-service-img-cont">
-            <Image
-              src="/images/m-5.webp"
-              fill
-              alt="web design"
-              sizes="(max-width: 991.98px) 100vw, 40vw"
-            />
           </div>
         </div>
+      </section>
 
-        <div className="home-sec5-service-wrapper">
-          <div className="home-sec5-service-content">
-            <div>
-              <h2 className="home-sec5-service-heading">
-                Google Business Profile Optimization
+      <section className="nh-section nh-maps-domination-section">
+        <div className="nh-container">
+          <div className="nh-maps-domination-inner">
+            <div className="nh-maps-domination-copy">
+              <p className="nh-label">Digital Market Domination</p>
+              <h2>Turn every channel into a connected growth advantage.</h2>
+              <h3>
+                SEO, paid media, content, analytics, and conversion strategy
+                work best when they move as one system.
+              </h3>
+              <p>
+                A digital marketing agency should do more than run isolated
+                campaigns. We connect search visibility, ad strategy, landing
+                pages, creative direction, and tracking so your brand can reach
+                the right audience and turn attention into measurable demand.
+              </p>
+              <p>
+                Our work gives every channel a clear role: organic search builds
+                trust, paid campaigns capture intent, content answers buying
+                questions, and conversion-focused pages turn traffic into
+                qualified leads.
+              </p>
+              <Link href="/services" className="buttons nh-section-cta">
+                Explore Marketing Services <BtnArrow />
+              </Link>
+            </div>
+            <div className="nh-maps-domination-media">
+              <Image
+                src="/images/new-home/ChatGPT Image May 4, 2026, 04_33_14 PM.png"
+                fill
+                alt="Digital marketing agency growth strategy dashboard"
+                sizes="(max-width: 991px) 100vw, 42vw"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="nh-section nh-business-growth-section">
+        <div className="nh-container">
+          <div className="nh-business-growth-inner">
+            <div className="nh-business-growth-copy">
+              <p className="nh-label">How We Grow Businesses</p>
+              <h2>
+                We turn marketing activity into a repeatable growth engine.
               </h2>
-              <p className="home-sec5-service-descrp">
-                We optimize your Google Business Profile to improve local
-                rankings, increase calls, and drive more customers.
+              <p>
+                Growth does not come from random posting, disconnected ads, or a
+                website that only looks good. We build the strategy, traffic
+                channels, conversion paths, and reporting loops that help a
+                business understand where demand comes from and how to capture
+                more of it.
               </p>
-              <ul className="home-sec5-list list-white">
-                <li>
-                  <GoDotFill size={16} />
-                  Profile Optimization
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Keyword Targeting
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Review Strategy
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Local Ranking Improvements
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Ongoing Updates
-                </li>
-              </ul>
+              <Link href="/contact-us" className="buttons nh-section-cta">
+                Grow My Business <BtnArrow />
+              </Link>
             </div>
-            <Link href="/services/gmb-reinstatement-help">
-              View GMB optimization service{" "}
-            </Link>
-          </div>
-          <div className="home-sec5-service-img-cont">
-            <Image
-              src="/images/home-gmb-1.webp"
-              fill
-              alt="google my business"
-            />
+            <div className="nh-business-growth-compare">
+              <div className="nh-growth-compare-box nh-growth-compare-without">
+                <span>Without us</span>
+                <strong>Marketing feels busy but unpredictable.</strong>
+                <p>
+                  Campaigns run in separate lanes, reports show surface-level
+                  numbers, landing pages leak leads, and it is hard to see which
+                  activity is actually creating revenue.
+                </p>
+              </div>
+              <div className="nh-growth-compare-box nh-growth-compare-with">
+                <span>Working with us</span>
+                <strong>
+                  Growth becomes focused, measurable, and easier to scale.
+                </strong>
+                <p>
+                  SEO, ads, content, analytics, and conversion paths work
+                  together with clear priorities, better lead quality, and a
+                  reporting loop that shows where to invest next.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="home-sec5-service-wrapper">
-          <div className="home-sec5-service-content">
+      <section className="nh-section nh-capabilities-section">
+        <div className="nh-container">
+          <div className="nh-section-header">
+            <p className="nh-label">What We Build</p>
+            <h2 className="nh-section-heading">
+              Built to Perform. Designed to Convert.
+            </h2>
+            <p className="nh-section-sub">
+              Three core disciplines, executed at the highest level — so your
+              digital presence generates real, measurable results.
+            </p>
+          </div>
+          <div className="nh-cap-grid">
+            {capabilities.map((cap, i) => (
+              <div key={i} className="nh-cap-card">
+                <div className="nh-cap-img-wrap">
+                  <Image
+                    src={cap.img}
+                    fill
+                    alt={cap.title}
+                    sizes="(max-width: 991px) 100vw, 33vw"
+                    style={{ objectFit: "contain", padding: "28px" }}
+                  />
+                </div>
+                <div className="nh-cap-content">
+                  <span className="nh-cap-badge">{cap.category}</span>
+                  <h3 className="nh-cap-title">{cap.title}</h3>
+                  <p className="nh-cap-desc">{cap.desc}</p>
+                  <ul className="nh-cap-features">
+                    {cap.features.map((f, j) => (
+                      <li key={j}>
+                        <FaCheck size={10} /> {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link href={cap.href} className="nh-learn-more">
+                    Learn more <FaArrowRight size={11} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── GMB FEATURE ───────────────────────────────────── */}
+      <section className="nh-gmb-section">
+        <div className="nh-container">
+          <div className="nh-gmb-inner">
+            <div className="nh-gmb-content">
+              <p className="nh-label">Google Business Profile</p>
+              <h2 className="nh-gmb-heading">
+                Get Your Business <span>Found, Trusted,</span> and Called on
+                Google
+              </h2>
+              <p className="nh-gmb-desc">
+                Your Google Business Profile is the single most powerful free
+                marketing asset a local business has. We optimize, verify, and
+                manage it so you appear at the top of local search and Google
+                Maps — exactly when customers are ready to act.
+              </p>
+              <div className="nh-gmb-features">
+                <div className="nh-gmb-feature">
+                  <div className="nh-gmb-feature-icon">
+                    <FaCircleCheck />
+                  </div>
+                  <div>
+                    <p className="nh-gmb-feature-title">Profile Optimization</p>
+                    <p className="nh-gmb-feature-desc">
+                      Every field, category, photo, and service area configured
+                      for maximum local ranking potential.
+                    </p>
+                  </div>
+                </div>
+                <div className="nh-gmb-feature">
+                  <div className="nh-gmb-feature-icon">
+                    <FaMagnifyingGlass />
+                  </div>
+                  <div>
+                    <p className="nh-gmb-feature-title">
+                      Map Pack Ranking Strategy
+                    </p>
+                    <p className="nh-gmb-feature-desc">
+                      Keyword-driven local content and citation building that
+                      pushes your listing into the top 3 results.
+                    </p>
+                  </div>
+                </div>
+                <div className="nh-gmb-feature">
+                  <div className="nh-gmb-feature-icon">
+                    <FaStar />
+                  </div>
+                  <div>
+                    <p className="nh-gmb-feature-title">
+                      Review Generation System
+                    </p>
+                    <p className="nh-gmb-feature-desc">
+                      Automated systems that consistently generate 5-star
+                      reviews and build long-term trust with new customers.
+                    </p>
+                  </div>
+                </div>
+                <div className="nh-gmb-feature">
+                  <div className="nh-gmb-feature-icon">
+                    <FaRocket />
+                  </div>
+                  <div>
+                    <p className="nh-gmb-feature-title">
+                      GMB Reinstatement Help
+                    </p>
+                    <p className="nh-gmb-feature-desc">
+                      Suspended or disabled profile? We have a proven process to
+                      reinstate and protect your Google listing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/services/gmb-reinstatement-help"
+                className="buttons nh-btn-primary-yellow"
+              >
+                Explore GMB Services <BtnArrow />
+              </Link>
+            </div>
+
+            <div className="nh-gmb-visual">
+              <div className="nh-gmb-glass-card">
+                <p className="nh-gmb-card-kicker">Local visibility system</p>
+                <h3>More calls from the customers already searching nearby.</h3>
+                <p>
+                  We strengthen the signals Google uses to trust, rank, and
+                  display your profile: categories, services, reviews, photos,
+                  citations, proximity signals, and conversion-focused profile
+                  content.
+                </p>
+                <div className="nh-gmb-card-stats">
+                  <span>
+                    <strong>Top 3</strong>
+                    Map Pack focus
+                  </span>
+                  <span>
+                    <strong>24/7</strong>
+                    Profile visibility
+                  </span>
+                </div>
+                <div className="nh-gmb-badge">
+                  <FaCircleCheck size={14} /> Google Verified &amp; Ranking
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDUSTRIES ────────────────────────────────────── */}
+      <section className="nh-section nh-industries-section">
+        <div className="nh-container">
+          <div className="nh-section-header">
+            <p className="nh-label">Who We Serve</p>
+            <h2 className="nh-section-heading">Industries We Work With</h2>
+            <p className="nh-section-sub">
+              From lean startups to established enterprises — we build tailored
+              digital strategies for the unique challenges and growth goals of
+              your specific industry.
+            </p>
+          </div>
+          <div className="nh-industries-grid">
+            {industries.map((ind, i) => (
+              <div key={i} className="nh-industry-card">
+                <div className="nh-industry-icon">{ind.icon}</div>
+                <h3 className="nh-industry-title">{ind.title}</h3>
+                <p className="nh-industry-desc">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="nh-dark-process nh-delivery-section">
+        <div className="nh-container">
+          <div className="nh-dark-process-head nh-dark-process-head-split">
             <div>
-              <h2 className="home-sec5-service-heading">Google Ads (PPC)</h2>
-              <p className="home-sec5-service-descrp">
-                Generate instant leads with high-converting Google Ads campaigns
-                managed by experienced PPC specialists.
-              </p>
-              <ul className="home-sec5-list list-white">
-                <li>
-                  <GoDotFill size={16} />
-                  Campaign Setup
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Keyword Targeting
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Conversion Tracking
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Ad Optimization
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  ROI Tracking
-                </li>
-              </ul>
+              <p className="nh-label nh-label-accent">Delivery Engine</p>
+              <h2 className="nh-dark-process-heading">
+                Built for Launch and Long-Term Growth
+              </h2>
             </div>
-            <Link href="/services/google-ads">
-              view google ads (PPC) service{" "}
-            </Link>
+            <p className="nh-dark-process-sub">
+              Zonic LLC keeps design, development, SEO, paid media, and
+              reporting aligned so your digital presence keeps improving after
+              the first release.
+            </p>
           </div>
-          <div className="home-sec5-service-img-cont">
-            <Image
-              src="/images/home-ads.webp"
-              fill
-              alt="google ads"
-              sizes="(max-width: 991.98px) 100vw, 40vw"
-            />
+          <div className="nh-dark-process-grid">
+            {deliveryPillars.map((item, i) => (
+              <div key={item.title} className="nh-dark-process-card">
+                <span className="nh-dark-process-num">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="nh-dark-process-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="home-sec5-service-wrapper">
-          <div className="home-sec5-service-content">
+      {/* ── PORTFOLIO ─────────────────────────────────────── */}
+      <section className="nh-section nh-portfolio-section">
+        <div className="nh-container">
+          <div className="nh-portfolio-head">
             <div>
-              <h2 className="home-sec5-service-heading">Local SEO Services</h2>
-              <p className="home-sec5-service-descrp">
-                Rank higher in Google Maps and local search results with our
-                data-driven local SEO strategies.
-              </p>
-              <ul className="home-sec5-list list-white">
-                <li>
-                  <GoDotFill size={16} />
-                  Rank in Local Searches
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Get More Calls
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Increase Website Traffic
-                </li>
-                <li>
-                  <GoDotFill size={16} />
-                  Generate Qualified Leads
-                </li>
-              </ul>
+              <p className="nh-label">Our Work</p>
+              <h2 className="nh-section-heading">
+                Results We&apos;ve Delivered
+              </h2>
             </div>
-            <Link href="/services/local-seo-for-home-services">
-              view local SEO service
+            <Link
+              href="/contact-us"
+              className="buttons nh-btn-outline nh-port-cta-desk"
+            >
+              Start Your Project <BtnArrow />
             </Link>
           </div>
-          <div className="home-sec5-service-img-cont">
-            <Image
-              src="/images/home-seo-2.webp"
-              fill
-              alt="local seo"
-              sizes="(max-width: 991.98px) 100vw, 40vw"
-            />
+          <div className="nh-portfolio-grid">
+            {projects.map((proj, i) => (
+              <div key={i} className="nh-project-card">
+                <div className="nh-project-top">
+                  <p className="nh-project-cat">{proj.category}</p>
+                  <h3 className="nh-project-title">{proj.title}</h3>
+                  <p className="nh-project-impact">{proj.impact}</p>
+                </div>
+                <div className="nh-project-bottom">
+                  <p className="nh-project-result">
+                    <span className="nh-dot" />
+                    {proj.result}
+                  </p>
+                  <Link href={proj.href} className="nh-learn-more">
+                    View Details <FaArrowRight size={11} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="nh-port-cta-mobile">
+            <Link href="/contact-us" className="buttons nh-btn-outline">
+              Start Your Project <BtnArrow />
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/*home-section-6*/}
-      <div className="home-section-6 marign-box">
-        <h2 className="home-sec6-heading">
-          Recognized for
-          <span>
-            Delivering
-            <Image
-              src="/images/icon.webp"
-              width={95}
-              height={90}
-              alt="zonic icon"
-            />
-            {""} Results
-          </span>
-        </h2>
-
-        {/* Updated Row and Cols */}
-        <Row className="home-sec6-row">
-          <Col xs={12} lg={3}>
-            <div className="home-sec6-card">
-              <p> 01 </p>
-              <h3>95+ proven growth strategies implemented</h3>
-            </div>
-          </Col>
-
-          <Col xs={12} lg={3}>
-            <div className="home-sec6-card">
-              <p> 02 </p>
-              <h3>Up to 300% higher conversion rates achieved</h3>
-            </div>
-          </Col>
-
-          <Col xs={12} lg={3}>
-            <div className="home-sec6-card">
-              <p> 03 </p>
-              <h3>200%+ increase in online visibility for clients</h3>
-            </div>
-          </Col>
-
-          <Col xs={12} lg={3}>
-            <div className="home-sec6-card border-0">
-              <p> 04 </p>
-              <h3>90% long-term client retention rate</h3>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      {/*world-map*/}
+      {/* ── WORLD MAP ─────────────────────────────────────── */}
       <WorldMap />
 
-      {/*home-section-7*/}
+      {/* ── TESTIMONIALS ─────────────────────── */}
       <div className="home-section-7">
-        <h2 className="testimonial-heading">
-          Hear what our clients say about
-          <span> working with Zonic Media.</span>
-        </h2>
-        <Testimonials />
+        <h2 className="testimonial-heading">What Our Clients Say</h2>
+
+        <div className="home-phila-test">
+          <ClutchWidget
+            widgetType="12"
+            height="375"
+            primaryColor="#f7c00a"
+            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+          />
+        </div>
       </div>
 
-      {/*home-section-8 contact-form*/}
-      <ContactForm content={ContactGlobal} />
+      {/* ── INSIGHTS / BLOG ───────────────────────────────── */}
+      <section className="nh-section nh-insights-section">
+        <div className="nh-container">
+          <div className="nh-section-header">
+            <p className="nh-label">Blog</p>
+            <h2 className="nh-section-heading">
+              Our Recent <span className="nh-accent-text">News</span> &amp;
+              Insights
+            </h2>
+            <p className="nh-section-sub">
+              Practical articles on web design, SEO, and digital marketing —
+              strategies that drive real growth in an ever-evolving digital
+              landscape.
+            </p>
+          </div>
+          <div className="nh-insights-grid">
+            <div className="nh-insight-featured">
+              <div className="nh-insight-img-placeholder">
+                <Image
+                  src={insights[0].img}
+                  fill
+                  alt={insights[0].title}
+                  sizes="(max-width: 991px) 100vw, 48vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="nh-insight-featured-content">
+                <div className="nh-insight-meta">
+                  <span className="nh-insight-cat">{insights[0].category}</span>
+                  <span className="nh-insight-date">{insights[0].date}</span>
+                </div>
+                <h3 className="nh-insight-title-lg">{insights[0].title}</h3>
+                <p className="nh-insight-excerpt">{insights[0].excerpt}</p>
+                <Link href="/contact-us" className="nh-learn-more">
+                  Read Article <FaArrowRight size={11} />
+                </Link>
+              </div>
+            </div>
+            <div className="nh-insight-side">
+              {insights.slice(1).map((ins, i) => (
+                <div key={i} className="nh-insight-card">
+                  <div className="nh-insight-card-img">
+                    <Image
+                      src={ins.img}
+                      fill
+                      alt={ins.title}
+                      sizes="(max-width: 575px) 100vw, 160px"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div className="nh-insight-card-content">
+                    <div className="nh-insight-meta">
+                      <span className="nh-insight-cat">{ins.category}</span>
+                      <span className="nh-insight-date">{ins.date}</span>
+                    </div>
+                    <h3 className="nh-insight-title">{ins.title}</h3>
+                    <p className="nh-insight-excerpt">{ins.excerpt}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/*home-section-9 footer*/}
+      {/* ── FINAL CTA ─────────────────────────────────────── */}
+      <section className="nh-section nh-finalcta-section">
+        <div className="nh-container">
+          <div className="nh-finalcta-card">
+            <p className="nh-label">Ready to Start?</p>
+            <h2 className="nh-finalcta-heading">
+              Let&apos;s Build a Digital Growth System <br />
+              <span>That Turns Attention Into Revenue</span>
+            </h2>
+            <p className="nh-finalcta-sub">
+              Whether you need a new website, a full-scale growth strategy, or a
+              complete digital transformation — Zonic LLC delivers results from
+              day one. No fluff, no bloated timelines, just measurable outcomes.
+            </p>
+            <div className="nh-finalcta-actions">
+              <Link href="/contact-us" className="buttons nh-btn-dark">
+                Start Your Project <BtnArrow />
+              </Link>
+              <Link href="/services" className="buttons nh-btn-finalcta-ghost">
+                View Services <BtnArrow />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
