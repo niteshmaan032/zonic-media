@@ -795,6 +795,11 @@
   line-height: 1.68;
 }
 
+.car-tow-faq-wrapper {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
 /* ─── FINAL CTA ─── */
 .car-tow-final-section {
   padding-top: 0;
@@ -822,6 +827,123 @@
 .car-tow-final-actions {
   justify-content: center;
   margin-top: 26px;
+}
+
+.car-tow-testimonial-section {
+  padding-top: 20px;
+}
+
+.car-tow-testimonial-card {
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.car-tow-contact-section {
+  padding-top: 10px;
+  padding-bottom: 80px;
+}
+
+.car-tow-contact-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.car-tow-contact-content,
+.car-tow-contact-form-wrap {
+  border-radius: 28px;
+  background: #fbfbfb;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.car-tow-contact-content {
+  padding: 42px;
+}
+
+.car-tow-contact-content h2 {
+  max-width: 700px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.car-tow-contact-lead {
+  color: var(--color2);
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.car-tow-contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.car-tow-contact-info-card {
+  padding: 22px;
+  border-radius: 20px;
+  background: var(--white);
+  border: 1px solid rgba(2, 6, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.car-tow-contact-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.car-tow-contact-info-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(253, 193, 21, 0.16);
+  color: var(--secondary);
+  font-size: 18px;
+}
+
+.car-tow-contact-info-card h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.car-tow-contact-info-card a {
+  color: var(--color2);
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.car-tow-contact-visual {
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 320px;
+}
+
+.car-tow-contact-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.car-tow-contact-visual:hover img {
+  transform: scale(1.03);
+}
+
+.car-tow-contact-form-wrap {
+  padding: 18px;
 }
 
 /* ─── PROCESS — INTERACTIVE REDESIGN ─── */
@@ -1045,6 +1167,10 @@
     grid-template-columns: 1fr;
   }
 
+  .car-tow-contact-shell {
+    grid-template-columns: 1fr;
+  }
+
   .car-tow-card-grid-six,
   .car-tow-service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1188,7 +1314,21 @@
   .car-tow-results-grid {
     grid-template-columns: 1fr;
   }
-}
+
+  .car-tow-contact-content,
+  .car-tow-contact-form-wrap,
+  .car-tow-testimonial-card {
+    padding: 24px;
+  }
+
+  .car-tow-contact-content h2 {
+    font-size: 34px;
+  }
+
+  .car-tow-contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+  }
 
 @media (max-width: 767.98px) {
   .car-tow-hero-layer,
@@ -1311,5 +1451,25 @@
 
   .car-tow-metric-card {
     padding: 24px;
+  }
+
+  .car-tow-testimonial-card,
+  .car-tow-contact-content,
+  .car-tow-contact-form-wrap {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .car-tow-contact-content h2 {
+    font-size: 30px;
+  }
+
+  .car-tow-contact-lead {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .car-tow-contact-visual {
+    min-height: 240px;
   }
 }

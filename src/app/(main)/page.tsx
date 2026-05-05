@@ -4,6 +4,7 @@ import Image from "next/image";
 import Footer from "@/app/components/Footer";
 import WorldMap from "@/app/components/WorldMap";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import HeroTypewriter from "@/app/components/HeroTypewriter";
 import {
   FaArrowRight,
   FaCode,
@@ -27,9 +28,9 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Agency | Web Design, SEO & Growth Solutions | Zonic LLC",
+  title: "Digital Agency | Web Design, SEO & Growth Solutions | Zonic Media",
   description:
-    "Zonic LLC delivers premium web design, UI/UX, branding, SEO, and custom software solutions to help businesses scale online.",
+    "Zonic Media delivers premium web design, UI/UX, branding, SEO, and custom software solutions to help businesses scale online.",
 };
 
 function BtnArrow() {
@@ -74,7 +75,7 @@ const heroStats = [
 
 const services = [
   {
-    icon: <FaCode />,
+    img: "/images/new-home/graphic-design.png",
     title: "Web Design & Development",
     desc: "High-performing, conversion-optimized websites built fast, mobile-first, and SEO-ready. We engineer digital experiences that turn visitors into paying customers.",
     href: "/services/web-design",
@@ -85,7 +86,7 @@ const services = [
     ],
   },
   {
-    icon: <FaPaintbrush />,
+    img: "/images/new-home/ui.png",
     title: "UI/UX Design",
     desc: "Intuitive, engaging interfaces crafted with user psychology and conversion principles in mind. Every pixel has a purpose — guiding users toward action.",
     href: "/services",
@@ -96,7 +97,7 @@ const services = [
     ],
   },
   {
-    icon: <FaStar />,
+    img: "/images/new-home/branding.png",
     title: "Branding",
     desc: "Strategic brand identities that build instant recognition and lasting trust. From logo design to brand guidelines, we craft the visual language of your business.",
     href: "/services",
@@ -107,7 +108,7 @@ const services = [
     ],
   },
   {
-    icon: <FaBullhorn />,
+    img: "/images/new-home/campaign.png",
     title: "Digital Marketing",
     desc: "Data-driven campaigns that generate measurable traffic, qualified leads, and compounding revenue growth across every relevant digital channel.",
     href: "/services",
@@ -118,7 +119,7 @@ const services = [
     ],
   },
   {
-    icon: <FaMagnifyingGlass />,
+    img: "/images/new-home/search-engine-optimization.png",
     title: "SEO Optimization",
     desc: "Rank higher in local and national search with proven strategies. We build sustainable organic visibility that compounds over time and outlasts paid channels.",
     href: "/services/local-seo-for-home-services",
@@ -129,7 +130,7 @@ const services = [
     ],
   },
   {
-    icon: <FaCloudArrowUp />,
+    img: "/images/new-home/app-development.png",
     title: "Custom Software Solutions",
     desc: "Scalable, purpose-built software engineered to solve your unique business challenges. From workflow automation to full-stack applications built to last.",
     href: "/services",
@@ -143,22 +144,27 @@ const services = [
 
 const whyPoints = [
   {
+    icon: <FaClipboardCheck />,
     title: "Strategy-First Approach",
     desc: "We begin with deep discovery — your goals, market, and audience — before writing a single line of code. Strategy is built in, not bolted on after launch.",
   },
   {
+    icon: <FaLaptopCode />,
     title: "Scalable Development",
     desc: "Every project is engineered for performance and long-term scale. The systems we build today are designed to grow seamlessly with your business tomorrow.",
   },
   {
+    icon: <FaChartLine />,
     title: "Conversion-Focused Design",
     desc: "Our design decisions are grounded in user psychology and data — built to maximize engagement, trust signals, and lead generation at every scroll depth.",
   },
   {
+    icon: <FaHandshake />,
     title: "Transparent Process",
     desc: "Clear milestones, open communication, and full project visibility at every stage. You will always know exactly where things stand — no surprises.",
   },
   {
+    icon: <FaRocket />,
     title: "Long-Term Support",
     desc: "We don't disappear after launch. Ongoing optimization, updates, and strategic reviews keep your results compounding month over month.",
   },
@@ -308,33 +314,6 @@ const industries = [
   },
 ];
 
-const projects = [
-  {
-    category: "Web Design & SEO",
-    title: "MXD Marketing — Agency Rebrand",
-    impact:
-      "Redesigned site architecture, optimized for conversions, and executed a full technical SEO overhaul across the entire domain.",
-    result: "300% increase in organic traffic within 90 days of launch.",
-    href: "/contact-us",
-  },
-  {
-    category: "Google Ads & PPC",
-    title: "Digital Toolbag — Lead Generation",
-    impact:
-      "Built high-converting landing pages, restructured campaign architecture, and implemented comprehensive conversion tracking.",
-    result: "4.2x ROAS achieved with fully managed campaigns.",
-    href: "/contact-us",
-  },
-  {
-    category: "Local SEO & GMB",
-    title: "Peace of Mind — Local Visibility",
-    impact:
-      "Complete GMB optimization, local citation cleanup, and a targeted content strategy across high-value service pages.",
-    result: "Top 3 Google rankings across 15 target keywords.",
-    href: "/contact-us",
-  },
-];
-
 const insights = [
   {
     img: "/images/new-home/ChatGPT Image May 4, 2026, 02_33_30 PM.png",
@@ -374,11 +353,11 @@ export default function Home() {
         <div className="nh-hero-inner">
           <p className="nh-eyebrow">Digital Agency · Web · SEO · Growth</p>
           <h1 className="nh-hero-heading">
-            Building Digital Brands <br className="nh-hero-br" />
-            That <span className="nh-hero-accent">Win Online</span>
+            We Build Brands <br className="nh-hero-br" />
+            That <HeroTypewriter />
           </h1>
           <p className="nh-hero-sub">
-            Zonic LLC designs and builds high-performing digital experiences —
+            Zonic Media designs and builds high-performing digital experiences -
             from conversion-focused websites to full-scale marketing systems
             that generate measurable, predictable growth.
           </p>
@@ -424,6 +403,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── ABOUT ─────────────────────────────────────────── */}
+      <section className="nh-section nh-about-section">
+        <div className="nh-container">
+          <div className="nh-about-inner">
+            <div className="nh-about-copy">
+              <p className="nh-label">About Us</p>
+              <h2 className="nh-about-heading">
+                Built to Grow Businesses. <br />
+                Driven by Results.
+              </h2>
+              <p className="nh-about-body">
+                Zonic Media is a results-driven digital agency serving
+                businesses across the USA, UAE, India, Australia, UK, and
+                Canada. We combine deep strategy, premium design, and
+                performance-first development into one focused growth system
+                built to turn digital presence into measurable revenue.
+              </p>
+              <p className="nh-about-body">
+                We work with startups, local businesses, e-commerce brands, and
+                SaaS companies that want more than a vendor. They want a partner
+                invested in their outcomes. Every engagement starts with your
+                goals and ends with results you can see.
+              </p>
+              <div className="nh-about-highlight-list">
+                <div className="nh-about-highlight">
+                  <div className="nh-about-highlight-icon">
+                    <FaChartLine />
+                  </div>
+                  <div>
+                    <h3>Growth-first planning</h3>
+                    <p>
+                      Every project starts with business goals, channel
+                      priorities, and a clear conversion path before production
+                      begins.
+                    </p>
+                  </div>
+                </div>
+                <div className="nh-about-highlight">
+                  <div className="nh-about-highlight-icon">
+                    <FaLaptopCode />
+                  </div>
+                  <div>
+                    <h3>Execution under one roof</h3>
+                    <p>
+                      Strategy, design, development, SEO, and campaign support
+                      stay aligned because one team owns the delivery.
+                    </p>
+                  </div>
+                </div>
+                <div className="nh-about-highlight">
+                  <div className="nh-about-highlight-icon">
+                    <FaHandshake />
+                  </div>
+                  <div>
+                    <h3>Long-term partnership</h3>
+                    <p>
+                      We stay involved after launch with optimization,
+                      reporting, and next-step planning that keeps momentum
+                      going.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Link href="/about" className="buttons nh-about-cta">
+                Meet the Team <BtnArrow />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICES ──────────────────────────────────────── */}
       <section className="nh-section nh-services-section">
         <div className="nh-container">
@@ -433,72 +483,34 @@ export default function Home() {
             <p className="nh-section-sub">
               We turn ideas into impactful digital experiences that engage
               audiences and fuel measurable, long-term growth for your business.
+              From strategy and design to development and optimization, every
+              service is built to strengthen your brand, improve conversions,
+              and create momentum that keeps compounding after launch.
             </p>
           </div>
           <div className="nh-services-grid">
             {services.map((svc, i) => (
               <div key={i} className="nh-service-card">
                 <div className="nh-service-card-top">
+                  <div className="nh-service-icon">
+                    <Image
+                      src={svc.img}
+                      alt={svc.title}
+                      width={84}
+                      height={84}
+                      className="nh-service-icon-image"
+                    />
+                  </div>
                   <h3 className="nh-service-title">{svc.title}</h3>
                   <p className="nh-service-desc">{svc.desc}</p>
-                  <ul className="nh-service-features">
-                    {svc.features.map((f, j) => (
-                      <li key={j}>
-                        <FaCheck size={10} />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
                 <div className="nh-service-card-bottom">
                   <Link href={svc.href} className="nh-learn-more">
                     Learn more <FaArrowRight size={11} />
                   </Link>
-                  <div className="nh-service-bg-icon">{svc.icon}</div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="nh-process-outer">
-        <div className="nh-container">
-          <div className="nh-process-wrap">
-            <div className="nh-process-top">
-              <div className="nh-process-top-left">
-                <p className="nh-label nh-label-accent">5 Simple Steps</p>
-                <h2 className="nh-process-heading">
-                  Effortless Process,
-                  <br />
-                  Exceptional Results
-                </h2>
-              </div>
-              <div className="nh-process-rule" />
-            </div>
-            <div className="nh-process-grid">
-              {processSteps.map((step, i) => (
-                <div key={i} className="nh-process-card">
-                  <p className="nh-process-num">{step.num}</p>
-                  <h3 className="nh-process-title">{step.title}</h3>
-                  <p className="nh-process-desc">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="nh-process-footer">
-              <div className="nh-proof">
-                <div className="nh-avatars">
-                  <span>R</span>
-                  <span>T</span>
-                  <span>A</span>
-                  <span>M</span>
-                </div>
-                <p>Trusted by 100+ businesses that choose growth</p>
-              </div>
-              <Link href="/contact-us" className="buttons nh-btn-process">
-                Start Now <BtnArrow />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -513,7 +525,7 @@ export default function Home() {
                 <Image
                   src="/images/ChatGPT Image May 4, 2026, 03_12_21 PM.png"
                   fill
-                  alt="Zonic LLC web design and development process"
+                  alt="Zonic Media web design and development process"
                   sizes="(max-width: 991px) 100vw, 42vw"
                   style={{ objectFit: "contain", padding: "20px" }}
                 />
@@ -530,7 +542,7 @@ export default function Home() {
 
             {/* content column */}
             <div className="nh-why-content">
-              <p className="nh-label">Why Zonic LLC</p>
+              <p className="nh-label">Why Zonic Media</p>
               <h2 className="nh-why-heading">
                 The Growth Partner Built for Results
               </h2>
@@ -543,9 +555,7 @@ export default function Home() {
               <div className="nh-why-list">
                 {whyPoints.map((pt, i) => (
                   <div key={i} className="nh-why-item">
-                    <div className="nh-why-check">
-                      <FaCircleCheck size={15} />
-                    </div>
+                    <div className="nh-why-check">{pt.icon}</div>
                     <div>
                       <p className="nh-why-item-title">{pt.title}</p>
                       <p className="nh-why-item-desc">{pt.desc}</p>
@@ -593,10 +603,11 @@ export default function Home() {
             <div className="nh-process-footer">
               <div className="nh-proof">
                 <div className="nh-avatars">
-                  <span>R</span>
-                  <span>T</span>
-                  <span>A</span>
-                  <span>M</span>
+                  <span>Z</span>
+                  <span>O</span>
+                  <span>N</span>
+                  <span>I</span>
+                  <span>C</span>
                 </div>
                 <p>Trusted by 100+ businesses that choose growth</p>
               </div>
@@ -608,27 +619,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="nh-between-banner">
+      <section className="nh-section nh-finalcta-section">
         <div className="nh-container">
-          <div className="nh-between-banner-inner">
+          <div className="nh-finalcta-card">
             <p className="nh-label">Ready to Start?</p>
-            <h2>
-              Turn your strategy into shipped work that grows{" "}
-              <strong className="nh-heading-highlight">
-                traffic, leads, and revenue.
-              </strong>
+            <h2 className="nh-finalcta-heading">
+              Let&apos;s Build a Digital Growth System <br />
+              <span>That Turns Attention Into Revenue</span>
             </h2>
-            <span>
-              Bring us the goal, the challenge, or the campaign you want to
-              improve. We will help you turn it into a clear plan, a stronger
-              digital presence, and measurable next steps.
-            </span>
-            <div className="nh-between-banner-actions">
-              <Link
-                href="/contact-us"
-                className="buttons nh-between-banner-btn"
-              >
+            <p className="nh-finalcta-sub">
+              Whether you need a new website, a full-scale growth strategy, or a
+              complete digital transformation — Zonic Media delivers results
+              from day one. No fluff, no bloated timelines, just measurable
+              outcomes.
+            </p>
+            <div className="nh-finalcta-actions">
+              <Link href="/contact-us" className="buttons nh-btn-dark">
                 Start Your Project <BtnArrow />
+              </Link>
+              <Link href="/services" className="buttons nh-btn-finalcta-ghost">
+                View Services <BtnArrow />
               </Link>
             </div>
           </div>
@@ -668,7 +678,7 @@ export default function Home() {
           <div className="nh-local-growth-inner">
             <div className="nh-local-growth-media">
               <Image
-                src="/images/new-home/ChatGPT Image May 4, 2026, 02_34_31 PM.png"
+                src="/images/new-home/ChatGPT Image May 4, 2026, 02_35_28 PM.png"
                 fill
                 alt="Digital marketing campaign dashboard and growth planning"
                 sizes="(max-width: 991px) 100vw, 42vw"
@@ -986,7 +996,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="nh-dark-process-sub">
-              Zonic LLC keeps design, development, SEO, paid media, and
+              Zonic Media keeps design, development, SEO, paid media, and
               reporting aligned so your digital presence keeps improving after
               the first release.
             </p>
@@ -1002,51 +1012,6 @@ export default function Home() {
                 <p>{item.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PORTFOLIO ─────────────────────────────────────── */}
-      <section className="nh-section nh-portfolio-section">
-        <div className="nh-container">
-          <div className="nh-portfolio-head">
-            <div>
-              <p className="nh-label">Our Work</p>
-              <h2 className="nh-section-heading">
-                Results We&apos;ve Delivered
-              </h2>
-            </div>
-            <Link
-              href="/contact-us"
-              className="buttons nh-btn-outline nh-port-cta-desk"
-            >
-              Start Your Project <BtnArrow />
-            </Link>
-          </div>
-          <div className="nh-portfolio-grid">
-            {projects.map((proj, i) => (
-              <div key={i} className="nh-project-card">
-                <div className="nh-project-top">
-                  <p className="nh-project-cat">{proj.category}</p>
-                  <h3 className="nh-project-title">{proj.title}</h3>
-                  <p className="nh-project-impact">{proj.impact}</p>
-                </div>
-                <div className="nh-project-bottom">
-                  <p className="nh-project-result">
-                    <span className="nh-dot" />
-                    {proj.result}
-                  </p>
-                  <Link href={proj.href} className="nh-learn-more">
-                    View Details <FaArrowRight size={11} />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="nh-port-cta-mobile">
-            <Link href="/contact-us" className="buttons nh-btn-outline">
-              Start Your Project <BtnArrow />
-            </Link>
           </div>
         </div>
       </section>
@@ -1128,32 +1093,6 @@ export default function Home() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FINAL CTA ─────────────────────────────────────── */}
-      <section className="nh-section nh-finalcta-section">
-        <div className="nh-container">
-          <div className="nh-finalcta-card">
-            <p className="nh-label">Ready to Start?</p>
-            <h2 className="nh-finalcta-heading">
-              Let&apos;s Build a Digital Growth System <br />
-              <span>That Turns Attention Into Revenue</span>
-            </h2>
-            <p className="nh-finalcta-sub">
-              Whether you need a new website, a full-scale growth strategy, or a
-              complete digital transformation — Zonic LLC delivers results from
-              day one. No fluff, no bloated timelines, just measurable outcomes.
-            </p>
-            <div className="nh-finalcta-actions">
-              <Link href="/contact-us" className="buttons nh-btn-dark">
-                Start Your Project <BtnArrow />
-              </Link>
-              <Link href="/services" className="buttons nh-btn-finalcta-ghost">
-                View Services <BtnArrow />
-              </Link>
             </div>
           </div>
         </div>

@@ -1,0 +1,291 @@
+@import "./plumbSeo.css";
+@import "./philadelphia/philaSeo.css";
+
+.pest-hero.phila-seo-sec-1 {
+  background-image: url("/images/pest-seo/ChatGPT%20Image%20May%204,%202026,%2002_44_13%20PM%201.jpg");
+}
+
+.pest-hero .phila-seo-sec-1-layer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 0.92) 44%,
+    rgba(0, 0, 0, 0.72) 62%,
+    rgba(0, 0, 0, 0.12) 88%
+  );
+}
+
+.pest-hero .phila-seo-sec-1-banner-image {
+  top: 56%;
+  right: 36px;
+}
+
+.pest-hero .phila-seo-sec-1-banner-image img {
+  width: 260px;
+  border-radius: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.pest-hero .phila-seo-sec-1-content-wrapper {
+  max-width: 900px;
+}
+
+.pest-hero .phila-seo-sec-1-heading {
+  max-width: 780px;
+  text-wrap: balance;
+}
+
+.pest-hero .phila-seo-sec-1-descrp {
+  margin: 0;
+}
+
+.pest-hero .phila-seo-feature-grid .feature-card:last-child {
+  border: none;
+}
+
+.pest-intro-copy {
+  max-width: 980px;
+}
+
+.pest-intro-copy h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.pest-intro-copy h2 span {
+  color: var(--primary);
+}
+
+.pest-intro-copy p {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.pest-map-grid {
+  padding: 24px 100px 60px;
+}
+
+.pest-map-grid-heading {
+  margin: 0 0 48px;
+  color: var(--text);
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.18;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.pest-map-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+}
+
+.pest-map-card {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 20px 22px;
+  background: var(--white);
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(13, 13, 13, 0.08);
+}
+
+.pest-map-card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background: #1f1f1f;
+  color: var(--white);
+}
+
+.pest-map-card-icon.yellow {
+  background: var(--primary);
+  color: var(--text);
+}
+
+.pest-map-card h3 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.pest-map-card p {
+  margin: 0;
+  color: var(--color2);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.pest-map-image {
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.pest-map-image img {
+  object-fit: cover;
+}
+
+.pest-growth-story {
+  padding: 10px 100px 60px;
+}
+
+.pest-growth-story-image {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.pest-growth-story-image img {
+  object-fit: cover;
+}
+
+.pest-growth-story-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.pest-growth-story-copy h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.pest-growth-story-copy h2 span {
+  color: var(--primary);
+}
+
+.pest-growth-story-copy p {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.pest-growth-story-copy .plumb-availability-cta {
+  margin-top: 8px;
+}
+
+.pest-map-copy .plumb-maps-heading {
+  color: var(--text);
+  max-width: 640px;
+}
+
+.pest-map-copy .plumb-maps-heading span {
+  color: var(--primary);
+}
+
+.pest-map-copy .plumb-maps-text {
+  color: var(--text);
+}
+
+.pest-map-copy .plumb-maps-cta {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.pest-map-copy .plumb-maps-cta:hover {
+  background: #e6b000;
+}
+
+.pest-why-list {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.pest-availability-image img {
+  object-position: center center;
+}
+
+@media (max-width: 991.98px) {
+  .pest-hero .phila-seo-sec-1-banner-image {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 28px;
+  }
+
+  .pest-hero .phila-seo-sec-1-banner-image img {
+    width: min(260px, 58vw);
+  }
+
+  .pest-intro-copy h2,
+  .pest-map-grid-heading,
+  .pest-growth-story-copy h2 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .pest-map-grid,
+  .pest-growth-story {
+    padding: 0 20px 40px;
+  }
+
+  .pest-map-image {
+    min-height: 320px;
+    margin-top: 24px;
+  }
+
+  .pest-growth-story-image {
+    min-height: 300px;
+    margin-bottom: 28px;
+  }
+
+  .pest-growth-story-copy {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pest-intro-copy h2,
+  .pest-map-grid-heading,
+  .pest-growth-story-copy h2 {
+    font-size: 28px;
+    line-height: 1.24;
+  }
+
+  .pest-map-card {
+    grid-template-columns: 58px 1fr;
+    padding: 18px;
+  }
+
+  .pest-map-card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

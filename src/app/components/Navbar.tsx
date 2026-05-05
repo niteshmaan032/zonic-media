@@ -136,6 +136,8 @@ function Navbar() {
     pathname === "/services/local-seo-services-for-hvac" ||
     pathname === "/services/industry/local-seo-services-for-hvac" ||
     pathname === "/services/industry/local-seo-for-roofing-companies" ||
+    pathname === "/services/industry/seo-services-for-plumber" ||
+    pathname === "/services/industry/seo-services-for-pest-control" ||
     pathname === "/services/industry/dental-seo-services" ||
     pathname === "/services/industry/pediatricians" ||
     pathname === "/services/industry/real-estate-seo-services";
