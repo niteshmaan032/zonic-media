@@ -2128,7 +2128,7 @@
   }
 
   .nh-hero-stat {
-    flex: 0 0 50%;
+    flex: 0 0 calc(50% - 7px);
     min-width: 0;
     padding: 0 10px;
     border-right: none;
@@ -2279,6 +2279,22 @@
   .nh-hero-cta-row .buttons {
     width: fit-content;
     max-width: max-content;
+  }
+
+  .nh-hero-stats {
+    padding-top: 28px;
+    gap: 24px 14px;
+  }
+
+  .nh-hero-stat {
+    flex: 0 0 calc(50% - 7px);
+    min-width: 0;
+    padding: 0 10px;
+    border-right: none;
+  }
+
+  .nh-hero-stat-val {
+    font-size: 38px;
   }
 
   .nh-float {
