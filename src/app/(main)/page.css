@@ -513,38 +513,55 @@
 }
 
 .nh-service-card:hover {
-  border-color: var(--primary);
   transform: translateY(-5px);
+}
+
+.nh-service-card-design:hover {
+  border-color: #efdabb;
+}
+
+.nh-service-card-ui:hover {
+  border-color: #d8e8f6;
+}
+
+.nh-service-card-branding:hover {
+  border-color: #f1dcc2;
+}
+
+.nh-service-card-marketing:hover {
+  border-color: #f2dfb5;
+}
+
+.nh-service-card-seo:hover {
+  border-color: #d3ebda;
+}
+
+.nh-service-card-software:hover {
+  border-color: #d7def5;
 }
 
 .nh-service-card-design {
   background: linear-gradient(180deg, #fff7ea 0%, #ffffff 100%);
-  border-color: #efdabb;
 }
 
 .nh-service-card-ui {
   background: linear-gradient(180deg, #eef8ff 0%, #ffffff 100%);
-  border-color: #d8e8f6;
 }
 
 .nh-service-card-branding {
   background: linear-gradient(180deg, #fff4e8 0%, #ffffff 100%);
-  border-color: #f1dcc2;
 }
 
 .nh-service-card-marketing {
   background: linear-gradient(180deg, #fff8e8 0%, #ffffff 100%);
-  border-color: #f2dfb5;
 }
 
 .nh-service-card-seo {
   background: linear-gradient(180deg, #eefbf3 0%, #ffffff 100%);
-  border-color: #d3ebda;
 }
 
 .nh-service-card-software {
   background: linear-gradient(180deg, #eff3ff 0%, #ffffff 100%);
-  border-color: #d7def5;
 }
 
 .nh-service-card-top {
@@ -2050,8 +2067,12 @@
     padding: 0 20px;
   }
 
+  .nh-hero {
+    padding: 112px 0 72px;
+  }
+
   .nh-section {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .nh-section-header {
@@ -2101,8 +2122,8 @@
   }
 
   .nh-hero-stats {
-    padding-top: 28px;
-    gap: 18px 0;
+    padding-top: 24px;
+    gap: 24px 14px;
   }
 
   .nh-hero-stat {
@@ -2136,6 +2157,14 @@
   .nh-finalcta-heading {
     font-size: 32px;
     line-height: 1.18;
+  }
+
+  .nh-about-section,
+  .nh-services-section,
+  .nh-why-section,
+  .nh-business-growth-section,
+  .nh-finalcta-section {
+    margin-top: 8px;
   }
 
   .nh-about-body,
