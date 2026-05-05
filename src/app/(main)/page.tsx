@@ -9,9 +9,9 @@ import {
   FaArrowRight,
   FaCode,
   FaBullhorn,
+  FaChartLine,
   FaMagnifyingGlass,
   FaRocket,
-  FaChartLine,
   FaStar,
   FaCircleCheck,
   FaStore,
@@ -76,6 +76,7 @@ const heroStats = [
 const services = [
   {
     img: "/images/new-home/graphic-design.png",
+    cardClassName: "nh-service-card-design",
     title: "Web Design & Development",
     desc: "High-performing, conversion-optimized websites built fast, mobile-first, and SEO-ready. We engineer digital experiences that turn visitors into paying customers.",
     href: "/services/web-design",
@@ -87,6 +88,7 @@ const services = [
   },
   {
     img: "/images/new-home/ui.png",
+    cardClassName: "nh-service-card-ui",
     title: "UI/UX Design",
     desc: "Intuitive, engaging interfaces crafted with user psychology and conversion principles in mind. Every pixel has a purpose — guiding users toward action.",
     href: "/services",
@@ -98,6 +100,7 @@ const services = [
   },
   {
     img: "/images/new-home/branding.png",
+    cardClassName: "nh-service-card-branding",
     title: "Branding",
     desc: "Strategic brand identities that build instant recognition and lasting trust. From logo design to brand guidelines, we craft the visual language of your business.",
     href: "/services",
@@ -109,6 +112,7 @@ const services = [
   },
   {
     img: "/images/new-home/campaign.png",
+    cardClassName: "nh-service-card-marketing",
     title: "Digital Marketing",
     desc: "Data-driven campaigns that generate measurable traffic, qualified leads, and compounding revenue growth across every relevant digital channel.",
     href: "/services",
@@ -120,6 +124,7 @@ const services = [
   },
   {
     img: "/images/new-home/search-engine-optimization.png",
+    cardClassName: "nh-service-card-seo",
     title: "SEO Optimization",
     desc: "Rank higher in local and national search with proven strategies. We build sustainable organic visibility that compounds over time and outlasts paid channels.",
     href: "/services/local-seo-for-home-services",
@@ -131,6 +136,7 @@ const services = [
   },
   {
     img: "/images/new-home/app-development.png",
+    cardClassName: "nh-service-card-software",
     title: "Custom Software Solutions",
     desc: "Scalable, purpose-built software engineered to solve your unique business challenges. From workflow automation to full-stack applications built to last.",
     href: "/services",
@@ -426,10 +432,16 @@ export default function Home() {
                 invested in their outcomes. Every engagement starts with your
                 goals and ends with results you can see.
               </p>
+
               <div className="nh-about-highlight-list">
-                <div className="nh-about-highlight">
-                  <div className="nh-about-highlight-icon">
-                    <FaChartLine />
+                <div className="nh-about-highlight nh-about-highlight-planning">
+                  <div className="nh-about-highlight-image">
+                    <Image
+                      src="/images/new-home/up.png"
+                      alt="Growth-first planning illustration"
+                      width={72}
+                      height={72}
+                    />
                   </div>
                   <div>
                     <h3>Growth-first planning</h3>
@@ -440,9 +452,14 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="nh-about-highlight">
-                  <div className="nh-about-highlight-icon">
-                    <FaLaptopCode />
+                <div className="nh-about-highlight nh-about-highlight-execution">
+                  <div className="nh-about-highlight-image">
+                    <Image
+                      src="/images/new-home/app-development.png"
+                      alt="Execution under one roof illustration"
+                      width={72}
+                      height={72}
+                    />
                   </div>
                   <div>
                     <h3>Execution under one roof</h3>
@@ -452,9 +469,14 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="nh-about-highlight">
-                  <div className="nh-about-highlight-icon">
-                    <FaHandshake />
+                <div className="nh-about-highlight nh-about-highlight-partnership">
+                  <div className="nh-about-highlight-image">
+                    <Image
+                      src="/images/new-home/handshake.png"
+                      alt="Long-term partnership illustration"
+                      width={72}
+                      height={72}
+                    />
                   </div>
                   <div>
                     <h3>Long-term partnership</h3>
@@ -466,9 +488,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Link href="/about" className="buttons nh-about-cta">
-                Meet the Team <BtnArrow />
-              </Link>
             </div>
           </div>
         </div>
@@ -490,7 +509,7 @@ export default function Home() {
           </div>
           <div className="nh-services-grid">
             {services.map((svc, i) => (
-              <div key={i} className="nh-service-card">
+              <div key={i} className={`nh-service-card ${svc.cardClassName}`}>
                 <div className="nh-service-card-top">
                   <div className="nh-service-icon">
                     <Image

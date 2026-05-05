@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { landingPages } from "@/shared/landing-pages";
 
 const SITE_URL = "https://zonicllc.com";
 
@@ -12,12 +11,15 @@ const staticRoutes = [
   { path: "/services/gmb-reinstatement-help", priority: 0.8 },
   { path: "/services/gmb-verification-help", priority: 0.8 },
   { path: "/services/google-ads", priority: 0.8 },
+  { path: "/services/industry/car-towing", priority: 0.8 },
   { path: "/services/launchpad", priority: 0.8 },
   { path: "/services/local-seo-for-home-services", priority: 0.8 },
   { path: "/services/industry/dental-seo-services", priority: 0.8 },
   { path: "/services/industry/local-seo-services-for-hvac", priority: 0.8 },
   { path: "/services/industry/local-seo-for-roofing-companies", priority: 0.8 },
   { path: "/services/industry/pediatricians", priority: 0.8 },
+  { path: "/services/industry/pest-control", priority: 0.8 },
+  { path: "/services/industry/plumber", priority: 0.8 },
   { path: "/services/delaware/digital-marketing", priority: 0.8 },
   { path: "/services/philadelphia/digital-marketing", priority: 0.8 },
   { path: "/services/philadelphia/local-seo", priority: 0.8 },
@@ -25,12 +27,6 @@ const staticRoutes = [
   { path: "/services/philadelphia/sem", priority: 0.8 },
   { path: "/services/web-design", priority: 0.8 },
 ] as const;
-
-function toAbsoluteUrl(pathOrUrl: string) {
-  return pathOrUrl.startsWith("http")
-    ? pathOrUrl
-    : `${SITE_URL}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
-}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -43,13 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     }),
   );
-
-  const landingEntries: MetadataRoute.Sitemap = landingPages.map(({ metadata }) => ({
-    url: toAbsoluteUrl(metadata.openGraph.url),
-    lastModified,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
-  return [...staticEntries, ...landingEntries];
+  return staticEntries;
 }

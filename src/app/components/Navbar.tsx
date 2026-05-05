@@ -78,6 +78,13 @@ const localSeoServices = [
     link: "/services/industry/local-seo-for-roofing-companies",
   },
   {
+    id: "Car Towing SEO",
+    label: "Car Towing Local SEO",
+    image: "/images/header-seo.webp",
+    alt: "car towing seo",
+    link: "/services/industry/car-towing",
+  },
+  {
     id: "Dentist SEO",
     label: "Dentist Local SEO",
     image: "/images/dental/dental-link-thumb.jpg",
@@ -103,14 +110,14 @@ const localSeoServices = [
     label: "Plumber Local SEO",
     image: "/images/plumber/plumber-link-thumb.jpg",
     alt: "plumber seo",
-    link: "/plumber-seo-services",
+    link: "/services/industry/plumber",
   },
   {
     id: "Pest SEO",
     label: "Pest Control Local SEO",
     image: "/images/pest/pest-thumb-link.jpg",
     alt: "pest control seo",
-    link: "/pest-seo-services",
+    link: "/services/industry/pest-control",
   },
 ];
 
@@ -136,8 +143,11 @@ function Navbar() {
     pathname === "/services/local-seo-services-for-hvac" ||
     pathname === "/services/industry/local-seo-services-for-hvac" ||
     pathname === "/services/industry/local-seo-for-roofing-companies" ||
+    pathname === "/services/industry/car-towing" ||
     pathname === "/services/industry/seo-services-for-plumber" ||
+    pathname === "/services/industry/plumber" ||
     pathname === "/services/industry/seo-services-for-pest-control" ||
+    pathname === "/services/industry/pest-control" ||
     pathname === "/services/industry/dental-seo-services" ||
     pathname === "/services/industry/pediatricians" ||
     pathname === "/services/industry/real-estate-seo-services";
@@ -485,6 +495,23 @@ function Navbar() {
                         ))}
 
                         <Link
+                          href="/services/industry/car-towing"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaStore />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Car Towing Local SEO</strong>
+                            <span>
+                              Help towing companies capture urgent local
+                              searches and turn them into inbound dispatch
+                              calls.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
                           href="/services/industry/local-seo-for-roofing-companies"
                           className="services-core-card"
                         >
@@ -549,7 +576,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href="/plumber-seo-services"
+                          href="/services/industry/plumber"
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
@@ -565,7 +592,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href="/pest-seo-services"
+                          href="/services/industry/pest-control"
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
