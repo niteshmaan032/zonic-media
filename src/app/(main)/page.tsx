@@ -697,7 +697,7 @@ export default function Home() {
           <div className="nh-local-growth-inner">
             <div className="nh-local-growth-media">
               <Image
-                src="/images/new-home/ChatGPT Image May 4, 2026, 02_35_28 PM.png"
+                src="/images/new-home/ChatGPT Image May 5, 2026, 04_29_24 PM.png"
                 fill
                 alt="Digital marketing campaign dashboard and growth planning"
                 sizes="(max-width: 991px) 100vw, 42vw"
