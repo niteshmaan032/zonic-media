@@ -1249,7 +1249,7 @@
 }
 
 .nh-business-growth-section {
-  background: linear-gradient(135deg, #fff6cb 0%, #fffdf5 52%, #ffe89a 100%);
+  background: linear-gradient(135deg, #fff8ea 0%, #ffffff 55%, #fff1cf 100%);
 }
 
 .nh-business-growth-inner {
@@ -1281,7 +1281,7 @@
 
 .nh-business-growth-copy p,
 .nh-business-growth-steps p {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.75;
   color: #111111;
@@ -1951,7 +1951,7 @@
    ============================================================ */
 
 .nh-finalcta-section {
-  background: linear-gradient(135deg, #fff6cb 0%, #fffdf5 52%, #ffe89a 100%);
+  background: linear-gradient(135deg, #eef9ff 0%, #ffffff 55%, #dff3ff 100%);
   padding: 0;
 }
 
