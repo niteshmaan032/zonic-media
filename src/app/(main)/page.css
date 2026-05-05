@@ -28,7 +28,7 @@
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--color2);
   padding: 8px 16px;
   border: 1px solid currentColor;
@@ -155,14 +155,9 @@
 
 .nh-hero {
   position: relative;
-  background: linear-gradient(
-    155deg,
-    var(--stroke) 0%,
-    #ffffff 28%,
-    #ffffff 58%,
-    #fffef0 80%,
-    #fff8d6 100%
-  );
+  background:
+    linear-gradient(135deg, #f4fbff 0%, #e4f5ff 48%, #cfeeff 100%),
+    linear-gradient(155deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.45) 52%, rgba(255, 255, 255, 0.1) 100%);
   padding: 150px 0 108px;
   overflow: hidden;
 }
@@ -173,19 +168,24 @@
   inset: 0;
   background:
     radial-gradient(
-      ellipse 80% 60% at 50% 0%,
-      rgba(253, 193, 21, 0.12) 0%,
-      transparent 65%
+      ellipse 70% 55% at 100% 0%,
+      rgba(96, 191, 240, 0.18) 0%,
+      transparent 60%
     ),
     radial-gradient(
-      ellipse 50% 40% at 0% 60%,
-      rgba(27, 27, 27, 0.04) 0%,
+      ellipse 76% 58% at 0% 100%,
+      rgba(96, 191, 240, 0.08) 0%,
+      transparent 66%
+    ),
+    radial-gradient(
+      ellipse 48% 40% at 0% 60%,
+      rgba(96, 191, 240, 0.05) 0%,
       transparent 70%
     ),
     radial-gradient(
       ellipse 50% 40% at 100% 50%,
-      rgba(253, 193, 21, 0.07) 0%,
-      transparent 70%
+      rgba(96, 191, 240, 0.12) 0%,
+      transparent 72%
     );
   pointer-events: none;
 }
@@ -324,7 +324,6 @@
   font-size: 15px;
   font-weight: 500;
   padding: 12px 22px;
-  border: 1px solid color-mix(in srgb, var(--primary) 38%, var(--white));
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.85);
   -webkit-backdrop-filter: blur(10px);
@@ -695,7 +694,7 @@
   align-items: flex-start;
   gap: 18px;
   padding: 34px 30px;
-  background: var(--white);
+  background: transparent;
   border: 0;
   border-right: 1px solid var(--stroke);
   border-radius: 0;
@@ -710,20 +709,26 @@
   border-right: 0;
 }
 
-.nh-why-item:hover {
-  background: color-mix(in srgb, var(--primary) 12%, var(--white));
+.nh-why-item:nth-child(2),
+.nh-why-item:nth-child(4) {
+  background: transparent;
 }
 
 .nh-why-check {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 66px;
+  height: 66px;
   border-radius: 16px;
   display: grid;
   place-items: center;
   color: var(--secondary);
-  background: var(--primary);
+  background: color-mix(in srgb, var(--primary) 58%, var(--white));
   margin-top: 0;
+}
+
+.nh-why-check svg {
+  width: 26px;
+  height: 26px;
 }
 
 .nh-why-item-title {
@@ -1951,7 +1956,7 @@
    ============================================================ */
 
 .nh-finalcta-section {
-  background: linear-gradient(135deg, #eef9ff 0%, #ffffff 55%, #dff3ff 100%);
+  background: linear-gradient(135deg, #dcefff 0%, #f7fbff 52%, #c6e2f6 100%);
   padding: 0;
 }
 
@@ -2028,7 +2033,7 @@
 
 .nh-finalcta-section .nh-btn-finalcta-ghost {
   background-color: var(--white) !important;
-  border-color: var(--white) !important;
+  border: 1px solid var(--secondary) !important;
   color: var(--secondary) !important;
 }
 
