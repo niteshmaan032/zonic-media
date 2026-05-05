@@ -343,4 +343,8 @@
     font-size: 28px;
     line-height: 38px;
   }
+
+  .roof-sec-5-arrow {
+    display: none;
+  }
 }
