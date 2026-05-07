@@ -1,0 +1,449 @@
+/* ─────────────────────────────────────────
+   CHIROPRACTOR DIGITAL MARKETING — chiroDigital.css
+   Override layer on top of carTow.css + philaDigital.css
+   ───────────────────────────────────────── */
+
+/* ─── BLUE THEME (#0c7cde) overrides car-tow yellow ─── */
+.chiro-page {
+  --chiroprimary: #0c7cde;
+  --chiro-primary-strong: #075ea9;
+  --chiro-primary-deep: #063968;
+  --chiro-primary-soft: #d7ecfb;
+  --chiro-primary-mist: #eff7fe;
+  overflow-x: clip;
+}
+
+/* Buttons keep readable text on long mobile CTAs */
+.chiro-page .buttons {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+.chiro-page main,
+.chiro-page section,
+.chiro-phila-section,
+.chiro-page .car-tow-container,
+.chiro-page .phila-sec-10-inner,
+.chiro-page .phila-sec-10-content,
+.chiro-page .phila-sec-10-contact-form,
+.chiro-page .phila-test {
+  min-width: 0;
+}
+
+.chiro-page .car-tow-hero,
+.chiro-page .car-tow-section,
+.chiro-page .phila-sec-8,
+.chiro-page .phila-sec-9,
+.chiro-page .phila-sec-10 {
+  overflow-x: clip;
+}
+
+.chiro-page .car-tow-trust-card:hover {
+  border-color: rgba(12, 124, 222, 0.55);
+}
+
+.chiro-page .car-tow-hero,
+.chiro-page #chiro-problems,
+.chiro-page .car-tow-section-dark,
+.chiro-page .car-tow-final-section,
+.chiro-page .car-tow-section-alt,
+.chiro-page .car-tow-section:not(.phila-sec-8):not(.phila-sec-9):not(.phila-sec-10) {
+  --primary: var(--chiroprimary);
+}
+
+.chiro-page .car-tow-hero-layer {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.88) 10%,
+      rgba(255, 255, 255, 0.8) 42%,
+      rgba(255, 255, 255, 0.58) 60%,
+      rgba(255, 255, 255, 0.14) 84%
+    );
+}
+
+.chiro-page .car-tow-hero-copy,
+.chiro-page .car-tow-hero-body,
+.chiro-page .car-tow-hero-copy h1,
+.chiro-page .car-tow-hero-sub-head {
+  color: var(--secondary);
+}
+
+.chiro-page .car-tow-hero-copy h1 {
+  font-size: 52px;
+  line-height: 1.12;
+}
+
+.chiro-page .car-tow-hero .car-tow-eyebrow {
+  color: var(--chiroprimary);
+}
+
+.chiro-page .car-tow-hero .car-tow-trust-card strong {
+  color: var(--secondary);
+}
+
+.chiro-page .car-tow-hero .car-tow-trust-card span {
+  color: var(--secondary);
+}
+
+.chiro-page .car-tow-hero .car-tow-trust-card {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 124, 222, 0.2) 0%,
+    rgba(255, 255, 255, 0.24) 100%
+  );
+  border: 1px solid rgba(126, 188, 241, 0.42);
+  box-shadow: none;
+  backdrop-filter: blur(18px) saturate(155%);
+  -webkit-backdrop-filter: blur(18px) saturate(155%);
+}
+
+.chiro-page .car-tow-hero .car-tow-trust-card:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 124, 222, 0.26) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  border-color: rgba(12, 124, 222, 0.34);
+}
+
+.chiro-page .car-tow-hero .buttons {
+  color: var(--white);
+}
+
+.chiro-page .car-tow-hero .buttons__icon-wrapper,
+.chiro-page .car-tow-final-cta .buttons__icon-wrapper {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.chiro-page .car-tow-hero .car-tow-button-secondary {
+  color: var(--secondary);
+  border-color: rgba(15, 23, 42, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.chiro-page .car-tow-hero .car-tow-button-secondary .buttons__icon-wrapper {
+  color: var(--chiroprimary);
+}
+
+.chiro-page .car-tow-section-dark .car-tow-service-icon,
+.chiro-page .car-tow-process-btn.is-active .car-tow-process-btn-circle,
+.chiro-page .car-tow-process-btn-circle,
+.chiro-page .car-tow-process-detail-icon {
+  color: var(--white);
+}
+
+.chiro-page .car-tow-icon-box,
+.chiro-page .car-tow-service-icon,
+.chiro-page .car-tow-result-icon,
+.chiro-page .car-tow-metric-num-arrow {
+  color: var(--white);
+}
+
+.chiro-page .car-tow-results-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chiro-page .car-tow-section-dark .car-tow-service-icon {
+  background: var(--chiroprimary);
+}
+
+.chiro-page #chiro-problems {
+  background: transparent;
+}
+
+.chiro-page #chiro-problems .car-tow-info-card {
+  background: linear-gradient(180deg, #fffefe 0%, #fff6f6 100%);
+  border-color: rgba(210, 90, 90, 0.18);
+  height: 100%;
+}
+
+.chiro-page #chiro-problems .car-tow-info-card:hover {
+  border-color: rgba(210, 90, 90, 0.4);
+}
+
+.chiro-page #chiro-problems .car-tow-icon-box {
+  background: #d65a5a;
+  color: var(--white);
+  width: 66px;
+  height: 66px;
+  font-size: 28px;
+}
+
+.chiro-page #chiro-problems .car-tow-info-card p,
+.chiro-page #chiro-problems .car-tow-section-descrp {
+  color: #7a4a4a;
+}
+
+.chiro-page #chiro-problems .car-tow-center-head-content h2 {
+  max-width: 760px;
+}
+
+.chiro-page .car-tow-before-after {
+  align-items: stretch;
+}
+
+.chiro-page .chiro-ba-before,
+.chiro-page .chiro-ba-after {
+  position: relative;
+  overflow: hidden;
+}
+
+.chiro-page .chiro-ba-before {
+  background: linear-gradient(180deg, #fff8f8 0%, #fff1f1 100%) !important;
+  border: 1px solid rgba(214, 90, 90, 0.26) !important;
+}
+
+.chiro-page .chiro-ba-before:hover {
+  border-color: rgba(214, 90, 90, 0.5) !important;
+}
+
+.chiro-page .chiro-ba-before span.chiro-ba-label-before {
+  background: #fbe1e1;
+  color: #a53333;
+  border: 1px solid rgba(214, 90, 90, 0.28);
+}
+
+.chiro-page .chiro-ba-before h3 {
+  color: #8f2d2d;
+}
+
+.chiro-page .chiro-ba-before .chiro-ba-list-inner li,
+.chiro-page .car-tow-metric-num-before strong {
+  color: #9a3b3b;
+}
+
+.chiro-page .chiro-ba-after {
+  background: linear-gradient(180deg, #f4fdf7 0%, #ecfbf1 100%) !important;
+  border: 1px solid rgba(42, 161, 93, 0.24) !important;
+}
+
+.chiro-page .chiro-ba-after:hover {
+  border-color: rgba(42, 161, 93, 0.44) !important;
+}
+
+.chiro-page .car-tow-compare-card.chiro-ba-after span {
+  background: #dff6e7 !important;
+  color: #1d7b45 !important;
+  border: 1px solid rgba(42, 161, 93, 0.22);
+}
+
+.chiro-page .chiro-ba-after h3 {
+  color: #17673b !important;
+}
+
+.chiro-page .chiro-ba-after .chiro-ba-list-inner li {
+  color: #1f6d3e;
+}
+
+.chiro-page .chiro-ba-list-inner {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chiro-page .chiro-ba-list-inner li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.chiro-page .chiro-icon-red,
+.chiro-page .chiro-icon-green {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.chiro-page .chiro-icon-red {
+  color: #d65a5a;
+}
+
+.chiro-page .chiro-icon-green {
+  color: #2aa15d;
+}
+
+.chiro-page .car-tow-metric-num-before {
+  background: #fff1f1;
+  border: 1px solid rgba(214, 90, 90, 0.22);
+}
+
+.chiro-page .car-tow-metric-num-before .car-tow-metric-num-label {
+  color: #9a5a5a;
+}
+
+.chiro-page .car-tow-metric-num-after {
+  background: #edf9f1;
+  border: 1px solid rgba(42, 161, 93, 0.24);
+}
+
+.chiro-page .car-tow-metric-num-after .car-tow-metric-num-label {
+  color: #4f8d67;
+}
+
+.chiro-page .car-tow-table thead th:nth-child(2) {
+  background: #fff2f2;
+  color: #8f2d2d;
+}
+
+.chiro-page .car-tow-table thead th:nth-child(3) {
+  background: #eefaf2;
+  color: #17673b;
+}
+
+.chiro-page .car-tow-table tbody td:nth-child(2) {
+  background: #fff9f9;
+  color: #8a4a4a;
+}
+
+.chiro-page .car-tow-table tbody td:nth-child(3) {
+  background: #f6fcf8;
+  color: #2f6e47;
+}
+
+.chiro-page .car-tow-process-section {
+  background: #ffffff;
+  color: var(--secondary);
+}
+
+.chiro-page .car-tow-process-section .car-tow-center-head-content-light h2,
+.chiro-page .car-tow-process-section .car-tow-center-head-content-light .car-tow-section-descrp,
+.chiro-page .car-tow-process-section .car-tow-process-btn-label,
+.chiro-page .car-tow-process-section .car-tow-process-detail-body h3,
+.chiro-page .car-tow-process-section .car-tow-process-detail-body p,
+.chiro-page .car-tow-process-section .car-tow-process-detail-step {
+  color: var(--secondary);
+}
+
+.chiro-page .car-tow-process-section .car-tow-eyebrow {
+  color: var(--chiroprimary);
+}
+
+.chiro-page .car-tow-process-section .car-tow-process-line {
+  background: rgba(12, 124, 222, 0.14);
+}
+
+.chiro-page .car-tow-process-section .car-tow-process-btn-circle,
+.chiro-page .car-tow-process-section .car-tow-process-btn.is-active .car-tow-process-btn-circle,
+.chiro-page .car-tow-process-section .car-tow-process-detail-icon {
+  background: var(--chiroprimary);
+  color: var(--white);
+}
+
+.chiro-page .car-tow-process-section .car-tow-process-btn-num {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.chiro-page .car-tow-process-section .car-tow-process-detail {
+  background: linear-gradient(180deg, #f7fbff 0%, #eef6fd 100%);
+  border: 1px solid rgba(12, 124, 222, 0.14);
+  box-shadow: 0 18px 40px rgba(7, 94, 169, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.chiro-page .car-tow-final-cta {
+  margin-top: 0;
+  background: var(--chiroprimary);
+  color: var(--white);
+}
+
+.chiro-page .car-tow-final-cta h2,
+.chiro-page .car-tow-final-cta .car-tow-eyebrow,
+.chiro-page .car-tow-final-cta p {
+  color: var(--white) !important;
+}
+
+.chiro-page .car-tow-final-cta .buttons {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--white);
+}
+
+.chiro-page .car-tow-final-cta .car-tow-button-secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.chiro-page .phila-sec-8-heading,
+.chiro-page .phila-sec-9 .phila-sec-heading,
+.chiro-page .phila-sec-10-heading {
+  color: inherit;
+}
+
+.chiro-page .phila-sec-9,
+.chiro-page .phila-sec-10 {
+  background: transparent;
+}
+
+.chiro-page .phila-sec-10 {
+  padding-top: 0;
+}
+
+.chiro-page .phila-sec-10-info-icon {
+  color: inherit;
+}
+
+.chiro-page .phila-sec-10-info-card h3,
+.chiro-page .phila-sec-10-info-card a:hover {
+  color: inherit;
+}
+
+.chiro-page .phila-sec-10-contact-form > * {
+  min-width: 0;
+}
+
+@media (max-width: 991.98px) {
+  .chiro-page .car-tow-hero-copy h1 {
+    font-size: 44px;
+  }
+
+  .chiro-page .buttons {
+    width: 100%;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .chiro-page .car-tow-hero-actions,
+  .chiro-page .car-tow-final-actions {
+    width: 100%;
+  }
+
+  .chiro-page .car-tow-hero-layer {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.78) 52%,
+      rgba(255, 255, 255, 0.64) 100%
+    );
+  }
+
+  .chiro-page .phila-sec-10-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .chiro-page .car-tow-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .chiro-page .car-tow-hero-copy h1 {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+
+  .chiro-page .car-tow-process-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

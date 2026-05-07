@@ -129,6 +129,13 @@ const industryLinks = [
       "SEO and lead generation strategies built for agents, teams, and brokerages.",
     link: "/services/industry/real-estate-seo-services",
   },
+  {
+    id: "chiropractor-local-seo-services",
+    title: "Chiropractor Local SEO Services",
+    description:
+      "Local SEO, Google Maps visibility, and patient growth systems for chiropractic clinics.",
+    link: "/services/industry/chiropractor-local-seo-services",
+  },
 ];
 
 function Navbar() {
@@ -150,7 +157,8 @@ function Navbar() {
     pathname === "/services/industry/pest-control" ||
     pathname === "/services/industry/dental-seo-services" ||
     pathname === "/services/industry/pediatricians" ||
-    pathname === "/services/industry/real-estate-seo-services";
+    pathname === "/services/industry/real-estate-seo-services" ||
+    pathname === "/services/industry/chiropractor-local-seo-services";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);

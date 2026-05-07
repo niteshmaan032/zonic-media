@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\maann\\\\OneDrive\\\\Desktop\\\\zonic\" -Depth 3 -Name)",
+      "Bash(Select-String \"services|industry|philadel|car.tow|carTow\")",
+      "Bash(Select-Object -First 40)"
     ]
   }
 }

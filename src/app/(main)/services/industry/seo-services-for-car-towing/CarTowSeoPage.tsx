@@ -6,7 +6,7 @@ import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
-import "@/style/carTow.css";
+import "@/app/style/carTow.css";
 import "@/app/style/philadelphia/philaDigital.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { motion, useAnimation } from "framer-motion";
