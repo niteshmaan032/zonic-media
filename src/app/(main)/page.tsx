@@ -67,7 +67,7 @@ function BtnArrow() {
 /* ── data ─────────────────────────────────────────────────── */
 
 const heroStats = [
-  { value: "95%+", label: "Client Success Rate" },
+  { value: "200%", label: "Client Success Rate" },
   { value: "100+", label: "Brands Grown" },
   { value: "50+", label: "Projects Delivered" },
   { value: "24/7", label: "Dedicated Support" },

@@ -572,7 +572,7 @@ function page() {
 
             <div className="phila-sec-10-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Pediatric clinic marketing consultation"
                 className="phila-sec-10-image"

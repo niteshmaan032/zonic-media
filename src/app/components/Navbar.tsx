@@ -123,6 +123,13 @@ const localSeoServices = [
 
 const industryLinks = [
   {
+    id: "local-seo-for-law-firms",
+    title: "Law Firm Local SEO",
+    description:
+      "Local SEO, Google Maps visibility, and case inquiry growth systems for law firms.",
+    link: "/services/industry/local-seo-for-law-firms",
+  },
+  {
     id: "real-estate",
     title: "Real Estate SEO",
     description:
@@ -158,7 +165,8 @@ function Navbar() {
     pathname === "/services/industry/dental-seo-services" ||
     pathname === "/services/industry/pediatricians" ||
     pathname === "/services/industry/real-estate-seo-services" ||
-    pathname === "/services/industry/chiropractor-local-seo-services";
+    pathname === "/services/industry/chiropractor-local-seo-services" ||
+    pathname === "/services/industry/local-seo-for-law-firms";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);

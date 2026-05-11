@@ -1055,7 +1055,7 @@ export default function ChiroDigitalPage() {
 
             <div className="phila-sec-10-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Philadelphia marketing consultation and contact"
                 className="phila-sec-10-image"

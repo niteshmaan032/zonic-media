@@ -1,0 +1,994 @@
+/* ─────────────────────────────────────────
+   LAW FIRM MARKETING — lawSeo.css
+   Override layer on top of carTow.css + philaDigital.css
+   ───────────────────────────────────────── */
+
+:root {
+  --lawprimary: #edbf5f;
+}
+
+/* ─── NAVBAR ACTIVE ─── */
+.law-seo-navbar-active .navbar-wrapper {
+  background: var(--white);
+}
+
+/* ─── PAGE CONTAINER ─── */
+.law-seo-page {
+  background: var(--white);
+  color: var(--text);
+  overflow-x: clip;
+}
+
+.law-seo-page main,
+.law-seo-page section,
+.law-phila-section,
+.law-seo-page .car-tow-container,
+.law-seo-page .phila-sec-10-inner,
+.law-seo-page .phila-sec-10-content,
+.law-seo-page .phila-sec-10-contact-form,
+.law-seo-page .phila-test {
+  min-width: 0;
+}
+
+.law-seo-page .car-tow-hero,
+.law-seo-page .car-tow-section,
+.law-seo-page .phila-sec-8,
+.law-seo-page .phila-sec-9,
+.law-seo-page .phila-sec-10 {
+  overflow-x: clip;
+}
+
+/* ─── PRIMARY COLOR SCOPE ─── */
+.law-seo-page .car-tow-hero,
+.law-seo-page #law-problems,
+.law-seo-page .car-tow-section-dark,
+.law-seo-page .car-tow-final-section,
+.law-seo-page .car-tow-section-alt,
+.law-seo-page .car-tow-section {
+  --primary: var(--lawprimary);
+}
+
+/* Buttons — wrap on long labels */
+.law-seo-page .buttons {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+/* ─── HERO ─── */
+.law-seo-page .car-tow-hero-layer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.96) 14%,
+    rgba(0, 0, 0, 0.88) 52%,
+    rgba(0, 0, 0, 0.68) 66%,
+    rgba(0, 0, 0, 0.08) 88%
+  );
+}
+
+.law-seo-page .car-tow-hero {
+  background-position: center top;
+  background-size: cover;
+}
+
+.law-hero-title {
+  max-width: 760px;
+}
+
+.law-seo-page .car-tow-hero-sub-head {
+  display: none;
+}
+
+.law-seo-page .car-tow-trust-card strong {
+  font-size: 20px;
+  color: var(--lawprimary);
+}
+
+.law-hero-stat-card {
+  display: grid;
+  gap: 8px;
+}
+
+.law-hero-stat-label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.law-hero-stat-card strong {
+  font-size: 34px !important;
+  line-height: 1;
+  order: -1;
+}
+
+.law-seo-page .car-tow-trust-card span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.law-seo-page .car-tow-trust-card:hover {
+  border-color: rgba(237, 191, 95, 0.52);
+}
+
+.law-seo-page .car-tow-hero .buttons__icon-wrapper,
+.law-seo-page .car-tow-final-cta .buttons__icon-wrapper {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.law-cta-banner {
+  display: grid;
+  gap: 18px;
+}
+
+.law-cta-banner-tight {
+  justify-items: center;
+}
+
+.law-cta-banner-tight h2 {
+  max-width: 760px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.law-cta-banner-tight p {
+  max-width: 780px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.law-cta-banner-spacious {
+  gap: 20px;
+}
+
+.law-cta-banner-spacious .car-tow-final-actions {
+  margin-top: 10px !important;
+}
+
+/* ─── ICONS ─── */
+.law-seo-page .car-tow-icon-box,
+.law-seo-page .car-tow-service-icon,
+.law-seo-page .car-tow-result-icon,
+.law-seo-page .car-tow-metric-num-arrow {
+  color: var(--secondary);
+}
+
+.law-seo-page .car-tow-section-dark .car-tow-service-icon {
+  background: var(--lawprimary);
+  color: var(--secondary);
+}
+
+/* ─── PROBLEM SECTION (core challenge) ─── */
+.law-seo-page #law-problems {
+  background: transparent;
+}
+
+.law-seo-page #law-problems .car-tow-info-card {
+  background: linear-gradient(180deg, #fffefe 0%, #fff6f6 100%);
+  border-color: rgba(210, 90, 90, 0.18);
+  height: 100%;
+}
+
+.law-seo-page #law-problems .car-tow-info-card:hover {
+  border-color: rgba(210, 90, 90, 0.4);
+}
+
+.law-seo-page #law-problems .car-tow-icon-box {
+  background: #d65a5a;
+  color: var(--white);
+  width: 66px;
+  height: 66px;
+  font-size: 28px;
+}
+
+.law-seo-page #law-problems .car-tow-info-card p,
+.law-seo-page #law-problems .car-tow-section-descrp {
+  color: #7a4a4a;
+}
+
+.law-seo-page #law-problems .car-tow-center-head-content h2 {
+  max-width: 780px;
+}
+
+/* ─── BENEFITS SECTION (greenish) ─── */
+.law-benefits-section {
+  background: linear-gradient(180deg, #fffcf4 0%, #fff7e3 100%);
+}
+
+.law-benefits-section .car-tow-result-item {
+  background: var(--white);
+  border-left-color: #2aa15d;
+}
+
+.law-benefits-section .car-tow-result-icon {
+  background: #2aa15d;
+  color: var(--white);
+}
+
+.law-benefits-section .car-tow-result-item h3 {
+  color: var(--color2);
+}
+
+.law-benefits-section .car-tow-result-item:hover {
+  box-shadow: 0 10px 30px rgba(237, 191, 95, 0.16);
+}
+
+.law-benefits-section .car-tow-split-copy h2 {
+  color: var(--color2);
+}
+
+.law-benefits-section .car-tow-eyebrow {
+  color: var(--lawprimary);
+}
+
+.law-benefits-section .car-tow-check-list svg {
+  color: #2aa15d;
+}
+
+.law-benefits-section .car-tow-split-copy p,
+.law-benefits-section .car-tow-split-copy h3,
+.law-benefits-section .car-tow-result-item p {
+  color: #111;
+}
+
+.law-benefits-section .car-tow-split-copy h2,
+.law-benefits-section .car-tow-split-copy .car-tow-eyebrow,
+.law-benefits-section .car-tow-split-copy h3,
+.law-benefits-section .car-tow-split-copy p,
+.law-benefits-section .car-tow-split-copy li,
+.law-benefits-section .car-tow-result-item h3,
+.law-benefits-section .car-tow-result-item p {
+  color: #111;
+}
+
+.law-benefits-section .car-tow-split-copy li svg {
+  color: #2aa15d;
+}
+
+.law-benefits-section .car-tow-image-frame {
+  align-self: flex-start;
+}
+
+/* ─── NOT WORKING SECTION (reddish) ─── */
+.law-notworking-section {
+  background: transparent;
+}
+
+.law-notworking-section .car-tow-eyebrow {
+  color: var(--lawprimary);
+}
+
+.law-notworking-section .car-tow-center-head-content h2 {
+  color: var(--secondary);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.law-notworking-section .car-tow-section-descrp {
+  color: var(--color2);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.law-notworking-section .car-tow-center-head {
+  justify-content: center !important;
+}
+
+.law-notworking-section .car-tow-center-head-content {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* ─── PROBLEM CARDS (reddish style for not-working section) ─── */
+.law-problem-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 26px 28px;
+  border: 1px solid rgba(214, 90, 90, 0.22);
+  border-left: 4px solid #d65a5a;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fffcfc 0%, #fff7f7 100%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.law-problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(214, 90, 90, 0.1);
+  border-left-color: #b54040;
+}
+
+.law-problem-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #d65a5a;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.law-problem-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #8f2d2d;
+}
+
+.law-problem-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #a05050;
+  margin: 0;
+}
+
+/* ─── CASE STUDY METRICS ─── */
+.law-seo-page .car-tow-metric-num-before {
+  background: #fff1f1;
+  border: 1px solid rgba(214, 90, 90, 0.22);
+}
+
+.law-seo-page .car-tow-metric-num-before .car-tow-metric-num-label {
+  color: #9a5a5a;
+}
+
+.law-seo-page .car-tow-metric-num-before strong {
+  color: #9a3b3b;
+}
+
+.law-seo-page .car-tow-metric-num-after {
+  background: #edf9f1;
+  border: 1px solid rgba(42, 161, 93, 0.24);
+}
+
+.law-seo-page .car-tow-metric-num-after .car-tow-metric-num-label {
+  color: #4f8d67;
+}
+
+.law-seo-page .car-tow-metric-num-after strong {
+  color: #15803d;
+}
+
+/* ─── SEO VS ADS TABLE ─── */
+.law-seo-page .car-tow-table thead th:nth-child(2) {
+  background: #eefaf2;
+  color: #17673b;
+}
+
+.law-seo-page .car-tow-table thead th:nth-child(3) {
+  background: #fff5e5;
+  color: #7a4a10;
+}
+
+.law-seo-page .car-tow-table tbody td:nth-child(2) {
+  background: #f6fcf8;
+  color: #2f6e47;
+}
+
+.law-seo-page .car-tow-table tbody td:nth-child(3) {
+  background: #fffaf0;
+  color: #7a5520;
+}
+
+/* ─── COMPARE CONCLUSION ─── */
+.law-compare-conclusion {
+  margin-top: 24px;
+  padding: 22px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fffdf0 0%, #fff8d6 100%);
+  border: 1px solid rgba(237, 191, 95, 0.4);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+
+/* ─── WHY ZONIC — SIDE IMAGE LAYOUT ─── */
+.law-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.law-why-image-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 420px;
+  position: sticky;
+  top: 120px;
+}
+
+.law-why-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.law-why-image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.law-hidden-visual,
+.law-why-image-wrap {
+  display: none;
+}
+
+.law-strategy-compare-layout > .col-lg-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.law-journey-visual-stack {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
+.law-journey-image-frame {
+  min-height: 420px;
+}
+
+.law-journey-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.law-journey-support-card {
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(237, 191, 95, 0.28);
+}
+
+.law-journey-support-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background: #fff4d1;
+  color: var(--secondary);
+  font-size: 22px;
+}
+
+.law-journey-support-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.law-journey-support-card p {
+  margin: 0;
+  color: var(--color2);
+  line-height: 1.7;
+}
+
+.law-connected-phone {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.law-connected-old {
+  display: none;
+}
+
+.law-connected-image-frame {
+  height: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  border: 0 !important;
+  box-shadow: none;
+}
+
+.law-connected-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: transparent;
+}
+
+
+.law-connected-phone-frame {
+  background: #111;
+  border-radius: 42px;
+  padding: 14px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+}
+
+.law-connected-phone-frame > * {
+  background: #fff;
+}
+
+.law-connected-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px 8px;
+  border-radius: 30px 30px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.law-connected-search {
+  margin: 0 12px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid #e7e2d8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #202020;
+}
+
+.law-connected-chip-row {
+  display: flex;
+  gap: 10px;
+  padding: 14px 12px;
+  flex-wrap: wrap;
+}
+
+.law-connected-chip-row span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #e7e2d8;
+  font-size: 13px;
+  color: #3b3b3b;
+  background: #fffdfa;
+}
+
+.law-connected-map {
+  position: relative;
+  min-height: 300px;
+  margin: 0 12px;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.65) 48%, rgba(140,190,255,0.32) 48%, rgba(140,190,255,0.32) 58%, rgba(255,255,255,0.65) 58%),
+    repeating-linear-gradient(0deg, rgba(200,200,200,0.2) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, rgba(200,200,200,0.2) 0 1px, transparent 1px 30px),
+    linear-gradient(180deg, #fbfbfb 0%, #f1eee6 100%);
+}
+
+.law-connected-map::before,
+.law-connected-map::after {
+  content: "";
+  position: absolute;
+  background: rgba(237, 191, 95, 0.6);
+}
+
+.law-connected-map::before {
+  width: 120%;
+  height: 4px;
+  top: 35%;
+  left: -10%;
+  transform: rotate(-24deg);
+}
+
+.law-connected-map::after {
+  width: 120%;
+  height: 4px;
+  top: 54%;
+  left: -6%;
+  transform: rotate(18deg);
+}
+
+.law-connected-pin {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f45b42;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(244, 91, 66, 0.32);
+}
+
+.law-connected-pin svg {
+  transform: rotate(45deg);
+}
+
+.law-connected-pin-1 { top: 20%; left: 18%; }
+.law-connected-pin-2 { top: 26%; right: 18%; }
+.law-connected-pin-3 { bottom: 30%; left: 14%; }
+.law-connected-pin-4 { bottom: 18%; right: 26%; }
+
+.law-connected-user-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  background: #2f80ed;
+  border: 4px solid rgba(47, 128, 237, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.law-connected-map-label {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(36, 36, 36, 0.7);
+}
+
+.law-connected-map-label-center {
+  top: 42%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.law-connected-map-label-right {
+  top: 56%;
+  right: 10%;
+}
+
+.law-connected-sheet {
+  margin: 0 12px 12px;
+  padding: 14px 16px 18px;
+  border-radius: 0 0 28px 28px;
+  background: #fff;
+}
+
+.law-connected-sheet-handle {
+  width: 64px;
+  height: 5px;
+  border-radius: 999px;
+  background: #d8d8d8;
+  margin: 0 auto 14px;
+}
+
+.law-connected-result-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #ece7dd;
+}
+
+.law-connected-result-card:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.law-connected-result-card h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: #181818;
+}
+
+.law-connected-result-card p,
+.law-connected-result-card span {
+  display: block;
+  margin: 0;
+  color: #676767;
+  font-size: 14px;
+}
+
+.law-connected-result-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.law-connected-result-actions span {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8e6;
+  color: #1d6de0;
+  border: 1px solid #ece3c8;
+}
+
+.law-inline-form-section {
+  padding-top: 0;
+}
+
+.law-inline-form-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 30px 34px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff9eb 0%, #fff4d9 100%);
+  border: 1px solid rgba(237, 191, 95, 0.4);
+}
+
+.law-inline-form-copy h2 {
+  margin-bottom: 12px;
+  color: var(--secondary);
+  text-align: center;
+  font-size: 32px;
+  text-transform: capitalize;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.law-inline-form-copy p:last-child {
+  margin: 0;
+  color: var(--color2);
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.law-inline-form-copy .car-tow-eyebrow {
+  text-align: center;
+}
+
+.law-inline-form-copy {
+  text-align: center;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.law-inline-audit-form {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+
+.law-inline-audit-form input {
+  min-height: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(28, 28, 28, 0.12);
+  padding: 0 16px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.law-inline-audit-form textarea {
+  min-height: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(28, 28, 28, 0.12);
+  padding: 14px 16px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.92);
+  resize: vertical;
+}
+
+.law-inline-audit-form input::placeholder {
+  color: #7f7f7f;
+}
+
+.law-inline-audit-form textarea::placeholder {
+  color: #7f7f7f;
+}
+
+.law-inline-audit-form .buttons {
+  height: 54px;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+/* ─── PROCESS SECTION ─── */
+.law-seo-page .car-tow-process-section {
+  background: linear-gradient(180deg, #fffdf6 0%, #fff7e5 100%);
+  color: var(--secondary);
+}
+
+.law-seo-page .car-tow-process-section .car-tow-process-line {
+  background: rgba(237, 191, 95, 0.24);
+}
+
+.law-seo-page .car-tow-process-section .car-tow-process-btn.is-active .car-tow-process-btn-circle,
+.law-seo-page .car-tow-process-section .car-tow-process-detail-icon {
+  color: var(--secondary);
+}
+
+.law-process-light-section .car-tow-section-descrp,
+.law-process-light-section .car-tow-process-btn-label,
+.law-process-light-section .car-tow-process-detail-body p,
+.law-process-light-section .car-tow-process-detail-step {
+  color: var(--color2);
+}
+
+.law-process-light-section .car-tow-process-btn {
+  color: var(--secondary);
+}
+
+.law-process-light-section .car-tow-process-btn-circle,
+.law-process-light-section .car-tow-process-detail-icon {
+  background: #fff;
+  border: 1px solid rgba(237, 191, 95, 0.36);
+  box-shadow: 0 16px 30px rgba(237, 191, 95, 0.16);
+}
+
+.law-process-light-section .car-tow-process-detail {
+  background: #fff;
+  border: 1px solid rgba(237, 191, 95, 0.24);
+  box-shadow: 0 18px 40px rgba(18, 18, 18, 0.06);
+}
+
+.law-process-light-section .car-tow-process-detail-body h3 {
+  color: #111;
+}
+
+.law-green-cta {
+  background: #2aa15d !important;
+  color: #fff !important;
+  border-color: #2aa15d !important;
+}
+
+.law-green-cta .buttons__icon-wrapper {
+  color: #fff !important;
+}
+
+/* ─── PROCESS BOTTOM IMAGE ─── */
+.law-process-image {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 320px;
+  margin-top: 32px;
+}
+
+.law-process-image img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.law-process-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ─── FINAL CTA ─── */
+.law-seo-page .car-tow-final-cta {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.law-seo-page .car-tow-final-cta h2,
+.law-seo-page .car-tow-final-cta .car-tow-eyebrow,
+.law-seo-page .car-tow-final-cta p {
+  color: var(--white) !important;
+}
+
+/* ─── PHILA SECTION OVERRIDES ─── */
+.law-seo-page .phila-sec-8-heading,
+.law-seo-page .phila-sec-9 .phila-sec-heading,
+.law-seo-page .phila-sec-10-heading {
+  color: inherit;
+}
+
+.law-seo-page .phila-sec-9,
+.law-seo-page .phila-sec-10 {
+  background: transparent;
+}
+
+.law-seo-page .phila-sec-10 {
+  padding-top: 0;
+}
+
+.law-seo-page .phila-sec-10-info-icon {
+  color: inherit;
+}
+
+.law-seo-page .phila-sec-10-info-card h3,
+.law-seo-page .phila-sec-10-info-card a:hover {
+  color: inherit;
+}
+
+.law-seo-page .phila-sec-10-contact-form > * {
+  min-width: 0;
+}
+
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1199.98px) {
+  .law-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .law-why-image-wrap {
+    position: static;
+    min-height: 320px;
+  }
+
+  .law-inline-audit-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .law-inline-audit-form textarea,
+  .law-inline-audit-form .buttons {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .law-seo-page .buttons {
+    width: 100%;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .law-seo-page .car-tow-hero-actions,
+  .law-seo-page .car-tow-final-actions {
+    width: 100%;
+  }
+
+  .law-seo-page .phila-sec-10-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .law-problem-card {
+    padding: 20px;
+  }
+
+  .law-inline-form-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .law-journey-support-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  .law-seo-page .car-tow-process-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .law-problem-card {
+    gap: 14px;
+  }
+
+  .law-problem-card h3 {
+    font-size: 18px;
+  }
+
+  .law-compare-conclusion {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .law-why-grid {
+    gap: 24px;
+  }
+
+  .law-connected-phone-frame {
+    padding: 10px;
+    border-radius: 28px;
+  }
+
+  .law-connected-result-card {
+    flex-direction: column;
+  }
+
+  .law-inline-form-banner {
+    padding: 24px 20px;
+  }
+
+  .law-inline-audit-form {
+    grid-template-columns: 1fr;
+  }
+
+}

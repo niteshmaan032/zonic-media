@@ -944,7 +944,7 @@ function page() {
 
             <div className="realest-sec-11-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Real estate consultation and contact"
                 className="realest-sec-11-image"

@@ -633,7 +633,7 @@ function page() {
 
             <div className="phila-sec-10-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Pest control SEO consultation and contact"
                 className="phila-sec-10-image"

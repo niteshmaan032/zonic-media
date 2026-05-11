@@ -614,7 +614,7 @@ function Page() {
 
             <div className="dent-contact-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Dental SEO consultation and contact"
                 className="dent-contact-image"

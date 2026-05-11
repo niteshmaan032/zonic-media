@@ -680,7 +680,7 @@ function page() {
 
             <div className="roof-sec-contact-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-sec.png"
                 fill
                 alt="Roofing SEO consultation and contact"
                 className="roof-sec-contact-image"
