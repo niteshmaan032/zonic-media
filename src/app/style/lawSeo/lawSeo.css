@@ -942,6 +942,7 @@
     max-width: 100%;
     justify-content: center;
     gap: 14px;
+    white-space: nowrap;
   }
 
   .law-seo-page .car-tow-hero-actions,
@@ -969,6 +970,18 @@
 }
 
 @media (max-width: 767.98px) {
+  .law-seo-page .buttons {
+    width: auto;
+    max-width: calc(100vw - 32px);
+    min-width: 0;
+    gap: 8px;
+    padding: 12px 14px;
+    font-size: clamp(0.66rem, 2.55vw, 0.82rem);
+    line-height: 1.1;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
   .law-seo-page .car-tow-process-section {
     padding-left: 20px;
     padding-right: 20px;
@@ -989,6 +1002,20 @@
 
   .law-why-grid {
     gap: 24px;
+  }
+
+  .law-journey-image-frame {
+    min-height: 0;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .law-journey-image-frame img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
   }
 
   .law-connected-phone-frame {
