@@ -752,7 +752,7 @@ export default function LawSeoPage() {
                 className="buttons"
                 offset={120}
               >
-                Request My Free Marketing Audit
+                Get a Free Audit
                 <ArrowIcon />
               </HashScrollLink>
             </div>
@@ -805,7 +805,7 @@ export default function LawSeoPage() {
                     className="buttons"
                     offset={120}
                   >
-                    Get Your Free Strategy Review
+                    Get a Free Audit
                     <ArrowIcon />
                   </HashScrollLink>
                 </div>
@@ -894,7 +894,7 @@ export default function LawSeoPage() {
                 className="buttons"
                 offset={120}
               >
-                Book My Free Discovery Call
+                Book a Free Call
                 <ArrowIcon />
               </HashScrollLink>
             </div>
@@ -1170,7 +1170,7 @@ export default function LawSeoPage() {
                 )}
               </div>
               <button type="submit" className="buttons" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Submit Audit Request"}
+                {isSubmitting ? "Submitting..." : "Get a Free Audit"}
                 <ArrowIcon />
               </button>
               <div className="law-inline-audit-form-recaptcha">
@@ -1303,7 +1303,7 @@ export default function LawSeoPage() {
                 className="buttons law-green-cta"
                 offset={120}
               >
-                Fix These Problems With a Free Audit
+                Get a Free Audit
                 <ArrowIcon />
               </HashScrollLink>
             </div>
@@ -1466,7 +1466,7 @@ export default function LawSeoPage() {
                   className="buttons"
                   offset={120}
                 >
-                  Get My Free Marketing Strategy Review
+                  Get a Free Audit
                   <ArrowIcon />
                 </HashScrollLink>
               </div>
@@ -1551,14 +1551,14 @@ export default function LawSeoPage() {
                 className="buttons"
                 offset={120}
               >
-                Book Your Free Strategy Call
+                Book a Free Call
                 <ArrowIcon />
               </HashScrollLink>
               <a
                 href={SITE_CONTACT.phoneHref}
                 className="buttons car-tow-button-secondary"
               >
-                Call Us Directly
+                Book a Free Call
                 <ArrowIcon />
               </a>
             </div>
@@ -1719,14 +1719,14 @@ export default function LawSeoPage() {
                 className="buttons"
                 offset={120}
               >
-                Request My Free Law Firm Marketing Audit
+                Free Audit
                 <ArrowIcon />
               </HashScrollLink>
               <a
                 href={SITE_CONTACT.phoneHref}
                 className="buttons car-tow-button-secondary"
               >
-                Book a Strategy Call
+                Book a Free Call
                 <ArrowIcon />
               </a>
             </div>

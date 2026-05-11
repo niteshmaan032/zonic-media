@@ -976,7 +976,7 @@
     min-width: 0;
     gap: 8px;
     padding: 12px 14px;
-    font-size: clamp(0.66rem, 2.55vw, 0.82rem);
+    font-size: 16px;
     line-height: 1.1;
     white-space: nowrap;
     flex-wrap: nowrap;
