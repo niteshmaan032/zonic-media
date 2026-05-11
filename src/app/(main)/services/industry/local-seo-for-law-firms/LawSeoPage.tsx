@@ -663,13 +663,14 @@ export default function LawSeoPage() {
                     Get Your Free Law Firm Marketing Audit
                     <ArrowIcon />
                   </HashScrollLink>
-                  <a
-                    href="#law-problems"
+                  <HashScrollLink
+                    href="#law-contact-form"
                     className="buttons car-tow-button-secondary"
+                    offset={120}
                   >
                     See How Many Cases You Are Missing
                     <ArrowIcon />
-                  </a>
+                  </HashScrollLink>
                 </div>
                 <div className="car-tow-trust-grid">
                   {heroStats.map((item) => (
