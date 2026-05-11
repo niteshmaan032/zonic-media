@@ -67,7 +67,6 @@ const imgs = {
 
 type InlineAuditFormValues = {
   fullName: string;
-  email: string;
   contact: string;
   businessName: string;
   message: string;
@@ -522,7 +521,6 @@ export default function LawSeoPage() {
     reValidateMode: "onChange",
     defaultValues: {
       fullName: "",
-      email: "",
       contact: "",
       businessName: "",
       message: "",
@@ -549,7 +547,7 @@ export default function LawSeoPage() {
           sourcePage: pathname,
           pageUrl: window.location.href,
           fullName: data.fullName,
-          email: data.email,
+          email: SITE_CONTACT.email,
           contact: data.contact,
           businessName: data.businessName,
           message: `Business Name: ${data.businessName}. Issue: ${data.message}`,
@@ -1066,11 +1064,6 @@ export default function LawSeoPage() {
               onSubmit={handleSubmit(onInlineAuditSubmit)}
               noValidate
             >
-              <input
-                type="hidden"
-                {...register("email")}
-                value={SITE_CONTACT.email}
-              />
               <div className="law-inline-field">
                 <input
                   type="text"
