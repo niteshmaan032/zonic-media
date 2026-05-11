@@ -4,13 +4,17 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Script from "next/script";
+import { usePathname, useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 import { Col, Row } from "react-bootstrap";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import "@/app/style/carTow.css";
 import "@/app/style/philadelphia/philaDigital.css";
 import "@/app/style/lawSeo/lawSeo.css";
@@ -59,6 +63,14 @@ const imgs = {
   img7: "/images/law-seo/ChatGPT Image May 11, 2026, 12_44_27 PM.png",
   img8: "/images/law-seo/ChatGPT Image May 11, 2026, 12_46_23 PM.png",
   contact: "/images/contact-sec.png",
+};
+
+type InlineAuditFormValues = {
+  fullName: string;
+  email: string;
+  contact: string;
+  businessName: string;
+  message: string;
 };
 
 /* â”€â”€â”€ ARROW ICON â”€â”€â”€ */
@@ -124,7 +136,7 @@ const problemCards = [
   {
     icon: <FaUsers />,
     title: "Competitors Dominating Legal Search",
-    text: "Other firms in your market have stronger Google Business Profiles, more practice area content, better review strategies, and higher-ranking websites â€” and they are winning the case inquiries you should be generating.",
+    text: "Other firms in your market have stronger Google Business Profiles, more practice area content, better review strategies, and higher-ranking websites - and they are winning the case inquiries you should be generating.",
   },
   {
     icon: <FaExclamationTriangle />,
@@ -134,7 +146,7 @@ const problemCards = [
   {
     icon: <FaChartLine />,
     title: "No Clear Lead Tracking System",
-    text: "Without proper call tracking and form attribution, you cannot identify which marketing efforts are generating real case inquiries â€” making it impossible to make intelligent decisions about where to invest your budget.",
+    text: "Without proper call tracking and form attribution, you cannot identify which marketing efforts are generating real case inquiries - making it impossible to make intelligent decisions about where to invest your budget.",
   },
 ];
 
@@ -158,7 +170,7 @@ const systemCards = [
     tag: "Visibility",
     icon: <FaGavel />,
     title: "Google Business Profile Optimization",
-    text: "Your Google Business Profile is the single most visible element in local legal searches. We optimize every field â€” practice areas, descriptions, photos, Q&A, review responses, and posting cadence â€” to maximize local map ranking.",
+    text: "Your Google Business Profile is the single most visible element in local legal searches. We optimize every field - practice areas, descriptions, photos, Q&A, review responses, and posting cadence - to maximize local map ranking.",
   },
   {
     tag: "Content",
@@ -205,7 +217,7 @@ const benefitCards = [
   {
     icon: <FaBalanceScale />,
     title: "More Qualified Case Inquiries",
-    text: "Attract prospective clients who are actively searching for legal help in your practice areas â€” not general web visitors unlikely to need your specific services.",
+    text: "Attract prospective clients who are actively searching for legal help in your practice areas - not general web visitors unlikely to need your specific services.",
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -238,7 +250,7 @@ const notWorkingCards = [
   {
     icon: <FaSearch />,
     title: "Competitors Win High-Intent Searches",
-    text: "Other law firms with stronger local SEO will capture the case inquiries from clients actively searching for an attorney in your practice areas â€” searches that should be reaching your firm first.",
+    text: "Other law firms with stronger local SEO will capture the case inquiries from clients actively searching for an attorney in your practice areas - searches that should be reaching your firm first.",
   },
   {
     icon: <FaMoneyBillWave />,
@@ -248,7 +260,7 @@ const notWorkingCards = [
   {
     icon: <FaGlobe />,
     title: "Website Traffic Does Not Become Consultations",
-    text: "Without conversion-focused web design and clear practice area content, prospective clients who do visit your website will leave without taking action â€” and contact a competing firm instead.",
+    text: "Without conversion-focused web design and clear practice area content, prospective clients who do visit your website will leave without taking action - and contact a competing firm instead.",
   },
   {
     icon: <FaThumbsDown />,
@@ -263,7 +275,7 @@ const notWorkingCards = [
   {
     icon: <FaChartLine />,
     title: "Leads Are Not Tracked or Attributed",
-    text: "Without proper call and form tracking, you have no visibility into which marketing efforts are producing real case inquiries â€” making every budget decision a guess rather than a data-driven choice.",
+    text: "Without proper call and form tracking, you have no visibility into which marketing efforts are producing real case inquiries - making every budget decision a guess rather than a data-driven choice.",
   },
 ];
 
@@ -330,7 +342,7 @@ const whyCards = [
   {
     icon: <FaGavel />,
     title: "We Focus on Qualified Consultations",
-    text: "Our law firm marketing services are measured by consultation requests and case inquiries â€” not impressions, clicks, or vanity metrics that do not translate into real business growth.",
+    text: "Our law firm marketing services are measured by consultation requests and case inquiries - not impressions, clicks, or vanity metrics that do not translate into real business growth.",
   },
   {
     icon: <FaSearch />,
@@ -360,7 +372,7 @@ const whyCards = [
   {
     icon: <FaShieldAlt />,
     title: "We Understand Legal Industry Trust Factors",
-    text: "Prospective legal clients are cautious and selective. We incorporate trust signals â€” credentials, reviews, practice area depth, and clear communication â€” into every aspect of your digital presence.",
+    text: "Prospective legal clients are cautious and selective. We incorporate trust signals - credentials, reviews, practice area depth, and clear communication - into every aspect of your digital presence.",
   },
   {
     icon: <FaHandshake />,
@@ -406,7 +418,7 @@ const processSteps = [
     step: "01",
     icon: <FaSearch />,
     title: "Audit and Market Analysis",
-    text: "We conduct a thorough review of your current online presence, local search performance, competitor positioning, Google Business Profile health, and website conversion gaps â€” identifying exactly where your firm is losing case inquiries and what needs to change first.",
+    text: "We conduct a thorough review of your current online presence, local search performance, competitor positioning, Google Business Profile health, and website conversion gaps - identifying exactly where your firm is losing case inquiries and what needs to change first.",
   },
   {
     step: "02",
@@ -470,7 +482,7 @@ const faqs = [
     question:
       "What makes Zonic Media different from other law firm marketing agencies?",
     answer:
-      "Zonic Media focuses on qualified case inquiries rather than vanity metrics. We build integrated law firm marketing strategies â€” connecting local SEO, practice area content, website conversion, reviews, and tracking â€” into one coordinated system. We limit the number of law firms we work with per market to avoid conflicts of interest, and we provide transparent monthly reporting so you always understand what your marketing investment is producing.",
+      "Zonic Media focuses on qualified case inquiries rather than vanity metrics. We build integrated law firm marketing strategies - connecting local SEO, practice area content, website conversion, reviews, and tracking - into one coordinated system. We limit the number of law firms we work with per market to avoid conflicts of interest, and we provide transparent monthly reporting so you always understand what your marketing investment is producing.",
   },
 ];
 
@@ -494,6 +506,82 @@ export default function LawSeoPage() {
   const lineControls = useAnimation();
   const cancelledRef = useRef(false);
   const processSectionRef = useRef<HTMLElement>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const [submitError, setSubmitError] = useState("");
+  const [smsConsent, setSmsConsent] = useState(true);
+  const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<InlineAuditFormValues>({
+    mode: "onChange",
+    reValidateMode: "onChange",
+    defaultValues: {
+      fullName: "",
+      email: "",
+      contact: "",
+      businessName: "",
+      message: "",
+    },
+  });
+
+  const onInlineAuditSubmit = async (data: InlineAuditFormValues) => {
+    setSubmitError("");
+
+    try {
+      const recaptchaToken = await recaptchaExecutorRef.current?.();
+
+      if (!recaptchaToken) {
+        throw new Error("reCAPTCHA is not ready yet. Please try again.");
+      }
+
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "gmb-reinstatement",
+          sourcePage: pathname,
+          pageUrl: window.location.href,
+          fullName: data.fullName,
+          email: data.email,
+          contact: data.contact,
+          businessName: data.businessName,
+          message: `Business Name: ${data.businessName}. Issue: ${data.message}`,
+          services: ["Google My Business (GMB)"],
+          smsConsent,
+          recaptchaToken,
+        }),
+      });
+
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
+
+      if (!response.ok) {
+        throw new Error(result?.message || "Failed to submit form.");
+      }
+
+      reset();
+      sessionStorage.setItem(
+        "thank_you_access_allowed_at",
+        Date.now().toString(),
+      );
+      router.push("/thank-you");
+    } catch (error) {
+      console.error("Inline audit form submission failed:", error);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
+    }
+  };
 
   useEffect(() => {
     document.body.classList.add("law-seo-navbar-active");
@@ -557,8 +645,8 @@ export default function LawSeoPage() {
                   Helping Law Firms Rank, Convert, and Grow Faster
                 </h1>
                 <p className="car-tow-hero-sub-head">
-                  Local SEO Â· Google Maps Ranking Â· Legal Website Conversion
-                  Â· Reputation Growth
+                  Local SEO, Google Maps Ranking, Legal Website Conversion,
+                  Reputation Growth
                 </p>
                 <p className="car-tow-hero-body">
                   Zonic Media provides law firm marketing services that build a
@@ -626,7 +714,7 @@ export default function LawSeoPage() {
               <p className="car-tow-section-descrp">
                 There is no shortage of demand for legal services. People facing
                 legal problems are searching for attorneys every day. The
-                challenge for most law firms is not demand â€” it is a
+                challenge for most law firms is not demand - it is a
                 visibility and conversion problem. They are not being found when
                 it matters, and when found, they are not compelling enough to
                 prompt contact.
@@ -697,9 +785,9 @@ export default function LawSeoPage() {
                 </p>
                 <p>
                   Marketing services for law firms need to account for this
-                  compressed decision process. Your entire online presence â€”
+                  compressed decision process. Your entire online presence -
                   from your Google Maps listing and reviews to your
-                  website&apos;s practice area pages and contact flow â€” must
+                  website&apos;s practice area pages and contact flow - must
                   work together to build trust and prompt action in a very short
                   window of time.
                 </p>
@@ -728,7 +816,7 @@ export default function LawSeoPage() {
                 <div className="car-tow-image-frame law-journey-image-frame">
                   <img
                     src={imgs.img1}
-                    alt="Attorney consulting with client â€” how prospective clients choose a law firm online"
+                    alt="Attorney consulting with client - how prospective clients choose a law firm online"
                   />
                 </div>
                 <div className="law-journey-support-grid">
@@ -869,8 +957,8 @@ export default function LawSeoPage() {
                     <article className="law-connected-result-card">
                       <div>
                         <h3>Best Law Firm</h3>
-                        <p>4.8 stars Â· Personal injury lawyer</p>
-                        <span>Open Â· Riverfront Ave</span>
+                        <p>4.8 stars , Personal injury lawyer</p>
+                        <span>Open , Riverfront Ave</span>
                       </div>
                       <div className="law-connected-result-actions">
                         <span>
@@ -884,8 +972,8 @@ export default function LawSeoPage() {
                     <article className="law-connected-result-card">
                       <div>
                         <h3>Best Law Firm</h3>
-                        <p>4.7 stars Â· Corporate lawyer</p>
-                        <span>Open Â· Harborview Dr</span>
+                        <p>4.7 stars , Corporate lawyer</p>
+                        <span>Open , Harborview Dr</span>
                       </div>
                       <div className="law-connected-result-actions">
                         <span>
@@ -899,8 +987,8 @@ export default function LawSeoPage() {
                     <article className="law-connected-result-card">
                       <div>
                         <h3>Best Law Firm</h3>
-                        <p>4.6 stars Â· Family law attorney</p>
-                        <span>Open Â· Court St</span>
+                        <p>4.6 stars , Family law attorney</p>
+                        <span>Open , Court St</span>
                       </div>
                       <div className="law-connected-result-actions">
                         <span>
@@ -973,39 +1061,132 @@ export default function LawSeoPage() {
                 Maps presence, and conversion gaps.
               </p>
             </div>
-            <form action="#law-contact-form" className="law-inline-audit-form">
+            <form
+              className="law-inline-audit-form"
+              onSubmit={handleSubmit(onInlineAuditSubmit)}
+              noValidate
+            >
               <input
-                type="text"
-                name="name"
-                placeholder="Full name"
-                aria-label="Full name"
-                required
+                type="hidden"
+                {...register("email")}
+                value={SITE_CONTACT.email}
               />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone number"
-                aria-label="Phone number"
-                required
-              />
-              <input
-                type="text"
-                name="business"
-                placeholder="Business name"
-                aria-label="Business name"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Your message"
-                aria-label="Your message"
-                rows={1}
-                required
-              />
-              <button type="submit" className="buttons">
-                Submit Audit Request
+              <div className="law-inline-field">
+                <input
+                  type="text"
+                  placeholder="Full name"
+                  aria-label="Full name"
+                  aria-invalid={errors.fullName ? "true" : "false"}
+                  {...register("fullName", {
+                    required: "Full name is required.",
+                    minLength: {
+                      value: 2,
+                      message: "Full name must be at least 2 characters.",
+                    },
+                    maxLength: {
+                      value: 100,
+                      message: "Full name must be at most 100 characters.",
+                    },
+                  })}
+                />
+                {errors.fullName && (
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.fullName.message}
+                  </p>
+                )}
+              </div>
+              <div className="law-inline-field">
+                <input
+                  type="tel"
+                  placeholder="Phone number"
+                  aria-label="Phone number"
+                  inputMode="numeric"
+                  aria-invalid={errors.contact ? "true" : "false"}
+                  onInput={(event) => {
+                    const target = event.currentTarget as HTMLInputElement;
+                    target.value = target.value.replace(/[^0-9]/g, "");
+                  }}
+                  {...register("contact", {
+                    required: "Phone number is required.",
+                    pattern: {
+                      value: /^[0-9]{7,15}$/,
+                      message:
+                        "Phone number must contain only digits (7 to 15).",
+                    },
+                  })}
+                />
+                {errors.contact && (
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.contact.message}
+                  </p>
+                )}
+              </div>
+              <div className="law-inline-field">
+                <input
+                  type="text"
+                  placeholder="Business name"
+                  aria-label="Business name"
+                  aria-invalid={errors.businessName ? "true" : "false"}
+                  {...register("businessName", {
+                    required: "Business name is required.",
+                    minLength: {
+                      value: 2,
+                      message: "Business name must be at least 2 characters.",
+                    },
+                    maxLength: {
+                      value: 100,
+                      message: "Business name must be at most 100 characters.",
+                    },
+                  })}
+                />
+                {errors.businessName && (
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.businessName.message}
+                  </p>
+                )}
+              </div>
+              <div className="law-inline-field">
+                <textarea
+                  placeholder="Your message"
+                  aria-label="Your message"
+                  rows={1}
+                  aria-invalid={errors.message ? "true" : "false"}
+                  {...register("message", {
+                    required: "Message is required.",
+                    minLength: {
+                      value: 5,
+                      message: "Message must be at least 5 characters.",
+                    },
+                    maxLength: {
+                      value: 1800,
+                      message: "Message must be at most 1800 characters.",
+                    },
+                  })}
+                />
+                {errors.message && (
+                  <p className="text-danger mt-2 mb-0">
+                    {errors.message.message}
+                  </p>
+                )}
+              </div>
+              <button type="submit" className="buttons" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit Audit Request"}
                 <ArrowIcon />
               </button>
+              <div className="law-inline-audit-form-recaptcha">
+                <RecaptchaCheckbox
+                  action={RECAPTCHA_ACTION}
+                  onExecutorReady={(executor) => {
+                    recaptchaExecutorRef.current = executor;
+                  }}
+                  onSmsConsentChange={setSmsConsent}
+                />
+              </div>
+              {submitError && (
+                <p className="text-danger text-center mb-0 law-inline-audit-error">
+                  {submitError}
+                </p>
+              )}
             </form>
           </div>
         </div>
@@ -1032,7 +1213,7 @@ export default function LawSeoPage() {
                 <h3 className="car-tow-sub-heading">
                   When law firm digital marketing services are executed
                   correctly, the impact goes well beyond increased website
-                  traffic â€” it creates a sustainable case inquiry engine.
+                  traffic - it creates a sustainable case inquiry engine.
                 </h3>
                 <p>
                   Law firms working with a structured marketing system see
@@ -1096,7 +1277,7 @@ export default function LawSeoPage() {
                 <h2>Common Problems Law Firms Face Without Zonic Media</h2>
                 <p className="car-tow-section-descrp" style={{ width: "100%" }}>
                   Without a structured law firm marketing system in place, these
-                  problems compound over time â€” costing your firm case
+                  problems compound over time - costing your firm case
                   inquiries, revenue, and competitive position in your market.
                 </p>
               </div>
@@ -1160,7 +1341,7 @@ export default function LawSeoPage() {
                   pages for personal injury and family law searches, cleaning up
                   local citations, implementing a structured review generation
                   process, and improving the website&apos;s consultation
-                  conversion flow â€” the firm began appearing more consistently
+                  conversion flow - the firm began appearing more consistently
                   in Google Maps results for high-intent legal searches. The
                   result was not simply more traffic. It was more calls, more
                   consultation form submissions, and a more predictable monthly
@@ -1238,8 +1419,8 @@ export default function LawSeoPage() {
               <h2>SEO vs Paid Ads for Law Firms</h2>
               <p className="car-tow-section-descrp">
                 Legal marketing involves significant budget decisions.
-                Understanding how SEO and paid advertising differ â€” and how
-                they work together â€” helps your firm make smarter, more
+                Understanding how SEO and paid advertising differ - and how
+                they work together - helps your firm make smarter, more
                 confident investment choices.
               </p>
             </div>
@@ -1275,7 +1456,7 @@ export default function LawSeoPage() {
                 The most effective strategy for most law firms is a{" "}
                 <strong>strong local SEO and content foundation</strong>{" "}
                 supported by targeted paid campaigns when specific short-term
-                goals require faster visibility â€” particularly for new
+                goals require faster visibility - particularly for new
                 practice areas or competitive markets where organic rankings
                 take longer to establish.
               </div>
@@ -1297,7 +1478,7 @@ export default function LawSeoPage() {
               >
                 <img
                   src={imgs.img6}
-                  alt="Law firm marketing strategy comparison â€” SEO versus paid advertising for attorneys"
+                  alt="Law firm marketing strategy comparison - SEO versus paid advertising for attorneys"
                 />
               </div>
             </Col>
@@ -1318,7 +1499,7 @@ export default function LawSeoPage() {
                 around how legal clients search, compare, and make contact
                 decisions. Our approach connects local SEO, content strategy,
                 web design, reputation growth, and tracking into a single system
-                focused on one outcome â€” more qualified case inquiries for
+                focused on one outcome - more qualified case inquiries for
                 your firm.
               </p>
             </div>
@@ -1357,7 +1538,7 @@ export default function LawSeoPage() {
             <p>
               Let&apos;s review your firm&apos;s current online presence and
               identify exactly what your law firm marketing services strategy
-              should prioritize. No pressure â€” just a focused conversation
+              should prioritize. No pressure - just a focused conversation
               about your market and the specific opportunities your firm is
               currently missing.
             </p>
@@ -1468,7 +1649,7 @@ export default function LawSeoPage() {
               className="buttons"
               offset={120}
             >
-              Start With Step One â€” Free Audit
+              Start With Step One - Free Audit
               <ArrowIcon />
             </HashScrollLink>
           </div>
@@ -1618,3 +1799,4 @@ export default function LawSeoPage() {
     </main>
   );
 }
+

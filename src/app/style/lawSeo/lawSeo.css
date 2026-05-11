@@ -749,9 +749,18 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
   align-items: center;
+  width: min(100%, 1180px);
+  margin-inline: auto;
 }
 
-.law-inline-audit-form input {
+.law-inline-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.law-inline-audit-form input,
+.law-inline-audit-form textarea {
   min-height: 54px;
   border-radius: 14px;
   border: 1px solid rgba(28, 28, 28, 0.12);
@@ -761,12 +770,7 @@
 }
 
 .law-inline-audit-form textarea {
-  min-height: 54px;
-  border-radius: 14px;
-  border: 1px solid rgba(28, 28, 28, 0.12);
   padding: 14px 16px;
-  color: var(--secondary);
-  background: rgba(255, 255, 255, 0.92);
   resize: vertical;
 }
 
@@ -778,10 +782,18 @@
   color: #7f7f7f;
 }
 
+.law-inline-audit-form-recaptcha,
+.law-inline-audit-error {
+  grid-column: 1 / -1;
+}
+
 .law-inline-audit-form .buttons {
   height: 54px;
   white-space: nowrap;
   justify-content: center;
+  justify-self: stretch;
+  width: 100%;
+  margin-top: 0;
 }
 
 /* ─── PROCESS SECTION ─── */
@@ -914,6 +926,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .law-inline-field {
+    grid-column: auto;
+  }
+
   .law-inline-audit-form textarea,
   .law-inline-audit-form .buttons {
     grid-column: 1 / -1;
@@ -922,14 +938,15 @@
 
 @media (max-width: 991.98px) {
   .law-seo-page .buttons {
-    width: 100%;
-    justify-content: space-between;
+    width: fit-content;
+    max-width: 100%;
+    justify-content: center;
     gap: 14px;
   }
 
   .law-seo-page .car-tow-hero-actions,
   .law-seo-page .car-tow-final-actions {
-    width: 100%;
+    width: auto;
   }
 
   .law-seo-page .phila-sec-10-info-grid {
@@ -990,5 +1007,8 @@
   .law-inline-audit-form {
     grid-template-columns: 1fr;
   }
-
+  
+  .law-inline-audit-form .buttons {
+    width: 100%;
+  }
 }
