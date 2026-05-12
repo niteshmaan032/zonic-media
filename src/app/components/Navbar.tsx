@@ -119,6 +119,13 @@ const localSeoServices = [
     alt: "pest control seo",
     link: "/services/industry/pest-control",
   },
+  {
+    id: "Commercial Cleaning SEO",
+    label: "Commercial Cleaning SEO",
+    image: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_27_37 PM.png",
+    alt: "commercial cleaning seo",
+    link: "/services/industry/local-seo-for-commercial-cleaning",
+  },
 ];
 
 const industryLinks = [
@@ -143,6 +150,13 @@ const industryLinks = [
       "Local SEO, Google Maps visibility, and patient growth systems for chiropractic clinics.",
     link: "/services/industry/chiropractor-local-seo-services",
   },
+  {
+    id: "commercial-cleaning-seo",
+    title: "Commercial Cleaning SEO",
+    description:
+      "Local SEO, Google Maps visibility, and contract inquiry growth for commercial cleaning companies.",
+    link: "/services/industry/local-seo-for-commercial-cleaning",
+  },
 ];
 
 function Navbar() {
@@ -166,7 +180,8 @@ function Navbar() {
     pathname === "/services/industry/pediatricians" ||
     pathname === "/services/industry/real-estate-seo-services" ||
     pathname === "/services/industry/chiropractor-local-seo-services" ||
-    pathname === "/services/industry/local-seo-for-law-firms";
+    pathname === "/services/industry/local-seo-for-law-firms" ||
+    pathname === "/services/industry/local-seo-for-commercial-cleaning";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);
