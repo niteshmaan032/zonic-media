@@ -1,6 +1,7 @@
 .car-tow-page {
   background: var(--white);
   color: var(--text);
+  overflow-x: clip;
 }
 
 .car-tow-navbar-active .navbar-wrapper {
@@ -10,6 +11,35 @@
 .car-tow-container {
   width: min(100%, 1280px);
   margin: 0 auto;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.car-tow-hero-copy {
+  min-width: 0;
+}
+
+.car-tow-contact-section .phila-sec-10-inner,
+.car-tow-contact-section .phila-sec-10-content,
+.car-tow-contact-section .phila-sec-10-contact-form,
+.car-tow-contact-section .lead-form-wrapper {
+  min-width: 0;
+}
+
+.car-tow-contact-section .phila-sec-10-info-card a,
+.car-tow-contact-section .lead-call-link {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.car-tow-contact-section .lead-form-wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.car-tow-contact-section .lead-form-wrapper .row > [class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .car-tow-section {
