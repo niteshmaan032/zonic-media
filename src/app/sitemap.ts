@@ -1,45 +1,75 @@
+import { readdirSync } from "fs";
+import { join, relative, sep } from "path";
 import type { MetadataRoute } from "next";
 
 const SITE_URL = "https://zonicllc.com";
+const APP_DIR = join(process.cwd(), "src", "app");
+const PAGE_FILE = "page.tsx";
 
-const staticRoutes = [
-  { path: "/", priority: 1 },
-  { path: "/about", priority: 0.8 },
-  { path: "/contact-us", priority: 0.8 },
-  { path: "/services", priority: 0.9 },
-  { path: "/services/gmb-optimization", priority: 0.8 },
-  { path: "/services/gmb-reinstatement-help", priority: 0.8 },
-  { path: "/services/gmb-verification-help", priority: 0.8 },
-  { path: "/services/google-ads", priority: 0.8 },
-  { path: "/services/industry/car-towing", priority: 0.8 },
-  { path: "/services/launchpad", priority: 0.8 },
-  { path: "/services/local-seo-for-home-services", priority: 0.8 },
-  { path: "/services/industry/dental-seo-services", priority: 0.8 },
-  { path: "/services/industry/local-seo-for-commercial-cleaning", priority: 0.8 },
-  { path: "/services/industry/local-seo-for-law-firms", priority: 0.8 },
-  { path: "/services/industry/local-seo-services-for-hvac", priority: 0.8 },
-  { path: "/services/industry/local-seo-for-roofing-companies", priority: 0.8 },
-  { path: "/services/industry/pediatricians", priority: 0.8 },
-  { path: "/services/industry/pest-control", priority: 0.8 },
-  { path: "/services/industry/plumber", priority: 0.8 },
-  { path: "/services/delaware/digital-marketing", priority: 0.8 },
-  { path: "/services/philadelphia/digital-marketing", priority: 0.8 },
-  { path: "/services/philadelphia/local-seo", priority: 0.8 },
-  { path: "/services/philadelphia/ppc", priority: 0.8 },
-  { path: "/services/philadelphia/sem", priority: 0.8 },
-  { path: "/services/web-design", priority: 0.8 },
-] as const;
+const EXCLUDED_ROUTE_SEGMENTS = new Set([
+  "api",
+  "coming-soon",
+  "legal",
+  "thank-you",
+  "[slug]",
+]);
+const EXCLUDED_ROUTE_GROUPS = new Set(["(admin)", "(admin-auth)"]);
+
+const PRIORITY_BY_PATH: Record<string, number> = {
+  "/": 1,
+  "/services": 0.9,
+  "/about": 0.8,
+  "/contact-us": 0.8,
+};
+
+function getPageFiles(dir: string): string[] {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const entryPath = join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      return getPageFiles(entryPath);
+    }
+
+    return entry.isFile() && entry.name === PAGE_FILE ? [entryPath] : [];
+  });
+}
+
+function toRoutePath(filePath: string): string | null {
+  const routePath = relative(APP_DIR, filePath);
+  const allSegments = routePath.split(sep).slice(0, -1);
+
+  if (allSegments.some((segment) => EXCLUDED_ROUTE_GROUPS.has(segment))) {
+    return null;
+  }
+
+  if (
+    allSegments.some((segment) => EXCLUDED_ROUTE_SEGMENTS.has(segment))
+  ) {
+    return null;
+  }
+
+  const segments = allSegments.filter(
+    (segment) => !(segment.startsWith("(") && segment.endsWith(")")),
+  );
+
+  if (segments.length === 0) {
+    return "/";
+  }
+
+  return `/${segments.join("/")}`;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+  const routes = getPageFiles(APP_DIR)
+    .map(toRoutePath)
+    .filter((route): route is string => route !== null)
+    .sort((a, b) => a.localeCompare(b));
 
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(
-    ({ path, priority }) => ({
-      url: `${SITE_URL}${path}`,
-      lastModified,
-      changeFrequency: path === "/" ? "weekly" : "monthly",
-      priority,
-    }),
-  );
-  return staticEntries;
+  return routes.map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified,
+    changeFrequency: path === "/" ? "weekly" : "monthly",
+    priority: PRIORITY_BY_PATH[path] ?? 0.8,
+  }));
 }
