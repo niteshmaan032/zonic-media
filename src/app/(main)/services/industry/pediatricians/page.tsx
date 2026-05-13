@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "@/app/style/philadelphia/philaDigital.css";
 import "@/app/style/pediatricians.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -377,6 +379,13 @@ function page() {
             </div>
           </Col>
         </Row>
+      </div>
+
+      <div className="iaf-section">
+        <InlineAuditForm
+          heading="Get Your Free Pediatric Practice SEO Audit"
+          description="Share your practice details and we will review your local search rankings, Google Maps visibility, and patient acquisition gaps at no cost."
+        />
       </div>
 
       <div className="pedi-sec-4">

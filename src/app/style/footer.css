@@ -43,6 +43,11 @@
   font-size: 18px;
 }
 
+.footer-contact-info li span {
+  color: var(--white);
+  font-size: 18px;
+}
+
 .footer-contact-info li a:hover {
   color: var(--primary);
 }

@@ -56,10 +56,10 @@
   background:
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.88) 10%,
-      rgba(255, 255, 255, 0.8) 42%,
-      rgba(255, 255, 255, 0.58) 60%,
-      rgba(255, 255, 255, 0.14) 84%
+      rgba(0, 0, 0, 0.97) 14%,
+      rgba(0, 0, 0, 0.9) 52%,
+      rgba(0, 0, 0, 0.7) 66%,
+      rgba(0, 0, 0, 0.06) 88%
     );
 }
 
@@ -67,7 +67,7 @@
 .chiro-page .car-tow-hero-body,
 .chiro-page .car-tow-hero-copy h1,
 .chiro-page .car-tow-hero-sub-head {
-  color: var(--secondary);
+  color: var(--white);
 }
 
 .chiro-page .car-tow-hero-copy h1 {
@@ -80,7 +80,7 @@
 }
 
 .chiro-page .car-tow-hero .car-tow-trust-card strong {
-  color: var(--secondary);
+  color: var(--white);
 }
 
 .chiro-page .car-tow-hero .car-tow-trust-card span {

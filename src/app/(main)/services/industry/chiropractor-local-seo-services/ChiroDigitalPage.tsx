@@ -9,6 +9,7 @@ import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import "@/app/style/carTow.css";
@@ -50,7 +51,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 /* ─── IMAGE PATHS ─── */
 const imgs = {
-  hero:    "/images/chiro-digital/woman-doing-leg-exercises-hospital.jpg",
+  hero:    "/images/chiro-digital/ChatGPT Image May 13, 2026, 06_27_49 PM.png",
   img1:    "/images/chiro-digital/ChatGPT Image May 7, 2026, 05_07_40 PM.png",
   img3:    "/images/chiro-digital/ChatGPT Image May 7, 2026, 05_11_53 PM.png",
 };
@@ -652,6 +653,15 @@ export default function ChiroDigitalPage() {
               </div>
             </Col>
           </Row>
+        </div>
+      </section>
+
+      <section className="car-tow-section">
+        <div className="car-tow-container">
+          <InlineAuditForm
+            heading="Get Your Free Chiropractic Practice SEO Audit"
+            description="Share your practice details and we will review your local search rankings, Google Maps visibility, and new patient conversion gaps at no cost."
+          />
         </div>
       </section>
 

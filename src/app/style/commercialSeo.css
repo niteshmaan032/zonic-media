@@ -93,6 +93,7 @@
   background: rgba(4, 57, 143, 0.12);
   -webkit-background-clip: unset;
   background-clip: unset;
+  width: fit-content;
 }
 
 .cseo-hero-stat-card {
@@ -261,7 +262,9 @@
   border-left: 4px solid var(--com-primary);
   border-radius: 14px;
   background: var(--white);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   height: 100%;
 }
 
@@ -524,7 +527,9 @@
   border-left: 4px solid #d65a5a;
   border-radius: 14px;
   background: linear-gradient(180deg, #fffcfc 0%, #fff7f7 100%);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   height: 100%;
 }
 
@@ -693,7 +698,9 @@
   color: var(--secondary);
 }
 
-.cseo-process-light-section .car-tow-process-btn.is-active .car-tow-process-btn-circle {
+.cseo-process-light-section
+  .car-tow-process-btn.is-active
+  .car-tow-process-btn-circle {
   border-color: var(--com-primary);
   background: var(--com-primary);
   color: var(--white);
@@ -706,7 +713,9 @@
   color: var(--com-primary);
 }
 
-.cseo-process-light-section .car-tow-process-btn.is-active .car-tow-process-btn-num {
+.cseo-process-light-section
+  .car-tow-process-btn.is-active
+  .car-tow-process-btn-num {
   background: var(--white);
   border-color: var(--com-primary);
   color: var(--com-primary);

@@ -157,6 +157,13 @@ const industryLinks = [
       "Local SEO, Google Maps visibility, and contract inquiry growth for commercial cleaning companies.",
     link: "/services/industry/local-seo-for-commercial-cleaning",
   },
+  {
+    id: "residential-cleaning-seo",
+    title: "Residential Cleaning SEO",
+    description:
+      "Local SEO, Google Maps visibility, and booking growth for house cleaning and maid service businesses.",
+    link: "/services/industry/local-seo-services-for-residential-cleaning",
+  },
 ];
 
 function Navbar() {
@@ -181,7 +188,8 @@ function Navbar() {
     pathname === "/services/industry/real-estate-seo-services" ||
     pathname === "/services/industry/chiropractor-local-seo-services" ||
     pathname === "/services/industry/local-seo-for-law-firms" ||
-    pathname === "/services/industry/local-seo-for-commercial-cleaning";
+    pathname === "/services/industry/local-seo-for-commercial-cleaning" ||
+    pathname === "/services/industry/local-seo-services-for-residential-cleaning";
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   // const [, setScrollDownDistance] = useState(0);

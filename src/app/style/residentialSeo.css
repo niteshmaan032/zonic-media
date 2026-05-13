@@ -1,0 +1,890 @@
+/* ─────────────────────────────────────────
+   RESIDENTIAL CLEANING SEO — residentialSeo.css
+   Override layer on top of carTow.css + philaDigital.css
+   ───────────────────────────────────────── */
+
+:root {
+  --residentail-primary: #73a83e;
+}
+
+/* ─── NAVBAR ACTIVE ─── */
+.rseo-navbar-active .navbar-wrapper {
+  background: var(--white);
+}
+
+/* ─── PAGE CONTAINER ─── */
+.rseo-page {
+  background: var(--white);
+  color: var(--text);
+  overflow-x: clip;
+}
+
+.rseo-page main,
+.rseo-page section,
+.rseo-phila-section,
+.rseo-page .car-tow-container,
+.rseo-page .phila-sec-10-inner,
+.rseo-page .phila-sec-10-content,
+.rseo-page .phila-sec-10-contact-form,
+.rseo-page .phila-test {
+  min-width: 0;
+}
+
+.rseo-page .car-tow-hero,
+.rseo-page .car-tow-section,
+.rseo-page .phila-sec-8,
+.rseo-page .phila-sec-9,
+.rseo-page .phila-sec-10 {
+  overflow-x: clip;
+}
+
+/* ─── PRIMARY COLOR SCOPE ─── */
+.rseo-page .car-tow-hero,
+.rseo-page .car-tow-section,
+.rseo-page .car-tow-section-dark,
+.rseo-page .car-tow-section-alt,
+.rseo-page .car-tow-final-section {
+  --primary: var(--residentail-primary);
+}
+
+/* Buttons */
+.rseo-page .buttons {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+
+/* ─── HERO ─── */
+.rseo-page .car-tow-hero-layer {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.97) 14%,
+    rgba(0, 0, 0, 0.9) 52%,
+    rgba(0, 0, 0, 0.7) 66%,
+    rgba(0, 0, 0, 0.06) 88%
+  );
+}
+
+.rseo-page .car-tow-hero {
+  background-position: center top;
+  background-size: cover;
+}
+
+.rseo-page .car-tow-hero .car-tow-eyebrow {
+  color: var(--white);
+}
+
+.rseo-page .car-tow-hero .car-tow-eyebrow::before,
+.rseo-page .car-tow-hero .car-tow-eyebrow::after {
+  background: currentColor;
+}
+
+.rseo-hero-title {
+  max-width: 780px;
+}
+
+.rseo-page .car-tow-hero-sub-head {
+  display: none;
+}
+
+.rseo-page .car-tow-trust-card strong {
+  font-size: 20px;
+  color: var(--residentail-primary);
+  background: rgba(115, 168, 62, 0.12);
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  width: fit-content;
+}
+
+.rseo-hero-stat-card {
+  display: grid;
+  gap: 8px;
+}
+
+.rseo-hero-stat-label {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.rseo-hero-stat-card strong {
+  font-size: 34px !important;
+  line-height: 1;
+  order: -1;
+  color: #b5e07a !important;
+}
+
+.rseo-page .car-tow-trust-card span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.rseo-page .car-tow-trust-card:hover {
+  border-color: rgba(115, 168, 62, 0.5);
+}
+
+.rseo-page .car-tow-hero .buttons__icon-wrapper,
+.rseo-page .car-tow-final-cta .buttons__icon-wrapper {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+/* ─── CTA BANNERS ─── */
+.rseo-cta-banner {
+  display: grid;
+  gap: 18px;
+}
+
+.rseo-cta-banner-tight {
+  justify-items: center;
+}
+
+.rseo-cta-banner-tight h2 {
+  max-width: 760px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.rseo-cta-banner-tight p {
+  max-width: 780px;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.rseo-cta-banner-spacious {
+  gap: 20px;
+}
+
+.rseo-cta-banner-spacious .car-tow-final-actions {
+  margin-top: 10px;
+}
+
+/* ─── ICONS ─── */
+.rseo-page .car-tow-icon-box {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-page .car-tow-service-icon {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-page .car-tow-result-icon {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-page .car-tow-metric-num-arrow {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-page .car-tow-section-dark .car-tow-service-icon {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+/* ─── PROBLEM SECTION ─── */
+.rseo-page #rseo-problems {
+  background: transparent;
+}
+
+.rseo-page #rseo-problems .car-tow-info-card {
+  background: linear-gradient(180deg, #fffefe 0%, #fff6f6 100%);
+  border-color: rgba(210, 90, 90, 0.18);
+  height: 100%;
+}
+
+.rseo-page #rseo-problems .car-tow-info-card:hover {
+  border-color: rgba(210, 90, 90, 0.4);
+}
+
+.rseo-page #rseo-problems .car-tow-icon-box {
+  background: #d65a5a;
+  color: var(--white);
+  width: 66px;
+  height: 66px;
+  font-size: 28px;
+}
+
+.rseo-page #rseo-problems .car-tow-info-card p,
+.rseo-page #rseo-problems .car-tow-section-descrp {
+  color: #111;
+}
+
+.rseo-page #rseo-problems .car-tow-center-head-content h2 {
+  max-width: 760px;
+}
+
+/* ─── SPECIALTIES SECTION ─── */
+.rseo-industry-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 26px;
+  border: 1px solid rgba(115, 168, 62, 0.14);
+  border-left: 4px solid var(--residentail-primary);
+  border-radius: 14px;
+  background: var(--white);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.rseo-industry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(115, 168, 62, 0.12);
+}
+
+.rseo-industry-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(115, 168, 62, 0.1);
+  color: var(--residentail-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.rseo-industry-card h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--secondary);
+}
+
+.rseo-industry-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color2);
+  margin: 0;
+}
+
+/* ─── JOURNEY ─── */
+.rseo-journey-visual-stack {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
+.rseo-journey-image-frame {
+  min-height: 420px;
+}
+
+.rseo-journey-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rseo-journey-support-card {
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(115, 168, 62, 0.18);
+}
+
+.rseo-journey-support-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background: rgba(115, 168, 62, 0.1);
+  color: var(--residentail-primary);
+  font-size: 22px;
+}
+
+.rseo-journey-support-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.rseo-journey-support-card p {
+  margin: 0;
+  color: var(--color2);
+  line-height: 1.7;
+}
+
+/* ─── INLINE FORM SECTION ─── */
+.rseo-inline-form-section {
+  padding-top: 0;
+}
+
+.rseo-inline-form-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 30px 34px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f0f8e8 0%, #d8edbe 100%);
+  border: 1px solid rgba(115, 168, 62, 0.22);
+}
+
+.rseo-inline-form-copy {
+  text-align: center;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.rseo-inline-form-copy h2 {
+  margin-bottom: 12px;
+  color: var(--secondary);
+  text-align: center;
+  font-size: 32px;
+  text-transform: capitalize;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.rseo-inline-form-copy p:last-child {
+  margin: 0;
+  color: var(--color2);
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.rseo-inline-form-copy .car-tow-eyebrow {
+  text-align: center;
+}
+
+.rseo-inline-audit-form {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+  width: min(100%, 1180px);
+  margin-inline: auto;
+}
+
+.rseo-inline-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.rseo-inline-audit-form input,
+.rseo-inline-audit-form textarea {
+  min-height: 54px;
+  border-radius: 14px;
+  border: 1px solid rgba(28, 28, 28, 0.12);
+  padding: 0 16px;
+  color: var(--secondary);
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 16px;
+}
+
+.rseo-inline-audit-form textarea {
+  padding: 14px 16px;
+  resize: vertical;
+}
+
+.rseo-inline-audit-form input::placeholder,
+.rseo-inline-audit-form textarea::placeholder {
+  color: #7f7f7f;
+}
+
+.rseo-inline-audit-form-recaptcha,
+.rseo-inline-audit-error {
+  grid-column: 1 / -1;
+}
+
+.rseo-inline-audit-form .buttons {
+  height: 54px;
+  white-space: nowrap;
+  justify-content: center;
+  justify-self: stretch;
+  width: 100%;
+  margin-top: 0;
+}
+
+/* ─── BENEFITS SECTION ─── */
+.rseo-benefits-section {
+  background: transparent;
+}
+
+.rseo-benefits-section .car-tow-result-item {
+  background: var(--white);
+  border-left-color: var(--residentail-primary);
+}
+
+.rseo-benefits-section .car-tow-result-icon {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-benefits-section .car-tow-result-item:hover {
+  box-shadow: 0 10px 30px rgba(115, 168, 62, 0.12);
+}
+
+.rseo-benefits-section .car-tow-eyebrow {
+  color: var(--residentail-primary);
+}
+
+.rseo-benefits-section .car-tow-check-list svg {
+  color: var(--residentail-primary);
+}
+
+.rseo-benefits-section .car-tow-split-copy h2,
+.rseo-benefits-section .car-tow-split-copy h3,
+.rseo-benefits-section .car-tow-split-copy p,
+.rseo-benefits-section .car-tow-split-copy li,
+.rseo-benefits-section .car-tow-result-item h3,
+.rseo-benefits-section .car-tow-result-item p {
+  color: #111;
+}
+
+.rseo-benefits-section .car-tow-split-copy li svg {
+  color: var(--residentail-primary);
+}
+
+.rseo-benefits-section .car-tow-image-frame {
+  align-self: flex-start;
+}
+
+/* ─── NOT WORKING SECTION ─── */
+.rseo-notworking-section {
+  background: transparent;
+}
+
+.rseo-notworking-section .car-tow-eyebrow {
+  color: var(--residentail-primary);
+}
+
+.rseo-notworking-section .car-tow-center-head {
+  justify-content: center;
+}
+
+.rseo-notworking-section .car-tow-center-head-content {
+  align-items: center;
+  text-align: center;
+}
+
+.rseo-notworking-section .car-tow-center-head-content h2 {
+  color: var(--secondary);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.rseo-notworking-section .car-tow-section-descrp {
+  color: var(--color2);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.rseo-problem-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 26px 28px;
+  border: 1px solid rgba(214, 90, 90, 0.22);
+  border-left: 4px solid #d65a5a;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fffcfc 0%, #fff7f7 100%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.rseo-problem-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(214, 90, 90, 0.1);
+  border-left-color: #b54040;
+}
+
+.rseo-problem-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #d65a5a;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.rseo-problem-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #8f2d2d;
+}
+
+.rseo-problem-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #a05050;
+  margin: 0;
+}
+
+/* ─── CASE STUDY METRICS ─── */
+.rseo-page .car-tow-metric-num-before {
+  background: #fff1f1;
+  border: 1px solid rgba(214, 90, 90, 0.22);
+}
+
+.rseo-page .car-tow-metric-num-before .car-tow-metric-num-label {
+  color: #9a5a5a;
+}
+
+.rseo-page .car-tow-metric-num-before strong {
+  color: #9a3b3b;
+}
+
+.rseo-page .car-tow-metric-num-after {
+  background: #edf9ec;
+  border: 1px solid rgba(115, 168, 62, 0.24);
+}
+
+.rseo-page .car-tow-metric-num-after .car-tow-metric-num-label {
+  color: #4f7a2a;
+}
+
+.rseo-page .car-tow-metric-num-after strong {
+  color: #3a6b12;
+}
+
+/* ─── SEO VS LEAD PLATFORMS TABLE ─── */
+.rseo-page .car-tow-table thead th:nth-child(2) {
+  background: #f0f8e8;
+  color: #3a6b12;
+}
+
+.rseo-page .car-tow-table thead th:nth-child(3) {
+  background: #fff5e5;
+  color: #7a4a10;
+}
+
+.rseo-page .car-tow-table tbody td:nth-child(2) {
+  background: #f0f8e8;
+  color: #2d5a0e;
+}
+
+.rseo-page .car-tow-table tbody td:nth-child(3) {
+  background: #fffaf0;
+  color: #7a5520;
+}
+
+/* ─── COMPARE CONCLUSION ─── */
+.rseo-compare-conclusion {
+  margin-top: 24px;
+  padding: 22px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f0f8e8 0%, #d8edbe 100%);
+  border: 1px solid rgba(115, 168, 62, 0.22);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--secondary);
+}
+
+/* ─── WHY ZONIC ─── */
+.rseo-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 48px;
+}
+
+.rseo-why-image-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 420px;
+  position: sticky;
+  top: 120px;
+  display: none;
+}
+
+.rseo-why-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.rseo-why-image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.rseo-hidden-visual {
+  display: none;
+}
+
+.rseo-strategy-compare-layout > .col-lg-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* ─── PROCESS SECTION ─── */
+.rseo-page .car-tow-process-section {
+  background: linear-gradient(180deg, #f0f8e8 0%, #d8edbe 100%);
+  color: var(--secondary);
+}
+
+.rseo-process-light-section .car-tow-section-descrp,
+.rseo-process-light-section .car-tow-process-btn-label,
+.rseo-process-light-section .car-tow-process-detail-body p,
+.rseo-process-light-section .car-tow-process-detail-step {
+  color: var(--color2);
+}
+
+.rseo-process-light-section .car-tow-process-btn {
+  color: var(--secondary);
+}
+
+.rseo-process-light-section .car-tow-process-line {
+  background: rgba(115, 168, 62, 0.18);
+}
+
+.rseo-process-light-section .car-tow-process-line-fill {
+  background: var(--residentail-primary);
+}
+
+.rseo-process-light-section .car-tow-process-btn-circle {
+  background: #fff;
+  border: 1px solid rgba(115, 168, 62, 0.28);
+  box-shadow: 0 16px 30px rgba(115, 168, 62, 0.12);
+  color: var(--secondary);
+}
+
+.rseo-process-light-section
+  .car-tow-process-btn.is-active
+  .car-tow-process-btn-circle {
+  border-color: var(--residentail-primary);
+  background: var(--residentail-primary);
+  color: var(--white);
+  box-shadow: 0 0 0 6px rgba(115, 168, 62, 0.14);
+}
+
+.rseo-process-light-section .car-tow-process-btn-num {
+  background: rgba(115, 168, 62, 0.08);
+  border: 1.5px solid rgba(115, 168, 62, 0.2);
+  color: var(--residentail-primary);
+}
+
+.rseo-process-light-section
+  .car-tow-process-btn.is-active
+  .car-tow-process-btn-num {
+  background: var(--white);
+  border-color: var(--residentail-primary);
+  color: var(--residentail-primary);
+}
+
+.rseo-process-light-section .car-tow-process-detail {
+  background: #fff;
+  border: 1px solid rgba(115, 168, 62, 0.18);
+  box-shadow: 0 18px 40px rgba(18, 18, 18, 0.06);
+}
+
+.rseo-process-light-section .car-tow-process-detail-icon {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+.rseo-process-light-section .car-tow-process-detail-body h3 {
+  color: #111;
+}
+
+.rseo-process-light-section .car-tow-process-detail-step {
+  background: var(--residentail-primary);
+  color: var(--white);
+}
+
+/* ─── GROWTH VISUAL FRAME ─── */
+.rseo-growth-visual-frame {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  height: 100%;
+  min-height: unset;
+}
+
+.rseo-growth-visual-frame img {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* ─── FINAL CTA ─── */
+.rseo-page .car-tow-final-cta {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.rseo-page .car-tow-final-cta h2,
+.rseo-page .car-tow-final-cta .car-tow-eyebrow,
+.rseo-page .car-tow-final-cta p {
+  color: var(--white) !important;
+}
+
+/* ─── PHILA SECTION OVERRIDES ─── */
+.rseo-page .phila-sec-8-heading,
+.rseo-page .phila-sec-9 .phila-sec-heading,
+.rseo-page .phila-sec-10-heading {
+  color: inherit;
+}
+
+.rseo-page .car-tow-section-dark .car-tow-center-head-content-light h2 {
+  color: var(--white) !important;
+}
+
+.rseo-page .phila-sec-9,
+.rseo-page .phila-sec-10 {
+  background: transparent;
+}
+
+.rseo-page .phila-sec-10 {
+  padding-top: 0;
+}
+
+.rseo-page .phila-sec-10-info-icon {
+  color: inherit;
+}
+
+.rseo-page .phila-sec-10-info-card h3,
+.rseo-page .phila-sec-10-info-card a:hover {
+  color: inherit;
+}
+
+.rseo-page .phila-sec-10-contact-form > * {
+  min-width: 0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (min-width: 992px) {
+  .rseo-hidden-visual,
+  .rseo-why-image-wrap {
+    display: block;
+  }
+
+  .rseo-strategy-compare-layout > .col-lg-8 {
+    flex: 0 0 66.666%;
+    max-width: 66.666%;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .rseo-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rseo-why-image-wrap {
+    position: static;
+    min-height: 320px;
+  }
+
+  .rseo-inline-audit-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rseo-inline-audit-form textarea,
+  .rseo-inline-audit-form .buttons {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .rseo-page .buttons {
+    width: fit-content;
+    max-width: 100%;
+    justify-content: center;
+    gap: 14px;
+    white-space: nowrap;
+  }
+
+  .rseo-page .car-tow-hero-actions,
+  .rseo-page .car-tow-final-actions {
+    width: auto;
+  }
+
+  .rseo-page .phila-sec-10-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rseo-inline-form-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .rseo-journey-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .rseo-page .buttons {
+    width: auto;
+    max-width: calc(100vw - 32px);
+    min-width: 0;
+    gap: 8px;
+    padding: 12px 14px;
+    font-size: 16px;
+    line-height: 1.1;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .rseo-inline-form-banner {
+    padding: 24px 20px;
+  }
+
+  .rseo-inline-audit-form {
+    grid-template-columns: 1fr;
+  }
+
+  .rseo-inline-audit-form .buttons {
+    width: 100%;
+  }
+
+  .rseo-journey-image-frame {
+    min-height: 0;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .rseo-journey-image-frame img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .rseo-why-grid {
+    gap: 24px;
+  }
+
+  .rseo-compare-conclusion {
+    padding: 18px 20px;
+    font-size: 15px;
+  }
+
+  .rseo-problem-card {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .rseo-problem-card h3 {
+    font-size: 18px;
+  }
+
+  .rseo-industry-card {
+    padding: 18px 20px;
+  }
+}

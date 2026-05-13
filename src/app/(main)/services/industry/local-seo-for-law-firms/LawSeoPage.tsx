@@ -52,7 +52,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 
 /* â”€â”€â”€ IMAGE PATHS â”€â”€â”€ */
 const imgs = {
-  hero: "/images/law-seo/ChatGPT Image May 11, 2026, 01_15_37 PM.png",
+  hero: "/images/law-seo/ChatGPT Image May 13, 2026, 06_14_24 PM.png",
   maps: "/images/law-seo/magnific_2958542805.png",
   img1: "/images/law-seo/ChatGPT Image May 11, 2026, 12_04_02 PM.png",
   img2: "/images/law-seo/ChatGPT Image May 11, 2026, 12_22_52 PM.png",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/style/localRoofing.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
@@ -400,6 +402,13 @@ function page() {
             </div>
           </Col>
         </Row>
+      </div>
+
+      <div className="iaf-section">
+        <InlineAuditForm
+          heading="Get Your Free Roofing Company SEO Audit"
+          description="Share your business details and we will review your local rankings, Google Business Profile, and lead conversion gaps at no cost."
+        />
       </div>
 
       {/* SECTION 6 - OUR PROVEN LOCAL SEO PROCESS (dark bg, 6 steps) */}

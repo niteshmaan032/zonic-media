@@ -2,7 +2,7 @@ import "@/app/style/footer.css";
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaRegClock } from "react-icons/fa6";
 import { BsArrowUpRightCircle } from "react-icons/bs";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
@@ -52,6 +52,10 @@ function Footer() {
                   >
                     {SITE_CONTACT.address}
                   </Link>
+                </li>
+                <li>
+                  <FaRegClock size={20} />
+                  <span>Mon – Fri &nbsp;|&nbsp; 9 AM – 5 PM</span>
                 </li>
               </ul>
             </Col>

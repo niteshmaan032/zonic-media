@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/style/pestSeo.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -358,6 +360,13 @@ function page() {
             </div>
           </Col>
         </Row>
+      </div>
+
+      <div className="iaf-section">
+        <InlineAuditForm
+          heading="Get Your Free Pest Control SEO Audit"
+          description="Share your business details and we will review your local search rankings, Google Business Profile, and lead conversion gaps at no cost."
+        />
       </div>
 
       <div className="roof-sec-5">

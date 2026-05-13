@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@/app/style/dentaSeo.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
@@ -370,6 +372,13 @@ function Page() {
           </Col>
         </Row>
       </section>
+
+      <div className="iaf-section">
+        <InlineAuditForm
+          heading="Get Your Free Dental Practice SEO Audit"
+          description="Share your practice details and we will review your local search rankings, Google Business Profile, and patient conversion gaps at no cost."
+        />
+      </div>
 
       <section className="dent-sec-6">
         <div className="dent-center-head">
