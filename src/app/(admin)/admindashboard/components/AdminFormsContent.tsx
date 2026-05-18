@@ -42,6 +42,31 @@ type EditorToolbarProps = {
 };
 
 const MAX_FEATURED_IMAGE_SIZE_BYTES = 500 * 1024;
+const FEATURED_IMAGE_REQUIRED_WIDTH = 1200;
+const FEATURED_IMAGE_REQUIRED_HEIGHT = 675;
+const FEATURED_IMAGE_RECOMMENDED_SIZE = `${FEATURED_IMAGE_REQUIRED_WIDTH} x ${FEATURED_IMAGE_REQUIRED_HEIGHT} px`;
+
+function getImageFileDimensions(file: File) {
+  return new Promise<{ width: number; height: number }>((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+      resolve({
+        width: image.naturalWidth,
+        height: image.naturalHeight,
+      });
+    };
+
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("Unable to read image dimensions."));
+    };
+
+    image.src = url;
+  });
+}
 
 function formatBlogDate(value: string) {
   if (!value) {
@@ -448,8 +473,11 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       }));
     };
 
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const handleImageUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const input = event.currentTarget;
+    const file = input.files?.[0];
 
     if (!file) {
       return;
@@ -466,16 +494,41 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     };
 
     if (!["image/jpeg", "image/png"].includes(file.type)) {
-      event.target.value = "";
+      input.value = "";
       clearFeaturedImage();
       setFeaturedImageError("Only JPG and PNG image formats are supported.");
       return;
     }
 
     if (file.size > MAX_FEATURED_IMAGE_SIZE_BYTES) {
-      event.target.value = "";
+      input.value = "";
       clearFeaturedImage();
       setFeaturedImageError("Featured image must be 500 KB or smaller.");
+      return;
+    }
+
+    let dimensions: { width: number; height: number };
+
+    try {
+      dimensions = await getImageFileDimensions(file);
+    } catch {
+      input.value = "";
+      clearFeaturedImage();
+      setFeaturedImageError(
+        `Unable to read image dimensions. Upload a ${FEATURED_IMAGE_RECOMMENDED_SIZE} JPG or PNG image.`,
+      );
+      return;
+    }
+
+    if (
+      dimensions.width !== FEATURED_IMAGE_REQUIRED_WIDTH ||
+      dimensions.height !== FEATURED_IMAGE_REQUIRED_HEIGHT
+    ) {
+      input.value = "";
+      clearFeaturedImage();
+      setFeaturedImageError(
+        `Featured image must be exactly ${FEATURED_IMAGE_RECOMMENDED_SIZE}. Uploaded image is ${dimensions.width} x ${dimensions.height} px.`,
+      );
       return;
     }
 
@@ -804,7 +857,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                   </div>
                   <p className="admin-blog-upload-note mb-0">
                     Only JPG and PNG image formats are supported. Max size: 500
-                    KB.
+                    KB. Recommended size: {FEATURED_IMAGE_RECOMMENDED_SIZE}
                   </p>
                   {featuredImageError ? (
                     <p className="admin-blog-upload-error mb-0">

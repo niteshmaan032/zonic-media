@@ -7,6 +7,8 @@ export const BLOG_COLLECTION = "blogs";
 export const BLOG_STATUSES = ["draft", "published"] as const;
 export const FEATURED_IMAGE_MAX_BYTES = 500 * 1024;
 export const FEATURED_IMAGE_TYPES = ["image/jpeg", "image/png"] as const;
+export const FEATURED_IMAGE_REQUIRED_WIDTH = 1200;
+export const FEATURED_IMAGE_REQUIRED_HEIGHT = 675;
 export const PUBLIC_BLOG_CACHE_TAG = "public-blogs";
 export const PUBLIC_BLOG_REVALIDATE_SECONDS = 300;
 
@@ -125,6 +127,112 @@ export async function ensureBlogIndexes() {
   });
 
   return globalThis.zonicBlogIndexesPromise;
+}
+
+type ImageDimensions = {
+  width: number;
+  height: number;
+};
+
+function getPngDimensions(bytes: Uint8Array): ImageDimensions | null {
+  const pngSignature = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
+
+  if (
+    bytes.length < 24 ||
+    !pngSignature.every((value, index) => bytes[index] === value)
+  ) {
+    return null;
+  }
+
+  return {
+    width:
+      (bytes[16] << 24) |
+      (bytes[17] << 16) |
+      (bytes[18] << 8) |
+      bytes[19],
+    height:
+      (bytes[20] << 24) |
+      (bytes[21] << 16) |
+      (bytes[22] << 8) |
+      bytes[23],
+  };
+}
+
+function getJpegDimensions(bytes: Uint8Array): ImageDimensions | null {
+  if (bytes.length < 4 || bytes[0] !== 0xff || bytes[1] !== 0xd8) {
+    return null;
+  }
+
+  let offset = 2;
+  const startOfFrameMarkers = new Set([
+    0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce,
+    0xcf,
+  ]);
+
+  while (offset < bytes.length) {
+    while (bytes[offset] === 0xff) {
+      offset += 1;
+    }
+
+    const marker = bytes[offset];
+    offset += 1;
+
+    if (marker === 0xda || marker === 0xd9 || offset + 1 >= bytes.length) {
+      break;
+    }
+
+    const segmentLength = (bytes[offset] << 8) + bytes[offset + 1];
+
+    if (segmentLength < 2 || offset + segmentLength > bytes.length) {
+      break;
+    }
+
+    if (startOfFrameMarkers.has(marker)) {
+      return {
+        height: (bytes[offset + 3] << 8) + bytes[offset + 4],
+        width: (bytes[offset + 5] << 8) + bytes[offset + 6],
+      };
+    }
+
+    offset += segmentLength;
+  }
+
+  return null;
+}
+
+function getImageDimensions(
+  bytes: Uint8Array,
+  mimeType: string,
+): ImageDimensions | null {
+  if (mimeType === "image/png") {
+    return getPngDimensions(bytes);
+  }
+
+  if (mimeType === "image/jpeg") {
+    return getJpegDimensions(bytes);
+  }
+
+  return null;
+}
+
+export function getFeaturedImageDimensionError(
+  bytes: Uint8Array,
+  mimeType: string,
+) {
+  const dimensions = getImageDimensions(bytes, mimeType);
+
+  if (!dimensions) {
+    return `Unable to read featured image dimensions. Upload a ${FEATURED_IMAGE_REQUIRED_WIDTH} x ${FEATURED_IMAGE_REQUIRED_HEIGHT} px JPG or PNG image.`;
+  }
+
+  if (
+    dimensions.width !== FEATURED_IMAGE_REQUIRED_WIDTH ||
+    dimensions.height !== FEATURED_IMAGE_REQUIRED_HEIGHT
+  ) {
+    return `Featured image must be exactly ${FEATURED_IMAGE_REQUIRED_WIDTH} x ${FEATURED_IMAGE_REQUIRED_HEIGHT} px. Uploaded image is ${dimensions.width} x ${dimensions.height} px.`;
+  }
+
+  return null;
 }
 
 export function toSlug(title: string): string {

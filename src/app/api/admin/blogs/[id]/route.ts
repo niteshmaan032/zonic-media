@@ -4,6 +4,7 @@ import {
   FEATURED_IMAGE_MAX_BYTES,
   FEATURED_IMAGE_TYPES,
   ensureBlogIndexes,
+  getFeaturedImageDimensionError,
   getBlogsCollection,
   isSlugTaken,
   revalidatePublicBlogCache,
@@ -199,6 +200,18 @@ export async function PATCH(
       }
 
       const buffer = Buffer.from(await newFeaturedImage.arrayBuffer());
+      const dimensionError = getFeaturedImageDimensionError(
+        buffer,
+        newFeaturedImage.type,
+      );
+
+      if (dimensionError) {
+        return NextResponse.json(
+          { success: false, message: dimensionError },
+          { status: 400 },
+        );
+      }
+
       const upload = await uploadBufferToCloudinary(buffer, {
         folder: FEATURED_IMAGE_FOLDER,
       });

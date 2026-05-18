@@ -6,6 +6,7 @@ import {
   FEATURED_IMAGE_TYPES,
   createBlogSchema,
   ensureBlogIndexes,
+  getFeaturedImageDimensionError,
   getBlogsCollection,
   isSlugTaken,
   revalidatePublicBlogCache,
@@ -210,6 +211,21 @@ export async function POST(request: NextRequest) {
     }
 
     const featuredImageBuffer = Buffer.from(await featuredImage.arrayBuffer());
+    const dimensionError = getFeaturedImageDimensionError(
+      featuredImageBuffer,
+      featuredImage.type,
+    );
+
+    if (dimensionError) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: dimensionError,
+        },
+        { status: 400 },
+      );
+    }
+
     const featuredUpload = await uploadBufferToCloudinary(featuredImageBuffer, {
       folder: FEATURED_IMAGE_FOLDER,
     });

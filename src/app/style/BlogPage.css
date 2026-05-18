@@ -238,7 +238,7 @@
 .bp-featured-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 460px;
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 42px;
@@ -575,6 +575,10 @@
   .bp-title {
     font-size: 36px;
   }
+
+  .bp-featured-image {
+    height: 420px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -590,6 +594,10 @@
 
   .bp-title {
     font-size: 30px;
+  }
+
+  .bp-featured-image {
+    height: 380px;
   }
 
   .bp-sidebar {
@@ -624,6 +632,7 @@
   }
 
   .bp-featured-image {
+    height: 280px;
     border-radius: 10px;
     margin-bottom: 32px;
   }
@@ -640,5 +649,9 @@
 
   .bp-content-h2 {
     font-size: 20px;
+  }
+
+  .bp-featured-image {
+    height: 220px;
   }
 }
