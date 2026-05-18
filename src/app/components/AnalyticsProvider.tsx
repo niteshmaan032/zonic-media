@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Script from "next/script";
 
 const TRACKING_ID = "AW-17618392446";
@@ -24,20 +25,20 @@ const primaryDomain = getConfiguredDomain();
 const linkerDomains = [primaryDomain, `www.${primaryDomain}`];
 
 export default function AnalyticsProvider() {
-  const isBrowser = typeof window !== "undefined";
+  const [isMainDomain, setIsMainDomain] = useState(false);
 
-  // ✅ Allow ONLY your real domain (www + non-www + future subdomains)
-  const isMainDomain =
-    isBrowser &&
-    (window.location.hostname === primaryDomain ||
-      window.location.hostname.endsWith(`.${primaryDomain}`));
+  useEffect(() => {
+    const hostname = window.location.hostname;
 
-  // 🚫 Block everything else (vercel previews, localhost, etc.)
+    setIsMainDomain(
+      hostname === primaryDomain || hostname.endsWith(`.${primaryDomain}`),
+    );
+  }, []);
+
   if (!isMainDomain) return null;
 
   return (
     <>
-      {/* Google Ads (gtag) */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`}
         strategy="afterInteractive"
@@ -73,7 +74,6 @@ export default function AnalyticsProvider() {
         }}
       />
 
-      {/* Google Tag Manager */}
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -91,7 +91,6 @@ export default function AnalyticsProvider() {
         }}
       />
 
-      {/* GTM fallback (noscript) */}
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
