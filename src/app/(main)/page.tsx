@@ -1,11 +1,12 @@
 import Link from "next/link";
 import "./page.css";
 import Image from "next/image";
-// import Blogs from "@/app/components/Blogs";
+import Blogs from "@/app/components/Blogs";
 import Footer from "@/app/components/Footer";
 import WorldMap from "@/app/components/WorldMap";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import HeroTypewriter from "@/app/components/HeroTypewriter";
+import { getPublishedBlogs } from "@/backend/lib/blogs";
 import {
   FaArrowRight,
   FaCode,
@@ -33,6 +34,8 @@ export const metadata: Metadata = {
   description:
     "Zonic Media delivers premium web design, UI/UX, branding, SEO, and custom software solutions to help businesses scale online.",
 };
+
+export const dynamic = "force-dynamic";
 
 function BtnArrow() {
   return (
@@ -352,7 +355,9 @@ const industries = [
 
 /* ── page ─────────────────────────────────────────────────── */
 
-export default function Home() {
+export default async function Home() {
+  const blogs = await getPublishedBlogs(6);
+
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────── */}
@@ -1039,15 +1044,15 @@ export default function Home() {
       {/* ── WORLD MAP ─────────────────────────────────────── */}
       <WorldMap />
 
-      {/* ── TESTIMONIALS ─────────────────────── */}
-      {/* Blog section disabled per request.
-      <section className="nh-section">
-        <div className="nh-container">
-          <Blogs />
-        </div>
-      </section>
-      */}
+      {blogs.length > 0 ? (
+        <section className="nh-section nh-blog-home-section">
+          <div className="nh-container">
+            <Blogs blogs={blogs} />
+          </div>
+        </section>
+      ) : null}
 
+      {/* ── TESTIMONIALS ─────────────────────── */}
       <div className="home-section-7">
         <h2 className="testimonial-heading">What Our Clients Say</h2>
 
@@ -1060,73 +1065,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-      {/* ── INSIGHTS / BLOG ───────────────────────────────── */}
-      {/* Blog section disabled per request.
-      <section className="nh-section nh-insights-section">
-        <div className="nh-container">
-          <div className="nh-section-header">
-            <p className="nh-label">Blog</p>
-            <h2 className="nh-section-heading">
-              Our Recent <span className="nh-accent-text">News</span> &amp;
-              Insights
-            </h2>
-            <p className="nh-section-sub">
-              Practical articles on web design, SEO, and digital marketing —
-              strategies that drive real growth in an ever-evolving digital
-              landscape.
-            </p>
-          </div>
-          <div className="nh-insights-grid">
-            <div className="nh-insight-featured">
-              <div className="nh-insight-img-placeholder">
-                <Image
-                  src={insights[0].img}
-                  fill
-                  alt={insights[0].title}
-                  sizes="(max-width: 991px) 100vw, 48vw"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="nh-insight-featured-content">
-                <div className="nh-insight-meta">
-                  <span className="nh-insight-cat">{insights[0].category}</span>
-                  <span className="nh-insight-date">{insights[0].date}</span>
-                </div>
-                <h3 className="nh-insight-title-lg">{insights[0].title}</h3>
-                <p className="nh-insight-excerpt">{insights[0].excerpt}</p>
-                <Link href="/contact-us" className="nh-learn-more">
-                  Read Article <FaArrowRight size={11} />
-                </Link>
-              </div>
-            </div>
-            <div className="nh-insight-side">
-              {insights.slice(1).map((ins, i) => (
-                <div key={i} className="nh-insight-card">
-                  <div className="nh-insight-card-img">
-                    <Image
-                      src={ins.img}
-                      fill
-                      alt={ins.title}
-                      sizes="(max-width: 575px) 100vw, 160px"
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-                  <div className="nh-insight-card-content">
-                    <div className="nh-insight-meta">
-                      <span className="nh-insight-cat">{ins.category}</span>
-                      <span className="nh-insight-date">{ins.date}</span>
-                    </div>
-                    <h3 className="nh-insight-title">{ins.title}</h3>
-                    <p className="nh-insight-excerpt">{ins.excerpt}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      */}
 
       <Footer />
     </>

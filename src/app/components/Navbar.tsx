@@ -674,7 +674,7 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href={SITE_PATHS.legalPlaceholder}
+                          href={SITE_PATHS.blogs}
                           className="services-core-card"
                         >
                           <span className="services-core-icon">
@@ -989,7 +989,7 @@ function Navbar() {
                       </li>
                       <li>
                         <Link
-                          href={SITE_PATHS.legalPlaceholder}
+                          href={SITE_PATHS.blogs}
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Blogs

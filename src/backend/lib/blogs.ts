@@ -40,6 +40,18 @@ export type SafeBlog = {
   publishedAt: string | null;
 };
 
+export type PublicBlog = {
+  id: string;
+  serviceTitle: string;
+  blogTitle: string;
+  publishDate: string;
+  authorName: string;
+  featuredImageUrl: string;
+  descriptionHtml: string;
+  excerpt: string;
+  publishedAt: string | null;
+};
+
 const validDateSchema = z.string().refine((value) => {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     return false;
@@ -74,6 +86,7 @@ export async function ensureBlogIndexes() {
   await Promise.all([
     blogs.createIndex({ createdAt: -1 }),
     blogs.createIndex({ status: 1, createdAt: -1 }),
+    blogs.createIndex({ status: 1, publishDate: -1 }),
   ]);
 }
 
@@ -92,4 +105,61 @@ export function toSafeBlog(blog: BlogDocument): SafeBlog {
     updatedAt: blog.updatedAt.toISOString(),
     publishedAt: blog.publishedAt?.toISOString() ?? null,
   };
+}
+
+export function stripBlogHtml(html: string) {
+  return html
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, " ")
+    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function sanitizeBlogHtml(html: string) {
+  return html
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, "")
+    .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, "")
+    .replace(/<\/?(?:object|embed|link|meta|base|form|input|button)\b[^>]*>/gi, "")
+    .replace(/\s+on[a-z]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "")
+    .replace(/\s(?:href|src)\s*=\s*(["'])\s*javascript:[^"']*\1/gi, "");
+}
+
+function toPublicBlog(blog: BlogDocument): PublicBlog {
+  const plainText = stripBlogHtml(blog.descriptionHtml);
+
+  return {
+    id: blog._id.toHexString(),
+    serviceTitle: blog.serviceTitle,
+    blogTitle: blog.blogTitle,
+    publishDate: blog.publishDate,
+    authorName: blog.authorName,
+    featuredImageUrl: blog.featuredImageUrl,
+    descriptionHtml: sanitizeBlogHtml(blog.descriptionHtml),
+    excerpt:
+      plainText.length > 150 ? `${plainText.slice(0, 147).trim()}...` : plainText,
+    publishedAt: blog.publishedAt?.toISOString() ?? null,
+  };
+}
+
+export async function getPublishedBlogs(limit?: number) {
+  await ensureBlogIndexes();
+  const blogs = await getBlogsCollection();
+  const query = blogs
+    .find({ status: "published" })
+    .sort({ publishDate: -1, createdAt: -1 });
+
+  if (limit && limit > 0) {
+    query.limit(limit);
+  }
+
+  const rows = await query.toArray();
+  return rows.map(toPublicBlog);
 }

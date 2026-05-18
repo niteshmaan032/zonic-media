@@ -4,7 +4,12 @@ import "@/app/style/Blogs.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import {
+  FaArrowLeftLong,
+  FaArrowRightLong,
+  FaCalendarDays,
+  FaCircleUser,
+} from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -13,22 +18,35 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { SITE_PATHS } from "@/shared/siteConfig";
+import type { PublicBlog } from "@/backend/lib/blogs";
 
-const blogs = [
-  {
-    slug: "law-firm-local-seo-growth",
-    image: "/images/home-seo-2.webp",
-    date: "March 12, 2026",
-    title: "How Local SEO Helps Service Brands Win Nearby Searches",
-    description:
-      "A practical look at improving maps visibility, building trust fast, and turning local search traffic into qualified leads.",
-  },
-];
+type BlogsProps = {
+  blogs: PublicBlog[];
+};
 
-function Blogs() {
+function formatBlogDate(value: string) {
+  const date = new Date(`${value}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("en", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+}
+
+function Blogs({ blogs }: BlogsProps) {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
+  const canNavigate = blogs.length > 1;
+
+  if (blogs.length === 0) {
+    return null;
+  }
 
   useEffect(() => {
     if (!swiper || !prevRef.current || !nextRef.current) {
@@ -55,24 +73,32 @@ function Blogs() {
           Explore our <span>latest blogs</span>
         </h2>
 
-        <div className="blog-swiper-nav">
-          <button
-            ref={prevRef}
-            type="button"
-            className="blog-swiper-button"
-            aria-label="Previous blog"
-          >
-            <FaArrowLeftLong />
-          </button>
+        <div className="blog-header-actions">
+          <Link href={SITE_PATHS.blogs} className="blog-view-all-link">
+            View All
+          </Link>
 
-          <button
-            ref={nextRef}
-            type="button"
-            className="blog-swiper-button"
-            aria-label="Next blog"
-          >
-            <FaArrowRightLong />
-          </button>
+          <div className="blog-swiper-nav">
+            <button
+              ref={prevRef}
+              type="button"
+              className="blog-swiper-button"
+              aria-label="Previous blog"
+              disabled={!canNavigate}
+            >
+              <FaArrowLeftLong />
+            </button>
+
+            <button
+              ref={nextRef}
+              type="button"
+              className="blog-swiper-button"
+              aria-label="Next blog"
+              disabled={!canNavigate}
+            >
+              <FaArrowRightLong />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -101,23 +127,36 @@ function Blogs() {
         className="blog-swiper"
       >
         {blogs.map((blog) => (
-          <SwiperSlide key={blog.slug}>
+          <SwiperSlide key={blog.id}>
             <article className="blog-card">
               <div className="blog-card-image-wrap">
                 <Image
-                  src={blog.image}
-                  alt={blog.title}
+                  src={blog.featuredImageUrl}
+                  alt={blog.blogTitle}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 />
               </div>
 
               <div className="blog-card-body">
-                <p className="blog-card-date">{blog.date}</p>
-                <h3 className="blog-card-title">{blog.title}</h3>
-                <p className="blog-card-description">{blog.description}</p>
+                <p className="blog-card-meta">
+                  <span>
+                    <FaCircleUser aria-hidden="true" />
+                    {blog.authorName}
+                  </span>
+                  <span className="blog-card-meta-dot" aria-hidden="true" />
+                  <span>
+                    <FaCalendarDays aria-hidden="true" />
+                    {formatBlogDate(blog.publishDate)}
+                  </span>
+                </p>
+                <h3 className="blog-card-title">{blog.blogTitle}</h3>
+                <p className="blog-card-description">{blog.excerpt}</p>
 
-                <Link href={SITE_PATHS.blogs} className="blog-card-link">
+                <Link
+                  href={`${SITE_PATHS.blogs}?blog=${blog.id}`}
+                  className="blog-card-link"
+                >
                   Continue Reading
                 </Link>
               </div>

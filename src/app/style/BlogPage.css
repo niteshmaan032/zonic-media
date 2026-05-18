@@ -89,6 +89,63 @@
   gap: 22px;
 }
 
+.bp-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.bp-content h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin: 8px 0 0;
+}
+
+.bp-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--secondary);
+  margin: 6px 0 0;
+}
+
+.bp-content ul,
+.bp-content ol {
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.bp-content li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #2a2a2a;
+}
+
+.bp-content blockquote {
+  border-left: 3px solid var(--primary);
+  padding: 18px 24px;
+  margin: 0;
+  background-color: var(--color9);
+  border-radius: 0 10px 10px 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.bp-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
 .bp-content-p {
   font-size: 17px;
   line-height: 1.8;
@@ -172,6 +229,11 @@
 .bp-recent-card:hover {
   border-color: var(--primary);
   box-shadow: 0 2px 14px rgba(253, 193, 21, 0.14);
+}
+
+.bp-recent-card-active {
+  border-color: var(--primary);
+  background-color: rgba(253, 193, 21, 0.08);
 }
 
 .bp-recent-img-wrap {
@@ -261,6 +323,38 @@
   color: var(--secondary);
 }
 
+.bp-empty {
+  min-height: 42vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+}
+
+.bp-empty h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--secondary);
+}
+
+.bp-empty p {
+  margin: 0;
+  font-size: 17px;
+  color: var(--color2);
+}
+
+.bp-empty-link {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
 /* ── RESPONSIVE ───────────────────────────────────────────────────────────── */
 
 @media (max-width: 1199.98px) {
@@ -313,6 +407,8 @@
     font-size: 22px;
   }
 
+  .bp-content p,
+  .bp-content li,
   .bp-content-p,
   .bp-content-list li {
     font-size: 16px;
