@@ -48,6 +48,10 @@ export type SafeAdmin = {
   lastLoginAt: string | null;
 };
 
+declare global {
+  var zonicAdminIndexesPromise: Promise<void> | undefined;
+}
+
 const passwordMessage =
   "Password must be at least 8 characters and include uppercase, lowercase, number, and special character.";
 
@@ -97,11 +101,23 @@ export async function getAdminsCollection(): Promise<
 }
 
 export async function ensureAdminIndexes() {
-  const admins = await getAdminsCollection();
-  await Promise.all([
-    admins.createIndex({ email: 1 }, { unique: true }),
-    admins.createIndex({ resetPasswordTokenHash: 1 }, { sparse: true }),
-  ]);
+  globalThis.zonicAdminIndexesPromise ??= (async () => {
+    const admins = await getAdminsCollection();
+    await Promise.all([
+      admins.createIndex({ email: 1 }, { unique: true }),
+      admins.createIndex({ email: 1, isActive: 1 }),
+      admins.createIndex(
+        { resetPasswordTokenHash: 1, resetPasswordExpiresAt: 1, isActive: 1 },
+        { sparse: true },
+      ),
+      admins.createIndex({ updatedAt: -1 }),
+    ]);
+  })().catch((error) => {
+    globalThis.zonicAdminIndexesPromise = undefined;
+    throw error;
+  });
+
+  return globalThis.zonicAdminIndexesPromise;
 }
 
 export async function hashPassword(password: string) {

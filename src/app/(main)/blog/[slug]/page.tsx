@@ -11,7 +11,7 @@ import {
 } from "@/backend/lib/blogs";
 import "@/app/style/BlogPage.css";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 type Props = {
   params: Promise<{ slug: string }>;

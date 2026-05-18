@@ -8,6 +8,7 @@ import {
   ensureBlogIndexes,
   getBlogsCollection,
   isSlugTaken,
+  revalidatePublicBlogCache,
   toSafeBlog,
   type BlogDocument,
   type BlogStatus,
@@ -236,6 +237,10 @@ export async function POST(request: NextRequest) {
 
     const blogs = await getBlogsCollection();
     await blogs.insertOne(blog);
+
+    if (blog.status === "published") {
+      revalidatePublicBlogCache(blog.slug);
+    }
 
     return NextResponse.json(
       {

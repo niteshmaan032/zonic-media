@@ -6,6 +6,7 @@ import {
   ensureBlogIndexes,
   getBlogsCollection,
   isSlugTaken,
+  revalidatePublicBlogCache,
   toSafeBlog,
   updateBlogSchema,
 } from "@/backend/lib/blogs";
@@ -254,6 +255,11 @@ export async function PATCH(
     await Promise.allSettled(toDelete.map((pid) => deleteCloudinaryAsset(pid)));
 
     const updated = await blogs.findOne({ _id: new ObjectId(id) });
+    revalidatePublicBlogCache(existing.slug ?? parsed.data.slug);
+    if (existing.slug && existing.slug !== parsed.data.slug) {
+      revalidatePublicBlogCache(parsed.data.slug);
+    }
+
     return NextResponse.json({
       success: true,
       message:
@@ -306,6 +312,10 @@ export async function DELETE(
 
     // Delete from MongoDB first; orphaned Cloudinary assets are acceptable
     await blogs.deleteOne({ _id: new ObjectId(id) });
+
+    if (blog.status === "published") {
+      revalidatePublicBlogCache(blog.slug);
+    }
 
     const publicIds = [
       blog.featuredImagePublicId,

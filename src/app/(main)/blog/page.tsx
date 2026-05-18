@@ -8,7 +8,7 @@ import Footer from "@/app/components/Footer";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import "@/app/style/BlogPage.css";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Blog | Digital Marketing & SEO Insights | Zonic Media",

@@ -6,6 +6,7 @@ import { getPublishedBlogs } from "@/backend/lib/blogs";
 
 const APP_DIR = join(process.cwd(), "src", "app");
 const PAGE_FILE = "page.tsx";
+export const revalidate = 300;
 
 const EXCLUDED_ROUTE_SEGMENTS = new Set([
   "api",

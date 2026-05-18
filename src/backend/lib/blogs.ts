@@ -1,4 +1,5 @@
 import { ObjectId, type Collection } from "mongodb";
+import { revalidatePath, revalidateTag, unstable_cache } from "next/cache";
 import { z } from "zod";
 import { getMongoDb } from "./mongodb";
 
@@ -6,6 +7,8 @@ export const BLOG_COLLECTION = "blogs";
 export const BLOG_STATUSES = ["draft", "published"] as const;
 export const FEATURED_IMAGE_MAX_BYTES = 500 * 1024;
 export const FEATURED_IMAGE_TYPES = ["image/jpeg", "image/png"] as const;
+export const PUBLIC_BLOG_CACHE_TAG = "public-blogs";
+export const PUBLIC_BLOG_REVALIDATE_SECONDS = 300;
 
 export type BlogStatus = (typeof BLOG_STATUSES)[number];
 
@@ -55,6 +58,10 @@ export type PublicBlog = {
   publishedAt: string | null;
 };
 
+declare global {
+  var zonicBlogIndexesPromise: Promise<void> | undefined;
+}
+
 const validDateSchema = z.string().refine((value) => {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     return false;
@@ -101,13 +108,23 @@ export async function getBlogsCollection(): Promise<Collection<BlogDocument>> {
 }
 
 export async function ensureBlogIndexes() {
-  const blogs = await getBlogsCollection();
-  await Promise.all([
-    blogs.createIndex({ createdAt: -1 }),
-    blogs.createIndex({ status: 1, createdAt: -1 }),
-    blogs.createIndex({ status: 1, publishDate: -1 }),
-    blogs.createIndex({ slug: 1 }, { sparse: true, unique: true }),
-  ]);
+  globalThis.zonicBlogIndexesPromise ??= (async () => {
+    const blogs = await getBlogsCollection();
+    await Promise.all([
+      blogs.createIndex({ createdAt: -1 }),
+      blogs.createIndex({ updatedAt: -1 }),
+      blogs.createIndex({ serviceTitle: 1 }),
+      blogs.createIndex({ status: 1, createdAt: -1 }),
+      blogs.createIndex({ status: 1, publishDate: -1, createdAt: -1 }),
+      blogs.createIndex({ status: 1, slug: 1 }),
+      blogs.createIndex({ slug: 1 }, { sparse: true, unique: true }),
+    ]);
+  })().catch((error) => {
+    globalThis.zonicBlogIndexesPromise = undefined;
+    throw error;
+  });
+
+  return globalThis.zonicBlogIndexesPromise;
 }
 
 export function toSlug(title: string): string {
@@ -181,7 +198,7 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
   };
 }
 
-export async function getPublishedBlogs(limit?: number) {
+async function getPublishedBlogsUncached(limit?: number) {
   await ensureBlogIndexes();
   const blogs = await getBlogsCollection();
   const query = blogs
@@ -196,7 +213,7 @@ export async function getPublishedBlogs(limit?: number) {
   return rows.map(toPublicBlog);
 }
 
-export async function getPublishedBlogBySlug(
+async function getPublishedBlogBySlugUncached(
   slug: string,
 ): Promise<PublicBlog | null> {
   await ensureBlogIndexes();
@@ -207,12 +224,53 @@ export async function getPublishedBlogBySlug(
 
   // Fallback: for older blogs without a stored slug, derive from title
   if (!blog) {
-    const all = await blogs.find({ status: "published" }).toArray();
+    const all = await blogs
+      .find({
+        status: "published",
+        $or: [{ slug: { $exists: false } }, { slug: "" }],
+      })
+      .toArray();
     blog =
       all.find((b) => !b.slug && toSlug(b.blogTitle) === slug) ?? null;
   }
 
   return blog ? toPublicBlog(blog) : null;
+}
+
+const getCachedPublishedBlogs = unstable_cache(
+  getPublishedBlogsUncached,
+  ["published-blogs"],
+  {
+    revalidate: PUBLIC_BLOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_BLOG_CACHE_TAG],
+  },
+);
+
+const getCachedPublishedBlogBySlug = unstable_cache(
+  getPublishedBlogBySlugUncached,
+  ["published-blog-by-slug"],
+  {
+    revalidate: PUBLIC_BLOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_BLOG_CACHE_TAG],
+  },
+);
+
+export async function getPublishedBlogs(limit?: number) {
+  return getCachedPublishedBlogs(limit);
+}
+
+export async function getPublishedBlogBySlug(slug: string) {
+  return getCachedPublishedBlogBySlug(slug);
+}
+
+export function revalidatePublicBlogCache(slug?: string) {
+  revalidateTag(PUBLIC_BLOG_CACHE_TAG, { expire: 0 });
+  revalidatePath("/");
+  revalidatePath("/blog");
+
+  if (slug) {
+    revalidatePath(`/blog/${slug}`);
+  }
 }
 
 export async function isSlugTaken(

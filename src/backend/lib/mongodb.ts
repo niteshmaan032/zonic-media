@@ -1,23 +1,50 @@
-import { Db, MongoClient } from "mongodb";
+import { Db, MongoClient, type MongoClientOptions } from "mongodb";
 
 const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB_NAME;
 
+type MongoCache = {
+  client: MongoClient | null;
+  promise: Promise<MongoClient> | null;
+};
+
 declare global {
-  var zonicMongoClientPromise: Promise<MongoClient> | undefined;
+  var zonicMongoCache: MongoCache | undefined;
 }
 
-export async function getMongoClient() {
+const maxPoolSize = Number(process.env.MONGODB_MAX_POOL_SIZE ?? "10");
+const mongoOptions: MongoClientOptions = {
+  appName: "zonic-web",
+  maxPoolSize:
+    Number.isFinite(maxPoolSize) && maxPoolSize > 0 ? maxPoolSize : 10,
+  minPoolSize: 0,
+  maxIdleTimeMS: 30_000,
+  serverSelectionTimeoutMS: 5_000,
+  socketTimeoutMS: 45_000,
+};
+
+const cached =
+  globalThis.zonicMongoCache ??
+  (globalThis.zonicMongoCache = { client: null, promise: null });
+
+export async function getMongoClient(): Promise<MongoClient> {
   if (!uri) {
     throw new Error("MONGODB_URI is not configured.");
   }
 
-  if (process.env.NODE_ENV === "development") {
-    globalThis.zonicMongoClientPromise ??= new MongoClient(uri).connect();
-    return globalThis.zonicMongoClientPromise;
+  if (cached.client) {
+    return cached.client;
   }
 
-  return new MongoClient(uri).connect();
+  if (!cached.promise) {
+    cached.promise = new MongoClient(uri, mongoOptions).connect().catch((error) => {
+      cached.promise = null;
+      throw error;
+    });
+  }
+
+  cached.client = await cached.promise;
+  return cached.client;
 }
 
 export async function getMongoDb(): Promise<Db> {
