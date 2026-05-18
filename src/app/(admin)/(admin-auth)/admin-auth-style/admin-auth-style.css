@@ -83,6 +83,28 @@
   margin-top: 8px;
 }
 
+.admin-auth-form .admin-login-attempts,
+.admin-auth-form .admin-login-lock {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.admin-auth-form .admin-login-attempts {
+  color: var(--admin-primary);
+}
+
+.admin-auth-form .admin-login-lock {
+  color: var(--color5);
+}
+
+.admin-auth-form input:disabled,
+.admin-auth-form .button:disabled,
+.password-toggle-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
 .admin-auth-form .forgot-psswrd {
   text-align: end;
 }

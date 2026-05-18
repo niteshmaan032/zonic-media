@@ -169,6 +169,17 @@
   border-radius: 0 30px 30px 0;
 }
 
+.admin-panel .admin-sidebar a.dropdown-item {
+  color: var(--admin-dark);
+  font-weight: 400;
+}
+
+.admin-panel .admin-sidebar a.dropdown-item:hover,
+.admin-panel .admin-sidebar a.dropdown-item.active {
+  color: var(--admin-primary);
+  background: #fff;
+}
+
 .admin-panel .dropdown-item:disabled {
   color: #6c757d;
   opacity: 1;
@@ -436,6 +447,516 @@
 
 .admin-panel .admin-back-to-top.show {
   display: inline-flex;
+}
+
+.admin-panel .admin-blog-card {
+  max-width: 1180px;
+}
+
+.admin-panel .admin-blog-card h6 {
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-form .form-label {
+  color: var(--admin-dark);
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-form .form-control {
+  border-color: rgba(25, 28, 36, 0.12);
+  color: var(--admin-dark);
+  padding: 1rem 0.8rem;
+  font-size: 15px;
+}
+
+.admin-panel .admin-blog-form .form-control:focus {
+  border-color: rgba(var(--admin-primary-rgb), 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(var(--admin-primary-rgb), 0.12);
+}
+
+.admin-panel .admin-blog-date-preview {
+  margin-top: 0.45rem;
+  color: #6c757d;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-upload {
+  position: relative;
+  min-height: 94px;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.375rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.admin-panel .admin-blog-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.admin-panel .admin-blog-upload-button {
+  border: 0;
+  border-radius: 0.375rem;
+  background: var(--admin-primary);
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 1.2rem;
+}
+
+.admin-panel .admin-blog-upload-name {
+  position: absolute;
+  left: 1rem;
+  bottom: 0.7rem;
+  max-width: calc(100% - 2rem);
+  overflow: hidden;
+  color: #6c757d;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-panel .admin-blog-preview-wrap {
+  margin-top: 0.85rem;
+}
+
+.admin-panel .admin-blog-upload-note {
+  margin-top: 0.45rem;
+  color: #6c757d;
+  font-size: 0.825rem;
+  font-weight: 400;
+}
+
+.admin-panel .admin-blog-upload-error {
+  margin-top: 0.35rem;
+  color: #dc3545;
+  font-size: 0.825rem;
+  font-weight: 400;
+}
+
+.admin-panel .admin-blog-upload-success {
+  color: #198754;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-image-preview {
+  display: block;
+  width: min(180px, 100%);
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.375rem;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.admin-panel .admin-blog-editor {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.375rem;
+  background: #fff;
+}
+
+.admin-panel .admin-blog-editor-file-input {
+  display: none;
+}
+
+.admin-panel .admin-blog-editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid rgba(25, 28, 36, 0.1);
+  background: rgba(25, 28, 36, 0.025);
+}
+
+.admin-panel .admin-blog-editor-toolbar button {
+  min-width: 38px;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.35rem;
+  background: #fff;
+  color: var(--admin-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.65rem;
+}
+
+.admin-panel .admin-blog-editor-toolbar button.active,
+.admin-panel .admin-blog-editor-toolbar button:hover {
+  border-color: rgba(var(--admin-primary-rgb), 0.35);
+  background: rgba(var(--admin-primary-rgb), 0.1);
+  color: var(--admin-primary);
+}
+
+.admin-panel .admin-blog-editor-toolbar button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.admin-panel .admin-blog-editor-content {
+  min-height: 280px;
+  padding: 1rem;
+  color: var(--admin-dark);
+  outline: none;
+}
+
+.admin-panel .admin-blog-editor-content p {
+  margin-bottom: 0.85rem;
+}
+
+.admin-panel .admin-blog-editor-content h2,
+.admin-panel .admin-blog-editor-content h3 {
+  margin: 1rem 0 0.65rem;
+}
+
+.admin-panel .admin-blog-editor-content ul,
+.admin-panel .admin-blog-editor-content ol {
+  padding-left: 1.25rem;
+}
+
+.admin-panel .admin-blog-draft-button {
+  border-color: rgba(25, 28, 36, 0.16);
+  background: #e9ecef;
+  color: var(--admin-dark);
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-draft-button:hover {
+  border-color: #6c757d;
+  background: #6c757d;
+  color: #fff;
+}
+
+.admin-panel .admin-blog-submit-success,
+.admin-panel .admin-blog-submit-error {
+  align-self: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-submit-success {
+  color: #198754;
+}
+
+.admin-panel .admin-blog-submit-error {
+  color: #dc3545;
+}
+
+.admin-blog-submit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1060;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-blog-submit-overlay-box {
+  min-width: 220px;
+  border: 1px solid rgba(25, 28, 36, 0.08);
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(25, 28, 36, 0.12);
+  color: var(--admin-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  font-weight: 500;
+  padding: 1.1rem 1.25rem;
+}
+
+.admin-panel .admin-blog-status-filter {
+  width: 180px;
+  border-color: rgba(25, 28, 36, 0.12);
+  color: var(--admin-dark);
+  font-weight: 400;
+}
+
+.admin-panel .admin-manage-blogs-table {
+  vertical-align: middle;
+}
+
+.admin-panel .admin-manage-blogs-table th {
+  color: var(--admin-dark);
+  font-weight: 500;
+}
+
+.admin-panel .admin-manage-blogs-table td {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.admin-panel .admin-blog-title-clamp {
+  display: -webkit-box;
+  max-width: 520px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.admin-panel .admin-blog-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 86px;
+  border-radius: 999px;
+  font-size: 0.825rem;
+  font-weight: 500;
+  padding: 0.35rem 0.7rem;
+}
+
+.admin-panel .admin-blog-status-published {
+  background: rgba(25, 135, 84, 0.12);
+  color: #198754;
+}
+
+.admin-panel .admin-blog-status-draft {
+  background: rgba(255, 193, 7, 0.2);
+  color: #9a6a00;
+}
+
+.admin-panel .admin-blog-table-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-panel .admin-blog-table-actions button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(var(--admin-primary-rgb), 0.22);
+  border-radius: 0.375rem;
+  background: rgba(var(--admin-primary-rgb), 0.08);
+  color: var(--admin-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-panel .admin-blog-table-actions button.danger {
+  border-color: rgba(220, 53, 69, 0.22);
+  background: rgba(220, 53, 69, 0.08);
+  color: #dc3545;
+}
+
+.admin-panel .admin-blog-table-actions button:hover:not(:disabled) {
+  background: var(--admin-primary);
+  color: #fff;
+}
+
+.admin-panel .admin-blog-table-actions button.danger:hover:not(:disabled) {
+  background: #dc3545;
+  color: #fff;
+}
+
+.admin-panel .admin-blog-table-actions button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.admin-panel .admin-blog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-top: 1rem;
+}
+
+.admin-panel .admin-blog-pagination button {
+  min-width: 38px;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.375rem;
+  background: #fff;
+  color: var(--admin-dark);
+  font-weight: 400;
+  padding: 0.45rem 0.75rem;
+}
+
+.admin-panel .admin-blog-pagination button.active,
+.admin-panel .admin-blog-pagination button:hover:not(:disabled) {
+  border-color: var(--admin-primary);
+  background: var(--admin-primary);
+  color: #fff;
+}
+
+.admin-panel .admin-blog-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.admin-panel .admin-blog-editor-content img,
+.admin-panel .admin-blog-editor-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 0.375rem;
+}
+
+.admin-panel .admin-blog-editor-content [data-resize-container] {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.admin-panel .admin-blog-editor-content [data-resize-wrapper] {
+  max-width: 100%;
+}
+
+.admin-panel .admin-blog-editor-content [data-resize-container] img {
+  margin: 0;
+}
+
+.admin-panel .admin-blog-editor-content [data-resize-handle] {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--admin-primary);
+  box-shadow: 0 2px 8px rgba(25, 28, 36, 0.18);
+  opacity: 0;
+  transform: translate(50%, 50%);
+  transition: opacity 0.15s ease;
+  z-index: 2;
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-container]:hover
+  [data-resize-handle],
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-container].ProseMirror-selectednode
+  [data-resize-handle] {
+  opacity: 1;
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-handle="left"] {
+  cursor: ew-resize;
+  transform: translate(-50%, -50%);
+  top: 50% !important;
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-handle="right"] {
+  cursor: ew-resize;
+  transform: translate(50%, -50%);
+  top: 50% !important;
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-handle="bottom-left"] {
+  cursor: nesw-resize;
+  transform: translate(-50%, 50%);
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  [data-resize-handle="bottom-right"] {
+  cursor: nwse-resize;
+}
+
+.admin-panel .admin-blog-editor-link-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(25, 28, 36, 0.1);
+  background: rgba(var(--admin-primary-rgb), 0.04);
+}
+
+.admin-panel .admin-blog-editor-link-bar input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid rgba(25, 28, 36, 0.14);
+  border-radius: 0.3rem;
+  color: var(--admin-dark);
+  font-size: 0.875rem;
+  padding: 0.35rem 0.65rem;
+  outline: none;
+}
+
+.admin-panel .admin-blog-editor-link-bar input:focus {
+  border-color: rgba(var(--admin-primary-rgb), 0.5);
+  box-shadow: 0 0 0 0.15rem rgba(var(--admin-primary-rgb), 0.12);
+}
+
+.admin-panel .admin-blog-editor-link-bar button {
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.3rem;
+  background: #fff;
+  color: var(--admin-dark);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  white-space: nowrap;
+}
+
+.admin-panel .admin-blog-editor-link-bar button:first-of-type {
+  border-color: rgba(var(--admin-primary-rgb), 0.35);
+  background: var(--admin-primary);
+  color: #fff;
+}
+
+.admin-panel .admin-blog-editor-link-bar button:first-of-type:hover {
+  background: #007dcc;
+}
+
+.admin-panel .admin-blog-editor-link-bar button:last-of-type:hover {
+  background: rgba(25, 28, 36, 0.06);
+}
+
+.admin-panel .admin-blog-delete-confirm {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--admin-dark);
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-delete-confirm button {
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 0.3rem;
+  background: #fff;
+  color: var(--admin-dark);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+}
+
+.admin-panel .admin-blog-delete-confirm button.danger {
+  border-color: rgba(220, 53, 69, 0.35);
+  background: #dc3545;
+  color: #fff;
+}
+
+.admin-panel .admin-blog-delete-confirm button.danger:hover {
+  background: #b02a37;
+}
+
+.admin-panel .admin-blog-delete-confirm button:not(.danger):hover {
+  background: rgba(25, 28, 36, 0.06);
+}
+
+.admin-panel .admin-blog-deleting-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  font-weight: 400;
 }
 
 @media (min-width: 992px) {

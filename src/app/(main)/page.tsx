@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./page.css";
 import Image from "next/image";
+// import Blogs from "@/app/components/Blogs";
 import Footer from "@/app/components/Footer";
 import WorldMap from "@/app/components/WorldMap";
 import ClutchWidget from "@/app/components/ClutchWidget";
@@ -320,7 +321,7 @@ const industries = [
   },
 ];
 
-const insights = [
+/* const insights = [
   {
     img: "/images/new-home/ChatGPT Image May 4, 2026, 02_33_30 PM.png",
     category: "Web Design",
@@ -347,7 +348,7 @@ const insights = [
     excerpt:
       "Smart bidding alone will not save a poorly structured campaign. The real wins come from landing page alignment, audience segmentation, and intent mapping.",
   },
-];
+]; */
 
 /* ── page ─────────────────────────────────────────────────── */
 
@@ -1039,6 +1040,14 @@ export default function Home() {
       <WorldMap />
 
       {/* ── TESTIMONIALS ─────────────────────── */}
+      {/* Blog section disabled per request.
+      <section className="nh-section">
+        <div className="nh-container">
+          <Blogs />
+        </div>
+      </section>
+      */}
+
       <div className="home-section-7">
         <h2 className="testimonial-heading">What Our Clients Say</h2>
 
@@ -1053,6 +1062,7 @@ export default function Home() {
       </div>
 
       {/* ── INSIGHTS / BLOG ───────────────────────────────── */}
+      {/* Blog section disabled per request.
       <section className="nh-section nh-insights-section">
         <div className="nh-container">
           <div className="nh-section-header">
@@ -1116,6 +1126,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       <Footer />
     </>

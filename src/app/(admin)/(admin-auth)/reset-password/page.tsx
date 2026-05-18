@@ -1,14 +1,120 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { FiArrowLeft, FiEye, FiEyeOff } from "react-icons/fi";
 import "../admin-auth-style/admin-auth-style.css";
 
-export default function ResetPsswrdAdmin() {
+function ResetPasswordForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [validatingToken, setValidatingToken] = useState(true);
+  const [tokenIsValid, setTokenIsValid] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const token = searchParams.get("token")?.trim() ?? "";
+
+  useEffect(() => {
+    let ignore = false;
+
+    const validateToken = async () => {
+      if (!token) {
+        router.replace("/admin-login");
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          `/api/admin/auth/reset-password?token=${encodeURIComponent(token)}`,
+          { cache: "no-store" },
+        );
+        const result = (await response.json()) as {
+          success?: boolean;
+          message?: string;
+        };
+
+        if (ignore) {
+          return;
+        }
+
+        if (!response.ok || !result.success) {
+          setError(result.message ?? "This reset link is invalid or expired.");
+          setTokenIsValid(false);
+          return;
+        }
+
+        setTokenIsValid(true);
+      } catch {
+        if (!ignore) {
+          setError("Unable to validate this reset link right now.");
+          setTokenIsValid(false);
+        }
+      } finally {
+        if (!ignore) {
+          setValidatingToken(false);
+        }
+      }
+    };
+
+    validateToken();
+
+    return () => {
+      ignore = true;
+    };
+  }, [router, token]);
+
+  const handleResetPassword = async (
+    event: React.FormEvent<HTMLFormElement>,
+  ) => {
+    event.preventDefault();
+    setError("");
+    setSuccess("");
+
+    if (!tokenIsValid) {
+      setError("This reset link is invalid or expired.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/admin/auth/reset-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token, password }),
+      });
+      const result = (await response.json()) as {
+        success?: boolean;
+        message?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        setError(result.message ?? "Unable to reset password right now.");
+        return;
+      }
+
+      setSuccess(result.message ?? "Password reset successfully.");
+      setPassword("");
+      setConfirmPassword("");
+      window.setTimeout(() => router.replace("/admin-login"), 1200);
+    } catch {
+      setError("Unable to reset password right now. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="admin-auth-wrapper container">
@@ -28,7 +134,7 @@ export default function ResetPsswrdAdmin() {
           <p className="admin-form-sub-head">Enter your new password</p>
         </div>
 
-        <form className="row g-3">
+        <form className="row g-3" onSubmit={handleResetPassword}>
           <div className="col-12">
             <label className="form-label">
               New Password <span>*</span>
@@ -39,6 +145,10 @@ export default function ResetPsswrdAdmin() {
                 type={showPassword ? "text" : "password"}
                 className="form-control"
                 placeholder="Enter your new password"
+                autoComplete="new-password"
+                value={password}
+                disabled={validatingToken || !tokenIsValid || loading}
+                onChange={(event) => setPassword(event.target.value)}
               />
 
               <button
@@ -62,15 +172,32 @@ export default function ResetPsswrdAdmin() {
             </label>
 
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               className="form-control"
               placeholder="Re-enter password"
+              autoComplete="new-password"
+              value={confirmPassword}
+              disabled={validatingToken || !tokenIsValid || loading}
+              onChange={(event) => setConfirmPassword(event.target.value)}
             />
           </div>
 
+          {error ? <p className="col-12 error-text mb-0">{error}</p> : null}
+          {success ? (
+            <p className="col-12 success-text mb-0">{success}</p>
+          ) : null}
+
           <div className="col-12">
-            <button type="button" className="button">
-              Reset Password
+            <button
+              type="submit"
+              className="button"
+              disabled={validatingToken || !tokenIsValid || loading}
+            >
+              {validatingToken
+                ? "Validating..."
+                : loading
+                  ? "Resetting..."
+                  : "Reset Password"}
             </button>
           </div>
         </form>
@@ -82,5 +209,13 @@ export default function ResetPsswrdAdmin() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ResetPsswrdAdmin() {
+  return (
+    <Suspense fallback={null}>
+      <ResetPasswordForm />
+    </Suspense>
   );
 }

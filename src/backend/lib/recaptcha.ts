@@ -7,13 +7,11 @@ type RecaptchaVerifyResponse = {
   ["error-codes"]?: string[];
 };
 
-const RECAPTCHA_SECRET_KEY = "6Ldj3aosAAAAAMnyEkFBDk8ORER_ZK8oOWR3sB4f";
-
 export const verifyRecaptchaToken = async (
   token: string,
   expectedAction?: string,
 ) => {
-  const secret = process.env.RECAPTCHA_SECRET_KEY?.trim() || RECAPTCHA_SECRET_KEY;
+  const secret = process.env.RECAPTCHA_SECRET_KEY?.trim();
 
   if (!secret) {
     return {

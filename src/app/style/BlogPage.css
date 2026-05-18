@@ -1,0 +1,339 @@
+/* ============================================================
+   BLOG PAGE  ·  bp- prefix namespace
+   ============================================================ */
+
+/* ── WRAPPER & CONTAINER ──────────────────────────────────────────────────── */
+
+.bp-wrapper {
+  padding-top: 130px;
+  padding-bottom: 90px;
+}
+
+.bp-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* ── ARTICLE HEADER ───────────────────────────────────────────────────────── */
+
+.bp-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-category-badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color2);
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 5px 14px;
+  margin-bottom: 18px;
+}
+
+.bp-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--secondary);
+  margin-bottom: 18px;
+}
+
+.bp-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.bp-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+.bp-meta-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--stroke);
+  flex-shrink: 0;
+}
+
+/* ── FEATURED IMAGE ───────────────────────────────────────────────────────── */
+
+.bp-featured-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 42px;
+  background-color: var(--color1);
+}
+
+/* ── BLOG CONTENT BODY ────────────────────────────────────────────────────── */
+
+.bp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bp-content-p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.bp-content-h2 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin: 8px 0 0;
+}
+
+.bp-content-list {
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.bp-content-list li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #2a2a2a;
+}
+
+.bp-blockquote {
+  border-left: 3px solid var(--primary);
+  padding: 18px 24px;
+  margin: 0;
+  background-color: var(--color9);
+  border-radius: 0 10px 10px 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+/* ── SIDEBAR ──────────────────────────────────────────────────────────────── */
+
+.bp-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.bp-sidebar-heading {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* ── RECENT BLOG CARDS ────────────────────────────────────────────────────── */
+
+.bp-recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.bp-recent-card {
+  display: flex;
+  gap: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bp-recent-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 14px rgba(253, 193, 21, 0.14);
+}
+
+.bp-recent-img-wrap {
+  position: relative;
+  width: 90px;
+  height: 68px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: var(--color1);
+}
+
+.bp-recent-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+}
+
+.bp-recent-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color2);
+  margin: 0;
+}
+
+.bp-recent-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--secondary);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.bp-recent-card:hover .bp-recent-title {
+  color: var(--primary);
+}
+
+/* ── PAGINATION ───────────────────────────────────────────────────────────── */
+
+.bp-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bp-page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--stroke);
+  background-color: var(--white);
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.bp-page-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.bp-page-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.bp-page-active {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 1199.98px) {
+  .bp-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .bp-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .bp-wrapper {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .bp-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .bp-title {
+    font-size: 30px;
+  }
+
+  .bp-sidebar {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .bp-wrapper {
+    padding-top: 90px;
+  }
+
+  .bp-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bp-title {
+    font-size: 26px;
+  }
+
+  .bp-content-h2 {
+    font-size: 22px;
+  }
+
+  .bp-content-p,
+  .bp-content-list li {
+    font-size: 16px;
+  }
+
+  .bp-featured-image {
+    border-radius: 10px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bp-title {
+    font-size: 23px;
+  }
+
+  .bp-category-badge {
+    font-size: 12px;
+  }
+
+  .bp-content-h2 {
+    font-size: 20px;
+  }
+}

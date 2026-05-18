@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ReactNode, useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 import { FaBars, FaHashtag, FaRegFileAlt, FaTable } from "react-icons/fa";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { IoNewspaperOutline } from "react-icons/io5";
 import { LuLayoutDashboard, LuMessageSquareText } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
 import { BsArrowUp } from "react-icons/bs";
@@ -15,12 +15,12 @@ type AdminShellProps = {
 
 const primaryLinks = [
   { href: "/admindashboard", label: "Dashboard", icon: LuLayoutDashboard },
-  {
-    href: "/admindashboard/form",
-    label: "Forms",
-    icon: IoDocumentTextOutline,
-  },
   { href: "/admindashboard/table", label: "Tables", icon: FaTable },
+] as const;
+
+const blogLinks = [
+  { href: "/admindashboard/form", label: "Post Blogs" },
+  { href: "/admindashboard/manage-blogs", label: "Manage Blogs" },
 ] as const;
 
 function DropdownAction({ children }: { children: ReactNode }) {
@@ -33,9 +33,24 @@ function DropdownAction({ children }: { children: ReactNode }) {
 
 export function AdminShell({ children }: AdminShellProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showSpinner, setShowSpinner] = useState(true);
+  const [loggingOut, setLoggingOut] = useState(false);
+
+  const resetAdminUiState = useCallback(() => {
+    setSidebarOpen(false);
+    setShowBackToTop(false);
+    setShowSpinner(false);
+    setLoggingOut(false);
+  }, []);
+
+  const redirectToLogin = useCallback(() => {
+    resetAdminUiState();
+    router.replace("/admin-login");
+    router.refresh();
+  }, [resetAdminUiState, router]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
@@ -56,8 +71,95 @@ export function AdminShell({ children }: AdminShellProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const verifySession = async () => {
+      try {
+        const response = await fetch("/api/admin/auth/me", {
+          cache: "no-store",
+          credentials: "include",
+          signal: controller.signal,
+        });
+
+        if (response.status === 401) {
+          redirectToLogin();
+        }
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          redirectToLogin();
+        }
+      }
+    };
+
+    verifySession();
+
+    return () => controller.abort();
+  }, [pathname, redirectToLogin]);
+
+  useEffect(() => {
+    let consecutiveNetworkFailures = 0;
+    let activeController: AbortController | null = null;
+
+    const verifyHeartbeat = async () => {
+      if (activeController) {
+        return;
+      }
+
+      activeController = new AbortController();
+
+      try {
+        const response = await fetch("/api/admin/auth/me", {
+          cache: "no-store",
+          credentials: "include",
+          signal: activeController.signal,
+        });
+
+        if (response.status === 401 || !response.ok) {
+          redirectToLogin();
+          return;
+        }
+
+        consecutiveNetworkFailures = 0;
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+
+        consecutiveNetworkFailures += 1;
+
+        if (consecutiveNetworkFailures >= 2) {
+          redirectToLogin();
+        }
+      } finally {
+        activeController = null;
+      }
+    };
+
+    const intervalId = window.setInterval(verifyHeartbeat, 60 * 1000);
+
+    return () => {
+      window.clearInterval(intervalId);
+      activeController?.abort();
+    };
+  }, [redirectToLogin]);
+
   const closeSidebar = () => {
     setSidebarOpen(false);
+  };
+
+  const handleLogout = async () => {
+    setLoggingOut(true);
+
+    try {
+      await fetch("/api/admin/auth/logout", {
+        method: "POST",
+        cache: "no-store",
+        credentials: "include",
+      });
+    } finally {
+      redirectToLogin();
+    }
   };
 
   return (
@@ -119,6 +221,30 @@ export function AdminShell({ children }: AdminShellProps) {
                 </Link>
               ))}
 
+              <details
+                className="nav-item admin-sidebar-group"
+                open={blogLinks.some((link) => pathname === link.href)}
+              >
+                <summary className="nav-link dropdown-toggle">
+                  <IoNewspaperOutline className="me-2" />
+                  Blogs
+                </summary>
+                <div className="dropdown-menu bg-transparent border-0">
+                  {blogLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`dropdown-item ${
+                        pathname === link.href ? "active" : ""
+                      }`}
+                      onClick={closeSidebar}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+
               <details className="nav-item admin-sidebar-group">
                 <summary className="nav-link dropdown-toggle">
                   <FaRegFileAlt className="me-2" />
@@ -135,9 +261,11 @@ export function AdminShell({ children }: AdminShellProps) {
               <button
                 type="button"
                 className="nav-item nav-link text-start admin-top-action"
+                disabled={loggingOut}
+                onClick={handleLogout}
               >
                 <FiLogOut className="me-2" />
-                Log Out
+                {loggingOut ? "Logging Out..." : "Log Out"}
               </button>
             </div>
           </nav>

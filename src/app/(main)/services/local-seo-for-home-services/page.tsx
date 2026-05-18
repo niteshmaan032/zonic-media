@@ -568,7 +568,7 @@ function page() {
                   <div className="local-seo-home-price-badge">STARTER PLAN</div>
 
                   <h1 className="local-seo-home-price">
-                    $350 <span>/ month</span>
+                    $750 <span>/ month</span>
                   </h1>
 
                   <p className="local-seo-home-price-subtitle">
@@ -603,7 +603,7 @@ function page() {
                   <div className="local-seo-home-price-badge">GROWTH PLAN</div>
 
                   <h1 className="local-seo-home-price">
-                    $650 <span>/ month</span>
+                    $1350 <span>/ month</span>
                   </h1>
 
                   <p className="local-seo-home-price-subtitle">
@@ -641,7 +641,7 @@ function page() {
                   </div>
 
                   <h1 className="local-seo-home-price">
-                    $950 <span>/ month</span>
+                    $2000 <span>/ month</span>
                   </h1>
 
                   <p className="local-seo-home-price-subtitle">
