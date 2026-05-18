@@ -2,6 +2,7 @@ import Footer from "@/app/components/Footer";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import "@/app/style/conditions.css";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Col } from "react-bootstrap";
 import {
@@ -16,6 +17,33 @@ type PageProps = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const pageData = getConditionPageBySlug(slug);
+
+  if (!pageData) {
+    return {
+      title: "Legal Page Not Found | Zonic Media",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  return {
+    title: `${pageData.title} | Zonic Media`,
+    description:
+      pageData.intro[0] ??
+      "Read Zonic Media legal terms, privacy policy, and refund policy information.",
+    alternates: {
+      canonical: `/legal/${slug}`,
+    },
+  };
+}
 
 function renderBlock(block: ConditionBlock, index: number) {
   switch (block.type) {

@@ -10,6 +10,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import type { Metadata } from "next";
 import { Col, Row } from "react-bootstrap";
 import { FaGoogle, FaSearch } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
@@ -18,6 +19,22 @@ import { LuCalendarCheck2 } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { FaBullhorn, FaChartLine, FaPenNib } from "react-icons/fa";
 import { RiLineChartLine } from "react-icons/ri";
+
+export const metadata: Metadata = {
+  title: "Real Estate SEO Services | SEO for Realtors & Brokerages",
+  description:
+    "Real estate SEO services for agents, brokers, and teams. Improve Google rankings, Google Business visibility, and buyer and seller lead generation.",
+  alternates: {
+    canonical: "/services/industry/real-estate-seo-services",
+  },
+  openGraph: {
+    title: "Real Estate SEO Services | SEO for Realtors & Brokerages",
+    description:
+      "Grow real estate leads with local SEO, Google Business Profile optimization, content strategy, and conversion-focused website improvements.",
+    url: "/services/industry/real-estate-seo-services",
+    type: "website",
+  },
+};
 
 const RealEstateFaqs = [
   {

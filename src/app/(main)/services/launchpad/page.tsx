@@ -4,6 +4,7 @@ import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import type { Metadata } from "next";
 import { Col, Row } from "react-bootstrap";
 import { FaArrowTrendUp, FaCheck, FaCircleExclamation } from "react-icons/fa6";
 import { PiBagSimple } from "react-icons/pi";
@@ -14,6 +15,22 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import SquareBgLaunch from "@/app/components/SquareBgLaunch";
+
+export const metadata: Metadata = {
+  title: "Business Launch Services | Start Your Business Online | Zonic Media",
+  description:
+    "Launch your business online with Zonic LaunchPad. Get branding, website design, Google Business setup, local SEO, and lead generation in one done-for-you system.",
+  alternates: {
+    canonical: "/services/launchpad",
+  },
+  openGraph: {
+    title: "Business Launch Services | Start Your Business Online | Zonic Media",
+    description:
+      "Zonic LaunchPad helps new businesses launch with branding, a conversion-focused website, Google visibility, and a lead generation foundation.",
+    url: "/services/launchpad",
+    type: "website",
+  },
+};
 
 const LaunchpadServiceFaqItems = [
   {
