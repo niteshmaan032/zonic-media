@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 import { FaCalendarDays, FaCircleUser, FaArrowRight } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
@@ -12,13 +13,13 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blog | Digital Marketing & SEO Insights | Zonic Media",
   description:
-    "Explore expert articles on local SEO, web design, Google Ads, and digital marketing strategies from the Zonic Media team.",
+    "Read the latest digital marketing, local SEO, web design, and Google Ads insights from the Zonic Media team.",
   alternates: {
     canonical: "/blog",
   },
 };
 
-type BlogsPageProps = {
+type BlogPageProps = {
   searchParams?: Promise<{ blog?: string }>;
 };
 
@@ -36,87 +37,143 @@ function formatBlogDate(value: string) {
   }).format(date);
 }
 
-export default async function BlogsPage({ searchParams }: BlogsPageProps) {
+export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = await searchParams;
+  const blogs = await getPublishedBlogs();
 
-  // Backward compat: /blog?blog=<id> -> /blog/<slug>
   if (params?.blog) {
-    const blogs = await getPublishedBlogs();
-    const found = blogs.find((b) => b.id === params.blog);
+    const found = blogs.find((blog) => blog.id === params.blog);
 
     if (found?.slug) {
       redirect(`/blog/${found.slug}`);
     }
-
-    redirect("/blog");
   }
 
-  const blogs = await getPublishedBlogs();
+  const blog = blogs[0] ?? null;
 
-  return (
-    <>
-      <div className="bp-wrapper">
-        <div className="bp-container">
-          <div className="bp-listing-header">
-            <h1>Blog</h1>
-            <p>
-              Insights, strategies, and updates from the Zonic Media team
-            </p>
-          </div>
-
-          {blogs.length > 0 ? (
-            <div className="bp-listing-grid">
-              {blogs.map((blog) => (
-                <article key={blog.id} className="bp-listing-card">
-                  <div className="bp-listing-img-wrap">
-                    <Image
-                      src={blog.featuredImageUrl}
-                      alt={blog.blogTitle}
-                      fill
-                      sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-
-                  <div className="bp-listing-body">
-                    <span className="bp-listing-badge">
-                      {blog.serviceTitle}
-                    </span>
-                    <h2 className="bp-listing-title">{blog.blogTitle}</h2>
-                    <p className="bp-listing-excerpt">{blog.excerpt}</p>
-
-                    <div className="bp-listing-meta">
-                      <span>
-                        <FaCalendarDays size={12} aria-hidden="true" />
-                        {formatBlogDate(blog.publishDate)}
-                      </span>
-                      <span style={{ opacity: 0.4 }}>·</span>
-                      <span>
-                        <FaCircleUser size={12} aria-hidden="true" />
-                        {blog.authorName}
-                      </span>
-                    </div>
-
-                    <Link
-                      href={`/blog/${blog.slug}`}
-                      className="bp-listing-read-more"
-                    >
-                      Read More <FaArrowRight size={11} />
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <div className="bp-empty">
+  if (!blog) {
+    return (
+      <>
+        <div className="bp-wrapper">
+          <div className="bp-container">
+            <section className="bp-empty">
               <h1>No published blogs yet.</h1>
               <p>Published admin blogs will appear here automatically.</p>
               <Link href="/" className="bp-empty-link">
                 <FaArrowRight size={12} />
                 Back to Home
               </Link>
+            </section>
+          </div>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: blog.blogTitle,
+    image: blog.featuredImageUrl,
+    author: {
+      "@type": "Person",
+      name: blog.authorName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Zonic Media",
+      url: "https://zonicll.com",
+    },
+    datePublished: blog.publishDate,
+    dateModified: blog.publishedAt
+      ? blog.publishedAt.split("T")[0]
+      : blog.publishDate,
+    description: blog.excerpt,
+  };
+
+  return (
+    <>
+      <Script
+        id="blog-latest-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <div className="bp-wrapper">
+        <div className="bp-container">
+          <div className="row g-4 g-xl-5">
+            <div className="col-lg-8">
+              <article className="bp-article">
+                <span className="bp-category-badge">{blog.serviceTitle}</span>
+                <h1 className="bp-title">{blog.blogTitle}</h1>
+
+                <div className="bp-meta">
+                  <span className="bp-meta-item">
+                    <FaCalendarDays size={13} />
+                    {formatBlogDate(blog.publishDate)}
+                  </span>
+                  <span className="bp-meta-dot" aria-hidden="true" />
+                  <span className="bp-meta-item">
+                    <FaCircleUser size={13} />
+                    {blog.authorName}
+                  </span>
+                </div>
+
+                <div className="bp-featured-image">
+                  <Image
+                    src={blog.featuredImageUrl}
+                    alt={blog.blogTitle}
+                    fill
+                    sizes="(max-width: 991px) 100vw, 65vw"
+                    style={{ objectFit: "cover" }}
+                    priority
+                  />
+                </div>
+
+                <div
+                  className="bp-content"
+                  dangerouslySetInnerHTML={{ __html: blog.descriptionHtml }}
+                />
+              </article>
             </div>
-          )}
+
+            <div className="col-lg-4">
+              <aside className="bp-sidebar">
+                <h2 className="bp-sidebar-heading">Recent Posts</h2>
+
+                <div className="bp-recent-list">
+                  {blogs.map((recent) => (
+                    <Link
+                      key={recent.id}
+                      href={`/blog/${recent.slug}`}
+                      className={`bp-recent-card${
+                        recent.id === blog.id ? " bp-recent-card-active" : ""
+                      }`}
+                    >
+                      <div className="bp-recent-img-wrap">
+                        <Image
+                          src={recent.featuredImageUrl}
+                          alt={recent.blogTitle}
+                          fill
+                          sizes="90px"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                      <div className="bp-recent-body">
+                        <p className="bp-recent-date">
+                          <FaCircleUser size={11} />
+                          {recent.authorName}&nbsp;·&nbsp;
+                          {formatBlogDate(recent.publishDate)}
+                        </p>
+                        <h3 className="bp-recent-title">{recent.blogTitle}</h3>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </aside>
+            </div>
+          </div>
         </div>
       </div>
 
