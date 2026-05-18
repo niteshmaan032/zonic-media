@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "About Zonic Media | Global Web Design & Digital Marketing Agency",
   description:
     "Learn about Zonic Media, a global digital marketing agency delivering web design, SEO, and PPC solutions helping businesses grow worldwide.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Zonic Media | Global Web Design & Digital Marketing Agency",
+    description:
+      "Learn about Zonic Media, a global digital marketing agency delivering web design, SEO, and PPC solutions helping businesses grow worldwide.",
+    url: "/about",
+  },
 };
 
 function Page() {

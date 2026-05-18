@@ -7,6 +7,7 @@ import {
   createBlogSchema,
   ensureBlogIndexes,
   getBlogsCollection,
+  isSlugTaken,
   toSafeBlog,
   type BlogDocument,
   type BlogStatus,
@@ -145,6 +146,7 @@ export async function POST(request: NextRequest) {
     const parsed = createBlogSchema.safeParse({
       serviceTitle: getStringField(formData, "serviceTitle"),
       blogTitle: getStringField(formData, "blogTitle"),
+      slug: getStringField(formData, "slug"),
       publishDate: getStringField(formData, "publishDate"),
       authorName: getStringField(formData, "authorName"),
       descriptionHtml: getStringField(formData, "descriptionHtml"),
@@ -158,6 +160,18 @@ export async function POST(request: NextRequest) {
           message: parsed.error.issues[0]?.message ?? "Invalid blog data.",
         },
         { status: 400 },
+      );
+    }
+
+    await ensureBlogIndexes();
+    if (await isSlugTaken(parsed.data.slug)) {
+      return NextResponse.json(
+        {
+          success: false,
+          message:
+            "This Blog URL is already in use. Please choose a different one.",
+        },
+        { status: 409 },
       );
     }
 
@@ -207,6 +221,7 @@ export async function POST(request: NextRequest) {
       _id: new ObjectId(),
       serviceTitle: parsed.data.serviceTitle,
       blogTitle: parsed.data.blogTitle,
+      slug: parsed.data.slug,
       publishDate: parsed.data.publishDate,
       authorName: parsed.data.authorName,
       featuredImageUrl: featuredUpload.secure_url,
@@ -219,7 +234,6 @@ export async function POST(request: NextRequest) {
       publishedAt: parsed.data.status === "published" ? now : null,
     };
 
-    await ensureBlogIndexes();
     const blogs = await getBlogsCollection();
     await blogs.insertOne(blog);
 

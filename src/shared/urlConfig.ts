@@ -1,4 +1,4 @@
-const PRODUCTION_DOMAIN = "zonicll.com";
+const PRODUCTION_DOMAIN = "zonicllc.com";
 
 function firstConfiguredEnv(keys: string[]) {
   for (const key of keys) {

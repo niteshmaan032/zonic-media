@@ -13,6 +13,7 @@ export type BlogDocument = {
   _id: ObjectId;
   serviceTitle: string;
   blogTitle: string;
+  slug?: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -29,6 +30,7 @@ export type SafeBlog = {
   id: string;
   serviceTitle: string;
   blogTitle: string;
+  slug?: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -44,6 +46,7 @@ export type PublicBlog = {
   id: string;
   serviceTitle: string;
   blogTitle: string;
+  slug: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -61,9 +64,20 @@ const validDateSchema = z.string().refine((value) => {
   return !Number.isNaN(date.getTime());
 }, "Enter a valid date.");
 
+const slugSchema = z
+  .string()
+  .trim()
+  .min(1, "Blog URL is required.")
+  .max(200, "Blog URL must be at most 200 characters.")
+  .regex(
+    /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+    "Blog URL must use only lowercase letters, numbers, and hyphens (e.g. my-blog-post).",
+  );
+
 export const createBlogSchema = z.object({
   serviceTitle: z.string().trim().min(1, "Service title is required.").max(160),
   blogTitle: z.string().trim().min(1, "Blog title is required.").max(220),
+  slug: slugSchema,
   publishDate: validDateSchema,
   authorName: z.string().trim().min(1, "Author name is required.").max(120),
   descriptionHtml: z
@@ -87,7 +101,18 @@ export async function ensureBlogIndexes() {
     blogs.createIndex({ createdAt: -1 }),
     blogs.createIndex({ status: 1, createdAt: -1 }),
     blogs.createIndex({ status: 1, publishDate: -1 }),
+    blogs.createIndex({ slug: 1 }, { sparse: true, unique: true }),
   ]);
+}
+
+export function toSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_]+/g, "-")
+    .replace(/-{2,}/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 export function toSafeBlog(blog: BlogDocument): SafeBlog {
@@ -95,6 +120,7 @@ export function toSafeBlog(blog: BlogDocument): SafeBlog {
     id: blog._id.toHexString(),
     serviceTitle: blog.serviceTitle,
     blogTitle: blog.blogTitle,
+    slug: blog.slug,
     publishDate: blog.publishDate,
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,
@@ -139,6 +165,7 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
     id: blog._id.toHexString(),
     serviceTitle: blog.serviceTitle,
     blogTitle: blog.blogTitle,
+    slug: blog.slug ?? toSlug(blog.blogTitle),
     publishDate: blog.publishDate,
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,
@@ -162,4 +189,36 @@ export async function getPublishedBlogs(limit?: number) {
 
   const rows = await query.toArray();
   return rows.map(toPublicBlog);
+}
+
+export async function getPublishedBlogBySlug(
+  slug: string,
+): Promise<PublicBlog | null> {
+  await ensureBlogIndexes();
+  const blogs = await getBlogsCollection();
+
+  // Try stored slug first (new blogs)
+  let blog = await blogs.findOne({ slug, status: "published" });
+
+  // Fallback: for older blogs without a stored slug, derive from title
+  if (!blog) {
+    const all = await blogs.find({ status: "published" }).toArray();
+    blog =
+      all.find((b) => !b.slug && toSlug(b.blogTitle) === slug) ?? null;
+  }
+
+  return blog ? toPublicBlog(blog) : null;
+}
+
+export async function isSlugTaken(
+  slug: string,
+  excludeId?: string,
+): Promise<boolean> {
+  const blogs = await getBlogsCollection();
+  const filter =
+    excludeId && ObjectId.isValid(excludeId)
+      ? { slug, _id: { $ne: new ObjectId(excludeId) } }
+      : { slug };
+  const count = await blogs.countDocuments(filter);
+  return count > 0;
 }

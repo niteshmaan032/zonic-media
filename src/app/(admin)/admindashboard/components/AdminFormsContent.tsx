@@ -12,6 +12,7 @@ import type { SafeBlog } from "@/backend/lib/blogs";
 type BlogFormState = {
   serviceTitle: string;
   blogTitle: string;
+  blogSlug: string;
   publishDate: string;
   authorName: string;
   description: string;
@@ -188,6 +189,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
   const [form, setForm] = useState<BlogFormState>({
     serviceTitle: "",
     blogTitle: "",
+    blogSlug: "",
     publishDate: "",
     authorName: "",
     description: "",
@@ -288,6 +290,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
         setForm({
           serviceTitle: blog.serviceTitle,
           blogTitle: blog.blogTitle,
+          blogSlug: blog.slug ?? "",
           publishDate: blog.publishDate,
           authorName: blog.authorName,
           description: blog.descriptionHtml,
@@ -435,6 +438,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     setForm({
       serviceTitle: "",
       blogTitle: "",
+      blogSlug: "",
       publishDate: "",
       authorName: "",
       description: "",
@@ -474,6 +478,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     const formData = new FormData();
     formData.append("serviceTitle", form.serviceTitle);
     formData.append("blogTitle", form.blogTitle);
+    formData.append("slug", form.blogSlug);
     formData.append("publishDate", form.publishDate);
     formData.append("authorName", form.authorName);
     formData.append("descriptionHtml", editor?.getHTML() ?? form.description);
@@ -597,6 +602,41 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                     onChange={updateField("blogTitle")}
                     required
                   />
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label" htmlFor="blogSlug">
+                    Blog URL
+                  </label>
+                  <div className="input-group">
+                    <span className="input-group-text" style={{ fontSize: 13 }}>
+                      /blogs/
+                    </span>
+                    <input
+                      id="blogSlug"
+                      type="text"
+                      className="form-control"
+                      placeholder="how-local-seo-grows-service-businesses"
+                      value={form.blogSlug}
+                      onChange={(e) => {
+                        const raw = e.target.value
+                          .toLowerCase()
+                          .replace(/[^a-z0-9-]/g, "")
+                          .replace(/-{2,}/g, "-");
+                        setForm((current) => ({
+                          ...current,
+                          blogSlug: raw,
+                        }));
+                      }}
+                      required
+                      pattern="^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                      title="Only lowercase letters, numbers, and hyphens allowed (e.g. my-blog-post)"
+                    />
+                  </div>
+                  <p className="admin-blog-upload-note mb-0">
+                    URL-friendly slug — only lowercase letters, numbers, and
+                    hyphens. This becomes the blog&apos;s permanent web address.
+                  </p>
                 </div>
 
                 <div className="col-12 col-lg-6">

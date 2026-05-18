@@ -49,7 +49,7 @@ const nextConfig: NextConfig = {
       { source: "/company/our-partners", destination: "/", permanent: true },
       {
         source: "/who-we-help/healthcare/veterinary",
-        destination: "/dentist-seo-services",
+        destination: "/services/industry/dental-seo-services",
         permanent: true,
       },
       {
@@ -70,7 +70,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/healthcare",
-        destination: "/dentist-seo-services",
+        destination: "/services/industry/dental-seo-services",
         permanent: true,
       },
       {
@@ -88,7 +88,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service/search-engine-marketing",
-        destination: "/",
+        destination: "/services/philadelphia/sem",
         permanent: true,
       },
       {
@@ -128,7 +128,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service/search-engine-optimization",
-        destination: "/",
+        destination: "/services/local-seo-for-home-services",
         permanent: true,
       },
       {
@@ -145,7 +145,7 @@ const nextConfig: NextConfig = {
       { source: "/company/about-us", destination: "/about", permanent: true },
       {
         source: "/service/google-my-business",
-        destination: "/",
+        destination: "/services/gmb-optimization",
         permanent: true,
       },
       {

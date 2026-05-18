@@ -1,20 +1,25 @@
-import "@/app/style/BlogPage.css";
+import { redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaCalendarDays,
-  FaCircleUser,
-  FaArrowLeft,
-} from "react-icons/fa6";
+import type { Metadata } from "next";
+import { FaCalendarDays, FaCircleUser, FaArrowRight } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
-import { getPublishedBlogs, type PublicBlog } from "@/backend/lib/blogs";
+import { getPublishedBlogs } from "@/backend/lib/blogs";
+import "@/app/style/BlogPage.css";
 
 export const dynamic = "force-dynamic";
 
-type BlogPageProps = {
-  searchParams?: Promise<{
-    blog?: string;
-  }>;
+export const metadata: Metadata = {
+  title: "Blog | Digital Marketing & SEO Insights | Zonic Media",
+  description:
+    "Explore expert articles on local SEO, web design, Google Ads, and digital marketing strategies from the Zonic Media team.",
+  alternates: {
+    canonical: "/blogs",
+  },
+};
+
+type BlogsPageProps = {
+  searchParams?: Promise<{ blog?: string }>;
 };
 
 function formatBlogDate(value: string) {
@@ -31,109 +36,90 @@ function formatBlogDate(value: string) {
   }).format(date);
 }
 
-function BlogMeta({ blog }: { blog: PublicBlog }) {
-  return (
-    <div className="bp-meta">
-      <span className="bp-meta-item">
-        <FaCalendarDays size={13} />
-        {formatBlogDate(blog.publishDate)}
-      </span>
-      <span className="bp-meta-dot" aria-hidden="true" />
-      <span className="bp-meta-item">
-        <FaCircleUser size={13} />
-        {blog.authorName}
-      </span>
-    </div>
-  );
-}
-
-export default async function BlogPage({ searchParams }: BlogPageProps) {
+export default async function BlogsPage({ searchParams }: BlogsPageProps) {
   const params = await searchParams;
+
+  // Backward compat: /blogs?blog=<id> → /blogs/<slug>
+  if (params?.blog) {
+    const blogs = await getPublishedBlogs();
+    const found = blogs.find((b) => b.id === params.blog);
+
+    if (found?.slug) {
+      redirect(`/blogs/${found.slug}`);
+    }
+
+    redirect("/blogs");
+  }
+
   const blogs = await getPublishedBlogs();
-  const selectedBlog =
-    blogs.find((blog) => blog.id === params?.blog) ?? blogs[0] ?? null;
 
   return (
     <>
       <div className="bp-wrapper">
         <div className="bp-container">
-          {selectedBlog ? (
-            <div className="row g-4 g-xl-5">
-              <div className="col-lg-8">
-                <article className="bp-article">
-                  <span className="bp-category-badge">
-                    {selectedBlog.serviceTitle}
-                  </span>
-                  <h1 className="bp-title">{selectedBlog.blogTitle}</h1>
+          <div className="bp-listing-header">
+            <h1>Our Blog</h1>
+            <p>
+              Insights, strategies, and updates from the Zonic Media team
+            </p>
+          </div>
 
-                  <BlogMeta blog={selectedBlog} />
-
-                  <div className="bp-featured-image">
+          {blogs.length > 0 ? (
+            <div className="bp-listing-grid">
+              {blogs.map((blog) => (
+                <article key={blog.id} className="bp-listing-card">
+                  <div className="bp-listing-img-wrap">
                     <Image
-                      src={selectedBlog.featuredImageUrl}
-                      alt={selectedBlog.blogTitle}
+                      src={blog.featuredImageUrl}
+                      alt={blog.blogTitle}
                       fill
-                      sizes="(max-width: 991px) 100vw, 65vw"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
                       style={{ objectFit: "cover" }}
-                      priority
                     />
                   </div>
 
-                  <div
-                    className="bp-content"
-                    dangerouslySetInnerHTML={{
-                      __html: selectedBlog.descriptionHtml,
-                    }}
-                  />
-                </article>
-              </div>
+                  <div className="bp-listing-body">
+                    <span className="bp-listing-badge">
+                      {blog.serviceTitle}
+                    </span>
+                    <h2 className="bp-listing-title">{blog.blogTitle}</h2>
+                    <p className="bp-listing-excerpt">{blog.excerpt}</p>
 
-              <div className="col-lg-4">
-                <aside className="bp-sidebar">
-                  <h2 className="bp-sidebar-heading">Recent Posts</h2>
+                    <div className="bp-listing-meta">
+                      <span>
+                        <FaCalendarDays size={12} aria-hidden="true" />
+                        {formatBlogDate(blog.publishDate)}
+                      </span>
+                      <span style={{ opacity: 0.4 }}>·</span>
+                      <span>
+                        <FaCircleUser size={12} aria-hidden="true" />
+                        {blog.authorName}
+                      </span>
+                    </div>
 
-                  <div className="bp-recent-list">
-                    {blogs.map((blog) => (
-                      <Link
-                        key={blog.id}
-                        href={`/blogs?blog=${blog.id}`}
-                        className={`bp-recent-card${
-                          blog.id === selectedBlog.id ? " bp-recent-card-active" : ""
-                        }`}
-                      >
-                        <div className="bp-recent-img-wrap">
-                          <Image
-                            src={blog.featuredImageUrl}
-                            alt={blog.blogTitle}
-                            fill
-                            sizes="90px"
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div className="bp-recent-body">
-                          <p className="bp-recent-date">
-                            {formatBlogDate(blog.publishDate)}
-                          </p>
-                          <h3 className="bp-recent-title">{blog.blogTitle}</h3>
-                        </div>
-                      </Link>
-                    ))}
+                    <Link
+                      href={`/blogs/${blog.slug}`}
+                      className="bp-listing-read-more"
+                    >
+                      Read More <FaArrowRight size={11} />
+                    </Link>
                   </div>
-                </aside>
-              </div>
+                </article>
+              ))}
             </div>
           ) : (
-            <section className="bp-empty">
+            <div className="bp-empty">
               <h1>No published blogs yet.</h1>
               <p>Published admin blogs will appear here automatically.</p>
               <Link href="/" className="bp-empty-link">
-                <FaArrowLeft size={12} />
+                <FaArrowRight size={12} />
                 Back to Home
               </Link>
-            </section>
+            </div>
           )}
         </div>
       </div>
+
       <Footer />
     </>
   );

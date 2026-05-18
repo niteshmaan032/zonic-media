@@ -27,14 +27,64 @@ const neueHaas = localFont({
   ],
 });
 
+const SITE_URL = "https://zonicllc.com";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Zonic Media",
+  description:
+    "Digital marketing agency delivering web design, SEO, Google Ads, and growth solutions for businesses worldwide.",
+  url: SITE_URL,
+  telephone: "+13027269736",
+  email: "contact@zonicllc.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "8 The Green, STE B",
+    addressLocality: "Dover",
+    addressRegion: "DE",
+    postalCode: "19901",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/zonic-media/",
+    "https://www.facebook.com/zonicmediallc/",
+    "https://www.instagram.com/zonicmedia",
+    "https://www.youtube.com/@ZonicMediaDelware",
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Zonic Media",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Zonic Media | Digital Agency",
+    template: "%s | Zonic Media",
+  },
+  description:
+    "Zonic Media delivers premium web design, SEO, Google Ads, and digital marketing solutions to help businesses scale online.",
   icons: {
     icon: "/favicon.png",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Zonic Media",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Digital Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@zonicmedia",
   },
 };
 
@@ -48,6 +98,14 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://widget.clutch.co" />
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
+
+        <Script
+          id="local-business-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
 
         <Script
           id="clutch-widget-script"

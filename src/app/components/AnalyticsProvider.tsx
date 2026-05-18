@@ -5,7 +5,7 @@ import Script from "next/script";
 
 const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
-const DEFAULT_DOMAIN = "zonicll.com";
+const DEFAULT_DOMAIN = "zonicllc.com";
 
 function getConfiguredDomain() {
   const configuredAppUrl = process.env.NEXT_PUBLIC_APP_URL?.trim();

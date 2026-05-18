@@ -5,6 +5,7 @@ import {
   FEATURED_IMAGE_TYPES,
   ensureBlogIndexes,
   getBlogsCollection,
+  isSlugTaken,
   toSafeBlog,
   updateBlogSchema,
 } from "@/backend/lib/blogs";
@@ -143,6 +144,7 @@ export async function PATCH(
     const parsed = updateBlogSchema.safeParse({
       serviceTitle: getStringField(formData, "serviceTitle"),
       blogTitle: getStringField(formData, "blogTitle"),
+      slug: getStringField(formData, "slug"),
       publishDate: getStringField(formData, "publishDate"),
       authorName: getStringField(formData, "authorName"),
       descriptionHtml: getStringField(formData, "descriptionHtml"),
@@ -156,6 +158,17 @@ export async function PATCH(
           message: parsed.error.issues[0]?.message ?? "Invalid blog data.",
         },
         { status: 400 },
+      );
+    }
+
+    if (await isSlugTaken(parsed.data.slug, id)) {
+      return NextResponse.json(
+        {
+          success: false,
+          message:
+            "This Blog URL is already in use. Please choose a different one.",
+        },
+        { status: 409 },
       );
     }
 
@@ -221,6 +234,7 @@ export async function PATCH(
         $set: {
           serviceTitle: parsed.data.serviceTitle,
           blogTitle: parsed.data.blogTitle,
+          slug: parsed.data.slug,
           publishDate: parsed.data.publishDate,
           authorName: parsed.data.authorName,
           featuredImageUrl,

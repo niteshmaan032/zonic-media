@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Contact Zonic Media | Get in Touch With Our Digital Experts",
   description:
     "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
+  alternates: {
+    canonical: "/contact-us",
+  },
+  openGraph: {
+    title: "Contact Zonic Media | Get in Touch With Our Digital Experts",
+    description:
+      "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
+    url: "/contact-us",
+  },
 };
 
 function Page() {

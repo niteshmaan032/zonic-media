@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Digital Marketing Services | Web Design, SEO & PPC | Zonic Media",
   description:
     "Explore Zonic Media's digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Digital Marketing Services | Web Design, SEO & PPC | Zonic Media",
+    description:
+      "Explore Zonic Media's digital marketing services including web development, local SEO, Google Business Profile optimization, and Google Ads management.",
+    url: "/services",
+  },
 };
 
 function Page() {

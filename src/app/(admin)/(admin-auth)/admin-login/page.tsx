@@ -30,6 +30,7 @@ export default function LoginAdmin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const [error, setError] = useState("");
   const [attemptsRemaining, setAttemptsRemaining] = useState<number | null>(
     null,
@@ -153,6 +154,7 @@ export default function LoginAdmin() {
         if (result.code === "ACCOUNT_LOCKED") {
           applyLockState(result);
           setPassword("");
+          setLoading(false);
           return;
         }
 
@@ -164,18 +166,23 @@ export default function LoginAdmin() {
             result.message ??
               "Password login is disabled. Please reset your password.",
           );
+          setLoading(false);
           return;
         }
 
         setError(result.message ?? "Invalid email or password");
+        setLoading(false);
         return;
       }
 
+      // Success: keep button disabled during the full redirect.
+      // setLoading(false) is intentionally NOT called here — the component
+      // unmounts when navigation completes, so there is nothing to re-enable.
+      setRedirecting(true);
       router.replace("/admindashboard");
       router.refresh();
     } catch {
       setError("Unable to log in right now. Please try again.");
-    } finally {
       setLoading(false);
     }
   };
@@ -274,7 +281,11 @@ export default function LoginAdmin() {
               type="submit"
               disabled={loading || isLocked || passwordResetRequired}
             >
-              {loading ? "Logging in..." : "Login"}
+              {redirecting
+                ? "Redirecting..."
+                : loading
+                  ? "Logging in..."
+                  : "Login"}
             </button>
           </div>
         </form>
