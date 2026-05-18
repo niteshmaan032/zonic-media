@@ -13,7 +13,7 @@ export const SITE_PATHS = {
   about: "/about",
   services: "/services",
   contact: "/contact-us",
-  blogs: "/blogs",
+  blogs: "/blog",
   seo: "/services/local-seo-for-home-services",
   terms: "/legal/terms-conditions",
   legalPlaceholder: "/coming-soon",

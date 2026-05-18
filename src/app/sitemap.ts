@@ -13,7 +13,7 @@ const EXCLUDED_ROUTE_SEGMENTS = new Set([
   "legal",
   "thank-you",
   "[slug]",
-  "blogs",
+  "blog",
 ]);
 const EXCLUDED_ROUTE_GROUPS = new Set(["(admin)", "(admin-auth)"]);
 
@@ -22,7 +22,7 @@ const PRIORITY_BY_PATH: Record<string, number> = {
   "/services": 0.9,
   "/about": 0.8,
   "/contact-us": 0.8,
-  "/blogs": 0.8,
+  "/blog": 0.8,
 };
 
 function getPageFiles(dir: string): string[] {
@@ -84,9 +84,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   );
 
-  // Add /blogs listing page explicitly
+  // Add /blog listing page explicitly
   staticEntries.push({
-    url: `${siteUrl}/blogs`,
+    url: `${siteUrl}/blog`,
     changeFrequency: "weekly",
     priority: 0.8,
   });
@@ -96,7 +96,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     const blogs = await getPublishedBlogs();
     blogEntries = blogs.map((blog) => ({
-      url: `${siteUrl}/blogs/${blog.slug}`,
+      url: `${siteUrl}/blog/${blog.slug}`,
       lastModified: blog.publishedAt
         ? new Date(blog.publishedAt)
         : new Date(`${blog.publishDate}T00:00:00`),

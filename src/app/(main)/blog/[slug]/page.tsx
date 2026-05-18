@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: blog.blogTitle,
     description: blog.excerpt,
     alternates: {
-      canonical: `/blogs/${slug}`,
+      canonical: `/blog/${slug}`,
     },
     openGraph: {
       title: blog.blogTitle,
@@ -147,7 +147,7 @@ export default async function BlogPostPage({ params }: Props) {
                   {recentBlogs.map((recent) => (
                     <Link
                       key={recent.id}
-                      href={`/blogs/${recent.slug}`}
+                      href={`/blog/${recent.slug}`}
                       className="bp-recent-card"
                     >
                       <div className="bp-recent-img-wrap">

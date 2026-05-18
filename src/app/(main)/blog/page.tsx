@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Explore expert articles on local SEO, web design, Google Ads, and digital marketing strategies from the Zonic Media team.",
   alternates: {
-    canonical: "/blogs",
+    canonical: "/blog",
   },
 };
 
@@ -39,16 +39,16 @@ function formatBlogDate(value: string) {
 export default async function BlogsPage({ searchParams }: BlogsPageProps) {
   const params = await searchParams;
 
-  // Backward compat: /blogs?blog=<id> → /blogs/<slug>
+  // Backward compat: /blog?blog=<id> -> /blog/<slug>
   if (params?.blog) {
     const blogs = await getPublishedBlogs();
     const found = blogs.find((b) => b.id === params.blog);
 
     if (found?.slug) {
-      redirect(`/blogs/${found.slug}`);
+      redirect(`/blog/${found.slug}`);
     }
 
-    redirect("/blogs");
+    redirect("/blog");
   }
 
   const blogs = await getPublishedBlogs();
@@ -98,7 +98,7 @@ export default async function BlogsPage({ searchParams }: BlogsPageProps) {
                     </div>
 
                     <Link
-                      href={`/blogs/${blog.slug}`}
+                      href={`/blog/${blog.slug}`}
                       className="bp-listing-read-more"
                     >
                       Read More <FaArrowRight size={11} />

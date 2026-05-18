@@ -154,7 +154,7 @@ function Blogs({ blogs }: BlogsProps) {
                 <p className="blog-card-description">{blog.excerpt}</p>
 
                 <Link
-                  href={`/blogs/${blog.slug}`}
+                  href={`/blog/${blog.slug}`}
                   className="blog-card-link"
                 >
                   Continue Reading

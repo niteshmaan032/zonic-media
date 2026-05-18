@@ -711,7 +711,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                   </label>
                   <div className="input-group">
                     <span className="input-group-text" style={{ fontSize: 13 }}>
-                      /blogs/
+                      /blog/
                     </span>
                     <input
                       id="blogSlug"
