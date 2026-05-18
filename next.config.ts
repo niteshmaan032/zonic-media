@@ -81,12 +81,6 @@ const nextConfig: NextConfig = {
       { source: "/company", destination: "/", permanent: true },
       { source: "/who-we-help", destination: "/", permanent: true },
       {
-        source:
-          "/blog/what-is-deceptive-content-how-to-fix-your-suspended-gmb-profile",
-        destination: "/",
-        permanent: true,
-      },
-      {
         source: "/service/search-engine-marketing",
         destination: "/services/philadelphia/sem",
         permanent: true,
