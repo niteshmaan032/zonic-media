@@ -681,7 +681,7 @@ function Navbar() {
                             <FaRegNewspaper />
                           </span>
                           <span className="services-core-content">
-                            <strong>Blogs</strong>
+                            <strong>Blog</strong>
                             <span>
                               Read insights, guides, and updates around SEO,
                               websites, ads, and local growth.
@@ -992,7 +992,7 @@ function Navbar() {
                           href={SITE_PATHS.blogs}
                           onClick={() => handleToggleMobileMenu(false)}
                         >
-                          Blogs
+                          Blog
                         </Link>
                       </li>
                       <li>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { FaCalendarDays, FaCircleUser, FaArrowLeft } from "react-icons/fa6";
+import { FaCalendarDays, FaCircleUser } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import {
   getPublishedBlogBySlug,
@@ -106,10 +106,6 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="row g-4 g-xl-5">
             <div className="col-lg-8">
               <article className="bp-article">
-                <Link href="/blogs" className="bp-back-link">
-                  <FaArrowLeft size={12} /> All Posts
-                </Link>
-
                 <span className="bp-category-badge">{blog.serviceTitle}</span>
                 <h1 className="bp-title">{blog.blogTitle}</h1>
 
@@ -152,9 +148,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <Link
                       key={recent.id}
                       href={`/blogs/${recent.slug}`}
-                      className={`bp-recent-card${
-                        recent.id === blog.id ? " bp-recent-card-active" : ""
-                      }`}
+                      className="bp-recent-card"
                     >
                       <div className="bp-recent-img-wrap">
                         <Image
@@ -167,7 +161,8 @@ export default async function BlogPostPage({ params }: Props) {
                       </div>
                       <div className="bp-recent-body">
                         <p className="bp-recent-date">
-                          {formatBlogDate(recent.publishDate)}
+                          <FaCircleUser size={11} />
+                          {recent.authorName}&nbsp;·&nbsp;{formatBlogDate(recent.publishDate)}
                         </p>
                         <h3 className="bp-recent-title">{recent.blogTitle}</h3>
                       </div>

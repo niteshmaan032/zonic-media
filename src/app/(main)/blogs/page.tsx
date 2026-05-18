@@ -58,7 +58,7 @@ export default async function BlogsPage({ searchParams }: BlogsPageProps) {
       <div className="bp-wrapper">
         <div className="bp-container">
           <div className="bp-listing-header">
-            <h1>Our Blog</h1>
+            <h1>Blog</h1>
             <p>
               Insights, strategies, and updates from the Zonic Media team
             </p>

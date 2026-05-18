@@ -4,9 +4,25 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import ImageExtension from "@tiptap/extension-image";
 import LinkExtension from "@tiptap/extension-link";
+import {
+  Table,
+  TableCell,
+  TableHeader,
+  TableRow,
+} from "@tiptap/extension-table";
 import type { Editor } from "@tiptap/react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import {
+  TbColumnInsertLeft,
+  TbColumnInsertRight,
+  TbColumnRemove,
+  TbRowInsertBottom,
+  TbRowInsertTop,
+  TbRowRemove,
+  TbTableMinus,
+  TbTablePlus,
+} from "react-icons/tb";
 import type { SafeBlog } from "@/backend/lib/blogs";
 
 type BlogFormState = {
@@ -143,6 +159,87 @@ function EditorToolbar({ editor, onInsertImage }: EditorToolbarProps) {
         >
           {isInLink ? "Unlink" : "Link"}
         </button>
+
+        <span className="admin-blog-toolbar-divider" aria-hidden="true" />
+
+        <button
+          type="button"
+          title="Insert table (3×3 with header)"
+          onClick={() =>
+            editor
+              .chain()
+              .focus()
+              .insertTable({ rows: 3, cols: 3, withHeaderRow: true })
+              .run()
+          }
+        >
+          <TbTablePlus size={16} />
+        </button>
+
+        {editor.isActive("table") && (
+          <>
+            <span className="admin-blog-toolbar-divider" aria-hidden="true" />
+
+            <button
+              type="button"
+              title="Add column before"
+              onClick={() => editor.chain().focus().addColumnBefore().run()}
+            >
+              <TbColumnInsertLeft size={16} />
+            </button>
+            <button
+              type="button"
+              title="Add column after"
+              onClick={() => editor.chain().focus().addColumnAfter().run()}
+            >
+              <TbColumnInsertRight size={16} />
+            </button>
+            <button
+              type="button"
+              title="Remove column"
+              className="admin-blog-toolbar-danger"
+              onClick={() => editor.chain().focus().deleteColumn().run()}
+            >
+              <TbColumnRemove size={16} />
+            </button>
+
+            <span className="admin-blog-toolbar-divider" aria-hidden="true" />
+
+            <button
+              type="button"
+              title="Add row above"
+              onClick={() => editor.chain().focus().addRowBefore().run()}
+            >
+              <TbRowInsertTop size={16} />
+            </button>
+            <button
+              type="button"
+              title="Add row below"
+              onClick={() => editor.chain().focus().addRowAfter().run()}
+            >
+              <TbRowInsertBottom size={16} />
+            </button>
+            <button
+              type="button"
+              title="Remove row"
+              className="admin-blog-toolbar-danger"
+              onClick={() => editor.chain().focus().deleteRow().run()}
+            >
+              <TbRowRemove size={16} />
+            </button>
+
+            <span className="admin-blog-toolbar-divider" aria-hidden="true" />
+
+            <button
+              type="button"
+              title="Delete entire table"
+              className="admin-blog-toolbar-danger"
+              onClick={() => editor.chain().focus().deleteTable().run()}
+            >
+              <TbTableMinus size={16} />
+            </button>
+          </>
+        )}
       </div>
       {linkOpen ? (
         <div className="admin-blog-editor-link-bar">
@@ -214,6 +311,10 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
   const editor = useEditor({
     extensions: [
       StarterKit,
+      Table.configure({ resizable: false }),
+      TableRow,
+      TableHeader,
+      TableCell,
       ImageExtension.configure({
         allowBase64: true,
         resize: {

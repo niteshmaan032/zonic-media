@@ -84,7 +84,12 @@ export const createBlogSchema = z.object({
     .string()
     .trim()
     .min(1, "Blog description is required.")
-    .max(250_000),
+    .refine(
+      (html) =>
+        html.replace(/data:image\/[^;]+;base64,[^"'`]*/g, "").length <=
+        250_000,
+      "Blog description is too long. Please reduce the amount of text content.",
+    ),
   status: z.enum(BLOG_STATUSES),
 });
 
