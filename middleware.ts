@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { getAdminCookieDomain } from "@/shared/urlConfig";
 
 const ADMIN_AUTH_COOKIE = "zonic_admin_auth";
 const protectedAdminPrefix = "/admindashboard";
@@ -70,8 +71,24 @@ function redirectToLogin(request: NextRequest) {
   url.pathname = "/admin-login";
   url.search = "";
   const response = NextResponse.redirect(url);
-  response.cookies.delete(ADMIN_AUTH_COOKIE);
+  clearAdminAuthCookie(response);
   return response;
+}
+
+function clearAdminAuthCookie(response: NextResponse) {
+  const domain = getAdminCookieDomain();
+
+  response.cookies.delete(ADMIN_AUTH_COOKIE);
+
+  if (domain) {
+    response.cookies.set({
+      name: ADMIN_AUTH_COOKIE,
+      value: "",
+      path: "/",
+      domain,
+      maxAge: 0,
+    });
+  }
 }
 
 export async function middleware(request: NextRequest) {
@@ -97,7 +114,7 @@ export async function middleware(request: NextRequest) {
 
   if (token && !hasValidToken) {
     const response = NextResponse.next();
-    response.cookies.delete(ADMIN_AUTH_COOKIE);
+    clearAdminAuthCookie(response);
     return response;
   }
 

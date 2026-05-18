@@ -4,6 +4,7 @@ import { ObjectId, type Collection } from "mongodb";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getMongoDb } from "./mongodb";
+import { getAdminCookieDomain } from "@/shared/urlConfig";
 
 export const ADMIN_AUTH_COOKIE = "zonic_admin_auth";
 export const ADMIN_COLLECTION = "admins";
@@ -201,6 +202,8 @@ export function verifyAdminToken(token: string): AdminJwtPayload | null {
 }
 
 export function setAdminAuthCookie(response: NextResponse, token: string) {
+  const domain = getAdminCookieDomain();
+
   response.cookies.set({
     name: ADMIN_AUTH_COOKIE,
     value: token,
@@ -208,11 +211,14 @@ export function setAdminAuthCookie(response: NextResponse, token: string) {
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
+    ...(domain ? { domain } : {}),
     maxAge: getJwtCookieMaxAgeSeconds(),
   });
 }
 
 export function clearAdminAuthCookie(response: NextResponse) {
+  const domain = getAdminCookieDomain();
+
   response.cookies.set({
     name: ADMIN_AUTH_COOKIE,
     value: "",
@@ -220,6 +226,7 @@ export function clearAdminAuthCookie(response: NextResponse) {
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
+    ...(domain ? { domain } : {}),
     maxAge: 0,
   });
 }

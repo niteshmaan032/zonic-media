@@ -9,6 +9,7 @@ import {
 import { sendAdminResetPasswordEmail } from "@/backend/lib/mailer";
 import { checkRateLimit, rateLimitResponse } from "@/backend/lib/rateLimit";
 import { createRawResetToken, hashResetToken } from "@/backend/lib/resetToken";
+import { getAppUrl } from "@/shared/urlConfig";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -59,11 +60,7 @@ export async function POST(request: Request) {
     const expiresAt = new Date(
       now.getTime() + getResetPasswordExpiresMinutes() * 60 * 1000,
     );
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/+$/, "");
-
-    if (!appUrl) {
-      throw new Error("NEXT_PUBLIC_APP_URL is not configured.");
-    }
+    const appUrl = getAppUrl();
 
     await admins.updateOne(
       { _id: admin._id },

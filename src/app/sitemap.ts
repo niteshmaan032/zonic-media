@@ -1,8 +1,8 @@
 import { readdirSync } from "fs";
 import { join, relative, sep } from "path";
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/shared/urlConfig";
 
-const SITE_URL = "https://zonicllc.com";
 const APP_DIR = join(process.cwd(), "src", "app");
 const PAGE_FILE = "page.tsx";
 
@@ -60,6 +60,7 @@ function toRoutePath(filePath: string): string | null {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const siteUrl = getSiteUrl();
   const lastModified = new Date();
   const routes = getPageFiles(APP_DIR)
     .map(toRoutePath)
@@ -67,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort((a, b) => a.localeCompare(b));
 
   return routes.map((path) => ({
-    url: `${SITE_URL}${path}`,
+    url: `${siteUrl}${path}`,
     lastModified,
     changeFrequency: path === "/" ? "weekly" : "monthly",
     priority: PRIORITY_BY_PATH[path] ?? 0.8,

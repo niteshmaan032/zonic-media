@@ -37,6 +37,10 @@ export default function RecaptchaCheckbox({
   const [smsConsentChecked, setSmsConsentChecked] = useState(true);
   const siteKey =
     process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || RECAPTCHA_SITE_KEY;
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
+  const privacyHref = appUrl
+    ? `${appUrl}/legal/privacy-policy`
+    : "/legal/privacy-policy";
 
   const execute = useCallback(async () => {
     if (!siteKey || !scriptReady || !window.grecaptcha) {
@@ -122,11 +126,11 @@ export default function RecaptchaCheckbox({
           email at <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>{" "}
           for more info. Visit{" "}
           <a
-            href="https://zonicllc.com/legal/privacy-policy"
+            href={privacyHref}
             target="_blank"
             rel="noopener noreferrer"
           >
-            zonicllc.com/legal/privacy-policy
+            Privacy Policy
           </a>{" "}
           to view terms &amp; privacy.
         </span>

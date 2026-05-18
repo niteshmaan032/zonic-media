@@ -4,13 +4,33 @@ import Script from "next/script";
 
 const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
+const DEFAULT_DOMAIN = "zonicll.com";
+
+function getConfiguredDomain() {
+  const configuredAppUrl = process.env.NEXT_PUBLIC_APP_URL?.trim();
+
+  if (!configuredAppUrl) {
+    return DEFAULT_DOMAIN;
+  }
+
+  try {
+    return new URL(configuredAppUrl).hostname.replace(/^www\./, "");
+  } catch {
+    return DEFAULT_DOMAIN;
+  }
+}
+
+const primaryDomain = getConfiguredDomain();
+const linkerDomains = [primaryDomain, `www.${primaryDomain}`];
 
 export default function AnalyticsProvider() {
   const isBrowser = typeof window !== "undefined";
 
   // ✅ Allow ONLY your real domain (www + non-www + future subdomains)
   const isMainDomain =
-    isBrowser && window.location.hostname.endsWith("zonicllc.com");
+    isBrowser &&
+    (window.location.hostname === primaryDomain ||
+      window.location.hostname.endsWith(`.${primaryDomain}`));
 
   // 🚫 Block everything else (vercel previews, localhost, etc.)
   if (!isMainDomain) return null;
@@ -34,7 +54,7 @@ export default function AnalyticsProvider() {
 
             gtag('config', '${TRACKING_ID}', {
               linker: {
-                domains: ['zonicllc.com']
+                domains: ${JSON.stringify(linkerDomains)}
               }
             });
           `,

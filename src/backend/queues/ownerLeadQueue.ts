@@ -1,24 +1,26 @@
 import type { LeadPayload } from "@/backend/controllers/leadsController";
+import { getApiUrl, normalizeBaseUrl } from "@/shared/urlConfig";
 
 type QueueResult = {
   queued: boolean;
 };
-
-const normalizeBaseUrl = (url: string) => url.replace(/\/+$/, "");
 
 export const enqueueOwnerLeadEmail = async (
   payload: LeadPayload,
 ): Promise<QueueResult> => {
   const qstashUrl = process.env.QSTASH_URL;
   const qstashToken = process.env.QSTASH_TOKEN;
-  const appBaseUrl = process.env.APP_BASE_URL;
   const queueSecret = process.env.QSTASH_QUEUE_SECRET;
   const delaySeconds = Number(process.env.OWNER_LEAD_DELAY_SECONDS ?? "120");
 
-  if (!qstashUrl || !qstashToken || !appBaseUrl || !queueSecret) {
+  if (!qstashUrl || !qstashToken || !queueSecret) {
     return { queued: false };
   }
 
+  const legacyAppBaseUrl = process.env.APP_BASE_URL?.trim();
+  const appBaseUrl = legacyAppBaseUrl
+    ? normalizeBaseUrl(legacyAppBaseUrl)
+    : getApiUrl();
   const targetUrl = `${normalizeBaseUrl(appBaseUrl)}/api/internal/owner-lead`;
   const publishUrl = `${normalizeBaseUrl(qstashUrl)}/v2/publish/${encodeURIComponent(targetUrl)}`;
 
