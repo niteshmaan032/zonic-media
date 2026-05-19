@@ -1,4 +1,5 @@
 const PRODUCTION_DOMAIN = "zonicllc.com";
+const PRODUCTION_BASE_URL = `https://${PRODUCTION_DOMAIN}`;
 
 function firstConfiguredEnv(keys: string[]) {
   for (const key of keys) {
@@ -16,9 +17,28 @@ export function normalizeBaseUrl(url: string) {
   return url.trim().replace(/\/+$/, "");
 }
 
+function isLocalhostUrl(url: string) {
+  try {
+    const hostname = new URL(url).hostname;
+    return hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
+  } catch {
+    return false;
+  }
+}
+
+function normalizeProductionSafeUrl(url: string) {
+  const normalizedUrl = normalizeBaseUrl(url);
+
+  if (process.env.NODE_ENV === "production" && isLocalhostUrl(normalizedUrl)) {
+    return PRODUCTION_BASE_URL;
+  }
+
+  return normalizedUrl;
+}
+
 function requireConfiguredUrl(url: string, envNames: string) {
   if (url) {
-    return normalizeBaseUrl(url);
+    return normalizeProductionSafeUrl(url);
   }
 
   throw new Error(`${envNames} must be configured.`);
@@ -45,7 +65,7 @@ export function getSiteUrl() {
 
 export function getApiUrl() {
   const apiUrl = firstConfiguredEnv(["NEXT_PUBLIC_API_URL", "API_URL"]);
-  return apiUrl ? normalizeBaseUrl(apiUrl) : getAppUrl();
+  return apiUrl ? normalizeProductionSafeUrl(apiUrl) : getAppUrl();
 }
 
 export function getAdminCookieDomain() {
@@ -55,12 +75,16 @@ export function getAdminCookieDomain() {
     return configuredDomain.replace(/^\.+/, "");
   }
 
-  const appUrl = firstConfiguredEnv([
+  const configuredAppUrl = firstConfiguredEnv([
     "APP_URL",
     "SITE_URL",
     "NEXTAUTH_URL",
     "NEXT_PUBLIC_APP_URL",
   ]);
+  const appUrl =
+    configuredAppUrl && process.env.NODE_ENV === "production"
+      ? normalizeProductionSafeUrl(configuredAppUrl)
+      : configuredAppUrl;
 
   if (process.env.NODE_ENV !== "production" || !appUrl) {
     return undefined;

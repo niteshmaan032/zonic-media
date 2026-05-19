@@ -1,8 +1,10 @@
 import { MongoServerError, ObjectId } from "mongodb";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import {
+  ADMIN_AUTH_COOKIE,
   adminCredentialsSchema,
   ensureAdminIndexes,
+  getAdminFromAuthToken,
   getAdminsCollection,
   hashPassword,
   toSafeAdmin,
@@ -12,7 +14,28 @@ import {
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function POST(request: Request) {
+async function canCreateAdmin(request: NextRequest, existingAdminCount: number) {
+  if (existingAdminCount === 0) {
+    return true;
+  }
+
+  const token = request.cookies.get(ADMIN_AUTH_COOKIE)?.value;
+
+  if (token) {
+    const currentAdmin = await getAdminFromAuthToken(token);
+
+    if (currentAdmin) {
+      return true;
+    }
+  }
+
+  const setupSecret = process.env.ADMIN_SETUP_SECRET;
+  const requestSecret = request.headers.get("x-admin-setup-secret");
+
+  return Boolean(setupSecret && requestSecret === setupSecret);
+}
+
+export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as unknown;
     const parsed = adminCredentialsSchema.safeParse(body);
@@ -31,19 +54,13 @@ export async function POST(request: Request) {
     const admins = await getAdminsCollection();
     const existingAdminCount = await admins.countDocuments({}, { limit: 1 });
 
-    // Security: public bootstrap is allowed only before the first admin exists.
-    // Keep ADMIN_SETUP_SECRET private and remove external access to this route
-    // after setup if your deployment does not need admin self-provisioning.
-    if (existingAdminCount > 0) {
-      const setupSecret = process.env.ADMIN_SETUP_SECRET;
-      const requestSecret = request.headers.get("x-admin-setup-secret");
-
-      if (!setupSecret || requestSecret !== setupSecret) {
-        return NextResponse.json(
-          { success: false, message: "Admin creation is not available." },
-          { status: 403 },
-        );
-      }
+    // Public bootstrap is allowed only before the first admin exists.
+    // Later admin creation requires a valid admin session or setup secret.
+    if (!(await canCreateAdmin(request, existingAdminCount))) {
+      return NextResponse.json(
+        { success: false, message: "Admin creation is not available." },
+        { status: 403 },
+      );
     }
 
     const now = new Date();
