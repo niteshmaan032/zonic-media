@@ -7,6 +7,7 @@ import WorldMap from "@/app/components/WorldMap";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import HeroTypewriter from "@/app/components/HeroTypewriter";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   FaArrowRight,
   FaCode,
@@ -385,8 +386,8 @@ export default async function Home() {
           </p>
 
           <div className="nh-hero-cta-row">
-            <Link href="/contact-us" className="buttons nh-btn-dark">
-              Start Your Project <BtnArrow />
+            <Link href={SITE_CONTACT.phoneHref} className="buttons nh-btn-dark">
+              {SITE_CONTACT.phoneDisplay} <BtnArrow />
             </Link>
             <div className="nh-clutch-wrap">
               <ClutchWidget height="50" />
@@ -597,7 +598,7 @@ export default async function Home() {
                     </div>
                   </div>
                 ))}
-                <Link href="/contact-us" className="nh-why-cta-tile">
+                <Link href={SITE_CONTACT.phoneHref} className="nh-why-cta-tile">
                   <span>Ready for a cleaner growth plan?</span>
                   <strong>Book a Strategy Call</strong>
                   <em>
