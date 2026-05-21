@@ -60,7 +60,7 @@ const imgs = {
   img2: "/images/residential-seo/ChatGPT Image May 13, 2026, 05_10_27 PM.png",
   img3: "/images/residential-seo/ChatGPT Image May 13, 2026, 05_12_21 PM.png",
   img4: "/images/residential-seo/ChatGPT Image May 13, 2026, 04_58_29 PM.png",
-  contact: "/images/contact-sec.png",
+  contact: "/images/contact-section.jpg",
 };
 
 type InlineAuditFormValues = {

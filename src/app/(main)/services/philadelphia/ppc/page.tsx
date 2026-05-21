@@ -839,7 +839,7 @@ function page() {
 
             <div className="phila-ppc-sec-11-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-section.jpg"
                 fill
                 alt="Philadelphia marketing consultation and contact"
                 className="phila-ppc-sec-11-image"

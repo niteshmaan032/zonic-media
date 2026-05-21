@@ -39,6 +39,49 @@ body p {
 
 .grecaptcha-badge {
   z-index: 999;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.floating-phone-link {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 998;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--secondary);
+  background: var(--primary);
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  box-shadow: none;
+  text-decoration: none;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease;
+}
+
+.floating-phone-link svg {
+  width: 19px;
+  height: 19px;
+}
+
+.floating-phone-link:hover,
+.floating-phone-link:focus-visible {
+  color: var(--secondary);
+  background: #ffcf3d;
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+
+.floating-phone-link:focus-visible {
+  outline: 3px solid rgba(253, 193, 21, 0.36);
+  outline-offset: 4px;
 }
 
 .buttons {
@@ -414,6 +457,82 @@ body p {
   .testimonial-heading {
     font-size: 36px;
     line-height: 44px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dent-sec-1,
+  .roof-sec-1,
+  .hvac-hero,
+  .realest-sec-1,
+  .phila-seo-sec-1,
+  .car-tow-hero {
+    background-image: none !important;
+    background-color: var(--industry-hero-mobile-bg, #111111) !important;
+  }
+
+  .dent-sec-1,
+  .roof-sec-1,
+  .phila-seo-sec-1,
+  .car-tow-page .car-tow-hero {
+    --industry-hero-mobile-bg: #111111;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #070707 0%, #171717 100%);
+  }
+
+  .hvac-hero {
+    --industry-hero-mobile-bg: #101316;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #090b0d 0%, #191f24 100%);
+  }
+
+  .realest-sec-1 {
+    --industry-hero-mobile-bg: #101512;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #090d0b 0%, #18211c 100%);
+  }
+
+  .pest-hero.phila-seo-sec-1 {
+    --industry-hero-mobile-bg: #12100a;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #0b0905 0%, #1d180c 100%);
+  }
+
+  .chiro-page .car-tow-hero {
+    --industry-hero-mobile-bg: #061f38;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #03111f 0%, #063968 100%);
+  }
+
+  .cseo-page .car-tow-hero {
+    --industry-hero-mobile-bg: #041f4d;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #03122e 0%, #04398f 100%);
+  }
+
+  .law-seo-page .car-tow-hero {
+    --industry-hero-mobile-bg: #181305;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #0e0a02 0%, #2a2109 100%);
+  }
+
+  .rseo-page .car-tow-hero {
+    --industry-hero-mobile-bg: #1f3212;
+    --industry-hero-mobile-layer: linear-gradient(180deg, #111d09 0%, #2d4d16 100%);
+  }
+
+  .dent-sec-1-layer,
+  .roof-sec-1-layer,
+  .realest-sec-1-layer,
+  .phila-seo-sec-1-layer,
+  .car-tow-hero-layer {
+    background: var(--industry-hero-mobile-layer, linear-gradient(180deg, #070707 0%, #171717 100%)) !important;
+  }
+
+  .floating-phone-link {
+    right: 18px;
+    bottom: 18px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media print {
+  .floating-phone-link {
+    display: none;
   }
 }
 

@@ -1226,7 +1226,7 @@ export default function CarTowSeoPage() {
 
             <div className="phila-sec-10-image-wrap">
               <img
-                src="/images/contact-sec.png"
+                src="/images/contact-section.jpg"
                 alt="Philadelphia marketing consultation and contact"
                 className="phila-sec-10-image"
               />

@@ -558,7 +558,7 @@ export default function HvacSeoPage() {
 
             <div className="roof-sec-contact-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-section.jpg"
                 fill
                 alt="HVAC SEO consultation and strategy"
                 className="roof-sec-contact-image"

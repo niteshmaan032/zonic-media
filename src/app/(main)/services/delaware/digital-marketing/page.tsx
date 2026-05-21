@@ -649,7 +649,7 @@ export default function Page() {
 
             <div className="deldg-sec-10-image-wrap">
               <Image
-                src="/images/real-est-industries/realest-img-5.jpg"
+                src="/images/contact-section.jpg"
                 fill
                 alt="Delaware business growth consultation"
                 className="deldg-sec-10-image"

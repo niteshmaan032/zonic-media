@@ -53,7 +53,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 /* â”€â”€â”€ IMAGE PATHS â”€â”€â”€ */
 const imgs = {
   hero: "/images/law-seo/ChatGPT Image May 13, 2026, 06_14_24 PM.png",
-  maps: "/images/law-seo/magnific_2958542805.png",
+  maps: "/images/contact-section.jpg",
   img1: "/images/law-seo/ChatGPT Image May 11, 2026, 12_04_02 PM.png",
   img2: "/images/law-seo/ChatGPT Image May 11, 2026, 12_22_52 PM.png",
   img3: "/images/law-seo/ChatGPT Image May 11, 2026, 12_24_33 PM.png",
@@ -62,7 +62,7 @@ const imgs = {
   img6: "/images/law-seo/ChatGPT Image May 11, 2026, 12_36_03 PM.png",
   img7: "/images/law-seo/ChatGPT Image May 11, 2026, 12_44_27 PM.png",
   img8: "/images/law-seo/ChatGPT Image May 11, 2026, 12_46_23 PM.png",
-  contact: "/images/contact-sec.png",
+  contact: "/images/contact-section.jpg",
 };
 
 type InlineAuditFormValues = {
@@ -1773,7 +1773,7 @@ export default function LawSeoPage() {
               <Image
                 src={imgs.contact}
                 fill
-                alt="Zonic Media law firm marketing services consultation and contact"
+                alt="Send mail illustration for contacting Zonic Media"
                 className="phila-sec-10-image"
               />
             </div>

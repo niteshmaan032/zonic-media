@@ -581,7 +581,7 @@ function page() {
 
             <div className="phila-sec-10-image-wrap">
               <Image
-                src="/images/contact-sec.png"
+                src="/images/contact-section.jpg"
                 fill
                 alt="Pediatric clinic marketing consultation"
                 className="phila-sec-10-image"

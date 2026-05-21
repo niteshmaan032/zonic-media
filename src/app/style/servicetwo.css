@@ -1,0 +1,1850 @@
+/* ============================================================
+   SERVICETWO PAGE  ·  st2- prefix namespace
+   ============================================================ */
+
+/* ── CONTAINER ────────────────────────────────────────────── */
+
+.st2-container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+/* ── SECTION BASE ─────────────────────────────────────────── */
+
+.st2-section {
+  padding: 60px 0;
+}
+
+/* ── SECTION HEADER ───────────────────────────────────────── */
+
+.st2-section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+/* ── LABEL PILL ───────────────────────────────────────────── */
+
+.st2-label {
+  display: inline-block;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: var(--color2);
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.st2-label-accent {
+  color: var(--primary);
+}
+
+.st2-label-light {
+  color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* ── SECTION HEADINGS ─────────────────────────────────────── */
+
+.st2-section-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin-bottom: 14px;
+}
+
+.st2-section-sub {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.6;
+  max-width: 68%;
+  margin: 0 auto;
+}
+
+/* ── BUTTON MODIFIERS ─────────────────────────────────────── */
+
+.st2-btn-dark {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.st2-btn-primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--secondary) !important;
+}
+
+.st2-btn-primary .buttons__icon-wrapper {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.st2-btn-yellow {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--secondary) !important;
+}
+
+.st2-btn-yellow .buttons__icon-wrapper {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.st2-btn-ghost {
+  background-color: rgba(27, 27, 27, 0.07) !important;
+  border-color: var(--stroke) !important;
+  color: var(--secondary) !important;
+}
+
+.st2-btn-ghost .buttons__icon-wrapper {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.st2-btn-ghost-light {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: var(--white) !important;
+}
+
+.st2-btn-ghost-light .buttons__icon-wrapper {
+  background-color: var(--white) !important;
+  color: var(--secondary) !important;
+}
+
+/* ── SHARED LEARN MORE ────────────────────────────────────── */
+
+.st2-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.st2-learn-more:hover {
+  color: var(--primary);
+}
+
+.st2-learn-more svg {
+  transition: transform 0.2s;
+}
+
+.st2-learn-more:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── SHARED CTA CENTER ────────────────────────────────────── */
+
+.st2-cta-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+/* ============================================================
+   SECTION 1 — HERO  (split two-column — different from home)
+   ============================================================ */
+
+.st2-hero {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.st2-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -120px;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(253, 193, 21, 0.13) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.st2-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  left: -100px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(253, 193, 21, 0.07) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Two-column grid */
+.st2-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 100px 64px;
+  box-sizing: border-box;
+}
+
+/* Left column */
+.st2-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  z-index: 1;
+}
+
+.st2-hero-overline {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 -10px;
+}
+
+.st2-hero-h1 {
+  font-size: 68px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-hero-accent {
+  color: var(--primary);
+}
+
+.st2-hero-p {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0;
+}
+
+.st2-hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Trust strip */
+.st2-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 6px;
+  padding-top: 0;
+}
+
+.st2-hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color2);
+}
+
+.st2-hero-trust-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Right column */
+.st2-hero-right {
+  position: relative;
+  z-index: 1;
+}
+
+.st2-hero-img-wrap {
+  position: relative;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color1);
+}
+
+/* Floating stat card */
+.st2-hero-stat-card {
+  position: absolute;
+  bottom: 28px;
+  left: -28px;
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: 0 12px 40px rgba(27, 27, 27, 0.1);
+  z-index: 2;
+}
+
+.st2-hero-stat-card p:first-child {
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1;
+  margin: 0 0 4px;
+}
+
+.st2-hero-stat-card p:last-child {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color2);
+  margin: 0;
+}
+
+/* Stats bar — full-width strip at bottom of hero */
+.st2-hero-statsbar {
+  border-top: 1px solid var(--stroke);
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 100px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.st2-hero-statsbar-item {
+  flex: 1;
+  padding: 28px 0;
+  text-align: center;
+  border-right: none;
+}
+
+.st2-hero-statsbar-item:last-child {
+  border-right: none;
+}
+
+.st2-hero-statsbar-val {
+  font-size: 38px;
+  font-weight: 500;
+  color: var(--secondary);
+  line-height: 1;
+  margin: 0 0 5px;
+}
+
+.st2-hero-statsbar-lbl {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color2);
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 2 — SERVICES GRID
+   ============================================================ */
+
+.st2-services-section {
+  background: var(--white);
+}
+
+.st2-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.st2-service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px 28px;
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.st2-service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gradient card backgrounds */
+.st2-card-design   { background: linear-gradient(180deg, #fff7ea 0%, #ffffff 100%); }
+.st2-card-ui       { background: linear-gradient(180deg, #eef8ff 0%, #ffffff 100%); }
+.st2-card-brand    { background: linear-gradient(180deg, #fff4e8 0%, #ffffff 100%); }
+.st2-card-seo      { background: linear-gradient(180deg, #eefbf3 0%, #ffffff 100%); }
+.st2-card-marketing{ background: linear-gradient(180deg, #fff8e8 0%, #ffffff 100%); }
+.st2-card-software { background: linear-gradient(180deg, #eff3ff 0%, #ffffff 100%); }
+
+/* Hover border per card */
+.st2-card-design:hover   { border-color: #efdabb; }
+.st2-card-ui:hover       { border-color: #d8e8f6; }
+.st2-card-brand:hover    { border-color: #f1dcc2; }
+.st2-card-seo:hover      { border-color: #d3ebda; }
+.st2-card-marketing:hover{ border-color: #f2dfb5; }
+.st2-card-software:hover { border-color: #d7def5; }
+
+.st2-service-card-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.st2-service-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.st2-service-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.st2-service-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--secondary);
+  margin: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--primary);
+  line-height: 1.3;
+}
+
+.st2-service-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.st2-service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st2-service-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color2);
+}
+
+.st2-service-features li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.st2-service-card-bottom {
+  margin-top: 18px;
+}
+
+/* ============================================================
+   SECTION 3 — WHY CHOOSE US
+   Layout: header row → image (full-width) → cards grid
+   ============================================================ */
+
+.st2-why-section {
+  background: var(--color1);
+}
+
+/* Header row: heading left, sub text right */
+.st2-why-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+
+.st2-why-header-left {
+  flex-shrink: 0;
+  max-width: 480px;
+}
+
+.st2-why-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-why-header-sub {
+  max-width: 440px;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.7;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Full-width image */
+.st2-why-img-container {
+  position: relative;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* Stat pills overlaid at bottom-left */
+.st2-why-img-stats {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.st2-why-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 100px;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.st2-why-stat-pill strong {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary);
+  line-height: 1;
+}
+
+.st2-why-stat-pill span {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color2);
+}
+
+/* Cards grid BELOW the image */
+.st2-why-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.st2-why-card {
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.st2-why-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.st2-why-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--primary) 55%, var(--white));
+  display: grid;
+  place-items: center;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.st2-why-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.st2-why-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.st2-why-card-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 4 — PROCESS  (dark background)
+   ============================================================ */
+
+.st2-process-section {
+  background: var(--secondary);
+  padding: 60px 0;
+}
+
+.st2-process-head {
+  display: flex;
+  align-items: flex-end;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.st2-process-head-left {
+  flex-shrink: 0;
+}
+
+.st2-process-rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 8px;
+}
+
+.st2-process-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--white);
+  margin: 8px 0 0;
+}
+
+.st2-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.st2-process-card {
+  padding: 32px 22px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.st2-process-card:last-child {
+  border-right: none;
+}
+
+.st2-process-card:hover {
+  background: rgba(253, 193, 21, 0.06);
+}
+
+.st2-process-num {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.st2-process-title {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0;
+}
+
+.st2-process-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.st2-process-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.st2-proof {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.st2-avatars {
+  display: flex;
+}
+
+.st2-avatars span {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--secondary);
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-left: -10px;
+}
+
+.st2-avatars span:first-child {
+  margin-left: 0;
+}
+
+.st2-proof p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 5 — FEATURED SERVICE DETAILS
+   ============================================================ */
+
+.st2-featured-section {
+  background: var(--white);
+}
+
+.st2-featured-section .st2-section-heading {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.st2-featured-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: stretch;
+  margin-bottom: 72px;
+  padding-bottom: 72px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.st2-featured-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.st2-featured-reverse {
+  direction: rtl;
+}
+
+.st2-featured-reverse > * {
+  direction: ltr;
+}
+
+.st2-featured-img-wrap {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color1);
+}
+
+.st2-featured-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.st2-featured-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(253, 193, 21, 0.12);
+  padding: 6px 14px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.st2-featured-heading {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-featured-body {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.st2-featured-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.st2-featured-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--secondary);
+  line-height: 1.5;
+}
+
+.st2-featured-points li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   SECTION 6 — INDUSTRIES
+   ============================================================ */
+
+.st2-industries-section {
+  background: var(--color1);
+}
+
+.st2-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.st2-industry-card {
+  padding: 26px 22px;
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.st2-industry-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.st2-industry-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  background: var(--primary);
+  color: var(--secondary);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.st2-industry-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.st2-industry-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-industry-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 7 — THE ZONIC DIFFERENCE  (NEW — comparison)
+   ============================================================ */
+
+.st2-comparison-section {
+  background: var(--white);
+}
+
+.st2-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.st2-comparison-card {
+  border-radius: 20px;
+  padding: 42px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.st2-comparison-without {
+  background: linear-gradient(180deg, #fff1f0 0%, #fffafa 100%);
+  border: 1px solid rgba(234, 67, 52, 0.22);
+}
+
+.st2-comparison-with {
+  background: var(--secondary);
+}
+
+.st2-comparison-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.st2-comparison-without .st2-comparison-label {
+  color: #b42318;
+}
+
+.st2-comparison-with .st2-comparison-label {
+  color: var(--primary);
+}
+
+.st2-comparison-card-heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.st2-comparison-without .st2-comparison-card-heading {
+  color: var(--secondary);
+}
+
+.st2-comparison-with .st2-comparison-card-heading {
+  color: var(--white);
+}
+
+.st2-comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+.st2-comparison-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.st2-comparison-without .st2-comparison-item {
+  color: var(--color2);
+}
+
+.st2-comparison-with .st2-comparison-item {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Icon badge */
+.st2-cmp-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+}
+
+.st2-cmp-icon-x {
+  background: rgba(234, 67, 52, 0.12);
+  color: #ea4334;
+}
+
+.st2-cmp-icon-check {
+  background: rgba(253, 193, 21, 0.18);
+  color: var(--primary);
+}
+
+/* ============================================================
+   SECTION 8 — RESULTS / BENEFITS  (dark)
+   ============================================================ */
+
+.st2-results-section {
+  background: var(--secondary);
+  padding: 60px 0;
+}
+
+.st2-results-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.st2-results-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.st2-results-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--white);
+  margin: 0;
+}
+
+.st2-results-sub {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.st2-results-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.st2-benefit-card {
+  padding: 28px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.st2-benefit-card:hover {
+  background: rgba(253, 193, 21, 0.08);
+  border-color: rgba(253, 193, 21, 0.22);
+}
+
+.st2-benefit-val {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1;
+  margin: 0;
+}
+
+.st2-benefit-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  margin: 0;
+}
+
+.st2-benefit-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.st2-results-banner-section {
+  background: linear-gradient(135deg, #dcefff 0%, #f7fbff 52%, #c6e2f6 100%);
+  padding: 0;
+}
+
+.st2-results-banner {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 0;
+  border-radius: 0;
+  padding: 92px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.st2-results-banner .st2-label {
+  color: var(--secondary);
+}
+
+.st2-results-banner-copy {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.st2-results-banner-heading {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-results-banner-sub {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(27, 27, 27, 0.78);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0;
+}
+
+.st2-results-banner-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.st2-results-banner-actions .st2-btn-ghost {
+  background-color: var(--white) !important;
+  border: 1px solid var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+.st2-results-banner-actions .st2-btn-ghost .buttons__icon-wrapper {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+/* ============================================================
+   SECTION 9 — FREE STRATEGY SESSION  (NEW)
+   ============================================================ */
+
+.st2-audit-section {
+  background: var(--color1);
+}
+
+.st2-audit-inner {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.st2-audit-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 100px;
+  margin: 0;
+  width: fit-content;
+}
+
+.st2-audit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.st2-audit-heading {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-audit-sub {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.st2-audit-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.st2-audit-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 236px;
+  padding: 26px 24px;
+  background: var(--white);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.st2-audit-item:hover {
+  background: rgba(253, 193, 21, 0.04);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.st2-audit-item-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--secondary);
+  display: grid;
+  place-items: center;
+}
+
+.st2-audit-item-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.st2-audit-item-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  margin: 0 0 5px;
+}
+
+.st2-audit-item-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 10 — FAQ
+   ============================================================ */
+
+.st2-faq-section {
+  background: var(--white);
+}
+
+.st2-faq-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.st2-faq-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.st2-faq-heading {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-faq-sub {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.st2-faq-right {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.st2-faq-item {
+  border-bottom: 1px solid var(--stroke);
+}
+
+.st2-faq-item:last-child {
+  border-bottom: none;
+}
+
+.st2-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s;
+  line-height: 1.45;
+}
+
+.st2-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.st2-faq-question:hover {
+  background: rgba(253, 193, 21, 0.04);
+}
+
+/* Plus / minus toggle */
+.st2-faq-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--color1);
+  position: relative;
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+
+.st2-faq-icon::before,
+.st2-faq-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--secondary);
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.st2-faq-icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+.st2-faq-icon::after {
+  width: 2px;
+  height: 12px;
+  transition: transform 0.25s;
+}
+
+details[open] .st2-faq-icon {
+  background: var(--primary);
+}
+
+details[open] .st2-faq-icon::before,
+details[open] .st2-faq-icon::after {
+  background: var(--secondary);
+}
+
+details[open] .st2-faq-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.st2-faq-answer {
+  padding: 0 24px 22px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color2);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION 11 — FINAL CTA
+   ============================================================ */
+
+.st2-finalcta-section {
+  background: var(--secondary);
+  padding: 0;
+}
+
+.st2-finalcta-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 92px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.st2-finalcta-card::before {
+  display: none;
+}
+
+.st2-finalcta-heading {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--white);
+  margin: 0;
+  position: relative;
+}
+
+.st2-finalcta-heading span {
+  color: var(--primary);
+}
+
+.st2-finalcta-sub {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0;
+  position: relative;
+}
+
+.st2-finalcta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  position: relative;
+}
+
+.st2-contact-section {
+  padding: 60px 0;
+}
+
+.st2-contact-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.st2-contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.st2-contact-heading {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.st2-contact-desc {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color2);
+  margin: 0;
+}
+
+.st2-contact-info-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.st2-contact-info-card {
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--white);
+}
+
+.st2-contact-info-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.st2-contact-info-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.st2-contact-info-card h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.st2-contact-info-card a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.st2-contact-info-card a:hover {
+  color: var(--color2);
+}
+
+.st2-contact-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.st2-contact-image {
+  object-fit: cover;
+}
+
+.st2-contact-form {
+  position: sticky;
+  top: 32px;
+  height: 100%;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET  (≤ 1100px)
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  /* Hero */
+  .st2-hero-h1 { font-size: 52px; }
+  .st2-hero-img-wrap { height: 420px; }
+  .st2-hero-stat-card { left: -16px; }
+
+  /* Section headings */
+  .st2-section-heading,
+  .st2-why-heading,
+  .st2-process-heading,
+  .st2-results-heading,
+  .st2-audit-heading { font-size: 32px; }
+  .st2-faq-heading { font-size: 28px; }
+  .st2-finalcta-heading { font-size: 38px; }
+  .st2-finalcta-card { padding: 76px 0; }
+  .st2-contact-inner { grid-template-columns: 1fr; }
+  .st2-contact-form {
+    position: relative;
+    top: auto;
+  }
+  .st2-contact-heading { font-size: 40px; }
+
+  /* Grids */
+  .st2-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .st2-industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .st2-why-cards { grid-template-columns: repeat(3, 1fr); }
+
+  /* Why header */
+  .st2-why-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .st2-why-header-sub { max-width: 100%; }
+
+  /* Process */
+  .st2-process-grid { grid-template-columns: repeat(3, 1fr); }
+  .st2-process-card:nth-child(3) { border-right: none; }
+  .st2-process-card:nth-child(n+4) { border-top: 1px solid rgba(255,255,255,0.1); }
+
+  /* Featured, audit, results, comparison, faq */
+  .st2-featured-block { gap: 48px; }
+  .st2-featured-heading { font-size: 26px; }
+  .st2-results-inner { gap: 48px; }
+  .st2-audit-inner { gap: 48px; }
+  .st2-audit-item { min-height: 250px; }
+  .st2-faq-inner { gap: 48px; }
+  .st2-comparison-card { padding: 32px 28px; }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE  (≤ 768px)
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .st2-section { padding: 48px 0; }
+
+  /* Hero */
+  .st2-hero { padding-top: 80px; }
+  .st2-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+  .st2-hero-h1 { font-size: 36px; }
+  .st2-hero-p { max-width: 100%; }
+  .st2-hero-img-wrap { height: 280px; }
+  .st2-hero-stat-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 14px;
+  }
+  .st2-hero-stat-card p:first-child { font-size: 24px; }
+  .st2-hero-statsbar { flex-wrap: wrap; }
+  .st2-hero-statsbar-item {
+    flex: 1 1 50%;
+    border-right: none;
+    border-bottom: 1px solid var(--stroke);
+    padding: 18px 0;
+  }
+  .st2-hero-statsbar-item:nth-child(odd) { border-right: none; }
+  .st2-hero-statsbar-item:nth-last-child(-n+2) { border-bottom: none; }
+  .st2-hero-statsbar-val { font-size: 28px; }
+  .st2-hero-ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .st2-hero-ctas .buttons {
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  /* Section headings */
+  .st2-section-heading { font-size: 26px; }
+  .st2-section-sub { max-width: 100%; font-size: 15px; }
+
+  /* Services */
+  .st2-services-grid { grid-template-columns: 1fr; }
+
+  /* Why */
+  .st2-why-header { gap: 16px; }
+  .st2-why-heading { font-size: 26px; }
+  .st2-why-img-container { height: 240px; }
+  .st2-why-img-stats { flex-direction: column; gap: 8px; }
+  .st2-why-cards { grid-template-columns: 1fr 1fr; }
+
+  /* Process */
+  .st2-process-section { padding: 48px 0; }
+  .st2-process-heading { font-size: 26px; }
+  .st2-process-head { flex-direction: column; align-items: flex-start; gap: 0; }
+  .st2-process-rule { display: none; }
+  .st2-process-grid { grid-template-columns: 1fr; border-radius: 12px; }
+  .st2-process-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .st2-process-card:last-child { border-bottom: none; }
+  .st2-process-card:nth-child(n+4) { border-top: none; }
+  .st2-process-footer { flex-direction: column; align-items: flex-start; }
+
+  /* Featured */
+  .st2-featured-block,
+  .st2-featured-reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 32px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+  }
+  .st2-featured-reverse > * { direction: ltr; }
+  .st2-featured-img-wrap {
+    height: 260px;
+    min-height: 260px;
+  }
+  .st2-featured-heading { font-size: 22px; }
+
+  /* Industries */
+  .st2-industries-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Comparison */
+  .st2-comparison-grid { grid-template-columns: 1fr; }
+  .st2-comparison-card { padding: 28px 24px; }
+
+  /* Results */
+  .st2-results-section { padding: 48px 0; }
+  .st2-results-inner { grid-template-columns: 1fr; gap: 36px; }
+  .st2-results-heading { font-size: 26px; }
+  .st2-results-right { grid-template-columns: 1fr 1fr; }
+  .st2-benefit-val { font-size: 26px; }
+  .st2-results-banner { padding: 72px 0; }
+  .st2-results-banner-heading { font-size: 32px; line-height: 1.18; }
+  .st2-results-banner-sub { font-size: 16px; line-height: 1.7; }
+  .st2-results-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .st2-results-banner-actions .buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Audit */
+  .st2-audit-inner { grid-template-columns: 1fr; gap: 36px; }
+  .st2-audit-items { grid-template-columns: 1fr 1fr; }
+  .st2-audit-item { min-height: auto; padding: 22px 20px; }
+  .st2-audit-heading { font-size: 24px; }
+
+  /* FAQ */
+  .st2-faq-inner { grid-template-columns: 1fr; gap: 36px; }
+  .st2-faq-left { position: static; }
+  .st2-faq-heading { font-size: 24px; }
+
+  /* Final CTA */
+  .st2-finalcta-card { padding: 64px 0; border-radius: 0; }
+  .st2-finalcta-heading { font-size: 26px; }
+  .st2-finalcta-sub { font-size: 15px; }
+  .st2-finalcta-actions { flex-direction: column; width: 100%; }
+  .st2-finalcta-actions .buttons { justify-content: center; width: 100%; }
+
+  .st2-contact-section { padding: 48px 0; }
+  .st2-contact-heading {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+  .st2-contact-desc {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .st2-contact-info-grid { grid-template-columns: 1fr; gap: 20px; }
+  .st2-contact-info-card { padding: 20px; }
+  .st2-contact-info-card h3 { font-size: 22px; }
+  .st2-contact-info-card a {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .st2-contact-image-wrap {
+    height: clamp(240px, 70vw, 320px);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE  (≤ 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .st2-industries-grid { grid-template-columns: 1fr; }
+  .st2-results-right { grid-template-columns: 1fr; }
+  .st2-audit-items { grid-template-columns: 1fr; }
+  .st2-why-cards { grid-template-columns: 1fr; }
+  .st2-hero-trust { gap: 12px; }
+}
+
+/* Match servicetwo horizontal gutters to the global navbar. */
+@media (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .st2-container,
+  .st2-hero-grid,
+  .st2-hero-statsbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
