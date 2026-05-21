@@ -158,6 +158,7 @@ export const metadata: Metadata = {
   title: "Digital Marketing Agency Delaware | SEO, PPC & Growth Strategy",
   description:
     "Delaware digital marketing agency helping businesses grow with SEO, PPC, social media, email marketing, AI SEO, and conversion-focused strategy.",
+  alternates: { canonical: "/services/delaware/digital-marketing" },
 };
 
 export default function Page() {

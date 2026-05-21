@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Web Design Services | Custom Websites That Drive Results",
   description:
     "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+  alternates: { canonical: "/services/web-design" },
 };
 function Page() {
   const WebContact = {

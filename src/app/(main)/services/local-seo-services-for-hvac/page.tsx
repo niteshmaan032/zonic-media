@@ -118,6 +118,7 @@ export const metadata: Metadata = {
     "Local SEO Services for HVAC Companies | Get More HVAC Leads | Zonic Media",
   description:
     "Local SEO services for HVAC companies. Zonic Media helps heating and cooling businesses rank higher on Google, improve map visibility, and generate more qualified service calls every month.",
+  alternates: { canonical: "/services/local-seo-services-for-hvac" },
 };
 
 export default function HvacSeoPage() {

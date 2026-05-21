@@ -79,6 +79,7 @@ export const metadata: Metadata = {
   title: "Fix Google Business Profile Verification Issues & Get Verified Fast",
   description:
     "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
+  alternates: { canonical: "/services/gmb-verification-help" },
 };
 
 function page() {

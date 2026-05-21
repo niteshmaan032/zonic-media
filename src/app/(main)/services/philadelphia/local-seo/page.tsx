@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   title: "Local SEO Philadelphia | Best Local SEO Company Philadelphia",
   description:
     "Grow your business with expert Local SEO in Philadelphia. Zonic Media helps businesses rank higher on Google Maps, generate more calls, and get consistent local leads.",
+  alternates: { canonical: "/services/philadelphia/local-seo" },
 };
 
 const PhilaSeoFaqs = [

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Google Ads Management Services | PPC Campaign Experts",
   description:
     "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
+  alternates: { canonical: "/services/google-ads" },
 };
 
 function Page() {

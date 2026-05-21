@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   title: "Search Engine Marketing Agency Philadelphia | SEM Services",
   description:
     "Philadelphia search engine marketing agency helping businesses drive more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
+  alternates: { canonical: "/services/philadelphia/sem" },
 };
 
 const PhilaSemFaqs = [

@@ -99,6 +99,7 @@ export const metadata: Metadata = {
   title: "Local SEO for Home Services | More Calls & Local Rankings",
   description:
     "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",
+  alternates: { canonical: "/services/local-seo-for-home-services" },
 };
 
 function page() {

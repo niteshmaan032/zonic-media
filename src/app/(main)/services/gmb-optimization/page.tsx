@@ -83,6 +83,7 @@ export const metadata: Metadata = {
     "Google Business Profile Optimization Service | Rank Higher on Google Maps",
   description:
     "Zonic Media optimizes your Google Business Profile to rank in the local 3-Pack, get more calls, and convert more customers. Expert GMB optimization. Free audit.",
+  alternates: { canonical: "/services/gmb-optimization" },
 };
 
 function page() {

@@ -121,6 +121,7 @@ export const metadata: Metadata = {
   title: "Dental SEO Services | Local SEO for Dentists | Zonic Media",
   description:
     "Dental SEO services that help dental clinics rank higher on Google, dominate local search, and generate more patient calls and bookings.",
+  alternates: { canonical: "/services/industry/dental-seo-services" },
 };
 
 function Page() {

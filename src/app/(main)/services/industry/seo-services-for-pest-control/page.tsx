@@ -132,6 +132,7 @@ export const metadata: Metadata = {
   title: "SEO Services for Pest Control | Get More Pest Control Leads",
   description:
     "Pest control SEO services that help exterminators and pest control companies rank higher on Google, dominate local search, and generate more calls and booked jobs.",
+  alternates: { canonical: "/services/industry/seo-services-for-pest-control" },
 };
 
 function page() {

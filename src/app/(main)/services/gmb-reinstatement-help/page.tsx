@@ -96,6 +96,7 @@ export const metadata: Metadata = {
   title: "GBP Suspension Recovery Experts | Zonic Media LLC",
   description:
     "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
+  alternates: { canonical: "/services/gmb-reinstatement-help" },
 };
 
 function page() {

@@ -87,7 +87,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/google-business-profile-suspension-guidelines-2025",
-        destination: "/",
+        destination: "/services/gmb-reinstatement-help",
         permanent: true,
       },
       {

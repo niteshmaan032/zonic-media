@@ -11,6 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         "/legal/refund-policy",
         "/coming-soon",
         "/terms-conditions",
+        "/admindashboard",
       ],
     },
     sitemap: `${getSiteUrl()}/sitemap.xml`,

@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "Marketing for Pediatricians | Pediatric SEO, Local Visibility & Patient Growth",
   description:
     "Zonic Media helps pediatricians and children's clinics grow with SEO, local visibility, website optimization, and patient-focused digital marketing strategies.",
+  alternates: { canonical: "/services/industry/pediatricians" },
 };
 
 const PediatricFaqs = [

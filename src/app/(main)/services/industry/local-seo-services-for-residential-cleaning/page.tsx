@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     "Local SEO Services for Residential Cleaning Companies | House Cleaning SEO | Zonic Media",
   description:
     "Zonic Media provides local SEO services for residential cleaning companies. Rank higher on Google Maps, generate more house cleaning bookings, and grow your maid service business with residential cleaning SEO.",
+  alternates: { canonical: "/services/industry/local-seo-services-for-residential-cleaning" },
 };
 
 export default function Page() {

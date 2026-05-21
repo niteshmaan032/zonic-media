@@ -40,6 +40,7 @@ export const metadata: Metadata = {
   title: "PPC Agency Philadelphia | Google Ads Management for Local Leads",
   description:
     "Philadelphia PPC agency helping businesses generate high-intent leads through Google Ads, landing page optimization, conversion tracking, and campaign management.",
+  alternates: { canonical: "/services/philadelphia/ppc" },
 };
 
 const PhilaPpcFaqs = [

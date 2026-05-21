@@ -192,6 +192,7 @@ export const metadata: Metadata = {
   title: "Digital Marketing Agency Philadelphia | SEO, Google Ads & Web Design",
   description:
     "Philadelphia digital marketing agency helping businesses grow with SEO, Google Ads, web design, local SEO, content marketing, and conversion-focused strategies.",
+  alternates: { canonical: "/services/philadelphia/digital-marketing" },
 };
 
 const PhilaDigitalFormHead = {

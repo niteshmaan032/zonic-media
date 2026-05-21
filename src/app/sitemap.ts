@@ -1,4 +1,4 @@
-import { readdirSync, statSync } from "fs";
+import { readdirSync } from "fs";
 import { join, relative, sep } from "path";
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/shared/urlConfig";
@@ -17,6 +17,16 @@ const EXCLUDED_ROUTE_SEGMENTS = new Set([
   "blog",
 ]);
 const EXCLUDED_ROUTE_GROUPS = new Set(["(admin)", "(admin-auth)"]);
+
+// Redirect stubs — have noindex set, must not appear in sitemap
+const EXCLUDED_PATHS = new Set([
+  "/industry/local-seo-services-for-hvac",
+  "/industry/real-estate-seo-services",
+  "/services/industry/car-towing",
+  "/services/industry/pest-control",
+  "/services/industry/plumber",
+  "/services/industry/local-seo-services-for-hvac",
+]);
 
 const PRIORITY_BY_PATH: Record<string, number> = {
   "/": 1,
@@ -64,30 +74,25 @@ function toRoutePath(filePath: string): string | null {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
 
-  // Static pages
+  // Static pages — exclude redirect stubs
   const routes = getPageFiles(APP_DIR)
     .map((filePath) => ({ path: toRoutePath(filePath), filePath }))
     .filter(
       (entry): entry is { path: string; filePath: string } =>
-        entry.path !== null,
+        entry.path !== null && !EXCLUDED_PATHS.has(entry.path),
     )
     .sort((a, b) => a.path.localeCompare(b.path));
 
-  const staticEntries: MetadataRoute.Sitemap = routes.map(
-    ({ path, filePath }) => {
-      const stat = statSync(filePath, { throwIfNoEntry: false });
-      return {
-        url: `${siteUrl}${path}`,
-        lastModified: stat?.mtime ?? new Date(),
-        changeFrequency: path === "/" ? "weekly" : "monthly",
-        priority: PRIORITY_BY_PATH[path] ?? 0.7,
-      };
-    },
-  );
+  const staticEntries: MetadataRoute.Sitemap = routes.map(({ path }) => ({
+    url: `${siteUrl}${path}`,
+    changeFrequency: path === "/" ? "weekly" : "monthly",
+    priority: PRIORITY_BY_PATH[path] ?? 0.7,
+  }));
 
-  // Add /blog listing page explicitly
+  // Blog listing page
   staticEntries.push({
     url: `${siteUrl}/blog`,
+    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   });

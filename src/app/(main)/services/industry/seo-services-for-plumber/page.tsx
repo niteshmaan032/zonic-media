@@ -125,6 +125,7 @@ export const metadata: Metadata = {
   title: "SEO Services for Plumbers | Get More Plumbing Leads | Zonic Media",
   description:
     "Plumbing SEO services that help plumbing businesses rank higher on Google, dominate local search, and generate more calls and booked jobs.",
+  alternates: { canonical: "/services/industry/seo-services-for-plumber" },
 };
 
 function page() {
