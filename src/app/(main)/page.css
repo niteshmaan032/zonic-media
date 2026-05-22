@@ -278,6 +278,29 @@
   flex-wrap: wrap;
 }
 
+.nh-hero-action-row .nh-btn-dark {
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.nh-hero-action-row .buttons__icon-wrapper {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.nh-hero-action-row .nh-btn-dark:hover,
+.nh-hero-action-row .nh-btn-dark:focus-visible {
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+  color: #000 !important;
+}
+
+.nh-hero-action-row .nh-btn-dark:hover .buttons__icon-wrapper,
+.nh-hero-action-row .nh-btn-dark:focus-visible .buttons__icon-wrapper {
+  background-color: #000 !important;
+  color: var(--white) !important;
+}
+
 .nh-clutch-wrap {
   display: flex;
   align-items: center;
@@ -1862,10 +1885,12 @@
 
 .home-section-7 {
   padding: 90px 100px 42px;
-  background: var(--white);
+  background: transparent;
+  text-align: center;
 }
 
 .home-section-7 .testimonial-heading {
+  width: 100%;
   margin: 0 0 38px;
   color: var(--secondary);
   font-size: 42px;
@@ -1877,6 +1902,31 @@
 .home-phila-test {
   width: 100%;
   overflow: hidden;
+  background: transparent;
+}
+
+.nh-finalcta-testimonials {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 36px 100px 0;
+  background: transparent !important;
+  text-align: center;
+}
+
+.nh-finalcta-testimonials .testimonial-heading {
+  width: 100%;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nh-finalcta-testimonials .home-phila-test,
+.nh-finalcta-testimonials .clutch-widget,
+.nh-finalcta-testimonials .carousel_widget__wrapper,
+.nh-finalcta-testimonials iframe {
+  background: transparent !important;
 }
 
 /* ============================================================
@@ -2276,6 +2326,10 @@
     padding: 56px 20px 24px;
   }
 
+  .nh-finalcta-testimonials {
+    padding: 32px 20px 0;
+  }
+
   .home-section-7 .testimonial-heading {
     font-size: 32px;
   }
@@ -2388,6 +2442,10 @@
     padding: 72px 40px 32px;
   }
 
+  .nh-finalcta-testimonials {
+    padding: 36px 40px 0;
+  }
+
   .home-section-7 .testimonial-heading {
     font-size: 38px;
   }
@@ -2435,16 +2493,8 @@
   padding-bottom: 0;
 }
 
-.nh-blog-home-section + .home-section-7 {
-  padding-top: 60px;
-}
-
 @media (max-width: 767.98px) {
   .nh-blog-home-section {
     padding-bottom: 0;
-  }
-
-  .nh-blog-home-section + .home-section-7 {
-    padding-top: 60px;
   }
 }

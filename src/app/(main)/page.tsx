@@ -684,6 +684,18 @@ export default async function Home() {
                 View Services <BtnArrow />
               </Link>
             </div>
+            <div className="home-section-7 nh-finalcta-testimonials">
+              <h2 className="testimonial-heading">What Our Clients Say</h2>
+
+              <div className="home-phila-test">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#f7c00a"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1069,20 +1081,6 @@ export default async function Home() {
           </div>
         </section>
       ) : null}
-
-      {/* ── TESTIMONIALS ─────────────────────── */}
-      <div className="home-section-7">
-        <h2 className="testimonial-heading">What Our Clients Say</h2>
-
-        <div className="home-phila-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
 
       <Footer />
     </>
