@@ -82,9 +82,9 @@ function BtnArrow() {
 /* ── data ─────────────────────────────────────────────────── */
 
 const heroStats = [
-  { value: "200%", label: "Client Success Rate" },
+  { value: "100%", label: "Client Success Rate" },
   { value: "100+", label: "Brands Grown" },
-  { value: "50+", label: "Projects Delivered" },
+  { value: "200+", label: "Projects Delivered" },
   { value: "24/7", label: "Dedicated Support" },
 ];
 
@@ -386,9 +386,14 @@ export default async function Home() {
           </p>
 
           <div className="nh-hero-cta-row">
-            <Link href={SITE_CONTACT.phoneHref} className="buttons nh-btn-dark">
-              {SITE_CONTACT.phoneDisplay} <BtnArrow />
-            </Link>
+            <div className="nh-hero-action-row">
+              <Link href="/contact-us" className="buttons nh-btn-dark">
+                Start Your Project <BtnArrow />
+              </Link>
+              <Link href={SITE_CONTACT.phoneHref} className="buttons nh-btn-dark">
+                {SITE_CONTACT.phoneDisplay} <BtnArrow />
+              </Link>
+            </div>
             <div className="nh-clutch-wrap">
               <ClutchWidget height="50" />
             </div>
@@ -600,7 +605,9 @@ export default async function Home() {
                 ))}
                 <Link href={SITE_CONTACT.phoneHref} className="nh-why-cta-tile">
                   <span>Ready for a cleaner growth plan?</span>
-                  <strong>Book a Strategy Call</strong>
+                  <strong className="buttons nh-why-cta-button">
+                    Book a Strategy Call <BtnArrow />
+                  </strong>
                   <em>
                     Tell us what you want to improve and we will map the fastest
                     next step.
