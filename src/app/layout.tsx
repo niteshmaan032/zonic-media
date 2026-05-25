@@ -7,6 +7,7 @@ import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
 import AnalyticsProvider from "@/app/components/AnalyticsProvider";
 import FloatingPhone from "@/app/components/FloatingPhone";
+import ChatBot from "@/app/components/ChatBot";
 
 const neueHaas = localFont({
   src: [
@@ -122,6 +123,7 @@ export default function RootLayout({
         <Loader />
         <SmoothScroll>{children}</SmoothScroll>
         <FloatingPhone />
+        <ChatBot />
       </body>
     </html>
   );

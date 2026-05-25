@@ -158,7 +158,7 @@
   background:
     linear-gradient(135deg, #f4fbff 0%, #e4f5ff 48%, #cfeeff 100%),
     linear-gradient(155deg, #ffffffe0 0%, #ffffff73 52%, #ffffff1a 100%);
-  padding: 150px 0 108px;
+  padding: 150px 0 60px;
   overflow: hidden;
 }
 
@@ -2161,7 +2161,7 @@
   }
 
   .nh-hero {
-    padding: 112px 0 72px;
+    padding: 112px 0 60px;
   }
 
   .nh-section {
@@ -2490,11 +2490,11 @@
 }
 
 .nh-blog-home-section {
-  padding-bottom: 0;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767.98px) {
   .nh-blog-home-section {
-    padding-bottom: 0;
+    padding-bottom: 60px;
   }
 }

@@ -1,0 +1,599 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import "@/app/style/chatbot.css";
+
+// ─── Conversation config ──────────────────────────────────────────────────────
+
+const SERVICE_OPTIONS = [
+  "Web Design / Website Redesign",
+  "Local SEO",
+  "Google Business Profile / GMB Help",
+  "Google Ads / PPC",
+  "Branding / Logo",
+  "UI/UX Design",
+  "Custom Software",
+  "Not sure yet",
+];
+
+const SUB_SERVICE_OPTIONS = {
+  "Web Design / Website Redesign": [
+    "🌐 WordPress Site",
+    "⚡ Custom Website",
+    "🛒 E-commerce Store",
+    "🎯 Landing Page",
+  ],
+  "Local SEO": [
+    "📍 Google Maps Ranking",
+    "📈 More Local Leads",
+    "🔍 Website SEO",
+    "📊 Full Local SEO Audit",
+  ],
+  "Google Business Profile / GMB Help": [
+    "🔓 Profile Suspended",
+    "✅ Verification Help",
+    "📌 Improve Ranking",
+    "🖊️ Profile Optimization",
+  ],
+  "Google Ads / PPC": [
+    "🚀 Launch First Campaign",
+    "🔧 Fix Existing Ads",
+    "💰 Lower Cost Per Click",
+    "📊 Ads + Landing Page",
+  ],
+  "Branding / Logo": [
+    "🎨 Logo Design",
+    "📦 Full Brand Package",
+    "🔄 Rebrand Existing",
+    "📋 Brand Guidelines",
+  ],
+  "UI/UX Design": [
+    "🖥️ Website",
+    "📱 Mobile App",
+    "📊 Dashboard / Portal",
+    "🔬 UX Audit",
+  ],
+  "Custom Software": [
+    "⚙️ Business Automation",
+    "🔗 API Integration",
+    "📱 Mobile App",
+    "🌐 Web Application",
+  ],
+  "Not sure yet": [
+    "📈 Grow Online Presence",
+    "💻 Need a Website",
+    "🎯 Get More Leads",
+    "🤔 Just Exploring",
+  ],
+};
+
+const SUB_SERVICE_PROMPTS = {
+  "Web Design / Website Redesign": "Great choice! **Which type of website are you looking for?**",
+  "Local SEO":                     "Perfect! **What's your main SEO goal right now?**",
+  "Google Business Profile / GMB Help": "Got it! **What's going on with your Google Business Profile?**",
+  "Google Ads / PPC":              "Awesome! **What are you looking to achieve with Google Ads?**",
+  "Branding / Logo":               "Love it! **What branding work do you need?**",
+  "UI/UX Design":                  "Great! **What type of product are we designing for?**",
+  "Custom Software":               "Interesting! **What kind of software solution do you need?**",
+  "Not sure yet":                  "No worries! **What's the main thing you're hoping to improve?**",
+};
+
+const URGENCY_OPTIONS = [
+  "🚀 ASAP — Book a Meeting",
+  "📧 Normal — Email Me",
+  "📲 Both Work for Me",
+];
+
+const CALENDAR_URL = "https://calendar.app.google/EGNcQQMvMU3DGP5R6";
+
+const CONNECT_SNIPPET =
+  `📅 [Book a Meeting](${CALENDAR_URL})\n` +
+  `📞 **Urgent?** [+1 (302) 726-9736](tel:+13027269736)\n` +
+  `📧 [contact@zonicllc.com](mailto:contact@zonicllc.com)`;
+
+// ─── Email submission ─────────────────────────────────────────────────────────
+
+async function submitLeadToEmail(leadData) {
+  const res = await fetch("/api/send-lead", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(leadData),
+  });
+
+  const json = await res.json().catch(() => null);
+
+  if (!res.ok) {
+    throw new Error(json?.message || "Failed to submit lead.");
+  }
+
+  return json;
+}
+
+// ─── Minimal markdown renderer (bold + links only) ───────────────────────────
+
+function renderBotText(text) {
+  const parts = [];
+  let lastIdx = 0;
+  const regex = /\*\*([^*\n]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIdx) parts.push(text.slice(lastIdx, match.index));
+    if (match[1] !== undefined) {
+      parts.push(<strong key={match.index}>{match[1]}</strong>);
+    } else {
+      parts.push(
+        <a key={match.index} href={match[3]} target="_blank" rel="noopener noreferrer">
+          {match[2]}
+        </a>
+      );
+    }
+    lastIdx = match.index + match[0].length;
+  }
+  if (lastIdx < text.length) parts.push(text.slice(lastIdx));
+  return parts.length ? parts : text;
+}
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function TypingDots() {
+  return (
+    <div className="zoni-message zoni-message--bot">
+      <div className="zoni-avatar" aria-hidden="true">Z</div>
+      <div className="zoni-bubble zoni-bubble--bot zoni-typing">
+        <span /><span /><span />
+      </div>
+    </div>
+  );
+}
+
+function ChatMessage({ msg }) {
+  const isBot = msg.sender === "bot";
+  return (
+    <div className={`zoni-message zoni-message--${isBot ? "bot" : "user"}`}>
+      {isBot && <div className="zoni-avatar" aria-hidden="true">Z</div>}
+      <div className={`zoni-bubble zoni-bubble--${isBot ? "bot" : "user"}`}>
+        {isBot ? renderBotText(msg.text) : msg.text}
+      </div>
+    </div>
+  );
+}
+
+function QuickReplies({ options, onSelect, disabled }) {
+  if (!options?.length) return null;
+  return (
+    <div className="zoni-quick-replies">
+      {options.map((opt) => (
+        <button
+          key={opt}
+          type="button"
+          className="zoni-quick-reply"
+          onClick={() => onSelect(opt)}
+          disabled={disabled}
+        >
+          {opt}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+// ─── Bubble messages ─────────────────────────────────────────────────────────
+
+const BUBBLE_TEXTS = {
+  greeting: "Hi! there 👋",
+  help:     "Need help? Let's chat 💬",
+  resume:   "Finish your inquiry →",
+};
+
+// ─── Main component ───────────────────────────────────────────────────────────
+
+export default function ChatBot() {
+  const [isOpen, setIsOpen]       = useState(false);
+  const [messages, setMessages]   = useState([]);
+  const [quickOpts, setQuickOpts] = useState([]);
+  const [inputVal, setInputVal]   = useState("");
+  const [isTyping, setIsTyping]   = useState(false);
+  const [locked, setLocked]       = useState(false);
+  const [step, setStep]           = useState(0);
+  const [mounted, setMounted]     = useState(false);
+
+  const [bubbleMsg, setBubbleMsg]         = useState("greeting");
+  const [bubbleVisible, setBubbleVisible] = useState(false);
+  const timersRef  = useRef([]);
+  const urgencyRef = useRef("");
+
+  const [lead, setLead] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    serviceFollowUp: "",
+    projectDetails: "",
+    timeline: "",
+    budget: "",
+  });
+
+  const bottomRef = useRef(null);
+  const inputRef  = useRef(null);
+  const greeted   = useRef(false);
+
+  useEffect(() => { setMounted(true); }, []);
+
+  // ── Bubble timer helpers ──────────────────────────────────────
+  const cancelTimers = () => {
+    timersRef.current.forEach(clearTimeout);
+    timersRef.current = [];
+  };
+  const addTimer = (fn, delay) => {
+    const t = setTimeout(fn, delay);
+    timersRef.current.push(t);
+  };
+
+  // Greeting → "Need help?" cycle, runs once after mount
+  useEffect(() => {
+    if (!mounted) return;
+    addTimer(() => {
+      setBubbleVisible(true);
+      addTimer(() => {
+        setBubbleVisible(false);
+        addTimer(() => {
+          setBubbleMsg("help");
+          setBubbleVisible(true);
+        }, 25000);
+      }, 5000);
+    }, 1000);
+    return cancelTimers;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mounted]);
+
+  // Cancel timers and hide bubble when chat opens
+  useEffect(() => {
+    if (!isOpen) return;
+    cancelTimers();
+    setBubbleVisible(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
+  // Nudge to finish if user closes mid-conversation
+  useEffect(() => {
+    if (isOpen || step < 2 || step >= 10) return;
+    cancelTimers();
+    addTimer(() => {
+      setBubbleMsg("resume");
+      setBubbleVisible(true);
+    }, 800);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
+  // Auto-scroll to latest message
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, isTyping, quickOpts]);
+
+  // Focus input after it unlocks
+  useEffect(() => {
+    if (isOpen && !locked) {
+      setTimeout(() => inputRef.current?.focus(), 80);
+    }
+  }, [isOpen, locked]);
+
+  // Trigger greeting once on first open
+  useEffect(() => {
+    if (!isOpen || greeted.current) return;
+    greeted.current = true;
+    botSay(
+      "Hey there! 👋 I'm **Zoni**, your digital assistant at Zonic Media. I'm excited to help you grow your business online!\n\n**What's your name?**",
+      [],
+      350
+    );
+    setStep(1);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
+
+  // Lock background scroll on mobile when chat is open
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof document === "undefined") return;
+    const isMobile = window.matchMedia("(max-width: 576px)").matches;
+    if (!isMobile) return;
+    if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow            = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow            = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow            = "";
+    };
+  }, [isOpen]);
+
+  // Queue a bot message with typing simulation
+  const botSay = (text, options = [], extraDelay = 0) => {
+    setIsTyping(true);
+    setLocked(true);
+    setTimeout(() => {
+      setIsTyping(false);
+      setMessages((prev) => [...prev, { sender: "bot", text }]);
+      setQuickOpts(options);
+      if (!options.length) setLocked(false);
+    }, 980 + extraDelay);
+  };
+
+  const addUserMsg = (text) => {
+    setMessages((prev) => [...prev, { sender: "user", text }]);
+    setQuickOpts([]);
+  };
+
+  const handleSend = (override) => {
+    const msg = (override ?? inputVal).trim();
+    if (!msg || isTyping) return;
+    setInputVal("");
+    addUserMsg(msg);
+    processStep(msg);
+  };
+
+  const handleQuickReply = (option) => {
+    addUserMsg(option);
+    setLocked(true);
+    processStep(option);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSend();
+    }
+  };
+
+  // ─── Conversation state machine ──────────────────────────────────────────────
+  const processStep = (userInput) => {
+
+    // Step 1 — name
+    if (step === 1) {
+      const name = userInput.trim();
+      setLead((p) => ({ ...p, name }));
+      setStep(2);
+      botSay(
+        `Nice to meet you, **${name}!** 😊\n\nI'm here to help you get the best digital results for your business. **How can I help you today?**`,
+        SERVICE_OPTIONS
+      );
+
+    // Step 2 — service selection → show sub-service chips
+    } else if (step === 2) {
+      setLead((p) => ({ ...p, service: userInput }));
+      setStep(3);
+      const prompt  = SUB_SERVICE_PROMPTS[userInput] ?? "Tell me more — **which option fits best?**";
+      const subOpts = SUB_SERVICE_OPTIONS[userInput] ?? [];
+      botSay(prompt, subOpts);
+
+    // Step 3 — sub-service selection → ask project description
+    } else if (step === 3) {
+      setLead((p) => ({ ...p, serviceFollowUp: userInput }));
+      setStep(4);
+      botSay("Nice! 🙌 **Can you briefly describe your project or what you're trying to achieve?**");
+
+    // Step 4 — project description → show urgency chips
+    } else if (step === 4) {
+      setLead((p) => ({ ...p, projectDetails: userInput }));
+      setStep(5);
+      botSay(
+        "That's really helpful! 💡 **How soon are you looking to get started?**",
+        URGENCY_OPTIONS
+      );
+
+    // Step 5 — urgency selection → collect contact info
+    } else if (step === 5) {
+      urgencyRef.current = userInput;
+      setStep(6);
+      if (userInput.includes("ASAP") || userInput.includes("Both")) {
+        botSay("Perfect! 📞 **What's the best phone number to reach you?** (10 digits)");
+      } else {
+        botSay("Perfect! 📧 **What's the best email address to reach you?**");
+      }
+
+    // Step 6 — phone (ASAP / Both) or email (Normal)
+    } else if (step === 6) {
+      const urgency = urgencyRef.current;
+
+      if (urgency.includes("Normal")) {
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
+        if (!valid) {
+          botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
+          return;
+        }
+        const fullLead = { ...lead, email: userInput.trim() };
+        setLead(fullLead);
+        sendLead(fullLead);
+
+      } else {
+        const digits = userInput.replace(/\D/g, "");
+        if (digits.length !== 10) {
+          botSay("Please enter a valid 10-digit US phone number (digits only). 📱");
+          return;
+        }
+        const updatedLead = { ...lead, phone: digits };
+        setLead(updatedLead);
+        if (urgency.includes("ASAP")) {
+          sendLead(updatedLead);
+        } else {
+          // Both path — now ask for email
+          setStep(7);
+          botSay("Got it! 📧 **And the best email address to reach you?**");
+        }
+      }
+
+    // Step 7 — email (Both path only)
+    } else if (step === 7) {
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
+      if (!valid) {
+        botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
+        return;
+      }
+      const fullLead = { ...lead, email: userInput.trim() };
+      setLead(fullLead);
+      sendLead(fullLead);
+    }
+  };
+
+  // ─── Submit to API ────────────────────────────────────────────────────────────
+  const sendLead = async (data) => {
+    setLocked(true);
+    setIsTyping(true);
+
+    const payload = {
+      ...data,
+      source:    "Zoni Chatbot",
+      pageUrl:   typeof window !== "undefined" ? window.location.href : "",
+      createdAt: new Date().toISOString(),
+    };
+
+    try {
+      await submitLeadToEmail(payload);
+      setIsTyping(false);
+      setStep(10);
+      setMessages((p) => [
+        ...p,
+        {
+          sender: "bot",
+          text: `That's really valuable, I appreciate you sharing that! 🎯\n\nYou're all set, **${data.name}!** 🎉 Your details are with the Zonic Media team — someone will reach out very shortly with a tailored plan.\n\nIn the meantime:\n\n${CONNECT_SNIPPET}`,
+        },
+      ]);
+    } catch {
+      setIsTyping(false);
+      setMessages((p) => [
+        ...p,
+        {
+          sender: "bot",
+          text: `Sorry about that — something went wrong on our end. 😓 Please reach out to us directly and we'll take great care of you:\n\n${CONNECT_SNIPPET}`,
+        },
+      ]);
+    }
+  };
+
+  if (!mounted) return null;
+
+  const inputActive  = !locked && step > 0 && step < 10;
+  const isPhoneStep  = step === 6 && urgencyRef.current && !urgencyRef.current.includes("Normal");
+
+  let inputPlaceholder = "Type your message...";
+  if (!inputActive) {
+    inputPlaceholder = "Choose an option above...";
+  } else if (isPhoneStep) {
+    inputPlaceholder = "Enter your 10-digit phone number...";
+  } else if (step === 6 || step === 7) {
+    inputPlaceholder = "Enter your email address...";
+  }
+
+  return (
+    <>
+      {/* ── Greeting / resume bubble ───────────────────────────────────── */}
+      <div
+        className={`zoni-greeting-bubble${bubbleVisible && !isOpen ? " zoni-greeting-bubble--visible" : ""}`}
+        onClick={() => setIsOpen(true)}
+        role="button"
+        tabIndex={bubbleVisible && !isOpen ? 0 : -1}
+        aria-hidden={!(bubbleVisible && !isOpen)}
+        aria-label="Open chat"
+      >
+        {BUBBLE_TEXTS[bubbleMsg]}
+      </div>
+
+      {/* ── Floating trigger button ─────────────────────────────────────── */}
+      <button
+        type="button"
+        className={`zoni-trigger${isOpen ? " zoni-trigger--open" : ""}`}
+        onClick={() => setIsOpen((v) => !v)}
+        aria-label={isOpen ? "Close Zoni chat" : "Chat with Zoni"}
+      >
+        {isOpen ? (
+          <svg className="zoni-trigger-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        ) : (
+          <svg className="zoni-trigger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 3 L13.6 9.4 L20 10 L13.6 10.6 L12 17 L10.4 10.6 L4 10 L10.4 9.4 Z" />
+            <path d="M18.5 15 L19.3 17.2 L21.5 17.8 L19.3 18.4 L18.5 20.5 L17.7 18.4 L15.5 17.8 L17.7 17.2 Z" />
+            <path d="M5.5 3 L6.1 4.9 L8 5.4 L6.1 5.9 L5.5 7.5 L4.9 5.9 L3 5.4 L4.9 4.9 Z" />
+          </svg>
+        )}
+      </button>
+
+      {/* ── Chat window ─────────────────────────────────────────────────── */}
+      <div
+        className={`zoni-window${isOpen ? " zoni-window--open" : ""}`}
+        role="dialog"
+        aria-label="Chat with Zoni"
+        aria-modal="true"
+      >
+        {/* Header */}
+        <div className="zoni-header">
+          <div className="zoni-header-left">
+            <div className="zoni-header-avatar" aria-hidden="true">Z</div>
+            <div className="zoni-header-info">
+              <span className="zoni-header-name">Zoni</span>
+              <span className="zoni-header-status">
+                <span className="zoni-status-dot" aria-hidden="true" />
+                Online · Usually replies instantly
+              </span>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="zoni-header-close"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close chat"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Messages */}
+        <div className="zoni-messages" role="log" aria-live="polite" aria-atomic="false" data-lenis-prevent>
+          {messages.map((msg, i) => (
+            <ChatMessage key={i} msg={msg} />
+          ))}
+          {isTyping && <TypingDots />}
+          <QuickReplies options={quickOpts} onSelect={handleQuickReply} disabled={isTyping} />
+          <div ref={bottomRef} />
+        </div>
+
+        {/* Input area */}
+        <div className="zoni-input-area">
+          <input
+            ref={inputRef}
+            type={isPhoneStep ? "tel" : "text"}
+            className="zoni-input"
+            placeholder={inputPlaceholder}
+            value={inputVal}
+            onChange={(e) => setInputVal(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={!inputActive}
+            aria-label="Chat message"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck="false"
+          />
+          <button
+            type="button"
+            className="zoni-send-btn"
+            onClick={() => handleSend()}
+            disabled={!inputVal.trim() || !inputActive}
+            aria-label="Send message"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}

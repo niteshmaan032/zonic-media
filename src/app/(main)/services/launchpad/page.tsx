@@ -14,7 +14,6 @@ import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
-import SquareBgLaunch from "@/app/components/SquareBgLaunch";
 
 export const metadata: Metadata = {
   title: "Business Launch Services | Start Your Business Online | Zonic Media",
@@ -159,8 +158,6 @@ function page() {
   return (
     <>
       <div className="launchpad-sec-1">
-        <SquareBgLaunch />
-
         <Col lg={8} className="launch-col">
           <div className="launchpad-sec-1-content-wrapper">
             <p className="launchpad-label">

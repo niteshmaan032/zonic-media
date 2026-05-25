@@ -563,6 +563,14 @@
   text-wrap: nowrap;
 }
 
+.local-seo-home-contact-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+  object-fit: contain;
+}
+
 /*--local-seo-home-sec-12--*/
 
 .local-seo-home-sec-12 {

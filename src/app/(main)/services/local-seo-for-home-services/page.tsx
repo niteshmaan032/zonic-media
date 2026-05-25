@@ -7,6 +7,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
+import { SITE_CONTACT } from "@/shared/siteConfig";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -130,35 +131,10 @@ function page() {
             </p>
 
             <div className="local-seo-sec-1-cta-clutch">
-              <HashScrollLink href="#local-seo-home-top" className="buttons">
-                Get Your Free Local SEO Audit
-                <span className="buttons__icon-wrapper">
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg"
-                    width="8"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <svg
-                    viewBox="0 0 14 15"
-                    fill="none"
-                    width="8"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="buttons__icon-svg buttons__icon-svg--copy"
-                  >
-                    <path
-                      d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-              </HashScrollLink>
+              <Link href={SITE_CONTACT.phoneHref} className="buttons">
+                <IoCall />
+                {SITE_CONTACT.phoneDisplay}
+              </Link>
 
               <ClutchWidget />
             </div>
@@ -884,6 +860,14 @@ function page() {
                   500+ Businesses Ranked on Google
                 </p>
               </div>
+
+              <Image
+                src="/images/contact-section.jpg"
+                width={2000}
+                height={938}
+                alt="Digital contact and email communication illustration"
+                className="local-seo-home-contact-illustration"
+              />
             </div>
 
             <div className="local-seo-home-contact-form">
