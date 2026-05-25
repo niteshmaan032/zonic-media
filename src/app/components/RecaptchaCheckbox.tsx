@@ -4,8 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 import Script from "next/script";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
-const RECAPTCHA_SITE_KEY = "6Ldj3aosAAAAABKXmvYgO85tVuQrkvCdtBAOKShY";
-
 type Grecaptcha = {
   ready: (callback: () => void) => void;
   execute: (
@@ -35,8 +33,7 @@ export default function RecaptchaCheckbox({
 }: RecaptchaCheckboxProps) {
   const [scriptReady, setScriptReady] = useState(false);
   const [smsConsentChecked, setSmsConsentChecked] = useState(true);
-  const siteKey =
-    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim() || RECAPTCHA_SITE_KEY;
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
   const privacyHref = appUrl
     ? `${appUrl}/legal/privacy-policy`

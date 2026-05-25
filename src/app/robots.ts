@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/shared/urlConfig";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -10,10 +9,12 @@ export default function robots(): MetadataRoute.Robots {
         "/legal/terms-conditions",
         "/legal/refund-policy",
         "/coming-soon",
+        "/404",
+        "/thank-you",
         "/terms-conditions",
         "/admindashboard",
       ],
     },
-    sitemap: `${getSiteUrl()}/sitemap.xml`,
+    sitemap: "https://www.zonicllc.com/sitemap.xml",
   };
 }

@@ -1,108 +1,53 @@
-import { readdirSync } from "fs";
-import { join, relative, sep } from "path";
 import type { MetadataRoute } from "next";
-import { getSiteUrl } from "@/shared/urlConfig";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 
-const APP_DIR = join(process.cwd(), "src", "app");
-const PAGE_FILE = "page.tsx";
 export const revalidate = 300;
 
-const EXCLUDED_ROUTE_SEGMENTS = new Set([
-  "api",
-  "coming-soon",
-  "legal",
-  "thank-you",
-  "[slug]",
-  "blog",
-]);
-const EXCLUDED_ROUTE_GROUPS = new Set(["(admin)", "(admin-auth)"]);
+const BASE_URL = "https://www.zonicllc.com";
 
-// Redirect stubs — have noindex set, must not appear in sitemap
-const EXCLUDED_PATHS = new Set([
-  "/industry/local-seo-services-for-hvac",
-  "/industry/real-estate-seo-services",
-  "/services/industry/car-towing",
-  "/services/industry/pest-control",
-  "/services/industry/plumber",
-  "/services/industry/local-seo-services-for-hvac",
-]);
+const STATIC_PAGES: MetadataRoute.Sitemap = [
+  // Core
+  { url: `${BASE_URL}/`, changeFrequency: "weekly", priority: 1.0 },
+  { url: `${BASE_URL}/services`, changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/contact-us`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/blog`, changeFrequency: "weekly", priority: 0.8 },
 
-const PRIORITY_BY_PATH: Record<string, number> = {
-  "/": 1,
-  "/services": 0.9,
-  "/about": 0.8,
-  "/contact-us": 0.8,
-  "/blog": 0.8,
-};
+  // Services
+  { url: `${BASE_URL}/services/web-design`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/gmb-reinstatement-help`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/google-ads`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/local-seo-for-home-services`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/launchpad`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/local-seo-services-for-hvac`, changeFrequency: "monthly", priority: 0.7 },
 
-function getPageFiles(dir: string): string[] {
-  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
-    const entryPath = join(dir, entry.name);
+  // Locations
+  { url: `${BASE_URL}/services/delaware/digital-marketing`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/philadelphia/digital-marketing`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/philadelphia/local-seo`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/philadelphia/sem`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/philadelphia/ppc`, changeFrequency: "monthly", priority: 0.7 },
 
-    if (entry.isDirectory()) {
-      return getPageFiles(entryPath);
-    }
-
-    return entry.isFile() && entry.name === PAGE_FILE ? [entryPath] : [];
-  });
-}
-
-function toRoutePath(filePath: string): string | null {
-  const routePath = relative(APP_DIR, filePath);
-  const allSegments = routePath.split(sep).slice(0, -1);
-
-  if (allSegments.some((segment) => EXCLUDED_ROUTE_GROUPS.has(segment))) {
-    return null;
-  }
-
-  if (allSegments.some((segment) => EXCLUDED_ROUTE_SEGMENTS.has(segment))) {
-    return null;
-  }
-
-  const segments = allSegments.filter(
-    (segment) => !(segment.startsWith("(") && segment.endsWith(")")),
-  );
-
-  if (segments.length === 0) {
-    return "/";
-  }
-
-  return `/${segments.join("/")}`;
-}
+  // Industries
+  { url: `${BASE_URL}/services/industry/real-estate-seo-services`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/chiropractor-local-seo-services`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/seo-services-for-car-towing`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/local-seo-for-roofing-companies`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/dental-seo-services`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/pediatricians`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/seo-services-for-plumber`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/seo-services-for-pest-control`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/local-seo-for-law-firms`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/local-seo-for-commercial-cleaning`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/local-seo-services-for-residential-cleaning`, changeFrequency: "monthly", priority: 0.7 },
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = getSiteUrl();
-
-  // Static pages — exclude redirect stubs
-  const routes = getPageFiles(APP_DIR)
-    .map((filePath) => ({ path: toRoutePath(filePath), filePath }))
-    .filter(
-      (entry): entry is { path: string; filePath: string } =>
-        entry.path !== null && !EXCLUDED_PATHS.has(entry.path),
-    )
-    .sort((a, b) => a.path.localeCompare(b.path));
-
-  const staticEntries: MetadataRoute.Sitemap = routes.map(({ path }) => ({
-    url: `${siteUrl}${path}`,
-    changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: PRIORITY_BY_PATH[path] ?? 0.7,
-  }));
-
-  // Blog listing page
-  staticEntries.push({
-    url: `${siteUrl}/blog`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  });
-
-  // Blog post pages from the database
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
     const blogs = await getPublishedBlogs();
     blogEntries = blogs.map((blog) => ({
-      url: `${siteUrl}/blog/${blog.slug}`,
+      url: `${BASE_URL}/blog/${blog.slug}`,
       lastModified: blog.publishedAt
         ? new Date(blog.publishedAt)
         : new Date(`${blog.publishDate}T00:00:00`),
@@ -113,5 +58,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If the DB is unreachable during sitemap generation, skip blog entries
   }
 
-  return [...staticEntries, ...blogEntries];
+  return [...STATIC_PAGES, ...blogEntries];
 }

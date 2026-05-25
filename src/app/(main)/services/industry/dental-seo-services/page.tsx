@@ -31,17 +31,17 @@ const DentalSeoFaqs = [
   {
     question: "How long does dental SEO take to show results?",
     answer:
-      "Most dental clinics begin seeing early ranking and visibility improvements within 2 to 3 months, while stronger patient lead flow usually builds over 4 to 6 months depending on competition and current website authority.",
+      "Most dental offices begin seeing early ranking and visibility improvements within 2 to 3 months, while stronger patient lead flow usually builds over 4 to 6 months depending on competition and current website authority.",
   },
   {
-    question: "Do dental clinics need Google Business Profile optimization?",
+    question: "Do dental offices need Google Business Profile optimization?",
     answer:
-      "Yes. Google Business Profile optimization is critical for dental clinics because many patients choose practices directly from Google Maps results, reviews, photos, service listings, and local search information.",
+      "Yes. Google Business Profile optimization is critical for dental offices because many patients choose practices directly from Google Maps results, reviews, photos, service listings, and local search information.",
   },
   {
-    question: "Is SEO better than paid ads for dental clinics?",
+    question: "Is SEO better than paid ads for dental offices?",
     answer:
-      "SEO builds long-term visibility and lowers patient acquisition cost over time, while paid ads can generate faster short-term leads. Many dental clinics get the best results from using both together.",
+      "SEO builds long-term visibility and lowers patient acquisition cost over time, while paid ads can generate faster short-term leads. Many dental offices get the best results from using both together.",
   },
   {
     question: "What dental services can you target with SEO?",
@@ -49,7 +49,7 @@ const DentalSeoFaqs = [
       "We can target general dentistry, cosmetic dentistry, dental implants, Invisalign, teeth whitening, emergency dentistry, pediatric dentistry, veneers, root canals, dentures, and service-area searches.",
   },
   {
-    question: "Can you help my dental clinic rank on Google Maps?",
+    question: "Can you help my dental office rank on Google Maps?",
     answer:
       "Yes. Our dental SEO strategy includes Google Business Profile optimization, local citations, review strategy, service optimization, local landing pages, and map ranking improvements.",
   },
@@ -101,7 +101,7 @@ const DentalChoosePoints = [
   },
   {
     icon: <FaDollarSign />,
-    title: "Strategy built for dental clinics",
+    title: "Strategy built for dental offices",
     desc: "SEO reduces dependency on paid ads and supports long-term growth.",
   },
 ];
@@ -120,7 +120,7 @@ const DentalServices = [
 export const metadata: Metadata = {
   title: "Dental SEO Services | Local SEO for Dentists | Zonic Media",
   description:
-    "Dental SEO services that help dental clinics rank higher on Google, dominate local search, and generate more patient calls and bookings.",
+    "Dental SEO services that help dental offices rank higher on Google, dominate local search, and generate more patient calls and bookings.",
   alternates: { canonical: "/services/industry/dental-seo-services" },
 };
 
@@ -138,7 +138,7 @@ function Page() {
               Dental SEO Services | Zonic Media
             </p>
             <p className="dent-sec-1-descrp">
-              Zonic Media helps dental clinics rank higher on Google, dominate
+              Zonic Media helps dental offices rank higher on Google, dominate
               local search, and consistently generate calls from patients ready
               to book.
             </p>
@@ -298,7 +298,7 @@ function Page() {
 
       <section className="dent-sec-4">
         <h2 className="dent-sec-4-heading">
-          Why Dental Clinics Choose <span>Zonic</span> Media
+          Why Dental Offices Choose <span>Zonic</span> Media
         </h2>
 
         <Row className="align-items-center g-4">
@@ -325,7 +325,7 @@ function Page() {
             <div className="dent-sec-4-image">
               <Image
                 src="/images/dental-seo/dental-seo-img-3.jpg"
-                alt="Dental clinics choosing Zonic Media SEO"
+                alt="Dental offices choosing Zonic Media SEO"
                 fill
               />
             </div>
@@ -383,7 +383,7 @@ function Page() {
 
       <section className="dent-sec-6">
         <div className="dent-center-head">
-          <h2>Our Proven Local SEO Process for Dental Clinics</h2>
+          <h2>Our Proven Local SEO Process for Dental Offices</h2>
         </div>
         <div className="dent-process-steps">
           {DentalProcessSteps.map((item, index) => (
@@ -401,7 +401,7 @@ function Page() {
       <section className="dent-sec-7">
         <div className="dent-center-head">
           <h2>
-            <span>SEO</span> vs <span>Paid Ads</span> for Dental Clinics
+            <span>SEO</span> vs <span>Paid Ads</span> for Dental Offices
           </h2>
           <p>
             Search Engine Optimization and paid advertising can work together,
@@ -477,7 +477,7 @@ function Page() {
           <p>
             We build digital marketing systems designed to generate patient
             calls, increase local visibility, and create long-term growth for
-            dental clinics.
+            dental offices.
           </p>
         </div>
 
