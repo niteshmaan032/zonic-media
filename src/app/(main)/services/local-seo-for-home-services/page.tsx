@@ -544,9 +544,9 @@ function page() {
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">STARTER PLAN</div>
 
-                  <h1 className="local-seo-home-price">
+                  <p className="local-seo-home-price">
                     $750 <span>/ month</span>
-                  </h1>
+                  </p>
 
                   <p className="local-seo-home-price-subtitle">
                     Best for small businesses targeting one service area.
@@ -579,9 +579,9 @@ function page() {
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">GROWTH PLAN</div>
 
-                  <h1 className="local-seo-home-price">
+                  <p className="local-seo-home-price">
                     $1350 <span>/ month</span>
-                  </h1>
+                  </p>
 
                   <p className="local-seo-home-price-subtitle">
                     Best for growing companies ready for more calls and booked
@@ -617,9 +617,9 @@ function page() {
                     DOMINATE PLAN
                   </div>
 
-                  <h1 className="local-seo-home-price">
+                  <p className="local-seo-home-price">
                     $2000 <span>/ month</span>
-                  </h1>
+                  </p>
 
                   <p className="local-seo-home-price-subtitle">
                     Best for competitive markets and multi-location growth.
@@ -810,9 +810,9 @@ function page() {
           <div className="local-seo-home-sec-1 local-seo-home-sec-11">
             <div className="local-seo-home-content">
               <p className="local-seo-home-label">95% Growth Success Rate</p>
-              <h1 className="local-seo-home-main-heading">
+              <h2 className="local-seo-home-main-heading">
                 Local SEO Built to Grow Home Service Businesses
-              </h1>
+              </h2>
               <p className="local-seo-home-descrp">
                 Homeowners search online every day for reliable local
                 professionals they can trust. If your business is not appearing

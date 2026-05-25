@@ -1105,10 +1105,10 @@ function page() {
           <p className="launchpad-home-label">
             Launch Your Business with Confidence
           </p>
-          <h1 className="launchpad-home-main-heading">
+          <h2 className="launchpad-home-main-heading">
             Everything You Need to Start and Grow Your Business — All in One
             Place
-          </h1>
+          </h2>
           <p className="launchpad-home-descrp">
             Starting a business is more than just building a website. You need
             the right setup, strong branding, and a system that helps you
