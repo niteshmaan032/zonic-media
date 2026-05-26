@@ -33,7 +33,7 @@ const SITE_URL = "https://www.zonicllc.com";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "MarketingAgency"],
+  "@type": ["LocalBusiness", "ProfessionalService"],
   name: "Zonic Media",
   description:
     "Digital marketing agency delivering web design, SEO, Google Ads, and growth solutions for businesses worldwide.",
