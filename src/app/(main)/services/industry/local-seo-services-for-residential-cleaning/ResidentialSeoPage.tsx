@@ -1608,6 +1608,7 @@ export default function ResidentialSeoPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/local-seo-services-for-residential-cleaning",
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

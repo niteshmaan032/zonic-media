@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node --input-type=module --eval ' *)"
+      "Bash(node --input-type=module --eval ' *)",
+      "Bash(sed -n '157,175p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/delaware/digital-marketing/page.tsx\")",
+      "Bash(sed -n '126,140p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/industry/local-seo-for-roofing-companies/page.tsx\")",
+      "Bash(sed -n '27,45p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/industry/pediatricians/page.tsx\")"
     ]
   }
 }

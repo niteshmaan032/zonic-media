@@ -921,6 +921,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/philadelphia/local-seo",
               mainEntity: PhilaSeoFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

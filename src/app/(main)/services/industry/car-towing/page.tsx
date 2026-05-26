@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SEO Services for Car Towing Companies | Zonic Media",
+  title: "SEO Services for Car Towing Companies",
   description:
     "SEO services for towing companies that want more local visibility, roadside assistance calls, and high-intent towing leads.",
   robots: {

@@ -354,7 +354,7 @@ function page() {
               <Image
                 src="/images/gmb-optim-1.png"
                 fill
-                alt="gmb-account-recover"
+                alt="Google Business Profile optimization dashboard illustration"
               ></Image>
             </div>
           </div>
@@ -509,7 +509,7 @@ function page() {
               <Image
                 src="/images/gmb-optim-2.png"
                 fill
-                alt="gmb opimization service"
+                alt="Google Business Profile optimization service in action"
               ></Image>
             </div>
           </div>
@@ -1012,12 +1012,13 @@ function page() {
             </div>
 
             <Script
-              id="gmb-reinst-faq-schema"
+              id="gmb-optim-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
+                  "url": "https://zonicllc.com/services/gmb-optimization",
                   mainEntity: GmbOptimFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

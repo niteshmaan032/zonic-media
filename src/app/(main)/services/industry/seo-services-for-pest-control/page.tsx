@@ -589,6 +589,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/seo-services-for-pest-control",
               mainEntity: pestFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

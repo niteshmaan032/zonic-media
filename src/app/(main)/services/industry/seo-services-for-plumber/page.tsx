@@ -122,7 +122,7 @@ const plumbingServices = [
 ];
 
 export const metadata: Metadata = {
-  title: "SEO Services for Plumbers | Get More Plumbing Leads | Zonic Media",
+  title: "SEO Services for Plumbers | Get More Plumbing Leads",
   description:
     "Plumbing SEO services that help plumbing businesses rank higher on Google, dominate local search, and generate more calls and booked jobs.",
   alternates: { canonical: "/services/industry/seo-services-for-plumber" },
@@ -592,6 +592,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/seo-services-for-plumber",
               mainEntity: plumberFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

@@ -595,6 +595,7 @@ export default function Page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/delaware/digital-marketing",
               mainEntity: DelDigitalFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

@@ -27,14 +27,12 @@ import {
 } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title:
-    "Digital Marketing Services | SEO, PPC & Web Design | Zonic Media",
+  title: "Digital Marketing Services | SEO, PPC & Web Design",
   description:
     "Grow online with Zonic Media's digital marketing services, including web design, local SEO, Google Ads, GMB optimization, branding, and custom software.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title:
-      "Digital Marketing Services | SEO, PPC & Web Design | Zonic Media",
+    title: "Digital Marketing Services | SEO, PPC & Web Design",
     description:
       "Grow online with Zonic Media's full-service digital marketing solutions for SEO, PPC, web design, GMB optimization, branding, and software.",
     url: "/services",
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Services | SEO, PPC & Web Design | Zonic Media",
+    title: "Digital Marketing Services | SEO, PPC & Web Design",
     description:
       "Grow online with Zonic Media's digital marketing services, including web design, local SEO, Google Ads, GMB optimization, branding, and custom software.",
   },
@@ -437,6 +435,7 @@ const contactFormHead = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "url": "https://zonicllc.com/services",
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.q,

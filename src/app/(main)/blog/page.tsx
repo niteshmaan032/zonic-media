@@ -11,7 +11,7 @@ import "@/app/style/BlogPage.css";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Blog | Digital Marketing & SEO Insights | Zonic Media",
+  title: "Blog | Digital Marketing & SEO Insights",
   description:
     "Read the latest digital marketing, local SEO, web design, and Google Ads insights from the Zonic Media team.",
   alternates: {

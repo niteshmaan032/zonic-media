@@ -29,7 +29,7 @@ const neueHaas = localFont({
   ],
 });
 
-const SITE_URL = "https://zonicllc.com";
+const SITE_URL = "https://www.zonicllc.com";
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",

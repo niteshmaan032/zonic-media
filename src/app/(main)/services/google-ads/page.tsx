@@ -292,7 +292,7 @@ function Page() {
             </div>
 
             <div className="ads-section-3__img-cont">
-              <Image src="/images/home-ads.webp" fill alt="ads" />
+              <Image src="/images/home-ads.webp" fill alt="Google Ads campaign management dashboard" />
             </div>
           </div>
 

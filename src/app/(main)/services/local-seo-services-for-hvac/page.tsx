@@ -505,6 +505,7 @@ export default function HvacSeoPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/local-seo-services-for-hvac",
               mainEntity: HvacSeoFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

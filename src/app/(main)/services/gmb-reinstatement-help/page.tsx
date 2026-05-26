@@ -93,7 +93,7 @@ const GmbReinsFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: "GBP Suspension Recovery Experts | Zonic Media LLC",
+  title: "GBP Suspension Recovery Experts",
   description:
     "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
   alternates: { canonical: "/services/gmb-reinstatement-help" },
@@ -367,7 +367,7 @@ function page() {
               <Image
                 src="/images/gmb-reinst/gmb-reinst-banner.svg"
                 fill
-                alt="gmb-account-recover"
+                alt="Google Business Profile reinstatement and recovery process illustration"
               ></Image>
             </div>
           </div>
@@ -518,7 +518,7 @@ function page() {
               <Image
                 src="/images/gmb-reinst/gmb-reinst-banner-2.svg"
                 fill
-                alt="gmb-account-recover"
+                alt="Google Business Profile reinstatement and recovery process illustration"
               ></Image>
             </div>
           </div>
@@ -901,6 +901,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
+                  "url": "https://zonicllc.com/services/gmb-reinstatement-help",
                   mainEntity: GmbResinstFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

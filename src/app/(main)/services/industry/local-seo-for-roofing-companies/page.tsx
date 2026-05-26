@@ -125,7 +125,7 @@ const RoofingServices = [
 
 export const metadata: Metadata = {
   title:
-    "Local SEO for Roofing Companies | Get More Roofing Leads | Zonic Media",
+    "Local SEO for Roofing Companies | Get More Roofing Leads",
   description:
     "Local SEO services for roofing companies. Zonic Media helps roofers rank higher on Google, dominate local search, and generate consistent calls from homeowners ready to hire.",
   alternates: { canonical: "/services/industry/local-seo-for-roofing-companies" },
@@ -635,6 +635,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/local-seo-for-roofing-companies",
               mainEntity: RoofingSeoFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

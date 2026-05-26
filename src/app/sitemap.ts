@@ -16,6 +16,8 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Services
   { url: `${BASE_URL}/services/web-design`,                changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
   { url: `${BASE_URL}/services/gmb-reinstatement-help`,   changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
+  { url: `${BASE_URL}/services/gmb-optimization`,         changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
+  { url: `${BASE_URL}/services/gmb-verification-help`,    changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
   { url: `${BASE_URL}/services/google-ads`,               changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
   { url: `${BASE_URL}/services/local-seo-for-home-services`, changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },
   { url: `${BASE_URL}/services/launchpad`,                changeFrequency: "monthly", priority: 0.8, lastModified: new Date("2026-05-25") },

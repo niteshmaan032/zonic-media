@@ -118,7 +118,7 @@ const DentalServices = [
 ];
 
 export const metadata: Metadata = {
-  title: "Dental SEO Services | Local SEO for Dentists | Zonic Media",
+  title: "Dental SEO Services | Local SEO for Dentists",
   description:
     "Dental SEO services that help dental offices rank higher on Google, dominate local search, and generate more patient calls and bookings.",
   alternates: { canonical: "/services/industry/dental-seo-services" },
@@ -572,6 +572,7 @@ function Page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/dental-seo-services",
               mainEntity: DentalSeoFaqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

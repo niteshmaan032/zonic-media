@@ -347,7 +347,7 @@ function page() {
               <Image
                 src="/images/gmb-verify-1.png"
                 fill
-                alt="gmb-verify-account"
+                alt="Google Business Profile verification process illustration"
               ></Image>
             </div>
           </div>
@@ -499,7 +499,7 @@ function page() {
               <Image
                 src="/images/gmb-verify-2.png"
                 fill
-                alt="gmb-verify-account"
+                alt="Google Business Profile verification process illustration"
               ></Image>
             </div>
           </div>
@@ -873,12 +873,13 @@ function page() {
             </div>
 
             <Script
-              id="gmb-reinst-faq-schema"
+              id="gmb-verifi-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
+                  "url": "https://zonicllc.com/services/gmb-verification-help",
                   mainEntity: GmbVerifiFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

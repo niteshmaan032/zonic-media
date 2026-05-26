@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   if (!pageData) {
     return {
-      title: "Legal Page Not Found | Zonic Media",
+      title: "Legal Page Not Found",
       robots: {
         index: false,
         follow: false,
@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${pageData.title} | Zonic Media`,
+    title: pageData.title,
     description:
       pageData.intro[0] ??
       "Read Zonic Media legal terms, privacy policy, and refund policy information.",

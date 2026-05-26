@@ -31,7 +31,10 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Digital Agency | Web Design, SEO & Growth Solutions | Zonic Media",
+  title: {
+    absolute:
+      "Digital Agency | Web Design, SEO & Growth Solutions | Zonic Media",
+  },
   description:
     "Zonic Media delivers premium web design, UI/UX, branding, SEO, and custom software solutions to help businesses scale online.",
   alternates: {

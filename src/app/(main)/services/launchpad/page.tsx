@@ -16,14 +16,14 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 
 export const metadata: Metadata = {
-  title: "Business Launch Services | Start Your Business Online | Zonic Media",
+  title: "Business Launch Services | Start Your Business Online",
   description:
     "Launch your business online with Zonic LaunchPad. Get branding, website design, Google Business setup, local SEO, and lead generation in one done-for-you system.",
   alternates: {
     canonical: "/services/launchpad",
   },
   openGraph: {
-    title: "Business Launch Services | Start Your Business Online | Zonic Media",
+    title: "Business Launch Services | Start Your Business Online",
     description:
       "Zonic LaunchPad helps new businesses launch with branding, a conversion-focused website, Google visibility, and a lead generation foundation.",
     url: "/services/launchpad",
@@ -1087,6 +1087,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/launchpad",
               mainEntity: LaunchpadServiceFaqItems.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

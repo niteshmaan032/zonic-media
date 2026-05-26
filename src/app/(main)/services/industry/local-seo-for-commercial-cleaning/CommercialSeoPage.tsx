@@ -1665,6 +1665,7 @@ export default function CommercialSeoPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
+              "url": "https://zonicllc.com/services/industry/local-seo-for-commercial-cleaning",
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,
