@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Script from "next/script";
 import "@/app/style/chatbot.css";
 
 // ─── Conversation config ──────────────────────────────────────────────────────
@@ -13,7 +14,6 @@ const SERVICE_OPTIONS = [
   "Branding / Logo",
   "UI/UX Design",
   "Custom Software",
-  "Not sure yet",
 ];
 
 const SUB_SERVICE_OPTIONS = {
@@ -59,12 +59,6 @@ const SUB_SERVICE_OPTIONS = {
     "📱 Mobile App",
     "🌐 Web Application",
   ],
-  "Not sure yet": [
-    "📈 Grow Online Presence",
-    "💻 Need a Website",
-    "🎯 Get More Leads",
-    "🤔 Just Exploring",
-  ],
 };
 
 const SUB_SERVICE_PROMPTS = {
@@ -75,14 +69,7 @@ const SUB_SERVICE_PROMPTS = {
   "Branding / Logo":               "Love it! **What branding work do you need?**",
   "UI/UX Design":                  "Great! **What type of product are we designing for?**",
   "Custom Software":               "Interesting! **What kind of software solution do you need?**",
-  "Not sure yet":                  "No worries! **What's the main thing you're hoping to improve?**",
 };
-
-const URGENCY_OPTIONS = [
-  "🚀 ASAP — Book a Meeting",
-  "📧 Normal — Email Me",
-  "📲 Both Work for Me",
-];
 
 const CALENDAR_URL = "https://calendar.app.google/EGNcQQMvMU3DGP5R6";
 
@@ -90,6 +77,22 @@ const CONNECT_SNIPPET =
   `📅 [Book a Meeting](${CALENDAR_URL})\n` +
   `📞 **Urgent?** [+1 (302) 726-9736](tel:+13027269736)\n` +
   `📧 [contact@zonicllc.com](mailto:contact@zonicllc.com)`;
+
+// ─── reCAPTCHA token ──────────────────────────────────────────────────────────
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
+
+async function getRecaptchaToken() {
+  if (!RECAPTCHA_SITE_KEY || !window.grecaptcha) return "";
+  return new Promise((resolve) => {
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute(RECAPTCHA_SITE_KEY, { action: "lead_form_submit" })
+        .then(resolve)
+        .catch(() => resolve(""));
+    });
+  });
+}
 
 // ─── Email submission ─────────────────────────────────────────────────────────
 
@@ -199,23 +202,35 @@ export default function ChatBot() {
 
   const [bubbleMsg, setBubbleMsg]         = useState("greeting");
   const [bubbleVisible, setBubbleVisible] = useState(false);
-  const timersRef  = useRef([]);
-  const urgencyRef = useRef("");
+  const timersRef = useRef([]);
 
   const [lead, setLead] = useState({
     name: "",
     email: "",
     phone: "",
     service: "",
-    serviceFollowUp: "",
-    projectDetails: "",
-    timeline: "",
-    budget: "",
+    subService: "",
+    projectDescription: "",
+    urgency: "",
   });
 
   const bottomRef = useRef(null);
   const inputRef  = useRef(null);
   const greeted   = useRef(false);
+  const audioRef  = useRef(null);
+
+  const playSound = () => {
+    try {
+      if (!audioRef.current) {
+        audioRef.current = new Audio("/audio/chatbot.mp3");
+        audioRef.current.volume = 0.5;
+      }
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch(() => {});
+    } catch {
+      // ignore
+    }
+  };
 
   useEffect(() => { setMounted(true); }, []);
 
@@ -229,6 +244,7 @@ export default function ChatBot() {
     timersRef.current.push(t);
   };
 
+  // Greeting → "Need help?" cycle, runs once after mount
   // Greeting → "Need help?" cycle, runs once after mount
   useEffect(() => {
     if (!mounted) return;
@@ -317,6 +333,7 @@ export default function ChatBot() {
       setMessages((prev) => [...prev, { sender: "bot", text }]);
       setQuickOpts(options);
       if (!options.length) setLocked(false);
+      playSound();
     }, 980 + extraDelay);
   };
 
@@ -369,68 +386,49 @@ export default function ChatBot() {
 
     // Step 3 — sub-service selection → ask project description
     } else if (step === 3) {
-      setLead((p) => ({ ...p, serviceFollowUp: userInput }));
+      setLead((p) => ({ ...p, subService: userInput }));
       setStep(4);
       botSay("Nice! 🙌 **Can you briefly describe your project or what you're trying to achieve?**");
 
-    // Step 4 — project description → show urgency chips
+    // Step 4 — project description → ask for email
     } else if (step === 4) {
-      setLead((p) => ({ ...p, projectDetails: userInput }));
+      setLead((p) => ({ ...p, projectDescription: userInput }));
       setStep(5);
       botSay(
-        "That's really helpful! 💡 **How soon are you looking to get started?**",
-        URGENCY_OPTIONS
+        `Thanks, **${lead.name}**. We'll send a quick confirmation of your enquiry and stay connected with you there. **What's the best email address to reach you?**`
       );
 
-    // Step 5 — urgency selection → collect contact info
+    // Step 5 — email → ask if phone optional
     } else if (step === 5) {
-      urgencyRef.current = userInput;
-      setStep(6);
-      if (userInput.includes("ASAP") || userInput.includes("Both")) {
-        botSay("Perfect! 📞 **What's the best phone number to reach you?** (10 digits)");
-      } else {
-        botSay("Perfect! 📧 **What's the best email address to reach you?**");
-      }
-
-    // Step 6 — phone (ASAP / Both) or email (Normal)
-    } else if (step === 6) {
-      const urgency = urgencyRef.current;
-
-      if (urgency.includes("Normal")) {
-        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
-        if (!valid) {
-          botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
-          return;
-        }
-        const fullLead = { ...lead, email: userInput.trim() };
-        setLead(fullLead);
-        sendLead(fullLead);
-
-      } else {
-        const digits = userInput.replace(/\D/g, "");
-        if (digits.length !== 10) {
-          botSay("Please enter a valid 10-digit US phone number (digits only). 📱");
-          return;
-        }
-        const updatedLead = { ...lead, phone: digits };
-        setLead(updatedLead);
-        if (urgency.includes("ASAP")) {
-          sendLead(updatedLead);
-        } else {
-          // Both path — now ask for email
-          setStep(7);
-          botSay("Got it! 📧 **And the best email address to reach you?**");
-        }
-      }
-
-    // Step 7 — email (Both path only)
-    } else if (step === 7) {
       const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
       if (!valid) {
         botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
         return;
       }
-      const fullLead = { ...lead, email: userInput.trim() };
+      setLead((p) => ({ ...p, email: userInput.trim() }));
+      setStep(6);
+      botSay(
+        "Thanks! Would you also like to share your phone number so our team can connect with you more easily? This is completely optional.",
+        ["Yes, I'll Share My Number", "No, Email Is Fine"]
+      );
+
+    // Step 6 — phone optional? (quick reply)
+    } else if (step === 6) {
+      if (userInput === "Yes, I'll Share My Number") {
+        setStep(7);
+        botSay("Sure, please enter your best phone number.");
+      } else {
+        sendLead({ ...lead });
+      }
+
+    // Step 7 — phone number (optional)
+    } else if (step === 7) {
+      const digits = userInput.replace(/\D/g, "");
+      if (digits.length < 7) {
+        botSay("Please enter a valid phone number. 📱");
+        return;
+      }
+      const fullLead = { ...lead, phone: digits };
       setLead(fullLead);
       sendLead(fullLead);
     }
@@ -441,11 +439,14 @@ export default function ChatBot() {
     setLocked(true);
     setIsTyping(true);
 
+    const recaptchaToken = await getRecaptchaToken();
+
     const payload = {
       ...data,
-      source:    "Zoni Chatbot",
-      pageUrl:   typeof window !== "undefined" ? window.location.href : "",
-      createdAt: new Date().toISOString(),
+      source:         "Zoni Chatbot",
+      pageUrl:        typeof window !== "undefined" ? window.location.href : "",
+      createdAt:      new Date().toISOString(),
+      recaptchaToken,
     };
 
     try {
@@ -456,7 +457,7 @@ export default function ChatBot() {
         ...p,
         {
           sender: "bot",
-          text: `That's really valuable, I appreciate you sharing that! 🎯\n\nYou're all set, **${data.name}!** 🎉 Your details are with the Zonic Media team — someone will reach out very shortly with a tailored plan.\n\nIn the meantime:\n\n${CONNECT_SNIPPET}`,
+          text: `You're all set, **${data.name}!** 🎉 We've received your enquiry and sent a confirmation to **${data.email}**. Our team will review your details and stay connected with you shortly.\n\n${CONNECT_SNIPPET}`,
         },
       ]);
     } catch {
@@ -473,20 +474,26 @@ export default function ChatBot() {
 
   if (!mounted) return null;
 
-  const inputActive  = !locked && step > 0 && step < 10;
-  const isPhoneStep  = step === 6 && urgencyRef.current && !urgencyRef.current.includes("Normal");
+  const inputActive = !locked && step > 0 && step < 10;
 
   let inputPlaceholder = "Type your message...";
   if (!inputActive) {
     inputPlaceholder = "Choose an option above...";
-  } else if (isPhoneStep) {
-    inputPlaceholder = "Enter your 10-digit phone number...";
-  } else if (step === 6 || step === 7) {
+  } else if (step === 7) {
+    inputPlaceholder = "Enter your phone number...";
+  } else if (step === 5) {
     inputPlaceholder = "Enter your email address...";
   }
 
   return (
     <>
+      {RECAPTCHA_SITE_KEY && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
+      )}
+
       {/* ── Greeting / resume bubble ───────────────────────────────────── */}
       <div
         className={`zoni-greeting-bubble${bubbleVisible && !isOpen ? " zoni-greeting-bubble--visible" : ""}`}
@@ -567,7 +574,7 @@ export default function ChatBot() {
         <div className="zoni-input-area">
           <input
             ref={inputRef}
-            type={isPhoneStep ? "tel" : "text"}
+            type={step === 7 ? "tel" : "text"}
             className="zoni-input"
             placeholder={inputPlaceholder}
             value={inputVal}

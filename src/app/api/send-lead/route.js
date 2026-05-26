@@ -12,6 +12,8 @@
 
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
+import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
+import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
 const DEFAULT_TO = "contact@zonicllc.com";
 const CC_EMAILS  = ["man2k19ish@gmail.com", "samrunads@gmail.com", "josef@zonicllc.com"];
@@ -118,16 +120,14 @@ function buildHtml(d) {
           <td style="padding:0 26px 22px;">
             <table width="100%" cellpadding="0" cellspacing="0" border="0"
               style="border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;">
-              ${row("Name",           d.name)}
-              ${row("Email",          d.email)}
-              ${row("Phone",          d.phone)}
-              ${row("Service",        d.service)}
-              ${row("Follow-up",      d.serviceFollowUp)}
-              ${row("Project Detail", d.projectDetails)}
-              ${row("Timeline",       d.timeline)}
-              ${row("Budget",         d.budget)}
-              ${row("Page URL",       d.pageUrl)}
-              ${row("Submitted",      submittedAt)}
+              ${row("Name",                d.name)}
+              ${row("Email",               d.email)}
+              ${row("Phone",               d.phone)}
+              ${row("Service",             d.service)}
+              ${row("Sub-service",         d.subService)}
+              ${row("Project Description", d.projectDescription)}
+              ${row("Page URL",            d.pageUrl)}
+              ${row("Submitted",           submittedAt)}
             </table>
           </td>
         </tr>
@@ -181,9 +181,20 @@ export async function POST(req) {
     return NextResponse.json({ success: false, message: err }, { status: 400 });
   }
 
+  const recaptchaResult = await verifyRecaptchaToken(
+    typeof body.recaptchaToken === "string" ? body.recaptchaToken : "",
+    RECAPTCHA_ACTION,
+  );
+  if (!recaptchaResult.success) {
+    return NextResponse.json(
+      { success: false, message: recaptchaResult.message ?? "reCAPTCHA verification failed." },
+      { status: 400 },
+    );
+  }
+
   const {
-    name, email, phone, service, serviceFollowUp = "",
-    projectDetails = "", timeline = "", budget = "",
+    name, email, phone, service,
+    subService = "", projectDescription = "",
     pageUrl = "", createdAt, source = "Zoni Chatbot",
   } = body;
 
@@ -196,15 +207,13 @@ export async function POST(req) {
     const plainText = [
       `New lead via ${source}`,
       "",
-      `Name:           ${name}`,
-      `Email:          ${email}`,
-      `Phone:          ${phone}`,
-      `Service:        ${service}`,
-      `Follow-up:      ${serviceFollowUp || "—"}`,
-      `Project detail: ${projectDetails  || "—"}`,
-      `Timeline:       ${timeline        || "—"}`,
-      `Budget:         ${budget          || "—"}`,
-      `Page URL:       ${pageUrl         || "—"}`,
+      `Name:               ${name}`,
+      `Email:              ${email}`,
+      `Phone:              ${phone || "—"}`,
+      `Service:            ${service}`,
+      `Sub-service:        ${subService         || "—"}`,
+      `Project description:${projectDescription || "—"}`,
+      `Page URL:           ${pageUrl            || "—"}`,
       `Submitted:      ${createdAt       || new Date().toISOString()}`,
     ].join("\n");
 
@@ -215,8 +224,8 @@ export async function POST(req) {
       subject: `New Lead from Zoni Chatbot — ${service}`,
       text: plainText,
       html: buildHtml({
-        name, email, phone, service, serviceFollowUp,
-        projectDetails, timeline, budget, pageUrl,
+        name, email, phone, service, subService,
+        projectDescription, pageUrl,
         createdAt: createdAt || new Date().toISOString(),
       }),
     });
