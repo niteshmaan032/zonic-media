@@ -287,15 +287,22 @@ export default function LiveChatRoom({
   const clientsRef = useRef({ realtime: null, chat: null });
 
   useEffect(() => {
-    const authParams = { type: "visitor", visitorId, conversationId };
-    const authUrl = "/api/ably/token";
-
     let realtime;
     try {
       realtime = new Ably.Realtime({
-        authUrl,
-        authMethod: "POST",
-        authParams,
+        authCallback: (tokenParams, callback) => {
+          fetch("/api/ably/token", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ type: "visitor", visitorId, conversationId }),
+          })
+            .then((r) => {
+              if (!r.ok) throw new Error(`Token request failed: ${r.status}`);
+              return r.json();
+            })
+            .then((tokenRequest) => callback(null, tokenRequest))
+            .catch((err) => callback(err, null));
+        },
         clientId: `visitor:${visitorId}`,
       });
 

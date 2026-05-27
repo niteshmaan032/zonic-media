@@ -115,9 +115,20 @@ export default function AdminLiveChatContent() {
         setAdminId(id);
 
         const realtime = new Ably.Realtime({
-          authUrl: "/api/ably/token",
-          authMethod: "POST",
-          authParams: { type: "admin" },
+          authCallback: (tokenParams, callback) => {
+            fetch("/api/ably/token", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              credentials: "include",
+              body: JSON.stringify({ type: "admin" }),
+            })
+              .then((r) => {
+                if (!r.ok) throw new Error(`Token request failed: ${r.status}`);
+                return r.json();
+              })
+              .then((tokenRequest) => callback(null, tokenRequest))
+              .catch((err) => callback(String(err), null));
+          },
           clientId: `admin:${id}`,
         });
 
