@@ -258,7 +258,27 @@ export default function ChatBot() {
     }
   };
 
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    setMounted(true);
+
+    // Restore live chat session if it was active before a page refresh
+    try {
+      const savedConvId   = sessionStorage.getItem("zonic_live_conv_id");
+      const savedRoomName = sessionStorage.getItem("zonic_live_room_name");
+      const savedMode     = sessionStorage.getItem("zonic_live_chat_mode");
+      const savedName     = sessionStorage.getItem("zonic_live_visitor_name");
+      if (savedConvId && savedRoomName && savedMode === "active") {
+        const vid = getOrCreateVisitorId();
+        setVisitorId(vid);
+        setLiveConvId(savedConvId);
+        setLiveRoomName(savedRoomName);
+        setLiveChatMode("active");
+        if (savedName) setLead((p) => ({ ...p, name: savedName }));
+      }
+    } catch {
+      // sessionStorage unavailable — proceed normally
+    }
+  }, []);
 
   // ── Bubble timer helpers ──────────────────────────────────────
   const cancelTimers = () => {
@@ -560,6 +580,14 @@ export default function ChatBot() {
         setLiveConvId(data.conversationId);
         setLiveRoomName(data.roomName);
         setLiveChatMode("active");
+
+        // Persist so live chat survives page refresh
+        try {
+          sessionStorage.setItem("zonic_live_conv_id",      data.conversationId);
+          sessionStorage.setItem("zonic_live_room_name",    data.roomName);
+          sessionStorage.setItem("zonic_live_chat_mode",    "active");
+          sessionStorage.setItem("zonic_live_visitor_name", lead.name || "");
+        } catch {}
       } else {
         throw new Error(data.message || "Failed to start live chat.");
       }
@@ -682,6 +710,13 @@ export default function ChatBot() {
               visitorName={lead.name || "Visitor"}
               onClose={() => {
                 setLiveChatMode(false);
+                // Clear persisted session so refresh doesn't re-open the ended chat
+                try {
+                  sessionStorage.removeItem("zonic_live_conv_id");
+                  sessionStorage.removeItem("zonic_live_room_name");
+                  sessionStorage.removeItem("zonic_live_chat_mode");
+                  sessionStorage.removeItem("zonic_live_visitor_name");
+                } catch {}
                 setMessages((p) => [
                   ...p,
                   {

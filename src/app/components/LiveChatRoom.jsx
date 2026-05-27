@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Ably from "ably";
-import { AblyProvider, ChannelProvider, useChannel } from "ably/react";
+import { AblyProvider, useAbly } from "ably/react";
 import { ChatClient } from "@ably/chat";
 import {
   ChatClientProvider,
@@ -73,27 +73,43 @@ function LiveChatInner({
   }, [conversationId]);
 
   // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
-  useChannel(`${roomName}::$chat::$chatMessages`, "message.created", (ablyMsg) => {
-    const meta = ablyMsg.data?.metadata ?? {};
-    const mongoId = meta.mongoId;
+  // Use the raw Ably client directly instead of useChannel/ChannelProvider so
+  // ChatRoomProvider's internal channel lifecycle doesn't interrupt subscriptions.
+  const ably = useAbly();
 
-    if (mongoId && seenIds.current.has(mongoId)) return; // dedup
-    if (mongoId) seenIds.current.add(mongoId);
+  useEffect(() => {
+    const channelName = `${roomName}::$chat::$chatMessages`;
+    const channel = ably.channels.get(channelName);
 
-    setNewMsgs((prev) => [
-      ...prev,
-      {
-        _id: mongoId || ablyMsg.id || String(Date.now()),
-        senderType: meta.senderType ?? "visitor",
-        senderName: meta.senderName ?? "User",
-        text: ablyMsg.data?.text ?? "",
-        createdAt: ablyMsg.timestamp
-          ? new Date(ablyMsg.timestamp).toISOString()
-          : new Date().toISOString(),
-      },
-    ]);
-    resetInactivity();
-  });
+    const handler = (ablyMsg) => {
+      const meta = ablyMsg.data?.metadata ?? {};
+      const mongoId = meta.mongoId;
+
+      if (mongoId && seenIds.current.has(mongoId)) return; // dedup
+      if (mongoId) seenIds.current.add(mongoId);
+
+      setNewMsgs((prev) => [
+        ...prev,
+        {
+          _id: mongoId || ablyMsg.id || String(Date.now()),
+          senderType: meta.senderType ?? "visitor",
+          senderName: meta.senderName ?? "User",
+          text: ablyMsg.data?.text ?? "",
+          createdAt: ablyMsg.timestamp
+            ? new Date(ablyMsg.timestamp).toISOString()
+            : new Date().toISOString(),
+        },
+      ]);
+      resetInactivity();
+    };
+
+    channel.subscribe("message.created", handler);
+
+    return () => {
+      channel.unsubscribe("message.created", handler);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ably, roomName]);
 
   // ── Ably Chat: typing indicator ─────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
@@ -420,16 +436,14 @@ export default function LiveChatRoom({
     <AblyProvider client={realtimeClient}>
       <ChatClientProvider client={chatClient}>
         <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 5000 } }}>
-          <ChannelProvider channelName={`${roomName}::$chat::$chatMessages`}>
-            <LiveChatInner
-              conversationId={conversationId}
-              roomName={roomName}
-              visitorId={visitorId}
-              visitorName={visitorName}
-              onClose={handleClose}
-              onInactive={handleInactive}
-            />
-          </ChannelProvider>
+          <LiveChatInner
+            conversationId={conversationId}
+            roomName={roomName}
+            visitorId={visitorId}
+            visitorName={visitorName}
+            onClose={handleClose}
+            onInactive={handleInactive}
+          />
         </ChatRoomProvider>
       </ChatClientProvider>
     </AblyProvider>

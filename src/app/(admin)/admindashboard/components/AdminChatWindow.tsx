@@ -6,7 +6,7 @@ import {
   useRef,
   useCallback,
 } from "react";
-import { useChannel, ChannelProvider } from "ably/react";
+import { useAbly } from "ably/react";
 import {
   ChatRoomProvider,
   useTyping,
@@ -104,10 +104,15 @@ function AdminChatWindowInner({
   }, [newMsgs, visitorTyping]);
 
   // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
-  useChannel(
-    `${conversation.roomName}::$chat::$chatMessages`,
-    "message.created",
-    (ablyMsg) => {
+  // Use the raw Ably client directly so ChatRoomProvider's channel lifecycle
+  // doesn't interrupt subscriptions when it re-attaches for room setup.
+  const ably = useAbly();
+
+  useEffect(() => {
+    const channelName = `${conversation.roomName}::$chat::$chatMessages`;
+    const channel = ably.channels.get(channelName);
+
+    const handler = (ablyMsg: { data?: { text?: string; metadata?: Record<string, string> }; id?: string; timestamp?: number }) => {
       const meta = (ablyMsg.data?.metadata as Record<string, string>) ?? {};
       const mongoId = meta.mongoId;
 
@@ -128,8 +133,17 @@ function AdminChatWindowInner({
       };
 
       setNewMsgs((prev) => [...prev, msg]);
-    }
-  );
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    channel.subscribe("message.created", handler as any);
+
+    return () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      channel.unsubscribe("message.created", handler as any);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ably, conversation._id, conversation.roomName]);
 
   // ── Ably Chat: typing ───────────────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
@@ -425,13 +439,11 @@ export default function AdminChatWindow({
       name={conversation.roomName}
       options={{ typing: { heartbeatThrottleMs: 5000 } }}
     >
-      <ChannelProvider channelName={`${conversation.roomName}::$chat::$chatMessages`}>
-        <AdminChatWindowInner
-          conversation={conversation}
-          adminId={adminId}
-          onStatusChange={onStatusChange}
-        />
-      </ChannelProvider>
+      <AdminChatWindowInner
+        conversation={conversation}
+        adminId={adminId}
+        onStatusChange={onStatusChange}
+      />
     </ChatRoomProvider>
   );
 }
