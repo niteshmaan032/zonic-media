@@ -235,6 +235,10 @@
   font-weight: 500;
 }
 
+.gmb-reinst-google-reviews {
+  margin-top: 30px;
+}
+
 .gmb-reinst-sec-4-cta-banner {
   background-color: var(--gmb-color-7);
   padding: 30px;

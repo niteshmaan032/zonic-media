@@ -444,6 +444,11 @@ function page() {
               </div>
             </div>
 
+            <LenisIframeGuard
+              className="gmb-reinst-google-reviews"
+              widgetScriptSrc="https://cdn.trustindex.io/loader.js?de967c372ebd85751c3639b52fa"
+            />
+
             <div className="gmb-reinst-sec-4-cta-banner">
               <h2>
                 Every Hour Your Profile Stays Suspended, You Lose Customers.

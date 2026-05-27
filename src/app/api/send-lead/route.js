@@ -14,6 +14,7 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
+import { saveChatLead } from "@/backend/lib/chat";
 
 const DEFAULT_TO = "contact@zonicllc.com";
 const CC_EMAILS  = ["man2k19ish@gmail.com", "samrunads@gmail.com", "josef@zonicllc.com"];
@@ -409,7 +410,24 @@ export async function POST(req) {
       }
     }
 
-    return NextResponse.json({ success: true }, { status: 200 });
+    // Persist lead to MongoDB (best-effort — never fail the email flow)
+    let leadId = null;
+    try {
+      leadId = await saveChatLead({
+        name,
+        service,
+        subService,
+        projectDetails: projectDescription,
+        email,
+        phone,
+        pageUrl,
+        source,
+      });
+    } catch (mongoErr) {
+      console.error("[send-lead] MongoDB lead insert failed:", mongoErr);
+    }
+
+    return NextResponse.json({ success: true, leadId }, { status: 200 });
   } catch (error) {
     console.error("[send-lead] Email failed:", error);
     return NextResponse.json(

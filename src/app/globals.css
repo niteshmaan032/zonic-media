@@ -47,8 +47,8 @@ body p {
 .floating-phone-link {
   position: fixed;
   right: 24px;
-  /* Sits above Zoni (24px bottom + 44px height + 10px gap = 78px) */
-  bottom: 78px;
+  /* Sits above Zoni (24px bottom + 44px height + 5px ring + 18px gap = 91px) */
+  bottom: 91px;
   z-index: 998;
   width: 40px;
   height: 40px;
@@ -525,8 +525,8 @@ body p {
 
   .floating-phone-link {
     right: 16px;
-    /* Zoni: 16px + 44px height + 10px gap = 70px */
-    bottom: 70px;
+    /* Zoni: 16px + 44px height + 5px ring + 18px gap = 83px */
+    bottom: 83px;
     width: 38px;
     height: 38px;
   }

@@ -8,6 +8,7 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { LuLayoutDashboard, LuMessageSquareText } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
 import { BsArrowUp } from "react-icons/bs";
+import { IoChatbubblesOutline } from "react-icons/io5";
 
 type AdminShellProps = {
   children: ReactNode;
@@ -16,6 +17,7 @@ type AdminShellProps = {
 const primaryLinks = [
   { href: "/admindashboard", label: "Dashboard", icon: LuLayoutDashboard },
   { href: "/admindashboard/table", label: "Tables", icon: FaTable },
+  { href: "/admindashboard/live-chat", label: "Live Chat", icon: IoChatbubblesOutline },
 ] as const;
 
 const blogLinks = [

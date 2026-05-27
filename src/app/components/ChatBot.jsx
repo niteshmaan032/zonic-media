@@ -1,8 +1,26 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import Script from "next/script";
 import "@/app/style/chatbot.css";
+
+// Lazy-load LiveChatRoom so Ably is never bundled for visitors who don't need it
+const LiveChatRoom = lazy(() => import("@/app/components/LiveChatRoom"));
+
+// ─── Visitor ID helper ────────────────────────────────────────────────────────
+function getOrCreateVisitorId() {
+  try {
+    const key = "zonic_visitor_id";
+    let id = localStorage.getItem(key);
+    if (!id) {
+      id = "v" + Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
+      localStorage.setItem(key, id);
+    }
+    return id;
+  } catch {
+    return "v" + Math.random().toString(36).slice(2, 10);
+  }
+}
 
 // ─── Conversation config ──────────────────────────────────────────────────────
 
@@ -199,6 +217,14 @@ export default function ChatBot() {
   const [locked, setLocked]       = useState(false);
   const [step, setStep]           = useState(0);
   const [mounted, setMounted]     = useState(false);
+
+  // Live chat state (step 10 post-lead)
+  const [leadId, setLeadId]                 = useState(null);
+  const [liveChatMode, setLiveChatMode]     = useState(false); // "connecting" | "active" | false
+  const [liveConvId, setLiveConvId]         = useState(null);
+  const [liveRoomName, setLiveRoomName]     = useState(null);
+  const [visitorId, setVisitorId]           = useState(null);
+  const [liveChatError, setLiveChatError]   = useState("");
 
   const [bubbleMsg, setBubbleMsg]         = useState("greeting");
   const [bubbleVisible, setBubbleVisible] = useState(false);
@@ -421,6 +447,23 @@ export default function ChatBot() {
         sendLead({ ...lead });
       }
 
+    // Step 10 — post-lead: live chat choice
+    } else if (step === 10) {
+      if (userInput === "Chat with Live Agent") {
+        startLiveChat();
+      } else {
+        // Wait for callback
+        setQuickOpts([]);
+        setLocked(true);
+        setMessages((p) => [
+          ...p,
+          {
+            sender: "bot",
+            text: `Got it, **${lead.name}!** 🙌 We'll reach out to you directly. In the meantime:\n\n${CONNECT_SNIPPET}`,
+          },
+        ]);
+      }
+
     // Step 7 — phone number (optional)
     } else if (step === 7) {
       const digits = userInput.replace(/\D/g, "");
@@ -450,16 +493,23 @@ export default function ChatBot() {
     };
 
     try {
-      await submitLeadToEmail(payload);
+      const json = await submitLeadToEmail(payload);
+      // Store the MongoDB leadId returned by the updated send-lead route
+      if (json?.leadId) setLeadId(json.leadId);
+
       setIsTyping(false);
       setStep(10);
       setMessages((p) => [
         ...p,
         {
           sender: "bot",
-          text: `You're all set, **${data.name}!** 🎉 We've received your enquiry and sent a confirmation to **${data.email}**. Our team will review your details and stay connected with you shortly.\n\n${CONNECT_SNIPPET}`,
+          text: `You're all set, **${data.name}!** 🎉 We've received your enquiry and sent a confirmation to **${data.email}**. Our team will review your details and get back to you.\n\nWould you like to speak with a live agent right now?`,
         },
       ]);
+      // Show live-chat options as quick replies
+      setQuickOpts(["Chat with Live Agent", "Wait for Callback"]);
+      // Unlock quick replies only (no text input at step 10)
+      setLocked(false);
     } catch {
       setIsTyping(false);
       setMessages((p) => [
@@ -469,6 +519,63 @@ export default function ChatBot() {
           text: `Sorry about that — something went wrong on our end. 😓 Please reach out to us directly and we'll take great care of you:\n\n${CONNECT_SNIPPET}`,
         },
       ]);
+    }
+  };
+
+  // ─── Start live chat ──────────────────────────────────────────────────────────
+  const startLiveChat = async () => {
+    setLocked(true);
+    setQuickOpts([]);
+    setLiveChatError("");
+
+    const vid = getOrCreateVisitorId();
+    setVisitorId(vid);
+
+    setMessages((p) => [
+      ...p,
+      {
+        sender: "bot",
+        text: "Connecting you to a live agent… Please hold on a moment.",
+      },
+    ]);
+    setLiveChatMode("connecting");
+
+    try {
+      const res = await fetch("/api/chat/start-live", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          visitorId: vid,
+          name:       lead.name,
+          email:      lead.email,
+          phone:      lead.phone,
+          service:    lead.service,
+          subService: lead.subService,
+          leadId:     leadId || undefined,
+        }),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setLiveConvId(data.conversationId);
+        setLiveRoomName(data.roomName);
+        setLiveChatMode("active");
+      } else {
+        throw new Error(data.message || "Failed to start live chat.");
+      }
+    } catch (err) {
+      setLiveChatMode(false);
+      setLiveChatError(
+        "Live chat is temporarily unavailable. Your enquiry is saved and our team will contact you shortly."
+      );
+      setMessages((p) => [
+        ...p,
+        {
+          sender: "bot",
+          text: `Sorry, we couldn't connect you right now. Our team has your details and will reach out soon.\n\n${CONNECT_SNIPPET}`,
+        },
+      ]);
+      setLocked(false);
     }
   };
 
@@ -560,46 +667,78 @@ export default function ChatBot() {
           </button>
         </div>
 
-        {/* Messages */}
-        <div className="zoni-messages" role="log" aria-live="polite" aria-atomic="false" data-lenis-prevent>
-          {messages.map((msg, i) => (
-            <ChatMessage key={i} msg={msg} />
-          ))}
-          {isTyping && <TypingDots />}
-          <QuickReplies options={quickOpts} onSelect={handleQuickReply} disabled={isTyping} />
-          <div ref={bottomRef} />
-        </div>
+        {/* ── Live chat mode ───────────────────────────────────── */}
+        {liveChatMode === "active" && liveConvId && liveRoomName && visitorId ? (
+          <Suspense fallback={
+            <div className="zlc-connecting">
+              <div className="zlc-connecting-dots"><span /><span /><span /></div>
+              <p>Loading live chat…</p>
+            </div>
+          }>
+            <LiveChatRoom
+              conversationId={liveConvId}
+              roomName={liveRoomName}
+              visitorId={visitorId}
+              visitorName={lead.name || "Visitor"}
+              onClose={() => {
+                setLiveChatMode(false);
+                setMessages((p) => [
+                  ...p,
+                  {
+                    sender: "bot",
+                    text: `Chat ended. Thanks for chatting with us, **${lead.name}**! Feel free to reach out anytime.\n\n${CONNECT_SNIPPET}`,
+                  },
+                ]);
+              }}
+            />
+          </Suspense>
+        ) : (
+          <>
+            {/* Messages */}
+            <div className="zoni-messages" role="log" aria-live="polite" aria-atomic="false" data-lenis-prevent>
+              {messages.map((msg, i) => (
+                <ChatMessage key={i} msg={msg} />
+              ))}
+              {isTyping && <TypingDots />}
+              <QuickReplies options={quickOpts} onSelect={handleQuickReply} disabled={isTyping || liveChatMode === "connecting"} />
+              {liveChatError && (
+                <div className="zlc-offline-notice">{liveChatError}</div>
+              )}
+              <div ref={bottomRef} />
+            </div>
 
-        {/* Input area */}
-        <div className="zoni-input-area">
-          <input
-            ref={inputRef}
-            type={step === 7 ? "tel" : "text"}
-            className="zoni-input"
-            placeholder={inputPlaceholder}
-            value={inputVal}
-            onChange={(e) => setInputVal(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={!inputActive}
-            aria-label="Chat message"
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck="false"
-          />
-          <button
-            type="button"
-            className="zoni-send-btn"
-            onClick={() => handleSend()}
-            disabled={!inputVal.trim() || !inputActive}
-            aria-label="Send message"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
-          </button>
-        </div>
+            {/* Input area */}
+            <div className="zoni-input-area">
+              <input
+                ref={inputRef}
+                type={step === 7 ? "tel" : "text"}
+                className="zoni-input"
+                placeholder={inputPlaceholder}
+                value={inputVal}
+                onChange={(e) => setInputVal(e.target.value)}
+                onKeyDown={handleKeyDown}
+                disabled={!inputActive}
+                aria-label="Chat message"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+              />
+              <button
+                type="button"
+                className="zoni-send-btn"
+                onClick={() => handleSend()}
+                disabled={!inputVal.trim() || !inputActive}
+                aria-label="Send message"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
