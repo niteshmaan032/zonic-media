@@ -11,6 +11,7 @@ import {
   usePresenceListener,
   usePresence,
 } from "@ably/chat/react";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
 
 const INACTIVITY_MS = 10 * 60 * 1000; // 10 minutes
 
@@ -78,7 +79,7 @@ function LiveChatInner({
   // completely independent of ChatRoomProvider's channel lifecycle.
   useEffect(() => {
     if (!realtimeClient) return;
-    const channelName = `${roomName}::$chat::$chatMessages`;
+    const channelName = getLiveMessageChannelName(roomName);
     const channel = realtimeClient.channels.get(channelName);
 
     const handler = (ablyMsg) => {
@@ -103,10 +104,12 @@ function LiveChatInner({
       resetInactivity();
     };
 
-    channel.subscribe("message.created", handler);
+    channel.subscribe(LIVE_MESSAGE_EVENT, handler).catch((err) => {
+      console.error("[LiveChatRoom] message subscription failed:", err);
+    });
 
     return () => {
-      channel.unsubscribe("message.created", handler);
+      channel.unsubscribe(LIVE_MESSAGE_EVENT, handler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [realtimeClient, roomName]);

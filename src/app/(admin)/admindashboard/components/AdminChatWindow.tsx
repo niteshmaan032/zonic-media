@@ -14,6 +14,7 @@ import {
   usePresence,
 } from "@ably/chat/react";
 import type { SafeConversation, SafeMessage } from "@/shared/chatTypes";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
 import AdminChatVisitorInfo from "./AdminChatVisitorInfo";
 
 // ─── Inner chat (inside ChatRoomProvider) ────────────────────────────────────
@@ -109,7 +110,7 @@ function AdminChatWindowInner({
   // Uses realtimeClient passed as a prop (not useAbly) so it is completely
   // independent of ChatRoomProvider's channel lifecycle.
   useEffect(() => {
-    const channelName = `${conversation.roomName}::$chat::$chatMessages`;
+    const channelName = getLiveMessageChannelName(conversation.roomName);
     const channel = realtimeClient.channels.get(channelName);
 
     const handler = (ablyMsg: Ably.Message) => {
@@ -137,10 +138,12 @@ function AdminChatWindowInner({
       setNewMsgs((prev) => [...prev, msg]);
     };
 
-    channel.subscribe("message.created", handler);
+    channel.subscribe(LIVE_MESSAGE_EVENT, handler).catch((err) => {
+      console.error("[AdminChatWindow] message subscription failed:", err);
+    });
 
     return () => {
-      channel.unsubscribe("message.created", handler);
+      channel.unsubscribe(LIVE_MESSAGE_EVENT, handler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [realtimeClient, conversation._id, conversation.roomName]);

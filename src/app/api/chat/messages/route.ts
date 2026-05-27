@@ -7,6 +7,7 @@ import {
   touchConversationLastMessage,
 } from "@/backend/lib/chat";
 import { checkRateLimit, rateLimitResponse } from "@/backend/lib/rateLimit";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -154,10 +155,9 @@ export async function POST(request: NextRequest) {
     if (apiKey) {
       try {
         const rest = new Ably.Rest({ key: apiKey });
-        // Ably Chat SDK listens on {roomId}::$chat::$chatMessages for 'message.created'
-        const channelName = `${conv.roomName}::$chat::$chatMessages`;
+        const channelName = getLiveMessageChannelName(conv.roomName);
         const channel = rest.channels.get(channelName);
-        await channel.publish("message.created", {
+        await channel.publish(LIVE_MESSAGE_EVENT, {
           text,
           metadata: {
             mongoId: saved._id,

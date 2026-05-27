@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Ably from "ably";
 import { ADMIN_AUTH_COOKIE, getAdminFromAuthToken } from "@/backend/lib/adminAuth";
 import { getConversationById } from "@/backend/lib/chat";
+import { getLiveMessageChannelName } from "@/shared/chatRealtime";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -45,6 +46,7 @@ export async function POST(request: NextRequest) {
         capability: JSON.stringify({
           "zonic-chat-*": ["subscribe", "publish", "presence", "history"],
           "zonic-chat-*:*": ["subscribe", "publish", "presence", "history"],
+          "zonic-chat-*:live-messages": ["subscribe"],
           "zonic-admin-notifications": ["subscribe"],
         }),
         ttl: 3600 * 1000,
@@ -78,6 +80,7 @@ export async function POST(request: NextRequest) {
           capability: JSON.stringify({
             "zonic-chat-*": ["subscribe", "publish", "presence", "history"],
             "zonic-chat-*:*": ["subscribe", "publish", "presence", "history"],
+            "zonic-chat-*:live-messages": ["subscribe"],
           }),
           ttl: 3600 * 1000,
         });
@@ -90,6 +93,7 @@ export async function POST(request: NextRequest) {
         capability: JSON.stringify({
           [roomName]: ["subscribe", "publish", "presence", "history"],
           [`${roomName}:*`]: ["subscribe", "publish", "presence", "history"],
+          [getLiveMessageChannelName(roomName)]: ["subscribe"],
         }),
         ttl: 3600 * 1000,
       });
