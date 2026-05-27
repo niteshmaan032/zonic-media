@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Ably from "ably";
-import { AblyProvider, useAbly } from "ably/react";
+import { AblyProvider } from "ably/react";
 import { ChatClient } from "@ably/chat";
 import {
   ChatClientProvider,
@@ -16,6 +16,7 @@ const INACTIVITY_MS = 10 * 60 * 1000; // 10 minutes
 
 // ─── Inner component (inside providers) ──────────────────────────────────────
 function LiveChatInner({
+  realtimeClient,
   conversationId,
   roomName,
   visitorId,
@@ -72,14 +73,13 @@ function LiveChatInner({
     return () => { cancelled = true; };
   }, [conversationId]);
 
-  // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
-  // Use the raw Ably client directly instead of useChannel/ChannelProvider so
-  // ChatRoomProvider's internal channel lifecycle doesn't interrupt subscriptions.
-  const ably = useAbly();
-
+  // ── Ably channel subscription ───────────────────────────────────
+  // Uses realtimeClient passed as a prop (not useAbly/useChannel) so it is
+  // completely independent of ChatRoomProvider's channel lifecycle.
   useEffect(() => {
+    if (!realtimeClient) return;
     const channelName = `${roomName}::$chat::$chatMessages`;
-    const channel = ably.channels.get(channelName);
+    const channel = realtimeClient.channels.get(channelName);
 
     const handler = (ablyMsg) => {
       const meta = ablyMsg.data?.metadata ?? {};
@@ -109,7 +109,7 @@ function LiveChatInner({
       channel.unsubscribe("message.created", handler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ably, roomName]);
+  }, [realtimeClient, roomName]);
 
   // ── Ably Chat: typing indicator ─────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
@@ -437,6 +437,7 @@ export default function LiveChatRoom({
       <ChatClientProvider client={chatClient}>
         <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 5000 } }}>
           <LiveChatInner
+            realtimeClient={realtimeClient}
             conversationId={conversationId}
             roomName={roomName}
             visitorId={visitorId}

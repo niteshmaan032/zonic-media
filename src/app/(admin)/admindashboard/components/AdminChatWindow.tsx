@@ -6,7 +6,7 @@ import {
   useRef,
   useCallback,
 } from "react";
-import { useAbly } from "ably/react";
+import Ably from "ably";
 import {
   ChatRoomProvider,
   useTyping,
@@ -18,12 +18,14 @@ import AdminChatVisitorInfo from "./AdminChatVisitorInfo";
 
 // ─── Inner chat (inside ChatRoomProvider) ────────────────────────────────────
 type InnerProps = {
+  realtimeClient: Ably.Realtime;
   conversation: SafeConversation;
   adminId: string;
   onStatusChange: (status: string) => void;
 };
 
 function AdminChatWindowInner({
+  realtimeClient,
   conversation,
   adminId,
   onStatusChange,
@@ -103,17 +105,17 @@ function AdminChatWindowInner({
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [newMsgs, visitorTyping]);
 
-  // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
-  // Use the raw Ably client directly so ChatRoomProvider's channel lifecycle
-  // doesn't interrupt subscriptions when it re-attaches for room setup.
-  const ably = useAbly();
-
+  // ── Ably channel subscription ───────────────────────────────────
+  // Uses realtimeClient passed as a prop (not useAbly) so it is completely
+  // independent of ChatRoomProvider's channel lifecycle.
   useEffect(() => {
     const channelName = `${conversation.roomName}::$chat::$chatMessages`;
-    const channel = ably.channels.get(channelName);
+    const channel = realtimeClient.channels.get(channelName);
 
-    const handler = (ablyMsg: { data?: { text?: string; metadata?: Record<string, string> }; id?: string; timestamp?: number }) => {
-      const meta = (ablyMsg.data?.metadata as Record<string, string>) ?? {};
+    const handler = (ablyMsg: Ably.Message) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const data = ablyMsg.data as any;
+      const meta = (data?.metadata as Record<string, string>) ?? {};
       const mongoId = meta.mongoId;
 
       if (mongoId && seenIds.current.has(mongoId)) return;
@@ -126,7 +128,7 @@ function AdminChatWindowInner({
         senderType: (meta.senderType as "visitor" | "admin" | "system") ?? "visitor",
         senderId: meta.senderId ?? "",
         senderName: meta.senderName ?? "Visitor",
-        text: ablyMsg.data?.text ?? "",
+        text: data?.text ?? "",
         createdAt: ablyMsg.timestamp
           ? new Date(ablyMsg.timestamp).toISOString()
           : new Date().toISOString(),
@@ -135,15 +137,13 @@ function AdminChatWindowInner({
       setNewMsgs((prev) => [...prev, msg]);
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    channel.subscribe("message.created", handler as any);
+    channel.subscribe("message.created", handler);
 
     return () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      channel.unsubscribe("message.created", handler as any);
+      channel.unsubscribe("message.created", handler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ably, conversation._id, conversation.roomName]);
+  }, [realtimeClient, conversation._id, conversation.roomName]);
 
   // ── Ably Chat: typing ───────────────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
@@ -424,12 +424,14 @@ function AdminChatWindowInner({
 
 // ─── Outer wrapper: wraps with ChatRoomProvider ───────────────────────────────
 type Props = {
+  realtimeClient: Ably.Realtime;
   conversation: SafeConversation;
   adminId: string;
   onStatusChange: (status: string) => void;
 };
 
 export default function AdminChatWindow({
+  realtimeClient,
   conversation,
   adminId,
   onStatusChange,
@@ -440,6 +442,7 @@ export default function AdminChatWindow({
       options={{ typing: { heartbeatThrottleMs: 5000 } }}
     >
       <AdminChatWindowInner
+        realtimeClient={realtimeClient}
         conversation={conversation}
         adminId={adminId}
         onStatusChange={onStatusChange}

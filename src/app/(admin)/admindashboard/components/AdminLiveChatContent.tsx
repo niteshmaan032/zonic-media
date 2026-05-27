@@ -78,6 +78,7 @@ function AdminLiveChatInner({
         {selectedConv ? (
           <AdminChatWindow
             key={selectedConv._id}
+            realtimeClient={realtimeClient}
             conversation={selectedConv}
             adminId={adminId}
             onStatusChange={handleStatusChange}
