@@ -6,7 +6,7 @@ import {
   useRef,
   useCallback,
 } from "react";
-import { useChannel } from "ably/react";
+import { useChannel, ChannelProvider } from "ably/react";
 import {
   ChatRoomProvider,
   useTyping,
@@ -425,11 +425,13 @@ export default function AdminChatWindow({
       name={conversation.roomName}
       options={{ typing: { heartbeatThrottleMs: 5000 } }}
     >
-      <AdminChatWindowInner
-        conversation={conversation}
-        adminId={adminId}
-        onStatusChange={onStatusChange}
-      />
+      <ChannelProvider channelName={`${conversation.roomName}::$chat::$chatMessages`}>
+        <AdminChatWindowInner
+          conversation={conversation}
+          adminId={adminId}
+          onStatusChange={onStatusChange}
+        />
+      </ChannelProvider>
     </ChatRoomProvider>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Ably from "ably";
-import { AblyProvider, useChannel } from "ably/react";
+import { AblyProvider, ChannelProvider, useChannel } from "ably/react";
 import { ChatClient } from "@ably/chat";
 import {
   ChatClientProvider,
@@ -420,14 +420,16 @@ export default function LiveChatRoom({
     <AblyProvider client={realtimeClient}>
       <ChatClientProvider client={chatClient}>
         <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 5000 } }}>
-          <LiveChatInner
-            conversationId={conversationId}
-            roomName={roomName}
-            visitorId={visitorId}
-            visitorName={visitorName}
-            onClose={handleClose}
-            onInactive={handleInactive}
-          />
+          <ChannelProvider channelName={`${roomName}::$chat::$chatMessages`}>
+            <LiveChatInner
+              conversationId={conversationId}
+              roomName={roomName}
+              visitorId={visitorId}
+              visitorName={visitorName}
+              onClose={handleClose}
+              onInactive={handleInactive}
+            />
+          </ChannelProvider>
         </ChatRoomProvider>
       </ChatClientProvider>
     </AblyProvider>
