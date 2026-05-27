@@ -138,19 +138,19 @@ function AdminChatWindowInner({
 
   // ── Ably Chat: presence ─────────────────────────────────────────
   usePresence({
-    enterWithData: { role: "admin", adminId },
+    initialData: { role: "admin", adminId },
   });
 
   usePresenceListener({
     listener: (event) => {
       const isVisitor = String(event.member?.clientId ?? "").startsWith("visitor:");
       if (
-        event.action === "enter" ||
-        event.action === "present" ||
-        event.action === "update"
+        event.type === "enter" ||
+        event.type === "present" ||
+        event.type === "update"
       ) {
         if (isVisitor) setVisitorOnline(true);
-      } else if (event.action === "leave" || event.action === "absent") {
+      } else if (event.type === "leave") {
         if (isVisitor) setVisitorOnline(false);
       }
     },
@@ -394,8 +394,8 @@ export default function AdminChatWindow({
 }: Props) {
   return (
     <ChatRoomProvider
-      id={conversation.roomName}
-      options={{ typing: { timeoutMs: 5000 } }}
+      name={conversation.roomName}
+      options={{ typing: { heartbeatThrottleMs: 5000 } }}
     >
       <AdminChatWindowInner
         conversation={conversation}

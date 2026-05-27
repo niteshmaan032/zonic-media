@@ -257,29 +257,27 @@ export async function touchConversationLastMessage(
 ): Promise<void> {
   const collection = await getConversationsCollection();
   const now = new Date();
-  const updateFields: Record<string, unknown> = {
+  const setFields = {
     lastMessage: text.slice(0, 120),
     lastMessageAt: now,
     updatedAt: now,
-    status: "active",
+    status: "active" as ConversationStatus,
   };
 
   if (senderType === "visitor") {
-    updateFields["$inc"] = { unreadForAdmin: 1 };
-  } else if (senderType === "admin") {
-    updateFields["$inc"] = { unreadForVisitor: 1 };
-  }
-
-  if (updateFields["$inc"]) {
-    const { $inc, ...rest } = updateFields as { $inc: object; [k: string]: unknown };
     await collection.updateOne(
       { _id: new ObjectId(conversationId) },
-      { $set: rest, $inc }
+      { $set: setFields, $inc: { unreadForAdmin: 1 } }
+    );
+  } else if (senderType === "admin") {
+    await collection.updateOne(
+      { _id: new ObjectId(conversationId) },
+      { $set: setFields, $inc: { unreadForVisitor: 1 } }
     );
   } else {
     await collection.updateOne(
       { _id: new ObjectId(conversationId) },
-      { $set: updateFields }
+      { $set: setFields }
     );
   }
 }

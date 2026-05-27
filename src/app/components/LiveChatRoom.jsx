@@ -106,15 +106,15 @@ function LiveChatInner({
 
   // ── Ably Chat: presence ─────────────────────────────────────────
   // Self presence
-  usePresence({ enterWithData: { name: visitorName, role: "visitor" } });
+  usePresence({ initialData: { name: visitorName, role: "visitor" } });
 
   // Listen for others
   usePresenceListener({
     listener: (event) => {
       const isAdmin = String(event.member?.clientId ?? "").startsWith("admin:");
-      if (event.action === "enter" || event.action === "present" || event.action === "update") {
+      if (event.type === "enter" || event.type === "present" || event.type === "update") {
         if (isAdmin) setAdminOnline(true);
-      } else if (event.action === "leave" || event.action === "absent") {
+      } else if (event.type === "leave") {
         if (isAdmin) setAdminOnline(false);
       }
     },
@@ -381,7 +381,7 @@ export default function LiveChatRoom({
   return (
     <AblyProvider client={realtimeClient}>
       <ChatClientProvider client={chatClient}>
-        <ChatRoomProvider id={roomName} options={{ typing: { timeoutMs: 5000 } }}>
+        <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 5000 } }}>
           <LiveChatInner
             conversationId={conversationId}
             roomName={roomName}
