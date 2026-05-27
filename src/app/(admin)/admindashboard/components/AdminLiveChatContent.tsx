@@ -48,11 +48,17 @@ function AdminLiveChatInner({
   }, []);
 
   const handleStatusChange = useCallback((newStatus: string) => {
-    setSelectedConv((prev) =>
-      prev
-        ? { ...prev, status: newStatus as SafeConversation["status"] }
-        : null
-    );
+    if (newStatus === "closed" || newStatus === "inactive") {
+      // Deselect the conversation so AdminChatWindow unmounts,
+      // which causes ChatRoomProvider to release its Ably room subscription.
+      setSelectedConv(null);
+    } else {
+      setSelectedConv((prev) =>
+        prev
+          ? { ...prev, status: newStatus as SafeConversation["status"] }
+          : null
+      );
+    }
     setNewConvSignal((n) => n + 1);
   }, []);
 

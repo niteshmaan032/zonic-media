@@ -27,15 +27,28 @@ export async function ensureChatIndexes(db: Db): Promise<void> {
     const msgs = db.collection(MESSAGES_COLLECTION);
 
     await Promise.all([
-      // leads
+      // ── leads ──────────────────────────────────────────────────────────────
       leads.createIndex({ email: 1, createdAt: -1 }),
       leads.createIndex({ createdAt: -1 }),
-      // conversations
-      convs.createIndex({ status: 1, lastMessageAt: -1 }),
-      convs.createIndex({ visitorId: 1, createdAt: -1 }),
+
+      // ── chat_conversations ─────────────────────────────────────────────────
+      // createOrGetConversation: findOne({ visitorId, status: { $nin: ["closed"] } })
+      convs.createIndex({ visitorId: 1, status: 1 }),
+      // admin list (status filter + recency sort):
+      //   find({ status: X }).sort({ lastMessageAt: -1, createdAt: -1 })
+      convs.createIndex({ status: 1, lastMessageAt: -1, createdAt: -1 }),
+      // admin list (all statuses, sort only):
+      //   find({}).sort({ lastMessageAt: -1, createdAt: -1 })
+      convs.createIndex({ lastMessageAt: -1, createdAt: -1 }),
+      // lookup by leadId (sparse — most convs have no leadId)
       convs.createIndex({ leadId: 1 }, { sparse: true }),
-      // messages
+
+      // ── chat_messages ──────────────────────────────────────────────────────
+      // getMessages: find({ conversationId, createdAt: { $lt: X } }).sort({ createdAt: -1 })
       msgs.createIndex({ conversationId: 1, createdAt: -1 }),
+      // markAdminRead: updateMany({ conversationId, readByAdmin: false })
+      msgs.createIndex({ conversationId: 1, readByAdmin: 1 }),
+      // roomName-based lookup (used by Ably publish helpers)
       msgs.createIndex({ roomName: 1, createdAt: -1 }),
     ]);
   })().catch((err) => {

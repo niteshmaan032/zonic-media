@@ -5,7 +5,8 @@
       "Bash(sed -n '157,175p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/delaware/digital-marketing/page.tsx\")",
       "Bash(sed -n '126,140p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/industry/local-seo-for-roofing-companies/page.tsx\")",
       "Bash(sed -n '27,45p' \"C:/Users/maann/OneDrive/Desktop/zonic/src/app/\\(main\\)/services/industry/pediatricians/page.tsx\")",
-      "Bash(node -e \"const f = require\\('fs'\\); console.log\\(f.readFileSync\\('./node_modules/@ably/chat/dist/core/events.js', 'utf8'\\).slice\\(0, 2000\\)\\)\")"
+      "Bash(node -e \"const f = require\\('fs'\\); console.log\\(f.readFileSync\\('./node_modules/@ably/chat/dist/core/events.js', 'utf8'\\).slice\\(0, 2000\\)\\)\")",
+      "Bash(node -e \"const fs = require\\('fs'\\); try { const p = JSON.parse\\(fs.readFileSync\\('./node_modules/ably/react.js', 'utf8'\\)\\); console.log\\(p\\); } catch\\(e\\) { console.log\\('not found:', e.message\\); }\")"
     ]
   }
 }

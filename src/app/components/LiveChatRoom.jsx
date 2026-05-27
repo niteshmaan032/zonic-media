@@ -2,12 +2,11 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Ably from "ably";
-import { AblyProvider } from "ably/react";
+import { AblyProvider, useChannel } from "ably/react";
 import { ChatClient } from "@ably/chat";
 import {
   ChatClientProvider,
   ChatRoomProvider,
-  useMessages,
   useTyping,
   usePresenceListener,
   usePresence,
@@ -32,6 +31,7 @@ function LiveChatInner({
   const [historyLoaded, setHistoryLoaded] = useState(false);
   const [adminOnline, setAdminOnline] = useState(false);
   const [adminTyping, setAdminTyping] = useState(false);
+  const [justConnected, setJustConnected] = useState(false);
 
   const seenIds = useRef(new Set());
   const bottomRef = useRef(null);
@@ -72,43 +72,40 @@ function LiveChatInner({
     return () => { cancelled = true; };
   }, [conversationId]);
 
-  // ── Ably Chat: receive real-time messages ───────────────────────
-  useMessages({
-    listener: (event) => {
-      if (event.type !== "message.created") return;
-      const meta = event.message?.metadata ?? {};
-      const mongoId = meta.mongoId;
+  // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
+  useChannel(`${roomName}::$chat::$chatMessages`, "message.created", (ablyMsg) => {
+    const meta = ablyMsg.data?.metadata ?? {};
+    const mongoId = meta.mongoId;
 
-      if (mongoId && seenIds.current.has(mongoId)) return; // already in history
-      if (mongoId) seenIds.current.add(mongoId);
+    if (mongoId && seenIds.current.has(mongoId)) return; // dedup
+    if (mongoId) seenIds.current.add(mongoId);
 
-      const msg = {
-        _id: mongoId || event.message.serial || String(Date.now()),
+    setNewMsgs((prev) => [
+      ...prev,
+      {
+        _id: mongoId || ablyMsg.id || String(Date.now()),
         senderType: meta.senderType ?? "visitor",
         senderName: meta.senderName ?? "User",
-        text: event.message.text ?? "",
-        createdAt: new Date(event.message.timestamp).toISOString(),
-      };
-      setNewMsgs((prev) => [...prev, msg]);
-      // Reset inactivity on any incoming message
-      resetInactivity();
-    },
+        text: ablyMsg.data?.text ?? "",
+        createdAt: ablyMsg.timestamp
+          ? new Date(ablyMsg.timestamp).toISOString()
+          : new Date().toISOString(),
+      },
+    ]);
+    resetInactivity();
   });
 
   // ── Ably Chat: typing indicator ─────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
 
   useEffect(() => {
-    // Show typing indicator if any non-visitor is typing
     const typing = Array.from(currentlyTyping ?? []);
     setAdminTyping(typing.some((id) => String(id).startsWith("admin:")));
   }, [currentlyTyping]);
 
   // ── Ably Chat: presence ─────────────────────────────────────────
-  // Self presence
   usePresence({ initialData: { name: visitorName, role: "visitor" } });
 
-  // Listen for others
   usePresenceListener({
     listener: (event) => {
       const isAdmin = String(event.member?.clientId ?? "").startsWith("admin:");
@@ -120,12 +117,20 @@ function LiveChatInner({
     },
   });
 
+  // ── "Connected!" flash when admin joins ────────────────────────
+  useEffect(() => {
+    if (!adminOnline) return;
+    setJustConnected(true);
+    const t = setTimeout(() => setJustConnected(false), 3000);
+    return () => clearTimeout(t);
+  }, [adminOnline]);
+
   // ── Auto-scroll ─────────────────────────────────────────────────
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [historyMsgs, newMsgs, adminTyping]);
 
-  // ── Send message ────────────────────────────────────────────────
+  // ── Send message (with optimistic update) ─────────────────────
   const sendMessage = async () => {
     const text = inputVal.trim();
     if (!text || sending) return;
@@ -134,6 +139,19 @@ function LiveChatInner({
     setError("");
     setInputVal("");
     resetInactivity();
+
+    // Show the message immediately — don't wait for Ably echo
+    const tempId = `temp-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    setNewMsgs((prev) => [
+      ...prev,
+      {
+        _id: tempId,
+        senderType: "visitor",
+        senderName: visitorName,
+        text,
+        createdAt: new Date().toISOString(),
+      },
+    ]);
 
     try {
       await stopTyping?.();
@@ -149,10 +167,19 @@ function LiveChatInner({
         }),
       });
       const data = await res.json();
-      if (!data.success) {
+      if (data.success && data.message?._id) {
+        // Swap temp ID → real ID and register it so Ably echo is skipped
+        const realId = data.message._id;
+        seenIds.current.add(realId);
+        setNewMsgs((prev) =>
+          prev.map((m) => (m._id === tempId ? { ...m, _id: realId } : m))
+        );
+      } else if (!data.success) {
+        setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
         setError(data.message ?? "Failed to send. Try again.");
       }
     } catch {
+      setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
       setError("Network error. Check your connection.");
     } finally {
       setSending(false);
@@ -180,10 +207,14 @@ function LiveChatInner({
   return (
     <div className="zlc-inner">
       {/* Status bar */}
-      <div className="zlc-status-bar">
+      <div className={`zlc-status-bar${justConnected ? " zlc-status-bar--connected" : ""}`}>
         <span className={`zlc-status-dot${adminOnline ? " zlc-status-dot--online" : ""}`} />
         <span className="zlc-status-text">
-          {adminOnline ? "Agent is online" : "Connecting you to an agent…"}
+          {justConnected
+            ? "✅ Agent connected! Start chatting."
+            : adminOnline
+            ? "Agent is online"
+            : "Connecting you to an agent…"}
         </span>
       </div>
 

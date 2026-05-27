@@ -6,9 +6,9 @@ import {
   useRef,
   useCallback,
 } from "react";
+import { useChannel } from "ably/react";
 import {
   ChatRoomProvider,
-  useMessages,
   useTyping,
   usePresenceListener,
   usePresence,
@@ -103,30 +103,33 @@ function AdminChatWindowInner({
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [newMsgs, visitorTyping]);
 
-  // ── Ably Chat: receive messages ─────────────────────────────────
-  useMessages({
-    listener: (event) => {
-      if (event.type !== "message.created") return;
-      const meta = (event.message?.metadata as Record<string, string>) ?? {};
+  // ── Raw Ably channel subscription (bypasses Chat SDK format requirements) ───
+  useChannel(
+    `${conversation.roomName}::$chat::$chatMessages`,
+    "message.created",
+    (ablyMsg) => {
+      const meta = (ablyMsg.data?.metadata as Record<string, string>) ?? {};
       const mongoId = meta.mongoId;
 
       if (mongoId && seenIds.current.has(mongoId)) return;
       if (mongoId) seenIds.current.add(mongoId);
 
       const msg: SafeMessage = {
-        _id: mongoId || event.message.serial || String(Date.now()),
+        _id: mongoId || ablyMsg.id || String(Date.now()),
         conversationId: conversation._id,
         roomName: conversation.roomName,
         senderType: (meta.senderType as "visitor" | "admin" | "system") ?? "visitor",
         senderId: meta.senderId ?? "",
         senderName: meta.senderName ?? "Visitor",
-        text: event.message.text ?? "",
-        createdAt: new Date(event.message.timestamp).toISOString(),
+        text: ablyMsg.data?.text ?? "",
+        createdAt: ablyMsg.timestamp
+          ? new Date(ablyMsg.timestamp).toISOString()
+          : new Date().toISOString(),
       };
 
       setNewMsgs((prev) => [...prev, msg]);
-    },
-  });
+    }
+  );
 
   // ── Ably Chat: typing ───────────────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
@@ -172,7 +175,7 @@ function AdminChatWindowInner({
     }
   };
 
-  // ── Send message ────────────────────────────────────────────────
+  // ── Send message (with optimistic update) ─────────────────────
   const sendMessage = async () => {
     const text = inputVal.trim();
     if (!text || sending) return;
@@ -180,6 +183,22 @@ function AdminChatWindowInner({
     setSending(true);
     setSendError("");
     setInputVal("");
+
+    // Show the message immediately — don't wait for Ably echo
+    const tempId = `temp-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    setNewMsgs((prev) => [
+      ...prev,
+      {
+        _id: tempId,
+        conversationId: conversation._id,
+        roomName: conversation.roomName,
+        senderType: "admin" as const,
+        senderId: `admin:${adminId}`,
+        senderName: "Zonic Team",
+        text,
+        createdAt: new Date().toISOString(),
+      },
+    ]);
 
     try {
       await stopTyping?.();
@@ -196,10 +215,19 @@ function AdminChatWindowInner({
         }),
       });
       const data = await res.json();
-      if (!data.success) {
+      if (data.success && data.message?._id) {
+        // Swap temp ID → real ID and register it so Ably echo is skipped
+        const realId = data.message._id;
+        seenIds.current.add(realId);
+        setNewMsgs((prev) =>
+          prev.map((m) => (m._id === tempId ? { ...m, _id: realId } : m))
+        );
+      } else if (!data.success) {
+        setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
         setSendError(data.message ?? "Failed to send. Try again.");
       }
     } catch {
+      setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
       setSendError("Network error. Please try again.");
     } finally {
       setSending(false);
