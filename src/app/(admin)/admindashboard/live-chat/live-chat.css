@@ -7,6 +7,45 @@
    No Tailwind. Normal CSS only.
    ============================================================ */
 
+/* ── Connection status banner ────────────────────────────────────────────────── */
+
+.alc-conn-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.alc-conn-banner--warn {
+  background: #fffbeb;
+  border-bottom: 1px solid #fde68a;
+  color: #92400e;
+}
+
+.alc-conn-banner--error {
+  background: #fef2f2;
+  border-bottom: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.alc-conn-banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: currentColor;
+  opacity: 0.7;
+  animation: alc-dot-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes alc-dot-pulse {
+  0%, 100% { opacity: 0.35; }
+  50%       { opacity: 1; }
+}
+
 /* ── Page layout ─────────────────────────────────────────────────────────────── */
 
 .alc-page {

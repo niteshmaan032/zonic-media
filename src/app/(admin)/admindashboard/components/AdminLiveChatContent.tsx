@@ -18,12 +18,15 @@ import AdminChatWindow from "./AdminChatWindow";
 function AdminLiveChatInner({
   adminId,
   realtimeClient,
+  connState,
 }: {
   adminId: string;
   realtimeClient: Ably.Realtime;
+  connState: string;
 }) {
   const [selectedConv, setSelectedConv] = useState<SafeConversation | null>(null);
   const [newConvSignal, setNewConvSignal] = useState(0);
+  const prevConnState = useRef(connState);
 
   // Subscribe to admin notification channel (new conversations)
   useEffect(() => {
@@ -31,7 +34,6 @@ function AdminLiveChatInner({
 
     const handler = (message: Ably.Message) => {
       if (message.name === "new_conversation") {
-        // Trigger conversation list refresh
         setNewConvSignal((n) => n + 1);
       }
     };
@@ -43,14 +45,24 @@ function AdminLiveChatInner({
     };
   }, [realtimeClient]);
 
+  // When connection recovers from disconnected/suspended, refresh the list
+  // so any new conversations that arrived while offline appear immediately.
+  useEffect(() => {
+    const wasOffline =
+      prevConnState.current === "disconnected" ||
+      prevConnState.current === "suspended";
+    if (wasOffline && connState === "connected") {
+      setNewConvSignal((n) => n + 1);
+    }
+    prevConnState.current = connState;
+  }, [connState]);
+
   const handleSelectConv = useCallback((conv: SafeConversation) => {
     setSelectedConv(conv);
   }, []);
 
   const handleStatusChange = useCallback((newStatus: string) => {
     if (newStatus === "closed" || newStatus === "inactive") {
-      // Deselect the conversation so AdminChatWindow unmounts,
-      // which causes ChatRoomProvider to release its Ably room subscription.
       setSelectedConv(null);
     } else {
       setSelectedConv((prev) =>
@@ -62,33 +74,53 @@ function AdminLiveChatInner({
     setNewConvSignal((n) => n + 1);
   }, []);
 
-  return (
-    <div className="alc-layout">
-      {/* Left: conversation list */}
-      <div className="alc-list-col">
-        <AdminChatConversationList
-          selectedId={selectedConv?._id ?? null}
-          onSelect={handleSelectConv}
-          newConvSignal={newConvSignal}
-        />
-      </div>
+  const isOffline = connState === "disconnected" || connState === "suspended";
 
-      {/* Right: chat window */}
-      <div className="alc-chat-col">
-        {selectedConv ? (
-          <AdminChatWindow
-            key={selectedConv._id}
-            realtimeClient={realtimeClient}
-            conversation={selectedConv}
-            adminId={adminId}
-            onStatusChange={handleStatusChange}
+  return (
+    <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+      {/* Connection status banner — only shown when not connected */}
+      {isOffline && (
+        <div className="alc-conn-banner alc-conn-banner--warn">
+          <span className="alc-conn-banner-dot" />
+          {connState === "suspended"
+            ? "Connection lost — retrying… New messages may be delayed."
+            : "Reconnecting to live chat…"}
+        </div>
+      )}
+      {connState === "failed" && (
+        <div className="alc-conn-banner alc-conn-banner--error">
+          <span className="alc-conn-banner-dot" />
+          Connection failed. Please reload the page.
+        </div>
+      )}
+
+      <div className="alc-layout">
+        {/* Left: conversation list */}
+        <div className="alc-list-col">
+          <AdminChatConversationList
+            selectedId={selectedConv?._id ?? null}
+            onSelect={handleSelectConv}
+            newConvSignal={newConvSignal}
           />
-        ) : (
-          <div className="alc-empty-state">
-            <div className="alc-empty-state-icon" aria-hidden="true">💬</div>
-            <p>Select a conversation to start chatting</p>
-          </div>
-        )}
+        </div>
+
+        {/* Right: chat window */}
+        <div className="alc-chat-col">
+          {selectedConv ? (
+            <AdminChatWindow
+              key={selectedConv._id}
+              realtimeClient={realtimeClient}
+              conversation={selectedConv}
+              adminId={adminId}
+              onStatusChange={handleStatusChange}
+            />
+          ) : (
+            <div className="alc-empty-state">
+              <div className="alc-empty-state-icon" aria-hidden="true">💬</div>
+              <p>Select a conversation to start chatting</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -100,6 +132,7 @@ export default function AdminLiveChatContent() {
   const [realtimeClient, setRealtimeClient] = useState<Ably.Realtime | null>(null);
   const [chatClient, setChatClient] = useState<ChatClient | null>(null);
   const [connectError, setConnectError] = useState<string | null>(null);
+  const [connState, setConnState] = useState<string>("connecting");
   const clientsRef = useRef<{
     realtime: Ably.Realtime | null;
     chat: ChatClient | null;
@@ -139,8 +172,11 @@ export default function AdminLiveChatContent() {
           clientId: `admin:${id}`,
         });
 
-        realtime.connection.on("failed", () => {
-          if (!cancelled) {
+        // Track all connection state changes so the UI can reflect them
+        realtime.connection.on((stateChange) => {
+          if (cancelled) return;
+          setConnState(stateChange.current);
+          if (stateChange.current === "failed") {
             setConnectError("Ably connection failed. Reload to try again.");
           }
         });
@@ -189,6 +225,7 @@ export default function AdminLiveChatContent() {
         <AdminLiveChatInner
           adminId={adminId}
           realtimeClient={realtimeClient}
+          connState={connState}
         />
       </ChatClientProvider>
     </AblyProvider>

@@ -79,6 +79,15 @@ export default function AdminChatConversationList({
     load(1, true);
   }, [filter, search, newConvSignal, load]);
 
+  // 30-second safety refresh — catches new conversations if an Ably notification
+  // was missed during a brief disconnect (only resets when on page 1).
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      if (page === 1) load(1, true);
+    }, 30_000);
+    return () => window.clearInterval(id);
+  }, [page, load]);
+
   return (
     <>
       <div className="alc-list-toolbar">

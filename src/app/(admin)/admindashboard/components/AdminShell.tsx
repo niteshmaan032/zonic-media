@@ -215,6 +215,7 @@ export function AdminShell({ children }: AdminShellProps) {
                 <Link
                   key={href}
                   href={href}
+                  prefetch={false}
                   className={`nav-item nav-link ${pathname === href ? "active" : ""}`}
                   onClick={closeSidebar}
                 >
@@ -236,6 +237,7 @@ export function AdminShell({ children }: AdminShellProps) {
                     <Link
                       key={link.href}
                       href={link.href}
+                      prefetch={false}
                       className={`dropdown-item ${
                         pathname === link.href ? "active" : ""
                       }`}
