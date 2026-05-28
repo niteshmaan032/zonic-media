@@ -58,7 +58,7 @@ function LiveChatInner({
   // ── Load history from MongoDB ───────────────────────────────────
   useEffect(() => {
     let cancelled = false;
-    fetch(`/api/chat/messages?conversationId=${encodeURIComponent(conversationId)}`)
+    fetch(`/api/chat/messages?conversationId=${encodeURIComponent(conversationId)}&visitorId=${encodeURIComponent(visitorId)}`)
       .then((r) => r.json())
       .then((data) => {
         if (cancelled) return;
@@ -72,7 +72,7 @@ function LiveChatInner({
         if (!cancelled) setHistoryLoaded(true);
       });
     return () => { cancelled = true; };
-  }, [conversationId]);
+  }, [conversationId, visitorId]);
 
   // ── Ably channel subscription ───────────────────────────────────
   // Uses realtimeClient passed as a prop (not useAbly/useChannel) so it is

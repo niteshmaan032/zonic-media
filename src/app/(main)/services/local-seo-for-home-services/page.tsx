@@ -151,7 +151,7 @@ function page() {
               </p>
 
               <p>
-                <span> 3-4 Months </span>
+                <span> 30-60 Dayes </span>
                 Average SEO Results Time
               </p>
             </div>

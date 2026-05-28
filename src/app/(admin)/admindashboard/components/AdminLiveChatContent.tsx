@@ -112,6 +112,7 @@ function AdminLiveChatInner({
               realtimeClient={realtimeClient}
               conversation={selectedConv}
               adminId={adminId}
+              connState={connState}
               onStatusChange={handleStatusChange}
             />
           ) : (

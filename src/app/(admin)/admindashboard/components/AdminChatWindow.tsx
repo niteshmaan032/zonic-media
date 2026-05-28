@@ -22,6 +22,7 @@ type InnerProps = {
   realtimeClient: Ably.Realtime;
   conversation: SafeConversation;
   adminId: string;
+  connState: string;
   onStatusChange: (status: string) => void;
 };
 
@@ -29,6 +30,7 @@ function AdminChatWindowInner({
   realtimeClient,
   conversation,
   adminId,
+  connState,
   onStatusChange,
 }: InnerProps) {
   const [historyMsgs, setHistoryMsgs] = useState<SafeMessage[]>([]);
@@ -42,9 +44,11 @@ function AdminChatWindowInner({
   const [visitorOnline, setVisitorOnline] = useState(false);
   const [visitorTyping, setVisitorTyping] = useState(false);
   const [closing, setClosing] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   const seenIds = useRef(new Set<string>());
   const bottomRef = useRef<HTMLDivElement>(null);
+  const prevConnStateRef = useRef(connState);
 
   const loadHistory = useCallback(
     async (before?: string) => {
@@ -98,27 +102,22 @@ function AdminChatWindowInner({
     return () => { cancelled = true; };
   }, [conversation._id, loadHistory]);
 
-  // Admin-side safety sync: if a realtime event is missed, pull saved messages
-  // from MongoDB so the admin window updates without a hard refresh.
+  // Reconnect-triggered refresh: when Ably recovers from disconnected/suspended,
+  // fetch the latest messages once to backfill anything missed while offline.
   useEffect(() => {
     if (!historyLoaded) return;
 
-    let cancelled = false;
+    const wasOffline =
+      prevConnStateRef.current === "disconnected" ||
+      prevConnStateRef.current === "suspended";
+    prevConnStateRef.current = connState;
 
-    const syncLatestMessages = async () => {
-      try {
-        const msgs = await loadHistory();
-        if (!cancelled) appendUnseenMessages(msgs);
-      } catch {}
-    };
-
-    const intervalId = window.setInterval(syncLatestMessages, 3000);
-
-    return () => {
-      cancelled = true;
-      window.clearInterval(intervalId);
-    };
-  }, [appendUnseenMessages, historyLoaded, loadHistory]);
+    if (wasOffline && connState === "connected") {
+      loadHistory()
+        .then((msgs) => appendUnseenMessages(msgs))
+        .catch(() => {});
+    }
+  }, [connState, historyLoaded, loadHistory, appendUnseenMessages]);
 
   // Mark admin read
   useEffect(() => {
@@ -309,6 +308,18 @@ function AdminChatWindowInner({
     }
   };
 
+  // ── Manual refresh ──────────────────────────────────────────────
+  const handleRefresh = async () => {
+    if (refreshing || !historyLoaded) return;
+    setRefreshing(true);
+    try {
+      const msgs = await loadHistory();
+      appendUnseenMessages(msgs);
+    } catch {} finally {
+      setRefreshing(false);
+    }
+  };
+
   const isClosed =
     conversation.status === "closed" || conversation.status === "inactive";
   const allMsgs = [...historyMsgs, ...newMsgs];
@@ -322,6 +333,15 @@ function AdminChatWindowInner({
           visitorOnline={visitorOnline}
         />
         <div className="alc-chat-header-right">
+          <button
+            type="button"
+            className="alc-chat-action-btn"
+            onClick={handleRefresh}
+            disabled={refreshing || !historyLoaded}
+            title="Refresh messages"
+          >
+            {refreshing ? "…" : "↻"}
+          </button>
           {!isClosed && (
             <button
               type="button"
@@ -457,6 +477,7 @@ type Props = {
   realtimeClient: Ably.Realtime;
   conversation: SafeConversation;
   adminId: string;
+  connState: string;
   onStatusChange: (status: string) => void;
 };
 
@@ -464,6 +485,7 @@ export default function AdminChatWindow({
   realtimeClient,
   conversation,
   adminId,
+  connState,
   onStatusChange,
 }: Props) {
   return (
@@ -475,6 +497,7 @@ export default function AdminChatWindow({
         realtimeClient={realtimeClient}
         conversation={conversation}
         adminId={adminId}
+        connState={connState}
         onStatusChange={onStatusChange}
       />
     </ChatRoomProvider>

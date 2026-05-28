@@ -2,8 +2,11 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaSeo.css";
+import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -143,7 +146,7 @@ function page() {
 
               <div className="phila-seo-sec-1-ctas">
                 <HashScrollLink
-                  href="#phila-seo-contact-form"
+                  href="#phila-seo-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -177,7 +180,7 @@ function page() {
                 </HashScrollLink>
 
                 <HashScrollLink
-                  href="#phila-seo-contact-form"
+                  href="#phila-seo-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -331,6 +334,10 @@ function page() {
             </Col>
           </Row>
         </div>
+
+        <ServiceSectionCta href="#phila-seo-audit-form">
+          Get My Free Local SEO Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-3">
@@ -408,6 +415,17 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-seo-audit-form">
+          Review My Local SEO Opportunity
+        </ServiceSectionCta>
+      </div>
+
+      <div className="iaf-section service-mid-audit" id="phila-seo-audit-form">
+        <InlineAuditForm
+          heading="Get Your Free Philadelphia Local SEO Audit"
+          description="Share your business details and we will review your Google Maps visibility, local rankings, and lead conversion gaps at no cost."
+        />
       </div>
 
       <div className="phila-seo-sec-4">
@@ -445,6 +463,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-seo-contact-form" align="left">
+          Get a Free Local SEO Call
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-5">
@@ -501,6 +523,10 @@ function page() {
             <h3>Legal Services</h3>
           </div>
         </div>
+
+        <ServiceSectionCta href="#phila-seo-contact-form">
+          See If Local SEO Fits My Business
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-6">
@@ -553,6 +579,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-seo-contact-form" align="left">
+          Future-Proof My Local Rankings
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-7">
@@ -775,6 +805,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-seo-contact-form">
+          Get a Free Local SEO Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-11">
@@ -821,6 +855,9 @@ function page() {
               business rank higher, earn trust through reviews, and generate
               calls from customers already ready to buy.
             </p>
+            <ServiceSectionCta href="#phila-seo-contact-form" align="left">
+              Build My Local Lead System
+            </ServiceSectionCta>
           </div>
         </div>
       </div>
@@ -886,6 +923,10 @@ function page() {
             </div>
           </div>
         </div>
+
+        <ServiceSectionCta href="#phila-seo-contact-form">
+          Talk to a Local SEO Specialist
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-8">

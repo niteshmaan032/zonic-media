@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "@/app/style/philadelphia/philaDigital.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
 
@@ -241,7 +244,7 @@ function page() {
 
               <div className="phila-sec-1-ctas">
                 <HashScrollLink
-                  href="#phila-digital-contact-form"
+                  href="#phila-digital-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -275,7 +278,7 @@ function page() {
                 </HashScrollLink>
 
                 <HashScrollLink
-                  href="#phila-digital-contact-form"
+                  href="#phila-digital-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -473,6 +476,10 @@ function page() {
             </Col>
           </Row>
         </div>
+
+        <ServiceSectionCta href="#phila-digital-audit-form">
+          Get My Free Marketing Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-3">
@@ -518,6 +525,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-digital-audit-form" align="left">
+          Review My Growth Opportunity
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-4">
@@ -594,6 +605,17 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-digital-audit-form">
+          Audit My Digital Marketing
+        </ServiceSectionCta>
+      </div>
+
+      <div className="iaf-section service-mid-audit" id="phila-digital-audit-form">
+        <InlineAuditForm
+          heading="Get Your Free Philadelphia Digital Marketing Audit"
+          description="Share your business details and we will review your SEO, paid ads, local visibility, and conversion opportunities at no cost."
+        />
       </div>
 
       <div className="phila-sec-5">
@@ -678,6 +700,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-digital-contact-form">
+          Build My Marketing Framework
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-6">
@@ -771,6 +797,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-digital-contact-form">
+          Get a Free Growth Strategy Call
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-11">
@@ -821,6 +851,10 @@ function page() {
             ))}
           </Row>
         </div>
+
+        <ServiceSectionCta href="#phila-digital-contact-form">
+          Find My Industry Growth Plan
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-12">
@@ -866,6 +900,10 @@ function page() {
             </div>
           </div>
         </div>
+
+        <ServiceSectionCta href="#phila-digital-contact-form" align="left">
+          Get More Philadelphia Leads
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-7">
@@ -1099,6 +1137,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-digital-contact-form">
+          Get a Free Marketing Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-8">

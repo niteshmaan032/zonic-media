@@ -6,6 +6,7 @@ import {
   saveMessage,
   touchConversationLastMessage,
 } from "@/backend/lib/chat";
+import { ADMIN_AUTH_COOKIE, getAdminFromAuthToken } from "@/backend/lib/adminAuth";
 import { checkRateLimit, rateLimitResponse } from "@/backend/lib/rateLimit";
 import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
 
@@ -37,13 +38,31 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Optionally verify the conversation exists
     const conv = await getConversationById(conversationId);
     if (!conv) {
       return NextResponse.json(
         { success: false, message: "Conversation not found." },
         { status: 404 }
       );
+    }
+
+    // Require either a valid admin JWT or matching visitorId
+    const token = request.cookies.get(ADMIN_AUTH_COOKIE)?.value;
+    const admin = token ? await getAdminFromAuthToken(token) : null;
+    if (!admin) {
+      const visitorId = searchParams.get("visitorId")?.trim() ?? "";
+      if (!visitorId) {
+        return NextResponse.json(
+          { success: false, message: "Unauthorized." },
+          { status: 401 }
+        );
+      }
+      if (conv.visitorId !== visitorId) {
+        return NextResponse.json(
+          { success: false, message: "Forbidden." },
+          { status: 403 }
+        );
+      }
     }
 
     const before = beforeTs ? new Date(beforeTs) : undefined;
@@ -118,6 +137,18 @@ export async function POST(request: NextRequest) {
         { success: false, message: `Message too long (max ${MAX_TEXT_LENGTH} chars).` },
         { status: 400 }
       );
+    }
+
+    // Only a verified admin may send as "admin"
+    if (senderType === "admin") {
+      const token = request.cookies.get(ADMIN_AUTH_COOKIE)?.value;
+      const admin = token ? await getAdminFromAuthToken(token) : null;
+      if (!admin) {
+        return NextResponse.json(
+          { success: false, message: "Unauthorized." },
+          { status: 401 }
+        );
+      }
     }
 
     // Verify conversation exists

@@ -2,8 +2,11 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaPpc.css";
+import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -25,7 +28,6 @@ import {
   FaPhoneAlt,
   FaSearch,
   FaTools,
-  FaFileAlt,
 } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2 } from "react-icons/lu";
@@ -275,7 +277,7 @@ function page() {
 
               <div className="phila-ppc-sec-1-ctas">
                 <HashScrollLink
-                  href="#phila-ppc-contact-form"
+                  href="#phila-ppc-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -309,7 +311,7 @@ function page() {
                 </HashScrollLink>
 
                 <HashScrollLink
-                  href="#phila-ppc-contact-form"
+                  href="#phila-ppc-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -397,6 +399,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-audit-form" align="left">
+          Get My Free PPC Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-3">
@@ -461,6 +467,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-audit-form" align="left">
+          Review My PPC Opportunity
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-4">
@@ -496,6 +506,17 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-audit-form">
+          Build My PPC Plan
+        </ServiceSectionCta>
+      </div>
+
+      <div className="iaf-section service-mid-audit" id="phila-ppc-audit-form">
+        <InlineAuditForm
+          heading="Get Your Free Philadelphia PPC Audit"
+          description="Share your business details and we will review your ad targeting, landing page conversion gaps, and lead generation opportunities at no cost."
+        />
       </div>
 
       <div className="phila-ppc-sec-5">
@@ -516,6 +537,10 @@ function page() {
             </div>
           ))}
         </div>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form">
+          See If PPC Fits My Industry
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-6">
@@ -582,6 +607,10 @@ function page() {
             </p>
           </div>
         </div>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form">
+          Combine PPC and SEO for Growth
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-7">
@@ -610,6 +639,10 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form">
+          Improve My PPC Performance
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-12">
@@ -661,6 +694,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form" align="left">
+          Get More Measurable Leads
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-13">
@@ -704,6 +741,10 @@ function page() {
             </p>
           </article>
         </div>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form">
+          Talk to a PPC Specialist
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-8">
@@ -752,6 +793,10 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-ppc-contact-form">
+          Get a Free PPC Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-9">

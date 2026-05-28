@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import "@/app/style/delware/delDigital.css";
+import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
@@ -182,7 +185,7 @@ export default function Page() {
 
           <div className="deldg-sec-1-cta-row">
             <HashScrollLink
-              href="#del-digital-contact-form"
+              href="#del-digital-audit-form"
               className="buttons"
               offset={120}
             >
@@ -284,14 +287,9 @@ export default function Page() {
           </h2>
           <p>Some make promises. We make results.</p>
 
-          <HashScrollLink
-            href="#del-digital-contact-form"
-            className="deldg-outline-btn"
-            offset={120}
-          >
+          <ServiceSectionCta href="#del-digital-audit-form" align="left">
             Get a Free Call
-            <span>-&gt;</span>
-          </HashScrollLink>
+          </ServiceSectionCta>
         </div>
 
         <div className="deldg-sec-2-right">
@@ -342,7 +340,7 @@ export default function Page() {
 
           <div className="deldg-sec-3-head-side">
             <HashScrollLink
-              href="#del-digital-contact-form"
+              href="#del-digital-audit-form"
               className="buttons"
               offset={120}
             >
@@ -409,6 +407,13 @@ export default function Page() {
         </div>
       </section>
 
+      <div className="iaf-section service-mid-audit" id="del-digital-audit-form">
+        <InlineAuditForm
+          heading="Get Your Free Delaware Digital Marketing Audit"
+          description="Share your business details and we will review your search visibility, paid growth opportunities, and conversion gaps at no cost."
+        />
+      </div>
+
       <section className="deldg-sec-4">
         <h2>
           Our Digital Marketing Strategy
@@ -435,6 +440,10 @@ export default function Page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#del-digital-contact-form">
+          Build My Growth Strategy
+        </ServiceSectionCta>
       </section>
 
       <section className="deldg-sec-5">
@@ -461,6 +470,9 @@ export default function Page() {
                 our strategies are built to deliver measurable outcomes, not
                 vanity metrics.
               </p>
+              <ServiceSectionCta href="#del-digital-contact-form" align="left">
+                Get a Free Strategy Call
+              </ServiceSectionCta>
             </div>
           </Col>
 
@@ -517,14 +529,9 @@ export default function Page() {
                 we build.
               </h2>
 
-              <HashScrollLink
-                href="#del-digital-contact-form"
-                className="deldg-outline-btn"
-                offset={120}
-              >
+              <ServiceSectionCta href="#del-digital-contact-form" align="left">
                 Get a Free Call
-                <span>-&gt;</span>
-              </HashScrollLink>
+              </ServiceSectionCta>
             </div>
           </Col>
         </Row>
@@ -560,6 +567,10 @@ export default function Page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#del-digital-contact-form">
+          Get a Free Marketing Audit
+        </ServiceSectionCta>
       </section>
 
       <section className="deldg-sec-8">

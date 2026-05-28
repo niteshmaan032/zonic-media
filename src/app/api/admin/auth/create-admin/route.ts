@@ -6,10 +6,12 @@ import {
   ensureAdminIndexes,
   getAdminFromAuthToken,
   getAdminsCollection,
+  getClientIp,
   hashPassword,
   toSafeAdmin,
   type AdminDocument,
 } from "@/backend/lib/adminAuth";
+import { checkRateLimit, rateLimitResponse } from "@/backend/lib/rateLimit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -37,6 +39,19 @@ async function canCreateAdmin(request: NextRequest, existingAdminCount: number) 
 
 export async function POST(request: NextRequest) {
   try {
+    const ip = getClientIp(request);
+    const limiter = checkRateLimit({
+      key: `create-admin:${ip}`,
+      limit: 5,
+      windowMs: 15 * 60 * 1000,
+    });
+
+    if (!limiter.allowed) {
+      return NextResponse.json(rateLimitResponse(limiter.retryAfterSeconds), {
+        status: 429,
+      });
+    }
+
     const body = (await request.json()) as unknown;
     const parsed = adminCredentialsSchema.safeParse(body);
 

@@ -2,8 +2,11 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaSem.css";
+import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -279,7 +282,7 @@ function page() {
 
               <div className="phila-sem-sec-1-ctas">
                 <HashScrollLink
-                  href="#phila-sem-contact-form"
+                  href="#phila-sem-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -313,7 +316,7 @@ function page() {
                 </HashScrollLink>
 
                 <HashScrollLink
-                  href="#phila-sem-contact-form"
+                  href="#phila-sem-audit-form"
                   className="buttons"
                   offset={120}
                 >
@@ -374,6 +377,10 @@ function page() {
             </p>
           </div>
         </div>
+
+        <ServiceSectionCta href="#phila-sem-audit-form">
+          Get My Free SEM Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-3">
@@ -414,6 +421,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-sem-audit-form">
+          Review My Search Opportunity
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-4">
@@ -440,6 +451,17 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-sem-audit-form">
+          Build My SEM Plan
+        </ServiceSectionCta>
+      </div>
+
+      <div className="iaf-section service-mid-audit" id="phila-sem-audit-form">
+        <InlineAuditForm
+          heading="Get Your Free Philadelphia SEM Audit"
+          description="Share your business details and we will review your SEO, paid search, and conversion opportunities at no cost."
+        />
       </div>
 
       <div className="phila-sem-sec-5">
@@ -466,6 +488,10 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-sem-contact-form">
+          Get a Free SEM Strategy Call
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-6">
@@ -486,6 +512,10 @@ function page() {
             </div>
           ))}
         </div>
+
+        <ServiceSectionCta href="#phila-sem-contact-form">
+          See If SEM Fits My Industry
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-7">
@@ -535,6 +565,10 @@ function page() {
             </div>
           </Col>
         </Row>
+
+        <ServiceSectionCta href="#phila-sem-contact-form" align="left">
+          Capture More Search Demand
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-8">
@@ -585,6 +619,10 @@ function page() {
             </Col>
           ))}
         </Row>
+
+        <ServiceSectionCta href="#phila-sem-contact-form">
+          Get a Free SEM Audit
+        </ServiceSectionCta>
       </div>
 
       <div className="phila-sem-sec-9">
