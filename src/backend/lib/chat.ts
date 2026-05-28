@@ -50,6 +50,11 @@ export async function ensureChatIndexes(db: Db): Promise<void> {
       msgs.createIndex({ conversationId: 1, readByAdmin: 1 }),
       // roomName-based lookup (used by Ably publish helpers)
       msgs.createIndex({ roomName: 1, createdAt: -1 }),
+      // idempotency: prevent duplicate saves for the same clientMessageId
+      msgs.createIndex(
+        { conversationId: 1, clientMessageId: 1 },
+        { unique: true, sparse: true }
+      ),
     ]);
   })().catch((err) => {
     globalThis.zonicChatIndexesPromise = undefined;
@@ -306,6 +311,7 @@ export function toSafeMessage(doc: ChatMessageDocument): SafeMessage {
     senderName: doc.senderName,
     text: doc.text,
     createdAt: doc.createdAt.toISOString(),
+    clientMessageId: doc.clientMessageId ?? undefined,
   };
 }
 
@@ -316,12 +322,23 @@ export interface SaveMessageParams {
   senderId: string;
   senderName: string;
   text: string;
+  clientMessageId?: string;
 }
 
 export async function saveMessage(
   params: SaveMessageParams
 ): Promise<SafeMessage> {
   const collection = await getMessagesCollection();
+
+  // Idempotency: if a clientMessageId was provided, return existing doc if found
+  if (params.clientMessageId) {
+    const existing = await collection.findOne({
+      conversationId: new ObjectId(params.conversationId),
+      clientMessageId: params.clientMessageId,
+    });
+    if (existing) return toSafeMessage(existing);
+  }
+
   const now = new Date();
   const doc: Omit<ChatMessageDocument, "_id"> = {
     conversationId: new ObjectId(params.conversationId),
@@ -330,6 +347,7 @@ export async function saveMessage(
     senderId: params.senderId,
     senderName: params.senderName,
     text: params.text,
+    clientMessageId: params.clientMessageId ?? null,
     readByAdmin: params.senderType === "admin",
     readByVisitor: params.senderType === "visitor",
     createdAt: now,

@@ -11,7 +11,7 @@ import {
   usePresenceListener,
   usePresence,
 } from "@ably/chat/react";
-import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT, generateClientMessageId } from "@/shared/chatRealtime";
 
 const INACTIVITY_MS = 10 * 60 * 1000; // 10 minutes
 
@@ -35,7 +35,8 @@ function LiveChatInner({
   const [adminTyping, setAdminTyping] = useState(false);
   const [justConnected, setJustConnected] = useState(false);
 
-  const seenIds = useRef(new Set());
+  const seenMongoIds = useRef(new Set());
+  const seenClientMsgIds = useRef(new Set());
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
   const inactivityRef = useRef(null);
@@ -63,7 +64,10 @@ function LiveChatInner({
       .then((data) => {
         if (cancelled) return;
         if (data.success && Array.isArray(data.messages)) {
-          data.messages.forEach((m) => seenIds.current.add(m._id));
+          data.messages.forEach((m) => {
+            seenMongoIds.current.add(m._id);
+            if (m.clientMessageId) seenClientMsgIds.current.add(m.clientMessageId);
+          });
           setHistoryMsgs(data.messages);
         }
         setHistoryLoaded(true);
@@ -85,9 +89,14 @@ function LiveChatInner({
     const handler = (ablyMsg) => {
       const meta = ablyMsg.data?.metadata ?? {};
       const mongoId = meta.mongoId;
+      const clientMsgId = meta.clientMessageId;
 
-      if (mongoId && seenIds.current.has(mongoId)) return; // dedup
-      if (mongoId) seenIds.current.add(mongoId);
+      // Dedup by mongoId or clientMessageId (covers the race condition)
+      if (mongoId && seenMongoIds.current.has(mongoId)) return;
+      if (clientMsgId && seenClientMsgIds.current.has(clientMsgId)) return;
+
+      if (mongoId) seenMongoIds.current.add(mongoId);
+      if (clientMsgId) seenClientMsgIds.current.add(clientMsgId);
 
       setNewMsgs((prev) => [
         ...prev,
@@ -99,6 +108,7 @@ function LiveChatInner({
           createdAt: ablyMsg.timestamp
             ? new Date(ablyMsg.timestamp).toISOString()
             : new Date().toISOString(),
+          clientMessageId: clientMsgId,
         },
       ]);
       resetInactivity();
@@ -115,12 +125,21 @@ function LiveChatInner({
   }, [realtimeClient, roomName]);
 
   // ── Ably Chat: typing indicator ─────────────────────────────────
-  const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
+  const { currentlyTyping, currentTypers, keystroke, stop: stopTyping } = useTyping();
 
   useEffect(() => {
-    const typing = Array.from(currentlyTyping ?? []);
-    setAdminTyping(typing.some((id) => String(id).startsWith("admin:")));
-  }, [currentlyTyping]);
+    const typers = currentTypers?.length
+      ? currentTypers
+      : Array.from(currentlyTyping ?? []).map((id) => ({ clientId: id }));
+    setAdminTyping(typers.some((m) => String(m.clientId).startsWith("admin:")));
+  }, [currentlyTyping, currentTypers]);
+
+  // Stop typing on unmount (e.g. chat closed, inactivity)
+  useEffect(() => {
+    return () => {
+      stopTyping?.().catch(() => {});
+    };
+  }, [stopTyping]);
 
   // ── Ably Chat: presence ─────────────────────────────────────────
   usePresence({ initialData: { name: visitorName, role: "visitor" } });
@@ -159,8 +178,11 @@ function LiveChatInner({
     setInputVal("");
     resetInactivity();
 
-    // Show the message immediately — don't wait for Ably echo
-    const tempId = `temp-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    // Generate stable ID before anything so Ably echo is always suppressed
+    const clientMessageId = generateClientMessageId();
+    seenClientMsgIds.current.add(clientMessageId);
+
+    const tempId = `temp-${clientMessageId}`;
     setNewMsgs((prev) => [
       ...prev,
       {
@@ -169,6 +191,7 @@ function LiveChatInner({
         senderName: visitorName,
         text,
         createdAt: new Date().toISOString(),
+        clientMessageId,
       },
     ]);
 
@@ -181,23 +204,25 @@ function LiveChatInner({
           conversationId,
           text,
           senderType: "visitor",
-          senderId: `visitor:${visitorId}`,
+          visitorId,
           senderName: visitorName,
+          clientMessageId,
         }),
       });
       const data = await res.json();
       if (data.success && data.message?._id) {
-        // Swap temp ID → real ID and register it so Ably echo is skipped
         const realId = data.message._id;
-        seenIds.current.add(realId);
+        seenMongoIds.current.add(realId);
         setNewMsgs((prev) =>
           prev.map((m) => (m._id === tempId ? { ...m, _id: realId } : m))
         );
       } else if (!data.success) {
+        seenClientMsgIds.current.delete(clientMessageId);
         setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
         setError(data.message ?? "Failed to send. Try again.");
       }
     } catch {
+      seenClientMsgIds.current.delete(clientMessageId);
       setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
       setError("Network error. Check your connection.");
     } finally {
@@ -218,6 +243,8 @@ function LiveChatInner({
     if (e.target.value.trim()) {
       keystroke?.().catch(() => {});
       resetInactivity();
+    } else {
+      stopTyping?.().catch(() => {});
     }
   };
 
@@ -269,8 +296,11 @@ function LiveChatInner({
         {adminTyping && (
           <div className="zlc-msg zlc-msg--agent">
             <div className="zlc-agent-avatar" aria-hidden="true">Z</div>
-            <div className="zlc-bubble zlc-bubble--agent zlc-typing">
-              <span /><span /><span />
+            <div className="zlc-bubble zlc-bubble--agent zlc-typing-bubble">
+              <span className="zlc-typing-label">Zonic Team is typing</span>
+              <span className="zlc-typing-dots">
+                <span /><span /><span />
+              </span>
             </div>
           </div>
         )}
@@ -438,7 +468,7 @@ export default function LiveChatRoom({
   return (
     <AblyProvider client={realtimeClient}>
       <ChatClientProvider client={chatClient}>
-        <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 5000 } }}>
+        <ChatRoomProvider name={roomName} options={{ typing: { heartbeatThrottleMs: 3000 } }}>
           <LiveChatInner
             realtimeClient={realtimeClient}
             conversationId={conversationId}

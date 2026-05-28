@@ -14,7 +14,7 @@ import {
   usePresence,
 } from "@ably/chat/react";
 import type { SafeConversation, SafeMessage } from "@/shared/chatTypes";
-import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT, generateClientMessageId } from "@/shared/chatRealtime";
 import AdminChatVisitorInfo from "./AdminChatVisitorInfo";
 
 // ─── Inner chat (inside ChatRoomProvider) ────────────────────────────────────
@@ -46,7 +46,8 @@ function AdminChatWindowInner({
   const [closing, setClosing] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
 
-  const seenIds = useRef(new Set<string>());
+  const seenMongoIds = useRef(new Set<string>());
+  const seenClientMsgIds = useRef(new Set<string>());
   const bottomRef = useRef<HTMLDivElement>(null);
   const prevConnStateRef = useRef(connState);
 
@@ -72,10 +73,17 @@ function AdminChatWindowInner({
   );
 
   const appendUnseenMessages = useCallback((msgs: SafeMessage[]) => {
-    const unseen = msgs.filter((msg) => !seenIds.current.has(msg._id));
+    const unseen = msgs.filter((msg) => {
+      if (seenMongoIds.current.has(msg._id)) return false;
+      if (msg.clientMessageId && seenClientMsgIds.current.has(msg.clientMessageId)) return false;
+      return true;
+    });
     if (unseen.length === 0) return;
 
-    unseen.forEach((msg) => seenIds.current.add(msg._id));
+    unseen.forEach((msg) => {
+      seenMongoIds.current.add(msg._id);
+      if (msg.clientMessageId) seenClientMsgIds.current.add(msg.clientMessageId);
+    });
     setNewMsgs((prev) => [...prev, ...unseen]);
   }, []);
 
@@ -84,13 +92,17 @@ function AdminChatWindowInner({
     let cancelled = false;
     setHistoryMsgs([]);
     setNewMsgs([]);
-    seenIds.current.clear();
+    seenMongoIds.current.clear();
+    seenClientMsgIds.current.clear();
     setHistoryLoaded(false);
 
     loadHistory()
       .then((msgs) => {
         if (cancelled) return;
-        msgs.forEach((m) => seenIds.current.add(m._id));
+        msgs.forEach((m) => {
+          seenMongoIds.current.add(m._id);
+          if (m.clientMessageId) seenClientMsgIds.current.add(m.clientMessageId);
+        });
         setHistoryMsgs(msgs);
         setHasMore(msgs.length === 30);
         setHistoryLoaded(true);
@@ -147,6 +159,11 @@ function AdminChatWindowInner({
       const data = ablyMsg.data as any;
       const meta = (data?.metadata as Record<string, string>) ?? {};
       const mongoId = meta.mongoId;
+      const clientMsgId = meta.clientMessageId;
+
+      // Fast dedup before constructing the object
+      if (mongoId && seenMongoIds.current.has(mongoId)) return;
+      if (clientMsgId && seenClientMsgIds.current.has(clientMsgId)) return;
 
       const msg: SafeMessage = {
         _id: mongoId || ablyMsg.id || String(Date.now()),
@@ -159,6 +176,7 @@ function AdminChatWindowInner({
         createdAt: ablyMsg.timestamp
           ? new Date(ablyMsg.timestamp).toISOString()
           : new Date().toISOString(),
+        clientMessageId: clientMsgId || undefined,
       };
 
       appendUnseenMessages([msg]);
@@ -175,12 +193,21 @@ function AdminChatWindowInner({
   }, [appendUnseenMessages, realtimeClient, conversation._id, conversation.roomName]);
 
   // ── Ably Chat: typing ───────────────────────────────────────────
-  const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();
+  const { currentlyTyping, currentTypers, keystroke, stop: stopTyping } = useTyping();
 
   useEffect(() => {
-    const typing = Array.from(currentlyTyping ?? []);
-    setVisitorTyping(typing.some((id) => String(id).startsWith("visitor:")));
-  }, [currentlyTyping]);
+    const typers = currentTypers?.length
+      ? currentTypers
+      : Array.from(currentlyTyping ?? []).map((id) => ({ clientId: id }));
+    setVisitorTyping(typers.some((m) => String(m.clientId).startsWith("visitor:")));
+  }, [currentlyTyping, currentTypers]);
+
+  // Stop typing on unmount (handles both component removal and conversation switch via key prop)
+  useEffect(() => {
+    return () => {
+      stopTyping?.().catch(() => {});
+    };
+  }, [stopTyping]);
 
   // ── Ably Chat: presence ─────────────────────────────────────────
   usePresence({
@@ -210,7 +237,10 @@ function AdminChatWindowInner({
     setLoadingMore(true);
     try {
       const msgs = await loadHistory(oldest.createdAt);
-      msgs.forEach((m) => seenIds.current.add(m._id));
+      msgs.forEach((m) => {
+        seenMongoIds.current.add(m._id);
+        if (m.clientMessageId) seenClientMsgIds.current.add(m.clientMessageId);
+      });
       setHistoryMsgs((prev) => [...msgs, ...prev]);
       setHasMore(msgs.length === 30);
     } finally {
@@ -227,8 +257,11 @@ function AdminChatWindowInner({
     setSendError("");
     setInputVal("");
 
-    // Show the message immediately — don't wait for Ably echo
-    const tempId = `temp-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    // Generate stable ID before anything so Ably echo is always suppressed
+    const clientMessageId = generateClientMessageId();
+    seenClientMsgIds.current.add(clientMessageId);
+
+    const tempId = `temp-${clientMessageId}`;
     setNewMsgs((prev) => [
       ...prev,
       {
@@ -240,6 +273,7 @@ function AdminChatWindowInner({
         senderName: "Zonic Team",
         text,
         createdAt: new Date().toISOString(),
+        clientMessageId,
       },
     ]);
 
@@ -253,23 +287,23 @@ function AdminChatWindowInner({
           conversationId: conversation._id,
           text,
           senderType: "admin",
-          senderId: `admin:${adminId}`,
-          senderName: "Zonic Team",
+          clientMessageId,
         }),
       });
       const data = await res.json();
       if (data.success && data.message?._id) {
-        // Swap temp ID → real ID and register it so Ably echo is skipped
         const realId = data.message._id;
-        seenIds.current.add(realId);
+        seenMongoIds.current.add(realId);
         setNewMsgs((prev) =>
           prev.map((m) => (m._id === tempId ? { ...m, _id: realId } : m))
         );
       } else if (!data.success) {
+        seenClientMsgIds.current.delete(clientMessageId);
         setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
         setSendError(data.message ?? "Failed to send. Try again.");
       }
     } catch {
+      seenClientMsgIds.current.delete(clientMessageId);
       setNewMsgs((prev) => prev.filter((m) => m._id !== tempId));
       setSendError("Network error. Please try again.");
     } finally {
@@ -288,6 +322,8 @@ function AdminChatWindowInner({
     setInputVal(e.target.value);
     if (e.target.value.trim()) {
       keystroke?.().catch(() => {});
+    } else {
+      stopTyping?.().catch(() => {});
     }
   };
 
@@ -412,7 +448,12 @@ function AdminChatWindowInner({
               {(conversation.name[0] ?? "V").toUpperCase()}
             </div>
             <div className="alc-typing-dots">
-              <span /><span /><span />
+              <span className="alc-typing-text">
+                {conversation.name || "Visitor"} is typing
+              </span>
+              <span className="alc-typing-dot" />
+              <span className="alc-typing-dot" />
+              <span className="alc-typing-dot" />
             </div>
           </div>
         )}
@@ -491,7 +532,7 @@ export default function AdminChatWindow({
   return (
     <ChatRoomProvider
       name={conversation.roomName}
-      options={{ typing: { heartbeatThrottleMs: 5000 } }}
+      options={{ typing: { heartbeatThrottleMs: 3000 } }}
     >
       <AdminChatWindowInner
         realtimeClient={realtimeClient}

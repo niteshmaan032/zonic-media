@@ -106,20 +106,11 @@ export async function POST(request: NextRequest) {
     const conversationId =
       typeof body.conversationId === "string" ? body.conversationId.trim() : "";
     const text = sanitizeText(body.text);
-    const senderType =
-      body.senderType === "admin"
-        ? "admin"
-        : body.senderType === "system"
-        ? "system"
-        : "visitor";
-    const senderId =
-      typeof body.senderId === "string" ? body.senderId.trim().slice(0, 100) : "";
-    const senderName =
-      typeof body.senderName === "string"
-        ? body.senderName.trim().slice(0, 100)
-        : "User";
+    const clientMessageId =
+      typeof body.clientMessageId === "string" && body.clientMessageId.trim()
+        ? body.clientMessageId.trim().slice(0, 64)
+        : undefined;
 
-    // Basic validation
     if (!conversationId) {
       return NextResponse.json(
         { success: false, message: "Missing conversationId." },
@@ -139,8 +130,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Only a verified admin may send as "admin"
-    if (senderType === "admin") {
+    // Reject "system" sender type from this public-facing route
+    if (body.senderType === "system") {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized." },
+        { status: 401 }
+      );
+    }
+
+    // ── Resolve verified identity ──────────────────────────────────────────────
+    let senderType: "visitor" | "admin";
+    let senderId: string;
+    let senderName: string;
+    let visitorIdForOwnershipCheck: string | null = null;
+
+    if (body.senderType === "admin") {
       const token = request.cookies.get(ADMIN_AUTH_COOKIE)?.value;
       const admin = token ? await getAdminFromAuthToken(token) : null;
       if (!admin) {
@@ -149,9 +153,29 @@ export async function POST(request: NextRequest) {
           { status: 401 }
         );
       }
+      senderType = "admin";
+      senderId = `admin:${admin._id.toHexString()}`;
+      senderName = "Zonic Team";
+    } else {
+      // visitor — must prove ownership via visitorId
+      const rawVisitorId =
+        typeof body.visitorId === "string" ? body.visitorId.trim().slice(0, 100) : "";
+      if (!rawVisitorId) {
+        return NextResponse.json(
+          { success: false, message: "Unauthorized." },
+          { status: 401 }
+        );
+      }
+      senderType = "visitor";
+      senderId = `visitor:${rawVisitorId}`;
+      senderName =
+        typeof body.senderName === "string"
+          ? body.senderName.trim().slice(0, 100) || "User"
+          : "User";
+      visitorIdForOwnershipCheck = rawVisitorId;
     }
 
-    // Verify conversation exists
+    // ── Verify conversation exists ─────────────────────────────────────────────
     const conv = await getConversationById(conversationId);
     if (!conv) {
       return NextResponse.json(
@@ -166,7 +190,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Save to MongoDB
+    // Visitor ownership check
+    if (visitorIdForOwnershipCheck !== null && conv.visitorId !== visitorIdForOwnershipCheck) {
+      return NextResponse.json(
+        { success: false, message: "Forbidden." },
+        { status: 403 }
+      );
+    }
+
+    // ── Save to MongoDB ────────────────────────────────────────────────────────
     const saved = await saveMessage({
       conversationId,
       roomName: conv.roomName,
@@ -174,6 +206,7 @@ export async function POST(request: NextRequest) {
       senderId,
       senderName,
       text,
+      clientMessageId,
     });
 
     // Update conversation metadata (non-blocking)
@@ -181,7 +214,7 @@ export async function POST(request: NextRequest) {
       (err) => console.error("[chat/messages] touchConversation failed:", err)
     );
 
-    // Publish to Ably Chat room channel so subscribers receive in real-time
+    // ── Publish to Ably ────────────────────────────────────────────────────────
     const apiKey = process.env.ABLY_API_KEY;
     if (apiKey) {
       try {
@@ -196,6 +229,7 @@ export async function POST(request: NextRequest) {
             senderType,
             senderId,
             senderName,
+            ...(clientMessageId ? { clientMessageId } : {}),
           },
           headers: {},
         });

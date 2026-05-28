@@ -65,6 +65,7 @@ export interface ChatMessageDocument {
   senderId: string;
   senderName: string;
   text: string;
+  clientMessageId?: string | null;
   ablyMessageSerial?: string | null;
   readByAdmin: boolean;
   readByVisitor: boolean;
@@ -102,4 +103,5 @@ export type SafeMessage = {
   senderName: string;
   text: string;
   createdAt: string;
+  clientMessageId?: string | null;
 };
