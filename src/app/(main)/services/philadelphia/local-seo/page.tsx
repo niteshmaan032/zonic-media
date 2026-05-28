@@ -576,13 +576,13 @@ function page() {
                 This helps future-proof your growth and keeps you ahead of
                 competitors.
               </p>
+
+              <ServiceSectionCta href="#phila-seo-contact-form" align="left">
+                Future-Proof My Local Rankings
+              </ServiceSectionCta>
             </div>
           </Col>
         </Row>
-
-        <ServiceSectionCta href="#phila-seo-contact-form" align="left">
-          Future-Proof My Local Rankings
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-7">
@@ -886,6 +886,10 @@ function page() {
               service company, we create a custom growth plan based on your
               market, competition, and goals.
             </p>
+
+            <ServiceSectionCta href="#phila-seo-contact-form" align="left">
+              Talk to a Local SEO Specialist
+            </ServiceSectionCta>
           </div>
 
           <div className="phila-seo-sec-12-panel">
@@ -923,10 +927,6 @@ function page() {
             </div>
           </div>
         </div>
-
-        <ServiceSectionCta href="#phila-seo-contact-form">
-          Talk to a Local SEO Specialist
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-seo-sec-8">

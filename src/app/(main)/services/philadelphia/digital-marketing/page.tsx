@@ -522,13 +522,13 @@ function page() {
                   stronger ROI for Philadelphia businesses.
                 </p>
               </div>
+
+              <ServiceSectionCta href="#phila-digital-audit-form" align="left">
+                Review My Growth Opportunity
+              </ServiceSectionCta>
             </div>
           </Col>
         </Row>
-
-        <ServiceSectionCta href="#phila-digital-audit-form" align="left">
-          Review My Growth Opportunity
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-4">
@@ -850,11 +850,11 @@ function page() {
               </Col>
             ))}
           </Row>
-        </div>
 
-        <ServiceSectionCta href="#phila-digital-contact-form">
-          Find My Industry Growth Plan
-        </ServiceSectionCta>
+          <ServiceSectionCta href="#phila-digital-contact-form">
+            Find My Industry Growth Plan
+          </ServiceSectionCta>
+        </div>
       </div>
 
       <div className="phila-sec-12">
@@ -882,6 +882,10 @@ function page() {
               visibility, stronger ROI, and scalable growth, Zonic Media is
               ready to help.
             </p>
+
+            <ServiceSectionCta href="#phila-digital-contact-form" align="left">
+              Get More Philadelphia Leads
+            </ServiceSectionCta>
           </div>
 
           <div className="phila-sec-12-panel">
@@ -900,10 +904,6 @@ function page() {
             </div>
           </div>
         </div>
-
-        <ServiceSectionCta href="#phila-digital-contact-form" align="left">
-          Get More Philadelphia Leads
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-sec-7">

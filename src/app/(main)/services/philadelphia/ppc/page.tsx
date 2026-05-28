@@ -396,13 +396,13 @@ function page() {
               <p className="phila-ppc-sec-2-highlight">
                 Generating high-quality leads that convert into revenue.
               </p>
+
+              <ServiceSectionCta href="#phila-ppc-audit-form" align="left">
+                Get My Free PPC Audit
+              </ServiceSectionCta>
             </div>
           </Col>
         </Row>
-
-        <ServiceSectionCta href="#phila-ppc-audit-form" align="left">
-          Get My Free PPC Audit
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-3">
@@ -666,6 +666,10 @@ function page() {
                 form submission, or direct purchase, PPC campaigns help
                 convert search demand into real business opportunities.
               </p>
+
+              <ServiceSectionCta href="#phila-ppc-contact-form" align="left">
+                Get More Measurable Leads
+              </ServiceSectionCta>
             </div>
           </Col>
 
@@ -694,10 +698,6 @@ function page() {
             </div>
           </Col>
         </Row>
-
-        <ServiceSectionCta href="#phila-ppc-contact-form" align="left">
-          Get More Measurable Leads
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-13">
@@ -720,6 +720,9 @@ function page() {
               clicks. This ensures your campaigns remain profitable and
               scalable.
             </p>
+            <ServiceSectionCta href="#phila-ppc-contact-form" align="left">
+              Talk to a PPC Specialist
+            </ServiceSectionCta>
           </article>
 
           <article className="phila-ppc-sec-13-card phila-ppc-sec-13-card-accent">
@@ -741,10 +744,6 @@ function page() {
             </p>
           </article>
         </div>
-
-        <ServiceSectionCta href="#phila-ppc-contact-form">
-          Talk to a PPC Specialist
-        </ServiceSectionCta>
       </div>
 
       <div className="phila-ppc-sec-8">

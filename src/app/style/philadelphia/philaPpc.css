@@ -502,6 +502,11 @@
   width: fit-content;
 }
 
+.phila-ppc-sec-12-content .phila-ppc-label::before,
+.phila-ppc-sec-12-content .phila-ppc-label::after {
+  display: none;
+}
+
 .phila-ppc-sec-12-heading {
   margin: 0;
   font-size: 42px;
