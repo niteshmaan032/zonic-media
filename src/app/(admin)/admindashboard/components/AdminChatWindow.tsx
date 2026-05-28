@@ -67,6 +67,14 @@ function AdminChatWindowInner({
     [conversation._id]
   );
 
+  const appendUnseenMessages = useCallback((msgs: SafeMessage[]) => {
+    const unseen = msgs.filter((msg) => !seenIds.current.has(msg._id));
+    if (unseen.length === 0) return;
+
+    unseen.forEach((msg) => seenIds.current.add(msg._id));
+    setNewMsgs((prev) => [...prev, ...unseen]);
+  }, []);
+
   // Load initial history
   useEffect(() => {
     let cancelled = false;
@@ -89,6 +97,28 @@ function AdminChatWindowInner({
 
     return () => { cancelled = true; };
   }, [conversation._id, loadHistory]);
+
+  // Admin-side safety sync: if a realtime event is missed, pull saved messages
+  // from MongoDB so the admin window updates without a hard refresh.
+  useEffect(() => {
+    if (!historyLoaded) return;
+
+    let cancelled = false;
+
+    const syncLatestMessages = async () => {
+      try {
+        const msgs = await loadHistory();
+        if (!cancelled) appendUnseenMessages(msgs);
+      } catch {}
+    };
+
+    const intervalId = window.setInterval(syncLatestMessages, 3000);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(intervalId);
+    };
+  }, [appendUnseenMessages, historyLoaded, loadHistory]);
 
   // Mark admin read
   useEffect(() => {
@@ -119,9 +149,6 @@ function AdminChatWindowInner({
       const meta = (data?.metadata as Record<string, string>) ?? {};
       const mongoId = meta.mongoId;
 
-      if (mongoId && seenIds.current.has(mongoId)) return;
-      if (mongoId) seenIds.current.add(mongoId);
-
       const msg: SafeMessage = {
         _id: mongoId || ablyMsg.id || String(Date.now()),
         conversationId: conversation._id,
@@ -135,7 +162,7 @@ function AdminChatWindowInner({
           : new Date().toISOString(),
       };
 
-      setNewMsgs((prev) => [...prev, msg]);
+      appendUnseenMessages([msg]);
     };
 
     channel.subscribe(LIVE_MESSAGE_EVENT, handler).catch((err) => {
@@ -146,7 +173,7 @@ function AdminChatWindowInner({
       channel.unsubscribe(LIVE_MESSAGE_EVENT, handler);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [realtimeClient, conversation._id, conversation.roomName]);
+  }, [appendUnseenMessages, realtimeClient, conversation._id, conversation.roomName]);
 
   // ── Ably Chat: typing ───────────────────────────────────────────
   const { currentlyTyping, keystroke, stop: stopTyping } = useTyping();

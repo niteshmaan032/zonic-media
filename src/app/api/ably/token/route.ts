@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         capability: JSON.stringify({
           "zonic-chat-*": ["subscribe", "publish", "presence", "history"],
           "zonic-chat-*:*": ["subscribe", "publish", "presence", "history"],
-          "zonic-chat-*:live-messages": ["subscribe"],
+          "zonic-chat-live:*": ["subscribe"],
           "zonic-admin-notifications": ["subscribe"],
         }),
         ttl: 3600 * 1000,
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
           capability: JSON.stringify({
             "zonic-chat-*": ["subscribe", "publish", "presence", "history"],
             "zonic-chat-*:*": ["subscribe", "publish", "presence", "history"],
-            "zonic-chat-*:live-messages": ["subscribe"],
+            "zonic-chat-live:*": ["subscribe"],
           }),
           ttl: 3600 * 1000,
         });

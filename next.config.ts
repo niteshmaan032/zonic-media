@@ -252,6 +252,11 @@ const nextConfig: NextConfig = {
 
       // Other old URLs
       {
+        source: "/hvac-seo-services",
+        destination: "/services/local-seo-services-for-hvac",
+        permanent: true,
+      },
+      {
         source: "/roofing-seo-services",
         destination: "/services/industry/local-seo-for-roofing-companies",
         permanent: true,
