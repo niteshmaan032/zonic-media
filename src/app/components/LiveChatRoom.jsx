@@ -205,6 +205,17 @@ function LiveChatInner({
     ]);
   }, [adminOnline, adminClosed]);
 
+  // ── Auto-return to bot view shortly after admin closes the chat ─
+  // Visitor reads the close notice for ~4s, then transitions back to the
+  // bot which shows the existing "Chat ended. Thanks for chatting..." note.
+  useEffect(() => {
+    if (!adminClosed) return;
+    const t = setTimeout(() => {
+      onClose?.();
+    }, 4000);
+    return () => clearTimeout(t);
+  }, [adminClosed, onClose]);
+
   // ── Auto-scroll ─────────────────────────────────────────────────
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -471,12 +482,24 @@ export default function LiveChatRoom({
   }, [conversationId, visitorId]);
 
   const handleClose = useCallback(() => {
+    // Tell the server the visitor ended the chat so the admin sees a system
+    // close message in real time. Fire-and-forget — the bot transition should
+    // not wait on the network. The endpoint is idempotent if already closed.
+    try {
+      fetch("/api/chat/end-chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        keepalive: true,
+        body: JSON.stringify({ conversationId, visitorId }),
+      }).catch(() => {});
+    } catch {}
+
     // Close connection when user manually ends chat
     try {
       clientsRef.current.realtime?.connection?.close();
     } catch {}
     onClose?.();
-  }, [onClose]);
+  }, [conversationId, visitorId, onClose]);
 
   if (connectError) {
     return (

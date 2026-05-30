@@ -45,6 +45,7 @@ function AdminChatWindowInner({
   const [visitorTyping, setVisitorTyping] = useState(false);
   const [closing, setClosing] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const [remoteClosed, setRemoteClosed] = useState(false);
 
   const seenMongoIds = useRef(new Set<string>());
   const seenClientMsgIds = useRef(new Set<string>());
@@ -106,6 +107,16 @@ function AdminChatWindowInner({
         setHistoryMsgs(msgs);
         setHasMore(msgs.length === 30);
         setHistoryLoaded(true);
+
+        // If a system close marker is already in history (visitor closed
+        // before admin opened the conv), reflect that locally.
+        const closedAlready = msgs.some(
+          (m) =>
+            m.senderType === "system" &&
+            (m.senderId === "system:visitor-end" ||
+              m.senderId === "system:admin-close")
+        );
+        if (closedAlready) setRemoteClosed(true);
       })
       .catch(() => {
         if (!cancelled) setHistoryLoaded(true);
@@ -180,6 +191,17 @@ function AdminChatWindowInner({
       };
 
       appendUnseenMessages([msg]);
+
+      // Visitor (or another admin) closed the chat — disable input locally
+      // but keep this window mounted so the admin can read the close notice.
+      if (
+        meta.senderType === "system" &&
+        (meta.conversationClosed === "true" ||
+          meta.senderId === "system:visitor-end" ||
+          meta.senderId === "system:admin-close")
+      ) {
+        setRemoteClosed(true);
+      }
     };
 
     channel.subscribe(LIVE_MESSAGE_EVENT, handler).catch((err) => {
@@ -357,7 +379,9 @@ function AdminChatWindowInner({
   };
 
   const isClosed =
-    conversation.status === "closed" || conversation.status === "inactive";
+    remoteClosed ||
+    conversation.status === "closed" ||
+    conversation.status === "inactive";
   const allMsgs = [...historyMsgs, ...newMsgs];
 
   return (
@@ -466,7 +490,7 @@ function AdminChatWindowInner({
       {/* Input */}
       {isClosed ? (
         <div className="alc-input-closed-notice">
-          This conversation is {conversation.status}. You cannot send messages.
+          This conversation is {remoteClosed ? "closed" : conversation.status}. You cannot send messages.
         </div>
       ) : (
         <div className="alc-input-area">
