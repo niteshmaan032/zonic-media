@@ -9,6 +9,7 @@ import WhyWork from "@/app/components/WhyWork";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title: "Google Ads Management Services | PPC Campaign Experts",
@@ -16,6 +17,12 @@ export const metadata: Metadata = {
     "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
   alternates: { canonical: "/services/google-ads" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Google Ads", url: "/services/google-ads" },
+]);
 
 function Page() {
   const ContactAds = {
@@ -154,6 +161,10 @@ function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* ads-section-1 */}
       <div className="ads-section-1">
         <Row className="justify-content-between h-100">

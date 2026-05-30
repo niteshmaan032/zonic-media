@@ -7,6 +7,13 @@ import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import Faqs from "@/app/components/Faqs";
 import { Metadata } from "next";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const aboutBreadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/about" },
+]);
+
 export const metadata: Metadata = {
   title: "About Us | Global Web Design & Digital Marketing Agency",
   description:
@@ -67,6 +74,13 @@ function Page() {
   };
   return (
     <>
+      <script
+        id="about-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutBreadcrumbJsonLd),
+        }}
+      />
       {/*about-section-1*/}
       <div className="about-sec1">
         <div className="about-sec1-content">

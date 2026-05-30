@@ -15,6 +15,13 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiLineChartLine } from "react-icons/ri";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Plumber SEO", url: "/services/industry/seo-services-for-plumber" },
+]);
 
 const plumberFaqs = [
   {
@@ -131,6 +138,10 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="roof-sec-1">
         <div className="roof-sec-1-layer">
           <div className="roof-sec-1-content">

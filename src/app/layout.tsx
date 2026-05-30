@@ -31,28 +31,102 @@ const neueHaas = localFont({
 
 const SITE_URL = "https://www.zonicllc.com";
 
+const postalAddressJsonLd = {
+  "@type": "PostalAddress",
+  streetAddress: "8 The Green, STE B",
+  addressLocality: "Dover",
+  addressRegion: "DE",
+  postalCode: "19901",
+  addressCountry: "US",
+};
+
+const sameAsLinks = [
+  "https://www.linkedin.com/company/zonic-media/",
+  "https://www.facebook.com/zonicmediallc/",
+  "https://www.instagram.com/zonicmedia",
+  "https://www.youtube.com/@ZonicMediaDelaware",
+];
+
+const organizationJsonLd = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "Zonic Media",
+  legalName: "Zonic Media LLC",
+  url: SITE_URL,
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/images/logo.webp`,
+  },
+  email: "contact@zonicllc.com",
+  telephone: "+13027269736",
+  address: postalAddressJsonLd,
+  sameAs: sameAsLinks,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+13027269736",
+    contactType: "customer service",
+    email: "contact@zonicllc.com",
+    areaServed: ["US", "CA", "GB", "AU", "AE", "IN"],
+    availableLanguage: ["English"],
+  },
+};
+
 const localBusinessJsonLd = {
-  "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
+  "@id": `${SITE_URL}/#local-business`,
   name: "Zonic Media",
   description:
     "Digital marketing agency delivering web design, SEO, Google Ads, and growth solutions for businesses worldwide.",
   url: SITE_URL,
   telephone: "+13027269736",
   email: "contact@zonicllc.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "8 The Green, STE B",
-    addressLocality: "Dover",
-    addressRegion: "DE",
-    postalCode: "19901",
-    addressCountry: "US",
+  image: `${SITE_URL}/images/logo.webp`,
+  logo: `${SITE_URL}/images/logo.webp`,
+  address: postalAddressJsonLd,
+  priceRange: "$$",
+  areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
+  sameAs: sameAsLinks,
+  parentOrganization: {
+    "@id": `${SITE_URL}/#organization`,
   },
-  sameAs: [
-    "https://www.linkedin.com/company/zonic-media/",
-    "https://www.facebook.com/zonicmediallc/",
-    "https://www.instagram.com/zonicmedia",
-    "https://www.youtube.com/@ZonicMediaDelaware",
+};
+
+const websiteJsonLd = {
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "Zonic Media",
+  url: SITE_URL,
+  inLanguage: "en-US",
+  publisher: {
+    "@id": `${SITE_URL}/#organization`,
+  },
+};
+
+const siteNavigationItems = [
+  { name: "Home", url: SITE_URL },
+  { name: "Services", url: `${SITE_URL}/services` },
+  { name: "Local SEO", url: `${SITE_URL}/services/local-seo-for-home-services` },
+  { name: "GMB Reinstatement", url: `${SITE_URL}/services/gmb-reinstatement-help` },
+  { name: "Launchpad", url: `${SITE_URL}/services/launchpad` },
+  { name: "Blog", url: `${SITE_URL}/blog` },
+  { name: "About Us", url: `${SITE_URL}/about` },
+  { name: "Contact Us", url: `${SITE_URL}/contact-us` },
+];
+
+const siteNavigationJsonLd = siteNavigationItems.map((item) => ({
+  "@type": "SiteNavigationElement",
+  "@id": `${item.url}#site-navigation`,
+  name: item.name,
+  url: item.url,
+}));
+
+const siteStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    organizationJsonLd,
+    localBusinessJsonLd,
+    websiteJsonLd,
+    ...siteNavigationJsonLd,
   ],
 };
 
@@ -102,10 +176,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
 
         <Script
-          id="local-business-jsonld"
+          id="site-structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd),
+            __html: JSON.stringify(siteStructuredData),
           }}
         />
 

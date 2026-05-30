@@ -14,6 +14,13 @@ import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Launchpad", url: "/services/launchpad" },
+]);
 
 export const metadata: Metadata = {
   title: "Business Launch Services | Start Your Business Online",
@@ -157,6 +164,10 @@ const LAUNCHPAD_LEAD_FORM_HASH = "#launchpad-lead-form" as const;
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="launchpad-sec-1">
         <Col lg={8} className="launch-col">
           <div className="launchpad-sec-1-content-wrapper">

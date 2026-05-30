@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ResidentialSeoPage from "./ResidentialSeoPage";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title:
@@ -9,6 +10,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/industry/local-seo-services-for-residential-cleaning" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Residential Cleaning Local SEO", url: "/services/industry/local-seo-services-for-residential-cleaning" },
+]);
+
 export default function Page() {
-  return <ResidentialSeoPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <ResidentialSeoPage />
+    </>
+  );
 }

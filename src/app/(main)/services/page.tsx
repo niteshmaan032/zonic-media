@@ -5,6 +5,7 @@ import Footer from "@/app/components/Footer";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import "@/app/style/services-page.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import {
   FaArrowRight,
   FaBullhorn,
@@ -25,6 +26,8 @@ import {
   FaLaptopCode,
   FaXmark,
 } from "react-icons/fa6";
+
+const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Services | SEO, PPC & Web Design",
@@ -435,7 +438,7 @@ const contactFormHead = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "url": "https://zonicllc.com/services",
+  "url": `${SITE_URL}/services`,
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.q,
@@ -446,12 +449,106 @@ const faqJsonLd = {
   })),
 };
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE_URL}/services#digital-marketing-services`,
+  name: "Digital Marketing Services",
+  url: `${SITE_URL}/services`,
+  description:
+    "Full-service digital marketing services from Zonic Media, including web design, local SEO, Google Ads, Google Business Profile optimization, branding, UI/UX design, and custom software solutions.",
+  provider: {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "Zonic Media",
+    url: SITE_URL,
+  },
+  areaServed: [
+    "United States",
+    "Canada",
+    "United Kingdom",
+    "Australia",
+    "United Arab Emirates",
+    "India",
+  ],
+  serviceType: services.map((service) => service.title),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Zonic Media Digital Marketing Services",
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      url: `${SITE_URL}${service.href}`,
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        description: service.desc,
+        provider: {
+          "@id": `${SITE_URL}/#organization`,
+        },
+      },
+    })),
+  },
+};
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+]);
+
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": `${SITE_URL}/services#how-to-start-a-project`,
+  name: "How to start a digital marketing project with Zonic Media",
+  description:
+    "Zonic Media's visible 5-step process for taking a digital marketing project from discovery through launch and ongoing growth.",
+  supply: [
+    {
+      "@type": "HowToSupply",
+      name: "Business goals, current website, and marketing context",
+    },
+  ],
+  tool: [
+    {
+      "@type": "HowToTool",
+      name: "Strategy, design, development, SEO, analytics, and reporting",
+    },
+  ],
+  step: processSteps.map((step, index) => ({
+    "@type": "HowToStep",
+    position: index + 1,
+    name: step.title,
+    text: step.desc,
+  })),
+};
+
 export default function ServicesPage() {
   return (
     <>
       {/* ══════════════════════════════════════════════════════
           SECTION 1 — HERO  (split two-column layout)
       ══════════════════════════════════════════════════════ */}
+      <script
+        id="services-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+      <script
+        id="services-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceJsonLd),
+        }}
+      />
+      <script
+        id="services-howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(howToJsonLd),
+        }}
+      />
       <script
         id="services-faq-schema"
         type="application/ld+json"

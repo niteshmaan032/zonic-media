@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { FaCalendarDays, FaCircleUser, FaArrowRight } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import "@/app/style/BlogPage.css";
 
 export const revalidate = 300;
@@ -45,7 +46,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     const found = blogs.find((blog) => blog.id === params.blog);
 
     if (found?.slug) {
-      redirect(`/blog/${found.slug}`);
+      permanentRedirect(`/blog/${found.slug}`);
     }
   }
 
@@ -83,7 +84,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     publisher: {
       "@type": "Organization",
       name: "Zonic Media",
-      url: "https://zonicll.com",
+      url: SITE_URL,
     },
     datePublished: blog.publishDate,
     dateModified: blog.publishedAt
@@ -92,8 +93,18 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     description: blog.excerpt,
   };
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+  ]);
+
   return (
     <>
+      <Script
+        id="blog-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Script
         id="blog-latest-jsonld"
         type="application/ld+json"

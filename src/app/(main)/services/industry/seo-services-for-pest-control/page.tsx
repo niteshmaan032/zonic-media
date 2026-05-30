@@ -17,6 +17,13 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiLineChartLine } from "react-icons/ri";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Pest Control SEO", url: "/services/industry/seo-services-for-pest-control" },
+]);
 
 const pestFaqs = [
   {
@@ -138,6 +145,10 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="phila-seo-sec-1 pest-hero">
         <div className="phila-seo-sec-1-layer">
           <div className="phila-seo-sec-1-banner-image">

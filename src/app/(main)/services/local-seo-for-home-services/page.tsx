@@ -8,6 +8,7 @@ import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -103,9 +104,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/local-seo-for-home-services" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Local SEO for Home Services", url: "/services/local-seo-for-home-services" },
+]);
+
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div id="local-seo-home-top"></div>
       <div className="local-seo-home-wrapper">
         {/*--local-seo-home-sec-1--*/}

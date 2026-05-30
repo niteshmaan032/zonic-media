@@ -16,6 +16,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiLineChartLine } from "react-icons/ri";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 const DentalSeoFaqs = [
   {
@@ -124,9 +125,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/industry/dental-seo-services" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Dental SEO Services", url: "/services/industry/dental-seo-services" },
+]);
+
 function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="dent-sec-1">
         <div className="dent-sec-1-layer">
           <Col lg={9} className="dent-sec-1-content-wrapper">

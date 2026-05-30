@@ -27,6 +27,13 @@ import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "GMB Verification Help", url: "/services/gmb-verification-help" },
+]);
 
 const GmbVerifiFaqs = [
   {
@@ -85,6 +92,10 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">
         {/*gmb-content-wrapper left-content*/}

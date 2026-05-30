@@ -8,6 +8,7 @@ import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaSem.css";
 import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
@@ -47,6 +48,12 @@ export const metadata: Metadata = {
     "Philadelphia search engine marketing agency helping businesses drive more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
   alternates: { canonical: "/services/philadelphia/sem" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Philadelphia SEM", url: "/services/philadelphia/sem" },
+]);
 
 const PhilaSemFaqs = [
   {
@@ -249,6 +256,10 @@ const SemServices = [
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="phila-sem-sec-1">
         <div className="phila-sem-sec-1-layer">
           <div className="phila-sem-sec-1-banner-image">

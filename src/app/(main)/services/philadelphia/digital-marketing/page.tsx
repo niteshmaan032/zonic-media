@@ -8,6 +8,7 @@ import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
 
 import Script from "next/script";
@@ -198,6 +199,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/philadelphia/digital-marketing" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Philadelphia Digital Marketing", url: "/services/philadelphia/digital-marketing" },
+]);
+
 const PhilaDigitalFormHead = {
   leadFormTitle: "Ready to Grow Your Business?",
   leadCallText: (
@@ -215,6 +222,10 @@ const PhilaDigitalFormHead = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="phila-sec-1">
         <div className="phila-sec-1-layer">
           <div className="phila-sec-1-content">

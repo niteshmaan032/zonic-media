@@ -26,6 +26,13 @@ import { BsExclamationCircleFill, BsQuestionCircleFill } from "react-icons/bs";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { IoIosCloseCircle } from "react-icons/io";
 import { AiFillStop } from "react-icons/ai";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "GMB Reinstatement Help", url: "/services/gmb-reinstatement-help" },
+]);
 
 const GmbResinstFaqs = [
   {
@@ -102,6 +109,10 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">
         {/*gmb-content-wrapper left-content*/}

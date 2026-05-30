@@ -7,12 +7,20 @@ import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import { Metadata } from "next";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
 export const metadata: Metadata = {
   title: "Web Design Services | Custom Websites That Drive Results",
   description:
     "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
   alternates: { canonical: "/services/web-design" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Web Design", url: "/services/web-design" },
+]);
 function Page() {
   const WebContact = {
     heading: "High-Converting Business Websites",
@@ -119,6 +127,10 @@ function Page() {
   };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/*web-design-section-1*/}
       <div className="web-design-section-1">
         <div className="web-design-sec1-content">

@@ -9,6 +9,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
@@ -164,9 +165,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/delaware/digital-marketing" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Delaware Digital Marketing", url: "/services/delaware/digital-marketing" },
+]);
+
 export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="deldg-sec-1">
         <div className="deldg-sec-1-copy">
           <h1 className="deldg-sec-1-title">

@@ -8,6 +8,7 @@ import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaSeo.css";
 import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
@@ -42,6 +43,12 @@ export const metadata: Metadata = {
     "Grow your business with expert Local SEO in Philadelphia. Zonic Media helps businesses rank higher on Google Maps, generate more calls, and get consistent local leads.",
   alternates: { canonical: "/services/philadelphia/local-seo" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Philadelphia Local SEO", url: "/services/philadelphia/local-seo" },
+]);
 
 const PhilaSeoFaqs = [
   {
@@ -110,6 +117,10 @@ const PhilaSeoGrowthBenefits = [
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="phila-seo-sec-1">
         <div className="phila-seo-sec-1-layer">
           <div className="phila-seo-sec-1-banner-image">

@@ -17,6 +17,13 @@ import { LuCalendarCheck2, LuShieldCheck } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RiLineChartLine } from "react-icons/ri";
 import Footer from "@/app/components/Footer";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Roofing Local SEO", url: "/services/industry/local-seo-for-roofing-companies" },
+]);
 
 const RoofingSeoFaqs = [
   {
@@ -134,6 +141,10 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* SECTION 1 - HERO */}
       <div className="roof-sec-1">
         <div className="roof-sec-1-layer">

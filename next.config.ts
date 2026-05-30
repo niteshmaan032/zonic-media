@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // Force canonical host: non-www -> www (fixes GSC "Alternate page with proper canonical tag")
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "zonicllc.com" }],
+        destination: "https://www.zonicllc.com/:path*",
+        permanent: true,
+      },
+
       // Service URL changes
       {
         source: "/service/google-my-business/gmb-suspension-reinstatement",

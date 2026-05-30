@@ -9,6 +9,7 @@ import {
   getPublishedBlogBySlug,
   getPublishedBlogs,
 } from "@/backend/lib/blogs";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import "@/app/style/BlogPage.css";
 
 export const revalidate = 300;
@@ -84,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "Zonic Media",
-      url: "https://zonicllc.com",
+      url: SITE_URL,
     },
     datePublished: blog.publishDate,
     dateModified: blog.publishedAt
@@ -93,8 +94,19 @@ export default async function BlogPostPage({ params }: Props) {
     description: blog.excerpt,
   };
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: blog.blogTitle, url: `/blog/${slug}` },
+  ]);
+
   return (
     <>
+      <Script
+        id="blog-post-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Script
         id="blog-post-jsonld"
         type="application/ld+json"

@@ -23,6 +23,7 @@ import { FaChildren, FaGoogle, FaUserDoctor } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { LuCalendarCheck2 } from "react-icons/lu";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title:
@@ -31,6 +32,12 @@ export const metadata: Metadata = {
     "Zonic Media helps pediatricians and children's clinics grow with SEO, local visibility, website optimization, and patient-focused digital marketing strategies.",
   alternates: { canonical: "/services/industry/pediatricians" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Pediatricians SEO", url: "/services/industry/pediatricians" },
+]);
 
 const PediatricFaqs = [
   {
@@ -178,6 +185,10 @@ const PediatricServices = [
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="pedi-sec-1">
         <div className="pedi-sec-1-layer">
           <Row className="align-items-center g-4">

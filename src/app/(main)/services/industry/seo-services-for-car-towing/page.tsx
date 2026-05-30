@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import CarTowSeoPage from "./CarTowSeoPage";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title: "SEO Services for Car Towing Companies",
@@ -9,6 +10,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/industry/seo-services-for-car-towing" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Car Towing SEO", url: "/services/industry/seo-services-for-car-towing" },
+]);
+
 export default function Page() {
-  return <CarTowSeoPage />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <CarTowSeoPage />
+    </>
+  );
 }

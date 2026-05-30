@@ -7,6 +7,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -116,9 +117,19 @@ const RealEstateFormHead = {
   ),
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Real Estate SEO", url: "/services/industry/real-estate-seo-services" },
+]);
+
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="realest-sec-1">
         <div className="realest-sec-1-layer">
           <div className="realest-sec-1-content">

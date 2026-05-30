@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import ContactUsPage from "./ContactUsPage";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+const contactBreadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Contact Us", url: "/contact-us" },
+]);
 
 export const metadata: Metadata = {
   title: "Contact Us | Get in Touch With Our Digital Experts",
@@ -17,7 +23,18 @@ export const metadata: Metadata = {
 };
 
 function Page() {
-  return <ContactUsPage />;
+  return (
+    <>
+      <script
+        id="contact-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactBreadcrumbJsonLd),
+        }}
+      />
+      <ContactUsPage />
+    </>
+  );
 }
 
 export default Page;

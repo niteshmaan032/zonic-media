@@ -7,6 +7,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
@@ -121,9 +122,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/local-seo-services-for-hvac" },
 };
 
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "HVAC Local SEO", url: "/services/local-seo-services-for-hvac" },
+]);
+
 export default function HvacSeoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="roof-sec-1 hvac-hero">
         <div className="roof-sec-1-layer hvac-hero-layer">
           <div className="roof-sec-1-content">

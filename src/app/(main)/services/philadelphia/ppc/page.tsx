@@ -8,6 +8,7 @@ import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import "@/app/style/philadelphia/philaPpc.css";
 import "@/app/style/carTow.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
@@ -44,6 +45,12 @@ export const metadata: Metadata = {
     "Philadelphia PPC agency helping businesses generate high-intent leads through Google Ads, landing page optimization, conversion tracking, and campaign management.",
   alternates: { canonical: "/services/philadelphia/ppc" },
 };
+
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+  { name: "Philadelphia PPC", url: "/services/philadelphia/ppc" },
+]);
 
 const PhilaPpcFaqs = [
   {
@@ -242,6 +249,10 @@ const PpcServices = [
 function page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="phila-ppc-sec-1">
         <div className="phila-ppc-sec-1-layer">
           <div className="phila-ppc-sec-1-banner-image">
