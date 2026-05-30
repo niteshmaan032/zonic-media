@@ -33,13 +33,23 @@ function LiveChatInner({
   const [historyLoaded, setHistoryLoaded] = useState(false);
   const [adminOnline, setAdminOnline] = useState(false);
   const [adminTyping, setAdminTyping] = useState(false);
-  const [justConnected, setJustConnected] = useState(false);
+  const [adminClosed, setAdminClosed] = useState(false);
 
   const seenMongoIds = useRef(new Set());
   const seenClientMsgIds = useRef(new Set());
+  const onlineNotifShownRef = useRef(false);
   const bottomRef = useRef(null);
   const inputRef = useRef(null);
   const inactivityRef = useRef(null);
+
+  const clearLiveChatSession = useCallback(() => {
+    try {
+      sessionStorage.removeItem("zonic_live_conv_id");
+      sessionStorage.removeItem("zonic_live_room_name");
+      sessionStorage.removeItem("zonic_live_chat_mode");
+      sessionStorage.removeItem("zonic_live_visitor_name");
+    } catch {}
+  }, []);
 
   // ── Inactivity reset ────────────────────────────────────────────
   const resetInactivity = useCallback(() => {
@@ -69,6 +79,16 @@ function LiveChatInner({
             if (m.clientMessageId) seenClientMsgIds.current.add(m.clientMessageId);
           });
           setHistoryMsgs(data.messages);
+
+          // If admin already closed this chat (visitor refreshed after close),
+          // detect the system close marker and reflect the closed state.
+          const alreadyClosed = data.messages.some(
+            (m) => m.senderType === "system" && m.senderId === "system:admin-close"
+          );
+          if (alreadyClosed) {
+            setAdminClosed(true);
+            clearLiveChatSession();
+          }
         }
         setHistoryLoaded(true);
       })
@@ -103,6 +123,7 @@ function LiveChatInner({
         {
           _id: mongoId || ablyMsg.id || String(Date.now()),
           senderType: meta.senderType ?? "visitor",
+          senderId: meta.senderId,
           senderName: meta.senderName ?? "User",
           text: ablyMsg.data?.text ?? "",
           createdAt: ablyMsg.timestamp
@@ -111,6 +132,18 @@ function LiveChatInner({
           clientMessageId: clientMsgId,
         },
       ]);
+
+      // Detect admin-close system message published by the admin PATCH route.
+      if (
+        meta.senderType === "system" &&
+        (meta.senderId === "system:admin-close" || meta.conversationClosed === "true")
+      ) {
+        setAdminClosed(true);
+        clearLiveChatSession();
+        if (inactivityRef.current) clearTimeout(inactivityRef.current);
+        return;
+      }
+
       resetInactivity();
     };
 
@@ -155,13 +188,22 @@ function LiveChatInner({
     },
   });
 
-  // ── "Connected!" flash when admin joins ────────────────────────
+  // ── In-chat notification when the live agent comes online ─────
+  // Fires once per session — confirms an agent is available to chat.
   useEffect(() => {
-    if (!adminOnline) return;
-    setJustConnected(true);
-    const t = setTimeout(() => setJustConnected(false), 3000);
-    return () => clearTimeout(t);
-  }, [adminOnline]);
+    if (!adminOnline || onlineNotifShownRef.current || adminClosed) return;
+    onlineNotifShownRef.current = true;
+    setNewMsgs((prev) => [
+      ...prev,
+      {
+        _id: `system-online-${Date.now()}`,
+        senderType: "system",
+        senderName: "System",
+        text: "Zonic Team is online. Feel free to start chatting!",
+        createdAt: new Date().toISOString(),
+      },
+    ]);
+  }, [adminOnline, adminClosed]);
 
   // ── Auto-scroll ─────────────────────────────────────────────────
   useEffect(() => {
@@ -253,14 +295,14 @@ function LiveChatInner({
   return (
     <div className="zlc-inner">
       {/* Status bar */}
-      <div className={`zlc-status-bar${justConnected ? " zlc-status-bar--connected" : ""}`}>
-        <span className={`zlc-status-dot${adminOnline ? " zlc-status-dot--online" : ""}`} />
+      <div className="zlc-status-bar">
+        <span className={`zlc-status-dot${adminClosed ? "" : " zlc-status-dot--online"}`} />
         <span className="zlc-status-text">
-          {justConnected
-            ? "✅ Agent connected! Start chatting."
+          {adminClosed
+            ? "Chat closed"
             : adminOnline
-            ? "Agent is online"
-            : "Connecting you to an agent…"}
+            ? "Zonic Team is online"
+            : "You're connected. Start chatting!"}
         </span>
       </div>
 
@@ -277,6 +319,13 @@ function LiveChatInner({
         )}
 
         {allMsgs.map((msg) => {
+          if (msg.senderType === "system") {
+            return (
+              <div key={msg._id} className="zlc-system-msg">
+                {msg.text}
+              </div>
+            );
+          }
           const isMine = msg.senderType === "visitor";
           return (
             <div
@@ -317,11 +366,11 @@ function LiveChatInner({
           ref={inputRef}
           type="text"
           className="zlc-input"
-          placeholder="Type your message…"
+          placeholder={adminClosed ? "This chat was closed by our team" : "Type your message…"}
           value={inputVal}
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
-          disabled={sending}
+          disabled={sending || adminClosed}
           autoComplete="off"
           autoCorrect="off"
           spellCheck="false"
@@ -331,7 +380,7 @@ function LiveChatInner({
           type="button"
           className="zlc-send-btn"
           onClick={sendMessage}
-          disabled={!inputVal.trim() || sending}
+          disabled={!inputVal.trim() || sending || adminClosed}
           aria-label="Send message"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"

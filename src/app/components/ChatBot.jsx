@@ -203,7 +203,7 @@ function QuickReplies({ options, onSelect, disabled }) {
 const BUBBLE_TEXTS = {
   greeting: "Hi! there 👋",
   help:     "Need help? Let's chat 💬",
-  resume:   "Finish your inquiry →",
+  resume:   "Finish your enquiry →",
 };
 
 // ─── Main component ───────────────────────────────────────────────────────────

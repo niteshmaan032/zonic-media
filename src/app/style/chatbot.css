@@ -739,6 +739,21 @@
   padding: 8px 0;
 }
 
+/* ── System / agent-status notice ────────────────────────────── */
+.zlc-system-msg {
+  align-self: center;
+  max-width: 92%;
+  text-align: center;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #6b6b6b;
+  background: #f5f5f5;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 8px 12px;
+  animation: zoni-msg-in 0.22s ease forwards;
+}
+
 /* ── Message rows ────────────────────────────────────────────── */
 
 .zlc-msg {

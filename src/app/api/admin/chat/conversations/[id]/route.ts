@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import Ably from "ably";
 import {
   ADMIN_AUTH_COOKIE,
   getAdminFromAuthToken,
@@ -7,9 +8,15 @@ import {
   getConversationById,
   getConversationsCollection,
   markAdminRead,
+  saveMessage,
   toSafeConversation,
 } from "@/backend/lib/chat";
+import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatRealtime";
 import type { ConversationStatus } from "@/shared/chatTypes";
+
+const ADMIN_CLOSE_SENDER_ID = "system:admin-close";
+const ADMIN_CLOSE_MESSAGE =
+  "Your chat session has been closed by our team. Thank you for connecting with Zonic Media — we appreciate your time and will be in touch with you very soon!";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -95,6 +102,47 @@ export async function PATCH(
     }
 
     await collection.updateOne({ _id: conv._id }, { $set: setFields });
+
+    // If the admin just closed the chat, notify the visitor with a persistent
+    // system message so they see a friendly closing note (real-time + history).
+    if (setFields.status === "closed" && conv.status !== "closed") {
+      try {
+        const saved = await saveMessage({
+          conversationId,
+          roomName: conv.roomName,
+          senderType: "system",
+          senderId: ADMIN_CLOSE_SENDER_ID,
+          senderName: "Zonic Team",
+          text: ADMIN_CLOSE_MESSAGE,
+        });
+
+        const apiKey = process.env.ABLY_API_KEY;
+        if (apiKey) {
+          const rest = new Ably.Rest({ key: apiKey });
+          const channel = rest.channels.get(
+            getLiveMessageChannelName(conv.roomName)
+          );
+          await channel.publish(LIVE_MESSAGE_EVENT, {
+            text: ADMIN_CLOSE_MESSAGE,
+            metadata: {
+              mongoId: saved._id,
+              conversationId,
+              senderType: "system",
+              senderId: ADMIN_CLOSE_SENDER_ID,
+              senderName: "Zonic Team",
+              conversationClosed: "true",
+            },
+            headers: {},
+          });
+        }
+      } catch (closeNotifyErr) {
+        // Non-fatal — admin still successfully closed the conversation.
+        console.error(
+          "[admin/chat/conversations/[id] PATCH] close-notify failed:",
+          closeNotifyErr
+        );
+      }
+    }
 
     const updated = await getConversationById(conversationId);
     return NextResponse.json({
