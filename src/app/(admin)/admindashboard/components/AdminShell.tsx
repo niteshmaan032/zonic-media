@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { FaBars, FaHashtag, FaRegFileAlt, FaTable } from "react-icons/fa";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { LuLayoutDashboard, LuMessageSquareText } from "react-icons/lu";
@@ -40,6 +40,11 @@ export function AdminShell({ children }: AdminShellProps) {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showSpinner, setShowSpinner] = useState(true);
   const [loggingOut, setLoggingOut] = useState(false);
+  const [unreadConversations, setUnreadConversations] = useState(0);
+  const [waitingConversations, setWaitingConversations] = useState(0);
+  const prevUnreadRef = useRef<number | null>(null);
+  const prevWaitingRef = useRef<number | null>(null);
+  const notifyAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const resetAdminUiState = useCallback(() => {
     setSidebarOpen(false);
@@ -150,6 +155,60 @@ export function AdminShell({ children }: AdminShellProps) {
     setSidebarOpen(false);
   };
 
+  const playAdminNotify = useCallback(() => {
+    try {
+      if (!notifyAudioRef.current) {
+        notifyAudioRef.current = new Audio("/audio/admin-notify.mp3");
+        notifyAudioRef.current.volume = 0.65;
+      }
+
+      notifyAudioRef.current.currentTime = 0;
+      notifyAudioRef.current.play().catch(() => {});
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const refreshChatSummary = useCallback(async () => {
+    try {
+      const response = await fetch("/api/admin/chat/conversations?status=all&page=1", {
+        cache: "no-store",
+        credentials: "include",
+      });
+
+      if (!response.ok) return;
+
+      const data = await response.json();
+      if (!data.success) return;
+
+      const nextUnread = Number(data.unreadConversations ?? 0);
+      const nextWaiting = Number(data.waitingConversations ?? 0);
+
+      if (
+        (prevUnreadRef.current !== null && nextUnread > prevUnreadRef.current) ||
+        (prevWaitingRef.current !== null && nextWaiting > prevWaitingRef.current)
+      ) {
+        playAdminNotify();
+      }
+
+      prevUnreadRef.current = nextUnread;
+      prevWaitingRef.current = nextWaiting;
+      setUnreadConversations(nextUnread);
+      setWaitingConversations(nextWaiting);
+    } catch {
+      // ignore
+    }
+  }, [playAdminNotify]);
+
+  useEffect(() => {
+    refreshChatSummary();
+  }, [pathname, refreshChatSummary]);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(refreshChatSummary, 15000);
+    return () => window.clearInterval(intervalId);
+  }, [refreshChatSummary]);
+
   const handleLogout = async () => {
     setLoggingOut(true);
 
@@ -163,6 +222,9 @@ export function AdminShell({ children }: AdminShellProps) {
       redirectToLogin();
     }
   };
+
+  const messageNotificationCount =
+    unreadConversations > 0 ? unreadConversations : waitingConversations;
 
   return (
     <div className="admin-panel">
@@ -296,15 +358,29 @@ export function AdminShell({ children }: AdminShellProps) {
             </button>
 
             <div className="navbar-nav align-items-center ms-auto">
-              <span className="nav-item nav-link">
+              <Link
+                href="/admindashboard/live-chat"
+                prefetch={false}
+                className="nav-item nav-link"
+              >
                 <span className="admin-message-icon-wrapper me-lg-2">
                   <LuMessageSquareText />
-                  <span className="admin-message-dot" aria-hidden="true"></span>
+                  <span className="admin-message-dot" aria-hidden="true" />
+                  {messageNotificationCount > 0 && (
+                    <span className="admin-message-count admin-message-count--icon">
+                      {messageNotificationCount}
+                    </span>
+                  )}
                 </span>
                 <span className="d-none d-lg-inline-flex align-items-center gap-2">
-                  Message
+                  Messages
+                  {messageNotificationCount > 0 && (
+                    <span className="admin-message-count">
+                      {messageNotificationCount}
+                    </span>
+                  )}
                 </span>
-              </span>
+              </Link>
             </div>
           </nav>
 

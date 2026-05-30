@@ -216,6 +216,27 @@
   left: -2px;
 }
 
+.admin-message-count {
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--admin-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.admin-message-count--icon {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}
+
 .admin-message-icon-wrapper {
   position: relative;
   display: inline-flex;

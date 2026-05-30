@@ -252,7 +252,7 @@ function Navbar() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
+    const syncScrolledState = () => {
       setScrolled(window.scrollY > 40);
 
       /*
@@ -289,8 +289,15 @@ function Navbar() {
       */
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    syncScrolledState();
+
+    window.addEventListener("scroll", syncScrolledState, { passive: true });
+    window.addEventListener("pageshow", syncScrolledState);
+
+    return () => {
+      window.removeEventListener("scroll", syncScrolledState);
+      window.removeEventListener("pageshow", syncScrolledState);
+    };
   }, []);
 
   return (

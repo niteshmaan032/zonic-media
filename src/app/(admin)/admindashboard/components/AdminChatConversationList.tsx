@@ -7,6 +7,11 @@ type Props = {
   selectedId: string | null;
   onSelect: (conv: SafeConversation) => void;
   newConvSignal: number; // increment this to trigger a refresh
+  onFilterDataChange?: (payload: {
+    filter: Filter;
+    visibleConversationIds: string[];
+    visibleConversations: SafeConversation[];
+  }) => void;
 };
 
 const FILTERS = ["all", "waiting_agent", "active", "inactive", "closed"] as const;
@@ -36,6 +41,7 @@ export default function AdminChatConversationList({
   selectedId,
   onSelect,
   newConvSignal,
+  onFilterDataChange,
 }: Props) {
   const [conversations, setConversations] = useState<SafeConversation[]>([]);
   const [filter, setFilter] = useState<Filter>("all");
@@ -87,6 +93,14 @@ export default function AdminChatConversationList({
     }, 30_000);
     return () => window.clearInterval(id);
   }, [page, load]);
+
+  useEffect(() => {
+    onFilterDataChange?.({
+      filter,
+      visibleConversationIds: conversations.map((conv) => conv._id),
+      visibleConversations: conversations,
+    });
+  }, [conversations, filter, onFilterDataChange]);
 
   return (
     <>

@@ -15,6 +15,18 @@ import AdminChatConversationList from "./AdminChatConversationList";
 import AdminChatWindow from "./AdminChatWindow";
 
 // ─── Inner: has access to Ably providers ─────────────────────────────────────
+function timeAgo(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const diff = Date.now() - new Date(iso).getTime();
+  const s = Math.floor(diff / 1000);
+  if (s < 60) return "just now";
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m}m ago`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}h ago`;
+  return `${Math.floor(h / 24)}d ago`;
+}
+
 function AdminLiveChatInner({
   adminId,
   realtimeClient,
@@ -26,7 +38,23 @@ function AdminLiveChatInner({
 }) {
   const [selectedConv, setSelectedConv] = useState<SafeConversation | null>(null);
   const [newConvSignal, setNewConvSignal] = useState(0);
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [rightPanelConversations, setRightPanelConversations] = useState<SafeConversation[]>([]);
   const prevConnState = useRef(connState);
+  const notifyAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playAdminNotify = useCallback(() => {
+    try {
+      if (!notifyAudioRef.current) {
+        notifyAudioRef.current = new Audio("/audio/admin-notify.mp3");
+        notifyAudioRef.current.volume = 0.65;
+      }
+      notifyAudioRef.current.currentTime = 0;
+      notifyAudioRef.current.play().catch(() => {});
+    } catch {
+      // ignore
+    }
+  }, []);
 
   // Subscribe to admin notification channel (new conversations)
   useEffect(() => {
@@ -35,6 +63,7 @@ function AdminLiveChatInner({
     const handler = (message: Ably.Message) => {
       if (message.name === "new_conversation") {
         setNewConvSignal((n) => n + 1);
+        playAdminNotify();
       }
     };
 
@@ -43,7 +72,7 @@ function AdminLiveChatInner({
     return () => {
       channel.unsubscribe(handler);
     };
-  }, [realtimeClient]);
+  }, [realtimeClient, playAdminNotify]);
 
   // When connection recovers from disconnected/suspended, refresh the list
   // so any new conversations that arrived while offline appear immediately.
@@ -60,6 +89,24 @@ function AdminLiveChatInner({
   const handleSelectConv = useCallback((conv: SafeConversation) => {
     setSelectedConv(conv);
   }, []);
+
+  const handleFilterDataChange = useCallback(
+    (payload: {
+      filter: string;
+      visibleConversationIds: string[];
+      visibleConversations: SafeConversation[];
+    }) => {
+      setActiveFilter(payload.filter);
+      setRightPanelConversations(payload.visibleConversations);
+      setSelectedConv((current) => {
+        if (!current) return current;
+        return payload.visibleConversationIds.includes(current._id)
+          ? current
+          : null;
+      });
+    },
+    []
+  );
 
   const handleStatusChange = useCallback((newStatus: string) => {
     if (newStatus === "closed" || newStatus === "inactive") {
@@ -101,11 +148,15 @@ function AdminLiveChatInner({
             selectedId={selectedConv?._id ?? null}
             onSelect={handleSelectConv}
             newConvSignal={newConvSignal}
+            onFilterDataChange={handleFilterDataChange}
           />
         </div>
 
         {/* Right: chat window */}
         <div className="alc-chat-col">
+          <div className="alc-chat-filter-info">
+            Showing: {activeFilter.replace("_", " ")}
+          </div>
           {selectedConv ? (
             <AdminChatWindow
               key={selectedConv._id}
@@ -116,9 +167,52 @@ function AdminLiveChatInner({
               onStatusChange={handleStatusChange}
             />
           ) : (
-            <div className="alc-empty-state">
-              <div className="alc-empty-state-icon" aria-hidden="true">💬</div>
-              <p>Select a conversation to start chatting</p>
+            <div
+              className={`alc-empty-state${
+                rightPanelConversations.length > 0 ? " alc-empty-state--with-list" : ""
+              }`}
+            >
+              {rightPanelConversations.length === 0 ? (
+                <>
+                  <div className="alc-empty-state-icon" aria-hidden="true">💬</div>
+                  <p>No chats available in this filter.</p>
+                </>
+              ) : (
+                <div className="alc-right-list">
+                  {rightPanelConversations.map((conv) => (
+                    <button
+                      key={conv._id}
+                      type="button"
+                      className="alc-conv-item alc-conv-item--right"
+                      onClick={() => handleSelectConv(conv)}
+                    >
+                      <div className="alc-conv-top">
+                        <span className="alc-conv-name">{conv.name}</span>
+                        <span className="alc-conv-time">
+                          {timeAgo(conv.lastMessageAt ?? conv.createdAt)}
+                        </span>
+                      </div>
+                      <div className="alc-conv-meta">
+                        <span className="alc-conv-service">
+                          {conv.service ?? "—"}
+                          {conv.subService ? ` · ${conv.subService}` : ""}
+                        </span>
+                        <span
+                          className={`alc-status-badge alc-status-badge--${conv.status}`}
+                        >
+                          {conv.status.replace("_", " ")}
+                        </span>
+                      </div>
+                      {conv.lastMessage && (
+                        <span className="alc-conv-last">{conv.lastMessage}</span>
+                      )}
+                      {conv.unreadForAdmin > 0 && (
+                        <span className="alc-unread-badge">{conv.unreadForAdmin}</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>

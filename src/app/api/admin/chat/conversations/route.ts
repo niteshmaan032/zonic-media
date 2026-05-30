@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { ObjectId } from "mongodb";
 import {
   ADMIN_AUTH_COOKIE,
   getAdminFromAuthToken,
@@ -59,7 +58,7 @@ export async function GET(request: NextRequest) {
       ];
     }
 
-    const [total, docs] = await Promise.all([
+    const [total, docs, unreadConversations, waitingConversations] = await Promise.all([
       collection.countDocuments(filter),
       collection
         .find(filter)
@@ -67,12 +66,16 @@ export async function GET(request: NextRequest) {
         .skip((page - 1) * pageSize)
         .limit(pageSize)
         .toArray(),
+      collection.countDocuments({ unreadForAdmin: { $gt: 0 }, status: { $ne: "closed" } }),
+      collection.countDocuments({ status: "waiting_agent" }),
     ]);
 
     return NextResponse.json({
       success: true,
       conversations: docs.map(toSafeConversation),
       total,
+      unreadConversations,
+      waitingConversations,
       page,
       pages: Math.ceil(total / pageSize),
     });

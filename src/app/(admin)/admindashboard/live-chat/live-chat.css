@@ -319,6 +319,15 @@
   overflow: hidden;
 }
 
+.alc-chat-filter-info {
+  padding: 8px 18px;
+  border-bottom: 1px solid rgba(25, 28, 36, 0.08);
+  background: #fff;
+  font-size: 12px;
+  color: #6c757d;
+  text-transform: capitalize;
+}
+
 .alc-empty-state {
   flex: 1;
   display: flex;
@@ -337,6 +346,29 @@
 .alc-empty-state p {
   margin: 0;
   font-size: 14px;
+}
+
+.alc-empty-state--with-list {
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.alc-right-list {
+  width: 100%;
+  max-width: 820px;
+  height: 100%;
+  overflow-y: auto;
+  border-top: 1px solid rgba(25, 28, 36, 0.06);
+}
+
+.alc-right-list .alc-conv-item--right {
+  width: 100%;
+  text-align: left;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  background: #fff;
 }
 
 /* ── Chat window header ───────────────────────────────────────────────────────── */
