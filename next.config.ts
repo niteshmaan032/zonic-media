@@ -8,7 +8,7 @@ const contentSecurityPolicyReportOnly = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://widget.clutch.co https://clutch.co https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.co.in https://www.facebook.com https://connect.facebook.net",
+  "connect-src 'self' https://widget.clutch.co https://clutch.co https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.co.in https://www.facebook.com https://connect.facebook.net https://*.ably.io https://*.ably.com https://*.ably.net wss://*.ably.io wss://*.ably.com wss://*.ably.net",
   "frame-src 'self' https://widget.clutch.co https://clutch.co https://www.youtube.com https://www.google.com https://www.googletagmanager.com",
   "worker-src 'self' blob:",
 ].join("; ");

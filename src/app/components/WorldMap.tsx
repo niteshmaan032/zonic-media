@@ -21,7 +21,7 @@ function WorldMap() {
           fill
           alt="world map"
           className="world-map-img"
-          priority
+          sizes="(max-width: 768px) 100vw, 1200px"
         />
 
         <div className="map-marker is-canada">
