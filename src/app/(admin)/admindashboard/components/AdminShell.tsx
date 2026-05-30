@@ -365,7 +365,6 @@ export function AdminShell({ children }: AdminShellProps) {
               >
                 <span className="admin-message-icon-wrapper me-lg-2">
                   <LuMessageSquareText />
-                  <span className="admin-message-dot" aria-hidden="true" />
                   {messageNotificationCount > 0 && (
                     <span className="admin-message-count admin-message-count--icon">
                       {messageNotificationCount}
@@ -374,11 +373,6 @@ export function AdminShell({ children }: AdminShellProps) {
                 </span>
                 <span className="d-none d-lg-inline-flex align-items-center gap-2">
                   Messages
-                  {messageNotificationCount > 0 && (
-                    <span className="admin-message-count">
-                      {messageNotificationCount}
-                    </span>
-                  )}
                 </span>
               </Link>
             </div>
