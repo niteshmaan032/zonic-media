@@ -583,6 +583,12 @@ export default function CarTowSeoPage() {
               </Col>
             ))}
           </Row>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Fix Your Towing Visibility
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -608,6 +614,12 @@ export default function CarTowSeoPage() {
                 <p>{item.text}</p>
               </article>
             ))}
+          </div>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Start Winning More Calls
+              <ArrowIcon />
+            </HashScrollLink>
           </div>
         </div>
       </section>
@@ -637,6 +649,12 @@ export default function CarTowSeoPage() {
               </Col>
             ))}
           </Row>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Target High-Intent Towing Keywords
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -665,6 +683,12 @@ export default function CarTowSeoPage() {
               </Col>
             ))}
           </Row>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Get Your Towing SEO Strategy
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -716,6 +740,12 @@ export default function CarTowSeoPage() {
                     Broader service-area visibility in Google Maps
                   </li>
                 </ul>
+                <div className="car-tow-section-cta car-tow-section-cta-left">
+                  <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+                    Get a Free SEO Audit
+                    <ArrowIcon />
+                  </HashScrollLink>
+                </div>
               </div>
             </Col>
           </Row>
@@ -749,6 +779,12 @@ export default function CarTowSeoPage() {
                 and where you do it. That combination gives nearby customers
                 more reasons to trust your listing and call sooner.
               </p>
+              <div className="car-tow-section-cta car-tow-section-cta-left">
+                <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+                  Improve Your Map Rankings
+                  <ArrowIcon />
+                </HashScrollLink>
+              </div>
             </div>
             </Col>
             <Col lg={5}>
@@ -788,6 +824,12 @@ export default function CarTowSeoPage() {
               </Col>
             ))}
           </Row>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Work With Zonic Media
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -818,6 +860,12 @@ export default function CarTowSeoPage() {
               </Col>
             ))}
           </Row>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Build Your Towing SEO Strategy
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -888,6 +936,12 @@ export default function CarTowSeoPage() {
               <p>{processSteps[highlightedUpTo].text}</p>
             </motion.div>
           </div>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Start the Process Today
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -920,6 +974,12 @@ export default function CarTowSeoPage() {
                 exposure, and more dependable towing jobs from the areas that
                 mattered most.
               </p>
+              <div className="car-tow-section-cta car-tow-section-cta-left">
+                <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+                  Get Results Like These
+                  <ArrowIcon />
+                </HashScrollLink>
+              </div>
             </div>
             </Col>
             <Col lg={5}>
@@ -1017,6 +1077,12 @@ export default function CarTowSeoPage() {
               </tbody>
             </table>
           </div>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Stop Renting Leads — Own Your Demand
+              <ArrowIcon />
+            </HashScrollLink>
+          </div>
         </div>
       </section>
 
@@ -1046,6 +1112,12 @@ export default function CarTowSeoPage() {
                 </div>
               </article>
             ))}
+          </div>
+          <div className="car-tow-section-cta">
+            <HashScrollLink href="#car-tow-contact-form" className="buttons" offset={120}>
+              Get These Results for Your Company
+              <ArrowIcon />
+            </HashScrollLink>
           </div>
         </div>
       </section>
