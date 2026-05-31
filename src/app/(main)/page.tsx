@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import "./page.css";
 import Image from "next/image";
 import Blogs from "@/app/components/Blogs";
@@ -50,6 +51,29 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 300;
+
+const SITE_URL = "https://www.zonicllc.com";
+
+const siteNavigationItems = [
+  { name: "Home", url: SITE_URL },
+  { name: "Services", url: `${SITE_URL}/services` },
+  { name: "Local SEO", url: `${SITE_URL}/services/local-seo-for-home-services` },
+  { name: "GMB Reinstatement", url: `${SITE_URL}/services/gmb-reinstatement-help` },
+  { name: "Launchpad", url: `${SITE_URL}/services/launchpad` },
+  { name: "Blog", url: `${SITE_URL}/blog` },
+  { name: "About Us", url: `${SITE_URL}/about` },
+  { name: "Contact Us", url: `${SITE_URL}/contact-us` },
+];
+
+const siteNavigationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": siteNavigationItems.map((item) => ({
+    "@type": "SiteNavigationElement",
+    "@id": `${item.url}#site-navigation`,
+    name: item.name,
+    url: item.url,
+  })),
+};
 
 function BtnArrow() {
   return (
@@ -374,6 +398,14 @@ export default async function Home() {
 
   return (
     <>
+      <Script
+        id="home-site-navigation-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(siteNavigationJsonLd),
+        }}
+      />
+
       {/* ── HERO ──────────────────────────────────────────── */}
       <section className="nh-hero">
         <div className="nh-hero-inner">

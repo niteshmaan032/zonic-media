@@ -47,6 +47,7 @@ const sameAsLinks = [
 ];
 
 const organizationJsonLd = {
+  "@context": "https://schema.org",
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   name: "Zonic Media",
@@ -71,6 +72,7 @@ const organizationJsonLd = {
 };
 
 const localBusinessJsonLd = {
+  "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${SITE_URL}/#local-business`,
   name: "Zonic Media",
@@ -91,6 +93,7 @@ const localBusinessJsonLd = {
 };
 
 const websiteJsonLd = {
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   name: "Zonic Media",
@@ -99,34 +102,6 @@ const websiteJsonLd = {
   publisher: {
     "@id": `${SITE_URL}/#organization`,
   },
-};
-
-const siteNavigationItems = [
-  { name: "Home", url: SITE_URL },
-  { name: "Services", url: `${SITE_URL}/services` },
-  { name: "Local SEO", url: `${SITE_URL}/services/local-seo-for-home-services` },
-  { name: "GMB Reinstatement", url: `${SITE_URL}/services/gmb-reinstatement-help` },
-  { name: "Launchpad", url: `${SITE_URL}/services/launchpad` },
-  { name: "Blog", url: `${SITE_URL}/blog` },
-  { name: "About Us", url: `${SITE_URL}/about` },
-  { name: "Contact Us", url: `${SITE_URL}/contact-us` },
-];
-
-const siteNavigationJsonLd = siteNavigationItems.map((item) => ({
-  "@type": "SiteNavigationElement",
-  "@id": `${item.url}#site-navigation`,
-  name: item.name,
-  url: item.url,
-}));
-
-const siteStructuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    organizationJsonLd,
-    localBusinessJsonLd,
-    websiteJsonLd,
-    ...siteNavigationJsonLd,
-  ],
 };
 
 export const metadata: Metadata = {
@@ -175,10 +150,26 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
 
         <Script
-          id="site-structured-data"
+          id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(siteStructuredData),
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
           }}
         />
 
