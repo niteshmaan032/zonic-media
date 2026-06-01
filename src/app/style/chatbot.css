@@ -115,6 +115,13 @@
   flex-shrink: 0;
 }
 
+.zoni-trigger-icon--img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
 @keyframes zoni-trigger-enter {
   from { opacity: 0; transform: translateY(18px) scale(0.88); }
   to   { opacity: 1; transform: translateY(0)   scale(1);    }

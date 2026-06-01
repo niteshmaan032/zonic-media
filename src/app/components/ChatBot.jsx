@@ -654,12 +654,14 @@ export default function ChatBot() {
             <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         ) : (
-          <svg className="zoni-trigger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 3 L13.6 9.4 L20 10 L13.6 10.6 L12 17 L10.4 10.6 L4 10 L10.4 9.4 Z" />
-            <path d="M18.5 15 L19.3 17.2 L21.5 17.8 L19.3 18.4 L18.5 20.5 L17.7 18.4 L15.5 17.8 L17.7 17.2 Z" />
-            <path d="M5.5 3 L6.1 4.9 L8 5.4 L6.1 5.9 L5.5 7.5 L4.9 5.9 L3 5.4 L4.9 4.9 Z" />
-          </svg>
+          <img
+            src="/images/chatbot.png"
+            alt=""
+            className="zoni-trigger-icon zoni-trigger-icon--img"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
         )}
       </button>
 

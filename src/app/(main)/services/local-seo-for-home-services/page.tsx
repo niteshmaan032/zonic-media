@@ -532,6 +532,7 @@ function page() {
         </div>
 
         {/*--local-seo-home-sec-7--*/}
+        {/*
         <div className="local-seo-home-sec-7">
           <div className="local-seo-home-center-head">
             <p className="local-seo-home-label">
@@ -550,23 +551,18 @@ function page() {
 
           <div className="local-seo-home-pricing-card-wrapper">
             <Row className="g-4 justify-content-center">
-              {/* STARTER PLAN */}
               <Col xs={12} md={12} lg={4}>
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">STARTER PLAN</div>
-
                   <p className="local-seo-home-price">
                     $750 <span>/ month</span>
                   </p>
-
                   <p className="local-seo-home-price-subtitle">
                     Best for small businesses targeting one service area.
                   </p>
-
                   <h5 className="local-seo-home-price-section-title">
                     What’s Included
                   </h5>
-
                   <ul className="local-seo-home-price-features">
                     <li>Google Business Profile optimization</li>
                     <li>Local keyword targeting</li>
@@ -575,7 +571,6 @@ function page() {
                     <li>Monthly reporting</li>
                     <li>Email support</li>
                   </ul>
-
                   <HashScrollLink
                     href="#local-seo-home-top"
                     className="local-seo-home-price-cta-btn"
@@ -585,24 +580,19 @@ function page() {
                 </div>
               </Col>
 
-              {/* GROWTH PLAN */}
               <Col xs={12} md={12} lg={4}>
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">GROWTH PLAN</div>
-
                   <p className="local-seo-home-price">
                     $1350 <span>/ month</span>
                   </p>
-
                   <p className="local-seo-home-price-subtitle">
                     Best for growing companies ready for more calls and booked
                     jobs.
                   </p>
-
                   <h5 className="local-seo-home-price-section-title">
                     What’s Included
                   </h5>
-
                   <ul className="local-seo-home-price-features">
                     <li>Everything in Starter Plan</li>
                     <li>Multi-service keyword targeting</li>
@@ -611,7 +601,6 @@ function page() {
                     <li>Competitor tracking</li>
                     <li>Priority support</li>
                   </ul>
-
                   <HashScrollLink
                     href="#local-seo-home-top"
                     className="local-seo-home-price-cta-btn"
@@ -621,25 +610,20 @@ function page() {
                 </div>
               </Col>
 
-              {/* DOMINATE PLAN */}
               <Col xs={12} md={12} lg={4}>
                 <div className="local-seo-home-pricing-card local-seo-home-pricing-card--dominate">
                   <div className="local-seo-home-price-badge">
                     DOMINATE PLAN
                   </div>
-
                   <p className="local-seo-home-price">
                     $2000 <span>/ month</span>
                   </p>
-
                   <p className="local-seo-home-price-subtitle">
                     Best for competitive markets and multi-location growth.
                   </p>
-
                   <h5 className="local-seo-home-price-section-title">
                     What’s Included
                   </h5>
-
                   <ul className="local-seo-home-price-features">
                     <li>Everything in Growth Plan</li>
                     <li>Multi-location SEO campaigns</li>
@@ -648,7 +632,6 @@ function page() {
                     <li>Aggressive ranking growth strategy</li>
                     <li>Dedicated account manager</li>
                   </ul>
-
                   <HashScrollLink
                     href="#local-seo-home-top"
                     className="local-seo-home-price-cta-btn"
@@ -658,6 +641,26 @@ function page() {
                 </div>
               </Col>
             </Row>
+          </div>
+        </div>
+        */}
+
+        <div className="local-seo-home-sec-7">
+          <div className="local-seo-home-card-container local-seo-card-banner">
+            <h2 className="local-seo-card-banner-heading">
+              Ready to Get More Calls and Booked Jobs in Your Area?
+            </h2>
+
+            <div className="local-seo-card-banner-ctas">
+              <HashScrollLink href="#local-seo-home-top" className="buttons">
+                <FaUser />
+                Get Your Free Local SEO Audit
+              </HashScrollLink>
+              <Link href="tel:+13027269736" className="buttons">
+                <IoCall />
+                Call: (302) 726-9736
+              </Link>
+            </div>
           </div>
         </div>
 
