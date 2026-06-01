@@ -87,21 +87,6 @@ const localBusinessJsonLd = {
   priceRange: "$$",
   areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
   sameAs: sameAsLinks,
-  parentOrganization: {
-    "@id": `${SITE_URL}/#organization`,
-  },
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
-  name: "Zonic Media",
-  url: SITE_URL,
-  inLanguage: "en-US",
-  publisher: {
-    "@id": `${SITE_URL}/#organization`,
-  },
 };
 
 export const metadata: Metadata = {
@@ -154,14 +139,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationJsonLd),
-          }}
-        />
-
-        <Script
-          id="website-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
           }}
         />
 

@@ -67,12 +67,27 @@ const siteNavigationItems = [
 
 const siteNavigationJsonLd = {
   "@context": "https://schema.org",
-  "@graph": siteNavigationItems.map((item) => ({
-    "@type": "SiteNavigationElement",
-    "@id": `${item.url}#site-navigation`,
-    name: item.name,
-    url: item.url,
-  })),
+  "@type": "SiteNavigationElement",
+  "@id": `${SITE_URL}/#site-navigation`,
+  name: siteNavigationItems.map((item) => item.name),
+  url: siteNavigationItems.map((item) => item.url),
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "Zonic Media",
+  url: SITE_URL,
+  inLanguage: "en-US",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/blog?search={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 function BtnArrow() {
@@ -398,6 +413,14 @@ export default async function Home() {
 
   return (
     <>
+      <Script
+        id="home-website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd),
+        }}
+      />
+
       <Script
         id="home-site-navigation-schema"
         type="application/ld+json"
