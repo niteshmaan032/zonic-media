@@ -1593,12 +1593,31 @@ body:has(.gbr-page) .zoni-window {
   }
 
   .gbr-nav-cta-btn {
-    padding: 8px 14px;
-    font-size: 12px;
+    display: none;
+  }
+
+  .gbr-sticky-bar {
+    display: none !important;
+  }
+
+  body:has(.gbr-page) .zoni-trigger {
+    bottom: 40px !important;
+  }
+
+  body:has(.gbr-page) .zoni-greeting-bubble {
+    bottom: 44px !important;
+  }
+
+  body:has(.gbr-page) .floating-phone-link {
+    bottom: 102px !important;
+  }
+
+  body:has(.gbr-page) .zoni-window {
+    bottom: 96px !important;
   }
 
   .gbr-main-wrapper {
-    padding: 90px 20px 80px 20px;
+    padding: 90px 20px 40px 20px;
   }
 
   .gbr-row {
