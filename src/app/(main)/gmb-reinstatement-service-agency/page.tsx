@@ -183,7 +183,7 @@ const guarantees = [
 const pricing = [
   {
     name: "Suspension Fix",
-    price: "297",
+    price: "400",
     desc: "One suspended profile, fully reinstated. Best for businesses that just need to get back online.",
     features: [
       { text: "Full suspension diagnosis", dim: false },
@@ -271,9 +271,9 @@ function Page() {
       <div id="gbr-top" className="gbr-page">
         {/* Minimal NAV (from HTML, replaces site navbar) */}
         <nav className="gbr-nav">
-          <div className="gbr-nav-logo">
+          <Link href="/" className="gbr-nav-logo">
             Z<span>O</span>NIC MEDIA
-          </div>
+          </Link>
           <div className="gbr-nav-right">
             <Link href={SITE_CONTACT.phoneHref} className="gbr-nav-phone-link">
               📞 {SITE_CONTACT.phoneDisplay}

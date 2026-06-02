@@ -10,21 +10,21 @@ body:has(.lo-page) .navbar-wrapper.show {
   display: none !important;
 }
 
-/* Push site-wide floating widgets above the bottom CTA strip */
+/* Float widgets positioned near viewport bottom (no sticky bar on this page) */
 body:has(.lo-page) .zoni-trigger {
-  bottom: 84px !important;
+  bottom: 40px !important;
 }
 
 body:has(.lo-page) .zoni-greeting-bubble {
-  bottom: 88px !important;
+  bottom: 44px !important;
 }
 
 body:has(.lo-page) .floating-phone-link {
-  bottom: 150px !important;
+  bottom: 102px !important;
 }
 
 body:has(.lo-page) .zoni-window {
-  bottom: 142px !important;
+  bottom: 96px !important;
 }
 
 .lo-page {
@@ -131,7 +131,7 @@ body:has(.lo-page) .zoni-window {
 
 .lo-nav-cta {
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   font-size: 13px;
   font-weight: 500;
   padding: 9px 18px;
@@ -425,7 +425,7 @@ body:has(.lo-page) .zoni-window {
 
 .lo-mp-rank.lo-r1 {
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
 }
 
 .lo-mp-rank.lo-r2,
@@ -960,7 +960,7 @@ body:has(.lo-page) .zoni-window {
   left: 50%;
   transform: translateX(-50%);
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   font-family: "DM Mono", monospace;
   font-size: 10px;
   font-weight: 500;
@@ -986,7 +986,7 @@ body:has(.lo-page) .zoni-window {
   color: var(--lo-white);
   line-height: 1;
   letter-spacing: -0.02em;
-  margin: 0 0 4px;
+  margin: 16px 0 4px;
 }
 
 .lo-pc-price sup {
@@ -1067,7 +1067,7 @@ body:has(.lo-page) .zoni-window {
 
 .lo-price-card.lo-featured .lo-pc-cta {
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   border-color: var(--lo-yellow);
 }
 
@@ -1214,7 +1214,7 @@ body:has(.lo-page) .zoni-window {
   height: 40px;
   border-radius: 50%;
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1334,7 +1334,7 @@ body:has(.lo-page) .zoni-window {
 .lo-cta-band .lo-mono-label {
   font-family: "DM Mono", monospace;
   font-size: 11px;
-  color: rgba(0, 0, 0, 0.55);
+  color: #000;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin: 0 0 16px;
@@ -1346,18 +1346,18 @@ body:has(.lo-page) .zoni-window {
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.01em;
-  color: #111;
+  color: #000;
   margin: 0 0 20px;
 }
 
 .lo-cta-band h2 .lo-outline {
-  -webkit-text-stroke: 2px #111;
+  -webkit-text-stroke: 2px #000;
   color: transparent;
 }
 
 .lo-cta-band p {
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.65);
+  color: #000;
   margin: 0 auto 32px;
   line-height: 1.7;
   font-weight: 400;
@@ -1371,13 +1371,13 @@ body:has(.lo-page) .zoni-window {
 }
 
 .lo-btn-dark {
-  background: #111;
+  background: #000;
   color: var(--lo-yellow);
   font-size: 15px;
   font-weight: 500;
   padding: 14px 30px;
   border-radius: 8px;
-  border: 2px solid #111;
+  border: 2px solid #000;
   transition: all 0.2s;
   display: inline-block;
   letter-spacing: 0.01em;
@@ -1389,8 +1389,8 @@ body:has(.lo-page) .zoni-window {
 }
 
 .lo-btn-dark-outline {
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  color: #111;
+  border: 2px solid #000;
+  color: #000;
   font-size: 15px;
   font-weight: 500;
   padding: 12px 26px;
@@ -1525,7 +1525,7 @@ body:has(.lo-page) .zoni-window {
 
 .lo-form-card .lead-form-title {
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   font-weight: 500;
   font-size: 21px;
   line-height: 1.2;
@@ -1565,7 +1565,7 @@ body:has(.lo-page) .zoni-window {
 
 .lo-form-card .lead-submit-btn {
   background: var(--lo-yellow);
-  color: #111;
+  color: #000;
   font-size: 15px;
   font-weight: 500;
   padding: 12px;
@@ -1824,4 +1824,20 @@ body:has(.lo-page) .zoni-window {
     gap: 14px;
     text-align: center;
   }
+}
+
+/* Force black text on every yellow-background CTA / element */
+.lo-page .lo-nav-cta,
+.lo-page .lo-btn-primary,
+.lo-page .lo-pc-badge,
+.lo-page .lo-price-card.lo-featured .lo-pc-cta,
+.lo-page .lo-mp-rank.lo-r1,
+.lo-page .lo-tc-avatar,
+.lo-page .lo-form-card .lead-form-title,
+.lo-page .lo-form-card .lead-submit-btn,
+.lo-page .lo-cta-band .lo-mono-label,
+.lo-page .lo-cta-band h2,
+.lo-page .lo-cta-band p,
+.lo-page .lo-btn-dark-outline {
+  color: #000 !important;
 }
