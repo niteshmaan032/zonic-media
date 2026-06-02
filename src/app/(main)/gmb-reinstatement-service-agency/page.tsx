@@ -651,7 +651,10 @@ function Page() {
             </div>
 
             {/* Right: sticky form (col-4) */}
-            <div className="gbr-form-col d-none d-lg-block">
+            <div
+              className="gbr-form-col d-none d-lg-block"
+              data-scroll-target="gbr-case-form"
+            >
               <div className="gbr-sticky-form">
                 <div className="gbr-form-card">
                   <LeadContactForm

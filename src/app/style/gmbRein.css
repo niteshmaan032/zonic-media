@@ -1657,6 +1657,22 @@ body:has(.gbr-page) .zoni-window {
     padding: 14px 18px;
   }
 
+  .gbr-cta-call,
+  .gbr-cta-form-trigger,
+  .gbr-dc-cta,
+  .gbr-pc-btn,
+  .gbr-fc-call,
+  .gbr-fc-form,
+  .gbr-urgency-cta {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .gbr-fc-call,
+  .gbr-fc-form {
+    width: 100%;
+  }
+
   .gbr-cost-section {
     padding: 28px 18px;
     margin: 40px 0;

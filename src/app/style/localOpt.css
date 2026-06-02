@@ -1764,6 +1764,16 @@ body:has(.lo-page) .zoni-window {
     align-items: stretch;
   }
 
+  .lo-btn-primary,
+  .lo-btn-outline,
+  .lo-btn-dark,
+  .lo-btn-dark-outline,
+  .lo-pc-cta,
+  .lo-nav-cta {
+    text-align: center;
+    justify-content: center;
+  }
+
   .lo-page-outer {
     padding: 0 20px;
   }

@@ -17,7 +17,17 @@ export default function HashScrollLink({
 }: HashScrollLinkProps) {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     const targetId = href.slice(1);
-    const target = document.getElementById(targetId);
+    const escaped =
+      typeof CSS !== "undefined" && typeof CSS.escape === "function"
+        ? CSS.escape(targetId)
+        : targetId;
+    const candidates = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        `[id="${escaped}"], [data-scroll-target="${escaped}"]`
+      )
+    );
+    const target =
+      candidates.find((el) => el.offsetParent !== null) ?? candidates[0];
 
     if (!target) {
       return;
