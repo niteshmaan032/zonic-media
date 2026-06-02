@@ -31,7 +31,6 @@ export default function RecaptchaCheckbox({
   onExecutorReady,
   onSmsConsentChange,
 }: RecaptchaCheckboxProps) {
-  const [scriptReady, setScriptReady] = useState(false);
   const [smsConsentChecked, setSmsConsentChecked] = useState(true);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
@@ -40,14 +39,37 @@ export default function RecaptchaCheckbox({
     : "/legal/privacy-policy";
 
   const execute = useCallback(async () => {
-    if (!siteKey || !scriptReady || !window.grecaptcha) {
-      throw new Error("reCAPTCHA is not ready yet. Please try again.");
+    if (!siteKey) {
+      throw new Error("reCAPTCHA is not configured.");
     }
 
+    const waitForGrecaptcha = () =>
+      new Promise<Grecaptcha>((resolve, reject) => {
+        const start = Date.now();
+        const tick = () => {
+          if (window.grecaptcha) {
+            resolve(window.grecaptcha);
+            return;
+          }
+          if (Date.now() - start > 10000) {
+            reject(
+              new Error(
+                "reCAPTCHA could not load. Please refresh and try again.",
+              ),
+            );
+            return;
+          }
+          setTimeout(tick, 100);
+        };
+        tick();
+      });
+
+    const grecaptcha = await waitForGrecaptcha();
+
     return await new Promise<string>((resolve, reject) => {
-      window.grecaptcha?.ready(() => {
-        window.grecaptcha
-          ?.execute(siteKey, { action })
+      grecaptcha.ready(() => {
+        grecaptcha
+          .execute(siteKey, { action })
           .then(resolve)
           .catch(() => {
             reject(
@@ -56,7 +78,7 @@ export default function RecaptchaCheckbox({
           });
       });
     });
-  }, [action, scriptReady, siteKey]);
+  }, [action, siteKey]);
 
   useEffect(() => {
     if (!onExecutorReady) {
@@ -77,7 +99,6 @@ export default function RecaptchaCheckbox({
       <Script
         src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
         strategy="afterInteractive"
-        onReady={() => setScriptReady(true)}
       />
 
       {siteKey ? (
