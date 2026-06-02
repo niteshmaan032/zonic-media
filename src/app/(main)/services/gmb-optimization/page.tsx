@@ -29,6 +29,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
@@ -144,7 +145,6 @@ function page() {
                 <Link href="tel:+13027269736"> Call Now: (302) 726-9736 </Link>
               </p>
             </div>
-
             <HashScrollLink href="#gmb-reinst-top" className="buttons">
               Get a Free GMB Audit
               <span className="buttons__icon-wrapper">
@@ -174,6 +174,11 @@ function page() {
                 </svg>
               </span>
             </HashScrollLink>
+
+            <LenisIframeGuard
+              className="gmb-reinst-google-reviews"
+              widgetScriptSrc="https://cdn.trustindex.io/loader.js?de967c372ebd85751c3639b52fa"
+            />
 
             <div className="gmb-reinst-sec-1-stats">
               <p>
@@ -629,7 +634,6 @@ function page() {
                 </p>
               </div>
             </div>
-
           </div>
 
           <div className="gmb-reinst-sec-5 gmb-reinst-common-sec">
@@ -1029,7 +1033,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  "url": "https://zonicllc.com/services/gmb-optimization",
+                  url: "https://zonicllc.com/services/gmb-optimization",
                   mainEntity: GmbOptimFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

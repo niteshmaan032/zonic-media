@@ -20,6 +20,16 @@ const OWNER_LEAD_CC_EMAILS = [
   "josef@zonicllc.com",
 ];
 
+const GMB_REINSTATEMENT_TEMPLATE_PAGES = new Set([
+  "/services/gmb-reinstatement-help",
+  "/gmb-reinstatement-service-agency",
+]);
+
+const GMB_OPTIMIZATION_TEMPLATE_PAGES = new Set([
+  "/services/gmb-optimization",
+  "/local-seo-google-business-optimization",
+]);
+
 const getTransporter = () => {
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT ?? "465");
@@ -140,7 +150,7 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 
   if (
     formType === "gmb-reinstatement" &&
-    sourcePage === "/services/gmb-reinstatement-help"
+    GMB_REINSTATEMENT_TEMPLATE_PAGES.has(sourcePage ?? "")
   ) {
     const firstName = escapeHtml(getFirstName(fullName));
     const safeBusinessName = escapeHtml(
@@ -309,7 +319,7 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 
   if (
     formType === "gmb-reinstatement" &&
-    sourcePage === "/services/gmb-optimization"
+    GMB_OPTIMIZATION_TEMPLATE_PAGES.has(sourcePage ?? "")
   ) {
     const firstName = escapeHtml(getFirstName(fullName));
     const plainBusinessName = businessName?.trim() || "your business";
