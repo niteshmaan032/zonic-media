@@ -8,7 +8,9 @@
       "Bash(node -e \"const f = require\\('fs'\\); console.log\\(f.readFileSync\\('./node_modules/@ably/chat/dist/core/events.js', 'utf8'\\).slice\\(0, 2000\\)\\)\")",
       "Bash(node -e \"const fs = require\\('fs'\\); try { const p = JSON.parse\\(fs.readFileSync\\('./node_modules/ably/react.js', 'utf8'\\)\\); console.log\\(p\\); } catch\\(e\\) { console.log\\('not found:', e.message\\); }\")",
       "Bash(npx tsc *)",
-      "Bash(ls C:\\\\Users\\\\maann\\\\OneDrive\\\\Desktop\\\\zonic *)"
+      "Bash(ls C:\\\\Users\\\\maann\\\\OneDrive\\\\Desktop\\\\zonic *)",
+      "Bash(Select-Object -First 80)",
+      "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 100)"
     ]
   }
 }
