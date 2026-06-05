@@ -787,7 +787,7 @@ function Page() {
                 </h2>
                 <LenisIframeGuard
                   className="lo-reviews-widget"
-                  widgetScriptSrc="https://cdn.trustindex.io/loader.js?de967c372ebd85751c3639b52fa"
+                  widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c"
                 />
               </section>
 
