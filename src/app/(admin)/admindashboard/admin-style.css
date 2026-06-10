@@ -1095,3 +1095,124 @@
   background: rgba(var(--admin-primary-rgb), 0.4);
   pointer-events: none;
 }
+
+/* ── FAQS REPEATER ──────────────────────────────────────────── */
+
+.admin-panel .admin-blog-faqs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.admin-panel .admin-blog-faq-add-btn {
+  background: #fdc115;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.admin-panel .admin-blog-faq-add-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.admin-panel .admin-blog-faq-add-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.admin-panel .admin-blog-faqs-empty {
+  font-size: 13px;
+  color: rgba(25, 28, 36, 0.55);
+  font-style: italic;
+}
+
+.admin-panel .admin-blog-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.admin-panel .admin-blog-faq-item {
+  background: #fff;
+  border: 1px solid rgba(25, 28, 36, 0.12);
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-panel .admin-blog-faq-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-panel .admin-blog-faq-item-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(25, 28, 36, 0.55);
+}
+
+.admin-panel .admin-blog-faq-remove-btn {
+  background: transparent;
+  color: #ea4334;
+  border: 1px solid rgba(234, 67, 52, 0.4);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.admin-panel .admin-blog-faq-remove-btn:hover {
+  background: #ea4334;
+  color: #fff;
+}
+
+.admin-panel .admin-blog-faq-question {
+  font-weight: 500;
+}
+
+.admin-panel .admin-blog-faq-answer {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* ── FAQ MARKER IN EDITOR ──────────────────────────────────── */
+
+.admin-panel .admin-blog-editor-content .admin-blog-faq-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 16px;
+  margin: 14px 0;
+  background: rgba(253, 193, 21, 0.12);
+  border: 1px dashed #fdc115;
+  border-radius: 8px;
+  color: #1b1b1b;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: default;
+}
+
+.admin-panel
+  .admin-blog-editor-content
+  .admin-blog-faq-marker.ProseMirror-selectednode {
+  outline: 2px solid #fdc115;
+}

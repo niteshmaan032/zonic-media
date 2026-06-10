@@ -5,12 +5,32 @@ import Link from "next/link";
 import Script from "next/script";
 import { FaCalendarDays, FaCircleUser } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
+import BlogPostFaqs from "@/app/components/BlogPostFaqs";
 import {
   getPublishedBlogBySlug,
   getPublishedBlogs,
 } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import "@/app/style/BlogPage.css";
+
+const FAQ_MARKER_REGEX = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/i;
+const FAQ_MARKER_REGEX_GLOBAL = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/gi;
+
+function splitOnFaqMarker(html: string) {
+  const match = html.match(FAQ_MARKER_REGEX);
+  if (!match || match.index === undefined) {
+    return {
+      before: html.replace(FAQ_MARKER_REGEX_GLOBAL, ""),
+      after: "",
+      hasMarker: false,
+    };
+  }
+  const before = html.slice(0, match.index);
+  const after = html
+    .slice(match.index + match[0].length)
+    .replace(FAQ_MARKER_REGEX_GLOBAL, "");
+  return { before, after, hasMarker: true };
+}
 
 export const revalidate = 300;
 
@@ -100,6 +120,25 @@ export default async function BlogPostPage({ params }: Props) {
     { name: blog.blogTitle, url: `/blog/${slug}` },
   ]);
 
+  const { before: contentBefore, after: contentAfter, hasMarker } =
+    splitOnFaqMarker(blog.descriptionHtml);
+  const hasFaqs = blog.faqs.length > 0;
+
+  const faqJsonLd = hasFaqs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: blog.faqs.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
       <Script
@@ -112,6 +151,13 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd ? (
+        <Script
+          id="blog-post-faq-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      ) : null}
 
       <div className="bp-wrapper">
         <div className="bp-container">
@@ -144,10 +190,29 @@ export default async function BlogPostPage({ params }: Props) {
                   />
                 </div>
 
-                <div
-                  className="bp-content"
-                  dangerouslySetInnerHTML={{ __html: blog.descriptionHtml }}
-                />
+                {hasMarker ? (
+                  <>
+                    <div
+                      className="bp-content"
+                      dangerouslySetInnerHTML={{ __html: contentBefore }}
+                    />
+                    {hasFaqs ? <BlogPostFaqs items={blog.faqs} /> : null}
+                    {contentAfter ? (
+                      <div
+                        className="bp-content"
+                        dangerouslySetInnerHTML={{ __html: contentAfter }}
+                      />
+                    ) : null}
+                  </>
+                ) : (
+                  <>
+                    <div
+                      className="bp-content"
+                      dangerouslySetInnerHTML={{ __html: contentBefore }}
+                    />
+                    {hasFaqs ? <BlogPostFaqs items={blog.faqs} /> : null}
+                  </>
+                )}
               </article>
             </div>
 

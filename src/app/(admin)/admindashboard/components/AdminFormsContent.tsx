@@ -23,7 +23,8 @@ import {
   TbTableMinus,
   TbTablePlus,
 } from "react-icons/tb";
-import type { SafeBlog } from "@/backend/lib/blogs";
+import type { FaqItem, SafeBlog } from "@/backend/lib/blogs";
+import { FaqMarkerExtension } from "./FaqMarkerExtension";
 
 type BlogFormState = {
   serviceTitle: string;
@@ -34,11 +35,17 @@ type BlogFormState = {
   description: string;
 };
 
+const MAX_FAQS = 30;
+const MAX_FAQ_QUESTION = 300;
+const MAX_FAQ_ANSWER = 2000;
+
 type BlogStatus = "draft" | "published";
 
 type EditorToolbarProps = {
   editor: Editor | null;
   onInsertImage: () => void;
+  onInsertFaqMarker: () => void;
+  hasFaqMarker: boolean;
 };
 
 const MAX_FEATURED_IMAGE_SIZE_BYTES = 500 * 1024;
@@ -86,7 +93,12 @@ function formatBlogDate(value: string) {
   }).format(date);
 }
 
-function EditorToolbar({ editor, onInsertImage }: EditorToolbarProps) {
+function EditorToolbar({
+  editor,
+  onInsertImage,
+  onInsertFaqMarker,
+  hasFaqMarker,
+}: EditorToolbarProps) {
   const [linkOpen, setLinkOpen] = useState(false);
   const [linkHref, setLinkHref] = useState("");
   const linkInputRef = useRef<HTMLInputElement | null>(null);
@@ -199,6 +211,22 @@ function EditorToolbar({ editor, onInsertImage }: EditorToolbarProps) {
           }
         >
           <TbTablePlus size={16} />
+        </button>
+
+        <span className="admin-blog-toolbar-divider" aria-hidden="true" />
+
+        <button
+          type="button"
+          className={hasFaqMarker ? "active" : ""}
+          title={
+            hasFaqMarker
+              ? "FAQ marker already placed in this post"
+              : "Insert FAQs at this position"
+          }
+          onClick={onInsertFaqMarker}
+          disabled={hasFaqMarker}
+        >
+          Insert FAQs Here
         </button>
 
         {editor.isActive("table") && (
@@ -316,6 +344,9 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     authorName: "",
     description: "",
   });
+  const [faqs, setFaqs] = useState<FaqItem[]>([]);
+  const [faqError, setFaqError] = useState("");
+  const [hasFaqMarker, setHasFaqMarker] = useState(false);
   const [featuredImageName, setFeaturedImageName] = useState("");
   const [featuredImageFile, setFeaturedImageFile] = useState<File | null>(null);
   const [featuredImagePreview, setFeaturedImagePreview] = useState("");
@@ -361,6 +392,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
         },
         autolink: true,
       }),
+      FaqMarkerExtension,
     ],
     content: "",
     immediatelyRender: false,
@@ -375,8 +407,16 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
         ...current,
         description: currentEditor.getHTML(),
       }));
+      setHasFaqMarker(currentEditor.isActive("faqMarker") || /data-faqs-marker/i.test(currentEditor.getHTML()));
     },
   });
+
+  const insertFaqMarker = () => {
+    if (!editor) return;
+    if (/data-faqs-marker/i.test(editor.getHTML())) return;
+    editor.chain().focus().insertContent({ type: "faqMarker" }).run();
+    setHasFaqMarker(true);
+  };
 
   // Set editor content when in edit mode (handles the async race between editor ready + data ready)
   useEffect(() => {
@@ -421,6 +461,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
           authorName: blog.authorName,
           description: blog.descriptionHtml,
         });
+        setFaqs(blog.faqs ?? []);
+        setHasFaqMarker(/data-faqs-marker/i.test(blog.descriptionHtml));
         setExistingFeaturedImageUrl(blog.featuredImageUrl);
         setFeaturedImagePreview(blog.featuredImageUrl);
         setFeaturedImageName("");
@@ -472,6 +514,29 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
         [field]: event.target.value,
       }));
     };
+
+  const addFaq = () => {
+    setFaqError("");
+    setFaqs((current) => {
+      if (current.length >= MAX_FAQS) {
+        setFaqError(`You can add at most ${MAX_FAQS} FAQs.`);
+        return current;
+      }
+      return [...current, { question: "", answer: "" }];
+    });
+  };
+
+  const removeFaq = (index: number) => {
+    setFaqError("");
+    setFaqs((current) => current.filter((_, i) => i !== index));
+  };
+
+  const updateFaq = (index: number, field: keyof FaqItem, value: string) => {
+    setFaqError("");
+    setFaqs((current) =>
+      current.map((item, i) => (i === index ? { ...item, [field]: value } : item)),
+    );
+  };
 
   const handleImageUpload = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -597,6 +662,9 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       authorName: "",
       description: "",
     });
+    setFaqs([]);
+    setFaqError("");
+    setHasFaqMarker(false);
     setFeaturedImageName("");
     setFeaturedImageFile(null);
     setFeaturedImageError("");
@@ -619,6 +687,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
   const submitBlog = async (status: BlogStatus) => {
     setSubmitMessage("");
     setSubmitError("");
+    setFaqError("");
 
     if (formRef.current && !formRef.current.reportValidity()) {
       return;
@@ -629,6 +698,23 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       return;
     }
 
+    const trimmedFaqs = faqs.map((item) => ({
+      question: item.question.trim(),
+      answer: item.answer.trim(),
+    }));
+    const hasIncompleteFaq = trimmedFaqs.some(
+      (item) => (item.question === "") !== (item.answer === ""),
+    );
+
+    if (hasIncompleteFaq) {
+      setFaqError("Each FAQ needs both a question and an answer.");
+      return;
+    }
+
+    const cleanFaqs = trimmedFaqs.filter(
+      (item) => item.question !== "" && item.answer !== "",
+    );
+
     const formData = new FormData();
     formData.append("serviceTitle", form.serviceTitle);
     formData.append("blogTitle", form.blogTitle);
@@ -636,6 +722,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     formData.append("publishDate", form.publishDate);
     formData.append("authorName", form.authorName);
     formData.append("descriptionHtml", editor?.getHTML() ?? form.description);
+    formData.append("faqs", JSON.stringify(cleanFaqs));
     formData.append("status", status);
 
     if (featuredImageFile) {
@@ -889,6 +976,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                     <EditorToolbar
                       editor={editor}
                       onInsertImage={() => editorImageInputRef.current?.click()}
+                      onInsertFaqMarker={insertFaqMarker}
+                      hasFaqMarker={hasFaqMarker}
                     />
                     <input
                       ref={editorImageInputRef}
@@ -909,6 +998,78 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                     name="description"
                     value={form.description}
                   />
+                </div>
+
+                <div className="col-12">
+                  <div className="admin-blog-faqs-header">
+                    <label className="form-label mb-0">FAQs (optional)</label>
+                    <button
+                      type="button"
+                      className="admin-blog-faq-add-btn"
+                      onClick={addFaq}
+                      disabled={faqs.length >= MAX_FAQS}
+                    >
+                      + Add FAQ
+                    </button>
+                  </div>
+                  <p className="admin-blog-upload-note mb-2">
+                    Each FAQ becomes an accordion item on the published post and
+                    is included in FAQPage structured data for Google. Use
+                    &quot;Insert FAQs Here&quot; in the editor toolbar to control
+                    where the accordion appears inside the article; otherwise it
+                    renders at the bottom.
+                  </p>
+
+                  {faqs.length === 0 ? (
+                    <p className="admin-blog-faqs-empty mb-0">
+                      No FAQs added yet. Click &quot;Add FAQ&quot; to create one.
+                    </p>
+                  ) : (
+                    <div className="admin-blog-faq-list">
+                      {faqs.map((item, index) => (
+                        <div className="admin-blog-faq-item" key={index}>
+                          <div className="admin-blog-faq-item-head">
+                            <span className="admin-blog-faq-item-label">
+                              FAQ {index + 1}
+                            </span>
+                            <button
+                              type="button"
+                              className="admin-blog-faq-remove-btn"
+                              onClick={() => removeFaq(index)}
+                            >
+                              Remove
+                            </button>
+                          </div>
+                          <input
+                            type="text"
+                            className="form-control admin-blog-faq-question"
+                            placeholder="Question"
+                            value={item.question}
+                            maxLength={MAX_FAQ_QUESTION}
+                            onChange={(e) =>
+                              updateFaq(index, "question", e.target.value)
+                            }
+                          />
+                          <textarea
+                            className="form-control admin-blog-faq-answer"
+                            placeholder="Answer"
+                            rows={3}
+                            value={item.answer}
+                            maxLength={MAX_FAQ_ANSWER}
+                            onChange={(e) =>
+                              updateFaq(index, "answer", e.target.value)
+                            }
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {faqError ? (
+                    <p className="admin-blog-upload-error mb-0 mt-2">
+                      {faqError}
+                    </p>
+                  ) : null}
                 </div>
 
                 <div className="col-12 d-flex flex-wrap justify-content-end gap-2">

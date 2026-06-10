@@ -48,6 +48,16 @@ function getStringField(formData: FormData, key: string) {
   return typeof value === "string" ? value : "";
 }
 
+function getFaqsField(formData: FormData): unknown {
+  const raw = getStringField(formData, "faqs");
+  if (!raw) return [];
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
 async function uploadTiptapImages(
   html: string,
   rollbackIds: string[],
@@ -145,6 +155,15 @@ export async function POST(request: NextRequest) {
     }
 
     const formData = await request.formData();
+    const faqsField = getFaqsField(formData);
+
+    if (faqsField === null) {
+      return NextResponse.json(
+        { success: false, message: "Invalid FAQs data." },
+        { status: 400 },
+      );
+    }
+
     const parsed = createBlogSchema.safeParse({
       serviceTitle: getStringField(formData, "serviceTitle"),
       blogTitle: getStringField(formData, "blogTitle"),
@@ -152,6 +171,7 @@ export async function POST(request: NextRequest) {
       publishDate: getStringField(formData, "publishDate"),
       authorName: getStringField(formData, "authorName"),
       descriptionHtml: getStringField(formData, "descriptionHtml"),
+      faqs: faqsField,
       status: getStringField(formData, "status"),
     });
 
@@ -245,6 +265,7 @@ export async function POST(request: NextRequest) {
       featuredImagePublicId: featuredUpload.public_id,
       contentImagePublicIds,
       descriptionHtml,
+      faqs: parsed.data.faqs,
       status: parsed.data.status,
       createdAt: now,
       updatedAt: now,

@@ -14,6 +14,11 @@ export const PUBLIC_BLOG_REVALIDATE_SECONDS = 300;
 
 export type BlogStatus = (typeof BLOG_STATUSES)[number];
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type BlogDocument = {
   _id: ObjectId;
   serviceTitle: string;
@@ -25,6 +30,7 @@ export type BlogDocument = {
   featuredImagePublicId: string;
   contentImagePublicIds: string[];
   descriptionHtml: string;
+  faqs?: FaqItem[];
   status: BlogStatus;
   createdAt: Date;
   updatedAt: Date;
@@ -41,6 +47,7 @@ export type SafeBlog = {
   featuredImageUrl: string;
   contentImagePublicIds: string[];
   descriptionHtml: string;
+  faqs: FaqItem[];
   status: BlogStatus;
   createdAt: string;
   updatedAt: string;
@@ -56,6 +63,7 @@ export type PublicBlog = {
   authorName: string;
   featuredImageUrl: string;
   descriptionHtml: string;
+  faqs: FaqItem[];
   excerpt: string;
   publishedAt: string | null;
 };
@@ -83,6 +91,24 @@ const slugSchema = z
     "Blog URL must use only lowercase letters, numbers, and hyphens (e.g. my-blog-post).",
   );
 
+const faqItemSchema = z.object({
+  question: z
+    .string()
+    .trim()
+    .min(1, "FAQ question is required.")
+    .max(300, "FAQ question must be at most 300 characters."),
+  answer: z
+    .string()
+    .trim()
+    .min(1, "FAQ answer is required.")
+    .max(2000, "FAQ answer must be at most 2000 characters."),
+});
+
+export const faqsSchema = z
+  .array(faqItemSchema)
+  .max(30, "You can add at most 30 FAQs.")
+  .default([]);
+
 export const createBlogSchema = z.object({
   serviceTitle: z.string().trim().min(1, "Service title is required.").max(160),
   blogTitle: z.string().trim().min(1, "Blog title is required.").max(220),
@@ -99,6 +125,7 @@ export const createBlogSchema = z.object({
         250_000,
       "Blog description is too long. Please reduce the amount of text content.",
     ),
+  faqs: faqsSchema,
   status: z.enum(BLOG_STATUSES),
 });
 
@@ -256,6 +283,7 @@ export function toSafeBlog(blog: BlogDocument): SafeBlog {
     featuredImageUrl: blog.featuredImageUrl,
     contentImagePublicIds: blog.contentImagePublicIds ?? [],
     descriptionHtml: blog.descriptionHtml,
+    faqs: blog.faqs ?? [],
     status: blog.status,
     createdAt: blog.createdAt.toISOString(),
     updatedAt: blog.updatedAt.toISOString(),
@@ -300,6 +328,7 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,
     descriptionHtml: sanitizeBlogHtml(blog.descriptionHtml),
+    faqs: blog.faqs ?? [],
     excerpt:
       plainText.length > 150 ? `${plainText.slice(0, 147).trim()}...` : plainText,
     publishedAt: blog.publishedAt?.toISOString() ?? null,
