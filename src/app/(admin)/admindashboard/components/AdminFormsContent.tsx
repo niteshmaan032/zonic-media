@@ -386,11 +386,25 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       }),
       LinkExtension.configure({
         openOnClick: false,
+        autolink: true,
         HTMLAttributes: {
           rel: "noopener noreferrer",
-          target: "_blank",
         },
-        autolink: true,
+      }).extend({
+        addAttributes() {
+          return {
+            ...this.parent?.(),
+            target: {
+              default: null,
+              parseHTML: (el) => el.getAttribute("target"),
+              renderHTML: (attrs) => {
+                const href = String(attrs.href ?? "");
+                if (/^(tel:|mailto:|sms:|#|\/)/i.test(href)) return {};
+                return { target: "_blank" };
+              },
+            },
+          };
+        },
       }),
       FaqMarkerExtension,
     ],

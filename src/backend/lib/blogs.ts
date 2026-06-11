@@ -313,7 +313,17 @@ export function sanitizeBlogHtml(html: string) {
     .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, "")
     .replace(/<\/?(?:object|embed|link|meta|base|form|input|button)\b[^>]*>/gi, "")
     .replace(/\s+on[a-z]+\s*=\s*(?:"[^"]*"|'[^']*'|[^\s>]+)/gi, "")
-    .replace(/\s(?:href|src)\s*=\s*(["'])\s*javascript:[^"']*\1/gi, "");
+    .replace(/\s(?:href|src)\s*=\s*(["'])\s*javascript:[^"']*\1/gi, "")
+    .replace(/<a\b[^>]*>/gi, (tag) => {
+      const hrefMatch = tag.match(/\shref\s*=\s*(["'])(.*?)\1/i);
+      const href = hrefMatch?.[2] ?? "";
+      if (/^(tel:|mailto:|sms:)/i.test(href)) {
+        return tag
+          .replace(/\s+target\s*=\s*(["'])[^"']*\1/gi, "")
+          .replace(/\s+rel\s*=\s*(["'])[^"']*\1/gi, "");
+      }
+      return tag;
+    });
 }
 
 function toPublicBlog(blog: BlogDocument): PublicBlog {
