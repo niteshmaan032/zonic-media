@@ -583,10 +583,12 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       setFeaturedImagePreview(existingFeaturedImageUrl);
     };
 
-    if (!["image/jpeg", "image/png"].includes(file.type)) {
+    if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
       input.value = "";
       clearFeaturedImage();
-      setFeaturedImageError("Only JPG and PNG image formats are supported.");
+      setFeaturedImageError(
+        "Only JPG, PNG and WebP image formats are supported.",
+      );
       return;
     }
 
@@ -605,7 +607,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       input.value = "";
       clearFeaturedImage();
       setFeaturedImageError(
-        `Unable to read image dimensions. Upload a ${FEATURED_IMAGE_RECOMMENDED_SIZE} JPG or PNG image.`,
+        `Unable to read image dimensions. Upload a ${FEATURED_IMAGE_RECOMMENDED_SIZE} JPG, PNG or WebP image.`,
       );
       return;
     }
@@ -993,7 +995,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                       ref={fileInputRef}
                       id="featuredImage"
                       type="file"
-                      accept="image/jpeg,image/png"
+                      accept="image/jpeg,image/png,image/webp"
                       className="admin-blog-file-input"
                       onChange={handleImageUpload}
                     />
@@ -1013,7 +1015,7 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                     ) : null}
                   </div>
                   <p className="admin-blog-upload-note mb-0">
-                    Only JPG and PNG image formats are supported. Max size: 500
+                    Only JPG, PNG and WebP image formats are supported. Max size: 500
                     KB. Recommended size: {FEATURED_IMAGE_RECOMMENDED_SIZE}
                   </p>
                   {featuredImageError ? (

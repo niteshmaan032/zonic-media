@@ -6,7 +6,11 @@ import { getMongoDb } from "./mongodb";
 export const BLOG_COLLECTION = "blogs";
 export const BLOG_STATUSES = ["draft", "published"] as const;
 export const FEATURED_IMAGE_MAX_BYTES = 500 * 1024;
-export const FEATURED_IMAGE_TYPES = ["image/jpeg", "image/png"] as const;
+export const FEATURED_IMAGE_TYPES = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+] as const;
 export const FEATURED_IMAGE_REQUIRED_WIDTH = 1200;
 export const FEATURED_IMAGE_REQUIRED_HEIGHT = 675;
 export const PUBLIC_BLOG_CACHE_TAG = "public-blogs";
@@ -245,6 +249,63 @@ function getJpegDimensions(bytes: Uint8Array): ImageDimensions | null {
   return null;
 }
 
+function getWebpDimensions(bytes: Uint8Array): ImageDimensions | null {
+  if (
+    bytes.length < 30 ||
+    bytes[0] !== 0x52 ||
+    bytes[1] !== 0x49 ||
+    bytes[2] !== 0x46 ||
+    bytes[3] !== 0x46 ||
+    bytes[8] !== 0x57 ||
+    bytes[9] !== 0x45 ||
+    bytes[10] !== 0x42 ||
+    bytes[11] !== 0x50
+  ) {
+    return null;
+  }
+
+  const chunk = String.fromCharCode(
+    bytes[12],
+    bytes[13],
+    bytes[14],
+    bytes[15],
+  );
+
+  if (chunk === "VP8X") {
+    return {
+      width: 1 + (bytes[24] | (bytes[25] << 8) | (bytes[26] << 16)),
+      height: 1 + (bytes[27] | (bytes[28] << 8) | (bytes[29] << 16)),
+    };
+  }
+
+  if (chunk === "VP8L") {
+    if (bytes[20] !== 0x2f) {
+      return null;
+    }
+    const b0 = bytes[21];
+    const b1 = bytes[22];
+    const b2 = bytes[23];
+    const b3 = bytes[24];
+    return {
+      width: 1 + (((b1 & 0x3f) << 8) | b0),
+      height:
+        1 + (((b3 & 0x0f) << 10) | (b2 << 2) | ((b1 & 0xc0) >> 6)),
+    };
+  }
+
+  if (chunk === "VP8 ") {
+    if (bytes[23] !== 0x9d || bytes[24] !== 0x01 || bytes[25] !== 0x2a) {
+      return null;
+    }
+    return {
+      width: ((bytes[27] & 0x3f) << 8) | bytes[26],
+      height: ((bytes[29] & 0x3f) << 8) | bytes[28],
+    };
+  }
+
+  return null;
+}
+
 function getImageDimensions(
   bytes: Uint8Array,
   mimeType: string,
@@ -257,6 +318,10 @@ function getImageDimensions(
     return getJpegDimensions(bytes);
   }
 
+  if (mimeType === "image/webp") {
+    return getWebpDimensions(bytes);
+  }
+
   return null;
 }
 
@@ -267,7 +332,7 @@ export function getFeaturedImageDimensionError(
   const dimensions = getImageDimensions(bytes, mimeType);
 
   if (!dimensions) {
-    return `Unable to read featured image dimensions. Upload a ${FEATURED_IMAGE_REQUIRED_WIDTH} x ${FEATURED_IMAGE_REQUIRED_HEIGHT} px JPG or PNG image.`;
+    return `Unable to read featured image dimensions. Upload a ${FEATURED_IMAGE_REQUIRED_WIDTH} x ${FEATURED_IMAGE_REQUIRED_HEIGHT} px JPG, PNG or WebP image.`;
   }
 
   if (
