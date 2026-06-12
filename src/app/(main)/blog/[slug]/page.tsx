@@ -18,7 +18,10 @@ const FAQ_MARKER_REGEX_GLOBAL = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/gi;
 
 function wrapTablesForScroll(html: string) {
   return html
-    .replace(/<table\b([^>]*)>/gi, '<div class="bp-table-wrap"><table$1>')
+    .replace(
+      /<table\b([^>]*)>/gi,
+      '<div class="bp-table-wrap table-responsive"><table$1>'
+    )
     .replace(/<\/table>/gi, "</table></div>");
 }
 
