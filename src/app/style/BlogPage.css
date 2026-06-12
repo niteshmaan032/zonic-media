@@ -331,9 +331,10 @@
 }
 
 .bp-content .bp-table-wrap table {
-  min-width: 100%;
-  width: max-content;
+  width: 100%;
+  min-width: 560px;
   max-width: none;
+  table-layout: auto;
 }
 
 .bp-content th,
@@ -352,7 +353,6 @@
   font-weight: 600;
   font-size: 14px;
   color: var(--secondary);
-  white-space: nowrap;
 }
 
 .bp-content tr:nth-child(even) td {
