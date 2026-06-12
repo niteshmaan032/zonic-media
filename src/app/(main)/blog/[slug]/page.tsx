@@ -16,19 +16,27 @@ import "@/app/style/BlogPage.css";
 const FAQ_MARKER_REGEX = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/i;
 const FAQ_MARKER_REGEX_GLOBAL = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/gi;
 
+function wrapTablesForScroll(html: string) {
+  return html
+    .replace(/<table\b([^>]*)>/gi, '<div class="bp-table-wrap"><table$1>')
+    .replace(/<\/table>/gi, "</table></div>");
+}
+
 function splitOnFaqMarker(html: string) {
   const match = html.match(FAQ_MARKER_REGEX);
   if (!match || match.index === undefined) {
     return {
-      before: html.replace(FAQ_MARKER_REGEX_GLOBAL, ""),
+      before: wrapTablesForScroll(html.replace(FAQ_MARKER_REGEX_GLOBAL, "")),
       after: "",
       hasMarker: false,
     };
   }
-  const before = html.slice(0, match.index);
-  const after = html
-    .slice(match.index + match[0].length)
-    .replace(FAQ_MARKER_REGEX_GLOBAL, "");
+  const before = wrapTablesForScroll(html.slice(0, match.index));
+  const after = wrapTablesForScroll(
+    html
+      .slice(match.index + match[0].length)
+      .replace(FAQ_MARKER_REGEX_GLOBAL, "")
+  );
   return { before, after, hasMarker: true };
 }
 
