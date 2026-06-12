@@ -7,6 +7,10 @@ import { FaCalendarDays, FaCircleUser, FaArrowRight } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+import {
+  FAQ_MARKER_REGEX_GLOBAL,
+  wrapTablesForScroll,
+} from "@/shared/blogContent";
 import "@/app/style/BlogPage.css";
 
 export const revalidate = 300;
@@ -144,7 +148,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
                 <div
                   className="bp-content"
-                  dangerouslySetInnerHTML={{ __html: blog.descriptionHtml }}
+                  dangerouslySetInnerHTML={{
+                    __html: wrapTablesForScroll(
+                      blog.descriptionHtml.replace(FAQ_MARKER_REGEX_GLOBAL, "")
+                    ),
+                  }}
                 />
               </article>
             </div>
