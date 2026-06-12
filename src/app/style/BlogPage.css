@@ -252,6 +252,7 @@
   display: flex;
   flex-direction: column;
   gap: 22px;
+  min-width: 0;
 }
 
 .bp-content p {
@@ -312,6 +313,7 @@
 }
 
 .bp-table-wrap {
+  display: block;
   width: 100%;
   max-width: 100%;
   margin: 1.5rem 0;
@@ -320,6 +322,7 @@
   border: 1px solid var(--stroke);
   border-radius: 10px;
   background-color: #fff;
+  min-width: 0;
 }
 
 .bp-content table {
@@ -345,7 +348,9 @@
   vertical-align: top;
   line-height: 1.6;
   color: #2a2a2a;
-  word-break: break-word;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 
 .bp-content th {
@@ -353,6 +358,7 @@
   font-weight: 600;
   font-size: 14px;
   color: var(--secondary);
+  white-space: nowrap;
 }
 
 .bp-content tr:nth-child(even) td {
