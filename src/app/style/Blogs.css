@@ -33,7 +33,7 @@
 
 .blog-card-image-wrap {
   position: relative;
-  height: 292px;
+  aspect-ratio: 16 / 9;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
@@ -215,10 +215,6 @@
   .blog-header-actions {
     width: 100%;
     justify-content: space-between;
-  }
-
-  .blog-card-image-wrap {
-    height: 250px;
   }
 
   .blog-card-body {
