@@ -354,7 +354,8 @@
   padding: 12px 16px;
   text-align: left;
   vertical-align: top;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.55;
   color: #2a2a2a;
   width: auto !important;
   min-width: 140px !important;
@@ -362,30 +363,38 @@
   overflow-wrap: break-word;
 }
 
+.bp-content .bp-table-wrap p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.bp-content .bp-table-wrap td strong,
+.bp-content .bp-table-wrap th strong,
 .bp-content .bp-table-wrap th {
-  background-color: var(--color9, #f7f7f7);
   font-weight: 600;
-  font-size: 14px;
   color: var(--secondary);
 }
 
-.bp-content .bp-table-wrap tr:nth-child(even) td {
+.bp-content .bp-table-wrap th,
+.bp-content .bp-table-wrap tr:first-child > td {
+  background-color: var(--color9, #f7f7f7);
+  font-size: 14px;
+}
+
+.bp-content .bp-table-wrap tr:nth-child(even):not(:first-child) td {
   background-color: rgba(0, 0, 0, 0.018);
 }
 
 @media (max-width: 767.98px) {
-  .bp-table-wrap {
-    margin-left: -1px;
-    margin-right: -1px;
-  }
-
   .bp-content .bp-table-wrap > table {
     min-width: max-content !important;
-    font-size: 14px;
   }
 
   .bp-content .bp-table-wrap th,
   .bp-content .bp-table-wrap td {
+    font-size: 13px;
     min-width: 132px !important;
     padding: 9px 12px;
   }
