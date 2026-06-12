@@ -327,8 +327,6 @@
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid var(--stroke);
-  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -397,6 +395,23 @@
     font-size: 13px;
     min-width: 132px !important;
     padding: 9px 12px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bp-table-wrap {
+    overflow-x: visible;
+  }
+
+  .bp-content .bp-table-wrap > table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: auto;
+  }
+
+  .bp-content .bp-table-wrap th,
+  .bp-content .bp-table-wrap td {
+    min-width: 0 !important;
   }
 }
 
