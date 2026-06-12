@@ -46,23 +46,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Blog Not Found" };
   }
 
+  const seoTitle = blog.metaTitle?.trim() || blog.blogTitle;
+  const seoDescription = blog.metaDescription?.trim() || blog.excerpt;
+
   return {
-    title: blog.blogTitle,
-    description: blog.excerpt,
+    title: seoTitle,
+    description: seoDescription,
     alternates: {
       canonical: `/blog/${slug}`,
     },
     openGraph: {
-      title: blog.blogTitle,
-      description: blog.excerpt,
+      title: seoTitle,
+      description: seoDescription,
       images: [{ url: blog.featuredImageUrl, alt: blog.blogTitle }],
       type: "article",
       publishedTime: blog.publishedAt ?? undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.blogTitle,
-      description: blog.excerpt,
+      title: seoTitle,
+      description: seoDescription,
       images: [blog.featuredImageUrl],
     },
   };
@@ -111,7 +114,7 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: blog.publishedAt
       ? blog.publishedAt.split("T")[0]
       : blog.publishDate,
-    description: blog.excerpt,
+    description: blog.metaDescription?.trim() || blog.excerpt,
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

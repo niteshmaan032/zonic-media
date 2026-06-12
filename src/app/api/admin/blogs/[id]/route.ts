@@ -166,6 +166,8 @@ export async function PATCH(
       serviceTitle: getStringField(formData, "serviceTitle"),
       blogTitle: getStringField(formData, "blogTitle"),
       slug: getStringField(formData, "slug"),
+      metaTitle: getStringField(formData, "metaTitle"),
+      metaDescription: getStringField(formData, "metaDescription"),
       publishDate: getStringField(formData, "publishDate"),
       authorName: getStringField(formData, "authorName"),
       descriptionHtml: getStringField(formData, "descriptionHtml"),
@@ -262,26 +264,41 @@ export async function PATCH(
         ? now
         : existing.publishedAt;
 
-    await blogs.updateOne(
-      { _id: new ObjectId(id) },
-      {
-        $set: {
-          serviceTitle: parsed.data.serviceTitle,
-          blogTitle: parsed.data.blogTitle,
-          slug: parsed.data.slug,
-          publishDate: parsed.data.publishDate,
-          authorName: parsed.data.authorName,
-          featuredImageUrl,
-          featuredImagePublicId,
-          contentImagePublicIds,
-          descriptionHtml,
-          faqs: parsed.data.faqs,
-          status: parsed.data.status,
-          updatedAt: now,
-          publishedAt,
-        },
-      },
-    );
+    const setFields: Record<string, unknown> = {
+      serviceTitle: parsed.data.serviceTitle,
+      blogTitle: parsed.data.blogTitle,
+      slug: parsed.data.slug,
+      publishDate: parsed.data.publishDate,
+      authorName: parsed.data.authorName,
+      featuredImageUrl,
+      featuredImagePublicId,
+      contentImagePublicIds,
+      descriptionHtml,
+      faqs: parsed.data.faqs,
+      status: parsed.data.status,
+      updatedAt: now,
+      publishedAt,
+    };
+    const unsetFields: Record<string, ""> = {};
+
+    if (parsed.data.metaTitle) {
+      setFields.metaTitle = parsed.data.metaTitle;
+    } else {
+      unsetFields.metaTitle = "";
+    }
+
+    if (parsed.data.metaDescription) {
+      setFields.metaDescription = parsed.data.metaDescription;
+    } else {
+      unsetFields.metaDescription = "";
+    }
+
+    const updateOps: Record<string, unknown> = { $set: setFields };
+    if (Object.keys(unsetFields).length > 0) {
+      updateOps.$unset = unsetFields;
+    }
+
+    await blogs.updateOne({ _id: new ObjectId(id) }, updateOps);
 
     // Clean up replaced/removed Cloudinary assets after successful DB update
     const toDelete = removedContentIds;

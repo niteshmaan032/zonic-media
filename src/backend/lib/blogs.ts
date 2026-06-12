@@ -24,6 +24,8 @@ export type BlogDocument = {
   serviceTitle: string;
   blogTitle: string;
   slug?: string;
+  metaTitle?: string;
+  metaDescription?: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -42,6 +44,8 @@ export type SafeBlog = {
   serviceTitle: string;
   blogTitle: string;
   slug?: string;
+  metaTitle?: string;
+  metaDescription?: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -59,6 +63,8 @@ export type PublicBlog = {
   serviceTitle: string;
   blogTitle: string;
   slug: string;
+  metaTitle?: string;
+  metaDescription?: string;
   publishDate: string;
   authorName: string;
   featuredImageUrl: string;
@@ -113,6 +119,18 @@ export const createBlogSchema = z.object({
   serviceTitle: z.string().trim().min(1, "Service title is required.").max(160),
   blogTitle: z.string().trim().min(1, "Blog title is required.").max(220),
   slug: slugSchema,
+  metaTitle: z
+    .string()
+    .trim()
+    .max(160, "Meta title must be at most 160 characters.")
+    .optional()
+    .default(""),
+  metaDescription: z
+    .string()
+    .trim()
+    .max(320, "Meta description must be at most 320 characters.")
+    .optional()
+    .default(""),
   publishDate: validDateSchema,
   authorName: z.string().trim().min(1, "Author name is required.").max(120),
   descriptionHtml: z
@@ -278,6 +296,8 @@ export function toSafeBlog(blog: BlogDocument): SafeBlog {
     serviceTitle: blog.serviceTitle,
     blogTitle: blog.blogTitle,
     slug: blog.slug,
+    metaTitle: blog.metaTitle,
+    metaDescription: blog.metaDescription,
     publishDate: blog.publishDate,
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,
@@ -334,6 +354,8 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
     serviceTitle: blog.serviceTitle,
     blogTitle: blog.blogTitle,
     slug: blog.slug ?? toSlug(blog.blogTitle),
+    metaTitle: blog.metaTitle,
+    metaDescription: blog.metaDescription,
     publishDate: blog.publishDate,
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,

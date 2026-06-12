@@ -30,10 +30,15 @@ type BlogFormState = {
   serviceTitle: string;
   blogTitle: string;
   blogSlug: string;
+  metaTitle: string;
+  metaDescription: string;
   publishDate: string;
   authorName: string;
   description: string;
 };
+
+const META_TITLE_MAX = 160;
+const META_DESCRIPTION_MAX = 320;
 
 const MAX_FAQS = 30;
 const MAX_FAQ_QUESTION = 300;
@@ -340,6 +345,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     serviceTitle: "",
     blogTitle: "",
     blogSlug: "",
+    metaTitle: "",
+    metaDescription: "",
     publishDate: "",
     authorName: "",
     description: "",
@@ -471,6 +478,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
           serviceTitle: blog.serviceTitle,
           blogTitle: blog.blogTitle,
           blogSlug: blog.slug ?? "",
+          metaTitle: blog.metaTitle ?? "",
+          metaDescription: blog.metaDescription ?? "",
           publishDate: blog.publishDate,
           authorName: blog.authorName,
           description: blog.descriptionHtml,
@@ -522,7 +531,9 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
 
   const updateField =
     (field: keyof BlogFormState) =>
-    (event: React.ChangeEvent<HTMLInputElement>) => {
+    (
+      event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    ) => {
       setForm((current) => ({
         ...current,
         [field]: event.target.value,
@@ -672,6 +683,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
       serviceTitle: "",
       blogTitle: "",
       blogSlug: "",
+      metaTitle: "",
+      metaDescription: "",
       publishDate: "",
       authorName: "",
       description: "",
@@ -733,6 +746,8 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
     formData.append("serviceTitle", form.serviceTitle);
     formData.append("blogTitle", form.blogTitle);
     formData.append("slug", form.blogSlug);
+    formData.append("metaTitle", form.metaTitle.trim());
+    formData.append("metaDescription", form.metaDescription.trim());
     formData.append("publishDate", form.publishDate);
     formData.append("authorName", form.authorName);
     formData.append("descriptionHtml", editor?.getHTML() ?? form.description);
@@ -891,6 +906,47 @@ export function AdminFormsContent({ blogId }: AdminFormsContentProps) {
                   <p className="admin-blog-upload-note mb-0">
                     URL-friendly slug — only lowercase letters, numbers, and
                     hyphens. This becomes the blog&apos;s permanent web address.
+                  </p>
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label" htmlFor="metaTitle">
+                    Meta Title
+                  </label>
+                  <input
+                    id="metaTitle"
+                    type="text"
+                    className="form-control"
+                    placeholder="Local SEO Services for Service Businesses | Zonic Media"
+                    value={form.metaTitle}
+                    onChange={updateField("metaTitle")}
+                    maxLength={META_TITLE_MAX}
+                  />
+                  <p className="admin-blog-upload-note mb-0">
+                    Shown as the SEO title in Google search results. Recommended
+                    50–60 characters. {form.metaTitle.length}/{META_TITLE_MAX}.
+                    Leave blank to use the Blog Title.
+                  </p>
+                </div>
+
+                <div className="col-12">
+                  <label className="form-label" htmlFor="metaDescription">
+                    Meta Description
+                  </label>
+                  <textarea
+                    id="metaDescription"
+                    className="form-control"
+                    rows={3}
+                    placeholder="A short summary that appears under the title in Google search results."
+                    value={form.metaDescription}
+                    onChange={updateField("metaDescription")}
+                    maxLength={META_DESCRIPTION_MAX}
+                  />
+                  <p className="admin-blog-upload-note mb-0">
+                    Shown as the SEO description in Google search results.
+                    Recommended 140–160 characters.{" "}
+                    {form.metaDescription.length}/{META_DESCRIPTION_MAX}. Leave
+                    blank to auto-generate from the blog content.
                   </p>
                 </div>
 

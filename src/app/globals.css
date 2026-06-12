@@ -510,42 +510,74 @@ body p {
   .phila-seo-sec-1,
   .car-tow-page .car-tow-hero {
     --industry-hero-mobile-bg: #111111;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #070707 0%, #171717 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #070707 0%,
+      #171717 100%
+    );
   }
 
   .hvac-hero {
     --industry-hero-mobile-bg: #101316;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #090b0d 0%, #191f24 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #090b0d 0%,
+      #191f24 100%
+    );
   }
 
   .realest-sec-1 {
     --industry-hero-mobile-bg: #101512;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #090d0b 0%, #18211c 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #090d0b 0%,
+      #18211c 100%
+    );
   }
 
   .pest-hero.phila-seo-sec-1 {
     --industry-hero-mobile-bg: #12100a;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #0b0905 0%, #1d180c 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #0b0905 0%,
+      #1d180c 100%
+    );
   }
 
   .chiro-page .car-tow-hero {
     --industry-hero-mobile-bg: #061f38;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #03111f 0%, #063968 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #03111f 0%,
+      #063968 100%
+    );
   }
 
   .cseo-page .car-tow-hero {
     --industry-hero-mobile-bg: #041f4d;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #03122e 0%, #04398f 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #03122e 0%,
+      #04398f 100%
+    );
   }
 
   .law-seo-page .car-tow-hero {
     --industry-hero-mobile-bg: #181305;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #0e0a02 0%, #2a2109 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #0e0a02 0%,
+      #2a2109 100%
+    );
   }
 
   .rseo-page .car-tow-hero {
     --industry-hero-mobile-bg: #1f3212;
-    --industry-hero-mobile-layer: linear-gradient(180deg, #111d09 0%, #2d4d16 100%);
+    --industry-hero-mobile-layer: linear-gradient(
+      180deg,
+      #111d09 0%,
+      #2d4d16 100%
+    );
   }
 
   .dent-sec-1-layer,
@@ -553,7 +585,10 @@ body p {
   .realest-sec-1-layer,
   .phila-seo-sec-1-layer,
   .car-tow-hero-layer {
-    background: var(--industry-hero-mobile-layer, linear-gradient(180deg, #070707 0%, #171717 100%)) !important;
+    background: var(
+      --industry-hero-mobile-layer,
+      linear-gradient(180deg, #070707 0%, #171717 100%)
+    ) !important;
   }
 
   .floating-phone-link {
@@ -635,4 +670,3 @@ body p {
 /*extra large desktop devices */
 @media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }
-

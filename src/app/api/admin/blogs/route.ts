@@ -168,6 +168,8 @@ export async function POST(request: NextRequest) {
       serviceTitle: getStringField(formData, "serviceTitle"),
       blogTitle: getStringField(formData, "blogTitle"),
       slug: getStringField(formData, "slug"),
+      metaTitle: getStringField(formData, "metaTitle"),
+      metaDescription: getStringField(formData, "metaDescription"),
       publishDate: getStringField(formData, "publishDate"),
       authorName: getStringField(formData, "authorName"),
       descriptionHtml: getStringField(formData, "descriptionHtml"),
@@ -259,6 +261,10 @@ export async function POST(request: NextRequest) {
       serviceTitle: parsed.data.serviceTitle,
       blogTitle: parsed.data.blogTitle,
       slug: parsed.data.slug,
+      ...(parsed.data.metaTitle ? { metaTitle: parsed.data.metaTitle } : {}),
+      ...(parsed.data.metaDescription
+        ? { metaDescription: parsed.data.metaDescription }
+        : {}),
       publishDate: parsed.data.publishDate,
       authorName: parsed.data.authorName,
       featuredImageUrl: featuredUpload.secure_url,
