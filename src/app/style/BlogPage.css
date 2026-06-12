@@ -16,6 +16,10 @@
   padding-right: 100px;
 }
 
+.bp-wrapper .row > [class*="col-"] {
+  min-width: 0;
+}
+
 /* ── BACK LINK ────────────────────────────────────────────────────────────── */
 
 .bp-back-link {
@@ -185,6 +189,8 @@
 .bp-article {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .bp-category-badge {

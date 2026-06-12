@@ -11,7 +11,11 @@
       "Bash(ls C:\\\\Users\\\\maann\\\\OneDrive\\\\Desktop\\\\zonic *)",
       "Bash(Select-Object -First 80)",
       "PowerShell(npx tsc --noEmit 2>&1 | Select-Object -First 100)",
-      "Bash(powershell *)"
+      "Bash(powershell *)",
+      "Bash(curl -sI https://zonicllc.com)",
+      "Bash(curl -s https://zonicllc.com)",
+      "Bash(curl -sI https://www.zonicllc.com)",
+      "Bash(curl -s https://www.zonicllc.com)"
     ]
   }
 }
