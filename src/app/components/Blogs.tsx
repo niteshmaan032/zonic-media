@@ -24,6 +24,37 @@ type BlogsProps = {
   blogs: PublicBlog[];
 };
 
+function BtnArrow() {
+  return (
+    <span className="buttons__icon-wrapper">
+      <svg
+        viewBox="0 0 14 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="buttons__icon-svg"
+        width="8"
+      >
+        <path
+          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+          fill="currentColor"
+        />
+      </svg>
+      <svg
+        viewBox="0 0 14 15"
+        fill="none"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+        className="buttons__icon-svg buttons__icon-svg--copy"
+      >
+        <path
+          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+  );
+}
+
 function formatBlogDate(value: string) {
   const date = new Date(`${value}T00:00:00`);
 
@@ -74,31 +105,9 @@ function Blogs({ blogs }: BlogsProps) {
         </h2>
 
         <div className="blog-header-actions">
-          <Link href={SITE_PATHS.blogs} className="blog-view-all-link">
-            View All
+          <Link href={SITE_PATHS.blogs} className="buttons nh-btn-dark">
+            View All <BtnArrow />
           </Link>
-
-          <div className="blog-swiper-nav">
-            <button
-              ref={prevRef}
-              type="button"
-              className="blog-swiper-button"
-              aria-label="Previous blog"
-              disabled={!canNavigate}
-            >
-              <FaArrowLeftLong />
-            </button>
-
-            <button
-              ref={nextRef}
-              type="button"
-              className="blog-swiper-button"
-              aria-label="Next blog"
-              disabled={!canNavigate}
-            >
-              <FaArrowRightLong />
-            </button>
-          </div>
         </div>
       </div>
 
@@ -150,7 +159,14 @@ function Blogs({ blogs }: BlogsProps) {
                     {formatBlogDate(blog.publishDate)}
                   </span>
                 </p>
-                <h3 className="blog-card-title">{blog.blogTitle}</h3>
+                <h3 className="blog-card-title">
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="blog-card-title-link"
+                  >
+                    {blog.blogTitle}
+                  </Link>
+                </h3>
                 <p className="blog-card-description">{blog.excerpt}</p>
 
                 <Link
@@ -158,12 +174,35 @@ function Blogs({ blogs }: BlogsProps) {
                   className="blog-card-link"
                 >
                   Continue Reading
+                  <FaArrowRightLong className="blog-card-link-arrow" />
                 </Link>
               </div>
             </article>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <div className="blog-swiper-nav blog-swiper-nav-below">
+        <button
+          ref={prevRef}
+          type="button"
+          className="blog-swiper-button"
+          aria-label="Previous blog"
+          disabled={!canNavigate}
+        >
+          <FaArrowLeftLong />
+        </button>
+
+        <button
+          ref={nextRef}
+          type="button"
+          className="blog-swiper-button"
+          aria-label="Next blog"
+          disabled={!canNavigate}
+        >
+          <FaArrowRightLong />
+        </button>
+      </div>
     </section>
   );
 }
