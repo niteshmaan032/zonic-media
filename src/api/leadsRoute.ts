@@ -10,6 +10,7 @@ const ALLOWED_SERVICES = new Set([
   "Google My Business (GMB)",
   "Web Development",
   "Local SEO",
+  "Home Inspector Marketing",
 ]);
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
