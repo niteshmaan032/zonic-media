@@ -1669,17 +1669,35 @@ body:has(.hia-page) .floating-phone-link {
     grid-template-columns: 1fr;
   }
   .hia-states {
-    padding: 44px 28px;
+    padding: 44px 0;
   }
   .hia-services-sec,
   .hia-results-sec,
-  .hia-pricing-sec,
+  .hia-pricing-sec {
+    padding: 48px 0;
+  }
   .hia-reviews-sec {
-    padding: 48px 28px;
+    padding: 32px 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
   }
   .hia-reviews-wrap {
     padding: 14px;
   }
+
+  /* Heading line-heights — more breathing room on tablet */
+  .hia-hero h1 { line-height: 1.22; }
+  .hia-sec-h2 { line-height: 1.35; }
+  .hia-svc-card h3 { line-height: 1.42; }
+  .hia-process-step h3 { line-height: 1.42; }
+  .hia-form-head h3 { line-height: 1.42; }
+  .hia-problem-card h4 { line-height: 1.5; }
+  .hia-industry-card h4 { line-height: 1.5; }
+  .hia-stat-desc h4 { line-height: 1.5; }
+  .hia-final-cta h2 { line-height: 1.32; }
+  .hia-faq-q { line-height: 1.45; }
   .hia-trust-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
@@ -1759,12 +1777,30 @@ body:has(.hia-page) .floating-phone-link {
   .hia-pricing-sec,
   .hia-reviews-sec,
   .hia-states {
-    padding: 40px 22px;
-    border-radius: var(--radius-lg);
+    padding: 40px 0;
+    border-radius: 0;
+  }
+  .hia-reviews-sec {
+    padding: 28px 0;
+    background: transparent;
+    border: none;
+    margin-top: 0;
   }
   .hia-reviews-wrap {
     padding: 12px;
   }
+
+  /* Heading line-heights — even more air on small mobile */
+  .hia-hero h1 { line-height: 1.25; }
+  .hia-sec-h2 { line-height: 1.38; }
+  .hia-svc-card h3 { line-height: 1.45; }
+  .hia-process-step h3 { line-height: 1.45; }
+  .hia-form-head h3 { line-height: 1.45; }
+  .hia-problem-card h4 { line-height: 1.55; }
+  .hia-industry-card h4 { line-height: 1.55; }
+  .hia-stat-desc h4 { line-height: 1.55; }
+  .hia-final-cta h2 { line-height: 1.32; }
+  .hia-faq-q { line-height: 1.5; }
   .hia-svc-card {
     padding: 26px 22px;
   }

@@ -494,12 +494,12 @@ function Page() {
                 <div className="hia-sec-label">Where We Work</div>
                 <h2 className="hia-sec-h2">
                   Home inspectors we help grow across{" "}
-                  <span className="hia-accent">10 states.</span>
+                  <span className="hia-accent">5 states.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Zonic Media helps home inspection companies grow throughout
-                  Texas, Florida, California, North Carolina, Georgia,
-                  Arizona, Tennessee, Colorado, South Carolina, and Virginia.
+                  Texas, Florida, California, North Carolina, and Georgia —
+                  with dedicated local SEO playbooks for each market.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
