@@ -49,6 +49,7 @@ const trustItems = [
 const states = [
   { name: "Texas", slug: "texas" },
   { name: "Florida", slug: "florida" },
+  { name: "California", slug: "california" },
   { name: "North Carolina", slug: "north-carolina" },
   { name: "Georgia", slug: "georgia" },
 ];

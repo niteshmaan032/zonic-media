@@ -663,6 +663,211 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     },
   },
 
+  california: {
+    name: "California",
+    slug: "california",
+    metaTitle:
+      "California Home Inspector Marketing | Bay Area, LA & Statewide SEO",
+    metaDescription:
+      "Home inspector marketing for California. Local SEO, Google Ads, GBP for inspectors in Los Angeles, San Diego, San Francisco, San Jose, Sacramento. Free audit, no contracts.",
+    ticker: [
+      "Free California Home Inspector Marketing Audit",
+      "500+ Local Businesses Ranked",
+      "Month-to-Month, No Contracts",
+      "Local SEO · Google Ads · GBP · Social · Websites",
+      "Trusted by Home Inspectors Nationally",
+      "4.9/5 Average Client Rating",
+    ],
+    hero: {
+      eyebrow: "Marketing for California Home Inspectors",
+      headlinePre: "Home Inspector Marketing for",
+      accent: "California's Toughest Markets.",
+      sub: "California home inspectors work in the most expensive housing market in the country, with the strictest regulations and the most informed buyers. The inspectors winning California are the ones who show up first on Google with profiles that say \"I know this market.\" We build that presence — from the Bay Area to San Diego, and everywhere the California real estate market is moving.",
+    },
+    problem: {
+      eyebrow: "Why California Home Inspectors Get Outranked",
+      headlinePre: "Every California inspector is online. Most of them are",
+      accent: "doing it wrong.",
+      lede: "California has been an online-first home inspection market for over a decade. Almost every licensed inspector in the state has a Google Business Profile, a website, and at least some marketing presence. What separates the inspectors getting twenty bookings a month from the inspectors getting two is execution, not effort — and that's exactly what most California inspectors get wrong.",
+      proseSegments: [
+        {
+          text: "California home inspection is a premium-priced, highly regulated market. Inspections in San Francisco and Los Angeles regularly clear $700 to $1,200, which means each new direct booking represents serious revenue. But it also means competition for online visibility is fierce. The inspectors ranking #1 in the Bay Area or West LA aren't there by accident — they have professional GBP profiles, dozens of recent reviews mentioning specific neighborhoods, and websites built for conversion.",
+        },
+        {
+          strongs: [
+            "Seismic and earthquake retrofit inspections",
+            "Title 24 energy compliance work",
+            "wildfire defensible-space assessments",
+          ],
+          text: "California's specialty inspection landscape is also unique. {0}, {1}, {2}, and pre-listing inspections for million-dollar homes are all routine in California in ways they aren't elsewhere. Each represents a long-tail keyword opportunity most inspectors haven't capitalized on.",
+        },
+        {
+          strongs: ["buyer profile"],
+          text: "The other California reality is the {0}. California buyers are sophisticated. They read inspection reports cover to cover, they ask agents specific questions, and they cross-reference reviews across multiple platforms before booking. Your online presence isn't just about visibility — it's about credibility. Generic stock-photo websites and three-line GBP descriptions don't pass that bar.",
+        },
+      ],
+      cards: [
+        {
+          h: "Every premium California metro has 100+ inspectors.",
+          p: "Ranking on page one in LA, SF, or San Diego is a multi-quarter SEO project. Specialty service pages get there faster than head terms.",
+        },
+        {
+          h: "California buyers cross-reference everything.",
+          p: "If your reviews on Google, Yelp, and Angi don't align — or if any platform shows old or thin review counts — sophisticated buyers walk away.",
+        },
+        {
+          h: "Specialty inspections drive premium revenue.",
+          p: "Seismic retrofit, Title 24, wildfire defensible space — these specialties are high-revenue and low-competition in search. Most inspectors haven't optimized for them.",
+        },
+        {
+          h: "Mobile speed determines whether you get the call.",
+          p: "California search is almost entirely mobile. A site that takes four seconds to load on a phone loses the booking before it starts. Sub-two-second mobile load is the baseline here.",
+        },
+      ],
+    },
+    processLede:
+      "No tedious onboarding deck. No fifty-question intake form. California home inspectors are running a premium business, and we respect that — we keep your time in the process to about forty-five minutes total across the first two weeks.",
+    results: {
+      headlinePre: "What changes when California home inspectors stop",
+      accent: "relying on referrals alone.",
+      lede: "Here are the patterns we see across California home inspection companies after the first ninety to one-hundred-eighty days. Your specific numbers will depend heavily on whether you're in a Tier 1 metro like the Bay Area or LA, or a secondary California market.",
+      proseSegments: [
+        {
+          text: "California client results take slightly longer to materialize because the markets are more competitive — but the revenue per booking is so much higher that the ROI math usually works out faster than other states. In the first ninety days, the specialty service pages (seismic, Title 24, wildfire) start ranking and bring in high-margin inquiries. The standard \"home inspector + city\" rankings often take six to nine months in the most saturated markets, but the specialty pages drive revenue while we wait.",
+        },
+        {
+          text: "One Sacramento-area home inspector we work with was doing about twenty-five inspections a month at $750 average ticket when we started. Within five months his GBP was ranking #1 for \"home inspector Sacramento\" in three submarkets including Folsom and Roseville. By month nine, his average monthly inspection count was fifty-two and his average ticket had risen to $895 because the digital marketing was attracting higher-end clients who weren't price-shopping.",
+        },
+        {
+          strongs: ["Yelp matters here"],
+          text: "The other California pattern: {0}. Unlike most other states where Yelp is secondary, California buyers consistently cross-reference Yelp reviews before booking. Our review automation includes Yelp-specific request flows for California clients because ignoring it costs bookings.",
+        },
+      ],
+      stats: [
+        {
+          big: "2.8×",
+          h: "More direct calls within 90 days",
+          p: "Average increase in non-referred buyer inquiries across California metros.",
+        },
+        {
+          big: "$895",
+          h: "Average ticket size after 9 months",
+          p: "Higher-value clients self-select toward inspectors with stronger digital presence.",
+        },
+        {
+          big: "#1",
+          h: "Specialty keyword rankings",
+          p: "Within 4-6 months for seismic, Title 24, or wildfire inspection searches.",
+        },
+        {
+          big: "44%",
+          h: "Lower cost per booked inspection",
+          p: "Comparing month-one CAC to month-twelve, blended across channels.",
+        },
+      ],
+    },
+    cities: {
+      eyebrow: "California Cities We Serve",
+      headlinePre: "Local marketing playbooks for every major",
+      accent: "California metro.",
+      lede: "California is the most segmented inspection market in the country — every metro has its own price point, buyer profile, and competitive landscape. Here are the California markets we focus on most, and what makes each one different.",
+      cards: [
+        {
+          h: "Los Angeles",
+          p: "Largest California metro. Sprawling submarket structure — West LA, San Fernando Valley, South Bay, Pasadena, Long Beach all behave like separate markets.",
+          link: "#",
+          linkLabel: "Local SEO in Los Angeles",
+        },
+        {
+          h: "San Diego",
+          p: "Strong military relocation volume and steady year-round demand. Less saturated than LA — first-page rankings achievable in 4-6 months.",
+          link: "#",
+          linkLabel: "Local SEO in San Diego",
+        },
+        {
+          h: "San Francisco",
+          p: "Premium Bay Area market with tech-wealth buyers. Average inspection prices clear $1,000. Specialty work (foundation, seismic) drives high-margin volume.",
+          link: "#",
+          linkLabel: "Local SEO in San Francisco",
+        },
+        {
+          h: "San Jose",
+          p: "Tech capital. South Bay buyers are sophisticated, review-driven, and willing to pay premium for inspectors with strong online credibility.",
+          link: "#",
+          linkLabel: "Local SEO in San Jose",
+        },
+        {
+          h: "Sacramento",
+          p: "Growing state capital with strong relocation volume from the Bay Area. Less competitive than coastal metros — faster SEO wins possible.",
+          link: "#",
+          linkLabel: "Local SEO in Sacramento",
+        },
+        {
+          h: "Fresno",
+          p: "Central Valley market with steady volume and lower CPCs. Google Ads especially efficient here — opportunity for first-page domination.",
+          link: "#",
+          linkLabel: "Local SEO in Fresno",
+        },
+        {
+          h: "Long Beach",
+          p: "LA-adjacent with its own distinct buyer profile. Pre-listing inspections for the older housing stock drive consistent specialty work.",
+          link: "#",
+          linkLabel: "Local SEO in Long Beach",
+        },
+        {
+          h: "Oakland",
+          p: "Bay Area East Bay. Strong Berkeley/Albany/Alameda submarket coverage opportunities for inspectors covering the broader region.",
+          link: "#",
+          linkLabel: "Local SEO in Oakland",
+        },
+      ],
+    },
+    pricingHeadlinePre:
+      "Three plans built for where your California inspection business is",
+    pricingAccent: "right now.",
+    pricingLede:
+      "Pick the plan that fits where your California inspection business is today — you can move up or down between tiers any month. Ad spend is separate from the management fee and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
+    faqEyebrow: "Common Questions From California Home Inspectors",
+    faqs: [
+      {
+        q: "How long does it take to see results from home inspector marketing in California?",
+        a: "Most California home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which California metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
+      },
+      {
+        q: "Do I need to sign a long-term contract?",
+        a: "No. Every plan is month to month. If a service is not producing results, you can pause or cancel without penalty. We stay away from twelve-month lockups because home inspectors deserve to keep working with us because the work is paying off, not because a contract says they have to.",
+      },
+      {
+        q: "Do you handle California-specific inspections like Title 24 and seismic retrofit?",
+        a: "Yes. We build dedicated optimized service pages for Title 24 energy compliance, seismic retrofit, wildfire defensible-space assessment, and any other California-specific inspection categories you offer. These specialty pages typically rank faster than the general \"home inspector\" head term because competition for them is much thinner — and they bring in higher-revenue work.",
+      },
+      {
+        q: "How do you compete in saturated California metros like the Bay Area and LA?",
+        a: "California's largest metros are some of the most competitive home inspector markets in the country. Our approach in saturated metros is the same as Texas — hyper-local. Instead of fighting for \"home inspector Los Angeles\" against fifty competitors, we build out submarket pages (Pasadena, West LA, Long Beach, Santa Monica, etc.) where competition is thinner. We also lean heavily into specialty service rankings, which are typically lower-competition and higher-margin.",
+      },
+      {
+        q: "Will digital marketing replace my real estate agent referrals in California?",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most California inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+      },
+      {
+        q: "What is included in the free California home inspector marketing audit?",
+        a: "The audit reviews your current Google Business Profile setup, your local pack ranking for primary inspection keywords in your California service area, your website speed and conversion structure, your review velocity and response patterns, citation accuracy across home services and real estate directories, and any active ad accounts. You receive a written report with prioritized recommendations within five business days. There is no obligation to hire us after.",
+      },
+      {
+        q: "How much does home inspector marketing cost in California?",
+        a: "Plans start at $750 per month for foundational local SEO and Google Business Profile work, $1,350 per month for growth-stage inspectors who need paid ads and review systems, and $2,000 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for California markets depending on the size of your service area.",
+      },
+      {
+        q: "Can you fix my Google Business Profile if it's been suspended?",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+      },
+    ],
+    final: {
+      accent: "California Home Inspectors.",
+      lede: "Five-page written report covering your GBP, your California local rankings, your website, and the gaps your competitors are exploiting. Delivered within five business days. No sales call required to receive it.",
+    },
+  },
+
   "north-carolina": {
     name: "North Carolina",
     slug: "north-carolina",
