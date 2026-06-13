@@ -7,7 +7,10 @@ import "@/app/style/gbpVerf.css";
 import GbpVerificationLeadForm from "@/app/components/GbpVerificationLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+} from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title:
@@ -24,6 +27,11 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     url: "/google-business-profile-verification-help-2026",
   },
 ]);
+
+const localBusinessJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: "/google-business-profile-verification-help-2026",
+  areaServed: { type: "Country", name: "United States" },
+});
 
 const insightCards = [
   {
@@ -417,6 +425,13 @@ function Page() {
         id="gbv-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="gbv-localbusiness-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessJsonLd),
+        }}
       />
 
       <div id="gbv-top" className="gbv-page">

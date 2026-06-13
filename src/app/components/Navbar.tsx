@@ -3,7 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBug, FaFan, FaTooth, FaUserDoctor, FaWrench } from "react-icons/fa6";
+import {
+  FaBug,
+  FaFan,
+  FaHouseChimney,
+  FaTooth,
+  FaUserDoctor,
+  FaWrench,
+} from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
@@ -163,6 +170,13 @@ const industryLinks = [
     description:
       "Local SEO, Google Maps visibility, and booking growth for house cleaning and maid service businesses.",
     link: "/services/industry/local-seo-services-for-residential-cleaning",
+  },
+  {
+    id: "home-inspector-marketing",
+    title: "Home Inspector Marketing",
+    description:
+      "Local SEO, Google Ads, GBP, and websites built to book more home inspections across the US.",
+    link: "/home-inspector-marketing-agency",
   },
 ];
 
@@ -649,6 +663,22 @@ function Navbar() {
                             <span>
                               Reach nearby homeowners searching for fast pest
                               control help and recurring service plans.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/home-inspector-marketing-agency"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <FaHouseChimney />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Home Inspector Marketing</strong>
+                            <span>
+                              Local SEO, Google Ads, GBP, and websites built
+                              to book more home inspections.
                             </span>
                           </span>
                         </Link>

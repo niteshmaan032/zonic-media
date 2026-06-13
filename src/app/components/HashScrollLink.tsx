@@ -23,7 +23,7 @@ export default function HashScrollLink({
         : targetId;
     const candidates = Array.from(
       document.querySelectorAll<HTMLElement>(
-        `[id="${escaped}"], [data-scroll-target="${escaped}"]`
+        `[id="${escaped}"], [data-scroll-target~="${escaped}"]`
       )
     );
     const target =

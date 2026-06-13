@@ -243,7 +243,7 @@ body p {
 .global-faqs-accordion .accordion-body {
   font-size: 18px;
   line-height: 27px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .global-faqs-accordion {
@@ -263,7 +263,7 @@ body p {
 .global-faqs-accordion button {
   background: transparent;
   color: var(--text);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -390,6 +390,43 @@ body p {
   color: var(--color8);
   font-weight: 500;
   text-decoration: none;
+}
+
+/*--Unified contact-section illustration (services, industries, locations pages)
+   Mirrors .local-seo-home-contact-illustration: natural aspect ratio, full-width,
+   object-contain, no border-radius. Uses double-class selectors to win over
+   per-page CSS without !important on every property. Image source: 2000x938. */
+.dent-contact-image-wrap.dent-contact-image-wrap,
+.deldg-sec-10-image-wrap.deldg-sec-10-image-wrap,
+.roof-sec-contact-image-wrap.roof-sec-contact-image-wrap,
+.realest-sec-11-image-wrap.realest-sec-11-image-wrap,
+.phila-ppc-sec-11-image-wrap.phila-ppc-sec-11-image-wrap,
+.phila-sem-sec-11-image-wrap.phila-sem-sec-11-image-wrap,
+.phila-sec-10-image-wrap.phila-sec-10-image-wrap,
+.phila-seo-sec-10-image-wrap.phila-seo-sec-10-image-wrap,
+.st2-contact-image-wrap.st2-contact-image-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 2000 / 938;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.dent-contact-image.dent-contact-image,
+.deldg-sec-10-image.deldg-sec-10-image,
+.roof-sec-contact-image.roof-sec-contact-image,
+.realest-sec-11-image.realest-sec-11-image,
+.phila-ppc-sec-11-image.phila-ppc-sec-11-image,
+.phila-sem-sec-11-image.phila-sem-sec-11-image,
+.phila-sec-10-image.phila-sec-10-image,
+.phila-seo-sec-10-image.phila-seo-sec-10-image,
+.st2-contact-image.st2-contact-image {
+  object-fit: contain;
+  border-radius: 0;
 }
 
 /*responsive*/

@@ -1,0 +1,95 @@
+/* ============================================================
+   Zonic · Home Inspector Marketing — State Child Pages
+   Shared CSS for /home-inspector-marketing-agency/[state]
+   All visual primitives reused from homeInspAgency.css (.hia-page).
+   This file only adds child-specific components:
+     · Breadcrumb above hero
+     · "Cities We Serve" grid + cards
+   ============================================================ */
+
+/* ──────────────── BREADCRUMB ──────────────── */
+.hia-page .his-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--slate);
+  margin: 0 0 18px;
+  letter-spacing: -0.005em;
+}
+.hia-page .his-breadcrumb a {
+  color: var(--slate);
+  transition: color 0.18s ease;
+}
+.hia-page .his-breadcrumb a:hover {
+  color: var(--orange);
+}
+.hia-page .his-breadcrumb-sep {
+  color: var(--border-strong);
+}
+.hia-page .his-breadcrumb-current {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* ──────────────── CITIES WE SERVE ──────────────── */
+.hia-page .his-city-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+.hia-page .his-city-card {
+  background: var(--hia-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.hia-page .his-city-card:hover {
+  border-color: var(--orange);
+  transform: translateY(-2px);
+}
+.hia-page .his-city-card h4 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--navy);
+  margin: 0 0 8px;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+.hia-page .his-city-card p {
+  font-size: 14.5px;
+  color: var(--slate);
+  line-height: 1.6;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.hia-page .his-city-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--orange);
+  letter-spacing: -0.005em;
+  align-self: flex-start;
+  transition: gap 0.18s ease, color 0.18s ease;
+}
+.hia-page .his-city-link:hover {
+  gap: 12px;
+  color: var(--orange-dark);
+}
+
+/* Responsive: stack city cards single column on mobile */
+@media (max-width: 768px) {
+  .hia-page .his-city-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hia-page .his-city-card {
+    padding: 20px 20px 18px;
+  }
+}
