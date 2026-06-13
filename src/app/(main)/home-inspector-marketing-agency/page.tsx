@@ -563,7 +563,7 @@ function Page() {
                 <div className="hia-section-cta">
                   <Link href={SITE_CONTACT.phoneHref} className="hia-cta-call">
                     <span className="hia-cta-call-dot" aria-hidden="true" />
-                    Talk to a strategist · {SITE_CONTACT.phoneDisplay}
+                    Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
                 <div className="hia-problem-grid">
@@ -677,7 +677,7 @@ function Page() {
                 <div className="hia-section-cta">
                   <Link href={SITE_CONTACT.phoneHref} className="hia-cta-call">
                     <span className="hia-cta-call-dot" aria-hidden="true" />
-                    Skip the form · Call {SITE_CONTACT.phoneDisplay}
+                    Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
                 <div className="hia-process-grid">

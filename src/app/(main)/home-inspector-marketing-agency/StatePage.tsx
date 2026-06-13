@@ -243,8 +243,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                       className="hia-cta-call-dot"
                       aria-hidden="true"
                     />
-                    Talk to a {stateName} strategist ·{" "}
-                    {SITE_CONTACT.phoneDisplay}
+                    Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
                 <div className="hia-problem-grid">
@@ -364,7 +363,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                       className="hia-cta-call-dot"
                       aria-hidden="true"
                     />
-                    Skip the form · Call {SITE_CONTACT.phoneDisplay}
+                    Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
                 <div className="hia-process-grid">

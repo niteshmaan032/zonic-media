@@ -1672,9 +1672,11 @@ body:has(.hia-page) .floating-phone-link {
     padding: 44px 0;
   }
   .hia-services-sec,
-  .hia-results-sec,
   .hia-pricing-sec {
     padding: 48px 0;
+  }
+  .hia-results-sec {
+    padding: 40px 28px;
   }
   .hia-reviews-sec {
     padding: 32px 0;
@@ -1773,12 +1775,14 @@ body:has(.hia-page) .floating-phone-link {
     grid-template-columns: 1fr 1fr;
   }
   .hia-services-sec,
-  .hia-results-sec,
   .hia-pricing-sec,
   .hia-reviews-sec,
   .hia-states {
     padding: 40px 0;
     border-radius: 0;
+  }
+  .hia-results-sec {
+    padding: 36px 22px;
   }
   .hia-reviews-sec {
     padding: 28px 0;
