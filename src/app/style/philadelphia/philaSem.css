@@ -876,6 +876,10 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  [class*="phila-sem-sec"] .service-section-cta .buttons {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 575.98px) {

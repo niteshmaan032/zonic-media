@@ -3,15 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
-import { FaCalendarDays, FaCircleUser, FaArrowRight } from "react-icons/fa6";
+import {
+  FaCalendarDays,
+  FaCircleUser,
+  FaArrowRightLong,
+} from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
-import {
-  FAQ_MARKER_REGEX_GLOBAL,
-  wrapTablesForScroll,
-} from "@/shared/blogContent";
 import "@/app/style/BlogPage.css";
+import "@/app/style/Blogs.css";
 
 export const revalidate = 300;
 
@@ -54,18 +55,37 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     }
   }
 
-  const blog = blogs[0] ?? null;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+  ]);
 
-  if (!blog) {
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: blogs.map((blog, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${SITE_URL}/blog/${blog.slug}`,
+      name: blog.blogTitle,
+    })),
+  };
+
+  if (blogs.length === 0) {
     return (
       <>
+        <Script
+          id="blog-breadcrumb-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
         <div className="bp-wrapper">
           <div className="bp-container">
             <section className="bp-empty">
               <h1>No published blogs yet.</h1>
               <p>Published admin blogs will appear here automatically.</p>
               <Link href="/" className="bp-empty-link">
-                <FaArrowRight size={12} />
+                <FaArrowRightLong size={12} />
                 Back to Home
               </Link>
             </section>
@@ -76,32 +96,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     );
   }
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: blog.blogTitle,
-    image: blog.featuredImageUrl,
-    author: {
-      "@type": "Person",
-      name: blog.authorName,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Zonic Media",
-      url: SITE_URL,
-    },
-    datePublished: blog.publishDate,
-    dateModified: blog.publishedAt
-      ? blog.publishedAt.split("T")[0]
-      : blog.publishDate,
-    description: blog.excerpt,
-  };
-
-  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-    { name: "Home", url: "/" },
-    { name: "Blog", url: "/blog" },
-  ]);
-
   return (
     <>
       <Script
@@ -110,88 +104,68 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Script
-        id="blog-latest-jsonld"
+        id="blog-itemlist-jsonld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
 
       <div className="bp-wrapper">
         <div className="bp-container">
-          <div className="row g-4 g-xl-5">
-            <div className="col-lg-8">
-              <article className="bp-article">
-                <span className="bp-category-badge">{blog.serviceTitle}</span>
-                <h1 className="bp-title">{blog.blogTitle}</h1>
+          <header className="bp-listing-header">
+            <h1 className="bp-listing-title">
+              Insights from the Zonic Media team
+            </h1>
+            <p className="bp-listing-sub">
+              Practical guides on digital marketing, local SEO, web design,
+              Google Ads, and growth strategy.
+            </p>
+          </header>
 
-                <div className="bp-meta">
-                  <span className="bp-meta-item">
-                    <FaCalendarDays size={13} />
-                    {formatBlogDate(blog.publishDate)}
-                  </span>
-                  <span className="bp-meta-dot" aria-hidden="true" />
-                  <span className="bp-meta-item">
-                    <FaCircleUser size={13} />
-                    {blog.authorName}
-                  </span>
-                </div>
-
-                <div className="bp-featured-image">
+          <div className="bp-listing-grid">
+            {blogs.map((blog) => (
+              <article key={blog.id} className="blog-card bp-listing-card">
+                <div className="blog-card-image-wrap">
                   <Image
                     src={blog.featuredImageUrl}
                     alt={blog.blogTitle}
                     fill
-                    sizes="(max-width: 991px) 100vw, 65vw"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     style={{ objectFit: "cover" }}
-                    priority
                   />
                 </div>
 
-                <div
-                  className="bp-content"
-                  dangerouslySetInnerHTML={{
-                    __html: wrapTablesForScroll(
-                      blog.descriptionHtml.replace(FAQ_MARKER_REGEX_GLOBAL, "")
-                    ),
-                  }}
-                />
-              </article>
-            </div>
-
-            <div className="col-lg-4">
-              <aside className="bp-sidebar">
-                <h2 className="bp-sidebar-heading">Recent Posts</h2>
-
-                <div className="bp-recent-list">
-                  {blogs.map((recent) => (
+                <div className="blog-card-body">
+                  <p className="blog-card-meta">
+                    <span>
+                      <FaCircleUser aria-hidden="true" />
+                      {blog.authorName}
+                    </span>
+                    <span className="blog-card-meta-dot" aria-hidden="true" />
+                    <span>
+                      <FaCalendarDays aria-hidden="true" />
+                      {formatBlogDate(blog.publishDate)}
+                    </span>
+                  </p>
+                  <h2 className="blog-card-title">
                     <Link
-                      key={recent.id}
-                      href={`/blog/${recent.slug}`}
-                      className={`bp-recent-card${
-                        recent.id === blog.id ? " bp-recent-card-active" : ""
-                      }`}
+                      href={`/blog/${blog.slug}`}
+                      className="blog-card-title-link"
                     >
-                      <div className="bp-recent-img-wrap">
-                        <Image
-                          src={recent.featuredImageUrl}
-                          alt={recent.blogTitle}
-                          fill
-                          sizes="90px"
-                          style={{ objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="bp-recent-body">
-                        <p className="bp-recent-date">
-                          <FaCircleUser size={11} />
-                          {recent.authorName}&nbsp;·&nbsp;
-                          {formatBlogDate(recent.publishDate)}
-                        </p>
-                        <h3 className="bp-recent-title">{recent.blogTitle}</h3>
-                      </div>
+                      {blog.blogTitle}
                     </Link>
-                  ))}
+                  </h2>
+                  <p className="blog-card-description">{blog.excerpt}</p>
+
+                  <Link
+                    href={`/blog/${blog.slug}`}
+                    className="blog-card-link"
+                  >
+                    Continue Reading
+                    <FaArrowRightLong className="blog-card-link-arrow" />
+                  </Link>
                 </div>
-              </aside>
-            </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>

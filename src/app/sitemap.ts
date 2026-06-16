@@ -16,10 +16,25 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Services
   { url: `${BASE_URL}/services/web-design`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/gmb-reinstatement-help`,       changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/gmb-optimization`,             changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/gmb-verification-help`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-ads`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-for-home-services`,  changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/launchpad`,                    changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/local-seo-services-for-hvac`,  changeFrequency: "monthly", priority: 0.8 },
+
+  // Landing pages
+  { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/gmb-reinstatement-service-agency`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/google-business-profile-verification-help-2026`, changeFrequency: "monthly", priority: 0.8 },
+
+  // Home inspector marketing
+  { url: `${BASE_URL}/home-inspector-marketing-agency`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/home-inspector-marketing-agency/california`,     changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/home-inspector-marketing-agency/florida`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/home-inspector-marketing-agency/georgia`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/home-inspector-marketing-agency/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/home-inspector-marketing-agency/texas`,          changeFrequency: "monthly", priority: 0.7 },
 
   // Locations
   { url: `${BASE_URL}/services/delaware/digital-marketing`,     changeFrequency: "monthly", priority: 0.8 },

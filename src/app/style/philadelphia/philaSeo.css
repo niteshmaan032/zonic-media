@@ -1072,6 +1072,10 @@
     height: clamp(280px, 55vw, 420px);
   }
 
+  [class*="phila-seo-sec"] .service-section-cta .buttons {
+    width: fit-content;
+  }
+
 }
 
 /*--mobile--*/

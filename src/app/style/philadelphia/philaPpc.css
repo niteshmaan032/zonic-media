@@ -1052,6 +1052,10 @@
   .phila-ppc-sec-11-image-wrap {
     height: clamp(280px, 55vw, 420px);
   }
+
+  [class*="phila-ppc-sec"] .service-section-cta .buttons {
+    width: fit-content;
+  }
 }
 
 @media (max-width: 575.98px) {
