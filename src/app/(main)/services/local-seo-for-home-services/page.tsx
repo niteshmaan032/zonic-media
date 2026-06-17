@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
-import LocalSeoGhlForm from "@/app/components/LocalSeoGhlForm";
+import LeadContactForm from "@/app/components/LeadContactForm";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
@@ -84,6 +84,19 @@ const SeoHomeFaqs = [
   },
 ];
 
+const LocalSeoHomeFormHead = {
+  leadFormTitle: "Get Your Free Local SEO Audit",
+  leadCallText: (
+    <>
+      One call can help you get more local rankings, calls, and booked jobs.
+      <br />{" "}
+      <a href="tel:+13027269736" className="lead-call-link">
+        Call Now:(302) 726-9736
+      </a>
+    </>
+  ),
+};
+
 export const metadata: Metadata = {
   title: "Local SEO for Home Services | More Calls & Local Rankings",
   description:
@@ -156,7 +169,11 @@ function page() {
           </div>
 
           <div className="local-seo-home-contact-form">
-            <LocalSeoGhlForm />
+            <LeadContactForm
+              leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
+              leadCallText={LocalSeoHomeFormHead.leadCallText}
+              submitButtonText="Contact Us"
+            />
           </div>
         </div>
         {/*--local-seo-home-sec-2--*/}
@@ -869,7 +886,11 @@ function page() {
             </div>
 
             <div className="local-seo-home-contact-form">
-              <LocalSeoGhlForm />
+              <LeadContactForm
+                leadFormTitle={LocalSeoHomeFormHead.leadFormTitle}
+                leadCallText={LocalSeoHomeFormHead.leadCallText}
+                submitButtonText="Contact Us"
+              />
             </div>
           </div>
         </div>
