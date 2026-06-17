@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   FaBug,
   FaFan,
-  FaHouseChimney,
   FaTooth,
   FaUserDoctor,
   FaWrench,
@@ -667,21 +666,6 @@ function Navbar() {
                           </span>
                         </Link>
 
-                        <Link
-                          href="/home-inspector-marketing-agency"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaHouseChimney />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Home Inspector Marketing</strong>
-                            <span>
-                              Local SEO, Google Ads, GBP, and websites built
-                              to book more home inspections.
-                            </span>
-                          </span>
-                        </Link>
                       </div>
                     </div>
                   </li>
