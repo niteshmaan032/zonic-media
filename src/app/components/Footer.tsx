@@ -132,15 +132,15 @@ function Footer() {
                 ></iframe>
                 <div className="mt-4">
                   <a
-                    href="https://businessfirms.co/digital-marketing-companies-in-united-states"
+                    href="https://businessfirms.co/company/zonic-media"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img
                       height="85"
                       width="85"
-                      alt="Top Digital Marketing Company"
-                      src="https://firebasestorage.googleapis.com/v0/b/hk-business-firm.appspot.com/o/badge%2Ftop-digital-marketing-company-badge-1.png?alt=media&token=980dcb12-9e43-456e-bd9b-072649465dc8"
+                      alt="company widget"
+                      src="https://businessfirms.co/images/bfirms-certified.png"
                     />
                   </a>
                 </div>
