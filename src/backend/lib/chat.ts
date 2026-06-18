@@ -7,6 +7,7 @@ import type {
   ConversationStatus,
   LeadStatus,
   SafeConversation,
+  SafeLead,
   SafeMessage,
 } from "@/shared/chatTypes";
 
@@ -30,6 +31,9 @@ export async function ensureChatIndexes(db: Db): Promise<void> {
       // ── leads ──────────────────────────────────────────────────────────────
       leads.createIndex({ email: 1, createdAt: -1 }),
       leads.createIndex({ createdAt: -1 }),
+      // admin leads list: filter by status / source, sort by recency
+      leads.createIndex({ status: 1, createdAt: -1 }),
+      leads.createIndex({ source: 1, createdAt: -1 }),
 
       // ── chat_conversations ─────────────────────────────────────────────────
       // createOrGetConversation: findOne({ visitorId, status: { $nin: ["closed"] } })
@@ -136,6 +140,178 @@ export async function updateLeadStatus(
     { _id: new ObjectId(leadId) },
     { $set: { status, updatedAt: new Date() } }
   );
+}
+
+// ─── Contact / website form leads ───────────────────────────────────────────────
+export interface SaveContactFormLeadParams {
+  fullName: string;
+  email?: string;
+  contact?: string;
+  businessName?: string;
+  message?: string;
+  services?: string[];
+  smsConsent?: boolean;
+  formType?: string;
+  sourcePage?: string;
+  pageUrl?: string;
+}
+
+// Maps a website contact/lead form submission onto the shared lead document so
+// it shows up in the admin dashboard alongside chatbot leads.
+export async function saveContactFormLead(
+  params: SaveContactFormLeadParams
+): Promise<string> {
+  const collection = await getLeadsCollection();
+  const now = new Date();
+  const services = params.services?.filter(Boolean) ?? [];
+  const doc: Omit<ChatLeadDocument, "_id"> = {
+    name: params.fullName,
+    service: services.length > 0 ? services.join(", ") : "General Enquiry",
+    services,
+    email: params.email,
+    phone: params.contact,
+    businessName: params.businessName,
+    message: params.message,
+    formType: params.formType,
+    smsConsent: params.smsConsent,
+    sourcePage: params.sourcePage,
+    pageUrl: params.pageUrl,
+    source: "Website Form",
+    status: "new" as LeadStatus,
+    createdAt: now,
+    updatedAt: now,
+  };
+  const result = await collection.insertOne(doc as ChatLeadDocument);
+  return result.insertedId.toHexString();
+}
+
+// ─── Admin lead listing ─────────────────────────────────────────────────────────
+export function toSafeLead(doc: ChatLeadDocument): SafeLead {
+  return {
+    id: doc._id.toHexString(),
+    name: doc.name,
+    service: doc.service,
+    subService: doc.subService,
+    projectDetails: doc.projectDetails,
+    email: doc.email,
+    phone: doc.phone,
+    businessName: doc.businessName,
+    services: doc.services,
+    message: doc.message,
+    formType: doc.formType,
+    smsConsent: doc.smsConsent,
+    sourcePage: doc.sourcePage,
+    pageUrl: doc.pageUrl,
+    source: doc.source ?? "Website Form",
+    status: doc.status,
+    createdAt: doc.createdAt.toISOString(),
+    updatedAt: doc.updatedAt.toISOString(),
+  };
+}
+
+export interface AdminLeadsFilter {
+  search?: string;
+  source?: string;
+  status?: LeadStatus | "all";
+  from?: Date;
+  to?: Date;
+  page?: number;
+  limit?: number;
+}
+
+export interface AdminLeadsResult {
+  leads: SafeLead[];
+  total: number;
+  page: number;
+  totalPages: number;
+  stats: {
+    total: number;
+    today: number;
+    last7Days: number;
+    newCount: number;
+  };
+}
+
+export async function getAdminLeads(
+  filter: AdminLeadsFilter
+): Promise<AdminLeadsResult> {
+  const collection = await getLeadsCollection();
+
+  const page = filter.page && filter.page > 0 ? filter.page : 1;
+  const limit =
+    filter.limit && filter.limit > 0 ? Math.min(filter.limit, 100) : 15;
+
+  const query: Record<string, unknown> = {};
+
+  if (filter.status && filter.status !== "all") {
+    query.status = filter.status;
+  }
+
+  if (filter.source && filter.source !== "all") {
+    query.source = filter.source;
+  }
+
+  if (filter.from || filter.to) {
+    const createdAt: Record<string, Date> = {};
+    if (filter.from) createdAt.$gte = filter.from;
+    if (filter.to) createdAt.$lte = filter.to;
+    query.createdAt = createdAt;
+  }
+
+  if (filter.search) {
+    const regex = { $regex: filter.search, $options: "i" };
+    query.$or = [
+      { name: regex },
+      { email: regex },
+      { phone: regex },
+      { service: regex },
+      { businessName: regex },
+      { message: regex },
+    ];
+  }
+
+  const now = new Date();
+  const startOfToday = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+  );
+  const sevenDaysAgo = new Date(startOfToday);
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6);
+
+  const [total, docs, statTotal, statToday, statWeek, statNew] =
+    await Promise.all([
+      collection.countDocuments(query),
+      collection
+        .find(query)
+        .sort({ createdAt: -1 })
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .toArray(),
+      collection.countDocuments({}),
+      collection.countDocuments({ createdAt: { $gte: startOfToday } }),
+      collection.countDocuments({ createdAt: { $gte: sevenDaysAgo } }),
+      collection.countDocuments({ status: "new" }),
+    ]);
+
+  return {
+    leads: docs.map(toSafeLead),
+    total,
+    page,
+    totalPages: Math.ceil(total / limit),
+    stats: {
+      total: statTotal,
+      today: statToday,
+      last7Days: statWeek,
+      newCount: statNew,
+    },
+  };
+}
+
+export async function getLeadSources(): Promise<string[]> {
+  const collection = await getLeadsCollection();
+  const sources = await collection.distinct("source");
+  return sources.filter((s): s is string => typeof s === "string" && s.length > 0);
 }
 
 // ─── Conversation helpers ─────────────────────────────────────────────────────

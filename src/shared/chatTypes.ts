@@ -3,6 +3,7 @@ import { ObjectId } from "mongodb";
 // ─── Lead ─────────────────────────────────────────────────────────────────────
 export type LeadStatus =
   | "new"
+  | "contacted"
   | "live_chat_started"
   | "callback_requested"
   | "closed";
@@ -15,6 +16,11 @@ export interface ChatLeadDocument {
   projectDetails?: string;
   email?: string;
   phone?: string;
+  businessName?: string;
+  services?: string[];
+  message?: string;
+  formType?: string;
+  smsConsent?: boolean;
   sourcePage?: string;
   pageUrl?: string;
   source?: string;
@@ -22,6 +28,28 @@ export interface ChatLeadDocument {
   status: LeadStatus;
   createdAt: Date;
   updatedAt: Date;
+}
+
+// Serialized lead for the admin dashboard (ObjectId/Date -> string).
+export interface SafeLead {
+  id: string;
+  name: string;
+  service: string;
+  subService?: string;
+  projectDetails?: string;
+  email?: string;
+  phone?: string;
+  businessName?: string;
+  services?: string[];
+  message?: string;
+  formType?: string;
+  smsConsent?: boolean;
+  sourcePage?: string;
+  pageUrl?: string;
+  source: string;
+  status: LeadStatus;
+  createdAt: string;
+  updatedAt: string;
 }
 
 // ─── Conversation ─────────────────────────────────────────────────────────────

@@ -1,4 +1,5 @@
 import { createLead, type LeadPayload } from "@/backend/controllers/leadsController";
+import { saveContactFormLead } from "@/backend/lib/chat";
 import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
@@ -116,6 +117,26 @@ export const leadsRoute = async (
     services,
     smsConsent,
   };
+
+  // Persist the lead first so it appears in the admin dashboard even if the
+  // notification email later fails. Storage is best-effort and never blocks
+  // the visitor's submission.
+  try {
+    await saveContactFormLead({
+      fullName,
+      email,
+      contact,
+      businessName,
+      message,
+      services,
+      smsConsent,
+      formType,
+      sourcePage,
+      pageUrl,
+    });
+  } catch (error) {
+    console.error("Failed to persist lead to database.", error);
+  }
 
   try {
     const result = await createLead(payload);

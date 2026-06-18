@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
-import { FaBars, FaHashtag, FaRegFileAlt, FaTable } from "react-icons/fa";
+import { FaBars, FaHashtag, FaRegFileAlt, FaTable, FaUsers } from "react-icons/fa";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { LuLayoutDashboard, LuMessageSquareText } from "react-icons/lu";
 import { FiLogOut } from "react-icons/fi";
@@ -16,6 +16,7 @@ type AdminShellProps = {
 
 const primaryLinks = [
   { href: "/admindashboard", label: "Dashboard", icon: LuLayoutDashboard },
+  { href: "/admindashboard/leads", label: "Leads", icon: FaUsers },
   { href: "/admindashboard/table", label: "Tables", icon: FaTable },
   { href: "/admindashboard/live-chat", label: "Live Chat", icon: IoChatbubblesOutline },
 ] as const;
