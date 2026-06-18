@@ -121,7 +121,7 @@ function Footer() {
                 </ul>
                 <div></div>
               </div>
-              <div>
+              <div className="d-flex align-items-center gap-3 flex-wrap">
                 <iframe
                   className="footer-clutch-badge mt-4"
                   width="85"
@@ -130,6 +130,20 @@ function Footer() {
                   src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
                   title="Top Clutch Digital Marketing Company Delaware 2026"
                 ></iframe>
+                <div className="mt-4">
+                  <a
+                    href="https://businessfirms.co/digital-marketing-companies-in-united-states"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      height="85"
+                      width="85"
+                      alt="Top Digital Marketing Company"
+                      src="https://firebasestorage.googleapis.com/v0/b/hk-business-firm.appspot.com/o/badge%2Ftop-digital-marketing-company-badge-1.png?alt=media&token=980dcb12-9e43-456e-bd9b-072649465dc8"
+                    />
+                  </a>
+                </div>
               </div>
             </Col>
           </Row>
