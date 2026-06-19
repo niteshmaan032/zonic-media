@@ -4,8 +4,6 @@ import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot, FaRegClock } from "react-icons/fa6";
 import { BsArrowUpRightCircle } from "react-icons/bs";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import { Row, Col } from "react-bootstrap";
 import { MdCopyright } from "react-icons/md";
 import {
@@ -180,26 +178,6 @@ function Footer() {
           <p className="text-white d-flex align-item-center gap-1 justify-content-lg-end">
             <MdCopyright /> 2026 . All Rights Reserved
           </p>
-        </div>
-
-        {/* Mobile Logo Marquee */}
-        <div className="footer-logo d-lg-none">
-          <Marquee>
-            <div className="footer-logo-img-cont">
-              <Image
-                src="/images/footer-logo.svg"
-                fill
-                alt="zonic media logo"
-              />
-            </div>
-          </Marquee>
-        </div>
-
-        {/* Desktop Logo Static */}
-        <div className="footer-logo d-none d-lg-block">
-          <div className="footer-logo-img-cont">
-            <Image src="/images/footer-logo.svg" fill alt="zonic media logo" />
-          </div>
         </div>
       </div>
     </>

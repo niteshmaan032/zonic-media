@@ -189,7 +189,12 @@
   gap: 12px;
 }
 
+.blog-swiper-nav-inline {
+  display: flex;
+}
+
 .blog-swiper-nav-below {
+  display: none;
   justify-content: flex-start;
   margin-top: 28px;
 }
@@ -234,6 +239,14 @@
 @media (max-width: 991.98px) {
   .blog-section-heading {
     font-size: 38px;
+  }
+
+  .blog-swiper-nav-inline {
+    display: none;
+  }
+
+  .blog-swiper-nav-below {
+    display: flex;
   }
 
   .blog-card-title {

@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 
 type GoHighLevelFormProps = {
   /**
@@ -25,7 +26,7 @@ export default function GoHighLevelForm({
   const elementId = `inline-${formId}-${instanceId}`;
 
   return (
-    <>
+    <LenisIframeGuard>
       <iframe
         src={`https://forms.zonicllc.com/widget/form/${formId}`}
         style={{
@@ -53,6 +54,6 @@ export default function GoHighLevelForm({
         strategy="afterInteractive"
         id="ghl-form-embed"
       />
-    </>
+    </LenisIframeGuard>
   );
 }

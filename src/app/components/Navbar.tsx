@@ -183,6 +183,7 @@ function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const forceWhiteNavbar =
+    pathname === "/" ||
     pathname === "/services/philadelphia/digital-marketing" ||
     pathname === "/services/philadelphia/sem" ||
     pathname === "/services/philadelphia/ppc" ||

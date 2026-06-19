@@ -3,7 +3,7 @@
 import "@/app/style/Blogs.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import {
   FaArrowLeftLong,
   FaArrowRightLong,
@@ -11,11 +11,9 @@ import {
   FaCircleUser,
 } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
-import "swiper/css/navigation";
 
 import { SITE_PATHS } from "@/shared/siteConfig";
 import type { PublicBlog } from "@/backend/lib/blogs";
@@ -70,8 +68,6 @@ function formatBlogDate(value: string) {
 }
 
 function Blogs({ blogs }: BlogsProps) {
-  const prevRef = useRef<HTMLButtonElement | null>(null);
-  const nextRef = useRef<HTMLButtonElement | null>(null);
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const canNavigate = blogs.length > 1;
 
@@ -79,23 +75,29 @@ function Blogs({ blogs }: BlogsProps) {
     return null;
   }
 
-  useEffect(() => {
-    if (!swiper || !prevRef.current || !nextRef.current) {
-      return;
-    }
+  const renderNav = (variant: string) => (
+    <div className={`blog-swiper-nav ${variant}`}>
+      <button
+        type="button"
+        className="blog-swiper-button"
+        aria-label="Previous blog"
+        disabled={!canNavigate}
+        onClick={() => swiper?.slidePrev()}
+      >
+        <FaArrowLeftLong />
+      </button>
 
-    if (
-      swiper.params.navigation &&
-      typeof swiper.params.navigation !== "boolean"
-    ) {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-    }
-
-    swiper.navigation.destroy();
-    swiper.navigation.init();
-    swiper.navigation.update();
-  }, [swiper]);
+      <button
+        type="button"
+        className="blog-swiper-button"
+        aria-label="Next blog"
+        disabled={!canNavigate}
+        onClick={() => swiper?.slideNext()}
+      >
+        <FaArrowRightLong />
+      </button>
+    </div>
+  );
 
   return (
     <section className="blog-section">
@@ -105,6 +107,7 @@ function Blogs({ blogs }: BlogsProps) {
         </h2>
 
         <div className="blog-header-actions">
+          {renderNav("blog-swiper-nav-inline")}
           <Link href={SITE_PATHS.blogs} className="buttons nh-btn-dark">
             View All <BtnArrow />
           </Link>
@@ -112,7 +115,6 @@ function Blogs({ blogs }: BlogsProps) {
       </div>
 
       <Swiper
-        navigation
         slidesPerView={1}
         spaceBetween={20}
         centeredSlides={false}
@@ -132,7 +134,6 @@ function Blogs({ blogs }: BlogsProps) {
           },
         }}
         onSwiper={setSwiper}
-        modules={[Navigation]}
         className="blog-swiper"
       >
         {blogs.map((blog) => (
@@ -182,27 +183,7 @@ function Blogs({ blogs }: BlogsProps) {
         ))}
       </Swiper>
 
-      <div className="blog-swiper-nav blog-swiper-nav-below">
-        <button
-          ref={prevRef}
-          type="button"
-          className="blog-swiper-button"
-          aria-label="Previous blog"
-          disabled={!canNavigate}
-        >
-          <FaArrowLeftLong />
-        </button>
-
-        <button
-          ref={nextRef}
-          type="button"
-          className="blog-swiper-button"
-          aria-label="Next blog"
-          disabled={!canNavigate}
-        >
-          <FaArrowRightLong />
-        </button>
-      </div>
+      {renderNav("blog-swiper-nav-below")}
     </section>
   );
 }
