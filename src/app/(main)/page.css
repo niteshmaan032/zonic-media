@@ -1592,6 +1592,23 @@
     flex-direction: column;
     gap: 10px;
   }
+  /* 1) Keep the "Can't find your niche?" CTA inside the card */
+  .home-revamp .niche-cta-btn {
+    white-space: normal;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.3;
+  }
+  /* 2) "How we work" cards stack one per row on mobile */
+  .home-revamp .proc-grid .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+  /* 3) Hide the overlapping Launchpad step chips on mobile */
+  .home-revamp .video-steps {
+    display: none;
+  }
 }
 
 /* ---------- RESPONSIVE (header-aligned side padding) ------- */
