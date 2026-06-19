@@ -57,7 +57,7 @@
 
 .contact-us-form-wrapper {
   background-color: var(--white);
-  padding: 50px 40px;
+  padding: 0;
 }
 
 .contact-us-form-wrapper form .form-control {
@@ -140,7 +140,7 @@
   }
 
   .contact-us-form-wrapper {
-    padding: 50px 20px;
+    padding: 0;
   }
 
   .contact-us-sec2-heading {
@@ -208,7 +208,7 @@
   }
 
   .contact-us-form-wrapper {
-    padding: 30px;
+    padding: 0;
   }
 
   .contact-us-section-2 {
@@ -232,7 +232,7 @@
   }
 
   .contact-us-form-wrapper {
-    padding: 30px;
+    padding: 0;
   }
 
   .contact-us-section-2 {

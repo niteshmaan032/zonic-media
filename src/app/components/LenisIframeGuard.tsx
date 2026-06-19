@@ -42,6 +42,13 @@ export default function LenisIframeGuard({
   return (
     <div ref={wrapperRef} className={combinedClassName}>
       {children}
+      {/*
+        Transparent overlay. While scrolling we flip THIS element's
+        pointer-events (not the iframe's) so the cross-origin iframe never
+        repaints — that repaint is what caused the flicker. When idle the
+        overlay is pointer-transparent and the form stays fully interactive.
+      */}
+      <span className="lenis-iframe-guard__overlay" aria-hidden="true" />
     </div>
   );
 }

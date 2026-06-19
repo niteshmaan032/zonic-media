@@ -11,6 +11,7 @@ import { FiPhone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { GrLocation } from "react-icons/gr";
 import Footer from "@/app/components/Footer";
+import GoHighLevelForm from "@/app/components/GoHighLevelForm";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import { SITE_CONTACT } from "@/shared/siteConfig";
@@ -178,7 +179,14 @@ function ContactUsPageClient() {
           {/* Right Side: Form */}
           <Col xs={12} lg={6} className="p-0">
             <div className="contact-us-form-wrapper">
-              <form
+              <GoHighLevelForm
+                formId="nRQ9EukoKHcVBgxnY6no"
+                formName="Local SEO"
+                instanceId="contact-us"
+                height={622}
+              />
+              {/* Old contact form — commented out in favor of the GoHighLevel form above */}
+              {/* <form
                 className="row g-4"
                 onSubmit={handleSubmit(onSubmit)}
                 noValidate
@@ -361,7 +369,7 @@ function ContactUsPageClient() {
                     <p className="text-danger mb-0">{submitError}</p>
                   </Col>
                 )}
-              </form>
+              </form> */}
             </div>
           </Col>
         </Row>

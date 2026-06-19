@@ -221,12 +221,29 @@ body p {
   pointer-events: none;
 }
 
+.lenis-iframe-guard {
+  position: relative;
+}
+
+/* Iframe stays interactive at all times — its pointer-events never change,
+   so the cross-origin form never repaints (this kills the scroll flicker). */
 .lenis-iframe-guard iframe {
   pointer-events: auto;
 }
 
-.lenis-iframe-guard.is-scrolling iframe {
+.lenis-iframe-guard__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* Idle: let pointer/clicks fall through to the form. */
   pointer-events: none;
+}
+
+/* While scrolling: the overlay swallows the wheel so Lenis scrolls the page,
+   instead of the wheel being trapped by the iframe. Toggling pointer-events on
+   this plain transparent div does not repaint the iframe — no flicker. */
+.lenis-iframe-guard.is-scrolling .lenis-iframe-guard__overlay {
+  pointer-events: auto;
 }
 
 /*global-faqs-seciton*/

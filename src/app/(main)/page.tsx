@@ -5,6 +5,7 @@ import RankGrid from "@/app/components/RankGrid";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Blogs from "@/app/components/Blogs";
 import GoHighLevelForm from "@/app/components/GoHighLevelForm";
+import LaunchpadVideo from "@/app/components/LaunchpadVideo";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { Metadata } from "next";
@@ -1074,7 +1075,7 @@ export default async function Home() {
           <div className="wrap">
             <div className="gbp-grid row g-5">
               <div className="col-lg-6">
-                <span className="eyebrow light">Google profile recovery</span>
+                <span className="eyebrow light">Google Business profile recovery</span>
                 <h2>Profile suspended? We&apos;ve reinstated 300+ of them.</h2>
                 <p className="lead">
                   A suspended Google Business Profile can shut off your best free
@@ -1231,36 +1232,7 @@ export default async function Home() {
           <div className="wrap">
             <div className="video-grid row g-4">
               <div className="video-card col-lg-6">
-                <a
-                  className="video-thumb"
-                  href="https://www.youtube.com/@ZonicMediaDelware"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Watch the Zonic Launchpad video on YouTube"
-                >
-                  <div className="video-thumb-inner">
-                    <span className="video-tag">Zonic Launchpad</span>
-                    <div className="video-steps">
-                      <span>Logo</span>
-                      <span>Website</span>
-                      <span>Google setup</span>
-                      <span>Social</span>
-                      <span>Leads</span>
-                    </div>
-                    <div className="video-play">
-                      <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                    <div className="video-cap">
-                      How we launch a business online — start to finish
-                    </div>
-                  </div>
-                </a>
-                <p className="video-note">
-                  Replace this placeholder with your animated explainer video
-                  (YouTube/Vimeo embed or MP4).
-                </p>
+                <LaunchpadVideo />
               </div>
               <div className="video-promo col-lg-6">
                 <span className="eyebrow light">Done-for-you launch</span>
