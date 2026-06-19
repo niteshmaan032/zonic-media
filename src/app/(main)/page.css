@@ -1462,7 +1462,7 @@
 }
 .home-revamp .contact-details .val {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   color: var(--navy);
   transition: color 0.18s;
@@ -1484,7 +1484,7 @@
 }
 .home-revamp .contact-form-head h3 {
   font-size: clamp(20px, 2.2vw, 26px);
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 6px;
 }
 .home-revamp .contact-form-head p {
