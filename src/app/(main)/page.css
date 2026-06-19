@@ -73,7 +73,7 @@
 
 .home-revamp .eyebrow {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -102,7 +102,7 @@
   align-items: center;
   gap: 9px;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   padding: 14px 26px;
   border-radius: 999px;
@@ -187,7 +187,7 @@
   background: rgba(249, 115, 22, 0.12);
   border: 1px solid rgba(249, 115, 22, 0.32);
   color: #fdba74;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 13.5px;
   padding: 7px 15px;
   border-radius: 999px;
@@ -214,7 +214,7 @@
 }
 .home-revamp .hero h1 {
   font-size: clamp(38px, 5vw, 62px);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 22px;
 }
 .home-revamp .hero h1 .accent {
@@ -249,7 +249,7 @@
 .home-revamp .hero-trust b {
   color: #fff;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* hero card / map pack mock */
@@ -301,7 +301,7 @@
 }
 .home-revamp .float-badge .val {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 17px;
   color: var(--navy);
   line-height: 1.1;
@@ -367,7 +367,7 @@
 }
 .home-revamp .rv-tab .k {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -380,7 +380,7 @@
 }
 .home-revamp .rv-tab .v {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 17px;
   color: var(--navy);
   margin-top: 2px;
@@ -435,7 +435,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 14px;
   color: #fff;
   position: relative;
@@ -506,13 +506,13 @@
 }
 .home-revamp .niche-head h3 {
   font-size: clamp(19px, 2vw, 24px);
-  font-weight: 500;
+  font-weight: 800;
   color: #fff;
   margin-top: 10px;
 }
 .home-revamp .niche-head-link {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   color: #fdba74;
   display: inline-flex;
@@ -536,7 +536,7 @@
 }
 .home-revamp .niche-chip {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14.5px;
   color: #e2e8f0;
   background: rgba(255, 255, 255, 0.05);
@@ -584,7 +584,7 @@
   font-family: "Manrope";
   font-size: clamp(18px, 1.8vw, 22px);
   color: #fff;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: -0.01em;
 }
 .home-revamp .niche-cta-btn {
@@ -605,7 +605,7 @@
 }
 .home-revamp .stat .num {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: clamp(30px, 3.4vw, 42px);
   color: var(--navy);
   line-height: 1;
@@ -632,7 +632,7 @@
 }
 .home-revamp .sec-head h2 {
   font-size: clamp(28px, 3.6vw, 44px);
-  font-weight: 600;
+  font-weight: 800;
   margin: 14px 0 12px;
 }
 .home-revamp .sec-head p {
@@ -690,14 +690,14 @@
 }
 .home-revamp .svc-card h3 {
   font-size: clamp(20px, 2vw, 24px);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 14px;
   letter-spacing: -0.025em;
   line-height: 1.12;
 }
 .home-revamp .svc-card .svc-sub {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -712,7 +712,7 @@
 }
 .home-revamp .svc-link {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14.5px;
   color: var(--navy);
   display: inline-flex;
@@ -787,7 +787,7 @@
 }
 .home-revamp .indseo-card h3 {
   font-size: 18.5px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 9px;
   letter-spacing: -0.02em;
 }
@@ -800,7 +800,7 @@
 }
 .home-revamp .indseo-go {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 13.5px;
   color: var(--navy);
   display: inline-flex;
@@ -847,7 +847,7 @@
 }
 .home-revamp .gbp h2 {
   font-size: clamp(28px, 3.6vw, 42px);
-  font-weight: 600;
+  font-weight: 800;
   margin: 16px 0 18px;
   color: #fff;
 }
@@ -884,7 +884,7 @@
 }
 .home-revamp .gbp-feat h4 {
   font-size: 15.5px;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   margin-bottom: 3px;
 }
@@ -920,7 +920,7 @@
 }
 .home-revamp .gbp-panel-head .t {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 19px;
   color: #fff;
 }
@@ -944,7 +944,7 @@
 .home-revamp .gbp-steps li::before {
   content: counter(step, decimal-leading-zero);
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 13px;
   color: var(--orange);
   background: rgba(249, 115, 22, 0.12);
@@ -958,7 +958,7 @@
 }
 .home-revamp .gbp-steps .st-t {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   color: #fff;
   margin-bottom: 5px;
@@ -1020,7 +1020,7 @@
   top: 16px;
   left: 16px;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1098,7 +1098,7 @@
 }
 .home-revamp .video-promo h2 {
   font-size: clamp(26px, 3vw, 36px);
-  font-weight: 600;
+  font-weight: 800;
   color: #fff;
   margin: 14px 0 14px;
 }
@@ -1120,7 +1120,7 @@
   align-items: center;
   gap: 9px;
   font-size: 14.5px;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 }
 .home-revamp .video-promo-list li svg {
@@ -1146,7 +1146,7 @@
 }
 .home-revamp .proc-num {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 800;
   font-size: 15px;
   color: var(--orange);
   background: rgba(249, 115, 22, 0.1);
@@ -1160,7 +1160,7 @@
 }
 .home-revamp .proc-card h4 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 9px;
 }
 .home-revamp .proc-card p {
@@ -1205,7 +1205,7 @@
 }
 .home-revamp .cmp-tag {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1225,7 +1225,7 @@
 }
 .home-revamp .cmp-card h3 {
   font-size: 21px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
   position: relative;
 }
@@ -1308,7 +1308,7 @@
   background: var(--navy);
   color: #fff;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1316,7 +1316,7 @@
 }
 .home-revamp .testi-who .nm {
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
 }
 .home-revamp .testi-who .rl {
@@ -1353,7 +1353,7 @@
   align-items: center;
   gap: 18px;
   font-family: "Manrope";
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16.5px;
   color: var(--navy);
 }
@@ -1522,7 +1522,7 @@
 }
 .home-revamp .cta-inner h2 {
   font-size: clamp(30px, 4vw, 48px);
-  font-weight: 600;
+  font-weight: 800;
   color: #fff;
   margin: 18px 0 22px;
 }
