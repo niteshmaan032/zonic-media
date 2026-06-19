@@ -156,7 +156,7 @@ const faqJsonLd = {
       name: "Can you really get a suspended Google Business Profile reinstated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Profile reinstatement is one of our core specialties. We have helped reinstate more than 300 Google Business Profiles by diagnosing the suspension cause, fixing the underlying policy issues, and managing the appeal process. No agency can promise Google's decision, but we know the process and the common failure points.",
+        text: "Yes. Profile reinstatement is one of our core specialties. We have helped reinstate more than 500 Google Business Profiles by diagnosing the suspension cause, fixing the underlying policy issues, and managing the appeal process. No agency can promise Google's decision, but we know the process and the common failure points.",
       },
     },
     {
@@ -686,7 +686,7 @@ export default async function Home() {
                 <p>
                   Your profile is your best free lead source. We optimize it to
                   rank, generate reviews, and — if it&apos;s suspended —
-                  reinstate it. We&apos;ve recovered 300+ profiles for
+                  reinstate it. We&apos;ve recovered 500+ profiles for
                   businesses like yours.
                 </p>
                 <a
@@ -1076,7 +1076,7 @@ export default async function Home() {
             <div className="gbp-grid row g-5">
               <div className="col-lg-6">
                 <span className="eyebrow light">Google Business profile recovery</span>
-                <h2>Profile suspended? We&apos;ve reinstated 300+ of them.</h2>
+                <h2>Profile suspended? We&apos;ve reinstated 500+ of them.</h2>
                 <p className="lead">
                   A suspended Google Business Profile can shut off your best free
                   lead source overnight — and Google rarely tells you why.
@@ -1525,7 +1525,7 @@ export default async function Home() {
                 </summary>
                 <div className="faq-a">
                   Reinstatement is one of our core specialties — we&apos;ve
-                  helped recover 300+ profiles by diagnosing the suspension
+                  helped recover 500+ profiles by diagnosing the suspension
                   cause, fixing the underlying policy issues, and managing the
                   appeal. No agency can promise Google&apos;s decision, but we
                   know the process and the common failure points cold.
