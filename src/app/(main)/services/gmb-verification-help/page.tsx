@@ -1,4 +1,4 @@
-﻿import "@/app/style/gmb-reinstatement.css";
+﻿import "@/app/style/gmb-service-pages.css";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";

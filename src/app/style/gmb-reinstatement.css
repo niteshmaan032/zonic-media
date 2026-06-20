@@ -185,6 +185,7 @@
 .sec-head h2 {
   font-size: clamp(24px, 3.2vw, 34px);
   font-weight: 800;
+  line-height: 1.3;
   margin: 14px 0 12px;
 }
 .sec-head p {
@@ -202,7 +203,7 @@
 .hero .crumb {
   font-size: 13px;
   color: #64748b;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -230,7 +231,7 @@
   font-size: 13.5px;
   padding: 7px 15px;
   border-radius: 999px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .hero-badge .ping {
   width: 8px;
@@ -254,7 +255,7 @@
   font-size: clamp(30px, 4vw, 48px);
   font-weight: 800;
   color: #fff;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 .hero h1 .accent {
   color: var(--yellow);
@@ -262,21 +263,21 @@
 .hero .lead {
   font-size: clamp(16px, 1.5vw, 19px);
   color: #cbd5e1;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .hero-assurance {
   display: flex;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 .assure-pill {
   display: inline-flex;
@@ -318,7 +319,7 @@
   font-weight: 700;
 }
 .hero-visual {
-  margin: 30px auto 0;
+  margin: 28px auto 0;
   max-width: 600px;
   position: relative;
 }
@@ -1188,11 +1189,66 @@
   }
   .hero-actions {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
   }
-  .hero-actions .btn {
-    justify-content: center;
+
+  /* Hero: flat (no navy box / padding) with dark, readable text on mobile. */
+  .gmb-reinst-page .hero {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
   }
+  .hero h1 {
+    color: var(--navy);
+  }
+  .hero h1 .accent {
+    color: var(--orange-dark); /* yellow is unreadable on a light background */
+  }
+  .hero .lead {
+    color: var(--slate);
+  }
+  .hero .crumb {
+    color: var(--slate-light);
+  }
+  .hero .crumb a {
+    color: var(--slate);
+  }
+  .hero .crumb a:hover {
+    color: var(--navy);
+  }
+  .hero-trust {
+    color: var(--slate);
+  }
+  .hero-trust b {
+    color: var(--navy);
+  }
+  .assure-note {
+    color: var(--slate);
+  }
+  /* Badge: dark-readable, and no longer congested when the text wraps —
+     the ping dot stays pinned to the first line. */
+  .hero-badge {
+    align-items: flex-start;
+    color: var(--orange-dark);
+    font-size: 12.5px;
+    padding: 7px 12px;
+    line-height: 1.4;
+  }
+  .hero-badge .ping {
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  /* Phone CTA was styled for a dark background — make it readable on light. */
+  .gmb-reinst-page .hero .btn-ghost-light {
+    background: transparent;
+    color: var(--navy);
+    border-color: var(--line);
+  }
+  .gmb-reinst-page .hero .btn-ghost-light:hover {
+    background: var(--bg-soft);
+    border-color: var(--navy);
+  }
+
   .gmb-reinst-page .af-row {
     flex-direction: column;
     gap: 0;
