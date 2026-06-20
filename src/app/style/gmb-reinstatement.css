@@ -1161,7 +1161,8 @@
 
 @media (max-width: 575.98px) {
   .gmb-main-wrapper {
-    padding: 100px 16px 48px;
+    /* just clears the fixed navbar so the hero sits right under the header */
+    padding: 68px 16px 48px;
     gap: 18px;
   }
   /* Flatten the white content boxes on mobile — no padding, border or
