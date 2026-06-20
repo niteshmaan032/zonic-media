@@ -1174,6 +1174,10 @@
   .gmb-panel-navy {
     padding: 16px;
   }
+  /* "Free suspension audit" banner — a touch more padding on mobile. */
+  .gmb-reinst-page .gmb-auditcta {
+    padding: 24px;
+  }
   .gmb-reinst-page .audit-form {
     padding: 16px;
   }
@@ -1192,44 +1196,17 @@
     align-items: flex-start;
   }
 
-  /* Hero: flat (no navy box / padding) with dark, readable text on mobile. */
+  /* Hero stays a navy block on mobile: full-bleed (cancels the 16px page
+     gutter) so there's no spacing outside, with 20px padding inside. */
   .gmb-reinst-page .hero {
-    background: transparent;
-    padding: 0;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 20px;
     border-radius: 0;
   }
-  .hero h1 {
-    color: var(--navy);
-  }
-  .hero h1 .accent {
-    color: var(--orange-dark); /* yellow is unreadable on a light background */
-  }
-  .hero .lead {
-    color: var(--slate);
-  }
-  .hero .crumb {
-    color: var(--slate-light);
-  }
-  .hero .crumb a {
-    color: var(--slate);
-  }
-  .hero .crumb a:hover {
-    color: var(--navy);
-  }
-  .hero-trust {
-    color: var(--slate);
-  }
-  .hero-trust b {
-    color: var(--navy);
-  }
-  .assure-note {
-    color: var(--slate);
-  }
-  /* Badge: dark-readable, and no longer congested when the text wraps —
-     the ping dot stays pinned to the first line. */
+  /* Badge: wraps cleanly on narrow screens; the ping dot stays on line 1. */
   .hero-badge {
     align-items: flex-start;
-    color: var(--orange-dark);
     font-size: 12.5px;
     padding: 7px 12px;
     line-height: 1.4;
@@ -1237,23 +1214,6 @@
   .hero-badge .ping {
     flex-shrink: 0;
     margin-top: 5px;
-  }
-  /* Phone CTA was styled for a dark background — make it readable on light,
-     with a solid black border. */
-  .gmb-reinst-page .hero .btn-ghost-light {
-    background: transparent;
-    color: var(--navy);
-    border-color: var(--navy);
-  }
-  .gmb-reinst-page .hero .btn-ghost-light:hover {
-    background: var(--bg-soft);
-    border-color: var(--navy);
-  }
-  /* "No Fix, No Charge" — keep it green, but readable on the light hero. */
-  .hero-assurance .assure-pill {
-    background: rgba(22, 163, 74, 0.12);
-    border-color: rgba(22, 163, 74, 0.45);
-    color: var(--green);
   }
 
   .gmb-reinst-page .af-row {

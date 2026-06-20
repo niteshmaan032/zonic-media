@@ -498,7 +498,7 @@ function page() {
           </section>
 
           {/* AUDIT CTA BAND */}
-          <section className="gmb-panel-navy">
+          <section className="gmb-panel-navy gmb-auditcta">
             <span className="eyebrow light">Free suspension audit</span>
             <h2 style={{ fontSize: "clamp(24px,3.2vw,34px)", fontWeight: 800, color: "#fff", margin: "14px 0 0" }}>
               Every hour suspended, customers find your competitors
