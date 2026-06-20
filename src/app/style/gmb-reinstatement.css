@@ -1238,15 +1238,22 @@
     flex-shrink: 0;
     margin-top: 5px;
   }
-  /* Phone CTA was styled for a dark background — make it readable on light. */
+  /* Phone CTA was styled for a dark background — make it readable on light,
+     with a solid black border. */
   .gmb-reinst-page .hero .btn-ghost-light {
     background: transparent;
     color: var(--navy);
-    border-color: var(--line);
+    border-color: var(--navy);
   }
   .gmb-reinst-page .hero .btn-ghost-light:hover {
     background: var(--bg-soft);
     border-color: var(--navy);
+  }
+  /* "No Fix, No Charge" — keep it green, but readable on the light hero. */
+  .hero-assurance .assure-pill {
+    background: rgba(22, 163, 74, 0.12);
+    border-color: rgba(22, 163, 74, 0.45);
+    color: var(--green);
   }
 
   .gmb-reinst-page .af-row {
