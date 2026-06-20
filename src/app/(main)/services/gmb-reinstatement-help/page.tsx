@@ -155,12 +155,14 @@ function page() {
             <div className="hero-visual">
               <GmbProfileCard />
             </div>
-
-            {/* Mobile form — appears here on small screens (sticky column is desktop-only) */}
-            <div className="gmb-mob-form d-block d-lg-none">
-              <GmbAuditForm />
-            </div>
           </section>
+
+          {/* Mobile form — shown right after the hero on small screens (the
+              sticky right column is desktop-only). Kept OUT of the hero box so
+              it isn't double-boxed / congested on mobile. */}
+          <div className="gmb-mob-form d-block d-lg-none">
+            <GmbAuditForm />
+          </div>
 
           {/* TRUST BAR */}
           <section className="gmb-panel">

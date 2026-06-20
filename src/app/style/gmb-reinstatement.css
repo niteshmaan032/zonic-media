@@ -1060,11 +1060,6 @@
   line-height: 1.5;
 }
 
-/* hero mobile form spacing */
-.gmb-mob-form {
-  margin-top: 28px;
-}
-
 /* ---------- FINAL CTA banner (full width, above footer) ---------- */
 .gmb-final {
   background: var(--navy);
@@ -1165,12 +1160,21 @@
 
 @media (max-width: 575.98px) {
   .gmb-main-wrapper {
-    padding: 100px 20px 48px;
-    gap: 22px;
+    padding: 100px 16px 48px;
+    gap: 18px;
   }
-  .gmb-panel,
+  /* Flatten the white content boxes on mobile — no padding, border or
+     background, so the content runs full width within the 16px gutter. */
+  .gmb-panel {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
   .gmb-panel-navy {
-    padding: 22px;
+    padding: 16px;
+  }
+  .gmb-reinst-page .audit-form {
+    padding: 16px;
   }
   .card-grid,
   .proc-grid,
