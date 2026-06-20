@@ -24,14 +24,17 @@ type RecaptchaCheckboxProps = {
   action: string;
   onExecutorReady?: (executor: (() => Promise<string>) | null) => void;
   onSmsConsentChange?: (checked: boolean) => void;
+  collapsibleConsent?: boolean;
 };
 
 export default function RecaptchaCheckbox({
   action,
   onExecutorReady,
   onSmsConsentChange,
+  collapsibleConsent = false,
 }: RecaptchaCheckboxProps) {
   const [smsConsentChecked, setSmsConsentChecked] = useState(true);
+  const [consentExpanded, setConsentExpanded] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
   const privacyHref = appUrl
@@ -133,24 +136,58 @@ export default function RecaptchaCheckbox({
           checked={smsConsentChecked}
           onChange={(event) => setSmsConsentChecked(event.currentTarget.checked)}
         />
-        <span>
-          By submitting this form, you agree to receive personalized text
-          messages, emails, and calls (e.g., call notifications, service
-          updates, replies) from us at the cell number used when signing up.
-          Consent is not a condition of any purchase. Msg frequency varies. SMS
-          Msg and data rates may apply. To opt out at any time, reply STOP; no
-          more messages will be sent. Reply &quot;HELP&quot; for help. Call{" "}
-          <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> or
-          email at <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>{" "}
-          for more info. Visit{" "}
-          <a
-            href={privacyHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Privacy Policy
-          </a>{" "}
-          to view terms &amp; privacy.
+        <span className="sms-consent-text">
+          {collapsibleConsent && !consentExpanded ? (
+            <>
+              By submitting this form, you agree to receive personalized text
+              messages, emails, and calls (e.g., call notifications, service
+              updates, replies) from us…{" "}
+              <button
+                type="button"
+                className="sms-consent-toggle"
+                aria-expanded={consentExpanded}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setConsentExpanded(true);
+                }}
+              >
+                Read more
+              </button>
+            </>
+          ) : (
+            <>
+              By submitting this form, you agree to receive personalized text
+              messages, emails, and calls (e.g., call notifications, service
+              updates, replies) from us at the cell number used when signing up.
+              Consent is not a condition of any purchase. Msg frequency varies.
+              SMS Msg and data rates may apply. To opt out at any time, reply
+              STOP; no more messages will be sent. Reply &quot;HELP&quot; for
+              help. Call{" "}
+              <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> or
+              email at <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>{" "}
+              for more info. Visit{" "}
+              <a href={privacyHref} target="_blank" rel="noopener noreferrer">
+                Privacy Policy
+              </a>{" "}
+              to view terms &amp; privacy.
+              {collapsibleConsent && (
+                <>
+                  {" "}
+                  <button
+                    type="button"
+                    className="sms-consent-toggle"
+                    aria-expanded={consentExpanded}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setConsentExpanded(false);
+                    }}
+                  >
+                    Read less
+                  </button>
+                </>
+              )}
+            </>
+          )}
         </span>
       </label>
     </div>
