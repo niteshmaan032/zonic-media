@@ -86,18 +86,6 @@ function page() {
         <div className="gmb-content">
           {/* HERO */}
           <section className="gmb-panel-navy hero">
-            <div className="crumb">
-              <Link href="/">Home</Link>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-              <Link href="/services">Services</Link>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-              <span>GBP Reinstatement</span>
-            </div>
-
             <span className="hero-badge">
               <span className="ping"></span>No. 1 Google Business Profile
               reinstatement agency in the US
