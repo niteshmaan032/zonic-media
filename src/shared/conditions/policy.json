@@ -206,18 +206,7 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Zonic Media LLC does not sell, rent, or trade your personal information."
-        },
-        {
-          "type": "paragraph",
-          "text": "We may share limited information with:"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Trusted service providers (for business operations)",
-            "Legal authorities when required by law"
-          ]
+          "text": "No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."
         },
         {
           "type": "paragraph",

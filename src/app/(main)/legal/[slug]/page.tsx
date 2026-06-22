@@ -62,6 +62,13 @@ function renderBlock(block: ConditionBlock, index: number) {
           ))}
         </ul>
       );
+    case "policyLink":
+      return (
+        <p className="conditions-descrp" key={index}>
+          {block.text}{" "}
+          <Link href={block.href}>{block.linkLabel}</Link>
+        </p>
+      );
     case "contact":
       return (
         <div key={index}>

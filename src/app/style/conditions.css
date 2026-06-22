@@ -21,7 +21,7 @@
 }
 
 .conditions-descrp {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
 }
@@ -53,6 +53,7 @@
 
 .conditions-sub-head {
   font-size: 24px;
+  font-weight: 500;
 }
 
 .condition-content-sub-list {
@@ -63,7 +64,7 @@
 }
 
 .condition-content-sub-list li {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
 }
 

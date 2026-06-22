@@ -176,7 +176,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Message frequency may vary depending on your interaction with our services."
+          "text": "As always, message and data rates may apply for any messages sent to you from us and to us from you. You will receive [message frequency]. If you have any questions about your text plan or data plan, it is best to contact your wireless provider."
         },
         {
           "type": "subheading",
@@ -184,7 +184,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Standard message and data rates may apply based on your mobile carrier."
+          "text": "Carriers are not liable for delayed or undelivered messages."
         },
         {
           "type": "subheading",
@@ -192,7 +192,12 @@
         },
         {
           "type": "paragraph",
-          "text": "You can opt out at any time by replying \"STOP\" to any message."
+          "text": "You can cancel the SMS service at any time. Just text \"STOP\" to the (302) 726-9736. After you send the SMS message \"STOP\" to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to join again, just sign up as you did the first time and we will start sending SMS messages to you again. If you are experiencing issues with the messaging program you can reply with the keyword HELP for more assistance, or you can get help directly at the support email address or toll-free number below."
+        },
+        {
+          "type": "contact",
+          "phone": "(302) 726-9736",
+          "email": "contact@zonicllc.com"
         },
         {
           "type": "subheading",
@@ -260,6 +265,12 @@
           "address": "8 The Green, STE B Dover, Kent, DE 19901, United States",
           "phone": "(302) 726-9736",
           "email": "contact@zonicllc.com"
+        },
+        {
+          "type": "policyLink",
+          "text": "If you have any questions regarding privacy, please read our privacy policy:",
+          "linkLabel": "Privacy Policy",
+          "href": "/legal/privacy-policy"
         }
       ]
     }

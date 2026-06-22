@@ -8,6 +8,7 @@ import Footer from "@/app/components/Footer";
 import GmbAuditForm from "@/app/components/GmbAuditForm";
 import GmbProfileCard from "@/app/components/GmbProfileCard";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
+import ScrollToFormLink from "@/app/components/ScrollToFormLink";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
@@ -74,6 +75,7 @@ export const metadata: Metadata = {
 
 function page() {
   return (
+    <>
     <div className={`gmb-reinst-page ${manrope.variable} ${inter.variable}`}>
       <script
         type="application/ld+json"
@@ -104,12 +106,12 @@ function page() {
             </p>
 
             <div className="hero-actions">
-              <Link href="#gmb-reinst-top" className="btn btn-primary">
+              <ScrollToFormLink className="btn btn-primary">
                 Get a Free Suspension Audit
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{ width: 17, height: 17 }}>
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </Link>
+              </ScrollToFormLink>
               <a href={SITE_CONTACT.phoneHref} className="btn btn-ghost-light">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 17, height: 17 }}>
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
@@ -148,7 +150,7 @@ function page() {
           {/* Mobile form — shown right after the hero on small screens (the
               sticky right column is desktop-only). Kept OUT of the hero box so
               it isn't double-boxed / congested on mobile. */}
-          <div className="gmb-mob-form d-block d-lg-none">
+          <div className="gmb-mob-form d-block d-lg-none js-audit-form">
             <GmbAuditForm />
           </div>
 
@@ -523,12 +525,12 @@ function page() {
                 Clear next steps — no obligation
               </li>
             </ul>
-            <Link href="#gmb-reinst-top" className="btn btn-primary">
+            <ScrollToFormLink className="btn btn-primary">
               Get a Free Suspension Audit
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{ width: 16, height: 16 }}>
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </Link>
+            </ScrollToFormLink>
           </section>
 
           {/* GUARANTEE PILLARS */}
@@ -644,7 +646,7 @@ function page() {
         </div>
 
         {/* ============ RIGHT: STICKY FORM (desktop) ============ */}
-        <aside className="gmb-form-col d-none d-lg-block">
+        <aside className="gmb-form-col d-none d-lg-block js-audit-form">
           <GmbAuditForm />
         </aside>
       </div>
@@ -662,12 +664,12 @@ function page() {
             guesswork, and a specialist on your case from day one.
           </p>
           <div className="gmb-final-actions">
-            <Link href="#gmb-reinst-top" className="btn btn-primary">
+            <ScrollToFormLink className="btn btn-primary">
               Get a Free Suspension Audit
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{ width: 17, height: 17 }}>
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </Link>
+            </ScrollToFormLink>
             <a href={SITE_CONTACT.phoneHref} className="btn btn-white">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 17, height: 17 }}>
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
@@ -697,9 +699,10 @@ function page() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
+
+    <Footer />
+    </>
   );
 }
 

@@ -12,6 +12,12 @@ export type ConditionBlock =
       items: string[];
     }
   | {
+      type: "policyLink";
+      text: string;
+      linkLabel: string;
+      href: string;
+    }
+  | {
       type: "contact";
       address?: string;
       phone?: string;
