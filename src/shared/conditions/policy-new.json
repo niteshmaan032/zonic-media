@@ -1,0 +1,327 @@
+{
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "intro": [
+    "Zonic Media LLC",
+    "Effective Date: June 1st, 2026"
+  ],
+  "sections": [
+    {
+      "heading": "Important Notice Regarding Text Messaging Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC (\"we,\" \"us,\" or \"our\") DOES NOT share customer opt-in information, including phone numbers and consent records, with any affiliates or third parties for marketing, promotional, or any other purposes unrelated to providing our direct services. All text messaging originator opt-in data is kept strictly confidential."
+        }
+      ]
+    },
+    {
+      "heading": "1. Information We Collect",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We collect the following types of information:"
+        },
+        {
+          "type": "subheading",
+          "text": "Personal Information:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Name, email address, phone number, physical address",
+            "Payment information when you make a purchase or request a quote",
+            "Opt-in records and timestamps for all communication channels (SMS, email, etc.)"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Non-Personal Information:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "IP address, browser type, device information",
+            "Website usage patterns and analytics",
+            "Cookies and similar technologies"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Customer Communication:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Records of inquiries and service requests",
+            "Appointment details and preferences",
+            "Service history and feedback"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "2. How We Use Your Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use collected data for:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Providing and improving our services",
+            "Processing transactions and payments",
+            "Communicating with you about your inquiries, appointments, and promotions",
+            "Enhancing website functionality and user experience",
+            "Ensuring security and fraud prevention",
+            "Maintaining records of your communication preferences and consent"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "3. SMS Messaging & Compliance",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "Text Message Program Terms & Conditions"
+        },
+        {
+          "type": "paragraph",
+          "text": "By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates."
+        },
+        {
+          "type": "subheading",
+          "text": "Opt-In & Consent:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You will only receive messages if you have explicitly opted in",
+            "We maintain timestamped records of all opt-in actions",
+            "We comply with the Telephone Consumer Protection Act (TCPA) and all applicable laws"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Opt-Out Instructions:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You can cancel SMS notifications at any time by replying \"STOP\"",
+            "You will receive a final confirmation message, and no further messages will be sent unless you re-opt in",
+            "All opt-out requests are processed immediately."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Message Frequency & Content:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Message frequency varies based on your interactions with our business",
+            "Messages will be directly related to the services you have requested",
+            "We do not send promotional content without specific consent"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Help & Support:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reply \"HELP\" for assistance or contact us at contact@zonicllc.com",
+            "Customer support is available during regular business hours"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Carrier Information:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Standard message and data rates may apply",
+            "Carriers are not liable for delayed or undelivered messages",
+            "Supported carriers include AT&T, Verizon, T-Mobile, Sprint, and most regional carriers"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "SMS Data Protection Statement"
+        },
+        {
+          "type": "paragraph",
+          "text": "No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties."
+        },
+        {
+          "type": "paragraph",
+          "text": "We implement strict data protection measures to safeguard your SMS opt-in information and consent records."
+        }
+      ]
+    },
+    {
+      "heading": "4. Information Sharing & Disclosure",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We do not sell, rent, or trade personal information. We may share information with:"
+        },
+        {
+          "type": "subheading",
+          "text": "Service Providers:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Third-party vendors who assist in our operations (e.g., payment processing, appointment scheduling)",
+            "SMS aggregators and providers solely for the purpose of delivering messages you've consented to receive",
+            "All service providers are contractually obligated to maintain confidentiality and security"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Legal Compliance:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If required by law, legal process, or to protect our rights",
+            "In response to valid law enforcement requests or court orders"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Business Transfers:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In case of mergers, acquisitions, or sale of assets",
+            "In such cases, your data remains protected under the terms of this policy"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services."
+        }
+      ]
+    },
+    {
+      "heading": "5. Data Security",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We implement and maintain reasonable security measures to protect your personal information:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Encryption of sensitive data in transit and at rest",
+            "Secure access controls and authentication mechanisms",
+            "Regular security assessments and updates",
+            "Employee training on data protection",
+            "Breach notification protocols in accordance with applicable laws",
+            "Secure backup systems and disaster recovery procedures"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Despite these measures, no method of transmission over the Internet or electronic storage is 100% secure. We strive to use commercially acceptable means to protect your personal information but cannot guarantee absolute security."
+        }
+      ]
+    },
+    {
+      "heading": "6. Cookies & Tracking Technologies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use cookies and similar technologies to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Analyze site traffic and user behavior",
+            "Remember your preferences",
+            "Improve website functionality and user experience",
+            "Measure the effectiveness of our services"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You may control cookies through your browser settings. Disabling cookies may limit your ability to use certain features of our website."
+        }
+      ]
+    },
+    {
+      "heading": "7. Your Rights & Choices",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You have the right to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Access, update, or delete your personal information",
+            "Opt-out of marketing emails by clicking \"unsubscribe\" in our emails",
+            "Opt-out of SMS messages by replying \"STOP\"",
+            "Request information on how we process your data",
+            "Withdraw consent at any time for future communications",
+            "Lodge a complaint with a supervisory authority if you believe your rights have been violated"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "To exercise these rights, please contact us using the information in Section 10."
+        }
+      ]
+    },
+    {
+      "heading": "8. Third-Party Links",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Our website may contain links to third-party websites. We are not responsible for their privacy practices and encourage you to review their policies. This privacy policy applies only to information collected by Zonic Media LLC."
+        }
+      ]
+    },
+    {
+      "heading": "9. Changes to This Privacy Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We may update this policy periodically. The latest version will always be available on our website with the effective date. For significant changes, we will notify you by email or through a notice on our website."
+        }
+      ]
+    },
+    {
+      "heading": "10. Contact Us",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "If you have questions about this Privacy Policy or how your information is handled, contact us at:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Zonic Media LLC"
+        },
+        {
+          "type": "contact",
+          "phone": "(302) 726-9736",
+          "email": "contact@zonicllc.com",
+          "website": "www.zonicllc.com",
+          "websiteHref": "https://www.zonicllc.com"
+        },
+        {
+          "type": "paragraph",
+          "text": "By using our website and services, you consent to this Privacy Policy."
+        }
+      ]
+    }
+  ]
+}

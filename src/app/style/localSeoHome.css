@@ -22,7 +22,7 @@
   flex-basis: 40%;
   position: sticky;
   top: 32px;
-  height: 100%;
+  align-self: flex-start;
 }
 
 .local-seo-home-content {

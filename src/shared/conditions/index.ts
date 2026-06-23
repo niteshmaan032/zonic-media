@@ -1,5 +1,10 @@
-import terms from "./terms.json";
-import policy from "./policy.json";
+// --- OLD legal content (pre June 1, 2026) — commented out, kept on disk for reference ---
+// import terms from "./terms.json";
+// import policy from "./policy.json";
+
+// --- CURRENT legal content (effective June 1, 2026) ---
+import terms from "./terms-new.json";
+import policy from "./policy-new.json";
 import refund from "./refund.json";
 
 export type ConditionBlock =

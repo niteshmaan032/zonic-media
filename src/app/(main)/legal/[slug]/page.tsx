@@ -1,5 +1,4 @@
 import Footer from "@/app/components/Footer";
-import LeadContactForm from "@/app/components/LeadContactForm";
 import "@/app/style/conditions.css";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -47,8 +46,13 @@ export async function generateMetadata({
 
 function renderBlock(block: ConditionBlock, index: number) {
   switch (block.type) {
-    case "paragraph":
     case "subheading":
+      return (
+        <p className="conditions-block-subhead" key={index}>
+          {block.text}
+        </p>
+      );
+    case "paragraph":
       return (
         <p className="conditions-descrp" key={index}>
           {block.text}
@@ -128,18 +132,25 @@ export default async function Page({ params }: PageProps) {
 
       <div className="conditions-content-wrapper">
         <Col xs={12} lg={7}>
-          {pageData.intro.map((paragraph, index) => (
-            <p
-              className={`conditions-descrp ${
-                slug === "refund-policy" && index < 3
-                  ? "conditions-descrp--strong"
-                  : ""
-              }`.trim()}
-              key={paragraph}
-            >
-              {paragraph}
-            </p>
-          ))}
+          {pageData.intro.map((paragraph, index) => {
+            const isEffectiveDate = paragraph.startsWith("Effective Date");
+            return (
+              <p
+                className={`conditions-descrp ${
+                  isEffectiveDate ? "conditions-effective-date" : ""
+                } ${
+                  slug === "refund-policy" && index < 3
+                    ? "conditions-descrp--strong"
+                    : ""
+                }`
+                  .replace(/\s+/g, " ")
+                  .trim()}
+                key={paragraph}
+              >
+                {paragraph}
+              </p>
+            );
+          })}
 
           <div className="conditions-content-list-wrapper">
             <ul className="conditions-main-list">
@@ -147,26 +158,6 @@ export default async function Page({ params }: PageProps) {
                 <li className="conditions-main-list-cont" key={section.heading}>
                   <h2 className="conditions-sub-head">{section.heading}</h2>
                   {section.blocks.map((block, index) => renderBlock(block, index))}
-                  {slug === "privacy-policy" &&
-                  section.heading === "Opt-Out & Data Removal" ? (
-                    <div className="conditions-form-wrapper">
-                      <LeadContactForm
-                        leadFormTitle="Get in touch"
-                        leadCallText={
-                          <>
-                            grow you business with zonic media
-                            <br />{" "}
-                            <a
-                              href={SITE_CONTACT.phoneHref}
-                              className="lead-call-link"
-                            >
-                              Call Now:{SITE_CONTACT.phoneDisplay}
-                            </a>
-                          </>
-                        }
-                      />
-                    </div>
-                  ) : null}
                 </li>
               ))}
             </ul>
