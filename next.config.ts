@@ -3,13 +3,14 @@ import type { NextConfig } from "next";
 const contentSecurityPolicyReportOnly = [
   "default-src 'self'",
   "base-uri 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net",
-  "script-src-elem 'self' 'unsafe-inline' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net",
-  "style-src 'self' 'unsafe-inline'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://connect.facebook.net",
+  "script-src-elem 'self' 'unsafe-inline' https://widget.clutch.co https://clutch.co https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://connect.facebook.net",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://widget.clutch.co https://clutch.co https://www.gstatic.com",
+  "style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://widget.clutch.co https://clutch.co https://www.gstatic.com",
   "img-src 'self' data: blob: https:",
-  "font-src 'self' data:",
-  "connect-src 'self' https://widget.clutch.co https://clutch.co https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.co.in https://www.facebook.com https://connect.facebook.net https://*.ably.io https://*.ably.com https://*.ably.net wss://*.ably.io wss://*.ably.com wss://*.ably.net",
-  "frame-src 'self' https://widget.clutch.co https://clutch.co https://www.youtube.com https://www.google.com https://www.googletagmanager.com",
+  "font-src 'self' data: https://fonts.gstatic.com",
+  "connect-src 'self' https://widget.clutch.co https://clutch.co https://www.google.com https://www.gstatic.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://td.doubleclick.net https://www.googleadservices.com https://www.google.co.in https://www.facebook.com https://connect.facebook.net https://*.ably.io https://*.ably.com https://*.ably.net wss://*.ably.io wss://*.ably.com wss://*.ably.net",
+  "frame-src 'self' https://widget.clutch.co https://clutch.co https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net https://www.facebook.com",
   "worker-src 'self' blob:",
 ].join("; ");
 

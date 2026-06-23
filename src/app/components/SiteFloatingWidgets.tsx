@@ -2,7 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import FloatingPhone from "@/app/components/FloatingPhone";
-import ChatBot from "@/app/components/ChatBot";
+// Old floating chatbot hidden — using GHL chat widget instead (see layout.tsx). Kept for easy restore.
+// import ChatBot from "@/app/components/ChatBot";
 
 export default function SiteFloatingWidgets() {
   const pathname = usePathname();
@@ -14,7 +15,8 @@ export default function SiteFloatingWidgets() {
   return (
     <>
       <FloatingPhone />
-      <ChatBot />
+      {/* Old floating chatbot hidden — using GHL chat widget instead (see layout.tsx). Kept for easy restore. */}
+      {/* <ChatBot /> */}
     </>
   );
 }
