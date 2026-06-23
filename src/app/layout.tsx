@@ -174,17 +174,12 @@ export default function RootLayout({
 
         <Loader />
         <SmoothScroll>{children}</SmoothScroll>
+        {/* The GoHighLevel (LeadConnector) chat widget is injected per-page
+            inside SiteFloatingWidgets — only on pages without a phone/SMS
+            opt-in form — so it passes GHL's compliance review. Loading it
+            globally here would put the widget on the same pages as our lead
+            forms and trigger a "multiple opt-in sources" rejection. */}
         <SiteFloatingWidgets />
-
-        {/* GoHighLevel (LeadConnector) chat widget */}
-        <Script
-          id="ghl-chat-widget"
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="6a2ac834e20523fdce854ae4"
-          data-source="WEB_USER"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
