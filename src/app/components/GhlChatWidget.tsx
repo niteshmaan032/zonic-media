@@ -12,7 +12,6 @@ export default function GhlChatWidget() {
       data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
       data-widget-id="6a2ac834e20523fdce854ae4"
       data-source="WEB_USER"
-      async
     />
   );
 }
