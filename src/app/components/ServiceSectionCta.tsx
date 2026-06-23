@@ -2,7 +2,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import type { ReactNode } from "react";
 
 type ServiceSectionCtaProps = {
-  href: `#${string}`;
+  href: string;
   children?: ReactNode;
   align?: "left" | "center";
   offset?: number;

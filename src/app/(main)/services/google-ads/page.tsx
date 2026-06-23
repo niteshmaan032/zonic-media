@@ -379,8 +379,8 @@ function Page() {
       {/* ads-section-6 */}
       <Faqs items={AdsFaqs} />
 
-      {/* ads-section-7 */}
-      <ContactForm content={ContactAds} />
+      {/* ads-section-7 — contact form hidden; GHL chat widget handles leads. Change false to true to restore. */}
+      {false && <ContactForm content={ContactAds} />}
 
       {/* ads-section-8 */}
       <Footer />

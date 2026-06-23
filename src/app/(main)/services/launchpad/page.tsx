@@ -159,7 +159,8 @@ const launchpadPricingPlans = [
   },
 ];
 
-const LAUNCHPAD_LEAD_FORM_HASH = "#launchpad-lead-form" as const;
+// Lead CTAs now route to the contact page (the inline lead form is hidden; GHL chat handles leads).
+const LAUNCHPAD_LEAD_HREF = "/contact-us" as const;
 
 function page() {
   return (
@@ -198,7 +199,7 @@ function page() {
 
             <div className="launchpad-sec1-ctas">
               <HashScrollLink
-                href={LAUNCHPAD_LEAD_FORM_HASH}
+                href={LAUNCHPAD_LEAD_HREF}
                 className="buttons"
               >
                 Get Started Today
@@ -231,7 +232,7 @@ function page() {
               </HashScrollLink>
 
               <HashScrollLink
-                href={LAUNCHPAD_LEAD_FORM_HASH}
+                href={LAUNCHPAD_LEAD_HREF}
                 className="buttons"
               >
                 Book Free Consultation
@@ -296,7 +297,7 @@ function page() {
             <div className="launchpad-sec-1-card-wrapper launch-sec-1-card-3">
               <h2>Launch Your Business Online in 7 to 14 Days </h2>
               <HashScrollLink
-                href={LAUNCHPAD_LEAD_FORM_HASH}
+                href={LAUNCHPAD_LEAD_HREF}
                 className="buttons"
               >
                 Book Free Consultation
@@ -450,7 +451,7 @@ function page() {
 
                 <div className="launchpad-box-card-cta">
                   <HashScrollLink
-                    href={LAUNCHPAD_LEAD_FORM_HASH}
+                    href={LAUNCHPAD_LEAD_HREF}
                     className="buttons"
                   >
                     Get started Today
@@ -550,7 +551,7 @@ function page() {
 
                     <div className="launchpad-box-card-cta">
                       <HashScrollLink
-                        href={LAUNCHPAD_LEAD_FORM_HASH}
+                        href={LAUNCHPAD_LEAD_HREF}
                         className="buttons"
                       >
                         Book free Consultation
@@ -754,7 +755,7 @@ function page() {
 
             <div className="launchpad-banner-ctas">
               <HashScrollLink
-                href={LAUNCHPAD_LEAD_FORM_HASH}
+                href={LAUNCHPAD_LEAD_HREF}
                 className="buttons"
               >
                 Launch My Business
@@ -934,7 +935,7 @@ function page() {
                 </p>
 
                 <HashScrollLink
-                  href={LAUNCHPAD_LEAD_FORM_HASH}
+                  href={LAUNCHPAD_LEAD_HREF}
                   className="buttons"
                 >
                   Get started today
@@ -1051,7 +1052,7 @@ function page() {
                   <p className="launchpad-price-ideal">{plan.ideal}</p>
 
                   <HashScrollLink
-                    href={LAUNCHPAD_LEAD_FORM_HASH}
+                    href={LAUNCHPAD_LEAD_HREF}
                     className="launchpad-price-cta-btn"
                   >
                     {plan.cta}
@@ -1169,8 +1170,10 @@ function page() {
           </div>
         </div>
 
+        {/* Contact form hidden — GHL chat widget handles leads on this page. Change false to true to restore. */}
+        {false && (
         <div
-          id={LAUNCHPAD_LEAD_FORM_HASH.slice(1)}
+          id={LAUNCHPAD_LEAD_HREF.slice(1)}
           className="launchpad-home-contact-form"
         >
           <LeadContactForm
@@ -1179,6 +1182,7 @@ function page() {
             submitButtonText="Contact Us"
           />
         </div>
+        )}
       </div>
 
       <div className="launchpad-sec-10">
@@ -1196,7 +1200,7 @@ function page() {
 
               <div className="launchpad-banner-ctas">
                 <HashScrollLink
-                  href={LAUNCHPAD_LEAD_FORM_HASH}
+                  href={LAUNCHPAD_LEAD_HREF}
                   className="buttons"
                 >
                   Get Started Today

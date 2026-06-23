@@ -196,7 +196,7 @@ export default function Page() {
 
           <div className="deldg-sec-1-cta-row">
             <HashScrollLink
-              href="#del-digital-audit-form"
+              href="/contact-us"
               className="buttons"
               offset={120}
             >
@@ -298,7 +298,7 @@ export default function Page() {
           </h2>
           <p>Some make promises. We make results.</p>
 
-          <ServiceSectionCta href="#del-digital-audit-form" align="left">
+          <ServiceSectionCta href="/contact-us" align="left">
             Get a Free Call
           </ServiceSectionCta>
         </div>
@@ -351,7 +351,7 @@ export default function Page() {
 
           <div className="deldg-sec-3-head-side">
             <HashScrollLink
-              href="#del-digital-audit-form"
+              href="/contact-us"
               className="buttons"
               offset={120}
             >
@@ -418,12 +418,15 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Audit form hidden — GHL chat widget handles leads on this page. Change false to true to restore. */}
+      {false && (
       <div className="iaf-section service-mid-audit" id="del-digital-audit-form">
         <InlineAuditForm
           heading="Get Your Free Delaware Digital Marketing Audit"
           description="Share your business details and we will review your search visibility, paid growth opportunities, and conversion gaps at no cost."
         />
       </div>
+      )}
 
       <section className="deldg-sec-4">
         <h2>
@@ -452,7 +455,7 @@ export default function Page() {
           ))}
         </Row>
 
-        <ServiceSectionCta href="#del-digital-contact-form">
+        <ServiceSectionCta href="/contact-us">
           Build My Growth Strategy
         </ServiceSectionCta>
       </section>
@@ -481,7 +484,7 @@ export default function Page() {
                 our strategies are built to deliver measurable outcomes, not
                 vanity metrics.
               </p>
-              <ServiceSectionCta href="#del-digital-contact-form" align="left">
+              <ServiceSectionCta href="/contact-us" align="left">
                 Get a Free Strategy Call
               </ServiceSectionCta>
             </div>
@@ -540,7 +543,7 @@ export default function Page() {
                 we build.
               </h2>
 
-              <ServiceSectionCta href="#del-digital-contact-form" align="left">
+              <ServiceSectionCta href="/contact-us" align="left">
                 Get a Free Call
               </ServiceSectionCta>
             </div>
@@ -579,7 +582,7 @@ export default function Page() {
           ))}
         </Row>
 
-        <ServiceSectionCta href="#del-digital-contact-form">
+        <ServiceSectionCta href="/contact-us">
           Get a Free Marketing Audit
         </ServiceSectionCta>
       </section>
@@ -631,6 +634,8 @@ export default function Page() {
         />
       </section>
 
+      {/* Contact section hidden — GHL chat widget handles leads on this page. Change false to true to restore. */}
+      {false && (
       <section className="deldg-sec-10">
         <div className="deldg-sec-10-inner">
           <div className="deldg-sec-10-content">
@@ -693,6 +698,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      )}
 
       <Footer />
     </>

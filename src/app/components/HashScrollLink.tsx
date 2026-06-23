@@ -1,9 +1,10 @@
 "use client";
 
 import { MouseEvent, ReactNode } from "react";
+import Link from "next/link";
 
 type HashScrollLinkProps = {
-  href: `#${string}`;
+  href: string;
   className?: string;
   children: ReactNode;
   offset?: number;
@@ -15,6 +16,15 @@ export default function HashScrollLink({
   children,
   offset = 0,
 }: HashScrollLinkProps) {
+  // Non-hash hrefs (e.g. "/contact-us") are normal client-side navigations.
+  if (!href.startsWith("#")) {
+    return (
+      <Link href={href} className={className}>
+        {children}
+      </Link>
+    );
+  }
+
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     const targetId = href.slice(1);
     const escaped =

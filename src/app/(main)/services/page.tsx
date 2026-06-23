@@ -1106,6 +1106,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Contact section hidden — GHL chat widget handles leads on this page. Change false to true to restore. */}
+      {false && (
       <section className="st2-contact-section">
         <div className="st2-container">
           <div className="st2-contact-inner">
@@ -1167,6 +1169,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      )}
       <Footer />
     </>
   );

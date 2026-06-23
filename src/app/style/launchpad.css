@@ -562,8 +562,8 @@
 .launchpad-sec-9 {
   background-color: var(--launchpad-home-bg);
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding: 120px 100px 60px 100px;
 }
 
@@ -575,10 +575,13 @@
 }
 
 .launchpad-home-content {
-  flex-basis: 55%;
-  padding-right: 60px;
+  flex-basis: auto;
+  max-width: 820px;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 16px;
 }
 
@@ -609,6 +612,8 @@
 .launchpad-home-cta-clutch {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
   gap: 16px;
   margin: 20px 0px;
 }

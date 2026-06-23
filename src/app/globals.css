@@ -737,3 +737,10 @@ body p {
 /*extra large desktop devices */
 @media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }
+
+/* GHL (LeadConnector) chat widget — loaded globally but only shown on
+   pages that opt in by setting the `ghl-page` class on <body>
+   (see SiteFloatingWidgets.tsx). Hidden everywhere else. */
+body:not(.ghl-page) chat-widget {
+  display: none !important;
+}
