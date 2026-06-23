@@ -8,6 +8,7 @@ import ProcessSwiper from "@/app/components/ProcessSwiper";
 import WhyWork from "@/app/components/WhyWork";
 import Faqs from "@/app/components/Faqs";
 import ContactForm from "@/app/components/ContactForm";
+import GhlChatWidget from "@/app/components/GhlChatWidget";
 import Footer from "@/app/components/Footer";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
@@ -383,6 +384,7 @@ function Page() {
       {false && <ContactForm content={ContactAds} />}
 
       {/* ads-section-8 */}
+      <GhlChatWidget />
       <Footer />
     </>
   );

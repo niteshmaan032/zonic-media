@@ -13,6 +13,7 @@ import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import GhlChatWidget from "@/app/components/GhlChatWidget";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
@@ -1267,6 +1268,7 @@ function page() {
         </div>
       </div>
 
+      <GhlChatWidget />
       <Footer />
     </>
   );

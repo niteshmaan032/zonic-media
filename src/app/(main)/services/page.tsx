@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Footer from "@/app/components/Footer";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import GhlChatWidget from "@/app/components/GhlChatWidget";
 import "@/app/style/services-page.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
@@ -1170,6 +1171,7 @@ export default function ServicesPage() {
         </div>
       </section>
       )}
+      <GhlChatWidget />
       <Footer />
     </>
   );

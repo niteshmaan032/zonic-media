@@ -6,6 +6,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import InlineAuditForm from "@/app/components/InlineAuditForm";
 import LeadContactForm from "@/app/components/LeadContactForm";
+import GhlChatWidget from "@/app/components/GhlChatWidget";
 import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
@@ -700,6 +701,7 @@ export default function Page() {
       </section>
       )}
 
+      <GhlChatWidget />
       <Footer />
     </>
   );
