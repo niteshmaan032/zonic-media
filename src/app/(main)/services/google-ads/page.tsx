@@ -377,7 +377,7 @@ function Page() {
       <WhyWork items={WhyAdsData} />
 
       {/* ads-section-6 */}
-      <Faqs items={AdsFaqs} />
+      <Faqs items={AdsFaqs} showQuestionBox={false} />
 
       {/* ads-section-7 — contact form hidden; GHL chat widget handles leads. Change false to true to restore. */}
       {false && <ContactForm content={ContactAds} />}

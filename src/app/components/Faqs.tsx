@@ -19,9 +19,10 @@ type FaqData = {
 type FaqsProps = {
   items: FaqItem[] | FaqData;
   defaultActiveKey?: string;
+  showQuestionBox?: boolean;
 };
 
-function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
+function Faqs({ items, defaultActiveKey = "0", showQuestionBox = true }: FaqsProps) {
   const resolvedItems = Array.isArray(items) ? items : items.items;
   const resolvedDefaultActiveKey = Array.isArray(items)
     ? defaultActiveKey
@@ -33,7 +34,7 @@ function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
 
       <Row className="justify-content-between ">
         {/* LEFT FAQ */}
-        <Col lg={8}>
+        <Col lg={showQuestionBox ? 8 : 12}>
           <div className="why-work-faq-wrapper">
             <Accordion
               defaultActiveKey={resolvedDefaultActiveKey}
@@ -50,23 +51,25 @@ function Faqs({ items, defaultActiveKey = "0" }: FaqsProps) {
         </Col>
 
         {/* RIGHT BOX (UNCHANGED) */}
-        <Col lg={4}>
-          <div className="faqs-question-box">
-            <FaMessage size={48} />
+        {showQuestionBox && (
+          <Col lg={4}>
+            <div className="faqs-question-box">
+              <FaMessage size={48} />
 
-            <h4>Have a Question or Need Expert Guidance?</h4>
+              <h4>Have a Question or Need Expert Guidance?</h4>
 
-            <p>
-              Connect with our team to discuss your project, explore the right
-              digital strategy, and discover how we can help grow your business
-              online.
-            </p>
+              <p>
+                Connect with our team to discuss your project, explore the right
+                digital strategy, and discover how we can help grow your business
+                online.
+              </p>
 
-            <Link href={SITE_CONTACT.emailHref} className="buttons">
-              Send Us an Email
-            </Link>
-          </div>
-        </Col>
+              <Link href={SITE_CONTACT.emailHref} className="buttons">
+                Send Us an Email
+              </Link>
+            </div>
+          </Col>
+        )}
       </Row>
     </div>
   );
