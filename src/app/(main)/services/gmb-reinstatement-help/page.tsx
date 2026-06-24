@@ -76,6 +76,13 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
+    {/* GHL external form tracking — captures custom form submissions into the
+        GHL dashboard for this page. */}
+    <Script
+      src="https://forms.zonicllc.com/js/external-tracking.js"
+      data-tracking-id="tk_f66384f994224b0091e870b5f6cf3e88"
+      strategy="afterInteractive"
+    />
     <div className={`gmb-reinst-page ${manrope.variable} ${inter.variable}`}>
       <script
         type="application/ld+json"
