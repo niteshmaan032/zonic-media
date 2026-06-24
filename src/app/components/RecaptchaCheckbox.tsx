@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Script from "next/script";
-import { SITE_CONTACT } from "@/shared/siteConfig";
+import LeadConsentCheckbox from "@/app/components/LeadConsentCheckbox";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
@@ -24,22 +24,24 @@ type RecaptchaCheckboxProps = {
   action: string;
   onExecutorReady?: (executor: (() => Promise<string>) | null) => void;
   onSmsConsentChange?: (checked: boolean) => void;
+  /** Kept for backwards compatibility; no longer changes the consent copy. */
   collapsibleConsent?: boolean;
+  /**
+   * When false, only the reCAPTCHA script + branding are rendered (no built-in
+   * SMS-consent checkbox). Use this when the parent form supplies its own
+   * consent UI.
+   */
+  renderConsent?: boolean;
 };
 
 export default function RecaptchaCheckbox({
   action,
   onExecutorReady,
   onSmsConsentChange,
-  collapsibleConsent = false,
+  renderConsent = true,
 }: RecaptchaCheckboxProps) {
-  const [smsConsentChecked, setSmsConsentChecked] = useState(true);
-  const [consentExpanded, setConsentExpanded] = useState(false);
+  const [smsConsentChecked, setSmsConsentChecked] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
-  const privacyHref = appUrl
-    ? `${appUrl}/legal/privacy-policy`
-    : "/legal/privacy-policy";
 
   const execute = useCallback(async () => {
     if (!siteKey) {
@@ -128,68 +130,13 @@ export default function RecaptchaCheckbox({
         <p className="text-danger mb-0">reCAPTCHA is not configured.</p>
       )}
 
-      <label className="sms-consent-checkbox">
-        <input
-          type="checkbox"
-          name="smsConsent"
-          value="yes"
+      {renderConsent && (
+        <LeadConsentCheckbox
+          className="sms-consent-checkbox"
           checked={smsConsentChecked}
-          onChange={(event) => setSmsConsentChecked(event.currentTarget.checked)}
+          onChange={setSmsConsentChecked}
         />
-        <span className="sms-consent-text">
-          {collapsibleConsent && !consentExpanded ? (
-            <>
-              By submitting this form, you agree to receive personalized text
-              messages, emails, and calls (e.g., call notifications, service
-              updates, replies) from us…{" "}
-              <button
-                type="button"
-                className="sms-consent-toggle"
-                aria-expanded={consentExpanded}
-                onClick={(event) => {
-                  event.preventDefault();
-                  setConsentExpanded(true);
-                }}
-              >
-                Read more
-              </button>
-            </>
-          ) : (
-            <>
-              By submitting this form, you agree to receive personalized text
-              messages, emails, and calls (e.g., call notifications, service
-              updates, replies) from us at the cell number used when signing up.
-              Consent is not a condition of any purchase. Msg frequency varies.
-              SMS Msg and data rates may apply. To opt out at any time, reply
-              STOP; no more messages will be sent. Reply &quot;HELP&quot; for
-              help. Call{" "}
-              <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> or
-              email at <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>{" "}
-              for more info. Visit{" "}
-              <a href={privacyHref} target="_blank" rel="noopener noreferrer">
-                Privacy Policy
-              </a>{" "}
-              to view terms &amp; privacy.
-              {collapsibleConsent && (
-                <>
-                  {" "}
-                  <button
-                    type="button"
-                    className="sms-consent-toggle"
-                    aria-expanded={consentExpanded}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      setConsentExpanded(false);
-                    }}
-                  >
-                    Read less
-                  </button>
-                </>
-              )}
-            </>
-          )}
-        </span>
-      </label>
+      )}
     </div>
   );
 }

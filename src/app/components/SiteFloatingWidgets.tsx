@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import FloatingPhone from "@/app/components/FloatingPhone";
 import ChatBot from "@/app/components/ChatBot";
 
@@ -32,23 +32,51 @@ function removeGhlWidget() {
     .forEach((el) => el.remove());
 }
 
+// On a full page load the server-rendered loader <script> (GhlChatWidget) is
+// parsed and executed by the browser. On a client-side navigation React inserts
+// that <script> node but the browser never runs it, so the widget never shows
+// until a refresh. Injecting the loader programmatically makes it execute.
+function injectGhlWidget() {
+  if (document.querySelector('chat-widget, iframe[src*="leadconnectorhq.com"]')) {
+    return; // widget already present
+  }
+  const script = document.createElement("script");
+  script.src = "https://widgets.leadconnectorhq.com/loader.js";
+  script.async = true;
+  script.setAttribute(
+    "data-resources-url",
+    "https://widgets.leadconnectorhq.com/chat-widget/loader.js",
+  );
+  script.setAttribute("data-widget-id", "6a2ac834e20523fdce854ae4");
+  script.setAttribute("data-source", "WEB_USER");
+  document.body.appendChild(script);
+}
+
 export default function SiteFloatingWidgets() {
   const pathname = usePathname();
   const isGhlPage = GHL_PAGES.includes(pathname);
+  const initialLoadRef = useRef(true);
 
   // The widget itself is rendered server-side by GhlChatWidget on GHL pages.
-  // Here we only toggle the `ghl-page` body class (CSS safety net that hides a
-  // lingering widget on non-GHL pages) and tear down any leftover widget DOM
-  // when the user navigates onto a page that has a lead form.
+  // Here we toggle the `ghl-page` body class (CSS safety net that hides a
+  // lingering widget on non-GHL pages), tear down any leftover widget DOM when
+  // the user navigates onto a page that has a lead form, and — on a client-side
+  // navigation onto a GHL page — execute the loader (the server-rendered script
+  // doesn't run on SPA navigation, only on a full page load).
   useEffect(() => {
     const cls = "ghl-page";
 
     if (isGhlPage) {
       document.body.classList.add(cls);
+      if (!initialLoadRef.current) {
+        injectGhlWidget();
+      }
     } else {
       document.body.classList.remove(cls);
       removeGhlWidget();
     }
+
+    initialLoadRef.current = false;
 
     return () => document.body.classList.remove(cls);
   }, [isGhlPage]);

@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
+import LeadConsentCheckbox from "@/app/components/LeadConsentCheckbox";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
@@ -62,12 +64,8 @@ export default function GbpVerificationLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
-  const [smsConsent, setSmsConsent] = useState(true);
+  const [smsConsent, setSmsConsent] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
-  const privacyHref = appUrl
-    ? `${appUrl}/legal/privacy-policy`
-    : "/legal/privacy-policy";
 
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
@@ -345,23 +343,6 @@ export default function GbpVerificationLeadForm() {
           </select>
         </div>
 
-        <button
-          type="submit"
-          className="gbv-form-submit"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? (
-            <>
-              <span className="gbv-form-spinner" aria-hidden="true" />
-              Sending...
-            </>
-          ) : (
-            <>Submit My Free Diagnosis →</>
-          )}
-        </button>
-
-        {submitError && <p className="gbv-form-error">{submitError}</p>}
-
         <p className="gbv-form-fine">
           Or call:{" "}
           <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> ·
@@ -399,31 +380,30 @@ export default function GbpVerificationLeadForm() {
           <p className="gbv-form-error">reCAPTCHA is not configured.</p>
         )}
 
-        <label className="gbv-sms-consent">
-          <input
-            type="checkbox"
-            checked={smsConsent}
-            onChange={(e) => setSmsConsent(e.currentTarget.checked)}
-          />
-          <span>
-            By submitting this form, you agree to receive personalized text
-            messages, emails, and calls from us at the cell number used when
-            signing up. Consent is not a condition of any purchase. Msg
-            frequency varies. Msg &amp; data rates may apply. Reply STOP to opt
-            out. Call{" "}
-            <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> or
-            email <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a> for
-            help. See our{" "}
-            <a
-              href={privacyHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>
-            .
-          </span>
-        </label>
+        <LeadConsentCheckbox
+          className="gbv-sms-consent"
+          checked={smsConsent}
+          onChange={setSmsConsent}
+        />
+
+        {submitError && <p className="gbv-form-error">{submitError}</p>}
+
+        <button
+          type="submit"
+          className="gbv-form-submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <span className="gbv-form-spinner" aria-hidden="true" />
+              Sending...
+            </>
+          ) : (
+            <>Submit My Free Diagnosis →</>
+          )}
+        </button>
+
+        <FormLegalLinks />
       </form>
     </div>
   );

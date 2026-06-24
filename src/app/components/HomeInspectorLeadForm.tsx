@@ -5,8 +5,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
+import FormLegalLinks from "@/app/components/FormLegalLinks";
+import LeadConsentCheckbox from "@/app/components/LeadConsentCheckbox";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
-import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type Grecaptcha = {
   ready: (callback: () => void) => void;
@@ -37,12 +38,8 @@ export default function HomeInspectorLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
-  const [smsConsent, setSmsConsent] = useState(true);
+  const [smsConsent, setSmsConsent] = useState(false);
   const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL?.trim().replace(/\/+$/, "");
-  const privacyHref = appUrl
-    ? `${appUrl}/legal/privacy-policy`
-    : "/legal/privacy-policy";
 
   const recaptchaExecutorRef = useRef<(() => Promise<string>) | null>(null);
 
@@ -158,6 +155,7 @@ export default function HomeInspectorLeadForm() {
       }
 
       reset();
+      setSmsConsent(false);
       sessionStorage.setItem(
         "thank_you_access_allowed_at",
         Date.now().toString(),
@@ -318,54 +316,6 @@ export default function HomeInspectorLeadForm() {
           )}
         </div>
 
-        <label className="hia-sms-consent">
-          <input
-            type="checkbox"
-            checked={smsConsent}
-            onChange={(e) => setSmsConsent(e.currentTarget.checked)}
-          />
-          <span>
-            By submitting this form, you agree to receive personalized text
-            messages, emails, and calls from us at the cell number used when
-            signing up. Consent is not a condition of any purchase. Msg
-            frequency varies. Msg &amp; data rates may apply. Reply STOP to opt
-            out. See our{" "}
-            <a
-              href={privacyHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>
-            .
-          </span>
-        </label>
-
-        <button
-          type="submit"
-          className="hia-form-submit"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? (
-            <>
-              <span className="hia-form-spinner" aria-hidden="true" />
-              Sending...
-            </>
-          ) : (
-            <>Send My Free Audit →</>
-          )}
-        </button>
-
-        {submitError && <p className="hia-form-error">{submitError}</p>}
-
-        <p className="hia-form-fine">
-          Or call:{" "}
-          <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> ·
-          Mon–Fri 9AM–5PM ET
-          <br />
-          We respect your inbox. One audit, no autoresponder spam.
-        </p>
-
         {siteKey ? (
           <p className="hia-recaptcha-notice">
             Protected by reCAPTCHA. Google{" "}
@@ -389,6 +339,31 @@ export default function HomeInspectorLeadForm() {
         ) : (
           <p className="hia-form-error">reCAPTCHA is not configured.</p>
         )}
+
+        <LeadConsentCheckbox
+          className="hia-sms-consent"
+          checked={smsConsent}
+          onChange={setSmsConsent}
+        />
+
+        {submitError && <p className="hia-form-error">{submitError}</p>}
+
+        <button
+          type="submit"
+          className="hia-form-submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <span className="hia-form-spinner" aria-hidden="true" />
+              Sending...
+            </>
+          ) : (
+            <>Send My Free Audit →</>
+          )}
+        </button>
+
+        <FormLegalLinks />
       </form>
     </div>
   );

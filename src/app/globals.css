@@ -198,6 +198,41 @@ body p {
   cursor: pointer;
 }
 
+.lead-consent-toggle {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: inherit;
+  font-weight: 600;
+  color: #ea580c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.consent-legal-links {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-top: 14px;
+  font-size: 12px;
+  color: var(--color2);
+}
+
+.consent-legal-links a {
+  color: var(--secondary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent-legal-sep {
+  margin: 0 6px;
+  color: var(--stroke);
+}
+
 /*testimonial-section*/
 .testimonial-heading {
   font-size: 52px;

@@ -11,6 +11,7 @@ import { Row, Col } from "react-bootstrap";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 
 type ContactFormValues = {
   fullName: string;
@@ -321,6 +322,12 @@ export default function ContactForm({ content }: ContactFormProps) {
                 />
               </Col>
 
+              {submitError && (
+                <Col xs={12}>
+                  <p className="text-danger mb-0">{submitError}</p>
+                </Col>
+              )}
+
               <Col
                 xs={12}
                 className="d-flex justify-content-between align-items-center"
@@ -353,11 +360,9 @@ export default function ContactForm({ content }: ContactFormProps) {
                 </p>
               </Col>
 
-              {submitError && (
-                <Col xs={12}>
-                  <p className="text-danger mb-0">{submitError}</p>
-                </Col>
-              )}
+              <Col xs={12}>
+                <FormLegalLinks />
+              </Col>
             </form>
           </div>
         </Col>

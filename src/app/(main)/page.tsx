@@ -4,7 +4,7 @@ import Footer from "@/app/components/Footer";
 import RankGrid from "@/app/components/RankGrid";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Blogs from "@/app/components/Blogs";
-import GoHighLevelForm from "@/app/components/GoHighLevelForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import LaunchpadVideo from "@/app/components/LaunchpadVideo";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
@@ -1638,7 +1638,7 @@ export default async function Home() {
         {/* CONTACT */}
         <section className="contact" id="contact">
           <div className="wrap">
-            <div className="contact-grid row g-4 g-lg-5">
+            <div className="contact-grid row g-4 g-lg-5 justify-content-between">
               {/* LEFT — copy + contact details */}
               <div className="col-lg-5">
                 <div className="contact-copy">
@@ -1716,20 +1716,18 @@ export default async function Home() {
                 </div>
               </div>
 
-              {/* RIGHT — GHL form */}
-              <div className="col-lg-7">
-                <div className="contact-form-card">
-                  <div className="contact-form-head">
-                    <h3>Request your free strategy session</h3>
-                    <p>Takes about a minute — no commitment required.</p>
-                  </div>
-                  <GoHighLevelForm
-                    formId="nRQ9EukoKHcVBgxnY6no"
-                    formName="Local SEO"
-                    instanceId="home-contact"
-                    height={622}
-                  />
-                </div>
+              {/* RIGHT — custom lead form */}
+              <div className="col-lg-6">
+                <ServiceLeadForm
+                  formType="home-strategy"
+                  badge="Free strategy session"
+                  title="Request your free strategy session"
+                  subtitle="Takes about a minute — no commitment required."
+                  submitText="Request My Free Session"
+                  defaultServices={["Local SEO"]}
+                  messageLabel="What do you want to grow?"
+                  messagePlaceholder="Tell us about your business and goals"
+                />
               </div>
             </div>
           </div>

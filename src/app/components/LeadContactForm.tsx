@@ -7,8 +7,8 @@ import { useForm } from "react-hook-form";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
-import { SITE_CONTACT } from "@/shared/siteConfig";
 
 type LeadContactFormValues = {
   fullName: string;
@@ -28,14 +28,6 @@ const DEFAULT_SERVICE = "Google My Business (GMB)";
 
 export default function LeadContactForm({
   leadFormTitle = "Get Your Free GMB Suspension Audit",
-  leadCallText = (
-    <>
-      One call can help recover your lost business visibility.{" "}
-      <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-        Call Now:{SITE_CONTACT.phoneDisplay}
-      </a>
-    </>
-  ),
   submitButtonText = "Get Case Review",
 }: LeadContactFormProps) {
   const router = useRouter();
@@ -261,6 +253,15 @@ export default function LeadContactForm({
           />
         </div>
 
+        {submitError && (
+          <p className="text-danger text-center mb-3">{submitError}</p>
+        )}
+
+        <div className="lead-confidential-box">
+          <IoShieldCheckmarkSharp />
+          Your information is 100% confidential. We never share your data.
+        </div>
+
         <div className="d-grid mb-3">
           <button
             type="submit"
@@ -282,16 +283,7 @@ export default function LeadContactForm({
           </button>
         </div>
 
-        {submitError && (
-          <p className="text-danger text-center mb-3">{submitError}</p>
-        )}
-
-        <div className="lead-confidential-box">
-          <IoShieldCheckmarkSharp />
-          Your information is 100% confidential. We never share your data.
-        </div>
-
-        <p className="lead-call-text">{leadCallText}</p>
+        <FormLegalLinks />
       </form>
     </div>
   );

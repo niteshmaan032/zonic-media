@@ -10,6 +10,7 @@ import { useForm } from "react-hook-form";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 
 type ComingSoonFormValues = {
   fullName: string;
@@ -294,6 +295,12 @@ function Page() {
                     />
                   </Col>
 
+                  {submitError && (
+                    <Col xs={12}>
+                      <p className="text-danger mb-0">{submitError}</p>
+                    </Col>
+                  )}
+
                   <Col
                     xs={12}
                     className="d-flex justify-content-between align-items-center"
@@ -327,11 +334,9 @@ function Page() {
                     </p>
                   </Col>
 
-                  {submitError && (
-                    <Col xs={12}>
-                      <p className="text-danger mb-0">{submitError}</p>
-                    </Col>
-                  )}
+                  <Col xs={12}>
+                    <FormLegalLinks />
+                  </Col>
                 </form>
               </div>
             </Col>

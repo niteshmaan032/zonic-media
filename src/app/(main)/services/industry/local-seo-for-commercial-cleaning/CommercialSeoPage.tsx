@@ -12,6 +12,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
@@ -1084,10 +1085,6 @@ export default function CommercialSeoPage() {
                   <p className="text-danger mt-2 mb-0">{errors.message.message}</p>
                 )}
               </div>
-              <button type="submit" className="buttons" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Get a Free Audit"}
-                <ArrowIcon />
-              </button>
               <div className="cseo-inline-audit-form-recaptcha">
                 <RecaptchaCheckbox
                   action={RECAPTCHA_ACTION}
@@ -1102,6 +1099,11 @@ export default function CommercialSeoPage() {
                   {submitError}
                 </p>
               )}
+              <button type="submit" className="buttons" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Get a Free Audit"}
+                <ArrowIcon />
+              </button>
+              <FormLegalLinks />
             </form>
           </div>
         </div>

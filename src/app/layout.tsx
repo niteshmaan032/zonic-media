@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@/app/style/service-lead-form.css";
 import localFont from "next/font/local";
 import Script from "next/script";
 import Loader from "@/app/components/Loader";
@@ -129,7 +130,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://widget.clutch.co" />
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
@@ -164,6 +165,15 @@ export default function RootLayout({
         <Script
           id="clutch-widget-script"
           src="https://widget.clutch.co/static/js/widget.js"
+          strategy="afterInteractive"
+        />
+
+        {/* GHL external form tracking — loaded site-wide so every custom lead
+            form submission is captured into the GoHighLevel dashboard. */}
+        <Script
+          id="ghl-external-tracking"
+          src="https://forms.zonicllc.com/js/external-tracking.js"
+          data-tracking-id="tk_f66384f994224b0091e870b5f6cf3e88"
           strategy="afterInteractive"
         />
       </head>

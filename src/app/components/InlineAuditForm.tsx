@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { usePathname, useRouter } from "next/navigation";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
@@ -161,10 +162,6 @@ export default function InlineAuditForm({
           />
           {errors.message && <p className="text-danger mt-2 mb-0">{errors.message.message}</p>}
         </div>
-        <button type="submit" className="buttons" disabled={isSubmitting}>
-          {isSubmitting ? "Submitting..." : "Get a Free Audit"}
-          <ArrowIcon />
-        </button>
         <div className="iaf-recaptcha">
           <RecaptchaCheckbox
             action={RECAPTCHA_ACTION}
@@ -175,6 +172,11 @@ export default function InlineAuditForm({
         {submitError && (
           <p className="text-danger text-center mb-0 iaf-error">{submitError}</p>
         )}
+        <button type="submit" className="buttons" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Get a Free Audit"}
+          <ArrowIcon />
+        </button>
+        <FormLegalLinks />
       </form>
     </div>
   );

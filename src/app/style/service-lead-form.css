@@ -1,0 +1,266 @@
+/* =====================================================================
+   Shared service lead form
+   Visual design matched to the Home-Inspector form (`.hia-*`): white card
+   with an orange border + soft orange glow, an orange top-accent bar,
+   tinted inputs with an orange focus glow, weight-500 type. Self-contained
+   under `.slf`. Child text rules are scoped under `.slf` so page-level
+   resets (e.g. `.home-revamp p { margin: 0 }`) can't override them.
+   ===================================================================== */
+
+.slf {
+  --slf-navy: #0f172a;
+  --slf-orange: #f97316;
+  --slf-orange-dark: #ea580c;
+  --slf-orange-tint: #fff7ed;
+  --slf-slate: #475569;
+  --slf-slate-light: #64748b;
+  --slf-line: #e2e8f0;
+  --slf-bg-alt: #f8fafc;
+  --slf-red: #ef4444;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--slf-navy);
+  line-height: 1.6;
+}
+
+.slf--card {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid var(--slf-orange);
+  border-radius: 20px;
+  padding: 30px 28px;
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.18),
+    0 10px 30px -16px rgba(249, 115, 22, 0.35);
+}
+.slf--card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: var(--slf-orange);
+  border-radius: 0 0 8px 8px;
+}
+
+/* ---------- Header ---------- */
+.slf .slf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--slf-orange-tint);
+  color: var(--slf-orange-dark);
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  padding: 7px 15px;
+  border-radius: 100px;
+  border: 1px solid rgba(249, 115, 22, 0.18);
+  margin-bottom: 16px;
+}
+.slf .slf-badge svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+.slf .slf-title {
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--slf-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+.slf .slf-sub {
+  font-size: 13.5px;
+  color: var(--slf-slate);
+  line-height: 1.55;
+  margin: 0 0 18px;
+}
+
+/* ---------- Fields ---------- */
+.slf-row {
+  display: flex;
+  gap: 12px;
+}
+.slf-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.slf .slf-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--slf-navy);
+  letter-spacing: -0.005em;
+  margin-bottom: 6px;
+}
+.slf input:not([type="checkbox"]),
+.slf select,
+.slf textarea {
+  width: 100%;
+  border: 1.5px solid var(--slf-line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14.5px;
+  margin-bottom: 12px;
+  color: var(--slf-navy);
+  background: var(--slf-bg-alt);
+  transition: border-color 0.18s ease, background 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.slf textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.55;
+}
+.slf input::placeholder,
+.slf textarea::placeholder {
+  color: var(--slf-slate-light);
+}
+.slf input:focus,
+.slf select:focus,
+.slf textarea:focus {
+  outline: none;
+  border-color: var(--slf-orange);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+}
+.slf input[aria-invalid="true"],
+.slf select[aria-invalid="true"],
+.slf textarea[aria-invalid="true"] {
+  border-color: var(--slf-red);
+}
+.slf .slf-error {
+  color: var(--slf-red);
+  font-size: 12px;
+  font-weight: 500;
+  margin: -8px 0 12px;
+}
+.slf .slf-error-center {
+  text-align: center;
+  margin: 4px 0 10px;
+}
+
+/* ---------- Service pills (multi-select) ---------- */
+.slf-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.slf-services input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.slf-services .slf-pill {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--slf-slate);
+  border: 1.5px solid var(--slf-line);
+  border-radius: 100px;
+  padding: 7px 14px;
+  margin: 0;
+  background: var(--slf-bg-alt);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.slf-services input:checked + .slf-pill {
+  background: var(--slf-orange);
+  border-color: var(--slf-orange);
+  color: #fff;
+}
+
+/* ---------- reCAPTCHA branding ---------- */
+.slf-recaptcha {
+  margin: 6px 0 14px;
+}
+
+/* ---------- Consent (above the submit button) ---------- */
+.slf .slf-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 14px;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--slf-slate);
+  cursor: pointer;
+}
+.slf .slf-consent input {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  accent-color: var(--slf-orange);
+}
+
+/* ---------- Submit ---------- */
+.slf-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0;
+  background: var(--slf-orange);
+  color: #fff;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+.slf-submit:hover:not(:disabled) {
+  background: var(--slf-orange-dark);
+  transform: translateY(-1px);
+}
+.slf-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+.slf-submit svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* ---------- Legal links (the only thing below the submit button) ---------- */
+.slf .slf-legal {
+  margin: 14px 0 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--slf-slate-light);
+}
+.slf .slf-legal a {
+  color: var(--slf-orange-dark);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.slf .slf-legal a:hover {
+  color: var(--slf-orange);
+}
+.slf .slf-legal .slf-legal-sep {
+  margin: 0 6px;
+  color: var(--slf-line);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+  .slf--card {
+    padding: 26px 20px;
+  }
+  .slf-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

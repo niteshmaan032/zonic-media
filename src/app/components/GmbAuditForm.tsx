@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
+import FormLegalLinks from "@/app/components/FormLegalLinks";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
 type GmbAuditFormValues = {
@@ -232,6 +233,8 @@ export default function GmbAuditForm() {
           />
         </div>
 
+        {submitError && <p className="af-error af-error-center">{submitError}</p>}
+
         <button type="submit" className="btn btn-primary af-submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
@@ -252,13 +255,7 @@ export default function GmbAuditForm() {
           )}
         </button>
 
-        {submitError && <p className="af-error af-error-center">{submitError}</p>}
-
-        <p className="fine">
-          Your information is 100% confidential — we never share your data. By
-          submitting, you agree to be contacted about your case. Reply STOP to opt
-          out of texts at any time.
-        </p>
+        <FormLegalLinks />
       </form>
     </div>
   );

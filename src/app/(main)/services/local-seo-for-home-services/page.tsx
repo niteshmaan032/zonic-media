@@ -1,7 +1,7 @@
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
-import GoHighLevelForm from "@/app/components/GoHighLevelForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
@@ -156,7 +156,16 @@ function page() {
           </div>
 
           <div className="local-seo-home-contact-form">
-            <GoHighLevelForm instanceId="hero" height={622} />
+            <ServiceLeadForm
+              formType="local-seo-home-services"
+              badge="Free Local SEO Audit"
+              title="Get your free local SEO audit"
+              subtitle="We'll respond within one business day."
+              submitText="Get My Free Audit"
+              defaultServices={["Local SEO"]}
+              messageLabel="Tell us about your business"
+              messagePlaceholder="What services do you offer and where?"
+            />
           </div>
         </div>
         {/*--local-seo-home-sec-2--*/}
@@ -869,7 +878,16 @@ function page() {
             </div>
 
             <div className="local-seo-home-contact-form">
-              <GoHighLevelForm instanceId="bottom" height={622} />
+              <ServiceLeadForm
+                formType="local-seo-home-services"
+                badge="Free Local SEO Audit"
+                title="Get your free local SEO audit"
+                subtitle="We'll respond within one business day."
+                submitText="Get My Free Audit"
+                defaultServices={["Local SEO"]}
+                messageLabel="Tell us about your business"
+                messagePlaceholder="What services do you offer and where?"
+              />
             </div>
           </div>
         </div>
