@@ -74,14 +74,14 @@ export default function StatePage({ state }: { state: StateContent }) {
   const services = buildStateServices(stateName);
   const priceCards = buildStatePriceCards(stateName);
 
-  const pageUrl = `https://zonicllc.com/home-inspector-marketing-agency/${state.slug}`;
+  const pageUrl = `https://zonicllc.com/services/home-inspector-marketing/${state.slug}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", url: "/" },
     {
       name: "Home Inspector Marketing Agency",
-      url: "/home-inspector-marketing-agency",
+      url: "/services/home-inspector-marketing",
     },
-    { name: stateName, url: `/home-inspector-marketing-agency/${state.slug}` },
+    { name: stateName, url: `/services/home-inspector-marketing/${state.slug}` },
   ]);
 
   const faqSchema = {
@@ -96,7 +96,7 @@ export default function StatePage({ state }: { state: StateContent }) {
   };
 
   const localBusinessJsonLd = buildLocalBusinessJsonLd({
-    pageUrl: `/home-inspector-marketing-agency/${state.slug}`,
+    pageUrl: `/services/home-inspector-marketing/${state.slug}`,
     areaServed: stateName,
   });
 
@@ -173,7 +173,7 @@ export default function StatePage({ state }: { state: StateContent }) {
             <div className="hia-content-col">
               {/* Breadcrumb */}
               <nav aria-label="Breadcrumb" className="his-breadcrumb">
-                <Link href="/home-inspector-marketing-agency">
+                <Link href="/services/home-inspector-marketing">
                   Home Inspector Marketing
                 </Link>
                 <span className="his-breadcrumb-sep">›</span>
@@ -636,7 +636,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 </div>
                 <div className="hia-footer-col">
                   <h5>Industries</h5>
-                  <Link href="/home-inspector-marketing-agency">
+                  <Link href="/services/home-inspector-marketing">
                     Home Inspectors
                   </Link>
                   <Link href="/services/industry/local-seo-for-roofing-companies">

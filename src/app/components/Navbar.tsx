@@ -5,10 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   FaBug,
-  FaFan,
   FaTooth,
   FaUserDoctor,
-  FaWrench,
 } from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
@@ -105,20 +103,6 @@ const localSeoServices = [
     link: "/services/industry/pediatricians",
   },
   {
-    id: "Hvac SEO",
-    label: "HVAC Local SEO",
-    image: "/images/hvac/hvac-link-thumb.jpg",
-    alt: "hvac-seo",
-    link: "/services/industry/local-seo-services-for-hvac",
-  },
-  {
-    id: "Plumber SEO",
-    label: "Plumber Local SEO",
-    image: "/images/plumber/plumber-link-thumb.jpg",
-    alt: "plumber seo",
-    link: "/services/industry/plumber",
-  },
-  {
     id: "Pest SEO",
     label: "Pest Control Local SEO",
     image: "/images/pest/pest-thumb-link.jpg",
@@ -175,7 +159,21 @@ const industryLinks = [
     title: "Home Inspector Marketing",
     description:
       "Local SEO, Google Ads, GBP, and websites built to book more home inspections across the US.",
-    link: "/home-inspector-marketing-agency",
+    link: "/services/home-inspector-marketing",
+  },
+  {
+    id: "plumbing-marketing-agency",
+    title: "Plumbing Marketing",
+    description:
+      "Map pack rankings, GBP, paid ads, websites, and reviews built to win urgent service calls for plumbing contractors.",
+    link: "/services/plumbing-marketing-agency",
+  },
+  {
+    id: "hvac-marketing-agency",
+    title: "HVAC Marketing",
+    description:
+      "Map pack rankings, GBP, paid ads, maintenance memberships, and reviews tuned to HVAC seasonal demand peaks.",
+    link: "/services/hvac-marketing-agency",
   },
 ];
 
@@ -615,38 +613,6 @@ function Navbar() {
                             <span>
                               Help pediatric clinics improve local visibility
                               and generate more patient appointments.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/local-seo-services-for-hvac"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaFan />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>HVAC Local SEO</strong>
-                            <span>
-                              Generate more calls for heating and cooling
-                              services with stronger local rankings.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/plumber"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaWrench />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Plumber Local SEO</strong>
-                            <span>
-                              Build consistent local visibility that helps
-                              plumbing businesses win urgent service calls.
                             </span>
                           </span>
                         </Link>

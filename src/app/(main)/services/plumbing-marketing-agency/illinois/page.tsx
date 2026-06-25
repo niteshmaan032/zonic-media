@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import StatePage from "../StatePage";
 import { STATE_CONTENT } from "../stateContent";
 
-const state = STATE_CONTENT.florida;
+const state = STATE_CONTENT.illinois;
 
 export const metadata: Metadata = {
   title: state.metaTitle,
   description: state.metaDescription,
   alternates: {
-    canonical: `/home-inspector-marketing-agency/${state.slug}`,
+    canonical: `/services/plumbing-marketing-agency/${state.slug}`,
   },
 };
 
-export default function FloridaStatePage() {
+export default function IllinoisPlumbingPage() {
   return <StatePage state={state} />;
 }

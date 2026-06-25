@@ -356,27 +356,7 @@ export default function GbpVerificationLeadForm() {
           <span className="gbv-ft-i">⚡ Same-day response</span>
         </div>
 
-        {siteKey ? (
-          <p className="gbv-recaptcha-notice">
-            Protected by reCAPTCHA. Google{" "}
-            <a
-              href="https://policies.google.com/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://policies.google.com/terms"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Terms of Service
-            </a>{" "}
-            apply.
-          </p>
-        ) : (
+        {!siteKey && (
           <p className="gbv-form-error">reCAPTCHA is not configured.</p>
         )}
 

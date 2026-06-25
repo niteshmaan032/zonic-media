@@ -508,7 +508,7 @@ export default async function Home() {
                   Towing
                 </a>
                 <a
-                  href="https://www.zonicllc.com/home-inspector-marketing-agency"
+                  href="https://www.zonicllc.com/services/home-inspector-marketing"
                   className="niche-chip"
                 >
                   <svg
@@ -948,7 +948,7 @@ export default async function Home() {
                   ),
                 },
                 {
-                  href: "https://www.zonicllc.com/home-inspector-marketing-agency",
+                  href: "https://www.zonicllc.com/services/home-inspector-marketing",
                   h: "Home Inspector Marketing",
                   p: "Local SEO, Google Ads, GBP, and websites built to book more home inspections across the US.",
                   icon: (

@@ -32,9 +32,9 @@ type FormValues = {
   message: string;
 };
 
-const DEFAULT_SERVICE = "Home Inspector Marketing";
+const DEFAULT_SERVICE = "HVAC Marketing";
 
-export default function HomeInspectorLeadForm() {
+export default function HvacLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
@@ -123,8 +123,8 @@ export default function HomeInspectorLeadForm() {
       }
 
       const messageParts = [
-        `Inspection Company: ${data.company}`,
-        `City You Serve: ${data.city}`,
+        `HVAC Company: ${data.company}`,
+        `Service Area / City: ${data.city}`,
         `Message: ${data.message}`,
       ];
 
@@ -132,7 +132,7 @@ export default function HomeInspectorLeadForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          formType: "home-inspector-marketing",
+          formType: "hvac-marketing",
           sourcePage: pathname,
           pageUrl: window.location.href,
           fullName: data.fullName,
@@ -162,7 +162,7 @@ export default function HomeInspectorLeadForm() {
       );
       router.push("/thank-you");
     } catch (error) {
-      console.error("Home inspector form submission failed:", error);
+      console.error("HVAC form submission failed:", error);
       setSubmitError(
         error instanceof Error
           ? error.message
@@ -183,10 +183,11 @@ export default function HomeInspectorLeadForm() {
       <div className="hia-form-stamp">Free Audit</div>
 
       <div className="hia-form-head">
-        <h3>Get Your Marketing Audit</h3>
+        <h3>Free HVAC Marketing Audit</h3>
         <p>
-          Five-page written report. Delivered within five business days. No
-          sales call required to receive it.
+          Five-page report. Current map pack position, GBP health, website
+          audit, and a competitive gap analysis. Delivered in five business
+          days.
         </p>
       </div>
 
@@ -196,11 +197,11 @@ export default function HomeInspectorLeadForm() {
         className="hia-form-body"
       >
         <div className="hia-fg">
-          <label htmlFor="hia-fullName">Your name</label>
+          <label htmlFor="hvac-fullName">Your name</label>
           <input
-            id="hia-fullName"
+            id="hvac-fullName"
             type="text"
-            placeholder="Mike Carter"
+            placeholder="Carlos Martinez"
             aria-invalid={errors.fullName ? "true" : "false"}
             {...register("fullName", {
               required: "Full name is required.",
@@ -215,11 +216,11 @@ export default function HomeInspectorLeadForm() {
 
         <div className="hia-fg-row">
           <div className="hia-fg">
-            <label htmlFor="hia-company">Inspection company</label>
+            <label htmlFor="hvac-company">HVAC company</label>
             <input
-              id="hia-company"
+              id="hvac-company"
               type="text"
-              placeholder="Carter Home Inspections"
+              placeholder="Reliable Heating & Air"
               aria-invalid={errors.company ? "true" : "false"}
               {...register("company", {
                 required: "Company is required.",
@@ -233,11 +234,11 @@ export default function HomeInspectorLeadForm() {
           </div>
 
           <div className="hia-fg">
-            <label htmlFor="hia-city">City you serve</label>
+            <label htmlFor="hvac-city">Service area / city</label>
             <input
-              id="hia-city"
+              id="hvac-city"
               type="text"
-              placeholder="Austin, TX"
+              placeholder="Houston, TX"
               aria-invalid={errors.city ? "true" : "false"}
               {...register("city", {
                 required: "City is required.",
@@ -253,11 +254,11 @@ export default function HomeInspectorLeadForm() {
 
         <div className="hia-fg-row">
           <div className="hia-fg">
-            <label htmlFor="hia-email">Email</label>
+            <label htmlFor="hvac-email">Email</label>
             <input
-              id="hia-email"
+              id="hvac-email"
               type="email"
-              placeholder="mike@carterinspections.com"
+              placeholder="carlos@reliableair.com"
               aria-invalid={errors.email ? "true" : "false"}
               {...register("email", {
                 required: "Email is required.",
@@ -273,11 +274,11 @@ export default function HomeInspectorLeadForm() {
           </div>
 
           <div className="hia-fg">
-            <label htmlFor="hia-contact">Phone</label>
+            <label htmlFor="hvac-contact">Phone</label>
             <input
-              id="hia-contact"
+              id="hvac-contact"
               type="tel"
-              placeholder="(302) 000-0000"
+              placeholder="(713) 555-0182"
               inputMode="numeric"
               aria-invalid={errors.contact ? "true" : "false"}
               onInput={(e: React.FormEvent<HTMLInputElement>) => {
@@ -299,11 +300,11 @@ export default function HomeInspectorLeadForm() {
         </div>
 
         <div className="hia-fg">
-          <label htmlFor="hia-message">Your message</label>
+          <label htmlFor="hvac-message">Your message</label>
           <textarea
-            id="hia-message"
+            id="hvac-message"
             rows={2}
-            placeholder="Tell us about your current marketing, target service areas, or what's holding you back."
+            placeholder="Tell us about your service area, HVAC specialties, current GBP status, or what's holding you back."
             aria-invalid={errors.message ? "true" : "false"}
             {...register("message", {
               required: "A short message is required.",

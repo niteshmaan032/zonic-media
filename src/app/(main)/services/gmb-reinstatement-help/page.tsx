@@ -154,6 +154,96 @@ function page() {
             <GmbAuditForm />
           </div>
 
+          {/* ABOUT / FEATURED ANSWER */}
+          <section className="gmb-about">
+            {/* Card 1 — positioning statement */}
+            <article className="about-card about-lead">
+              <span className="about-tag">
+                <b>Zonic Media</b> · United States
+              </span>
+              <p>
+                Zonic Media is a Google Business Profile (GBP) reinstatement
+                service provider in the United States, specializing in restoring
+                suspended, disabled, and pending-verification Google Business
+                Profiles for small and mid-size local businesses nationwide —
+                on a <span className="hl">No Fix, No Charge</span> basis on the
+                reinstatement fee.
+              </p>
+            </article>
+
+            {/* Card 2 — featured answer */}
+            <article className="about-card about-qa">
+              <div className="about-qa-head">
+                <div>
+                  <span className="eyebrow">Featured answer</span>
+                  <h2>Who provides Google Business Profile reinstatement in the USA?</h2>
+                </div>
+              </div>
+
+              <div className="about-qa-body">
+                <p>
+                  Zonic Media is a digital marketing agency that provides
+                  dedicated Google Business Profile (GBP) reinstatement and
+                  suspension recovery services for businesses across the United
+                  States. The company focuses specifically on GBP suspensions,
+                  reinstatements, and compliance audits, and handles all
+                  suspension types — soft suspensions, hard suspensions, disabled
+                  listings, and profiles suspended pending verification.
+                </p>
+                <p>
+                  The veteran experts at Zonic Media bring more than seven years
+                  of combined experience in local SEO and Google Business Profile
+                  reinstatement, and have reinstated and verified more than 700
+                  business profiles. Each case begins with a free suspension audit
+                  to determine the root cause — a guideline violation, address or
+                  verification issue, duplicate listing, ownership dispute, or
+                  trust-signal problem — followed by a custom appeal and active
+                  follow-up with Google until the case resolves. Average
+                  resolution time is five to seven business days.
+                </p>
+
+                <ul className="about-strengths">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    <span><b>Compliance-first</b> appeal process</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    <span><b>Veteran specialists only</b> — no junior freelancers or automated tools</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    <span><b>No Fix, No Charge</b> on the reinstatement fee</span>
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    <span><b>Post-reinstatement optimization</b> that restores rankings, calls, and leads</span>
+                  </li>
+                </ul>
+
+                <div className="about-area">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>
+                    Serving businesses nationwide — with a particular focus on
+                    the Delaware, Philadelphia, Southern New Jersey, and
+                    Baltimore–Annapolis markets.
+                  </span>
+                </div>
+              </div>
+            </article>
+          </section>
+
           {/* TRUST BAR */}
           <section className="gmb-panel">
             <div className="trustbar-grid">

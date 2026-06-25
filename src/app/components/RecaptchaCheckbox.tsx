@@ -106,27 +106,7 @@ export default function RecaptchaCheckbox({
         strategy="afterInteractive"
       />
 
-      {siteKey ? (
-        <p className="mb-0 text-muted small">
-          Protected by reCAPTCHA. Google{" "}
-          <a
-            href="https://policies.google.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Privacy Policy
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://policies.google.com/terms"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Terms of Service
-          </a>{" "}
-          apply.
-        </p>
-      ) : (
+      {!siteKey && (
         <p className="text-danger mb-0">reCAPTCHA is not configured.</p>
       )}
 

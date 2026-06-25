@@ -29,12 +29,32 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/google-business-profile-verification-help-2026`, changeFrequency: "monthly", priority: 0.8 },
 
   // Home inspector marketing
-  { url: `${BASE_URL}/home-inspector-marketing-agency`,                changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/home-inspector-marketing-agency/california`,     changeFrequency: "monthly", priority: 0.7 },
-  { url: `${BASE_URL}/home-inspector-marketing-agency/florida`,        changeFrequency: "monthly", priority: 0.7 },
-  { url: `${BASE_URL}/home-inspector-marketing-agency/georgia`,        changeFrequency: "monthly", priority: 0.7 },
-  { url: `${BASE_URL}/home-inspector-marketing-agency/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
-  { url: `${BASE_URL}/home-inspector-marketing-agency/texas`,          changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/home-inspector-marketing`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/home-inspector-marketing/california`,     changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/home-inspector-marketing/florida`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/home-inspector-marketing/georgia`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/home-inspector-marketing/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/home-inspector-marketing/texas`,          changeFrequency: "monthly", priority: 0.7 },
+
+  // Plumbing marketing
+  { url: `${BASE_URL}/services/plumbing-marketing-agency`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/arizona`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/california`,     changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/florida`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/georgia`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/illinois`,       changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/plumbing-marketing-agency/texas`,          changeFrequency: "monthly", priority: 0.7 },
+
+  // HVAC marketing
+  { url: `${BASE_URL}/services/hvac-marketing-agency`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/arizona`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/california`,     changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/florida`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/georgia`,        changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/illinois`,       changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/hvac-marketing-agency/texas`,          changeFrequency: "monthly", priority: 0.7 },
 
   // Locations
   { url: `${BASE_URL}/services/delaware/digital-marketing`,     changeFrequency: "monthly", priority: 0.8 },

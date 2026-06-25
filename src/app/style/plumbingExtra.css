@@ -1,0 +1,74 @@
+/* Plumbing-specific additions layered on top of homeInspAgency.css.
+   Only the few pieces that the home-inspector layout did not already cover:
+   the strategy checklist and the specialty/KPI helpers. Everything else
+   reuses the shared .hia-* design system so fonts, colors, spacing, and the
+   form styling stay identical across both industries. */
+
+.pmb-strategy {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.pmb-strategy li {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hia-border, #e2e8f0);
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #1e293b;
+}
+.pmb-strategy li:last-child {
+  border-bottom: none;
+}
+.pmb-strategy li::before {
+  content: "✓";
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: #fff7ed;
+  color: #f97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* SMS/messaging consent disclosure that sits directly above the site footer
+   on the plumbing marketing pages. Dark strip to blend into the footer. */
+.pmb-consent-footer {
+  background: #0a1120;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+}
+.pmb-consent-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.pmb-consent-inner p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+@media (max-width: 560px) {
+  .pmb-consent-inner {
+    padding: 0 20px;
+  }
+}
+
+/* Specialty chips reuse the industry-card look but allow a small lead icon. */
+.pmb-spec-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #fff7ed;
+  font-size: 20px;
+  margin-bottom: 12px;
+}

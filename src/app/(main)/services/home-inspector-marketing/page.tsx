@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   title: "Home Inspector Marketing Agency | Local SEO & Leads",
   description:
     "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
-  alternates: { canonical: "/home-inspector-marketing-agency" },
+  alternates: { canonical: "/services/home-inspector-marketing" },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   {
     name: "Home Inspector Marketing Agency",
-    url: "/home-inspector-marketing-agency",
+    url: "/services/home-inspector-marketing",
   },
 ]);
 
@@ -365,7 +365,7 @@ const faqs = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: "https://zonicllc.com/home-inspector-marketing-agency",
+  url: "https://zonicllc.com/services/home-inspector-marketing",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
@@ -374,7 +374,7 @@ const faqSchema = {
 };
 
 const localBusinessJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: "/home-inspector-marketing-agency",
+  pageUrl: "/services/home-inspector-marketing",
   areaServed: { type: "Country", name: "United States" },
 });
 
@@ -513,7 +513,7 @@ function Page() {
                   {states.map((state) => (
                     <Link
                       key={state.slug}
-                      href={`/home-inspector-marketing-agency/${state.slug}`}
+                      href={`/services/home-inspector-marketing/${state.slug}`}
                       className="hia-state-chip"
                     >
                       <span className="hia-state-pin" aria-hidden="true" />
@@ -951,7 +951,7 @@ function Page() {
                 </div>
                 <div className="hia-footer-col">
                   <h5>Industries</h5>
-                  <Link href="/home-inspector-marketing-agency">
+                  <Link href="/services/home-inspector-marketing">
                     Home Inspectors
                   </Link>
                   <Link href="/services/industry/local-seo-for-roofing-companies">

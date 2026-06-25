@@ -83,6 +83,13 @@ const nextConfig: NextConfig = {
       },
       { source: "/service", destination: "/services", permanent: true },
 
+      // Home inspector marketing moved under /services (parent + state pages)
+      {
+        source: "/home-inspector-marketing-agency/:path*",
+        destination: "/services/home-inspector-marketing/:path*",
+        permanent: true,
+      },
+
       // Company URL changes
       { source: "/company/about-us", destination: "/about", permanent: true },
       { source: "/company/our-partners", destination: "/", permanent: true },
