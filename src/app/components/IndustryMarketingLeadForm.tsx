@@ -31,6 +31,20 @@ type FormValues = {
   goal: string;
 };
 
+// The /api/leads route only accepts services from a fixed whitelist
+// (see src/api/leadsRoute.ts); anything else is stripped and the request 400s.
+// Map each growth goal to an allowed service, keeping the readable goal text
+// in the message. Fall back to Local SEO for any unmapped/custom option.
+const GOAL_TO_SERVICE: Record<string, string> = {
+  "More calls & booked jobs": "Local SEO",
+  "Rank in Google Map Pack": "Google My Business (GMB)",
+  "Google Ads / PPC leads": "Pay Per Click (PPC)",
+  "New website": "Web Design",
+  "Everything — full marketing": "Local SEO",
+};
+
+const DEFAULT_SERVICE = "Local SEO";
+
 type IndustryMarketingLeadFormProps = {
   slug: string;
   title: string;
@@ -136,8 +150,8 @@ export default function IndustryMarketingLeadForm({
           email: values.email,
           contact: values.contact,
           businessName: values.businessName,
-          message: `Primary growth goal: ${values.goal}`,
-          services: [title],
+          message: `${title} — primary growth goal: ${values.goal}`,
+          services: [GOAL_TO_SERVICE[values.goal] ?? DEFAULT_SERVICE],
           smsConsent,
           recaptchaToken,
         }),
