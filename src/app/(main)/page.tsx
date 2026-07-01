@@ -1,4 +1,5 @@
 import Script from "next/script";
+import Image from "next/image";
 import "./page.css";
 import Footer from "@/app/components/Footer";
 import RankGrid from "@/app/components/RankGrid";
@@ -261,6 +262,23 @@ export default async function Home() {
                     </svg>
                     (302) 726-9736
                   </a>
+                </div>
+                <div className="hero-badges">
+                  <iframe
+                    className="hero-badge-widget"
+                    width="90"
+                    height="90"
+                    loading="eager"
+                    src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
+                    title="Top Clutch Digital Marketing Company Delaware 2026"
+                  ></iframe>
+                  <Image
+                    className="hero-badge-widget"
+                    width={90}
+                    height={90}
+                    src="/images/Partner.png"
+                    alt="Yelp Advertising Partner"
+                  />
                 </div>
                 <div className="hero-trust">
                   <span>

@@ -1,0 +1,414 @@
+/* ============================================================
+   Zonic · Google Business Profile Services for Real Estate
+   Prefix: gre-
+   Supplements homeInspAgency.css (hia-) — reuses its shell,
+   nav, hero, form, sections, final CTA and footer. This file
+   adds only the real-estate-specific pieces: the select field,
+   breadcrumb, suspension-trigger cards, click-share visual,
+   the individual-vs-brokerage matrix, and the state blocks.
+   All rules are scoped under .hia-page so they inherit the
+   same tokens (--navy / --orange / --slate / --radius…).
+   ============================================================ */
+
+/* Select field — match hia-fg inputs, add a caret */
+.hia-page .hia-fg select {
+  width: 100%;
+  padding: 12px 38px 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 14.5px;
+  background-color: var(--bg-alt);
+  color: var(--text);
+  transition: all 0.18s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.hia-page .hia-fg select:focus {
+  outline: none;
+  border-color: var(--orange);
+  background-color: var(--hia-white);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+}
+.hia-page .hia-fg select[aria-invalid="true"] {
+  border-color: #ef4444;
+}
+
+/* ──────────────── BREADCRUMB ──────────────── */
+.gre-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--slate);
+  margin-bottom: 26px;
+}
+.gre-breadcrumb a {
+  color: var(--orange);
+  font-weight: 500;
+}
+.gre-breadcrumb a:hover {
+  text-decoration: underline;
+}
+.gre-breadcrumb-sep {
+  color: var(--border-strong);
+}
+.gre-breadcrumb-current {
+  color: var(--slate);
+}
+
+/* ──────────────── SUSPENSION TRIGGERS ──────────────── */
+.gre-trigger-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+.gre-trigger-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 28px 28px;
+  border-radius: var(--radius-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.gre-trigger-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.gre-trigger-num {
+  font-weight: 500;
+  font-size: 12.5px;
+  color: var(--orange);
+  letter-spacing: 0.18em;
+  margin: 0 0 12px;
+}
+.gre-trigger-card h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+}
+.gre-trigger-card p {
+  font-size: 15px;
+  color: var(--slate);
+  line-height: 1.68;
+  margin: 0 0 16px;
+}
+.gre-trigger-fix {
+  background: var(--hia-white);
+  border: 1px solid var(--border);
+  border-left: 3px solid #16a34a;
+  padding: 14px 16px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-top: auto;
+}
+.gre-trigger-fix strong {
+  color: #16a34a;
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ──────────────── CLICK-SHARE (map pack) VISUAL ──────────────── */
+.gre-clickshare {
+  margin-top: 8px;
+  background: var(--navy);
+  border-radius: var(--radius-xl);
+  padding: 34px 34px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.gre-clickshare::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  right: -140px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(
+    circle,
+    rgba(249, 115, 22, 0.14) 0%,
+    transparent 62%
+  );
+  pointer-events: none;
+}
+.gre-clickshare-head {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-bottom: 22px;
+}
+.gre-clickshare-head strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+.gre-rank-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.gre-rank {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  background: var(--navy-2);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+.gre-rank-1 {
+  border-color: rgba(249, 115, 22, 0.5);
+  background: rgba(249, 115, 22, 0.1);
+}
+.gre-rank-pin {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: var(--navy-3);
+  letter-spacing: -0.02em;
+}
+.gre-rank-1 .gre-rank-pin {
+  background: var(--orange);
+}
+.gre-rank-susp .gre-rank-pin {
+  background: #dc2626;
+  font-size: 11px;
+}
+.gre-rank-name {
+  color: #ffffff;
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.gre-rank-susp .gre-rank-name {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: line-through;
+}
+.gre-rank-sub {
+  display: block;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12.5px;
+  font-weight: 400;
+  margin-top: 3px;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+.gre-rank-share {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--orange);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+.gre-rank-susp .gre-rank-share {
+  color: #f87171;
+  font-size: 15px;
+}
+.gre-clickshare-cap {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12.5px;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 0.02em;
+}
+
+/* ──────────────── INDIVIDUAL vs BROKERAGE MATRIX ──────────────── */
+.gre-matrix {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--hia-white);
+  overflow: hidden;
+}
+.gre-matrix-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 14px;
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.gre-matrix-row:first-child {
+  border-top: none;
+}
+.gre-matrix-head {
+  background: var(--navy);
+  font-weight: 500;
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+.gre-matrix-head > :first-child {
+  color: var(--orange);
+}
+.gre-matrix-row:nth-child(even):not(.gre-matrix-head) {
+  background: var(--bg-alt);
+}
+.gre-matrix-label {
+  color: var(--navy);
+  font-weight: 500;
+}
+.gre-matrix-cell {
+  color: var(--slate);
+}
+.gre-matrix-cell.gre-yes {
+  color: #16a34a;
+  font-weight: 500;
+}
+.gre-matrix-cell.gre-no {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+/* ──────────────── STATE BLOCKS ──────────────── */
+.gre-state-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 8px;
+}
+.gre-state-block {
+  background: var(--hia-white);
+  border: 1px solid var(--border);
+  padding: 30px 32px;
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+.gre-state-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 44px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 0 0 3px 3px;
+}
+.gre-state-block:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.gre-state-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.gre-state-head h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+.gre-state-meta {
+  font-size: 12.5px;
+  color: var(--slate-light);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.gre-state-meta span {
+  color: var(--orange);
+}
+.gre-state-block p {
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--slate);
+  margin: 0;
+}
+.gre-state-block p strong {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 991.98px) {
+  .gre-trigger-grid {
+    grid-template-columns: 1fr;
+  }
+  .gre-clickshare {
+    padding: 28px 24px 26px;
+  }
+  .gre-rank {
+    grid-template-columns: 40px 1fr auto;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  /* Matrix collapses to stacked cards with labels */
+  .gre-matrix {
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+  .gre-matrix-head {
+    display: none;
+  }
+  .gre-matrix-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    background: var(--hia-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .gre-matrix-row:nth-child(even):not(.gre-matrix-head) {
+    background: var(--hia-white);
+  }
+  .gre-matrix-label {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate-light);
+  }
+  .gre-matrix-cell::before {
+    content: attr(data-col) ": ";
+    color: var(--navy);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gre-trigger-card {
+    padding: 24px 22px;
+  }
+  .gre-state-block {
+    padding: 26px 22px;
+  }
+  .gre-state-head h3 {
+    font-size: 21px;
+  }
+}

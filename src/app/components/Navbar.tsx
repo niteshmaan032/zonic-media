@@ -134,6 +134,13 @@ const industryLinks = [
     link: "/services/industry/real-estate-seo-services",
   },
   {
+    id: "gbp-real-estate",
+    title: "Real Estate Google Business Profile",
+    description:
+      "GBP reinstatement, verification, and management for real estate agents and brokers across FL, TX, CA, NY & AZ.",
+    link: "/services/google-business-profile-services-real-estate-agents",
+  },
+  {
     id: "chiropractor-local-seo-services",
     title: "Chiropractor Local SEO Services",
     description:
