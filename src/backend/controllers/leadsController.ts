@@ -30,6 +30,179 @@ const GMB_OPTIMIZATION_TEMPLATE_PAGES = new Set([
   "/local-seo-google-business-optimization",
 ]);
 
+// Per-industry copy for the marketing-agency landing pages built from
+// src/data/industryMarketingPages.generated.json. Keyed by the form's
+// `formType`, which is the page slug (see IndustryMarketingLeadForm).
+// `adj` reads in "our {adj} marketing specialists"; `biz` reads in
+// "your {biz}".
+const INDUSTRY_MARKETING_TEMPLATES: Record<
+  string,
+  { label: string; adj: string; biz: string }
+> = {
+  "auto-repair-marketing-agency": {
+    label: "Auto Repair Marketing",
+    adj: "auto repair",
+    biz: "auto repair shop",
+  },
+  "chiropractic-marketing-agency": {
+    label: "Chiropractic Marketing",
+    adj: "chiropractic",
+    biz: "chiropractic practice",
+  },
+  "cleaning-company-marketing-agency": {
+    label: "Cleaning Company Marketing",
+    adj: "cleaning company",
+    biz: "cleaning company",
+  },
+  "dental-marketing-agency": {
+    label: "Dental Marketing",
+    adj: "dental",
+    biz: "dental practice",
+  },
+  "electrician-marketing-agency": {
+    label: "Electrician Marketing",
+    adj: "electrician",
+    biz: "electrical business",
+  },
+  "garage-door-marketing-agency": {
+    label: "Garage Door Marketing",
+    adj: "garage door",
+    biz: "garage door business",
+  },
+  "landscaping-marketing-agency": {
+    label: "Landscaping Marketing",
+    adj: "landscaping",
+    biz: "landscaping business",
+  },
+  "law-firm-marketing-agency": {
+    label: "Law Firm Marketing",
+    adj: "law firm",
+    biz: "law firm",
+  },
+  "moving-company-marketing-agency": {
+    label: "Moving Company Marketing",
+    adj: "moving company",
+    biz: "moving company",
+  },
+  "painting-contractor-marketing-agency": {
+    label: "Painting Contractor Marketing",
+    adj: "painting",
+    biz: "painting business",
+  },
+  "pest-control-marketing-agency": {
+    label: "Pest Control Marketing",
+    adj: "pest control",
+    biz: "pest control business",
+  },
+  "real-estate-marketing-agency": {
+    label: "Real Estate Marketing",
+    adj: "real estate",
+    biz: "real estate business",
+  },
+  "roofing-marketing-agency": {
+    label: "Roofing Marketing",
+    adj: "roofing",
+    biz: "roofing business",
+  },
+};
+
+// Builds the shared, on-brand thank-you email (both text and HTML) so each
+// new service page can send a tailored message without duplicating markup.
+const buildBrandedThankYouEmail = ({
+  subject,
+  headerTag,
+  greetingName,
+  bodyParagraphs,
+  signatureRole,
+  disclaimer,
+  accentColor = "#e8401c",
+}: {
+  subject: string;
+  headerTag: string;
+  greetingName: string;
+  bodyParagraphs: string[];
+  signatureRole: string;
+  disclaimer: string;
+  accentColor?: string;
+}) => {
+  const closingLine = `If you'd like to speak with a specialist right away, feel free to call us at ${SITE_CONTACT.phoneDisplay}.`;
+
+  const text = [
+    `Hi ${greetingName},`,
+    "",
+    ...bodyParagraphs.flatMap((paragraph) => [paragraph, ""]),
+    closingLine,
+    "",
+    "Talk soon,",
+    "The Zonic Media Team",
+    signatureRole,
+    `${SITE_CONTACT.email} | ${SITE_CONTACT.phoneDisplay}`,
+  ].join("\n");
+
+  const safeGreeting = escapeHtml(greetingName);
+  const paragraphsHtml = bodyParagraphs
+    .map(
+      (paragraph) =>
+        `<p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">${escapeHtml(paragraph)}</p>`,
+    )
+    .join("\n            ");
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>${escapeHtml(subject)}</title>
+</head>
+<body style="margin:0; padding:0; background:#f4f2ee; font-family: Arial, sans-serif; font-size:16px; color:#1a1a1a;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f2ee; padding:40px 16px;">
+  <tr>
+    <td align="center">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:580px; background:#ffffff; border-radius:8px; overflow:hidden; border:1px solid rgba(0,0,0,0.08);">
+        <tr>
+          <td style="padding:28px 40px 24px; border-bottom:1px solid #f0ede8;">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td><span style="font-size:20px; font-weight:800; color:#0d0d0d; letter-spacing:-0.5px;"><span style="color:${accentColor};">Zonic</span>Media</span></td>
+                <td align="right"><span style="font-size:11px; color:#999;">${escapeHtml(headerTag)}</span></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 40px 32px;">
+            <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${safeGreeting}</strong>,</p>
+            ${paragraphsHtml}
+            <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with a specialist right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:${accentColor}; font-weight:700; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a>.</p>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
+            <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
+            <p style="font-size:15px; font-weight:700; color:#0d0d0d; margin:0 0 4px;">The Zonic Media Team</p>
+            <p style="font-size:13px; color:#888; margin:0 0 16px; line-height:1.6;">${escapeHtml(signatureRole)}</p>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:12px;"><a href="${SITE_CONTACT.emailHref}" style="font-size:13px; color:#555; text-decoration:none;">${escapeHtml(SITE_CONTACT.email)}</a></td>
+                <td style="color:#ddd; font-size:13px; padding-right:12px;">|</td>
+                <td><a href="${SITE_CONTACT.phoneHref}" style="font-size:13px; color:#555; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px; background:#f9f7f3; border-top:1px solid #f0ede8;">
+            <p style="font-size:11px; color:#ccc; margin:0; line-height:1.7; text-align:center;">${escapeHtml(disclaimer)}</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`;
+
+  return { text, html };
+};
+
 const getTransporter = () => {
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT ?? "465");
@@ -398,6 +571,52 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 </html>`,
     });
 
+    return;
+  }
+
+  // Industry marketing-agency landing pages (formType === page slug).
+  const industryTemplate = INDUSTRY_MARKETING_TEMPLATES[formType ?? ""];
+  if (industryTemplate) {
+    const businessLabel =
+      businessName?.trim() || `your ${industryTemplate.biz}`;
+    const subject = `Your Free ${industryTemplate.label} Audit Is Underway - Zonic Media`;
+    const { text, html } = buildBrandedThankYouEmail({
+      subject,
+      accentColor: "#f97316",
+      headerTag: `${industryTemplate.label} Specialists`,
+      greetingName: getFirstName(fullName),
+      bodyParagraphs: [
+        `Thank you for reaching out to Zonic Media. We've received your free marketing audit request for ${businessLabel} and our team is already digging into it. One of our ${industryTemplate.adj} marketing specialists will call or email you shortly.`,
+        `Whether you're after more qualified leads, higher rankings in the Google Map Pack, better-performing Google Ads, or a website that actually converts, we'll pinpoint exactly where your ${industryTemplate.biz} is leaving money on the table and give you a clear, no-fluff plan to fix it.`,
+      ],
+      signatureRole: `${industryTemplate.label} & Local Growth Specialists`,
+      disclaimer:
+        "You're receiving this email because you requested a free marketing audit at zonicllc.com.",
+    });
+
+    await transporter.sendMail({ from, to: email, subject, text, html });
+    return;
+  }
+
+  // Google Business Profile services for real estate agents & brokers.
+  if (formType === "gbp-real-estate") {
+    const businessLabel = businessName?.trim() || "your brokerage";
+    const subject = "Your Real Estate GBP Audit Is Underway - Zonic Media";
+    const { text, html } = buildBrandedThankYouEmail({
+      subject,
+      accentColor: "#e8401c",
+      headerTag: "Real Estate GBP Specialists",
+      greetingName: getFirstName(fullName),
+      bodyParagraphs: [
+        `Thank you for reaching out to Zonic Media. We've received your Google Business Profile audit request for ${businessLabel} and our team is already reviewing it. One of our real estate GBP specialists will call or email you shortly.`,
+        "Real estate has the highest GBP suspension rate of any local service category, and one wrong edit can wipe your listing off Google Maps overnight. Your five-page audit covers your current profile status, suspension risk, and a written reinstatement plan if you're suspended, delivered within five business days.",
+      ],
+      signatureRole: "GMB Suspension & Real Estate Growth Specialists",
+      disclaimer:
+        "Zonic Media is an independent GMB specialist agency, not affiliated with Google.",
+    });
+
+    await transporter.sendMail({ from, to: email, subject, text, html });
     return;
   }
 
