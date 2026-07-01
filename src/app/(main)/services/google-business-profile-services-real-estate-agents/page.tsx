@@ -440,9 +440,8 @@ function Page() {
                   For Real Estate Brokers &amp; Agents
                 </div>
                 <h1>
-                  Google Business Profile Services Built Around How{" "}
-                  <span className="hia-accent">Real Estate</span> Actually Gets
-                  Suspended.
+                  <span className="hia-accent">Real Estate</span> Google
+                  Business Profile Services.
                 </h1>
                 <p className="hia-hero-sub">
                   Real estate has the highest Google Business Profile suspension

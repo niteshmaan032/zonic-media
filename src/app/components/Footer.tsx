@@ -1,4 +1,5 @@
 import "@/app/style/footer.css";
+import Image from "next/image";
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -142,6 +143,13 @@ function Footer() {
                     />
                   </a>
                 </div>
+                <Image
+                  className="footer-yelp-badge mt-4"
+                  width={85}
+                  height={85}
+                  src="/images/Partner.png"
+                  alt="Yelp Advertising Partner"
+                />
               </div>
             </Col>
           </Row>

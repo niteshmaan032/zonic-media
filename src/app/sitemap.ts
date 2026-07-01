@@ -23,6 +23,21 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/launchpad`,                    changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/local-seo-services-for-hvac`,  changeFrequency: "monthly", priority: 0.8 },
 
+  // Industry marketing agencies
+  { url: `${BASE_URL}/services/auto-repair-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/chiropractic-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/cleaning-company-marketing-agency`,    changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/dental-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/electrician-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/garage-door-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/landscaping-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/law-firm-marketing-agency`,            changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/moving-company-marketing-agency`,      changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/painting-contractor-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/pest-control-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/real-estate-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/roofing-marketing-agency`,             changeFrequency: "monthly", priority: 0.8 },
+
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/gmb-reinstatement-service-agency`,              changeFrequency: "monthly", priority: 0.8 },

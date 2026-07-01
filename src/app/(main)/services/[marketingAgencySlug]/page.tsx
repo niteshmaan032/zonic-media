@@ -1,0 +1,50 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import IndustryMarketingPage, {
+  type IndustryMarketingPageData,
+} from "@/app/components/IndustryMarketingPage";
+import pagesJson from "@/data/industryMarketingPages.generated.json";
+import "@/app/style/industryMarketingPages.css";
+
+const pages = pagesJson as Record<string, IndustryMarketingPageData>;
+
+type Props = {
+  params: Promise<{ marketingAgencySlug: string }>;
+};
+
+export function generateStaticParams() {
+  return Object.keys(pages).map((marketingAgencySlug) => ({ marketingAgencySlug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { marketingAgencySlug } = await params;
+  const page = pages[marketingAgencySlug];
+
+  if (!page) {
+    return { title: "Service Not Found" };
+  }
+
+  return {
+    title: page.title,
+    description: page.description,
+    alternates: { canonical: `/services/${page.slug}` },
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      url: `/services/${page.slug}`,
+      type: "website",
+    },
+  };
+}
+
+export default async function MarketingAgencyPage({ params }: Props) {
+  const { marketingAgencySlug } = await params;
+  const page = pages[marketingAgencySlug];
+
+  if (!page) {
+    notFound();
+  }
+
+  return <IndustryMarketingPage page={page} />;
+}

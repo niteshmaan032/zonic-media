@@ -3,11 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  FaBug,
-  FaTooth,
-  FaUserDoctor,
-} from "react-icons/fa6";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
@@ -16,7 +11,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineInfo } from "react-icons/md";
-import { MdRoofing } from "react-icons/md";
 import { RiMapPinLine } from "react-icons/ri";
 import { SiGoogleads } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
@@ -73,93 +67,97 @@ const gmbServiceLinks = [
   },
 ];
 
-const localSeoServices = [
-  {
-    id: "Roofing SEO",
-    label: "Roofing Local SEO",
-    image: "/images/roofing/roof-link-thumb.jpg",
-    alt: "roofing agency seo",
-    link: "/services/industry/local-seo-for-roofing-companies",
-  },
-  {
-    id: "Car Towing SEO",
-    label: "Car Towing Local SEO",
-    image: "/images/header-seo.webp",
-    alt: "car towing seo",
-    link: "/services/industry/car-towing",
-  },
-  {
-    id: "Dentist SEO",
-    label: "Dentist Local SEO",
-    image: "/images/dental/dental-link-thumb.jpg",
-    alt: "dentist seo",
-    link: "/services/industry/dental-seo-services",
-  },
-  {
-    id: "Pediatricians",
-    label: "Pediatrician Marketing",
-    image: "/images/pediatricians/pedis-serv-img-1.jpg",
-    alt: "pediatrician marketing",
-    link: "/services/industry/pediatricians",
-  },
-  {
-    id: "Pest SEO",
-    label: "Pest Control Local SEO",
-    image: "/images/pest/pest-thumb-link.jpg",
-    alt: "pest control seo",
-    link: "/services/industry/pest-control",
-  },
-  {
-    id: "Commercial Cleaning SEO",
-    label: "Commercial Cleaning SEO",
-    image: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_27_37 PM.png",
-    alt: "commercial cleaning seo",
-    link: "/services/industry/local-seo-for-commercial-cleaning",
-  },
-];
-
 const industryLinks = [
   {
-    id: "local-seo-for-law-firms",
-    title: "Law Firm Local SEO",
+    id: "auto-repair-marketing-agency",
+    title: "Auto Repair Marketing",
     description:
-      "Local SEO, Google Maps visibility, and case inquiry growth systems for law firms.",
-    link: "/services/industry/local-seo-for-law-firms",
+      "Local visibility, paid search, reviews, and lead generation for repair shops.",
+    link: "/services/auto-repair-marketing-agency",
   },
   {
-    id: "real-estate",
-    title: "Real Estate SEO",
+    id: "chiropractic-marketing-agency",
+    title: "Chiropractic Marketing",
     description:
-      "SEO and lead generation strategies built for agents, teams, and brokerages.",
-    link: "/services/industry/real-estate-seo-services",
+      "Patient acquisition systems for chiropractic clinics and local practices.",
+    link: "/services/chiropractic-marketing-agency",
   },
   {
-    id: "gbp-real-estate",
-    title: "Real Estate Google Business Profile",
+    id: "cleaning-company-marketing-agency",
+    title: "Cleaning Company Marketing",
     description:
-      "GBP reinstatement, verification, and management for real estate agents and brokers across FL, TX, CA, NY & AZ.",
-    link: "/services/google-business-profile-services-real-estate-agents",
+      "Lead generation and local growth for residential and commercial cleaners.",
+    link: "/services/cleaning-company-marketing-agency",
   },
   {
-    id: "chiropractor-local-seo-services",
-    title: "Chiropractor Local SEO Services",
+    id: "dental-marketing-agency",
+    title: "Dental Marketing",
     description:
-      "Local SEO, Google Maps visibility, and patient growth systems for chiropractic clinics.",
-    link: "/services/industry/chiropractor-local-seo-services",
+      "Local patient acquisition, paid ads, and reputation growth for dentists.",
+    link: "/services/dental-marketing-agency",
   },
   {
-    id: "commercial-cleaning-seo",
-    title: "Commercial Cleaning SEO",
+    id: "electrician-marketing-agency",
+    title: "Electrician Marketing",
     description:
-      "Local SEO, Google Maps visibility, and contract inquiry growth for commercial cleaning companies.",
-    link: "/services/industry/local-seo-for-commercial-cleaning",
+      "Map visibility, paid leads, and booking systems for electrical contractors.",
+    link: "/services/electrician-marketing-agency",
   },
   {
-    id: "residential-cleaning-seo",
-    title: "Residential Cleaning SEO",
+    id: "garage-door-marketing-agency",
+    title: "Garage Door Marketing",
     description:
-      "Local SEO, Google Maps visibility, and booking growth for house cleaning and maid service businesses.",
-    link: "/services/industry/local-seo-services-for-residential-cleaning",
+      "Urgent-call lead generation for garage door repair and installation teams.",
+    link: "/services/garage-door-marketing-agency",
+  },
+  {
+    id: "landscaping-marketing-agency",
+    title: "Landscaping Marketing",
+    description:
+      "Local search, ads, and recurring-service leads for landscaping companies.",
+    link: "/services/landscaping-marketing-agency",
+  },
+  {
+    id: "law-firm-marketing-agency",
+    title: "Law Firm Marketing",
+    description:
+      "Qualified case inquiries from search, paid media, and conversion-focused pages.",
+    link: "/services/law-firm-marketing-agency",
+  },
+  {
+    id: "moving-company-marketing-agency",
+    title: "Moving Company Marketing",
+    description:
+      "Booked move leads and local visibility for residential and commercial movers.",
+    link: "/services/moving-company-marketing-agency",
+  },
+  {
+    id: "painting-contractor-marketing-agency",
+    title: "Painting Contractor Marketing",
+    description:
+      "Estimate requests and local demand generation for painting contractors.",
+    link: "/services/painting-contractor-marketing-agency",
+  },
+  {
+    id: "pest-control-marketing-agency",
+    title: "Pest Control Marketing",
+    description:
+      "Urgent and recurring pest-control leads from maps, search, and paid ads.",
+    link: "/services/pest-control-marketing-agency",
+  },
+  {
+    id: "real-estate-marketing-agency",
+    title: "Real Estate Marketing",
+    description:
+      "Lead generation and digital visibility for agents, teams, and brokerages.",
+    link: "/services/real-estate-marketing-agency",
+  },
+  {
+    id: "roofing-marketing-agency",
+    title: "Roofing Marketing",
+    description:
+      "Storm, repair, and replacement leads for residential roofing companies.",
+    link: "/services/roofing-marketing-agency",
   },
   {
     id: "home-inspector-marketing",
@@ -559,87 +557,6 @@ function Navbar() {
                           </div>
                         ))}
 
-                        <Link
-                          href="/services/industry/car-towing"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaStore />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Car Towing Local SEO</strong>
-                            <span>
-                              Help towing companies capture urgent local
-                              searches and turn them into inbound dispatch
-                              calls.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/local-seo-for-roofing-companies"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <MdRoofing />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Roofing Local SEO</strong>
-                            <span>
-                              Help roofing companies rank locally and turn
-                              search traffic into booked estimates.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/dental-seo-services"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaTooth />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Dentist Local SEO</strong>
-                            <span>
-                              Improve map visibility and patient leads for
-                              dental practices in competitive markets.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/pediatricians"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaUserDoctor />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Pediatrician Marketing</strong>
-                            <span>
-                              Help pediatric clinics improve local visibility
-                              and generate more patient appointments.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href="/services/industry/pest-control"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaBug />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Pest Control Local SEO</strong>
-                            <span>
-                              Reach nearby homeowners searching for fast pest
-                              control help and recurring service plans.
-                            </span>
-                          </span>
-                        </Link>
-
                       </div>
                     </div>
                   </li>
@@ -938,16 +855,6 @@ function Navbar() {
                             onClick={() => handleToggleMobileMenu(false)}
                           >
                             {industry.title}
-                          </Link>
-                        </li>
-                      ))}
-                      {localSeoServices.map((service) => (
-                        <li key={service.id}>
-                          <Link
-                            href={service.link}
-                            onClick={() => handleToggleMobileMenu(false)}
-                          >
-                            {service.label}
                           </Link>
                         </li>
                       ))}
