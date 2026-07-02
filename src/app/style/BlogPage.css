@@ -66,7 +66,6 @@
 
 .bp-listing-card {
   border-radius: 14px;
-  border: 1px solid var(--stroke);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -614,6 +613,18 @@
   color: var(--secondary);
 }
 
+.bp-page-ellipsis {
+  font-size: 14px;
+  color: var(--color2);
+  padding: 0 2px;
+  user-select: none;
+}
+
+.bp-listing-pagination {
+  justify-content: center;
+  margin-top: 40px;
+}
+
 .bp-empty {
   min-height: 42vh;
   display: flex;
@@ -752,6 +763,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px 28px;
+  scroll-margin-top: 110px;
 }
 
 .bp-listing-card {

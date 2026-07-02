@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Script from "next/script";
 import { FaCalendarDays, FaCircleUser } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import BlogPostFaqs from "@/app/components/BlogPostFaqs";
+import BlogRecentPosts from "@/app/components/BlogRecentPosts";
 import {
   getPublishedBlogBySlug,
   getPublishedBlogs,
@@ -69,14 +69,25 @@ function formatBlogDate(value: string) {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const [blog, recentBlogs] = await Promise.all([
+  const [blog, publishedBlogs] = await Promise.all([
     getPublishedBlogBySlug(slug),
-    getPublishedBlogs(6),
+    getPublishedBlogs(),
   ]);
 
   if (!blog) {
     notFound();
   }
+
+  const recentPosts = publishedBlogs
+    .filter((recent) => recent.slug !== slug)
+    .map((recent) => ({
+      id: recent.id,
+      slug: recent.slug,
+      blogTitle: recent.blogTitle,
+      authorName: recent.authorName,
+      publishDate: recent.publishDate,
+      featuredImageUrl: recent.featuredImageUrl,
+    }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -205,32 +216,7 @@ export default async function BlogPostPage({ params }: Props) {
               <aside className="bp-sidebar">
                 <h2 className="bp-sidebar-heading">Recent Posts</h2>
 
-                <div className="bp-recent-list">
-                  {recentBlogs.map((recent) => (
-                    <Link
-                      key={recent.id}
-                      href={`/blog/${recent.slug}`}
-                      className="bp-recent-card"
-                    >
-                      <div className="bp-recent-img-wrap">
-                        <Image
-                          src={recent.featuredImageUrl}
-                          alt={recent.blogTitle}
-                          fill
-                          sizes="90px"
-                          style={{ objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="bp-recent-body">
-                        <p className="bp-recent-date">
-                          <FaCircleUser size={11} />
-                          {recent.authorName}&nbsp;·&nbsp;{formatBlogDate(recent.publishDate)}
-                        </p>
-                        <h3 className="bp-recent-title">{recent.blogTitle}</h3>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+                <BlogRecentPosts posts={recentPosts} />
               </aside>
             </div>
           </div>

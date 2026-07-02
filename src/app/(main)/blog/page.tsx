@@ -1,14 +1,10 @@
 import { permanentRedirect } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import type { Metadata } from "next";
-import {
-  FaCalendarDays,
-  FaCircleUser,
-  FaArrowRightLong,
-} from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
+import BlogListingGrid from "@/app/components/BlogListingGrid";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import "@/app/style/BlogPage.css";
@@ -28,20 +24,6 @@ export const metadata: Metadata = {
 type BlogPageProps = {
   searchParams?: Promise<{ blog?: string }>;
 };
-
-function formatBlogDate(value: string) {
-  const date = new Date(`${value}T00:00:00`);
-
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-
-  return new Intl.DateTimeFormat("en", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  }).format(date);
-}
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const params = await searchParams;
@@ -121,52 +103,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </p>
           </header>
 
-          <div className="bp-listing-grid">
-            {blogs.map((blog) => (
-              <article key={blog.id} className="blog-card bp-listing-card">
-                <div className="blog-card-image-wrap">
-                  <Image
-                    src={blog.featuredImageUrl}
-                    alt={blog.blogTitle}
-                    fill
-                    sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-
-                <div className="blog-card-body">
-                  <p className="blog-card-meta">
-                    <span>
-                      <FaCircleUser aria-hidden="true" />
-                      {blog.authorName}
-                    </span>
-                    <span className="blog-card-meta-dot" aria-hidden="true" />
-                    <span>
-                      <FaCalendarDays aria-hidden="true" />
-                      {formatBlogDate(blog.publishDate)}
-                    </span>
-                  </p>
-                  <h2 className="blog-card-title">
-                    <Link
-                      href={`/blog/${blog.slug}`}
-                      className="blog-card-title-link"
-                    >
-                      {blog.blogTitle}
-                    </Link>
-                  </h2>
-                  <p className="blog-card-description">{blog.excerpt}</p>
-
-                  <Link
-                    href={`/blog/${blog.slug}`}
-                    className="blog-card-link"
-                  >
-                    Continue Reading
-                    <FaArrowRightLong className="blog-card-link-arrow" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
+          <BlogListingGrid
+            posts={blogs.map((blog) => ({
+              id: blog.id,
+              slug: blog.slug,
+              blogTitle: blog.blogTitle,
+              authorName: blog.authorName,
+              publishDate: blog.publishDate,
+              featuredImageUrl: blog.featuredImageUrl,
+              excerpt: blog.excerpt,
+            }))}
+          />
         </div>
       </div>
 
