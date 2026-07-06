@@ -21,10 +21,21 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title:
-    "HVAC Marketing Agency | Marketing for HVAC Contractors | Zonic Media",
+  title: "HVAC Marketing Agency for Contractors | Zonic Media",
   description:
-    "An HVAC marketing agency built for HVAC contractors. Google Business Profile, Google Maps ranking, paid ads, maintenance memberships, website design, and reviews. Serving Florida, Texas, California, Arizona, Illinois, Georgia, and North Carolina. Free HVAC marketing audit.",
+    "HVAC marketing agency for HVAC contractors. Google Business Profile, Google Maps ranking, ads, maintenance memberships, websites, and reviews. Free audit.",
+  keywords: [
+    "HVAC marketing agency",
+    "marketing for HVAC contractors",
+    "HVAC SEO services",
+    "HVAC lead generation",
+    "local SEO for HVAC companies",
+    "Google Maps ranking for HVAC contractors",
+    "Google Business Profile for HVAC companies",
+    "Google Ads for HVAC companies",
+    "HVAC maintenance membership marketing",
+    "HVAC website design",
+  ],
   alternates: { canonical: "/services/hvac-marketing-agency" },
 };
 

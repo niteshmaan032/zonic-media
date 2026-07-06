@@ -136,9 +136,21 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-  title: "SEO Services for Pest Control | Get More Pest Control Leads",
+  title: "SEO Services for Pest Control Companies",
   description:
-    "Pest control SEO services that help exterminators and pest control companies rank higher on Google, dominate local search, and generate more calls and booked jobs.",
+    "Pest control SEO services that help exterminators rank higher on Google, dominate local search, and generate more calls and booked inspections.",
+  keywords: [
+    "pest control SEO services",
+    "local SEO for pest control companies",
+    "pest control marketing agency",
+    "pest control lead generation",
+    "Google Maps ranking for pest control",
+    "Google Business Profile for exterminators",
+    "exterminator SEO",
+    "termite treatment SEO",
+    "rodent control leads",
+    "pest control company marketing",
+  ],
   alternates: { canonical: "/services/industry/seo-services-for-pest-control" },
 };
 

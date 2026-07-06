@@ -85,10 +85,28 @@ const SeoHomeFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Local SEO for Home Services | More Calls & Local Rankings",
+  title: "Local SEO for Home Services | More Calls & Jobs",
   description:
     "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",
+  keywords: [
+    "local SEO for home services",
+    "local SEO for contractors",
+    "home services SEO company",
+    "local SEO for plumbers",
+    "local SEO for HVAC companies",
+    "local SEO for roofers",
+    "Google Maps ranking for home services",
+    "Google Business Profile optimization for contractors",
+    "local SEO agency for service businesses",
+  ],
   alternates: { canonical: "/services/local-seo-for-home-services" },
+  openGraph: {
+    title: "Local SEO for Home Services | More Calls & Jobs | Zonic Media",
+    description:
+      "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",
+    url: "/services/local-seo-for-home-services",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

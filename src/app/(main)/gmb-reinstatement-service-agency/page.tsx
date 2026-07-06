@@ -15,7 +15,26 @@ export const metadata: Metadata = {
     "Google Business Profile Suspended? We Reinstate It Fast | Zonic Media",
   description:
     "Your GBP is suspended and every hour costs you customers. Zonic Media's reinstatement specialists recover suspended Google Business Profiles in 5–7 days. Money-back guarantee.",
+  keywords: [
+    "GMB reinstatement service",
+    "Google Business Profile reinstatement",
+    "suspended Google Business Profile",
+    "GBP suspended",
+    "reinstate Google Business Profile",
+    "Google Business Profile appeal",
+    "GMB suspension help",
+    "fix suspended Google business listing",
+    "Google Business Profile recovery service",
+  ],
   alternates: { canonical: "/gmb-reinstatement-service-agency" },
+  openGraph: {
+    title:
+      "Google Business Profile Suspended? We Reinstate It Fast | Zonic Media",
+    description:
+      "Your GBP is suspended and every hour costs you customers. Zonic Media's reinstatement specialists recover suspended Google Business Profiles in 5–7 days. Money-back guarantee.",
+    url: "/gmb-reinstatement-service-agency",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

@@ -3,10 +3,20 @@ import ResidentialSeoPage from "./ResidentialSeoPage";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title:
-    "Local SEO Services for Residential Cleaning Companies | House Cleaning SEO",
+  title: "Residential Cleaning SEO | House Cleaning Leads",
   description:
-    "Zonic Media provides local SEO services for residential cleaning companies. Rank higher on Google Maps, generate more house cleaning bookings, and grow your maid service business with residential cleaning SEO.",
+    "Local SEO services for residential cleaning companies. Rank on Google Maps, book more house cleaning jobs, and grow your maid service with proven SEO.",
+  keywords: [
+    "residential cleaning SEO services",
+    "local SEO for residential cleaning companies",
+    "house cleaning marketing agency",
+    "house cleaning lead generation",
+    "Google Maps ranking for cleaning companies",
+    "Google Business Profile for maid services",
+    "maid service SEO",
+    "house cleaning SEO",
+    "cleaning company lead generation",
+  ],
   alternates: { canonical: "/services/industry/local-seo-services-for-residential-cleaning" },
 };
 

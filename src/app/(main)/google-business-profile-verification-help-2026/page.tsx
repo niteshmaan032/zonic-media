@@ -17,7 +17,26 @@ export const metadata: Metadata = {
     "Google Business Profile Verification Help | Fix GBP Verification Fast | Zonic Media",
   description:
     "Stuck in a GBP verification loop? Video rejected? Postcard expired? Zonic Media fixes every type of GBP verification failure — SABs, live video calls, verification loops — in 5–7 days. Money-back guarantee.",
+  keywords: [
+    "Google Business Profile verification help",
+    "GBP verification loop",
+    "video verification failed",
+    "verify Google Business Profile 2026",
+    "GMB verification service",
+    "live video call verification",
+    "service area business verification",
+    "GBP verification stuck",
+    "Google Business Profile video verification rejected",
+  ],
   alternates: { canonical: "/google-business-profile-verification-help-2026" },
+  openGraph: {
+    title:
+      "Google Business Profile Verification Help | Fix GBP Verification Fast | Zonic Media",
+    description:
+      "Stuck in a GBP verification loop? Video rejected? Postcard expired? Zonic Media fixes every type of GBP verification failure — SABs, live video calls, verification loops — in 5–7 days. Money-back guarantee.",
+    url: "/google-business-profile-verification-help-2026",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

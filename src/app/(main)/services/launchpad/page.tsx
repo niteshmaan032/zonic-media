@@ -24,14 +24,25 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 ]);
 
 export const metadata: Metadata = {
-  title: "Business Launch Services | Start Your Business Online",
+  title: "Business Launch Services | Start Your Business",
   description:
     "Launch your business online with Zonic LaunchPad. Get branding, website design, Google Business setup, local SEO, and lead generation in one done-for-you system.",
+  keywords: [
+    "business launch services",
+    "start a business online",
+    "new business website package",
+    "done for you business setup",
+    "branding for new business",
+    "Google Business Profile setup service",
+    "local SEO for new business",
+    "small business launch package",
+    "logo and branding package for startups",
+  ],
   alternates: {
     canonical: "/services/launchpad",
   },
   openGraph: {
-    title: "Business Launch Services | Start Your Business Online",
+    title: "Business Launch Services | Start Your Business | Zonic Media",
     description:
       "Zonic LaunchPad helps new businesses launch with branding, a conversion-focused website, Google visibility, and a lead generation foundation.",
     url: "/services/launchpad",

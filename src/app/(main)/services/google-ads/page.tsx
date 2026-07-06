@@ -13,10 +13,28 @@ import Footer from "@/app/components/Footer";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Google Ads Management Services | PPC Campaign Experts",
+  title: "Google Ads Management Services | PPC Agency",
   description:
     "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
+  keywords: [
+    "Google Ads management services",
+    "PPC agency for local business",
+    "local services ads management",
+    "Google Ads agency for small business",
+    "PPC campaign management",
+    "search ads management",
+    "pay per click advertising services",
+    "Google Ads optimization",
+    "lead generation with Google Ads",
+  ],
   alternates: { canonical: "/services/google-ads" },
+  openGraph: {
+    title: "Google Ads Management Services | PPC Agency | Zonic Media",
+    description:
+      "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
+    url: "/services/google-ads",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

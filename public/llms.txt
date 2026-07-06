@@ -1,6 +1,6 @@
 # Zonic Media
 
-> Zonic Media (Zonic Media LLC) is a US-based digital marketing agency in Dover, Delaware that helps local and service-based businesses grow online through web design, local SEO, Google Business Profile (GMB) services, and Google Ads. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
+> Zonic Media (Zonic Media LLC) is a US-based digital marketing agency in Dover, Delaware that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 700+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
 
 ## About
 
@@ -8,10 +8,21 @@
 - Location: 8 The Green, STE B, Dover, DE 19901, United States
 - Contact: contact@zonicllc.com | +1-302-726-9736
 - Areas served: United States, Canada, United Kingdom, Australia, United Arab Emirates, India
-- Core focus: web design, local SEO, Google Business Profile (GMB) optimization/reinstatement/verification, Google Ads (PPC)
+- Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and optimization; local SEO; web design; Google Ads (PPC)
+- Trust signals: 700+ Google Business Profiles reinstated and verified, 4.9 average client rating, average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
 
 - [About Zonic Media](https://www.zonicllc.com/about): Who we are, our team, and our approach to digital marketing.
 - [Contact Us](https://www.zonicllc.com/contact-us): Get in touch for a consultation or quote.
+
+## Google Business Profile Services (flagship)
+
+- [GMB Reinstatement Service](https://www.zonicllc.com/services/gmb-reinstatement-help): Recovers suspended and disabled Google Business Profiles. Handles soft suspensions, hard suspensions, disabled listings, and profiles suspended pending verification. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, No Fix, No Charge on the reinstatement fee, post-reinstatement optimization included.
+- [GMB Reinstatement Agency (overview)](https://www.zonicllc.com/gmb-reinstatement-service-agency): Fast-track landing page for suspended Google Business Profiles.
+- [GMB Verification Help](https://www.zonicllc.com/services/gmb-verification-help): Fixes failed postcard, video, phone, and email verification and verification loops.
+- [GBP Verification Help 2026](https://www.zonicllc.com/google-business-profile-verification-help-2026): Current-year guide and service for every GBP verification failure type.
+- [GMB Optimization](https://www.zonicllc.com/services/gmb-optimization): Google Business Profile optimization to rank in the local Map Pack.
+- [Local SEO & GBP Optimization](https://www.zonicllc.com/local-seo-google-business-optimization): Map Pack ranking service for live profiles.
+- [GBP Services for Real Estate Agents](https://www.zonicllc.com/services/google-business-profile-services-real-estate-agents): Reinstatement, verification, and management for realtors and brokers.
 
 ## Services
 
@@ -20,10 +31,10 @@
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.
 - [Local SEO for HVAC](https://www.zonicllc.com/services/local-seo-services-for-hvac): SEO built for HVAC contractors.
-- [GMB Optimization](https://www.zonicllc.com/services/gmb-optimization): Google Business Profile setup and optimization.
-- [GMB Reinstatement Help](https://www.zonicllc.com/services/gmb-reinstatement-help): Recover suspended Google Business Profiles.
-- [GMB Verification Help](https://www.zonicllc.com/services/gmb-verification-help): Assistance verifying a Google Business Profile.
+- [White-Label Services for Agencies](https://www.zonicllc.com/services/white-label-services): Resell GBP reinstatement, verification, management, local SEO, and web design under your own brand.
 - [Launchpad](https://www.zonicllc.com/services/launchpad): Growth program for newly launching businesses.
+- [Plumbing Marketing Agency](https://www.zonicllc.com/services/plumbing-marketing-agency): Marketing for plumbing contractors, with state pages for AZ, CA, FL, GA, IL, NC, and TX.
+- [HVAC Marketing Agency](https://www.zonicllc.com/services/hvac-marketing-agency): Marketing for HVAC contractors, with state pages for AZ, CA, FL, GA, IL, NC, and TX.
 
 ## Industries
 

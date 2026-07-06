@@ -193,10 +193,28 @@ const PhilaLeadBenefits = [
 ];
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency Philadelphia | SEO, Google Ads & Web Design",
+  title: "Digital Marketing Agency Philadelphia | SEO & Ads",
   description:
     "Philadelphia digital marketing agency helping businesses grow with SEO, Google Ads, web design, local SEO, content marketing, and conversion-focused strategies.",
+  keywords: [
+    "digital marketing agency Philadelphia",
+    "Philadelphia SEO company",
+    "Google Ads management Philadelphia",
+    "web design Philadelphia",
+    "local SEO Philadelphia",
+    "Philadelphia marketing agency for small business",
+    "content marketing Philadelphia",
+    "lead generation Philadelphia",
+    "social media marketing Philadelphia",
+  ],
   alternates: { canonical: "/services/philadelphia/digital-marketing" },
+  openGraph: {
+    title: "Digital Marketing Agency Philadelphia | SEO & Ads | Zonic Media",
+    description:
+      "Philadelphia digital marketing agency helping businesses grow with SEO, Google Ads, web design, local SEO, content marketing, and conversion-focused strategies.",
+    url: "/services/philadelphia/digital-marketing",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

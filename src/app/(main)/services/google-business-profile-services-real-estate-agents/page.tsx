@@ -24,6 +24,17 @@ export const metadata: Metadata = {
     "Google Business Profile Services for Real Estate Agents & Brokers | Zonic Media",
   description:
     "GBP reinstatement, verification, and management for real estate agents and brokers. Local SEO and real estate website design across FL, TX, CA, NY & AZ. 700+ profiles reinstated.",
+  keywords: [
+    "Google Business Profile for real estate agents",
+    "realtor GBP suspended",
+    "real estate GMB reinstatement",
+    "Google Business Profile for realtors",
+    "real estate agent GBP verification",
+    "real estate local SEO",
+    "realtor Google Business Profile management",
+    "real estate broker Google Business Profile",
+    "real estate website design",
+  ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title:

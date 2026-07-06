@@ -34,6 +34,17 @@ export const metadata: Metadata = {
   title: "Digital Marketing Services | SEO, PPC & Web Design",
   description:
     "Grow online with Zonic Media's digital marketing services, including web design, local SEO, Google Ads, GMB optimization, branding, and custom software.",
+  keywords: [
+    "digital marketing services",
+    "local SEO services",
+    "Google Ads management",
+    "web design services",
+    "Google Business Profile optimization",
+    "branding and logo design services",
+    "PPC advertising services",
+    "digital marketing for local business",
+    "small business marketing services",
+  ],
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Digital Marketing Services | SEO, PPC & Web Design",

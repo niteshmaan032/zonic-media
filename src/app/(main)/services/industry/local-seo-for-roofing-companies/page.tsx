@@ -131,10 +131,21 @@ const RoofingServices = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Local SEO for Roofing Companies | Get More Roofing Leads",
+  title: "Local SEO for Roofing Companies | Roofer Leads",
   description:
-    "Local SEO services for roofing companies. Zonic Media helps roofers rank higher on Google, dominate local search, and generate consistent calls from homeowners ready to hire.",
+    "Local SEO services for roofing companies. Zonic Media helps roofers rank higher on Google Maps and win consistent calls from homeowners ready to hire.",
+  keywords: [
+    "roofing SEO services",
+    "local SEO for roofing companies",
+    "roofing marketing agency",
+    "roofing lead generation",
+    "Google Maps ranking for roofers",
+    "Google Business Profile for roofing companies",
+    "roofing contractor SEO",
+    "Google 3-Pack for roofers",
+    "roof repair SEO",
+    "roofing company marketing",
+  ],
   alternates: { canonical: "/services/industry/local-seo-for-roofing-companies" },
 };
 

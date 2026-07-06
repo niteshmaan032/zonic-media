@@ -38,10 +38,28 @@ import {
 import { RiLineChartLine } from "react-icons/ri";
 
 export const metadata: Metadata = {
-  title: "Local SEO Philadelphia | Best Local SEO Company Philadelphia",
+  title: "Local SEO Philadelphia | Google Maps Rankings",
   description:
     "Grow your business with expert Local SEO in Philadelphia. Zonic Media helps businesses rank higher on Google Maps, generate more calls, and get consistent local leads.",
+  keywords: [
+    "local SEO Philadelphia",
+    "Philadelphia local SEO company",
+    "Google Maps ranking Philadelphia",
+    "local SEO services Philadelphia",
+    "Google Business Profile optimization Philadelphia",
+    "Philadelphia SEO agency",
+    "map pack ranking Philadelphia",
+    "local SEO for small business Philadelphia",
+    "near me SEO Philadelphia",
+  ],
   alternates: { canonical: "/services/philadelphia/local-seo" },
+  openGraph: {
+    title: "Local SEO Philadelphia | Google Maps Rankings | Zonic Media",
+    description:
+      "Grow your business with expert Local SEO in Philadelphia. Rank higher on Google Maps, generate more calls, and get consistent local leads.",
+    url: "/services/philadelphia/local-seo",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

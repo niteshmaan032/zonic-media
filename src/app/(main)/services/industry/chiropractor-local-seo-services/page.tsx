@@ -3,9 +3,20 @@ import ChiroDigitalPage from "./ChiroDigitalPage";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Chiropractor Digital Marketing Agency",
+  title: "Chiropractor Local SEO Services & Marketing",
   description:
-    "Zonic Media helps chiropractic clinics attract more patients with local SEO, Google Maps optimization, high-converting websites, reputation growth, and lead generation strategies.",
+    "Chiropractor local SEO services that help clinics rank on Google Maps, attract new patients, and grow with reviews, websites, and lead generation.",
+  keywords: [
+    "chiropractor SEO services",
+    "local SEO for chiropractors",
+    "chiropractor marketing agency",
+    "chiropractor lead generation",
+    "Google Maps ranking for chiropractors",
+    "Google Business Profile for chiropractors",
+    "chiropractic patient lead generation",
+    "chiropractic clinic marketing",
+    "SEO for chiropractic clinics",
+  ],
   alternates: { canonical: "/services/industry/chiropractor-local-seo-services" },
 };
 

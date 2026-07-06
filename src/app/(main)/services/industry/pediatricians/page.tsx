@@ -26,10 +26,20 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title:
-    "Marketing for Pediatricians | Pediatric SEO, Local Visibility & Patient Growth",
+  title: "Marketing for Pediatricians | Pediatric SEO",
   description:
-    "Zonic Media helps pediatricians and children's clinics grow with SEO, local visibility, website optimization, and patient-focused digital marketing strategies.",
+    "Pediatrician marketing and SEO services that help children's clinics rank on Google, attract more parents, and book more patient appointments.",
+  keywords: [
+    "pediatrician marketing",
+    "pediatric SEO services",
+    "local SEO for pediatricians",
+    "pediatrician lead generation",
+    "Google Maps ranking for pediatricians",
+    "Google Business Profile for pediatric clinics",
+    "marketing for children's clinics",
+    "pediatric practice marketing",
+    "SEO for pediatric practices",
+  ],
   alternates: { canonical: "/services/industry/pediatricians" },
 };
 

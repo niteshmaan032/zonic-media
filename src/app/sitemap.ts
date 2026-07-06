@@ -15,13 +15,15 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // Services
   { url: `${BASE_URL}/services/web-design`,                   changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/services/gmb-reinstatement-help`,       changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/gmb-reinstatement-help`,       changeFrequency: "weekly",  priority: 0.9 },
   { url: `${BASE_URL}/services/gmb-optimization`,             changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/gmb-verification-help`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-ads`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-for-home-services`,  changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/launchpad`,                    changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/local-seo-services-for-hvac`,  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/white-label-services`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/google-business-profile-services-real-estate-agents`, changeFrequency: "monthly", priority: 0.8 },
 
   // Industry marketing agencies
   { url: `${BASE_URL}/services/auto-repair-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },

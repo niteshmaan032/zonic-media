@@ -15,7 +15,27 @@ export const metadata: Metadata = {
     "Google Business Profile Optimization | Rank in the Map Pack | Zonic Media",
   description:
     "Your GBP is live — but is it ranking? Zonic Media's GBP optimization service gets local businesses into the top-3 Map Pack, generating more calls, clicks, and revenue.",
+  keywords: [
+    "local SEO services",
+    "Google Business Profile optimization",
+    "rank in Google Map Pack",
+    "local 3-pack ranking",
+    "GBP optimization service",
+    "Google Maps SEO",
+    "local search rankings",
+    "GBP management",
+    "local SEO agency",
+    "Google Business Profile ranking",
+  ],
   alternates: { canonical: "/local-seo-google-business-optimization" },
+  openGraph: {
+    title:
+      "Google Business Profile Optimization | Rank in the Map Pack | Zonic Media",
+    description:
+      "Your GBP is live — but is it ranking? Zonic Media's GBP optimization service gets local businesses into the top-3 Map Pack, generating more calls, clicks, and revenue.",
+    url: "/local-seo-google-business-optimization",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

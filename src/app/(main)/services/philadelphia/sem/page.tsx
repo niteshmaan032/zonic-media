@@ -43,10 +43,27 @@ import {
 import { RiLineChartLine } from "react-icons/ri";
 
 export const metadata: Metadata = {
-  title: "Search Engine Marketing Agency Philadelphia | SEM Services",
+  title: "SEM Agency Philadelphia | Search Engine Marketing",
   description:
     "Philadelphia search engine marketing agency helping businesses drive more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
+  keywords: [
+    "search engine marketing Philadelphia",
+    "SEM agency Philadelphia",
+    "Philadelphia SEM services",
+    "SEO and PPC Philadelphia",
+    "paid search management Philadelphia",
+    "Google Ads and SEO strategy Philadelphia",
+    "search marketing company Philadelphia",
+    "lead generation SEM Philadelphia",
+  ],
   alternates: { canonical: "/services/philadelphia/sem" },
+  openGraph: {
+    title: "SEM Agency Philadelphia | Search Engine Marketing | Zonic Media",
+    description:
+      "Philadelphia search engine marketing agency driving more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
+    url: "/services/philadelphia/sem",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

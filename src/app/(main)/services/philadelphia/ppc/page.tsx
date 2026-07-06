@@ -40,10 +40,28 @@ import {
 import { RiLineChartLine } from "react-icons/ri";
 
 export const metadata: Metadata = {
-  title: "PPC Agency Philadelphia | Google Ads Management for Local Leads",
+  title: "PPC Agency Philadelphia | Google Ads Management",
   description:
     "Philadelphia PPC agency helping businesses generate high-intent leads through Google Ads, landing page optimization, conversion tracking, and campaign management.",
+  keywords: [
+    "PPC agency Philadelphia",
+    "Google Ads management Philadelphia",
+    "PPC management services Philadelphia",
+    "pay per click advertising Philadelphia",
+    "Philadelphia Google Ads agency",
+    "landing page optimization Philadelphia",
+    "PPC for local business Philadelphia",
+    "conversion tracking PPC Philadelphia",
+    "lead generation Google Ads Philadelphia",
+  ],
   alternates: { canonical: "/services/philadelphia/ppc" },
+  openGraph: {
+    title: "PPC Agency Philadelphia | Google Ads Management | Zonic Media",
+    description:
+      "Philadelphia PPC agency generating high-intent leads through Google Ads, landing page optimization, conversion tracking, and campaign management.",
+    url: "/services/philadelphia/ppc",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

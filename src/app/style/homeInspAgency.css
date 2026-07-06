@@ -371,6 +371,45 @@ body:has(.hia-page) .floating-phone-link {
   line-height: 1.4;
 }
 
+/* ──────────────── HERO TRUST BADGES (shared component) ──────────────── */
+.hia-hero .hero-trust-badges {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin: 0 0 36px;
+  padding: 0 0 28px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-trust-badges .htb-clutch {
+  width: 80px;
+  height: 80px;
+  border: none;
+  flex-shrink: 0;
+}
+.hero-trust-badges .htb-yelp {
+  display: inline-flex;
+  align-items: center;
+}
+.hero-trust-badges .htb-yelp-img {
+  height: 72px;
+  width: 72px;
+  border-radius: 50%;
+}
+@media (max-width: 575.98px) {
+  .hia-hero .hero-trust-badges {
+    gap: 16px;
+  }
+  .hero-trust-badges .htb-clutch {
+    width: 68px;
+    height: 68px;
+  }
+  .hero-trust-badges .htb-yelp-img {
+    height: 62px;
+    width: 62px;
+  }
+}
+
 /* ──────────────── SECTION COMMON ──────────────── */
 .hia-section {
   padding: 52px 0;

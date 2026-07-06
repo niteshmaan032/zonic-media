@@ -86,7 +86,26 @@ export const metadata: Metadata = {
   title: "Fix Google Business Profile Verification Issues & Get Verified Fast",
   description:
     "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
+  keywords: [
+    "Google Business Profile verification help",
+    "GMB verification",
+    "GBP verification",
+    "verify Google Business Profile",
+    "video verification failed",
+    "GBP verification loop",
+    "postcard verification failed",
+    "Google Business Profile not verified",
+    "business profile verification service",
+  ],
   alternates: { canonical: "/services/gmb-verification-help" },
+  openGraph: {
+    title:
+      "Fix Google Business Profile Verification Issues & Get Verified Fast",
+    description:
+      "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
+    url: "/services/gmb-verification-help",
+    type: "website",
+  },
 };
 
 function page() {

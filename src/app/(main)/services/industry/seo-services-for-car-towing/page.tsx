@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: "SEO Services for Car Towing Companies",
   description:
     "SEO services for car towing companies focused on Google Maps visibility, emergency towing searches, roadside assistance keywords, and more direct local calls.",
+  keywords: [
+    "towing SEO services",
+    "local SEO for towing companies",
+    "towing marketing agency",
+    "towing lead generation",
+    "Google Maps ranking for towing companies",
+    "Google Business Profile for tow truck companies",
+    "emergency towing SEO",
+    "roadside assistance leads",
+    "SEO for car towing companies",
+    "tow truck company SEO",
+  ],
   alternates: { canonical: "/services/industry/seo-services-for-car-towing" },
 };
 

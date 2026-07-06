@@ -22,14 +22,26 @@ import { FaBullhorn, FaChartLine, FaPenNib } from "react-icons/fa";
 import { RiLineChartLine } from "react-icons/ri";
 
 export const metadata: Metadata = {
-  title: "Real Estate SEO Services | SEO for Realtors & Brokerages",
+  title: "Real Estate SEO Services for Realtors & Brokers",
   description:
     "Real estate SEO services for agents, brokers, and teams. Improve Google rankings, Google Business visibility, and buyer and seller lead generation.",
+  keywords: [
+    "real estate SEO services",
+    "local SEO for real estate agents",
+    "real estate marketing agency",
+    "realtor lead generation",
+    "SEO for realtors",
+    "Google Maps ranking for real estate agents",
+    "Google Business Profile for realtors",
+    "seller lead generation for realtors",
+    "SEO for real estate brokerages",
+    "neighborhood SEO for real estate",
+  ],
   alternates: {
     canonical: "/services/industry/real-estate-seo-services",
   },
   openGraph: {
-    title: "Real Estate SEO Services | SEO for Realtors & Brokerages",
+    title: "Real Estate SEO Services for Realtors & Brokers",
     description:
       "Grow real estate leads with local SEO, Google Business Profile optimization, content strategy, and conversion-focused website improvements.",
     url: "/services/industry/real-estate-seo-services",

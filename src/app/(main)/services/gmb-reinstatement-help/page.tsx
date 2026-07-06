@@ -32,16 +32,80 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "GMB Reinstatement Help", url: "/services/gmb-reinstatement-help" },
 ]);
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/services/gmb-reinstatement-help#service",
+  name: "GMB Reinstatement Service",
+  alternateName: [
+    "Google Business Profile Reinstatement Service",
+    "GBP Reinstatement Service",
+    "Google My Business Reinstatement",
+    "Google Business Profile Suspension Recovery",
+  ],
+  serviceType: "Google Business Profile Reinstatement",
+  description:
+    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified.",
+  url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Local businesses, agencies, and multi-location brands with suspended Google Business Profiles",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free Google Business Profile suspension audit",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free suspension audit with a No Fix, No Charge policy on the reinstatement fee — if the profile is not reinstated, the reinstatement fee is not charged.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
+
 const GmbResinstFaqs = [
+  {
+    question: "What is a GMB reinstatement service?",
+    answer:
+      "A GMB reinstatement service (also called Google Business Profile reinstatement) diagnoses why Google suspended your Business Profile, fixes the underlying policy violations, and files a documented appeal with Google to get the listing restored to Search and Maps. Zonic Media handles the entire process — audit, compliance fixes, appeal, and follow-up with Google until your profile is live again.",
+  },
   {
     question: "What types of GBP suspensions do you handle?",
     answer:
       "We handle all suspension types — soft suspensions, hard suspensions, disabled listings, and profiles suspended pending verification. If your listing is suspended, our team has very likely handled a similar case before.",
   },
   {
-    question: "How long does reinstatement take?",
+    question: "How long does Google Business Profile reinstatement take?",
     answer:
       "Most cases resolve within five to seven business days. More complex cases or those requiring video verification can take up to two weeks. We give you a realistic timeline after the audit, since the final review timing sits with Google.",
+  },
+  {
+    question: "How much does a GMB reinstatement service cost?",
+    answer:
+      "The suspension audit is free, and we quote a flat, transparent reinstatement fee after the audit based on the complexity of your case. Our engagement is backed by a No Fix, No Charge policy — if we can't get your profile reinstated, you don't pay the reinstatement fee. Many competitors charge $500 or more upfront with no such protection.",
+  },
+  {
+    question:
+      "Can I just create a new Google Business Profile instead of reinstating the suspended one?",
+    answer:
+      "No — creating a new profile is one of the most damaging mistakes you can make. Google links new listings to the suspended one through your address, phone number, and account ownership, and typically suspends the new profile too, which makes the original case harder to win. The only safe path is reinstating the original profile through a proper appeal.",
+  },
+  {
+    question:
+      "What is the difference between a soft suspension and a hard suspension?",
+    answer:
+      "A soft suspension marks your profile as unverified — the listing still appears on Google, but you lose the ability to manage it. A hard suspension removes your Business Profile from Google Search and Maps entirely, so customers can't find you at all. Hard suspensions are more serious, but both types can be reinstated with the right appeal, and we handle both.",
   },
   {
     question: "What if Google rejects the appeal?",
@@ -67,10 +131,38 @@ const GmbResinstFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "GBP Suspension Recovery Experts",
+  title: {
+    absolute:
+      "GMB Reinstatement Service | Fix Suspended Google Business Profile",
+  },
   description:
-    "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
+    "Suspended Google Business Profile? Zonic Media's GMB reinstatement service recovers suspended & disabled GBP listings in 5–7 days. 700+ profiles reinstated. No Fix, No Charge.",
+  keywords: [
+    "GMB reinstatement service",
+    "Google Business Profile reinstatement",
+    "suspended Google Business Profile",
+    "Google Business Profile suspended",
+    "GBP suspension appeal",
+    "fix suspended GMB listing",
+    "Google My Business reinstatement",
+    "GBP reinstatement service",
+    "Google Business Profile appeal",
+    "reinstate Google Business Profile",
+  ],
   alternates: { canonical: "/services/gmb-reinstatement-help" },
+  openGraph: {
+    title: "GMB Reinstatement Service | Fix Suspended Google Business Profile",
+    description:
+      "Recover your suspended Google Business Profile in 5–7 business days. Free suspension audit, 700+ profiles reinstated, No Fix, No Charge.",
+    url: "/services/gmb-reinstatement-help",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GMB Reinstatement Service | Fix Suspended Google Business Profile",
+    description:
+      "Recover your suspended Google Business Profile in 5–7 business days. Free audit. No Fix, No Charge.",
+  },
 };
 
 function page() {
@@ -80,6 +172,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
 
@@ -95,14 +191,15 @@ function page() {
 
             <h1>
               Suspended Google Business Profile?{" "}
-              <span className="accent">Get Reinstated.</span>
+              <span className="accent">Get Reinstated Fast.</span>
             </h1>
 
             <p className="lead">
-              When your Google Business Profile is suspended, you vanish from Maps
-              and lose calls every hour. Zonic Media diagnoses the real cause,
-              fixes the compliance issues, and manages your appeal to recover your
-              listing, rankings, and leads — fast.
+              When your Google Business Profile is suspended, you vanish from
+              Google Maps and lose calls every hour. Zonic Media&apos;s GMB
+              reinstatement service diagnoses the real cause, fixes the
+              compliance issues, and manages your reinstatement appeal with
+              Google to recover your listing, rankings, and leads — fast.
             </p>
 
             <div className="hero-actions">
@@ -162,11 +259,12 @@ function page() {
                 <b>Zonic Media</b> · United States
               </span>
               <p>
-                Zonic Media is a Google Business Profile (GBP) reinstatement
-                service provider in the United States, specializing in restoring
-                suspended, disabled, and pending-verification Google Business
-                Profiles for small and mid-size local businesses nationwide —
-                on a <span className="hl">No Fix, No Charge</span> basis on the
+                Zonic Media is a GMB reinstatement service provider (Google
+                Business Profile reinstatement) in the United States,
+                specializing in restoring suspended, disabled, and
+                pending-verification Google Business Profiles for small and
+                mid-size local businesses nationwide — on a{" "}
+                <span className="hl">No Fix, No Charge</span> basis on the
                 reinstatement fee.
               </p>
             </article>
@@ -182,13 +280,14 @@ function page() {
 
               <div className="about-qa-body">
                 <p>
-                  Zonic Media is a digital marketing agency that provides
-                  dedicated Google Business Profile (GBP) reinstatement and
-                  suspension recovery services for businesses across the United
-                  States. The company focuses specifically on GBP suspensions,
-                  reinstatements, and compliance audits, and handles all
-                  suspension types — soft suspensions, hard suspensions, disabled
-                  listings, and profiles suspended pending verification.
+                  Zonic Media is a digital marketing agency that provides a
+                  dedicated GMB reinstatement service — Google Business Profile
+                  (GBP) reinstatement and suspension recovery — for businesses
+                  across the United States. The company focuses specifically on
+                  GBP suspensions, reinstatement appeals, and compliance
+                  audits, and handles all suspension types — soft suspensions,
+                  hard suspensions, disabled listings, and profiles suspended
+                  pending verification.
                 </p>
                 <p>
                   The veteran experts at Zonic Media bring more than seven years
@@ -697,7 +796,7 @@ function page() {
           <section className="gmb-panel">
             <div className="sec-head">
               <span className="eyebrow">Common questions</span>
-              <h2>Everything you need to know</h2>
+              <h2>GMB reinstatement service — everything you need to know</h2>
             </div>
             {GmbResinstFaqs.map((faq, index) => (
               <details className="faq-item" key={faq.question} open={index === 0}>

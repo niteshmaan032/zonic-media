@@ -122,6 +122,18 @@ export const metadata: Metadata = {
   title: "Dental SEO Services | Local SEO for Dentists",
   description:
     "Dental SEO services that help dental offices rank higher on Google, dominate local search, and generate more patient calls and bookings.",
+  keywords: [
+    "dental SEO services",
+    "local SEO for dentists",
+    "dental marketing agency",
+    "dental patient lead generation",
+    "Google Maps ranking for dentists",
+    "Google Business Profile for dental offices",
+    "SEO for dental practices",
+    "dentist SEO company",
+    "Invisalign and dental implant SEO",
+    "dental clinic marketing",
+  ],
   alternates: { canonical: "/services/industry/dental-seo-services" },
 };
 

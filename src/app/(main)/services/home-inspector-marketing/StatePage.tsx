@@ -10,6 +10,7 @@ import HomeInspectorLeadForm from "@/app/components/HomeInspectorLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import HeroTrustBadges from "@/app/components/HeroTrustBadges";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -202,6 +203,8 @@ export default function StatePage({ state }: { state: StateContent }) {
                     Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
+
+                <HeroTrustBadges />
 
                 <div className="hia-trust-row">
                   {trustItems.map((t, i) => (

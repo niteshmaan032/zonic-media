@@ -8,14 +8,24 @@ const contactBreadcrumbJsonLd = buildBreadcrumbJsonLd([
 ]);
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get in Touch With Our Digital Experts",
+  title: "Contact Us | Digital Marketing Agency",
   description:
     "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
+  keywords: [
+    "contact digital marketing agency",
+    "digital marketing consultation",
+    "free marketing strategy call",
+    "local SEO consultation",
+    "web design quote",
+    "Google Ads management quote",
+    "small business marketing help",
+    "hire a digital marketing agency",
+  ],
   alternates: {
     canonical: "/contact-us",
   },
   openGraph: {
-    title: "Contact Us | Get in Touch With Our Digital Experts",
+    title: "Contact Us | Digital Marketing Agency | Zonic Media",
     description:
       "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
     url: "/contact-us",

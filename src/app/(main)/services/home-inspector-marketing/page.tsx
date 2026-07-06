@@ -9,6 +9,7 @@ import HomeInspectorLeadForm from "@/app/components/HomeInspectorLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
+import HeroTrustBadges from "@/app/components/HeroTrustBadges";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -19,6 +20,18 @@ export const metadata: Metadata = {
   title: "Home Inspector Marketing Agency | Local SEO & Leads",
   description:
     "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
+  keywords: [
+    "home inspector marketing",
+    "local SEO for home inspectors",
+    "home inspector marketing agency",
+    "home inspector lead generation",
+    "Google Maps ranking for home inspectors",
+    "Google Business Profile for home inspectors",
+    "home inspection SEO services",
+    "Google Ads for home inspectors",
+    "home inspector website design",
+    "home inspection leads",
+  ],
   alternates: { canonical: "/services/home-inspector-marketing" },
 };
 
@@ -473,6 +486,8 @@ function Page() {
                     Call {SITE_CONTACT.phoneDisplay}
                   </Link>
                 </div>
+
+                <HeroTrustBadges />
 
                 <div className="hia-trust-row">
                   {trustItems.map((t, i) => (

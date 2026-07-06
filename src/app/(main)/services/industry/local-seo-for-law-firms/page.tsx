@@ -3,9 +3,21 @@ import LawSeoPage from "./LawSeoPage";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Law Firm Marketing Services | Local SEO for Law Firms",
+  title: "Local SEO for Law Firms | Attorney Marketing",
   description:
-    "Zonic Media provides law firm marketing services including local SEO, Google Maps optimization, legal website conversion, reputation growth, and digital marketing services for law firms.",
+    "Local SEO for law firms that helps attorneys rank on Google Maps, win more case leads, and grow with reputation management and legal marketing.",
+  keywords: [
+    "law firm SEO services",
+    "local SEO for law firms",
+    "law firm marketing agency",
+    "law firm lead generation",
+    "attorney local SEO",
+    "Google Maps ranking for law firms",
+    "Google Business Profile for attorneys",
+    "legal marketing services",
+    "lawyer SEO company",
+    "case lead generation for attorneys",
+  ],
   alternates: { canonical: "/services/industry/local-seo-for-law-firms" },
 };
 

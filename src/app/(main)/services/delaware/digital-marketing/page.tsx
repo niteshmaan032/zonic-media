@@ -160,10 +160,28 @@ const DelDigitalFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency Delaware | SEO, PPC & Growth Strategy",
+  title: "Digital Marketing Agency Delaware | SEO & PPC",
   description:
     "Delaware digital marketing agency helping businesses grow with SEO, PPC, social media, email marketing, AI SEO, and conversion-focused strategy.",
+  keywords: [
+    "digital marketing agency Delaware",
+    "Delaware SEO company",
+    "PPC management Delaware",
+    "local SEO Delaware",
+    "digital marketing Dover DE",
+    "social media marketing Delaware",
+    "Delaware marketing agency for small business",
+    "lead generation Delaware",
+    "Google Ads management Delaware",
+  ],
   alternates: { canonical: "/services/delaware/digital-marketing" },
+  openGraph: {
+    title: "Digital Marketing Agency Delaware | SEO & PPC | Zonic Media",
+    description:
+      "Delaware digital marketing agency helping businesses grow with SEO, PPC, social media, email marketing, AI SEO, and conversion-focused strategy.",
+    url: "/services/delaware/digital-marketing",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

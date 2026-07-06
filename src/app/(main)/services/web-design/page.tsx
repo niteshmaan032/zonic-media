@@ -10,10 +10,28 @@ import { Metadata } from "next";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Web Design Services | Custom Websites That Drive Results",
+  title: "Web Design Services for Small Business",
   description:
     "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+  keywords: [
+    "web design services for small business",
+    "conversion focused website design",
+    "local business website design",
+    "responsive web design services",
+    "SEO friendly web design",
+    "custom website design",
+    "website redesign services",
+    "mobile friendly website design",
+    "affordable web design for small business",
+  ],
   alternates: { canonical: "/services/web-design" },
+  openGraph: {
+    title: "Web Design Services for Small Business | Zonic Media",
+    description:
+      "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+    url: "/services/web-design",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

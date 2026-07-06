@@ -115,11 +115,28 @@ const HvacBenefits = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Local SEO Services for HVAC Companies | Get More HVAC Leads | Zonic Media",
+  title: "Local SEO Services for HVAC Companies | Zonic Media",
   description:
-    "Local SEO services for HVAC companies. Zonic Media helps heating and cooling businesses rank higher on Google, improve map visibility, and generate more qualified service calls every month.",
+    "Local SEO services for HVAC companies. Zonic Media helps heating and cooling businesses rank higher on Google Maps and get more qualified service calls.",
+  keywords: [
+    "local SEO services for HVAC",
+    "HVAC SEO company",
+    "SEO for HVAC contractors",
+    "HVAC local SEO agency",
+    "Google Business Profile for HVAC",
+    "HVAC lead generation SEO",
+    "Google Maps ranking for HVAC",
+    "HVAC marketing agency",
+    "SEO for heating and cooling companies",
+  ],
   alternates: { canonical: "/services/local-seo-services-for-hvac" },
+  openGraph: {
+    title: "Local SEO Services for HVAC Companies | Zonic Media",
+    description:
+      "Local SEO services for HVAC companies. Rank higher on Google Maps and turn heating and cooling searches into qualified service calls.",
+    url: "/services/local-seo-services-for-hvac",
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([

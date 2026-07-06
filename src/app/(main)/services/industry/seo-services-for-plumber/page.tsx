@@ -132,6 +132,17 @@ export const metadata: Metadata = {
   title: "SEO Services for Plumbers | Get More Plumbing Leads",
   description:
     "Plumbing SEO services that help plumbing businesses rank higher on Google, dominate local search, and generate more calls and booked jobs.",
+  keywords: [
+    "plumbing SEO services",
+    "local SEO for plumbers",
+    "plumber marketing agency",
+    "plumbing lead generation",
+    "Google Maps ranking for plumbers",
+    "Google Business Profile for plumbers",
+    "SEO services for plumbers",
+    "emergency plumber SEO",
+    "plumbing contractor SEO",
+  ],
   alternates: { canonical: "/services/industry/seo-services-for-plumber" },
 };
 

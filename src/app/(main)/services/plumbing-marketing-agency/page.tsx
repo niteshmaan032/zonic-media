@@ -21,10 +21,21 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title:
-    "Plumbing Marketing Agency | Marketing for Plumbing Contractors | Zonic Media",
+  title: "Plumbing Marketing Agency for Contractors | Zonic Media",
   description:
-    "A plumbing marketing agency built for plumbing contractors. Google Business Profile, Google Maps ranking, paid ads, website design, and reviews. Serving Florida, Texas, California, Arizona, Illinois, Georgia, and North Carolina. Free plumbing marketing audit.",
+    "Plumbing marketing agency for contractors. Google Business Profile, Google Maps ranking, paid ads, websites, and reviews. Free plumbing marketing audit.",
+  keywords: [
+    "plumbing marketing agency",
+    "marketing for plumbing contractors",
+    "plumber marketing services",
+    "plumbing lead generation",
+    "local SEO for plumbers",
+    "Google Maps ranking for plumbers",
+    "Google Business Profile for plumbers",
+    "Google Ads for plumbers",
+    "plumbing website design",
+    "plumber review management",
+  ],
   alternates: { canonical: "/services/plumbing-marketing-agency" },
 };
 

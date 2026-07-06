@@ -80,6 +80,11 @@ function Footer() {
                       Local SEO
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/services/white-label-services">
+                      White-Label Services
+                    </Link>
+                  </li>
                 </ul>
 
                 <ul>
