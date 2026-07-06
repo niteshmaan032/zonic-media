@@ -527,9 +527,12 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="services-dropdown">
-                    <span className="nav-link-with-icon">
+                    <Link
+                      href={SITE_PATHS.industries}
+                      className="nav-link-with-icon"
+                    >
                       Industries <MdArrowOutward size={16} />
-                    </span>
+                    </Link>
 
                     <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
                       <div className="services-core-label">Industries</div>
@@ -848,6 +851,14 @@ function Navbar() {
                   <Accordion.Header>Industries</Accordion.Header>
                   <Accordion.Body>
                     <ul>
+                      <li>
+                        <Link
+                          href={SITE_PATHS.industries}
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          View all industries
+                        </Link>
+                      </li>
                       {industryLinks.map((industry) => (
                         <li key={industry.id}>
                           <Link

@@ -9,6 +9,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Core
   { url: `${BASE_URL}/`,           changeFrequency: "daily",   priority: 1.0 },
   { url: `${BASE_URL}/services`,   changeFrequency: "weekly",  priority: 0.9 },
+  { url: `${BASE_URL}/industries`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/about`,      changeFrequency: "yearly",  priority: 0.6 },
   { url: `${BASE_URL}/contact-us`, changeFrequency: "yearly",  priority: 0.6 },
   { url: `${BASE_URL}/blog`,       changeFrequency: "weekly",  priority: 0.8 },

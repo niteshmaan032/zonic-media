@@ -12,6 +12,7 @@ export const SITE_PATHS = {
   home: "/",
   about: "/about",
   services: "/services",
+  industries: "/industries",
   contact: "/contact-us",
   blogs: "/blog",
   seo: "/services/local-seo-for-home-services",
