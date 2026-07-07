@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
@@ -51,7 +51,7 @@ import {
 import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 
-/* â”€â”€â”€ IMAGE PATHS â”€â”€â”€ */
+/* ─── IMAGE PATHS ─── */
 const imgs = {
   hero: "/images/law-seo/ChatGPT Image May 13, 2026, 06_14_24 PM.png",
   maps: "/images/contact-section.jpg",
@@ -73,7 +73,7 @@ type InlineAuditFormValues = {
   message: string;
 };
 
-/* â”€â”€â”€ ARROW ICON â”€â”€â”€ */
+/* ─── ARROW ICON ─── */
 const ArrowIcon = () => (
   <span className="buttons__icon-wrapper" aria-hidden="true">
     <svg
@@ -103,7 +103,7 @@ const ArrowIcon = () => (
   </span>
 );
 
-/* â”€â”€â”€ DATA â”€â”€â”€ */
+/* ─── DATA ─── */
 const marqueeTerms = [
   "Law firm near me",
   "Personal injury attorney",
@@ -500,7 +500,7 @@ const lawContactFormHead = {
   ),
 };
 
-/* â”€â”€â”€ COMPONENT â”€â”€â”€ */
+/* ─── COMPONENT ─── */
 export default function LawSeoPage() {
   const [highlightedUpTo, setHighlightedUpTo] = useState(0);
   const lineControls = useAnimation();
@@ -630,7 +630,7 @@ export default function LawSeoPage() {
 
   return (
     <main className="law-seo-page">
-      {/* â”€â”€â”€ HERO â”€â”€â”€ */}
+      {/* ─── HERO ─── */}
       <section
         className="car-tow-hero"
         style={{ backgroundImage: `url("${imgs.hero}")` }}
@@ -701,7 +701,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ CORE CHALLENGE â”€â”€â”€ */}
+      {/* ─── CORE CHALLENGE ─── */}
       <section className="car-tow-section" id="law-problems">
         <div className="car-tow-container">
           <div className="car-tow-center-head">
@@ -760,7 +760,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ CLIENT JOURNEY â”€â”€â”€ */}
+      {/* ─── CLIENT JOURNEY ─── */}
       <section className="car-tow-section car-tow-section-alt">
         <div className="car-tow-container">
           <Row className="gy-4 align-items-start">
@@ -842,7 +842,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ MARKETING SYSTEM (dark) â”€â”€â”€ */}
+      {/* ─── MARKETING SYSTEM (dark) ─── */}
       <section className="car-tow-section car-tow-section-dark">
         <div className="car-tow-container">
           <div className="car-tow-center-head">
@@ -902,7 +902,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ CONNECTED SYSTEM SPLIT (image + copy) â”€â”€â”€ */}
+      {/* ─── CONNECTED SYSTEM SPLIT (image + copy) ─── */}
       <section className="car-tow-section">
         <div className="car-tow-container">
           <Row className="align-items-start gy-4">
@@ -1049,7 +1049,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ BENEFITS (GREENISH) â”€â”€â”€ */}
+      {/* ─── BENEFITS (GREENISH) ─── */}
       <section className="car-tow-section law-inline-form-section">
         <div className="car-tow-container">
           <div className="law-inline-form-banner">
@@ -1257,7 +1257,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ NOT WORKING (REDDISH) â”€â”€â”€ */}
+      {/* ─── NOT WORKING (REDDISH) ─── */}
       <section className="car-tow-section law-notworking-section">
         <div className="car-tow-container">
           <div>
@@ -1307,7 +1307,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ CASE STUDY â”€â”€â”€ */}
+      {/* ─── CASE STUDY ─── */}
       <section className="car-tow-section car-tow-section-alt">
         <div className="car-tow-container">
           <Row className="gy-4 align-items-center">
@@ -1406,7 +1406,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ SEO VS PAID ADS â”€â”€â”€ */}
+      {/* ─── SEO VS PAID ADS ─── */}
       <section className="car-tow-section">
         <div className="car-tow-container">
           <div className="car-tow-center-head">
@@ -1482,7 +1482,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ WHY ZONIC MEDIA (dark) â”€â”€â”€ */}
+      {/* ─── WHY ZONIC MEDIA (dark) ─── */}
       <section className="car-tow-section car-tow-section-dark">
         <div className="car-tow-container">
           <div className="car-tow-center-head">
@@ -1562,7 +1562,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ PROCESS (interactive) â”€â”€â”€ */}
+      {/* ─── PROCESS (interactive) ─── */}
       <section
         ref={processSectionRef}
         className="car-tow-section car-tow-process-section law-process-light-section"
@@ -1652,7 +1652,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ TESTIMONIALS â”€â”€â”€ */}
+      {/* ─── TESTIMONIALS ─── */}
       <div className="phila-sec-8 law-phila-section">
         <h2 className="phila-sec-8-heading">What Our Clients Say</h2>
         <div className="phila-test">
@@ -1665,7 +1665,7 @@ export default function LawSeoPage() {
         </div>
       </div>
 
-      {/* â”€â”€â”€ FAQ â”€â”€â”€ */}
+      {/* ─── FAQ ─── */}
       <div className="phila-sec-9 law-phila-section">
         <div className="phila-center-head">
           <div className="phila-center-head-content-wrapper">
@@ -1697,7 +1697,7 @@ export default function LawSeoPage() {
         />
       </div>
 
-      {/* â”€â”€â”€ FINAL CTA â”€â”€â”€ */}
+      {/* ─── FINAL CTA ─── */}
       <section className="car-tow-section car-tow-final-section">
         <div className="car-tow-container">
           <div className="car-tow-final-cta law-cta-banner law-cta-banner-spacious">
@@ -1731,7 +1731,7 @@ export default function LawSeoPage() {
         </div>
       </section>
 
-      {/* â”€â”€â”€ CONTACT FORM â”€â”€â”€ */}
+      {/* ─── CONTACT FORM ─── */}
       <div className="phila-sec-10 law-phila-section">
         <div className="phila-sec-10-inner">
           <div className="phila-sec-10-content">

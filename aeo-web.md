@@ -124,3 +124,82 @@ Left unchanged (already keyword-strong): home, about, services index, dental, pl
 
 - No JSX structure, classNames, imports, component structure, or CSS touched anywhere — text, metadata, and schema data only.
 - JSON-LD kept consistent with the site-wide hard-coded aggregateRating (4.9 / 127 reviews in `src/shared/seoSchemas.ts`).
+
+---
+---
+
+# Session 2 — SEO Crawl Issue Fixes (July 7, 2026)
+
+Fixes for 5 issue groups flagged by an SEO crawl tool (screenshots provided by owner). All verified against the rendered production build output.
+
+## Root Cause Discovered
+
+The root layout applies the title template `%s | Zonic Media` to every page. Pages whose title string already ended in "| Zonic Media" were rendering the brand suffix **twice** live (e.g. About page rendered as "About Zonic Media | Marketing Agency for Small & Mid-Size Businesses | Zonic Media" = 85 chars). This was the hidden cause behind most of the "title too long" flags.
+
+## Issue 1 — Title tags too long (19 flagged pages fixed, all now ≤65 chars)
+
+| URL | New live title (len) |
+|---|---|
+| /about | About Zonic Media \| Digital Marketing Agency for SMBs (53) — via title.absolute |
+| /services/auto-repair-marketing-agency | Auto Repair Marketing Agency \| Local SEO & Ads \| Zonic Media (60) |
+| /services/chiropractic-marketing-agency | Chiropractic Marketing Agency \| Local SEO & Ads \| Zonic Media (61) |
+| /services/cleaning-company-marketing-agency | Cleaning Company Marketing Agency \| Local SEO \| Zonic Media (59) |
+| /services/dental-marketing-agency | Dental Marketing Agency \| Local SEO & Ads \| Zonic Media (55) |
+| /services/electrician-marketing-agency | Electrician Marketing Agency \| Local SEO & Ads \| Zonic Media (60) |
+| /services/garage-door-marketing-agency | Garage Door Marketing Agency \| Local SEO & Ads \| Zonic Media (60) |
+| /services/landscaping-marketing-agency | Landscaping Marketing Agency \| Local SEO & Ads \| Zonic Media (60) |
+| /services/law-firm-marketing-agency | Law Firm Marketing Agency \| Local SEO & Ads \| Zonic Media (57) |
+| /services/moving-company-marketing-agency | Moving Company Marketing Agency \| Local SEO \| Zonic Media (57) |
+| /services/painting-contractor-marketing-agency | Painting Contractor Marketing Agency \| Local SEO \| Zonic Media (62) |
+| /services/pest-control-marketing-agency | Pest Control Marketing Agency \| Local SEO & Ads \| Zonic Media (61) |
+| /services/real-estate-marketing-agency | Real Estate Marketing Agency \| Local SEO & Ads \| Zonic Media (60) |
+| /services/roofing-marketing-agency | Roofing Marketing Agency \| Local SEO & Ads \| Zonic Media (56) |
+| /services/home-inspector-marketing/california | California Home Inspector Marketing & SEO \| Zonic Media (55) |
+| /services/home-inspector-marketing/florida | Florida Home Inspector Marketing & SEO \| Zonic Media (52) |
+| /services/home-inspector-marketing/georgia | Georgia Home Inspector Marketing & SEO \| Zonic Media (52) |
+| /services/home-inspector-marketing/north-carolina | North Carolina Home Inspector Marketing & SEO \| Zonic Media (59) |
+| /services/home-inspector-marketing/texas | Texas Home Inspector Marketing & SEO \| Zonic Media (50) |
+
+**How:** 13 industry-agency titles shortened in `src/data/industryMarketingPages.generated.json` + `[marketingAgencySlug]/page.tsx` now uses `title: { absolute: page.title }` (prevents template double-suffix). Home-inspector titles shortened in `home-inspector-marketing/stateContent.ts` (template adds the brand suffix once).
+
+**Bonus — doubled-suffix bug fixed on 25 more pages** (stripped the embedded " | Zonic Media" so the template adds it exactly once, and shortened where needed):
+- All 7 plumbing + 7 HVAC state pages (`stateContent.ts` in each hub folder)
+- Hubs: /services/plumbing-marketing-agency (55), /services/hvac-marketing-agency (51)
+- /services/local-seo-services-for-hvac (51)
+- /gmb-reinstatement-service-agency → "GBP Suspended? We Reinstate It in 5–7 Days" (58)
+- /google-business-profile-verification-help-2026 → "Google Business Profile Verification Help" (55)
+- /services/google-business-profile-services-real-estate-agents → "GBP Services for Real Estate Agents & Brokers" (59)
+- /local-seo-google-business-optimization → "GBP Optimization | Rank in the Google Map Pack" (60)
+- /services/gmb-optimization → "GMB Optimization Service | Map Pack Ranking" (57)
+- /services/white-label-services → "White-Label GBP, SEO & Web Design for Agencies" (60)
+
+## Issue 2 — Redirect
+
+Added 301 in `next.config.ts` redirects():
+`/services/google-my-business` → `/services/gmb-reinstatement-help` (permanent).
+
+## Issue 3 — Duplicate meta descriptions (/legal pages)
+
+Added `LEGAL_META_DESCRIPTIONS` map in `src/app/(main)/legal/[slug]/page.tsx` with unique descriptions for privacy-policy, terms-conditions, and refund-policy (refund one mentions No Fix, No Charge). Previously all legal pages fell back to a shared intro paragraph.
+
+## Issue 4 — Broken internal links (/services/google-my-business)
+
+Found in TWO components and fixed at the source to point to `/services/gmb-reinstatement-help`:
+- `src/app/components/Navbar.tsx` (sitewide GMB menu item — now every page internally links to the priority reinstatement page)
+- `src/app/(main)/services/home-inspector-marketing/StatePage.tsx` footer (the 5 flagged state pages)
+Build-wide scan confirms zero remaining references to the dead URL.
+
+## Issue 5 — Invalid structured data (13 marketing-agency pages)
+
+`serviceType` is not a valid schema.org property on `ProfessionalService`/`LocalBusiness`. Replaced `serviceType` → `knowsAbout` (valid, keeps the service keywords) in all 13 schema strings inside `src/data/industryMarketingPages.generated.json`. Verified in build: 0 serviceType, knowsAbout present.
+
+## Verification
+
+- `npm run build` — passes, all pages prerendered
+- All new titles read back from the rendered `.next/server/app/*.html` output (route groups are stripped from these paths in Next 16)
+- Legal meta descriptions confirmed unique in rendered HTML
+- Zero pages reference `/services/google-my-business`
+
+## Post-deploy
+
+Re-run the SEO tool crawl — all 5 issue groups should clear. Resubmit sitemap in GSC if prompted.

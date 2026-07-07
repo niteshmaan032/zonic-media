@@ -71,21 +71,21 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Free Georgia Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
       "Month-to-Month, No Contracts",
-      "Local SEO Â· Google Ads Â· GBP Â· Social Â· Websites",
+      "Local SEO · Google Ads · GBP · Social · Websites",
       "Trusted by Home Inspectors Nationally",
       "4.9/5 Average Client Rating",
     ],
     hero: {
       eyebrow: "Marketing for Georgia Home Inspectors",
-      headlinePre: "Georgia Home Inspector Marketing â€” More Inspections in",
+      headlinePre: "Georgia Home Inspector Marketing — More Inspections in",
       accent: "Atlanta and Beyond.",
-      sub: "Atlanta's housing market has been one of the most active in the South for the past five years, and Georgia's secondary metros â€” Savannah, Augusta, Athens â€” are growing fast behind it. Georgia home inspectors who get their digital marketing right are filling calendars while the competition waits for agent referrals. We help you do that.",
+      sub: "Atlanta's housing market has been one of the most active in the South for the past five years, and Georgia's secondary metros — Savannah, Augusta, Athens — are growing fast behind it. Georgia home inspectors who get their digital marketing right are filling calendars while the competition waits for agent referrals. We help you do that.",
     },
     problem: {
       eyebrow: "Why Georgia Home Inspectors Hit a Ceiling",
       headlinePre: "Metro Atlanta is huge. Most inspectors only see",
       accent: "part of it.",
-      lede: "Metro Atlanta has more than six million people spread across nearly thirty counties. Most home inspectors in the region operate as if it's one market â€” and they end up competing for the same fifteen ZIP codes while the rest of the metro goes uncovered. The Georgia inspectors growing fastest are the ones building submarket-by-submarket digital presence in Cobb, Gwinnett, Fulton, DeKalb, and Cherokee counties simultaneously.",
+      lede: "Metro Atlanta has more than six million people spread across nearly thirty counties. Most home inspectors in the region operate as if it's one market — and they end up competing for the same fifteen ZIP codes while the rest of the metro goes uncovered. The Georgia inspectors growing fastest are the ones building submarket-by-submarket digital presence in Cobb, Gwinnett, Fulton, DeKalb, and Cherokee counties simultaneously.",
       proseSegments: [
         {
           strongs: ["Cobb County, Gwinnett, North Fulton, Cherokee, and DeKalb"],
@@ -97,7 +97,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           strongs: ["film and tech relocation wave"],
-          text: "Third, there's the {0}. Hollywood South, Microsoft, Google, and a wave of corporate relocations have brought tens of thousands of transplants to Atlanta over the past five years. Like North Carolina, these buyers don't have local agent relationships â€” they Google their inspectors. Inspectors capturing that traffic are growing while traditional referral-based competitors stagnate.",
+          text: "Third, there's the {0}. Hollywood South, Microsoft, Google, and a wave of corporate relocations have brought tens of thousands of transplants to Atlanta over the past five years. Like North Carolina, these buyers don't have local agent relationships — they Google their inspectors. Inspectors capturing that traffic are growing while traditional referral-based competitors stagnate.",
         },
       ],
       cards: [
@@ -111,11 +111,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Transplant volume is changing the buyer profile.",
-          p: "Film, tech, and corporate relocations have brought online-native buyers to Atlanta. They don't ask their agent â€” they search Google.",
+          p: "Film, tech, and corporate relocations have brought online-native buyers to Atlanta. They don't ask their agent — they search Google.",
         },
         {
           h: "Coastal Georgia is its own market.",
-          p: "Savannah and the coast operate completely separately from Atlanta. Inspectors trying to cover both regions need separate page strategies â€” what works in Marietta doesn't work in Savannah.",
+          p: "Savannah and the coast operate completely separately from Atlanta. Inspectors trying to cover both regions need separate page strategies — what works in Marietta doesn't work in Savannah.",
         },
       ],
     },
@@ -134,12 +134,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           strongs: ["termite and pre-listing inspection specialty pages"],
-          text: "The other Georgia pattern worth noting: {0} drive disproportionate volume. Most Georgia inspectors don't have dedicated pages for these â€” building them is one of the fastest ways to capture buyer searches your competitors haven't optimized for.",
+          text: "The other Georgia pattern worth noting: {0} drive disproportionate volume. Most Georgia inspectors don't have dedicated pages for these — building them is one of the fastest ways to capture buyer searches your competitors haven't optimized for.",
         },
       ],
       stats: [
         {
-          big: "3.1Ã—",
+          big: "3.1×",
           h: "More direct calls within 90 days",
           p: "Average increase across metro Atlanta and secondary Georgia metros.",
         },
@@ -168,7 +168,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       cards: [
         {
           h: "Atlanta",
-          p: "Largest Georgia metro. Operates as multiple submarkets â€” North Fulton, Buckhead, Decatur, Midtown â€” each with separate ranking strategies.",
+          p: "Largest Georgia metro. Operates as multiple submarkets — North Fulton, Buckhead, Decatur, Midtown — each with separate ranking strategies.",
           link: "#",
           linkLabel: "Local SEO in Atlanta",
         },
@@ -180,7 +180,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Augusta",
-          p: "Second-largest metro. Steady transactional volume with less digital marketing competition â€” strong opportunity for first-page domination.",
+          p: "Second-largest metro. Steady transactional volume with less digital marketing competition — strong opportunity for first-page domination.",
           link: "#",
           linkLabel: "Local SEO in Augusta",
         },
@@ -210,7 +210,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Sandy Springs",
-          p: "High-income North Fulton market. Premium inspection pricing and sophisticated buyers â€” strong fit for inspectors with established online presence.",
+          p: "High-income North Fulton market. Premium inspection pricing and sophisticated buyers — strong fit for inspectors with established online presence.",
           link: "#",
           linkLabel: "Local SEO in Sandy Springs",
         },
@@ -220,12 +220,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Three plans built for where your Georgia inspection business is",
     pricingAccent: "right now.",
     pricingLede:
-      "Pick the plan that fits where your Georgia inspection business is today â€” you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
+      "Pick the plan that fits where your Georgia inspection business is today — you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
     faqEyebrow: "Common Questions From Georgia Home Inspectors",
     faqs: [
       {
         q: "How long does it take to see results from home inspector marketing in Georgia?",
-        a: "Most Georgia home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Georgia metro you're in and the current state of your online presence. We give honest timelines during the audit â€” never inflated \"results in seven days\" promises.",
+        a: "Most Georgia home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Georgia metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
       },
       {
         q: "Do I need to sign a long-term contract?",
@@ -233,15 +233,15 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How do you handle competition in the saturated metro Atlanta market?",
-        a: "Metro Atlanta is one of the most competitive home inspector markets in the South. Our approach is submarket-by-submarket rather than fighting for the \"home inspector Atlanta\" head term directly. We build out service pages for Marietta, Roswell, Alpharetta, Sandy Springs, Decatur, Buckhead, East Cobb, North Fulton, and other submarkets where competition is thinner and search intent is higher. By month six, most Atlanta-area clients are ranking #1 in three to five submarkets simultaneously â€” which usually produces more bookings than a single metro-wide #1 ranking would.",
+        a: "Metro Atlanta is one of the most competitive home inspector markets in the South. Our approach is submarket-by-submarket rather than fighting for the \"home inspector Atlanta\" head term directly. We build out service pages for Marietta, Roswell, Alpharetta, Sandy Springs, Decatur, Buckhead, East Cobb, North Fulton, and other submarkets where competition is thinner and search intent is higher. By month six, most Atlanta-area clients are ranking #1 in three to five submarkets simultaneously — which usually produces more bookings than a single metro-wide #1 ranking would.",
       },
       {
         q: "Do you serve coastal Georgia and Savannah differently than Atlanta?",
-        a: "Yes. Coastal Georgia is a completely separate market from metro Atlanta â€” different buyer profile, different agent network, different competitive landscape. Savannah in particular has heavy second-home and tourism-rental inspection demand that doesn't exist in Atlanta, and we build dedicated content around it. If you cover both Atlanta and the coast, we run them as two separate marketing strategies rather than one â€” because trying to be everything to everyone is how Georgia inspectors waste budget.",
+        a: "Yes. Coastal Georgia is a completely separate market from metro Atlanta — different buyer profile, different agent network, different competitive landscape. Savannah in particular has heavy second-home and tourism-rental inspection demand that doesn't exist in Atlanta, and we build dedicated content around it. If you cover both Atlanta and the coast, we run them as two separate marketing strategies rather than one — because trying to be everything to everyone is how Georgia inspectors waste budget.",
       },
       {
         q: "Will digital marketing replace my real estate agent referrals in Georgia?",
-        a: "Our goal is not to replace agent relationships â€” it is to stop you from depending entirely on them. Most Georgia inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most Georgia inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
       },
       {
         q: "What is included in the free Georgia home inspector marketing audit?",
@@ -253,7 +253,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
-        a: "Yes. GBP reinstatement is one of our specialties â€” we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
     ],
     final: {
@@ -272,7 +272,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Free Texas Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
       "Month-to-Month, No Contracts",
-      "Local SEO Â· Google Ads Â· GBP Â· Social Â· Websites",
+      "Local SEO · Google Ads · GBP · Social · Websites",
       "Trusted by Home Inspectors Nationally",
       "4.9/5 Average Client Rating",
     ],
@@ -280,33 +280,33 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Marketing for Texas Home Inspectors",
       headlinePre: "Home Inspector Marketing Built for",
       accent: "the Texas Market.",
-      sub: "Texas is the fastest-growing real estate market in America â€” Houston, Dallas, Austin, and San Antonio are all on tear, new construction is everywhere, and transplants are arriving by the thousand every month. The home inspectors winning Texas right now are the ones showing up first on Google. We help Texas inspection companies own their local search territory across every major metro in the state.",
+      sub: "Texas is the fastest-growing real estate market in America — Houston, Dallas, Austin, and San Antonio are all on tear, new construction is everywhere, and transplants are arriving by the thousand every month. The home inspectors winning Texas right now are the ones showing up first on Google. We help Texas inspection companies own their local search territory across every major metro in the state.",
     },
     problem: {
       eyebrow: "Why Texas Home Inspectors Lose Bookings",
       headlinePre: "The Texas market is growing. So is",
       accent: "your competition.",
-      lede: "Texas added more new residents than any other state for three years running. That sounds like a tailwind for home inspectors â€” and it is, but only for the ones who get found online. Every transplant moving into Frisco, The Woodlands, Round Rock, or Cedar Park is Googling \"home inspector near me\" before they ask their agent for a recommendation. If you're not on page one for your city, those inspections are going to someone else.",
+      lede: "Texas added more new residents than any other state for three years running. That sounds like a tailwind for home inspectors — and it is, but only for the ones who get found online. Every transplant moving into Frisco, The Woodlands, Round Rock, or Cedar Park is Googling \"home inspector near me\" before they ask their agent for a recommendation. If you're not on page one for your city, those inspections are going to someone else.",
       proseSegments: [
         {
           strongs: ["TREC license"],
-          text: "Texas home inspection is a high-volume, high-competition business. The major metros â€” DFW, Houston, Austin, San Antonio â€” have hundreds of licensed inspectors each, and new ones get their {0} every month. Standing out is no longer optional. The inspectors winning in Texas right now have professional Google Business Profiles, dozens of recent reviews, and websites that load fast on mobile because nine out of ten buyers are searching from their phone.",
+          text: "Texas home inspection is a high-volume, high-competition business. The major metros — DFW, Houston, Austin, San Antonio — have hundreds of licensed inspectors each, and new ones get their {0} every month. Standing out is no longer optional. The inspectors winning in Texas right now have professional Google Business Profiles, dozens of recent reviews, and websites that load fast on mobile because nine out of ten buyers are searching from their phone.",
         },
         {
           strongs: ["Foundation issues from expansive clay soil"],
-          text: "The other Texas-specific challenge is the diversity of your inspection work. {0}, hail damage assessments, wind mitigation in coastal counties, and Wood Destroying Insect (WDI) reports are all routine in Texas in ways they aren't in most other states. Buyers and agents searching for those specific services need to find you for the specialty â€” not just for \"home inspector.\"",
+          text: "The other Texas-specific challenge is the diversity of your inspection work. {0}, hail damage assessments, wind mitigation in coastal counties, and Wood Destroying Insect (WDI) reports are all routine in Texas in ways they aren't in most other states. Buyers and agents searching for those specific services need to find you for the specialty — not just for \"home inspector.\"",
         },
         {
-          text: "Then there's the investor market. Houston, San Antonio, and Dallas all have huge investor activity, and investors don't ask their agent for a recommendation â€” they Google an inspector who can turn around inspections fast and provide reports the way they want them. That's a market segment you can capture entirely through digital marketing, and most Texas inspectors are leaving it on the table.",
+          text: "Then there's the investor market. Houston, San Antonio, and Dallas all have huge investor activity, and investors don't ask their agent for a recommendation — they Google an inspector who can turn around inspections fast and provide reports the way they want them. That's a market segment you can capture entirely through digital marketing, and most Texas inspectors are leaving it on the table.",
         },
       ],
       cards: [
         {
           h: "New construction means new competitors.",
-          p: "Every new master-planned community in DFW or Houston brings new inspectors trying to break in. You need an established Google presence before they show up â€” once they're ranking, it's harder to displace them.",
+          p: "Every new master-planned community in DFW or Houston brings new inspectors trying to break in. You need an established Google presence before they show up — once they're ranking, it's harder to displace them.",
         },
         {
-          h: "Foundation work is your edge â€” if buyers find you.",
+          h: "Foundation work is your edge — if buyers find you.",
           p: "Texas foundation expertise is your differentiator, but only if your service pages rank for \"foundation inspection + city\" and your GBP categories include slab and foundation specialties.",
         },
         {
@@ -327,19 +327,19 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       lede: "Here are the patterns we see across Texas home inspection companies after the first ninety to one-hundred-eighty days. Your specific numbers will depend on which metro you're in, how saturated it already is, and how aggressive you want to be with paid spend.",
       proseSegments: [
         {
-          text: "The pattern across our Texas clients is consistent: in the first ninety days, the GBP rebuild and the paid ads start filling the calendar with direct calls from buyers in target zip codes. By month four or five, the local SEO investment compounds â€” you stop paying for clicks on keywords you now rank #1 for organically. By the end of year one, the cost per booked inspection has typically dropped by half.",
+          text: "The pattern across our Texas clients is consistent: in the first ninety days, the GBP rebuild and the paid ads start filling the calendar with direct calls from buyers in target zip codes. By month four or five, the local SEO investment compounds — you stop paying for clicks on keywords you now rank #1 for organically. By the end of year one, the cost per booked inspection has typically dropped by half.",
         },
         {
           text: "One Houston-area home inspector we work with was running on about thirty agent-referred inspections a month when we started. Ninety days in, direct Google calls were adding twenty-two more inspections from across Katy, Sugar Land, and The Woodlands. By month seven, his GBP was ranking #1 for \"home inspector\" in three of his target submarkets, and he had stopped advertising on Angi entirely.",
         },
         {
           strongs: ["foundation and WDI specialty pages"],
-          text: "The other Texas-specific pattern: {0} drive a disproportionate share of new leads. Buyers searching for specialty services convert at higher rates and pay more per inspection. Most Texas inspectors don't optimize for those keywords â€” which means whoever does will own that segment in their metro.",
+          text: "The other Texas-specific pattern: {0} drive a disproportionate share of new leads. Buyers searching for specialty services convert at higher rates and pay more per inspection. Most Texas inspectors don't optimize for those keywords — which means whoever does will own that segment in their metro.",
         },
       ],
       stats: [
         {
-          big: "3.4Ã—",
+          big: "3.4×",
           h: "More direct calls within 90 days",
           p: "Average increase in non-referred calls from buyers across Texas metros.",
         },
@@ -364,7 +364,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Texas Cities We Serve",
       headlinePre: "Local marketing playbooks for every major",
       accent: "Texas metro.",
-      lede: "We work with home inspectors across every population center in Texas, from the I-35 corridor to the Gulf Coast. Each metro has its own competitive landscape, search volume, and price-per-click economics â€” here's where we focus most of our Texas work, and how each market is different.",
+      lede: "We work with home inspectors across every population center in Texas, from the I-35 corridor to the Gulf Coast. Each metro has its own competitive landscape, search volume, and price-per-click economics — here's where we focus most of our Texas work, and how each market is different.",
       cards: [
         {
           h: "Houston",
@@ -374,7 +374,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Dallas",
-          p: "Tech corridor with heavy transplant volume. Competition is intense â€” first-page rankings here are five-figure annual revenue opportunities.",
+          p: "Tech corridor with heavy transplant volume. Competition is intense — first-page rankings here are five-figure annual revenue opportunities.",
           link: "#",
           linkLabel: "Local SEO in Dallas",
         },
@@ -392,13 +392,13 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Fort Worth",
-          p: "Traditional Texas market with strong family-home volume. Less saturated than Dallas â€” opportunity for first-mover local SEO wins.",
+          p: "Traditional Texas market with strong family-home volume. Less saturated than Dallas — opportunity for first-mover local SEO wins.",
           link: "#",
           linkLabel: "Local SEO in Fort Worth",
         },
         {
           h: "Plano",
-          p: "High-income Dallas suburb. Premium inspection market, agent-network-heavy â€” digital marketing complements rather than replaces referrals.",
+          p: "High-income Dallas suburb. Premium inspection market, agent-network-heavy — digital marketing complements rather than replaces referrals.",
           link: "#",
           linkLabel: "Local SEO in Plano",
         },
@@ -410,7 +410,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "El Paso",
-          p: "Border metro with growing inspection demand. Less competitive Google landscape â€” early SEO wins still achievable here.",
+          p: "Border metro with growing inspection demand. Less competitive Google landscape — early SEO wins still achievable here.",
           link: "#",
           linkLabel: "Local SEO in El Paso",
         },
@@ -420,12 +420,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Three plans built for where your Texas inspection business is",
     pricingAccent: "right now.",
     pricingLede:
-      "Pick the plan that fits where your Texas inspection business is today â€” you can move up or down between tiers any month. Ad spend is separate from the management fee and goes straight to Google and Meta. No setup fees, no twelve-month lockups, no hidden charges.",
+      "Pick the plan that fits where your Texas inspection business is today — you can move up or down between tiers any month. Ad spend is separate from the management fee and goes straight to Google and Meta. No setup fees, no twelve-month lockups, no hidden charges.",
     faqEyebrow: "Common Questions From Texas Home Inspectors",
     faqs: [
       {
         q: "How long does it take to see results from home inspector marketing in Texas?",
-        a: "Most Texas home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Texas metro you're in and the current state of your online presence. We give honest timelines during the audit â€” never inflated \"results in seven days\" promises.",
+        a: "Most Texas home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Texas metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
       },
       {
         q: "Do I need to sign a long-term contract?",
@@ -433,7 +433,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Do you understand Texas TREC licensing requirements for home inspectors?",
-        a: "Yes. We work exclusively with TREC-licensed home inspectors and understand the licensing tier structure (Apprentice, Real Estate Inspector, Professional Inspector). Our content and marketing copy is calibrated to TREC standards â€” we never make claims or use language that could trigger a license issue. If you have a specific concern about how we present your credentials, we address it during onboarding.",
+        a: "Yes. We work exclusively with TREC-licensed home inspectors and understand the licensing tier structure (Apprentice, Real Estate Inspector, Professional Inspector). Our content and marketing copy is calibrated to TREC standards — we never make claims or use language that could trigger a license issue. If you have a specific concern about how we present your credentials, we address it during onboarding.",
       },
       {
         q: "How do you handle the saturation in Dallas, Houston, and Austin metros?",
@@ -441,7 +441,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will digital marketing replace my real estate agent referrals in Texas?",
-        a: "Our goal is not to replace agent relationships â€” it is to stop you from depending entirely on them. Most Texas inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most Texas inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
       },
       {
         q: "What is included in the free Texas home inspector marketing audit?",
@@ -453,7 +453,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
-        a: "Yes. GBP reinstatement is one of our specialties â€” we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
     ],
     final: {
@@ -472,7 +472,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Free Florida Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
       "Month-to-Month, No Contracts",
-      "Local SEO Â· Google Ads Â· GBP Â· Social Â· Websites",
+      "Local SEO · Google Ads · GBP · Social · Websites",
       "Trusted by Home Inspectors Nationally",
       "4.9/5 Average Client Rating",
     ],
@@ -480,25 +480,25 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Marketing for Florida Home Inspectors",
       headlinePre: "Home Inspector Marketing That Wins in",
       accent: "Florida's Insurance Era.",
-      sub: "Florida's home inspection market is unlike anywhere else in the country. Wind mitigation inspections, 4-point inspections, and the ongoing insurance crisis have created year-round demand â€” but they've also created saturation. We help Florida home inspectors stand out in Miami, Tampa, Orlando, Jacksonville, and every metro in between by building digital marketing that speaks directly to the insurance-driven buyer.",
+      sub: "Florida's home inspection market is unlike anywhere else in the country. Wind mitigation inspections, 4-point inspections, and the ongoing insurance crisis have created year-round demand — but they've also created saturation. We help Florida home inspectors stand out in Miami, Tampa, Orlando, Jacksonville, and every metro in between by building digital marketing that speaks directly to the insurance-driven buyer.",
     },
     problem: {
       eyebrow: "Why Florida Home Inspectors Struggle Online",
       headlinePre: "Florida demand is high. So is the competition for",
       accent: "every keyword.",
-      lede: "Florida has more licensed home inspectors per capita than almost any other state, and the insurance crisis has only increased demand for specialty inspections. Every homeowner in the state now needs a 4-point and wind mitigation just to keep coverage, and buyers are doing more inspections than ever. The opportunity is enormous â€” but the inspectors capturing it are the ones with strong Google presence, optimized service pages for specialty work, and review counts that signal trust to nervous buyers.",
+      lede: "Florida has more licensed home inspectors per capita than almost any other state, and the insurance crisis has only increased demand for specialty inspections. Every homeowner in the state now needs a 4-point and wind mitigation just to keep coverage, and buyers are doing more inspections than ever. The opportunity is enormous — but the inspectors capturing it are the ones with strong Google presence, optimized service pages for specialty work, and review counts that signal trust to nervous buyers.",
       proseSegments: [
         {
           strongs: ["insurance"],
-          text: "Florida home inspection is shaped by one thing more than any other: {0}. The state's ongoing insurance crisis has made 4-point inspections, wind mitigation reports, and roof condition certifications routine demands from every carrier. That's a massive opportunity â€” but most Florida inspectors aren't optimizing their websites or GBP profiles for the specific keywords insurance-driven buyers are searching.",
+          text: "Florida home inspection is shaped by one thing more than any other: {0}. The state's ongoing insurance crisis has made 4-point inspections, wind mitigation reports, and roof condition certifications routine demands from every carrier. That's a massive opportunity — but most Florida inspectors aren't optimizing their websites or GBP profiles for the specific keywords insurance-driven buyers are searching.",
         },
         {
           strongs: ["snowbird and second-home market"],
-          text: "The second Florida-specific reality is the {0}. Buyers from New York, New Jersey, Pennsylvania, and Ohio routinely buy homes in Naples, Sarasota, the Panhandle, and coastal Broward County without ever visiting in person â€” they hire their inspector entirely through Google reviews and online presence. If your profile isn't there, you're invisible to a huge slice of the Florida buyer market.",
+          text: "The second Florida-specific reality is the {0}. Buyers from New York, New Jersey, Pennsylvania, and Ohio routinely buy homes in Naples, Sarasota, the Panhandle, and coastal Broward County without ever visiting in person — they hire their inspector entirely through Google reviews and online presence. If your profile isn't there, you're invisible to a huge slice of the Florida buyer market.",
         },
         {
           strongs: ["hurricane and humidity reality"],
-          text: "Third, there's the {0}. Mold inspections, post-storm assessments, and ongoing moisture intrusion work are all year-round revenue streams for Florida inspectors. But again â€” buyers and adjusters searching for those services need to find you. Most Florida inspectors have a single \"home inspection\" service page and miss every long-tail keyword that drives specialty work.",
+          text: "Third, there's the {0}. Mold inspections, post-storm assessments, and ongoing moisture intrusion work are all year-round revenue streams for Florida inspectors. But again — buyers and adjusters searching for those services need to find you. Most Florida inspectors have a single \"home inspection\" service page and miss every long-tail keyword that drives specialty work.",
         },
       ],
       cards: [
@@ -508,11 +508,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "4-point inspections are required by every insurer.",
-          p: "This is now a recurring revenue stream â€” not a one-off inspection. Inspectors who rank for 4-point keywords get repeat business from the same homeowners every renewal cycle.",
+          p: "This is now a recurring revenue stream — not a one-off inspection. Inspectors who rank for 4-point keywords get repeat business from the same homeowners every renewal cycle.",
         },
         {
           h: "Snowbird buyers hire entirely online.",
-          p: "If your reviews and GBP photos aren't strong, out-of-state buyers will book the inspector with the better online presence â€” every time.",
+          p: "If your reviews and GBP photos aren't strong, out-of-state buyers will book the inspector with the better online presence — every time.",
         },
         {
           h: "Hurricane season changes search behavior.",
@@ -528,7 +528,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       lede: "Here are the patterns we see across Florida home inspection companies after the first ninety to one-hundred-eighty days. Your specific numbers will depend on whether you're in a Tier 1 metro like Miami or Tampa or a secondary market like Naples or Pensacola.",
       proseSegments: [
         {
-          text: "Florida client results follow a slightly different pattern than other states. In the first ninety days, the specialty service pages (wind mitigation, 4-point) start ranking and bringing in insurance-driven inquiries that are highly likely to convert. The standard \"home inspector + city\" rankings take longer â€” usually four to six months â€” but the specialty pages move much faster because most competitors haven't optimized for them.",
+          text: "Florida client results follow a slightly different pattern than other states. In the first ninety days, the specialty service pages (wind mitigation, 4-point) start ranking and bringing in insurance-driven inquiries that are highly likely to convert. The standard \"home inspector + city\" rankings take longer — usually four to six months — but the specialty pages move much faster because most competitors haven't optimized for them.",
         },
         {
           text: "One Tampa Bay home inspector we work with was doing about forty inspections a month when we started, mostly through agent referrals. Within four months his wind mitigation page was the #1 result for \"wind mitigation inspection Tampa\" and was bringing in twenty-five additional bookings monthly directly from insurance-required searches. By month nine, the standard home inspection rankings caught up and the agent-referral business became roughly half his volume instead of all of it.",
@@ -540,7 +540,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       ],
       stats: [
         {
-          big: "3.8Ã—",
+          big: "3.8×",
           h: "More direct inspection bookings within 90 days",
           p: "Including specialty 4-point and wind mitigation inquiries.",
         },
@@ -565,11 +565,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Florida Cities We Serve",
       headlinePre: "Hyper-local marketing across every major",
       accent: "Florida metro.",
-      lede: "Florida is really five or six distinct markets stitched together â€” South Florida, the I-4 corridor, Tampa Bay, Jacksonville, the Panhandle, and the high-end Gulf Coast. Each has its own buyer profile, agent network, and search behavior. Here are the Florida metros we focus on most.",
+      lede: "Florida is really five or six distinct markets stitched together — South Florida, the I-4 corridor, Tampa Bay, Jacksonville, the Panhandle, and the high-end Gulf Coast. Each has its own buyer profile, agent network, and search behavior. Here are the Florida metros we focus on most.",
       cards: [
         {
           h: "Miami",
-          p: "International buyers, premium inspection pricing, Spanish-language search volume. Highly competitive â€” specialty service ranking is the fast win here.",
+          p: "International buyers, premium inspection pricing, Spanish-language search volume. Highly competitive — specialty service ranking is the fast win here.",
           link: "#",
           linkLabel: "Local SEO in Miami",
         },
@@ -587,7 +587,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Jacksonville",
-          p: "Largest Florida city by area. Growing tech and military relocation market. Less saturated than South Florida â€” faster SEO wins possible.",
+          p: "Largest Florida city by area. Growing tech and military relocation market. Less saturated than South Florida — faster SEO wins possible.",
           link: "#",
           linkLabel: "Local SEO in Jacksonville",
         },
@@ -599,7 +599,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Naples",
-          p: "High-end retirement and second-home market. Snowbird buyers research entirely online â€” review count and GBP photos are the conversion drivers here.",
+          p: "High-end retirement and second-home market. Snowbird buyers research entirely online — review count and GBP photos are the conversion drivers here.",
           link: "#",
           linkLabel: "Local SEO in Naples",
         },
@@ -621,12 +621,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Three plans built for where your Florida inspection business is",
     pricingAccent: "right now.",
     pricingLede:
-      "Pick the plan that fits where your Florida inspection business is today â€” you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
+      "Pick the plan that fits where your Florida inspection business is today — you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
     faqEyebrow: "Common Questions From Florida Home Inspectors",
     faqs: [
       {
         q: "How long does it take to see results from home inspector marketing in Florida?",
-        a: "Most Florida home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Florida metro you're in and the current state of your online presence. We give honest timelines during the audit â€” never inflated \"results in seven days\" promises.",
+        a: "Most Florida home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which Florida metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
       },
       {
         q: "Do I need to sign a long-term contract?",
@@ -634,7 +634,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you handle marketing for wind mitigation and 4-point inspection services specifically?",
-        a: "Yes â€” these are some of the highest-volume and highest-intent search categories in Florida home inspection. We build dedicated service pages for both, optimize your GBP categories to include them, and run targeted Google Ads campaigns for insurance-driven keywords. For most Florida clients, specialty service rankings are the fastest wins because most competitors haven't built dedicated pages for them.",
+        a: "Yes — these are some of the highest-volume and highest-intent search categories in Florida home inspection. We build dedicated service pages for both, optimize your GBP categories to include them, and run targeted Google Ads campaigns for insurance-driven keywords. For most Florida clients, specialty service rankings are the fastest wins because most competitors haven't built dedicated pages for them.",
       },
       {
         q: "Do you work with DBPR-licensed inspectors and understand Florida's specific regulations?",
@@ -642,7 +642,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will digital marketing replace my real estate agent referrals in Florida?",
-        a: "Our goal is not to replace agent relationships â€” it is to stop you from depending entirely on them. Most Florida inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most Florida inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
       },
       {
         q: "What is included in the free Florida home inspector marketing audit?",
@@ -654,7 +654,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
-        a: "Yes. GBP reinstatement is one of our specialties â€” we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
     ],
     final: {
@@ -674,7 +674,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Free California Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
       "Month-to-Month, No Contracts",
-      "Local SEO Â· Google Ads Â· GBP Â· Social Â· Websites",
+      "Local SEO · Google Ads · GBP · Social · Websites",
       "Trusted by Home Inspectors Nationally",
       "4.9/5 Average Client Rating",
     ],
@@ -682,16 +682,16 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Marketing for California Home Inspectors",
       headlinePre: "Home Inspector Marketing for",
       accent: "California's Toughest Markets.",
-      sub: "California home inspectors work in the most expensive housing market in the country, with the strictest regulations and the most informed buyers. The inspectors winning California are the ones who show up first on Google with profiles that say \"I know this market.\" We build that presence â€” from the Bay Area to San Diego, and everywhere the California real estate market is moving.",
+      sub: "California home inspectors work in the most expensive housing market in the country, with the strictest regulations and the most informed buyers. The inspectors winning California are the ones who show up first on Google with profiles that say \"I know this market.\" We build that presence — from the Bay Area to San Diego, and everywhere the California real estate market is moving.",
     },
     problem: {
       eyebrow: "Why California Home Inspectors Get Outranked",
       headlinePre: "Every California inspector is online. Most of them are",
       accent: "doing it wrong.",
-      lede: "California has been an online-first home inspection market for over a decade. Almost every licensed inspector in the state has a Google Business Profile, a website, and at least some marketing presence. What separates the inspectors getting twenty bookings a month from the inspectors getting two is execution, not effort â€” and that's exactly what most California inspectors get wrong.",
+      lede: "California has been an online-first home inspection market for over a decade. Almost every licensed inspector in the state has a Google Business Profile, a website, and at least some marketing presence. What separates the inspectors getting twenty bookings a month from the inspectors getting two is execution, not effort — and that's exactly what most California inspectors get wrong.",
       proseSegments: [
         {
-          text: "California home inspection is a premium-priced, highly regulated market. Inspections in San Francisco and Los Angeles regularly clear $700 to $1,200, which means each new direct booking represents serious revenue. But it also means competition for online visibility is fierce. The inspectors ranking #1 in the Bay Area or West LA aren't there by accident â€” they have professional GBP profiles, dozens of recent reviews mentioning specific neighborhoods, and websites built for conversion.",
+          text: "California home inspection is a premium-priced, highly regulated market. Inspections in San Francisco and Los Angeles regularly clear $700 to $1,200, which means each new direct booking represents serious revenue. But it also means competition for online visibility is fierce. The inspectors ranking #1 in the Bay Area or West LA aren't there by accident — they have professional GBP profiles, dozens of recent reviews mentioning specific neighborhoods, and websites built for conversion.",
         },
         {
           strongs: [
@@ -703,7 +703,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           strongs: ["buyer profile"],
-          text: "The other California reality is the {0}. California buyers are sophisticated. They read inspection reports cover to cover, they ask agents specific questions, and they cross-reference reviews across multiple platforms before booking. Your online presence isn't just about visibility â€” it's about credibility. Generic stock-photo websites and three-line GBP descriptions don't pass that bar.",
+          text: "The other California reality is the {0}. California buyers are sophisticated. They read inspection reports cover to cover, they ask agents specific questions, and they cross-reference reviews across multiple platforms before booking. Your online presence isn't just about visibility — it's about credibility. Generic stock-photo websites and three-line GBP descriptions don't pass that bar.",
         },
       ],
       cards: [
@@ -713,11 +713,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "California buyers cross-reference everything.",
-          p: "If your reviews on Google, Yelp, and Angi don't align â€” or if any platform shows old or thin review counts â€” sophisticated buyers walk away.",
+          p: "If your reviews on Google, Yelp, and Angi don't align — or if any platform shows old or thin review counts — sophisticated buyers walk away.",
         },
         {
           h: "Specialty inspections drive premium revenue.",
-          p: "Seismic retrofit, Title 24, wildfire defensible space â€” these specialties are high-revenue and low-competition in search. Most inspectors haven't optimized for them.",
+          p: "Seismic retrofit, Title 24, wildfire defensible space — these specialties are high-revenue and low-competition in search. Most inspectors haven't optimized for them.",
         },
         {
           h: "Mobile speed determines whether you get the call.",
@@ -726,14 +726,14 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       ],
     },
     processLede:
-      "No tedious onboarding deck. No fifty-question intake form. California home inspectors are running a premium business, and we respect that â€” we keep your time in the process to about forty-five minutes total across the first two weeks.",
+      "No tedious onboarding deck. No fifty-question intake form. California home inspectors are running a premium business, and we respect that — we keep your time in the process to about forty-five minutes total across the first two weeks.",
     results: {
       headlinePre: "What changes when California home inspectors stop",
       accent: "relying on referrals alone.",
       lede: "Here are the patterns we see across California home inspection companies after the first ninety to one-hundred-eighty days. Your specific numbers will depend heavily on whether you're in a Tier 1 metro like the Bay Area or LA, or a secondary California market.",
       proseSegments: [
         {
-          text: "California client results take slightly longer to materialize because the markets are more competitive â€” but the revenue per booking is so much higher that the ROI math usually works out faster than other states. In the first ninety days, the specialty service pages (seismic, Title 24, wildfire) start ranking and bring in high-margin inquiries. The standard \"home inspector + city\" rankings often take six to nine months in the most saturated markets, but the specialty pages drive revenue while we wait.",
+          text: "California client results take slightly longer to materialize because the markets are more competitive — but the revenue per booking is so much higher that the ROI math usually works out faster than other states. In the first ninety days, the specialty service pages (seismic, Title 24, wildfire) start ranking and bring in high-margin inquiries. The standard \"home inspector + city\" rankings often take six to nine months in the most saturated markets, but the specialty pages drive revenue while we wait.",
         },
         {
           text: "One Sacramento-area home inspector we work with was doing about twenty-five inspections a month at $750 average ticket when we started. Within five months his GBP was ranking #1 for \"home inspector Sacramento\" in three submarkets including Folsom and Roseville. By month nine, his average monthly inspection count was fifty-two and his average ticket had risen to $895 because the digital marketing was attracting higher-end clients who weren't price-shopping.",
@@ -745,7 +745,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       ],
       stats: [
         {
-          big: "2.8Ã—",
+          big: "2.8×",
           h: "More direct calls within 90 days",
           p: "Average increase in non-referred buyer inquiries across California metros.",
         },
@@ -770,17 +770,17 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "California Cities We Serve",
       headlinePre: "Local marketing playbooks for every major",
       accent: "California metro.",
-      lede: "California is the most segmented inspection market in the country â€” every metro has its own price point, buyer profile, and competitive landscape. Here are the California markets we focus on most, and what makes each one different.",
+      lede: "California is the most segmented inspection market in the country — every metro has its own price point, buyer profile, and competitive landscape. Here are the California markets we focus on most, and what makes each one different.",
       cards: [
         {
           h: "Los Angeles",
-          p: "Largest California metro. Sprawling submarket structure â€” West LA, San Fernando Valley, South Bay, Pasadena, Long Beach all behave like separate markets.",
+          p: "Largest California metro. Sprawling submarket structure — West LA, San Fernando Valley, South Bay, Pasadena, Long Beach all behave like separate markets.",
           link: "#",
           linkLabel: "Local SEO in Los Angeles",
         },
         {
           h: "San Diego",
-          p: "Strong military relocation volume and steady year-round demand. Less saturated than LA â€” first-page rankings achievable in 4-6 months.",
+          p: "Strong military relocation volume and steady year-round demand. Less saturated than LA — first-page rankings achievable in 4-6 months.",
           link: "#",
           linkLabel: "Local SEO in San Diego",
         },
@@ -798,13 +798,13 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Sacramento",
-          p: "Growing state capital with strong relocation volume from the Bay Area. Less competitive than coastal metros â€” faster SEO wins possible.",
+          p: "Growing state capital with strong relocation volume from the Bay Area. Less competitive than coastal metros — faster SEO wins possible.",
           link: "#",
           linkLabel: "Local SEO in Sacramento",
         },
         {
           h: "Fresno",
-          p: "Central Valley market with steady volume and lower CPCs. Google Ads especially efficient here â€” opportunity for first-page domination.",
+          p: "Central Valley market with steady volume and lower CPCs. Google Ads especially efficient here — opportunity for first-page domination.",
           link: "#",
           linkLabel: "Local SEO in Fresno",
         },
@@ -826,12 +826,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Three plans built for where your California inspection business is",
     pricingAccent: "right now.",
     pricingLede:
-      "Pick the plan that fits where your California inspection business is today â€” you can move up or down between tiers any month. Ad spend is separate from the management fee and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
+      "Pick the plan that fits where your California inspection business is today — you can move up or down between tiers any month. Ad spend is separate from the management fee and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
     faqEyebrow: "Common Questions From California Home Inspectors",
     faqs: [
       {
         q: "How long does it take to see results from home inspector marketing in California?",
-        a: "Most California home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which California metro you're in and the current state of your online presence. We give honest timelines during the audit â€” never inflated \"results in seven days\" promises.",
+        a: "Most California home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which California metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
       },
       {
         q: "Do I need to sign a long-term contract?",
@@ -839,15 +839,15 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Do you handle California-specific inspections like Title 24 and seismic retrofit?",
-        a: "Yes. We build dedicated optimized service pages for Title 24 energy compliance, seismic retrofit, wildfire defensible-space assessment, and any other California-specific inspection categories you offer. These specialty pages typically rank faster than the general \"home inspector\" head term because competition for them is much thinner â€” and they bring in higher-revenue work.",
+        a: "Yes. We build dedicated optimized service pages for Title 24 energy compliance, seismic retrofit, wildfire defensible-space assessment, and any other California-specific inspection categories you offer. These specialty pages typically rank faster than the general \"home inspector\" head term because competition for them is much thinner — and they bring in higher-revenue work.",
       },
       {
         q: "How do you compete in saturated California metros like the Bay Area and LA?",
-        a: "California's largest metros are some of the most competitive home inspector markets in the country. Our approach in saturated metros is the same as Texas â€” hyper-local. Instead of fighting for \"home inspector Los Angeles\" against fifty competitors, we build out submarket pages (Pasadena, West LA, Long Beach, Santa Monica, etc.) where competition is thinner. We also lean heavily into specialty service rankings, which are typically lower-competition and higher-margin.",
+        a: "California's largest metros are some of the most competitive home inspector markets in the country. Our approach in saturated metros is the same as Texas — hyper-local. Instead of fighting for \"home inspector Los Angeles\" against fifty competitors, we build out submarket pages (Pasadena, West LA, Long Beach, Santa Monica, etc.) where competition is thinner. We also lean heavily into specialty service rankings, which are typically lower-competition and higher-margin.",
       },
       {
         q: "Will digital marketing replace my real estate agent referrals in California?",
-        a: "Our goal is not to replace agent relationships â€” it is to stop you from depending entirely on them. Most California inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most California inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
       },
       {
         q: "What is included in the free California home inspector marketing audit?",
@@ -859,7 +859,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
-        a: "Yes. GBP reinstatement is one of our specialties â€” we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
     ],
     final: {
@@ -879,33 +879,33 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Free North Carolina Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
       "Month-to-Month, No Contracts",
-      "Local SEO Â· Google Ads Â· GBP Â· Social Â· Websites",
+      "Local SEO · Google Ads · GBP · Social · Websites",
       "Trusted by Home Inspectors Nationally",
       "4.9/5 Average Client Rating",
     ],
     hero: {
       eyebrow: "Marketing for North Carolina Home Inspectors",
-      headlinePre: "Home Inspector Marketing Across North Carolina â€”",
+      headlinePre: "Home Inspector Marketing Across North Carolina —",
       accent: "Charlotte to the Coast.",
-      sub: "North Carolina is one of the fastest-growing relocation markets in the country. Transplants from New York, New Jersey, California, and Florida are flooding into Charlotte and the Triangle every month â€” and they're hiring home inspectors they Google, not the one their agent suggests. We help NC inspection companies capture that direct demand across every metro in the state.",
+      sub: "North Carolina is one of the fastest-growing relocation markets in the country. Transplants from New York, New Jersey, California, and Florida are flooding into Charlotte and the Triangle every month — and they're hiring home inspectors they Google, not the one their agent suggests. We help NC inspection companies capture that direct demand across every metro in the state.",
     },
     problem: {
       eyebrow: "Why North Carolina Inspectors Miss Transplant Buyers",
       headlinePre:
         "Your busiest buyer segment isn't from here. And they're not asking",
       accent: "your local agents.",
-      lede: "North Carolina's growth story is the transplant buyer â€” Charlotte, Raleigh, Durham, and Cary are all in the top ten US metros for net migration. Those buyers don't have an existing relationship with a local agent. They're searching online for an inspector before they even close on the house, often from a different state entirely. If you're not surfacing in those searches, you're invisible to the most active buyer segment in your market.",
+      lede: "North Carolina's growth story is the transplant buyer — Charlotte, Raleigh, Durham, and Cary are all in the top ten US metros for net migration. Those buyers don't have an existing relationship with a local agent. They're searching online for an inspector before they even close on the house, often from a different state entirely. If you're not surfacing in those searches, you're invisible to the most active buyer segment in your market.",
       proseSegments: [
         {
-          text: "North Carolina home inspection is shaped by relocation. The Triangle (Raleigh, Durham, Chapel Hill) and Charlotte metros are absorbing transplants at historic rates, primarily driven by the tech corridor in the Triangle and the banking corridor in Charlotte. These buyers are sophisticated, online-native, and they make hiring decisions based on Google reviews and search visibility â€” not local referral networks.",
+          text: "North Carolina home inspection is shaped by relocation. The Triangle (Raleigh, Durham, Chapel Hill) and Charlotte metros are absorbing transplants at historic rates, primarily driven by the tech corridor in the Triangle and the banking corridor in Charlotte. These buyers are sophisticated, online-native, and they make hiring decisions based on Google reviews and search visibility — not local referral networks.",
         },
         {
           strongs: ["housing stock"],
-          text: "The second North Carolina reality is the {0}. NC has a mix of brand-new construction in master-planned communities and older homes with crawlspaces, moisture issues, and termite vulnerability. Buyers searching for \"crawlspace inspection Charlotte\" or \"moisture intrusion Raleigh\" are highly intentful â€” and most NC inspectors haven't built specialty pages for those searches.",
+          text: "The second North Carolina reality is the {0}. NC has a mix of brand-new construction in master-planned communities and older homes with crawlspaces, moisture issues, and termite vulnerability. Buyers searching for \"crawlspace inspection Charlotte\" or \"moisture intrusion Raleigh\" are highly intentful — and most NC inspectors haven't built specialty pages for those searches.",
         },
         {
           strongs: ["NCLHIB licensing standards"],
-          text: "Third, North Carolina has {0} that are stricter than many neighboring states. That's an advantage for inspectors who emphasize their credentialing properly in their marketing â€” but most NC inspectors bury their license number in a footer instead of leading with it. Sophisticated transplant buyers (especially from California and the Northeast) actively look for proper credentialing as a trust signal.",
+          text: "Third, North Carolina has {0} that are stricter than many neighboring states. That's an advantage for inspectors who emphasize their credentialing properly in their marketing — but most NC inspectors bury their license number in a footer instead of leading with it. Sophisticated transplant buyers (especially from California and the Northeast) actively look for proper credentialing as a trust signal.",
         },
       ],
       cards: [
@@ -918,12 +918,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
           p: "NC's older housing stock means crawlspace inspections, moisture assessments, and termite work are consistent revenue streams. Most NC inspectors don't have dedicated service pages for these.",
         },
         {
-          h: "NCLHIB credentials are a trust signal â€” when surfaced properly.",
+          h: "NCLHIB credentials are a trust signal — when surfaced properly.",
           p: "Out-of-state buyers look for licensing rigor. Leading with your NCLHIB number and recent reviews mentioning your professionalism wins these bookings.",
         },
         {
           h: "Charlotte vs Triangle search behavior is different.",
-          p: "Charlotte buyers behave more like financial-services transplants â€” risk-averse, review-heavy. Triangle buyers behave more like tech transplants â€” speed and online-booking focused. Same playbook doesn't work for both.",
+          p: "Charlotte buyers behave more like financial-services transplants — risk-averse, review-heavy. Triangle buyers behave more like tech transplants — speed and online-booking focused. Same playbook doesn't work for both.",
         },
       ],
     },
@@ -935,7 +935,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       lede: "Here are the patterns we see across North Carolina home inspection companies after the first ninety to one-hundred-eighty days. Your specific numbers will depend on whether you're in the Triangle, Charlotte, or a secondary metro like Greensboro or Asheville.",
       proseSegments: [
         {
-          text: "NC client results follow a pattern shaped by the transplant buyer. In the first ninety days, GBP optimization and paid ads start surfacing your business for \"home inspector + city\" searches â€” and transplant buyers who haven't picked an agent yet convert at higher rates than typical local buyers. By month four or five, the organic SEO investment starts paying out for the broader metro keywords.",
+          text: "NC client results follow a pattern shaped by the transplant buyer. In the first ninety days, GBP optimization and paid ads start surfacing your business for \"home inspector + city\" searches — and transplant buyers who haven't picked an agent yet convert at higher rates than typical local buyers. By month four or five, the organic SEO investment starts paying out for the broader metro keywords.",
         },
         {
           text: "One Raleigh-area home inspector we work with was running about twenty-five inspections a month, mostly through three local agents. Within four months his direct Google bookings had grown to thirty-five additional inspections on top of the agent base, almost entirely from transplant buyers relocating from New York, California, and Florida. By month nine, he was the #1 Google result for \"home inspector Raleigh\" and was actively turning down work.",
@@ -947,7 +947,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       ],
       stats: [
         {
-          big: "3.5Ã—",
+          big: "3.5×",
           h: "More direct calls within 90 days",
           p: "Especially strong in Charlotte and Triangle metros with high transplant volume.",
         },
@@ -976,7 +976,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       cards: [
         {
           h: "Charlotte",
-          p: "Banking corridor capital. Heaviest transplant volume in the state. Submarkets include Concord, Huntersville, Matthews, Pineville â€” all viable separate market opportunities.",
+          p: "Banking corridor capital. Heaviest transplant volume in the state. Submarkets include Concord, Huntersville, Matthews, Pineville — all viable separate market opportunities.",
           link: "#",
           linkLabel: "Local SEO in Charlotte",
         },
@@ -1000,7 +1000,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Winston-Salem",
-          p: "Traditional Triad market. Less competitive Google landscape â€” early wins achievable for inspectors who haven't invested in digital yet.",
+          p: "Traditional Triad market. Less competitive Google landscape — early wins achievable for inspectors who haven't invested in digital yet.",
           link: "#",
           linkLabel: "Local SEO in Winston-Salem",
         },
@@ -1018,7 +1018,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Cary",
-          p: "High-income Triangle suburb. Premium inspection market overlap with Raleigh â€” strong opportunity for inspectors covering both.",
+          p: "High-income Triangle suburb. Premium inspection market overlap with Raleigh — strong opportunity for inspectors covering both.",
           link: "#",
           linkLabel: "Local SEO in Cary",
         },
@@ -1028,12 +1028,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Three plans built for where your North Carolina inspection business is",
     pricingAccent: "right now.",
     pricingLede:
-      "Pick the plan that fits where your North Carolina inspection business is today â€” you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
+      "Pick the plan that fits where your North Carolina inspection business is today — you can move up or down between tiers any month. Ad spend is separate and goes straight to Google and Meta. No setup fees, no twelve-month lockups.",
     faqEyebrow: "Common Questions From North Carolina Home Inspectors",
     faqs: [
       {
         q: "How long does it take to see results from home inspector marketing in North Carolina?",
-        a: "Most North Carolina home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which North Carolina metro you're in and the current state of your online presence. We give honest timelines during the audit â€” never inflated \"results in seven days\" promises.",
+        a: "Most North Carolina home inspectors see measurable changes within thirty to forty-five days. Google Business Profile improvements and paid ad campaigns typically generate calls inside the first three weeks. Sustained local SEO ranking takes ninety to one-hundred-eighty days depending on which North Carolina metro you're in and the current state of your online presence. We give honest timelines during the audit — never inflated \"results in seven days\" promises.",
       },
       {
         q: "Do I need to sign a long-term contract?",
@@ -1041,7 +1041,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Do you handle marketing for NCLHIB-licensed inspectors specifically?",
-        a: "Yes. We work exclusively with NCLHIB-licensed home inspectors and understand North Carolina's licensing structure. Your license number and certification level are surfaced prominently in your marketing copy because they're a real trust signal â€” especially for transplant buyers from states with weaker licensing requirements. We're careful to never make claims that could create licensing or advertising compliance issues.",
+        a: "Yes. We work exclusively with NCLHIB-licensed home inspectors and understand North Carolina's licensing structure. Your license number and certification level are surfaced prominently in your marketing copy because they're a real trust signal — especially for transplant buyers from states with weaker licensing requirements. We're careful to never make claims that could create licensing or advertising compliance issues.",
       },
       {
         q: "How do you help me capture the transplant buyer market in Charlotte and the Triangle?",
@@ -1049,7 +1049,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will digital marketing replace my real estate agent referrals in North Carolina?",
-        a: "Our goal is not to replace agent relationships â€” it is to stop you from depending entirely on them. Most North Carolina inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
+        a: "Our goal is not to replace agent relationships — it is to stop you from depending entirely on them. Most North Carolina inspectors we work with keep their agent referrals and add a steady stream of direct calls from buyers, sellers, and FSBO transactions through Google. The agent referrals become a bonus, not a lifeline. Many clients also report new agents joining their referral pool because strong online presence makes them look more established.",
       },
       {
         q: "What is included in the free North Carolina home inspector marketing audit?",
@@ -1061,7 +1061,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
-        a: "Yes. GBP reinstatement is one of our specialties â€” we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+        a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
     ],
     final: {
@@ -1071,7 +1071,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   },
 };
 
-/* Helpers â€” build state-flavored service/price content from a single template. */
+/* Helpers — build state-flavored service/price content from a single template. */
 
 export type StateService = {
   num: string;
@@ -1093,9 +1093,9 @@ export type StatePriceCard = {
 export function buildStateServices(stateName: string): StateService[] {
   return [
     {
-      num: "01 Â· LOCAL SEO",
+      num: "01 · LOCAL SEO",
       h: `Rank for "Home Inspector Near Me" in Every ${stateName} Town You Serve.`,
-      p: `Local SEO for home inspectors is not a generic checklist exercise. The way ${stateName} buyers search for inspectors is hyper-local and intent-heavy â€” they're searching for a specific city, neighborhood, sometimes a specific home type. We build out service-area pages for every ${stateName} town in your coverage map, fix your citations across the directories real estate buyers actually use, and earn the kind of local backlinks that move the needle.`,
+      p: `Local SEO for home inspectors is not a generic checklist exercise. The way ${stateName} buyers search for inspectors is hyper-local and intent-heavy — they're searching for a specific city, neighborhood, sometimes a specific home type. We build out service-area pages for every ${stateName} town in your coverage map, fix your citations across the directories real estate buyers actually use, and earn the kind of local backlinks that move the needle.`,
       items: [
         `Service-area pages for every ${stateName} town and zip you cover`,
         "Citation cleanup on Angi, Yelp, NACHI, InterNACHI, BBB, HomeAdvisor",
@@ -1105,9 +1105,9 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
     {
-      num: "02 Â· GOOGLE BUSINESS PROFILE",
+      num: "02 · GOOGLE BUSINESS PROFILE",
       h: `Own the Local Map Pack for Your ${stateName} Service Area.`,
-      p: `Your Google Business Profile is the single highest-converting asset you own â€” when it's optimized properly, it sends more calls than your website. We rebuild the profile from the inside out: every category beyond "home inspector" you should be claiming, photo geo-tagging from real inspections in ${stateName}, weekly Google Posts about seasonal issues, and a Q&A section seeded with the questions ${stateName} buyers actually ask.`,
+      p: `Your Google Business Profile is the single highest-converting asset you own — when it's optimized properly, it sends more calls than your website. We rebuild the profile from the inside out: every category beyond "home inspector" you should be claiming, photo geo-tagging from real inspections in ${stateName}, weekly Google Posts about seasonal issues, and a Q&A section seeded with the questions ${stateName} buyers actually ask.`,
       items: [
         "Category optimization (mold, radon, sewer scope, drone, thermal imaging)",
         `Geo-tagged photo uploads from real ${stateName} inspection sites`,
@@ -1117,7 +1117,7 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
     {
-      num: "03 Â· GOOGLE ADS",
+      num: "03 · GOOGLE ADS",
       h: `Capture the ${stateName} Buyers Searching Right Now.`,
       p: `Local SEO is a long game. Google Ads is how you fill the calendar this week. We build inspection-specific search campaigns with the negative keywords no one else thinks about (no, you don't want to pay for "DIY home inspection checklist" or "home inspector salary"), call-only ads for mobile users, and geo-targeting that matches the actual ${stateName} neighborhoods you want to work in. Most clients see calls inside the first ten days of the campaign going live.`,
       items: [
@@ -1129,9 +1129,9 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
     {
-      num: "04 Â· SOCIAL MEDIA MARKETING",
+      num: "04 · SOCIAL MEDIA MARKETING",
       h: "Build the Trust That Closes the Booking.",
-      p: `Homebuyers are nervous. They are spending more money than they ever have on a property they barely understand, and they're hiring you to be their last line of defense before signing. Social media â€” when done right for home inspectors â€” is where that trust gets built before a buyer ever picks up the phone. We create short-form video content from real inspection findings, agent-facing content on LinkedIn, and a weekly cadence that keeps your name in front of every potential referral source in ${stateName}.`,
+      p: `Homebuyers are nervous. They are spending more money than they ever have on a property they barely understand, and they're hiring you to be their last line of defense before signing. Social media — when done right for home inspectors — is where that trust gets built before a buyer ever picks up the phone. We create short-form video content from real inspection findings, agent-facing content on LinkedIn, and a weekly cadence that keeps your name in front of every potential referral source in ${stateName}.`,
       items: [
         "Short-form video clips of unusual inspection findings",
         `Educational content for first-time ${stateName} homebuyers`,
@@ -1141,7 +1141,7 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
     {
-      num: "05 Â· WEBSITE DESIGN & SEO",
+      num: "05 · WEBSITE DESIGN & SEO",
       h: `A Website That Actually Books ${stateName} Inspections.`,
       p: `Most home inspector websites are brochures. We build conversion machines. That means online scheduling integrated with your inspection software, instant quote calculators for service type and square footage, service pages for every inspection add-on you offer, mobile load times under two seconds, and on-page SEO that targets the exact phrases ${stateName} buyers are typing. If your current site is what it is and we just need to fix it, we can do that too.`,
       items: [
@@ -1153,9 +1153,9 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
     {
-      num: "06 Â· REVIEWS & REPUTATION",
+      num: "06 · REVIEWS & REPUTATION",
       h: "Turn Every Inspection Into a Five-Star Public Endorsement.",
-      p: "Reviews are the single biggest factor â€” after distance â€” in whether a buyer chooses your inspection company over the one three blocks away. We build an automated review request system that fires the right message at the right time after every inspection, monitors review activity across Google, Yelp, Angi, and NextDoor, and writes professional response templates for negative reviews so a one-star complaint doesn't bury you on Page One.",
+      p: "Reviews are the single biggest factor — after distance — in whether a buyer chooses your inspection company over the one three blocks away. We build an automated review request system that fires the right message at the right time after every inspection, monitors review activity across Google, Yelp, Angi, and NextDoor, and writes professional response templates for negative reviews so a one-star complaint doesn't bury you on Page One.",
       items: [
         "Automated review requests by SMS and email after every inspection",
         "Custom review templates referencing actual findings (not generic)",
@@ -1172,10 +1172,10 @@ export function buildStatePriceCards(stateName: string): StatePriceCard[] {
     {
       tier: "Foundation",
       amount: "$750",
-      period: "per month Â· billed monthly",
+      period: "per month · billed monthly",
       features: [
         "Google Business Profile optimization (full rebuild + monthly management)",
-        `Local SEO foundation â€” service-area pages for up to 5 ${stateName} towns`,
+        `Local SEO foundation — service-area pages for up to 5 ${stateName} towns`,
         "Citation cleanup across 40+ home services and real estate directories",
         "NAP consistency audit and fix",
         "On-page SEO for primary inspection service pages",
@@ -1187,12 +1187,12 @@ export function buildStatePriceCards(stateName: string): StatePriceCard[] {
     {
       tier: "Growth",
       amount: "$1,350",
-      period: "per month Â· billed monthly",
+      period: "per month · billed monthly",
       featured: true,
       badge: "Most Popular",
       features: [
         "Everything in Foundation",
-        "Google Ads management â€” full search campaign build and weekly bid management",
+        "Google Ads management — full search campaign build and weekly bid management",
         "Automated review request system with custom inspection templates",
         "Review monitoring and response across Google, Yelp, Angi, BBB",
         `${stateName} service-area pages expanded to up to 12 towns`,
@@ -1204,10 +1204,10 @@ export function buildStatePriceCards(stateName: string): StatePriceCard[] {
     {
       tier: "Authority",
       amount: "$2,000",
-      period: "per month Â· billed monthly",
+      period: "per month · billed monthly",
       features: [
         "Everything in Growth",
-        "Social media management â€” Instagram, Facebook, LinkedIn",
+        "Social media management — Instagram, Facebook, LinkedIn",
         "Short-form video content from inspection sites (4 per month)",
         "Meta Ads management for buyer and agent audiences",
         "Website conversion audit and ongoing optimization",
@@ -1232,8 +1232,8 @@ export const CHANNEL_TABLE: ChannelTableRow[] = [
     channel: "Google Business Profile",
     tag: "Map pack",
     delivers:
-      "Direct calls from local Maps searches and the GBP knowledge panel â€” typically the highest-converting asset for a home inspection company.",
-    timeline: "30â€“60 days",
+      "Direct calls from local Maps searches and the GBP knowledge panel — typically the highest-converting asset for a home inspection company.",
+    timeline: "30–60 days",
     fit: "Inspectors invisible in the local 3-pack despite having reviews.",
   },
   {
@@ -1241,7 +1241,7 @@ export const CHANNEL_TABLE: ChannelTableRow[] = [
     tag: "Organic rankings",
     delivers:
       "Page-one rankings for buyer search phrases across your city, suburbs, and service-area towns.",
-    timeline: "90â€“180 days",
+    timeline: "90–180 days",
     fit: "Inspectors paying for clicks they should be ranking for organically.",
   },
   {
@@ -1249,7 +1249,7 @@ export const CHANNEL_TABLE: ChannelTableRow[] = [
     tag: "Paid search",
     delivers:
       "Buyer-intent leads that fill the calendar this week while SEO compounds in the background.",
-    timeline: "1â€“10 days",
+    timeline: "1–10 days",
     fit: "Inspectors who need booked inspections now, not next quarter.",
   },
   {
@@ -1266,14 +1266,14 @@ export const CHANNEL_TABLE: ChannelTableRow[] = [
     delivers:
       "Automated review requests across SMS and email, plus monitoring and response across Google, Yelp, Angi, BBB.",
     timeline: "First 14 days",
-    fit: "Inspectors who can't break into the 4.8â˜…+ tier of their local market.",
+    fit: "Inspectors who can't break into the 4.8★+ tier of their local market.",
   },
   {
     channel: "Social Media",
     tag: "Top of funnel",
     delivers:
       "Short-form video of real findings and agent-facing LinkedIn content that builds trust before the booking call.",
-    timeline: "60â€“90 days",
+    timeline: "60–90 days",
     fit: "Inspectors competing on reputation and referrals, not just clicks.",
   },
 ];
