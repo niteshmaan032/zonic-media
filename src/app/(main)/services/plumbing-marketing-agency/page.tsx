@@ -21,7 +21,7 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title: "Plumbing Marketing Agency for Contractors | Zonic Media",
+  title: "Plumbing Marketing Agency for Contractors",
   description:
     "Plumbing marketing agency for contractors. Google Business Profile, Google Maps ranking, paid ads, websites, and reviews. Free plumbing marketing audit.",
   keywords: [

@@ -115,7 +115,7 @@ const HvacBenefits = [
 ];
 
 export const metadata: Metadata = {
-  title: "Local SEO Services for HVAC Companies | Zonic Media",
+  title: "Local SEO Services for HVAC Companies",
   description:
     "Local SEO services for HVAC companies. Zonic Media helps heating and cooling businesses rank higher on Google Maps and get more qualified service calls.",
   keywords: [

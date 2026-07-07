@@ -15,7 +15,7 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "White-Label Services for Agencies | GBP, SEO & Web Design",
+  title: "White-Label GBP, SEO & Web Design for Agencies",
   description:
     "White-label digital marketing fulfillment for agencies. Resell Google Business Profile reinstatement, verification, management, local SEO, and WordPress web design under your own brand. We stay invisible.",
   keywords: [

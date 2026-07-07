@@ -20,8 +20,7 @@ const PAGE_PATH =
   "/services/google-business-profile-services-real-estate-agents";
 
 export const metadata: Metadata = {
-  title:
-    "Google Business Profile Services for Real Estate Agents & Brokers | Zonic Media",
+  title: "GBP Services for Real Estate Agents & Brokers",
   description:
     "GBP reinstatement, verification, and management for real estate agents and brokers. Local SEO and real estate website design across FL, TX, CA, NY & AZ. 700+ profiles reinstated.",
   keywords: [

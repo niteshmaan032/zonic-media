@@ -13,8 +13,7 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title:
-    "Google Business Profile Verification Help | Fix GBP Verification Fast | Zonic Media",
+  title: "Google Business Profile Verification Help",
   description:
     "Stuck in a GBP verification loop? Video rejected? Postcard expired? Zonic Media fixes every type of GBP verification failure — SABs, live video calls, verification loops — in 5–7 days. Money-back guarantee.",
   keywords: [

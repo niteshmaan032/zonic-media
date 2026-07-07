@@ -17,6 +17,17 @@ type PageProps = {
   }>;
 };
 
+// Unique meta descriptions per legal page (the shared intro paragraph was
+// producing duplicate descriptions across /legal/* in SEO crawls).
+const LEGAL_META_DESCRIPTIONS: Record<string, string> = {
+  "privacy-policy":
+    "Learn how Zonic Media LLC collects, uses, stores, and protects your personal information. Read our Privacy Policy to understand your data rights and security practices.",
+  "terms-conditions":
+    "Review Zonic Media LLC's Terms & Conditions to understand the rules, responsibilities, service terms, disclaimers, and conditions for using our website and services.",
+  "refund-policy":
+    "Read Zonic Media LLC's Refund Policy to understand when refunds apply to our services, including our No Fix, No Charge commitment on GBP reinstatement fees.",
+};
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -36,6 +47,7 @@ export async function generateMetadata({
   return {
     title: pageData.title,
     description:
+      LEGAL_META_DESCRIPTIONS[slug] ??
       pageData.intro[0] ??
       "Read Zonic Media legal terms, privacy policy, and refund policy information.",
     alternates: {

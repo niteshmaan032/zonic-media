@@ -24,7 +24,7 @@ const services = [
     label: "google my business (GMB)",
     image: "/images/header-gmb.webp",
     alt: "google my business",
-    link: "/services/google-my-business",
+    link: "/services/gmb-reinstatement-help",
   },
   {
     id: "web",

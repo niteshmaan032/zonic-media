@@ -96,6 +96,30 @@ const CONNECT_SNIPPET =
   `📞 **Urgent?** [+1 (302) 726-9736](tel:+13027269736)\n` +
   `📧 [contact@zonicllc.com](mailto:contact@zonicllc.com)`;
 
+// ─── Main menu & live-agent availability (7:00 AM – 7:00 PM Eastern) ─────────
+
+const MENU_ZONI  = "💬 Chat with Zoni";
+const MENU_AGENT = "🧑‍💼 Talk to a Live Agent";
+const MENU_EMAIL = "✉️ Email Our Team";
+const MAIN_MENU_OPTIONS = [MENU_ZONI, MENU_AGENT, MENU_EMAIL];
+
+const AGENT_HOURS_TEXT = "7:00 AM – 7:00 PM EST";
+
+function isLiveAgentAvailable(date = new Date()) {
+  try {
+    const hour = Number(
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        hour: "numeric",
+        hourCycle: "h23",
+      }).format(date)
+    );
+    return hour >= 7 && hour < 19;
+  } catch {
+    return true; // if timezone lookup fails, don't block the user
+  }
+}
+
 // ─── reCAPTCHA token ──────────────────────────────────────────────────────────
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY?.trim();
@@ -318,7 +342,9 @@ export default function ChatBot() {
 
   // Nudge to finish if user closes mid-conversation
   useEffect(() => {
-    if (isOpen || step < 2 || step >= 10) return;
+    const midFlow =
+      (step >= 2 && step < 10) || [20, 21, 22, 30, 31, 32].includes(step);
+    if (isOpen || !midFlow) return;
     cancelTimers();
     addTimer(() => {
       setBubbleMsg("resume");
@@ -344,11 +370,11 @@ export default function ChatBot() {
     if (!isOpen || greeted.current) return;
     greeted.current = true;
     botSay(
-      "Hey there! 👋 I'm **Zoni**, your digital assistant at Zonic Media. I'm excited to help you grow your business online!\n\n**What's your name?**",
-      [],
+      "Hello and welcome to **Zonic Media**! 👋 I'm **Zoni**, your virtual assistant.\n\n**How would you like to connect with us today?** Please choose an option below. 😊",
+      MAIN_MENU_OPTIONS,
       350
     );
-    setStep(1);
+    setStep(0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
@@ -412,8 +438,36 @@ export default function ChatBot() {
   // ─── Conversation state machine ──────────────────────────────────────────────
   const processStep = (userInput) => {
 
+    // Step 0 — main menu
+    if (step === 0) {
+      if (userInput === MENU_ZONI) {
+        setStep(1);
+        botSay(
+          "Wonderful! I'd love to learn a little more about you and your business. 😊\n\n**What's your name?**"
+        );
+      } else if (userInput === MENU_AGENT) {
+        if (isLiveAgentAvailable()) {
+          setStep(20);
+          botSay(
+            "Great! I'd be happy to connect you with a member of our team. 🧑‍💼\n\nFirst, **may I have your name, please?**"
+          );
+        } else {
+          botSay(
+            `Thank you for your interest in speaking with our team! 🙏\n\nOur live agents are available **every day from ${AGENT_HOURS_TEXT}**, and they're currently offline. We sincerely apologize for any inconvenience.\n\nIn the meantime, I'd be happy to assist you myself, or you can email our team and we'll get back to you as soon as we're back online. 😊`,
+            [MENU_ZONI, MENU_EMAIL]
+          );
+        }
+      } else if (userInput === MENU_EMAIL) {
+        setStep(30);
+        botSay(
+          "Of course! I'll make sure your message reaches our team right away. ✉️\n\n**May I have your name, please?**"
+        );
+      } else {
+        botSay("**How would you like to connect with us today?**", MAIN_MENU_OPTIONS);
+      }
+
     // Step 1 — name
-    if (step === 1) {
+    } else if (step === 1) {
       const name = userInput.trim();
       setLead((p) => ({ ...p, name }));
       setStep(2);
@@ -494,11 +548,93 @@ export default function ChatBot() {
       const fullLead = { ...lead, phone: digits };
       setLead(fullLead);
       sendLead(fullLead);
+
+    // Step 20 — live agent path: name
+    } else if (step === 20) {
+      const name = userInput.trim();
+      setLead((p) => ({ ...p, name }));
+      setStep(21);
+      botSay(
+        `Thank you, **${name}**! **What's the best email address for our team to reach you at?**`
+      );
+
+    // Step 21 — live agent path: email
+    } else if (step === 21) {
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
+      if (!valid) {
+        botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
+        return;
+      }
+      setLead((p) => ({ ...p, email: userInput.trim() }));
+      setStep(22);
+      botSay(
+        "Perfect. And **what would you like to discuss with our agent today?**",
+        [...SERVICE_OPTIONS, "💬 General Question"]
+      );
+
+    // Step 22 — live agent path: topic → connect
+    } else if (step === 22) {
+      const fullLead = { ...lead, service: userInput };
+      setLead(fullLead);
+      setStep(23);
+      connectToAgent(fullLead);
+
+    // Step 30 — email path: name
+    } else if (step === 30) {
+      const name = userInput.trim();
+      setLead((p) => ({ ...p, name }));
+      setStep(31);
+      botSay(
+        `Thanks, **${name}**! **What email address should our team reply to?**`
+      );
+
+    // Step 31 — email path: email
+    } else if (step === 31) {
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInput.trim());
+      if (!valid) {
+        botSay("Hmm, that doesn't look like a valid email. Could you double-check and try again? 😊");
+        return;
+      }
+      setLead((p) => ({ ...p, email: userInput.trim() }));
+      setStep(32);
+      botSay(
+        "Great. Now, **please share a few details about what you need help with**, and I'll pass your message along to our team right away. ✍️"
+      );
+
+    // Step 32 — email path: message → submit
+    } else if (step === 32) {
+      const fullLead = {
+        ...lead,
+        service: "General Enquiry",
+        projectDescription: userInput.trim(),
+      };
+      setLead(fullLead);
+      sendLead(fullLead, "email");
+
+    // Step 40 — post-email: anything else?
+    } else if (step === 40) {
+      if (userInput === MENU_ZONI) {
+        setStep(2);
+        botSay(
+          `Happy to help, **${lead.name}**! **What would you like to explore?**`,
+          SERVICE_OPTIONS
+        );
+      } else {
+        setQuickOpts([]);
+        setLocked(true);
+        setMessages((p) => [
+          ...p,
+          {
+            sender: "bot",
+            text: `You're most welcome, **${lead.name}**! Thank you for reaching out to Zonic Media — we truly appreciate it. Have a wonderful day! 😊\n\n${CONNECT_SNIPPET}`,
+          },
+        ]);
+      }
     }
   };
 
   // ─── Submit to API ────────────────────────────────────────────────────────────
-  const sendLead = async (data) => {
+  const sendLead = async (data, mode = "zoni") => {
     setLocked(true);
     setIsTyping(true);
 
@@ -518,7 +654,37 @@ export default function ChatBot() {
       if (json?.leadId) setLeadId(json.leadId);
 
       setIsTyping(false);
+
+      // Email path — confirm delivery and offer to keep helping
+      if (mode === "email") {
+        setStep(40);
+        setMessages((p) => [
+          ...p,
+          {
+            sender: "bot",
+            text: `✅ Your message has been sent, **${data.name}**! Our team will review it and reply to you at **${data.email}** — usually within 1 business day.\n\nIs there anything else I can help you with today?`,
+          },
+        ]);
+        setQuickOpts([MENU_ZONI, "No, That's All — Thank You!"]);
+        setLocked(false);
+        return;
+      }
+
       setStep(10);
+
+      // Outside agent hours — politely close out instead of offering live chat
+      if (!isLiveAgentAvailable()) {
+        setMessages((p) => [
+          ...p,
+          {
+            sender: "bot",
+            text: `You're all set, **${data.name}!** 🎉 We've received your enquiry and sent a confirmation to **${data.email}**.\n\nOur live agents are available **every day from ${AGENT_HOURS_TEXT}** and are currently offline, so a member of our team will personally follow up with you as soon as possible. Thank you so much for your patience! 🙏\n\n${CONNECT_SNIPPET}`,
+          },
+        ]);
+        setQuickOpts([]);
+        return;
+      }
+
       setMessages((p) => [
         ...p,
         {
@@ -542,8 +708,39 @@ export default function ChatBot() {
     }
   };
 
+  // ─── Connect to agent (direct path): record lead first, then start live chat ──
+  const connectToAgent = async (fullLead) => {
+    setLocked(true);
+    setQuickOpts([]);
+    setIsTyping(true);
+
+    // Email the enquiry details to the team first (best-effort — live chat
+    // proceeds even if this fails)
+    let liveLeadId = leadId;
+    try {
+      const recaptchaToken = await getRecaptchaToken();
+      const json = await submitLeadToEmail({
+        ...fullLead,
+        source:    "Zoni Chatbot",
+        pageUrl:   typeof window !== "undefined" ? window.location.href : "",
+        createdAt: new Date().toISOString(),
+        recaptchaToken,
+      });
+      if (json?.leadId) {
+        liveLeadId = json.leadId;
+        setLeadId(json.leadId);
+      }
+    } catch {}
+
+    setIsTyping(false);
+    await startLiveChat({ ...fullLead, leadId: liveLeadId });
+  };
+
   // ─── Start live chat ──────────────────────────────────────────────────────────
-  const startLiveChat = async () => {
+  const startLiveChat = async (info = null) => {
+    const contact = info || lead;
+    const linkedLeadId = (info && info.leadId) || leadId;
+
     setLocked(true);
     setQuickOpts([]);
     setLiveChatError("");
@@ -566,12 +763,12 @@ export default function ChatBot() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           visitorId: vid,
-          name:       lead.name,
-          email:      lead.email,
-          phone:      lead.phone,
-          service:    lead.service,
-          subService: lead.subService,
-          leadId:     leadId || undefined,
+          name:       contact.name,
+          email:      contact.email,
+          phone:      contact.phone,
+          service:    contact.service,
+          subService: contact.subService,
+          leadId:     linkedLeadId || undefined,
         }),
       });
       const data = await res.json();
@@ -586,8 +783,17 @@ export default function ChatBot() {
           sessionStorage.setItem("zonic_live_conv_id",      data.conversationId);
           sessionStorage.setItem("zonic_live_room_name",    data.roomName);
           sessionStorage.setItem("zonic_live_chat_mode",    "active");
-          sessionStorage.setItem("zonic_live_visitor_name", lead.name || "");
+          sessionStorage.setItem("zonic_live_visitor_name", contact.name || "");
         } catch {}
+      } else if (data.code === "outside_hours") {
+        // Server-side hours check (covers clock skew / time rolling past 7 PM)
+        setLiveChatMode(false);
+        setStep(0);
+        botSay(
+          `I'm so sorry — our live agents are available **every day from ${AGENT_HOURS_TEXT}** and have just gone offline. 🙏\n\nDon't worry, though — we have your details and our team will follow up with you. In the meantime, I'd be happy to keep helping you myself, or you can send our team an email. 😊`,
+          [MENU_ZONI, MENU_EMAIL]
+        );
+        return;
       } else {
         throw new Error(data.message || "Failed to start live chat.");
       }
@@ -609,15 +815,18 @@ export default function ChatBot() {
 
   if (!mounted) return null;
 
-  const inputActive = !locked && step > 0 && step < 10;
+  const TEXT_INPUT_STEPS = [1, 2, 3, 4, 5, 6, 7, 20, 21, 30, 31, 32];
+  const inputActive = !locked && TEXT_INPUT_STEPS.includes(step);
 
   let inputPlaceholder = "Type your message...";
   if (!inputActive) {
     inputPlaceholder = "Choose an option above...";
   } else if (step === 7) {
     inputPlaceholder = "Enter your phone number...";
-  } else if (step === 5) {
+  } else if (step === 5 || step === 21 || step === 31) {
     inputPlaceholder = "Enter your email address...";
+  } else if (step === 20 || step === 30) {
+    inputPlaceholder = "Enter your name...";
   }
 
   return (

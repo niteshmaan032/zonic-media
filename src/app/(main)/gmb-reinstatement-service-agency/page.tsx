@@ -11,8 +11,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title:
-    "Google Business Profile Suspended? We Reinstate It Fast | Zonic Media",
+  title: "GBP Suspended? We Reinstate It in 5–7 Days",
   description:
     "Your GBP is suspended and every hour costs you customers. Zonic Media's reinstatement specialists recover suspended Google Business Profiles in 5–7 days. Money-back guarantee.",
   keywords: [

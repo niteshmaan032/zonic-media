@@ -10,7 +10,9 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
-  title: "About Zonic Media | Marketing Agency for Small & Mid-Size Businesses",
+  title: {
+    absolute: "About Zonic Media | Digital Marketing Agency for SMBs",
+  },
   description:
     "Meet Zonic Media — a US marketing agency helping small and mid-size businesses grow with Local SEO, Google Business Profile management, website design, and PPC. Based in Dover, DE, serving businesses nationwide.",
   keywords: [

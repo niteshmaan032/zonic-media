@@ -630,7 +630,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>
-                  <Link href="/services/google-my-business">
+                  <Link href="/services/gmb-reinstatement-help">
                     Google Business Profile
                   </Link>
                   <Link href="/services/google-ads">Google Ads Management</Link>

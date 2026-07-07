@@ -11,8 +11,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title:
-    "Google Business Profile Optimization | Rank in the Map Pack | Zonic Media",
+  title: "GBP Optimization | Rank in the Google Map Pack",
   description:
     "Your GBP is live — but is it ranking? Zonic Media's GBP optimization service gets local businesses into the top-3 Map Pack, generating more calls, clicks, and revenue.",
   keywords: [

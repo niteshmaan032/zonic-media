@@ -87,7 +87,7 @@ const GmbOptiFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: "GMB Optimization Service | Rank in the Google Map Pack",
+  title: "GMB Optimization Service | Map Pack Ranking",
   description:
     "Zonic Media optimizes your Google Business Profile to rank in the local 3-Pack, get more calls, and convert more customers. Expert GMB optimization. Free audit.",
   keywords: [

@@ -14,6 +14,22 @@ function sanitize(val: unknown, maxLen = 200): string {
   return val.replace(/[<>]/g, "").trim().slice(0, maxLen);
 }
 
+// Live agents are available 7:00 AM – 7:00 PM Eastern, every day
+function isWithinAgentHours(): boolean {
+  try {
+    const hour = Number(
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        hour: "numeric",
+        hourCycle: "h23",
+      }).format(new Date())
+    );
+    return hour >= 7 && hour < 19;
+  } catch {
+    return true;
+  }
+}
+
 export async function POST(request: NextRequest) {
   try {
     const ip =
@@ -28,6 +44,15 @@ export async function POST(request: NextRequest) {
     const body = (await request.json().catch(() => null)) as Record<string, unknown> | null;
     if (!body) {
       return NextResponse.json({ success: false, message: "Invalid body." }, { status: 400 });
+    }
+
+    if (!isWithinAgentHours()) {
+      return NextResponse.json({
+        success: false,
+        code: "outside_hours",
+        message:
+          "Our live agents are available every day from 7:00 AM to 7:00 PM EST. Please reach out during those hours or leave your details and we'll get back to you.",
+      });
     }
 
     const visitorId = sanitize(body.visitorId, 100);

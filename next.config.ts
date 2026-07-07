@@ -256,6 +256,11 @@ const nextConfig: NextConfig = {
 
       // Services internal redirects
       {
+        source: "/services/google-my-business",
+        destination: "/services/gmb-reinstatement-help",
+        permanent: true,
+      },
+      {
         source: "/services/local-seo",
         destination: "/services/local-seo-for-home-services",
         permanent: true,

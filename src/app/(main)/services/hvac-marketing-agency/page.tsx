@@ -21,7 +21,7 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title: "HVAC Marketing Agency for Contractors | Zonic Media",
+  title: "HVAC Marketing Agency for Contractors",
   description:
     "HVAC marketing agency for HVAC contractors. Google Business Profile, Google Maps ranking, ads, maintenance memberships, websites, and reviews. Free audit.",
   keywords: [

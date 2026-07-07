@@ -80,35 +80,35 @@ export const BASE_TRUST = [
   { num: "300+", label: "GBPs Reinstated" },
 ];
 
-/** The six marketing functions — shared by the parent and state pages. */
+/** The six marketing functions â€” shared by the parent and state pages. */
 export const SERVICES: HvacServiceCard[] = [
   {
-    num: "01 · GBP & MAP PACK",
+    num: "01 Â· GBP & MAP PACK",
     h: "Google Business Profile rebuild for HVAC map pack visibility.",
     p: "Complete GBP rebuild with HVAC-specific categories (HVAC contractor, AC contractor, heating contractor, furnace repair service), NATE-certification trust signals, manufacturer credential markup (Carrier, Trane, Lennox, Goodman, Daikin, Mitsubishi), 24/7 emergency attributes, geo-tagged jobsite photos, weekly Posts on an HVAC seasonal calendar.",
   },
   {
-    num: "02 · GOOGLE ADS / PPC",
+    num: "02 Â· GOOGLE ADS / PPC",
     h: "Paid search timed to HVAC seasonal peaks.",
     p: "HVAC contractor-specific keyword targeting, geo-modified emergency keywords, ad copy tuned to mobile decision compression, conversion tracking integrated with your dispatch software, and Local Services Ads management where available in your metro.",
   },
   {
-    num: "03 · WEBSITE DESIGN",
+    num: "03 Â· WEBSITE DESIGN",
     h: "Mobile-first HVAC websites that convert summer and winter emergencies.",
     p: "Sub-2-second mobile load times, persistent click-to-call across every page, maintenance-contract membership signup flow, online booking integration, schema markup for HVAC contractor and LocalBusiness, dedicated submarket and service landing pages, R-454B refrigerant transition content.",
   },
   {
-    num: "04 · MEMBERSHIPS & RETENTION",
+    num: "04 Â· MEMBERSHIPS & RETENTION",
     h: "Maintenance-contract program development and customer retention.",
     p: "Membership program structure, landing pages, automated email sequences for two-visit-per-year touchpoints, retention dashboards. Maintenance contracts at 80%+ gross margin are the highest-leverage HVAC marketing asset and most contractors leave them on the table.",
   },
   {
-    num: "05 · REVIEW VELOCITY",
+    num: "05 Â· REVIEW VELOCITY",
     h: "Automated reviews after every HVAC service call.",
     p: "SMS plus email review requests fire automatically after every completed service or installation. Keyword-coached templates that mention neighborhood, equipment type (heat pump, AC, furnace), and service. Multi-platform monitoring. Negative-review response protocols. Review request integration with dispatch software.",
   },
   {
-    num: "06 · LOCAL SEO & CITATIONS",
+    num: "06 Â· LOCAL SEO & CITATIONS",
     h: "Citations, submarket pages, and HVAC-specific directory work.",
     p: "NAP consistency across 60+ general and HVAC-specific directories including manufacturer dealer locators (Carrier, Trane, Lennox dealer pages count as citations). Submarket-specific landing pages. R-454B transition content. Title 24 compliance content for California. GBP reinstatement included.",
   },
@@ -117,53 +117,53 @@ export const SERVICES: HvacServiceCard[] = [
 /** Eight HVAC service categories we market. */
 export const SPECIALTIES: HvacSpecialty[] = [
   {
-    icon: "❄️",
+    icon: "â„ï¸",
     h: "AC Repair & Install",
     p: "Central AC, package units, condenser replacement. Peak demand May-September. Highest emergency call volume.",
   },
   {
-    icon: "🔥",
+    icon: "ðŸ”¥",
     h: "Furnace & Heating",
     p: "Gas furnace, electric furnace, boiler service. Peak demand November-February. Older homes drive replacement.",
   },
   {
-    icon: "⚡",
+    icon: "âš¡",
     h: "Heat Pump Install",
     p: "Fastest-growing HVAC category. California Title 24 mandate and federal IRA tax credits drive adoption.",
   },
   {
-    icon: "🌬️",
+    icon: "ðŸŒ¬ï¸",
     h: "Ductless Mini-Split",
     p: "Mitsubishi, Daikin, LG systems. Premium-margin installations. Older homes, additions, garages, ADUs.",
   },
   {
-    icon: "🌿",
+    icon: "ðŸŒ¿",
     h: "Indoor Air Quality",
     p: "UV lights, air purifiers, humidifiers, ventilation. Add-on revenue per service call. Growing post-2020 demand.",
   },
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     h: "Maintenance Memberships",
     p: "Two visits/year, recurring revenue at 80%+ margin. The highest-leverage HVAC marketing asset most miss.",
   },
   {
-    icon: "🏢",
+    icon: "ðŸ¢",
     h: "Commercial HVAC",
     p: "Restaurants, retail, office, multi-family. B2B keyword patterns, longer sales cycles, separate landing pages.",
   },
   {
-    icon: "🏗️",
+    icon: "ðŸ—ï¸",
     h: "New Construction",
-    p: "Builder relationships plus retail visibility. Critical in growth states — FL, TX, AZ, GA, NC. High AOV installs.",
+    p: "Builder relationships plus retail visibility. Critical in growth states â€” FL, TX, AZ, GA, NC. High AOV installs.",
   },
 ];
 
-/** Month-to-month pricing — shared by the parent and state pages. */
+/** Month-to-month pricing â€” shared by the parent and state pages. */
 export const PRICE_CARDS: HvacPriceCard[] = [
   {
     tier: "Foundation",
     amount: "$750",
-    period: "per month · billed monthly",
+    period: "per month Â· billed monthly",
     features: [
       "Google Business Profile rebuild + monthly management",
       "Citation cleanup across 40+ general directories",
@@ -180,7 +180,7 @@ export const PRICE_CARDS: HvacPriceCard[] = [
   {
     tier: "Growth",
     amount: "$1,350",
-    period: "per month · billed monthly",
+    period: "per month Â· billed monthly",
     features: [
       "Everything in Foundation",
       "Google Ads management with HVAC seasonal playbook",
@@ -198,13 +198,13 @@ export const PRICE_CARDS: HvacPriceCard[] = [
   {
     tier: "Authority",
     amount: "$2,000",
-    period: "per month · billed monthly",
+    period: "per month Â· billed monthly",
     features: [
       "Everything in Growth",
       "Full website rebuild on HVAC conversion architecture",
       "R-454B refrigerant transition content program",
       "Spanish-language landing pages where demographic supports",
-      "Social media management — Instagram, Facebook",
+      "Social media management â€” Instagram, Facebook",
       "Short-form video content from jobsites (4 per month)",
       "Meta Ads with local homeowner targeting",
       "Multi-state expansion + unlimited submarkets",
@@ -219,44 +219,44 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   arizona: {
     name: "Arizona",
     slug: "arizona",
-    metaTitle: "HVAC Marketing Agency in Arizona | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in Arizona",
     metaDescription:
       "HVAC marketing agency for Arizona contractors. Map pack rankings across Phoenix, Tucson, Mesa, Scottsdale. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free Arizona HVAC Audit",
-      "Phoenix · Tucson · Mesa · Scottsdale",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Phoenix Â· Tucson Â· Mesa Â· Scottsdale",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
-        "Arizona HVAC: 115°F Summers Destroy Equipment. Cooling Replacement Cycles Run Half As Long.",
+        "Arizona HVAC: 115Â°F Summers Destroy Equipment. Cooling Replacement Cycles Run Half As Long.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "Arizona.",
-      sub: "Arizona has the harshest HVAC operating conditions in the continental US. Phoenix runs 110+ days per year above 100°F. Outdoor units run 14-18 hours a day for months. Equipment that lasts 15 years in moderate climates fails in 8-10 years across the Valley. Heat pumps overwork in 115°F conditions. Monsoon season dust storms (July-September) clog condenser coils and reduce efficiency by 25-40% in days. We help Arizona HVAC contractors win local SEO across every Valley submarket and Tucson metro so customers find your business first when their AC quits at 2 PM in July with the indoor temperature climbing past 90°F.",
+      sub: "Arizona has the harshest HVAC operating conditions in the continental US. Phoenix runs 110+ days per year above 100Â°F. Outdoor units run 14-18 hours a day for months. Equipment that lasts 15 years in moderate climates fails in 8-10 years across the Valley. Heat pumps overwork in 115Â°F conditions. Monsoon season dust storms (July-September) clog condenser coils and reduce efficiency by 25-40% in days. We help Arizona HVAC contractors win local SEO across every Valley submarket and Tucson metro so customers find your business first when their AC quits at 2 PM in July with the indoor temperature climbing past 90Â°F.",
       trustExtra: { num: "7.5M", label: "Arizona Population" },
     },
     problem: {
       eyebrow: "Why Arizona HVAC Marketing Is Different",
       title:
         "Four Arizona-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "Arizona HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Arizona HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "Arizona HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Arizona HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
-          h: "115°F destroys HVAC equipment faster than anywhere in the US.",
-          p: "Phoenix runs 110+ days above 100°F annually. Condensers, compressors, and capacitors fail in 8-10 years instead of 15+. The replacement category alone is a defining service revenue stream for every Arizona HVAC contractor.",
+          h: "115Â°F destroys HVAC equipment faster than anywhere in the US.",
+          p: "Phoenix runs 110+ days above 100Â°F annually. Condensers, compressors, and capacitors fail in 8-10 years instead of 15+. The replacement category alone is a defining service revenue stream for every Arizona HVAC contractor.",
         },
         {
           h: "Monsoon season dust storms clog systems in hours.",
           p: "July through September monsoons hit the Valley with massive dust storms. Condenser coils foul, efficiency drops 25-40%, emergency cleaning and recovery work spikes. Pre-ranked HVAC contractors capture the wave.",
         },
         {
-          h: "Heat pumps overwork in extreme heat — design matters.",
-          p: "Standard heat pumps lose efficiency above 100°F. Arizona HVAC contractors who specialize in heat-pump-optimized installation for extreme heat (variable-speed, dual-fuel, oversized condenser) win the high-AOV replacement category.",
+          h: "Heat pumps overwork in extreme heat â€” design matters.",
+          p: "Standard heat pumps lose efficiency above 100Â°F. Arizona HVAC contractors who specialize in heat-pump-optimized installation for extreme heat (variable-speed, dual-fuel, oversized condenser) win the high-AOV replacement category.",
         },
         {
-          h: "Phoenix is sprawl — submarket pages are essential.",
+          h: "Phoenix is sprawl â€” submarket pages are essential.",
           p: "Scottsdale to Buckeye is 60 miles. Generic 'Phoenix HVAC' SEO doesn't survive. Dedicated submarket pages for every Valley city you serve are mandatory for ranking depth.",
         },
       ],
@@ -273,11 +273,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     strategy: {
       eyebrow: "Our Arizona HVAC Strategy",
       title: "Six Arizona-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive Arizona dynamics. The six workstreams below are calibrated to the specific factors driving Arizona HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive Arizona dynamics. The six workstreams below are calibrated to the specific factors driving Arizona HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Extreme-heat specialty pages — emergency AC repair, condenser replacement, capacitor service, refrigerant recharge, heat damage prevention.",
-        "Monsoon recovery and seasonal cleaning landing pages — pre-positioned for July-September dust storm windows.",
-        "Heat pump optimization pages — variable-speed installation, dual-fuel systems, extreme-heat-rated equipment.",
+        "Extreme-heat specialty pages â€” emergency AC repair, condenser replacement, capacitor service, refrigerant recharge, heat damage prevention.",
+        "Monsoon recovery and seasonal cleaning landing pages â€” pre-positioned for July-September dust storm windows.",
+        "Heat pump optimization pages â€” variable-speed installation, dual-fuel systems, extreme-heat-rated equipment.",
         "Submarket-specific pages for Scottsdale, Mesa, Tempe, Chandler, Gilbert, Glendale, Peoria, Surprise, Goodyear, Queen Creek.",
         "Bilingual Spanish landing pages for South Phoenix, Maryvale, West Valley markets.",
         "Arizona ROC C-39 license verification integrated with citation profiles.",
@@ -287,23 +287,23 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Arizona Cities We Serve",
       title:
         "Dedicated Arizona city pages built around each metro's specific HVAC market.",
-      lede: "Each Arizona city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Arizona metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each Arizona city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Arizona metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Phoenix",
-          p: "Hottest US metro. 115°F+ destroys condensers, heat pumps overwork, monsoon dust clogs systems. Fast suburban growth in Buckeye, Surprise, Goodyear.",
+          p: "Hottest US metro. 115Â°F+ destroys condensers, heat pumps overwork, monsoon dust clogs systems. Fast suburban growth in Buckeye, Surprise, Goodyear.",
         },
         {
           h: "Tucson",
-          p: "Southern AZ — slightly milder than Phoenix but still extreme. University commercial work. Monsoon season impact on outdoor units.",
+          p: "Southern AZ â€” slightly milder than Phoenix but still extreme. University commercial work. Monsoon season impact on outdoor units.",
         },
         {
           h: "Mesa",
-          p: "East Valley submarket. Family residential, slab homes, HVAC replacement cycles 8-10 years (vs 15+ in milder climates) — strong recurring market.",
+          p: "East Valley submarket. Family residential, slab homes, HVAC replacement cycles 8-10 years (vs 15+ in milder climates) â€” strong recurring market.",
         },
         {
           h: "Scottsdale",
-          p: "Affluent North Valley. Premium replacement equipment market — multi-zone systems, smart controls, custom installation. High AOV.",
+          p: "Affluent North Valley. Premium replacement equipment market â€” multi-zone systems, smart controls, custom installation. High AOV.",
         },
       ],
     },
@@ -323,7 +323,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for HVAC contractors in newer West Valley submarkets?",
-        a: "Yes. West Valley submarkets — Buckeye, Surprise, Goodyear, Avondale, Queen Creek — are some of our strongest performance categories because they're growing fast and the ranking competition is lighter. New construction generates steady HVAC service and replacement demand. Most West Valley HVAC contractors reach top-three rankings inside 75 days.",
+        a: "Yes. West Valley submarkets â€” Buckeye, Surprise, Goodyear, Avondale, Queen Creek â€” are some of our strongest performance categories because they're growing fast and the ranking competition is lighter. New construction generates steady HVAC service and replacement demand. Most West Valley HVAC contractors reach top-three rankings inside 75 days.",
       },
       {
         q: "Can you handle Spanish-language SEO for Phoenix HVAC markets?",
@@ -331,18 +331,18 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for maintenance membership marketing in Arizona?",
-        a: "Yes — Arizona is exceptional for membership economics because of the extreme-heat operating conditions. Members get priority service during peak demand windows (a real value differentiator when emergency calls run 5+ days out in July) plus the seasonal cleaning and tune-up cadence that prevents the catastrophic failures Arizona heat causes. We build dedicated membership landing pages and integrate enrollment with your dispatch software.",
+        a: "Yes â€” Arizona is exceptional for membership economics because of the extreme-heat operating conditions. Members get priority service during peak demand windows (a real value differentiator when emergency calls run 5+ days out in July) plus the seasonal cleaning and tune-up cadence that prevents the catastrophic failures Arizona heat causes. We build dedicated membership landing pages and integrate enrollment with your dispatch software.",
       },
     ],
     final: {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across Arizona metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the Arizona HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free Arizona audit before any commitment",
-        "Active across all Arizona metros — Phoenix, Tucson, Mesa, Scottsdale and beyond",
+        "Active across all Arizona metros â€” Phoenix, Tucson, Mesa, Scottsdale and beyond",
       ],
     },
   },
@@ -350,29 +350,29 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   california: {
     name: "California",
     slug: "california",
-    metaTitle: "HVAC Marketing Agency in California | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in California",
     metaDescription:
       "HVAC marketing agency for California contractors. Map pack rankings across Los Angeles, San Francisco Bay Area, San Diego, Sacramento. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free California HVAC Audit",
-      "Los Angeles · San Francisco Bay Area · San Diego · Sacramento",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Los Angeles Â· San Francisco Bay Area Â· San Diego Â· Sacramento",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
         "California HVAC: Title 24 Mandate, Heat Pump Conversion Wave, Refrigerant Transition.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "California.",
-      sub: "California HVAC is the country's largest and most regulated market. Title 24 Part 6 — the energy efficiency code that updates every three years — forces specific HVAC equipment, sizing, and installation practices that generalist contractors struggle to navigate. The 2023 update accelerated heat pump conversion requirements, particularly in new construction. The R-410A to R-454B refrigerant transition (starting 2025) is reshaping every replacement decision. California Climate Investment incentives stack with IRA federal tax credits for heat pumps to create the most aggressive HVAC conversion economics anywhere in the country. We help California HVAC contractors win local SEO across LA, the Bay Area, San Diego, Sacramento, and the Central Valley so customers find your business first.",
+      sub: "California HVAC is the country's largest and most regulated market. Title 24 Part 6 â€” the energy efficiency code that updates every three years â€” forces specific HVAC equipment, sizing, and installation practices that generalist contractors struggle to navigate. The 2023 update accelerated heat pump conversion requirements, particularly in new construction. The R-410A to R-454B refrigerant transition (starting 2025) is reshaping every replacement decision. California Climate Investment incentives stack with IRA federal tax credits for heat pumps to create the most aggressive HVAC conversion economics anywhere in the country. We help California HVAC contractors win local SEO across LA, the Bay Area, San Diego, Sacramento, and the Central Valley so customers find your business first.",
       trustExtra: { num: "39M", label: "California Population" },
     },
     problem: {
       eyebrow: "Why California HVAC Marketing Is Different",
       title:
         "Four California-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "California HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to California HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "California HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to California HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Title 24 compliance is a competitive moat.",
@@ -405,21 +405,21 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Our California HVAC Strategy",
       title:
         "Six California-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive California dynamics. The six workstreams below are calibrated to the specific factors driving California HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive California dynamics. The six workstreams below are calibrated to the specific factors driving California HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Title 24 compliance landing pages — Title 24-compliant heat pump installation, condensing furnace replacement, ductwork sealing service.",
+        "Title 24 compliance landing pages â€” Title 24-compliant heat pump installation, condensing furnace replacement, ductwork sealing service.",
         "Heat pump conversion pages with IRA tax credit and California Climate Investment stacking calculators for high-value lead conversion.",
-        "R-454B refrigerant transition content — repair-vs-replace decision tools, equipment availability, customer education content.",
+        "R-454B refrigerant transition content â€” repair-vs-replace decision tools, equipment availability, customer education content.",
         "Bilingual Spanish landing pages for East LA, San Gabriel Valley, San Diego South Bay, Central Valley.",
         "CSLB C-20 (HVAC) license verification displayed prominently across citation profiles for California trust signal compounding.",
-        "Bay Area / LA submarket pages — Mid-City, San Gabriel Valley, South Bay, North County, Inland Empire — with submarket-specific Title 24 enforcement context.",
+        "Bay Area / LA submarket pages â€” Mid-City, San Gabriel Valley, South Bay, North County, Inland Empire â€” with submarket-specific Title 24 enforcement context.",
       ],
     },
     cities: {
       eyebrow: "California Cities We Serve",
       title:
         "Dedicated California city pages built around each metro's specific HVAC market.",
-      lede: "Each California city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the California metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each California city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the California metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Los Angeles",
@@ -451,7 +451,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for heat pump conversion marketing?",
-        a: "Yes — and California is the best US state for heat pump conversion economics because Title 24 incentives stack with IRA federal tax credits. We build dedicated heat pump conversion landing pages with savings calculators, integrate enrollment forms with your dispatch software, and run paid ads tuned to heat-pump-intent and conversion-incentive keywords. The customer education content matters more in California than anywhere else because the incentive landscape is genuinely complex.",
+        a: "Yes â€” and California is the best US state for heat pump conversion economics because Title 24 incentives stack with IRA federal tax credits. We build dedicated heat pump conversion landing pages with savings calculators, integrate enrollment forms with your dispatch software, and run paid ads tuned to heat-pump-intent and conversion-incentive keywords. The customer education content matters more in California than anywhere else because the incentive landscape is genuinely complex.",
       },
       {
         q: "How do you handle Title 24 compliance positioning?",
@@ -470,11 +470,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across California metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the California HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free California audit before any commitment",
-        "Active across all California metros — Los Angeles, San Francisco Bay Area, San Diego, Sacramento and beyond",
+        "Active across all California metros â€” Los Angeles, San Francisco Bay Area, San Diego, Sacramento and beyond",
       ],
     },
   },
@@ -482,15 +482,15 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   florida: {
     name: "Florida",
     slug: "florida",
-    metaTitle: "HVAC Marketing Agency in Florida | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in Florida",
     metaDescription:
       "HVAC marketing agency for Florida contractors. Map pack rankings across Miami, Tampa, Orlando, Jacksonville. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free Florida HVAC Audit",
-      "Miami · Tampa · Orlando · Jacksonville",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Miami Â· Tampa Â· Orlando Â· Jacksonville",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -504,7 +504,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Why Florida HVAC Marketing Is Different",
       title:
         "Four Florida-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "Florida HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Florida HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "Florida HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Florida HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Year-round cooling is a Florida-only dynamic.",
@@ -512,7 +512,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Salt-air corrosion is destroying coastal condensers.",
-          p: "Coastal Florida — Miami-Dade, Broward, Pinellas, Hillsborough — sees condenser coil corrosion at 3× the inland rate. Replacement cycles run 8-10 years coastal vs 12-15 inland. Anti-corrosion coating and stainless service is a dedicated revenue category.",
+          p: "Coastal Florida â€” Miami-Dade, Broward, Pinellas, Hillsborough â€” sees condenser coil corrosion at 3Ã— the inland rate. Replacement cycles run 8-10 years coastal vs 12-15 inland. Anti-corrosion coating and stainless service is a dedicated revenue category.",
         },
         {
           h: "Hurricane season is a wave of forced replacements.",
@@ -536,29 +536,29 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     strategy: {
       eyebrow: "Our Florida HVAC Strategy",
       title: "Six Florida-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive Florida dynamics. The six workstreams below are calibrated to the specific factors driving Florida HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive Florida dynamics. The six workstreams below are calibrated to the specific factors driving Florida HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Year-round content cadence — no seasonal lull. Weekly Google Posts on a 12-month Florida HVAC calendar with coastal corrosion, hurricane prep, and year-round cooling themes.",
-        "Salt-air specialty service pages — condenser replacement, coastal coil cleaning, anti-corrosion coating service, stainless installation.",
+        "Year-round content cadence â€” no seasonal lull. Weekly Google Posts on a 12-month Florida HVAC calendar with coastal corrosion, hurricane prep, and year-round cooling themes.",
+        "Salt-air specialty service pages â€” condenser replacement, coastal coil cleaning, anti-corrosion coating service, stainless installation.",
         "Hurricane preparation and recovery landing pages pre-positioned for June-November storm windows.",
         "Spanish-language GBP optimization and landing pages for Miami-Dade, Broward, Hialeah, Doral, and Tampa Spanish markets.",
         "Florida CILB license verification linked from citation profiles for trust signal compounding.",
-        "Maintenance membership program landing pages — recurring revenue at 80%+ margin, the highest-leverage HVAC marketing category in Florida year-round demand patterns.",
+        "Maintenance membership program landing pages â€” recurring revenue at 80%+ margin, the highest-leverage HVAC marketing category in Florida year-round demand patterns.",
       ],
     },
     cities: {
       eyebrow: "Florida Cities We Serve",
       title:
         "Dedicated Florida city pages built around each metro's specific HVAC market.",
-      lede: "Each Florida city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Florida metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each Florida city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Florida metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Miami",
-          p: "Year-round cooling demand. Salt-air corrosion destroys condensers 3× faster inland than coastal. Spanish-language critical across Hialeah, Doral, Little Havana. Hurricane recovery work.",
+          p: "Year-round cooling demand. Salt-air corrosion destroys condensers 3Ã— faster inland than coastal. Spanish-language critical across Hialeah, Doral, Little Havana. Hurricane recovery work.",
         },
         {
           h: "Tampa",
-          p: "Coastal humidity + salt-air condenser corrosion. Slab homes. Growing residential demand. Strong AC replacement category — Florida's oldest HVAC equipment concentration.",
+          p: "Coastal humidity + salt-air condenser corrosion. Slab homes. Growing residential demand. Strong AC replacement category â€” Florida's oldest HVAC equipment concentration.",
         },
         {
           h: "Orlando",
@@ -566,7 +566,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Jacksonville",
-          p: "Largest FL city by area — service-area logistics matter. Coastal humidity, hurricane drainage impact on outdoor units, fast-growing southside.",
+          p: "Largest FL city by area â€” service-area logistics matter. Coastal humidity, hurricane drainage impact on outdoor units, fast-growing southside.",
         },
       ],
     },
@@ -578,11 +578,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you handle Spanish-language SEO for South Florida HVAC?",
-        a: "Yes. Spanish-language landing pages and Spanish Google Ads are available on the Authority tier. South Florida specifically — Miami-Dade, Broward, Hialeah, Doral — generates substantial Spanish-language HVAC search volume with consistently lower keyword competition than English. ROI is strong for Florida HVAC contractors willing to serve those markets, especially in AC repair and emergency service categories.",
+        a: "Yes. Spanish-language landing pages and Spanish Google Ads are available on the Authority tier. South Florida specifically â€” Miami-Dade, Broward, Hialeah, Doral â€” generates substantial Spanish-language HVAC search volume with consistently lower keyword competition than English. ROI is strong for Florida HVAC contractors willing to serve those markets, especially in AC repair and emergency service categories.",
       },
       {
         q: "Will this help with hurricane-season HVAC replacement marketing?",
-        a: "Yes. Hurricane season is one of the highest-leverage windows for Florida HVAC marketing. Outdoor units are damaged by water, debris, and storm surge across coastal counties. Insurance-claim replacement runs 4-6× normal volume in the weeks following major storms. We pre-position your GBP and pre-write storm-recovery content that publishes in real time. Pre-ranked Florida HVAC contractors capture disproportionate share of the post-storm replacement wave.",
+        a: "Yes. Hurricane season is one of the highest-leverage windows for Florida HVAC marketing. Outdoor units are damaged by water, debris, and storm surge across coastal counties. Insurance-claim replacement runs 4-6Ã— normal volume in the weeks following major storms. We pre-position your GBP and pre-write storm-recovery content that publishes in real time. Pre-ranked Florida HVAC contractors capture disproportionate share of the post-storm replacement wave.",
       },
       {
         q: "Do you handle GBP suspensions for Florida HVAC contractors?",
@@ -590,22 +590,22 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for maintenance membership program marketing?",
-        a: "Yes — and Florida is the best US state for membership program economics because of year-round cooling demand. We build dedicated maintenance membership landing pages, integrate enrollment funnels with your dispatch software (ServiceTitan, FieldEdge, Housecall Pro), and run Google Ads tuned to maintenance-intent keywords. Membership programs typically run 80%+ gross margin and produce 30-50% of total revenue once scaled.",
+        a: "Yes â€” and Florida is the best US state for membership program economics because of year-round cooling demand. We build dedicated maintenance membership landing pages, integrate enrollment funnels with your dispatch software (ServiceTitan, FieldEdge, Housecall Pro), and run Google Ads tuned to maintenance-intent keywords. Membership programs typically run 80%+ gross margin and produce 30-50% of total revenue once scaled.",
       },
       {
         q: "Do you serve Florida HVAC contractors outside the four major metros?",
-        a: "Yes. We work with HVAC contractors in every Florida metro and most secondary markets — Cape Coral, Fort Myers, Sarasota, Naples, Gainesville, Tallahassee, Pensacola, Daytona, West Palm Beach. Strategy adapts to local competitive density. Smaller markets typically see faster ranking timelines because the competition is less saturated.",
+        a: "Yes. We work with HVAC contractors in every Florida metro and most secondary markets â€” Cape Coral, Fort Myers, Sarasota, Naples, Gainesville, Tallahassee, Pensacola, Daytona, West Palm Beach. Strategy adapts to local competitive density. Smaller markets typically see faster ranking timelines because the competition is less saturated.",
       },
     ],
     final: {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across Florida metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the Florida HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free Florida audit before any commitment",
-        "Active across all Florida metros — Miami, Tampa, Orlando, Jacksonville and beyond",
+        "Active across all Florida metros â€” Miami, Tampa, Orlando, Jacksonville and beyond",
       ],
     },
   },
@@ -613,29 +613,29 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   georgia: {
     name: "Georgia",
     slug: "georgia",
-    metaTitle: "HVAC Marketing Agency in Georgia | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in Georgia",
     metaDescription:
       "HVAC marketing agency for Georgia contractors. Map pack rankings across Atlanta, Augusta, Savannah, Columbus. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free Georgia HVAC Audit",
-      "Atlanta · Augusta · Savannah · Columbus",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Atlanta Â· Augusta Â· Savannah Â· Columbus",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
         "Georgia HVAC: Atlanta Growth Boom, Hot Humid Summers, Occasional Freeze Surprises.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "Georgia.",
-      sub: "Georgia HVAC sits on top of one of the country's most aggressive growth curves. Metro Atlanta has added more than 100,000 residents annually for the past decade. North Fulton, Cobb, Gwinnett, Forsyth, and Cherokee counties are building thousands of new homes — each one a future HVAC customer. Hot humid summers (90+ degree days, 80%+ humidity) drive constant cooling demand and shorten equipment cycles. Occasional freeze events — 2014's snowmageddon, the 2022 Christmas freeze — catch Georgia HVAC contractors and homeowners off-guard and produce massive emergency furnace and heat pump call volume. We help Georgia HVAC contractors win local SEO across Atlanta, the surrounding metros, and growing secondary markets.",
+      sub: "Georgia HVAC sits on top of one of the country's most aggressive growth curves. Metro Atlanta has added more than 100,000 residents annually for the past decade. North Fulton, Cobb, Gwinnett, Forsyth, and Cherokee counties are building thousands of new homes â€” each one a future HVAC customer. Hot humid summers (90+ degree days, 80%+ humidity) drive constant cooling demand and shorten equipment cycles. Occasional freeze events â€” 2014's snowmageddon, the 2022 Christmas freeze â€” catch Georgia HVAC contractors and homeowners off-guard and produce massive emergency furnace and heat pump call volume. We help Georgia HVAC contractors win local SEO across Atlanta, the surrounding metros, and growing secondary markets.",
       trustExtra: { num: "11M", label: "Georgia Population" },
     },
     problem: {
       eyebrow: "Why Georgia HVAC Marketing Is Different",
       title:
         "Four Georgia-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "Georgia HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Georgia HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "Georgia HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Georgia HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Atlanta growth is creating new HVAC ranking arenas weekly.",
@@ -667,13 +667,13 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     strategy: {
       eyebrow: "Our Georgia HVAC Strategy",
       title: "Six Georgia-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive Georgia dynamics. The six workstreams below are calibrated to the specific factors driving Georgia HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive Georgia dynamics. The six workstreams below are calibrated to the specific factors driving Georgia HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
         "Suburban submarket pages for North Fulton (Alpharetta, Roswell, Johns Creek), Cobb (Marietta, Smyrna), Gwinnett (Lawrenceville, Duluth), Forsyth (Cumming), Cherokee (Canton).",
-        "Atlanta intown neighborhood pages — Buckhead, Midtown, Virginia-Highland, Decatur, East Atlanta.",
+        "Atlanta intown neighborhood pages â€” Buckhead, Midtown, Virginia-Highland, Decatur, East Atlanta.",
         "Freeze-event content pre-positioned for the rare but high-impact Georgia freeze windows.",
-        "New-construction-focused content for the rapidly growing Atlanta exurbs — high-AOV multi-zone system installation.",
-        "Historic district specialty pages for Savannah and Augusta — coastal humidity service, salt-air corrosion (Savannah), older home retrofit.",
+        "New-construction-focused content for the rapidly growing Atlanta exurbs â€” high-AOV multi-zone system installation.",
+        "Historic district specialty pages for Savannah and Augusta â€” coastal humidity service, salt-air corrosion (Savannah), older home retrofit.",
         "Georgia Construction Industry Licensing Board verification integrated with citation profiles.",
       ],
     },
@@ -681,7 +681,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Georgia Cities We Serve",
       title:
         "Dedicated Georgia city pages built around each metro's specific HVAC market.",
-      lede: "Each Georgia city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Georgia metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each Georgia city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Georgia metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Atlanta",
@@ -697,7 +697,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Columbus",
-          p: "Southwestern GA market. Fort Moore military base, residential growth, mixed older homes — less competitive ranking landscape.",
+          p: "Southwestern GA market. Fort Moore military base, residential growth, mixed older homes â€” less competitive ranking landscape.",
         },
       ],
     },
@@ -709,7 +709,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for HVAC contractors in newer Atlanta exurbs?",
-        a: "Yes. The North Atlanta exurbs — Forsyth, Cherokee, parts of Cobb and Gwinnett — are some of our strongest performance categories because they're growing fast and ranking competition is still consolidating. New construction generates steady HVAC service and replacement demand from new homeowners. Most exurb HVAC contractors reach top-three rankings inside 75 days.",
+        a: "Yes. The North Atlanta exurbs â€” Forsyth, Cherokee, parts of Cobb and Gwinnett â€” are some of our strongest performance categories because they're growing fast and ranking competition is still consolidating. New construction generates steady HVAC service and replacement demand from new homeowners. Most exurb HVAC contractors reach top-three rankings inside 75 days.",
       },
       {
         q: "Do you handle GBP suspensions for Georgia HVAC contractors?",
@@ -721,7 +721,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How does this work for Savannah and the coastal historic district?",
-        a: "Savannah and other coastal historic markets need specialized HVAC service messaging because of salt-air corrosion on outdoor units and humidity dynamics. We build dedicated landing pages for historic district services — salt-air condenser service, anti-corrosion installation, historic home retrofit — and tune the strategy to the coastal market.",
+        a: "Savannah and other coastal historic markets need specialized HVAC service messaging because of salt-air corrosion on outdoor units and humidity dynamics. We build dedicated landing pages for historic district services â€” salt-air condenser service, anti-corrosion installation, historic home retrofit â€” and tune the strategy to the coastal market.",
       },
       {
         q: "Will this work for maintenance membership marketing in Georgia?",
@@ -732,11 +732,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across Georgia metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the Georgia HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free Georgia audit before any commitment",
-        "Active across all Georgia metros — Atlanta, Augusta, Savannah, Columbus and beyond",
+        "Active across all Georgia metros â€” Atlanta, Augusta, Savannah, Columbus and beyond",
       ],
     },
   },
@@ -744,33 +744,33 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   illinois: {
     name: "Illinois",
     slug: "illinois",
-    metaTitle: "HVAC Marketing Agency in Illinois | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in Illinois",
     metaDescription:
       "HVAC marketing agency for Illinois contractors. Map pack rankings across Chicago, Aurora, Naperville, Rockford. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free Illinois HVAC Audit",
-      "Chicago · Aurora · Naperville · Rockford",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Chicago Â· Aurora Â· Naperville Â· Rockford",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
         "Illinois HVAC Lives or Dies in January. Polar Vortex Furnace Emergencies Decide the Year.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "Illinois.",
-      sub: "Illinois HVAC has the most extreme winter demand asymmetry of any US market. A normal January is busy. A polar vortex January is a year's worth of work in two weeks. The 2019 polar vortex hit -23°F in Chicago and produced thousands of furnace failures, frozen heat pumps, and emergency replacement calls in concentrated days. The 2021 freeze and 2023 December event continued the pattern. Chicago's housing stock — pre-war bungalows, two-flats, three-flats with aging boilers — is uniquely vulnerable. We help Illinois HVAC contractors win local SEO across Chicago and every Chicagoland and downstate metro so you're ranked before the next polar vortex hits.",
+      sub: "Illinois HVAC has the most extreme winter demand asymmetry of any US market. A normal January is busy. A polar vortex January is a year's worth of work in two weeks. The 2019 polar vortex hit -23Â°F in Chicago and produced thousands of furnace failures, frozen heat pumps, and emergency replacement calls in concentrated days. The 2021 freeze and 2023 December event continued the pattern. Chicago's housing stock â€” pre-war bungalows, two-flats, three-flats with aging boilers â€” is uniquely vulnerable. We help Illinois HVAC contractors win local SEO across Chicago and every Chicagoland and downstate metro so you're ranked before the next polar vortex hits.",
       trustExtra: { num: "12.5M", label: "Illinois Population" },
     },
     problem: {
       eyebrow: "Why Illinois HVAC Marketing Is Different",
       title:
         "Four Illinois-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "Illinois HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Illinois HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "Illinois HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Illinois HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Polar vortex events reset the entire Illinois HVAC market.",
-          p: "The 2019 polar vortex hit -23°F in Chicago — a year's worth of emergency furnace and heat pump failures in two weeks. The 2021 freeze produced thousands of boiler emergencies. Pre-ranked HVAC contractors captured the wave; the rest watched.",
+          p: "The 2019 polar vortex hit -23Â°F in Chicago â€” a year's worth of emergency furnace and heat pump failures in two weeks. The 2021 freeze produced thousands of boiler emergencies. Pre-ranked HVAC contractors captured the wave; the rest watched.",
         },
         {
           h: "Older Chicago boilers are uniquely vulnerable.",
@@ -798,12 +798,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     strategy: {
       eyebrow: "Our Illinois HVAC Strategy",
       title: "Six Illinois-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive Illinois dynamics. The six workstreams below are calibrated to the specific factors driving Illinois HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive Illinois dynamics. The six workstreams below are calibrated to the specific factors driving Illinois HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Pre-positioned polar vortex content — furnace emergency repair, heat pump frozen unit thaw, emergency replacement — published the moment polar vortex events begin.",
-        "Chicago community area submarket pages — Lincoln Park, Wicker Park, West Loop, River North, Hyde Park, Logan Square, Pilsen.",
+        "Pre-positioned polar vortex content â€” furnace emergency repair, heat pump frozen unit thaw, emergency replacement â€” published the moment polar vortex events begin.",
+        "Chicago community area submarket pages â€” Lincoln Park, Wicker Park, West Loop, River North, Hyde Park, Logan Square, Pilsen.",
         "Suburban submarket pages for Aurora, Naperville, Schaumburg, Arlington Heights, Joliet, Elgin, Evanston, Oak Park.",
-        "Boiler-to-furnace conversion specialty pages — high-AOV Chicago older-home category.",
+        "Boiler-to-furnace conversion specialty pages â€” high-AOV Chicago older-home category.",
         "Bilingual Spanish landing pages for Pilsen, Little Village, Logan Square, Humboldt Park markets.",
         "Illinois IDPH HVAC contractor license verification integrated with citation profiles.",
       ],
@@ -812,11 +812,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Illinois Cities We Serve",
       title:
         "Dedicated Illinois city pages built around each metro's specific HVAC market.",
-      lede: "Each Illinois city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Illinois metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each Illinois city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Illinois metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Chicago",
-          p: "Largest IL metro. Brutal winters, older boiler-heated housing across North/South Side, 77 community areas — hyperlocal search behavior.",
+          p: "Largest IL metro. Brutal winters, older boiler-heated housing across North/South Side, 77 community areas â€” hyperlocal search behavior.",
         },
         {
           h: "Aurora",
@@ -828,7 +828,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Rockford",
-          p: "Northern IL market. Older industrial-era housing, brutal winters, lower competitive density vs Chicago — faster ranking timelines.",
+          p: "Northern IL market. Older industrial-era housing, brutal winters, lower competitive density vs Chicago â€” faster ranking timelines.",
         },
       ],
     },
@@ -840,7 +840,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this help during polar vortex events?",
-        a: "This is the highest-leverage window for Illinois HVAC marketing. We pre-write emergency content — furnace failure, heat pump frozen unit, emergency replacement, dual-fuel system installation — and pre-position your GBP for the spike. Pre-ranked Illinois HVAC contractors capture disproportionate share of post-vortex emergency call volume. The 2019 polar vortex was a year's worth of bookings for HVAC contractors holding top map pack positions.",
+        a: "This is the highest-leverage window for Illinois HVAC marketing. We pre-write emergency content â€” furnace failure, heat pump frozen unit, emergency replacement, dual-fuel system installation â€” and pre-position your GBP for the spike. Pre-ranked Illinois HVAC contractors capture disproportionate share of post-vortex emergency call volume. The 2019 polar vortex was a year's worth of bookings for HVAC contractors holding top map pack positions.",
       },
       {
         q: "Can you handle Spanish-language SEO for Chicago HVAC neighborhoods?",
@@ -863,11 +863,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across Illinois metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the Illinois HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free Illinois audit before any commitment",
-        "Active across all Illinois metros — Chicago, Aurora, Naperville, Rockford and beyond",
+        "Active across all Illinois metros â€” Chicago, Aurora, Naperville, Rockford and beyond",
       ],
     },
   },
@@ -875,29 +875,29 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   "north-carolina": {
     name: "North Carolina",
     slug: "north-carolina",
-    metaTitle: "HVAC Marketing Agency in North Carolina | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in North Carolina",
     metaDescription:
       "HVAC marketing agency for North Carolina contractors. Map pack rankings across Charlotte, Raleigh, Greensboro, Durham. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free North Carolina HVAC Audit",
-      "Charlotte · Raleigh · Greensboro · Durham",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Charlotte Â· Raleigh Â· Greensboro Â· Durham",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
         "North Carolina: Heat Pump Capital of the Southeast. Charlotte and Triangle Growth Boom.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "North Carolina.",
-      sub: "North Carolina is the heat pump capital of the Southeast — the equipment category that dominates HVAC installation across both Charlotte and the Raleigh-Durham Triangle. The mild winters and hot humid summers make heat pumps the dominant residential HVAC choice across the state, and Charlotte plus the Triangle are two of the fastest-growing US metros. Combined population growth produces tens of thousands of new homes annually, each one a future HVAC customer. Older Charlotte and Greensboro neighborhoods built mid-century need retrofit work. We help North Carolina HVAC contractors win local SEO across Charlotte, Raleigh, Durham, Greensboro, and every growing submarket — Cary, Apex, Huntersville, Concord, Fort Mill — so your business captures the heat-pump growth wave.",
+      sub: "North Carolina is the heat pump capital of the Southeast â€” the equipment category that dominates HVAC installation across both Charlotte and the Raleigh-Durham Triangle. The mild winters and hot humid summers make heat pumps the dominant residential HVAC choice across the state, and Charlotte plus the Triangle are two of the fastest-growing US metros. Combined population growth produces tens of thousands of new homes annually, each one a future HVAC customer. Older Charlotte and Greensboro neighborhoods built mid-century need retrofit work. We help North Carolina HVAC contractors win local SEO across Charlotte, Raleigh, Durham, Greensboro, and every growing submarket â€” Cary, Apex, Huntersville, Concord, Fort Mill â€” so your business captures the heat-pump growth wave.",
       trustExtra: { num: "10.7M", label: "North Carolina Population" },
     },
     problem: {
       eyebrow: "Why North Carolina HVAC Marketing Is Different",
       title:
         "Four North Carolina-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "North Carolina HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to North Carolina HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "North Carolina HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to North Carolina HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Heat pump is the dominant residential equipment category.",
@@ -905,7 +905,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Charlotte and Triangle growth is the biggest market shift in NC HVAC.",
-          p: "Charlotte adds 75,000+ residents annually. The Triangle adds another 60,000+. Thousands of new HVAC installations every year. Ranking competition is still consolidating — early movers establish defensible positions.",
+          p: "Charlotte adds 75,000+ residents annually. The Triangle adds another 60,000+. Thousands of new HVAC installations every year. Ranking competition is still consolidating â€” early movers establish defensible positions.",
         },
         {
           h: "Suburban submarket sprawl fragments the metros.",
@@ -930,13 +930,13 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Our North Carolina HVAC Strategy",
       title:
         "Six North Carolina-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive North Carolina dynamics. The six workstreams below are calibrated to the specific factors driving North Carolina HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive North Carolina dynamics. The six workstreams below are calibrated to the specific factors driving North Carolina HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Heat pump specialty pages — heat pump installation, heat pump repair, heat pump replacement, dual-fuel system, geothermal heat pump (the highest-AOV NC category).",
-        "Charlotte submarket pages — Ballantyne, South End, Myers Park, Dilworth, Plaza Midwood, Lake Norman, Huntersville, Concord.",
-        "Triangle submarket pages — Raleigh Inside-the-Beltline, North Raleigh, Cary, Apex, Holly Springs, Durham, Chapel Hill.",
+        "Heat pump specialty pages â€” heat pump installation, heat pump repair, heat pump replacement, dual-fuel system, geothermal heat pump (the highest-AOV NC category).",
+        "Charlotte submarket pages â€” Ballantyne, South End, Myers Park, Dilworth, Plaza Midwood, Lake Norman, Huntersville, Concord.",
+        "Triangle submarket pages â€” Raleigh Inside-the-Beltline, North Raleigh, Cary, Apex, Holly Springs, Durham, Chapel Hill.",
         "New-construction-focused content for the rapidly growing Charlotte and Triangle suburbs.",
-        "Older-home retrofit pages for established Charlotte and Greensboro neighborhoods — boiler-to-heat-pump conversion.",
+        "Older-home retrofit pages for established Charlotte and Greensboro neighborhoods â€” boiler-to-heat-pump conversion.",
         "NC State Board HVAC contractor license verification integrated with citation profiles.",
       ],
     },
@@ -944,7 +944,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "North Carolina Cities We Serve",
       title:
         "Dedicated North Carolina city pages built around each metro's specific HVAC market.",
-      lede: "Each North Carolina city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the North Carolina metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each North Carolina city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the North Carolina metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Charlotte",
@@ -972,7 +972,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this work for heat pump specialty marketing?",
-        a: "Yes — and NC is the best US state for heat pump marketing because the climate makes heat pumps the dominant residential equipment category. We build dedicated heat pump landing pages, integrate IRA tax credit information for high-value lead conversion, optimize your GBP for heat-pump-specific categories, and seed Q&A entries with heat pump questions NC customers actually search for.",
+        a: "Yes â€” and NC is the best US state for heat pump marketing because the climate makes heat pumps the dominant residential equipment category. We build dedicated heat pump landing pages, integrate IRA tax credit information for high-value lead conversion, optimize your GBP for heat-pump-specific categories, and seed Q&A entries with heat pump questions NC customers actually search for.",
       },
       {
         q: "Will this work for HVAC contractors in newer Charlotte and Triangle suburbs?",
@@ -984,7 +984,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Will this help during NC freeze events?",
-        a: "Yes. NC sees occasional but high-impact freeze events that strain heat pumps in particular. We pre-write emergency freeze content — frozen heat pump thawing, emergency furnace service, auxiliary heat troubleshooting — and pre-position your GBP for the spike. Pre-ranked NC HVAC contractors capture disproportionate share of freeze-event call volume.",
+        a: "Yes. NC sees occasional but high-impact freeze events that strain heat pumps in particular. We pre-write emergency freeze content â€” frozen heat pump thawing, emergency furnace service, auxiliary heat troubleshooting â€” and pre-position your GBP for the spike. Pre-ranked NC HVAC contractors capture disproportionate share of freeze-event call volume.",
       },
       {
         q: "Do you serve NC HVAC contractors outside the major metros?",
@@ -995,11 +995,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across North Carolina metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the North Carolina HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free North Carolina audit before any commitment",
-        "Active across all North Carolina metros — Charlotte, Raleigh, Greensboro, Durham and beyond",
+        "Active across all North Carolina metros â€” Charlotte, Raleigh, Greensboro, Durham and beyond",
       ],
     },
   },
@@ -1007,33 +1007,33 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   texas: {
     name: "Texas",
     slug: "texas",
-    metaTitle: "HVAC Marketing Agency in Texas | Zonic Media",
+    metaTitle: "HVAC Marketing Agency in Texas",
     metaDescription:
       "HVAC marketing agency for Texas contractors. Map pack rankings across Houston, Dallas, Austin, San Antonio. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
     ticker: [
       "Free Texas HVAC Audit",
-      "Houston · Dallas · Austin · San Antonio",
-      "GBP · Memberships · Google Ads · R-454B Transition",
-      "500+ Local Businesses Ranked · 35+ HVAC Contractors Served",
-      "Starting at $750/mo · Month-to-Month",
+      "Houston Â· Dallas Â· Austin Â· San Antonio",
+      "GBP Â· Memberships Â· Google Ads Â· R-454B Transition",
+      "500+ Local Businesses Ranked Â· 35+ HVAC Contractors Served",
+      "Starting at $750/mo Â· Month-to-Month",
     ],
     hero: {
       eyebrow:
-        "Texas HVAC: 100°F Summers, 2021 Freeze Memory, Suburban Growth Boom.",
+        "Texas HVAC: 100Â°F Summers, 2021 Freeze Memory, Suburban Growth Boom.",
       headlinePre: "HVAC Marketing Agency in",
       accent: "Texas.",
-      sub: "Texas HVAC sits on top of two structural drivers. The first is sustained extreme heat — Houston, Dallas, San Antonio, and Austin all run 90+ days per year above 90°F, with summer cooling demand among the heaviest in the country. The second is the 2021 polar vortex memory — a generational HVAC event that destroyed millions of cooling and heating systems statewide and reset Texas homeowner expectations about backup heating and emergency replacement capacity. We help Texas HVAC contractors win local SEO across Houston, Dallas-Fort Worth, Austin, San Antonio, and the rapidly growing suburbs — Frisco, McKinney, Round Rock, The Woodlands, Sugar Land — so you're the contractor customers find first when 105°F hits in August or the next polar vortex rolls in.",
+      sub: "Texas HVAC sits on top of two structural drivers. The first is sustained extreme heat â€” Houston, Dallas, San Antonio, and Austin all run 90+ days per year above 90Â°F, with summer cooling demand among the heaviest in the country. The second is the 2021 polar vortex memory â€” a generational HVAC event that destroyed millions of cooling and heating systems statewide and reset Texas homeowner expectations about backup heating and emergency replacement capacity. We help Texas HVAC contractors win local SEO across Houston, Dallas-Fort Worth, Austin, San Antonio, and the rapidly growing suburbs â€” Frisco, McKinney, Round Rock, The Woodlands, Sugar Land â€” so you're the contractor customers find first when 105Â°F hits in August or the next polar vortex rolls in.",
       trustExtra: { num: "30M+", label: "Texas Population" },
     },
     problem: {
       eyebrow: "Why Texas HVAC Marketing Is Different",
       title:
         "Four Texas-specific dynamics that decide which HVAC contractors win the map pack.",
-      lede: "Texas HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Texas HVAC economics — equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
+      lede: "Texas HVAC has structural drivers that don't exist in other states. Generic marketing playbooks miss them. The four pain points below are calibrated specifically to Texas HVAC economics â€” equipment lifespan, climate stress patterns, demographic search behavior, and competitive density.",
       cards: [
         {
           h: "Sustained summer heat creates the heaviest cooling demand in the US.",
-          p: "Houston, Dallas, San Antonio, and Austin run 90+ days per year above 90°F. Cooling systems run 12-16 hours per day for months. Equipment fails faster, replacement cycles run shorter, and emergency demand is structural.",
+          p: "Houston, Dallas, San Antonio, and Austin run 90+ days per year above 90Â°F. Cooling systems run 12-16 hours per day for months. Equipment fails faster, replacement cycles run shorter, and emergency demand is structural.",
         },
         {
           h: "The 2021 polar vortex reset Texas HVAC permanently.",
@@ -1061,10 +1061,10 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     strategy: {
       eyebrow: "Our Texas HVAC Strategy",
       title: "Six Texas-calibrated workstreams that compound month over month.",
-      lede: "Generic HVAC marketing playbooks don't survive Texas dynamics. The six workstreams below are calibrated to the specific factors driving Texas HVAC demand — climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
+      lede: "Generic HVAC marketing playbooks don't survive Texas dynamics. The six workstreams below are calibrated to the specific factors driving Texas HVAC demand â€” climate stress, equipment lifespan patterns, regulatory environment, and competitive landscape. Each runs every month for the duration of the engagement.",
       items: [
-        "Extreme-heat service pages — emergency AC repair, same-day cooling, dual-stage compressor service, R-454B refrigerant transition messaging.",
-        "Freeze-event content pre-positioned for the next polar vortex — emergency furnace, heat pump service, dual-fuel system installation, backup heating.",
+        "Extreme-heat service pages â€” emergency AC repair, same-day cooling, dual-stage compressor service, R-454B refrigerant transition messaging.",
+        "Freeze-event content pre-positioned for the next polar vortex â€” emergency furnace, heat pump service, dual-fuel system installation, backup heating.",
         "Bilingual Spanish landing pages and Spanish Google Ads for Houston, San Antonio, and Rio Grande Valley markets.",
         "Suburban submarket pages for Frisco, McKinney, Plano, Round Rock, Cedar Park, The Woodlands, Sugar Land, Pearland.",
         "Texas TDLR HVACR license verification integrated with citation profiles for trust signal.",
@@ -1075,11 +1075,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       eyebrow: "Texas Cities We Serve",
       title:
         "Dedicated Texas city pages built around each metro's specific HVAC market.",
-      lede: "Each Texas city below has its own market dynamics, equipment mix, and competitive landscape. The pages below — when launched — will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Texas metros where our HVAC marketing strategy is calibrated most carefully.",
+      lede: "Each Texas city below has its own market dynamics, equipment mix, and competitive landscape. The pages below â€” when launched â€” will go deeper than this state-level overview, with city-specific submarket strategy, local market context, and case study examples. Right now, the cities below represent the Texas metros where our HVAC marketing strategy is calibrated most carefully.",
       cards: [
         {
           h: "Houston",
-          p: "Hottest sustained summers in continental US. Hurricane Beryl + Harvey aftermath, August humidity, Hispanic-majority — bilingual essential. Strong commercial work.",
+          p: "Hottest sustained summers in continental US. Hurricane Beryl + Harvey aftermath, August humidity, Hispanic-majority â€” bilingual essential. Strong commercial work.",
         },
         {
           h: "Dallas",
@@ -1087,11 +1087,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           h: "Austin",
-          p: "Hyper-growth tech market. New construction surge in Cedar Park, Round Rock, Leander. Affluent residential — premium replacement equipment market.",
+          p: "Hyper-growth tech market. New construction surge in Cedar Park, Round Rock, Leander. Affluent residential â€” premium replacement equipment market.",
         },
         {
           h: "San Antonio",
-          p: "Older housing stock + intense heat. Hispanic-majority market — bilingual critical. Military base commercial work, lower competitive density than DFW or Houston.",
+          p: "Older housing stock + intense heat. Hispanic-majority market â€” bilingual critical. Military base commercial work, lower competitive density than DFW or Houston.",
         },
       ],
     },
@@ -1103,11 +1103,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "Can you handle Spanish-language SEO for Houston and San Antonio HVAC?",
-        a: "Yes. Bilingual landing pages and Spanish Google Ads are available on the Authority tier. Houston, San Antonio, and the Rio Grande Valley generate substantial Spanish-language HVAC search at consistently lower keyword competition than English. The ROI is strong for Texas HVAC contractors willing to serve those markets — emergency AC and AC replacement search converts particularly well in Spanish.",
+        a: "Yes. Bilingual landing pages and Spanish Google Ads are available on the Authority tier. Houston, San Antonio, and the Rio Grande Valley generate substantial Spanish-language HVAC search at consistently lower keyword competition than English. The ROI is strong for Texas HVAC contractors willing to serve those markets â€” emergency AC and AC replacement search converts particularly well in Spanish.",
       },
       {
         q: "Will this help during freeze events like 2021?",
-        a: "This is one of the highest-leverage windows for Texas HVAC marketing. We pre-write emergency freeze content — furnace repair, heat pump emergency service, dual-fuel installation, frozen heat pump thawing — and pre-position your GBP for the spike. Pre-ranked Texas HVAC contractors capture disproportionate share of post-freeze emergency call volume. The 2021 polar vortex was a year's worth of bookings for HVAC contractors holding top map pack positions.",
+        a: "This is one of the highest-leverage windows for Texas HVAC marketing. We pre-write emergency freeze content â€” furnace repair, heat pump emergency service, dual-fuel installation, frozen heat pump thawing â€” and pre-position your GBP for the spike. Pre-ranked Texas HVAC contractors capture disproportionate share of post-freeze emergency call volume. The 2021 polar vortex was a year's worth of bookings for HVAC contractors holding top map pack positions.",
       },
       {
         q: "Do you handle GBP suspensions for Texas HVAC contractors?",
@@ -1126,11 +1126,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       accentTail: "Your Specific Metro.",
       lede: "Five-page written report covering current map pack position across Texas metros that matter to your business, GBP health (and any suspension risks), category and attribute gaps, manufacturer credential opportunities, review velocity vs the Texas HVAC contractors outranking you, and the specific work required to move your business into the three-pack. Delivered within five business days.",
       checks: [
-        "No long-term contract — month to month",
+        "No long-term contract â€” month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $750/mo Â· No setup fee",
         "Free Texas audit before any commitment",
-        "Active across all Texas metros — Houston, Dallas, Austin, San Antonio and beyond",
+        "Active across all Texas metros â€” Houston, Dallas, Austin, San Antonio and beyond",
       ],
     },
   },
