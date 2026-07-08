@@ -1,0 +1,598 @@
+/* ============================================================
+   Zonic · Nonprofit Marketing Agency
+   The page reuses the home-inspector SHELL (nav + left content /
+   right sticky form + form card) from homeInspAgency.css, but every
+   CONTENT SECTION below is a faithful port of the reference template
+   (zonic-media-landing.html) — same content, cards, numbers, icons,
+   and colors. Only the page layout differs (content left, form right).
+
+   Palette (from the template):
+   Ink #14243D · Parchment #F5F1E8 · Brass #B08A3E · Sage #5B7362 · Paper #FBFAF6
+   Type: inherits the site font (same as the home-inspector page).
+   ============================================================ */
+
+.hia-page.npm-page {
+  /* Shell/form variables (drive the reused hia- layout + form card). */
+  --navy: #14243d; /* ink */
+  --navy-2: #22364f; /* ink-soft */
+  --navy-3: #2f4459;
+  --slate: #46586e;
+  --slate-light: #7c879a;
+  --orange: #b08a3e; /* brass */
+  --orange-dark: #8f6d2c;
+  --orange-tint: #f2ead8;
+  --hia-white: #fbfaf6; /* paper */
+  --bg-alt: #f5f1e8; /* parchment */
+  --border: #e6dfcd;
+  --border-strong: #cdbf9c;
+  --text: #14243d;
+
+  /* Template palette (drives the faithful section ports below). */
+  --ink: #14243d;
+  --ink-soft: #22364f;
+  --parchment: #f5f1e8;
+  --parchment-deep: #ece5d6;
+  --brass: #b08a3e;
+  --brass-bright: #c69a45;
+  --sage: #5b7362;
+  --paper: #fbfaf6;
+  --line: rgba(20, 36, 61, 0.12);
+  --ink-70: rgba(20, 36, 61, 0.72);
+  --ink-55: rgba(20, 36, 61, 0.55);
+  --cream-70: rgba(245, 241, 232, 0.78);
+  --cream-45: rgba(245, 241, 232, 0.5);
+}
+
+/* ──────────────── CTAs (ink bg, white text) ──────────────── */
+.npm-page .hia-btn-primary,
+.npm-page .hia-btn-primary:link,
+.npm-page .hia-btn-primary:visited,
+.npm-page .hia-form-submit,
+.npm-page .hia-nav-cta,
+.npm-page .hia-nav-cta:link,
+.npm-page .hia-nav-cta:visited {
+  background: var(--ink);
+  color: #ffffff;
+}
+.npm-page .hia-btn-primary:hover,
+.npm-page .hia-form-submit:hover:not(:disabled),
+.npm-page .hia-nav-cta:hover {
+  background: var(--ink-soft);
+  color: #ffffff;
+}
+
+/* "Free Consult" stamp on the form — white text on brass. */
+.npm-page .hia-form-stamp {
+  color: #ffffff;
+}
+
+/* Form card: flat, no shadow (keeps the brass border + top bar). */
+.npm-page .hia-form-card {
+  box-shadow: none;
+}
+.npm-page .hia-form-stamp {
+  box-shadow: 0 4px 12px -2px rgba(176, 138, 62, 0.4);
+}
+.npm-page .hia-nav-phone::before {
+  box-shadow: 0 0 0 4px rgba(176, 138, 62, 0.15);
+}
+.npm-page .hia-final-cta::before {
+  background: radial-gradient(
+    circle,
+    rgba(176, 138, 62, 0.16) 0%,
+    transparent 60%
+  );
+}
+.npm-page .hia-final-cta::after {
+  background: radial-gradient(
+    circle,
+    rgba(91, 115, 98, 0.12) 0%,
+    transparent 60%
+  );
+}
+.npm-page .hia-fc-form,
+.npm-page .hia-fc-form:link,
+.npm-page .hia-fc-form:visited,
+.npm-page .hia-fc-form:hover {
+  color: #ffffff;
+}
+
+/* ──────────────── SECTION HEADINGS (template look) ──────────────── */
+.npm-page .hia-sec-label {
+  letter-spacing: 0.14em;
+}
+/* Emphasized words are italic accents, matching the template. */
+.npm-page .hia-hero h1 em {
+  font-style: italic;
+  color: var(--brass-bright);
+}
+.npm-page .hia-sec-h2 em {
+  font-style: italic;
+  color: var(--sage);
+}
+.npm-page .hia-final-cta h2 em {
+  font-style: italic;
+  color: var(--brass-bright);
+}
+
+/* ──────────────── HERO SIGNATURE: CASE-FOR-SUPPORT CARD ──────────────── */
+.npm-cfs {
+  background: var(--parchment);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 26px 24px;
+  margin: 8px 0 4px;
+  width: 100%;
+}
+.npm-cfs-label {
+  font-size: 11.5px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink-55);
+}
+.npm-cfs-raw {
+  font-size: 14px;
+  color: var(--ink-70);
+  margin-top: 8px;
+  padding: 12px 14px;
+  background: var(--paper);
+  border: 1px dashed var(--border-strong);
+  border-radius: 6px;
+}
+.npm-cfs-arrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 2px;
+  color: var(--brass);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.npm-cfs-arrow .npm-ln {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brass), transparent);
+}
+.npm-cfs-story {
+  font-size: 20px;
+  line-height: 1.42;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.npm-cfs-story strong {
+  color: var(--brass);
+  font-weight: 500;
+}
+.npm-cfs-foot {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-55);
+  line-height: 1.55;
+}
+
+/* ──────────────── TRUST STRIP (editorial stat band) ──────────────── */
+.npm-strip {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.npm-strip-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.npm-stat {
+  position: relative;
+  padding: 26px 28px;
+  border-left: 1px solid var(--line);
+}
+.npm-stat:first-child {
+  border-left: none;
+}
+/* Brass hairline tick — the same signature motif as the section eyebrows. */
+.npm-stat::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 28px;
+  width: 22px;
+  height: 2px;
+  background: var(--brass);
+}
+.npm-stat b {
+  display: block;
+  margin-top: 18px;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.npm-stat span {
+  display: block;
+  margin-top: 9px;
+  font-size: 13.5px;
+  color: var(--ink-55);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+.npm-strip-txt {
+  margin: 0;
+  padding: 16px 28px;
+  border-top: 1px solid var(--line);
+  background: var(--parchment);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink-55);
+  line-height: 1.55;
+}
+@media (max-width: 600px) {
+  .npm-strip-stats {
+    grid-template-columns: 1fr;
+  }
+  .npm-stat {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding: 20px 24px;
+  }
+  .npm-stat:first-child {
+    border-top: none;
+  }
+  .npm-stat::before {
+    top: 20px;
+    left: 24px;
+  }
+  .npm-stat b {
+    margin-top: 14px;
+    font-size: 28px;
+  }
+  .npm-strip-txt {
+    padding: 14px 24px;
+  }
+}
+
+/* ──────────────── UNDERSTANDING (problems) ──────────────── */
+.npm-prob-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.npm-prob {
+  background: var(--paper);
+  padding: 30px 26px;
+  transition: background 0.25s;
+}
+.npm-prob:hover {
+  background: var(--parchment);
+}
+.npm-prob-n {
+  font-size: 14px;
+  color: var(--brass);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.npm-prob h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 12px 0 12px;
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.npm-prob p {
+  font-size: 15px;
+  color: var(--ink-70);
+  line-height: 1.62;
+}
+
+/* ──────────────── SERVICES (dark block) ──────────────── */
+.npm-svc {
+  background: var(--ink);
+  border-radius: 14px;
+  padding: 48px 40px;
+}
+.npm-svc .hia-sec-label {
+  color: var(--brass-bright);
+}
+.npm-svc .hia-sec-label::before {
+  background: var(--brass-bright);
+}
+.npm-svc .hia-sec-h2 {
+  color: var(--parchment);
+}
+.npm-svc .hia-sec-h2 em,
+.npm-svc .hia-accent {
+  color: var(--brass-bright);
+}
+.npm-svc .hia-sec-sub {
+  color: var(--cream-70);
+}
+.npm-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.npm-scard {
+  background: rgba(245, 241, 232, 0.04);
+  border: 1px solid rgba(245, 241, 232, 0.14);
+  border-radius: 8px;
+  padding: 28px 26px;
+  transition: transform 0.22s, border-color 0.22s, background 0.22s;
+}
+.npm-scard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(176, 138, 62, 0.5);
+  background: rgba(245, 241, 232, 0.06);
+}
+.npm-scard-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(176, 138, 62, 0.14);
+  border: 1px solid rgba(176, 138, 62, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.npm-scard h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--parchment);
+  letter-spacing: -0.01em;
+  margin-bottom: 11px;
+  line-height: 1.22;
+}
+.npm-scard p {
+  font-size: 14.5px;
+  color: var(--cream-70);
+  line-height: 1.62;
+}
+.npm-scard .npm-tag {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brass-bright);
+}
+
+/* ──────────────── WHO WE SERVE ──────────────── */
+.npm-serve-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.npm-serve-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 20px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.npm-serve-item:hover {
+  border-color: var(--brass);
+  transform: translateY(-3px);
+}
+.npm-serve-item .npm-dot {
+  flex-shrink: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--brass);
+  margin-top: 6px;
+}
+.npm-serve-item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 5px;
+  color: var(--ink);
+}
+.npm-serve-item p {
+  font-size: 13.5px;
+  color: var(--ink-55);
+  line-height: 1.5;
+}
+.npm-note {
+  font-size: 15.5px;
+  color: var(--ink-70);
+  line-height: 1.7;
+  max-width: 46em;
+  margin: 30px 0 0;
+}
+.npm-note strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ──────────────── APPROACH ──────────────── */
+.npm-steps {
+  border-top: 1px solid var(--line);
+}
+.npm-step {
+  display: flex;
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.npm-step-mark {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--brass);
+  color: var(--brass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+.npm-step h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.npm-step p {
+  font-size: 15px;
+  color: var(--ink-70);
+  line-height: 1.6;
+}
+.npm-aside {
+  background: var(--parchment);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px 28px;
+  margin-top: 24px;
+}
+.npm-aside-q {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.36;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+.npm-aside-q strong {
+  color: var(--sage);
+  font-weight: 500;
+}
+.npm-aside p {
+  font-size: 15px;
+  color: var(--ink-70);
+  margin: 16px 0 0;
+  line-height: 1.7;
+}
+.npm-pledge {
+  margin: 22px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+.npm-pledge li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.npm-pledge li::before {
+  content: "✓";
+  color: var(--sage);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ──────────────── CAPABILITY (sage block) ──────────────── */
+.npm-cap {
+  background: var(--sage);
+  border-radius: 14px;
+  padding: 48px 40px;
+}
+.npm-cap .hia-sec-label {
+  color: var(--parchment);
+}
+.npm-cap .hia-sec-label::before {
+  background: var(--parchment);
+}
+.npm-cap .hia-sec-h2 {
+  color: #ffffff;
+}
+.npm-cap .hia-sec-h2 em,
+.npm-cap .hia-accent {
+  color: var(--parchment);
+}
+.npm-cap .hia-sec-sub {
+  color: var(--cream-70);
+}
+.npm-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 18px;
+}
+.npm-cap-item {
+  background: rgba(20, 36, 61, 0.24);
+  border: 1px solid rgba(245, 241, 232, 0.18);
+  border-radius: 8px;
+  padding: 24px 22px;
+}
+.npm-cap-item b {
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.npm-cap-item span {
+  font-size: 14px;
+  color: var(--cream-70);
+  line-height: 1.5;
+  display: block;
+}
+.npm-cap-note {
+  margin-top: 30px;
+  font-size: 15px;
+  color: var(--cream-70);
+  max-width: 44em;
+  line-height: 1.7;
+}
+.npm-cap-note strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ──────────────── MINIMAL FOOTER (from template) ──────────────── */
+.npm-footer-simple {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-top: none;
+  padding-top: 0;
+}
+.npm-footer-simple .npm-footer-logo {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 575.98px) {
+  .npm-svc,
+  .npm-cap {
+    padding: 36px 22px;
+  }
+  .npm-strip {
+    padding: 22px 20px;
+  }
+  .npm-strip-stats {
+    gap: 26px;
+  }
+}

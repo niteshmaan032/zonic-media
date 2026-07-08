@@ -180,6 +180,13 @@ const industryLinks = [
       "Map pack rankings, GBP, paid ads, maintenance memberships, and reviews tuned to HVAC seasonal demand peaks.",
     link: "/services/hvac-marketing-agency",
   },
+  {
+    id: "non-profit-marketing-agency",
+    title: "Nonprofit Marketing",
+    description:
+      "Digital fundraising and advocacy — social, Google Ad Grant, video, and board-ready reporting for mission-driven organizations.",
+    link: "/services/non-profit-marketing-agency",
+  },
 ];
 
 function Navbar() {
