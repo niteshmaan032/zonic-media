@@ -28,6 +28,7 @@
 
 - [All Services](https://www.zonicllc.com/services): Overview of Zonic Media's digital marketing services.
 - [Web Design](https://www.zonicllc.com/services/web-design): Custom, conversion-focused website design and development.
+- [Dental Website Design](https://www.zonicllc.com/services/dental-website-design): Dental practice websites built as patient acquisition systems — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.
 - [Local SEO for HVAC](https://www.zonicllc.com/services/local-seo-services-for-hvac): SEO built for HVAC contractors.

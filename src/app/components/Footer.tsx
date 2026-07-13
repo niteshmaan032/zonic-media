@@ -85,6 +85,11 @@ function Footer() {
                       White-Label Services
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/services/dental-website-design">
+                      Dental Website Design
+                    </Link>
+                  </li>
                 </ul>
 
                 <ul>

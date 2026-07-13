@@ -1,0 +1,1824 @@
+/* Dental Website Design service page — all selectors scoped under .dw-page.
+   Palette mirrors the PrimeCare reference design; typography stays the site font.
+   Side insets track the fixed navbar paddings via --dw-inset (no max-width). */
+
+.dw-page {
+  --dw-navy: #062a5c;
+  --dw-accent: #0c4da2;
+  --dw-hl: #86c2ea;
+  --dw-text: #4d5f77;
+  --dw-light: #f6f9fc;
+  --dw-divider: #e3f2fd;
+  --dw-inset: 100px;
+
+  background: #fff;
+  color: var(--dw-navy);
+  overflow-x: clip;
+}
+
+@media (max-width: 1399.98px) {
+  .dw-page {
+    --dw-inset: 40px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .dw-page {
+    --dw-inset: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dw-page {
+    --dw-inset: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dw-page {
+    --dw-inset: 20px;
+  }
+}
+
+.dw-page .dw-container {
+  padding: 0 var(--dw-inset);
+}
+
+/* ---------- shared ---------- */
+
+.dw-page .dw-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dw-accent);
+  margin-bottom: 14px;
+}
+
+.dw-page .dw-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 3px;
+  background: var(--dw-accent);
+}
+
+.dw-page .dw-h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--dw-navy);
+  margin: 0 0 16px;
+}
+
+.dw-page .dw-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--dw-text);
+  margin: 0 0 14px;
+}
+
+.dw-page .dw-lead a {
+  color: var(--dw-accent);
+  text-decoration: none;
+}
+
+.dw-page .dw-lead a:hover {
+  text-decoration: underline;
+}
+
+.dw-page .dw-hl-text {
+  color: var(--dw-accent);
+}
+
+.dw-page .dw-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 100px;
+  background: var(--dw-accent);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.dw-page .dw-btn:hover {
+  background: var(--dw-navy);
+  color: #fff;
+}
+
+.dw-page .dw-btn-circ {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--dw-accent);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border: 1px solid var(--dw-navy);
+  border-radius: 100px;
+  color: var(--dw-navy);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-btn-ghost:hover {
+  background: var(--dw-accent);
+  border-color: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--dw-accent);
+  padding-bottom: 3px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.dw-page .dw-link-arrow:hover {
+  gap: 12px;
+  color: var(--dw-accent);
+}
+
+.dw-page a:focus-visible,
+.dw-page button:focus-visible {
+  outline: 2px solid var(--dw-accent);
+  outline-offset: 3px;
+}
+
+.dw-page .dw-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.dw-page .dw-sec-head .dw-h2 {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+.dw-page .dw-sec-head-center {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.dw-page .dw-sec-head-center .dw-lead {
+  margin-bottom: 0;
+}
+
+.dw-page section {
+  padding: 64px 0;
+}
+
+/* ---------- 1. hero ---------- */
+
+.dw-page .dw-hero {
+  position: relative;
+  background:
+    radial-gradient(
+      55% 70% at 80% 8%,
+      rgba(117, 179, 224, 0.4) 0%,
+      rgba(117, 179, 224, 0) 70%
+    ),
+    radial-gradient(
+      120% 150% at 15% 0%,
+      #0c4da2 0%,
+      #0a3a7a 55%,
+      #062a5c 100%
+    );
+  padding: 150px 0 90px;
+  overflow: hidden;
+}
+
+.dw-page .dw-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/dental-web/hero-bg.svg") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.dw-page .dw-hero .dw-container {
+  position: relative;
+  z-index: 1;
+}
+
+.dw-page .dw-hero .dw-eyebrow {
+  color: #86c2ea;
+}
+
+.dw-page .dw-hero .dw-eyebrow::before {
+  background: #86c2ea;
+}
+
+.dw-page .dw-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.dw-page .dw-hero-h1 {
+  font-size: clamp(34px, 3.8vw, 56px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.dw-page .dw-h1-img {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 2.1em;
+  height: 0.92em;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0.08em;
+  transform: translateY(-0.06em);
+}
+
+.dw-page .dw-h1-img img {
+  object-fit: cover;
+}
+
+.dw-page .dw-hl {
+  color: var(--dw-hl);
+}
+
+.dw-page .dw-hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 540px;
+  margin: 0 0 28px;
+}
+
+.dw-page .dw-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.dw-page .dw-hero .dw-btn {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-hero .dw-btn:hover {
+  background: #fff;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-hero .dw-btn-ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.dw-page .dw-hero .dw-btn-ghost:hover {
+  background: #fff;
+  border-color: #fff;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-hero a:focus-visible {
+  outline-color: #fff;
+}
+
+.dw-page .dw-hero-stats {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 26px;
+}
+
+.dw-page .dw-stat-num {
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.dw-page .dw-stat-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.dw-page .dw-hero-visual {
+  position: relative;
+}
+
+.dw-page .dw-hero-img {
+  position: relative;
+  aspect-ratio: 4 / 4.4;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.dw-page .dw-hero-img img {
+  object-fit: cover;
+}
+
+.dw-page .dw-hero-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border-radius: 100px;
+  padding: 12px 14px;
+}
+
+.dw-page .dw-hero-badge-stars {
+  display: flex;
+  gap: 3px;
+  color: var(--dw-accent);
+  font-size: 14px;
+}
+
+.dw-page .dw-hero-badge p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--dw-text);
+}
+
+.dw-page .dw-hero-badge p strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-hero-badge-phone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dw-accent);
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.dw-page .dw-hero-badge-phone:hover {
+  background: var(--dw-navy);
+  color: #fff;
+}
+
+/* ---------- 2. contact strip (inside hero) ---------- */
+
+.dw-page .dw-strip-inner {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 12px 12px 12px 0;
+  margin-top: 64px;
+}
+
+.dw-page .dw-strip-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 32px;
+  min-width: 0;
+}
+
+.dw-page .dw-strip-cell + .dw-strip-cell {
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.dw-page .dw-strip-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--dw-accent);
+  color: #fff;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-strip-cell p {
+  margin: 0;
+}
+
+.dw-page .dw-strip-cell p span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 4px;
+}
+
+.dw-page .dw-strip-cell p strong {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dw-page .dw-strip-cell p a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dw-page .dw-strip-cell p a:hover {
+  color: #86c2ea;
+}
+
+.dw-page .dw-strip-cta {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ---------- 3. about / first impressions ---------- */
+
+.dw-page .dw-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.dw-page .dw-collage {
+  position: relative;
+  aspect-ratio: 1 / 1.02;
+}
+
+.dw-page .dw-collage-img-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 58%;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.dw-page .dw-collage-img-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 66%;
+  height: 54%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 8px solid #fff;
+}
+
+.dw-page .dw-collage-img-1 img,
+.dw-page .dw-collage-img-2 img {
+  object-fit: cover;
+}
+
+.dw-page .dw-collage-badge {
+  position: absolute;
+  top: 24%;
+  left: calc(72% - 59px);
+  width: 118px;
+  height: 118px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.dw-page .dw-collage-badge svg {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  animation: dw-spin 14s linear infinite;
+}
+
+.dw-page .dw-collage-badge svg text {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  fill: var(--dw-accent);
+}
+
+.dw-page .dw-collage-badge-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--dw-accent);
+  color: #fff;
+  font-size: 18px;
+}
+
+@keyframes dw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dw-page .dw-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
+  margin: 24px 0 30px;
+}
+
+.dw-page .dw-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-check svg {
+  color: var(--dw-accent);
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+/* ---------- 4. what we build — icon cards ---------- */
+
+.dw-page .dw-services {
+  background: var(--dw-light);
+}
+
+.dw-page .dw-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.dw-page .dw-card {
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--dw-accent);
+}
+
+.dw-page .dw-card-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(12, 77, 162, 0.1);
+  color: var(--dw-accent);
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.dw-page .dw-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 10px;
+}
+
+.dw-page .dw-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--dw-text);
+  margin: 0;
+}
+
+/* ---------- 5. split band ---------- */
+
+.dw-page .dw-band {
+  padding: 0;
+}
+
+.dw-page .dw-band-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 500px;
+}
+
+.dw-page .dw-band-content {
+  background: var(--dw-navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 80px 72px var(--dw-inset);
+}
+
+.dw-page .dw-band-content .dw-h2 {
+  color: #fff;
+}
+
+.dw-page .dw-band-content .dw-lead {
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+.dw-page .dw-band-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 32px;
+  margin: 36px 0;
+  max-width: 520px;
+}
+
+.dw-page .dw-band-stat {
+  border-left: 2px solid var(--dw-accent);
+  padding-left: 16px;
+}
+
+.dw-page .dw-band-stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.dw-page .dw-band-stat span {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.dw-page .dw-band-content .dw-btn {
+  align-self: flex-start;
+  margin-top: 20px;
+  background: #fff;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-band-content .dw-btn:hover {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-band-content .dw-btn .dw-btn-circ {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-band-media {
+  position: relative;
+  min-height: 360px;
+}
+
+.dw-page .dw-band-media img {
+  object-fit: cover;
+}
+
+/* ---------- 6. patient acquisition system ---------- */
+
+.dw-page .dw-system {
+  background: var(--dw-light);
+}
+
+.dw-page .dw-feat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.dw-page .dw-feat-card {
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 20px;
+  padding: 30px 26px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-feat-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--dw-accent);
+}
+
+.dw-page .dw-feat-card .dw-card-icon {
+  margin-bottom: 20px;
+}
+
+.dw-page .dw-feat-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 8px;
+}
+
+.dw-page .dw-feat-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--dw-text);
+  margin: 0;
+}
+
+/* ---------- 7. anatomy checklist ---------- */
+
+.dw-page .dw-anatomy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.dw-page .dw-anatomy-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.dw-page .dw-anatomy-item {
+  display: flex;
+  gap: 12px;
+  border: 1px solid var(--dw-divider);
+  border-radius: 16px;
+  padding: 20px;
+  transition: border-color 0.25s ease;
+}
+
+.dw-page .dw-anatomy-item:hover {
+  border-color: var(--dw-accent);
+}
+
+.dw-page .dw-anatomy-item svg {
+  color: var(--dw-accent);
+  font-size: 19px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.dw-page .dw-anatomy-item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 5px;
+}
+
+.dw-page .dw-anatomy-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--dw-text);
+  margin: 0;
+}
+
+.dw-page .dw-anatomy-cta {
+  margin-top: 28px;
+}
+
+/* ---------- 8. why choose us — gradient cards ---------- */
+
+.dw-page .dw-why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.dw-page .dw-why-card {
+  border-radius: 20px;
+  padding: 34px 30px;
+  background: var(--dw-light);
+  border: 1px solid var(--dw-divider);
+  color: var(--dw-navy);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--dw-accent);
+}
+
+.dw-page .dw-why-card-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(12, 77, 162, 0.1);
+  color: var(--dw-accent);
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.dw-page .dw-why-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 10px;
+}
+
+.dw-page .dw-why-card p {
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--dw-text);
+  margin: 0;
+}
+
+.dw-page .dw-why-card p a {
+  color: var(--dw-accent);
+  text-decoration: none;
+}
+
+.dw-page .dw-why-card p a:hover {
+  text-decoration: underline;
+}
+
+.dw-page .dw-why-banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  flex-wrap: wrap;
+  background:
+    radial-gradient(
+      70% 130% at 100% 0%,
+      rgba(117, 179, 224, 0.42) 0%,
+      rgba(117, 179, 224, 0) 55%
+    ),
+    linear-gradient(135deg, #0c4da2 0%, #0a3a7a 45%, #062a5c 100%);
+  border-radius: 26px;
+  padding: 46px 52px;
+  margin-top: 44px;
+}
+
+.dw-page .dw-why-banner::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 42px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.dw-page .dw-why-banner-text {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.dw-page .dw-why-banner .dw-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 14px;
+}
+
+.dw-page .dw-why-banner .dw-eyebrow::before {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dw-page .dw-why-banner h3 {
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.dw-page .dw-why-banner p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  max-width: 560px;
+}
+
+.dw-page .dw-why-banner-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-why-banner .dw-btn {
+  background: #fff;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-why-banner .dw-btn:hover {
+  background: var(--dw-navy);
+  color: #fff;
+}
+
+.dw-page .dw-why-banner .dw-btn .dw-btn-circ {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+/* ---------- 9. how it works — steps ---------- */
+
+.dw-page .dw-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.dw-page .dw-step {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--dw-divider);
+  padding-top: 24px;
+  transition: border-color 0.25s ease;
+}
+
+.dw-page .dw-step:hover {
+  border-top-color: var(--dw-accent);
+}
+
+.dw-page .dw-step h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 10px;
+}
+
+.dw-page .dw-step p {
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--dw-text);
+  margin: 0 0 22px;
+}
+
+.dw-page .dw-step-num {
+  margin-top: auto;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(12, 77, 162, 0.55);
+}
+
+/* ---------- 10. banner (full width) ---------- */
+
+.dw-page .dw-banner {
+  padding: 0;
+  position: relative;
+  background:
+    radial-gradient(
+      60% 90% at 85% 10%,
+      rgba(117, 179, 224, 0.35) 0%,
+      rgba(117, 179, 224, 0) 70%
+    ),
+    linear-gradient(150deg, #0a3a7a 0%, #062a5c 65%);
+  overflow: hidden;
+}
+
+.dw-page .dw-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/dental-web/hero-bg.svg") center / cover no-repeat;
+  pointer-events: none;
+}
+
+.dw-page .dw-banner-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  min-height: 70vh;
+  padding: 90px var(--dw-inset) 0;
+}
+
+.dw-page .dw-banner-copy {
+  padding-bottom: 70px;
+}
+
+.dw-page .dw-banner-copy .dw-eyebrow {
+  color: #86c2ea;
+  margin-bottom: 20px;
+}
+
+.dw-page .dw-banner-copy .dw-eyebrow::before {
+  background: #86c2ea;
+}
+
+.dw-page .dw-banner-copy .dw-h2 {
+  color: #fff;
+  font-size: clamp(32px, 3.2vw, 48px);
+  margin-bottom: 22px;
+}
+
+.dw-page .dw-banner-copy .dw-lead {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 17px;
+  margin-bottom: 34px;
+}
+
+.dw-page .dw-banner-copy .dw-btn {
+  background: #fff;
+  color: var(--dw-navy);
+}
+
+.dw-page .dw-banner-copy .dw-btn:hover {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-banner-copy .dw-btn .dw-btn-circ {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-banner-media {
+  position: relative;
+  align-self: end;
+  height: 100%;
+  min-height: 540px;
+}
+
+.dw-page .dw-banner-media img {
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.dw-page .dw-banner-feats {
+  display: grid;
+  gap: 34px;
+  padding-bottom: 70px;
+}
+
+.dw-page .dw-banner-feat {
+  display: flex;
+  gap: 16px;
+}
+
+.dw-page .dw-banner-feat-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--dw-accent);
+  color: #fff;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-banner-feat h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  margin: 2px 0 6px;
+}
+
+.dw-page .dw-banner-feat p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0;
+}
+
+/* ---------- 11. marquee ---------- */
+
+.dw-page .dw-marquee {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--dw-divider);
+  overflow: hidden;
+}
+
+.dw-page .dw-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  width: max-content;
+  animation: dw-marquee 32s linear infinite;
+}
+
+.dw-page .dw-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 44px;
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--dw-navy);
+  white-space: nowrap;
+}
+
+.dw-page .dw-marquee-item svg {
+  color: var(--dw-accent);
+  font-size: 0.6em;
+  flex-shrink: 0;
+}
+
+@keyframes dw-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- 12. nationwide ---------- */
+
+.dw-page .dw-nationwide {
+  background: linear-gradient(
+    165deg,
+    #f6f9fc 0%,
+    #e3f2fd 40%,
+    #cfe6fb 100%
+  );
+}
+
+.dw-page .dw-nationwide .dw-sec-head-center {
+  margin-bottom: 34px;
+}
+
+.dw-page .dw-nationwide .dw-chip {
+  background: #fff;
+  border-color: #d4e9fc;
+}
+
+.dw-page .dw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 860px;
+  margin: 0 auto 36px;
+}
+
+.dw-page .dw-chip {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  border: 1px solid var(--dw-divider);
+  background: var(--dw-light);
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+.dw-page .dw-nationwide-cta {
+  text-align: center;
+}
+
+/* ---------- process/faq split + phone badge ---------- */
+
+.dw-page .dw-split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.dw-page .dw-faq-cta {
+  margin-top: 28px;
+}
+
+.dw-page .global-faqs-accordion .accordion-item {
+  border: 1px solid var(--dw-divider);
+  border-radius: 16px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.dw-page .global-faqs-accordion .accordion-button {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  background: #fff;
+  padding: 20px 24px;
+  box-shadow: none;
+}
+
+.dw-page .global-faqs-accordion .accordion-button:not(.collapsed) {
+  color: var(--dw-accent);
+  background: #fff;
+}
+
+.dw-page .global-faqs-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--dw-divider);
+}
+
+.dw-page .global-faqs-accordion .accordion-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--dw-text);
+  padding: 0 24px 22px;
+}
+
+/* ---------- grow further — icon cards ---------- */
+
+.dw-page .dw-grow {
+  padding-top: 0;
+}
+
+.dw-page .dw-grow-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.dw-page .dw-grow-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-grow-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--dw-accent);
+}
+
+.dw-page .dw-grow-card .dw-card-icon {
+  background: var(--dw-accent);
+  color: #fff;
+}
+
+.dw-page .dw-grow-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin: 0 0 10px;
+}
+
+.dw-page .dw-grow-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--dw-text);
+  margin: 0 0 20px;
+}
+
+.dw-page .dw-grow-card .dw-grow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dw-accent);
+}
+
+/* ---------- lead form section ---------- */
+
+.dw-page .dw-form-sec {
+  background: var(--dw-light);
+  border-top: 1px solid var(--dw-divider);
+}
+
+.dw-page .dw-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* left consult panel (dark) */
+
+.dw-page .dw-form-aside {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 24px;
+  padding: 48px 44px;
+  background:
+    radial-gradient(
+      70% 90% at 100% 0%,
+      rgba(117, 179, 224, 0.4) 0%,
+      rgba(117, 179, 224, 0) 60%
+    ),
+    linear-gradient(160deg, #0c4da2 0%, #062a5c 70%);
+}
+
+.dw-page .dw-form-aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/dental-web/hero-bg.svg") center / cover no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.dw-page .dw-form-aside > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dw-page .dw-form-aside .dw-eyebrow {
+  color: #86c2ea;
+}
+
+.dw-page .dw-form-aside .dw-eyebrow::before {
+  background: #86c2ea;
+}
+
+.dw-page .dw-form-aside .dw-h2 {
+  color: #fff;
+}
+
+.dw-page .dw-form-aside .dw-lead {
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 0;
+  max-width: 440px;
+}
+
+.dw-page .dw-form-contacts {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.dw-page .dw-form-contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.dw-page .dw-form-contact:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(117, 179, 224, 0.6);
+}
+
+.dw-page .dw-form-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--dw-accent);
+  color: #fff;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-form-contact-txt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dw-page .dw-form-contact-txt small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 2px;
+}
+
+.dw-page .dw-form-contact-txt strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  word-break: break-word;
+}
+
+.dw-page .dw-form-main {
+  display: flex;
+}
+
+.dw-page .dw-form-main .dwf-card {
+  width: 100%;
+}
+
+/* ---------- dwf lead form (home-inspector style, indigo) ---------- */
+
+.dw-page .dwf-card {
+  background: #fff;
+  padding: 30px 28px;
+  border-radius: 20px;
+  position: relative;
+  border: 1.5px solid var(--dw-accent);
+}
+
+.dw-page .dwf-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: var(--dw-accent);
+  border-radius: 0 0 8px 8px;
+}
+
+.dw-page .dwf-stamp {
+  position: absolute;
+  top: -14px;
+  right: 22px;
+  background: var(--dw-accent);
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.dw-page .dwf-head {
+  margin-bottom: 18px;
+  padding-top: 6px;
+}
+
+.dw-page .dwf-head h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--dw-navy);
+}
+
+.dw-page .dwf-head p {
+  color: var(--dw-text);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.dw-page .dwf-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dw-page .dwf-fg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.dw-page .dwf-fg-row .dwf-fg {
+  min-width: 0;
+}
+
+.dw-page .dwf-fg label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--dw-navy);
+  margin-bottom: 6px;
+}
+
+.dw-page .dwf-fg input,
+.dw-page .dwf-fg textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--dw-divider);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14.5px;
+  background: var(--dw-light);
+  transition: all 0.18s;
+  color: var(--dw-navy);
+}
+
+.dw-page .dwf-fg textarea {
+  resize: vertical;
+  min-height: 82px;
+  line-height: 1.55;
+}
+
+.dw-page .dwf-fg input::placeholder,
+.dw-page .dwf-fg textarea::placeholder {
+  color: #8ea6c2;
+}
+
+.dw-page .dwf-fg input:focus,
+.dw-page .dwf-fg textarea:focus {
+  outline: none;
+  border-color: var(--dw-accent);
+  background: #fff;
+}
+
+.dw-page .dwf-fg input[aria-invalid="true"],
+.dw-page .dwf-fg textarea[aria-invalid="true"] {
+  border-color: #ef4444;
+}
+
+.dw-page .dwf-field-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.dw-page .dwf-submit {
+  background: var(--dw-accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dw-page .dwf-submit:hover:not(:disabled) {
+  background: var(--dw-navy);
+  transform: translateY(-1px);
+}
+
+.dw-page .dwf-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.dw-page .dwf-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: dwf-spin 0.8s linear infinite;
+}
+
+@keyframes dwf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dw-page .dwf-form-error {
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.dw-page .dwf-sms-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 11.5px;
+  color: var(--dw-text);
+  line-height: 1.55;
+  margin: 2px 0 4px;
+  padding: 0;
+  border-top: none;
+}
+
+.dw-page .dwf-sms-consent input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--dw-accent);
+  flex-shrink: 0;
+}
+
+.dw-page .dwf-sms-consent a {
+  color: var(--dw-accent);
+  font-weight: 500;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1199.98px) {
+  .dw-page .dw-feat-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dw-page .dw-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+  .dw-page .dw-banner-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    padding-top: 56px;
+  }
+
+  .dw-page .dw-banner-media {
+    display: none;
+  }
+
+  .dw-page .dw-band-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dw-page section {
+    padding: 48px 0;
+  }
+
+  .dw-page .dw-hero-grid,
+  .dw-page .dw-about-grid,
+  .dw-page .dw-split-grid,
+  .dw-page .dw-form-grid,
+  .dw-page .dw-anatomy-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .dw-page .dw-cards,
+  .dw-page .dw-grow-cards,
+  .dw-page .dw-why-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dw-page .dw-sec-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .dw-page .dw-hero-stats {
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+
+  .dw-page .dw-hero-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dw-page .dw-strip-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 20px;
+    margin-top: 44px;
+  }
+
+  .dw-page .dw-strip-cell {
+    padding: 16px 0;
+  }
+
+  .dw-page .dw-strip-cell + .dw-strip-cell {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .dw-page .dw-strip-cta {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .dw-page .dw-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dw-page .dw-band-content {
+    padding: 64px var(--dw-inset);
+  }
+
+  .dw-page .dw-banner-grid {
+    grid-template-columns: 1fr;
+    padding: 48px var(--dw-inset);
+    gap: 36px;
+  }
+
+  .dw-page .dw-banner-copy,
+  .dw-page .dw-banner-feats {
+    padding-bottom: 0;
+  }
+
+  .dw-page .dw-anatomy-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dw-page .dw-hero {
+    padding: 110px 0 60px;
+  }
+
+  .dw-page .dw-feat-cards,
+  .dw-page .dw-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .dw-page .dw-checks {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dw-page .dw-collage {
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .dw-page .dw-collage-badge {
+    width: 96px;
+    height: 96px;
+    left: calc(72% - 48px);
+  }
+
+  .dw-page .dw-collage-badge-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .dw-page .dw-band-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dw-page .dw-why-banner {
+    padding: 34px 26px;
+    gap: 28px;
+  }
+
+  .dw-page .dw-why-banner::before {
+    display: none;
+  }
+
+  .dw-page .dw-form-aside {
+    padding: 36px 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .dw-page .dwf-fg-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-page .dw-card,
+  .dw-page .dw-feat-card,
+  .dw-page .dw-why-card,
+  .dw-page .dw-grow-card,
+  .dw-page .dw-contact-item,
+  .dw-page .dw-anatomy-item {
+    transition: none;
+  }
+
+  .dw-page .dw-collage-badge svg,
+  .dw-page .dw-marquee-track {
+    animation: none;
+  }
+}
