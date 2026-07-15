@@ -90,6 +90,11 @@ function Footer() {
                       Dental Website Design
                     </Link>
                   </li>
+                  <li>
+                    <Link href="/services/travel-tourism-marketing-agency">
+                      Travel &amp; Tourism Marketing
+                    </Link>
+                  </li>
                 </ul>
 
                 <ul>
@@ -160,6 +165,20 @@ function Footer() {
                   src="/images/Partner.png"
                   alt="Yelp Advertising Partner"
                 />
+                <a
+                  href="https://www.trustpilot.com/review/zonicllc.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4"
+                >
+                  <Image
+                    className="footer-trustpilot-badge"
+                    width={110}
+                    height={51}
+                    src="/images/Trustpilot-Logo.png"
+                    alt="Trustpilot Reviews"
+                  />
+                </a>
               </div>
             </Col>
           </Row>

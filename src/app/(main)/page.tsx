@@ -291,6 +291,19 @@ export default async function Home() {
                     src="/images/Partner.png"
                     alt="Yelp Advertising Partner"
                   />
+                  <a
+                    href="https://www.trustpilot.com/review/zonicllc.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className="hero-trust-badge"
+                      width={110}
+                      height={51}
+                      src="/images/Trustpilot-Logo.png"
+                      alt="Trustpilot Reviews"
+                    />
+                  </a>
                 </div>
                 <div className="hero-trust">
                   <span>

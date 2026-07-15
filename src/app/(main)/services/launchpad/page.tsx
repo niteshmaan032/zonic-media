@@ -603,7 +603,7 @@ function page() {
                     <Image
                       src="/images/launchpad-2.jpg"
                       fill
-                      alt="launchpad business launch"
+                      alt="Zonic LaunchPad business setup system illustration"
                     />
                   </div>
                 </Col>
