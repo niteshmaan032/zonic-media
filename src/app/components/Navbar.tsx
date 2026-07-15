@@ -7,6 +7,7 @@ import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import { IoDesktopOutline } from "react-icons/io5";
+import { LuPlaneTakeoff } from "react-icons/lu";
 import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -46,6 +47,13 @@ const services = [
     image: "/images/header-ad-2.webp",
     alt: "google ads",
     link: "/services/google-ads",
+  },
+  {
+    id: "travel-tourism",
+    label: "Travel & Tourism Marketing",
+    image: "/images/header-seo.webp",
+    alt: "travel and tourism marketing",
+    link: "/services/travel-and-tourism-marketing-agency",
   },
 ];
 
@@ -399,6 +407,22 @@ function Navbar() {
                             <span>
                               Local search strategies that help service
                               businesses rank and generate consistent calls.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/services/travel-and-tourism-marketing-agency"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <LuPlaneTakeoff />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Travel &amp; Tourism Marketing</strong>
+                            <span>
+                              Direct-booking growth for hotels, tour operators,
+                              and destinations.
                             </span>
                           </span>
                         </Link>

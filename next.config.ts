@@ -256,6 +256,11 @@ const nextConfig: NextConfig = {
 
       // Services internal redirects
       {
+        source: "/services/travel-tourism-marketing-agency",
+        destination: "/services/travel-and-tourism-marketing-agency",
+        permanent: true,
+      },
+      {
         source: "/services/google-my-business",
         destination: "/services/gmb-reinstatement-help",
         permanent: true,

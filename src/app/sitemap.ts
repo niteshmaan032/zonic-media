@@ -25,7 +25,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/local-seo-services-for-hvac`,  changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/white-label-services`,         changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/dental-website-design`,        changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/services/travel-tourism-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/travel-and-tourism-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-business-profile-services-real-estate-agents`, changeFrequency: "monthly", priority: 0.8 },
 
   // Industry marketing agencies

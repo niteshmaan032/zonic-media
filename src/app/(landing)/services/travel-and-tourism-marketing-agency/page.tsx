@@ -26,7 +26,7 @@ import {
 import { LuPlaneTakeoff } from "react-icons/lu";
 import { RiLineChartLine, RiMegaphoneLine, RiQuillPenLine, RiSearchLine } from "react-icons/ri";
 
-const PAGE_PATH = "/services/travel-tourism-marketing-agency";
+const PAGE_PATH = "/services/travel-and-tourism-marketing-agency";
 
 export const metadata: Metadata = {
   title: "Travel & Tourism Marketing Agency That Books Trips",
@@ -108,32 +108,32 @@ const TravelFaqs = [
   {
     question: "What does a travel and tourism marketing agency actually do?",
     answer:
-      "A travel marketing agency fills the gap between wanderlust and a confirmed booking. We handle the full journey: travel SEO so your brand shows up when people research destinations, paid media that captures high-intent searches, content that sells the experience, and booking-optimized website flows that convert lookers into travelers. Instead of one-off campaigns, you get a system built around your seasons, your margins, and your booking engine.",
+      "A travel marketing agency fills the gap between wanderlust and a confirmed booking. We handle travel SEO so your brand shows up while people research destinations. We run paid media that captures high-intent searches. We create content that sells the experience and booking flows that convert lookers into travelers. The result is a system built around your seasons and your booking engine rather than one-off campaigns.",
   },
   {
     question: "Can you help us reduce our dependence on OTAs like Booking.com and Expedia?",
     answer:
-      "Yes — that is usually the first goal we set. OTA commissions of 15–25% quietly eat the margin on every stay or tour. We grow your direct channel with travel SEO, branded search protection, remarketing to past guests, email and loyalty flows, and a booking experience that gives travelers a reason to book direct — better rates, perks, or flexibility. OTAs stay part of the mix; they just stop being the whole mix.",
+      "Yes. That is usually the first goal we set. OTA commissions of 15–25% quietly eat the margin on every stay or tour. We grow your direct channel with travel SEO and branded search protection. We then add remarketing and email flows plus a booking experience that gives travelers a real reason to book direct. OTAs stay part of the mix without being the whole mix.",
   },
   {
     question: "How do you handle seasonality in travel campaigns?",
     answer:
-      "We plan marketing around your booking windows, not the calendar month. Travelers research 30 to 120 days before they book, so demand-generation content and prospecting campaigns run ahead of your season, while high-intent search and remarketing scale up as booking windows open. In shoulder and off-seasons we shift budget toward packages, events, and nearby drive markets instead of letting spend idle.",
+      "We plan marketing around your booking windows instead of the calendar month. Travelers research 30 to 120 days before they book. Demand generation runs ahead of your season while high-intent search and remarketing scale up as booking windows open. In the off-season we shift budget toward packages and nearby drive markets instead of letting spend idle.",
   },
   {
     question: "How much does travel and tourism marketing cost?",
     answer:
-      "It depends on scope: a single-property hotel needs a different engine than a multi-destination tour operator or a DMO. After a discovery call we quote a flat monthly engagement that covers strategy, execution, and reporting — no hourly billing and no surprise line items. You will always know what is being spent on ads versus agency work, and what each channel is returning in bookings.",
+      "It depends on scope. A single-property hotel needs a different engine than a multi-destination tour operator or a DMO. After a discovery call we quote a flat monthly engagement that covers strategy and reporting with no hourly billing. You will always know what goes to ads versus agency work and what each channel returns in bookings.",
   },
   {
     question: "Who do you work with — hotels, tour operators, or destinations?",
     answer:
-      "All three, plus the wider travel ecosystem: boutique hotels and resorts, vacation rental portfolios, tour and activity operators, cruise and charter companies, travel agencies, and destination marketing organizations. The playbook adapts to each — a resort optimizes for direct stays, an operator for tour departures, a DMO for visitation and partner referrals — but the goal is the same: measurable, bookable demand.",
+      "All three plus the wider travel ecosystem. That includes boutique hotels, vacation rentals, tour operators, cruise companies, travel agencies, and destination marketing organizations. The playbook adapts to each one. A resort optimizes for direct stays while a DMO optimizes for visitation. The goal is always measurable and bookable demand.",
   },
   {
     question: "How soon should we expect results?",
     answer:
-      "Paid campaigns typically produce measurable booking activity within the first 30–60 days. Travel SEO and destination content compound more slowly — meaningful movement usually shows in three to six months, and it keeps building after that. We report both tracks side by side every month, so you can see quick wins funding the long-term asset you are building.",
+      "Paid campaigns typically produce measurable booking activity within the first 30 to 60 days. Travel SEO and destination content compound more slowly. Meaningful movement usually shows in three to six months and keeps building after that. We report both tracks side by side every month so you can watch quick wins fund the long-term asset.",
   },
 ];
 
@@ -179,12 +179,12 @@ const ServiceCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Travel SEO",
-    desc: "Rank for the searches travelers make before they book — destination guides, “best tours in...” queries, and the branded searches OTAs try to steal.",
+    desc: "Rank for the searches travelers make before they book. That includes destination guides and the branded searches OTAs try to steal.",
   },
   {
     icon: <FiTarget aria-hidden="true" />,
     title: "Paid Media & Metasearch",
-    desc: "Google Ads, Performance Max for travel goals, and metasearch placements tuned to booking windows — so budget flows where trips are actually booked.",
+    desc: "Google Ads and metasearch placements tuned to your booking windows. Budget flows to where trips actually get booked.",
   },
   {
     icon: <RiMegaphoneLine aria-hidden="true" />,
@@ -194,17 +194,17 @@ const ServiceCards = [
   {
     icon: <RiQuillPenLine aria-hidden="true" />,
     title: "Destination Content & Storytelling",
-    desc: "Itineraries, guides, and landing pages that sell the experience — written to rank, structured to convert, and built around real traveler questions.",
+    desc: "Itineraries and guides that sell the experience. Every page is written to rank and built around real traveler questions.",
   },
   {
     icon: <FiLayout aria-hidden="true" />,
     title: "Travel Web Design & Booking UX",
-    desc: "Fast, visual websites wired into your booking engine — fewer steps from “this looks amazing” to a confirmed reservation.",
+    desc: "Fast visual websites wired into your booking engine. Fewer steps between “this looks amazing” and a confirmed reservation.",
   },
   {
     icon: <FiMail aria-hidden="true" />,
     title: "Email, CRM & Guest Retention",
-    desc: "Pre-arrival upsells, win-back campaigns, and loyalty flows that turn one-time guests into repeat travelers who book direct.",
+    desc: "Pre-arrival upsells and loyalty flows that turn one-time guests into repeat travelers who book direct.",
   },
 ];
 
@@ -217,7 +217,7 @@ const BentoCards = [
   {
     icon: <FiCalendar aria-hidden="true" />,
     title: "30–120 day booking window",
-    desc: "Travelers research for months — your brand stays visible across the entire journey.",
+    desc: "Travelers research for months. Your brand stays visible across the entire journey.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
@@ -227,12 +227,12 @@ const BentoCards = [
   {
     icon: <FiTrendingUp aria-hidden="true" />,
     title: "Seasonal budget shifts",
-    desc: "Spend follows your booking windows — heavier ahead of peak season, smarter in the shoulder months.",
+    desc: "Spend follows your booking windows. Heavier ahead of peak season and smarter in the shoulder months.",
   },
   {
     icon: <RiLineChartLine aria-hidden="true" />,
     title: "Bookings-first reporting",
-    desc: "Reports read in revenue and cost per booking — never clicks and impressions.",
+    desc: "Reports read in revenue and cost per booking rather than clicks and impressions.",
   },
   {
     icon: <FiUsers aria-hidden="true" />,
@@ -250,17 +250,17 @@ const EngineCards = [
   {
     icon: <FiCalendar aria-hidden="true" />,
     title: "Seasonal demand planning",
-    desc: "Campaigns mapped to your booking windows — demand generation ahead of the season, high-intent capture when windows open.",
+    desc: "Campaigns mapped to your booking windows. Demand generation runs ahead of the season and high-intent capture scales when windows open.",
   },
   {
     icon: <FiMapPin aria-hidden="true" />,
     title: "Destination content hubs",
-    desc: "Guides and itineraries that earn rankings year-round and hand warm, researched travelers to your offer pages.",
+    desc: "Guides and itineraries that earn rankings year-round and send well-researched travelers to your offer pages.",
   },
   {
     icon: <FaStar aria-hidden="true" />,
     title: "Reviews & reputation",
-    desc: "Review velocity on Google and TripAdvisor, plus reputation flows that keep your score climbing while you sleep.",
+    desc: "Review velocity on Google and TripAdvisor with reputation flows that keep your score climbing while you sleep.",
   },
 ];
 
@@ -268,22 +268,22 @@ const ProcessSteps = [
   {
     num: "01",
     title: "Discovery & market audit",
-    desc: "Your destinations, seasons, margins, and booking data — plus who outranks you and where OTAs intercept your travelers. Everything mapped before a dollar is spent.",
+    desc: "We map your destinations, seasons, and booking data. We also study who outranks you and where OTAs intercept your travelers before a dollar is spent.",
   },
   {
     num: "02",
     title: "Growth itinerary",
-    desc: "A channel-by-channel plan built around your booking windows: what runs ahead of the season, what captures demand in-season, and what fills the shoulder months.",
+    desc: "A channel-by-channel plan built around your booking windows. It covers what runs ahead of the season and what fills the shoulder months.",
   },
   {
     num: "03",
     title: "Launch & creative production",
-    desc: "Campaigns, content, and landing pages go live with tracking wired to actual bookings — not clicks, not impressions, bookings.",
+    desc: "Campaigns and landing pages go live with tracking wired to actual bookings rather than clicks or impressions.",
   },
   {
     num: "04",
     title: "Optimize, report & scale",
-    desc: "Monthly reporting in booking terms your team recognizes: direct revenue, cost per booking, and OTA share — then budget shifts to what is working.",
+    desc: "Monthly reporting in terms your team recognizes: direct revenue, cost per booking, and OTA share. Budget then shifts to what is working.",
   },
 ];
 
@@ -291,17 +291,17 @@ const WhyCards = [
   {
     icon: <RiLineChartLine aria-hidden="true" />,
     title: "Measured in bookings, not clicks",
-    desc: "Every campaign is tracked through to reservations and revenue, so reports read like a booking ledger — not a vanity-metrics slideshow.",
+    desc: "Every campaign is tracked through to reservations and revenue. Reports read like a booking ledger instead of a vanity-metrics slideshow.",
   },
   {
     icon: <LuPlaneTakeoff aria-hidden="true" />,
     title: "Built for how travelers decide",
-    desc: "Dream, research, compare, book — our funnels mirror the real trip-planning journey instead of forcing travelers into a generic ad sequence.",
+    desc: "Travelers dream, research, compare, and then book. Our funnels mirror that real journey instead of forcing a generic ad sequence.",
   },
   {
     icon: <FiCalendar aria-hidden="true" />,
     title: "A partner for every season",
-    desc: "High season, shoulder season, off-season — the strategy adapts each quarter, so momentum from one season funds the next.",
+    desc: "The strategy adapts each quarter across high season and off-season. Momentum from one season funds the next.",
   },
 ];
 
@@ -321,14 +321,14 @@ const GrowCards = [
     href: "/services/google-ads",
     icon: <FiTarget aria-hidden="true" />,
     title: "Google Ads Management",
-    desc: "High-intent search campaigns managed for return — the paid engine behind many of our travel growth plans.",
+    desc: "High-intent search campaigns managed for return. This is the paid engine behind many of our travel growth plans.",
     cta: "Explore Google Ads",
   },
   {
     href: "/services/web-design",
     icon: <FiLayout aria-hidden="true" />,
     title: "Web Design",
-    desc: "Conversion-first websites built to carry traffic from every campaign — fast, visual, and wired for measurement.",
+    desc: "Conversion-first websites built to carry traffic from every campaign. Fast and wired for measurement.",
     cta: "See web design",
   },
   {
@@ -480,11 +480,41 @@ function Page() {
                 into <span className="tt-hero-hl">booked trips</span>
               </h1>
               <p className="tt-hero-sub">
-                Zonic Media grows hotels, tour operators, and destinations with
-                travel SEO, paid media, and booking-ready websites — so more
-                travelers book direct, and fewer bookings leak to OTA
-                commissions.
+                Zonic Media grows hotels and tour operators with travel SEO,
+                paid media, and booking-ready websites. More travelers book
+                direct and fewer bookings leak to OTA commissions.
               </p>
+
+              <div className="tt-hero-badges">
+                <iframe
+                  className="tt-hero-badge-widget"
+                  width="90"
+                  height="90"
+                  loading="lazy"
+                  src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
+                  title="Top Clutch Digital Marketing Company Delaware 2026"
+                ></iframe>
+                <Image
+                  className="tt-hero-badge-widget"
+                  width={90}
+                  height={90}
+                  src="/images/Partner.png"
+                  alt="Yelp Advertising Partner"
+                />
+                <a
+                  href="https://www.trustpilot.com/review/zonicllc.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    className="tt-hero-trust-badge"
+                    width={110}
+                    height={51}
+                    src="/images/Trustpilot-Logo.png"
+                    alt="Trustpilot Reviews"
+                  />
+                </a>
+              </div>
 
               <TravelLeadForm />
 
@@ -537,17 +567,17 @@ function Page() {
                     <span className="tt-hl">You only get one glance.</span>
                   </h2>
                   <p className="tt-lead">
-                    A traveler researches a trip for 30 to 120 days — scrolling
-                    reels, reading guides, comparing tabs. Then the decision
-                    happens in seconds: the brand that showed up at every step,
-                    with the clearest story and the easiest booking flow, wins
-                    the reservation.
+                    A traveler researches a trip for 30 to 120 days. They
+                    scroll reels, read guides, and compare a dozen open tabs.
+                    Then the decision happens in seconds. The brand that showed
+                    up at every step with the clearest story and the easiest
+                    booking flow wins the reservation.
                   </p>
                   <p className="tt-lead">
-                    As a travel and tourism marketing agency, we build your
-                    presence across that whole journey — from the first
-                    daydream search to the confirmation email — so the booking
-                    lands on your engine, not an OTA&apos;s.
+                    As a travel and tourism marketing agency we build your
+                    presence across that whole journey. From the first daydream
+                    search to the confirmation email, the goal stays the same:
+                    the booking lands on your engine instead of an OTA&apos;s.
                   </p>
                   <div className="tt-checks">
                     {AboutChecks.map((check) => (
@@ -557,7 +587,7 @@ function Page() {
                       </div>
                     ))}
                   </div>
-                  <HashScrollLink href="#travel-lead-form" className="tt-btn" offset={120}>
+                  <HashScrollLink href="#tt-contact" className="tt-btn" offset={120}>
                     Plan My Growth Route
                     <span className="tt-btn-circ">
                       <FiArrowUpRight aria-hidden="true" />
@@ -598,10 +628,10 @@ function Page() {
                   Every direct booking is margin you keep
                 </h2>
                 <p className="tt-lead">
-                  OTAs are a distribution channel, not a growth strategy. When
-                  your own site ranks, your ads capture high-intent searches,
-                  and your booking flow converts, each reservation keeps the
-                  commission that used to leave with a middleman.
+                  OTAs are a distribution channel rather than a growth
+                  strategy. When your own site ranks and your booking flow
+                  converts, each reservation keeps the commission that used to
+                  leave with a middleman.
                 </p>
               </div>
 
@@ -642,8 +672,8 @@ function Page() {
                 </h2>
                 <p className="tt-lead">
                   Most travel marketing stops at traffic. Ours follows the
-                  traveler all the way to the confirmation page — four
-                  connected parts, each doing one job.
+                  traveler all the way to the confirmation page through four
+                  connected parts. Each one does a single job.
                 </p>
               </div>
               <div className="tt-engine-cards">
@@ -739,12 +769,11 @@ function Page() {
                   <p className="tt-eyebrow">Free Strategy Call</p>
                   <h3>Not sure which channel should come first?</h3>
                   <p>
-                    Tell us your destinations, seasons, and booking goals.
-                    We&apos;ll map the channels worth your budget — and the ones
-                    that aren&apos;t — on a free call with a strategist, not a
-                    sales script.
+                    Tell us your destinations, seasons, and booking goals. On a
+                    free call a strategist maps the channels worth your budget
+                    and flags the ones that are not.
                   </p>
-                  <HashScrollLink href="#travel-lead-form" className="tt-btn" offset={120}>
+                  <HashScrollLink href="#tt-contact" className="tt-btn" offset={120}>
                     Book a Free Strategy Call
                     <span className="tt-btn-circ">
                       <FiArrowUpRight aria-hidden="true" />
@@ -766,9 +795,8 @@ function Page() {
                 <p className="tt-lead">
                   From a twelve-room boutique hotel to a statewide destination
                   marketing organization, the engagement adapts to how your
-                  business actually books — because everything runs remotely,
-                  we work with travel brands across the United States and
-                  beyond.
+                  business actually books. Everything runs remotely, so we work
+                  with travel brands across the United States and beyond.
                 </p>
               </div>
               <div className="tt-chips">
@@ -779,7 +807,7 @@ function Page() {
                 ))}
               </div>
               <div className="tt-niches-cta">
-                <HashScrollLink href="#travel-lead-form" className="tt-btn" offset={120}>
+                <HashScrollLink href="#tt-contact" className="tt-btn" offset={120}>
                   Get My Growth Plan
                   <span className="tt-btn-circ">
                     <FiArrowUpRight aria-hidden="true" />
@@ -804,10 +832,10 @@ function Page() {
                   </h2>
                   <p className="tt-lead">
                     Straight answers on OTAs, seasonality, pricing, and
-                    timelines. If your question isn&apos;t here, send it through
-                    the form — a strategist replies, not an autoresponder.
+                    timelines. If your question is not covered here, send it
+                    through the form and a strategist will reply.
                   </p>
-                  <HashScrollLink href="#travel-lead-form" className="tt-btn" offset={120}>
+                  <HashScrollLink href="#tt-contact" className="tt-btn" offset={120}>
                     Ask About Your Brand
                     <span className="tt-btn-circ">
                       <FiArrowUpRight aria-hidden="true" />
@@ -853,13 +881,13 @@ function Page() {
                   Let&apos;s fill your next season with direct bookings
                 </h2>
                 <p className="tt-lead tt-lead-light">
-                  Share your travel brand above and we&apos;ll come back with a
-                  channel-by-channel growth plan — free, and yours to keep
+                  Share your travel brand below and we will come back with a
+                  channel-by-channel growth plan. It is free and yours to keep
                   either way.
                 </p>
                 <div className="tt-cta-actions">
                   <HashScrollLink
-                    href="#travel-lead-form"
+                    href="#tt-contact"
                     className="tt-btn tt-btn-white"
                     offset={120}
                   >
@@ -874,6 +902,62 @@ function Page() {
                   </a>
                 </div>
               </div>
+          </section>
+
+          {/* 14. Contact */}
+          <section className="tt-contact" id="tt-contact">
+            <div className="tt-container">
+              <div className="tt-contact-grid">
+                <div className="tt-contact-info">
+                  <p className="tt-eyebrow">Contact Us</p>
+                  <h2 className="tt-h2">
+                    Tell us where you want more bookings
+                  </h2>
+                  <p className="tt-lead">
+                    Share a few details about your travel brand. A strategist
+                    replies within one business day with clear next steps for
+                    your seasons and your booking goals.
+                  </p>
+                  <div className="tt-contact-cards">
+                    <a href={SITE_CONTACT.phoneHref} className="tt-contact-card">
+                      <span className="tt-contact-card-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="tt-contact-card-txt">
+                        <small>Call a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a href={SITE_CONTACT.emailHref} className="tt-contact-card">
+                      <span className="tt-contact-card-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="tt-contact-card-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tt-contact-card"
+                    >
+                      <span className="tt-contact-card-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="tt-contact-card-txt">
+                        <small>Visit our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div className="tt-contact-form">
+                  <TravelLeadForm id="tt-contact-form" variant="stacked" />
+                </div>
+              </div>
+            </div>
           </section>
         </main>
 

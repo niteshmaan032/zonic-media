@@ -91,7 +91,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/travel-tourism-marketing-agency">
+                    <Link href="/services/travel-and-tourism-marketing-agency">
                       Travel &amp; Tourism Marketing
                     </Link>
                   </li>

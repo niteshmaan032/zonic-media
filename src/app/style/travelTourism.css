@@ -53,29 +53,16 @@
 .tt-page .tt-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--tt-blue-deep);
   margin-bottom: 14px;
 }
 
-.tt-page .tt-eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--tt-blue);
-}
-
 .tt-page .tt-eyebrow-light {
   color: #fff;
-}
-
-.tt-page .tt-eyebrow-light::before {
-  background: rgba(255, 255, 255, 0.85);
 }
 
 .tt-page .tt-h2 {
@@ -441,7 +428,7 @@
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -468,6 +455,27 @@
   color: rgba(255, 255, 255, 0.88);
   max-width: 680px;
   margin: 0 auto 38px;
+}
+
+.tt-page .tt-hero-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 34px;
+}
+
+.tt-page .tt-hero-badge-widget {
+  width: 90px;
+  height: 90px;
+  border: 0;
+  object-fit: contain;
+}
+
+.tt-page .tt-hero-trust-badge {
+  width: 110px;
+  height: auto;
 }
 
 .tt-page .tt-hero-chips {
@@ -504,6 +512,14 @@
   max-width: 1240px;
   margin: 0 auto;
   scroll-margin-top: 130px;
+}
+
+/* hero form is a mobile/tablet shortcut — desktop visitors use the
+   contact section form instead */
+@media (min-width: 992px) {
+  .tt-page .tt-hero .ttf-shell {
+    display: none;
+  }
 }
 
 .tt-page .ttf-form {
@@ -1282,6 +1298,156 @@
   gap: 16px;
 }
 
+/* ---------- 14. contact ---------- */
+
+.tt-page .tt-contact {
+  padding: 110px 0;
+  background: #fff;
+  scroll-margin-top: 110px;
+}
+
+.tt-page .tt-contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.tt-page .tt-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.tt-page .tt-contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--tt-sky);
+  border: 1px solid var(--tt-border);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.tt-page .tt-contact-card:hover {
+  background: #fff;
+  border-color: var(--tt-blue);
+}
+
+.tt-page .tt-contact-card-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--tt-border);
+  color: var(--tt-blue-deep);
+  font-size: 20px;
+}
+
+.tt-page .tt-contact-card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tt-page .tt-contact-card-txt small {
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tt-text);
+}
+
+.tt-page .tt-contact-card-txt strong {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--tt-ink);
+  line-height: 1.4;
+}
+
+/* stacked form variant — light card for the contact section */
+.tt-page .ttf-stacked .ttf-form {
+  background: #fff;
+  border: 1px solid var(--tt-border);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.tt-page .ttf-stacked .ttf-bar {
+  grid-template-columns: 1fr 1fr;
+}
+
+.tt-page .ttf-stacked .ttf-fg label {
+  color: var(--tt-ink);
+}
+
+.tt-page .ttf-stacked .ttf-fg input,
+.tt-page .ttf-stacked .ttf-fg textarea {
+  background: var(--tt-sky);
+  border-color: var(--tt-border);
+}
+
+.tt-page .ttf-stacked .ttf-fg textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--tt-border);
+  color: var(--tt-ink);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tt-page .ttf-stacked .ttf-fg textarea::placeholder {
+  color: #8b99b3;
+}
+
+.tt-page .ttf-stacked .ttf-fg textarea:focus {
+  border-color: var(--tt-blue);
+  box-shadow: 0 0 0 3px rgba(85, 143, 252, 0.35);
+}
+
+.tt-page .ttf-stacked .ttf-fg-full {
+  grid-column: 1 / -1;
+}
+
+.tt-page .ttf-stacked .ttf-submit {
+  grid-column: 1 / -1;
+  width: 100%;
+  justify-self: stretch;
+}
+
+.tt-page .ttf-stacked .ttf-field-error,
+.tt-page .ttf-stacked .ttf-form-error {
+  color: #d64545;
+}
+
+.tt-page .ttf-stacked .ttf-sms-consent {
+  color: var(--tt-text);
+}
+
+.tt-page .ttf-stacked .ttf-sms-consent .lead-consent-toggle,
+.tt-page .ttf-stacked .consent-legal-links a {
+  color: var(--tt-blue-deep);
+}
+
+.tt-page .ttf-stacked .consent-legal-links {
+  color: var(--tt-text);
+}
+
+.tt-page .ttf-stacked .consent-legal-sep {
+  color: var(--tt-text);
+}
+
 /* ---------- footer ---------- */
 
 .tt-page .tt-footer {
@@ -1432,15 +1598,17 @@
   .tt-page .tt-why,
   .tt-page .tt-niches,
   .tt-page .tt-faqs,
-  .tt-page .tt-grow {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  .tt-page .tt-grow,
+  .tt-page .tt-contact {
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 
   .tt-page .tt-about-grid,
-  .tt-page .tt-faqs-grid {
+  .tt-page .tt-faqs-grid,
+  .tt-page .tt-contact-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 
   .tt-page .tt-bento {
@@ -1483,7 +1651,94 @@
 
 @media (max-width: 575.98px) {
   .tt-page .tt-hero {
-    padding-top: 130px;
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  /* tighter vertical rhythm on phones */
+  .tt-page .tt-about,
+  .tt-page .tt-services,
+  .tt-page .tt-band,
+  .tt-page .tt-engine,
+  .tt-page .tt-gallery,
+  .tt-page .tt-process,
+  .tt-page .tt-why,
+  .tt-page .tt-niches,
+  .tt-page .tt-faqs,
+  .tt-page .tt-grow,
+  .tt-page .tt-contact {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .tt-page .tt-sec-head-center {
+    margin-bottom: 28px;
+  }
+
+  .tt-page .tt-about-grid,
+  .tt-page .tt-faqs-grid,
+  .tt-page .tt-contact-grid {
+    gap: 28px;
+  }
+
+  .tt-page .tt-cards,
+  .tt-page .tt-engine-cards,
+  .tt-page .tt-steps,
+  .tt-page .tt-why-cards,
+  .tt-page .tt-grow-cards,
+  .tt-page .tt-bento {
+    gap: 14px;
+  }
+
+  .tt-page .tt-hero-sub {
+    margin-bottom: 26px;
+  }
+
+  .tt-page .tt-hero-badges {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .tt-page .tt-checks {
+    margin: 16px 0 22px;
+  }
+
+  .tt-page .tt-why-banner {
+    padding: 22px;
+    gap: 22px;
+  }
+
+  .tt-page .tt-why-cards {
+    margin-bottom: 32px;
+  }
+
+  .tt-page .tt-niches-cta,
+  .tt-page .tt-chips {
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  /* Booking Journey collage: stack the two images normally on phones so
+     they can never overlap off-screen or collapse to zero height */
+  .tt-page .tt-about-visual {
+    min-height: 0;
+    display: grid;
+    gap: 14px;
+  }
+
+  .tt-page .tt-ph-about-1,
+  .tt-page .tt-ph-about-2 {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+
+  .tt-page .tt-ph-about-1 {
+    aspect-ratio: 4 / 3;
+  }
+
+  .tt-page .tt-ph-about-2 {
+    aspect-ratio: 16 / 10;
   }
 
   .tt-page .tt-cards,
@@ -1507,10 +1762,6 @@
 
   .tt-page .tt-checks {
     grid-template-columns: 1fr;
-  }
-
-  .tt-page .tt-about-visual {
-    min-height: 400px;
   }
 
   .tt-page .tt-footer-grid {

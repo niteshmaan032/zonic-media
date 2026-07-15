@@ -29,11 +29,22 @@ type FormValues = {
   email: string;
   contact: string;
   message: string;
+  details: string;
 };
 
 const DEFAULT_SERVICE = "Travel & Tourism Marketing";
 
-export default function TravelLeadForm() {
+type TravelLeadFormProps = {
+  /** Anchor id — must stay unique when the form appears twice on a page. */
+  id?: string;
+  /** "bar" = horizontal glass strip (hero); "stacked" = light two-column card. */
+  variant?: "bar" | "stacked";
+};
+
+export default function TravelLeadForm({
+  id = "travel-lead-form",
+  variant = "bar",
+}: TravelLeadFormProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
@@ -106,6 +117,7 @@ export default function TravelLeadForm() {
       email: "",
       contact: "",
       message: "",
+      details: "",
     },
   });
 
@@ -129,7 +141,9 @@ export default function TravelLeadForm() {
           fullName: data.fullName,
           email: data.email,
           contact: data.contact,
-          message: `Travel brand: ${data.message}`,
+          message: data.details.trim()
+            ? `Travel brand: ${data.message}. Message: ${data.details.trim()}`
+            : `Travel brand: ${data.message}`,
           services: [DEFAULT_SERVICE],
           smsConsent,
           recaptchaToken,
@@ -162,7 +176,10 @@ export default function TravelLeadForm() {
   };
 
   return (
-    <div className="ttf-shell" id="travel-lead-form">
+    <div
+      className={`ttf-shell${variant === "stacked" ? " ttf-stacked" : ""}`}
+      id={id}
+    >
       {siteKey ? (
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
@@ -173,9 +190,9 @@ export default function TravelLeadForm() {
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="ttf-form">
         <div className="ttf-bar">
           <div className="ttf-fg">
-            <label htmlFor="ttf-fullName">Your name</label>
+            <label htmlFor={`${id}-fullName`}>Your name</label>
             <input
-              id="ttf-fullName"
+              id={`${id}-fullName`}
               type="text"
               placeholder="Alex Carter"
               autoComplete="name"
@@ -192,9 +209,9 @@ export default function TravelLeadForm() {
           </div>
 
           <div className="ttf-fg">
-            <label htmlFor="ttf-email">Work email</label>
+            <label htmlFor={`${id}-email`}>Work email</label>
             <input
-              id="ttf-email"
+              id={`${id}-email`}
               type="email"
               placeholder="alex@yourbrand.com"
               autoComplete="email"
@@ -213,9 +230,9 @@ export default function TravelLeadForm() {
           </div>
 
           <div className="ttf-fg">
-            <label htmlFor="ttf-contact">Phone</label>
+            <label htmlFor={`${id}-contact`}>Phone</label>
             <input
-              id="ttf-contact"
+              id={`${id}-contact`}
               type="tel"
               placeholder="(302) 000-0000"
               inputMode="numeric"
@@ -239,9 +256,9 @@ export default function TravelLeadForm() {
           </div>
 
           <div className="ttf-fg">
-            <label htmlFor="ttf-message">Your travel brand</label>
+            <label htmlFor={`${id}-message`}>Your travel brand</label>
             <input
-              id="ttf-message"
+              id={`${id}-message`}
               type="text"
               placeholder="Hotel, tour company, DMO..."
               aria-invalid={errors.message ? "true" : "false"}
@@ -255,6 +272,24 @@ export default function TravelLeadForm() {
               <p className="ttf-field-error">{errors.message.message}</p>
             )}
           </div>
+
+          {variant === "stacked" && (
+            <div className="ttf-fg ttf-fg-full">
+              <label htmlFor={`${id}-details`}>Your message</label>
+              <textarea
+                id={`${id}-details`}
+                rows={5}
+                placeholder="Tell us about your destinations, seasons, and what you want more of..."
+                aria-invalid={errors.details ? "true" : "false"}
+                {...register("details", {
+                  maxLength: { value: 1500, message: "Max 1500 characters." },
+                })}
+              />
+              {errors.details && (
+                <p className="ttf-field-error">{errors.details.message}</p>
+              )}
+            </div>
+          )}
 
           <button type="submit" className="ttf-submit" disabled={isSubmitting}>
             {isSubmitting ? (
