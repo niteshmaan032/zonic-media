@@ -26,9 +26,21 @@ export const metadata: Metadata = {
     "pay per click advertising services",
     "Google Ads optimization",
     "lead generation with Google Ads",
+    "best PPC agency for small business",
+    "Google Ads management company",
+    "local PPC management services",
+    "Google Local Services Ads agency",
   ],
   alternates: { canonical: "/services/google-ads" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Google Ads Management Services | PPC Agency | Zonic Media",
     description:
       "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
@@ -42,6 +54,48 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Google Ads", url: "/services/google-ads" },
 ]);
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/services/google-ads#service",
+  name: "Google Ads Management Services",
+  alternateName: [
+    "PPC Management Services",
+    "Google Ads Agency for Small Business",
+    "Pay-Per-Click Campaign Management",
+    "Local Services Ads Management",
+  ],
+  serviceType: "Google Ads / PPC Management",
+  description:
+    "Zonic Media creates, optimizes, and scales Google Ads campaigns for small and mid-size businesses — search ads, Local Services Ads, and remarketing built to generate qualified leads and maximize ROI. Campaign strategy, keyword and negative-keyword management, ad copy testing, landing page optimization, and transparent reporting. Verified client reviews on Trustpilot and Clutch.",
+  url: "https://www.zonicllc.com/services/google-ads",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small and mid-size businesses that want qualified leads from Google Ads",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free Google Ads account audit",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free PPC audit identifying wasted spend, missed keywords, and the fastest path to a higher return on ad spend.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
 
 function Page() {
   const ContactAds = {
@@ -183,6 +237,10 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       {/* ads-section-1 */}
       <div className="ads-section-1">

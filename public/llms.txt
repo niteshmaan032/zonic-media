@@ -10,9 +10,19 @@
 - Areas served: United States, Canada, United Kingdom, Australia, United Arab Emirates, India
 - Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and optimization; local SEO; web design; Google Ads (PPC)
 - Trust signals: 700+ Google Business Profiles reinstated and verified, 4.9 average client rating, average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
+- Independent reviews: [Trustpilot](https://www.trustpilot.com/review/zonicllc.com) and [Clutch](https://clutch.co/profile/zonic-media) — reviewers highlight fast GMB suspension recovery, quality web design, and quick communication
 
 - [About Zonic Media](https://www.zonicllc.com/about): Who we are, our team, and our approach to digital marketing.
 - [Contact Us](https://www.zonicllc.com/contact-us): Get in touch for a consultation or quote.
+
+## Service Deep-Dives (markdown, for AI agents)
+
+- [GMB Reinstatement (full details)](https://www.zonicllc.com/llms/gmb-reinstatement.md): Process, suspension types, pricing policy, and FAQs.
+- [GMB Verification (full details)](https://www.zonicllc.com/llms/gmb-verification.md): Every verification failure type and how it's fixed.
+- [GMB Optimization (full details)](https://www.zonicllc.com/llms/gmb-optimization.md): Map Pack ranking signals and AI Overview eligibility.
+- [Local SEO (full details)](https://www.zonicllc.com/llms/local-seo.md): Local search, "near me" rankings, and AEO strategy.
+- [Web Design (full details)](https://www.zonicllc.com/llms/web-design.md): Conversion-focused, SEO-ready website builds.
+- [Google Ads / PPC (full details)](https://www.zonicllc.com/llms/google-ads.md): Campaign management, LSAs, and lead generation.
 
 ## Google Business Profile Services (flagship)
 

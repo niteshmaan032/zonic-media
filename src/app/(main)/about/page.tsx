@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "About Zonic Media | Marketing Agency for Small & Mid-Size Businesses",
     description:

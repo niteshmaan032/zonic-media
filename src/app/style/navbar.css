@@ -555,6 +555,20 @@
   --bs-accordion-btn-icon-width: 1.2rem;
 }
 
+/* Accordion headers whose title is a real link: link + chevron-only toggle side by side */
+.mob-tab-nav-menus .mob-acc-link-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mob-tab-nav-menus .mob-acc-toggle {
+  width: auto;
+  flex: 0 0 auto;
+  padding: 4px;
+}
+
 .mob-tab-nav-menus .accordion-body {
   padding: 12px 0 0;
 }

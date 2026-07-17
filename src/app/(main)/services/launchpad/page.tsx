@@ -42,6 +42,14 @@ export const metadata: Metadata = {
     canonical: "/services/launchpad",
   },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Business Launch Services | Start Your Business | Zonic Media",
     description:
       "Zonic LaunchPad helps new businesses launch with branding, a conversion-focused website, Google visibility, and a lead generation foundation.",

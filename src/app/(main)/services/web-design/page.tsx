@@ -23,9 +23,21 @@ export const metadata: Metadata = {
     "website redesign services",
     "mobile friendly website design",
     "affordable web design for small business",
+    "best web design agency for small business",
+    "small business website design company",
+    "website design and development services",
+    "lead generation website design",
   ],
   alternates: { canonical: "/services/web-design" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Web Design Services for Small Business | Zonic Media",
     description:
       "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
@@ -39,6 +51,48 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Web Design", url: "/services/web-design" },
 ]);
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/services/web-design#service",
+  name: "Web Design Services for Small Business",
+  alternateName: [
+    "Small Business Website Design",
+    "Custom Website Design and Development",
+    "Conversion-Focused Web Design",
+    "Website Redesign Services",
+  ],
+  serviceType: "Web Design and Development",
+  description:
+    "Zonic Media designs fast, mobile-friendly, SEO-ready websites for small and mid-size businesses — built to rank on Google and convert visitors into leads and customers. Custom design, responsive development, on-page SEO structure, and conversion-focused landing pages. Verified client reviews on Trustpilot and Clutch.",
+  url: "https://www.zonicllc.com/services/web-design",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small and mid-size businesses that need a website that generates leads",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free website consultation",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free consultation covering design direction, SEO structure, and a transparent project quote.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
 function Page() {
   const WebContact = {
     heading: "High-Converting Business Websites",
@@ -148,6 +202,10 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       {/*web-design-section-1*/}
       <div className="web-design-section-1">

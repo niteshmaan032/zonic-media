@@ -41,6 +41,14 @@ export const metadata: Metadata = {
     canonical: "/services/industry/real-estate-seo-services",
   },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Real Estate SEO Services for Realtors & Brokers",
     description:
       "Grow real estate leads with local SEO, Google Business Profile optimization, content strategy, and conversion-focused website improvements.",

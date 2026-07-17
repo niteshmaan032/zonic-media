@@ -40,6 +40,48 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "GMB Optimization", url: "/services/gmb-optimization" },
 ]);
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/services/gmb-optimization#service",
+  name: "GMB Optimization Service",
+  alternateName: [
+    "Google Business Profile Optimization Service",
+    "GBP Optimization Service",
+    "Google Maps Optimization",
+    "Local Map Pack Optimization",
+  ],
+  serviceType: "Google Business Profile Optimization",
+  description:
+    "Zonic Media optimizes Google Business Profiles to rank in the local 3-Pack and Google Maps — category strategy, keyword-rich descriptions, photos, posts, Q&A, and review generation. 1500+ profiles optimized with 95% client satisfaction. Optimized profiles are also what Google's AI Overviews cite for local queries. Verified client reviews on Trustpilot and Clutch.",
+  url: "https://www.zonicllc.com/services/gmb-optimization",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Local businesses, multi-location brands, and agencies that want to rank in the Google Map Pack",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free GMB optimization audit",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free Google Business Profile audit showing exactly which ranking signals your profile is missing.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
+
 const GmbOptimFaqs = [
   {
     question: "How long before I see results from GMB optimization?",
@@ -71,6 +113,16 @@ const GmbOptimFaqs = [
     answer:
       "GMB optimization focuses specifically on your Google Business Profile - categories, photos, posts, reviews. Local SEO is broader and includes your website, citations, and backlinks. Both work together - we offer both services.",
   },
+  {
+    question: "Does GMB optimization help my business appear in Google's AI Overviews?",
+    answer:
+      "Yes. Google's AI Overviews for local searches pull from verified, complete, and active Google Business Profiles - businesses with strong categories, recent reviews above 4.3 stars, fresh posts, and accurate service data are the ones AI answers cite. Our optimization covers exactly those signals, so your profile is eligible for both the Map Pack and AI-generated results.",
+  },
+  {
+    question: "What makes Zonic Media one of the best GMB optimization services?",
+    answer:
+      "Zonic Media has optimized 1500+ Google Business Profiles with 95% client satisfaction and a 4.9 average rating. Every engagement starts with a free audit, the strategy is tailored to your industry and local market, and independent client reviews are published on Trustpilot and Clutch. We're also a reinstatement and verification specialist, so profiles we optimize stay compliant with Google's guidelines.",
+  },
 ];
 
 const GmbOptiFormHead = {
@@ -101,9 +153,21 @@ export const metadata: Metadata = {
     "optimize Google Business Profile",
     "Google Business Profile ranking",
     "local SEO for Google Maps",
+    "best GMB optimization service",
+    "Google Business Profile management service",
+    "rank in AI Overviews local search",
+    "GBP optimization agency",
   ],
   alternates: { canonical: "/services/gmb-optimization" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "Google Business Profile Optimization Service | Rank Higher on Google Maps",
     description:
@@ -119,6 +183,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">

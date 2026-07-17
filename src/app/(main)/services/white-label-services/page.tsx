@@ -31,6 +31,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/white-label-services" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "White-Label Services for Agencies | GBP Reinstatement, Local SEO & Web Design",
     description:

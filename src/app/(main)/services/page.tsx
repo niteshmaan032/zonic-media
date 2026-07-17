@@ -44,9 +44,20 @@ export const metadata: Metadata = {
     "PPC advertising services",
     "digital marketing for local business",
     "small business marketing services",
+    "best digital marketing agency for small business",
+    "GMB reinstatement and verification services",
+    "local SEO agency USA",
   ],
   alternates: { canonical: "/services" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Digital Marketing Services | SEO, PPC & Web Design",
     description:
       "Grow online with Zonic Media's full-service digital marketing solutions for SEO, PPC, web design, GMB optimization, branding, and software.",

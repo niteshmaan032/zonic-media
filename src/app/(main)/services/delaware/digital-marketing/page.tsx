@@ -176,6 +176,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/delaware/digital-marketing" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Digital Marketing Agency Delaware | SEO & PPC | Zonic Media",
     description:
       "Delaware digital marketing agency helping businesses grow with SEO, PPC, social media, email marketing, AI SEO, and conversion-focused strategy.",

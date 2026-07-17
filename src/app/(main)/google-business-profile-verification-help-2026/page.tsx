@@ -13,7 +13,9 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Google Business Profile Verification Help",
+  title: {
+    absolute: "Google Business Profile Verification Help 2026 | Zonic Media",
+  },
   description:
     "Stuck in a GBP verification loop? Video rejected? Postcard expired? Zonic Media fixes every type of GBP verification failure — SABs, live video calls, verification loops — in 5–7 days. Money-back guarantee.",
   keywords: [
@@ -26,9 +28,19 @@ export const metadata: Metadata = {
     "service area business verification",
     "GBP verification stuck",
     "Google Business Profile video verification rejected",
+    "best GBP verification service 2026",
+    "Google Business Profile verification agency",
   ],
   alternates: { canonical: "/google-business-profile-verification-help-2026" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "Google Business Profile Verification Help | Fix GBP Verification Fast | Zonic Media",
     description:

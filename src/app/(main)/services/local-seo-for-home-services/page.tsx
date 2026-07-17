@@ -101,6 +101,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/local-seo-for-home-services" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Local SEO for Home Services | More Calls & Jobs | Zonic Media",
     description:
       "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",

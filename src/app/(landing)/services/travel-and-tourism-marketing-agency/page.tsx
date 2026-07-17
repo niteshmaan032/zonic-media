@@ -48,6 +48,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Travel & Tourism Marketing Agency That Books Trips | Zonic Media",
     description:
       "Travel and tourism marketing built around direct bookings — travel SEO, paid media, destination content, and web design for hotels, tour operators, and DMOs.",
@@ -488,14 +496,22 @@ function Page() {
               </p>
 
               <div className="tt-hero-badges">
-                <iframe
-                  className="tt-hero-badge-widget"
-                  width="90"
-                  height="90"
-                  loading="lazy"
-                  src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                  title="Top Clutch Digital Marketing Company Delaware 2026"
-                ></iframe>
+                {/* Self-hosted Clutch badge — the live iframe embed is
+                    behind a Cloudflare challenge and breaks randomly. */}
+                <a
+                  href="https://clutch.co/profile/zonic-media?badge=11431"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    className="tt-hero-badge-widget"
+                    width={90}
+                    height={90}
+                    src="/images/clutch-top-company-2026.png"
+                    alt="Top Clutch Digital Marketing Company Delaware 2026"
+                    style={{ objectFit: "contain" }}
+                  />
+                </a>
                 <Image
                   className="tt-hero-badge-widget"
                   width={90}

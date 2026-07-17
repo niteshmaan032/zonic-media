@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     canonical: "/industries",
   },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Industries We Serve | Local SEO & Marketing by Industry",
     description:
       "One specialist team, a dedicated playbook for every niche. See how Zonic Media grows roofers, HVAC, plumbing, dental, legal, real estate and more.",

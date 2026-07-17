@@ -60,11 +60,23 @@ export const metadata: Metadata = {
     "Google Maps ranking services",
     "logo and graphic design services",
     "online marketing agency USA",
+    "best digital marketing agency for small business",
+    "GMB reinstatement service",
+    "Google Business Profile optimization agency",
+    "best local SEO company USA",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Marketing Agency for Small & Mid-Size Businesses | Zonic Media",
     description:
       "Local SEO, Google Business Profile, website design, graphic & logo design, and PPC ads for small and mid-size US businesses.",
@@ -276,14 +288,22 @@ export default async function Home() {
                   </a>
                 </div>
                 <div className="hero-badges">
-                  <iframe
-                    className="hero-badge-widget"
-                    width="90"
-                    height="90"
-                    loading="eager"
-                    src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                    title="Top Clutch Digital Marketing Company Delaware 2026"
-                  ></iframe>
+                  {/* Self-hosted Clutch badge — the live iframe embed is
+                      behind a Cloudflare challenge and breaks randomly. */}
+                  <a
+                    href="https://clutch.co/profile/zonic-media?badge=11431"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <Image
+                      className="hero-badge-widget"
+                      width={90}
+                      height={90}
+                      src="/images/clutch-top-company-2026.png"
+                      alt="Top Clutch Digital Marketing Company Delaware 2026"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </a>
                   <Image
                     className="hero-badge-widget"
                     width={90}
@@ -301,13 +321,13 @@ export default async function Home() {
                       width={110}
                       height={51}
                       src="/images/Trustpilot-Logo.png"
-                      alt="Trustpilot Reviews"
+                      alt="Zonic Media reviews on Trustpilot"
                     />
                   </a>
                 </div>
                 <div className="hero-trust">
                   <span>
-                    <span className="stars">★★★★★</span> <b>5.0</b> client rating
+                    <span className="stars">★★★★★</span> <b>4.9</b> client rating
                   </span>
                   <span>
                     <b>700+</b> Google Business Profiles reinstated &amp;

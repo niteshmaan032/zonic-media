@@ -47,6 +47,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Dental Website Design That Books Patients | Zonic Media",
     description:
       "Dental website design built as a patient acquisition system — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.",

@@ -150,6 +150,8 @@
   background-color: var(--orange);
   border-color: var(--orange);
   color: #fff;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .home-revamp .buttons:hover {
   background-color: var(--orange);

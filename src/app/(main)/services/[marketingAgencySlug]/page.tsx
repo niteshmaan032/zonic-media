@@ -30,6 +30,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: page.description,
     alternates: { canonical: `/services/${page.slug}` },
     openGraph: {
+      images: [
+        {
+          url: "/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+        },
+      ],
       title: page.title,
       description: page.description,
       url: `/services/${page.slug}`,

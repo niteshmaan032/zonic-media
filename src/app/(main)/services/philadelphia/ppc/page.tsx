@@ -56,6 +56,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/philadelphia/ppc" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "PPC Agency Philadelphia | Google Ads Management | Zonic Media",
     description:
       "Philadelphia PPC agency generating high-intent leads through Google Ads, landing page optimization, conversion tracking, and campaign management.",

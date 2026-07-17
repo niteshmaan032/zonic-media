@@ -25,9 +25,21 @@ export const metadata: Metadata = {
     "GBP management",
     "local SEO agency",
     "Google Business Profile ranking",
+    "best local SEO agency for small business",
+    "local SEO and GBP optimization service",
+    "rank in AI Overviews local search",
+    "near me search ranking",
   ],
   alternates: { canonical: "/local-seo-google-business-optimization" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "Google Business Profile Optimization | Rank in the Map Pack | Zonic Media",
     description:
@@ -44,6 +56,48 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     url: "/local-seo-google-business-optimization",
   },
 ]);
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/local-seo-google-business-optimization#service",
+  name: "Local SEO & Google Business Profile Optimization",
+  alternateName: [
+    "Local SEO Services",
+    "GBP Optimization Service",
+    "Google Map Pack Ranking Service",
+    "Local Search Optimization",
+  ],
+  serviceType: "Local SEO",
+  description:
+    "Zonic Media's local SEO and Google Business Profile optimization service gets local businesses into the top-3 Google Map Pack and cited in AI-powered local search results. Category strategy, keyword placement, review generation, Q&A management, citations, and ongoing profile activity. Verified client reviews on Trustpilot and Clutch.",
+  url: "https://www.zonicllc.com/local-seo-google-business-optimization",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Local and service-area businesses that want more calls and customers from Google Search and Maps",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free GBP audit",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free Google Business Profile audit showing why your profile isn't ranking in the Map Pack and what it would take to get there.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
 
 const formHead = {
   leadFormTitle: "Get Your Free GBP Audit",
@@ -405,6 +459,11 @@ function Page() {
         id="lo-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="lo-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
       <div id="lo-top" className="lo-page">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
+import { FaBroom, FaTooth, FaUserDoctor } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import { IoDesktopOutline } from "react-icons/io5";
 import { LuPlaneTakeoff } from "react-icons/lu";
@@ -12,10 +13,36 @@ import { MdArrowOutward } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineInfo } from "react-icons/md";
+import {
+  MdGavel,
+  MdOutlineCarRepair,
+  MdOutlineChildCare,
+  MdOutlineCleaningServices,
+  MdOutlineElectricalServices,
+  MdOutlineFormatPaint,
+  MdOutlineGarage,
+  MdOutlineGrass,
+  MdOutlineHomeRepairService,
+  MdOutlineHomeWork,
+  MdOutlineHvac,
+  MdOutlineLocalShipping,
+  MdOutlinePestControl,
+  MdOutlinePlumbing,
+  MdOutlineRealEstateAgent,
+  MdOutlineVolunteerActivism,
+  MdRoofing,
+} from "react-icons/md";
 import { RiMapPinLine } from "react-icons/ri";
 import { SiGoogleads } from "react-icons/si";
-import { useEffect, useRef, useState } from "react";
-import { Container, Row, Col, Accordion } from "react-bootstrap";
+import { useContext, useEffect, useRef, useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Accordion,
+  AccordionContext,
+  useAccordionButton,
+} from "react-bootstrap";
 import "@/app/style/navbar.css";
 import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 
@@ -75,6 +102,113 @@ const gmbServiceLinks = [
   },
 ];
 
+const seoServiceLinks = [
+  {
+    id: "local-seo-for-home-services",
+    title: "Local SEO for Home Services",
+    description:
+      "Local search strategies that help home service businesses rank and generate consistent calls.",
+    link: "/services/local-seo-for-home-services",
+    icon: <MdOutlineHomeRepairService />,
+  },
+  {
+    id: "local-seo-services-for-hvac",
+    title: "Local SEO for HVAC",
+    description:
+      "Map pack rankings and local visibility tuned to HVAC seasonal demand peaks.",
+    link: "/services/local-seo-services-for-hvac",
+    icon: <MdOutlineHvac />,
+  },
+  {
+    id: "seo-services-for-plumber",
+    title: "SEO for Plumbers",
+    description:
+      "Rank for 'plumber near me' searches and win urgent service calls on Google Maps.",
+    link: "/services/industry/seo-services-for-plumber",
+    icon: <MdOutlinePlumbing />,
+  },
+  {
+    id: "local-seo-for-roofing-companies",
+    title: "Local SEO for Roofing Companies",
+    description:
+      "Show up when homeowners search for roof repair, replacement, or inspections nearby.",
+    link: "/services/industry/local-seo-for-roofing-companies",
+    icon: <MdRoofing />,
+  },
+  {
+    id: "seo-services-for-pest-control",
+    title: "SEO for Pest Control",
+    description:
+      "Rank in the local pack when nearby homeowners need immediate pest help.",
+    link: "/services/industry/seo-services-for-pest-control",
+    icon: <MdOutlinePestControl />,
+  },
+  {
+    id: "seo-services-for-car-towing",
+    title: "SEO for Car Towing",
+    description:
+      "Google Maps visibility for emergency towing and roadside assistance searches.",
+    link: "/services/industry/seo-services-for-car-towing",
+    icon: <MdOutlineLocalShipping />,
+  },
+  {
+    id: "dental-seo-services",
+    title: "Dental SEO Services",
+    description:
+      "More calls from patients ready to book with local search and Maps visibility.",
+    link: "/services/industry/dental-seo-services",
+    icon: <FaTooth />,
+  },
+  {
+    id: "chiropractor-local-seo-services",
+    title: "Chiropractor Local SEO",
+    description:
+      "Local SEO and marketing built for chiropractic clinics and practices.",
+    link: "/services/industry/chiropractor-local-seo-services",
+    icon: <FaUserDoctor />,
+  },
+  {
+    id: "pediatricians-seo",
+    title: "Pediatrician SEO & Marketing",
+    description:
+      "Local search visibility that helps parents find and choose your pediatric practice.",
+    link: "/services/industry/pediatricians",
+    icon: <MdOutlineChildCare />,
+  },
+  {
+    id: "local-seo-for-law-firms",
+    title: "Local SEO for Law Firms",
+    description:
+      "Qualified case inquiries from local search and attorney-focused SEO.",
+    link: "/services/industry/local-seo-for-law-firms",
+    icon: <MdGavel />,
+  },
+  {
+    id: "real-estate-seo-services",
+    title: "Real Estate SEO Services",
+    description:
+      "Search visibility for realtors, teams, and brokerages in their local markets.",
+    link: "/services/industry/real-estate-seo-services",
+    icon: <MdOutlineRealEstateAgent />,
+  },
+  {
+    id: "local-seo-for-commercial-cleaning",
+    title: "Local SEO for Commercial Cleaning",
+    description:
+      "Janitorial SEO that brings steady commercial cleaning contracts.",
+    link: "/services/industry/local-seo-for-commercial-cleaning",
+    icon: <MdOutlineCleaningServices />,
+  },
+  {
+    id: "local-seo-services-for-residential-cleaning",
+    title: "Residential Cleaning SEO",
+    description:
+      "House cleaning leads from local search, Maps, and review visibility.",
+    link: "/services/industry/local-seo-services-for-residential-cleaning",
+    icon: <FaBroom />,
+  },
+];
+
 const industryLinks = [
   {
     id: "auto-repair-marketing-agency",
@@ -82,6 +216,7 @@ const industryLinks = [
     description:
       "Local visibility, paid search, reviews, and lead generation for repair shops.",
     link: "/services/auto-repair-marketing-agency",
+    icon: <MdOutlineCarRepair />,
   },
   {
     id: "chiropractic-marketing-agency",
@@ -89,6 +224,7 @@ const industryLinks = [
     description:
       "Patient acquisition systems for chiropractic clinics and local practices.",
     link: "/services/chiropractic-marketing-agency",
+    icon: <FaUserDoctor />,
   },
   {
     id: "cleaning-company-marketing-agency",
@@ -96,6 +232,7 @@ const industryLinks = [
     description:
       "Lead generation and local growth for residential and commercial cleaners.",
     link: "/services/cleaning-company-marketing-agency",
+    icon: <MdOutlineCleaningServices />,
   },
   {
     id: "dental-marketing-agency",
@@ -103,6 +240,7 @@ const industryLinks = [
     description:
       "Local patient acquisition, paid ads, and reputation growth for dentists.",
     link: "/services/dental-marketing-agency",
+    icon: <FaTooth />,
   },
   {
     id: "electrician-marketing-agency",
@@ -110,6 +248,7 @@ const industryLinks = [
     description:
       "Map visibility, paid leads, and booking systems for electrical contractors.",
     link: "/services/electrician-marketing-agency",
+    icon: <MdOutlineElectricalServices />,
   },
   {
     id: "garage-door-marketing-agency",
@@ -117,6 +256,7 @@ const industryLinks = [
     description:
       "Urgent-call lead generation for garage door repair and installation teams.",
     link: "/services/garage-door-marketing-agency",
+    icon: <MdOutlineGarage />,
   },
   {
     id: "landscaping-marketing-agency",
@@ -124,6 +264,7 @@ const industryLinks = [
     description:
       "Local search, ads, and recurring-service leads for landscaping companies.",
     link: "/services/landscaping-marketing-agency",
+    icon: <MdOutlineGrass />,
   },
   {
     id: "law-firm-marketing-agency",
@@ -131,6 +272,7 @@ const industryLinks = [
     description:
       "Qualified case inquiries from search, paid media, and conversion-focused pages.",
     link: "/services/law-firm-marketing-agency",
+    icon: <MdGavel />,
   },
   {
     id: "moving-company-marketing-agency",
@@ -138,6 +280,7 @@ const industryLinks = [
     description:
       "Booked move leads and local visibility for residential and commercial movers.",
     link: "/services/moving-company-marketing-agency",
+    icon: <MdOutlineLocalShipping />,
   },
   {
     id: "painting-contractor-marketing-agency",
@@ -145,6 +288,7 @@ const industryLinks = [
     description:
       "Estimate requests and local demand generation for painting contractors.",
     link: "/services/painting-contractor-marketing-agency",
+    icon: <MdOutlineFormatPaint />,
   },
   {
     id: "pest-control-marketing-agency",
@@ -152,6 +296,7 @@ const industryLinks = [
     description:
       "Urgent and recurring pest-control leads from maps, search, and paid ads.",
     link: "/services/pest-control-marketing-agency",
+    icon: <MdOutlinePestControl />,
   },
   {
     id: "real-estate-marketing-agency",
@@ -159,6 +304,7 @@ const industryLinks = [
     description:
       "Lead generation and digital visibility for agents, teams, and brokerages.",
     link: "/services/real-estate-marketing-agency",
+    icon: <MdOutlineRealEstateAgent />,
   },
   {
     id: "roofing-marketing-agency",
@@ -166,6 +312,7 @@ const industryLinks = [
     description:
       "Storm, repair, and replacement leads for residential roofing companies.",
     link: "/services/roofing-marketing-agency",
+    icon: <MdRoofing />,
   },
   {
     id: "home-inspector-marketing",
@@ -173,6 +320,7 @@ const industryLinks = [
     description:
       "Local SEO, Google Ads, GBP, and websites built to book more home inspections across the US.",
     link: "/services/home-inspector-marketing",
+    icon: <MdOutlineHomeWork />,
   },
   {
     id: "plumbing-marketing-agency",
@@ -180,6 +328,7 @@ const industryLinks = [
     description:
       "Map pack rankings, GBP, paid ads, websites, and reviews built to win urgent service calls for plumbing contractors.",
     link: "/services/plumbing-marketing-agency",
+    icon: <MdOutlinePlumbing />,
   },
   {
     id: "hvac-marketing-agency",
@@ -187,6 +336,7 @@ const industryLinks = [
     description:
       "Map pack rankings, GBP, paid ads, maintenance memberships, and reviews tuned to HVAC seasonal demand peaks.",
     link: "/services/hvac-marketing-agency",
+    icon: <MdOutlineHvac />,
   },
   {
     id: "non-profit-marketing-agency",
@@ -194,8 +344,33 @@ const industryLinks = [
     description:
       "Digital fundraising and advocacy — social, Google Ad Grant, video, and board-ready reporting for mission-driven organizations.",
     link: "/services/non-profit-marketing-agency",
+    icon: <MdOutlineVolunteerActivism />,
   },
 ];
+
+// Chevron-only accordion toggle so mobile header links stay outside the button
+// (an <a> inside <button> is invalid HTML).
+function MobileAccordionToggle({
+  eventKey,
+  label,
+}: {
+  eventKey: string;
+  label: string;
+}) {
+  const { activeEventKey } = useContext(AccordionContext);
+  const toggleAccordion = useAccordionButton(eventKey);
+  const isOpen = activeEventKey === eventKey;
+
+  return (
+    <button
+      type="button"
+      className={`accordion-button mob-acc-toggle${isOpen ? "" : " collapsed"}`}
+      aria-expanded={isOpen}
+      aria-label={label}
+      onClick={toggleAccordion}
+    />
+  );
+}
 
 function Navbar() {
   const pathname = usePathname();
@@ -467,8 +642,34 @@ function Navbar() {
                       </div>
                     </div>
                   </li>
-                  <li>
-                    <Link href={SITE_PATHS.seo}>Local SEO</Link>
+                  <li className="services-dropdown">
+                    <Link href={SITE_PATHS.seo}>
+                      Local SEO <MdArrowOutward size={16} />
+                    </Link>
+
+                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
+                      <div className="services-core-label">
+                        Local SEO Services
+                      </div>
+
+                      <div className="services-core-grid local-seo-core-grid">
+                        {seoServiceLinks.map((seoLink) => (
+                          <Link
+                            href={seoLink.link}
+                            className="services-core-card"
+                            key={seoLink.id}
+                          >
+                            <span className="services-core-icon">
+                              {seoLink.icon}
+                            </span>
+                            <span className="services-core-content">
+                              <strong>{seoLink.title}</strong>
+                              <span>{seoLink.description}</span>
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </li>
                   <li>
                     <Link href="/services/gmb-reinstatement-help">
@@ -575,7 +776,7 @@ function Navbar() {
                             key={industry.id}
                           >
                             <span className="services-core-icon">
-                              <FaStore />
+                              {industry.icon}
                             </span>
                             <span className="services-core-content">
                               <strong>
@@ -730,10 +931,18 @@ function Navbar() {
                 }
               >
                 <Accordion.Item eventKey="0">
-                  <Accordion.Header>
-                    {" "}
-                    <Link href="/services">Services </Link>{" "}
-                  </Accordion.Header>
+                  <div className="mob-acc-link-header">
+                    <Link
+                      href="/services"
+                      onClick={() => handleToggleMobileMenu(false)}
+                    >
+                      Services
+                    </Link>
+                    <MobileAccordionToggle
+                      eventKey="0"
+                      label="Toggle services menu"
+                    />
+                  </div>
                   <Accordion.Body>
                     <ul>
                       {services.map((s) => (
@@ -787,12 +996,45 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Link
-                href={SITE_PATHS.seo}
-                onClick={() => handleToggleMobileMenu(false)}
+              <Accordion
+                flush
+                id="mobileLocalSeoAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
               >
-                Local SEO
-              </Link>
+                <Accordion.Item eventKey="5">
+                  <div className="mob-acc-link-header">
+                    <Link
+                      href={SITE_PATHS.seo}
+                      onClick={() => handleToggleMobileMenu(false)}
+                    >
+                      Local SEO
+                    </Link>
+                    <MobileAccordionToggle
+                      eventKey="5"
+                      label="Toggle local SEO menu"
+                    />
+                  </div>
+                  <Accordion.Body>
+                    <ul>
+                      {seoServiceLinks.map((seoLink) => (
+                        <li key={seoLink.id}>
+                          <Link
+                            href={seoLink.link}
+                            onClick={() => handleToggleMobileMenu(false)}
+                          >
+                            {seoLink.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </li>
             <li>
               <Link href="/services/gmb-reinstatement-help">
@@ -917,10 +1159,18 @@ function Navbar() {
                 }
               >
                 <Accordion.Item eventKey="2">
-                  <Accordion.Header>
-                    {" "}
-                    <Link href={SITE_PATHS.about}>Others </Link>{" "}
-                  </Accordion.Header>
+                  <div className="mob-acc-link-header">
+                    <Link
+                      href={SITE_PATHS.about}
+                      onClick={() => handleToggleMobileMenu(false)}
+                    >
+                      Others
+                    </Link>
+                    <MobileAccordionToggle
+                      eventKey="2"
+                      label="Toggle others menu"
+                    />
+                  </div>
                   <Accordion.Body>
                     <ul>
                       <li>

@@ -54,6 +54,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/philadelphia/local-seo" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Local SEO Philadelphia | Google Maps Rankings | Zonic Media",
     description:
       "Grow your business with expert Local SEO in Philadelphia. Rank higher on Google Maps, generate more calls, and get consistent local leads.",

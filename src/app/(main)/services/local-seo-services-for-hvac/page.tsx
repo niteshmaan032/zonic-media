@@ -131,6 +131,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/local-seo-services-for-hvac" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "Local SEO Services for HVAC Companies | Zonic Media",
     description:
       "Local SEO services for HVAC companies. Rank higher on Google Maps and turn heating and cooling searches into qualified service calls.",

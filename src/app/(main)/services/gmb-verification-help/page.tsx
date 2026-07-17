@@ -35,6 +35,48 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "GMB Verification Help", url: "/services/gmb-verification-help" },
 ]);
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.zonicllc.com/services/gmb-verification-help#service",
+  name: "GMB Verification Help",
+  alternateName: [
+    "Google Business Profile Verification Service",
+    "GBP Verification Help",
+    "Google My Business Verification Service",
+    "Google Maps Business Verification",
+  ],
+  serviceType: "Google Business Profile Verification",
+  description:
+    "Zonic Media resolves every type of Google Business Profile verification failure — postcards that never arrive, rejected video verification, verification loops, revoked verifications, and service-area business (SAB) verification. 1500+ listings verified and restored with a 95% success rate and 48-hour average resolution time. Verified client reviews on Trustpilot and Clutch.",
+  url: "https://www.zonicllc.com/services/gmb-verification-help",
+  provider: {
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
+  },
+  areaServed: { "@type": "Country", name: "United States" },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Local businesses, service-area businesses, and agencies unable to verify their Google Business Profile",
+  },
+  offers: {
+    "@type": "Offer",
+    name: "Free GMB verification audit",
+    price: "0",
+    priceCurrency: "USD",
+    description:
+      "Free verification audit identifying why your Google Business Profile won't verify and the fastest available verification path.",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+};
+
 const GmbVerifiFaqs = [
   {
     question: "What verification methods does Google offer?",
@@ -67,6 +109,11 @@ const GmbVerifiFaqs = [
     answer:
       "Most cases are resolved within 5-7 business days depending on the verification method. We'll give you a realistic timeline after your free audit.",
   },
+  {
+    question: "What makes Zonic Media one of the best GMB verification services?",
+    answer:
+      "Zonic Media has verified and restored 1500+ Google Business Profile listings with a 95% success rate and a 48-hour average resolution time. The team handles every failure type — postcard, video, phone, email, verification loops, and revoked verifications — and starts with a free audit so you know the exact path before paying anything. Independent client reviews are published on Trustpilot and Clutch.",
+  },
 ];
 
 const GmbVeriFormHead = {
@@ -96,9 +143,22 @@ export const metadata: Metadata = {
     "postcard verification failed",
     "Google Business Profile not verified",
     "business profile verification service",
+    "GMB verification service",
+    "Google Business Profile verification stuck",
+    "service area business verification",
+    "get verified on Google Maps",
+    "best GMB verification service",
   ],
   alternates: { canonical: "/services/gmb-verification-help" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "Fix Google Business Profile Verification Issues & Get Verified Fast",
     description:
@@ -114,6 +174,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">

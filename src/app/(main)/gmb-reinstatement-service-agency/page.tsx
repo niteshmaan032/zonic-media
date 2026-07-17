@@ -24,9 +24,20 @@ export const metadata: Metadata = {
     "GMB suspension help",
     "fix suspended Google business listing",
     "Google Business Profile recovery service",
+    "best GMB reinstatement agency",
+    "GBP reinstatement agency USA",
+    "Google Business Profile suspension appeal service",
   ],
   alternates: { canonical: "/gmb-reinstatement-service-agency" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title:
       "Google Business Profile Suspended? We Reinstate It Fast | Zonic Media",
     description:

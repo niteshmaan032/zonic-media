@@ -136,14 +136,24 @@ function Footer() {
                 <div></div>
               </div>
               <div className="d-flex align-items-center gap-3 flex-wrap">
-                <iframe
-                  className="footer-clutch-badge mt-4"
-                  width="85"
-                  height="85"
-                  loading="eager"
-                  src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                  title="Top Clutch Digital Marketing Company Delaware 2026"
-                ></iframe>
+                {/* Self-hosted copy of the Clutch badge — the live
+                    clutch.co/share/badges iframe sits behind a Cloudflare
+                    bot challenge and intermittently renders broken. */}
+                <a
+                  className="mt-4"
+                  href="https://clutch.co/profile/zonic-media?badge=11431"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  <Image
+                    className="footer-clutch-badge"
+                    src="/images/clutch-top-company-2026.png"
+                    width={85}
+                    height={85}
+                    alt="Top Clutch Digital Marketing Company Delaware 2026"
+                    style={{ objectFit: "contain" }}
+                  />
+                </a>
                 <div className="mt-4">
                   <a
                     href="https://businessfirms.co/company/zonic-media"

@@ -45,6 +45,19 @@ const sameAsLinks = [
   "https://www.facebook.com/zonicmediallc/",
   "https://www.instagram.com/zonicmedia",
   "https://www.youtube.com/@ZonicMediaDelaware",
+  "https://www.trustpilot.com/review/zonicllc.com",
+  "https://clutch.co/profile/zonic-media",
+];
+
+const knowsAboutTopics = [
+  "Google Business Profile reinstatement",
+  "Google Business Profile verification",
+  "Google Business Profile optimization",
+  "Local SEO",
+  "Google Map Pack ranking",
+  "Web design for small businesses",
+  "Google Ads management",
+  "Answer engine optimization (AEO)",
 ];
 
 const organizationJsonLd = {
@@ -62,6 +75,7 @@ const organizationJsonLd = {
   telephone: "+13027269736",
   address: postalAddressJsonLd,
   sameAs: sameAsLinks,
+  knowsAbout: knowsAboutTopics,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+13027269736",
@@ -88,6 +102,7 @@ const localBusinessJsonLd = {
   priceRange: "$$",
   areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
   sameAs: sameAsLinks,
+  knowsAbout: knowsAboutTopics,
 };
 
 export const metadata: Metadata = {
@@ -111,10 +126,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/logo.webp",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Zonic Media — Digital Agency",
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
   },

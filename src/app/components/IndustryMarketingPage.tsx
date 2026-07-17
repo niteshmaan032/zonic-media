@@ -103,14 +103,22 @@ export default function IndustryMarketingPage({ page }: Props) {
                 <div className="ima-hero-copy">
                   <div dangerouslySetInnerHTML={{ __html: heroBeforeTrust }} />
                   <div className="ima-hero-badges" aria-label="Partner badges">
-                    <iframe
-                      className="ima-hero-badge"
-                      width="90"
-                      height="90"
-                      loading="eager"
-                      src="https://clutch.co/share/badges/2617344/11431?utm_source=clutch_top_company_badge&utm_medium=image_embed"
-                      title="Top Clutch Digital Marketing Company Delaware 2026"
-                    />
+                    {/* Self-hosted Clutch badge — the live iframe embed is
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <Image
+                        className="ima-hero-badge"
+                        width={90}
+                        height={90}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </a>
                     <Image
                       className="ima-hero-badge"
                       width={90}

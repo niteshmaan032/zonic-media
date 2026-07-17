@@ -58,6 +58,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/philadelphia/sem" },
   openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
     title: "SEM Agency Philadelphia | Search Engine Marketing | Zonic Media",
     description:
       "Philadelphia search engine marketing agency driving more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
