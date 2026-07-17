@@ -1,5 +1,6 @@
 import "@/app/style/gmb-reinstatement.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
 import { Manrope, Inter } from "next/font/google";
@@ -223,6 +224,45 @@ function page() {
               compliance issues, and manages your reinstatement appeal with
               Google to recover your listing, rankings, and leads — fast.
             </p>
+
+            <div className="hero-badges">
+              {/* Self-hosted Clutch badge — the live iframe embed is
+                  behind a Cloudflare challenge and breaks randomly. */}
+              <a
+                href="https://clutch.co/profile/zonic-media?badge=11431"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+              >
+                <Image
+                  className="hero-badge-widget"
+                  width={90}
+                  height={90}
+                  src="/images/clutch-top-company-2026.png"
+                  alt="Top Clutch Digital Marketing Company Delaware 2026"
+                  style={{ objectFit: "contain" }}
+                />
+              </a>
+              <Image
+                className="hero-badge-widget"
+                width={90}
+                height={90}
+                src="/images/Partner.png"
+                alt="Yelp Advertising Partner"
+              />
+              <a
+                href="https://www.trustpilot.com/review/zonicllc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="hero-trust-badge"
+                  width={110}
+                  height={51}
+                  src="/images/Trustpilot-Logo.png"
+                  alt="Zonic Media reviews on Trustpilot"
+                />
+              </a>
+            </div>
 
             <div className="hero-actions">
               <ScrollToFormLink className="btn btn-primary">
