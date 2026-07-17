@@ -13,9 +13,11 @@ import { FaStar } from "react-icons/fa";
 import {
   FiArrowUpRight,
   FiCalendar,
+  FiGlobe,
   FiLayout,
   FiMail,
   FiMapPin,
+  FiPenTool,
   FiPercent,
   FiPhoneCall,
   FiShield,
@@ -24,7 +26,7 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { LuPlaneTakeoff } from "react-icons/lu";
-import { RiLineChartLine, RiMegaphoneLine, RiQuillPenLine, RiSearchLine } from "react-icons/ri";
+import { RiLineChartLine } from "react-icons/ri";
 
 const PAGE_PATH = "/services/travel-and-tourism-marketing-agency";
 
@@ -177,34 +179,34 @@ const AboutChecks = [
 
 const ServiceCards = [
   {
-    icon: <RiSearchLine aria-hidden="true" />,
-    title: "Travel SEO",
-    desc: "Rank for the searches travelers make before they book. That includes destination guides and the branded searches OTAs try to steal.",
+    icon: <FiMapPin aria-hidden="true" />,
+    title: "Local SEO Agency",
+    desc: "We get your business ranking in the Google Map Pack so nearby customers find you first — turning local searches into steady calls and walk-ins, not just website traffic.",
   },
   {
-    icon: <FiTarget aria-hidden="true" />,
-    title: "Paid Media & Metasearch",
-    desc: "Google Ads and metasearch placements tuned to your booking windows. Budget flows to where trips actually get booked.",
+    icon: <FiGlobe aria-hidden="true" />,
+    title: "Google Business Profile",
+    desc: "Your profile is your best free lead source. We optimize it to rank, generate reviews, and — if it's suspended — reinstate it. We've recovered 500+ profiles for businesses like yours.",
   },
   {
-    icon: <RiMegaphoneLine aria-hidden="true" />,
-    title: "Social & Influencer Campaigns",
-    desc: "Short-form video, creator partnerships, and paid social that put your destination in the feeds where trips are dreamed up.",
-  },
-  {
-    icon: <RiQuillPenLine aria-hidden="true" />,
-    title: "Destination Content & Storytelling",
-    desc: "Itineraries and guides that sell the experience. Every page is written to rank and built around real traveler questions.",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    title: "PPC Ads Agency",
+    desc: "Google Ads campaigns built to capture customers searching right now — managed for cost-per-lead, not wasted clicks, so every dollar of a tighter budget works harder.",
   },
   {
     icon: <FiLayout aria-hidden="true" />,
-    title: "Travel Web Design & Booking UX",
-    desc: "Fast visual websites wired into your booking engine. Fewer steps between “this looks amazing” and a confirmed reservation.",
+    title: "Website Design",
+    desc: "Fast, mobile-first websites that make a small business look established and turn visitors into booked jobs — with the technical SEO foundation built in from day one.",
   },
   {
-    icon: <FiMail aria-hidden="true" />,
-    title: "Email, CRM & Guest Retention",
-    desc: "Pre-arrival upsells and loyalty flows that turn one-time guests into repeat travelers who book direct.",
+    icon: <FiPenTool aria-hidden="true" />,
+    title: "Graphic Design",
+    desc: "Professional graphics for ads, social, signage, and print that keep a growing brand looking consistent and credible everywhere customers see you.",
+  },
+  {
+    icon: <FiShield aria-hidden="true" />,
+    title: "Logo Design",
+    desc: "A distinctive logo and brand identity that earns instant recognition and trust — giving a small business the polished first impression bigger competitors rely on.",
   },
 ];
 
@@ -360,12 +362,12 @@ const TravelImages = {
     alt: "Traveler planning a trip with a map and smartphone at a cafe table",
   },
   resortAerial: {
-    src: "/images/travel-tourism/resort-aerial.webp",
-    alt: "Coastal resort beside a bright beach and calm turquoise water",
+    src: "/images/travel-tourism/direct-booking-revenue-dashboard.webp",
+    alt: "Hotel booking analytics dashboard on a resort terrace overlooking the ocean",
   },
   travelerBooking: {
-    src: "/images/travel-tourism/traveler-booking-phone.webp",
-    alt: "Traveler booking a trip direct on a smartphone beside luggage and coffee",
+    src: "/images/travel-tourism/traveler-direct-booking-checkout.webp",
+    alt: "Traveler completing a direct hotel booking on a smartphone beside luggage",
   },
   teamStrategy: {
     src: "/images/travel-tourism/team-strategy-session.webp",

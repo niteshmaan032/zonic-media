@@ -788,7 +788,7 @@
 /* ---------- 4. services ---------- */
 
 .tt-page .tt-services {
-  padding: 110px 0;
+  padding: 0 0 110px;
   background: var(--tt-sky);
 }
 
@@ -834,7 +834,7 @@
 /* ---------- 5. stats band ---------- */
 
 .tt-page .tt-band {
-  padding: 110px 0;
+  padding: 0 0 110px;
 }
 
 /* bento grid: 4 columns — tall image spans 2x2, wide image spans 2x1 */
@@ -908,7 +908,7 @@
 /* ---------- 6. engine ---------- */
 
 .tt-page .tt-engine {
-  padding: 110px 0;
+  padding: 0 0 110px;
 }
 
 .tt-page .tt-engine-cards {
@@ -934,7 +934,7 @@
 /* ---------- 7. postcard gallery marquee ---------- */
 
 .tt-page .tt-gallery {
-  padding: 110px 0 120px;
+  padding: 0 0 120px;
   background: var(--tt-sky);
   overflow: hidden;
 }
@@ -1004,7 +1004,7 @@
 /* ---------- 8. process ---------- */
 
 .tt-page .tt-process {
-  padding: 110px 0;
+  padding: 0 0 110px;
 }
 
 .tt-page .tt-steps {
@@ -1063,7 +1063,7 @@
 /* ---------- 9. why + banner ---------- */
 
 .tt-page .tt-why {
-  padding: 110px 0;
+  padding: 0 0 110px;
   background: var(--tt-sky);
 }
 
@@ -1117,7 +1117,7 @@
 /* ---------- 10. niches ---------- */
 
 .tt-page .tt-niches {
-  padding: 110px 0;
+  padding: 0 0 110px;
 }
 
 .tt-page .tt-chips {
@@ -1167,7 +1167,7 @@
 /* ---------- 11. faqs ---------- */
 
 .tt-page .tt-faqs {
-  padding: 110px 0;
+  padding: 0 0 110px;
   background: var(--tt-sky);
 }
 
@@ -1215,7 +1215,7 @@
 /* ---------- 12. grow further ---------- */
 
 .tt-page .tt-grow {
-  padding: 110px 0;
+  padding: 0 0 110px;
 }
 
 .tt-page .tt-grow-cards {
@@ -1600,8 +1600,13 @@
   .tt-page .tt-faqs,
   .tt-page .tt-grow,
   .tt-page .tt-contact {
-    padding-top: 72px;
     padding-bottom: 72px;
+  }
+
+  /* only the sections without a padded sibling above keep top padding */
+  .tt-page .tt-about,
+  .tt-page .tt-contact {
+    padding-top: 72px;
   }
 
   .tt-page .tt-about-grid,
@@ -1667,8 +1672,25 @@
   .tt-page .tt-faqs,
   .tt-page .tt-grow,
   .tt-page .tt-contact {
-    padding-top: 52px;
     padding-bottom: 52px;
+  }
+
+  .tt-page .tt-about,
+  .tt-page .tt-contact {
+    padding-top: 52px;
+  }
+
+  /* smaller eyebrow pill so it stays on one line instead of a big box */
+  .tt-page .tt-hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    margin-bottom: 18px;
+  }
+
+  /* contact form: one input per row on phones */
+  .tt-page .ttf-stacked .ttf-bar {
+    grid-template-columns: 1fr;
   }
 
   .tt-page .tt-sec-head-center {
