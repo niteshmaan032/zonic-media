@@ -120,7 +120,10 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Local SEO for Home Services", url: "/services/local-seo-for-home-services" },
+  {
+    name: "Local SEO for Home Services",
+    url: "/services/local-seo-for-home-services",
+  },
 ]);
 
 function page() {
@@ -163,7 +166,7 @@ function page() {
               <ClutchWidget />
             </div>
 
-            <div className="local-seo-home-sec-1-stats">
+            {/* <div className="local-seo-home-sec-1-stats">
               <p>
                 <span> 500+ </span>
                 500+ Businesses Ranked <br /> on Google
@@ -178,7 +181,7 @@ function page() {
                 <span> 30-60 Dayes </span>
                 Average SEO Results Time
               </p>
-            </div>
+            </div> */}
           </div>
 
           <div className="local-seo-home-contact-form">
@@ -824,7 +827,7 @@ function page() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                "url": "https://zonicllc.com/services/local-seo-for-home-services",
+                url: "https://zonicllc.com/services/local-seo-for-home-services",
                 mainEntity: SeoHomeFaqs.map((faq) => ({
                   "@type": "Question",
                   name: faq.question,
