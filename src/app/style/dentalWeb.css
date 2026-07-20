@@ -1850,3 +1850,11 @@
     animation: none;
   }
 }
+
+/* In-body contextual internal links */
+.dw-page .dw-inline-link {
+  color: #0c4da2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

@@ -273,10 +273,23 @@ export default function StatePage({ state }: { state: StateContent }) {
                 </h2>
                 <p className="hia-sec-sub">
                   We are not a &ldquo;just SEO&rdquo; shop or a &ldquo;just
-                  Google Ads&rdquo; shop. We build the whole funnel for{" "}
-                  {stateName} home inspectors, from the way you appear on
-                  Google Maps to the way your website converts a visitor into
-                  a booked inspection.
+                  Google Ads&rdquo; shop. Our{" "}
+                  <Link
+                    href="/services/home-inspector-marketing"
+                    className="hia-inline-link"
+                  >
+                    home inspector marketing
+                  </Link>{" "}
+                  program builds the whole funnel for {stateName} home
+                  inspectors, from the way you appear on Google Maps through{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="hia-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  to the way your website converts a visitor into a booked
+                  inspection.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -310,9 +323,19 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <span className="hia-accent">how fast it pays back.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  Use this grid as a planning guide. Google Ads and a polished
-                  Google Business Profile buy you bookings this month. Local
-                  SEO and social compound across the year. The strongest{" "}
+                  Use this grid as a planning guide.{" "}
+                  <Link href="/services/google-ads" className="hia-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  and a polished Google Business Profile buy you bookings this
+                  month.{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="hia-inline-link"
+                  >
+                    Local SEO for home services
+                  </Link>{" "}
+                  and social compound across the year. The strongest{" "}
                   {stateName} home inspector marketing plans blend both
                   timelines so the calendar never goes cold.
                 </p>
@@ -465,7 +488,19 @@ export default function StatePage({ state }: { state: StateContent }) {
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
                   agencies can&apos;t edit, filter, or fake. The same operators
-                  who hired us to fix their booking pipeline left these.
+                  who hired us to fix their booking pipeline left these. Many
+                  came to us needing to{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="hia-inline-link"
+                  >
+                    recover a suspended Google Business Profile
+                  </Link>{" "}
+                  or rebuild a slow, dated site into a{" "}
+                  <Link href="/services/web-design" className="hia-inline-link">
+                    conversion-focused website
+                  </Link>{" "}
+                  before the reviews ever started rolling in.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -535,9 +570,16 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <span className="hia-accent">strategy call.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  If you don&apos;t see your question below, just include it
-                  in the audit form and we will answer it in the written
-                  report.
+                  If you don&apos;t see your question below — whether it&apos;s
+                  about paid ads, review systems, or how to{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="hia-inline-link"
+                  >
+                    verify a new Google Business Profile
+                  </Link>{" "}
+                  — just include it in the audit form and we will answer it in
+                  the written report.
                 </p>
                 <HiaFaqAccordion items={state.faqs} defaultOpen={0} />
               </section>

@@ -37,6 +37,13 @@
   border-color: #ef4444;
 }
 
+#hia-top .gre-inline-link {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ──────────────── BREADCRUMB ──────────────── */
 .gre-breadcrumb {
   display: flex;
@@ -411,4 +418,12 @@
   .gre-state-head h3 {
     font-size: 21px;
   }
+}
+
+/* In-body contextual internal links */
+.hia-page .gre-inline-link {
+  color: #dc2626;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
 }

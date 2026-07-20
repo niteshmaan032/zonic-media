@@ -1847,3 +1847,12 @@ details[open] .st2-faq-icon::after {
     padding-right: 20px;
   }
 }
+
+/* Contextual in-body internal links */
+.st2-container .st2-inline-link,
+.st2-hero .st2-inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

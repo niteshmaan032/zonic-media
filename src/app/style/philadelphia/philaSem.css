@@ -1,3 +1,14 @@
+.phila-sem-sec-1 .phila-sem-inline-link,
+.phila-sem-sec-2 .phila-sem-inline-link,
+.phila-sem-sec-4 .phila-sem-inline-link,
+.phila-sem-sec-7 .phila-sem-inline-link,
+.phila-sem-sec-8 .phila-sem-inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .phila-sem-sec-1 {
   background-image: url("/images/philadelphia/phila-sem/phila-sem-banner-1.jpg");
   min-height: 100svh;

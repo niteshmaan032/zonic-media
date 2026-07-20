@@ -6,6 +6,22 @@
   background-position: center center;
 }
 
+.dent-sec-1 .dent-inline-link,
+.dent-sec-2 .dent-inline-link,
+.dent-sec-3 .dent-inline-link,
+.dent-sec-4 .dent-inline-link,
+.dent-sec-5 .dent-inline-link,
+.dent-sec-6 .dent-inline-link,
+.dent-sec-7 .dent-inline-link,
+.dent-sec-8 .dent-inline-link,
+.dent-sec-9 .dent-inline-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 2px;
+}
+
 .dent-sec-1-layer {
   position: relative;
   overflow: hidden;

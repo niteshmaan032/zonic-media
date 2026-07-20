@@ -371,12 +371,22 @@ export default function Page() {
                     freelancer, or consultant resell another company&apos;s
                     fulfillment under their own brand. You sell the service to
                     your client and set the price; we execute the work behind the
-                    scenes — Google Business Profile reinstatement, verification,
-                    and management, local SEO, and WordPress web design — with no
-                    Zonic Media branding anywhere your client can see. Your client
-                    experiences a seamless service from your agency, while you add
-                    capabilities and capacity without hiring, and keep the margin
-                    between our reseller rate and your client price.
+                    scenes — Google Business Profile reinstatement,{" "}
+                    <Link
+                      href="/services/gmb-verification-help"
+                      className="wl-inline-link"
+                    >
+                      GBP verification
+                    </Link>
+                    , and management, local SEO, and{" "}
+                    <Link href="/services/web-design" className="wl-inline-link">
+                      WordPress web design
+                    </Link>{" "}
+                    — with no Zonic Media branding anywhere your client can see.
+                    Your client experiences a seamless service from your agency,
+                    while you add capabilities and capacity without hiring, and
+                    keep the margin between our reseller rate and your client
+                    price.
                   </p>
                 </div>
               </section>
@@ -390,8 +400,11 @@ export default function Page() {
                 </h2>
                 <p className="wl-sec-sub">
                   Add specialist capabilities to your agency overnight. Resell
-                  one service or the full stack — your clients only ever see
-                  your name.
+                  one service or our full{" "}
+                  <Link href="/services" className="wl-inline-link">
+                    digital marketing services
+                  </Link>{" "}
+                  stack — your clients only ever see your name.
                 </p>
                 <div className="wl-grid wl-g3">
                   {resellServices.map((s, i) => (
@@ -460,22 +473,42 @@ export default function Page() {
                   </h2>
                   <p>
                     Every growing agency hits the same wall: a client wants a
-                    service you don&apos;t fulfill in-house, or your pipeline
-                    outgrows your team&apos;s capacity. Hiring a specialist for a
-                    capability you&apos;ll only use occasionally is slow and
-                    expensive. Turning the work away costs you revenue and
-                    weakens the client relationship. White-label fulfillment
-                    solves both — you say yes to the work, we deliver it under
-                    your brand, and you grow without the overhead.
+                    service you don&apos;t fulfill in-house — ongoing{" "}
+                    <Link
+                      href="/services/gmb-optimization"
+                      className="wl-inline-link"
+                    >
+                      Google Business Profile management
+                    </Link>
+                    , say, or full{" "}
+                    <Link
+                      href="/services/local-seo-for-home-services"
+                      className="wl-inline-link"
+                    >
+                      local SEO
+                    </Link>{" "}
+                    — or your pipeline outgrows your team&apos;s capacity. Hiring
+                    a specialist for a capability you&apos;ll only use
+                    occasionally is slow and expensive. Turning the work away
+                    costs you revenue and weakens the client relationship.
+                    White-label fulfillment solves both — you say yes to the
+                    work, we deliver it under your brand, and you grow without the
+                    overhead.
                   </p>
                   <p>
-                    Niche capabilities are where this matters most. Google
-                    Business Profile reinstatement, for example, is a specialized
-                    skill most agencies can&apos;t justify staffing for, yet
-                    clients with suspended profiles need it urgently. Partnering
-                    lets you offer that expertise on demand, with a track record
-                    of 700+ reinstatements behind it, without becoming a
-                    reinstatement expert yourself.
+                    Niche capabilities are where this matters most.{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="wl-inline-link"
+                    >
+                      Google Business Profile reinstatement
+                    </Link>
+                    , for example, is a specialized skill most agencies
+                    can&apos;t justify staffing for, yet clients with suspended
+                    profiles need it urgently. Partnering lets you offer that
+                    expertise on demand, with a track record of 700+
+                    reinstatements behind it, without becoming a reinstatement
+                    expert yourself.
                   </p>
                   <h3>Your brand stays front and center</h3>
                   <p>
@@ -490,8 +523,13 @@ export default function Page() {
                   <p>
                     Reseller pricing sits below our standard rates, giving you
                     room to mark up to your own client price and keep a
-                    comfortable margin. You control what your client pays; we
-                    keep your cost low. The result is a new revenue stream with
+                    comfortable margin — whether you resell a single service or a
+                    bundled{" "}
+                    <Link href="/services/launchpad" className="wl-inline-link">
+                      starter marketing package
+                    </Link>{" "}
+                    for a new-business client. You control what your client pays;
+                    we keep your cost low. The result is a new revenue stream with
                     none of the fulfillment burden — and the more you send, the
                     better your wholesale rate becomes.
                   </p>

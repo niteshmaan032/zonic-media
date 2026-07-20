@@ -10,6 +10,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -352,7 +353,14 @@ function page() {
           </p>
           <p className="pedi-sec-descrp">
             We build systems that position your clinic in front of parents who
-            are actively searching for care.
+            are actively searching for care, from{" "}
+            <Link
+              href="/services/gmb-optimization"
+              className="pedi-inline-link"
+            >
+              Google Business Profile optimization
+            </Link>{" "}
+            to content that earns trust.
           </p>
           <p className="pedi-sec-descrp">
             No generic strategies. No guesswork. Just focused pediatric
@@ -373,10 +381,32 @@ function page() {
               </h3>
               <p className="pedi-split-text">
                 Most parents search for pediatricians near them when they need
-                care for their child. Local SEO ensures your clinic appears in
-                Google Maps and local search results at the right moment, making
-                it easier for nearby parents to find, trust, and choose your
-                services.
+                care for their child. Our{" "}
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="pedi-inline-link"
+                >
+                  local SEO services
+                </Link>{" "}
+                ensure your clinic appears in the Google Map Pack and local
+                search results at the right moment, making it easier for nearby
+                parents to find, trust, and choose your services. If your listing
+                has been taken down, we also handle{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="pedi-inline-link"
+                >
+                  suspended Google Business Profile reinstatement
+                </Link>{" "}
+                so you never lose local visibility. For new or locked profiles,
+                we can also{" "}
+                <Link
+                  href="/services/gmb-verification-help"
+                  className="pedi-inline-link"
+                >
+                  verify your GBP
+                </Link>{" "}
+                before campaigns scale.
               </p>
               <p className="pedi-split-label">What We Do:</p>
 
@@ -415,7 +445,16 @@ function page() {
           <h2 className="pedi-sec-heading">How Our Process Works</h2>
           <p className="pedi-sec-descrp">
             From research to optimization, every step is focused on performance,
-            scalability, and consistent lead generation.
+            scalability, and consistent lead generation. When you need faster
+            reach, we pair organic growth with{" "}
+            <Link href="/services/google-ads" className="pedi-inline-link">
+              Google Ads
+            </Link>{" "}
+            and a full range of{" "}
+            <Link href="/services" className="pedi-inline-link">
+              digital marketing services
+            </Link>
+            .
           </p>
         </div>
 
@@ -454,8 +493,11 @@ function page() {
               </h3>
               <p className="pedi-split-text">
                 Getting traffic is not enough. Your website must convert
-                visitors into appointment requests. We optimize your website so
-                parents trust your clinic and take action.
+                visitors into appointment requests. Our{" "}
+                <Link href="/services/web-design" className="pedi-inline-link">
+                  conversion-focused website design
+                </Link>{" "}
+                makes parents trust your clinic and take action.
               </p>
               <p className="pedi-split-label">What We Do:</p>
 

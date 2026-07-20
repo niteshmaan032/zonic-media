@@ -189,22 +189,61 @@ const ServiceCards = [
   {
     icon: <FiMapPin aria-hidden="true" />,
     title: "Local SEO Agency",
-    desc: "We get your business ranking in the Google Map Pack so nearby customers find you first — turning local searches into steady calls and walk-ins, not just website traffic.",
+    desc: (
+      <>
+        We get your business ranking in the{" "}
+        <Link href="/services/local-seo-for-home-services" className="tt-inline-link">
+          Google Map Pack
+        </Link>{" "}
+        so nearby customers find you first — turning local searches into steady
+        calls and walk-ins, not just website traffic.
+      </>
+    ),
   },
   {
     icon: <FiGlobe aria-hidden="true" />,
     title: "Google Business Profile",
-    desc: "Your profile is your best free lead source. We optimize it to rank, generate reviews, and — if it's suspended — reinstate it. We've recovered 500+ profiles for businesses like yours.",
+    desc: (
+      <>
+        Your profile is your best free lead source. We handle{" "}
+        <Link href="/services/gmb-optimization" className="tt-inline-link">
+          Google Business Profile optimization
+        </Link>{" "}
+        to rank and generate reviews, and when a profile is suspended, we help{" "}
+        <Link href="/services/gmb-reinstatement-help" className="tt-inline-link">
+          reinstate suspended profiles
+        </Link>
+        . We&apos;ve recovered 500+ profiles for businesses like yours.
+      </>
+    ),
   },
   {
     icon: <FiTrendingUp aria-hidden="true" />,
     title: "PPC Ads Agency",
-    desc: "Google Ads campaigns built to capture customers searching right now — managed for cost-per-lead, not wasted clicks, so every dollar of a tighter budget works harder.",
+    desc: (
+      <>
+        <Link href="/services/google-ads" className="tt-inline-link">
+          Google Ads campaigns
+        </Link>{" "}
+        built to capture customers searching right now — managed for
+        cost-per-lead, not wasted clicks, so every dollar of a tighter budget
+        works harder.
+      </>
+    ),
   },
   {
     icon: <FiLayout aria-hidden="true" />,
     title: "Website Design",
-    desc: "Fast, mobile-first websites that make a small business look established and turn visitors into booked jobs — with the technical SEO foundation built in from day one.",
+    desc: (
+      <>
+        Fast,{" "}
+        <Link href="/services/web-design" className="tt-inline-link">
+          mobile-first websites
+        </Link>{" "}
+        that make a small business look established and turn visitors into
+        booked jobs — with the technical SEO foundation built in from day one.
+      </>
+    ),
   },
   {
     icon: <FiPenTool aria-hidden="true" />,
@@ -490,9 +529,12 @@ function Page() {
                 into <span className="tt-hero-hl">booked trips</span>
               </h1>
               <p className="tt-hero-sub">
-                Zonic Media grows hotels and tour operators with travel SEO,
-                paid media, and booking-ready websites. More travelers book
-                direct and fewer bookings leak to OTA commissions.
+                <Link href="/" className="tt-inline-link">
+                  Zonic Media
+                </Link>{" "}
+                grows hotels and tour operators with travel SEO, paid media,
+                and booking-ready websites. More travelers book direct and fewer
+                bookings leak to OTA commissions.
               </p>
 
               <div className="tt-hero-badges">
@@ -814,7 +856,11 @@ function Page() {
                   From a twelve-room boutique hotel to a statewide destination
                   marketing organization, the engagement adapts to how your
                   business actually books. Everything runs remotely, so we work
-                  with travel brands across the United States and beyond.
+                  with{" "}
+                  <Link href="/industries" className="tt-inline-link">
+                    travel brands
+                  </Link>{" "}
+                  across the United States and beyond.
                 </p>
               </div>
               <div className="tt-chips">

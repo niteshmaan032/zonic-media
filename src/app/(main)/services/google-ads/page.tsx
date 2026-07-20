@@ -261,7 +261,12 @@ function Page() {
                 We help businesses capture ready-to-convert traffic, appear at
                 the top of Google search results, optimize advertising budgets,
                 and turn paid clicks into measurable leads and revenue through
-                strategic Google Ads management.
+                strategic Google Ads management — a fast complement to the
+                slower-building results of{" "}
+                <Link href="/services/local-seo-for-home-services" className="ads-inline-link">
+                  local SEO
+                </Link>
+                .
               </p>
 
               <Link href="/contact-us" className="buttons">
@@ -316,10 +321,14 @@ function Page() {
           <Col lg={6}>
             <div className="ads-section-2__descrp">
               <p>
-                Whether you operate an HVAC company, roofing business, locksmith
-                service, healthcare clinic, or any local service business, Zonic
-                Media helps companies across industries generate qualified leads
-                through strategic Google Ads campaigns. From plumbers,
+                Whether you operate an{" "}
+                <Link href="/services/local-seo-services-for-hvac" className="ads-inline-link">
+                  HVAC company
+                </Link>
+                , roofing business, locksmith service, healthcare clinic, or any
+                local service business, Zonic Media helps companies across
+                industries generate qualified leads through strategic Google Ads
+                campaigns. From plumbers,
                 electricians, landscapers, and contractors to dentists, medical
                 spas, real estate agencies, auto repair shops, moving companies,
                 and cleaning services — we help businesses attract ready-to-buy
@@ -331,18 +340,26 @@ function Page() {
                 results exactly when potential customers are actively looking
                 for their services. With the right strategy, your ads can
                 capture high-intent searches, drive qualified traffic, and
-                generate consistent leads for your business. At Zonic Media, we
-                focus on creating data-driven campaigns that maximize return on
-                ad spend while minimizing wasted budget.
+                generate consistent leads for your business. Paired with{" "}
+                <Link href="/services/gmb-optimization" className="ads-inline-link">
+                  Google Business Profile optimization
+                </Link>
+                , paid and organic reinforce each other. At Zonic Media, we focus
+                on creating data-driven campaigns that maximize return on ad
+                spend while minimizing wasted budget.
               </p>
 
               <p>
                 Our Google Ads services support local businesses, service-area
                 businesses, and multi-location companies looking to scale their
-                online lead generation. No matter your industry, our experts
-                build optimized campaigns, refine targeting, and continuously
-                improve performance to deliver measurable growth and long-term
-                advertising success.
+                online lead generation. Brand-new companies can get ads,
+                branding, and a website together through our{" "}
+                <Link href="/services/launchpad" className="ads-inline-link">
+                  business launch package
+                </Link>
+                . No matter your industry, our experts build optimized
+                campaigns, refine targeting, and continuously improve performance
+                to deliver measurable growth and long-term advertising success.
               </p>
             </div>
           </Col>
@@ -361,10 +378,15 @@ function Page() {
 
               <p className="ads-section-3__descrp">
                 Launch highly targeted Google Ads campaigns designed to reach
-                customers actively searching for your products or services. Our
-                team builds data-driven campaigns that maximize visibility,
-                improve click-through rates, and generate qualified leads for
-                your business.
+                customers actively searching for your products or services. Ads
+                are also the fastest way to stay visible if your organic listing
+                goes dark — for example, while we handle a{" "}
+                <Link href="/services/gmb-reinstatement-help" className="ads-inline-link">
+                  suspended Google Business Profile
+                </Link>
+                . Our team builds data-driven campaigns that maximize
+                visibility, improve click-through rates, and generate qualified
+                leads for your business.
               </p>
 
               <ul className="ads-section-3__key-points">
@@ -393,7 +415,12 @@ function Page() {
 
               <p className="ads-section-3__descrp">
                 We continuously monitor and optimize your Google Ads campaigns
-                to improve performance and maximize return on ad spend. Our
+                to improve performance and maximize return on ad spend. For
+                service-area businesses, we can also resolve{" "}
+                <Link href="/services/gmb-verification-help" className="ads-inline-link">
+                  Google Business Profile verification
+                </Link>{" "}
+                issues so your organic listing supports the paid strategy. Our
                 optimization strategies focus on improving ad quality, reducing
                 wasted spend, and increasing conversions.
               </p>
@@ -423,9 +450,13 @@ function Page() {
               </h3>
 
               <p className="ads-section-3__descrp">
-                A successful Google Ads campaign requires more than clicks. We
-                optimize landing pages and user experience to convert traffic
-                into leads and customers while improving campaign performance.
+                A successful Google Ads campaign requires more than clicks. Our{" "}
+                <Link href="/services/web-design" className="ads-inline-link">
+                  conversion-focused web design
+                </Link>{" "}
+                team optimizes landing pages and user experience to convert
+                traffic into leads and customers while improving campaign
+                performance.
               </p>
 
               <ul className="ads-section-3__key-points">

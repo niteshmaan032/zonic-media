@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -648,7 +649,14 @@ export default function LawSeoPage() {
                   Reputation Growth
                 </p>
                 <p className="car-tow-hero-body">
-                  Zonic Media provides law firm marketing services that build a
+                  Zonic Media provides{" "}
+                  <Link
+                    href="/services/law-firm-marketing-agency"
+                    className="law-inline-link"
+                  >
+                    law firm marketing services
+                  </Link>{" "}
+                  that build a
                   consistent flow of qualified case inquiries through local SEO,
                   Google Maps optimization, conversion-focused web design, and
                   reputation growth. If your firm is not generating predictable
@@ -740,8 +748,29 @@ export default function LawSeoPage() {
             <h2>Find Out Exactly Where Your Firm Is Losing Case Inquiries</h2>
             <p>
               Request a free law firm marketing audit and we will review your
-              local SEO performance, Google Business Profile, website conversion
-              rate, and competitive positioning in your market.
+              <Link
+                href="/services/local-seo-for-home-services"
+                className="law-inline-link"
+              >
+                local SEO
+              </Link>{" "}
+              performance, Google Business Profile, website conversion rate, and
+              competitive positioning in your market. We can also flag whether
+              you need to{" "}
+              <Link
+                href="/services/gmb-verification-help"
+                className="law-inline-link"
+              >
+                verify your GBP
+              </Link>{" "}
+              or recover a{" "}
+              <Link
+                href="/services/gmb-reinstatement-help"
+                className="law-inline-link"
+              >
+                suspended Google Business Profile
+              </Link>
+              .
             </p>
             <div
               className="car-tow-hero-actions car-tow-final-actions"
@@ -1012,9 +1041,18 @@ export default function LawSeoPage() {
                   need to work together.
                 </h3>
                 <p>
-                  We connect Google Business Profile optimization, practice area
-                  content, local signals, reviews, and conversion-focused web
-                  design into one coordinated system that helps your firm win
+                  We connect{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="law-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>
+                  , practice area content, local signals, reviews, and{" "}
+                  <Link href="/services/web-design" className="law-inline-link">
+                    conversion-focused web design
+                  </Link>{" "}
+                  into one coordinated system that helps your firm win
                   more high-intent legal searches and turn them into
                   consultations.
                 </p>
@@ -1415,7 +1453,11 @@ export default function LawSeoPage() {
               <h2>SEO vs Paid Ads for Law Firms</h2>
               <p className="car-tow-section-descrp">
                 Legal marketing involves significant budget decisions.
-                Understanding how SEO and paid advertising differ - and how
+                Understanding how SEO and{" "}
+                <Link href="/services/google-ads" className="law-inline-link">
+                  paid advertising
+                </Link>{" "}
+                differ - and how
                 they work together - helps your firm make smarter, more
                 confident investment choices.
               </p>

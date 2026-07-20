@@ -849,6 +849,18 @@ body:has(.ima-page) .navbar-wrapper.show {
   line-height: 1.75;
 }
 
+/* In-body contextual internal links. */
+.ima-page .ima-inline-link {
+  color: var(--ima-orange-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+}
+
+.ima-page .ima-inline-link:hover {
+  color: var(--ima-orange);
+}
+
 .ima-reviews-section {
   padding: 66px 0;
   border-bottom: 1px solid var(--ima-border);

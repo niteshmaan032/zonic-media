@@ -258,8 +258,14 @@ function Page() {
                   <em>strongest story.</em>
                 </h1>
                 <p className="hia-hero-sub">
-                  Zonic Media is a digital fundraising and advocacy studio for
-                  mission-driven organizations. We build the campaigns,
+                  <Link href="/" className="npm-inline-link">
+                    Zonic Media
+                  </Link>{" "}
+                  is a digital fundraising and advocacy studio providing{" "}
+                  <Link href="/services" className="npm-inline-link">
+                    digital marketing services
+                  </Link>{" "}
+                  for mission-driven organizations. We build the campaigns,
                   content, and thought leadership that move donors, boards, and
                   policymakers to act.
                 </p>
@@ -360,7 +366,11 @@ function Page() {
                     <em>from one partner.</em>
                   </h2>
                   <p className="hia-sec-sub">
-                    Strategy, content, paid media, and production — delivered
+                    Strategy, content,{" "}
+                    <Link href="/services/google-ads" className="npm-inline-link">
+                      paid media
+                    </Link>
+                    , and production — delivered
                     as a single coordinated program so your team can stay
                     focused on the mission.
                   </p>
@@ -415,7 +425,12 @@ function Page() {
                         Demographic and program data turned into clean,
                         scannable infographics — plus campaign graphics, impact
                         reports, and donor-ready assets built for the way boards
-                        actually read.
+                        actually read. When the campaign needs a stronger
+                        landing page, those assets can support{" "}
+                        <Link href="/services/web-design" className="npm-inline-link">
+                          conversion-focused websites
+                        </Link>
+                        .
                       </p>
                       <span className="npm-tag">
                         Infographics · reports · assets
@@ -485,8 +500,12 @@ function Page() {
                   <em>help you tell it.</em>
                 </h2>
                 <p className="hia-sec-sub">
-                  Zonic Media works across the nonprofit sector. The channels
-                  stay the same; the story changes with your cause.
+                  Zonic Media works across the nonprofit sector and the wider{" "}
+                  <Link href="/industries" className="npm-inline-link">
+                    industries we serve
+                  </Link>
+                  . The channels stay the same; the story changes with your
+                  cause.
                 </p>
                 <div className="npm-serve-grid">
                   {serveCards.map((c, i) => (
@@ -532,10 +551,17 @@ function Page() {
                   </p>
                   <p>
                     Yes to both. We offer a short initial term instead of a
-                    long lock-in, so your board can see the work before
-                    committing to a year. The goal is a partnership you renew
-                    because it&apos;s working — not a contract you&apos;re stuck
-                    in.
+                    long lock-in, so your board can see how{" "}
+                    <Link href="/about" className="npm-inline-link">
+                      our team
+                    </Link>{" "}
+                    works before committing to a year. If you need a smaller
+                    first step, start with a{" "}
+                    <Link href="/contact-us" className="npm-inline-link">
+                      free consultation
+                    </Link>
+                    . The goal is a partnership you renew because it&apos;s
+                    working — not a contract you&apos;re stuck in.
                   </p>
                   <ul className="npm-pledge">
                     {pledge.map((p, i) => (

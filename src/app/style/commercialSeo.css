@@ -19,6 +19,13 @@
   overflow-x: clip;
 }
 
+.cseo-page .cseo-inline-link {
+  color: var(--com-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .cseo-page main,
 .cseo-page section,
 .cseo-phila-section,

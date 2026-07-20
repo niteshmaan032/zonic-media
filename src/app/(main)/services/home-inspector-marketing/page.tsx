@@ -512,9 +512,22 @@ function Page() {
                   <span className="hia-accent">5 states.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  Zonic Media helps home inspection companies grow throughout
-                  Texas, Florida, California, North Carolina, and Georgia —
-                  with dedicated local SEO playbooks for each market.
+                  Zonic Media helps{" "}
+                  <Link
+                    href="/services/home-inspector-marketing/texas"
+                    className="hia-inline-link"
+                  >
+                    home inspectors in Texas
+                  </Link>
+                  , Florida, California, North Carolina, and Georgia — with
+                  dedicated{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="hia-inline-link"
+                  >
+                    local SEO
+                  </Link>{" "}
+                  playbooks for each market.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -567,12 +580,21 @@ function Page() {
                     to compare options on their own.
                   </p>
                   <p>
-                    If your Google Business Profile is sitting on page two and
-                    your website looks like it was built in 2014, those
-                    buyers never see you. They book the inspector with the
-                    better reviews, the cleaner Maps listing, and the website
-                    that actually loads in under three seconds on their
-                    phone.
+                    If your{" "}
+                    <Link
+                      href="/services/gmb-optimization"
+                      className="hia-inline-link"
+                    >
+                      Google Business Profile
+                    </Link>{" "}
+                    is sitting on page two and your website looks like it was
+                    built in 2014, those buyers never see you. They book the
+                    inspector with the better reviews, the cleaner Maps
+                    listing, and a{" "}
+                    <Link href="/services/web-design" className="hia-inline-link">
+                      website that actually loads
+                    </Link>{" "}
+                    in under three seconds on their phone.
                   </p>
                 </div>
                 <div className="hia-section-cta">
@@ -637,11 +659,14 @@ function Page() {
                   <span className="hia-accent">how fast it pays back.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  Use this grid as a planning guide. Google Ads and a polished
-                  Google Business Profile buy you bookings this month. Local SEO
-                  and social compound across the year. The strongest home
-                  inspector marketing plans blend both timelines so the
-                  calendar never goes cold.
+                  Use this grid as a planning guide.{" "}
+                  <Link href="/services/google-ads" className="hia-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  and a polished Google Business Profile buy you bookings this
+                  month. Local SEO and social compound across the year. The
+                  strongest home inspector marketing plans blend both timelines
+                  so the calendar never goes cold.
                 </p>
                 <div className="hia-channel-table-wrap">
                   <table className="hia-channel-table">
@@ -723,12 +748,18 @@ function Page() {
                 <div className="hia-results-prose">
                   <p>
                     The pattern is consistent: in the first ninety days, the
-                    Google Business Profile work and the paid ads start
-                    filling the calendar with direct calls. By month four or
-                    five, the local SEO investment starts compounding — you
-                    stop paying for clicks on keywords you now rank #1 for
-                    organically. By the end of year one, the cost per booked
-                    inspection has typically dropped by half.
+                    Google Business Profile work — including{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hia-inline-link"
+                    >
+                      reinstating any suspended profile
+                    </Link>{" "}
+                    — and the paid ads start filling the calendar with direct
+                    calls. By month four or five, the local SEO investment
+                    starts compounding — you stop paying for clicks on keywords
+                    you now rank #1 for organically. By the end of year one, the
+                    cost per booked inspection has typically dropped by half.
                   </p>
                   <p>
                     The other pattern worth flagging:{" "}
@@ -872,9 +903,16 @@ function Page() {
                   <span className="hia-accent">strategy call.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  If you don&apos;t see your question below, just include it
-                  in the audit form and we will answer it in the written
-                  report.
+                  If you don&apos;t see your question below — whether it&apos;s
+                  about paid ads, review systems, or how to{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="hia-inline-link"
+                  >
+                    verify a new Google Business Profile
+                  </Link>{" "}
+                  — just include it in the audit form and we will answer it in
+                  the written report.
                 </p>
                 <HiaFaqAccordion items={faqs} defaultOpen={0} />
               </section>

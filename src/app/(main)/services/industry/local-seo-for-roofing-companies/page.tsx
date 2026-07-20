@@ -8,6 +8,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import { FaSearch, FaLink, FaStar, FaChartBar } from "react-icons/fa";
@@ -288,8 +289,15 @@ function page() {
               homeowners search for roof repair, installation, or inspection,
               your company appears at the top with a strong, optimized presence.
               From improving your visibility on search results to building trust
-              through reviews and accurate listings, we help convert clicks into
-              calls and inquiries into confirmed projects. It&apos;s not just
+              through reviews and accurate listings, our{" "}
+              <Link
+                href="/services/roofing-marketing-agency"
+                className="roof-inline-link"
+              >
+                roofing marketing agency
+              </Link>{" "}
+              helps convert clicks into calls and inquiries into confirmed
+              projects. It&apos;s not just
               about traffic &mdash; it&apos;s about attracting the right
               customers at the right time and turning every search into a
               potential job.
@@ -313,13 +321,21 @@ function page() {
               </p>
               <p className="roof-sec-3-descrp">
                 In a competitive market like Philadelphia, simply having a
-                website is not enough. Your business needs to appear exactly
-                when potential customers search for services near them.
+                website is not enough. Conversion-focused{" "}
+                <Link href="/services/web-design" className="roof-inline-link">
+                  website design
+                </Link>{" "}
+                makes your business appear exactly when potential customers
+                search for services near them.
               </p>
               <p className="roof-sec-3-descrp">
                 At Zonic Media, we help Philadelphia businesses dominate local
                 search, increase visibility, and generate consistent
-                high-quality leads without relying only on paid ads.
+                high-quality leads without relying only on paid ads such as{" "}
+                <Link href="/services/google-ads" className="roof-inline-link">
+                  Google Ads
+                </Link>
+                .
               </p>
               <HashScrollLink
                 href="#roof-contact-form"
@@ -395,18 +411,30 @@ function page() {
                 Google Business Profile Verification &amp; Setup
               </p>
               <p className="roof-sec-4b-lead">
-                Struggling to get your GBP verified or dealing with suspension
-                issues? We handle the setup the right way and make sure your
-                profile is fully optimized to attract local homeowners.
+                Struggling to get your GBP verified or dealing with a{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="roof-inline-link"
+                >
+                  suspended Google Business Profile
+                </Link>
+                ? We handle the setup the right way and make sure your profile
+                is fully optimized to attract local homeowners.
               </p>
 
               <div className="roof-sec-4b-copy-block">
                 <h3>Local SEO That Gets You Calls</h3>
                 <p>
                   We position your business in the Google 3 Pack, where real
-                  roofing leads happen. From keyword targeting to local
-                  authority building, we make sure your company shows up when it
-                  matters.
+                  roofing leads happen. Through hands-on{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="roof-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  and local authority building, we make sure your company shows
+                  up when it matters.
                 </p>
               </div>
 
@@ -551,7 +579,21 @@ function page() {
             <p className="roof-sec-7-descrp">
               We build digital marketing systems designed to generate leads,
               increase revenue, and create long term growth for businesses in
-              Philadelphia.
+              Philadelphia, using the same foundations behind{" "}
+              <Link
+                href="/services/local-seo-for-home-services"
+                className="roof-inline-link"
+              >
+                local SEO for home services
+              </Link>{" "}
+              and starting with basics like helping you{" "}
+              <Link
+                href="/services/gmb-verification-help"
+                className="roof-inline-link"
+              >
+                verify your GBP
+              </Link>
+              .
             </p>
 
             <div className="roof-sec-7-grid">

@@ -923,3 +923,11 @@
   outline-offset: 2px;
   border-radius: 4px;
 }
+
+/* Contextual in-body internal links */
+.industries-hub .ind-inline-link {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

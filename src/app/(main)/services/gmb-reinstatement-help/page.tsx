@@ -325,8 +325,12 @@ function page() {
                 Business Profile reinstatement) in the United States,
                 specializing in restoring suspended, disabled, and
                 pending-verification Google Business Profiles for small and
-                mid-size local businesses nationwide — on a{" "}
-                <span className="hl">No Fix, No Charge</span> basis on the
+                mid-size local businesses nationwide — from home services and
+                trades to{" "}
+                <Link href="/services/google-business-profile-services-real-estate-agents" className="gmb-inline-link">
+                  real estate agents
+                </Link>{" "}
+                — on a <span className="hl">No Fix, No Charge</span> basis on the
                 reinstatement fee.
               </p>
             </article>
@@ -353,9 +357,17 @@ function page() {
                 </p>
                 <p>
                   The veteran experts at Zonic Media bring more than seven years
-                  of combined experience in local SEO and Google Business Profile
-                  reinstatement, and have reinstated and verified more than 700
-                  business profiles. Each case begins with a free suspension audit
+                  of combined experience in{" "}
+                  <Link href="/services/local-seo-for-home-services" className="gmb-inline-link">
+                    local SEO
+                  </Link>{" "}
+                  and Google Business Profile reinstatement, and have reinstated
+                  and verified more than 700 business profiles. Many of these
+                  cases involve profiles that were never fully{" "}
+                  <Link href="/services/gmb-verification-help" className="gmb-inline-link">
+                    verified on Google Maps
+                  </Link>{" "}
+                  in the first place. Each case begins with a free suspension audit
                   to determine the root cause — a guideline violation, address or
                   verification issue, duplicate listing, ownership dispute, or
                   trust-signal problem — followed by a custom appeal and active
@@ -434,8 +446,13 @@ function page() {
               <h2>The common reasons Google suspends a Business Profile</h2>
               <p>
                 Suspensions usually come down to a conflict with Google&apos;s
-                guidelines, verification standards, or trust signals. These are
-                the issues our specialists resolve most often.
+                guidelines, verification standards, or trust signals — and
+                service-area trades like{" "}
+                <Link href="/services/plumbing-marketing-agency" className="gmb-inline-link">
+                  plumbing companies
+                </Link>{" "}
+                get flagged more often than most. These are the issues our
+                specialists resolve most often.
               </p>
             </div>
             <div className="card-grid">
@@ -586,9 +603,17 @@ function page() {
               <p>
                 Getting your listing back is the starting line, not the finish.
                 Once you&apos;re live again, our team turns your recovered profile
-                into a lead-generating asset — optimized to rank in the Map Pack,
-                build trust, and stay compliant so the same issue doesn&apos;t come
-                back.
+                into a lead-generating asset with ongoing{" "}
+                <Link href="/services/gmb-optimization" className="gmb-inline-link">
+                  Google Business Profile optimization
+                </Link>{" "}
+                — optimized to rank in the Map Pack, build trust, and stay
+                compliant so the same issue doesn&apos;t come back. For businesses
+                that want faster reach, we can pair it with{" "}
+                <Link href="/services/google-ads" className="gmb-inline-link">
+                  Google Ads management
+                </Link>{" "}
+                to capture high-intent searches while rankings rebuild.
               </p>
             </div>
             <div className="card-grid">
@@ -744,7 +769,11 @@ function page() {
                 <h3>Growth-focused</h3>
                 <p>
                   We don&apos;t just recover listings — we help restore your
-                  rankings, calls, leads, and long-term local visibility.
+                  rankings, calls, leads, and long-term local visibility, from a{" "}
+                  <Link href="/services/web-design" className="gmb-inline-link">
+                    conversion-focused website
+                  </Link>{" "}
+                  to the profile itself.
                 </p>
               </div>
             </div>

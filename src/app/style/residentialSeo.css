@@ -19,6 +19,13 @@
   overflow-x: clip;
 }
 
+.rseo-page .rseo-inline-link {
+  color: var(--residentail-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .rseo-page main,
 .rseo-page section,
 .rseo-phila-section,

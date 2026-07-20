@@ -278,6 +278,13 @@ body:has(.gbv-page) .zoni-window {
   font-weight: 500;
 }
 
+.gbv-page .gbv-inline-link {
+  color: var(--gbv-y);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .gbv-hero h1 .gbv-accent {
   color: var(--gbv-y);
 }

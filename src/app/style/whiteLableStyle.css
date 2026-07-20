@@ -1146,3 +1146,11 @@ body:has(.wl-page) .floating-phone-link {
   .htb-clutch { width: 68px; height: 68px; }
   .htb-yelp-img { height: 62px; width: 62px; }
 }
+
+/* In-body contextual internal links */
+.wl-page .wl-inline-link {
+  color: #f97316;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

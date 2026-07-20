@@ -27,6 +27,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/dental-website-design`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/travel-and-tourism-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-business-profile-services-real-estate-agents`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/non-profit-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
 
   // Industry marketing agencies
   { url: `${BASE_URL}/services/auto-repair-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },

@@ -229,7 +229,22 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Every service below is calibrated to how {stateName} HVAC
                   customers actually find and choose contractors — categories,
                   attributes, schema, content cadence, ad copy, and review
-                  templates designed around HVAC search behavior.
+                  templates designed around HVAC search behavior. It is the same
+                  discipline behind our{" "}
+                  <Link
+                    href="/services/local-seo-services-for-hvac"
+                    className="hvac-inline-link"
+                  >
+                    local SEO for HVAC companies
+                  </Link>
+                  , layered with the broader{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="hvac-inline-link"
+                  >
+                    local SEO for home services
+                  </Link>{" "}
+                  playbook that wins the map pack.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -306,7 +321,14 @@ export default function StatePage({ state }: { state: StateContent }) {
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
                   agencies can&apos;t edit, filter, or fake. The same operators
-                  who hired us to win the map pack left these.
+                  who hired us for{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="hvac-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  and to win the map pack left these.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -340,9 +362,19 @@ export default function StatePage({ state }: { state: StateContent }) {
                 </h2>
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — move up or down
-                  between tiers any month. Ad spend is separate from the
-                  management fee. No setup fees, no twelve-month lockups. GBP
-                  reinstatement is included on every plan.
+                  between tiers any month. Ad spend for{" "}
+                  <Link href="/services/google-ads" className="hvac-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  is separate from the management fee. No setup fees, no
+                  twelve-month lockups, and{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="hvac-inline-link"
+                  >
+                    Google Business Profile reinstatement
+                  </Link>{" "}
+                  is included on every plan.
                 </p>
                 <div className="hia-price-grid">
                   {PRICE_CARDS.map((p, i) => (
@@ -383,6 +415,18 @@ export default function StatePage({ state }: { state: StateContent }) {
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question below, just include it in
                   the audit form and we will answer it in the written report.
+                  You can also explore our broader{" "}
+                  <Link
+                    href="/services/hvac-marketing-agency"
+                    className="hvac-inline-link"
+                  >
+                    HVAC marketing
+                  </Link>{" "}
+                  program or the conversion-focused{" "}
+                  <Link href="/services/web-design" className="hvac-inline-link">
+                    website design services
+                  </Link>{" "}
+                  behind every campaign.
                 </p>
                 <HiaFaqAccordion items={state.faqs} defaultOpen={0} />
               </section>

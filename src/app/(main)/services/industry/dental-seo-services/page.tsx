@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "@/app/style/dentaSeo.css";
 import "@/app/style/carTow.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
@@ -274,9 +275,14 @@ function Page() {
           <p className="dent-sec-2-descrp">
             Patients search every day for dentists, emergency care, implants,
             Invisalign, whitening, and cosmetic treatments. We position your
-            dental practice where those searches happen, then optimize your
-            website and Google Business Profile to turn visibility into booked
-            appointments.
+            dental practice where those searches happen, then handle your{" "}
+            <Link
+              href="/services/gmb-optimization"
+              className="dent-inline-link"
+            >
+              Google Business Profile optimization
+            </Link>{" "}
+            to turn visibility into booked appointments.
           </p>
         </div>
       </section>
@@ -298,7 +304,13 @@ function Page() {
                 Struggling to Get Consistent Patient <span>Bookings?</span>
               </h2>
               <p>
-                If your clinic is not appearing in Google Maps or local search
+                If your clinic is not appearing in Google Maps or{" "}
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="dent-inline-link"
+                >
+                  local SEO
+                </Link>{" "}
                 results, patients are choosing competitors before they ever find
                 your website.
               </p>
@@ -371,15 +383,28 @@ function Page() {
             <div className="dent-sec-copy">
               <h3>Google Business Profile Verification & Setup</h3>
               <p>
-                Struggling to get your profile verified or facing suspension
-                issues? We help you get verified the right way and make sure
-                your profile is fully optimized to attract local patients.
+                Struggling to get your profile verified or facing a{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="dent-inline-link"
+                >
+                  suspended Google Business Profile
+                </Link>
+                ? We help you get verified the right way and make sure your
+                profile is fully optimized to attract local patients.
               </p>
               <h3>Local SEO That Gets You Calls</h3>
               <p>
                 We position your practice in the Google 3 pack where real
-                patient leads happen, from local service targeting to authority
-                building and conversion-ready pages.
+                patient leads happen, and we can also{" "}
+                <Link
+                  href="/services/gmb-verification-help"
+                  className="dent-inline-link"
+                >
+                  verify your GBP
+                </Link>{" "}
+                so local service targeting, authority building, and
+                conversion-ready pages have a fully live listing to feed.
               </p>
               <h2>
                 Dominate Google Maps for <span>&quot;Dentist Near Me&quot;</span>{" "}
@@ -430,7 +455,11 @@ function Page() {
             Search Engine Optimization and paid advertising can work together,
             but they serve different purposes. SEO builds lasting visibility and
             compounding trust, while paid ads can support faster short-term
-            patient acquisition.
+            patient acquisition through{" "}
+            <Link href="/services/google-ads" className="dent-inline-link">
+              Google Ads
+            </Link>
+            .
           </p>
         </div>
 
@@ -498,7 +527,11 @@ function Page() {
         <div className="dent-sec-8-intro">
           <h2>Our Dental Local SEO Services</h2>
           <p>
-            We build digital marketing systems designed to generate patient
+            We build{" "}
+            <Link href="/services" className="dent-inline-link">
+              digital marketing systems
+            </Link>{" "}
+            designed to generate patient
             calls, increase local visibility, and create long-term growth for
             dental offices.
           </p>
@@ -541,7 +574,14 @@ function Page() {
               <p>
                 Because they focus on traffic instead of conversions. At Zonic
                 Media, we build dental SEO systems designed to generate leads,
-                increase revenue, and create long-term growth.
+                increase revenue, and create long-term growth alongside{" "}
+                <Link
+                  href="/services/dental-website-design"
+                  className="dent-inline-link"
+                >
+                  dental website design
+                </Link>
+                .
               </p>
               <p>
                 Whether you are a general dentist, cosmetic dentist, implant

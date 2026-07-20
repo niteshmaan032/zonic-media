@@ -305,8 +305,14 @@ function Page() {
                 <p className="hia-hero-sub">
                   When the AC dies on a 95°F afternoon or the furnace quits at
                   5°F, customers don&apos;t research — they search and they
-                  call. We help HVAC contractors win those calls through Google
-                  Business Profile work that gets you into the map pack, websites
+                  call. We help HVAC contractors win those calls through{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="hvac-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  that gets you into the map pack, websites
                   that convert mobile emergencies, reviews that compound month
                   over month, paid ads tuned to HVAC seasonal patterns, and
                   local SEO across every submarket you serve. Across home
@@ -427,7 +433,15 @@ function Page() {
                   actually find and choose contractors. Generic marketing
                   fundamentals get an HVAC-specific layer — categories,
                   attributes, schema, content cadence, ad copy patterns, and
-                  review templates designed around HVAC search behavior.
+                  review templates designed around HVAC search behavior, the same
+                  foundation as our dedicated{" "}
+                  <Link
+                    href="/services/local-seo-services-for-hvac"
+                    className="hvac-inline-link"
+                  >
+                    local SEO for HVAC companies
+                  </Link>
+                  .
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -461,7 +475,14 @@ function Page() {
                   tune the strategy to the specialties that drive your business
                   — whether you&apos;re emergency service, residential install,
                   commercial, or the rapidly growing heat-pump and ductless
-                  markets.
+                  markets — all built on the same{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="hvac-inline-link"
+                  >
+                    local SEO for home services
+                  </Link>{" "}
+                  foundation.
                 </p>
                 <div className="hia-industry-grid">
                   {SPECIALTIES.map((s, i) => (
@@ -489,7 +510,12 @@ function Page() {
                   These are the patterns we see across the HVAC contractors we
                   work with through the first twelve months. Your specific
                   numbers will depend on your metro&apos;s competitive density,
-                  your current presence, and how aggressive you want to be.
+                  your current presence, how aggressive you want to be, and
+                  whether you pair organic rankings with{" "}
+                  <Link href="/services/google-ads" className="hvac-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  to accelerate early lead flow.
                 </p>
                 <div className="hia-results-prose">
                   {resultsProse.map((p, i) => (
@@ -531,7 +557,14 @@ function Page() {
                   Florida&apos;s salt air corrodes condensers at three times the
                   inland rate. The seven states below have dedicated HVAC
                   marketing pages calibrated to each market&apos;s specific
-                  economics.
+                  economics, and we run the same state-by-state playbook for our{" "}
+                  <Link
+                    href="/services/plumbing-marketing-agency"
+                    className="hvac-inline-link"
+                  >
+                    plumbing marketing agency
+                  </Link>{" "}
+                  clients.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -639,10 +672,17 @@ function Page() {
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — move up or down
                   between tiers any month. Ad spend is separate from the
-                  management fee. No setup fees, no twelve-month lockups. Most
-                  HVAC contractors start at Growth to get Google Ads management
-                  and maintenance-contract membership program development working
-                  in parallel with foundational work.
+                  management fee. No setup fees, no twelve-month lockups, and{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="hvac-inline-link"
+                  >
+                    Google Business Profile reinstatement
+                  </Link>{" "}
+                  is included on every plan. Most HVAC contractors start at
+                  Growth to get Google Ads management and maintenance-contract
+                  membership program development working in parallel with
+                  foundational work.
                 </p>
                 <div className="hia-price-grid">
                   {PRICE_CARDS.map((p, i) => (
@@ -719,8 +759,11 @@ function Page() {
             </h2>
             <p className="hia-fc-lede">
               Five-page written report covering current map pack position,
-              Google Business Profile health, website conversion architecture,
-              maintenance-contract opportunity, review velocity vs the HVAC
+              Google Business Profile health,{" "}
+              <Link href="/services/web-design" className="hvac-inline-link">
+                website conversion architecture
+              </Link>
+              , maintenance-contract opportunity, review velocity vs the HVAC
               contractors outranking you, and the specific work required to move
               your business into the three-pack before your next peak window
               arrives. Delivered within five business days.

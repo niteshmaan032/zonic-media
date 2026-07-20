@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import Footer from "@/app/components/Footer";
@@ -579,8 +580,9 @@ export default function ChiroDigitalPage() {
                   They are searching because something hurts, and they need help
                   soon. They scan two or three top results, check reviews,
                   evaluate the website, and make a decision in under a minute.
-                  The clinic that looks credible, is easy to reach, and makes
-                  booking simple usually wins that appointment.
+                  The clinic that looks credible, is easy to reach, and wins the{" "}
+                  <Link href="/services/local-seo-for-home-services" className="chiro-inline-link">Google Map Pack</Link>{" "}
+                  usually books that appointment.
                 </p>
                 <ul className="car-tow-check-list">
                   {journeyChecklist.map((item, i) => (
@@ -639,7 +641,8 @@ export default function ChiroDigitalPage() {
                   urgency, and an easy path to booking.
                 </h3>
                 <p>
-                  We align Google Business Profile optimization, location pages,
+                  We align{" "}
+                  <Link href="/services/gmb-optimization" className="chiro-inline-link">Google Business Profile optimization</Link>, location pages,
                   review signals, and conversion-focused website content so your
                   clinic can compete for high-intent patient searches with more
                   consistency. The goal is a stronger local presence that helps
@@ -683,14 +686,21 @@ export default function ChiroDigitalPage() {
                   structured local SEO strategy. The clinic had a small number
                   of reviews, inconsistent NAP data across directories, and
                   service pages that did not target the conditions patients were
-                  actually searching for. New patients were coming mostly from
-                  referrals with no reliable digital channel in place.
+                  actually searching for. The listing had also never been through a
+                  proper{" "}
+                  <Link href="/services/gmb-verification-help" className="chiro-inline-link">Google Business Profile verification</Link>{" "}
+                  cleanup, so new patients were coming mostly from referrals with no
+                  reliable digital channel in place.
                 </p>
                 <p>
                   After optimizing the Google Business Profile, building
                   condition-specific landing pages, cleaning up local citations,
                   and implementing a review generation process, the clinic began
-                  appearing more often in map results for high-intent searches.
+                  appearing more often in map results for high-intent searches. Had
+                  the profile ever been suspended, our{" "}
+                  <Link href="/services/gmb-reinstatement-help" className="chiro-inline-link">GBP reinstatement service</Link>{" "}
+                  would have been the first step to recover a suspended Google
+                  Business Profile before any ranking work.
                   The result was not just more traffic — it was more calls, more
                   appointment form submissions, and a more predictable flow of
                   new patients each month from the areas that mattered most.
@@ -828,7 +838,8 @@ export default function ChiroDigitalPage() {
           </div>
           <div className="chiro-compare-conclusion" style={{ marginTop: "24px" }}>
             The most effective strategy for most chiropractic clinics is a{" "}
-            <strong>strong SEO foundation</strong> supported by smart paid
+            <strong>strong SEO foundation</strong> supported by smart{" "}
+            <Link href="/services/google-ads" className="chiro-inline-link">Google Ads</Link>{" "}
             campaigns when specific short-term goals require faster visibility.
             One without the other is often less efficient than both working
             together.
@@ -866,8 +877,9 @@ export default function ChiroDigitalPage() {
             <p className="car-tow-eyebrow">Ready to Start?</p>
             <h2>Book a Free Chiropractic Marketing Strategy Call</h2>
             <p>
-              Let&apos;s walk through exactly what your clinic needs to attract
-              more patients consistently. No pressure, no generic pitch — just a
+              Let&apos;s walk through exactly what your clinic needs from a{" "}
+              <Link href="/services/chiropractic-marketing-agency" className="chiro-inline-link">chiropractic marketing agency</Link>{" "}
+              to attract more patients consistently. No pressure, no generic pitch — just a
               focused conversation about your market and growth opportunities.
             </p>
             <div className="car-tow-hero-actions car-tow-final-actions">
@@ -1003,7 +1015,9 @@ export default function ChiroDigitalPage() {
             <p className="car-tow-eyebrow">Start Growing Today</p>
             <h2>More chiropractic patients from Google and Maps.</h2>
             <p>
-              Zonic Media builds local SEO systems for chiropractic clinics that
+              Zonic Media builds local SEO systems and{" "}
+              <Link href="/services/web-design" className="chiro-inline-link">conversion-focused websites</Link>{" "}
+              for chiropractic clinics that
               need more direct appointment bookings, stronger emergency search
               coverage, and better local growth. If your current visibility is
               not converting into enough patients, the gap is measurable and

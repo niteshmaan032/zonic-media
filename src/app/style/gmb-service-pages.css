@@ -32,6 +32,14 @@
   border-color: var(--secondary);
 }
 
+/* In-body contextual internal links */
+.gmb-reinst-content-wrapper .gmb-inline-link {
+  color: var(--gmb-color-4);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .gmb-reinst-main-wrapper {
   padding: 120px 100px 100px 100px;
   background-color: var(--gmb-reinstatement-bg);

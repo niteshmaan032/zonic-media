@@ -11,6 +11,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -178,7 +179,12 @@ function page() {
               <p className="phila-seo-sec-1-descrp">
                 Whether you run a law firm, dental clinic, contractor business,
                 med spa, or local service company, we help you dominate local
-                search and turn online traffic into paying customers.
+                search and turn online traffic into paying customers as part of
+                our full{" "}
+                <Link href="/services/philadelphia/digital-marketing" className="phila-seo-inline-link">
+                  digital marketing in Philadelphia
+                </Link>
+                .
               </p>
 
               <div className="phila-seo-sec-1-ctas">
@@ -364,8 +370,11 @@ function page() {
                   </h3>
                 </div>
                 <p className="phila-seo-card-desc">
-                  Optimize your Google profile to generate more calls, clicks,
-                  reviews, and local trust.
+                  Use{" "}
+                  <Link href="/services/gmb-optimization" className="phila-seo-inline-link">
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  to generate more calls, clicks, reviews, and local trust.
                 </p>
               </div>
             </Col>
@@ -477,15 +486,22 @@ function page() {
               <p className="phila-seo-sec-4-descrp">
                 If your business is not showing in Google Maps or local search
                 results, you are losing customers every day. In a competitive
-                market like Philadelphia, simply having a website is not enough.
-                Your business needs to appear exactly when potential customers
-                search for nearby services.
+                market like Philadelphia, simply having a{" "}
+                <Link href="/services/web-design" className="phila-seo-inline-link">
+                  conversion-focused website
+                </Link>{" "}
+                is not enough. Your business needs to appear exactly when
+                potential customers search for nearby services.
               </p>
 
               <p className="phila-seo-sec-4-descrp">
                 That is where Zonic Media helps. We improve local visibility,
                 increase rankings, and generate consistent high-quality leads
-                without relying only on paid ads.
+                without relying only on paid ads, with specialized{" "}
+                <Link href="/services/local-seo-for-home-services" className="phila-seo-inline-link">
+                  local SEO for home services
+                </Link>{" "}
+                companies like roofers, plumbers, and HVAC pros.
               </p>
             </div>
           </Col>
@@ -881,16 +897,24 @@ function page() {
             </p>
             <p className="phila-seo-sec-11-lead">
               Local SEO helps your business appear when people search for
-              services in your area. Whether someone needs a roofer in Center
+              services in your area, and it pairs well with{" "}
+              <Link href="/services/philadelphia/sem" className="phila-seo-inline-link">
+                search engine marketing
+              </Link>{" "}
+              for broader coverage. Whether someone needs a roofer in Center
               City, a dentist in Northeast Philadelphia, or an HVAC company near
               South Philly, showing up at the right time creates real
               opportunities.
             </p>
             <p className="phila-seo-sec-11-lead">
-              Unlike paid ads that stop when budget ends, Local SEO builds
-              long-term visibility and consistent lead flow. It helps your
-              business rank higher, earn trust through reviews, and generate
-              calls from customers already ready to buy.
+              Unlike{" "}
+              <Link href="/services/philadelphia/ppc" className="phila-seo-inline-link">
+                paid ads in Philadelphia
+              </Link>{" "}
+              that stop when budget ends, Local SEO builds long-term visibility
+              and consistent lead flow. It helps your business rank higher, earn
+              trust through reviews, and generate calls from customers already
+              ready to buy.
             </p>
             <ServiceSectionCta href="#phila-seo-contact-form" align="left">
               Build My Local Lead System
@@ -916,7 +940,11 @@ function page() {
               Our strategies are built around ranking for high-intent local
               keywords, improving Google Business Profile visibility,
               strengthening trust signals, and converting visitors into
-              customers.
+              customers. If your listing was ever taken down, we also offer{" "}
+              <Link href="/services/gmb-reinstatement-help" className="phila-seo-inline-link">
+                suspended Google Business Profile reinstatement
+              </Link>{" "}
+              to restore your local rankings.
             </p>
             <p className="phila-seo-sec-12-text">
               Whether you are a contractor, lawyer, dentist, med spa, or home

@@ -9,6 +9,19 @@
   overflow-x: clip;
 }
 
+.pedi-sec-1 .pedi-inline-link,
+.pedi-sec-2 .pedi-inline-link,
+.pedi-sec-3 .pedi-inline-link,
+.pedi-sec-4 .pedi-inline-link,
+.pedi-sec-5 .pedi-inline-link,
+.pedi-sec-6 .pedi-inline-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 2px;
+}
+
 .pedi-sec-1-layer,
 .pedi-sec-2,
 .pedi-sec-3,

@@ -213,8 +213,15 @@ function page() {
             </h1>
             <p className="launchpad-descrp">
               At <span> Zonic LaunchPad </span> we build everything you need
-              from branding and website to Google presence and marketing so you
-              can focus on growing your business
+              from branding and your{" "}
+              <Link href="/services/web-design" className="launchpad-inline-link">
+                business website
+              </Link>{" "}
+              to Google presence and{" "}
+              <Link href="/services" className="launchpad-inline-link">
+                marketing services
+              </Link>{" "}
+              so you can focus on growing your business
             </p>
 
             <div className="launchpad-sec1-ctas">
@@ -544,7 +551,12 @@ function page() {
                         <span>
                           <FaCheck />
                         </span>
-                        Google Business Profile setup and optimization
+                        <Link
+                          href="/services/gmb-optimization"
+                          className="launchpad-inline-link"
+                        >
+                          Google Business Profile setup and optimization
+                        </Link>
                       </li>
 
                       <li>
@@ -558,7 +570,13 @@ function page() {
                         <span>
                           <FaCheck />
                         </span>
-                        Local SEO foundation to improve visibility
+                        <Link
+                          href="/services/local-seo-for-home-services"
+                          className="launchpad-inline-link"
+                        >
+                          Local SEO foundation
+                        </Link>{" "}
+                        to improve visibility
                       </li>
 
                       <li>
@@ -1039,7 +1057,12 @@ function page() {
 
               <p className="launchpad-sec-descrp">
                 Simple packages designed to take you from idea to a fully
-                operational, market-ready business.
+                operational, market-ready business. If you are unsure which
+                plan fits, start with a{" "}
+                <Link href="/contact-us" className="launchpad-inline-link">
+                  free consultation
+                </Link>
+                .
               </p>
             </div>
           </Col>
@@ -1151,8 +1174,11 @@ function page() {
           <p className="launchpad-home-descrp">
             Zonic LaunchPad gives you a complete done-for-you business
             setup—from branding and website to Google presence and lead
-            generation—so you can launch faster and focus on growing your
-            business.
+            generation—plus{" "}
+            <Link href="/industries" className="launchpad-inline-link">
+              industry-specific marketing
+            </Link>{" "}
+            so you can launch faster and focus on growing your business.
           </p>
 
           <div className="launchpad-home-cta-clutch">
@@ -1214,8 +1240,11 @@ function page() {
               </h2>
               <p className="launchpad-banner-descrp">
                 At Zonic LaunchPad We build everything you need from branding
-                and website to Google presence and marketing so you can focus on
-                growing your business
+                and website to Google presence,{" "}
+                <Link href="/services/google-ads" className="launchpad-inline-link">
+                  Google Ads campaigns
+                </Link>
+                , and marketing so you can focus on growing your business
               </p>
 
               <div className="launchpad-banner-ctas">

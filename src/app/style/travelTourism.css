@@ -20,6 +20,13 @@
   overflow-x: clip;
 }
 
+.tt-page .tt-inline-link {
+  color: var(--tt-blue-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 1399.98px) {
   .tt-page {
     --tt-inset: 40px;
@@ -730,8 +737,11 @@
 
 /* ---------- 3. about ---------- */
 
+/* Sections use symmetric top/bottom padding so bands with a different
+   background (sky vs white) always have their own breathing room at the
+   top — half values, so the gap between two sections stays ~110px. */
 .tt-page .tt-about {
-  padding: 110px 0;
+  padding: 55px 0;
 }
 
 .tt-page .tt-about-grid {
@@ -788,7 +798,7 @@
 /* ---------- 4. services ---------- */
 
 .tt-page .tt-services {
-  padding: 0 0 110px;
+  padding: 55px 0;
   background: var(--tt-sky);
 }
 
@@ -834,7 +844,7 @@
 /* ---------- 5. stats band ---------- */
 
 .tt-page .tt-band {
-  padding: 0 0 110px;
+  padding: 55px 0;
 }
 
 /* bento grid: 4 columns — tall image spans 2x2, wide image spans 2x1 */
@@ -908,7 +918,7 @@
 /* ---------- 6. engine ---------- */
 
 .tt-page .tt-engine {
-  padding: 0 0 110px;
+  padding: 55px 0;
 }
 
 .tt-page .tt-engine-cards {
@@ -934,7 +944,7 @@
 /* ---------- 7. postcard gallery marquee ---------- */
 
 .tt-page .tt-gallery {
-  padding: 0 0 120px;
+  padding: 60px 0;
   background: var(--tt-sky);
   overflow: hidden;
 }
@@ -1004,7 +1014,7 @@
 /* ---------- 8. process ---------- */
 
 .tt-page .tt-process {
-  padding: 0 0 110px;
+  padding: 55px 0;
 }
 
 .tt-page .tt-steps {
@@ -1063,7 +1073,7 @@
 /* ---------- 9. why + banner ---------- */
 
 .tt-page .tt-why {
-  padding: 0 0 110px;
+  padding: 55px 0;
   background: var(--tt-sky);
 }
 
@@ -1117,7 +1127,7 @@
 /* ---------- 10. niches ---------- */
 
 .tt-page .tt-niches {
-  padding: 0 0 110px;
+  padding: 55px 0;
 }
 
 .tt-page .tt-chips {
@@ -1167,7 +1177,7 @@
 /* ---------- 11. faqs ---------- */
 
 .tt-page .tt-faqs {
-  padding: 0 0 110px;
+  padding: 55px 0;
   background: var(--tt-sky);
 }
 
@@ -1215,7 +1225,7 @@
 /* ---------- 12. grow further ---------- */
 
 .tt-page .tt-grow {
-  padding: 0 0 110px;
+  padding: 55px 0;
 }
 
 .tt-page .tt-grow-cards {
@@ -1301,7 +1311,7 @@
 /* ---------- 14. contact ---------- */
 
 .tt-page .tt-contact {
-  padding: 110px 0;
+  padding: 55px 0;
   background: #fff;
   scroll-margin-top: 110px;
 }
@@ -1600,13 +1610,8 @@
   .tt-page .tt-faqs,
   .tt-page .tt-grow,
   .tt-page .tt-contact {
-    padding-bottom: 72px;
-  }
-
-  /* only the sections without a padded sibling above keep top padding */
-  .tt-page .tt-about,
-  .tt-page .tt-contact {
-    padding-top: 72px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .tt-page .tt-about-grid,
@@ -1672,12 +1677,8 @@
   .tt-page .tt-faqs,
   .tt-page .tt-grow,
   .tt-page .tt-contact {
-    padding-bottom: 52px;
-  }
-
-  .tt-page .tt-about,
-  .tt-page .tt-contact {
-    padding-top: 52px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   /* smaller eyebrow pill so it stays on one line instead of a big box */

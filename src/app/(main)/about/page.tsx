@@ -1,5 +1,6 @@
 import "@/app/style/about.css";
 import Script from "next/script";
+import Link from "next/link";
 import { Metadata } from "next";
 import Footer from "@/app/components/Footer";
 import ClutchWidget from "@/app/components/ClutchWidget";
@@ -193,8 +194,11 @@ function Page() {
                 </h1>
                 <p className="lead">
                   We help small and mid-size US businesses get found, look
-                  established, and bring in more customers — with Local SEO,
-                  Google Business Profile management, website design, and PPC
+                  established, and bring in more customers — with{" "}
+                  <Link href="/services/local-seo-for-home-services" className="ab-inline-link">
+                    Local SEO
+                  </Link>
+                  , Google Business Profile management, website design, and PPC
                   handled by one team that actually understands smaller budgets
                   and bigger goals.
                 </p>
@@ -374,8 +378,12 @@ function Page() {
               <div className="story-body">
                 <p>
                   Zonic Media is a performance-focused marketing agency built for
-                  the businesses bigger agencies overlook. We believe a strong
-                  digital presence comes from{" "}
+                  the local service businesses bigger agencies overlook, with a
+                  dedicated playbook for every{" "}
+                  <Link href="/industries" className="ab-inline-link">
+                    industry we serve
+                  </Link>
+                  . We believe a strong digital presence comes from{" "}
                   <strong>strategy, clarity, and results</strong> — never
                   guesswork or busywork that looks good on a report but never
                   rings the phone.
@@ -383,9 +391,16 @@ function Page() {
                 <p>
                   Every engagement starts with understanding your business, your
                   customers, and how people actually search for what you do. From
-                  there we build a clear plan — Local SEO, a conversion-ready
-                  website, a healthy Google Business Profile, and ads tuned to
-                  cost-per-call — and we ship the work, not just a slide deck.
+                  there we build a clear plan — Local SEO, a{" "}
+                  <Link href="/services/web-design" className="ab-inline-link">
+                    conversion-ready website
+                  </Link>
+                  , a healthy{" "}
+                  <Link href="/services/gmb-optimization" className="ab-inline-link">
+                    Google Business Profile
+                  </Link>
+                  , and ads tuned to cost-per-call — and we ship the work, not
+                  just a slide deck.
                 </p>
                 <p>
                   Based in Dover, Delaware and working remote-first with clients
@@ -439,8 +454,12 @@ function Page() {
                 <div className="kicker">Launch, growth &amp; optimization</div>
                 <p>
                   We launch, monitor, and continuously optimize your search
-                  visibility, profile, and campaigns — then report in plain
-                  English on the leads and dollars they generate.
+                  visibility, profile, and{" "}
+                  <Link href="/services/google-ads" className="ab-inline-link">
+                    Google Ads campaigns
+                  </Link>{" "}
+                  — then report in plain English on the leads and dollars they
+                  generate.
                 </p>
               </div>
             </div>
@@ -493,9 +512,13 @@ function Page() {
                 </div>
                 <h3>One team, everything covered</h3>
                 <p>
-                  SEO, your Google profile, website, and ads all under one roof —
-                  aligned and accountable, so nothing falls through the cracks
-                  between vendors.
+                  Our{" "}
+                  <Link href="/services" className="ab-inline-link">
+                    full-service marketing
+                  </Link>{" "}
+                  covers SEO, your Google profile, website, and ads all under one
+                  roof — aligned and accountable, so nothing falls through the
+                  cracks between vendors.
                 </p>
               </div>
               <div className="why-card">
@@ -548,9 +571,12 @@ function Page() {
                 </div>
                 <h3>Local search specialists</h3>
                 <p>
-                  Map Pack visibility and Google Business Profile recovery are
-                  what we do best — including 500+ suspended profiles we&apos;ve
-                  helped reinstate.
+                  Map Pack visibility and{" "}
+                  <Link href="/services/gmb-reinstatement-help" className="ab-inline-link">
+                    Google Business Profile recovery
+                  </Link>{" "}
+                  are what we do best — including 500+ suspended profiles
+                  we&apos;ve helped reinstate.
                 </p>
               </div>
               <div className="why-card">

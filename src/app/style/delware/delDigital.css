@@ -1,3 +1,14 @@
+.deldg-sec-1 .deldg-inline-link,
+.deldg-sec-2 .deldg-inline-link,
+.deldg-sec-3 .deldg-inline-link,
+.deldg-sec-5 .deldg-inline-link,
+.deldg-sec-6 .deldg-inline-link {
+  color: #7c4dff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .deldg-sec-1 {
   position: relative;
   display: grid;

@@ -1,5 +1,6 @@
 import Script from "next/script";
 import Image from "next/image";
+import Link from "next/link";
 import "./page.css";
 import Footer from "@/app/components/Footer";
 import RankGrid from "@/app/components/RankGrid";
@@ -726,7 +727,11 @@ export default async function Home() {
                 <h3>Local SEO Agency</h3>
                 <div className="svc-sub">For Small &amp; Mid-Size Biz</div>
                 <p>
-                  We get your business ranking in the Google Map Pack so nearby
+                  Our{" "}
+                  <Link href="/services/local-seo-for-home-services" className="hr-inline-link">
+                    local SEO services
+                  </Link>{" "}
+                  get your business ranking in the Google Map Pack so nearby
                   customers find you first — turning local searches into steady
                   calls and walk-ins, not just website traffic.
                 </p>
@@ -803,9 +808,12 @@ export default async function Home() {
                 <h3>PPC Ads Agency</h3>
                 <div className="svc-sub">For Small &amp; Mid-Size Biz</div>
                 <p>
-                  Google Ads campaigns built to capture customers searching
-                  right now — managed for cost-per-lead, not wasted clicks, so
-                  every dollar of a tighter budget works harder.
+                  <Link href="/services/google-ads" className="hr-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  built to capture customers searching right now — managed for
+                  cost-per-lead, not wasted clicks, so every dollar of a tighter
+                  budget works harder.
                 </p>
                 <a
                   href="https://www.zonicllc.com/services/google-ads"
@@ -841,9 +849,13 @@ export default async function Home() {
                 <h3>Website Design</h3>
                 <div className="svc-sub">For Small &amp; Mid-Size Biz</div>
                 <p>
-                  Fast, mobile-first websites that make a small business look
-                  established and turn visitors into booked jobs — with the
-                  technical SEO foundation built in from day one.
+                  Fast, mobile-first{" "}
+                  <Link href="/services/web-design" className="hr-inline-link">
+                    conversion-focused websites
+                  </Link>{" "}
+                  that make a small business look established and turn visitors
+                  into booked jobs — with the technical SEO foundation built in
+                  from day one.
                 </p>
                 <a
                   href="https://www.zonicllc.com/services/web-design"
@@ -970,9 +982,12 @@ export default async function Home() {
               </span>
               <h2>Local SEO built around your industry</h2>
               <p>
-                We don&apos;t write generic copy and swap the logo. Every
-                industry has its own licensing bodies, certifications, seasons,
-                and competitive dynamics — so we build Local SEO, Google Maps
+                We don&apos;t write generic copy and swap the logo. Every{" "}
+                <Link href="/industries" className="hr-inline-link">
+                  industry we serve
+                </Link>{" "}
+                has its own licensing bodies, certifications, seasons, and
+                competitive dynamics — so we build Local SEO, Google Maps
                 visibility, and lead systems specific to yours.
               </p>
             </div>
@@ -1158,10 +1173,14 @@ export default async function Home() {
                 <span className="eyebrow light">Google Business profile recovery</span>
                 <h2>Profile suspended? We&apos;ve reinstated 500+ of them.</h2>
                 <p className="lead">
-                  A suspended Google Business Profile can shut off your best free
-                  lead source overnight — and Google rarely tells you why.
-                  Reinstatement is one of the things we do best. We find the real
-                  cause, fix it, and manage the appeal start to finish.
+                  A{" "}
+                  <Link href="/services/gmb-reinstatement-help" className="hr-inline-link">
+                    suspended Google Business Profile
+                  </Link>{" "}
+                  can shut off your best free lead source overnight — and Google
+                  rarely tells you why. Reinstatement is one of the things we do
+                  best. We find the real cause, fix it, and manage the appeal
+                  start to finish.
                 </p>
                 <div className="gbp-feats">
                   <div className="gbp-feat">
@@ -1319,8 +1338,12 @@ export default async function Home() {
                 <h2>Launch Your Business Online in 7 to 14 Days</h2>
                 <p>
                   Logo, website, Google Business Profile, social setup, and a
-                  lead system — everything a new or growing business needs to
-                  start showing up and getting calls, handled by one team.
+                  lead system — our{" "}
+                  <Link href="/services/launchpad" className="hr-inline-link">
+                    all-in-one starter package
+                  </Link>{" "}
+                  gives a new or growing business everything it needs to start
+                  showing up and getting calls, handled by one team.
                 </p>
                 <ul className="video-promo-list">
                   <li>
@@ -1652,10 +1675,12 @@ export default async function Home() {
                 </summary>
                 <div className="faq-a">
                   Local SEO focuses on getting you into the Google Map Pack and
-                  local results for customers searching nearby. It centers on
-                  your Google Business Profile, citations, reviews, and
-                  location-relevant content — rather than competing nationally
-                  for broad keywords.
+                  local results for customers searching nearby. It centers on{" "}
+                  <Link href="/services/gmb-optimization" className="hr-inline-link">
+                    Google Business Profile optimization
+                  </Link>
+                  , citations, reviews, and location-relevant content — rather
+                  than competing nationally for broad keywords.
                 </div>
               </details>
               <details className="faq-item">

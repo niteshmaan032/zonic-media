@@ -9,6 +9,7 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import { FaChartBar, FaLink, FaSearch, FaStar } from "react-icons/fa";
@@ -289,10 +290,16 @@ export default function HvacSeoPage() {
           <p>
             Because they focus on traffic instead of conversions. At Zonic
             Media, we build digital marketing systems designed to generate
-            leads, increase revenue, and create long-term growth for businesses
-            in Philadelphia. Whether you are a local service provider or a
-            growing company, our strategies are built to deliver measurable
-            outcomes, not just vanity metrics.
+            leads, increase revenue, and create long-term growth as a{" "}
+            <Link
+              href="/services/philadelphia/digital-marketing"
+              className="hvac-inline-link"
+            >
+              digital marketing agency in Philadelphia
+            </Link>
+            . Whether you are a local service provider or a growing company, our
+            strategies are built to deliver measurable outcomes, not just vanity
+            metrics.
           </p>
         </div>
       </section>
@@ -322,7 +329,15 @@ export default function HvacSeoPage() {
             <p>
               Whether you are a local service provider or a growing company,
               our strategies are built to deliver measurable outcomes, not just
-              vanity metrics.
+              vanity metrics — and for heating and cooling brands that need
+              broader campaigns, our full{" "}
+              <Link
+                href="/services/hvac-marketing-agency"
+                className="hvac-inline-link"
+              >
+                HVAC marketing
+              </Link>{" "}
+              team picks up where local SEO leaves off.
             </p>
           </div>
         </div>
@@ -402,16 +417,25 @@ export default function HvacSeoPage() {
                 customers right when they&apos;re searching.
               </p>
               <p>
-                From optimizing your Google Business Profile and targeting
-                near-me keywords to building strong local authority and
-                improving your website performance, we focus on driving real
-                visibility that turns into calls and booked jobs.
+                From{" "}
+                <Link
+                  href="/services/gmb-optimization"
+                  className="hvac-inline-link"
+                >
+                  Google Business Profile optimization
+                </Link>{" "}
+                and targeting near-me keywords to building strong local
+                authority and improving your website performance, we focus on
+                driving real visibility that turns into calls and booked jobs.
               </p>
               <p>
                 Our data-driven approach ensures higher rankings, increased
                 local trust, and a steady flow of quality leads, so you can
-                grow your HVAC business without relying on unpredictable ads or
-                chasing customers.
+                grow your HVAC business without relying on unpredictable{" "}
+                <Link href="/services/google-ads" className="hvac-inline-link">
+                  Google Ads
+                </Link>{" "}
+                or chasing customers.
               </p>
               <h2>
                 <span>Real Growth</span> for HVAC Contractors
@@ -444,9 +468,13 @@ export default function HvacSeoPage() {
           <div className="roof-sec-7-left">
             <h2 className="roof-sec-7-heading">Our HVAC Local SEO Services</h2>
             <p className="roof-sec-7-descrp">
-              We build digital marketing systems designed to generate leads,
-              increase revenue, and create long term growth for HVAC businesses
-              that want stronger local visibility.
+              We build digital marketing systems — from conversion-focused{" "}
+              <Link href="/services/web-design" className="hvac-inline-link">
+                website design
+              </Link>{" "}
+              to citations and content — designed to generate leads, increase
+              revenue, and create long term growth for HVAC businesses that want
+              stronger local visibility.
             </p>
 
             <div className="roof-sec-7-grid">
@@ -485,8 +513,22 @@ export default function HvacSeoPage() {
               <p>
                 Because they focus on traffic instead of conversions. At Zonic
                 Media, we take a different approach. We build digital marketing
-                systems designed to generate leads, increase revenue, and create
-                long-term growth for businesses in Philadelphia.
+                systems designed to generate leads and revenue — and if a
+                listing goes dark, we handle{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="hvac-inline-link"
+                >
+                  suspended Google Business Profile reinstatement
+                </Link>{" "}
+                so your HVAC company stays visible. The same playbook powers our{" "}
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="hvac-inline-link"
+                >
+                  local SEO for home services
+                </Link>{" "}
+                clients across every trade.
               </p>
               <HashScrollLink
                 href="#hvac-contact-form"

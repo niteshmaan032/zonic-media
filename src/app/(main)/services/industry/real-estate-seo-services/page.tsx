@@ -171,9 +171,14 @@ function page() {
               <p className="realest-sec-1-descrp">
                 We help real estate professionals dominate Google search,
                 strengthen online visibility, and generate high-quality buyer
-                and seller inquiries every month through strategic SEO, Google
-                Business Profile optimization, website SEO, and data-driven
-                marketing systems.
+                and seller inquiries every month through strategic SEO,{" "}
+                <Link
+                  href="/services/gmb-optimization"
+                  className="realest-inline-link"
+                >
+                  Google Business Profile optimization
+                </Link>
+                , website SEO, and data-driven marketing systems.
               </p>
 
               <div className="realest-sec-1-ctas">
@@ -349,7 +354,11 @@ function page() {
                 </div>
                 <p className="realest-card-desc">
                   Generate immediate traffic and motivated buyer or seller leads
-                  through targeted Google Ads campaigns.
+                  through targeted{" "}
+                  <Link href="/services/google-ads" className="realest-inline-link">
+                    Google Ads campaigns
+                  </Link>
+                  .
                 </p>
               </div>
             </Col>
@@ -457,7 +466,15 @@ function page() {
                 <p>
                   Real estate SEO helps your business appear when people search
                   for real estate agents, homes for sale, listing services, and
-                  neighborhood-specific property searches in your target market.
+                  neighborhood-specific property searches in your target market,
+                  working alongside your broader{" "}
+                  <Link
+                    href="/services/real-estate-marketing-agency"
+                    className="realest-inline-link"
+                  >
+                    real estate marketing
+                  </Link>{" "}
+                  efforts.
                 </p>
               </div>
             </div>
@@ -533,7 +550,14 @@ function page() {
 
                 <p className="realest-sec-5-descrp">
                   Zonic Media approaches real estate SEO as a complete growth
-                  system. We combine local keyword targeting, Google Business
+                  system. We combine{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="realest-inline-link"
+                  >
+                    local SEO
+                  </Link>{" "}
+                  and local keyword targeting, Google Business
                   Profile optimization, technical SEO, on-page conversion
                   improvements, and market-focused content to help agents,
                   brokerages, and real estate teams generate more qualified
@@ -590,8 +614,15 @@ function page() {
               <h4>Google &amp; Website Optimization</h4>
               <p>
                 We optimize your Google Business Profile, core landing pages,
-                technical SEO, on-page messaging, and local trust signals so
-                your business ranks better and converts more visitors.
+                technical SEO, on-page messaging, and local trust signals, and
+                help you{" "}
+                <Link
+                  href="/services/gmb-verification-help"
+                  className="realest-inline-link"
+                >
+                  verify your GBP
+                </Link>{" "}
+                so your business ranks better and converts more visitors.
               </p>
             </div>
           </Col>
@@ -654,7 +685,15 @@ function page() {
                 We help real estate businesses build or repair their Google
                 Business Profile correctly, improve category targeting, enhance
                 trust signals, and position the profile to generate more calls,
-                direction requests, and qualified local inquiries.
+                direction requests, and qualified local inquiries. If your
+                listing has been suspended, we can also help you{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="realest-inline-link"
+                >
+                  recover a suspended Google Business Profile
+                </Link>
+                .
               </p>
             </div>
 
@@ -664,8 +703,15 @@ function page() {
                 From ranking for terms like &ldquo;real estate agent near
                 me,&rdquo; &ldquo;homes for sale in [city],&rdquo; and
                 seller-intent searches to building city pages and local
-                authority, we make sure your business appears when buyers and
-                sellers are ready to act.
+                authority, along with{" "}
+                <Link
+                  href="/services/google-business-profile-services-real-estate-agents"
+                  className="realest-inline-link"
+                >
+                  GBP services for realtors
+                </Link>
+                , we make sure your business appears when buyers and sellers are
+                ready to act.
               </p>
             </div>
 

@@ -43,6 +43,13 @@
   --cream-45: rgba(245, 241, 232, 0.5);
 }
 
+.hia-page.npm-page .npm-inline-link {
+  color: var(--brass);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ──────────────── CTAs (ink bg, white text) ──────────────── */
 .npm-page .hia-btn-primary,
 .npm-page .hia-btn-primary:link,

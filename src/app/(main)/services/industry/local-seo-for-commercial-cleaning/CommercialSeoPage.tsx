@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -672,8 +673,21 @@ export default function CommercialSeoPage() {
                   Local SEO Services for Commercial Cleaning Companies
                 </h1>
                 <p className="car-tow-hero-body">
-                  Zonic Media provides local SEO services built specifically for
-                  commercial cleaning companies. We help janitorial and cleaning
+                  Zonic Media provides{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="cseo-inline-link"
+                  >
+                    local SEO services
+                  </Link>{" "}
+                  built specifically for{" "}
+                  <Link
+                    href="/services/cleaning-company-marketing-agency"
+                    className="cseo-inline-link"
+                  >
+                    commercial cleaning companies
+                  </Link>
+                  . We help janitorial and cleaning
                   businesses rank higher on Google Maps, generate more inbound
                   quote requests, and build a consistent pipeline of qualified
                   cleaning contracts through local search optimization, Google
@@ -761,7 +775,10 @@ export default function CommercialSeoPage() {
             <h2>Find Out Exactly Where Your Cleaning Company Is Losing Leads</h2>
             <p>
               Request a free commercial cleaning SEO audit and we will review
-              your local rankings, Google Business Profile, website conversion
+              your local rankings, Google Business Profile,{" "}
+              <Link href="/services/web-design" className="cseo-inline-link">
+                website conversion
+              </Link>{" "}
               gaps, and competitive positioning in your market.
             </p>
             <div className="car-tow-hero-actions car-tow-final-actions" style={{ marginTop: "20px" }}>
@@ -862,7 +879,13 @@ export default function CommercialSeoPage() {
               <h2>Complete Local SEO Services for Commercial Cleaning</h2>
               <p className="car-tow-section-descrp">
                 We build a full commercial cleaning SEO system that connects
-                Google Business Profile optimization, local keyword strategy,
+                <Link
+                  href="/services/gmb-optimization"
+                  className="cseo-inline-link"
+                >
+                  Google Business Profile optimization
+                </Link>
+                , local keyword strategy,
                 location pages, service content, review growth, citation
                 building, and technical SEO into one coordinated approach
                 focused on generating consistent cleaning contract inquiries.
@@ -1007,6 +1030,21 @@ export default function CommercialSeoPage() {
               <p>
                 Share your business details below and we will review your local
                 rankings, Google Business Profile, and conversion gaps at no cost.
+                We can also flag whether you need to{" "}
+                <Link
+                  href="/services/gmb-verification-help"
+                  className="cseo-inline-link"
+                >
+                  verify your GBP
+                </Link>{" "}
+                or recover a{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="cseo-inline-link"
+                >
+                  suspended Google Business Profile
+                </Link>
+                .
               </p>
             </div>
             <form
@@ -1538,7 +1576,11 @@ export default function CommercialSeoPage() {
               <h2>SEO vs Paid Ads for Commercial Cleaning Companies</h2>
               <p className="car-tow-section-descrp">
                 Marketing budget decisions matter for every cleaning business.
-                Understanding how local SEO and paid advertising differ — and
+                Understanding how local SEO and{" "}
+                <Link href="/services/google-ads" className="cseo-inline-link">
+                  paid advertising
+                </Link>{" "}
+                differ — and
                 how they work together — helps you make smarter, more confident
                 investment choices for your company.
               </p>

@@ -213,6 +213,11 @@ function page() {
               Zonic Media&apos;s GMB optimization specialists fine-tune every
               element of your profile - so you show up higher on Google Maps,
               get more calls, and turn profile visitors into paying customers.
+              If your listing isn&apos;t live yet, we also handle{" "}
+              <Link href="/services/gmb-verification-help" className="gmb-inline-link">
+                Google Business Profile verification
+              </Link>{" "}
+              so you can start ranking sooner.
             </p>
 
             <div className="gmb-reinst-sec-1-box">
@@ -353,7 +358,12 @@ function page() {
                 content and low engagement signals, small gaps can significantly
                 impact your visibility. Our experts identify and fix these
                 issues to help your profile rank higher on Google Maps, attract
-                more local searches, and convert visitors into real customers.
+                more local searches, and convert visitors into real customers —
+                and for businesses that need leads immediately, we can layer in{" "}
+                <Link href="/services/google-ads" className="gmb-inline-link">
+                  Google Ads management
+                </Link>{" "}
+                alongside the organic work.
               </p>
             </div>
 
@@ -630,8 +640,12 @@ function page() {
               </h2>
               <p className="gmb-reinst-descrp">
                 Choosing the right Google Business Profile optimization partner
-                can directly impact your local rankings and lead flow. At Zonic
-                Media, we combine data-driven strategies, industry-specific
+                can directly impact your local rankings and lead flow. Paired
+                with our broader{" "}
+                <Link href="/services/local-seo-for-home-services" className="gmb-inline-link">
+                  local SEO services
+                </Link>
+                , we combine data-driven strategies, industry-specific
                 expertise, and proven optimization techniques to help your
                 business rank higher on Google Maps, increase profile
                 visibility, and consistently generate more calls, leads, and
@@ -675,9 +689,12 @@ function page() {
                 </h3>
                 <p className="gmb-reinst-card-descrp">
                   Optimizing a restaurant profile is completely different from
-                  optimizing a law firm or a roofing company. We tailor every
-                  strategy to your specific industry, competitors, and local
-                  market.
+                  optimizing a law firm or a{" "}
+                  <Link href="/services/roofing-marketing-agency" className="gmb-inline-link">
+                    roofing company
+                  </Link>
+                  . We tailor every strategy to your specific industry,
+                  competitors, and local market.
                 </p>
               </div>
 
@@ -736,7 +753,12 @@ function page() {
               <p className="gmb-reinst-descrp">
                 We optimize every ranking signal inside your Google Business
                 Profile so the listing is complete, competitive, and built to
-                convert local search traffic into real customers.
+                convert local search traffic into real customers. Just starting
+                out? Our{" "}
+                <Link href="/services/launchpad" className="gmb-inline-link">
+                  business launch package
+                </Link>{" "}
+                sets up and optimizes your profile from day one.
               </p>
             </div>
 
@@ -854,7 +876,12 @@ function page() {
                   Website &amp; Link Signals
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Correct NAP consistency and citation alignment across the web.
+                  Correct NAP consistency and citation alignment across the web,
+                  backed by a fast, SEO-ready{" "}
+                  <Link href="/services/web-design" className="gmb-inline-link">
+                    business website
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -1060,8 +1087,12 @@ function page() {
                     Results-Driven Approach
                   </h3>
                   <p>
-                    If we can&apos;t get your listing reinstated, you pay
-                    nothing. We only win when you win.
+                    If your profile is suspended, our{" "}
+                    <Link href="/services/gmb-reinstatement-help" className="gmb-inline-link">
+                      GMB reinstatement service
+                    </Link>{" "}
+                    recovers it first — and if we can&apos;t get your listing
+                    reinstated, you pay nothing. We only win when you win.
                   </p>
                 </li>
 

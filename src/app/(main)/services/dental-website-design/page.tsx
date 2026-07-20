@@ -168,7 +168,19 @@ const ServiceCards = [
   {
     icon: <FiLayout aria-hidden="true" />,
     title: "New Practice Websites",
-    desc: "Opening or rebranding? We design your site from sitemap to launch — booking flows, insurance pages, and local SEO foundations included from day one.",
+    desc: (
+      <>
+        Opening or rebranding? We design your site from sitemap to launch —
+        booking flows, insurance pages, and{" "}
+        <Link
+          href="/services/local-seo-for-home-services"
+          className="dw-inline-link"
+        >
+          local SEO foundations
+        </Link>{" "}
+        included from day one.
+      </>
+    ),
   },
   {
     icon: <FiRefreshCw aria-hidden="true" />,
@@ -401,7 +413,12 @@ function Page() {
                   Zonic Media designs dental practice websites that work like a
                   patient acquisition system — online booking flows, insurance
                   verification UX, treatment-specific landing pages, and
-                  HIPAA-aware forms. Not another brochure site.
+                  HIPAA-aware forms. Our{" "}
+                  <Link href="/services/web-design" className="dw-inline-link">
+                    website design services
+                  </Link>{" "}
+                  are built around booked appointments, not another brochure
+                  site.
                 </p>
                 <div className="dw-hero-ctas">
                   <HashScrollLink
@@ -563,7 +580,14 @@ function Page() {
                   Great dental website design closes that gap: it answers the
                   three questions every patient has — can I trust you, do you
                   take my insurance, and how fast can I get in — and then makes
-                  booking effortless.
+                  booking effortless. It is also the foundation of any wider{" "}
+                  <Link
+                    href="/services/dental-marketing-agency"
+                    className="dw-inline-link"
+                  >
+                    dental marketing
+                  </Link>{" "}
+                  program you run.
                 </p>
                 <div className="dw-checks">
                   {AboutChecks.map((check) => (
@@ -624,7 +648,15 @@ function Page() {
                 multi-location groups — we design around your patient mix, your
                 treatments, and the way your community searches for care. Your
                 site should feel like your practice, not like a template every
-                competitor is also using.
+                competitor is also using, whether you serve families or need
+                sharper visibility for{" "}
+                <Link
+                  href="/services/industry/pediatricians"
+                  className="dw-inline-link"
+                >
+                  pediatric dental SEO
+                </Link>
+                .
               </p>
               <div className="dw-band-stats">
                 {BandStats.map((stat) => (
@@ -753,11 +785,17 @@ function Page() {
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
-                  <Link href="/services/industry/dental-seo-services">
+                  <Link
+                    href="/services/industry/dental-seo-services"
+                    className="dw-inline-link"
+                  >
                     dental SEO
                   </Link>{" "}
                   and{" "}
-                  <Link href="/services/gmb-optimization">
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="dw-inline-link"
+                  >
                     Google Business Profile optimization
                   </Link>{" "}
                   when you are ready to grow.
@@ -855,6 +893,11 @@ function Page() {
               <p className="dw-lead">
                 A website built by a team that understands how patients choose
                 a dentist — and what makes them book instead of keep scrolling.
+                If the project touches ads, content, or profile work, our{" "}
+                <Link href="/services" className="dw-inline-link">
+                  full-service marketing
+                </Link>{" "}
+                team can keep the whole system aligned.
               </p>
               <Link href="/contact-us" className="dw-btn">
                 Contact Us

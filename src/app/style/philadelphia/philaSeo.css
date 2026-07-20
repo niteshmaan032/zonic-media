@@ -1,3 +1,14 @@
+.phila-seo-sec-1 .phila-seo-inline-link,
+.phila-seo-sec-2 .phila-seo-inline-link,
+.phila-seo-sec-4 .phila-seo-inline-link,
+.phila-seo-sec-11 .phila-seo-inline-link,
+.phila-seo-sec-12 .phila-seo-inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .phila-seo-sec-1 {
   background-image: url("/images/philadelphia/phila-seo/phila-seo-banner.jpg");
   min-height: 100svh;

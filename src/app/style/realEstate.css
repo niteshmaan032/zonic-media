@@ -1395,3 +1395,10 @@
     line-height: 54px;
   }
 }
+
+.realest-inline-link {
+  color: #b8860b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

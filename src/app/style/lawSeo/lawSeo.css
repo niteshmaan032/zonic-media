@@ -19,6 +19,13 @@
   overflow-x: clip;
 }
 
+.law-seo-page .law-inline-link {
+  color: var(--lawprimary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .law-seo-page main,
 .law-seo-page section,
 .law-phila-section,

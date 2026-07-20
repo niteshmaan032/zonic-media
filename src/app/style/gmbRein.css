@@ -551,6 +551,13 @@ body:has(.gbr-page) .zoni-window {
   margin: 0 0 14px;
 }
 
+.gbr-page .gbr-inline-link {
+  color: var(--gbr-yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .gbr-sec-h2 .gbr-accent {
   color: var(--gbr-yellow);
 }

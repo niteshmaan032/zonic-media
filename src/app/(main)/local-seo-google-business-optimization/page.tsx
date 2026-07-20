@@ -434,7 +434,10 @@ const faqs = [
         businesses, recently verified profiles, and profiles that have had
         multiple edits in a short period. If your profile is suspended, we offer
         a{" "}
-        <Link href="/services/gmb-reinstatement-help">
+        <Link
+          href="/services/gmb-reinstatement-help"
+          className="lo-inline-link"
+        >
           dedicated GBP reinstatement service
         </Link>
         . For active Optimize + Manage clients, suspension monitoring and
@@ -646,7 +649,14 @@ function Page() {
                   Most Google Business Profiles don&apos;t fail because
                   they&apos;re inactive. They fail because of specific, fixable
                   gaps that silently cost business owners leads every single
-                  day.
+                  day — the same gaps our{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="lo-inline-link"
+                  >
+                    Google Business Profile optimization service
+                  </Link>{" "}
+                  is built to close.
                 </p>
                 <div className="lo-audit-grid">
                   {auditCards.map((c, i) => (
@@ -670,7 +680,14 @@ function Page() {
                 <p className="lo-section-sub">
                   We optimize every element Google scores — not just the
                   visible ones. Here&apos;s exactly what changes in your
-                  profile.
+                  profile. It&apos;s the same discipline we bring to{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="lo-inline-link"
+                  >
+                    local SEO for home services
+                  </Link>{" "}
+                  and contractor businesses across the Mid-Atlantic.
                 </p>
                 <div className="lo-optimize-grid">
                   {optimizeCards.map((c, i) => (
@@ -694,7 +711,15 @@ function Page() {
                 <p className="lo-section-sub">
                   A structured four-phase process with specific deliverables and
                   timelines — not vague &quot;ongoing work&quot; with no
-                  milestones.
+                  milestones. If your profile isn&apos;t live yet, we can start
+                  with{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="lo-inline-link"
+                  >
+                    Google Business Profile verification
+                  </Link>{" "}
+                  before optimization begins.
                 </p>
                 <div className="lo-process-list">
                   {processItems.map((p, i) => (
@@ -726,7 +751,15 @@ function Page() {
                 </h2>
                 <p className="lo-section-sub">
                   Measured outcomes from real Mid-Atlantic businesses — not
-                  generic case study language.
+                  generic case study language. We see the same pattern in our{" "}
+                  <Link
+                    href="/services/local-seo-services-for-hvac"
+                    className="lo-inline-link"
+                  >
+                    local SEO for HVAC companies
+                  </Link>{" "}
+                  work, where Map Pack visibility drives most of the phone
+                  calls.
                 </p>
                 <div className="lo-results-grid">
                   {results.map((r, i) => (
@@ -807,7 +840,12 @@ function Page() {
                 <p className="lo-section-sub">
                   Three realistic options for GBP optimization. Here&apos;s how
                   they actually compare across the factors that determine
-                  whether your profile ranks.
+                  whether your profile ranks. For businesses that also want paid
+                  reach, our{" "}
+                  <Link href="/services/google-ads" className="lo-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  pairs well with a fully optimized profile.
                 </p>
                 <div className="lo-compare-wrap">
                   <table className="lo-compare-table">
@@ -878,7 +916,11 @@ function Page() {
                 </h2>
                 <p className="lo-section-sub">
                   Specific answers — not the generic FAQ that applies to every
-                  agency on the internet.
+                  agency on the internet. We also connect this work to{" "}
+                  <Link href="/services/web-design" className="lo-inline-link">
+                    conversion-focused websites
+                  </Link>{" "}
+                  when your profile traffic needs a stronger place to land.
                 </p>
                 <div className="lo-faq-list">
                   {faqs.map((f, i) => (

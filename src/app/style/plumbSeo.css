@@ -348,3 +348,16 @@
     display: none;
   }
 }
+
+/* In-body contextual internal links */
+.roof-sec-1 .plumb-inline-link,
+.roof-sec-3 .plumb-inline-link,
+.roof-sec-6 .plumb-inline-link,
+.plumb-maps-section .plumb-inline-link,
+.roof-sec-7 .plumb-inline-link,
+.plumb-availability .plumb-inline-link {
+  color: #f7c00a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

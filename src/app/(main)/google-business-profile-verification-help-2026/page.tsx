@@ -518,7 +518,14 @@ function Page() {
                     Google&apos;s verification process became dramatically
                     harder in 2024 — video is the default, live video calls are
                     new, and AI search now ignores unverified profiles
-                    entirely.{" "}
+                    entirely. Our dedicated{" "}
+                    <Link
+                      href="/services/gmb-verification-help"
+                      className="gbv-inline-link"
+                    >
+                      GBP verification service
+                    </Link>{" "}
+                    handles every case type.{" "}
                     <strong>We know exactly how to navigate all of it.</strong>
                   </p>
 
@@ -708,14 +715,30 @@ function Page() {
                       policy for businesses that don&apos;t serve customers at a
                       fixed location. But this creates a verification challenge:
                       Google needs to confirm you&apos;re a real business
-                      without a storefront to film.
+                      without a storefront to film. It&apos;s a hurdle we clear
+                      constantly in our{" "}
+                      <Link
+                        href="/services/local-seo-services-for-hvac"
+                        className="gbv-inline-link"
+                      >
+                        local SEO for HVAC companies
+                      </Link>{" "}
+                      engagements.
                     </p>
                     <p>
                       The SAB path requires proving legitimacy through branded
                       equipment, vehicles, insurance documents, and business
                       licenses — not a storefront walkthrough. Most video
                       verification guides assume you have a physical location.
-                      For SABs, that guidance is useless.
+                      For SABs, that guidance is useless. Once verified, these
+                      same businesses rely on{" "}
+                      <Link
+                        href="/services/local-seo-for-home-services"
+                        className="gbv-inline-link"
+                      >
+                        local SEO for home services
+                      </Link>{" "}
+                      to win the Map Pack.
                     </p>
                     <div className="gbv-sab-trades">
                       {["HVAC", "Plumbing", "Roofing", "Pest Control", "Electrical", "Landscaping", "Cleaning", "Mobile Services"].map((t) => (
@@ -756,7 +779,15 @@ function Page() {
                   The verification loop is the most frustrating and most
                   misunderstood GBP problem. Here&apos;s the mechanism — and
                   why trying to re-verify without fixing the root cause makes
-                  it worse each time.
+                  it worse each time. If a revoked profile tips into a full
+                  suspension, our{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="gbv-inline-link"
+                  >
+                    Google Business Profile reinstatement help
+                  </Link>{" "}
+                  takes over.
                 </p>
                 <div className="gbv-loop-flow">
                   {loopSteps.map((s, i) => (
@@ -793,7 +824,15 @@ function Page() {
                 </h2>
                 <p className="gbv-sec-sub">
                   No ambiguity. No &quot;we&apos;ll handle it.&quot; Here&apos;s
-                  exactly what happens at each step.
+                  exactly what happens at each step — and once you&apos;re live,
+                  our{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="gbv-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  makes sure the verified profile actually ranks.
                 </p>
                 <div className="gbv-process-list">
                   {processSteps.map((s, i) => (
@@ -856,6 +895,11 @@ function Page() {
                 <p className="gbv-sec-sub">
                   Money-back guarantee on every plan. You don&apos;t pay if we
                   don&apos;t deliver a verified, live Google Business Profile.
+                  While verification is in progress, many clients run{" "}
+                  <Link href="/services/google-ads" className="gbv-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  to stay visible to high-intent searchers.
                 </p>
                 <div className="gbv-pricing-grid">
                   {pricing.map((p, i) => (
@@ -904,7 +948,15 @@ function Page() {
                 <p className="gbv-sec-sub">
                   Three realistic options for GBP verification. Here&apos;s how
                   they stack up on the factors that actually determine whether
-                  your profile gets verified and stays that way.
+                  your profile gets verified and stays that way. A verified
+                  profile paired with a{" "}
+                  <Link
+                    href="/services/web-design"
+                    className="gbv-inline-link"
+                  >
+                    conversion-focused website
+                  </Link>{" "}
+                  turns new visibility into booked customers.
                 </p>
                 <div className="gbv-cmp-wrap">
                   <table className="gbv-cmp-table">

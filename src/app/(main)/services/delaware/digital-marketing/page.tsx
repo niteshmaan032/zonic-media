@@ -12,6 +12,7 @@ import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -218,7 +219,12 @@ export default function Page() {
           <p className="deldg-sec-1-text">
             Looking for a digital marketing agency in Delaware? Zonic Media
             helps businesses generate leads through SEO, PPC, and
-            high-converting growth strategies.
+            high-converting growth strategies, and also serves nearby markets
+            like{" "}
+            <Link href="/services/philadelphia/digital-marketing" className="deldg-inline-link">
+              digital marketing in Philadelphia
+            </Link>
+            .
           </p>
 
           <div className="deldg-sec-1-cta-row">
@@ -333,15 +339,22 @@ export default function Page() {
         <div className="deldg-sec-2-right">
           <h3>Scale Your Business with Smarter Digital Marketing</h3>
           <p>
-            We create data-driven strategies that help you reach the right
-            audience, increase visibility, and generate consistent leads that
-            turn into real business growth.
+            We create data-driven strategies, from{" "}
+            <Link href="/services/google-ads" className="deldg-inline-link">
+              Google Ads management
+            </Link>{" "}
+            to organic search, that help you reach the right audience, increase
+            visibility, and generate consistent leads that turn into real
+            business growth.
           </p>
           <p>
             Our approach combines creativity, data, and performance marketing to
             deliver measurable outcomes that help your brand grow stronger and
-            faster. We build digital systems that attract, convert, and retain
-            customers for long-term success.
+            faster. We build digital systems, including a{" "}
+            <Link href="/services/web-design" className="deldg-inline-link">
+              conversion-focused website
+            </Link>
+            , that attract, convert, and retain customers for long-term success.
           </p>
 
           <div className="deldg-sec-2-stats">
@@ -412,9 +425,12 @@ export default function Page() {
             </HashScrollLink>
 
             <p>
-              We build digital marketing systems designed to generate leads,
-              increase revenue, and create long term growth for businesses in
-              Delaware.
+              We build{" "}
+              <Link href="/services" className="deldg-inline-link">
+                full-service digital marketing
+              </Link>{" "}
+              systems designed to generate leads, increase revenue, and create
+              long term growth for businesses in Delaware.
             </p>
           </div>
         </div>
@@ -502,14 +518,20 @@ export default function Page() {
               </h3>
               <p>
                 Because they focus on traffic instead of conversions. At Zonic
-                Media, we build digital marketing systems designed to generate
-                leads, increase revenue, and create long term growth for
-                Delaware businesses.
+                Media, we build digital marketing systems, backed by{" "}
+                <Link href="/services/gmb-optimization" className="deldg-inline-link">
+                  Google Business Profile optimization
+                </Link>
+                , designed to generate leads, increase revenue, and create long
+                term growth for Delaware businesses.
               </p>
               <p>
-                Whether you are a local service provider or a growing company,
-                our strategies are built to deliver measurable outcomes, not
-                vanity metrics.
+                Whether you are a local service provider that benefits from{" "}
+                <Link href="/services/local-seo-for-home-services" className="deldg-inline-link">
+                  local SEO for home services
+                </Link>{" "}
+                or a growing company, our strategies are built to deliver
+                measurable outcomes, not vanity metrics.
               </p>
               <ServiceSectionCta href="/contact-us" align="left">
                 Get a Free Strategy Call
@@ -552,9 +574,13 @@ export default function Page() {
               </p>
               <p>
                 From the beginning, we work alongside you to understand your
-                vision, challenges, and opportunities. Instead of offering
-                one-size-fits-all solutions, we build strategies that align with
-                your growth and your market.
+                vision, challenges, and opportunities, whether that means
+                scaling paid ads or handling a{" "}
+                <Link href="/services/gmb-reinstatement-help" className="deldg-inline-link">
+                  suspended Google Business Profile reinstatement
+                </Link>
+                . Instead of offering one-size-fits-all solutions, we build
+                strategies that align with your growth and your market.
               </p>
               <p>
                 We celebrate wins as our own and take responsibility when things

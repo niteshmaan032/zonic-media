@@ -1678,3 +1678,15 @@
   line-height: 1.5;
   height: auto;
 }
+
+/* Contextual in-body internal links */
+.home-revamp .hr-inline-link {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.home-revamp .video-promo .hr-inline-link {
+  color: #172033;
+}

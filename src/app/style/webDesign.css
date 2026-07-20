@@ -190,6 +190,16 @@
   padding-top: 70px;
 }
 
+/* In-body contextual internal links */
+.web-design-section-1 .web-inline-link,
+.web-design-section-2 .web-inline-link,
+.web-design-section-4 .web-inline-link {
+  color: var(--color2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 /*responsive*/
 
 @media (max-width: 991.98px) {

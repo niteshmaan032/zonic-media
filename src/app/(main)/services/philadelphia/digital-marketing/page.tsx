@@ -10,6 +10,7 @@ import ServiceSectionCta from "@/app/components/ServiceSectionCta";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import Image from "next/image";
+import Link from "next/link";
 
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
@@ -275,7 +276,11 @@ function page() {
                 We work with Philadelphia businesses that want more calls,
                 better online visibility, and a consistent stream of qualified
                 customers. Whether you need stronger rankings, better ad
-                performance, or a website that converts, our team builds systems
+                performance from{" "}
+                <Link href="/services/philadelphia/ppc" className="phila-inline-link">
+                  PPC in Philadelphia
+                </Link>
+                , or a website that converts, our team builds systems
                 designed to grow your business in 2026 and beyond.
               </p>
 
@@ -394,10 +399,13 @@ function page() {
 
             <p className="phila-sec-descrp">
               Modern digital marketing is not just one channel or a single
-              tactic. It combines multiple systems working together to drive
-              growth, generate qualified leads, improve brand visibility, and
-              increase long-term revenue for Philadelphia businesses in
-              competitive markets.
+              tactic. It combines multiple systems working together, from{" "}
+              <Link href="/services/philadelphia/local-seo" className="phila-inline-link">
+                local SEO in Philadelphia
+              </Link>{" "}
+              to paid search, to drive growth, generate qualified leads, improve
+              brand visibility, and increase long-term revenue for Philadelphia
+              businesses in competitive markets.
             </p>
           </div>
         </div>
@@ -451,9 +459,12 @@ function page() {
                   </h3>
                 </div>
                 <p className="phila-card-desc">
-                  Increase local visibility, improve Google Maps rankings, and
-                  generate more calls from nearby customers actively searching
-                  for trusted businesses.
+                  Increase local visibility with{" "}
+                  <Link href="/services/gmb-optimization" className="phila-inline-link">
+                    Google Business Profile optimization
+                  </Link>
+                  , improve Google Maps rankings, and generate more calls from
+                  nearby customers actively searching for trusted businesses.
                 </p>
               </div>
             </Col>
@@ -555,8 +566,16 @@ function page() {
                   Whether you are a local service business, contractor, medical
                   practice, eCommerce brand, or growing company, our strategies
                   are built to deliver measurable outcomes—not vanity metrics.
-                  We focus on what matters most: more calls, more customers, and
-                  stronger ROI for Philadelphia businesses.
+                  From integrated{" "}
+                  <Link href="/services/philadelphia/sem" className="phila-inline-link">
+                    search engine marketing
+                  </Link>{" "}
+                  to a conversion-focused{" "}
+                  <Link href="/services/web-design" className="phila-inline-link">
+                    website design
+                  </Link>
+                  , we focus on what matters most: more calls, more customers,
+                  and stronger ROI for Philadelphia businesses.
                 </p>
               </div>
 
@@ -909,15 +928,22 @@ function page() {
             <p className="phila-sec-12-text">
               Our Philadelphia digital marketing strategies help your business
               rank higher, generate more calls, improve conversion rates, and
-              build long-term brand authority. We combine SEO, Google Ads, local
-              SEO, content marketing, and website optimization to create
+              build long-term brand authority. We combine SEO,{" "}
+              <Link href="/services/google-ads" className="phila-inline-link">
+                Google Ads management
+              </Link>
+              , local SEO, content marketing, and website optimization to create
               consistent growth.
             </p>
             <p className="phila-sec-12-text">
               Instead of relying on referrals or unpredictable traffic, we build
-              systems that generate leads month after month. If you want more
-              visibility, stronger ROI, and scalable growth, Zonic Media is
-              ready to help.
+              systems that generate leads month after month. We support growing
+              companies across the region, including our{" "}
+              <Link href="/services/delaware/digital-marketing" className="phila-inline-link">
+                digital marketing agency in Delaware
+              </Link>
+              . If you want more visibility, stronger ROI, and scalable growth,
+              Zonic Media is ready to help.
             </p>
 
             <ServiceSectionCta href="#phila-digital-contact-form" align="left">

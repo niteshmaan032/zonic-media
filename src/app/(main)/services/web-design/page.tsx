@@ -226,7 +226,11 @@ function Page() {
                   We create modern, SEO-friendly, and user-focused websites
                   designed to turn visitors into customers
                 </span>
-                —so you can focus on scaling your business.
+                —and we can extend them with{" "}
+                <Link href="/services/local-seo-for-home-services" className="web-inline-link">
+                  local SEO
+                </Link>{" "}
+                so you can focus on scaling your business.
               </p>
               <Link href="/contact-us" className="buttons">
                 launch your website
@@ -284,7 +288,11 @@ function Page() {
                 web development solutions focus on fast loading speeds, seamless
                 functionality, and optimized user experience to help your
                 business attract visitors, increase engagement, and generate
-                more leads online.
+                more leads online as part of a broader{" "}
+                <Link href="/services" className="web-inline-link">
+                  full-service marketing
+                </Link>{" "}
+                system.
               </p>
 
               <Link className="serv-box-link" href="/contact-us">
@@ -306,7 +314,11 @@ function Page() {
                 experiences that make your website easy to navigate and visually
                 impactful. Our UI/UX design approach improves usability,
                 increases customer engagement, and helps convert website
-                visitors into loyal customers.
+                visitors into loyal customers from search, referrals, and{" "}
+                <Link href="/services/google-ads" className="web-inline-link">
+                  Google Ads campaigns
+                </Link>
+                .
               </p>
 
               <Link className="serv-box-link" href="/contact-us">
@@ -334,7 +346,14 @@ function Page() {
                 seamlessly across desktops, tablets, and mobile devices. Our
                 websites are optimized for speed, SEO performance, and easy
                 content management so your business can grow online with
-                confidence.
+                confidence alongside{" "}
+                <Link
+                  href="/services/gmb-optimization"
+                  className="web-inline-link"
+                >
+                  Google Business Profile optimization
+                </Link>
+                .
               </p>
 
               <Link className="serv-box-link" href="/contact-us">
@@ -361,7 +380,12 @@ function Page() {
                 Launch a powerful Shopify eCommerce store designed to sell more
                 products online. We create responsive, conversion-focused online
                 stores with optimized product pages, secure checkout, and a
-                seamless shopping experience for your customers.
+                seamless shopping experience for your customers; for brand-new
+                companies, the same thinking powers our{" "}
+                <Link href="/services/launchpad" className="web-inline-link">
+                  Launchpad package
+                </Link>
+                .
               </p>
 
               <Link className="serv-box-link" href="/contact-us">
@@ -408,7 +432,10 @@ function Page() {
                 <h3>120+ successful website projects</h3>
                 <p className="card-descrp">
                   Delivered high-performing websites for businesses across
-                  multiple industries.
+                  <Link href="/industries" className="web-inline-link">
+                    multiple industries
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -421,7 +448,12 @@ function Page() {
                 <h3>250%+ average conversion growth</h3>
                 <p className="card-descrp">
                   Improved website engagement and lead generation through
-                  optimized design.
+                  optimized design, then routed interested visitors toward a
+                  clear{" "}
+                  <Link href="/contact-us" className="web-inline-link">
+                    free consultation
+                  </Link>
+                  .
                 </p>
               </div>
             </div>

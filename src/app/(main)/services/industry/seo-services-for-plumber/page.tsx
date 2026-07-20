@@ -9,6 +9,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import { FiPhoneCall } from "react-icons/fi";
@@ -170,7 +171,14 @@ function page() {
                 competitors every day.
               </p>
               <p className="roof-sec-1-descrp">
-                Zonic Media helps plumbing companies rank higher on Google,
+                Zonic Media helps{" "}
+                <Link
+                  href="/services/plumbing-marketing-agency"
+                  className="plumb-inline-link"
+                >
+                  plumbing companies
+                </Link>{" "}
+                rank higher on Google,
                 dominate local search, and consistently generate calls from
                 customers who need plumbing services right now.
               </p>
@@ -305,14 +313,25 @@ function page() {
                 you in front of customers exactly when they need you.
               </p>
               <p className="roof-sec-3-descrp">
-                We optimize your Google Business Profile, target high-intent
+                We optimize your{" "}
+                <Link
+                  href="/services/gmb-optimization"
+                  className="plumb-inline-link"
+                >
+                  Google Business Profile
+                </Link>
+                , target high-intent
                 keywords like plumber near me, and improve your website to rank
                 higher on search results and maps.
               </p>
               <p className="roof-sec-3-descrp">
                 Our strategy focuses on driving real leads, calls, bookings,
                 and inquiries by combining technical SEO, local listings,
-                reviews, and conversion-focused design.
+                reviews, and{" "}
+                <Link href="/services/web-design" className="plumb-inline-link">
+                  conversion-focused design
+                </Link>
+                .
               </p>
               <HashScrollLink
                 href="#plumber-contact-form"
@@ -403,7 +422,11 @@ function page() {
             <p className="roof-sec-6-intro">
               Search Engine Marketing includes Search Engine Optimization for
               organic rankings and paid search advertising through platforms
-              like Google Ads. Together, they help your plumbing company appear
+              like{" "}
+              <Link href="/services/google-ads" className="plumb-inline-link">
+                Google Ads
+              </Link>
+              . Together, they help your plumbing company appear
               at every stage of the customer journey.
             </p>
           </div>
@@ -474,7 +497,14 @@ function page() {
               </p>
               <p className="plumb-maps-text">
                 Get consistent plumbing leads every month with proven local SEO
-                that drives real calls and bookings.
+                that drives real calls and bookings. Our broader{" "}
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="plumb-inline-link"
+                >
+                  local SEO for home services
+                </Link>{" "}
+                supports trade contractors with the same search foundations.
               </p>
               <h2 className="plumb-maps-heading">
                 Dominate Google Maps for Plumbing Searches. Most customers
@@ -519,7 +549,15 @@ function page() {
             <p className="roof-sec-7-descrp">
               We build digital marketing systems designed to generate more
               leads, increase revenue, and create long-term growth for
-              plumbing companies.
+              plumbing companies, starting with clean profile setup when we need
+              to{" "}
+              <Link
+                href="/services/gmb-verification-help"
+                className="plumb-inline-link"
+              >
+                verify your GBP
+              </Link>
+              .
             </p>
 
             <div className="roof-sec-7-grid">
@@ -568,6 +606,14 @@ function page() {
                   We work with a limited number of plumbing companies in each
                   service area so we can stay focused on rankings, leads, and
                   measurable growth without taking on direct local competitors.
+                  If your listing is down, we can also help recover a{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="plumb-inline-link"
+                  >
+                    suspended Google Business Profile
+                  </Link>
+                  .
                 </p>
                 <HashScrollLink
                   href="#plumber-contact-form"

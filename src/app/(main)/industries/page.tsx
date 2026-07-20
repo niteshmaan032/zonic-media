@@ -380,7 +380,15 @@ const included = [
   },
   {
     title: "Google Business Profile",
-    body: "Setup, optimization, and reinstatement so your profile earns calls, directions, and trust in your area.",
+    body: (
+      <>
+        Setup, optimization, and{" "}
+        <Link href="/services/gmb-reinstatement-help" className="ind-inline-link">
+          profile reinstatement
+        </Link>{" "}
+        so your profile earns calls, directions, and trust in your area.
+      </>
+    ),
     icon: (
       <>
         <circle cx="12" cy="12" r="9" />
@@ -400,7 +408,15 @@ const included = [
   },
   {
     title: "Google Ads that pay back",
-    body: "Paid search tuned to cost-per-call, so every click is aimed at jobs worth winning in your niche.",
+    body: (
+      <>
+        <Link href="/services/google-ads" className="ind-inline-link">
+          Paid search
+        </Link>{" "}
+        tuned to cost-per-call, so every click is aimed at jobs worth winning in
+        your niche.
+      </>
+    ),
     icon: (
       <>
         <path d="M3 3v18h18" />
@@ -533,10 +549,13 @@ function Page() {
                 </h1>
                 <p className="lead">
                   Roofers, dentists, movers, and law firms don&apos;t win
-                  customers the same way. We run a dedicated Local SEO, Google
-                  Business Profile, website, and ads playbook for every niche we
-                  serve, so your marketing fits how people actually search for
-                  what you do.
+                  customers the same way. We run a dedicated{" "}
+                  <Link href="/services/local-seo-for-home-services" className="ind-inline-link">
+                    local SEO
+                  </Link>
+                  , Google Business Profile, website, and ads playbook for every
+                  niche we serve, so your marketing fits how people actually
+                  search for what you do.
                 </p>
                 <div className="hero-actions">
                   <a href="#all-industries" className="buttons">
@@ -686,15 +705,28 @@ function Page() {
                   the table.
                 </p>
                 <p>
-                  A roofer needs to show up the moment a storm rolls through. A
-                  dentist needs a steady stream of new patients month after
-                  month. A moving company needs volume during peak season. We
-                  build the strategy around your reality, not a template.
+                  A{" "}
+                  <Link href="/services/roofing-marketing-agency" className="ind-inline-link">
+                    roofing company
+                  </Link>{" "}
+                  needs to show up the moment a storm rolls through. A{" "}
+                  <Link href="/services/dental-marketing-agency" className="ind-inline-link">
+                    dental practice
+                  </Link>{" "}
+                  needs a steady stream of new patients month after month. A
+                  moving company needs volume during peak season. We build the
+                  strategy around your reality, not a template.
                 </p>
                 <p>
-                  Under the hood the tools are consistent, Local SEO, a healthy
-                  Google Business Profile, a conversion-ready website, and paid
-                  ads, but{" "}
+                  Under the hood the tools are consistent, Local SEO, a healthy{" "}
+                  <Link href="/services/gmb-optimization" className="ind-inline-link">
+                    Google Business Profile
+                  </Link>
+                  , a{" "}
+                  <Link href="/services/web-design" className="ind-inline-link">
+                    conversion-ready website
+                  </Link>
+                  , and paid ads, but{" "}
                   <strong>how we aim them is tuned to your industry</strong> and
                   the way people in it actually decide who to call.
                 </p>

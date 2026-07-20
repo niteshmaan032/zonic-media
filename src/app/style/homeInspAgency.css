@@ -289,6 +289,16 @@ body:has(.hia-page) .floating-phone-link {
 .hia-accent {
   color: var(--orange);
 }
+.hia-page .hia-inline-link {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  transition: color 0.18s ease;
+}
+.hia-page .hia-inline-link:hover {
+  color: var(--orange-dark);
+}
 .hia-hero-sub {
   font-size: 17px;
   color: var(--slate);

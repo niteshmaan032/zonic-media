@@ -247,7 +247,17 @@ const featuredServices = [
   {
     badge: "Web Design & Development",
     heading: "Websites Built to Win — Not Just to Look Good",
-    body: "Most websites look decent but fail to convert. We engineer digital experiences that are fast, mobile-first, SEO-optimized, and designed around the psychology of your target customer — so every visit has a higher chance of turning into a lead or sale.",
+    body: (
+      <>
+        Most websites look decent but fail to convert. Our{" "}
+        <Link href="/services/web-design" className="st2-inline-link">
+          website design services
+        </Link>{" "}
+        engineer digital experiences that are fast, mobile-first, SEO-optimized,
+        and designed around the psychology of your target customer — so every
+        visit has a higher chance of turning into a lead or sale.
+      </>
+    ),
     points: [
       "Performance-first architecture with sub-2s load times",
       "Conversion-focused layouts based on user intent data",
@@ -262,7 +272,22 @@ const featuredServices = [
   {
     badge: "Google Business Profile Optimization",
     heading: "Turn Local Searches Into Calls, Directions, and Bookings",
-    body: "Your Google Business Profile is often the first place customers decide whether to trust you. We optimize categories, services, photos, posts, reviews, and conversion signals so your listing performs like a real acquisition channel.",
+    body: (
+      <>
+        Your Google Business Profile is often the first place customers decide
+        whether to trust you. Our{" "}
+        <Link href="/services/gmb-optimization" className="st2-inline-link">
+          GBP optimization
+        </Link>{" "}
+        dials in categories, services, photos, posts, reviews, and conversion
+        signals so your listing performs like a real acquisition channel — and
+        if your listing ever goes dark, our{" "}
+        <Link href="/services/gmb-reinstatement-help" className="st2-inline-link">
+          suspended profile reinstatement
+        </Link>{" "}
+        team gets it back online.
+      </>
+    ),
     points: [
       "Complete GMB profile setup, cleanup, and optimization",
       "Category, service, and keyword alignment for local intent",
@@ -292,7 +317,18 @@ const featuredServices = [
   {
     badge: "Google Ads & PPC Management",
     heading: "Ad Campaigns That Generate Revenue, Not Just Clicks",
-    body: "Clicks are worthless without conversions. Our PPC team builds tightly structured Google Ads campaigns targeting high-intent buyers, with fully optimized landing pages, smart bidding strategies, and transparent reporting that shows exactly what your ad spend is generating.",
+    body: (
+      <>
+        Clicks are worthless without conversions. Our PPC team builds tightly
+        structured{" "}
+        <Link href="/services/google-ads" className="st2-inline-link">
+          Google Ads campaigns
+        </Link>{" "}
+        targeting high-intent buyers, with fully optimized landing pages, smart
+        bidding strategies, and transparent reporting that shows exactly what
+        your ad spend is generating.
+      </>
+    ),
     points: [
       "Strategic campaign architecture for maximum ROAS",
       "Intent-matched landing pages built for conversion",
@@ -340,7 +376,15 @@ const industries = [
   {
     icon: <FaBullhorn />,
     title: "Marketing Agencies",
-    desc: "White-label design, development support, and reliable delivery capacity for agencies that need a trusted partner.",
+    desc: (
+      <>
+        <Link href="/services/white-label-services" className="st2-inline-link">
+          White-label design
+        </Link>
+        , development support, and reliable delivery capacity for agencies that
+        need a trusted partner.
+      </>
+    ),
   },
   {
     icon: <FaChartLine />,
@@ -591,9 +635,13 @@ export default function ServicesPage() {
               {" "}Real Growth
             </h1>
             <p className="st2-hero-p">
-              From conversion-focused web design and local SEO to high-ROAS
-              Google Ads and custom software — we deliver full-service digital
-              solutions engineered for measurable, scalable results.
+              From conversion-focused web design and{" "}
+              <Link href="/services/local-seo-for-home-services" className="st2-inline-link">
+                local SEO
+              </Link>{" "}
+              to high-ROAS Google Ads and custom software — we deliver
+              full-service digital solutions engineered for measurable, scalable
+              results.
             </p>
             <div className="st2-hero-ctas">
               <Link href="/contact-us" className="buttons st2-btn-dark">
@@ -878,7 +926,11 @@ export default function ServicesPage() {
             <p className="st2-section-sub">
               From lean startups to established enterprises — we build tailored
               digital strategies for the unique challenges and growth goals of
-              your specific industry.
+              the{" "}
+              <Link href="/industries" className="st2-inline-link">
+                industries we serve
+              </Link>
+              .
             </p>
           </div>
 

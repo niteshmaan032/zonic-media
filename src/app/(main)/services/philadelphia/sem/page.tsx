@@ -11,6 +11,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -311,9 +312,12 @@ function page() {
                 search strategies.
               </p>
               <p className="phila-sem-sec-1-descrp">
-                We combine organic search growth with Google Ads execution so
-                your business appears across the customer journey and captures
-                more high-intent opportunities.
+                We combine organic search growth with{" "}
+                <Link href="/services/google-ads" className="phila-sem-inline-link">
+                  Google Ads management
+                </Link>{" "}
+                execution so your business appears across the customer journey
+                and captures more high-intent opportunities.
               </p>
 
               <div className="phila-sem-sec-1-ctas">
@@ -407,9 +411,17 @@ function page() {
             </h2>
             <p className="phila-sem-sec-descrp">
               Search Engine Marketing includes Search Engine Optimization for
-              organic rankings and paid search advertising through platforms
-              like Google Ads, working together to ensure your business appears
-              at every stage of the customer journey.
+              organic rankings, such as{" "}
+              <Link href="/services/philadelphia/local-seo" className="phila-sem-inline-link">
+                local SEO in Philadelphia
+              </Link>
+              , and paid search advertising through platforms like Google Ads,
+              working together as part of your broader{" "}
+              <Link href="/services/philadelphia/digital-marketing" className="phila-sem-inline-link">
+                Philadelphia digital marketing
+              </Link>{" "}
+              to ensure your business appears at every stage of the customer
+              journey.
             </p>
           </div>
         </div>
@@ -469,7 +481,12 @@ function page() {
             <h2 className="phila-sem-sec-heading">Our SEM Process</h2>
             <p className="phila-sem-sec-descrp">
               From research to optimization, every step is focused on
-              performance, scalability, and consistent lead generation.
+              performance, scalability, and consistent lead generation. If a
+              listing is offline, we can also handle{" "}
+              <Link href="/services/gmb-reinstatement-help" className="phila-sem-inline-link">
+                suspended Google Business Profile reinstatement
+              </Link>{" "}
+              so your local presence stays intact.
             </p>
           </div>
         </div>
@@ -562,8 +579,11 @@ function page() {
                 Why SEM Matters for Philadelphia Businesses
               </h2>
               <p className="phila-sem-sec-7-text">
-                Philadelphia is a highly competitive market. Customers are
-                constantly searching for:
+                Philadelphia is a highly competitive market, and strong{" "}
+                <Link href="/services/gmb-optimization" className="phila-sem-inline-link">
+                  Google Business Profile optimization
+                </Link>{" "}
+                keeps you visible while customers are constantly searching for:
               </p>
 
               <div className="phila-sem-timeline-list">
@@ -577,7 +597,11 @@ function page() {
 
               <p className="phila-sem-sec-7-text">
                 If your business does not appear in both paid and organic
-                results, you are missing opportunities. SEM allows you to:
+                results, you are missing opportunities. Focused{" "}
+                <Link href="/services/philadelphia/ppc" className="phila-sem-inline-link">
+                  PPC campaigns in Philadelphia
+                </Link>{" "}
+                capture that paid demand, and SEM allows you to:
               </p>
 
               <div className="phila-sem-timeline-list">
@@ -615,7 +639,11 @@ function page() {
             </h2>
             <p className="phila-sem-sec-descrp">
               Drive instant traffic and high-quality leads with targeted SEM
-              campaigns.
+              campaigns paired with{" "}
+              <Link href="/services/web-design" className="phila-sem-inline-link">
+                conversion-focused web design
+              </Link>
+              .
             </p>
           </div>
         </div>

@@ -462,11 +462,24 @@ function Page() {
                   Business Profile Services.
                 </h1>
                 <p className="hia-hero-sub">
-                  Real estate has the highest Google Business Profile suspension
+                  Real estate has the highest{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="gre-inline-link"
+                  >
+                    Google Business Profile suspension
+                  </Link>{" "}
                   rate of any local service category. Multi-agent brokerage
                   addresses look like duplicate spam. Keyword-stuffed names get
                   flagged. Home-based agents trigger SAB confusion. We&apos;ve
-                  reinstated 700-plus profiles, structured verification around
+                  reinstated 700-plus profiles,{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="gre-inline-link"
+                  >
+                    structured verification
+                  </Link>{" "}
+                  around
                   each state&apos;s licensing rules, and engineered the ongoing
                   management that keeps agents and brokers ranked in their map
                   pack across Florida, Texas, California, New York, and Arizona.
@@ -611,8 +624,14 @@ function Page() {
                 </h2>
                 <p className="hia-sec-sub">
                   “Realtor near me,” “real estate agent [neighborhood],” and
-                  “homes for sale [city]” all trigger the three-pin Google Map
-                  Pack as the dominant result. Those three pins absorb nearly
+                  “homes for sale [city]” all trigger the three-pin{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="gre-inline-link"
+                  >
+                    Google Map Pack
+                  </Link>{" "}
+                  as the dominant result. Those three pins absorb nearly
                   three-quarters of the clicks — and suspension removes you from
                   the pack entirely, dropping impressions, clicks, and direction
                   requests to zero.
@@ -655,7 +674,14 @@ function Page() {
                   Every service is built around the structural realities of real
                   estate — the multi-agent brokerage dynamic, the state-by-state
                   regulatory environment, the mobile-first buyer journey, and the
-                  suspension landscape that defines real estate marketing in
+                  suspension landscape that defines{" "}
+                  <Link
+                    href="/services/real-estate-marketing-agency"
+                    className="gre-inline-link"
+                  >
+                    real estate marketing
+                  </Link>{" "}
+                  in
                   2026. No pricing on this page — every engagement is scoped and
                   quoted after the free audit.
                 </p>
@@ -764,6 +790,19 @@ function Page() {
                   structures, and suspension dynamics. Florida, Texas,
                   California, New York, and Arizona have the deepest dedicated
                   work — but we serve real estate brokers and agents nationally.
+                  For markets that need more than profile repair, we connect the
+                  same work to{" "}
+                  <Link
+                    href="/services/industry/real-estate-seo-services"
+                    className="gre-inline-link"
+                  >
+                    real estate SEO services
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/services/web-design" className="gre-inline-link">
+                    real estate website design
+                  </Link>
+                  .
                 </p>
                 <div className="gre-state-list">
                   {states.map((st, i) => (
@@ -797,7 +836,14 @@ function Page() {
                 <p className="hia-sec-sub">
                   Agents and brokers are running transactions, managing clients,
                   and serving showings. Total time investment across the first
-                  two weeks is under an hour. After that, monthly reports.
+                  two weeks is under an hour. After that, monthly reports keep{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="gre-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  moving without pulling you away from clients.
                 </p>
                 <div className="hia-section-cta">
                   <Link href={SITE_CONTACT.phoneHref} className="hia-cta-call">

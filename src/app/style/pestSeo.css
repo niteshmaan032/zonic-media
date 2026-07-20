@@ -302,3 +302,15 @@
     font-size: 20px;
   }
 }
+
+/* In-body contextual internal links */
+.pest-hero .pest-inline-link,
+.pest-growth-story .pest-inline-link,
+.plumb-maps-section .pest-inline-link,
+.roof-sec-7 .pest-inline-link,
+.plumb-availability .pest-inline-link {
+  color: #f7c00a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

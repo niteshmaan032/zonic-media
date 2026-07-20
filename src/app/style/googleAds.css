@@ -7,6 +7,16 @@
   overflow: hidden;
 }
 
+/* In-body contextual internal links */
+.ads-section-1 .ads-inline-link,
+.ads-section-2 .ads-inline-link,
+.ads-section-3 .ads-inline-link {
+  color: var(--color8);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .ads-section-1__content {
   display: flex;
   flex-direction: column;

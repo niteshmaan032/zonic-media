@@ -7,6 +7,22 @@
   background-position: center center;
 }
 
+.roof-sec-1 .roof-inline-link,
+.roof-sec-2 .roof-inline-link,
+.roof-sec-3 .roof-inline-link,
+.roof-sec-4 .roof-inline-link,
+.roof-sec-4b .roof-inline-link,
+.roof-sec-5 .roof-inline-link,
+.roof-sec-6 .roof-inline-link,
+.roof-sec-7 .roof-inline-link,
+.roof-sec-8 .roof-inline-link {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 2px;
+}
+
 .roof-sec-1-layer {
   position: relative;
   overflow: hidden;

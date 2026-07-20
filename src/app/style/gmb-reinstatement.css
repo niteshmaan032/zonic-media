@@ -50,6 +50,14 @@
   text-decoration: none;
 }
 
+/* In-body contextual internal links */
+.gmb-reinst-page .gmb-inline-link {
+  color: var(--orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .gmb-reinst-page img,
 .gmb-reinst-page svg {
   display: block;

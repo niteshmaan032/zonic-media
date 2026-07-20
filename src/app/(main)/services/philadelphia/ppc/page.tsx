@@ -11,6 +11,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -302,8 +303,11 @@ function page() {
               <p className="phila-ppc-sec-1-descrp">
                 Looking for a high-performing Philadelphia PPC agency that
                 actually delivers results? Zonic Media helps businesses generate
-                high-quality leads through strategic Google Ads campaigns,
-                advanced targeting, and data-driven PPC management.
+                high-quality leads through strategic{" "}
+                <Link href="/services/google-ads" className="phila-ppc-inline-link">
+                  Google Ads campaigns
+                </Link>
+                , advanced targeting, and data-driven PPC management.
               </p>
               <p className="phila-ppc-sec-1-descrp">
                 As a trusted PPC agency in Philadelphia, we focus on what
@@ -415,9 +419,13 @@ function page() {
               </h2>
               <p className="phila-ppc-sec-2-descrp">
                 If you want immediate leads for your business, PPC advertising
-                in Philadelphia is one of the fastest ways to generate results.
-                But running ads alone is not enough; strategy, targeting, and
-                optimization make the difference.
+                in Philadelphia is one of the fastest ways to generate results
+                within a broader{" "}
+                <Link href="/services/philadelphia/digital-marketing" className="phila-ppc-inline-link">
+                  Philadelphia digital marketing
+                </Link>{" "}
+                plan. But running ads alone is not enough; strategy, targeting,
+                and optimization make the difference.
               </p>
               <p className="phila-ppc-sec-2-descrp">
                 Many businesses waste thousands of dollars on poorly managed
@@ -466,7 +474,11 @@ function page() {
 
               <p className="phila-ppc-sec-3-text">
                 These are high-intent searches where customers are ready to take
-                action.
+                action, and pairing ads with{" "}
+                <Link href="/services/gmb-optimization" className="phila-ppc-inline-link">
+                  Google Business Profile optimization
+                </Link>{" "}
+                helps you capture even more of them.
               </p>
               <p className="phila-ppc-sec-3-text">
                 With the right PPC marketing in Philadelphia, your business
@@ -518,8 +530,12 @@ function page() {
             </h2>
             <p className="phila-ppc-sec-descrp">
               PPC advertising places your business in front of customers who are
-              ready to take action. You only pay when someone clicks your ad,
-              making it a highly targeted and measurable strategy.
+              ready to take action, then a conversion-focused{" "}
+              <Link href="/services/web-design" className="phila-ppc-inline-link">
+                landing page and website design
+              </Link>{" "}
+              turns those clicks into leads. You only pay when someone clicks
+              your ad, making it a highly targeted and measurable strategy.
             </p>
           </div>
         </div>
@@ -587,9 +603,16 @@ function page() {
               <span>PPC + SEO</span> Combined Strategy
             </h2>
             <p className="phila-ppc-sec-6-text">
-              PPC brings instant visibility and quick leads, while SEO builds
-              long-term traffic and authority. Together, they create a powerful
-              growth system for Philadelphia businesses.
+              PPC brings instant visibility and quick leads, while{" "}
+              <Link href="/services/philadelphia/local-seo" className="phila-ppc-inline-link">
+                local SEO in Philadelphia
+              </Link>{" "}
+              builds long-term traffic and authority. Combined as{" "}
+              <Link href="/services/philadelphia/sem" className="phila-ppc-inline-link">
+                search engine marketing
+              </Link>
+              , they create a powerful growth system for Philadelphia
+              businesses.
             </p>
 
             <div className="phila-ppc-timeline-list">
@@ -754,8 +777,12 @@ function page() {
               At Zonic Media, we focus on precise keyword targeting, smart
               bidding strategies, and continuous optimization. Our goal is
               simple: maximize your return on ad spend while reducing wasted
-              clicks. This ensures your campaigns remain profitable and
-              scalable.
+              clicks. And if your listing is ever taken down, our{" "}
+              <Link href="/services/gmb-reinstatement-help" className="phila-ppc-inline-link">
+                suspended Google Business Profile reinstatement
+              </Link>{" "}
+              keeps your local presence online so campaigns remain profitable
+              and scalable.
             </p>
             <ServiceSectionCta href="#phila-ppc-contact-form" align="left">
               Talk to a PPC Specialist

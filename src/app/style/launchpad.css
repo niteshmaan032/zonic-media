@@ -7,6 +7,19 @@
   --launchpad-home-bg: #eff6ff;
 }
 
+.launchpad-sec-1 .launchpad-inline-link,
+.launchpad-sec-3 .launchpad-inline-link,
+.launchpad-sec-4 .launchpad-inline-link,
+.launchpad-sec-5 .launchpad-inline-link,
+.launchpad-sec-6 .launchpad-inline-link,
+.launchpad-sec-9 .launchpad-inline-link,
+.launchpad-sec-10 .launchpad-inline-link {
+  color: var(--launchpad-color-1);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .launchpad-sec-1 {
   position: relative;
   padding: 160px 100px 60px 100px;

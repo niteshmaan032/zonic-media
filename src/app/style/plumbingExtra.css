@@ -60,6 +60,15 @@
   }
 }
 
+/* Contextual in-body internal links. Scoped under the page wrapper so the
+   selector never leaks site-wide. Uses the shared orange accent. */
+.hia-page .pmb-inline-link {
+  color: #f97316;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 /* Specialty chips reuse the industry-card look but allow a small lead icon. */
 .pmb-spec-icon {
   display: inline-flex;

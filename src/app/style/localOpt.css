@@ -218,6 +218,13 @@ body:has(.lo-page) .zoni-window {
   margin: 0 0 24px;
 }
 
+.lo-page .lo-inline-link {
+  color: var(--lo-yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .lo-hero h1 .lo-accent {
   color: var(--lo-yellow);
 }

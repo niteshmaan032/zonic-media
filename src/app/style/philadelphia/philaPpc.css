@@ -1,3 +1,15 @@
+.phila-ppc-sec-1 .phila-ppc-inline-link,
+.phila-ppc-sec-2 .phila-ppc-inline-link,
+.phila-ppc-sec-3 .phila-ppc-inline-link,
+.phila-ppc-sec-4 .phila-ppc-inline-link,
+.phila-ppc-sec-6 .phila-ppc-inline-link,
+.phila-ppc-sec-13 .phila-ppc-inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .phila-ppc-sec-1 {
   background-image: url("/images/philadelphia/phila-ppc/phila-ppc-bannner.jpg");
   min-height: 100svh;

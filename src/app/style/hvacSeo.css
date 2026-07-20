@@ -294,3 +294,18 @@
     text-align: center;
   }
 }
+
+/* In-body contextual internal links */
+.hvac-hero .hvac-inline-link,
+.hvac-sec-2 .hvac-inline-link,
+.hvac-sec-3 .hvac-inline-link,
+.hvac-sec-4 .hvac-inline-link,
+.hvac-sec-5 .hvac-inline-link,
+.hvac-sec-6 .hvac-inline-link,
+.roof-sec-5 .hvac-inline-link,
+.roof-sec-7 .hvac-inline-link {
+  color: #a06b00;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}

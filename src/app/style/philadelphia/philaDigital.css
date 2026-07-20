@@ -1,3 +1,13 @@
+.phila-sec-1 .phila-inline-link,
+.phila-sec-2 .phila-inline-link,
+.phila-sec-3 .phila-inline-link,
+.phila-sec-12 .phila-inline-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
 .phila-sec-1 {
   background-image: url("/images/philadelphia/phila-digital/phila-banner-1.jpg");
   min-height: 100svh;

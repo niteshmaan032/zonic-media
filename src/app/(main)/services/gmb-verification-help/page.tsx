@@ -203,7 +203,12 @@ function page() {
               Profile verification failures - postcard not arriving, video
               verification rejected, phone or email options unavailable. Our
               specialists have deep platform expertise and know exactly how to
-              get your profile verified and live on Google Maps fast.
+              get your profile verified and live on Google Maps fast — then link
+              it to a conversion-ready{" "}
+              <Link href="/services/web-design" className="gmb-inline-link">
+                business website
+              </Link>{" "}
+              that turns clicks into customers.
             </p>
 
             <div className="gmb-reinst-sec-1-box">
@@ -416,7 +421,12 @@ function page() {
                 <p className="gmb-reinst-card-descrp">
                   Brand new listings sometimes get stuck in a verification loop
                   with no clear resolution path. We help new businesses get
-                  their first verified listing live quickly and correctly.
+                  their first verified listing live quickly and correctly, often
+                  as part of a full{" "}
+                  <Link href="/services/launchpad" className="gmb-inline-link">
+                    business launch package
+                  </Link>
+                  .
                 </p>
               </div>
 
@@ -429,10 +439,13 @@ function page() {
                   Service Area Business Verification
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Service area businesses (SABs) - plumbers, roofers, cleaners -
-                  face unique verification challenges since they don&apos;t
-                  serve customers at a physical storefront. We specialize in SAB
-                  verification strategies that work.
+                  Service area businesses (SABs) -{" "}
+                  <Link href="/services/plumbing-marketing-agency" className="gmb-inline-link">
+                    plumbing companies
+                  </Link>
+                  , roofers, cleaners - face unique verification challenges since
+                  they don&apos;t serve customers at a physical storefront. We
+                  specialize in SAB verification strategies that work.
                 </p>
               </div>
             </div>
@@ -462,6 +475,11 @@ function page() {
                 simplifies everything—from choosing the correct verification
                 method to meeting Google’s requirements—so your profile gets
                 verified quickly and goes live on Google Maps without delays.
+                Need customers before rankings build? We also run{" "}
+                <Link href="/services/google-ads" className="gmb-inline-link">
+                  Google Ads campaigns
+                </Link>{" "}
+                to drive leads from day one.
               </p>
             </div>
 
@@ -512,9 +530,12 @@ function page() {
                   Profile Optimization (Post-Verification)
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Once verified, we optimize your profile - categories,
-                  keywords, photos, posts - so you start ranking in local search
-                  and attracting customers from day one.
+                  Once verified, we handle full{" "}
+                  <Link href="/services/gmb-optimization" className="gmb-inline-link">
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  - categories, keywords, photos, posts - so you start ranking in
+                  local search and attracting customers from day one.
                 </p>
               </div>
             </div>
@@ -695,7 +716,11 @@ function page() {
                 <p className="gmb-reinst-card-descrp">
                   Getting verified is just the start. We make sure your newly
                   verified profile is optimized to rank, generate calls, and
-                  drive real local leads.
+                  drive real local leads through ongoing{" "}
+                  <Link href="/services/local-seo-for-home-services" className="gmb-inline-link">
+                    local SEO
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -913,8 +938,12 @@ function page() {
                     Money-Back Guarantee
                   </h3>
                   <p>
-                    If we can&apos;t get your listing reinstated, you pay
-                    nothing. We only win when you win.
+                    If your profile is suspended rather than unverified, our{" "}
+                    <Link href="/services/gmb-reinstatement-help" className="gmb-inline-link">
+                      suspended Google Business Profile recovery
+                    </Link>{" "}
+                    steps in — and if we can&apos;t get your listing reinstated,
+                    you pay nothing. We only win when you win.
                   </p>
                 </li>
 

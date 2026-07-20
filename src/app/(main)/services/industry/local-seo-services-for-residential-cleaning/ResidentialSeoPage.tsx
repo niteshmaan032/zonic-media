@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -671,9 +672,22 @@ export default function ResidentialSeoPage() {
                   Local SEO Services for Residential Cleaning Companies
                 </h1>
                 <p className="car-tow-hero-body">
-                  Zonic Media provides local SEO services built specifically for
-                  house cleaning and maid service businesses. We help residential
-                  cleaning companies rank higher on Google Maps, generate more
+                  Zonic Media provides{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="rseo-inline-link"
+                  >
+                    local SEO services
+                  </Link>{" "}
+                  built specifically for house cleaning and maid service
+                  businesses. We help{" "}
+                  <Link
+                    href="/services/cleaning-company-marketing-agency"
+                    className="rseo-inline-link"
+                  >
+                    residential cleaning companies
+                  </Link>{" "}
+                  rank higher on Google Maps, generate more
                   booking requests from local homeowners, and build a consistent
                   flow of recurring clients through local search optimization,
                   Google Business Profile management, and conversion-focused
@@ -761,7 +775,10 @@ export default function ResidentialSeoPage() {
             <h2>Find Out Exactly Where Your Cleaning Business Is Losing Bookings</h2>
             <p>
               Request a free residential cleaning SEO audit and we will review
-              your local rankings, Google Business Profile, website conversion
+              your local rankings, Google Business Profile,{" "}
+              <Link href="/services/web-design" className="rseo-inline-link">
+                website conversion
+              </Link>{" "}
               gaps, and competitive positioning in your service areas.
             </p>
             <div className="car-tow-hero-actions car-tow-final-actions" style={{ marginTop: "20px" }}>
@@ -864,7 +881,13 @@ export default function ResidentialSeoPage() {
               <h2>Complete Local SEO Services for Residential Cleaning</h2>
               <p className="car-tow-section-descrp">
                 We build a full residential cleaning SEO system that connects
-                Google Business Profile optimization, local keyword strategy,
+                <Link
+                  href="/services/gmb-optimization"
+                  className="rseo-inline-link"
+                >
+                  Google Business Profile optimization
+                </Link>
+                , local keyword strategy,
                 service page content, review growth, citation building, and
                 technical SEO into one coordinated approach focused on
                 generating consistent booking requests from local homeowners.
@@ -956,7 +979,21 @@ export default function ResidentialSeoPage() {
               <p>
                 Share your business details below and we will review your local
                 rankings, Google Business Profile, and booking conversion gaps
-                at no cost.
+                at no cost. We can also flag whether you need to{" "}
+                <Link
+                  href="/services/gmb-verification-help"
+                  className="rseo-inline-link"
+                >
+                  verify your GBP
+                </Link>{" "}
+                or recover a{" "}
+                <Link
+                  href="/services/gmb-reinstatement-help"
+                  className="rseo-inline-link"
+                >
+                  suspended Google Business Profile
+                </Link>
+                .
               </p>
             </div>
             <form
@@ -1490,8 +1527,12 @@ export default function ResidentialSeoPage() {
               <h2>Local SEO vs Lead Platforms for Residential Cleaning Companies</h2>
               <p className="car-tow-section-descrp">
                 Many cleaning companies rely on Thumbtack, Angi, or similar
-                platforms for leads. Understanding how local SEO compares to
-                those platforms helps you make smarter, more confident
+                platforms for leads. Understanding how local SEO, lead
+                platforms, and{" "}
+                <Link href="/services/google-ads" className="rseo-inline-link">
+                  Google Ads
+                </Link>{" "}
+                compare helps you make smarter, more confident
                 marketing investment decisions for your cleaning business.
               </p>
             </div>

@@ -205,7 +205,21 @@ const guarantees = [
   {
     icon: "🎯",
     title: "Expert-Only Handling",
-    body: "Every case is handled personally by a veteran GBP specialist — not a junior freelancer, not an automated tool. The person who diagnoses your suspension is the person who writes and submits your appeal.",
+    body: (
+      <>
+        Every case is handled personally by a veteran GBP specialist — not a
+        junior freelancer, not an automated tool. We work with contractors of
+        every kind, including{" "}
+        <Link
+          href="/services/local-seo-services-for-hvac"
+          className="gbr-inline-link"
+        >
+          local SEO for HVAC companies
+        </Link>
+        . The person who diagnoses your suspension is the person who writes and
+        submits your appeal.
+      </>
+    ),
   },
 ];
 
@@ -350,7 +364,15 @@ function Page() {
                     <strong>invisible on Google Maps right now</strong> — no
                     calls, no direction requests, no new customers. Zonic
                     Media&apos;s reinstatement specialists have restored 1,500+
-                    suspended profiles. We&apos;ll get yours back in 5–7 days.
+                    suspended profiles, and our{" "}
+                    <Link
+                      href="/services/web-design"
+                      className="gbr-inline-link"
+                    >
+                      conversion-focused website design
+                    </Link>{" "}
+                    turns that recovered traffic into booked jobs. We&apos;ll
+                    get yours back in 5–7 days.
                   </p>
 
                   <div className="gbr-hero-guarantee">
@@ -430,7 +452,14 @@ function Page() {
                   <p className="gbr-cost-sub">
                     These aren&apos;t estimates. They&apos;re what happens when
                     your business disappears from Google Maps — where 86% of
-                    consumers look for local businesses.
+                    consumers look for local businesses. Getting your{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="gbr-inline-link"
+                    >
+                      suspended Google Business Profile reinstated
+                    </Link>{" "}
+                    stops the bleeding fast.
                   </p>
                   <div className="gbr-cost-grid">
                     <div className="gbr-cost-card">
@@ -474,8 +503,15 @@ function Page() {
                 </h2>
                 <p className="gbr-sec-sub">
                   Google issues different types of suspensions — and each
-                  requires a different recovery approach. Find your situation
-                  below.
+                  requires a different recovery approach. Some profiles are
+                  flagged pending verification, which is where{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="gbr-inline-link"
+                  >
+                    GBP verification help
+                  </Link>{" "}
+                  comes in. Find your situation below.
                 </p>
                 <div className="gbr-diag-grid">
                   {diagCards.map((c, i) => (
@@ -503,7 +539,16 @@ function Page() {
                 </h2>
                 <p className="gbr-sec-sub">
                   Google doesn&apos;t always tell you why. Here are the most
-                  common triggers we diagnose — and fix.
+                  common triggers we diagnose — and fix. Many of them trace back
+                  to a profile that was never properly built, which is why
+                  ongoing{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="gbr-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  is the best suspension insurance.
                 </p>
                 <div className="gbr-causes-list">
                   {causes.map((c, i) => (
@@ -527,7 +572,15 @@ function Page() {
                 </h2>
                 <p className="gbr-sec-sub">
                   A structured process with specific timelines — not
-                  &quot;we&apos;ll handle it&quot; with no milestones.
+                  &quot;we&apos;ll handle it&quot; with no milestones. Once
+                  you&apos;re back online, we help you rebuild rankings with{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="gbr-inline-link"
+                  >
+                    local SEO for home services
+                  </Link>{" "}
+                  so the recovery actually pays off.
                 </p>
                 <div className="gbr-process-steps">
                   {processSteps.map((s, i) => (
@@ -590,7 +643,11 @@ function Page() {
                 </h2>
                 <p className="gbr-sec-sub">
                   Money-back guarantee on all plans. You don&apos;t pay if we
-                  don&apos;t deliver.
+                  don&apos;t deliver. Need more than a reinstatement? Ask about{" "}
+                  <Link href="/services/google-ads" className="gbr-inline-link">
+                    Google Ads management
+                  </Link>{" "}
+                  to keep leads flowing while your organic visibility recovers.
                 </p>
                 <div className="gbr-pricing-grid">
                   {pricing.map((p, i) => (

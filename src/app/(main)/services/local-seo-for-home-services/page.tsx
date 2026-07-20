@@ -153,8 +153,15 @@ function page() {
               Zonic Media helps home service companies generate more leads
               through strategic local SEO. We improve your rankings on Google
               Search and Maps, increase visibility in your service areas, and
-              turn high-intent searches into real customers for roofing, HVAC,
-              plumbing, electrical, pest control, and other service businesses.
+              turn high-intent searches into real customers for roofing,{" "}
+              <Link
+                href="/services/local-seo-services-for-hvac"
+                className="lsh-inline-link"
+              >
+                local SEO for HVAC companies
+              </Link>
+              , plumbing, electrical, pest control, and other service
+              businesses.
             </p>
 
             <div className="local-seo-sec-1-cta-clutch">
@@ -220,8 +227,15 @@ function page() {
                   Most customers choose from the top businesses they see on
                   Google Search and Google Maps. If your company is not visible
                   when people need help, you lose high-intent leads to
-                  competitors. Local SEO helps your business appear in front of
-                  nearby customers exactly when they are ready to call and book.
+                  competitors. Strong{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="lsh-inline-link"
+                  >
+                    Google Business Profile optimization
+                  </Link>{" "}
+                  helps your business appear in front of nearby customers exactly
+                  when they are ready to call and book.
                 </p>
               </div>
             </Col>
@@ -437,9 +451,16 @@ function page() {
                 <p className="local-seo-home-descrp">
                   We work with a wide range of home service businesses that rely
                   on local visibility, phone calls, and booked jobs to grow
-                  revenue. Whether you serve residential, commercial, or
-                  multi-location markets, our Local SEO strategies are built to
-                  generate consistent leads and stronger rankings.
+                  revenue — including roofers who lean on our{" "}
+                  <Link
+                    href="/services/industry/local-seo-for-roofing-companies"
+                    className="lsh-inline-link"
+                  >
+                    local SEO for roofing companies
+                  </Link>
+                  . Whether you serve residential, commercial, or multi-location
+                  markets, our Local SEO strategies are built to generate
+                  consistent leads and stronger rankings.
                 </p>
               </div>
             </Col>
@@ -703,9 +724,16 @@ function page() {
               <div className="local-seo-home-head-descrp">
                 <p className="local-seo-home-descrp">
                   Not all SEO agencies understand how home service businesses
-                  generate revenue. We focus on one goal—helping you get more
-                  calls, booked jobs, and long-term growth through proven Local
-                  SEO strategies.
+                  generate revenue. Alongside broader campaigns like our{" "}
+                  <Link
+                    href="/services/hvac-marketing-agency"
+                    className="lsh-inline-link"
+                  >
+                    HVAC marketing
+                  </Link>{" "}
+                  programs, we focus on one goal—helping you get more calls,
+                  booked jobs, and long-term growth through proven Local SEO
+                  strategies.
                 </p>
               </div>
             </Col>
@@ -810,7 +838,14 @@ function page() {
                   Have questions about how local SEO works or how it can grow
                   your home service business? Here are clear answers to the most
                   common questions about rankings, leads, timelines, and results
-                  so you can make the right decision for your business.
+                  — and if your listing is offline, our{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="lsh-inline-link"
+                  >
+                    suspended Google Business Profile reinstatement
+                  </Link>{" "}
+                  team can help you recover it.
                 </p>
               </div>
             </Col>
@@ -851,7 +886,14 @@ function page() {
               </h2>
               <p className="local-seo-home-descrp">
                 Homeowners search online every day for reliable local
-                professionals they can trust. If your business is not appearing
+                professionals they can trust — from plumbers exploring our{" "}
+                <Link
+                  href="/services/plumbing-marketing-agency"
+                  className="lsh-inline-link"
+                >
+                  plumbing marketing
+                </Link>{" "}
+                to remodelers and landscapers. If your business is not appearing
                 in those searches, you are missing calls, estimates, and booked
                 jobs that are going directly to competitors in your area.
               </p>
@@ -929,8 +971,15 @@ function page() {
 
           <p className="local-seo-home-sec-12-descrp">
             We rank your business at the top of Google—so you get more calls,
-            more jobs, and steady growth without ads, consistently attracting
-            homeowners ready to hire.
+            more jobs, and steady growth without ads, whether you run a
+            remodeling crew or need dedicated{" "}
+            <Link
+              href="/services/industry/seo-services-for-pest-control"
+              className="lsh-inline-link"
+            >
+              SEO for pest control companies
+            </Link>
+            , consistently attracting homeowners ready to hire.
           </p>
 
           <div className="local-seo-home-sec-12-ctas">

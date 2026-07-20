@@ -9,6 +9,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import { FaEye } from "react-icons/fa";
@@ -188,7 +189,14 @@ function page() {
                 competitors every day.
               </p>
               <p className="phila-seo-sec-1-descrp">
-                Zonic Media helps pest control companies rank higher on Google,
+                Zonic Media helps{" "}
+                <Link
+                  href="/services/pest-control-marketing-agency"
+                  className="pest-inline-link"
+                >
+                  pest control companies
+                </Link>{" "}
+                rank higher on Google,
                 dominate local search, and consistently generate calls from
                 customers who need extermination and prevention services right
                 now.
@@ -365,13 +373,30 @@ function page() {
               </h2>
               <p>
                 Generate consistent pest control leads every month with proven
-                local SEO strategies designed to put your business in front of
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="pest-inline-link"
+                >
+                  local SEO strategies
+                </Link>{" "}
+                designed to put your business in front of
                 high-intent customers right when they are searching.
               </p>
               <p>
-                From optimizing your Google Business Profile and targeting
+                From optimizing your{" "}
+                <Link
+                  href="/services/gmb-optimization"
+                  className="pest-inline-link"
+                >
+                  Google Business Profile
+                </Link>{" "}
+                and targeting
                 &quot;near me&quot; keywords to building strong local authority
-                and improving your website performance, we focus on driving
+                and improving your{" "}
+                <Link href="/services/web-design" className="pest-inline-link">
+                  website performance
+                </Link>
+                , we focus on driving
                 real visibility that turns into calls and booked jobs.
               </p>
               <HashScrollLink
@@ -470,7 +495,11 @@ function page() {
               <p className="plumb-maps-text">
                 We focus on lead quality, map visibility, and service-area
                 coverage so your website and Google presence keep generating
-                inquiries beyond short-term ad spend.
+                inquiries beyond short-term{" "}
+                <Link href="/services/google-ads" className="pest-inline-link">
+                  ad spend
+                </Link>
+                .
               </p>
               <h2 className="plumb-maps-heading">
                 Get More <span>Pest Control Leads</span> with Local SEO
@@ -516,7 +545,14 @@ function page() {
             <p className="roof-sec-7-descrp">
               We build digital marketing systems designed to generate leads,
               increase revenue, and create long-term growth for pest control
-              businesses.
+              businesses, including profile setup when you need to{" "}
+              <Link
+                href="/services/gmb-verification-help"
+                className="pest-inline-link"
+              >
+                verify your GBP
+              </Link>
+              .
             </p>
 
             <div className="roof-sec-7-grid">
@@ -565,7 +601,14 @@ function page() {
                   We work with a limited number of pest control companies in
                   each market so we can stay focused on rankings, lead quality,
                   and measurable local growth without taking on direct area
-                  competitors.
+                  competitors. If your listing disappears, we can also recover a{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="pest-inline-link"
+                  >
+                    suspended Google Business Profile
+                  </Link>
+                  .
                 </p>
                 <HashScrollLink
                   href="#pest-contact-form"
