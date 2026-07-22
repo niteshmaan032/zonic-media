@@ -525,8 +525,8 @@ function Page() {
             <div className="tt-container tt-hero-content">
               <p className="tt-hero-eyebrow">For Hotels, Tour Operators &amp; DMOs</p>
               <h1 className="tt-hero-h1">
-                The travel and tourism marketing agency that turns wanderlust
-                into <span className="tt-hero-hl">booked trips</span>
+                The Travel And Tourism Marketing Agency That Turns Wanderlust
+                Into <span className="tt-hero-hl">Booked Trips</span>
               </h1>
               <p className="tt-hero-sub">
                 <Link href="/" className="tt-inline-link">
