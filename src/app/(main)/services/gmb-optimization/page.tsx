@@ -75,11 +75,6 @@ const serviceJsonLd = {
     description:
       "Free Google Business Profile audit showing exactly which ranking signals your profile is missing.",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-  },
 };
 
 const GmbOptimFaqs = [

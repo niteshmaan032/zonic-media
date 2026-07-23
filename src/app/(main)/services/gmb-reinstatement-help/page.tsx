@@ -10,7 +10,10 @@ import GmbAuditForm from "@/app/components/GmbAuditForm";
 import GmbProfileCard from "@/app/components/GmbProfileCard";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import ScrollToFormLink from "@/app/components/ScrollToFormLink";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+} from "@/shared/seoSchemas";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
 const manrope = Manrope({
@@ -33,6 +36,11 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "GMB Reinstatement Help", url: "/services/gmb-reinstatement-help" },
 ]);
 
+const localBusinessJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: "/services/gmb-reinstatement-help",
+  areaServed: { type: "Country", name: "United States" },
+});
+
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -46,7 +54,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Reinstatement",
   description:
-    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified, with verified client reviews on Trustpilot and Clutch.",
+    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified, rated 4.9 out of 5 across 127 verified client reviews on Trustpilot and Clutch.",
   url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
   provider: {
     "@type": "Organization",
@@ -67,11 +75,6 @@ const serviceJsonLd = {
     priceCurrency: "USD",
     description:
       "Free suspension audit with a No Fix, No Charge policy on the reinstatement fee — if the profile is not reinstated, the reinstatement fee is not charged.",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
   },
 };
 
@@ -199,6 +202,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
 

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "@/app/style/dentalWeb.css";
 import DentalWebLeadForm from "@/app/components/DentalWebLeadForm";
-import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import { SITE_CONTACT } from "@/shared/siteConfig";
+import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
@@ -124,7 +123,7 @@ const DentalWebFaqs = [
   {
     question: "How long does it take to design a dental website?",
     answer:
-      "Most dental practice websites launch in four to eight weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many treatment pages or custom integrations can take longer.",
+      "Most dental practice websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many treatment pages or custom integrations can take longer.",
   },
   {
     question: "Will my dental website be HIPAA compliant?",
@@ -213,7 +212,7 @@ const BandStats = [
   { num: "50+", label: "Local business sites launched" },
   { num: "6+", label: "Dental specialties designed for" },
   { num: "24/7", label: "Online booking, even after hours" },
-  { num: "4–8 wks", label: "Typical design-to-launch" },
+  { num: "1–2 wks", label: "Typical design-to-launch" },
 ];
 
 const SystemCards = [
@@ -381,7 +380,8 @@ function Page() {
         }}
       />
 
-      <main className="dw-page">
+      <div className="dw-page">
+        <main>
         {/* 1. Hero */}
         <section className="dw-hero">
           <div className="dw-container">
@@ -443,7 +443,7 @@ function Page() {
                     <p className="dw-stat-label">Average client rating</p>
                   </div>
                   <div className="dw-stat">
-                    <p className="dw-stat-num">4–8 wks</p>
+                    <p className="dw-stat-num">1–2 wks</p>
                     <p className="dw-stat-label">Typical design-to-launch</p>
                   </div>
                 </div>
@@ -609,7 +609,7 @@ function Page() {
         </section>
 
         {/* 4. What we build — 6 icon cards */}
-        <section className="dw-services">
+        <section className="dw-services" id="dw-services">
           <div className="dw-container">
             <div className="dw-sec-head">
               <div>
@@ -851,7 +851,7 @@ function Page() {
         </section>
 
         {/* 9. How it works — steps */}
-        <section className="dw-process">
+        <section className="dw-process" id="dw-process">
           <div className="dw-container">
             <div className="dw-sec-head">
               <div>
@@ -982,7 +982,7 @@ function Page() {
         </section>
 
         {/* 13. FAQs */}
-        <section className="dw-faqs">
+        <section className="dw-faqs" id="dw-faqs">
           <div className="dw-container">
             <div className="dw-split-grid">
               <div>
@@ -1096,9 +1096,128 @@ function Page() {
             </div>
           </div>
         </section>
-      </main>
+        </main>
 
-      <Footer />
+        {/* 16. Page footer */}
+        <footer className="dw-footer">
+          <div className="dw-container">
+            <div className="dw-footer-grid">
+              <div className="dw-footer-brand">
+                <Link href="/" aria-label="Zonic Media — home">
+                  <Image
+                    src="/images/logo.webp"
+                    alt="Zonic Media"
+                    width={160}
+                    height={44}
+                  />
+                </Link>
+                <p>
+                  Zonic Media is a digital growth agency helping dental
+                  practices turn website visitors into booked patients.
+                </p>
+                <div className="dw-footer-social">
+                  {SITE_SOCIAL_LINKS.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {social.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="dw-footer-col">
+                <h3>On This Page</h3>
+                <ul>
+                  <li>
+                    <HashScrollLink href="#dw-services" offset={96}>
+                      What We Build
+                    </HashScrollLink>
+                  </li>
+                  <li>
+                    <HashScrollLink href="#dw-process" offset={96}>
+                      How It Works
+                    </HashScrollLink>
+                  </li>
+                  <li>
+                    <HashScrollLink href="#dw-faqs" offset={96}>
+                      FAQs
+                    </HashScrollLink>
+                  </li>
+                  <li>
+                    <HashScrollLink href="#dental-web-form" offset={120}>
+                      Free Mockup
+                    </HashScrollLink>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="dw-footer-col">
+                <h3>Explore Zonic</h3>
+                <ul>
+                  <li>
+                    <Link href="/about">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/services">All Services</Link>
+                  </li>
+                  <li>
+                    <Link href="/blog">Blog</Link>
+                  </li>
+                  <li>
+                    <Link href="/contact-us">Contact</Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="dw-footer-col">
+                <h3>Talk to Us</h3>
+                <ul className="dw-footer-contact">
+                  <li>
+                    <a href={SITE_CONTACT.phoneHref}>
+                      <FiPhoneCall aria-hidden="true" />
+                      {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </li>
+                  <li>
+                    <a href={SITE_CONTACT.emailHref}>
+                      <FiMail aria-hidden="true" />
+                      {SITE_CONTACT.email}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FiMapPin aria-hidden="true" />
+                      {SITE_CONTACT.address}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="dw-footer-bottom">
+              <p>
+                © {new Date().getFullYear()} Zonic Media LLC. All rights
+                reserved.
+              </p>
+              <div className="dw-footer-legal">
+                <Link href="/legal/privacy-policy">Privacy Policy</Link>
+                <Link href="/legal/terms-conditions">
+                  Terms &amp; Conditions
+                </Link>
+                <Link href="/legal/refund-policy">Refund Policy</Link>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </>
   );
 }

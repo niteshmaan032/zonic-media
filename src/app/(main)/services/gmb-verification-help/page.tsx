@@ -70,11 +70,6 @@ const serviceJsonLd = {
     description:
       "Free verification audit identifying why your Google Business Profile won't verify and the fastest available verification path.",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-  },
 };
 
 const GmbVerifiFaqs = [

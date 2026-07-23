@@ -1396,7 +1396,7 @@
   }
 }
 
-.realest-inline-link {
+[class*="realest-sec"] .realest-inline-link {
   color: #b8860b;
   text-decoration: underline;
   text-underline-offset: 2px;

@@ -90,11 +90,6 @@ const serviceJsonLd = {
     description:
       "Free PPC audit identifying wasted spend, missed keywords, and the fastest path to a higher return on ad spend.",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-  },
 };
 
 function Page() {

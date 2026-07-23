@@ -86,11 +86,6 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/dental-website-design">
-                      Dental Website Design
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="/services/travel-and-tourism-marketing-agency">
                       Travel &amp; Tourism Marketing
                     </Link>

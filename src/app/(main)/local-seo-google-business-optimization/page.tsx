@@ -92,11 +92,6 @@ const serviceJsonLd = {
     description:
       "Free Google Business Profile audit showing why your profile isn't ranking in the Map Pack and what it would take to get there.",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-  },
 };
 
 const formHead = {

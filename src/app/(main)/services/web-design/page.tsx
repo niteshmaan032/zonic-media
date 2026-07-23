@@ -87,11 +87,6 @@ const serviceJsonLd = {
     description:
       "Free consultation covering design direction, SEO structure, and a transparent project quote.",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-  },
 };
 function Page() {
   const WebContact = {
