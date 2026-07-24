@@ -507,19 +507,46 @@ function page() {
                     <IoIosCheckmarkCircle /> Electricians
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Plumbers
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/seo-services-for-plumber"
+                      className="lsh-inline-link"
+                    >
+                      Plumbers
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> HVAC Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/local-seo-services-for-hvac"
+                      className="lsh-inline-link"
+                    >
+                      HVAC Companies
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle /> Garage Door Companies
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Roofing Contractors
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-roofing-companies"
+                      className="lsh-inline-link"
+                    >
+                      Roofing Contractors
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle /> Appliance Repair Services
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/seo-services-for-car-towing"
+                      className="lsh-inline-link"
+                    >
+                      Car Towing Companies
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -536,7 +563,13 @@ function page() {
                     <IoIosCheckmarkCircle /> Landscaping Companies
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Pest Control Services
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/seo-services-for-pest-control"
+                      className="lsh-inline-link"
+                    >
+                      Pest Control Services
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle /> Pool Services
@@ -550,11 +583,86 @@ function page() {
                   <li>
                     <IoIosCheckmarkCircle /> Solar Companies
                   </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-commercial-cleaning"
+                      className="lsh-inline-link"
+                    >
+                      Commercial Cleaning
+                    </Link>
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-services-for-residential-cleaning"
+                      className="lsh-inline-link"
+                    >
+                      Residential Cleaning
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </Col>
 
             <Col lg={3}>
+              <div className="local-seo-home-cards-indust-cont">
+                <h3 className="local-seo-home-cards-indust-heading">
+                  Healthcare & Professional Services
+                </h3>
+
+                <ul>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/chiropractor-local-seo-services"
+                      className="lsh-inline-link"
+                    >
+                      Chiropractors
+                    </Link>
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/dental-seo-services"
+                      className="lsh-inline-link"
+                    >
+                      Dentists
+                    </Link>
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/pediatricians"
+                      className="lsh-inline-link"
+                    >
+                      Pediatricians
+                    </Link>
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-law-firms"
+                      className="lsh-inline-link"
+                    >
+                      Law Firms
+                    </Link>
+                  </li>
+                  <li>
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/real-estate-seo-services"
+                      className="lsh-inline-link"
+                    >
+                      Real Estate Agents
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </Col>
+
+            {/*
+            <Col lg={12}>
               <div className="local-seo-home-cards-indust-cont local-seo-home-cards-indus-banner">
                 <h3 className="local-seo-card-banner-heading">
                   Don’t See Your Industry? We Can Still Help.
@@ -570,6 +678,7 @@ function page() {
                 </div>
               </div>
             </Col>
+            */}
           </Row>
         </div>
 

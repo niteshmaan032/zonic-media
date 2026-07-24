@@ -348,6 +348,8 @@
   align-items: center;
   justify-content: center;
   background-color: var(--seo-home-color-1);
+  min-height: auto;
+  padding: 40px 22px;
 }
 
 .local-seo-home-cards-indust-cont .local-seo-card-banner-heading {
