@@ -11,6 +11,13 @@ declare global {
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
+    // Lenis doesn't smooth touch scrolling (native scroll is used on phones),
+    // so on touch devices its per-frame rAF loop is pure main-thread cost.
+    // Skip it there; consumers (useLenisPointerGuard) already handle absence.
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    }
+
     const lenis = new Lenis();
     window.__appLenis = lenis;
     window.dispatchEvent(

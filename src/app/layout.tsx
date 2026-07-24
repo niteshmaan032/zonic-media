@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/style/service-lead-form.css";
+import "@/app/style/google-fonts.css";
 import localFont from "next/font/local";
 import Script from "next/script";
 import Loader from "@/app/components/Loader";
@@ -150,15 +151,22 @@ export default function RootLayout({
         <link rel="preconnect" href="https://widget.clutch.co" />
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* Manrope + Inter are self-hosted (see style/google-fonts.css) so the
+            first paint never waits on fonts.googleapis.com. Preload only the
+            latin variable files — the ones every page actually renders with. */}
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
+          rel="preload"
+          href="/fonts/google/xn7gYHE41ni1AdIRggexSg.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="/fonts/google/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
 
         <Script
@@ -177,19 +185,23 @@ export default function RootLayout({
           }}
         />
 
+        {/* lazyOnload: the Clutch review widget renders below the fold, so its
+            script doesn't need to compete with page startup on mobile. */}
         <Script
           id="clutch-widget-script"
           src="https://widget.clutch.co/static/js/widget.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
         {/* GHL external form tracking — loaded site-wide so every custom lead
-            form submission is captured into the GoHighLevel dashboard. */}
+            form submission is captured into the GoHighLevel dashboard.
+            lazyOnload is safe: it only needs to be present before a visitor
+            submits a form, never during the first paint. */}
         <Script
           id="ghl-external-tracking"
           src="https://forms.zonicllc.com/js/external-tracking.js"
           data-tracking-id="tk_f66384f994224b0091e870b5f6cf3e88"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </head>
 

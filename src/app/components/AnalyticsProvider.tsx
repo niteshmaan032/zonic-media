@@ -39,14 +39,17 @@ export default function AnalyticsProvider() {
 
   return (
     <>
+      {/* lazyOnload keeps Google's tag scripts off the critical path on
+          mobile. gtag() calls queue into dataLayer, so nothing is lost —
+          events just flush once the tags load after the page is idle. */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
 
       <Script
         id="gtag-config"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -64,7 +67,7 @@ export default function AnalyticsProvider() {
 
       <Script
         id="gtag-phone-config"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             gtag('config', 'AW-17618392446/lC5eCJvcxJQcEP6qjdFB', {
@@ -76,7 +79,7 @@ export default function AnalyticsProvider() {
 
       <Script
         id="gtm-script"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];

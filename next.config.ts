@@ -36,6 +36,37 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Next serves /public with max-age=0 by default, so every repeat visit
+      // re-downloads all images. Font files are content-hashed by Google, so
+      // they can be immutable; image filenames do get reused when an asset is
+      // swapped, so cap those at 30 days instead of a year.
+      {
+        source: "/fonts/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/images/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000, stale-while-revalidate=86400",
+          },
+        ],
+      },
+      {
+        source: "/favicon.png",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=604800",
+          },
+        ],
+      },
     ];
   },
 
