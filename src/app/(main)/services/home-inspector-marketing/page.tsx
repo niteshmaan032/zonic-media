@@ -487,7 +487,7 @@ function Page() {
                   </Link>
                 </div>
 
-                <HeroTrustBadges />
+                <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
                 <div className="hia-trust-row">
                   {trustItems.map((t, i) => (

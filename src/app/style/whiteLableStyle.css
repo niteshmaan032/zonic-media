@@ -307,6 +307,14 @@ body:has(.wl-page) .floating-phone-link {
   width: 72px;
   border-radius: 50%;
 }
+.htb-trustpilot {
+  display: inline-flex;
+  align-items: center;
+}
+.htb-trustpilot-img {
+  width: 110px;
+  height: auto;
+}
 
 /* ──────────────── HERO ART (partnership diagram) ──────────────── */
 .wl-hero-art {
@@ -1145,6 +1153,7 @@ body:has(.wl-page) .floating-phone-link {
   .hero-trust-badges { gap: 16px; }
   .htb-clutch { width: 68px; height: 68px; }
   .htb-yelp-img { height: 62px; width: 62px; }
+  .htb-trustpilot-img { width: 92px; }
 }
 
 /* In-body contextual internal links */

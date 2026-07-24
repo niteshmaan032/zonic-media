@@ -348,6 +348,14 @@ body:has(.ima-page) .navbar-wrapper.show {
   object-fit: contain;
 }
 
+.ima-hero-badge-trustpilot {
+  display: block;
+  width: 110px;
+  height: auto;
+  border: 0;
+  object-fit: contain;
+}
+
 .ima-page .stars {
   color: var(--ima-yellow);
   letter-spacing: 1px;
@@ -1221,6 +1229,7 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-hero .hero-lead { font-size: 16px; }
   .ima-hero-badges { gap: 12px; margin-bottom: 20px; }
   .ima-hero-badge { width: 74px; height: 74px; }
+  .ima-hero-badge-trustpilot { width: 96px; }
   .ima-page .hero-actions { align-items: stretch; flex-direction: column; }
   .ima-page .hero-actions .btn { width: 100%; }
   .ima-page .trustbar { padding: 22px 18px; }
@@ -1250,6 +1259,15 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-source-footer .foot-grid > div:first-child,
   .ima-source-footer .foot-grid > div:last-child { grid-column: 1 / -1; }
   .ima-source-footer .foot-bot { flex-direction: column; }
+}
+
+/* Desktop only: soften the pure-white page background to reduce eye strain
+   in dark environments. Cards/sections keep their own backgrounds. Mobile
+   stays white — do not extend this below 992px. */
+@media (min-width: 992px) {
+  .ima-page {
+    background: #f4f4f4;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

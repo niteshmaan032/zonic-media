@@ -126,6 +126,19 @@ export default function IndustryMarketingPage({ page }: Props) {
                       src="/images/Partner.png"
                       alt="Yelp Advertising Partner"
                     />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        className="ima-hero-badge-trustpilot"
+                        width={110}
+                        height={52}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
+                      />
+                    </a>
                   </div>
                   {heroTrust ? (
                     <div dangerouslySetInnerHTML={{ __html: heroTrust }} />

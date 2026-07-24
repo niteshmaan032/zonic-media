@@ -406,6 +406,14 @@ body:has(.hia-page) .floating-phone-link {
   width: 72px;
   border-radius: 50%;
 }
+.hero-trust-badges .htb-trustpilot {
+  display: inline-flex;
+  align-items: center;
+}
+.hero-trust-badges .htb-trustpilot-img {
+  width: 110px;
+  height: auto;
+}
 @media (max-width: 575.98px) {
   .hia-hero .hero-trust-badges {
     gap: 16px;
@@ -417,6 +425,9 @@ body:has(.hia-page) .floating-phone-link {
   .hero-trust-badges .htb-yelp-img {
     height: 62px;
     width: 62px;
+  }
+  .hero-trust-badges .htb-trustpilot-img {
+    width: 92px;
   }
 }
 
@@ -1886,5 +1897,15 @@ body:has(.hia-page) .floating-phone-link {
   .hia-mob-form-top {
     margin-top: 32px;
     padding-top: 28px;
+  }
+}
+
+/* Desktop only: soften the pure-white page background to reduce eye strain
+   in dark environments. Cards keep their white backgrounds for contrast.
+   Mobile stays white — do not extend this below 992px. */
+@media (min-width: 992px) {
+  .hia-page,
+  .hia-page .hia-main-wrapper {
+    background: #f4f4f4;
   }
 }

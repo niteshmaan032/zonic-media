@@ -204,7 +204,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   </Link>
                 </div>
 
-                <HeroTrustBadges />
+                <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
                 <div className="hia-trust-row">
                   {trustItems.map((t, i) => (
