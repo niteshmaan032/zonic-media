@@ -1,80 +1,8 @@
 /* Septic marketing agency page (/services/septic-marketing-agency).
-   Green palette layered over the shared ima- landing system plus the
-   field-photo skeleton gallery. Every selector is scoped under
-   .ima-septic per the site CSS scoping rule. */
-
-.ima-page.ima-septic {
-  /* Green accents replace the family orange; navy/slate system stays. */
-  --ima-orange: #15803d;       /* drainfield green — buttons, accents */
-  --ima-orange-dark: #166534;  /* pine — hovers, eyebrow text */
-  --ima-orange-tint: #f0fdf4;  /* meadow — chips & answer box fills */
-  --ima-yellow: #a3e635;       /* grass-blade lime — ticker highlights on navy */
-}
-
-/* The four spots in the base sheet that hard-code orange rgba values. */
-.ima-septic .ima-hero-copy .eyebrow,
-.ima-septic .ima-source-content .eyebrow {
-  border-color: rgba(21, 128, 61, 0.2);
-}
-
-.ima-septic .answer-wrap {
-  border-color: rgba(21, 128, 61, 0.22);
-}
-
-.ima-septic .ima-field input:focus,
-.ima-septic .ima-field select:focus {
-  outline-color: rgba(21, 128, 61, 0.24);
-}
-
-@media (max-width: 991.98px) {
-  .ima-septic .ima-hero {
-    background:
-      radial-gradient(circle at 100% 0, rgba(74, 222, 128, 0.16), transparent 42%),
-      var(--ima-navy);
-  }
-
-  /* The dark drainfield green vanishes on the navy mobile hero — the
-     headline keyword and pill checks go bright green there instead. */
-  .ima-page.ima-septic .ima-hero .hl {
-    color: #4ade80;
-  }
-
-  .ima-page.ima-septic .ima-hero .pill svg {
-    color: #4ade80;
-  }
-}
-
-/* "Everything under one roof" — the family's near-black navy panel reads
-   too dark on the green page and hides the dark-green inline links, so the
-   septic version flips it to a light meadow panel with white service cards. */
-.ima-septic .ima-source-content .section.navy {
-  color: var(--ima-slate);
-  background: linear-gradient(180deg, #f0fdf4 0%, #e6f6ec 100%);
-  border: 1px solid #d8eede;
-}
-
-.ima-septic .ima-source-content .section.navy :where(h2, h3) {
-  color: var(--ima-navy);
-}
-
-.ima-septic .ima-source-content .section.navy .s-head p,
-.ima-septic .ima-source-content .section.navy .svc p {
-  color: var(--ima-slate);
-}
-
-.ima-page.ima-septic .svc-grid {
-  gap: 14px;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  overflow: visible;
-}
-
-.ima-page.ima-septic .svc {
-  background: #fff;
-  border: 1px solid #d8eede;
-  border-radius: var(--ima-radius-lg);
-}
+   Colors come entirely from the shared ima- landing system (family
+   orange, same as the generated pages like painting-contractor);
+   this sheet only adds the field-photo bands. Every selector is
+   scoped under .ima-septic per the site CSS scoping rule. */
 
 /* ---------- field-photo bands ---------- */
 

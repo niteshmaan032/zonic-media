@@ -3,7 +3,8 @@ import type { IndustryMarketingPageData } from "@/app/components/IndustryMarketi
 // Septic industry landing page. Follows the same data shape as the 13
 // generated industry marketing pages but lives in code (not the generated
 // JSON) so re-running scripts/import-industry-landing-pages.mjs never
-// overwrites it. Green theme comes from ima-septic (septicMarketing.css).
+// overwrites it. Uses the default family orange palette; ima-septic
+// (septicMarketing.css) only scopes the field-photo bands.
 
 const CHECK_SVG =
   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>';
@@ -21,9 +22,8 @@ export const septicMarketingPage: IndustryMarketingPageData = {
   slug: "septic-marketing-agency",
   title: "Septic Marketing Agency | Local SEO & Ads | Zonic Media",
   description:
-    "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for septic pumping, repairs & installs. Free audit.",
+    "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for pumping, repairs & installs. Free audit.",
   themeClass: "ima-septic",
-  accentColor: "#15803d",
   tickerHtml: `${tickerRun}\n${tickerRun}`,
   heroHtml: `<span class="eyebrow">Septic Marketing Agency</span>
 <h1>The <span class="hl">septic marketing agency</span> that keeps your pump trucks booked.</h1>
@@ -280,7 +280,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
       name: "Zonic Media — Septic Marketing Agency",
       url: "https://www.zonicllc.com/services/septic-marketing-agency",
       description:
-        "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for septic pumping, repairs & installs. Free audit.",
+        "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for pumping, repairs & installs. Free audit.",
       telephone: "+1-302-726-9736",
       priceRange: "$550–$1700/mo",
       areaServed: "United States",

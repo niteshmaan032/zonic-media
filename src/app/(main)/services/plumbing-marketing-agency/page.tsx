@@ -564,7 +564,14 @@ function Page() {
                   >
                     HVAC marketing agency
                   </Link>{" "}
-                  clients.
+                  clients — plus a dedicated{" "}
+                  <Link
+                    href="/services/septic-marketing-agency"
+                    className="pmb-inline-link"
+                  >
+                    septic marketing
+                  </Link>{" "}
+                  program for plumbers who also run septic crews.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink

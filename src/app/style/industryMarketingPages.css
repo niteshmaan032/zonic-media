@@ -876,7 +876,8 @@ body:has(.ima-page) .navbar-wrapper.show {
 }
 
 .ima-reviews-section {
-  padding: 66px 0;
+  /* Short bottom padding keeps the FAQ section tucked under the widget. */
+  padding: 66px 0 24px;
 }
 
 .ima-reviews-heading {
@@ -1240,7 +1241,7 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-page .trustbar { padding: 22px 18px; }
   .ima-page .trustbar-in { grid-template-columns: repeat(2, 1fr); }
   .ima-source-content .section { padding: 50px 0; }
-  .ima-reviews-section { padding: 50px 0; }
+  .ima-reviews-section { padding: 50px 0 24px; }
   .ima-reviews-heading { margin-bottom: 24px; text-align: left; }
   .ima-reviews-widget { margin-inline: -4px; padding: 10px; }
   .ima-source-content .section.alt,
