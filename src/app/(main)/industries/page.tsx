@@ -73,7 +73,7 @@ function BtnArrow() {
 
 type IndustryIcon = "auto" | "chiro" | "clean" | "dental" | "electric"
   | "garage" | "landscape" | "law" | "moving" | "painting" | "pest"
-  | "realestate" | "roofing" | "inspection" | "plumbing" | "hvac";
+  | "realestate" | "roofing" | "septic" | "solar" | "inspection" | "plumbing" | "hvac";
 
 function Icon({ name }: { name: IndustryIcon }) {
   const common = {
@@ -170,6 +170,22 @@ function Icon({ name }: { name: IndustryIcon }) {
         <svg {...common}>
           <path d="m3 12 9-8 9 8" />
           <path d="M5 10v10h14V10" />
+        </svg>
+      );
+    case "septic":
+      return (
+        <svg {...common}>
+          <path d="M3 6h18" />
+          <path d="M12 6v6M9.5 9h5" />
+          <rect x="5" y="12" width="14" height="7" rx="3" />
+        </svg>
+      );
+    case "solar":
+      return (
+        <svg {...common}>
+          <circle cx="5.5" cy="5" r="2" />
+          <path d="M7 10h10l2 9H5z" />
+          <path d="M12 10v9M6 14.5h12" />
         </svg>
       );
     case "inspection":
@@ -326,6 +342,24 @@ const INDUSTRIES: Industry[] = [
     icon: "roofing",
   },
   {
+    id: "septic",
+    name: "Septic Services",
+    href: "/services/septic-marketing-agency",
+    anchor: "Septic marketing",
+    tagline:
+      "Book pump-outs, drain field repairs, and full system installs from local search.",
+    icon: "septic",
+  },
+  {
+    id: "solar",
+    name: "Solar",
+    href: "/services/solar-marketing-agency",
+    anchor: "Solar marketing",
+    tagline:
+      "Win panel install and battery storage consultations from serious local buyers.",
+    icon: "solar",
+  },
+  {
     id: "home-inspector",
     name: "Home Inspector",
     href: "/services/home-inspector-marketing",
@@ -458,7 +492,7 @@ const industryFaqs = [
   {
     question: "Which industries does Zonic Media work with?",
     answer:
-      "We specialize in local, service-based businesses. That includes roofing, HVAC, plumbing, electrical, garage door, landscaping, painting, moving, and auto repair companies, plus dental, chiropractic, and law practices, real estate agents, home inspectors, and cleaning and pest control companies. Each one has its own dedicated marketing page and strategy.",
+      "We specialize in local, service-based businesses. That includes roofing, HVAC, plumbing, septic, solar, electrical, garage door, landscaping, painting, moving, and auto repair companies, plus dental, chiropractic, and law practices, real estate agents, home inspectors, and cleaning and pest control companies. Each one has its own dedicated marketing page and strategy.",
   },
   {
     question: "Why does industry-specific marketing matter?",

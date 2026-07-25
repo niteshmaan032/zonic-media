@@ -223,6 +223,20 @@
   }
 }
 
+/* Industries dropdown holds 19 links — 4 columns keeps it short, and the
+   viewport-clamped width + max-height keep it from running off screen. */
+.industries-core-dropdown {
+  width: min(1240px, calc(100vw - 64px));
+  min-width: 0;
+  max-width: none;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.industries-core-dropdown .local-seo-core-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .nav-link-with-icon {
   display: flex;
   align-items: center;

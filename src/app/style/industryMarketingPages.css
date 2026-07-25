@@ -16,10 +16,11 @@ body:has(.ima-page) .navbar-wrapper.show {
   --ima-bg: #f8fafc;
   --ima-border: #e2e8f0;
   --ima-white: #fff;
+  --ima-page-bg: #fff; /* matches the hia-family desktop background */
   --ima-radius: 8px;
   --ima-radius-lg: 14px;
   color: var(--ima-navy-2);
-  background: var(--ima-white);
+  background: var(--ima-page-bg);
   font-family: var(--neue-haas), Arial, sans-serif;
   font-size: 16.5px;
   font-weight: 400;
@@ -336,7 +337,7 @@ body:has(.ima-page) .navbar-wrapper.show {
 .ima-hero-badges {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 24px;
   margin: 0 0 22px;
 }
 
@@ -810,6 +811,11 @@ body:has(.ima-page) .navbar-wrapper.show {
   font-weight: 500;
 }
 
+/* Tighter gap between the reviews widget and the FAQ heading. */
+.ima-source-content .section:has(.faq-list) {
+  padding-top: 18px;
+}
+
 .ima-page .faq-list {
   border-top: 1px solid var(--ima-border);
 }
@@ -871,7 +877,6 @@ body:has(.ima-page) .navbar-wrapper.show {
 
 .ima-reviews-section {
   padding: 66px 0;
-  border-bottom: 1px solid var(--ima-border);
 }
 
 .ima-reviews-heading {
@@ -1227,7 +1232,7 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-hero { margin-inline: -18px; padding: 46px 18px 40px; }
   .ima-hero h1 { font-size: clamp(35px, 10vw, 46px); line-height: 1.24; }
   .ima-hero .hero-lead { font-size: 16px; }
-  .ima-hero-badges { gap: 12px; margin-bottom: 20px; }
+  .ima-hero-badges { gap: 16px; margin-bottom: 20px; }
   .ima-hero-badge { width: 74px; height: 74px; }
   .ima-hero-badge-trustpilot { width: 96px; }
   .ima-page .hero-actions { align-items: stretch; flex-direction: column; }
@@ -1259,15 +1264,6 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-source-footer .foot-grid > div:first-child,
   .ima-source-footer .foot-grid > div:last-child { grid-column: 1 / -1; }
   .ima-source-footer .foot-bot { flex-direction: column; }
-}
-
-/* Desktop only: soften the pure-white page background to reduce eye strain
-   in dark environments. Cards/sections keep their own backgrounds. Mobile
-   stays white — do not extend this below 992px. */
-@media (min-width: 992px) {
-  .ima-page {
-    background: #f4f4f4;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

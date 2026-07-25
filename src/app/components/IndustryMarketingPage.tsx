@@ -9,6 +9,10 @@ export type IndustryMarketingPageData = {
   slug: string;
   title: string;
   description: string;
+  // Optional palette override (e.g. "ima-septic"); the 13 generated JSON
+  // pages omit both and keep the default orange accent.
+  themeClass?: string;
+  accentColor?: string;
   tickerHtml: string;
   heroHtml: string;
   trustbarHtml: string;
@@ -59,7 +63,11 @@ export default function IndustryMarketingPage({ page }: Props) {
         />
       ))}
 
-      <div className="ima-page">
+      <div
+        className={
+          page.themeClass ? `ima-page ${page.themeClass}` : "ima-page"
+        }
+      >
         <div className="ima-ticker" aria-label="Zonic Media highlights">
           <div
             className="ima-ticker-track"
@@ -168,7 +176,7 @@ export default function IndustryMarketingPage({ page }: Props) {
                     <ClutchWidget
                       widgetType="12"
                       height="375"
-                      primaryColor="#f97316"
+                      primaryColor={page.accentColor ?? "#f97316"}
                       reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                     />
                   </div>

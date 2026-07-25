@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
-import Script from "next/script";
+import LazyRecaptcha, { injectRecaptchaScript } from "@/app/components/LazyRecaptcha";
 import "@/app/style/chatbot.css";
 
 // Lazy-load LiveChatRoom so Ably is never bundled for visitors who don't need it
@@ -235,6 +235,12 @@ const BUBBLE_TEXTS = {
 export default function ChatBot() {
   const [isOpen, setIsOpen]       = useState(false);
   const [messages, setMessages]   = useState([]);
+
+  // Make sure reCAPTCHA is loading as soon as the chat opens, so the token is
+  // ready well before the visitor reaches the live-chat handoff step.
+  useEffect(() => {
+    if (isOpen) injectRecaptchaScript(RECAPTCHA_SITE_KEY);
+  }, [isOpen]);
   const [quickOpts, setQuickOpts] = useState([]);
   const [inputVal, setInputVal]   = useState("");
   const [isTyping, setIsTyping]   = useState(false);
@@ -831,12 +837,7 @@ export default function ChatBot() {
 
   return (
     <>
-      {RECAPTCHA_SITE_KEY && (
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
-          strategy="afterInteractive"
-        />
-      )}
+      {RECAPTCHA_SITE_KEY && <LazyRecaptcha siteKey={RECAPTCHA_SITE_KEY} />}
 
       {/* ── Greeting / resume bubble ───────────────────────────────────── */}
       <div
@@ -864,7 +865,7 @@ export default function ChatBot() {
           </svg>
         ) : (
           <img
-            src="/images/chatbot.png"
+            src="/images/chatbot-96.png"
             alt=""
             className="zoni-trigger-icon zoni-trigger-icon--img"
             width="32"

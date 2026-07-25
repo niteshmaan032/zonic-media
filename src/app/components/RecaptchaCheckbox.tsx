@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Script from "next/script";
+import LazyRecaptcha from "@/app/components/LazyRecaptcha";
 import LeadConsentCheckbox from "@/app/components/LeadConsentCheckbox";
 
 type Grecaptcha = {
@@ -101,10 +101,7 @@ export default function RecaptchaCheckbox({
 
   return (
     <div className="recaptcha-field">
-      <Script
-        src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
-        strategy="afterInteractive"
-      />
+      <LazyRecaptcha siteKey={siteKey} />
 
       {!siteKey && (
         <p className="text-danger mb-0">reCAPTCHA is not configured.</p>

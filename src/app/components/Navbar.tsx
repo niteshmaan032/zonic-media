@@ -28,7 +28,9 @@ import {
   MdOutlineLocalShipping,
   MdOutlinePestControl,
   MdOutlinePlumbing,
+  MdOutlinePropaneTank,
   MdOutlineRealEstateAgent,
+  MdOutlineSolarPower,
   MdOutlineVolunteerActivism,
   MdRoofing,
 } from "react-icons/md";
@@ -313,6 +315,22 @@ const industryLinks = [
       "Storm, repair, and replacement leads for residential roofing companies.",
     link: "/services/roofing-marketing-agency",
     icon: <MdRoofing />,
+  },
+  {
+    id: "septic-marketing-agency",
+    title: "Septic Marketing",
+    description:
+      "Pumping, repair, and install leads for septic companies from maps, search, and paid ads.",
+    link: "/services/septic-marketing-agency",
+    icon: <MdOutlinePropaneTank />,
+  },
+  {
+    id: "solar-marketing-agency",
+    title: "Solar Marketing",
+    description:
+      "Exclusive install and battery storage leads for solar companies from maps, search, and paid ads.",
+    link: "/services/solar-marketing-agency",
+    icon: <MdOutlineSolarPower />,
   },
   {
     id: "home-inspector-marketing",
@@ -766,7 +784,7 @@ function Navbar() {
                       Industries <MdArrowOutward size={16} />
                     </Link>
 
-                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
+                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown industries-core-dropdown">
                       <div className="services-core-label">Industries</div>
 
                       <div className="services-core-grid local-seo-core-grid">

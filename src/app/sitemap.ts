@@ -48,6 +48,8 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/pest-control-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/real-estate-marketing-agency`,         changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/roofing-marketing-agency`,             changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/septic-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/solar-marketing-agency`,               changeFrequency: "monthly", priority: 0.8 },
 
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },

@@ -104,6 +104,16 @@ const INDUSTRY_MARKETING_TEMPLATES: Record<
     adj: "roofing",
     biz: "roofing business",
   },
+  "septic-marketing-agency": {
+    label: "Septic Marketing",
+    adj: "septic",
+    biz: "septic company",
+  },
+  "solar-marketing-agency": {
+    label: "Solar Marketing",
+    adj: "solar",
+    biz: "solar company",
+  },
 };
 
 // Builds the shared, on-brand thank-you email (both text and HTML) so each

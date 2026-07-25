@@ -598,6 +598,38 @@ export default async function Home() {
                   Roofing
                 </a>
                 <a
+                  href="https://www.zonicllc.com/services/septic-marketing-agency"
+                  className="niche-chip"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.9"
+                  >
+                    <path d="M3 6h18" />
+                    <path d="M12 6v6M9.5 9h5" />
+                    <rect x="5" y="12" width="14" height="7" rx="3" />
+                  </svg>
+                  Septic
+                </a>
+                <a
+                  href="https://www.zonicllc.com/services/solar-marketing-agency"
+                  className="niche-chip"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.9"
+                  >
+                    <circle cx="5.5" cy="5" r="2" />
+                    <path d="M7 10h10l2 9H5z" />
+                    <path d="M12 10v9M6 14.5h12" />
+                  </svg>
+                  Solar
+                </a>
+                <a
                   href="https://www.zonicllc.com/services/home-inspector-marketing"
                   className="niche-chip"
                 >

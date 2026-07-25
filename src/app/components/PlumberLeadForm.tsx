@@ -1,6 +1,6 @@
 "use client";
 
-import Script from "next/script";
+import LazyRecaptcha from "@/app/components/LazyRecaptcha";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
@@ -174,10 +174,7 @@ export default function PlumberLeadForm() {
   return (
     <div className="hia-form-card">
       {siteKey ? (
-        <Script
-          src={`https://www.google.com/recaptcha/api.js?render=${siteKey}`}
-          strategy="afterInteractive"
-        />
+        <LazyRecaptcha siteKey={siteKey} />
       ) : null}
 
       <div className="hia-form-stamp">Free Audit</div>

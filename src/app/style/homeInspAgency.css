@@ -29,6 +29,7 @@ body:has(.hia-page) .floating-phone-link {
   --orange-dark: #ea580c;
   --orange-tint: #fff7ed;
   --hia-white: #ffffff;
+  --hia-page-bg: #eff6ff; /* matches --seo-home-bg on /services/local-seo-for-home-services */
   --bg-alt: #f8fafc;
   --border: #e2e8f0;
   --border-strong: #cbd5e1;
@@ -42,7 +43,7 @@ body:has(.hia-page) .floating-phone-link {
 
   font-family: inherit;
   color: var(--text);
-  background: var(--hia-white);
+  background: var(--hia-page-bg);
   line-height: 1.65;
   font-size: 16.5px;
   -webkit-font-smoothing: antialiased;
@@ -385,7 +386,7 @@ body:has(.hia-page) .floating-phone-link {
 .hia-hero .hero-trust-badges {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 30px;
   flex-wrap: wrap;
   margin: 0 0 36px;
   padding: 0 0 28px;
@@ -416,7 +417,7 @@ body:has(.hia-page) .floating-phone-link {
 }
 @media (max-width: 575.98px) {
   .hia-hero .hero-trust-badges {
-    gap: 16px;
+    gap: 20px;
   }
   .hero-trust-badges .htb-clutch {
     width: 68px;
@@ -438,6 +439,13 @@ body:has(.hia-page) .floating-phone-link {
 }
 .hia-section:first-of-type {
   border-top: none;
+}
+/* No divider line above the FAQ section, and a tighter gap to the section
+   before it (nonprofit uses #npm-faq). */
+.hia-page #hia-faq,
+.hia-page #npm-faq {
+  border-top: none;
+  padding-top: 18px;
 }
 .hia-sec-label {
   display: inline-flex;
@@ -1900,12 +1908,11 @@ body:has(.hia-page) .floating-phone-link {
   }
 }
 
-/* Desktop only: soften the pure-white page background to reduce eye strain
-   in dark environments. Cards keep their white backgrounds for contrast.
-   Mobile stays white — do not extend this below 992px. */
+/* Page background is plain white on desktop too (overrides the #eff6ff
+   --hia-page-bg fallback on .hia-page). */
 @media (min-width: 992px) {
   .hia-page,
   .hia-page .hia-main-wrapper {
-    background: #f4f4f4;
+    background: #fff;
   }
 }
