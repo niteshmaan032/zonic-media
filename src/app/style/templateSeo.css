@@ -263,6 +263,7 @@
   letter-spacing: -0.025em;
   color: var(--tseo-ink);
   margin: 0 0 20px;
+  text-transform: capitalize;
 }
 
 .tseo-page .tseo-hl {
@@ -2479,10 +2480,10 @@
   background:
     radial-gradient(
       70% 90% at 100% 0%,
-      rgba(37, 103, 232, 0.26) 0%,
+      rgba(37, 103, 232, 0.12) 0%,
       rgba(37, 103, 232, 0) 60%
     ),
-    linear-gradient(160deg, #dde8fd 0%, #f7faff 70%);
+    linear-gradient(160deg, #eef4fe 0%, #fbfdff 70%);
   border: 1px solid var(--tseo-divider);
 }
 

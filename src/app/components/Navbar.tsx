@@ -127,7 +127,7 @@ const seoServiceLinks = [
     title: "Local SEO for HVAC",
     description:
       "Map pack rankings and local visibility tuned to HVAC seasonal demand peaks.",
-    link: "/services/local-seo-services-for-hvac",
+    link: "/services/industry/local-seo-services-for-hvac",
     icon: <MdOutlineHvac />,
   },
   {

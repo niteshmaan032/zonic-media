@@ -748,7 +748,7 @@ function Page() {
                   Measured outcomes from real Mid-Atlantic businesses — not
                   generic case study language. We see the same pattern in our{" "}
                   <Link
-                    href="/services/local-seo-services-for-hvac"
+                    href="/services/industry/local-seo-services-for-hvac"
                     className="lo-inline-link"
                   >
                     local SEO for HVAC companies

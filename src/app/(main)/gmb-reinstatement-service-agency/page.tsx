@@ -211,7 +211,7 @@ const guarantees = [
         junior freelancer, not an automated tool. We work with contractors of
         every kind, including{" "}
         <Link
-          href="/services/local-seo-services-for-hvac"
+          href="/services/industry/local-seo-services-for-hvac"
           className="gbr-inline-link"
         >
           local SEO for HVAC companies

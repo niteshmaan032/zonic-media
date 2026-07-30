@@ -155,7 +155,7 @@ function page() {
               Search and Maps, increase visibility in your service areas, and
               turn high-intent searches into real customers for roofing,{" "}
               <Link
-                href="/services/local-seo-services-for-hvac"
+                href="/services/industry/local-seo-services-for-hvac"
                 className="lsh-inline-link"
               >
                 local SEO for HVAC companies
@@ -560,7 +560,7 @@ function page() {
                   <li>
                     <IoIosCheckmarkCircle />{" "}
                     <Link
-                      href="/services/local-seo-services-for-hvac"
+                      href="/services/industry/local-seo-services-for-hvac"
                       className="lsh-inline-link"
                     >
                       HVAC Companies

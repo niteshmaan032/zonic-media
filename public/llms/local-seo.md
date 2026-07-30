@@ -5,7 +5,7 @@
 Service pages:
 - https://www.zonicllc.com/local-seo-google-business-optimization
 - https://www.zonicllc.com/services/local-seo-for-home-services (home services)
-- https://www.zonicllc.com/services/local-seo-services-for-hvac (HVAC)
+- https://www.zonicllc.com/services/industry/local-seo-services-for-hvac (HVAC)
 
 ## What this service does
 

@@ -436,7 +436,7 @@ function Page() {
                   review templates designed around HVAC search behavior, the same
                   foundation as our dedicated{" "}
                   <Link
-                    href="/services/local-seo-services-for-hvac"
+                    href="/services/industry/local-seo-services-for-hvac"
                     className="hvac-inline-link"
                   >
                     local SEO for HVAC companies

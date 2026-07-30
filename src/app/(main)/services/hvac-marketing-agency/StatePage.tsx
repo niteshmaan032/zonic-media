@@ -232,7 +232,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   templates designed around HVAC search behavior. It is the same
                   discipline behind our{" "}
                   <Link
-                    href="/services/local-seo-services-for-hvac"
+                    href="/services/industry/local-seo-services-for-hvac"
                     className="hvac-inline-link"
                   >
                     local SEO for HVAC companies

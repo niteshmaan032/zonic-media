@@ -718,7 +718,7 @@ function Page() {
                       without a storefront to film. It&apos;s a hurdle we clear
                       constantly in our{" "}
                       <Link
-                        href="/services/local-seo-services-for-hvac"
+                        href="/services/industry/local-seo-services-for-hvac"
                         className="gbv-inline-link"
                       >
                         local SEO for HVAC companies

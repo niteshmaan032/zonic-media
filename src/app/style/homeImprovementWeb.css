@@ -1,0 +1,2004 @@
+/* Home Improvement & Remodeling website-design pages — ONE scoped, variable-
+   driven stylesheet shared by all six routes (bathroom, kitchen, general
+   contractor, flooring, window & door, painting). Every selector is scoped
+   under .hiw-page so nothing leaks site-wide. Palette is set per page via a
+   .hiw-theme-* modifier class; the body only references CSS variables (and
+   color-mix() tints derived from them), so each service gets its own colour
+   world from a seven-token block. Image slots are .hiw-ph shimmer skeletons
+   until real photography is dropped in. Side insets track the fixed navbar
+   paddings via --hiw-inset (no max-width). */
+
+.hiw-page {
+  /* structural (theme-agnostic) */
+  --hiw-inset: 100px;
+
+  /* derived tints — computed from the theme palette on this same element */
+  --hiw-wash-1: color-mix(in srgb, var(--hiw-accent) 16%, #fff);
+  --hiw-wash-2: color-mix(in srgb, var(--hiw-accent) 8%, #fff);
+  --hiw-wash-3: color-mix(in srgb, var(--hiw-accent) 3%, #fff);
+  --hiw-skeleton-a: color-mix(in srgb, var(--hiw-accent) 12%, #fff);
+  --hiw-skeleton-b: color-mix(in srgb, var(--hiw-accent) 5%, #fff);
+  --hiw-skeleton-border: color-mix(in srgb, var(--hiw-accent) 30%, #fff);
+  --hiw-skeleton-label: color-mix(in srgb, var(--hiw-ink) 42%, var(--hiw-light));
+  --hiw-chip-border: color-mix(in srgb, var(--hiw-accent) 22%, #fff);
+  --hiw-placeholder: color-mix(in srgb, var(--hiw-ink) 34%, #fff);
+  --hiw-icon-bg: color-mix(in srgb, var(--hiw-accent) 10%, transparent);
+  --hiw-accent-04: color-mix(in srgb, var(--hiw-accent) 4%, transparent);
+  --hiw-accent-08: color-mix(in srgb, var(--hiw-accent) 8%, transparent);
+  --hiw-accent-18: color-mix(in srgb, var(--hiw-accent) 18%, transparent);
+  --hiw-accent-55: color-mix(in srgb, var(--hiw-accent) 55%, transparent);
+  --hiw-hl-35: color-mix(in srgb, var(--hiw-hl) 35%, transparent);
+  --hiw-hl-40: color-mix(in srgb, var(--hiw-hl) 40%, transparent);
+  --hiw-ink-12: color-mix(in srgb, var(--hiw-ink) 12%, transparent);
+  --hiw-duo: linear-gradient(90deg, var(--hiw-accent) 0%, var(--hiw-second) 100%);
+
+  background: #fff;
+  color: var(--hiw-ink);
+  overflow-x: clip;
+}
+
+/* ---------- theme palettes (one seven-token block per service) ---------- */
+
+.hiw-page.hiw-theme-bathroom {
+  --hiw-ink: #12211e;
+  --hiw-accent: #0c837a;
+  --hiw-second: #45c4b8;
+  --hiw-hl: #7fd8ce;
+  --hiw-text: #55635f;
+  --hiw-light: #eef9f7;
+  --hiw-divider: #cfebe6;
+}
+
+.hiw-page.hiw-theme-kitchen {
+  --hiw-ink: #241611;
+  --hiw-accent: #b14a22;
+  --hiw-second: #e39a3c;
+  --hiw-hl: #f1b57c;
+  --hiw-text: #6a5a50;
+  --hiw-light: #fbf3ec;
+  --hiw-divider: #f0ddcb;
+}
+
+.hiw-page.hiw-theme-contractor {
+  --hiw-ink: #14181e;
+  --hiw-accent: #1d4e89;
+  --hiw-second: #f5a623;
+  --hiw-hl: #7aa3d0;
+  --hiw-text: #55606e;
+  --hiw-light: #eef3fa;
+  --hiw-divider: #d4e0ee;
+}
+
+.hiw-page.hiw-theme-flooring {
+  --hiw-ink: #241b12;
+  --hiw-accent: #8a5626;
+  --hiw-second: #c6975a;
+  --hiw-hl: #d8b888;
+  --hiw-text: #6a5c4c;
+  --hiw-light: #faf4eb;
+  --hiw-divider: #ecdcc6;
+}
+
+.hiw-page.hiw-theme-window {
+  --hiw-ink: #10202a;
+  --hiw-accent: #0e6e9c;
+  --hiw-second: #6fc7ec;
+  --hiw-hl: #86d2ef;
+  --hiw-text: #51616b;
+  --hiw-light: #edf8fd;
+  --hiw-divider: #cfe9f6;
+}
+
+.hiw-page.hiw-theme-painting {
+  --hiw-ink: #1c1530;
+  --hiw-accent: #6d28d9;
+  --hiw-second: #ec5b9c;
+  --hiw-hl: #b79cf0;
+  --hiw-text: #5c556b;
+  --hiw-light: #f5f1fd;
+  --hiw-divider: #e4daf7;
+}
+
+@media (max-width: 1399.98px) {
+  .hiw-page {
+    --hiw-inset: 40px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hiw-page {
+    --hiw-inset: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hiw-page {
+    --hiw-inset: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hiw-page {
+    --hiw-inset: 20px;
+  }
+}
+
+.hiw-page .hiw-container {
+  padding: 0 var(--hiw-inset);
+}
+
+/* ---------- image skeletons ---------- */
+
+.hiw-page .hiw-ph {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    120deg,
+    var(--hiw-skeleton-a) 0%,
+    var(--hiw-skeleton-b) 50%,
+    var(--hiw-skeleton-a) 100%
+  );
+  border: 1px dashed var(--hiw-skeleton-border);
+}
+
+.hiw-page .hiw-ph::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.65) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: hiw-shimmer 2.2s ease-in-out infinite;
+}
+
+.hiw-page .hiw-ph span {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hiw-skeleton-label);
+  text-align: center;
+  padding: 0 18px;
+}
+
+@keyframes hiw-shimmer {
+  55%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ---------- shared ---------- */
+
+.hiw-page .hiw-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hiw-accent);
+  margin-bottom: 14px;
+}
+
+/* signature: accent-to-secondary rule ahead of every eyebrow */
+.hiw-page .hiw-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 3px;
+  background: var(--hiw-duo);
+}
+
+.hiw-page .hiw-h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: var(--hiw-ink);
+  margin: 0 0 16px;
+}
+
+.hiw-page .hiw-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--hiw-text);
+  margin: 0 0 14px;
+}
+
+.hiw-page .hiw-lead a {
+  color: var(--hiw-accent);
+  text-decoration: none;
+}
+
+.hiw-page .hiw-lead a:hover {
+  text-decoration: underline;
+}
+
+.hiw-page .hiw-hl-text {
+  color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 100px;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.hiw-page .hiw-btn:hover {
+  background: var(--hiw-ink);
+  color: #fff;
+}
+
+.hiw-page .hiw-btn-circ {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--hiw-accent);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.hiw-page .hiw-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border: 1px solid var(--hiw-ink);
+  border-radius: 100px;
+  color: var(--hiw-ink);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-btn-ghost:hover {
+  background: var(--hiw-accent);
+  border-color: var(--hiw-accent);
+  color: #fff;
+}
+
+.hiw-page .hiw-link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--hiw-accent);
+  padding-bottom: 3px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.hiw-page .hiw-link-arrow:hover {
+  gap: 12px;
+  color: var(--hiw-accent);
+}
+
+.hiw-page a:focus-visible,
+.hiw-page button:focus-visible {
+  outline: 2px solid var(--hiw-accent);
+  outline-offset: 3px;
+}
+
+.hiw-page .hiw-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.hiw-page .hiw-sec-head .hiw-h2 {
+  max-width: 640px;
+  margin-bottom: 0;
+}
+
+.hiw-page .hiw-sec-head-center {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.hiw-page .hiw-sec-head-center .hiw-lead {
+  margin-bottom: 0;
+}
+
+.hiw-page section {
+  padding: 64px 0;
+}
+
+/* ---------- 1. hero ---------- */
+
+.hiw-page .hiw-hero {
+  position: relative;
+  background:
+    radial-gradient(
+      55% 70% at 80% 8%,
+      var(--hiw-hl-35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      160deg,
+      var(--hiw-wash-1) 0%,
+      var(--hiw-wash-2) 45%,
+      #ffffff 100%
+    );
+  padding: 150px 0 90px;
+  overflow: hidden;
+}
+
+.hiw-page .hiw-hero .hiw-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-page .hiw-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.hiw-page .hiw-hero-h1 {
+  font-size: clamp(34px, 3.8vw, 56px);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  color: var(--hiw-ink);
+  margin: 0 0 20px;
+}
+
+.hiw-page .hiw-hl {
+  color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-hero-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--hiw-text);
+  max-width: 540px;
+  margin: 0 0 28px;
+}
+
+.hiw-page .hiw-hero-sub a {
+  color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 42px;
+}
+
+.hiw-page .hiw-hero-stats {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid var(--hiw-divider);
+  padding-top: 26px;
+}
+
+.hiw-page .hiw-stat-num {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--hiw-ink);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.hiw-page .hiw-stat-label {
+  font-size: 14px;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+.hiw-page .hiw-hero-visual {
+  position: relative;
+}
+
+.hiw-page .hiw-hero-img {
+  position: relative;
+  aspect-ratio: 4 / 4.4;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.hiw-page .hiw-hero-img .hiw-ph {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
+.hiw-page .hiw-hero-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border-radius: 100px;
+  padding: 12px 14px;
+  box-shadow: 0 12px 30px var(--hiw-ink-12);
+}
+
+.hiw-page .hiw-hero-badge-stars {
+  display: flex;
+  gap: 3px;
+  color: var(--hiw-accent);
+  font-size: 14px;
+}
+
+.hiw-page .hiw-hero-badge p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--hiw-text);
+}
+
+.hiw-page .hiw-hero-badge p strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hiw-ink);
+}
+
+.hiw-page .hiw-hero-badge-phone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+
+.hiw-page .hiw-hero-badge-phone:hover {
+  background: var(--hiw-ink);
+  color: #fff;
+}
+
+/* ---------- 2. contact strip (inside hero) ---------- */
+
+.hiw-page .hiw-strip-inner {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  box-shadow: 0 14px 34px var(--hiw-accent-08);
+  border-radius: 20px;
+  padding: 12px 12px 12px 0;
+  margin-top: 64px;
+}
+
+.hiw-page .hiw-strip-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 32px;
+  min-width: 0;
+}
+
+.hiw-page .hiw-strip-cell + .hiw-strip-cell {
+  border-left: 1px solid var(--hiw-divider);
+}
+
+.hiw-page .hiw-strip-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.hiw-page .hiw-strip-cell p {
+  margin: 0;
+}
+
+.hiw-page .hiw-strip-cell p span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hiw-text);
+  margin-bottom: 4px;
+}
+
+.hiw-page .hiw-strip-cell p strong {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  white-space: nowrap;
+}
+
+.hiw-page .hiw-strip-cell p a {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--hiw-ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hiw-page .hiw-strip-cell p a:hover {
+  color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-strip-cta {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* ---------- 3. first impressions ---------- */
+
+.hiw-page .hiw-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.hiw-page .hiw-collage {
+  position: relative;
+  aspect-ratio: 1 / 1.02;
+}
+
+.hiw-page .hiw-collage-img-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 58%;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.hiw-page .hiw-collage-img-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 66%;
+  height: 54%;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 8px solid #fff;
+}
+
+.hiw-page .hiw-collage-img-1 .hiw-ph,
+.hiw-page .hiw-collage-img-2 .hiw-ph {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+}
+
+.hiw-page .hiw-collage-badge {
+  position: absolute;
+  top: 24%;
+  left: calc(72% - 59px);
+  width: 118px;
+  height: 118px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px var(--hiw-ink-12);
+}
+
+.hiw-page .hiw-collage-badge svg {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  animation: hiw-spin 14s linear infinite;
+}
+
+.hiw-page .hiw-collage-badge svg text {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  fill: var(--hiw-accent);
+}
+
+.hiw-page .hiw-collage-badge-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-size: 18px;
+}
+
+@keyframes hiw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hiw-page .hiw-checks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
+  margin: 24px 0 30px;
+}
+
+.hiw-page .hiw-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+}
+
+.hiw-page .hiw-check svg {
+  color: var(--hiw-accent);
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+/* ---------- 4. what we build — icon cards ---------- */
+
+.hiw-page .hiw-services {
+  background: var(--hiw-light);
+}
+
+.hiw-page .hiw-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.hiw-page .hiw-card {
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-card-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--hiw-icon-bg);
+  color: var(--hiw-accent);
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+
+.hiw-page .hiw-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 10px;
+}
+
+.hiw-page .hiw-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+.hiw-page .hiw-card p a {
+  color: var(--hiw-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hiw-page .hiw-card p a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 5. split band ---------- */
+
+.hiw-page .hiw-band {
+  padding: 0;
+}
+
+.hiw-page .hiw-band-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 500px;
+}
+
+.hiw-page .hiw-band-content {
+  background:
+    radial-gradient(
+      55% 70% at 85% 10%,
+      var(--hiw-hl-35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      160deg,
+      var(--hiw-wash-1) 0%,
+      var(--hiw-wash-2) 55%,
+      var(--hiw-wash-3) 100%
+    );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 80px 72px var(--hiw-inset);
+}
+
+.hiw-page .hiw-band-content .hiw-lead {
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+.hiw-page .hiw-band-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 32px;
+  margin: 36px 0;
+  max-width: 520px;
+}
+
+.hiw-page .hiw-band-stat {
+  border-left: 2px solid var(--hiw-accent);
+  padding-left: 16px;
+}
+
+.hiw-page .hiw-band-stat strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--hiw-ink);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.hiw-page .hiw-band-stat span {
+  font-size: 13.5px;
+  color: var(--hiw-text);
+}
+
+.hiw-page .hiw-band-content .hiw-btn {
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.hiw-page .hiw-band-media {
+  position: relative;
+  min-height: 360px;
+}
+
+.hiw-page .hiw-band-media .hiw-ph {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  border: none;
+}
+
+/* ---------- 6. conversion system ---------- */
+
+.hiw-page .hiw-system {
+  background: var(--hiw-light);
+}
+
+.hiw-page .hiw-feat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.hiw-page .hiw-feat-card {
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  border-radius: 20px;
+  padding: 30px 26px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-feat-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-feat-card .hiw-card-icon {
+  margin-bottom: 20px;
+}
+
+.hiw-page .hiw-feat-card h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 8px;
+}
+
+.hiw-page .hiw-feat-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+/* ---------- 7. anatomy checklist ---------- */
+
+.hiw-page .hiw-anatomy-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.hiw-page .hiw-anatomy-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.hiw-page .hiw-anatomy-item {
+  display: flex;
+  gap: 12px;
+  border: 1px solid var(--hiw-divider);
+  border-radius: 16px;
+  padding: 20px;
+  transition: border-color 0.25s ease;
+}
+
+.hiw-page .hiw-anatomy-item:hover {
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-anatomy-item svg {
+  color: var(--hiw-accent);
+  font-size: 19px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hiw-page .hiw-anatomy-item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 5px;
+}
+
+.hiw-page .hiw-anatomy-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+.hiw-page .hiw-anatomy-cta {
+  margin-top: 28px;
+}
+
+/* ---------- 8. why choose us ---------- */
+
+.hiw-page .hiw-why-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.hiw-page .hiw-why-card {
+  border-radius: 20px;
+  padding: 34px 30px;
+  background: var(--hiw-light);
+  border: 1px solid var(--hiw-divider);
+  color: var(--hiw-ink);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-why-card-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--hiw-icon-bg);
+  color: var(--hiw-accent);
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+
+.hiw-page .hiw-why-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 10px;
+}
+
+.hiw-page .hiw-why-card p {
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+.hiw-page .hiw-why-card p a {
+  color: var(--hiw-accent);
+  text-decoration: none;
+}
+
+.hiw-page .hiw-why-card p a:hover {
+  text-decoration: underline;
+}
+
+.hiw-page .hiw-why-banner {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  flex-wrap: wrap;
+  background:
+    radial-gradient(
+      70% 130% at 100% 0%,
+      var(--hiw-hl-40) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      var(--hiw-wash-1) 0%,
+      var(--hiw-wash-2) 45%,
+      var(--hiw-wash-3) 100%
+    );
+  border: 1px solid var(--hiw-divider);
+  border-radius: 26px;
+  padding: 46px 52px;
+  margin-top: 44px;
+}
+
+.hiw-page .hiw-why-banner::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid var(--hiw-accent-18);
+  box-shadow: 0 0 0 42px var(--hiw-accent-04);
+  pointer-events: none;
+}
+
+.hiw-page .hiw-why-banner-text {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.hiw-page .hiw-why-banner h3 {
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--hiw-ink);
+  margin: 0 0 12px;
+}
+
+.hiw-page .hiw-why-banner p {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--hiw-text);
+  margin: 0;
+  max-width: 560px;
+}
+
+.hiw-page .hiw-why-banner-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* ---------- 9. how it works — steps ---------- */
+
+.hiw-page .hiw-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.hiw-page .hiw-step {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--hiw-divider);
+  padding-top: 24px;
+  transition: border-color 0.25s ease;
+}
+
+.hiw-page .hiw-step:hover {
+  border-top-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-step h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 10px;
+}
+
+.hiw-page .hiw-step p {
+  font-size: 14.5px;
+  line-height: 1.68;
+  color: var(--hiw-text);
+  margin: 0 0 22px;
+}
+
+.hiw-page .hiw-step-num {
+  margin-top: auto;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--hiw-accent-55);
+}
+
+/* ---------- 10. banner (full width) ---------- */
+
+.hiw-page .hiw-banner {
+  padding: 0;
+  position: relative;
+  background:
+    radial-gradient(
+      60% 90% at 85% 10%,
+      var(--hiw-hl-35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(150deg, var(--hiw-wash-1) 0%, var(--hiw-light) 65%);
+  overflow: hidden;
+}
+
+.hiw-page .hiw-banner-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  min-height: 70vh;
+  padding: 50px var(--hiw-inset) 0;
+}
+
+.hiw-page .hiw-banner-copy {
+  padding-bottom: 70px;
+}
+
+.hiw-page .hiw-banner-copy .hiw-eyebrow {
+  margin-bottom: 20px;
+}
+
+.hiw-page .hiw-banner-copy .hiw-h2 {
+  font-size: clamp(32px, 3.2vw, 48px);
+  margin-bottom: 22px;
+}
+
+.hiw-page .hiw-banner-copy .hiw-lead {
+  font-size: 17px;
+  margin-bottom: 34px;
+}
+
+.hiw-page .hiw-banner-media {
+  position: relative;
+  align-self: end;
+  height: 100%;
+  min-height: 540px;
+}
+
+.hiw-page .hiw-banner-media .hiw-ph {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.hiw-page .hiw-banner-feats {
+  display: grid;
+  gap: 34px;
+  padding-bottom: 70px;
+}
+
+.hiw-page .hiw-banner-feat {
+  display: flex;
+  gap: 16px;
+}
+
+.hiw-page .hiw-banner-feat-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-size: 21px;
+  flex-shrink: 0;
+}
+
+.hiw-page .hiw-banner-feat h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 2px 0 6px;
+}
+
+.hiw-page .hiw-banner-feat p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--hiw-text);
+  margin: 0;
+}
+
+/* ---------- 11. marquee ---------- */
+
+.hiw-page .hiw-marquee {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--hiw-divider);
+  overflow: hidden;
+}
+
+.hiw-page .hiw-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  width: max-content;
+  animation: hiw-marquee 32s linear infinite;
+}
+
+.hiw-page .hiw-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 44px;
+  font-size: clamp(15px, 1.5vw, 20px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--hiw-ink);
+  white-space: nowrap;
+}
+
+.hiw-page .hiw-marquee-item svg {
+  color: var(--hiw-accent);
+  font-size: 0.6em;
+  flex-shrink: 0;
+}
+
+@keyframes hiw-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- 12. nationwide ---------- */
+
+.hiw-page .hiw-nationwide {
+  background: linear-gradient(
+    165deg,
+    var(--hiw-light) 0%,
+    var(--hiw-wash-2) 40%,
+    var(--hiw-wash-1) 100%
+  );
+}
+
+.hiw-page .hiw-nationwide .hiw-sec-head-center {
+  margin-bottom: 34px;
+}
+
+.hiw-page .hiw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 860px;
+  margin: 0 auto 36px;
+}
+
+.hiw-page .hiw-chip {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  border: 1px solid var(--hiw-chip-border);
+  background: #fff;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+.hiw-page .hiw-nationwide-cta {
+  text-align: center;
+}
+
+/* ---------- 13. faqs ---------- */
+
+.hiw-page .hiw-split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.hiw-page .hiw-faq-cta {
+  margin-top: 28px;
+}
+
+.hiw-page .global-faqs-accordion .accordion-item {
+  border: 1px solid var(--hiw-divider);
+  border-radius: 16px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hiw-page .global-faqs-accordion .accordion-button {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  background: #fff;
+  padding: 20px 24px;
+  box-shadow: none;
+}
+
+.hiw-page .global-faqs-accordion .accordion-button:not(.collapsed) {
+  color: var(--hiw-accent);
+  background: #fff;
+}
+
+.hiw-page .global-faqs-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--hiw-divider);
+}
+
+.hiw-page .global-faqs-accordion .accordion-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--hiw-text);
+  padding: 0 24px 22px;
+}
+
+/* ---------- 14. grow further ---------- */
+
+.hiw-page .hiw-grow {
+  padding-top: 0;
+}
+
+.hiw-page .hiw-grow-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.hiw-page .hiw-grow-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-grow-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-grow-card .hiw-card-icon {
+  background: var(--hiw-accent);
+  color: #fff;
+}
+
+.hiw-page .hiw-grow-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin: 0 0 10px;
+}
+
+.hiw-page .hiw-grow-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--hiw-text);
+  margin: 0 0 20px;
+}
+
+.hiw-page .hiw-grow-card .hiw-grow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--hiw-accent);
+}
+
+/* ---------- 15. lead form section ---------- */
+
+.hiw-page .hiw-form-sec {
+  background: var(--hiw-light);
+  border-top: 1px solid var(--hiw-divider);
+}
+
+.hiw-page .hiw-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+.hiw-page .hiw-form-aside {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 24px;
+  padding: 48px 44px;
+  background:
+    radial-gradient(
+      70% 90% at 100% 0%,
+      var(--hiw-hl-40) 0%,
+      transparent 60%
+    ),
+    linear-gradient(160deg, var(--hiw-wash-1) 0%, var(--hiw-wash-3) 70%);
+  border: 1px solid var(--hiw-divider);
+}
+
+.hiw-page .hiw-form-aside > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-page .hiw-form-aside .hiw-lead {
+  margin-bottom: 0;
+  max-width: 440px;
+}
+
+.hiw-page .hiw-form-contacts {
+  display: grid;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hiw-page .hiw-form-contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-form-contact:hover {
+  background: var(--hiw-light);
+  border-color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-form-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.hiw-page .hiw-form-contact-txt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.hiw-page .hiw-form-contact-txt small {
+  font-size: 12px;
+  color: var(--hiw-text);
+  margin-bottom: 2px;
+}
+
+.hiw-page .hiw-form-contact-txt strong {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  word-break: break-word;
+}
+
+.hiw-page .hiw-form-main {
+  display: flex;
+}
+
+.hiw-page .hiw-form-main .hiwf-card {
+  width: 100%;
+}
+
+/* ---------- hiwf lead form ---------- */
+
+.hiw-page .hiwf-card {
+  background: #fff;
+  padding: 30px 28px;
+  border-radius: 20px;
+  position: relative;
+  border: 1.5px solid var(--hiw-accent);
+}
+
+.hiw-page .hiwf-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: var(--hiw-duo);
+  border-radius: 0 0 8px 8px;
+}
+
+.hiw-page .hiwf-stamp {
+  position: absolute;
+  top: -14px;
+  right: 22px;
+  background: var(--hiw-accent);
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.hiw-page .hiwf-head {
+  margin-bottom: 18px;
+  padding-top: 6px;
+}
+
+.hiw-page .hiwf-head h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--hiw-ink);
+}
+
+.hiw-page .hiwf-head p {
+  color: var(--hiw-text);
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.hiw-page .hiwf-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hiw-page .hiwf-fg-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hiw-page .hiwf-fg-row .hiwf-fg {
+  min-width: 0;
+}
+
+.hiw-page .hiwf-fg label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--hiw-ink);
+  margin-bottom: 6px;
+}
+
+.hiw-page .hiwf-fg input,
+.hiw-page .hiwf-fg textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--hiw-divider);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14.5px;
+  background: var(--hiw-light);
+  transition: all 0.18s;
+  color: var(--hiw-ink);
+}
+
+.hiw-page .hiwf-fg textarea {
+  resize: vertical;
+  min-height: 82px;
+  line-height: 1.55;
+}
+
+.hiw-page .hiwf-fg input::placeholder,
+.hiw-page .hiwf-fg textarea::placeholder {
+  color: var(--hiw-placeholder);
+}
+
+.hiw-page .hiwf-fg input:focus,
+.hiw-page .hiwf-fg textarea:focus {
+  outline: none;
+  border-color: var(--hiw-accent);
+  background: #fff;
+}
+
+.hiw-page .hiwf-fg input[aria-invalid="true"],
+.hiw-page .hiwf-fg textarea[aria-invalid="true"] {
+  border-color: #ef4444;
+}
+
+.hiw-page .hiwf-field-error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.hiw-page .hiwf-submit {
+  background: var(--hiw-accent);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hiw-page .hiwf-submit:hover:not(:disabled) {
+  background: var(--hiw-ink);
+  transform: translateY(-1px);
+}
+
+.hiw-page .hiwf-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.hiw-page .hiwf-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: hiwf-spin 0.8s linear infinite;
+}
+
+@keyframes hiwf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hiw-page .hiwf-form-error {
+  color: #ef4444;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.hiw-page .hiwf-sms-consent {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 11.5px;
+  color: var(--hiw-text);
+  line-height: 1.55;
+  margin: 2px 0 4px;
+  padding: 0;
+  border-top: none;
+}
+
+.hiw-page .hiwf-sms-consent input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--hiw-accent);
+  flex-shrink: 0;
+}
+
+.hiw-page .hiwf-sms-consent a {
+  color: var(--hiw-accent);
+  font-weight: 500;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1199.98px) {
+  .hiw-page .hiw-feat-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hiw-page .hiw-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+  .hiw-page .hiw-banner-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    min-height: 0;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .hiw-page .hiw-banner-media {
+    display: none;
+  }
+
+  .hiw-page .hiw-banner-copy,
+  .hiw-page .hiw-banner-feats {
+    padding-bottom: 0;
+  }
+
+  .hiw-page .hiw-band-content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hiw-page section {
+    padding: 48px 0;
+  }
+
+  .hiw-page .hiw-hero-grid,
+  .hiw-page .hiw-about-grid,
+  .hiw-page .hiw-split-grid,
+  .hiw-page .hiw-form-grid,
+  .hiw-page .hiw-anatomy-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .hiw-page .hiw-cards,
+  .hiw-page .hiw-grow-cards,
+  .hiw-page .hiw-why-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hiw-page .hiw-sec-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .hiw-page .hiw-hero-stats {
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+
+  .hiw-page .hiw-hero-img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hiw-page .hiw-strip-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 20px;
+    margin-top: 44px;
+  }
+
+  .hiw-page .hiw-strip-cell {
+    padding: 16px 0;
+  }
+
+  .hiw-page .hiw-strip-cell + .hiw-strip-cell {
+    border-left: none;
+    border-top: 1px solid var(--hiw-divider);
+  }
+
+  .hiw-page .hiw-strip-cta {
+    margin-left: 0;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .hiw-page .hiw-band-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hiw-page .hiw-band-content {
+    padding: 64px var(--hiw-inset);
+  }
+
+  .hiw-page .hiw-banner-grid {
+    grid-template-columns: 1fr;
+    padding: 48px var(--hiw-inset);
+    gap: 36px;
+  }
+
+  .hiw-page .hiw-anatomy-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hiw-page .hiw-hero {
+    padding: 110px 0 60px;
+  }
+
+  .hiw-page .hiw-feat-cards,
+  .hiw-page .hiw-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .hiw-page .hiw-checks {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hiw-page .hiw-collage {
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .hiw-page .hiw-collage-badge {
+    width: 96px;
+    height: 96px;
+    left: calc(72% - 48px);
+  }
+
+  .hiw-page .hiw-collage-badge-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .hiw-page .hiw-band-stats {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hiw-page .hiw-why-banner {
+    padding: 34px 26px;
+    gap: 28px;
+  }
+
+  .hiw-page .hiw-why-banner::before {
+    display: none;
+  }
+
+  .hiw-page .hiw-form-aside {
+    padding: 36px 26px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hiw-page .hiw-hero-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hiw-page .hiwf-fg-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hiw-page .hiw-card,
+  .hiw-page .hiw-feat-card,
+  .hiw-page .hiw-why-card,
+  .hiw-page .hiw-grow-card,
+  .hiw-page .hiw-anatomy-item {
+    transition: none;
+  }
+
+  .hiw-page .hiw-collage-badge svg,
+  .hiw-page .hiw-marquee-track,
+  .hiw-page .hiw-ph::after {
+    animation: none;
+  }
+}
+
+/* In-body contextual internal links */
+.hiw-page .hiw-inline-link {
+  color: var(--hiw-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+/* ---------- page footer (replaces the global site footer) ---------- */
+
+.hiw-page .hiw-footer {
+  background: linear-gradient(180deg, var(--hiw-light) 0%, #fff 100%);
+  border-top: 1px solid var(--hiw-divider);
+  padding: 80px 0 0;
+}
+
+.hiw-page .hiw-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr 1.2fr;
+  gap: 50px;
+  padding-bottom: 56px;
+}
+
+.hiw-page .hiw-footer-brand img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.hiw-page .hiw-footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--hiw-text);
+  max-width: 320px;
+  margin: 0 0 22px;
+}
+
+.hiw-page .hiw-footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hiw-page .hiw-footer-social a {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: #fff;
+  border: 1px solid var(--hiw-divider);
+  color: var(--hiw-accent);
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.hiw-page .hiw-footer-social a:hover {
+  background: var(--hiw-accent);
+  border-color: var(--hiw-accent);
+  color: #fff;
+}
+
+.hiw-page .hiw-footer-col h3 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hiw-ink);
+  margin: 0 0 20px;
+}
+
+.hiw-page .hiw-footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.hiw-page .hiw-footer-col a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--hiw-text);
+  font-size: 15px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hiw-page .hiw-footer-col a:hover {
+  color: var(--hiw-accent);
+}
+
+.hiw-page .hiw-footer-contact svg {
+  flex-shrink: 0;
+  color: var(--hiw-accent);
+  font-size: 17px;
+}
+
+.hiw-page .hiw-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 24px 0 28px;
+  border-top: 1px solid var(--hiw-divider);
+}
+
+.hiw-page .hiw-footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--hiw-text);
+}
+
+.hiw-page .hiw-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.hiw-page .hiw-footer-legal a {
+  color: var(--hiw-text);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hiw-page .hiw-footer-legal a:hover {
+  color: var(--hiw-accent);
+}
+
+@media (max-width: 991.98px) {
+  .hiw-page .hiw-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hiw-page .hiw-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hiw-page .hiw-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

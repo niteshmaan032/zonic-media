@@ -317,7 +317,7 @@ function Page() {
             <div className="ads-section-2__descrp">
               <p>
                 Whether you operate an{" "}
-                <Link href="/services/local-seo-services-for-hvac" className="ads-inline-link">
+                <Link href="/services/industry/local-seo-services-for-hvac" className="ads-inline-link">
                   HVAC company
                 </Link>
                 , roofing business, locksmith service, healthcare clinic, or any

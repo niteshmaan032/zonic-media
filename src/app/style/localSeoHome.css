@@ -48,6 +48,7 @@
 .local-seo-home-main-heading {
   font-size: 48px;
   line-height: 60px;
+  text-transform: capitalize;
 }
 
 .local-seo-home-descrp {

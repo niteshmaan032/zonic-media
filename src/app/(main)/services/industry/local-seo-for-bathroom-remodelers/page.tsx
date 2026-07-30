@@ -1,6 +1,6 @@
 /*
  * LOCAL SEO FOR BATHROOM REMODELERS — built on the approved local SEO template
- * layout (see /services/template-seo and /services/local-seo-services-for-hvac).
+ * layout (see /services/template-seo and /services/industry/local-seo-services-for-hvac).
  * Design/classes come from templateSeo.css (scoped under .tseo-page); all copy,
  * mockups, FAQs, and schema are bathroom-remodeling specific. Form leads submit
  * as service "Local SEO" (on the API whitelist).

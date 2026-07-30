@@ -127,6 +127,6 @@ Live preview: `http://localhost:3000/services/template-seo` (`npm run dev`)
 
 - /services/local-seo-for-home-services
 - /services/gmb-optimization
-- /services/local-seo-services-for-hvac
+- /services/industry/local-seo-services-for-hvac
 - /local-seo-google-business-optimization
 - (others as directed)

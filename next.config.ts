@@ -212,7 +212,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/service-providers/hvac",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {
@@ -234,7 +234,7 @@ const nextConfig: NextConfig = {
       // Who we help / home-service
       {
         source: "/who-we-help/home-service/construction-companies",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {
@@ -244,12 +244,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/home-service/hvac",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {
         source: "/who-we-help/home-service/electricians",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {
@@ -259,7 +259,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/home-service/contractors",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {
@@ -314,7 +314,7 @@ const nextConfig: NextConfig = {
       // Other old URLs
       {
         source: "/hvac-seo-services",
-        destination: "/services/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
       {

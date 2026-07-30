@@ -347,7 +347,7 @@ const GrowCards = [
     cta: "Explore HVAC marketing",
   },
   {
-    href: "/services/local-seo-services-for-hvac",
+    href: "/services/industry/local-seo-services-for-hvac",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for HVAC",
     desc: "Rank for AC repair and furnace searches across Google Search and Maps in every city you serve.",
@@ -634,7 +634,7 @@ function Page() {
                 feel like your company, not like a template every competitor
                 is also using — and it should be built to rank with{" "}
                 <Link
-                  href="/services/local-seo-services-for-hvac"
+                  href="/services/industry/local-seo-services-for-hvac"
                   className="hw-inline-link"
                 >
                   local SEO for HVAC
@@ -770,7 +770,7 @@ function Page() {
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
                   <Link
-                    href="/services/local-seo-services-for-hvac"
+                    href="/services/industry/local-seo-services-for-hvac"
                     className="hw-inline-link"
                   >
                     HVAC local SEO

@@ -28,7 +28,7 @@ Use ONLY these URLs as link targets. Never invent a URL.
 | Launchpad, all-in-one starter marketing package for new businesses | `/services/launchpad` |
 | white label services, white label SEO/marketing for agencies | `/services/white-label-services` |
 | dental website design, dental websites | `/services/dental-website-design` |
-| HVAC local SEO, local SEO for HVAC companies | `/services/local-seo-services-for-hvac` |
+| HVAC local SEO, local SEO for HVAC companies | `/services/industry/local-seo-services-for-hvac` |
 | travel and tourism marketing, tourism marketing agency | `/services/travel-and-tourism-marketing-agency` |
 | Google Business Profile for real estate agents, realtor GBP services | `/services/google-business-profile-services-real-estate-agents` |
 | non-profit marketing | `/services/non-profit-marketing-agency` |

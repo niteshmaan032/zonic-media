@@ -41,7 +41,7 @@
 - [Dental Website Design](https://www.zonicllc.com/services/dental-website-design): Dental practice websites built as patient acquisition systems — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.
-- [Local SEO for HVAC](https://www.zonicllc.com/services/local-seo-services-for-hvac): SEO built for HVAC contractors.
+- [Local SEO for HVAC](https://www.zonicllc.com/services/industry/local-seo-services-for-hvac): SEO built for HVAC contractors.
 - [White-Label Services for Agencies](https://www.zonicllc.com/services/white-label-services): Resell GBP reinstatement, verification, management, local SEO, and web design under your own brand.
 - [Launchpad](https://www.zonicllc.com/services/launchpad): Growth program for newly launching businesses.
 - [Plumbing Marketing Agency](https://www.zonicllc.com/services/plumbing-marketing-agency): Marketing for plumbing contractors, with state pages for AZ, CA, FL, GA, IL, NC, and TX.
@@ -246,7 +246,7 @@ GMB optimization focuses on the profile itself (categories, photos, posts, revie
 Service pages:
 - https://www.zonicllc.com/local-seo-google-business-optimization
 - https://www.zonicllc.com/services/local-seo-for-home-services (home services)
-- https://www.zonicllc.com/services/local-seo-services-for-hvac (HVAC)
+- https://www.zonicllc.com/services/industry/local-seo-services-for-hvac (HVAC)
 
 ## What this service does
 
