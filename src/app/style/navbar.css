@@ -229,8 +229,20 @@
   width: min(1240px, calc(100vw - 64px));
   min-width: 0;
   max-width: none;
+}
+
+/* Higher-specificity (.services-dropdown-container.industries-core-dropdown)
+   so it beats .services-dropdown-container's min-height:100%. That inherited
+   min-height resolves to the full viewport height (the panel is absolutely
+   positioned against the viewport), which makes the panel taller than the
+   screen and defeats max-height — so the page scrolls instead of the dropdown.
+   Forcing min-height:0 lets max-height cap the panel so its content scrolls. */
+.services-dropdown-container.industries-core-dropdown {
+  min-height: 0;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
+  /* Keep wheel scrolling inside the dropdown instead of chaining to the body. */
+  overscroll-behavior: contain;
 }
 
 .industries-core-dropdown .local-seo-core-grid {

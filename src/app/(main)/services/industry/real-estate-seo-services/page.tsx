@@ -1,45 +1,97 @@
-import "@/app/style/realEstate.css";
-import "@/app/style/carTow.css";
+/*
+ * REAL ESTATE SEO SERVICES — revamped July 2026 onto the approved local SEO
+ * template layout (see /services/template-seo). Design/classes come from
+ * templateSeo.css (scoped under .tseo-page); all copy, mockups, FAQs, and
+ * schema are real-estate-specific (agents, teams, brokerages; buyer/seller
+ * leads). Form leads submit as service "Local SEO" (on the API whitelist).
+ *
+ * ==========================================================================
+ * OLD IMPLEMENTATION — kept commented for reference during the revamp.
+ * ==========================================================================
+ *
+ * import "@/app/style/realEstate.css";
+ * import "@/app/style/carTow.css";
+ * import ClutchWidget from "@/app/components/ClutchWidget";
+ * import InlineAuditForm from "@/app/components/InlineAuditForm";
+ * import Footer from "@/app/components/Footer";
+ * import GmbFaqs from "@/app/components/GmbFaqs";
+ * import HashScrollLink from "@/app/components/HashScrollLink";
+ * import LeadContactForm from "@/app/components/LeadContactForm";
+ * import { SITE_CONTACT } from "@/shared/siteConfig";
+ * import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+ * import Image from "next/image";
+ * import Link from "next/link";
+ * import Script from "next/script";
+ * import type { Metadata } from "next";
+ * import { Col, Row } from "react-bootstrap";
+ * import { FaGoogle, FaSearch } from "react-icons/fa";
+ * import { FiPhoneCall } from "react-icons/fi";
+ * import { HiOutlinePresentationChartLine } from "react-icons/hi2";
+ * import { LuCalendarCheck2 } from "react-icons/lu";
+ * import { MdOutlineLocationOn } from "react-icons/md";
+ * import { FaBullhorn, FaChartLine, FaPenNib } from "react-icons/fa";
+ * import { RiLineChartLine } from "react-icons/ri";
+ *
+ * const RealEstateFaqs = [ ... 12 Q&A on real estate SEO leads, GBP, teams,
+ *   brokerages, luxury, city/neighborhood pages, why Zonic ... ];
+ * const RealEstateFormHead = { leadFormTitle, leadCallText (Call Now link) };
+ *
+ * (Full previous hero/stats/what-we-do/inline-audit/why/how/services/reviews/
+ *  faq/contact JSX preserved in git history at commit 60fb83f. Replaced
+ *  wholesale by the template layout below.)
+ */
+
+import type { Metadata } from "next";
+import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
-import InlineAuditForm from "@/app/components/InlineAuditForm";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import type { Metadata } from "next";
-import { Col, Row } from "react-bootstrap";
-import { FaGoogle, FaSearch } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
-import { HiOutlinePresentationChartLine } from "react-icons/hi2";
-import { LuCalendarCheck2 } from "react-icons/lu";
-import { MdOutlineLocationOn } from "react-icons/md";
-import { FaBullhorn, FaChartLine, FaPenNib } from "react-icons/fa";
-import { RiLineChartLine } from "react-icons/ri";
+import { FaStar } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
+import {
+  FiArrowUpRight,
+  FiClock,
+  FiFileText,
+  FiImage,
+  FiLink2,
+  FiMail,
+  FiMapPin,
+  FiPhoneCall,
+  FiSearch,
+  FiStar,
+  FiTrendingUp,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+const PAGE_PATH = "/services/industry/real-estate-seo-services";
 
 export const metadata: Metadata = {
-  title: "Real Estate SEO Services for Realtors & Brokers",
+  title: "Real Estate SEO Services That Win Local Leads",
   description:
-    "Real estate SEO services for agents, brokers, and teams. Improve Google rankings, Google Business visibility, and buyer and seller lead generation.",
+    "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' and 'real estate agent near me' — GBP, reviews, and buyer/seller leads. Get a free audit.",
   keywords: [
     "real estate SEO services",
-    "local SEO for real estate agents",
-    "real estate marketing agency",
-    "realtor lead generation",
+    "realtor near me",
+    "real estate agent near me",
+    "homes for sale",
+    "listing agent",
+    "real estate SEO company",
     "SEO for realtors",
-    "Google Maps ranking for real estate agents",
+    "local SEO for real estate agents",
     "Google Business Profile for realtors",
-    "seller lead generation for realtors",
-    "SEO for real estate brokerages",
-    "neighborhood SEO for real estate",
+    "real estate lead generation",
+    "best realtor near me",
   ],
-  alternates: {
-    canonical: "/services/industry/real-estate-seo-services",
-  },
+  alternates: { canonical: PAGE_PATH },
   openGraph: {
     images: [
       {
@@ -49,1029 +101,1566 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Real Estate SEO Services for Realtors & Brokers",
+    title: "Real Estate SEO Services That Win Local Leads | Zonic Media",
     description:
-      "Grow real estate leads with local SEO, Google Business Profile optimization, content strategy, and conversion-focused website improvements.",
-    url: "/services/industry/real-estate-seo-services",
+      "Real estate SEO services that put realtors in the Google map pack — profile optimization, reviews, and neighborhood pages that turn 'realtor near me' searches into buyer and seller leads.",
+    url: PAGE_PATH,
     type: "website",
   },
-};
-
-const RealEstateFaqs = [
-  {
-    question:
-      "How can SEO help real estate agents get more buyer and seller leads?",
-    answer:
-      "SEO helps real estate agents appear on Google when people search for homes, listing agents, home values, or realtors in their area. This creates a consistent flow of high-intent buyer and seller leads without depending only on referrals or paid platforms.",
-  },
-  {
-    question: "What makes real estate SEO different from regular SEO?",
-    answer:
-      "Real estate SEO requires strategies built around local markets, neighborhood searches, buyer intent, seller intent, Google Maps visibility, IDX/property pages, and lead conversion systems. Generic SEO agencies often miss these industry-specific opportunities.",
-  },
-  {
-    question: "How long does it take for real estate SEO to generate leads?",
-    answer:
-      "Most campaigns begin showing ranking improvements within 3 to 6 months. Lead generation depends on your market competition, website condition, local authority, and how aggressively the campaign is executed.",
-  },
-  {
-    question: "Can SEO help me get more listings instead of only buyer leads?",
-    answer:
-      "Yes. We target seller-focused searches such as home valuation, sell my house, listing agent near me, and realtor for sellers. This helps attract homeowners who are ready to list their property.",
-  },
-  {
-    question: "Is SEO better than Zillow, Realtor.com, or paid lead platforms?",
-    answer:
-      "SEO helps you build your own lead source and brand authority instead of renting leads from third-party platforms. Many agents use SEO to reduce long-term dependence on expensive lead providers.",
-  },
-  {
-    question:
-      "Do you provide SEO for individual agents, teams, and brokerages?",
-    answer:
-      "Yes. We work with solo real estate agents, growing teams, luxury brokerages, franchise offices, and multi-location real estate brands across the United States.",
-  },
-  {
-    question:
-      "Can you rank my real estate business in multiple cities or neighborhoods?",
-    answer:
-      "Yes. We build city pages, neighborhood pages, service-area strategies, and local SEO systems that help you rank in multiple target markets.",
-  },
-  {
-    question: "What does a real estate SEO campaign usually include?",
-    answer:
-      "A complete campaign may include keyword research, on-page SEO, technical SEO, Google Business Profile optimization, city pages, content creation, backlink building, review growth, and lead conversion optimization.",
-  },
-  {
-    question: "Does Google Business Profile matter for real estate agents?",
-    answer:
-      "Absolutely. Google Business Profile improves your Maps visibility, builds trust through reviews, and helps local buyers and sellers contact you directly from search results.",
-  },
-  {
-    question: "Can SEO help luxury real estate agents or high-end markets?",
-    answer:
-      "Yes. We can target luxury-specific searches, premium neighborhoods, high-value property keywords, and affluent buyer intent searches to help luxury agents attract qualified opportunities.",
-  },
-  {
-    question: "Why do many real estate websites fail to generate leads?",
-    answer:
-      "Most real estate websites focus only on design instead of rankings, speed, user experience, local trust signals, and clear calls-to-action. Traffic without conversion strategy usually produces poor results.",
-  },
-  {
-    question: "Why choose Zonic Media over a generic real estate SEO company?",
-    answer:
-      "Zonic Media is a dedicated growth partner for real estate professionals. We focus on generating buyer and seller leads, improving local rankings, building authority, and creating long-term predictable lead flow.",
-  },
-];
-
-const RealEstateFormHead = {
-  leadFormTitle: "Ready to Grow Your Real Estate Business?",
-  leadCallText: (
-    <>
-      Let&apos;s build a strategy that helps you rank higher, attract better
-      leads, and generate more buyer and seller inquiries.
-      <br />{" "}
-      <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-        Call Now:{SITE_CONTACT.phoneDisplay}
-      </a>
-    </>
-  ),
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Real Estate SEO", url: "/services/industry/real-estate-seo-services" },
+  { name: "Real Estate SEO Services", url: PAGE_PATH },
 ]);
 
-function page() {
+// NOTE: never add aggregateRating to a Service schema — GSC flags it.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Real Estate SEO Services",
+  serviceType: "Local Search Engine Optimization for Real Estate Agents",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  description:
+    "Real estate SEO services covering Google Business Profile optimization, citation building, review growth, on-page SEO, and neighborhood content — built to rank realtors, teams, and brokerages in the Google map pack and grow buyer and seller leads.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Zonic Media",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Real estate agents, realtor teams, and brokerages",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Real Estate Local SEO Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Business Profile Optimization for Realtors",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Real Estate Keyword & Competitor Research",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Citation & Listing Management" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Review Growth & Reputation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Page SEO & Neighborhood Pages",
+        },
+      },
+    ],
+  },
+};
+
+const RealEstateSeoFaqs = [
+  {
+    question: "What's included in your real estate SEO services?",
+    answer:
+      "Every real estate campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your city and neighborhood pages, local content, and a monthly report that shows rankings, calls, and buyer and seller leads — not vanity metrics.",
+  },
+  {
+    question: "How long do real estate SEO services take to show results?",
+    answer:
+      "Most agents see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'realtor near me' and 'real estate agent near me.' Competitive metros take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds every listing season.",
+  },
+  {
+    question: "How much do real estate SEO services cost?",
+    answer:
+      "Pricing depends on how many markets you work, how competitive your metro is, and how aggressively you want to grow your buyer and seller pipeline. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
+  },
+  {
+    question: "Do you guarantee first-page Google rankings for realtor keywords?",
+    answer:
+      "Our track record speaks for itself — most real estate clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
+  },
+  {
+    question: "Do real estate agents really need Google Business Profile optimization?",
+    answer:
+      "Yes — it is the single biggest lever in real estate local SEO. Your Google Business Profile decides whether you show up in the local map pack when a buyer or seller searches for an agent nearby, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and clients choose it.",
+  },
+  {
+    question: "Can you help real estate teams, brokerages, and multi-agent offices?",
+    answer:
+      "Absolutely. We build local SEO systems for solo agents and multi-agent brokerages alike — market and neighborhood targeting, individual agent and location pages, and map visibility for every city and neighborhood you cover, all reported in one clear dashboard.",
+  },
+  {
+    question: "Why choose Zonic Media over another real estate SEO company?",
+    answer:
+      "We specialize in local, lead-driven businesses like real estate, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and buyer and seller leads, and work that is built to compound listing season after listing season — not churn.",
+  },
+];
+
+const realEstateSeoFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  mainEntity: RealEstateSeoFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const HeroStats = [
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    num: "50+",
+    label: "Local & lead-driven businesses ranked",
+  },
+  {
+    icon: <FaStar aria-hidden="true" />,
+    num: "4.9/5",
+    label: "Average client rating on Clutch",
+  },
+  {
+    icon: <FiClock aria-hidden="true" />,
+    num: "60–90",
+    label: "Days to measurable movement",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    num: "100%",
+    label: "In-house work — nothing outsourced",
+  },
+];
+
+const BannerChecks = [
+  "Your real estate map pack growth plan",
+  "Profile wins ready to unlock",
+  "Citation opportunities mapped",
+  "Review growth roadmap",
+];
+
+const AuditRows = [
+  { label: "Google Business Profile", flag: "A+ grade" },
+  { label: "Citations & listings", flag: "100% accurate" },
+  { label: "Review velocity", flag: "Ahead of top 3" },
+];
+
+const ProblemChecks = [
+  "Map pack ranking strategy",
+  "Profile fully optimized",
+  "Citations cleaned & built",
+  "Reviews growing weekly",
+];
+
+const ServiceCards = [
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: (
+      <>
+        Your profile is your new homepage in the map pack. We optimize every
+        field, real estate category, photo, and post — the same system behind
+        our{" "}
+        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+          GBP optimization service
+        </Link>{" "}
+        — so Google trusts it and buyers and sellers choose you.
+      </>
+    ),
+  },
+  {
+    icon: <FiSearch aria-hidden="true" />,
+    title: "Real Estate Keyword & Competitor Research",
+    desc: "We map every search your clients actually type — realtor near me, homes for sale, listing agent, home valuation — neighborhood by neighborhood, and build the exact strategy that wins those searches for you.",
+  },
+  {
+    icon: <FiLink2 aria-hidden="true" />,
+    title: "Citations & Listing Management",
+    desc: "Consistent name, address, and phone across every directory that matters — including the real estate and agent listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
+  },
+  {
+    icon: <FiStar aria-hidden="true" />,
+    title: "Review Growth & Reputation",
+    desc: "A steady stream of real reviews from real buyers and sellers, with responses that show Google — and the next client comparing agents — that somebody is home.",
+  },
+  {
+    icon: <FiFileText aria-hidden="true" />,
+    title: "On-Page SEO & Neighborhood Pages",
+    desc: (
+      <>
+        City and neighborhood pages built around real estate searches, with
+        schema and internal links that make every page easier to rank — backed
+        by conversion-first{" "}
+        <Link href="/services/web-design" className="tseo-inline-link">
+          website design
+        </Link>{" "}
+        when your site needs it.
+      </>
+    ),
+  },
+  {
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Tracking & Monthly Reporting",
+    desc: "Rankings, calls, direction requests, and buyer and seller leads in one plain-English report. You always know what we did, what moved, and what is next.",
+  },
+];
+
+const ResultCards = [
+  {
+    icon: <FiPhoneCall aria-hidden="true" />,
+    industry: "Solo Agent",
+    metric: "+212%",
+    label: "Calls from Google Business Profile",
+    desc: "From page-two invisibility to top-three map pack rankings for 'realtor near me' across every target neighborhood within one listing season.",
+  },
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    industry: "Real Estate Team",
+    metric: "Top 3",
+    label: "Map pack for every core keyword",
+    desc: "A profile rebuild, citation cleanup, and review growth took the team from #13 to the top three before the spring market peaked.",
+  },
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    industry: "Brokerage",
+    metric: "3.2×",
+    label: "More buyer & seller leads from local search",
+    desc: "City and neighborhood pages turned seasonal listing spikes into a steady, year-round pipeline of buyer and seller inquiries.",
+  },
+];
+
+const ScoreRows = [
+  { label: "Profile strength", before: 34, after: 92 },
+  { label: "Citation accuracy", before: 41, after: 96 },
+  { label: "Review velocity", before: 22, after: 78 },
+  { label: "Map pack visibility", before: 18, after: 84 },
+];
+
+const RankRows = [
+  { kw: "realtor near me", pos: "#1", delta: "▲ 5" },
+  { kw: "homes for sale [city]", pos: "#2", delta: "▲ 7" },
+  { kw: "listing agent [city]", pos: "#1", delta: "▲ 4" },
+  { kw: "real estate agent near me", pos: "#3", delta: "▲ 8" },
+];
+
+const ReviewBarHeights = [28, 36, 44, 52, 58, 68, 74];
+
+const CompareThem = [
+  "Set-and-forget profile, updated quarterly at best",
+  "Reports full of impressions, empty of buyer & seller leads",
+  "Offshore link packages and duplicate citations",
+  "One account manager for 80 clients",
+  "12-month contracts before you see a single lead",
+];
+
+const CompareUs = [
+  "Profile worked weekly — posts, photos, Q&A, real estate categories",
+  "Reporting tied to calls, direction requests, and buyer & seller leads",
+  "Hand-built citations and local links that compound",
+  "A dedicated strategist who knows your real estate market",
+  "Month-to-month — we keep you with results, not paperwork",
+];
+
+const WhyCards = [
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Lead-driven local is all we do",
+    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and buyer and seller leads for real estate agents and teams is the entire practice.",
+  },
+  {
+    icon: <FiZap aria-hidden="true" />,
+    title: "Fast, compounding execution",
+    desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into peak buying and listing demand. Every month of work stacks on the last.",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Transparent to a fault",
+    desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
+  },
+];
+
+const MarqueeItems = [
+  "Real Estate Local SEO",
+  "Realtor Near Me Rankings",
+  "Google Business Profile",
+  "Map Pack Rankings",
+  "Buyer & Seller Leads",
+  "Review Growth",
+  "Neighborhood Pages",
+];
+
+const NationwideChips = [
+  "Buyer Representation",
+  "Listing Services",
+  "Luxury Homes",
+  "First-Time Buyers",
+  "Relocation",
+  "New Construction",
+  "Investment Property",
+  "Property Valuation",
+];
+
+const GrowCards = [
+  {
+    href: "/services/gmb-optimization",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: "Most buyers and sellers pick an agent straight from the map pack. We optimize your profile so that agent is you.",
+    cta: "Optimize your profile",
+  },
+  {
+    href: "/services/real-estate-marketing-agency",
+    icon: <FiZap aria-hidden="true" />,
+    title: "Real Estate Marketing",
+    desc: "Ready to grow beyond local SEO? Full-funnel real estate marketing — ads, web, and brand — built to keep your pipeline full every season.",
+    cta: "See real estate marketing",
+  },
+  {
+    href: "/services/google-ads",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    title: "Google Ads Management",
+    desc: "Pair organic rankings with paid coverage and own the whole results page during peak buying and listing demand.",
+    cta: "See Google Ads",
+  },
+];
+
+function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="realest-sec-1">
-        <div className="realest-sec-1-layer">
-          <div className="realest-sec-1-content">
-            <Col lg={8} className="realest-sec-1-content-wrapper">
-              <h1 className="realest-sec-1-heading">
-                Get More Buyers and Sellers Without Chasing Leads
-              </h1>
-              <p className="realest-sec-1-sub-head">
-                Dedicated Real Estate SEO Company | Zonic Media
-              </p>
-              <p className="realest-sec-1-descrp">
-                Most real estate agents waste money on generic marketing that
-                never produces consistent leads. Zonic Media is not an average
-                real estate SEO company, we are a dedicated growth partner
-                built specifically for real estate agents, brokers, teams, and
-                agencies across the United States.
-              </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(realEstateSeoFaqJsonLd),
+        }}
+      />
 
-              <p className="realest-sec-1-descrp">
-                We help real estate professionals dominate Google search,
-                strengthen online visibility, and generate high-quality buyer
-                and seller inquiries every month through strategic SEO,{" "}
-                <Link
-                  href="/services/gmb-optimization"
-                  className="realest-inline-link"
-                >
-                  Google Business Profile optimization
-                </Link>
-                , website SEO, and data-driven marketing systems.
-              </p>
+      <div className="tseo-page">
+        <main>
+          {/* 1. Hero */}
+          <section className="tseo-hero">
+            <div className="tseo-container">
+              <div className="tseo-hero-grid">
+                <div className="tseo-hero-copy">
+                  <p className="tseo-eyebrow">Real Estate SEO Services</p>
+                  <h1 className="tseo-hero-h1">
+                    Real estate SEO that{" "}
+                    <span className="tseo-hl">wins more leads</span>
+                  </h1>
+                  <p className="tseo-hero-sub">
+                    We&apos;ve helped 50+ local and lead-driven businesses climb
+                    into the Google map pack and grow. Zonic Media builds the
+                    full local ranking system for real estate agents, teams, and
+                    brokerages — Google Business Profile, citations, reviews, and
+                    neighborhood content — so when buyers and sellers search
+                    &ldquo;realtor near me,&rdquo; they find you first.
+                  </p>
+                  <div className="tseo-hero-badges" aria-label="Partner badges">
+                    {/* Self-hosted Clutch badge — the live iframe embed is
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge"
+                        width={74}
+                        height={74}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
+                      />
+                    </a>
+                    <Image
+                      className="tseo-hero-badge"
+                      width={74}
+                      height={74}
+                      src="/images/Partner.png"
+                      alt="Yelp Advertising Partner"
+                    />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge-trustpilot"
+                        width={104}
+                        height={50}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
+                      />
+                    </a>
+                  </div>
+                  <div className="tseo-hero-ctas">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Get Your Free Real Estate SEO Audit
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                    <a href={SITE_CONTACT.phoneHref} className="tseo-btn-ghost">
+                      <FiPhoneCall aria-hidden="true" />
+                      Call {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </div>
+                  <div className="tseo-hero-proof">
+                    <span
+                      className="tseo-hero-proof-stars"
+                      aria-hidden="true"
+                    >
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </span>
+                    <p>
+                      <strong>Rated 4.9/5</strong> by the local businesses we
+                      rank
+                    </p>
+                  </div>
+                </div>
 
-              <div className="realest-sec-1-ctas">
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get Free Strategy Call
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
+                <div className="tseo-hero-visual">
+                  <div className="tseo-hero-dash-wrap">
+                  <div className="tseo-hero-dash" aria-hidden="true">
+                    <div className="tseo-dash-head">
+                      <h3>Real Estate Local SEO Performance</h3>
+                    </div>
+                    <div className="tseo-ba-toggle-row">
+                      <span className="tseo-ba-toggle">
+                        <span className="tseo-ba-thumb" />
+                        <span className="tseo-ba-label tseo-ba-label--before">
+                          Before
+                        </span>
+                        <span className="tseo-ba-label tseo-ba-label--after">
+                          After
+                        </span>
+                      </span>
+                    </div>
+                    <div className="tseo-ba-stage">
+                      {/* AFTER state (base layer) */}
+                      <div className="tseo-ba-panel">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;realtor near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li tseo-dash-li--you">
+                              <FiMapPin />
+                              <span>Your Real Estate Team</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Realty Group</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Brokerage</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-review">
+                              <FaStar />
+                              4.9 · 198 reviews
+                              <em>+32 this quarter</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Leads from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">284</p>
+                              <span className="tseo-dash-delta">+212%</span>
+                            </div>
+                            <div className="tseo-dash-bars">
+                              {[26, 34, 30, 42, 50, 46, 58, 66, 62, 78, 90, 104].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#1</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.9★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>+86%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BEFORE state (fading overlay) */}
+                      <div className="tseo-ba-panel tseo-ba-panel--before">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;realtor near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Realty Group</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Brokerage</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Homes Co.</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-li tseo-dash-li--lost">
+                              <FiMapPin />
+                              <span>Your Real Estate Team</span>
+                              <em>#13</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Leads from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">38</p>
+                              <span className="tseo-dash-delta tseo-dash-delta--down">
+                                Page 2
+                              </span>
+                            </div>
+                            <div className="tseo-dash-bars tseo-dash-bars--muted">
+                              {[48, 34, 42, 28, 36, 24, 32, 20, 28, 16, 22, 12].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#13</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.1★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>−8%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tseo-hero-floats">
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>#1 in the Map Pack</strong>
+                        &ldquo;realtor near me&rdquo;
+                      </p>
+                    </div>
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon tseo-float-card-icon--green">
+                        <FiStar aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>+32 reviews</strong>
+                        this quarter
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tseo-hero-stats">
+                {HeroStats.map((stat) => (
+                  <div className="tseo-stat" key={stat.label}>
+                    <span className="tseo-stat-icon">{stat.icon}</span>
+                    <div>
+                      <p className="tseo-stat-num">{stat.num}</p>
+                      <p className="tseo-stat-label">{stat.label}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 2. Problem / solution */}
+          <section className="tseo-problem">
+            <div className="tseo-container">
+              <div className="tseo-problem-grid">
+                <div className="tseo-gbp-wrap" aria-hidden="true">
+                  <div className="tseo-gbp">
+                    <div className="tseo-gbp-head">
+                      <span className="tseo-gbp-avatar">
+                        <FiImage />
+                      </span>
+                      <div>
+                        <strong>
+                          Your Real Estate Team
+                          <MdOutlineVerifiedUser />
+                        </strong>
+                        <span className="tseo-gbp-stars">
+                          <FaStar />
+                          4.9 (198 reviews)
+                        </span>
+                      </div>
+                    </div>
+                    <p className="tseo-gbp-meta">
+                      Real estate agency · <em>Open now</em> · Serving your whole
+                      metro
+                    </p>
+                    <div className="tseo-gbp-actions">
+                      <span className="tseo-gbp-action tseo-gbp-action--solid">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiMapPin />
+                        Directions
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiArrowUpRight />
+                        Website
+                      </span>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Profile views</span>
+                      <em>+180%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Calls from profile</span>
+                      <em>+212%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Buyer &amp; seller inquiries</span>
+                      <em>+3×</em>
+                    </div>
+                  </div>
+                  <span className="tseo-gbp-chip">
+                    <FaStar aria-hidden="true" />
+                    Trusted by 50+ local businesses
                   </span>
-                </HashScrollLink>
-
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  See How It Works
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </HashScrollLink>
-              </div>
-
-              <div className="realest-feature-grid">
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <p>RANK HIGHER ON GOOGLE</p>
                 </div>
-
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <FiPhoneCall />
+                <div>
+                  <p className="tseo-eyebrow">The Local Growth Opportunity</p>
+                  <h2 className="tseo-h2">
+                    Buyers and sellers are searching for an agent.{" "}
+                    <span className="tseo-hl-text">
+                      We make sure they find you.
+                    </span>
+                  </h2>
+                  <p className="tseo-lead">
+                    When someone is ready to buy or list a home, the first thing
+                    they do is search &ldquo;real estate agent near me&rdquo; and
+                    call one of the top three names on the map. That is an
+                    enormous, high-intent growth channel sitting right in front
+                    of your business — and it is exactly the channel we have
+                    spent years mastering for real estate professionals.
+                  </p>
+                  <p className="tseo-lead">
+                    Our local SEO system captures it step by step: a fully
+                    optimized Google Business Profile, consistent citations,
+                    steadily growing reviews, and neighborhood pages built around
+                    the searches your clients actually type. Every ranking signal
+                    Google rewards, done properly and done monthly — that is how
+                    our clients turn local searches into calls, showings, and
+                    listings that compound season after season.
+                  </p>
+                  <div className="tseo-checks">
+                    {ProblemChecks.map((check) => (
+                      <div className="tseo-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
                   </div>
-                  <p>GET MORE CALLS FROM LOCAL BUYERS &amp; SELLERS</p>
-                </div>
-
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <LuCalendarCheck2 />
-                  </div>
-                  <p>BOOK MORE DEALS &amp; GROW YOUR BUSINESS</p>
-                </div>
-
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <RiLineChartLine />
-                  </div>
-                  <p>SUSTAINABLE GROWTH THAT LASTS</p>
-                </div>
-              </div>
-            </Col>
-          </div>
-        </div>
-      </div>
-
-      <div className="realest-sec-2">
-        <div className="realest-sec-2-grid">
-          <div className="realest-sec-2-item">
-            <h3>250+</h3>
-            <p>Properties Listed</p>
-          </div>
-          <div className="realest-sec-2-item">
-            <h3>95%</h3>
-            <p>Client Satisfaction</p>
-          </div>
-          <div className="realest-sec-2-item">
-            <h3>50+</h3>
-            <p>Prime Locations Covered</p>
-          </div>
-          <div className="realest-sec-2-item">
-            <h3>1200+</h3>
-            <p>Leads Generated</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="realest-sec-3">
-        <div className="realest-center-head">
-          <div className="realest-center-head-content-wrapper">
-            <p className="realest-label">WHAT WE DO</p>
-            <h2 className="realest-sec-heading">
-              Website SEO That Turns Visitors Into Real Estate Leads
-            </h2>
-            <p className="realest-sec-descrp">
-              A real estate website should do more than look good-it should
-              generate buyer inquiries, seller leads, showing requests, and
-              listing opportunities. We fix what most real estate websites get
-              wrong.
-            </p>
-          </div>
-        </div>
-
-        <div className="realest-sec-3-content-wrapper">
-          <Row className="g-4 justify-content-center">
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <FaSearch />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Search Engine <br /> Optimization
-                  </h3>
-                </div>
-                <p className="realest-card-desc">
-                  Rank higher for searches like homes for sale, real estate
-                  agent near me, realtor in [city], and seller agent searches
-                  that bring real opportunities.
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <FaBullhorn />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Pay Per Click <br /> Advertising
-                  </h3>
-                </div>
-                <p className="realest-card-desc">
-                  Generate immediate traffic and motivated buyer or seller leads
-                  through targeted{" "}
-                  <Link href="/services/google-ads" className="realest-inline-link">
-                    Google Ads campaigns
+                  <Link href="/about" className="tseo-btn">
+                    More About Zonic Media
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
                   </Link>
-                  .
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <FaChartLine />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Conversion Rate <br /> Optimization
-                  </h3>
                 </div>
-                <p className="realest-card-desc">
-                  Turn more website visitors into booked calls, showing
-                  requests, valuation inquiries, and listing appointments.
-                </p>
               </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <FaPenNib />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Content <br /> Marketing
-                  </h3>
-                </div>
-                <p className="realest-card-desc">
-                  Build authority with neighborhood pages, buyer guides, seller
-                  guides, blogs, and market content that ranks and converts.
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <FaGoogle />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Google Business <br /> Profile Optimization
-                  </h3>
-                </div>
-                <p className="realest-card-desc">
-                  Improve your local map visibility, strengthen trust, and
-                  capture more calls from buyers and sellers searching nearby.
-                </p>
-              </div>
-            </Col>
-
-            <Col lg={4} md={6}>
-              <div className="realest-card">
-                <div className="realest-card-top">
-                  <div className="realest-card-icon">
-                    <HiOutlinePresentationChartLine />
-                  </div>
-                  <h3 className="realest-card-title">
-                    Lead Tracking <br /> and Reporting
-                  </h3>
-                </div>
-                <p className="realest-card-desc">
-                  Measure what is working, track lead sources clearly, and make
-                  smarter growth decisions with data-driven reporting.
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-      </div>
-
-      <div className="iaf-section">
-        <InlineAuditForm
-          heading="Get Your Free Real Estate SEO Audit"
-          description="Share your business details and we will review your local search rankings, Google Business Profile, and lead conversion gaps at no cost."
-        />
-      </div>
-
-      <div className="realest-sec-4">
-        <div className="realest-sec-4-grid">
-          <div className="realest-sec-4-left">
-            <h2 className="realest-sec-4-heading">
-              Why SEO is Essential for Your Real Estate Business
-            </h2>
-
-            <div className="realest-sec-4-image-wrap">
-              <Image
-                src="/images/real-est-industries/realest-img-2.jpg"
-                alt="Real estate locations map"
-                fill
-                className="realest-sec-4-image"
-              />
             </div>
-          </div>
+          </section>
 
-          <div className="realest-sec-4-right">
-            <div className="realest-sec-4-point">
-              <div className="realest-sec-4-badge">01</div>
-              <div className="realest-sec-4-copy">
-                <h3>Stronger Local Search Visibility</h3>
-                <p>
-                  Real estate SEO helps your business appear when people search
-                  for real estate agents, homes for sale, listing services, and
-                  neighborhood-specific property searches in your target market,
-                  working alongside your broader{" "}
+          {/* 3. Deliverables */}
+          <section className="tseo-services" id="tseo-services">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">What&apos;s Included</p>
+                  <h2 className="tseo-h2">
+                    Everything your real estate rankings need, in one system
+                  </h2>
+                </div>
+                <Link href="/services" className="tseo-link-arrow">
+                  View all services <FiArrowUpRight aria-hidden="true" />
+                </Link>
+              </div>
+              <div className="tseo-cards">
+                {ServiceCards.map((card) => (
+                  <article className="tseo-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. Dark band + map pack mockup */}
+          <section className="tseo-band">
+            <div className="tseo-band-grid">
+              <div className="tseo-band-content">
+                <p className="tseo-eyebrow">The Map Pack Is The Market</p>
+                <h2 className="tseo-h2">
+                  We put your real estate business in the top three — and keep it
+                  there
+                </h2>
+                <p className="tseo-lead">
+                  The map pack gets the majority of clicks and nearly all of the
+                  buyer and seller inquiries, and that is exactly where we
+                  specialize. Every campaign is built around one goal: earning
+                  your business those top spots for the real estate searches and
+                  neighborhoods that pay you best, then strengthening them month
+                  after month.
+                </p>
+                <p className="tseo-lead">
+                  We work the signals Google actually rewards: proximity,
+                  relevance, and prominence. A fully built-out profile tells
+                  Google exactly which markets and services you cover, consistent
+                  citations confirm you are who you say you are, and a steady flow
+                  of reviews and local content proves buyers and sellers love
+                  working with you. And if a listing ever gets suspended, our{" "}
                   <Link
-                    href="/services/real-estate-marketing-agency"
-                    className="realest-inline-link"
+                    href="/services/gmb-reinstatement-help"
+                    className="tseo-inline-link"
                   >
-                    real estate marketing
+                    Google Business Profile reinstatement
                   </Link>{" "}
-                  efforts.
+                  team gets you back on the map fast.
                 </p>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  See Where You Rank Today
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+
+              <div className="tseo-mappack" aria-hidden="true">
+                <div className="tseo-mappack-map">
+                  <span className="tseo-map-pin tseo-map-pin--a">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--you">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--b">
+                    <FiMapPin />
+                  </span>
+                </div>
+                <div className="tseo-mappack-bar">
+                  <FiSearch />
+                  realtor near me
+                </div>
+                <div className="tseo-mappack-list">
+                  <p className="tseo-mappack-title">Google · Local results</p>
+                  <div className="tseo-mappack-row tseo-mappack-row--you">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Your Real Estate Team</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.9 (198) · Real estate agency ·{" "}
+                        <span className="tseo-mappack-open">Open now</span>
+                      </span>
+                    </span>
+                    <span className="tseo-mappack-badge">
+                      That&apos;s you
+                    </span>
+                    <span className="tseo-mappack-actions">
+                      <span className="tseo-mappack-action">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-mappack-action tseo-mappack-action--ghost">
+                        <FiArrowUpRight />
+                        Directions
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Realty Group</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.6 (98) · Real estate agency
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Brokerage</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.4 (61) · Real estate agency
+                      </span>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
+          </section>
 
-            <div className="realest-sec-4-point">
-              <div className="realest-sec-4-badge">02</div>
-              <div className="realest-sec-4-copy">
-                <h3>More High-Intent Buyer and Seller Leads</h3>
-                <p>
-                  Instead of chasing cold prospects, you attract motivated
-                  buyers, sellers, and investors who are already searching for
-                  the services you offer online.
-                </p>
+          {/* 5. Process */}
+          <section className="tseo-process" id="tseo-process">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">How It Works</p>
+                  <h2 className="tseo-h2">
+                    From invisible to unavoidable in four steps
+                  </h2>
+                </div>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-link-arrow"
+                  offset={120}
+                >
+                  Start with step one <FiArrowUpRight aria-hidden="true" />
+                </HashScrollLink>
               </div>
-            </div>
+              <div className="tseo-bento">
+                {/* 01 — featured */}
+                <article className="tseo-bento-card tseo-bento-card--s1">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      01
+                    </span>
+                    <span className="tseo-bento-tag">Week 1</span>
+                  </div>
+                  <h3>Free real estate visibility audit</h3>
+                  <p>
+                    We audit your rankings, profile, citations, reviews, and
+                    competitors — and show you exactly where the buyer and seller
+                    leads you are missing are going instead.
+                  </p>
+                  <div className="tseo-bento-visual" aria-hidden="true">
+                    <p className="tseo-bento-visual-title">
+                      Where real estate clients typically land after 90 days
+                    </p>
+                    {[
+                      { label: "Profile strength", val: 92 },
+                      { label: "Citation accuracy", val: 96 },
+                      { label: "Review velocity", val: 84 },
+                    ].map((bar) => (
+                      <div className="tseo-bento-bar-row" key={bar.label}>
+                        <div className="tseo-bento-bar-head">
+                          <span>{bar.label}</span>
+                          <span>{bar.val}%</span>
+                        </div>
+                        <div className="tseo-bento-bar-track">
+                          <span
+                            className="tseo-bento-bar-fill"
+                            style={{ width: `${bar.val}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
 
-            <div className="realest-sec-4-point">
-              <div className="realest-sec-4-badge">03</div>
-              <div className="realest-sec-4-copy">
-                <h3>Greater Trust, Authority, and Click-Through Rates</h3>
-                <p>
-                  Top rankings in Google Search and Google Maps make your real
-                  estate brand look more credible, more established, and more
-                  trustworthy to potential clients.
-                </p>
-              </div>
-            </div>
+                {/* 02 */}
+                <article className="tseo-bento-card tseo-bento-card--s2">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      02
+                    </span>
+                    <span className="tseo-bento-tag">Weeks 2–4</span>
+                  </div>
+                  <h3>Strategy &amp; foundation fixes</h3>
+                  <p>
+                    A keyword-mapped plan for your markets and neighborhoods, then
+                    the foundation work: profile optimization, citation cleanup,
+                    and on-page fixes.
+                  </p>
+                </article>
 
-            <div className="realest-sec-4-point">
-              <div className="realest-sec-4-badge">04</div>
-              <div className="realest-sec-4-copy">
-                <h3>Predictable Long-Term Organic Growth</h3>
-                <p>
-                  Unlike short-term lead platforms, SEO builds a durable source
-                  of traffic and inquiries that keeps working as your authority
-                  and local presence improve.
-                </p>
-              </div>
-            </div>
-
-            <div className="realest-sec-4-point">
-              <div className="realest-sec-4-badge">05</div>
-              <div className="realest-sec-4-copy">
-                <h3>Better Website Conversion Performance</h3>
-                <p>
-                  A well-optimized real estate website converts search traffic
-                  into valuation requests, property inquiries, showing
-                  appointments, and listing consultations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="realest-sec-5">
-        <Row>
-          <Col lg={7}>
-            <div className="realest-sec-5-content">
-              <h2 className="realest-sec-5-heading">
-                A Real Estate SEO Company Built to Turn Search Traffic Into Real
-                Closings
-              </h2>
-
-              <div>
-                <p className="realest-sec-5-descrp">
-                  Most real estate websites are built to look polished but are
-                  not structured to rank for competitive local keywords or
-                  convert serious buyers and sellers once they land on the page.
-                  That is why many agents get traffic without consistent
-                  inquiries, calls, or listing opportunities.
-                </p>
-
-                <p className="realest-sec-5-descrp">
-                  Zonic Media approaches real estate SEO as a complete growth
-                  system. We combine{" "}
-                  <Link
-                    href="/services/local-seo-for-home-services"
-                    className="realest-inline-link"
+                {/* 03 — dark */}
+                <article className="tseo-bento-card tseo-bento-card--s3">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      03
+                    </span>
+                    <span className="tseo-bento-tag">Every month</span>
+                  </div>
+                  <h3>Build authority every month</h3>
+                  <p>
+                    Local content, links, review growth, and profile activity —
+                    the compounding signals that move you up the map pack and
+                    keep you there through every listing season.
+                  </p>
+                  <div className="tseo-bento-chips">
+                    {["Local content", "Review growth", "Profile activity"].map(
+                      (chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ),
+                    )}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn tseo-bento-cta"
+                    offset={120}
                   >
-                    local SEO
-                  </Link>{" "}
-                  and local keyword targeting, Google Business
-                  Profile optimization, technical SEO, on-page conversion
-                  improvements, and market-focused content to help agents,
-                  brokerages, and real estate teams generate more qualified
-                  buyer leads, seller leads, and long-term organic visibility.
+                    Start Growing Today
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </article>
+
+                {/* 04 — wide */}
+                <article className="tseo-bento-card tseo-bento-card--s4">
+                  <div className="tseo-bento-s4-copy">
+                    <div className="tseo-bento-head">
+                      <span className="tseo-bento-num" aria-hidden="true">
+                        04
+                      </span>
+                      <span className="tseo-bento-tag">Ongoing</span>
+                    </div>
+                    <h3>Report, refine, expand</h3>
+                    <p>
+                      Monthly reporting tied to calls and buyer and seller leads,
+                      not vanity metrics. As rankings lock in, we expand to more
+                      neighborhoods and more markets.
+                    </p>
+                  </div>
+                  <div className="tseo-bento-s4-side">
+                    <div className="tseo-bento-chips">
+                      {[
+                        "Plain-English report",
+                        "New neighborhoods",
+                        "New markets",
+                      ].map((chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-link-arrow"
+                      offset={120}
+                    >
+                      Start with the free audit{" "}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </HashScrollLink>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* 5c. Results */}
+          <section className="tseo-results">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Real Results</p>
+                <h2 className="tseo-h2">
+                  What happens when real estate SEO is done properly
+                </h2>
+                <p className="tseo-lead">
+                  Different markets, different seasons — the same system,
+                  executed month after month.
                 </p>
               </div>
-            </div>
-          </Col>
-
-          <Col lg={5}>
-            <div className="realest-sec-5-img-cont">
-              <Image
-                src="/images/real-est-industries/realest-img-3.jpg"
-                fill
-                alt="Real estate marketing strategy discussion"
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="realest-sec-6">
-        <div className="realest-center-head">
-          <div className="realest-center-head-content-wrapper">
-            <h2 className="realest-sec-heading">How It Works</h2>
-            <p className="realest-sec-descrp">
-              Our real estate SEO process is designed to improve local
-              visibility, target high-intent search demand, and convert traffic
-              into buyer and seller leads that are ready to take action.
-            </p>
-          </div>
-        </div>
-
-        <Row className="realest-strategy-row">
-          <Col lg={4} className="realest-strategy-col">
-            <div className="realest-strategy-card">
-              <div className="realest-strategy-circle">
-                <span className="realest-strategy-number">01</span>
+              <div className="tseo-results-cards">
+                {ResultCards.map((card) => (
+                  <article className="tseo-result-card" key={card.industry}>
+                    <p className="tseo-result-ind">
+                      {card.icon}
+                      {card.industry}
+                    </p>
+                    <p className="tseo-result-metric">{card.metric}</p>
+                    <p className="tseo-result-label">{card.label}</p>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
               </div>
-              <h4>Market &amp; Goal Clarity</h4>
-              <p>
-                We identify your local market, ideal client profile, service
-                areas, and revenue goals so the SEO strategy targets the right
-                buyer searches, seller searches, and neighborhood demand.
-              </p>
             </div>
-          </Col>
+          </section>
 
-          <Col lg={4} className="realest-strategy-col">
-            <div className="realest-strategy-card">
-              <div className="realest-strategy-circle">
-                <span className="realest-strategy-number">02</span>
-              </div>
-              <h4>Google &amp; Website Optimization</h4>
-              <p>
-                We optimize your Google Business Profile, core landing pages,
-                technical SEO, on-page messaging, and local trust signals, and
-                help you{" "}
-                <Link
-                  href="/services/gmb-verification-help"
-                  className="realest-inline-link"
-                >
-                  verify your GBP
-                </Link>{" "}
-                so your business ranks better and converts more visitors.
-              </p>
-            </div>
-          </Col>
-
-          <Col lg={4} className="realest-strategy-col">
-            <div className="realest-strategy-card">
-              <div className="realest-strategy-circle">
-                <span className="realest-strategy-number">03</span>
-              </div>
-              <h4>Visibility &amp; Lead Growth</h4>
-              <p>
-                Once the foundation is in place, we scale rankings, local
-                authority, and lead flow through strategic content, city-page
-                expansion, reputation growth, and ongoing SEO refinement.
-              </p>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="realest-sec-7">
-        <h2 className="realest-sec-7-main-heading">Why Zonic Media</h2>
-
-        <div className="realest-sec-7-intro">
-          <h3 className="realest-sec-7-heading">
-            Built for Real Estate Lead Generation, Not Generic Marketing
-          </h3>
-          <p className="realest-sec-7-lead">
-            We do not approach real estate SEO like a generic agency campaign.
-            We build a local growth system that helps your real estate business
-            rank higher, become more visible in the markets that matter, and
-            generate consistent buyer and seller leads from Google Search and
-            Google Maps.
-          </p>
-          <p className="realest-sec-7-lead">
-            Whether you are an individual agent, a growing team, or a
-            multi-office brokerage, our focus stays the same: stronger local
-            rankings, better website performance, higher-quality inquiries, and
-            a lead generation engine you actually own.
-          </p>
-        </div>
-
-        <div className="realest-sec-7-grid">
-          <div className="realest-sec-7-image-wrap">
-            <Image
-              src="/images/real-est-industries/realest-img-4.jpg"
-              fill
-              alt="Real estate local search marketing"
-              className="realest-sec-7-image"
-            />
-          </div>
-
-          <div className="realest-sec-7-content">
-            <div className="realest-sec-7-block">
-              <h3>Google Business Profile Setup, Verification, and Growth</h3>
-              <h4>
-                Need stronger local visibility in Google Maps and local search?
-              </h4>
-              <p>
-                We help real estate businesses build or repair their Google
-                Business Profile correctly, improve category targeting, enhance
-                trust signals, and position the profile to generate more calls,
-                direction requests, and qualified local inquiries. If your
-                listing has been suspended, we can also help you{" "}
-                <Link
-                  href="/services/gmb-reinstatement-help"
-                  className="realest-inline-link"
-                >
-                  recover a suspended Google Business Profile
-                </Link>
-                .
-              </p>
-            </div>
-
-            <div className="realest-sec-7-block">
-              <h3>Local SEO That Brings Real Estate Calls and Listing Leads</h3>
-              <p>
-                From ranking for terms like &ldquo;real estate agent near
-                me,&rdquo; &ldquo;homes for sale in [city],&rdquo; and
-                seller-intent searches to building city pages and local
-                authority, along with{" "}
-                <Link
-                  href="/services/google-business-profile-services-real-estate-agents"
-                  className="realest-inline-link"
-                >
-                  GBP services for realtors
-                </Link>
-                , we make sure your business appears when buyers and sellers are
-                ready to act.
-              </p>
-            </div>
-
-            <div className="realest-sec-7-block">
-              <h3>Optimization That Improves Rankings and Conversion</h3>
-              <p>We improve your local presence with:</p>
-              <ul className="realest-sec-7-list">
-                <li>Keyword-focused business descriptions and service copy</li>
-                <li>Location targeting aligned to your real estate markets</li>
-                <li>Ongoing Google updates, content, and activity signals</li>
-                <li>Review growth strategies that build trust and authority</li>
-              </ul>
-              <p>
-                The result is stronger local rankings and more people who
-                contact your business instead of scrolling past it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="realest-sec-8">
-        <div className="realest-center-head">
-          <div className="realest-center-head-content-wrapper">
-            <h2 className="realest-sec-heading">Our Services</h2>
-            <p className="realest-sec-descrp">
-              Our real estate SEO services are built to increase local rankings,
-              improve conversion performance, and help agents, brokerages, and
-              teams generate more buyer and seller leads.
-            </p>
-          </div>
-        </div>
-
-        <Row className="g-4">
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-1.jpg"
-                  alt="Google Business Profile verification and optimization"
-                  width={500}
-                  height={350}
-                />
-              </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FaGoogle />
-                  </div>
-                  <h4>google business Profile verfication</h4>
-                </div>
-
-                <p>
-                  We help your business rank on Google Search and Maps to
-                  generate consistent organic leads.
+          {/* 6. Comparison */}
+          <section className="tseo-compare">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">The Difference</p>
+                <h2 className="tseo-h2">
+                  What you get with Zonic vs. a typical real estate SEO agency
+                </h2>
+                <p className="tseo-lead">
+                  Local SEO for lead-driven businesses is all we do, and it
+                  shows. Here is exactly what working with a dedicated local team
+                  looks like.
                 </p>
-
-                <Link
-                  href="/services/gmb-verification-help"
-                  className="realest-sec-8-link"
+              </div>
+              <div className="tseo-compare-grid">
+                <div className="tseo-compare-col tseo-compare-col--them">
+                  <h3>Typical SEO agency</h3>
+                  <p className="tseo-compare-sub">
+                    Why most real estate campaigns quietly stall
+                  </p>
+                  <ul>
+                    {CompareThem.map((item) => (
+                      <li key={item}>
+                        <FiX aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="tseo-compare-col tseo-compare-col--us">
+                  <h3>Real Estate Local SEO with Zonic Media</h3>
+                  <p className="tseo-compare-sub">
+                    Built to compound, reported like a P&amp;L
+                  </p>
+                  <ul>
+                    {CompareUs.map((item) => (
+                      <li key={item}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div
+                  className="tseo-compare-col tseo-compare-col--score"
+                  aria-hidden="true"
                 >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </Link>
+                  <h3>Local Visibility Scorecard</h3>
+                  <p className="tseo-compare-sub">
+                    A typical real estate client&apos;s first six months
+                  </p>
+                  <div className="tseo-score-rows">
+                    {ScoreRows.map((row) => (
+                      <div key={row.label}>
+                        <div className="tseo-score-head">
+                          <span>{row.label}</span>
+                          <span className="tseo-score-vals">
+                            {row.before}% → <strong>{row.after}%</strong>
+                          </span>
+                        </div>
+                        <div className="tseo-score-track">
+                          <span
+                            className="tseo-score-fill"
+                            style={
+                              { "--w": `${row.after}%` } as React.CSSProperties
+                            }
+                          />
+                          <span
+                            className="tseo-score-before"
+                            style={
+                              { "--b": `${row.before}%` } as React.CSSProperties
+                            }
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="tseo-score-legend">
+                    <span>
+                      <i className="tseo-score-legend-before" />
+                      Before Zonic
+                    </span>
+                    <span>
+                      <i />
+                      After 6 months
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-          </Col>
+          </section>
 
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-2.jpg"
-                  alt="Local SEO for real estate"
-                  width={500}
-                  height={350}
-                />
-              </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FaBullhorn />
-                  </div>
-                  <h4>Local SEO for Real Estate</h4>
+          {/* 6b. Live tracking mockups */}
+          <section className="tseo-tracking">
+            <div className="tseo-container">
+              <div className="tseo-tracking-grid">
+                <div>
+                  <p className="tseo-eyebrow">Always Measurable</p>
+                  <h2 className="tseo-h2">
+                    Watch your real estate rankings and reviews climb,{" "}
+                    <span className="tseo-hl-text">month over month</span>
+                  </h2>
+                  <p className="tseo-lead">
+                    No black box. Every campaign comes with live rank tracking
+                    for the real estate keywords that pay you, review growth
+                    monitoring, and call tracking from your profile — all rolled
+                    into one plain-English monthly report.
+                  </p>
+                  <p className="tseo-lead">
+                    If a number moves, you know why. If a number stalls, you
+                    know what we are doing about it.
+                  </p>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Get a Sample Report
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
                 </div>
 
-                <p>
-                  We run targeted paid campaigns that bring immediate high
-                  intent traffic.
+                <div className="tseo-mocks" aria-hidden="true">
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Keyword Rankings</h3>
+                      <span className="tseo-mock-tag">All improving</span>
+                    </div>
+                    <div className="tseo-rank-rows">
+                      {RankRows.map((row) => (
+                        <div className="tseo-rank-row" key={row.kw}>
+                          <span className="tseo-rank-kw">{row.kw}</span>
+                          <span className="tseo-rank-pos">{row.pos}</span>
+                          <span className="tseo-rank-delta">{row.delta}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Review Growth</h3>
+                      <span className="tseo-mock-tag">+32 this quarter</span>
+                    </div>
+                    <div className="tseo-review-score">
+                      <strong>4.9</strong>
+                      <span>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </span>
+                    </div>
+                    <p className="tseo-review-count">
+                      198 Google reviews and counting
+                    </p>
+                    <div className="tseo-review-bars">
+                      {ReviewBarHeights.map((height, index) => (
+                        <span
+                          className="tseo-review-bar"
+                          key={index}
+                          style={{ height: `${height}px` }}
+                        />
+                      ))}
+                    </div>
+                    <p className="tseo-review-bars-label">
+                      New reviews per month
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Why choose us + audit banner */}
+          <section className="tseo-why">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Why Zonic Media</p>
+                <h2 className="tseo-h2">
+                  A real estate SEO partner, not a monthly invoice
+                </h2>
+                <p className="tseo-lead">
+                  Rankings are the output. The inputs are strategy, execution,
+                  and accountability — and that is what you are actually buying.
                 </p>
-
-                <Link
-                  href="/services/gmb-optimization"
-                  className="realest-sec-8-link"
-                >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </Link>
               </div>
-            </div>
-          </Col>
-
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-3.jpg"
-                  alt="Website SEO and conversion optimization"
-                  width={500}
-                  height={350}
-                />
+              <div className="tseo-why-cards">
+                {WhyCards.map((card) => (
+                  <article className="tseo-why-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
               </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FaChartLine />
+              <div className="tseo-why-banner">
+                <div className="tseo-why-banner-text">
+                  <p className="tseo-eyebrow">Free Real Estate SEO Audit</p>
+                  <h3>See exactly how we&apos;ll grow your real estate rankings</h3>
+                  <p>
+                    We&apos;ll map your profile, citations, reviews, and
+                    rankings — and show you the clear path to the top three for
+                    the real estate searches in your market. Free, and yours to
+                    keep either way.
+                  </p>
+                  <div className="tseo-banner-checks">
+                    {BannerChecks.map((check) => (
+                      <div className="tseo-banner-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
                   </div>
-                  <h4>Website SEO and Conversion Optimization</h4>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Claim Your Free Audit
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
                 </div>
 
-                <p>
-                  Traffic alone is not enough. We optimize your website to:
-                  increase conversions, reduce bounce rates, generate more
-                  inquiries
-                </p>
-
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="realest-sec-8-link"
-                  offset={120}
-                >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
-              </div>
-            </div>
-          </Col>
-
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-4.jpg"
-                  alt="Social media growth strategy"
-                  width={500}
-                  height={350}
-                />
-              </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FiPhoneCall />
+                <div className="tseo-audit-card" aria-hidden="true">
+                  <div className="tseo-audit-head">
+                    <h4>Local Visibility Score</h4>
+                    <span className="tseo-mock-tag">After 6 months</span>
                   </div>
-                  <h4>Social Media Growth Strategy</h4>
-                </div>
-
-                <p>
-                  We prepare your business for: AI search engines, ChatGPT
-                  recommendations, Google AI Overviews
-                </p>
-
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="realest-sec-8-link"
-                  offset={120}
-                >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
-              </div>
-            </div>
-          </Col>
-
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-5.jpg"
-                  alt="AEO and GEO optimization"
-                  width={500}
-                  height={350}
-                />
-              </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FaSearch />
+                  <div className="tseo-audit-ring-wrap">
+                    <div className="tseo-audit-ring">
+                      <span>
+                        92<small>/100</small>
+                      </span>
+                    </div>
+                    <div className="tseo-audit-ring-info">
+                      <strong>Excellent</strong>
+                      <small>
+                        Where our real estate campaigns typically land after six
+                        months of compounding local SEO work
+                      </small>
+                    </div>
                   </div>
-                  <h4>AEO and GEO Optimization</h4>
+                  {AuditRows.map((row) => (
+                    <div className="tseo-audit-row" key={row.label}>
+                      <span>{row.label}</span>
+                      <span className="tseo-audit-flag">{row.flag}</span>
+                    </div>
+                  ))}
                 </div>
-
-                <p>
-                  We create strategic content that: builds trust, improves
-                  rankings, attracts qualified leads.
-                </p>
-
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="realest-sec-8-link"
-                  offset={120}
-                >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
               </div>
             </div>
-          </Col>
+          </section>
 
-          <Col lg={4}>
-            <div className="realest-sec-8-card">
-              <div className="realest-sec-8-img">
-                <Image
-                  src="/images/real-est-industries/realest-serv-6.jpg"
-                  alt="Local SEO and Google Business Profile optimization"
-                  width={500}
-                  height={350}
-                />
-              </div>
-
-              <div className="realest-sec-8-overlay">
-                <div className="realest-sec-8-head">
-                  <div className="realest-sec-8-icon">
-                    <FaPenNib />
-                  </div>
-                  <h4>Local SEO &amp; Google Business Profile optimization</h4>
-                </div>
-
-                <p>
-                  We create strategic content that: builds trust, improves
-                  rankings, attracts qualified leads.
-                </p>
-
-                <HashScrollLink
-                  href="#realest-contact-form"
-                  className="realest-sec-8-link"
-                  offset={120}
-                >
-                  LEARN MORE <span>&gt;&gt;</span>
-                </HashScrollLink>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="realest-sec-9">
-        <h2 className="realest-sec-9-heading">What Our Clients Say</h2>
-
-        <div className="realest-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
-
-      <div className="realest-sec-10">
-        <div className="realest-center-head">
-          <div className="realest-center-head-content-wrapper">
-            <h2 className="realest-sec-heading">
-              Frequently Asked Questions About Real Estate SEO &amp; Lead
-              Generation
-            </h2>
-          </div>
-        </div>
-
-        <div className="realest-sec-10-faq-wrapper">
-          <GmbFaqs items={RealEstateFaqs} columns={2} />
-        </div>
-
-        <Script
-          id="realest-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/real-estate-seo-services",
-              mainEntity: RealEstateFaqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      </div>
-
-      <div className="realest-sec-11">
-        <div className="realest-sec-11-inner">
-          <div className="realest-sec-11-content">
-            <h2 className="realest-sec-11-heading">
-              Ready to Grow with a Real Estate SEO Company Focused on Leads and
-              Local Rankings?
-            </h2>
-            <p className="realest-sec-11-descrp">
-              Book a discovery call with Zonic Media and let&apos;s build a real
-              estate SEO strategy designed to improve Google rankings,
-              strengthen Google Business Profile visibility, and generate more
-              qualified buyer and seller leads for your market.
-            </p>
-
-            <div className="realest-sec-11-info-grid">
-              <div className="realest-sec-11-info-card">
-                <div className="realest-sec-11-info-head">
-                  <div className="realest-sec-11-info-icon">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <h3>Our Office</h3>
-                </div>
-                <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
-                  <br />
-                  United States
-                </a>
-              </div>
-
-              <div className="realest-sec-11-info-card">
-                <div className="realest-sec-11-info-head">
-                  <div className="realest-sec-11-info-icon">
-                    <FiPhoneCall />
-                  </div>
-                  <h3>Contact Us</h3>
-                </div>
-                <a href={SITE_CONTACT.emailHref}>{SITE_CONTACT.email}</a>
-                <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a>
-              </div>
-            </div>
-
-            <div className="realest-sec-11-image-wrap">
-              <Image
-                src="/images/contact-section.jpg"
-                fill
-                alt="Real estate consultation and contact"
-                className="realest-sec-11-image"
-              />
-            </div>
-          </div>
-
-          <div
-            className="realest-sec-11-contact-form"
-            id="realest-contact-form"
+          {/* 8. Reviews */}
+          <section
+            className="tseo-reviews"
+            aria-labelledby="tseo-reviews-title"
           >
-            <LeadContactForm
-              leadFormTitle={RealEstateFormHead.leadFormTitle}
-              leadCallText={RealEstateFormHead.leadCallText}
-              submitButtonText="Contact Us"
-            />
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Verified Client Reviews</p>
+                <h2 className="tseo-h2" id="tseo-reviews-title">
+                  Trusted by small &amp; mid-size businesses across the US
+                </h2>
+              </div>
+              <div className="tseo-reviews-widget">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#2567e8"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* 9. Marquee */}
+          <div className="tseo-marquee" aria-hidden="true">
+            <div className="tseo-marquee-track">
+              {[0, 1].map((copy) => (
+                <span className="tseo-marquee-item" key={copy}>
+                  {MarqueeItems.map((item) => (
+                    <span className="tseo-marquee-item" key={item}>
+                      {item} <FaStar aria-hidden="true" />
+                    </span>
+                  ))}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+
+          {/* 10. Industries / nationwide */}
+          <section className="tseo-nationwide">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Wherever You Work</p>
+                <h2 className="tseo-h2">
+                  Local SEO for real estate agents in every market in the US
+                </h2>
+                <p className="tseo-lead">
+                  From solo agents to multi-office brokerages, we run local SEO
+                  campaigns in every state. Everything happens remotely — audits,
+                  strategy calls, reporting — so you get the same process whether
+                  you are in Delaware, Texas, or California.
+                </p>
+              </div>
+              <div className="tseo-coverage" aria-hidden="true">
+                {[
+                  { city: "Dover, DE", win: "#1 Map Pack", top: "26%", left: "78%" },
+                  { city: "Philadelphia, PA", win: "Top 3", top: "12%", left: "58%" },
+                  { city: "Miami, FL", win: "+3× leads", top: "68%", left: "70%" },
+                  { city: "Austin, TX", win: "+212% calls", top: "66%", left: "34%" },
+                  { city: "Denver, CO", win: "Top 3", top: "24%", left: "22%" },
+                  { city: "Phoenix, AZ", win: "#1 rankings", top: "58%", left: "10%" },
+                ].map((pin) => (
+                  <span
+                    className="tseo-coverage-pin"
+                    style={{ top: pin.top, left: pin.left }}
+                    key={pin.city}
+                  >
+                    <FiMapPin />
+                    {pin.city}
+                    <em>{pin.win}</em>
+                  </span>
+                ))}
+                <div className="tseo-coverage-core">
+                  <strong>50+</strong>
+                  <span>
+                    local businesses growing
+                    <br />
+                    across the United States
+                  </span>
+                </div>
+              </div>
+              <div className="tseo-chips">
+                {NationwideChips.map((chip) => (
+                  <span className="tseo-chip" key={chip}>
+                    {chip}
+                  </span>
+                ))}
+              </div>
+              <div className="tseo-nationwide-cta">
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  Get Your Free Audit
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+            </div>
+          </section>
+
+          {/* 11. FAQs */}
+          <section className="tseo-faqs" id="tseo-faqs">
+            <div className="tseo-container">
+              <div className="tseo-split-grid">
+                <div>
+                  <p className="tseo-eyebrow">FAQs</p>
+                  <h2 className="tseo-h2">
+                    Straight answers about real estate SEO
+                  </h2>
+                  <p className="tseo-lead">
+                    Pricing, timelines, guarantees, and what actually moves real
+                    estate rankings. If your question is not here, send it through
+                    the form — a strategist answers, not a sales script.
+                  </p>
+                  <div className="tseo-faq-cta">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Ask About Your Market
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                  </div>
+                </div>
+                <div>
+                  <GmbFaqs items={RealEstateSeoFaqs} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 12. Grow further — internal links */}
+          <section className="tseo-grow">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Grow Further</p>
+                <h2 className="tseo-h2">
+                  Rankings are step one. Here is what multiplies them.
+                </h2>
+              </div>
+              <div className="tseo-grow-cards">
+                {GrowCards.map((card) => (
+                  <Link
+                    href={card.href}
+                    className="tseo-grow-card"
+                    key={card.href}
+                  >
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                    <span className="tseo-grow-link">
+                      {card.cta} <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 13. Lead form */}
+          <section className="tseo-form-sec" id="tseo-form">
+            <div className="tseo-container">
+              <div className="tseo-form-grid">
+                <aside className="tseo-form-aside">
+                  <p className="tseo-eyebrow">Get Started</p>
+                  <h2 className="tseo-h2">
+                    Claim your free real estate local SEO audit
+                  </h2>
+                  <p className="tseo-lead">
+                    Tell us about your real estate business and we will send a
+                    full local visibility audit — rankings, profile, citations,
+                    reviews — plus a flat-price growth plan to take you to the
+                    top of your market.
+                  </p>
+                  <div className="tseo-form-contacts">
+                    <a
+                      href={SITE_CONTACT.emailHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.phoneHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Speak with a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Visit our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
+                  </div>
+                </aside>
+                <div className="tseo-form-main">
+                  <ServiceLeadForm
+                    formType="local-seo"
+                    badge="Free Audit"
+                    title="Get your free real estate SEO audit"
+                    subtitle="No contracts, no pressure — just a clear picture of where your real estate business stands and what it takes to win your market."
+                    submitText="Send My Free Audit"
+                    messageLabel="Tell us about your real estate business"
+                    messagePlaceholder="Your markets, your city, and what you'd like to improve"
+                    defaultServices={["Local SEO"]}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
 
+      {/* 14. Global site footer */}
       <Footer />
     </>
   );
 }
 
-export default page;
+export default Page;

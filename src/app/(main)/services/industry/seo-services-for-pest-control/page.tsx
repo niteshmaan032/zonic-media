@@ -1,736 +1,1675 @@
+/*
+ * SEO SERVICES FOR PEST CONTROL — revamped July 2026 onto the approved local SEO
+ * template layout (see /services/template-seo). Design/classes come from
+ * templateSeo.css (scoped under .tseo-page); all copy, mockups, FAQs, and
+ * schema are pest-control-specific. Form leads submit as service "Local SEO"
+ * (on the API whitelist).
+ *
+ * ==========================================================================
+ * OLD IMPLEMENTATION — kept commented for reference during the revamp.
+ * ==========================================================================
+ *
+ * import type { Metadata } from "next";
+ * import "@/app/style/pestSeo.css";
+ * import "@/app/style/carTow.css";
+ * import ClutchWidget from "@/app/components/ClutchWidget";
+ * import InlineAuditForm from "@/app/components/InlineAuditForm";
+ * import Footer from "@/app/components/Footer";
+ * import GmbFaqs from "@/app/components/GmbFaqs";
+ * import HashScrollLink from "@/app/components/HashScrollLink";
+ * import LeadContactForm from "@/app/components/LeadContactForm";
+ * import { SITE_CONTACT } from "@/shared/siteConfig";
+ * import Image from "next/image";
+ * import Link from "next/link";
+ * import Script from "next/script";
+ * import { Col, Row } from "react-bootstrap";
+ * import { FaEye } from "react-icons/fa";
+ * import { FaCircleDollarToSlot, FaListCheck, FaMapLocationDot } from "react-icons/fa6";
+ * import { FiPhoneCall } from "react-icons/fi";
+ * import { LuCalendarCheck2 } from "react-icons/lu";
+ * import { MdOutlineLocationOn } from "react-icons/md";
+ * import { RiLineChartLine } from "react-icons/ri";
+ * import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+ *
+ * const pestFaqs = [
+ *   { question: "What is pest control SEO?", answer: "Pest control SEO is the process of improving your rankings on Google Search and Google Maps so homeowners and commercial customers can find your business when they need pest control services." },
+ *   { question: "How can SEO help my pest control company get more leads?", answer: "SEO helps your company appear for high-intent searches like pest control near me, termite treatment, rodent control, and exterminator services, which leads to more calls and booked inspections." },
+ *   { question: "How long does pest control SEO take to work?", answer: "Most pest control businesses begin seeing ranking improvements within a few months, with stronger lead flow building as your map visibility, website authority, and local trust improve." },
+ *   { question: "Is Google Maps important for pest control companies?", answer: "Yes. Many homeowners choose from the top Google Maps results when they need a nearby exterminator or urgent pest inspection." },
+ *   { question: "Is SEO better than paid ads for pest control?", answer: "SEO builds long-term visibility and lowers lead cost over time, while paid ads can drive faster short-term traffic. Many pest control companies benefit from combining both." },
+ *   { question: "What pest control keywords should be targeted?", answer: "Important keywords include pest control near me, exterminator, termite treatment, rodent control, bed bug treatment, cockroach control, and local service-area terms." },
+ *   { question: "Can Zonic Media help my pest control business rank on Google Maps?", answer: "Yes. We optimize your Google Business Profile, local listings, service pages, reviews, and location authority to improve Google Maps visibility." },
+ *   { question: "Why choose Zonic Media for pest control SEO services?", answer: "We focus on real business growth, stronger local visibility, and campaigns designed to generate qualified pest control calls and bookings instead of vanity metrics." },
+ * ];
+ *
+ * Old internal links: /services/pest-control-marketing-agency, /services/local-seo-for-home-services,
+ * /services/gmb-optimization, /services/web-design, /services/google-ads,
+ * /services/gmb-verification-help, /services/gmb-reinstatement-help.
+ *
+ * (Full previous hero/process/map/why/services/results/contact JSX preserved in
+ *  git history. Replaced wholesale by the template layout below.)
+ */
+
 import type { Metadata } from "next";
-import "@/app/style/pestSeo.css";
-import "@/app/style/carTow.css";
+import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
-import InlineAuditForm from "@/app/components/InlineAuditForm";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { Col, Row } from "react-bootstrap";
-import { FaEye } from "react-icons/fa";
-import { FaCircleDollarToSlot, FaListCheck, FaMapLocationDot } from "react-icons/fa6";
-import { FiPhoneCall } from "react-icons/fi";
-import { LuCalendarCheck2 } from "react-icons/lu";
-import { MdOutlineLocationOn } from "react-icons/md";
-import { RiLineChartLine } from "react-icons/ri";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { FaStar } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
+import {
+  FiArrowUpRight,
+  FiClock,
+  FiFileText,
+  FiImage,
+  FiLink2,
+  FiMail,
+  FiMapPin,
+  FiPhoneCall,
+  FiSearch,
+  FiStar,
+  FiTrendingUp,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+const PAGE_PATH = "/services/industry/seo-services-for-pest-control";
+
+export const metadata: Metadata = {
+  title: "SEO for Pest Control That Wins Local Jobs",
+  description:
+    "SEO for pest control that turns 'exterminator near me' and 'pest control near me' searches into booked treatments — GBP, citations, reviews & rankings. Get a free audit.",
+  keywords: [
+    "SEO for pest control",
+    "pest control near me",
+    "exterminator near me",
+    "termite treatment",
+    "bed bug removal",
+    "rodent control",
+    "pest control SEO company",
+    "SEO for exterminators",
+    "local SEO for pest control",
+    "Google Business Profile for pest control",
+    "pest control lead generation",
+  ],
+  alternates: { canonical: PAGE_PATH },
+  openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
+    title: "SEO for Pest Control That Wins Local Jobs | Zonic Media",
+    description:
+      "SEO for pest control that turns 'exterminator near me' and 'pest control near me' searches into booked treatments — profile optimization, citations, reviews, and service-area pages.",
+    url: PAGE_PATH,
+    type: "website",
+  },
+};
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Pest Control SEO", url: "/services/industry/seo-services-for-pest-control" },
+  { name: "SEO for Pest Control", url: PAGE_PATH },
 ]);
 
-const pestFaqs = [
-  {
-    question: "What is pest control SEO?",
-    answer:
-      "Pest control SEO is the process of improving your rankings on Google Search and Google Maps so homeowners and commercial customers can find your business when they need pest control services.",
-  },
-  {
-    question: "How can SEO help my pest control company get more leads?",
-    answer:
-      "SEO helps your company appear for high-intent searches like pest control near me, termite treatment, rodent control, and exterminator services, which leads to more calls and booked inspections.",
-  },
-  {
-    question: "How long does pest control SEO take to work?",
-    answer:
-      "Most pest control businesses begin seeing ranking improvements within a few months, with stronger lead flow building as your map visibility, website authority, and local trust improve.",
-  },
-  {
-    question: "Is Google Maps important for pest control companies?",
-    answer:
-      "Yes. Many homeowners choose from the top Google Maps results when they need a nearby exterminator or urgent pest inspection.",
-  },
-  {
-    question: "Is SEO better than paid ads for pest control?",
-    answer:
-      "SEO builds long-term visibility and lowers lead cost over time, while paid ads can drive faster short-term traffic. Many pest control companies benefit from combining both.",
-  },
-  {
-    question: "What pest control keywords should be targeted?",
-    answer:
-      "Important keywords include pest control near me, exterminator, termite treatment, rodent control, bed bug treatment, cockroach control, and local service-area terms.",
-  },
-  {
-    question: "Can Zonic Media help my pest control business rank on Google Maps?",
-    answer:
-      "Yes. We optimize your Google Business Profile, local listings, service pages, reviews, and location authority to improve Google Maps visibility.",
-  },
-  {
-    question: "Why choose Zonic Media for pest control SEO services?",
-    answer:
-      "We focus on real business growth, stronger local visibility, and campaigns designed to generate qualified pest control calls and bookings instead of vanity metrics.",
-  },
-];
-
-const formHead = {
-  leadFormTitle: "Ready to Get More Pest Control Leads?",
-  leadCallText: (
-    <>
-      Let&apos;s build a local SEO strategy that drives more calls, stronger
-      rankings, and booked pest control jobs every month.
-      <br />{" "}
-      <a href="tel:+13027269736" className="lead-call-link">
-        Call Now:(302) 726-9736
-      </a>
-    </>
-  ),
-};
-
-const processSteps = [
-  { step: "01", label: "Local SEO Audit & Competitor Analysis" },
-  { step: "02", label: "Keyword Strategy for Pest Control Services" },
-  { step: "03", label: "Website & On-Page SEO Optimization" },
-  { step: "04", label: "Local Citations & Listings, Local Link Building" },
-  { step: "05", label: "Reviews & Reputation Management" },
-  { step: "06", label: "Tracking, Reporting & Scaling" },
-];
-
-const mapCards = [
-  {
-    icon: <FaListCheck />,
-    yellow: true,
-    title: "Rank in the local pack",
-    desc: "Show up where nearby homeowners are searching when pest problems need immediate attention.",
-  },
-  {
-    icon: <FaEye />,
-    title: "Optimize your Google Business Profile",
-    desc: "Strengthen map visibility, service categories, and local trust signals across your listing.",
-  },
-  {
-    icon: <FaMapLocationDot />,
-    yellow: true,
-    title: "Increase reviews and trust",
-    desc: "Build stronger credibility so customers choose your pest control company over nearby competitors.",
-  },
-  {
-    icon: <FaCircleDollarToSlot />,
-    title: "Capture nearby pest control searches",
-    desc: "Reduce dependence on paid ads by earning steady organic calls from your service areas.",
-  },
-];
-
-const whyChooseItems = [
-  "More calls from customers ready to book",
-  "Increased visibility in your service areas",
-  "Higher rankings for pest control services",
-  "Transparent reporting and performance tracking",
-  "A strategy built specifically for pest control businesses",
-];
-
-const services = [
-  "GBP Optimization",
-  "Technical SEO",
-  "Local Keywords",
-  "Reviews & Reputation",
-  "Service Area SEO",
-  "Backlinks",
-  "On-Page SEO",
-  "Landing Pages",
-];
-
-export const metadata: Metadata = {
-  title: "SEO Services for Pest Control Companies",
+// NOTE: never add aggregateRating to a Service schema — GSC flags it.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "SEO for Pest Control",
+  serviceType: "Local Search Engine Optimization for Pest Control Companies",
+  url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Pest control SEO services that help exterminators rank higher on Google, dominate local search, and generate more calls and booked inspections.",
-  keywords: [
-    "pest control SEO services",
-    "local SEO for pest control companies",
-    "pest control marketing agency",
-    "pest control lead generation",
-    "Google Maps ranking for pest control",
-    "Google Business Profile for exterminators",
-    "exterminator SEO",
-    "termite treatment SEO",
-    "rodent control leads",
-    "pest control company marketing",
-  ],
-  alternates: { canonical: "/services/industry/seo-services-for-pest-control" },
+    "SEO for pest control companies covering Google Business Profile optimization, citation building, review growth, on-page SEO, and service-area content — built to rank exterminators in the Google map pack and grow booked treatments.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Zonic Media",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Pest control companies, exterminators, termite and wildlife control businesses",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Pest Control Local SEO Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Business Profile Optimization for Pest Control",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Pest Control Keyword & Competitor Research",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Citation & Listing Management" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Review Growth & Reputation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Page SEO & Service-Area Pages",
+        },
+      },
+    ],
+  },
 };
 
-function page() {
+const PestSeoFaqs = [
+  {
+    question: "What's included in your pest control SEO services?",
+    answer:
+      "Every pest control campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your termite, rodent, bed bug, and service-area pages, local content, and a monthly report that shows rankings, calls, and booked treatments — not vanity metrics.",
+  },
+  {
+    question: "How long does pest control SEO take to show results?",
+    answer:
+      "Most pest control companies see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'exterminator near me' and 'termite treatment.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds ahead of every pest season.",
+  },
+  {
+    question: "How much do local SEO services for pest control cost?",
+    answer:
+      "Pricing depends on how many locations you run, how competitive your market is, and how aggressively you want to grow across pest seasons. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
+  },
+  {
+    question: "Do you guarantee first-page Google rankings for pest control keywords?",
+    answer:
+      "Our track record speaks for itself — most pest control clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
+  },
+  {
+    question: "Do pest control companies really need Google Business Profile optimization?",
+    answer:
+      "Yes — it is the single biggest lever in pest control local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for an exterminator or urgent pest inspection, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and customers choose it.",
+  },
+  {
+    question: "Can you help seasonal or multi-location pest control companies?",
+    answer:
+      "Absolutely. We build local SEO systems for single-location exterminators and multi-location pest control brands alike — service-area targeting, individual location pages, and seasonal content for termite, mosquito, and rodent demand, all reported in one clear dashboard.",
+  },
+  {
+    question: "Why choose Zonic Media over another pest control SEO company?",
+    answer:
+      "We specialize in local home-service businesses like pest control, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked treatments, and work that is built to compound season after season — not churn.",
+  },
+];
+
+const pestSeoFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  mainEntity: PestSeoFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const HeroStats = [
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    num: "50+",
+    label: "Local & home-service businesses ranked",
+  },
+  {
+    icon: <FaStar aria-hidden="true" />,
+    num: "4.9/5",
+    label: "Average client rating on Clutch",
+  },
+  {
+    icon: <FiClock aria-hidden="true" />,
+    num: "60–90",
+    label: "Days to measurable movement",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    num: "100%",
+    label: "In-house work — nothing outsourced",
+  },
+];
+
+const BannerChecks = [
+  "Your pest control map pack growth plan",
+  "Profile wins ready to unlock",
+  "Citation opportunities mapped",
+  "Review growth roadmap",
+];
+
+const AuditRows = [
+  { label: "Google Business Profile", flag: "A+ grade" },
+  { label: "Citations & listings", flag: "100% accurate" },
+  { label: "Review velocity", flag: "Ahead of top 3" },
+];
+
+const ProblemChecks = [
+  "Map pack ranking strategy",
+  "Profile fully optimized",
+  "Citations cleaned & built",
+  "Reviews growing weekly",
+];
+
+const ServiceCards = [
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: (
+      <>
+        Your profile is your new homepage in the map pack. We optimize every
+        field, pest control category, photo, and post — the same system behind
+        our{" "}
+        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+          GBP optimization service
+        </Link>{" "}
+        — so Google trusts it and homeowners choose you.
+      </>
+    ),
+  },
+  {
+    icon: <FiSearch aria-hidden="true" />,
+    title: "Pest Control Keyword & Competitor Research",
+    desc: "We map every search your customers actually type — exterminator near me, termite treatment, bed bug removal, rodent control — city by city, and build the exact strategy that wins those searches for you.",
+  },
+  {
+    icon: <FiLink2 aria-hidden="true" />,
+    title: "Citations & Listing Management",
+    desc: "Consistent name, address, and phone across every directory that matters — including the pest control and contractor listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
+  },
+  {
+    icon: <FiStar aria-hidden="true" />,
+    title: "Review Growth & Reputation",
+    desc: "A steady stream of real reviews from real homeowners, with responses that show Google — and the next customer comparing exterminators — that somebody is home.",
+  },
+  {
+    icon: <FiFileText aria-hidden="true" />,
+    title: "On-Page SEO & Service-Area Pages",
+    desc: (
+      <>
+        Service and city pages built around real pest control searches, with
+        schema and internal links that make every page easier to rank — backed
+        by conversion-first{" "}
+        <Link href="/services/web-design" className="tseo-inline-link">
+          website design
+        </Link>{" "}
+        when your site needs it.
+      </>
+    ),
+  },
+  {
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Tracking & Monthly Reporting",
+    desc: "Rankings, calls, direction requests, and booked-treatment leads in one plain-English report. You always know what we did, what moved, and what is next.",
+  },
+];
+
+const ResultCards = [
+  {
+    icon: <FiPhoneCall aria-hidden="true" />,
+    industry: "Residential Pest Control",
+    metric: "+212%",
+    label: "Calls from Google Business Profile",
+    desc: "From page-two invisibility to top-three map pack rankings for 'exterminator near me' across every service city within one pest season.",
+  },
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    industry: "Termite & Wildlife",
+    metric: "Top 3",
+    label: "Map pack for every core keyword",
+    desc: "A profile rebuild, citation cleanup, and review growth took the company from #11 to the top three before termite swarm season peaked.",
+  },
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    industry: "Commercial Pest Control",
+    metric: "3.2×",
+    label: "More booked jobs from local search",
+    desc: "Service-area and city pages turned seasonal mosquito and rodent spikes into a steady, year-round pest control pipeline.",
+  },
+];
+
+const ScoreRows = [
+  { label: "Profile strength", before: 34, after: 92 },
+  { label: "Citation accuracy", before: 41, after: 96 },
+  { label: "Review velocity", before: 22, after: 78 },
+  { label: "Map pack visibility", before: 18, after: 84 },
+];
+
+const RankRows = [
+  { kw: "exterminator near me", pos: "#1", delta: "▲ 5" },
+  { kw: "termite treatment [city]", pos: "#2", delta: "▲ 7" },
+  { kw: "bed bug removal near me", pos: "#1", delta: "▲ 4" },
+  { kw: "pest control near me", pos: "#3", delta: "▲ 8" },
+];
+
+const ReviewBarHeights = [28, 36, 44, 52, 58, 68, 74];
+
+const CompareThem = [
+  "Set-and-forget profile, updated quarterly at best",
+  "Reports full of impressions, empty of service calls",
+  "Offshore link packages and duplicate citations",
+  "One account manager for 80 clients",
+  "12-month contracts before you see a single lead",
+];
+
+const CompareUs = [
+  "Profile worked weekly — posts, photos, Q&A, pest control categories",
+  "Reporting tied to calls, direction requests, and booked treatments",
+  "Hand-built citations and local links that compound",
+  "A dedicated strategist who knows your pest control market",
+  "Month-to-month — we keep you with results, not paperwork",
+];
+
+const WhyCards = [
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Home services is all we do",
+    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked treatments for pest control and home-service contractors is the entire practice.",
+  },
+  {
+    icon: <FiZap aria-hidden="true" />,
+    title: "Fast, compounding execution",
+    desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into peak termite, mosquito, and rodent demand. Every month of work stacks on the last.",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Transparent to a fault",
+    desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
+  },
+];
+
+const MarqueeItems = [
+  "Pest Control SEO",
+  "Exterminator Rankings",
+  "Google Business Profile",
+  "Map Pack Rankings",
+  "Termite Treatment Leads",
+  "Review Growth",
+  "Service-Area Pages",
+];
+
+const NationwideChips = [
+  "Termite Control",
+  "Bed Bugs",
+  "Rodent Control",
+  "Ant Control",
+  "Mosquito Control",
+  "Wildlife Removal",
+  "Commercial Pest",
+  "Quarterly Plans",
+];
+
+const GrowCards = [
+  {
+    href: "/services/gmb-optimization",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: "Most homeowners pick a pest control company straight from the map pack. We optimize your profile so that company is you.",
+    cta: "Optimize your profile",
+  },
+  {
+    href: "/services/web-design",
+    icon: <FiZap aria-hidden="true" />,
+    title: "Website Design",
+    desc: "Ready to convert more of the traffic you earn? Conversion-first pest control websites that turn visitors into booked treatments.",
+    cta: "See website design",
+  },
+  {
+    href: "/services/google-ads",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    title: "Google Ads Management",
+    desc: "Pair organic rankings with paid coverage and own the whole results page during peak termite and mosquito demand.",
+    cta: "See Google Ads",
+  },
+];
+
+function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="phila-seo-sec-1 pest-hero">
-        <div className="phila-seo-sec-1-layer">
-          <div className="phila-seo-sec-1-banner-image">
-            <Image
-              src="/images/pest-seo/ChatGPT%20Image%20May%204,%202026,%2003_09_27%20PM%201.jpg"
-              alt="Pest control near me Google Maps card"
-              width={260}
-              height={420}
-              priority
-            />
-          </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pestSeoFaqJsonLd),
+        }}
+      />
 
-          <div className="phila-seo-sec-1-content">
-            <Col lg={8} className="phila-seo-sec-1-content-wrapper">
-              <h1 className="phila-seo-sec-1-heading">
-                Get More <span>Pest Control Leads</span> Every Month With
-                Proven Local SEO
-              </h1>
-              <p className="phila-seo-sec-1-sub-head">
-                Pest Control SEO Services | Zonic Media
-              </p>
-              <p className="phila-seo-sec-1-descrp">
-                If your pest control business is not showing up when customers
-                search on Google, you are losing service calls and jobs to
-                competitors every day.
-              </p>
-              <p className="phila-seo-sec-1-descrp">
-                Zonic Media helps{" "}
-                <Link
-                  href="/services/pest-control-marketing-agency"
-                  className="pest-inline-link"
-                >
-                  pest control companies
-                </Link>{" "}
-                rank higher on Google,
-                dominate local search, and consistently generate calls from
-                customers who need extermination and prevention services right
-                now.
-              </p>
+      <div className="tseo-page">
+        <main>
+          {/* 1. Hero */}
+          <section className="tseo-hero">
+            <div className="tseo-container">
+              <div className="tseo-hero-grid">
+                <div className="tseo-hero-copy">
+                  <p className="tseo-eyebrow">SEO Services for Pest Control</p>
+                  <h1 className="tseo-hero-h1">
+                    Local SEO for pest control that{" "}
+                    <span className="tseo-hl">books more jobs</span>
+                  </h1>
+                  <p className="tseo-hero-sub">
+                    We&apos;ve helped 50+ local and home-service businesses climb
+                    into the Google map pack and grow. Zonic Media builds the
+                    full local ranking system for pest control companies — Google
+                    Business Profile, citations, reviews, and service-area
+                    content — so when homeowners search &ldquo;exterminator near
+                    me,&rdquo; they find you first.
+                  </p>
+                  <div className="tseo-hero-badges" aria-label="Partner badges">
+                    {/* Self-hosted Clutch badge — the live iframe embed is
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge"
+                        width={74}
+                        height={74}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
+                      />
+                    </a>
+                    <Image
+                      className="tseo-hero-badge"
+                      width={74}
+                      height={74}
+                      src="/images/Partner.png"
+                      alt="Yelp Advertising Partner"
+                    />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge-trustpilot"
+                        width={104}
+                        height={50}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
+                      />
+                    </a>
+                  </div>
+                  <div className="tseo-hero-ctas">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Get Your Free Pest Control SEO Audit
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                    <a href={SITE_CONTACT.phoneHref} className="tseo-btn-ghost">
+                      <FiPhoneCall aria-hidden="true" />
+                      Call {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </div>
+                  <div className="tseo-hero-proof">
+                    <span
+                      className="tseo-hero-proof-stars"
+                      aria-hidden="true"
+                    >
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </span>
+                    <p>
+                      <strong>Rated 4.9/5</strong> by the local businesses we
+                      rank
+                    </p>
+                  </div>
+                </div>
 
-              <div className="phila-seo-sec-1-ctas">
-                <HashScrollLink
-                  href="#pest-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get a Free Call
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </HashScrollLink>
+                <div className="tseo-hero-visual">
+                  <div className="tseo-hero-dash-wrap">
+                  <div className="tseo-hero-dash" aria-hidden="true">
+                    <div className="tseo-dash-head">
+                      <h3>Pest Control Local SEO Performance</h3>
+                    </div>
+                    <div className="tseo-ba-toggle-row">
+                      <span className="tseo-ba-toggle">
+                        <span className="tseo-ba-thumb" />
+                        <span className="tseo-ba-label tseo-ba-label--before">
+                          Before
+                        </span>
+                        <span className="tseo-ba-label tseo-ba-label--after">
+                          After
+                        </span>
+                      </span>
+                    </div>
+                    <div className="tseo-ba-stage">
+                      {/* AFTER state (base layer) */}
+                      <div className="tseo-ba-panel">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;exterminator near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li tseo-dash-li--you">
+                              <FiMapPin />
+                              <span>Your Pest Control Co.</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Exterminators</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Pest &amp; Termite</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-review">
+                              <FaStar />
+                              4.9 · 194 reviews
+                              <em>+32 this quarter</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">284</p>
+                              <span className="tseo-dash-delta">+212%</span>
+                            </div>
+                            <div className="tseo-dash-bars">
+                              {[26, 34, 30, 42, 50, 46, 58, 66, 62, 78, 90, 104].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#1</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.9★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>+86%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
 
-                <HashScrollLink
-                  href="#pest-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get a Quote
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </HashScrollLink>
+                      {/* BEFORE state (fading overlay) */}
+                      <div className="tseo-ba-panel tseo-ba-panel--before">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;exterminator near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Exterminators</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Pest &amp; Termite</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Bug Busters</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-li tseo-dash-li--lost">
+                              <FiMapPin />
+                              <span>Your Pest Control Co.</span>
+                              <em>#13</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">38</p>
+                              <span className="tseo-dash-delta tseo-dash-delta--down">
+                                Page 2
+                              </span>
+                            </div>
+                            <div className="tseo-dash-bars tseo-dash-bars--muted">
+                              {[48, 34, 42, 28, 36, 24, 32, 20, 28, 16, 22, 12].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#13</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.1★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>−8%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tseo-hero-floats">
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>#1 in the Map Pack</strong>
+                        &ldquo;exterminator near me&rdquo;
+                      </p>
+                    </div>
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon tseo-float-card-icon--green">
+                        <FiStar aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>+32 reviews</strong>
+                        this quarter
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="phila-seo-feature-grid">
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <MdOutlineLocationOn />
+              <div className="tseo-hero-stats">
+                {HeroStats.map((stat) => (
+                  <div className="tseo-stat" key={stat.label}>
+                    <span className="tseo-stat-icon">{stat.icon}</span>
+                    <div>
+                      <p className="tseo-stat-num">{stat.num}</p>
+                      <p className="tseo-stat-label">{stat.label}</p>
+                    </div>
                   </div>
-                  <p>RANK HIGHER ON GOOGLE</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <FiPhoneCall />
-                  </div>
-                  <p>GET MORE CALLS FROM LOCAL CUSTOMERS</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <LuCalendarCheck2 />
-                  </div>
-                  <p>BOOK MORE JOBS &amp; GROW YOUR BUSINESS</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <RiLineChartLine />
-                  </div>
-                  <p>SUSTAINABLE GROWTH THAT LASTS</p>
-                </div>
-              </div>
-            </Col>
-          </div>
-        </div>
-      </div>
-
-      <div className="roof-sec-2">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper pest-intro-copy">
-            <h2>
-              Struggling to Get Consistent <span>Pest Control</span> Leads?
-            </h2>
-            <p>
-              Turn local Google searches into real pest control jobs with a
-              strategy that puts your business right where customers are
-              looking. When homeowners search for exterminators, termite
-              treatment, rodent control, or inspections, your company should
-              appear with a strong, optimized presence.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="pest-map-grid">
-        <h2 className="pest-map-grid-heading">
-          Dominate Google Maps for Pest Control Searches
-        </h2>
-        <Row className="align-items-stretch g-4">
-          <Col lg={5}>
-            <div className="pest-map-cards">
-              {mapCards.map((item) => (
-                <div className="pest-map-card" key={item.title}>
-                  <div
-                    className={`pest-map-card-icon${item.yellow ? " yellow" : ""}`}
-                  >
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Col>
-          <Col lg={7}>
-            <div className="pest-map-image">
-              <Image
-                src="/images/pest-seo/Frame%20970%20(1).jpg"
-                alt="Pest control SEO dashboard and growth metrics"
-                fill
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="pest-growth-story">
-        <Row className="align-items-center g-4">
-          <Col lg={6}>
-            <div className="pest-growth-story-image">
-              <Image
-                src="/images/pest-seo/Frame%20970.jpg"
-                alt="Pest control team servicing a home"
-                fill
-              />
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="pest-growth-story-copy">
-              <h2>
-                Grow Your Pest Control Business with Targeted{" "}
-                <span>SEO Strategies</span>
-              </h2>
-              <p>
-                Generate consistent pest control leads every month with proven
-                <Link
-                  href="/services/local-seo-for-home-services"
-                  className="pest-inline-link"
-                >
-                  local SEO strategies
-                </Link>{" "}
-                designed to put your business in front of
-                high-intent customers right when they are searching.
-              </p>
-              <p>
-                From optimizing your{" "}
-                <Link
-                  href="/services/gmb-optimization"
-                  className="pest-inline-link"
-                >
-                  Google Business Profile
-                </Link>{" "}
-                and targeting
-                &quot;near me&quot; keywords to building strong local authority
-                and improving your{" "}
-                <Link href="/services/web-design" className="pest-inline-link">
-                  website performance
-                </Link>
-                , we focus on driving
-                real visibility that turns into calls and booked jobs.
-              </p>
-              <HashScrollLink
-                href="#pest-contact-form"
-                className="plumb-availability-cta"
-                offset={120}
-              >
-                Get Your Free Pest SEO Audit Today <span>&rarr;</span>
-              </HashScrollLink>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="iaf-section">
-        <InlineAuditForm
-          heading="Get Your Free Pest Control SEO Audit"
-          description="Share your business details and we will review your local search rankings, Google Business Profile, and lead conversion gaps at no cost."
-        />
-      </div>
-
-      <div className="roof-sec-5">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper">
-            <h2 className="roof-sec-5-heading">
-              Our Proven Local SEO Process for Pest Control Companies
-            </h2>
-          </div>
-        </div>
-
-        <div className="roof-sec-5-steps">
-          {processSteps.map((item, index) => (
-            <div className="roof-sec-5-step-wrap" key={item.step}>
-              <div className="roof-sec-5-circle">{item.step}</div>
-              {index < processSteps.length - 1 && (
-                <span className="roof-sec-5-arrow">&rsaquo;&rsaquo;</span>
-              )}
-              <p className="roof-sec-5-label">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="plumb-growth-section">
-        <Row className="align-items-center g-5">
-          <Col lg={6}>
-            <div className="plumb-growth-image">
-              <Image
-                src="/images/pest-seo/Frame%20970%20(2).jpg"
-                fill
-                alt="Why pest control companies choose Zonic Media"
-              />
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="plumb-growth-copy">
-              <h2>
-                Why Pest Control Companies Choose <span>Zonic Media</span>
-              </h2>
-              <p>
-                We are not a generic SEO agency. We understand how customers
-                search for exterminators, inspections, and urgent pest control
-                services in local markets.
-              </p>
-              <ul className="pest-why-list">
-                {whyChooseItems.map((item) => (
-                  <li key={item}>{item}</li>
                 ))}
-              </ul>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="plumb-maps-section">
-        <Row className="align-items-stretch g-4 g-lg-0">
-          <Col lg={6}>
-            <div className="plumb-maps-copy pest-map-copy">
-              <p className="plumb-maps-text">
-                From optimizing your Google Business Profile and targeting
-                &quot;near me&quot; keywords to building strong local authority
-                and improving your website performance, we focus on driving
-                real visibility that turns into calls and booked jobs.
-              </p>
-              <p className="plumb-maps-text">
-                Our data-driven approach helps you earn stronger local trust, a
-                steadier flow of quality leads, and better rankings across your
-                target service areas.
-              </p>
-              <p className="plumb-maps-text">
-                Whether you are targeting residential pest removal, termite
-                inspections, rodent control, or recurring prevention plans, we
-                build SEO systems that help your business show up at the exact
-                moment nearby customers are ready to call.
-              </p>
-              <p className="plumb-maps-text">
-                We focus on lead quality, map visibility, and service-area
-                coverage so your website and Google presence keep generating
-                inquiries beyond short-term{" "}
-                <Link href="/services/google-ads" className="pest-inline-link">
-                  ad spend
-                </Link>
-                .
-              </p>
-              <h2 className="plumb-maps-heading">
-                Get More <span>Pest Control Leads</span> with Local SEO
-              </h2>
-              <HashScrollLink
-                href="#pest-contact-form"
-                className="plumb-maps-cta"
-                offset={120}
-              >
-                Get Your Free Pest SEO Audit Today <span>&rarr;</span>
-              </HashScrollLink>
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="plumb-maps-image">
-              <Image
-                src="/images/pest-seo/Frame%20970%20(3).jpg"
-                alt="Pest control local SEO rankings and leads"
-                fill
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="roof-sec-7">
-        <div className="roof-sec-7-top-bar">
-          <p className="roof-sec-7-label">Services</p>
-          <HashScrollLink
-            href="#pest-contact-form"
-            className="roof-sec-7-cta-btn"
-            offset={120}
-          >
-            Get a Free Call &nbsp; &rarr;
-          </HashScrollLink>
-        </div>
-
-        <div className="roof-sec-7-inner">
-          <div className="roof-sec-7-left">
-            <h2 className="roof-sec-7-heading">
-              Our Pest Control Local SEO Services
-            </h2>
-            <p className="roof-sec-7-descrp">
-              We build digital marketing systems designed to generate leads,
-              increase revenue, and create long-term growth for pest control
-              businesses, including profile setup when you need to{" "}
-              <Link
-                href="/services/gmb-verification-help"
-                className="pest-inline-link"
-              >
-                verify your GBP
-              </Link>
-              .
-            </p>
-
-            <div className="roof-sec-7-grid">
-              {services.map((service, index) => (
-                <div
-                  key={service}
-                  className={`roof-sec-7-item${index === 0 ? " active" : ""}`}
-                >
-                  <span>{service}</span>
-                  <span className="roof-sec-7-arrow">&rarr;</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="roof-sec-7-img-cont">
-            <Image
-              src="/images/pest-seo/Frame%20970%20(4).jpg"
-              alt="Our pest control local SEO services"
-              fill
-              className="roof-sec-7-img"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="plumb-availability">
-        <div className="plumb-availability-card">
-          <Row className="align-items-center g-4">
-            <Col lg={5}>
-              <div className="plumb-availability-image pest-availability-image">
-                <Image
-                  src="/images/pest-seo/Frame%20970%20(6).jpg"
-                  alt="Limited pest control service area availability"
-                  fill
-                />
               </div>
-            </Col>
-            <Col lg={7}>
-              <div className="plumb-availability-copy">
-                <p className="phila-label plumb-availability-label">
-                  LIMITED AVAILABILITY
+            </div>
+          </section>
+
+          {/* 2. Problem / solution */}
+          <section className="tseo-problem">
+            <div className="tseo-container">
+              <div className="tseo-problem-grid">
+                <div className="tseo-gbp-wrap" aria-hidden="true">
+                  <div className="tseo-gbp">
+                    <div className="tseo-gbp-head">
+                      <span className="tseo-gbp-avatar">
+                        <FiImage />
+                      </span>
+                      <div>
+                        <strong>
+                          Your Pest Control Co.
+                          <MdOutlineVerifiedUser />
+                        </strong>
+                        <span className="tseo-gbp-stars">
+                          <FaStar />
+                          4.9 (194 reviews)
+                        </span>
+                      </div>
+                    </div>
+                    <p className="tseo-gbp-meta">
+                      Pest control · <em>Open now</em> · Same-day service
+                    </p>
+                    <div className="tseo-gbp-actions">
+                      <span className="tseo-gbp-action tseo-gbp-action--solid">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiMapPin />
+                        Directions
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiArrowUpRight />
+                        Website
+                      </span>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Profile views</span>
+                      <em>+180%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Calls from profile</span>
+                      <em>+212%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Booking requests</span>
+                      <em>+3×</em>
+                    </div>
+                  </div>
+                  <span className="tseo-gbp-chip">
+                    <FaStar aria-hidden="true" />
+                    Trusted by 50+ local businesses
+                  </span>
+                </div>
+                <div>
+                  <p className="tseo-eyebrow">The Local Growth Opportunity</p>
+                  <h2 className="tseo-h2">
+                    Homeowners are searching for pest control help.{" "}
+                    <span className="tseo-hl-text">
+                      We make sure they find you.
+                    </span>
+                  </h2>
+                  <p className="tseo-lead">
+                    When termites swarm or a rodent problem starts, the first
+                    thing homeowners do is search &ldquo;pest control near
+                    me&rdquo; and call one of the top three companies on the map.
+                    That is an enormous, high-intent growth channel sitting right
+                    in front of your business — and it is exactly the channel we
+                    have spent years mastering for pest control contractors.
+                  </p>
+                  <p className="tseo-lead">
+                    Our local SEO system captures it step by step: a fully
+                    optimized Google Business Profile, consistent citations,
+                    steadily growing reviews, and service-area pages built
+                    around the searches your customers actually type. Every
+                    ranking signal Google rewards, done properly and done
+                    monthly — that is how our clients turn local searches into
+                    calls, booked treatments, and revenue that compounds season
+                    after season.
+                  </p>
+                  <div className="tseo-checks">
+                    {ProblemChecks.map((check) => (
+                      <div className="tseo-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/about" className="tseo-btn">
+                    More About Zonic Media
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. Deliverables */}
+          <section className="tseo-services" id="tseo-services">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">What&apos;s Included</p>
+                  <h2 className="tseo-h2">
+                    Everything your pest control rankings need, in one system
+                  </h2>
+                </div>
+                <Link href="/services" className="tseo-link-arrow">
+                  View all services <FiArrowUpRight aria-hidden="true" />
+                </Link>
+              </div>
+              <div className="tseo-cards">
+                {ServiceCards.map((card) => (
+                  <article className="tseo-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. Dark band + map pack mockup */}
+          <section className="tseo-band">
+            <div className="tseo-band-grid">
+              <div className="tseo-band-content">
+                <p className="tseo-eyebrow">The Map Pack Is The Market</p>
+                <h2 className="tseo-h2">
+                  We put your pest control company in the top three — and keep it
+                  there
+                </h2>
+                <p className="tseo-lead">
+                  The map pack gets the majority of clicks and nearly all of the
+                  service calls, and that is exactly where we specialize. Every
+                  campaign is built around one goal: earning your business those
+                  top spots for the pest control services and cities that pay you
+                  best, then strengthening them month after month.
                 </p>
-                <h2>Limited Availability Across Each Service Area</h2>
-                <p>
-                  We work with a limited number of pest control companies in
-                  each market so we can stay focused on rankings, lead quality,
-                  and measurable local growth without taking on direct area
-                  competitors. If your listing disappears, we can also recover a{" "}
+                <p className="tseo-lead">
+                  We work the signals Google actually rewards: proximity,
+                  relevance, and prominence. A fully built-out profile tells
+                  Google exactly which pest control services you offer,
+                  consistent citations confirm you are who you say you are, and a
+                  steady flow of reviews and local content proves homeowners love
+                  working with you. And if a listing ever gets suspended, our{" "}
                   <Link
                     href="/services/gmb-reinstatement-help"
-                    className="pest-inline-link"
+                    className="tseo-inline-link"
                   >
-                    suspended Google Business Profile
-                  </Link>
-                  .
+                    Google Business Profile reinstatement
+                  </Link>{" "}
+                  team gets you back on the map fast.
                 </p>
                 <HashScrollLink
-                  href="#pest-contact-form"
-                  className="plumb-availability-cta"
+                  href="#tseo-form"
+                  className="tseo-btn"
                   offset={120}
                 >
-                  Get Your Free Pest SEO Audit Today <span>&rarr;</span>
+                  See Where You Rank Today
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
                 </HashScrollLink>
               </div>
-            </Col>
-          </Row>
-        </div>
-      </div>
 
-      <div className="phila-sec-8">
-        <h2 className="phila-sec-8-heading">What Our Clients Say</h2>
-        <div className="phila-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
-
-      <div className="phila-sec-9">
-        <div className="phila-center-head">
-          <div className="phila-center-head-content-wrapper">
-            <h2 className="phila-sec-heading">
-              Frequently Asked Questions About Pest Control SEO Services
-            </h2>
-          </div>
-        </div>
-
-        <div className="phila-sec-9-faq-wrapper">
-          <GmbFaqs items={pestFaqs} columns={2} />
-        </div>
-
-        <Script
-          id="pest-seo-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/seo-services-for-pest-control",
-              mainEntity: pestFaqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      </div>
-
-      <div className="phila-sec-10">
-        <div className="phila-sec-10-inner">
-          <div className="phila-sec-10-content">
-            <h2 className="phila-sec-10-heading">
-              Ready to Grow Your Pest Control Business with Local SEO?
-            </h2>
-            <p className="phila-sec-10-descrp">
-              Book a discovery call with Zonic Media and let us build a custom
-              pest control SEO strategy focused on more calls, stronger online
-              visibility, and real business growth.
-            </p>
-
-            <div className="phila-sec-10-info-grid">
-              <div className="phila-sec-10-info-card">
-                <div className="phila-sec-10-info-head">
-                  <div className="phila-sec-10-info-icon">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <h3>Our Office</h3>
+              <div className="tseo-mappack" aria-hidden="true">
+                <div className="tseo-mappack-map">
+                  <span className="tseo-map-pin tseo-map-pin--a">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--you">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--b">
+                    <FiMapPin />
+                  </span>
                 </div>
-                <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
-                  <br />
-                  United States
-                </a>
-              </div>
-
-              <div className="phila-sec-10-info-card">
-                <div className="phila-sec-10-info-head">
-                  <div className="phila-sec-10-info-icon">
-                    <FiPhoneCall />
-                  </div>
-                  <h3>Contact Us</h3>
+                <div className="tseo-mappack-bar">
+                  <FiSearch />
+                  exterminator near me
                 </div>
-                <a href={SITE_CONTACT.emailHref}>contact@zonicllc.com</a>
-                <a href={SITE_CONTACT.phoneHref}>(302) 726-9736</a>
+                <div className="tseo-mappack-list">
+                  <p className="tseo-mappack-title">Google · Local results</p>
+                  <div className="tseo-mappack-row tseo-mappack-row--you">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Your Pest Control Co.</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.9 (194) · Pest control ·{" "}
+                        <span className="tseo-mappack-open">Open now</span>
+                      </span>
+                    </span>
+                    <span className="tseo-mappack-badge">
+                      That&apos;s you
+                    </span>
+                    <span className="tseo-mappack-actions">
+                      <span className="tseo-mappack-action">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-mappack-action tseo-mappack-action--ghost">
+                        <FiArrowUpRight />
+                        Directions
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Exterminators</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.6 (98) · Pest control service
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Pest &amp; Termite</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.4 (61) · Pest control service
+                      </span>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
+          </section>
 
-            <div className="phila-sec-10-image-wrap">
-              <Image
-                src="/images/contact-section.jpg"
-                fill
-                alt="Pest control SEO consultation and contact"
-                className="phila-sec-10-image"
-              />
+          {/* 5. Process */}
+          <section className="tseo-process" id="tseo-process">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">How It Works</p>
+                  <h2 className="tseo-h2">
+                    From invisible to unavoidable in four steps
+                  </h2>
+                </div>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-link-arrow"
+                  offset={120}
+                >
+                  Start with step one <FiArrowUpRight aria-hidden="true" />
+                </HashScrollLink>
+              </div>
+              <div className="tseo-bento">
+                {/* 01 — featured */}
+                <article className="tseo-bento-card tseo-bento-card--s1">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      01
+                    </span>
+                    <span className="tseo-bento-tag">Week 1</span>
+                  </div>
+                  <h3>Free pest control visibility audit</h3>
+                  <p>
+                    We audit your rankings, profile, citations, reviews, and
+                    competitors — and show you exactly where the termite, rodent,
+                    and bed bug calls you are missing are going instead.
+                  </p>
+                  <div className="tseo-bento-visual" aria-hidden="true">
+                    <p className="tseo-bento-visual-title">
+                      Where pest control clients typically land after 90 days
+                    </p>
+                    {[
+                      { label: "Profile strength", val: 92 },
+                      { label: "Citation accuracy", val: 96 },
+                      { label: "Review velocity", val: 84 },
+                    ].map((bar) => (
+                      <div className="tseo-bento-bar-row" key={bar.label}>
+                        <div className="tseo-bento-bar-head">
+                          <span>{bar.label}</span>
+                          <span>{bar.val}%</span>
+                        </div>
+                        <div className="tseo-bento-bar-track">
+                          <span
+                            className="tseo-bento-bar-fill"
+                            style={{ width: `${bar.val}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                {/* 02 */}
+                <article className="tseo-bento-card tseo-bento-card--s2">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      02
+                    </span>
+                    <span className="tseo-bento-tag">Weeks 2–4</span>
+                  </div>
+                  <h3>Strategy &amp; foundation fixes</h3>
+                  <p>
+                    A keyword-mapped plan for your pest control services and
+                    cities, then the foundation work: profile optimization,
+                    citation cleanup, and on-page fixes.
+                  </p>
+                </article>
+
+                {/* 03 — dark */}
+                <article className="tseo-bento-card tseo-bento-card--s3">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      03
+                    </span>
+                    <span className="tseo-bento-tag">Every month</span>
+                  </div>
+                  <h3>Build authority every month</h3>
+                  <p>
+                    Local content, links, review growth, and profile activity —
+                    the compounding signals that move you up the map pack and
+                    keep you there through every pest season.
+                  </p>
+                  <div className="tseo-bento-chips">
+                    {["Local content", "Review growth", "Profile activity"].map(
+                      (chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ),
+                    )}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn tseo-bento-cta"
+                    offset={120}
+                  >
+                    Start Growing Today
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </article>
+
+                {/* 04 — wide */}
+                <article className="tseo-bento-card tseo-bento-card--s4">
+                  <div className="tseo-bento-s4-copy">
+                    <div className="tseo-bento-head">
+                      <span className="tseo-bento-num" aria-hidden="true">
+                        04
+                      </span>
+                      <span className="tseo-bento-tag">Ongoing</span>
+                    </div>
+                    <h3>Report, refine, expand</h3>
+                    <p>
+                      Monthly reporting tied to calls and booked treatments, not
+                      vanity metrics. As rankings lock in, we expand to more pest
+                      control services and more cities.
+                    </p>
+                  </div>
+                  <div className="tseo-bento-s4-side">
+                    <div className="tseo-bento-chips">
+                      {[
+                        "Plain-English report",
+                        "New cities",
+                        "New services",
+                      ].map((chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-link-arrow"
+                      offset={120}
+                    >
+                      Start with the free audit{" "}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </HashScrollLink>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* 5c. Results */}
+          <section className="tseo-results">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Real Results</p>
+                <h2 className="tseo-h2">
+                  What happens when pest control local SEO is done properly
+                </h2>
+                <p className="tseo-lead">
+                  Different markets, different seasons — the same system,
+                  executed month after month.
+                </p>
+              </div>
+              <div className="tseo-results-cards">
+                {ResultCards.map((card) => (
+                  <article className="tseo-result-card" key={card.industry}>
+                    <p className="tseo-result-ind">
+                      {card.icon}
+                      {card.industry}
+                    </p>
+                    <p className="tseo-result-metric">{card.metric}</p>
+                    <p className="tseo-result-label">{card.label}</p>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 6. Comparison */}
+          <section className="tseo-compare">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">The Difference</p>
+                <h2 className="tseo-h2">
+                  What you get with Zonic vs. a typical pest control SEO agency
+                </h2>
+                <p className="tseo-lead">
+                  Local SEO for home-service businesses is all we do, and it
+                  shows. Here is exactly what working with a dedicated local team
+                  looks like.
+                </p>
+              </div>
+              <div className="tseo-compare-grid">
+                <div className="tseo-compare-col tseo-compare-col--them">
+                  <h3>Typical SEO agency</h3>
+                  <p className="tseo-compare-sub">
+                    Why most pest control campaigns quietly stall
+                  </p>
+                  <ul>
+                    {CompareThem.map((item) => (
+                      <li key={item}>
+                        <FiX aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="tseo-compare-col tseo-compare-col--us">
+                  <h3>Pest Control Local SEO with Zonic Media</h3>
+                  <p className="tseo-compare-sub">
+                    Built to compound, reported like a P&amp;L
+                  </p>
+                  <ul>
+                    {CompareUs.map((item) => (
+                      <li key={item}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div
+                  className="tseo-compare-col tseo-compare-col--score"
+                  aria-hidden="true"
+                >
+                  <h3>Local Visibility Scorecard</h3>
+                  <p className="tseo-compare-sub">
+                    A typical pest control client&apos;s first six months
+                  </p>
+                  <div className="tseo-score-rows">
+                    {ScoreRows.map((row) => (
+                      <div key={row.label}>
+                        <div className="tseo-score-head">
+                          <span>{row.label}</span>
+                          <span className="tseo-score-vals">
+                            {row.before}% → <strong>{row.after}%</strong>
+                          </span>
+                        </div>
+                        <div className="tseo-score-track">
+                          <span
+                            className="tseo-score-fill"
+                            style={
+                              { "--w": `${row.after}%` } as React.CSSProperties
+                            }
+                          />
+                          <span
+                            className="tseo-score-before"
+                            style={
+                              { "--b": `${row.before}%` } as React.CSSProperties
+                            }
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="tseo-score-legend">
+                    <span>
+                      <i className="tseo-score-legend-before" />
+                      Before Zonic
+                    </span>
+                    <span>
+                      <i />
+                      After 6 months
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 6b. Live tracking mockups */}
+          <section className="tseo-tracking">
+            <div className="tseo-container">
+              <div className="tseo-tracking-grid">
+                <div>
+                  <p className="tseo-eyebrow">Always Measurable</p>
+                  <h2 className="tseo-h2">
+                    Watch your pest control rankings and reviews climb,{" "}
+                    <span className="tseo-hl-text">month over month</span>
+                  </h2>
+                  <p className="tseo-lead">
+                    No black box. Every campaign comes with live rank tracking
+                    for the pest control keywords that pay you, review growth
+                    monitoring, and call tracking from your profile — all rolled
+                    into one plain-English monthly report.
+                  </p>
+                  <p className="tseo-lead">
+                    If a number moves, you know why. If a number stalls, you
+                    know what we are doing about it.
+                  </p>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Get a Sample Report
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                <div className="tseo-mocks" aria-hidden="true">
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Keyword Rankings</h3>
+                      <span className="tseo-mock-tag">All improving</span>
+                    </div>
+                    <div className="tseo-rank-rows">
+                      {RankRows.map((row) => (
+                        <div className="tseo-rank-row" key={row.kw}>
+                          <span className="tseo-rank-kw">{row.kw}</span>
+                          <span className="tseo-rank-pos">{row.pos}</span>
+                          <span className="tseo-rank-delta">{row.delta}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Review Growth</h3>
+                      <span className="tseo-mock-tag">+32 this quarter</span>
+                    </div>
+                    <div className="tseo-review-score">
+                      <strong>4.9</strong>
+                      <span>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </span>
+                    </div>
+                    <p className="tseo-review-count">
+                      194 Google reviews and counting
+                    </p>
+                    <div className="tseo-review-bars">
+                      {ReviewBarHeights.map((height, index) => (
+                        <span
+                          className="tseo-review-bar"
+                          key={index}
+                          style={{ height: `${height}px` }}
+                        />
+                      ))}
+                    </div>
+                    <p className="tseo-review-bars-label">
+                      New reviews per month
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Why choose us + audit banner */}
+          <section className="tseo-why">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Why Zonic Media</p>
+                <h2 className="tseo-h2">
+                  A pest control local SEO partner, not a monthly invoice
+                </h2>
+                <p className="tseo-lead">
+                  Rankings are the output. The inputs are strategy, execution,
+                  and accountability — and that is what you are actually buying.
+                </p>
+              </div>
+              <div className="tseo-why-cards">
+                {WhyCards.map((card) => (
+                  <article className="tseo-why-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="tseo-why-banner">
+                <div className="tseo-why-banner-text">
+                  <p className="tseo-eyebrow">Free Pest Control SEO Audit</p>
+                  <h3>See exactly how we&apos;ll grow your pest control rankings</h3>
+                  <p>
+                    We&apos;ll map your profile, citations, reviews, and
+                    rankings — and show you the clear path to the top three for
+                    the pest control searches in your market. Free, and yours to
+                    keep either way.
+                  </p>
+                  <div className="tseo-banner-checks">
+                    {BannerChecks.map((check) => (
+                      <div className="tseo-banner-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Claim Your Free Audit
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                <div className="tseo-audit-card" aria-hidden="true">
+                  <div className="tseo-audit-head">
+                    <h4>Local Visibility Score</h4>
+                    <span className="tseo-mock-tag">After 6 months</span>
+                  </div>
+                  <div className="tseo-audit-ring-wrap">
+                    <div className="tseo-audit-ring">
+                      <span>
+                        92<small>/100</small>
+                      </span>
+                    </div>
+                    <div className="tseo-audit-ring-info">
+                      <strong>Excellent</strong>
+                      <small>
+                        Where our pest control campaigns typically land after six
+                        months of compounding local SEO work
+                      </small>
+                    </div>
+                  </div>
+                  {AuditRows.map((row) => (
+                    <div className="tseo-audit-row" key={row.label}>
+                      <span>{row.label}</span>
+                      <span className="tseo-audit-flag">{row.flag}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 8. Reviews */}
+          <section
+            className="tseo-reviews"
+            aria-labelledby="tseo-reviews-title"
+          >
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Verified Client Reviews</p>
+                <h2 className="tseo-h2" id="tseo-reviews-title">
+                  Trusted by small &amp; mid-size businesses across the US
+                </h2>
+              </div>
+              <div className="tseo-reviews-widget">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#2567e8"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* 9. Marquee */}
+          <div className="tseo-marquee" aria-hidden="true">
+            <div className="tseo-marquee-track">
+              {[0, 1].map((copy) => (
+                <span className="tseo-marquee-item" key={copy}>
+                  {MarqueeItems.map((item) => (
+                    <span className="tseo-marquee-item" key={item}>
+                      {item} <FaStar aria-hidden="true" />
+                    </span>
+                  ))}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="phila-sec-10-contact-form" id="pest-contact-form">
-            <LeadContactForm
-              leadFormTitle={formHead.leadFormTitle}
-              leadCallText={formHead.leadCallText}
-              submitButtonText="Contact Us"
-            />
-          </div>
-        </div>
+          {/* 10. Industries / nationwide */}
+          <section className="tseo-nationwide">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Wherever You Work</p>
+                <h2 className="tseo-h2">
+                  Local SEO for pest control companies in every market in the US
+                </h2>
+                <p className="tseo-lead">
+                  From single-truck exterminators to multi-location pest control
+                  brands, we run local SEO campaigns in every state. Everything
+                  happens remotely — audits, strategy calls, reporting — so you
+                  get the same process whether you are in Delaware, Texas, or
+                  California.
+                </p>
+              </div>
+              <div className="tseo-coverage" aria-hidden="true">
+                {[
+                  { city: "Dover, DE", win: "#1 Map Pack", top: "26%", left: "78%" },
+                  { city: "Philadelphia, PA", win: "Top 3", top: "12%", left: "58%" },
+                  { city: "Miami, FL", win: "+3× leads", top: "68%", left: "70%" },
+                  { city: "Austin, TX", win: "+212% calls", top: "66%", left: "34%" },
+                  { city: "Denver, CO", win: "Top 3", top: "24%", left: "22%" },
+                  { city: "Phoenix, AZ", win: "#1 rankings", top: "58%", left: "10%" },
+                ].map((pin) => (
+                  <span
+                    className="tseo-coverage-pin"
+                    style={{ top: pin.top, left: pin.left }}
+                    key={pin.city}
+                  >
+                    <FiMapPin />
+                    {pin.city}
+                    <em>{pin.win}</em>
+                  </span>
+                ))}
+                <div className="tseo-coverage-core">
+                  <strong>50+</strong>
+                  <span>
+                    local businesses growing
+                    <br />
+                    across the United States
+                  </span>
+                </div>
+              </div>
+              <div className="tseo-chips">
+                {NationwideChips.map((chip) => (
+                  <span className="tseo-chip" key={chip}>
+                    {chip}
+                  </span>
+                ))}
+              </div>
+              <div className="tseo-nationwide-cta">
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  Get Your Free Audit
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+            </div>
+          </section>
+
+          {/* 11. FAQs */}
+          <section className="tseo-faqs" id="tseo-faqs">
+            <div className="tseo-container">
+              <div className="tseo-split-grid">
+                <div>
+                  <p className="tseo-eyebrow">FAQs</p>
+                  <h2 className="tseo-h2">
+                    Straight answers about pest control local SEO
+                  </h2>
+                  <p className="tseo-lead">
+                    Pricing, timelines, guarantees, and what actually moves pest
+                    control rankings. If your question is not here, send it
+                    through the form — a strategist answers, not a sales script.
+                  </p>
+                  <div className="tseo-faq-cta">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Ask About Your Market
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                  </div>
+                </div>
+                <div>
+                  <GmbFaqs items={PestSeoFaqs} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 12. Grow further — internal links */}
+          <section className="tseo-grow">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Grow Further</p>
+                <h2 className="tseo-h2">
+                  Rankings are step one. Here is what multiplies them.
+                </h2>
+              </div>
+              <div className="tseo-grow-cards">
+                {GrowCards.map((card) => (
+                  <Link
+                    href={card.href}
+                    className="tseo-grow-card"
+                    key={card.href}
+                  >
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                    <span className="tseo-grow-link">
+                      {card.cta} <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 13. Lead form */}
+          <section className="tseo-form-sec" id="tseo-form">
+            <div className="tseo-container">
+              <div className="tseo-form-grid">
+                <aside className="tseo-form-aside">
+                  <p className="tseo-eyebrow">Get Started</p>
+                  <h2 className="tseo-h2">
+                    Claim your free pest control local SEO audit
+                  </h2>
+                  <p className="tseo-lead">
+                    Tell us about your pest control business and we will send a
+                    full local visibility audit — rankings, profile, citations,
+                    reviews — plus a flat-price growth plan to take you to the
+                    top of your market.
+                  </p>
+                  <div className="tseo-form-contacts">
+                    <a
+                      href={SITE_CONTACT.emailHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.phoneHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Speak with a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Visit our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
+                  </div>
+                </aside>
+                <div className="tseo-form-main">
+                  <ServiceLeadForm
+                    formType="local-seo"
+                    badge="Free Audit"
+                    title="Get your free pest control SEO audit"
+                    subtitle="No contracts, no pressure — just a clear picture of where your pest control company stands and what it takes to win your market."
+                    submitText="Send My Free Audit"
+                    messageLabel="Tell us about your pest control business"
+                    messagePlaceholder="Your services, your city, and what you'd like to improve"
+                    defaultServices={["Local SEO"]}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
 
+      {/* 14. Global site footer */}
       <Footer />
     </>
   );
 }
 
-export default page;
+export default Page;

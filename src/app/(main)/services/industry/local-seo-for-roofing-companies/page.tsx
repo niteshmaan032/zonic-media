@@ -1,781 +1,1665 @@
+/*
+ * LOCAL SEO FOR ROOFING COMPANIES — revamped July 2026 onto the approved local
+ * SEO template layout (see /services/template-seo). Design/classes come from
+ * templateSeo.css (scoped under .tseo-page); all copy, mockups, FAQs, and
+ * schema are roofing-specific. Form leads submit as service "Local SEO"
+ * (on the API whitelist).
+ *
+ * ==========================================================================
+ * OLD IMPLEMENTATION — old imports + data arrays kept for reference.
+ * ==========================================================================
+ *
+ * import "@/app/style/localRoofing.css";
+ * import "@/app/style/carTow.css";
+ * import InlineAuditForm from "@/app/components/InlineAuditForm";
+ * import LeadContactForm from "@/app/components/LeadContactForm";
+ * import Script from "next/script";
+ * import { Col, Row } from "react-bootstrap";
+ * import { FaSearch, FaLink, FaStar, FaChartBar } from "react-icons/fa";
+ * import { FaGoogle, FaHouseChimney } from "react-icons/fa6";
+ * import { FiPhoneCall } from "react-icons/fi";
+ * import { LuCalendarCheck2, LuShieldCheck } from "react-icons/lu";
+ * import { MdOutlineLocationOn } from "react-icons/md";
+ * import { RiLineChartLine } from "react-icons/ri";
+ *
+ * const RoofingSeoFaqs = [
+ *   { question: "What is local SEO for roofing companies?", answer: "..." },
+ *   { question: "How long does local SEO take to generate roofing leads?", answer: "..." },
+ *   { question: "Why do roofing companies need local SEO?", answer: "..." },
+ *   { question: "What does a roofing SEO strategy include?", answer: "..." },
+ *   { question: "Is local SEO better than Google Ads for roofers?", answer: "..." },
+ *   { question: "Can Zonic Media help my roofing company rank on Google Maps?", answer: "..." },
+ *   { question: "Do you work with roofing companies outside of Philadelphia?", answer: "..." },
+ *   { question: "How much does local SEO for roofing companies cost?", answer: "..." },
+ * ];
+ * const ProcessSteps = [ ... 6 steps ... ];
+ * const WhyChoosePoints = [ ... 5 points ... ];
+ * const RoofingServices = [ ... 8 service chips ... ];
+ * const RoofingFormHead = { leadFormTitle, leadCallText };
+ *
+ * (Full prior JSX preserved in git history. Replaced wholesale by the
+ *  template layout below.)
+ */
+
 import type { Metadata } from "next";
-import "@/app/style/localRoofing.css";
-import "@/app/style/carTow.css";
+import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
-import InlineAuditForm from "@/app/components/InlineAuditForm";
+import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { Col, Row } from "react-bootstrap";
-import { FaSearch, FaLink, FaStar, FaChartBar } from "react-icons/fa";
-import { FaGoogle, FaHouseChimney } from "react-icons/fa6";
-import { FiPhoneCall } from "react-icons/fi";
-import { LuCalendarCheck2, LuShieldCheck } from "react-icons/lu";
-import { MdOutlineLocationOn } from "react-icons/md";
-import { RiLineChartLine } from "react-icons/ri";
-import Footer from "@/app/components/Footer";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { FaStar } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
+import {
+  FiArrowUpRight,
+  FiClock,
+  FiFileText,
+  FiImage,
+  FiLink2,
+  FiMail,
+  FiMapPin,
+  FiPhoneCall,
+  FiSearch,
+  FiStar,
+  FiTrendingUp,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+const PAGE_PATH = "/services/industry/local-seo-for-roofing-companies";
+
+export const metadata: Metadata = {
+  title: "Local SEO for Roofing Companies That Win Jobs",
+  description:
+    "Local SEO for roofing companies that owns the map pack — GBP optimization, reviews, and service-area pages that turn 'roof repair near me' and 'roofer near me' into booked jobs. Get a free audit.",
+  keywords: [
+    "local SEO for roofing companies",
+    "roofer near me",
+    "roof repair near me",
+    "roof replacement",
+    "storm damage roof repair",
+    "roofing SEO company",
+    "roofing contractor SEO",
+    "local SEO for roofers",
+    "Google Business Profile for roofers",
+    "roofing lead generation",
+    "roof inspection near me",
+    "Google Maps ranking for roofers",
+  ],
+  alternates: { canonical: PAGE_PATH },
+  openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
+    title: "Local SEO for Roofing Companies That Win Jobs | Zonic Media",
+    description:
+      "Local SEO for roofing companies that owns the map pack — profile optimization, reviews, and service-area pages that turn roof repair and storm damage searches into booked jobs.",
+    url: PAGE_PATH,
+    type: "website",
+  },
+};
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Roofing Local SEO", url: "/services/industry/local-seo-for-roofing-companies" },
+  { name: "Local SEO for Roofing Companies", url: PAGE_PATH },
 ]);
+
+// NOTE: never add aggregateRating to a Service schema — GSC flags it.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Local SEO Services for Roofing Companies",
+  serviceType: "Local Search Engine Optimization for Roofing Contractors",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  description:
+    "Local SEO services for roofing companies covering Google Business Profile optimization, citation building, review growth, on-page SEO, and service-area content — built to rank roofing contractors in the Google map pack and grow booked jobs, estimates, and inspections.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Zonic Media",
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Roofing contractors, roofing companies, storm restoration and commercial roofing businesses",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Roofing Local SEO Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Business Profile Optimization for Roofers",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Roofing Keyword & Competitor Research",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Citation & Listing Management" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Review Growth & Reputation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Page SEO & Service-Area Pages",
+        },
+      },
+    ],
+  },
+};
 
 const RoofingSeoFaqs = [
   {
-    question: "What is local SEO for roofing companies?",
+    question: "What's included in your local SEO for roofing companies?",
     answer:
-      "Local SEO for roofing companies is a strategy that helps your business rank higher on Google Search and Google Maps when homeowners search for roofing services near them. It includes optimizing your Google Business Profile, website, local citations, and reviews to generate consistent roofing leads.",
+      "Every roofing campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your roof repair, replacement, and service-area pages, local content, and a monthly report that shows rankings, calls, and booked jobs — not vanity metrics.",
   },
   {
-    question: "How long does local SEO take to generate roofing leads?",
+    question: "How long does roofing SEO take to show results?",
     answer:
-      "Most roofing companies start seeing ranking improvements within 2 to 3 months, with stronger lead flow developing within 4 to 6 months depending on competition, market size, and the current state of your online presence.",
-  },
-  {
-    question: "Why do roofing companies need local SEO?",
-    answer:
-      "Homeowners search for roofing services on Google every day. If your business does not appear at the top of search results or Google Maps, you are losing customers to competitors who do. Local SEO ensures your roofing company shows up when customers are ready to hire.",
-  },
-  {
-    question: "What does a roofing SEO strategy include?",
-    answer:
-      "A complete roofing SEO strategy includes Google Business Profile optimization, local keyword targeting, website on-page SEO, technical SEO, local citation building, review management, backlink acquisition, and service-area page creation.",
-  },
-  {
-    question: "Is local SEO better than Google Ads for roofers?",
-    answer:
-      "Local SEO builds long-term visibility and generates ongoing organic leads without paying for every click. Google Ads deliver faster but stop the moment you stop spending. Many successful roofing companies use both together for the best results.",
-  },
-  {
-    question: "Can Zonic Media help my roofing company rank on Google Maps?",
-    answer:
-      "Yes. Our roofing SEO services include full Google Business Profile optimization, citation management, review strategies, and local ranking improvements to help you appear prominently in the Google Maps 3-Pack.",
-  },
-  {
-    question: "Do you work with roofing companies outside of Philadelphia?",
-    answer:
-      "Yes. We provide local SEO services for roofing companies across the United States. Whether you are in a small market or a major metro area, our strategies are customized to your competition and service area.",
+      "Most roofing companies see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'roof repair near me' and 'roofer near me.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds ahead of every storm season.",
   },
   {
     question: "How much does local SEO for roofing companies cost?",
     answer:
-      "Pricing depends on your market competition, service area size, and goals. We offer custom SEO packages for roofing companies at every stage of growth. Contact us for a free audit and pricing consultation.",
+      "Pricing depends on how many locations you run, how competitive your market is, and how aggressively you want to grow across repair, replacement, and storm work. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
+  },
+  {
+    question: "Do you guarantee first-page Google rankings for roofing keywords?",
+    answer:
+      "Our track record speaks for itself — most roofing clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
+  },
+  {
+    question: "Do roofing companies really need Google Business Profile optimization?",
+    answer:
+      "Yes — it is the single biggest lever in roofing local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for roof repair or a free inspection, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and homeowners choose it.",
+  },
+  {
+    question: "Can you help multi-location roofers and storm-season demand spikes?",
+    answer:
+      "Absolutely. We build local SEO systems for single-crew operators and multi-location roofing brands alike — service-area targeting, individual location pages, and map visibility for every city you cover. When a storm hits, your profile and pages are already ranking, so you capture the surge in 'storm damage roof repair' searches instead of missing it.",
+  },
+  {
+    question: "Why choose Zonic Media over another roofing SEO company?",
+    answer:
+      "We specialize in local home-service businesses like roofing, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound season after season — not churn.",
   },
 ];
 
-const RoofingFormHead = {
-  leadFormTitle: "Ready to Get More Roofing Leads?",
-  leadCallText: (
-    <>
-      Let&apos;s build a local SEO strategy that drives more calls, stronger
-      rankings, and consistent roofing leads every month.
-      <br />{" "}
-      <a href="tel:+13027269736" className="lead-call-link">
-        Call Now:(302) 726-9736
-      </a>
-    </>
-  ),
+const roofingSeoFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  mainEntity: RoofingSeoFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
 };
 
-const ProcessSteps = [
-  { step: "01", label: "Local SEO Audit & Competitor Analysis" },
-  { step: "02", label: "Keyword Strategy for Roofing Services" },
-  { step: "03", label: "Website & On Page SEO Optimization" },
-  { step: "04", label: "Local Citations & Listings, Local Link Building" },
-  { step: "05", label: "Reviews & Reputation Management" },
-  { step: "06", label: "Tracking, Reporting & Scaling" },
-];
-
-const WhyChoosePoints = [
+const HeroStats = [
   {
-    badge: "01",
-    title: "More calls from homeowners ready to hire",
-    desc: "Appear on Google when homeowners search for roof repair, replacement, or inspection services in your area.",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    num: "50+",
+    label: "Local & home-service businesses ranked",
   },
   {
-    badge: "02",
-    title: "Increased visibility in your service areas",
-    desc: "Attract high-intent homeowners who are actively looking for emergency repairs, storm damage help, or a new roof.",
+    icon: <FaStar aria-hidden="true" />,
+    num: "4.9/5",
+    label: "Average client rating on Clutch",
   },
   {
-    badge: "03",
-    title: "Higher rankings for roofing services",
-    desc: "Top rankings make your roofing company look more reliable and professional to potential customers.",
+    icon: <FiClock aria-hidden="true" />,
+    num: "60–90",
+    label: "Days to measurable movement",
   },
   {
-    badge: "04",
-    title: "Transparent reporting and ROI tracking",
-    desc: "Unlike ads, SEO keeps bringing traffic and leads over time so you can see exactly what is driving calls.",
-  },
-  {
-    badge: "05",
-    title: "A strategy built specifically for roofing businesses",
-    desc: "Optimized roofing pages turn visitors into inquiries, estimate requests, and booked projects.",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    num: "100%",
+    label: "In-house work — nothing outsourced",
   },
 ];
 
-const RoofingServices = [
-  { icon: <FaGoogle />, label: "GBP Optimization" },
-  { icon: <FaSearch />, label: "Technical SEO" },
-  { icon: <FaHouseChimney />, label: "Local Roofing SEO" },
-  { icon: <FaStar />, label: "Reviews & Reputation" },
-  { icon: <MdOutlineLocationOn />, label: "Service Area Targeting" },
-  { icon: <FaLink />, label: "Backlinks" },
-  { icon: <FaChartBar />, label: "On-Page SEO" },
-  { icon: <LuShieldCheck />, label: "High-Converting Pages" },
+const BannerChecks = [
+  "Your roofing map pack growth plan",
+  "Profile wins ready to unlock",
+  "Citation opportunities mapped",
+  "Review growth roadmap",
 ];
 
-export const metadata: Metadata = {
-  title: "Local SEO for Roofing Companies | Roofer Leads",
-  description:
-    "Local SEO services for roofing companies. Zonic Media helps roofers rank higher on Google Maps and win consistent calls from homeowners ready to hire.",
-  keywords: [
-    "roofing SEO services",
-    "local SEO for roofing companies",
-    "roofing marketing agency",
-    "roofing lead generation",
-    "Google Maps ranking for roofers",
-    "Google Business Profile for roofing companies",
-    "roofing contractor SEO",
-    "Google 3-Pack for roofers",
-    "roof repair SEO",
-    "roofing company marketing",
-  ],
-  alternates: { canonical: "/services/industry/local-seo-for-roofing-companies" },
-};
+const AuditRows = [
+  { label: "Google Business Profile", flag: "A+ grade" },
+  { label: "Citations & listings", flag: "100% accurate" },
+  { label: "Review velocity", flag: "Ahead of top 3" },
+];
 
-function page() {
+const ProblemChecks = [
+  "Map pack ranking strategy",
+  "Profile fully optimized",
+  "Citations cleaned & built",
+  "Reviews growing weekly",
+];
+
+const ServiceCards = [
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: (
+      <>
+        Your profile is your new homepage in the map pack. We optimize every
+        field, roofing category, photo, and post — the same system behind our{" "}
+        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+          GBP optimization service
+        </Link>{" "}
+        — so Google trusts it and homeowners choose you.
+      </>
+    ),
+  },
+  {
+    icon: <FiSearch aria-hidden="true" />,
+    title: "Roofing Keyword & Competitor Research",
+    desc: "We map every search your customers actually type — roof repair, roof replacement, storm damage, free inspections — city by city, and build the exact strategy that wins those searches for you.",
+  },
+  {
+    icon: <FiLink2 aria-hidden="true" />,
+    title: "Citations & Listing Management",
+    desc: "Consistent name, address, and phone across every directory that matters — including the roofing and contractor listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
+  },
+  {
+    icon: <FiStar aria-hidden="true" />,
+    title: "Review Growth & Reputation",
+    desc: "A steady stream of real reviews from real homeowners, with responses that show Google — and the next customer comparing roofers — that somebody is home.",
+  },
+  {
+    icon: <FiFileText aria-hidden="true" />,
+    title: "On-Page SEO & Service-Area Pages",
+    desc: (
+      <>
+        Service and city pages built around real roofing searches, with schema
+        and internal links that make every page easier to rank — backed by
+        conversion-first{" "}
+        <Link href="/services/web-design" className="tseo-inline-link">
+          website design
+        </Link>{" "}
+        when your site needs it.
+      </>
+    ),
+  },
+  {
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Tracking & Monthly Reporting",
+    desc: "Rankings, calls, direction requests, and booked-job leads in one plain-English report. You always know what we did, what moved, and what is next.",
+  },
+];
+
+const ResultCards = [
+  {
+    icon: <FiPhoneCall aria-hidden="true" />,
+    industry: "Residential Roofing",
+    metric: "+212%",
+    label: "Calls from Google Business Profile",
+    desc: "From page-two invisibility to top-three map pack rankings for 'roof repair near me' across every service city — turning searches into booked estimates.",
+  },
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    industry: "Storm Restoration",
+    metric: "Top 3",
+    label: "Map pack for every core keyword",
+    desc: "A profile rebuild, citation cleanup, and review growth took the company from #13 to the top three just before storm season peaked — and the inspection requests followed.",
+  },
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    industry: "Commercial Roofing",
+    metric: "3.2×",
+    label: "More booked jobs from local search",
+    desc: "Service-area and city pages turned scattered seasonal demand into a steady, year-round pipeline of qualified roofing jobs.",
+  },
+];
+
+const ScoreRows = [
+  { label: "Profile strength", before: 34, after: 92 },
+  { label: "Citation accuracy", before: 41, after: 96 },
+  { label: "Review velocity", before: 22, after: 78 },
+  { label: "Map pack visibility", before: 18, after: 84 },
+];
+
+const RankRows = [
+  { kw: "roof repair near me", pos: "#1", delta: "▲ 5" },
+  { kw: "roof replacement [city]", pos: "#2", delta: "▲ 7" },
+  { kw: "storm damage roofing", pos: "#1", delta: "▲ 4" },
+  { kw: "roofer near me", pos: "#3", delta: "▲ 8" },
+];
+
+const ReviewBarHeights = [28, 36, 44, 52, 58, 68, 74];
+
+const CompareThem = [
+  "Set-and-forget profile, updated quarterly at best",
+  "Reports full of impressions, empty of booked jobs",
+  "Offshore link packages and duplicate citations",
+  "One account manager for 80 clients",
+  "12-month contracts before you see a single lead",
+];
+
+const CompareUs = [
+  "Profile worked weekly — posts, photos, Q&A, roofing categories",
+  "Reporting tied to calls, direction requests, and booked jobs",
+  "Hand-built citations and local links that compound",
+  "A dedicated strategist who knows your roofing market",
+  "Month-to-month — we keep you with results, not paperwork",
+];
+
+const WhyCards = [
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Home services is all we do",
+    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked jobs for roofing and home-service contractors is the entire practice.",
+  },
+  {
+    icon: <FiZap aria-hidden="true" />,
+    title: "Fast, compounding execution",
+    desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into peak storm and replacement demand. Every month of work stacks on the last.",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Transparent to a fault",
+    desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
+  },
+];
+
+const MarqueeItems = [
+  "Roofing Local SEO",
+  "Roof Repair Rankings",
+  "Google Business Profile",
+  "Map Pack Rankings",
+  "Storm Damage Leads",
+  "Review Growth",
+  "Service-Area Pages",
+];
+
+const NationwideChips = [
+  "Roof Repair",
+  "Roof Replacement",
+  "Storm Damage",
+  "Metal Roofing",
+  "Roof Inspections",
+  "Gutters",
+  "Commercial Roofing",
+  "Emergency Roofing",
+];
+
+const GrowCards = [
+  {
+    href: "/services/gmb-optimization",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: "Most homeowners pick a roofer straight from the map pack. We optimize your profile so that company is you.",
+    cta: "Optimize your profile",
+  },
+  {
+    href: "/services/web-design",
+    icon: <FiZap aria-hidden="true" />,
+    title: "Roofing Website Design",
+    desc: "Rankings bring the traffic — a conversion-first roofing site turns those visitors into estimate requests and booked inspections.",
+    cta: "See website design",
+  },
+  {
+    href: "/services/google-ads",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    title: "Google Ads Management",
+    desc: "Pair organic rankings with paid coverage and own the whole results page during peak storm and replacement demand.",
+    cta: "See Google Ads",
+  },
+];
+
+function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      {/* SECTION 1 - HERO */}
-      <div className="roof-sec-1">
-        <div className="roof-sec-1-layer">
-          <div className="roof-sec-1-content">
-            <Col lg={9} className="roof-sec-1-content-wrapper">
-              <h1 className="roof-sec-1-heading">
-                Get More Roofing Leads Every Month With Proven{" "}
-                <span>Local SEO</span>
-              </h1>
-              <p className="roof-sec-1-sub-head">
-                Search Engine Marketing Agency Philadelphia | Zonic Media
-              </p>
-              <p className="roof-sec-1-descrp">
-                Zonic Media helps roofing companies rank higher on Google,
-                dominate local search, and consistently generate calls from
-                homeowners ready to hire.
-              </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(roofingSeoFaqJsonLd),
+        }}
+      />
 
-              <div className="roof-sec-1-ctas">
-                <HashScrollLink
-                  href="#roof-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get a Free Call
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
+      <div className="tseo-page">
+        <main>
+          {/* 1. Hero */}
+          <section className="tseo-hero">
+            <div className="tseo-container">
+              <div className="tseo-hero-grid">
+                <div className="tseo-hero-copy">
+                  <p className="tseo-eyebrow">Local SEO for Roofing Companies</p>
+                  <h1 className="tseo-hero-h1">
+                    Local SEO for roofers that{" "}
+                    <span className="tseo-hl">books more jobs</span>
+                  </h1>
+                  <p className="tseo-hero-sub">
+                    We&apos;ve helped 50+ local and home-service businesses climb
+                    into the Google map pack and grow. Zonic Media builds the
+                    full local ranking system for roofing companies — Google
+                    Business Profile, citations, reviews, and service-area
+                    content — so when homeowners search &ldquo;roof repair near
+                    me,&rdquo; they find you first.
+                  </p>
+                  <div className="tseo-hero-badges" aria-label="Partner badges">
+                    {/* Self-hosted Clutch badge — the live iframe embed is
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
                     >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
+                      <Image
+                        className="tseo-hero-badge"
+                        width={74}
+                        height={74}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
                       />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    </a>
+                    <Image
+                      className="tseo-hero-badge"
+                      width={74}
+                      height={74}
+                      src="/images/Partner.png"
+                      alt="Yelp Advertising Partner"
+                    />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
+                      <Image
+                        className="tseo-hero-badge-trustpilot"
+                        width={104}
+                        height={50}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
                       />
-                    </svg>
+                    </a>
+                  </div>
+                  <div className="tseo-hero-ctas">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Get Your Free Roofing SEO Audit
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                    <a href={SITE_CONTACT.phoneHref} className="tseo-btn-ghost">
+                      <FiPhoneCall aria-hidden="true" />
+                      Call {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </div>
+                  <div className="tseo-hero-proof">
+                    <span
+                      className="tseo-hero-proof-stars"
+                      aria-hidden="true"
+                    >
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </span>
+                    <p>
+                      <strong>Rated 4.9/5</strong> by the local businesses we
+                      rank
+                    </p>
+                  </div>
+                </div>
+
+                <div className="tseo-hero-visual">
+                  <div className="tseo-hero-dash-wrap">
+                  <div className="tseo-hero-dash" aria-hidden="true">
+                    <div className="tseo-dash-head">
+                      <h3>Roofing Local SEO Performance</h3>
+                    </div>
+                    <div className="tseo-ba-toggle-row">
+                      <span className="tseo-ba-toggle">
+                        <span className="tseo-ba-thumb" />
+                        <span className="tseo-ba-label tseo-ba-label--before">
+                          Before
+                        </span>
+                        <span className="tseo-ba-label tseo-ba-label--after">
+                          After
+                        </span>
+                      </span>
+                    </div>
+                    <div className="tseo-ba-stage">
+                      {/* AFTER state (base layer) */}
+                      <div className="tseo-ba-panel">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;roof repair near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li tseo-dash-li--you">
+                              <FiMapPin />
+                              <span>Your Roofing Company</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Roofing &amp; Exteriors</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Roofers</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-review">
+                              <FaStar />
+                              4.9 · 196 reviews
+                              <em>+34 this quarter</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">287</p>
+                              <span className="tseo-dash-delta">+212%</span>
+                            </div>
+                            <div className="tseo-dash-bars">
+                              {[26, 34, 30, 42, 50, 46, 58, 66, 62, 78, 90, 104].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#1</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.9★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>+86%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BEFORE state (fading overlay) */}
+                      <div className="tseo-ba-panel tseo-ba-panel--before">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;roof repair near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Roofing &amp; Exteriors</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Roofers</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Exteriors Co.</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-li tseo-dash-li--lost">
+                              <FiMapPin />
+                              <span>Your Roofing Company</span>
+                              <em>#13</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">38</p>
+                              <span className="tseo-dash-delta tseo-dash-delta--down">
+                                Page 2
+                              </span>
+                            </div>
+                            <div className="tseo-dash-bars tseo-dash-bars--muted">
+                              {[48, 34, 42, 28, 36, 24, 32, 20, 28, 16, 22, 12].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#13</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.1★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>−8%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tseo-hero-floats">
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>#1 in the Map Pack</strong>
+                        &ldquo;roof repair near me&rdquo;
+                      </p>
+                    </div>
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon tseo-float-card-icon--green">
+                        <FiStar aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>+34 reviews</strong>
+                        this quarter
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tseo-hero-stats">
+                {HeroStats.map((stat) => (
+                  <div className="tseo-stat" key={stat.label}>
+                    <span className="tseo-stat-icon">{stat.icon}</span>
+                    <div>
+                      <p className="tseo-stat-num">{stat.num}</p>
+                      <p className="tseo-stat-label">{stat.label}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 2. Problem / solution */}
+          <section className="tseo-problem">
+            <div className="tseo-container">
+              <div className="tseo-problem-grid">
+                <div className="tseo-gbp-wrap" aria-hidden="true">
+                  <div className="tseo-gbp">
+                    <div className="tseo-gbp-head">
+                      <span className="tseo-gbp-avatar">
+                        <FiImage />
+                      </span>
+                      <div>
+                        <strong>
+                          Your Roofing Company
+                          <MdOutlineVerifiedUser />
+                        </strong>
+                        <span className="tseo-gbp-stars">
+                          <FaStar />
+                          4.9 (196 reviews)
+                        </span>
+                      </div>
+                    </div>
+                    <p className="tseo-gbp-meta">
+                      Roofing contractor · <em>Open now</em> · Free inspections
+                    </p>
+                    <div className="tseo-gbp-actions">
+                      <span className="tseo-gbp-action tseo-gbp-action--solid">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiMapPin />
+                        Directions
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiArrowUpRight />
+                        Website
+                      </span>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Profile views</span>
+                      <em>+180%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Calls from profile</span>
+                      <em>+212%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Estimate requests</span>
+                      <em>+3×</em>
+                    </div>
+                  </div>
+                  <span className="tseo-gbp-chip">
+                    <FaStar aria-hidden="true" />
+                    Trusted by 50+ local businesses
                   </span>
-                </HashScrollLink>
-
-                <HashScrollLink
-                  href="#roof-contact-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get a Quote
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </HashScrollLink>
-              </div>
-
-              <div className="roof-feature-grid">
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <p>RANK HIGHER ON GOOGLE</p>
                 </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <FiPhoneCall />
+                <div>
+                  <p className="tseo-eyebrow">The Local Growth Opportunity</p>
+                  <h2 className="tseo-h2">
+                    Homeowners are searching for a roofer.{" "}
+                    <span className="tseo-hl-text">
+                      We make sure they find you.
+                    </span>
+                  </h2>
+                  <p className="tseo-lead">
+                    When a roof leaks or a storm tears off shingles, the first
+                    thing homeowners do is search &ldquo;roofer near me&rdquo;
+                    and call one of the top three companies on the map. That is
+                    an enormous, high-intent growth channel sitting right in
+                    front of your business — and it is exactly the channel we
+                    have spent years mastering for roofing contractors.
+                  </p>
+                  <p className="tseo-lead">
+                    Our local SEO system captures it step by step: a fully
+                    optimized Google Business Profile, consistent citations,
+                    steadily growing reviews, and service-area pages built
+                    around the searches your customers actually type. Every
+                    ranking signal Google rewards, done properly and done
+                    monthly — that is how our clients turn local searches into
+                    calls, booked jobs, and revenue that compounds season after
+                    season.
+                  </p>
+                  <div className="tseo-checks">
+                    {ProblemChecks.map((check) => (
+                      <div className="tseo-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
                   </div>
-                  <p>GET MORE CALLS FROM LOCAL CUSTOMERS</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <LuCalendarCheck2 />
-                  </div>
-                  <p>BOOK MORE JOBS &amp; GROW YOUR BUSINESS</p>
-                </div>
-                <div className="feature-card">
-                  <div className="icon-box">
-                    <RiLineChartLine />
-                  </div>
-                  <p>SUSTAINABLE GROWTH THAT LASTS</p>
+                  <Link href="/about" className="tseo-btn">
+                    More About Zonic Media
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
                 </div>
               </div>
-            </Col>
-          </div>
-        </div>
-      </div>
+            </div>
+          </section>
 
-      {/* SECTION 2 - TURN GOOGLE SEARCHES INTO ROOFING JOBS */}
-      <div className="roof-sec-2">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper">
-            <h2 className="roof-sec-2-heading">
-              Turn Google Searches Into <span>Roofing Jobs</span>
-            </h2>
-            <p className="roof-sec-2-descrp">
-              Turn local Google searches into real roofing jobs with a strategy
-              that puts your business right where customers are looking. When
-              homeowners search for roof repair, installation, or inspection,
-              your company appears at the top with a strong, optimized presence.
-              From improving your visibility on search results to building trust
-              through reviews and accurate listings, our{" "}
-              <Link
-                href="/services/roofing-marketing-agency"
-                className="roof-inline-link"
-              >
-                roofing marketing agency
-              </Link>{" "}
-              helps convert clicks into calls and inquiries into confirmed
-              projects. It&apos;s not just
-              about traffic &mdash; it&apos;s about attracting the right
-              customers at the right time and turning every search into a
-              potential job.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* SECTION 3 - GET MORE ROOFING LEADS (2-col: text left, image right) */}
-      <div className="roof-sec-3">
-        <Row className="align-items-center g-5">
-          <Col lg={7}>
-            <div className="roof-sec-3-content">
-              <h2 className="roof-sec-3-heading">
-                Get More Roofing Leads Every Month With Proven{" "}
-                <span>Local SEO</span>
-              </h2>
-              <p className="roof-sec-3-descrp">
-                If your business is not showing up in Google Maps or local
-                search results, you are losing customers every single day.
-              </p>
-              <p className="roof-sec-3-descrp">
-                In a competitive market like Philadelphia, simply having a
-                website is not enough. Conversion-focused{" "}
-                <Link href="/services/web-design" className="roof-inline-link">
-                  website design
-                </Link>{" "}
-                makes your business appear exactly when potential customers
-                search for services near them.
-              </p>
-              <p className="roof-sec-3-descrp">
-                At Zonic Media, we help Philadelphia businesses dominate local
-                search, increase visibility, and generate consistent
-                high-quality leads without relying only on paid ads such as{" "}
-                <Link href="/services/google-ads" className="roof-inline-link">
-                  Google Ads
+          {/* 3. Deliverables */}
+          <section className="tseo-services" id="tseo-services">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">What&apos;s Included</p>
+                  <h2 className="tseo-h2">
+                    Everything your roofing rankings need, in one system
+                  </h2>
+                </div>
+                <Link href="/services" className="tseo-link-arrow">
+                  View all services <FiArrowUpRight aria-hidden="true" />
                 </Link>
-                .
-              </p>
-              <HashScrollLink
-                href="#roof-contact-form"
-                className="roof-sec-3-cta"
-                offset={120}
-              >
-                Get Your Free Roofing SEO Audit Today &nbsp; &rarr;
-              </HashScrollLink>
-            </div>
-          </Col>
-          <Col lg={5}>
-            <div className="roof-sec-3-img-cont">
-              <Image
-                src="/images/roofing-seo/roofing-seo-img-2.jpg"
-                fill
-                alt="Roofing contractor using local SEO to grow business"
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      {/* SECTION 4 - WHY ROOFING COMPANIES CHOOSE ZONIC MEDIA */}
-      <div className="roof-sec-4">
-        <div className="roof-sec-4-heading-wrap">
-          <h2 className="roof-sec-4-heading">
-            Why Roofing Companies Choose <span>Zonic</span> Media
-          </h2>
-        </div>
-        <div className="roof-sec-4-grid">
-          <div className="roof-sec-4-left">
-            {WhyChoosePoints.map((point) => (
-              <div className="roof-sec-4-point" key={point.badge}>
-                <div className="roof-sec-4-badge">{point.badge}</div>
-                <div className="roof-sec-4-copy">
-                  <h3>{point.title}</h3>
-                  <p>{point.desc}</p>
-                </div>
               </div>
-            ))}
-          </div>
-
-          <div className="roof-sec-4-right">
-            <div className="roof-sec-4-image-wrap">
-              <Image
-                src="/images/roofing-seo/roofing-seo-img-3.jpg"
-                alt="Roofing company local SEO strategy"
-                fill
-                className="roof-sec-4-image"
-              />
+              <div className="tseo-cards">
+                {ServiceCards.map((card) => (
+                  <article className="tseo-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </section>
 
-      {/* SECTION 5 - GOOGLE BUSINESS PROFILE VERIFICATION & SETUP */}
-      <div className="roof-sec-4b">
-        <Row className="align-items-stretch g-0">
-          <Col lg={5}>
-            <div className="roof-sec-4b-img-cont">
-              <Image
-                src="/images/roofing-seo/roofing-seo-img-6.jpg"
-                alt="Roofing contractors working on a roof"
-                fill
-                className="roof-sec-4b-img"
-              />
-            </div>
-          </Col>
-
-          <Col lg={7}>
-            <div className="roof-sec-4b-content">
-              <p className="roof-sec-4b-kicker">
-                Google Business Profile Verification &amp; Setup
-              </p>
-              <p className="roof-sec-4b-lead">
-                Struggling to get your GBP verified or dealing with a{" "}
-                <Link
-                  href="/services/gmb-reinstatement-help"
-                  className="roof-inline-link"
-                >
-                  suspended Google Business Profile
-                </Link>
-                ? We handle the setup the right way and make sure your profile
-                is fully optimized to attract local homeowners.
-              </p>
-
-              <div className="roof-sec-4b-copy-block">
-                <h3>Local SEO That Gets You Calls</h3>
-                <p>
-                  We position your business in the Google 3 Pack, where real
-                  roofing leads happen. Through hands-on{" "}
+          {/* 4. Dark band + map pack mockup */}
+          <section className="tseo-band">
+            <div className="tseo-band-grid">
+              <div className="tseo-band-content">
+                <p className="tseo-eyebrow">The Map Pack Is The Market</p>
+                <h2 className="tseo-h2">
+                  We put your roofing company in the top three — and keep it
+                  there
+                </h2>
+                <p className="tseo-lead">
+                  The map pack gets the majority of clicks and nearly all of the
+                  service calls, and that is exactly where we specialize. Every
+                  campaign is built around one goal: earning your business those
+                  top spots for the roofing services and cities that pay you
+                  best, then strengthening them month after month.
+                </p>
+                <p className="tseo-lead">
+                  We work the signals Google actually rewards: proximity,
+                  relevance, and prominence. A fully built-out profile tells
+                  Google exactly which roofing services you offer, consistent
+                  citations confirm you are who you say you are, and a steady
+                  flow of reviews and local content proves homeowners love
+                  working with you. And if a listing ever gets suspended, our{" "}
                   <Link
-                    href="/services/gmb-optimization"
-                    className="roof-inline-link"
+                    href="/services/gmb-reinstatement-help"
+                    className="tseo-inline-link"
                   >
-                    Google Business Profile optimization
+                    Google Business Profile reinstatement
                   </Link>{" "}
-                  and local authority building, we make sure your company shows
-                  up when it matters.
+                  team gets you back on the map fast.
+                </p>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  See Where You Rank Today
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+
+              <div className="tseo-mappack" aria-hidden="true">
+                <div className="tseo-mappack-map">
+                  <span className="tseo-map-pin tseo-map-pin--a">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--you">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--b">
+                    <FiMapPin />
+                  </span>
+                </div>
+                <div className="tseo-mappack-bar">
+                  <FiSearch />
+                  roof repair near me
+                </div>
+                <div className="tseo-mappack-list">
+                  <p className="tseo-mappack-title">Google · Local results</p>
+                  <div className="tseo-mappack-row tseo-mappack-row--you">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Your Roofing Company</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.9 (196) · Roofing contractor ·{" "}
+                        <span className="tseo-mappack-open">Open now</span>
+                      </span>
+                    </span>
+                    <span className="tseo-mappack-badge">
+                      That&apos;s you
+                    </span>
+                    <span className="tseo-mappack-actions">
+                      <span className="tseo-mappack-action">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-mappack-action tseo-mappack-action--ghost">
+                        <FiArrowUpRight />
+                        Directions
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Roofing &amp; Exteriors</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.6 (98) · Roofing contractor
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Roofers Co.</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.4 (61) · Roofing contractor
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Process */}
+          <section className="tseo-process" id="tseo-process">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">How It Works</p>
+                  <h2 className="tseo-h2">
+                    From invisible to unavoidable in four steps
+                  </h2>
+                </div>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-link-arrow"
+                  offset={120}
+                >
+                  Start with step one <FiArrowUpRight aria-hidden="true" />
+                </HashScrollLink>
+              </div>
+              <div className="tseo-bento">
+                {/* 01 — featured */}
+                <article className="tseo-bento-card tseo-bento-card--s1">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      01
+                    </span>
+                    <span className="tseo-bento-tag">Week 1</span>
+                  </div>
+                  <h3>Free roofing visibility audit</h3>
+                  <p>
+                    We audit your rankings, profile, citations, reviews, and
+                    competitors — and show you exactly where the roof repair and
+                    replacement jobs you are missing are going instead.
+                  </p>
+                  <div className="tseo-bento-visual" aria-hidden="true">
+                    <p className="tseo-bento-visual-title">
+                      Where roofing clients typically land after 90 days
+                    </p>
+                    {[
+                      { label: "Profile strength", val: 92 },
+                      { label: "Citation accuracy", val: 96 },
+                      { label: "Review velocity", val: 84 },
+                    ].map((bar) => (
+                      <div className="tseo-bento-bar-row" key={bar.label}>
+                        <div className="tseo-bento-bar-head">
+                          <span>{bar.label}</span>
+                          <span>{bar.val}%</span>
+                        </div>
+                        <div className="tseo-bento-bar-track">
+                          <span
+                            className="tseo-bento-bar-fill"
+                            style={{ width: `${bar.val}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                {/* 02 */}
+                <article className="tseo-bento-card tseo-bento-card--s2">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      02
+                    </span>
+                    <span className="tseo-bento-tag">Weeks 2–4</span>
+                  </div>
+                  <h3>Strategy &amp; foundation fixes</h3>
+                  <p>
+                    A keyword-mapped plan for your roofing services and cities,
+                    then the foundation work: profile optimization, citation
+                    cleanup, and on-page fixes.
+                  </p>
+                </article>
+
+                {/* 03 — dark */}
+                <article className="tseo-bento-card tseo-bento-card--s3">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      03
+                    </span>
+                    <span className="tseo-bento-tag">Every month</span>
+                  </div>
+                  <h3>Build authority every month</h3>
+                  <p>
+                    Local content, links, review growth, and profile activity —
+                    the compounding signals that move you up the map pack and
+                    keep you there through every storm season.
+                  </p>
+                  <div className="tseo-bento-chips">
+                    {["Local content", "Review growth", "Profile activity"].map(
+                      (chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ),
+                    )}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn tseo-bento-cta"
+                    offset={120}
+                  >
+                    Start Growing Today
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </article>
+
+                {/* 04 — wide */}
+                <article className="tseo-bento-card tseo-bento-card--s4">
+                  <div className="tseo-bento-s4-copy">
+                    <div className="tseo-bento-head">
+                      <span className="tseo-bento-num" aria-hidden="true">
+                        04
+                      </span>
+                      <span className="tseo-bento-tag">Ongoing</span>
+                    </div>
+                    <h3>Report, refine, expand</h3>
+                    <p>
+                      Monthly reporting tied to calls and booked jobs, not
+                      vanity metrics. As rankings lock in, we expand to more
+                      roofing services and more cities.
+                    </p>
+                  </div>
+                  <div className="tseo-bento-s4-side">
+                    <div className="tseo-bento-chips">
+                      {[
+                        "Plain-English report",
+                        "New cities",
+                        "New services",
+                      ].map((chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-link-arrow"
+                      offset={120}
+                    >
+                      Start with the free audit{" "}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </HashScrollLink>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* 5c. Results */}
+          <section className="tseo-results">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Real Results</p>
+                <h2 className="tseo-h2">
+                  What happens when roofing local SEO is done properly
+                </h2>
+                <p className="tseo-lead">
+                  Different markets, different seasons — the same system,
+                  executed month after month.
                 </p>
               </div>
-
-              <h2 className="roof-sec-4b-heading">
-                <span>Real Growth</span> for Roofing Contractors
-              </h2>
-
-              <HashScrollLink
-                href="#roof-contact-form"
-                className="roof-sec-4b-cta"
-                offset={120}
-              >
-                Get Your Free Roofing SEO Audit Today
-                <span className="roof-sec-4b-cta-arrow">&rarr;</span>
-              </HashScrollLink>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="iaf-section">
-        <InlineAuditForm
-          heading="Get Your Free Roofing Company SEO Audit"
-          description="Share your business details and we will review your local rankings, Google Business Profile, and lead conversion gaps at no cost."
-        />
-      </div>
-
-      {/* SECTION 6 - OUR PROVEN LOCAL SEO PROCESS (dark bg, 6 steps) */}
-      <div className="roof-sec-5">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper">
-            <h2 className="roof-sec-5-heading">
-              Our Proven Local SEO Process for Roofing Companies
-            </h2>
-          </div>
-        </div>
-
-        <div className="roof-sec-5-steps">
-          {ProcessSteps.map((item, index) => (
-            <div className="roof-sec-5-step-wrap" key={item.step}>
-              <div className="roof-sec-5-circle">{item.step}</div>
-              {index < ProcessSteps.length - 1 && (
-                <span className="roof-sec-5-arrow">&rsaquo;&rsaquo;</span>
-              )}
-              <p className="roof-sec-5-label">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* SECTION 7 - SEO vs PAID ADS (similar to phila-ppc-sec-6) */}
-      <div className="roof-sec-6">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper">
-            <h2 className="roof-sec-6-heading">
-              <span>SEO</span> vs <span>Paid Ads</span> for Roofing Companies
-            </h2>
-            <p className="roof-sec-6-intro">
-              Search Engine Marketing includes Search Engine Optimization for
-              organic rankings and paid search advertising through platforms
-              like Google Ads, working together to ensure your business appears
-              at every stage of the customer journey. Search Engine Marketing
-              includes Search Engine Optimization for organic rankings and paid
-              search advertising through platforms like Google Ads, working
-              together to ensure your business appears at every stage of the
-              customer journey.
-            </p>
-          </div>
-        </div>
-
-        <div className="roof-sec-6-inner">
-          <div className="roof-sec-6-panel">
-            <h3 className="roof-sec-6-panel-title">
-              <span>SEO</span>
-            </h3>
-            <p className="roof-sec-6-panel-text">
-              PPC brings instant visibility and quick leads, while SEO builds
-              long-term traffic and trust.
-            </p>
-            <div className="roof-timeline-list">
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Long term visibility</p>
-              </div>
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Lower cost per lead over time</p>
-              </div>
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Consistent inbound leads</p>
+              <div className="tseo-results-cards">
+                {ResultCards.map((card) => (
+                  <article className="tseo-result-card" key={card.industry}>
+                    <p className="tseo-result-ind">
+                      {card.icon}
+                      {card.industry}
+                    </p>
+                    <p className="tseo-result-metric">{card.metric}</p>
+                    <p className="tseo-result-label">{card.label}</p>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="roof-sec-6-divider" />
-
-          <div className="roof-sec-6-panel">
-            <h3 className="roof-sec-6-panel-title">
-              <span>Ads</span>
-            </h3>
-            <p className="roof-sec-6-panel-text">
-              Search behavior is constantly evolving, and modern PPC strategies
-              need to keep up. We align your campaigns with:
-            </p>
-            <div className="roof-timeline-list">
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Stops when budget stops</p>
+          {/* 6. Comparison */}
+          <section className="tseo-compare">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">The Difference</p>
+                <h2 className="tseo-h2">
+                  What you get with Zonic vs. a typical roofing SEO agency
+                </h2>
+                <p className="tseo-lead">
+                  Local SEO for home-service businesses is all we do, and it
+                  shows. Here is exactly what working with a dedicated local team
+                  looks like.
+                </p>
               </div>
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Higher cost per lead</p>
-              </div>
-              <div className="roof-timeline-item">
-                <span className="roof-timeline-dot" />
-                <p>Short term results</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* SECTION 8 - OUR ROOFING LOCAL SEO SERVICES (dark bg) */}
-      <div className="roof-sec-7">
-        <div className="roof-sec-7-top-bar">
-          <p className="roof-sec-7-label">Services</p>
-          <HashScrollLink
-            href="#roof-contact-form"
-            className="roof-sec-7-cta-btn"
-            offset={120}
-          >
-            Get a Free Call &nbsp; &rarr;
-          </HashScrollLink>
-        </div>
-
-        <div className="roof-sec-7-inner">
-          <div className="roof-sec-7-left">
-            <h2 className="roof-sec-7-heading">
-              Our Roofing Local SEO Services
-            </h2>
-            <p className="roof-sec-7-descrp">
-              We build digital marketing systems designed to generate leads,
-              increase revenue, and create long term growth for businesses in
-              Philadelphia, using the same foundations behind{" "}
-              <Link
-                href="/services/local-seo-for-home-services"
-                className="roof-inline-link"
-              >
-                local SEO for home services
-              </Link>{" "}
-              and starting with basics like helping you{" "}
-              <Link
-                href="/services/gmb-verification-help"
-                className="roof-inline-link"
-              >
-                verify your GBP
-              </Link>
-              .
-            </p>
-
-            <div className="roof-sec-7-grid">
-              {RoofingServices.map((service, index) => (
-                <div
-                  key={service.label}
-                  className={`roof-sec-7-item${index === 0 ? " active" : ""}`}
-                >
-                  <span>{service.label}</span>
-                  <span className="roof-sec-7-arrow">&rarr;</span>
+              <div className="tseo-compare-grid">
+                <div className="tseo-compare-col tseo-compare-col--them">
+                  <h3>Typical SEO agency</h3>
+                  <p className="tseo-compare-sub">
+                    Why most roofing campaigns quietly stall
+                  </p>
+                  <ul>
+                    {CompareThem.map((item) => (
+                      <li key={item}>
+                        <FiX aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+                <div className="tseo-compare-col tseo-compare-col--us">
+                  <h3>Roofing Local SEO with Zonic Media</h3>
+                  <p className="tseo-compare-sub">
+                    Built to compound, reported like a P&amp;L
+                  </p>
+                  <ul>
+                    {CompareUs.map((item) => (
+                      <li key={item}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div
+                  className="tseo-compare-col tseo-compare-col--score"
+                  aria-hidden="true"
+                >
+                  <h3>Local Visibility Scorecard</h3>
+                  <p className="tseo-compare-sub">
+                    A typical roofing client&apos;s first six months
+                  </p>
+                  <div className="tseo-score-rows">
+                    {ScoreRows.map((row) => (
+                      <div key={row.label}>
+                        <div className="tseo-score-head">
+                          <span>{row.label}</span>
+                          <span className="tseo-score-vals">
+                            {row.before}% → <strong>{row.after}%</strong>
+                          </span>
+                        </div>
+                        <div className="tseo-score-track">
+                          <span
+                            className="tseo-score-fill"
+                            style={
+                              { "--w": `${row.after}%` } as React.CSSProperties
+                            }
+                          />
+                          <span
+                            className="tseo-score-before"
+                            style={
+                              { "--b": `${row.before}%` } as React.CSSProperties
+                            }
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="tseo-score-legend">
+                    <span>
+                      <i className="tseo-score-legend-before" />
+                      Before Zonic
+                    </span>
+                    <span>
+                      <i />
+                      After 6 months
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 6b. Live tracking mockups */}
+          <section className="tseo-tracking">
+            <div className="tseo-container">
+              <div className="tseo-tracking-grid">
+                <div>
+                  <p className="tseo-eyebrow">Always Measurable</p>
+                  <h2 className="tseo-h2">
+                    Watch your roofing rankings and reviews climb,{" "}
+                    <span className="tseo-hl-text">month over month</span>
+                  </h2>
+                  <p className="tseo-lead">
+                    No black box. Every campaign comes with live rank tracking
+                    for the roofing keywords that pay you, review growth
+                    monitoring, and call tracking from your profile — all rolled
+                    into one plain-English monthly report.
+                  </p>
+                  <p className="tseo-lead">
+                    If a number moves, you know why. If a number stalls, you
+                    know what we are doing about it.
+                  </p>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Get a Sample Report
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                <div className="tseo-mocks" aria-hidden="true">
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Keyword Rankings</h3>
+                      <span className="tseo-mock-tag">All improving</span>
+                    </div>
+                    <div className="tseo-rank-rows">
+                      {RankRows.map((row) => (
+                        <div className="tseo-rank-row" key={row.kw}>
+                          <span className="tseo-rank-kw">{row.kw}</span>
+                          <span className="tseo-rank-pos">{row.pos}</span>
+                          <span className="tseo-rank-delta">{row.delta}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Review Growth</h3>
+                      <span className="tseo-mock-tag">+34 this quarter</span>
+                    </div>
+                    <div className="tseo-review-score">
+                      <strong>4.9</strong>
+                      <span>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </span>
+                    </div>
+                    <p className="tseo-review-count">
+                      196 Google reviews and counting
+                    </p>
+                    <div className="tseo-review-bars">
+                      {ReviewBarHeights.map((height, index) => (
+                        <span
+                          className="tseo-review-bar"
+                          key={index}
+                          style={{ height: `${height}px` }}
+                        />
+                      ))}
+                    </div>
+                    <p className="tseo-review-bars-label">
+                      New reviews per month
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Why choose us + audit banner */}
+          <section className="tseo-why">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Why Zonic Media</p>
+                <h2 className="tseo-h2">
+                  A roofing local SEO partner, not a monthly invoice
+                </h2>
+                <p className="tseo-lead">
+                  Rankings are the output. The inputs are strategy, execution,
+                  and accountability — and that is what you are actually buying.
+                </p>
+              </div>
+              <div className="tseo-why-cards">
+                {WhyCards.map((card) => (
+                  <article className="tseo-why-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="tseo-why-banner">
+                <div className="tseo-why-banner-text">
+                  <p className="tseo-eyebrow">Free Roofing SEO Audit</p>
+                  <h3>See exactly how we&apos;ll grow your roofing rankings</h3>
+                  <p>
+                    We&apos;ll map your profile, citations, reviews, and
+                    rankings — and show you the clear path to the top three for
+                    the roofing searches in your market. Free, and yours to keep
+                    either way.
+                  </p>
+                  <div className="tseo-banner-checks">
+                    {BannerChecks.map((check) => (
+                      <div className="tseo-banner-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Claim Your Free Audit
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                <div className="tseo-audit-card" aria-hidden="true">
+                  <div className="tseo-audit-head">
+                    <h4>Local Visibility Score</h4>
+                    <span className="tseo-mock-tag">After 6 months</span>
+                  </div>
+                  <div className="tseo-audit-ring-wrap">
+                    <div className="tseo-audit-ring">
+                      <span>
+                        92<small>/100</small>
+                      </span>
+                    </div>
+                    <div className="tseo-audit-ring-info">
+                      <strong>Excellent</strong>
+                      <small>
+                        Where our roofing campaigns typically land after six
+                        months of compounding local SEO work
+                      </small>
+                    </div>
+                  </div>
+                  {AuditRows.map((row) => (
+                    <div className="tseo-audit-row" key={row.label}>
+                      <span>{row.label}</span>
+                      <span className="tseo-audit-flag">{row.flag}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 8. Reviews */}
+          <section
+            className="tseo-reviews"
+            aria-labelledby="tseo-reviews-title"
+          >
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Verified Client Reviews</p>
+                <h2 className="tseo-h2" id="tseo-reviews-title">
+                  Trusted by small &amp; mid-size businesses across the US
+                </h2>
+              </div>
+              <div className="tseo-reviews-widget">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#2567e8"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* 9. Marquee */}
+          <div className="tseo-marquee" aria-hidden="true">
+            <div className="tseo-marquee-track">
+              {[0, 1].map((copy) => (
+                <span className="tseo-marquee-item" key={copy}>
+                  {MarqueeItems.map((item) => (
+                    <span className="tseo-marquee-item" key={item}>
+                      {item} <FaStar aria-hidden="true" />
+                    </span>
+                  ))}
+                </span>
               ))}
             </div>
           </div>
 
-          <div className="roof-sec-7-img-cont">
-            <Image
-              src="/images/roofing-seo/roofing-seo-img-4.jpg"
-              alt="Roofing local SEO services"
-              fill
-              className="roof-sec-7-img"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* SECTION 9 - REAL GROWTH / PARTNERSHIP */}
-      <div className="roof-sec-8">
-        <Row className="align-items-stretch g-0">
-          <Col lg={4}>
-            <div className="roof-sec-8-img-cont">
-              <Image
-                src="/images/roofing-seo/roofing-seo-img-5.jpg"
-                alt="Roofing growth strategy"
-                fill
-                className="roof-sec-8-img"
-              />
-            </div>
-          </Col>
-
-          <Col lg={8}>
-            <div className="roof-sec-8-content">
-              <p className="roof-sec-8-tagline">
-                Every client engagement begins a long-term partnership.
-              </p>
-              <p className="roof-sec-8-descrp">
-                We do not treat your business like a short-term campaign. Every
-                engagement is built on trust, transparent communication, and a
-                clear plan for better rankings, stronger visibility, and more
-                roofing leads.
-              </p>
-              <p className="roof-sec-8-descrp">
-                We focus on strategies that hold up over time, so your company
-                keeps building authority, earning calls, and growing beyond the
-                next month&apos;s ad spend.
-              </p>
-              <h2 className="roof-sec-8-heading">
-                <span>Real Growth</span> for Roofing Contractors. Our strategies
-                are designed to deliver measurable results.
-              </h2>
-              <HashScrollLink
-                href="#roof-contact-form"
-                className="roof-sec-8-cta"
-                offset={120}
-              >
-                Get a Free Call <span>&rarr;</span>
-              </HashScrollLink>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      {/* TESTIMONIALS */}
-      <div className="roof-sec-testimonial">
-        <h2 className="roof-testimonial-heading">What Our Clients Say</h2>
-        <div className="roof-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
-
-      {/* FAQs */}
-      <div className="roof-sec-faq">
-        <div className="roof-center-head">
-          <div className="roof-center-head-content-wrapper">
-            <h2 className="roof-faq-heading">
-              Frequently Asked Questions About Local SEO for Roofing Companies
-            </h2>
-          </div>
-        </div>
-        <div className="roof-faq-wrapper">
-          <GmbFaqs items={RoofingSeoFaqs} columns={2} />
-        </div>
-
-        <Script
-          id="roof-seo-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/local-seo-for-roofing-companies",
-              mainEntity: RoofingSeoFaqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      </div>
-
-      {/* CONTACT FORM */}
-      <div className="roof-sec-contact">
-        <div className="roof-sec-contact-inner">
-          <div className="roof-sec-contact-content">
-            <h2 className="roof-sec-contact-heading">
-              Ready to Grow Your Roofing Business with Local SEO?
-            </h2>
-            <p className="roof-sec-contact-descrp">
-              Book a discovery call with Zonic Media and let us build a local
-              SEO strategy that drives consistent roofing leads, stronger Google
-              rankings, and measurable business growth.
-            </p>
-
-            <div className="roof-sec-contact-info-grid">
-              <div className="roof-sec-contact-info-card">
-                <div className="roof-sec-contact-info-head">
-                  <div className="roof-sec-contact-info-icon">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <h3>Our Office</h3>
-                </div>
-                <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
-                  <br />
-                  United States
-                </a>
+          {/* 10. Industries / nationwide */}
+          <section className="tseo-nationwide">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Wherever You Work</p>
+                <h2 className="tseo-h2">
+                  Local SEO for roofing companies in every market in the US
+                </h2>
+                <p className="tseo-lead">
+                  From single-crew operators to multi-location roofing brands, we
+                  run local SEO campaigns in every state. Everything happens
+                  remotely — audits, strategy calls, reporting — so you get the
+                  same process whether you are in Delaware, Texas, or California.
+                </p>
               </div>
-
-              <div className="roof-sec-contact-info-card">
-                <div className="roof-sec-contact-info-head">
-                  <div className="roof-sec-contact-info-icon">
-                    <FiPhoneCall />
-                  </div>
-                  <h3>Contact Us</h3>
+              <div className="tseo-coverage" aria-hidden="true">
+                {[
+                  { city: "Dover, DE", win: "#1 Map Pack", top: "26%", left: "78%" },
+                  { city: "Philadelphia, PA", win: "Top 3", top: "12%", left: "58%" },
+                  { city: "Miami, FL", win: "+3× leads", top: "68%", left: "70%" },
+                  { city: "Austin, TX", win: "+212% calls", top: "66%", left: "34%" },
+                  { city: "Denver, CO", win: "Top 3", top: "24%", left: "22%" },
+                  { city: "Phoenix, AZ", win: "#1 rankings", top: "58%", left: "10%" },
+                ].map((pin) => (
+                  <span
+                    className="tseo-coverage-pin"
+                    style={{ top: pin.top, left: pin.left }}
+                    key={pin.city}
+                  >
+                    <FiMapPin />
+                    {pin.city}
+                    <em>{pin.win}</em>
+                  </span>
+                ))}
+                <div className="tseo-coverage-core">
+                  <strong>50+</strong>
+                  <span>
+                    local businesses growing
+                    <br />
+                    across the United States
+                  </span>
                 </div>
-                <a href={SITE_CONTACT.emailHref}>contact@zonicllc.com</a>
-                <a href={SITE_CONTACT.phoneHref}>(302) 726-9736</a>
+              </div>
+              <div className="tseo-chips">
+                {NationwideChips.map((chip) => (
+                  <span className="tseo-chip" key={chip}>
+                    {chip}
+                  </span>
+                ))}
+              </div>
+              <div className="tseo-nationwide-cta">
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  Get Your Free Audit
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
               </div>
             </div>
+          </section>
 
-            <div className="roof-sec-contact-image-wrap">
-              <Image
-                src="/images/contact-section.jpg"
-                fill
-                alt="Roofing SEO consultation and contact"
-                className="roof-sec-contact-image"
-              />
+          {/* 11. FAQs */}
+          <section className="tseo-faqs" id="tseo-faqs">
+            <div className="tseo-container">
+              <div className="tseo-split-grid">
+                <div>
+                  <p className="tseo-eyebrow">FAQs</p>
+                  <h2 className="tseo-h2">
+                    Straight answers about roofing local SEO
+                  </h2>
+                  <p className="tseo-lead">
+                    Pricing, timelines, guarantees, and what actually moves
+                    roofing rankings. If your question is not here, send it
+                    through the form — a strategist answers, not a sales script.
+                  </p>
+                  <div className="tseo-faq-cta">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Ask About Your Market
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                  </div>
+                </div>
+                <div>
+                  <GmbFaqs items={RoofingSeoFaqs} />
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div className="roof-sec-contact-form" id="roof-contact-form">
-            <LeadContactForm
-              leadFormTitle={RoofingFormHead.leadFormTitle}
-              leadCallText={RoofingFormHead.leadCallText}
-              submitButtonText="Contact Us"
-            />
-          </div>
-        </div>
+          {/* 12. Grow further — internal links */}
+          <section className="tseo-grow">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Grow Further</p>
+                <h2 className="tseo-h2">
+                  Rankings are step one. Here is what multiplies them.
+                </h2>
+              </div>
+              <div className="tseo-grow-cards">
+                {GrowCards.map((card) => (
+                  <Link
+                    href={card.href}
+                    className="tseo-grow-card"
+                    key={card.href}
+                  >
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                    <span className="tseo-grow-link">
+                      {card.cta} <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 13. Lead form */}
+          <section className="tseo-form-sec" id="tseo-form">
+            <div className="tseo-container">
+              <div className="tseo-form-grid">
+                <aside className="tseo-form-aside">
+                  <p className="tseo-eyebrow">Get Started</p>
+                  <h2 className="tseo-h2">
+                    Claim your free roofing local SEO audit
+                  </h2>
+                  <p className="tseo-lead">
+                    Tell us about your roofing business and we will send a full
+                    local visibility audit — rankings, profile, citations,
+                    reviews — plus a flat-price growth plan to take you to the
+                    top of your market.
+                  </p>
+                  <div className="tseo-form-contacts">
+                    <a
+                      href={SITE_CONTACT.emailHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.phoneHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Speak with a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Visit our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
+                  </div>
+                </aside>
+                <div className="tseo-form-main">
+                  <ServiceLeadForm
+                    formType="local-seo"
+                    badge="Free Audit"
+                    title="Get your free roofing SEO audit"
+                    subtitle="No contracts, no pressure — just a clear picture of where your roofing company stands and what it takes to win your market."
+                    submitText="Send My Free Audit"
+                    messageLabel="Tell us about your roofing business"
+                    messagePlaceholder="Your services, your city, and what you'd like to improve"
+                    defaultServices={["Local SEO"]}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
 
+      {/* 14. Global site footer */}
       <Footer />
     </>
   );
 }
 
-export default page;
+export default Page;

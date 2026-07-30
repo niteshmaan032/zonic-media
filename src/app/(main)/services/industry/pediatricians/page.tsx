@@ -1,675 +1,1667 @@
+/*
+ * PEDIATRICIANS — SEO & MARKETING. Revamped July 2026 onto the approved local
+ * SEO template layout (see /services/template-seo). Design/classes come from
+ * templateSeo.css (scoped under .tseo-page); all copy, mockups, FAQs, and
+ * schema are pediatric-specific and speak to parents choosing care for their
+ * kids. Form leads submit as service "Local SEO" (on the API whitelist).
+ *
+ * ==========================================================================
+ * OLD IMPLEMENTATION — kept commented for reference during the revamp.
+ * ==========================================================================
+ *
+ * import type { Metadata } from "next";
+ * import "@/app/style/philadelphia/philaDigital.css";
+ * import "@/app/style/pediatricians.css";
+ * import "@/app/style/carTow.css";
+ * import ClutchWidget from "@/app/components/ClutchWidget";
+ * import InlineAuditForm from "@/app/components/InlineAuditForm";
+ * import Footer from "@/app/components/Footer";
+ * import GmbFaqs from "@/app/components/GmbFaqs";
+ * import HashScrollLink from "@/app/components/HashScrollLink";
+ * import LeadContactForm from "@/app/components/LeadContactForm";
+ * import { SITE_CONTACT } from "@/shared/siteConfig";
+ * import Image from "next/image";
+ * import Link from "next/link";
+ * import Script from "next/script";
+ * import { Col, Row } from "react-bootstrap";
+ * import { FaChartLine, FaLaptopMedical, FaMapMarkedAlt, FaSearch, FaStethoscope } from "react-icons/fa";
+ * import { FaChildren, FaGoogle, FaUserDoctor } from "react-icons/fa6";
+ * import { FiPhoneCall } from "react-icons/fi";
+ * import { LuCalendarCheck2 } from "react-icons/lu";
+ * import { MdOutlineLocationOn } from "react-icons/md";
+ * import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+ *
+ * const PediatricFaqs = [
+ *   { question: "How does pediatric SEO help my clinic grow?", answer: "Pediatric SEO improves your visibility when parents search for child healthcare services, helping your clinic attract more appointment inquiries." },
+ *   { question: "How long does it take to see results?", answer: "Local SEO and website improvements often show early traction within a few months, while stronger rankings and steady patient growth build over time." },
+ *   { question: "Do you work with new pediatric clinics?", answer: "Yes. We help both established practices and new pediatric clinics build online visibility, local trust, and a reliable flow of patient leads." },
+ *   { question: "What makes pediatric marketing different from general marketing?", answer: "Pediatric marketing needs parent-focused messaging, local trust signals, and a strategy that reflects how families search for care and choose providers." },
+ *   { question: "Can you help my clinic rank in my city?", answer: "Yes. We optimize your local presence, service pages, keyword targeting, and Google Business Profile so your clinic can compete in its target area." },
+ * ];
+ *
+ * (Data arrays PediatricFormHead, HeroHighlights, LocalSeoItems, WebsiteItems,
+ *  ProcessSteps, PediatricServices and the full prior hero/split/process/services
+ *  JSX are preserved in git history. Replaced wholesale by the template layout below.)
+ */
+
 import type { Metadata } from "next";
-import "@/app/style/philadelphia/philaDigital.css";
-import "@/app/style/pediatricians.css";
-import "@/app/style/carTow.css";
+import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
-import InlineAuditForm from "@/app/components/InlineAuditForm";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import LeadContactForm from "@/app/components/LeadContactForm";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { Col, Row } from "react-bootstrap";
+import { FaStar } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
 import {
-  FaChartLine,
-  FaLaptopMedical,
-  FaMapMarkedAlt,
-  FaSearch,
-  FaStethoscope,
-} from "react-icons/fa";
-import { FaChildren, FaGoogle, FaUserDoctor } from "react-icons/fa6";
-import { FiPhoneCall } from "react-icons/fi";
-import { LuCalendarCheck2 } from "react-icons/lu";
-import { MdOutlineLocationOn } from "react-icons/md";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+  FiArrowUpRight,
+  FiClock,
+  FiFileText,
+  FiImage,
+  FiLink2,
+  FiMail,
+  FiMapPin,
+  FiPhoneCall,
+  FiSearch,
+  FiStar,
+  FiTrendingUp,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+const PAGE_PATH = "/services/industry/pediatricians";
 
 export const metadata: Metadata = {
-  title: "Marketing for Pediatricians | Pediatric SEO",
+  title: "Pediatrician SEO & Marketing That Wins Families",
   description:
-    "Pediatrician marketing and SEO services that help children's clinics rank on Google, attract more parents, and book more patient appointments.",
+    "Pediatrician SEO that wins the map pack for 'pediatrician near me' — Google Business Profile, reviews, and local pages that turn parent searches into booked visits. Get a free audit.",
   keywords: [
-    "pediatrician marketing",
-    "pediatric SEO services",
+    "pediatrician near me",
+    "children's doctor near me",
+    "pediatric clinic",
+    "kids doctor near me",
+    "pediatrician SEO",
+    "SEO for pediatricians",
     "local SEO for pediatricians",
-    "pediatrician lead generation",
-    "Google Maps ranking for pediatricians",
-    "Google Business Profile for pediatric clinics",
-    "marketing for children's clinics",
     "pediatric practice marketing",
-    "SEO for pediatric practices",
+    "Google Business Profile for pediatricians",
+    "best pediatrician near me",
+    "pediatric marketing",
+    "children's clinic SEO",
   ],
-  alternates: { canonical: "/services/industry/pediatricians" },
+  alternates: { canonical: PAGE_PATH },
+  openGraph: {
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+      },
+    ],
+    title: "Pediatrician SEO & Marketing That Wins Families | Zonic Media",
+    description:
+      "Pediatrician SEO that wins the map pack — Google Business Profile optimization, reviews, and local pages that turn 'pediatrician near me' searches into new patient families.",
+    url: PAGE_PATH,
+    type: "website",
+  },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Pediatricians SEO", url: "/services/industry/pediatricians" },
+  { name: "Pediatrician SEO & Marketing", url: PAGE_PATH },
 ]);
 
-const PediatricFaqs = [
-  {
-    question: "How does pediatric SEO help my clinic grow?",
-    answer:
-      "Pediatric SEO improves your visibility when parents search for child healthcare services, helping your clinic attract more appointment inquiries.",
+// NOTE: never add aggregateRating to a Service schema — GSC flags it.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Pediatrician SEO & Marketing",
+  serviceType: "Local Search Engine Optimization for Pediatric Practices",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  description:
+    "Pediatrician SEO and marketing covering Google Business Profile optimization, citation building, review growth, on-page SEO, and local content — built to rank pediatric practices in the Google map pack and grow new patient families.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Zonic Media",
   },
-  {
-    question: "How long does it take to see results?",
-    answer:
-      "Local SEO and website improvements often show early traction within a few months, while stronger rankings and steady patient growth build over time.",
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
   },
-  {
-    question: "Do you work with new pediatric clinics?",
-    answer:
-      "Yes. We help both established practices and new pediatric clinics build online visibility, local trust, and a reliable flow of patient leads.",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Pediatric practices, children's clinics, pediatricians, family medical practices",
   },
-  {
-    question:
-      "What makes pediatric marketing different from general marketing?",
-    answer:
-      "Pediatric marketing needs parent-focused messaging, local trust signals, and a strategy that reflects how families search for care and choose providers.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Pediatric Local SEO Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Business Profile Optimization for Pediatricians",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Pediatric Keyword & Competitor Research",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Citation & Listing Management" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Review Growth & Reputation" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Page SEO & Local Practice Pages",
+        },
+      },
+    ],
   },
-  {
-    question: "Can you help my clinic rank in my city?",
-    answer:
-      "Yes. We optimize your local presence, service pages, keyword targeting, and Google Business Profile so your clinic can compete in its target area.",
-  },
-];
-
-const PediatricFormHead = {
-  leadFormTitle: "Your clinic deserves more visibility and more patients.",
-  leadCallText: (
-    <>
-      Book a discovery call with Zonic Media and let us build a search marketing
-      strategy that drives consistent growth.
-      <br />{" "}
-      <a href="tel:+13027269736" className="lead-call-link">
-        Call Now:(302) 726-9736
-      </a>
-    </>
-  ),
 };
 
-const HeroHighlights = [
+const PediatricSeoFaqs = [
   {
-    icon: <FaUserDoctor />,
-    title: "Pediatric SEO Expertise",
-    colorClass: "pink",
+    question: "What's included in your pediatrician SEO services?",
+    answer:
+      "Every pediatric campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your well-child, sick-visit, and location pages, parent-focused local content, and a monthly report that shows rankings, calls, and booked visits — not vanity metrics.",
   },
   {
-    icon: <FaChildren />,
-    title: "Parent-Focused Messaging",
-    colorClass: "green",
+    question: "How long does pediatrician SEO take to show results?",
+    answer:
+      "Most pediatric practices see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'pediatrician near me' and 'children's doctor near me.' Competitive metros take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds through back-to-school and cold-and-flu season.",
   },
   {
-    icon: <LuCalendarCheck2 />,
-    title: "Appointment Growth Strategy",
-    colorClass: "blue",
-  },
-];
-
-const LocalSeoItems = [
-  "Google Business Profile optimization",
-  "Local citations and listings",
-  "Location-based keyword targeting",
-  "Map ranking improvements",
-  "Review and reputation optimization",
-];
-
-const WebsiteItems = [
-  "Website structure optimization",
-  "Mobile-friendly design improvements",
-  "Faster loading speed",
-  "Clear call to action placement",
-  "Patient-focused content optimization",
-];
-
-const ProcessSteps = [
-  {
-    step: "01",
-    title: "Understand Your Clinic",
-    description:
-      "We analyze your services, target audience, and local competition to understand your market position and identify the best opportunities for growth.",
+    question: "How much does SEO for pediatricians cost?",
+    answer:
+      "Pricing depends on how many locations and providers you run, how competitive your metro is, and how aggressively you want to grow. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
   },
   {
-    step: "02",
-    title: "Build a Custom Strategy",
-    description:
-      "We create a pediatric marketing plan focused on visibility, trust, and attracting the right parents in your local area.",
+    question: "Do you guarantee first-page Google rankings for pediatric keywords?",
+    answer:
+      "Our track record speaks for itself — most pediatric clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your practice with results.",
   },
   {
-    step: "03",
-    title: "Execute and Optimize",
-    description:
-      "We improve rankings, pages, and campaigns continuously so your clinic generates stronger leads and more appointment requests over time.",
+    question: "Do pediatric practices really need Google Business Profile optimization?",
+    answer:
+      "Yes — it is the single biggest lever in pediatrician SEO. Your Google Business Profile decides whether you show up in the local map pack when a parent searches for a children's doctor, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and families choose it.",
+  },
+  {
+    question: "Can you help multi-location practices and group providers?",
+    answer:
+      "Absolutely. We build local SEO systems for single-office pediatricians and multi-location groups with several associate providers alike — service-area targeting, individual location pages, and map visibility for every neighborhood you serve, all reported in one clear dashboard.",
+  },
+  {
+    question: "Why choose Zonic Media over another pediatric marketing agency?",
+    answer:
+      "We specialize in local practices and home-service businesses, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked visits, and work that is built to compound season after season — not churn.",
   },
 ];
 
-const PediatricServices = [
+const pediatricSeoFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  mainEntity: PediatricSeoFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
+const HeroStats = [
   {
-    image: "/images/pediatricians/pedis-serv-img-1.jpg",
-    icon: <FaSearch />,
-    title: "Keyword Research Focused on Pediatric Services",
-    description:
-      "We target the searches parents actually use when looking for pediatric care, checkups, urgent visits, and child health services.",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    num: "50+",
+    label: "Local & practice businesses ranked",
   },
   {
-    image: "/images/pediatricians/pedis-serv-img-2.jpg",
-    icon: <FaGoogle />,
-    title: "On-Page SEO for Your Website",
-    description:
-      "We optimize service pages, page structure, headings, and copy so your clinic earns stronger organic visibility.",
+    icon: <FaStar aria-hidden="true" />,
+    num: "4.9/5",
+    label: "Average client rating on Clutch",
   },
   {
-    image: "/images/pediatricians/pedis-serv-img-3.jpg",
-    icon: <FaStethoscope />,
-    title: "Service Page Optimization",
-    description:
-      "We improve your core treatment and service pages so parents understand what you offer and feel confident contacting your clinic.",
+    icon: <FiClock aria-hidden="true" />,
+    num: "60–90",
+    label: "Days to measurable movement",
   },
   {
-    image: "/images/pediatricians/pedis-serv-img-4.jpg",
-    icon: <FaLaptopMedical />,
-    title: "Content Strategy Targeting Parent Queries",
-    description:
-      "We build helpful content around real parent questions to increase trust, rankings, and long-tail search visibility.",
-  },
-  {
-    image: "/images/pediatricians/pedis-serv-img-5.jpg",
-    icon: <FaChartLine />,
-    title: "Technical SEO Improvements",
-    description:
-      "We fix performance, indexing, and site health issues that hold back rankings and reduce the quality of your online experience.",
-  },
-  {
-    image: "/images/pediatricians/pedis-serv-img-6.jpg",
-    icon: <FaMapMarkedAlt />,
-    title: "Local SEO & Google Business Profile Optimization",
-    description:
-      "We strengthen your local presence so nearby families can find, trust, and choose your clinic more easily.",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    num: "100%",
+    label: "In-house work — nothing outsourced",
   },
 ];
 
-function page() {
+const BannerChecks = [
+  "Your pediatric map pack growth plan",
+  "Profile wins ready to unlock",
+  "Citation opportunities mapped",
+  "Review growth roadmap",
+];
+
+const AuditRows = [
+  { label: "Google Business Profile", flag: "A+ grade" },
+  { label: "Citations & listings", flag: "100% accurate" },
+  { label: "Review velocity", flag: "Ahead of top 3" },
+];
+
+const ProblemChecks = [
+  "Map pack ranking strategy",
+  "Profile fully optimized",
+  "Citations cleaned & built",
+  "Reviews growing weekly",
+];
+
+const ServiceCards = [
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: (
+      <>
+        Your profile is your new homepage in the map pack. We optimize every
+        field, pediatric category, photo, and post — the same system behind our{" "}
+        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+          GBP optimization service
+        </Link>{" "}
+        — so Google trusts it and parents choose you.
+      </>
+    ),
+  },
+  {
+    icon: <FiSearch aria-hidden="true" />,
+    title: "Pediatric Keyword & Competitor Research",
+    desc: "We map every search parents actually type — pediatrician near me, children's doctor, well-child checkups, same-day sick visits — neighborhood by neighborhood, and build the exact strategy that wins those searches for you.",
+  },
+  {
+    icon: <FiLink2 aria-hidden="true" />,
+    title: "Citations & Listing Management",
+    desc: "Consistent name, address, and phone across every directory that matters — including the medical and healthcare listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
+  },
+  {
+    icon: <FiStar aria-hidden="true" />,
+    title: "Review Growth & Reputation",
+    desc: "A steady stream of real reviews from real families, with responses that show Google — and the next parent comparing pediatric practices — that somebody caring is behind the desk.",
+  },
+  {
+    icon: <FiFileText aria-hidden="true" />,
+    title: "On-Page SEO & Local Practice Pages",
+    desc: (
+      <>
+        Service and location pages built around real parent searches, with schema
+        and internal links that make every page easier to rank — backed by
+        conversion-first{" "}
+        <Link href="/services/web-design" className="tseo-inline-link">
+          website design
+        </Link>{" "}
+        when your site needs it.
+      </>
+    ),
+  },
+  {
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Tracking & Monthly Reporting",
+    desc: "Rankings, calls, direction requests, and appointment leads in one plain-English report. You always know what we did, what moved, and what is next.",
+  },
+];
+
+const ResultCards = [
+  {
+    icon: <FiPhoneCall aria-hidden="true" />,
+    industry: "Pediatric Clinic",
+    metric: "+212%",
+    label: "Calls from Google Business Profile",
+    desc: "From page-two invisibility to top-three map pack rankings for 'pediatrician near me' across every neighborhood within one busy season of new patient families.",
+  },
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    industry: "Newborn & Family Care",
+    metric: "Top 3",
+    label: "Map pack for every core keyword",
+    desc: "A profile rebuild, citation cleanup, and review growth took the practice from #13 to the top three before back-to-school appointment season peaked.",
+  },
+  {
+    icon: <FiTrendingUp aria-hidden="true" />,
+    industry: "Multi-Location Pediatrics",
+    metric: "3.2×",
+    label: "More booked visits from local search",
+    desc: "Location and neighborhood pages turned seasonal checkup and sick-visit spikes into a steady, year-round pipeline of new patient families.",
+  },
+];
+
+const ScoreRows = [
+  { label: "Profile strength", before: 34, after: 92 },
+  { label: "Citation accuracy", before: 41, after: 96 },
+  { label: "Review velocity", before: 22, after: 78 },
+  { label: "Map pack visibility", before: 18, after: 84 },
+];
+
+const RankRows = [
+  { kw: "pediatrician near me", pos: "#1", delta: "▲ 5" },
+  { kw: "children's doctor [city]", pos: "#2", delta: "▲ 7" },
+  { kw: "pediatric clinic", pos: "#1", delta: "▲ 4" },
+  { kw: "kids doctor near me", pos: "#3", delta: "▲ 8" },
+];
+
+const ReviewBarHeights = [28, 36, 44, 52, 58, 68, 74];
+
+const CompareThem = [
+  "Set-and-forget profile, updated quarterly at best",
+  "Reports full of impressions, empty of booked visits",
+  "Offshore link packages and duplicate citations",
+  "One account manager for 80 clients",
+  "12-month contracts before you see a single family",
+];
+
+const CompareUs = [
+  "Profile worked weekly — posts, photos, Q&A, pediatric categories",
+  "Reporting tied to calls, direction requests, and booked visits",
+  "Hand-built citations and local links that compound",
+  "A dedicated strategist who knows your pediatric market",
+  "Month-to-month — we keep you with results, not paperwork",
+];
+
+const WhyCards = [
+  {
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Local practices are all we do",
+    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked visits for pediatric and local practices is the entire practice.",
+  },
+  {
+    icon: <FiZap aria-hidden="true" />,
+    title: "Fast, compounding execution",
+    desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into back-to-school and cold-and-flu demand. Every month of work stacks on the last.",
+  },
+  {
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Transparent to a fault",
+    desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
+  },
+];
+
+const MarqueeItems = [
+  "Pediatrician SEO",
+  "Pediatrician Near Me",
+  "Google Business Profile",
+  "Map Pack Rankings",
+  "New Patient Families",
+  "Review Growth",
+  "Local Practice Pages",
+];
+
+const NationwideChips = [
+  "Well-Child Visits",
+  "Newborn Care",
+  "Vaccinations",
+  "Sick Visits",
+  "Sports Physicals",
+  "Developmental Care",
+  "Same-Day Sick",
+  "Telehealth",
+];
+
+const GrowCards = [
+  {
+    href: "/services/gmb-optimization",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    title: "Google Business Profile Optimization",
+    desc: "Most parents pick a pediatrician straight from the map pack. We optimize your profile so that practice is you.",
+    cta: "Optimize your profile",
+  },
+  {
+    href: "/services/web-design",
+    icon: <FiZap aria-hidden="true" />,
+    title: "Website Design",
+    desc: "Traffic is not enough — your site has to convert parents into booked visits. Conversion-first design built to earn family trust.",
+    cta: "See website design",
+  },
+  {
+    href: "/services/google-ads",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    title: "Google Ads Management",
+    desc: "Pair organic rankings with paid coverage and own the whole results page during peak checkup and sick-visit demand.",
+    cta: "See Google Ads",
+  },
+];
+
+function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="pedi-sec-1">
-        <div className="pedi-sec-1-layer">
-          <Row className="align-items-center g-4">
-            <Col lg={6}>
-              <div className="pedi-sec-1-content">
-                <h1 className="pedi-sec-1-heading">
-                  Marketing for <span>Pediatricians</span> That Brings More
-                  Patient Appointments
-                </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pediatricSeoFaqJsonLd),
+        }}
+      />
 
-                <p className="pedi-sec-1-descrp">
-                  We help pediatric clinics grow with SEO, local visibility, and
-                  targeted digital marketing strategies designed to attract more
-                  patients and build long-term trust.
+      <div className="tseo-page">
+        <main>
+          {/* 1. Hero */}
+          <section className="tseo-hero">
+            <div className="tseo-container">
+              <div className="tseo-hero-grid">
+                <div className="tseo-hero-copy">
+                  <p className="tseo-eyebrow">Pediatrician SEO & Marketing</p>
+                  <h1 className="tseo-hero-h1">
+                    Pediatrician SEO that{" "}
+                    <span className="tseo-hl">fills your schedule</span>
+                  </h1>
+                  <p className="tseo-hero-sub">
+                    We&apos;ve helped 50+ local practices and home-service
+                    businesses climb into the Google map pack and grow. Zonic
+                    Media builds the full local ranking system for pediatric
+                    practices — Google Business Profile, citations, reviews, and
+                    local pages — so when parents search &ldquo;pediatrician near
+                    me,&rdquo; they find you first.
+                  </p>
+                  <div className="tseo-hero-badges" aria-label="Partner badges">
+                    {/* Self-hosted Clutch badge — the live iframe embed is
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge"
+                        width={74}
+                        height={74}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
+                      />
+                    </a>
+                    <Image
+                      className="tseo-hero-badge"
+                      width={74}
+                      height={74}
+                      src="/images/Partner.png"
+                      alt="Yelp Advertising Partner"
+                    />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        className="tseo-hero-badge-trustpilot"
+                        width={104}
+                        height={50}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
+                      />
+                    </a>
+                  </div>
+                  <div className="tseo-hero-ctas">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Get Your Free Pediatric SEO Audit
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                    <a href={SITE_CONTACT.phoneHref} className="tseo-btn-ghost">
+                      <FiPhoneCall aria-hidden="true" />
+                      Call {SITE_CONTACT.phoneDisplay}
+                    </a>
+                  </div>
+                  <div className="tseo-hero-proof">
+                    <span
+                      className="tseo-hero-proof-stars"
+                      aria-hidden="true"
+                    >
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </span>
+                    <p>
+                      <strong>Rated 4.9/5</strong> by the local businesses we
+                      rank
+                    </p>
+                  </div>
+                </div>
+
+                <div className="tseo-hero-visual">
+                  <div className="tseo-hero-dash-wrap">
+                  <div className="tseo-hero-dash" aria-hidden="true">
+                    <div className="tseo-dash-head">
+                      <h3>Pediatric Local SEO Performance</h3>
+                    </div>
+                    <div className="tseo-ba-toggle-row">
+                      <span className="tseo-ba-toggle">
+                        <span className="tseo-ba-thumb" />
+                        <span className="tseo-ba-label tseo-ba-label--before">
+                          Before
+                        </span>
+                        <span className="tseo-ba-label tseo-ba-label--after">
+                          After
+                        </span>
+                      </span>
+                    </div>
+                    <div className="tseo-ba-stage">
+                      {/* AFTER state (base layer) */}
+                      <div className="tseo-ba-panel">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;pediatrician near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li tseo-dash-li--you">
+                              <FiMapPin />
+                              <span>Your Pediatric Practice</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Children&apos;s Clinic</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Kids Health</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-review">
+                              <FaStar />
+                              4.9 · 194 reviews
+                              <em>+32 this quarter</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">284</p>
+                              <span className="tseo-dash-delta">+212%</span>
+                            </div>
+                            <div className="tseo-dash-bars">
+                              {[26, 34, 30, 42, 50, 46, 58, 66, 62, 78, 90, 104].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#1</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.9★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>+86%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* BEFORE state (fading overlay) */}
+                      <div className="tseo-ba-panel tseo-ba-panel--before">
+                        <div className="tseo-dash-body">
+                          <div className="tseo-dash-list">
+                            <p className="tseo-dash-sub">
+                              Map pack · &ldquo;pediatrician near me&rdquo;
+                            </p>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Children&apos;s Clinic</span>
+                              <em>#1</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Kids Health</span>
+                              <em>#2</em>
+                            </div>
+                            <div className="tseo-dash-li">
+                              <FiMapPin />
+                              <span>Competitor Family Pediatrics</span>
+                              <em>#3</em>
+                            </div>
+                            <div className="tseo-dash-li tseo-dash-li--lost">
+                              <FiMapPin />
+                              <span>Your Pediatric Practice</span>
+                              <em>#13</em>
+                            </div>
+                          </div>
+                          <div className="tseo-dash-chart">
+                            <p className="tseo-dash-sub">
+                              Calls from local search
+                            </p>
+                            <div className="tseo-dash-metric">
+                              <p className="tseo-dash-metric-num">38</p>
+                              <span className="tseo-dash-delta tseo-dash-delta--down">
+                                Page 2
+                              </span>
+                            </div>
+                            <div className="tseo-dash-bars tseo-dash-bars--muted">
+                              {[48, 34, 42, 28, 36, 24, 32, 20, 28, 16, 22, 12].map(
+                                (height, index) => (
+                                  <span
+                                    key={index}
+                                    style={{ height: `${height}px` }}
+                                  />
+                                ),
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="tseo-dash-foot">
+                          <div>
+                            <strong>#13</strong>
+                            <span>Map pack rank</span>
+                          </div>
+                          <div>
+                            <strong>4.1★</strong>
+                            <span>Google rating</span>
+                          </div>
+                          <div>
+                            <strong>−8%</strong>
+                            <span>Direction requests</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tseo-hero-floats">
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>#1 in the Map Pack</strong>
+                        &ldquo;pediatrician near me&rdquo;
+                      </p>
+                    </div>
+                    <div className="tseo-float-card">
+                      <span className="tseo-float-card-icon tseo-float-card-icon--green">
+                        <FiStar aria-hidden="true" />
+                      </span>
+                      <p>
+                        <strong>+32 reviews</strong>
+                        this quarter
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tseo-hero-stats">
+                {HeroStats.map((stat) => (
+                  <div className="tseo-stat" key={stat.label}>
+                    <span className="tseo-stat-icon">{stat.icon}</span>
+                    <div>
+                      <p className="tseo-stat-num">{stat.num}</p>
+                      <p className="tseo-stat-label">{stat.label}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 2. Problem / solution */}
+          <section className="tseo-problem">
+            <div className="tseo-container">
+              <div className="tseo-problem-grid">
+                <div className="tseo-gbp-wrap" aria-hidden="true">
+                  <div className="tseo-gbp">
+                    <div className="tseo-gbp-head">
+                      <span className="tseo-gbp-avatar">
+                        <FiImage />
+                      </span>
+                      <div>
+                        <strong>
+                          Your Pediatric Practice
+                          <MdOutlineVerifiedUser />
+                        </strong>
+                        <span className="tseo-gbp-stars">
+                          <FaStar />
+                          4.9 (194 reviews)
+                        </span>
+                      </div>
+                    </div>
+                    <p className="tseo-gbp-meta">
+                      Pediatrician · <em>Open now</em> · Accepting new patients
+                    </p>
+                    <div className="tseo-gbp-actions">
+                      <span className="tseo-gbp-action tseo-gbp-action--solid">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiMapPin />
+                        Directions
+                      </span>
+                      <span className="tseo-gbp-action">
+                        <FiArrowUpRight />
+                        Website
+                      </span>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Profile views</span>
+                      <em>+180%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Calls from profile</span>
+                      <em>+212%</em>
+                    </div>
+                    <div className="tseo-gbp-row">
+                      <span>Appointment requests</span>
+                      <em>+3×</em>
+                    </div>
+                  </div>
+                  <span className="tseo-gbp-chip">
+                    <FaStar aria-hidden="true" />
+                    Trusted by 50+ local businesses
+                  </span>
+                </div>
+                <div>
+                  <p className="tseo-eyebrow">The Local Growth Opportunity</p>
+                  <h2 className="tseo-h2">
+                    Parents are searching for a pediatrician.{" "}
+                    <span className="tseo-hl-text">
+                      We make sure they find you.
+                    </span>
+                  </h2>
+                  <p className="tseo-lead">
+                    When a child spikes a fever or a new family moves to town, the
+                    first thing parents do is search &ldquo;pediatrician near
+                    me&rdquo; and call one of the top three practices on the map.
+                    That is an enormous, high-intent growth channel sitting right
+                    in front of your practice — and it is exactly the channel we
+                    have spent years mastering for local medical practices.
+                  </p>
+                  <p className="tseo-lead">
+                    Our local SEO system captures it step by step: a fully
+                    optimized Google Business Profile, consistent citations,
+                    steadily growing reviews, and local pages built around the
+                    searches parents actually type. Every ranking signal Google
+                    rewards, done properly and done monthly — that is how our
+                    clients turn local searches into calls, booked visits, and new
+                    patient families that compound season after season.
+                  </p>
+                  <div className="tseo-checks">
+                    {ProblemChecks.map((check) => (
+                      <div className="tseo-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/about" className="tseo-btn">
+                    More About Zonic Media
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. Deliverables */}
+          <section className="tseo-services" id="tseo-services">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">What&apos;s Included</p>
+                  <h2 className="tseo-h2">
+                    Everything your pediatric rankings need, in one system
+                  </h2>
+                </div>
+                <Link href="/services" className="tseo-link-arrow">
+                  View all services <FiArrowUpRight aria-hidden="true" />
+                </Link>
+              </div>
+              <div className="tseo-cards">
+                {ServiceCards.map((card) => (
+                  <article className="tseo-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. Dark band + map pack mockup */}
+          <section className="tseo-band">
+            <div className="tseo-band-grid">
+              <div className="tseo-band-content">
+                <p className="tseo-eyebrow">The Map Pack Is The Market</p>
+                <h2 className="tseo-h2">
+                  We put your practice in the top three — and keep it there
+                </h2>
+                <p className="tseo-lead">
+                  The map pack gets the majority of clicks and nearly all of the
+                  new patient calls, and that is exactly where we specialize.
+                  Every campaign is built around one goal: earning your practice
+                  those top spots for the pediatric services and neighborhoods
+                  that grow your schedule fastest, then strengthening them month
+                  after month.
                 </p>
+                <p className="tseo-lead">
+                  We work the signals Google actually rewards: proximity,
+                  relevance, and prominence. A fully built-out profile tells
+                  Google exactly which pediatric services you offer, consistent
+                  citations confirm you are who you say you are, and a steady flow
+                  of reviews and local content proves families love working with
+                  you. And if a listing ever gets suspended, our{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="tseo-inline-link"
+                  >
+                    Google Business Profile reinstatement
+                  </Link>{" "}
+                  team gets you back on the map fast.
+                </p>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  See Where You Rank Today
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
 
-                <div className="pedi-sec-1-ctas">
+              <div className="tseo-mappack" aria-hidden="true">
+                <div className="tseo-mappack-map">
+                  <span className="tseo-map-pin tseo-map-pin--a">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--you">
+                    <FiMapPin />
+                  </span>
+                  <span className="tseo-map-pin tseo-map-pin--b">
+                    <FiMapPin />
+                  </span>
+                </div>
+                <div className="tseo-mappack-bar">
+                  <FiSearch />
+                  pediatrician near me
+                </div>
+                <div className="tseo-mappack-list">
+                  <p className="tseo-mappack-title">Google · Local results</p>
+                  <div className="tseo-mappack-row tseo-mappack-row--you">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Your Pediatric Practice</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.9 (194) · Pediatrician ·{" "}
+                        <span className="tseo-mappack-open">Open now</span>
+                      </span>
+                    </span>
+                    <span className="tseo-mappack-badge">
+                      That&apos;s you
+                    </span>
+                    <span className="tseo-mappack-actions">
+                      <span className="tseo-mappack-action">
+                        <FiPhoneCall />
+                        Call
+                      </span>
+                      <span className="tseo-mappack-action tseo-mappack-action--ghost">
+                        <FiArrowUpRight />
+                        Directions
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Children&apos;s Clinic</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.6 (98) · Pediatrician
+                      </span>
+                    </span>
+                  </div>
+                  <div className="tseo-mappack-row">
+                    <span className="tseo-mappack-thumb">
+                      <FiImage />
+                    </span>
+                    <span className="tseo-mappack-info">
+                      <strong>Competitor Kids Health</strong>
+                      <span className="tseo-mappack-stars">
+                        <FaStar />
+                        4.4 (61) · Pediatrician
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Process */}
+          <section className="tseo-process" id="tseo-process">
+            <div className="tseo-container">
+              <div className="tseo-sec-head">
+                <div>
+                  <p className="tseo-eyebrow">How It Works</p>
+                  <h2 className="tseo-h2">
+                    From invisible to unavoidable in four steps
+                  </h2>
+                </div>
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-link-arrow"
+                  offset={120}
+                >
+                  Start with step one <FiArrowUpRight aria-hidden="true" />
+                </HashScrollLink>
+              </div>
+              <div className="tseo-bento">
+                {/* 01 — featured */}
+                <article className="tseo-bento-card tseo-bento-card--s1">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      01
+                    </span>
+                    <span className="tseo-bento-tag">Week 1</span>
+                  </div>
+                  <h3>Free pediatric visibility audit</h3>
+                  <p>
+                    We audit your rankings, profile, citations, reviews, and
+                    competitors — and show you exactly where the new patient
+                    families you are missing are going instead.
+                  </p>
+                  <div className="tseo-bento-visual" aria-hidden="true">
+                    <p className="tseo-bento-visual-title">
+                      Where pediatric clients typically land after 90 days
+                    </p>
+                    {[
+                      { label: "Profile strength", val: 92 },
+                      { label: "Citation accuracy", val: 96 },
+                      { label: "Review velocity", val: 84 },
+                    ].map((bar) => (
+                      <div className="tseo-bento-bar-row" key={bar.label}>
+                        <div className="tseo-bento-bar-head">
+                          <span>{bar.label}</span>
+                          <span>{bar.val}%</span>
+                        </div>
+                        <div className="tseo-bento-bar-track">
+                          <span
+                            className="tseo-bento-bar-fill"
+                            style={{ width: `${bar.val}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                {/* 02 */}
+                <article className="tseo-bento-card tseo-bento-card--s2">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      02
+                    </span>
+                    <span className="tseo-bento-tag">Weeks 2–4</span>
+                  </div>
+                  <h3>Strategy &amp; foundation fixes</h3>
+                  <p>
+                    A keyword-mapped plan for your pediatric services and
+                    neighborhoods, then the foundation work: profile
+                    optimization, citation cleanup, and on-page fixes.
+                  </p>
+                </article>
+
+                {/* 03 — dark */}
+                <article className="tseo-bento-card tseo-bento-card--s3">
+                  <div className="tseo-bento-head">
+                    <span className="tseo-bento-num" aria-hidden="true">
+                      03
+                    </span>
+                    <span className="tseo-bento-tag">Every month</span>
+                  </div>
+                  <h3>Build authority every month</h3>
+                  <p>
+                    Local content, links, review growth, and profile activity —
+                    the compounding signals that move you up the map pack and
+                    keep you there through every season.
+                  </p>
+                  <div className="tseo-bento-chips">
+                    {["Local content", "Review growth", "Profile activity"].map(
+                      (chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ),
+                    )}
+                  </div>
                   <HashScrollLink
-                    href="#pediatricians-contact-form"
-                    className="buttons"
+                    href="#tseo-form"
+                    className="tseo-btn tseo-bento-cta"
                     offset={120}
                   >
-                    Book Free Strategy Call
-                    <span className="buttons__icon-wrapper">
-                      <svg
-                        viewBox="0 0 14 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="buttons__icon-svg"
-                        width="8"
-                      >
-                        <path
-                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        viewBox="0 0 14 15"
-                        fill="none"
-                        width="8"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="buttons__icon-svg buttons__icon-svg--copy"
-                      >
-                        <path
-                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                    Start Growing Today
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
                     </span>
                   </HashScrollLink>
+                </article>
 
+                {/* 04 — wide */}
+                <article className="tseo-bento-card tseo-bento-card--s4">
+                  <div className="tseo-bento-s4-copy">
+                    <div className="tseo-bento-head">
+                      <span className="tseo-bento-num" aria-hidden="true">
+                        04
+                      </span>
+                      <span className="tseo-bento-tag">Ongoing</span>
+                    </div>
+                    <h3>Report, refine, expand</h3>
+                    <p>
+                      Monthly reporting tied to calls and booked visits, not
+                      vanity metrics. As rankings lock in, we expand to more
+                      pediatric services and more neighborhoods.
+                    </p>
+                  </div>
+                  <div className="tseo-bento-s4-side">
+                    <div className="tseo-bento-chips">
+                      {[
+                        "Plain-English report",
+                        "New neighborhoods",
+                        "New services",
+                      ].map((chip) => (
+                        <span className="tseo-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-link-arrow"
+                      offset={120}
+                    >
+                      Start with the free audit{" "}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </HashScrollLink>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* 5c. Results */}
+          <section className="tseo-results">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Real Results</p>
+                <h2 className="tseo-h2">
+                  What happens when pediatric local SEO is done properly
+                </h2>
+                <p className="tseo-lead">
+                  Different markets, different seasons — the same system,
+                  executed month after month.
+                </p>
+              </div>
+              <div className="tseo-results-cards">
+                {ResultCards.map((card) => (
+                  <article className="tseo-result-card" key={card.industry}>
+                    <p className="tseo-result-ind">
+                      {card.icon}
+                      {card.industry}
+                    </p>
+                    <p className="tseo-result-metric">{card.metric}</p>
+                    <p className="tseo-result-label">{card.label}</p>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 6. Comparison */}
+          <section className="tseo-compare">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">The Difference</p>
+                <h2 className="tseo-h2">
+                  What you get with Zonic vs. a typical pediatric marketing agency
+                </h2>
+                <p className="tseo-lead">
+                  Local SEO for practices and home-service businesses is all we
+                  do, and it shows. Here is exactly what working with a dedicated
+                  local team looks like.
+                </p>
+              </div>
+              <div className="tseo-compare-grid">
+                <div className="tseo-compare-col tseo-compare-col--them">
+                  <h3>Typical marketing agency</h3>
+                  <p className="tseo-compare-sub">
+                    Why most pediatric campaigns quietly stall
+                  </p>
+                  <ul>
+                    {CompareThem.map((item) => (
+                      <li key={item}>
+                        <FiX aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="tseo-compare-col tseo-compare-col--us">
+                  <h3>Pediatrician SEO with Zonic Media</h3>
+                  <p className="tseo-compare-sub">
+                    Built to compound, reported like a P&amp;L
+                  </p>
+                  <ul>
+                    {CompareUs.map((item) => (
+                      <li key={item}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div
+                  className="tseo-compare-col tseo-compare-col--score"
+                  aria-hidden="true"
+                >
+                  <h3>Local Visibility Scorecard</h3>
+                  <p className="tseo-compare-sub">
+                    A typical pediatric client&apos;s first six months
+                  </p>
+                  <div className="tseo-score-rows">
+                    {ScoreRows.map((row) => (
+                      <div key={row.label}>
+                        <div className="tseo-score-head">
+                          <span>{row.label}</span>
+                          <span className="tseo-score-vals">
+                            {row.before}% → <strong>{row.after}%</strong>
+                          </span>
+                        </div>
+                        <div className="tseo-score-track">
+                          <span
+                            className="tseo-score-fill"
+                            style={
+                              { "--w": `${row.after}%` } as React.CSSProperties
+                            }
+                          />
+                          <span
+                            className="tseo-score-before"
+                            style={
+                              { "--b": `${row.before}%` } as React.CSSProperties
+                            }
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="tseo-score-legend">
+                    <span>
+                      <i className="tseo-score-legend-before" />
+                      Before Zonic
+                    </span>
+                    <span>
+                      <i />
+                      After 6 months
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 6b. Live tracking mockups */}
+          <section className="tseo-tracking">
+            <div className="tseo-container">
+              <div className="tseo-tracking-grid">
+                <div>
+                  <p className="tseo-eyebrow">Always Measurable</p>
+                  <h2 className="tseo-h2">
+                    Watch your pediatric rankings and reviews climb,{" "}
+                    <span className="tseo-hl-text">month over month</span>
+                  </h2>
+                  <p className="tseo-lead">
+                    No black box. Every campaign comes with live rank tracking
+                    for the pediatric keywords that fill your schedule, review
+                    growth monitoring, and call tracking from your profile — all
+                    rolled into one plain-English monthly report.
+                  </p>
+                  <p className="tseo-lead">
+                    If a number moves, you know why. If a number stalls, you
+                    know what we are doing about it.
+                  </p>
                   <HashScrollLink
-                    href="#pediatricians-contact-form"
-                    className="buttons pedi-sec-1-secondary-btn"
+                    href="#tseo-form"
+                    className="tseo-btn"
                     offset={120}
                   >
-                    Get More Patient Leads
-                    <span className="buttons__icon-wrapper">
-                      <svg
-                        viewBox="0 0 14 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="buttons__icon-svg"
-                        width="8"
-                      >
-                        <path
-                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <svg
-                        viewBox="0 0 14 15"
-                        fill="none"
-                        width="8"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="buttons__icon-svg buttons__icon-svg--copy"
-                      >
-                        <path
-                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                          fill="currentColor"
-                        />
-                      </svg>
+                    Get a Sample Report
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
                     </span>
                   </HashScrollLink>
                 </div>
 
-                <div className="pedi-feature-grid">
-                  {HeroHighlights.map((item) => (
-                    <div className="pedi-feature-card" key={item.title}>
-                      <div className={`pedi-feature-icon ${item.colorClass}`}>
-                        {item.icon}
+                <div className="tseo-mocks" aria-hidden="true">
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Keyword Rankings</h3>
+                      <span className="tseo-mock-tag">All improving</span>
+                    </div>
+                    <div className="tseo-rank-rows">
+                      {RankRows.map((row) => (
+                        <div className="tseo-rank-row" key={row.kw}>
+                          <span className="tseo-rank-kw">{row.kw}</span>
+                          <span className="tseo-rank-pos">{row.pos}</span>
+                          <span className="tseo-rank-delta">{row.delta}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="tseo-mock-card">
+                    <div className="tseo-mock-head">
+                      <h3>Review Growth</h3>
+                      <span className="tseo-mock-tag">+32 this quarter</span>
+                    </div>
+                    <div className="tseo-review-score">
+                      <strong>4.9</strong>
+                      <span>
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                        <FaStar />
+                      </span>
+                    </div>
+                    <p className="tseo-review-count">
+                      194 Google reviews and counting
+                    </p>
+                    <div className="tseo-review-bars">
+                      {ReviewBarHeights.map((height, index) => (
+                        <span
+                          className="tseo-review-bar"
+                          key={index}
+                          style={{ height: `${height}px` }}
+                        />
+                      ))}
+                    </div>
+                    <p className="tseo-review-bars-label">
+                      New reviews per month
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Why choose us + audit banner */}
+          <section className="tseo-why">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Why Zonic Media</p>
+                <h2 className="tseo-h2">
+                  A pediatric SEO partner, not a monthly invoice
+                </h2>
+                <p className="tseo-lead">
+                  Rankings are the output. The inputs are strategy, execution,
+                  and accountability — and that is what you are actually buying.
+                </p>
+              </div>
+              <div className="tseo-why-cards">
+                {WhyCards.map((card) => (
+                  <article className="tseo-why-card" key={card.title}>
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+              <div className="tseo-why-banner">
+                <div className="tseo-why-banner-text">
+                  <p className="tseo-eyebrow">Free Pediatric SEO Audit</p>
+                  <h3>See exactly how we&apos;ll grow your practice rankings</h3>
+                  <p>
+                    We&apos;ll map your profile, citations, reviews, and
+                    rankings — and show you the clear path to the top three for
+                    the pediatric searches in your market. Free, and yours to
+                    keep either way.
+                  </p>
+                  <div className="tseo-banner-checks">
+                    {BannerChecks.map((check) => (
+                      <div className="tseo-banner-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
                       </div>
-                      <p>{item.title}</p>
+                    ))}
+                  </div>
+                  <HashScrollLink
+                    href="#tseo-form"
+                    className="tseo-btn"
+                    offset={120}
+                  >
+                    Claim Your Free Audit
+                    <span className="tseo-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                <div className="tseo-audit-card" aria-hidden="true">
+                  <div className="tseo-audit-head">
+                    <h4>Local Visibility Score</h4>
+                    <span className="tseo-mock-tag">After 6 months</span>
+                  </div>
+                  <div className="tseo-audit-ring-wrap">
+                    <div className="tseo-audit-ring">
+                      <span>
+                        92<small>/100</small>
+                      </span>
+                    </div>
+                    <div className="tseo-audit-ring-info">
+                      <strong>Excellent</strong>
+                      <small>
+                        Where our pediatric campaigns typically land after six
+                        months of compounding local SEO work
+                      </small>
+                    </div>
+                  </div>
+                  {AuditRows.map((row) => (
+                    <div className="tseo-audit-row" key={row.label}>
+                      <span>{row.label}</span>
+                      <span className="tseo-audit-flag">{row.flag}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </Col>
+            </div>
+          </section>
 
-            <Col lg={6}>
-              <div className="pedi-sec-1-visual">
-                <div className="pedi-sec-1-shape pedi-sec-1-shape-left" />
-                <div className="pedi-sec-1-shape pedi-sec-1-shape-right" />
-                <Image
-                  src="/images/pediatricians/pedis-banner-1.png"
-                  alt="Marketing for pediatricians hero illustration"
-                  width={760}
-                  height={720}
-                  priority
+          {/* 8. Reviews */}
+          <section
+            className="tseo-reviews"
+            aria-labelledby="tseo-reviews-title"
+          >
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Verified Client Reviews</p>
+                <h2 className="tseo-h2" id="tseo-reviews-title">
+                  Trusted by small &amp; mid-size businesses across the US
+                </h2>
+              </div>
+              <div className="tseo-reviews-widget">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#2567e8"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                 />
               </div>
-            </Col>
-          </Row>
+            </div>
+          </section>
 
-          <div className="pedi-priority-strip">
-            <div className="pedi-priority-strip-media pedi-priority-strip-media-left">
-              <Image
-                src="/images/pediatricians/pedis-img-2.svg"
-                alt="Pediatric clinic growth illustration"
-                width={88}
-                height={88}
-              />
-            </div>
-            <div className="pedi-priority-strip-copy">
-              <h3>Your Practice Growth Is Our Priority</h3>
-              <p>
-                We help pediatric clinics attract more local patients and grow
-                their online presence with strategies built for long-term trust.
-              </p>
-            </div>
-            <div className="pedi-priority-strip-media pedi-priority-strip-media-right">
-              <Image
-                src="/images/pediatricians/pedis-img-3.svg"
-                alt="Pediatric care support illustration"
-                width={88}
-                height={88}
-              />
+          {/* 9. Marquee */}
+          <div className="tseo-marquee" aria-hidden="true">
+            <div className="tseo-marquee-track">
+              {[0, 1].map((copy) => (
+                <span className="tseo-marquee-item" key={copy}>
+                  {MarqueeItems.map((item) => (
+                    <span className="tseo-marquee-item" key={item}>
+                      {item} <FaStar aria-hidden="true" />
+                    </span>
+                  ))}
+                </span>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="pedi-sec-2">
-        <div className="pedi-center-head">
-          <h2 className="pedi-sec-heading">
-            A Pediatric Marketing Agency <span>Built For Growth</span>
-          </h2>
-          <p className="pedi-sec-descrp">
-            At Zonic, we specialize in marketing for pediatricians and
-            children&apos;s clinics.
-          </p>
-          <p className="pedi-sec-descrp">
-            We build systems that position your clinic in front of parents who
-            are actively searching for care, from{" "}
-            <Link
-              href="/services/gmb-optimization"
-              className="pedi-inline-link"
-            >
-              Google Business Profile optimization
-            </Link>{" "}
-            to content that earns trust.
-          </p>
-          <p className="pedi-sec-descrp">
-            No generic strategies. No guesswork. Just focused pediatric
-            marketing designed to increase appointments.
-          </p>
-        </div>
-      </div>
+          {/* 10. Industries / nationwide */}
+          <section className="tseo-nationwide">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Wherever You Practice</p>
+                <h2 className="tseo-h2">
+                  Local SEO for pediatric practices in every market in the US
+                </h2>
+                <p className="tseo-lead">
+                  From single-office pediatricians to multi-location groups, we
+                  run local SEO campaigns in every state. Everything happens
+                  remotely — audits, strategy calls, reporting — so you get the
+                  same process whether you are in Delaware, Texas, or California.
+                </p>
+              </div>
+              <div className="tseo-coverage" aria-hidden="true">
+                {[
+                  { city: "Dover, DE", win: "#1 Map Pack", top: "26%", left: "78%" },
+                  { city: "Philadelphia, PA", win: "Top 3", top: "12%", left: "58%" },
+                  { city: "Miami, FL", win: "+3× leads", top: "68%", left: "70%" },
+                  { city: "Austin, TX", win: "+212% calls", top: "66%", left: "34%" },
+                  { city: "Denver, CO", win: "Top 3", top: "24%", left: "22%" },
+                  { city: "Phoenix, AZ", win: "#1 rankings", top: "58%", left: "10%" },
+                ].map((pin) => (
+                  <span
+                    className="tseo-coverage-pin"
+                    style={{ top: pin.top, left: pin.left }}
+                    key={pin.city}
+                  >
+                    <FiMapPin />
+                    {pin.city}
+                    <em>{pin.win}</em>
+                  </span>
+                ))}
+                <div className="tseo-coverage-core">
+                  <strong>50+</strong>
+                  <span>
+                    local businesses growing
+                    <br />
+                    across the United States
+                  </span>
+                </div>
+              </div>
+              <div className="tseo-chips">
+                {NationwideChips.map((chip) => (
+                  <span className="tseo-chip" key={chip}>
+                    {chip}
+                  </span>
+                ))}
+              </div>
+              <div className="tseo-nationwide-cta">
+                <HashScrollLink
+                  href="#tseo-form"
+                  className="tseo-btn"
+                  offset={120}
+                >
+                  Get Your Free Audit
+                  <span className="tseo-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+            </div>
+          </section>
 
-      <div className="pedi-sec-3">
-        <Row className="align-items-center g-4">
-          <Col lg={6}>
-            <div className="pedi-split-copy">
-              <h2 className="pedi-split-heading">
-                Local SEO For Pediatricians
-              </h2>
-              <h3 className="pedi-split-subhead">
-                Get Found in Your Local Area
-              </h3>
-              <p className="pedi-split-text">
-                Most parents search for pediatricians near them when they need
-                care for their child. Our{" "}
-                <Link
-                  href="/services/local-seo-for-home-services"
-                  className="pedi-inline-link"
-                >
-                  local SEO services
-                </Link>{" "}
-                ensure your clinic appears in the Google Map Pack and local
-                search results at the right moment, making it easier for nearby
-                parents to find, trust, and choose your services. If your listing
-                has been taken down, we also handle{" "}
-                <Link
-                  href="/services/gmb-reinstatement-help"
-                  className="pedi-inline-link"
-                >
-                  suspended Google Business Profile reinstatement
-                </Link>{" "}
-                so you never lose local visibility. For new or locked profiles,
-                we can also{" "}
-                <Link
-                  href="/services/gmb-verification-help"
-                  className="pedi-inline-link"
-                >
-                  verify your GBP
-                </Link>{" "}
-                before campaigns scale.
-              </p>
-              <p className="pedi-split-label">What We Do:</p>
-
-              <div className="pedi-timeline-list">
-                {LocalSeoItems.map((item) => (
-                  <div className="pedi-timeline-item" key={item}>
-                    <span className="pedi-timeline-dot" />
-                    <p>{item}</p>
+          {/* 11. FAQs */}
+          <section className="tseo-faqs" id="tseo-faqs">
+            <div className="tseo-container">
+              <div className="tseo-split-grid">
+                <div>
+                  <p className="tseo-eyebrow">FAQs</p>
+                  <h2 className="tseo-h2">
+                    Straight answers about pediatrician SEO
+                  </h2>
+                  <p className="tseo-lead">
+                    Pricing, timelines, guarantees, and what actually moves
+                    pediatric rankings. If your question is not here, send it
+                    through the form — a strategist answers, not a sales script.
+                  </p>
+                  <div className="tseo-faq-cta">
+                    <HashScrollLink
+                      href="#tseo-form"
+                      className="tseo-btn"
+                      offset={120}
+                    >
+                      Ask About Your Market
+                      <span className="tseo-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
                   </div>
+                </div>
+                <div>
+                  <GmbFaqs items={PediatricSeoFaqs} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 12. Grow further — internal links */}
+          <section className="tseo-grow">
+            <div className="tseo-container">
+              <div className="tseo-sec-head-center">
+                <p className="tseo-eyebrow">Grow Further</p>
+                <h2 className="tseo-h2">
+                  Rankings are step one. Here is what multiplies them.
+                </h2>
+              </div>
+              <div className="tseo-grow-cards">
+                {GrowCards.map((card) => (
+                  <Link
+                    href={card.href}
+                    className="tseo-grow-card"
+                    key={card.href}
+                  >
+                    <span className="tseo-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                    <span className="tseo-grow-link">
+                      {card.cta} <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
                 ))}
               </div>
             </div>
-          </Col>
+          </section>
 
-          <Col lg={6}>
-            <div className="pedi-split-image">
-              <Image
-                src="/images/pediatricians/pedis-img-4.jpg"
-                alt="Local SEO for pediatricians"
-                fill
-              />
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="iaf-section">
-        <InlineAuditForm
-          heading="Get Your Free Pediatric Practice SEO Audit"
-          description="Share your practice details and we will review your local search rankings, Google Maps visibility, and patient acquisition gaps at no cost."
-        />
-      </div>
-
-      <div className="pedi-sec-4">
-        <div className="pedi-center-head pedi-center-head-dark">
-          <h2 className="pedi-sec-heading">How Our Process Works</h2>
-          <p className="pedi-sec-descrp">
-            From research to optimization, every step is focused on performance,
-            scalability, and consistent lead generation. When you need faster
-            reach, we pair organic growth with{" "}
-            <Link href="/services/google-ads" className="pedi-inline-link">
-              Google Ads
-            </Link>{" "}
-            and a full range of{" "}
-            <Link href="/services" className="pedi-inline-link">
-              digital marketing services
-            </Link>
-            .
-          </p>
-        </div>
-
-        <Row className="pedi-process-row">
-          {ProcessSteps.map((item) => (
-            <Col lg={4} md={6} key={item.step} className="pedi-process-col">
-              <div className="pedi-process-card">
-                <div className="pedi-process-circle">{item.step}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </div>
-
-      <div className="pedi-sec-5">
-        <Row className="align-items-center g-4">
-          <Col lg={6}>
-            <div className="pedi-split-image pedi-split-image-light">
-              <Image
-                src="/images/pediatricians/pedis-img-5.jpg"
-                alt="Pediatric website optimization"
-                fill
-              />
-            </div>
-          </Col>
-
-          <Col lg={6}>
-            <div className="pedi-split-copy">
-              <h2 className="pedi-split-heading">
-                Pediatric Website Optimization
-              </h2>
-              <h3 className="pedi-split-subhead">
-                Turn Visitors Into Patients
-              </h3>
-              <p className="pedi-split-text">
-                Getting traffic is not enough. Your website must convert
-                visitors into appointment requests. Our{" "}
-                <Link href="/services/web-design" className="pedi-inline-link">
-                  conversion-focused website design
-                </Link>{" "}
-                makes parents trust your clinic and take action.
-              </p>
-              <p className="pedi-split-label">What We Do:</p>
-
-              <div className="pedi-timeline-list">
-                {WebsiteItems.map((item) => (
-                  <div className="pedi-timeline-item" key={item}>
-                    <span className="pedi-timeline-dot" />
-                    <p>{item}</p>
+          {/* 13. Lead form */}
+          <section className="tseo-form-sec" id="tseo-form">
+            <div className="tseo-container">
+              <div className="tseo-form-grid">
+                <aside className="tseo-form-aside">
+                  <p className="tseo-eyebrow">Get Started</p>
+                  <h2 className="tseo-h2">
+                    Claim your free pediatric local SEO audit
+                  </h2>
+                  <p className="tseo-lead">
+                    Tell us about your practice and we will send a full local
+                    visibility audit — rankings, profile, citations, reviews —
+                    plus a flat-price growth plan to take you to the top of your
+                    market and bring more families through the door.
+                  </p>
+                  <div className="tseo-form-contacts">
+                    <a
+                      href={SITE_CONTACT.emailHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.phoneHref}
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Speak with a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="tseo-form-contact"
+                    >
+                      <span className="tseo-form-contact-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="tseo-form-contact-txt">
+                        <small>Visit our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
                   </div>
-                ))}
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </div>
-
-      <div className="pedi-sec-6">
-        <div className="pedi-center-head pedi-center-head-dark">
-          <h2 className="pedi-sec-heading">Pediatric SEO Services</h2>
-          <p className="pedi-sec-descrp">
-            Optimize your pediatric website for better visibility, traffic, and
-            patient growth.
-          </p>
-        </div>
-
-        <Row className="g-4">
-          {PediatricServices.map((service) => (
-            <Col lg={4} md={6} key={service.title}>
-              <div className="pedi-service-card">
-                <div className="pedi-service-img">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={500}
-                    height={350}
+                </aside>
+                <div className="tseo-form-main">
+                  <ServiceLeadForm
+                    formType="local-seo"
+                    badge="Free Audit"
+                    title="Get your free pediatric SEO audit"
+                    subtitle="No contracts, no pressure — just a clear picture of where your practice stands and what it takes to win the families in your market."
+                    submitText="Send My Free Audit"
+                    messageLabel="Tell us about your practice"
+                    messagePlaceholder="Your services, your city, and what you'd like to improve"
+                    defaultServices={["Local SEO"]}
                   />
                 </div>
-
-                <div className="pedi-service-overlay">
-                  <div className="pedi-service-head">
-                    <div className="pedi-service-icon">{service.icon}</div>
-                    <h4>{service.title}</h4>
-                  </div>
-
-                  <p>{service.description}</p>
-
-                  <HashScrollLink
-                    href="#pediatricians-contact-form"
-                    className="pedi-service-link"
-                    offset={120}
-                  >
-                    LEARN MORE <span>&gt;&gt;</span>
-                  </HashScrollLink>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </div>
-
-      <div className="phila-sec-8">
-        <h2 className="phila-sec-8-heading">What Our Clients Say</h2>
-
-        <div className="phila-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
-
-      <div className="phila-sec-9">
-        <div className="phila-center-head">
-          <div className="phila-center-head-content-wrapper">
-            <h2 className="phila-sec-heading">
-              Frequently Asked Questions About Pediatric Marketing
-            </h2>
-          </div>
-        </div>
-
-        <div className="phila-sec-9-faq-wrapper">
-          <GmbFaqs items={PediatricFaqs} columns={2} />
-        </div>
-
-        <Script
-          id="pediatricians-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/pediatricians",
-              mainEntity: PediatricFaqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      </div>
-
-      <div className="phila-sec-10">
-        <div className="phila-sec-10-inner">
-          <div className="phila-sec-10-content">
-            <h2 className="phila-sec-10-heading">
-              Your clinic deserves more visibility and more patients.
-            </h2>
-            <p className="phila-sec-10-descrp">
-              Book a discovery call with Zonic Media and let us build a search
-              engine marketing strategy that drives consistent growth for your
-              pediatric practice.
-            </p>
-
-            <div className="phila-sec-10-info-grid">
-              <div className="phila-sec-10-info-card">
-                <div className="phila-sec-10-info-head">
-                  <div className="phila-sec-10-info-icon">
-                    <MdOutlineLocationOn />
-                  </div>
-                  <h3>Our Office</h3>
-                </div>
-                <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
-                  <br />
-                  United States
-                </a>
-              </div>
-
-              <div className="phila-sec-10-info-card">
-                <div className="phila-sec-10-info-head">
-                  <div className="phila-sec-10-info-icon">
-                    <FiPhoneCall />
-                  </div>
-                  <h3>Contact Us</h3>
-                </div>
-                <a href={SITE_CONTACT.emailHref}>contact@zonicllc.com</a>
-                <a href={SITE_CONTACT.phoneHref}>(302) 726-9736</a>
               </div>
             </div>
-
-            <div className="phila-sec-10-image-wrap">
-              <Image
-                src="/images/contact-section.jpg"
-                fill
-                alt="Pediatric clinic marketing consultation"
-                className="phila-sec-10-image"
-              />
-            </div>
-          </div>
-
-          <div
-            className="phila-sec-10-contact-form"
-            id="pediatricians-contact-form"
-          >
-            <LeadContactForm
-              leadFormTitle={PediatricFormHead.leadFormTitle}
-              leadCallText={PediatricFormHead.leadCallText}
-              submitButtonText="Book Your Free Call"
-            />
-          </div>
-        </div>
+          </section>
+        </main>
       </div>
 
+      {/* 14. Global site footer */}
       <Footer />
     </>
   );
 }
 
-export default page;
+export default Page;

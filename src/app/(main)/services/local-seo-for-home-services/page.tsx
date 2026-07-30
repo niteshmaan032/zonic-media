@@ -475,22 +475,58 @@ function page() {
 
                 <ul>
                   <li>
-                    <IoIosCheckmarkCircle /> Bathroom Remodelers
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-bathroom-remodelers"
+                      className="lsh-inline-link"
+                    >
+                      Bathroom Remodelers
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Kitchen Remodelers
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-kitchen-remodelers"
+                      className="lsh-inline-link"
+                    >
+                      Kitchen Remodelers
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> General Contractors
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-general-contractors"
+                      className="lsh-inline-link"
+                    >
+                      General Contractors
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Flooring Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-flooring-companies"
+                      className="lsh-inline-link"
+                    >
+                      Flooring Companies
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Window & Door Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-window-and-door-companies"
+                      className="lsh-inline-link"
+                    >
+                      Window & Door Companies
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Painting Contractors
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-painting-contractors"
+                      className="lsh-inline-link"
+                    >
+                      Painting Contractors
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -504,7 +540,13 @@ function page() {
 
                 <ul>
                   <li>
-                    <IoIosCheckmarkCircle /> Electricians
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-electricians"
+                      className="lsh-inline-link"
+                    >
+                      Electricians
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle />{" "}
@@ -525,7 +567,13 @@ function page() {
                     </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Garage Door Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-garage-door-companies"
+                      className="lsh-inline-link"
+                    >
+                      Garage Door Companies
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle />{" "}
@@ -537,7 +585,13 @@ function page() {
                     </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Appliance Repair Services
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-appliance-repair"
+                      className="lsh-inline-link"
+                    >
+                      Appliance Repair Services
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle />{" "}
@@ -560,7 +614,13 @@ function page() {
 
                 <ul>
                   <li>
-                    <IoIosCheckmarkCircle /> Landscaping Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-landscaping-companies"
+                      className="lsh-inline-link"
+                    >
+                      Landscaping Companies
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle />{" "}
@@ -572,16 +632,40 @@ function page() {
                     </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Pool Services
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-pool-service-companies"
+                      className="lsh-inline-link"
+                    >
+                      Pool Services
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Gutter Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-gutter-companies"
+                      className="lsh-inline-link"
+                    >
+                      Gutter Companies
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Tree Services
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-tree-service-companies"
+                      className="lsh-inline-link"
+                    >
+                      Tree Services
+                    </Link>
                   </li>
                   <li>
-                    <IoIosCheckmarkCircle /> Solar Companies
+                    <IoIosCheckmarkCircle />{" "}
+                    <Link
+                      href="/services/industry/local-seo-for-solar-companies"
+                      className="lsh-inline-link"
+                    >
+                      Solar Companies
+                    </Link>
                   </li>
                   <li>
                     <IoIosCheckmarkCircle />{" "}

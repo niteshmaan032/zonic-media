@@ -1,43 +1,9 @@
 /*
- * LOCAL SEO FOR LAW FIRMS — revamped July 2026 onto the approved local SEO
- * template layout (see /services/template-seo). Design/classes come from
- * templateSeo.css (scoped under .tseo-page); all copy, mockups, FAQs, and
- * schema are law-firm/attorney specific. YMYL/legal niche — claims stay
- * careful: we never promise case outcomes, only search visibility and
- * inquiries. Form leads submit as service "Local SEO" (on the API whitelist).
- *
- * ==========================================================================
- * OLD IMPLEMENTATION — kept commented for reference during the revamp.
- * The previous page rendered a separate client component (./LawSeoPage) with
- * the car-tow/philaDigital/lawSeo layout.
- * ==========================================================================
- *
- * import type { Metadata } from "next";
- * import LawSeoPage from "./LawSeoPage";
- * import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
- *
- * // ./LawSeoPage imports (now retired):
- * //   "@/app/style/carTow.css", "@/app/style/philadelphia/philaDigital.css",
- * //   "@/app/style/lawSeo/lawSeo.css", framer-motion, react-hook-form,
- * //   react-bootstrap Col/Row, LeadContactForm, RecaptchaCheckbox,
- * //   FormLegalLinks, ClutchWidget, GmbFaqs, HashScrollLink, Footer,
- * //   SITE_CONTACT, RECAPTCHA_ACTION, next/script, many react-icons/fa(6).
- *
- * const faqs = [
- *   { question: "What are law firm marketing services?", answer: "..." },
- *   { question: "How does local SEO help law firms get more cases?", answer: "..." },
- *   { question: "How long does law firm SEO take to produce results?", answer: "..." },
- *   { question: "Do you help with Google Business Profile optimization for law firms?", answer: "..." },
- *   { question: "Do you offer social media marketing services for law firms?", answer: "..." },
- *   { question: "Can you improve an existing law firm website that is not converting?", answer: "..." },
- *   { question: "Is SEO better than Google Ads for law firms?", answer: "..." },
- *   { question: "What makes Zonic Media different from other law firm marketing agencies?", answer: "..." },
- * ];
- *
- * (Full previous hero/problem/system/benefits/case-study/process/contact JSX,
- *  marqueeTerms, problemCards, systemCards, benefitCards, caseStudyStats,
- *  whyCards, processSteps, and the inline audit form preserved in git history
- *  at commit 60fb83f. Replaced wholesale by the template layout below.)
+ * LOCAL SEO FOR BATHROOM REMODELERS — built on the approved local SEO template
+ * layout (see /services/template-seo and /services/local-seo-services-for-hvac).
+ * Design/classes come from templateSeo.css (scoped under .tseo-page); all copy,
+ * mockups, FAQs, and schema are bathroom-remodeling specific. Form leads submit
+ * as service "Local SEO" (on the API whitelist).
  */
 
 import type { Metadata } from "next";
@@ -71,25 +37,24 @@ import {
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 
-const PAGE_PATH = "/services/industry/local-seo-for-law-firms";
+const PAGE_PATH = "/services/industry/local-seo-for-bathroom-remodelers";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Law Firms That Wins Cases",
+  title: "Local SEO for Bathroom Remodelers That Wins Jobs",
   description:
-    "Local SEO for law firms that ranks you for 'lawyer near me' and 'attorney near me' — Google Business Profile, reviews, and citations that turn searches into signed clients. Get a free audit.",
+    "Local SEO for bathroom remodelers that captures 'bathroom remodeler near me' searches — Google Business Profile, reviews, and service-area pages that book estimates. Get a free audit.",
   keywords: [
-    "lawyer near me",
-    "personal injury attorney",
-    "criminal defense lawyer",
-    "divorce attorney",
-    "law firm SEO",
-    "attorney SEO company",
-    "local SEO for law firms",
-    "SEO for lawyers",
-    "Google Business Profile for attorneys",
-    "legal lead generation",
-    "attorney local SEO",
-    "law firm marketing agency",
+    "local SEO for bathroom remodelers",
+    "bathroom remodeling SEO",
+    "SEO for bathroom remodelers",
+    "bathroom remodeler near me",
+    "bathroom remodeling contractor",
+    "shower remodel near me",
+    "bathroom renovation near me",
+    "local SEO for remodelers",
+    "Google Business Profile for remodelers",
+    "bathroom remodel lead generation",
+    "walk-in shower installation",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -101,9 +66,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO for Law Firms That Wins Cases | Zonic Media",
+    title: "Local SEO for Bathroom Remodelers That Wins Jobs | Zonic Media",
     description:
-      "Local SEO for law firms that wins the Google map pack — profile optimization, reviews, citations, and practice-area pages that turn 'lawyer near me' searches into qualified case inquiries.",
+      "Local SEO for bathroom remodelers that captures 'bathroom remodeler near me' searches — profile optimization, reviews, and service-area pages that turn searches into booked estimates.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -112,18 +77,18 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Local SEO for Law Firms", url: PAGE_PATH },
+  { name: "Local SEO for Bathroom Remodelers", url: PAGE_PATH },
 ]);
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Local SEO for Law Firms",
-  serviceType: "Local Search Engine Optimization for Law Firms and Attorneys",
+  name: "Local SEO for Bathroom Remodelers",
+  serviceType: "Local Search Engine Optimization for Bathroom Remodeling Contractors",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Local SEO for law firms covering Google Business Profile optimization, citation building, review growth, on-page SEO, and practice-area content — built to rank attorneys in the Google map pack and grow qualified case inquiries.",
+    "Local SEO for bathroom remodelers covering Google Business Profile optimization, citation building, review growth, on-page SEO, and service-area content — built to rank bathroom remodeling contractors in the Google map pack and grow booked estimates.",
   provider: {
     "@type": "LocalBusiness",
     name: "Zonic Media",
@@ -134,24 +99,24 @@ const serviceJsonLd = {
   },
   audience: {
     "@type": "BusinessAudience",
-    name: "Law firms, attorneys, solo practitioners, and multi-location legal practices",
+    name: "Bathroom remodelers, bathroom renovation contractors, shower and tub remodeling companies",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Law Firm Local SEO Services",
+    name: "Bathroom Remodeling Local SEO Services",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Google Business Profile Optimization for Attorneys",
+          name: "Google Business Profile Optimization for Bathroom Remodelers",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Legal Keyword & Competitor Research",
+          name: "Bathroom Remodeling Keyword & Competitor Research",
         },
       },
       {
@@ -166,56 +131,56 @@ const serviceJsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "On-Page SEO & Practice-Area Pages",
+          name: "On-Page SEO & Service-Area Pages",
         },
       },
     ],
   },
 };
 
-const LawSeoFaqs = [
+const BathSeoFaqs = [
   {
-    question: "What's included in your local SEO for law firms?",
+    question: "What's included in your local SEO for bathroom remodelers?",
     answer:
-      "Every law firm campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your practice-area and location pages, local content, and a monthly report that shows rankings, calls, and qualified case inquiries — not vanity metrics.",
+      "Every bathroom remodeling campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your shower remodel, tub replacement, and service-area pages, local content, and a monthly report that shows rankings, calls, and booked estimates — not vanity metrics.",
   },
   {
-    question: "How long does law firm SEO take to show results?",
+    question: "How long does bathroom remodeling SEO take to show results?",
     answer:
-      "Most law firms see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'personal injury lawyer near me' and 'criminal defense attorney.' Competitive legal markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and the momentum compounds month over month.",
+      "Most bathroom remodelers see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'bathroom remodeler near me' and 'shower remodel near me.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds every month.",
   },
   {
-    question: "How much does local SEO for law firms cost?",
+    question: "How much does local SEO for bathroom remodelers cost?",
     answer:
-      "Pricing depends on how many attorneys and locations you run, how competitive your practice areas are, and how aggressively you want to grow. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
+      "Pricing depends on how many locations you run, how competitive your market is, and how aggressively you want to grow. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items, so you can plan around booked estimates instead of paperwork.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for legal keywords?",
+    question: "Do you guarantee first-page Google rankings for bathroom remodeling keywords?",
     answer:
-      "We guarantee transparency and search visibility — never legal outcomes. No ethical agency can promise you'll win cases, and because Google's results change daily, no one can honestly promise a fixed ranking position either. What we do promise: work built on the exact local signals Google rewards, and a monthly report that shows exactly where you rank, what improved, and what we did. Most clients reach top-three map pack positions for their core keywords, and with no long-term contracts we earn your business with results.",
+      "Our track record speaks for itself — most bathroom remodeling clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do law firms really need Google Business Profile optimization?",
+    question: "Do bathroom remodelers really need Google Business Profile optimization?",
     answer:
-      "Yes — it is the single biggest lever in local SEO for law firms. Your Google Business Profile decides whether you show up in the local map pack when someone searches for a lawyer near them, and it drives your call volume, direction requests, and review visibility. We optimize every field, practice-area category, photo, and post so Google trusts your profile and prospective clients choose it.",
+      "Yes — it is the single biggest lever in bathroom remodeling local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for a bathroom remodel, and it drives your call volume, estimate requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and homeowners choose it.",
   },
   {
-    question: "Can you help multi-attorney or multi-location law firms?",
+    question: "Can you help multi-location or wide service-area bathroom remodeling companies?",
     answer:
-      "Absolutely. We build local SEO systems for solo practitioners and multi-location firms alike — service-area targeting, individual location and attorney pages, and map visibility for every city and practice area you cover, all reported in one clear dashboard.",
+      "Absolutely. We build local SEO systems for single-crew remodelers and multi-location bathroom renovation brands alike — service-area targeting, individual location pages, and map visibility for every city and neighborhood you cover, all reported in one clear dashboard.",
   },
   {
-    question: "Why choose Zonic Media over another attorney SEO company?",
+    question: "Why choose Zonic Media over another bathroom remodeling SEO company?",
     answer:
-      "We specialize in local service businesses and understand how cautious legal clients search and choose, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and qualified case inquiries, and work built to compound month after month — not churn.",
+      "We specialize in local home-service businesses like bathroom remodeling, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound month after month — not churn.",
   },
 ];
 
-const lawSeoFaqJsonLd = {
+const bathSeoFaqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   url: `${SITE_URL}${PAGE_PATH}`,
-  mainEntity: LawSeoFaqs.map((faq) => ({
+  mainEntity: BathSeoFaqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -229,7 +194,7 @@ const HeroStats = [
   {
     icon: <FiTrendingUp aria-hidden="true" />,
     num: "50+",
-    label: "Local & service businesses ranked",
+    label: "Local & home-service businesses ranked",
   },
   {
     icon: <FaStar aria-hidden="true" />,
@@ -249,7 +214,7 @@ const HeroStats = [
 ];
 
 const BannerChecks = [
-  "Your law firm map pack growth plan",
+  "Your bathroom remodeling map pack plan",
   "Profile wins ready to unlock",
   "Citation opportunities mapped",
   "Review growth roadmap",
@@ -275,38 +240,38 @@ const ServiceCards = [
     desc: (
       <>
         Your profile is your new homepage in the map pack. We optimize every
-        field, practice-area category, photo, and post — the same system behind
-        our{" "}
+        field, remodeling category, project photo, and post — the same system
+        behind our{" "}
         <Link href="/services/gmb-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
-        — so Google trusts it and prospective clients choose you.
+        — so Google trusts it and homeowners choose you.
       </>
     ),
   },
   {
     icon: <FiSearch aria-hidden="true" />,
-    title: "Legal Keyword & Competitor Research",
-    desc: "We map every search your prospective clients actually type — personal injury lawyer, criminal defense attorney, divorce lawyer, employment law — city by city, and build the exact strategy that wins those searches for your firm.",
+    title: "Bathroom Remodeling Keyword & Competitor Research",
+    desc: "We map every search your customers actually type — bathroom remodeler near me, shower remodel, walk-in shower installation, bathroom renovation — city by city, and build the exact strategy that wins those searches for you.",
   },
   {
     icon: <FiLink2 aria-hidden="true" />,
     title: "Citations & Listing Management",
-    desc: "Consistent name, address, and phone across every directory that matters — including the legal directories and bar listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
+    desc: "Consistent name, address, and phone across every directory that matters — including the remodeling and home-improvement listings Google checks. We fix the wrong ones, build the missing ones, and keep them synced.",
   },
   {
     icon: <FiStar aria-hidden="true" />,
     title: "Review Growth & Reputation",
-    desc: "A steady stream of real reviews from real clients, with responses that show Google — and the next person comparing attorneys — that your firm is trusted, responsive, and worth calling.",
+    desc: "A steady stream of real reviews from real homeowners, with responses that show Google — and the next homeowner comparing bathroom remodelers — that somebody is home.",
   },
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "On-Page SEO & Practice-Area Pages",
+    title: "On-Page SEO & Service-Area Pages",
     desc: (
       <>
-        Practice-area and city pages built around real legal searches, with
-        schema and internal links that make every page easier to rank — backed
-        by conversion-first{" "}
+        Service and city pages built around real bathroom remodeling searches,
+        with schema and internal links that make every page easier to rank —
+        backed by conversion-first{" "}
         <Link href="/services/web-design" className="tseo-inline-link">
           website design
         </Link>{" "}
@@ -317,31 +282,31 @@ const ServiceCards = [
   {
     icon: <RiLineChartLine aria-hidden="true" />,
     title: "Tracking & Monthly Reporting",
-    desc: "Rankings, calls, direction requests, and qualified case inquiries in one plain-English report. You always know what we did, what moved, and what is next.",
+    desc: "Rankings, calls, direction requests, and booked-estimate leads in one plain-English report. You always know what we did, what moved, and what is next.",
   },
 ];
 
 const ResultCards = [
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    industry: "Personal Injury Firm",
+    industry: "Bath Remodeling Co.",
     metric: "+212%",
     label: "Calls from Google Business Profile",
-    desc: "From page-two invisibility to top-three map pack rankings for 'personal injury lawyer near me' across every target city, driving a steady rise in qualified case inquiries.",
+    desc: "From page-two invisibility to top-three map pack rankings for 'bathroom remodeler near me' across every service city — and a calendar full of booked in-home estimates.",
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    industry: "Criminal Defense",
+    industry: "Shower & Tub Specialists",
     metric: "Top 3",
     label: "Map pack for every core keyword",
-    desc: "A profile rebuild, citation cleanup, and review growth took the practice from #13 to the top three for its highest-intent defense searches — and more consultation calls followed.",
+    desc: "A profile rebuild, citation cleanup, and review growth took the company from #11 to the top three for 'shower remodel near me' and doubled estimate requests.",
   },
   {
     icon: <FiTrendingUp aria-hidden="true" />,
-    industry: "Multi-Practice Firm",
+    industry: "Full-Home Remodeler",
     metric: "3.2×",
-    label: "More qualified case inquiries",
-    desc: "Practice-area and city pages turned scattered visibility into a steady, year-round pipeline of qualified inquiries across personal injury, family, and business law.",
+    label: "More booked estimates from local search",
+    desc: "Service-area and city pages turned scattered bathroom renovation searches into a steady, year-round pipeline of qualified remodeling jobs.",
   },
 ];
 
@@ -353,67 +318,67 @@ const ScoreRows = [
 ];
 
 const RankRows = [
-  { kw: "personal injury lawyer near me", pos: "#1", delta: "▲ 5" },
-  { kw: "criminal defense attorney [city]", pos: "#2", delta: "▲ 7" },
-  { kw: "divorce lawyer", pos: "#1", delta: "▲ 4" },
-  { kw: "lawyer near me", pos: "#3", delta: "▲ 8" },
+  { kw: "bathroom remodeler near me", pos: "#1", delta: "▲ 5" },
+  { kw: "shower remodel [city]", pos: "#2", delta: "▲ 7" },
+  { kw: "bathroom renovation", pos: "#1", delta: "▲ 4" },
+  { kw: "walk-in shower installation", pos: "#3", delta: "▲ 8" },
 ];
 
 const ReviewBarHeights = [28, 36, 44, 52, 58, 68, 74];
 
 const CompareThem = [
   "Set-and-forget profile, updated quarterly at best",
-  "Reports full of impressions, empty of case inquiries",
+  "Reports full of impressions, empty of estimate requests",
   "Offshore link packages and duplicate citations",
   "One account manager for 80 clients",
   "12-month contracts before you see a single lead",
 ];
 
 const CompareUs = [
-  "Profile worked weekly — posts, photos, Q&A, practice-area categories",
-  "Reporting tied to calls, direction requests, and case inquiries",
+  "Profile worked weekly — posts, project photos, Q&A, remodeling categories",
+  "Reporting tied to calls, direction requests, and booked estimates",
   "Hand-built citations and local links that compound",
-  "A dedicated strategist who knows your legal market",
+  "A dedicated strategist who knows your remodeling market",
   "Month-to-month — we keep you with results, not paperwork",
 ];
 
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Local service SEO is all we do",
-    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and qualified inquiries for service businesses like law firms is the entire practice.",
+    title: "Home services is all we do",
+    desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked estimates for bathroom remodelers and home-service contractors is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
     title: "Fast, compounding execution",
-    desc: "Foundation fixes ship in the first weeks, not the first quarter — so your visibility starts climbing early. Every month of work stacks on the last.",
+    desc: "Foundation fixes ship in the first weeks, not the first quarter — so you start capturing bathroom remodel searches sooner. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Transparent to a fault",
-    desc: "You own every account and asset. You see every change in the monthly report. We report on rankings and inquiries — never on case outcomes, which no honest agency can promise.",
+    desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
 
 const MarqueeItems = [
-  "Law Firm Local SEO",
-  "Lawyer Near Me Rankings",
+  "Bathroom Remodeling SEO",
+  "Shower Remodel Rankings",
   "Google Business Profile",
   "Map Pack Rankings",
-  "Legal Lead Generation",
+  "Bathroom Remodel Leads",
   "Review Growth",
-  "Practice-Area Pages",
+  "Service-Area Pages",
 ];
 
 const NationwideChips = [
-  "Personal Injury",
-  "Criminal Defense",
-  "Family Law",
-  "Estate Planning",
-  "Employment Law",
-  "Immigration",
-  "Business Law",
-  "Auto Accidents",
+  "Full Bathroom Remodels",
+  "Shower & Tub Replacement",
+  "Walk-In Showers",
+  "Vanity & Tile",
+  "Accessible Bathrooms",
+  "Small Bathroom Remodels",
+  "Luxury Bathrooms",
+  "Fixtures & Plumbing",
 ];
 
 const GrowCards = [
@@ -421,21 +386,21 @@ const GrowCards = [
     href: "/services/gmb-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
-    desc: "Most people pick a law firm straight from the map pack. We optimize your profile so that firm is you.",
+    desc: "Most homeowners pick a bathroom remodeler straight from the map pack. We optimize your profile so that company is you.",
     cta: "Optimize your profile",
   },
   {
     href: "/services/web-design",
     icon: <FiZap aria-hidden="true" />,
-    title: "Law Firm Web Design",
-    desc: "Rankings get the click; your site wins the consultation. Conversion-first design that communicates authority and makes contacting you effortless.",
-    cta: "See web design",
+    title: "Website Design",
+    desc: "Ready to convert more of the traffic you earn? Conversion-first remodeling websites built to turn visitors into booked estimates.",
+    cta: "See website design",
   },
   {
     href: "/services/google-ads",
     icon: <FiTrendingUp aria-hidden="true" />,
     title: "Google Ads Management",
-    desc: "Pair organic rankings with paid coverage and own the whole results page for your highest-intent legal searches.",
+    desc: "Pair organic rankings with paid coverage and own the whole results page for high-intent bathroom remodeling searches.",
     cta: "See Google Ads",
   },
 ];
@@ -454,7 +419,7 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(lawSeoFaqJsonLd),
+          __html: JSON.stringify(bathSeoFaqJsonLd),
         }}
       />
 
@@ -465,18 +430,18 @@ function Page() {
             <div className="tseo-container">
               <div className="tseo-hero-grid">
                 <div className="tseo-hero-copy">
-                  <p className="tseo-eyebrow">Local SEO for Law Firms</p>
+                  <p className="tseo-eyebrow">Local SEO for Bathroom Remodelers</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for law firms that{" "}
-                    <span className="tseo-hl">wins clients</span>
+                    Local SEO for bathroom remodelers that{" "}
+                    <span className="tseo-hl">books jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and service businesses climb into
-                    the Google map pack and grow. Zonic Media builds the full
-                    local ranking system for law firms — Google Business Profile,
-                    citations, reviews, and practice-area content — so when
-                    someone searches &ldquo;personal injury lawyer near me,&rdquo;
-                    they find your firm first.
+                    We&apos;ve helped 50+ local and home-service businesses climb
+                    into the Google map pack and grow. Zonic Media builds the
+                    full local ranking system for bathroom remodelers — Google
+                    Business Profile, citations, reviews, and service-area
+                    content — so when homeowners search &ldquo;bathroom remodeler
+                    near me,&rdquo; they find you first.
                   </p>
                   <div className="tseo-hero-badges" aria-label="Partner badges">
                     {/* Self-hosted Clutch badge — the live iframe embed is
@@ -521,7 +486,7 @@ function Page() {
                       className="tseo-btn"
                       offset={120}
                     >
-                      Get Your Free Law Firm SEO Audit
+                      Get Your Free Bathroom Remodeling SEO Audit
                       <span className="tseo-btn-circ">
                         <FiArrowUpRight aria-hidden="true" />
                       </span>
@@ -553,7 +518,7 @@ function Page() {
                   <div className="tseo-hero-dash-wrap">
                   <div className="tseo-hero-dash" aria-hidden="true">
                     <div className="tseo-dash-head">
-                      <h3>Law Firm Local SEO Performance</h3>
+                      <h3>Bathroom Remodeling Local SEO Performance</h3>
                     </div>
                     <div className="tseo-ba-toggle-row">
                       <span className="tseo-ba-toggle">
@@ -572,28 +537,27 @@ function Page() {
                         <div className="tseo-dash-body">
                           <div className="tseo-dash-list">
                             <p className="tseo-dash-sub">
-                              Map pack · &ldquo;personal injury lawyer near
-                              me&rdquo;
+                              Map pack · &ldquo;bathroom remodeler near me&rdquo;
                             </p>
                             <div className="tseo-dash-li tseo-dash-li--you">
                               <FiMapPin />
-                              <span>Your Law Firm</span>
+                              <span>Your Remodeling Company</span>
                               <em>#1</em>
                             </div>
                             <div className="tseo-dash-li">
                               <FiMapPin />
-                              <span>Competitor Law Group</span>
+                              <span>Competitor Bath &amp; Tile</span>
                               <em>#2</em>
                             </div>
                             <div className="tseo-dash-li">
                               <FiMapPin />
-                              <span>Competitor &amp; Associates</span>
+                              <span>Competitor Remodeling</span>
                               <em>#3</em>
                             </div>
                             <div className="tseo-dash-review">
                               <FaStar />
-                              4.9 · 196 reviews
-                              <em>+34 this quarter</em>
+                              4.9 · 176 reviews
+                              <em>+28 this quarter</em>
                             </div>
                           </div>
                           <div className="tseo-dash-chart">
@@ -637,27 +601,26 @@ function Page() {
                         <div className="tseo-dash-body">
                           <div className="tseo-dash-list">
                             <p className="tseo-dash-sub">
-                              Map pack · &ldquo;personal injury lawyer near
-                              me&rdquo;
+                              Map pack · &ldquo;bathroom remodeler near me&rdquo;
                             </p>
                             <div className="tseo-dash-li">
                               <FiMapPin />
-                              <span>Competitor Law Group</span>
+                              <span>Competitor Bath &amp; Tile</span>
                               <em>#1</em>
                             </div>
                             <div className="tseo-dash-li">
                               <FiMapPin />
-                              <span>Competitor &amp; Associates</span>
+                              <span>Competitor Remodeling</span>
                               <em>#2</em>
                             </div>
                             <div className="tseo-dash-li">
                               <FiMapPin />
-                              <span>Competitor Legal Partners</span>
+                              <span>Competitor Renovations</span>
                               <em>#3</em>
                             </div>
                             <div className="tseo-dash-li tseo-dash-li--lost">
                               <FiMapPin />
-                              <span>Your Law Firm</span>
+                              <span>Your Remodeling Company</span>
                               <em>#13</em>
                             </div>
                           </div>
@@ -707,7 +670,7 @@ function Page() {
                       </span>
                       <p>
                         <strong>#1 in the Map Pack</strong>
-                        &ldquo;personal injury lawyer near me&rdquo;
+                        &ldquo;bathroom remodeler near me&rdquo;
                       </p>
                     </div>
                     <div className="tseo-float-card">
@@ -715,7 +678,7 @@ function Page() {
                         <FiStar aria-hidden="true" />
                       </span>
                       <p>
-                        <strong>+34 reviews</strong>
+                        <strong>+28 reviews</strong>
                         this quarter
                       </p>
                     </div>
@@ -750,17 +713,17 @@ function Page() {
                       </span>
                       <div>
                         <strong>
-                          Your Law Firm
+                          Your Remodeling Company
                           <MdOutlineVerifiedUser />
                         </strong>
                         <span className="tseo-gbp-stars">
                           <FaStar />
-                          4.9 (196 reviews)
+                          4.9 (176 reviews)
                         </span>
                       </div>
                     </div>
                     <p className="tseo-gbp-meta">
-                      Law firm · <em>Open now</em> · Free consultations
+                      Bathroom remodeler · <em>Open now</em> · Free in-home estimates
                     </p>
                     <div className="tseo-gbp-actions">
                       <span className="tseo-gbp-action tseo-gbp-action--solid">
@@ -785,7 +748,7 @@ function Page() {
                       <em>+212%</em>
                     </div>
                     <div className="tseo-gbp-row">
-                      <span>Consultation requests</span>
+                      <span>Estimate requests</span>
                       <em>+3×</em>
                     </div>
                   </div>
@@ -797,27 +760,29 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    People need a lawyer and search now.{" "}
+                    Homeowners are searching for a bathroom remodel.{" "}
                     <span className="tseo-hl-text">
                       We make sure they find you.
                     </span>
                   </h2>
                   <p className="tseo-lead">
-                    When someone is in an accident, facing charges, or filing for
-                    divorce, the first thing they do is search &ldquo;lawyer near
-                    me&rdquo; and call one of the top three firms on the map. That
-                    is an enormous, high-intent growth channel sitting right in
-                    front of your firm — and it is exactly the channel we have
-                    spent years mastering for local service businesses.
+                    When a homeowner is finally ready to gut that dated bathroom
+                    or add a walk-in shower, the first thing they do is search
+                    &ldquo;bathroom remodeler near me&rdquo; and call one of the
+                    top three companies on the map. That is an enormous,
+                    high-intent growth channel sitting right in front of your
+                    business — and it is exactly the channel we have spent years
+                    mastering for remodeling contractors.
                   </p>
                   <p className="tseo-lead">
                     Our local SEO system captures it step by step: a fully
                     optimized Google Business Profile, consistent citations,
-                    steadily growing reviews, and practice-area pages built around
-                    the searches your prospective clients actually type. Every
-                    ranking signal Google rewards, done properly and done monthly
-                    — that is how our clients turn local searches into calls and
-                    qualified case inquiries that compound month after month.
+                    steadily growing reviews, and service-area pages built
+                    around the searches your customers actually type. Every
+                    ranking signal Google rewards, done properly and done
+                    monthly — that is how our clients turn local searches into
+                    calls, booked estimates, and remodeling revenue that
+                    compounds month after month.
                   </p>
                   <div className="tseo-checks">
                     {ProblemChecks.map((check) => (
@@ -845,7 +810,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your law firm rankings need, in one system
+                    Everything your bathroom remodeling rankings need, in one system
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -870,22 +835,22 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your law firm in the top three — and keep it there
+                  We put your bathroom remodeling company in the top three — and keep it there
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
-                  consultation calls, and that is exactly where we specialize.
-                  Every campaign is built around one goal: earning your firm those
-                  top spots for the practice areas and cities that matter most,
-                  then strengthening them month after month.
+                  estimate calls, and that is exactly where we specialize. Every
+                  campaign is built around one goal: earning your business those
+                  top spots for the bathroom remodeling services and cities that
+                  pay you best, then strengthening them month after month.
                 </p>
                 <p className="tseo-lead">
                   We work the signals Google actually rewards: proximity,
                   relevance, and prominence. A fully built-out profile tells
-                  Google exactly which practice areas you handle, consistent
-                  citations confirm you are who you say you are, and a steady flow
-                  of reviews and local content proves clients trust your firm. And
-                  if a listing ever gets suspended, our{" "}
+                  Google exactly which remodeling services you offer, consistent
+                  citations confirm you are who you say you are, and a steady
+                  flow of reviews and local content proves homeowners love
+                  working with you. And if a listing ever gets suspended, our{" "}
                   <Link
                     href="/services/gmb-reinstatement-help"
                     className="tseo-inline-link"
@@ -920,7 +885,7 @@ function Page() {
                 </div>
                 <div className="tseo-mappack-bar">
                   <FiSearch />
-                  personal injury lawyer near me
+                  bathroom remodeler near me
                 </div>
                 <div className="tseo-mappack-list">
                   <p className="tseo-mappack-title">Google · Local results</p>
@@ -929,10 +894,10 @@ function Page() {
                       <FiImage />
                     </span>
                     <span className="tseo-mappack-info">
-                      <strong>Your Law Firm</strong>
+                      <strong>Your Remodeling Company</strong>
                       <span className="tseo-mappack-stars">
                         <FaStar />
-                        4.9 (196) · Law firm ·{" "}
+                        4.9 (176) · Bathroom remodeler ·{" "}
                         <span className="tseo-mappack-open">Open now</span>
                       </span>
                     </span>
@@ -955,10 +920,10 @@ function Page() {
                       <FiImage />
                     </span>
                     <span className="tseo-mappack-info">
-                      <strong>Competitor Law Group</strong>
+                      <strong>Competitor Bath &amp; Tile</strong>
                       <span className="tseo-mappack-stars">
                         <FaStar />
-                        4.6 (98) · Law firm
+                        4.6 (98) · Bathroom remodeler
                       </span>
                     </span>
                   </div>
@@ -967,10 +932,10 @@ function Page() {
                       <FiImage />
                     </span>
                     <span className="tseo-mappack-info">
-                      <strong>Competitor &amp; Associates</strong>
+                      <strong>Competitor Remodeling Co.</strong>
                       <span className="tseo-mappack-stars">
                         <FaStar />
-                        4.4 (61) · Law firm
+                        4.4 (61) · Bathroom remodeler
                       </span>
                     </span>
                   </div>
@@ -1006,15 +971,15 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free law firm visibility audit</h3>
+                  <h3>Free bathroom remodeling visibility audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
-                    competitors — and show you exactly where the case inquiries
-                    you are missing are going instead.
+                    competitors — and show you exactly where the bathroom remodel
+                    estimates you are missing are going instead.
                   </p>
                   <div className="tseo-bento-visual" aria-hidden="true">
                     <p className="tseo-bento-visual-title">
-                      Where law firm clients typically land after 90 days
+                      Where remodeling clients typically land after 90 days
                     </p>
                     {[
                       { label: "Profile strength", val: 92 },
@@ -1047,9 +1012,9 @@ function Page() {
                   </div>
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
-                    A keyword-mapped plan for your practice areas and cities, then
-                    the foundation work: profile optimization, citation cleanup,
-                    and on-page fixes.
+                    A keyword-mapped plan for your bathroom remodeling services
+                    and cities, then the foundation work: profile optimization,
+                    citation cleanup, and on-page fixes.
                   </p>
                 </article>
 
@@ -1064,8 +1029,8 @@ function Page() {
                   <h3>Build authority every month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
-                    the compounding signals that move you up the map pack and keep
-                    you there through the year.
+                    the compounding signals that move you up the map pack and
+                    keep you there all year round.
                   </p>
                   <div className="tseo-bento-chips">
                     {["Local content", "Review growth", "Profile activity"].map(
@@ -1099,9 +1064,9 @@ function Page() {
                     </div>
                     <h3>Report, refine, expand</h3>
                     <p>
-                      Monthly reporting tied to calls and qualified case
-                      inquiries, not vanity metrics. As rankings lock in, we
-                      expand to more practice areas and more cities.
+                      Monthly reporting tied to calls and booked estimates, not
+                      vanity metrics. As rankings lock in, we expand to more
+                      bathroom remodeling services and more cities.
                     </p>
                   </div>
                   <div className="tseo-bento-s4-side">
@@ -1109,7 +1074,7 @@ function Page() {
                       {[
                         "Plain-English report",
                         "New cities",
-                        "New practice areas",
+                        "New services",
                       ].map((chip) => (
                         <span className="tseo-bento-chip" key={chip}>
                           {chip}
@@ -1136,10 +1101,10 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when law firm local SEO is done properly
+                  What happens when bathroom remodeling local SEO is done properly
                 </h2>
                 <p className="tseo-lead">
-                  Different markets, different practice areas — the same system,
+                  Different markets, different price points — the same system,
                   executed month after month.
                 </p>
               </div>
@@ -1165,19 +1130,19 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical law firm SEO agency
+                  What you get with Zonic vs. a typical bathroom remodeling SEO agency
                 </h2>
                 <p className="tseo-lead">
-                  Local SEO for service businesses is all we do, and it shows.
-                  Here is exactly what working with a dedicated local team looks
-                  like.
+                  Local SEO for home-service businesses is all we do, and it
+                  shows. Here is exactly what working with a dedicated local team
+                  looks like.
                 </p>
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
                   <h3>Typical SEO agency</h3>
                   <p className="tseo-compare-sub">
-                    Why most law firm campaigns quietly stall
+                    Why most bathroom remodeling campaigns quietly stall
                   </p>
                   <ul>
                     {CompareThem.map((item) => (
@@ -1189,7 +1154,7 @@ function Page() {
                   </ul>
                 </div>
                 <div className="tseo-compare-col tseo-compare-col--us">
-                  <h3>Law Firm Local SEO with Zonic Media</h3>
+                  <h3>Bathroom Remodeling Local SEO with Zonic Media</h3>
                   <p className="tseo-compare-sub">
                     Built to compound, reported like a P&amp;L
                   </p>
@@ -1208,7 +1173,7 @@ function Page() {
                 >
                   <h3>Local Visibility Scorecard</h3>
                   <p className="tseo-compare-sub">
-                    A typical law firm client&apos;s first six months
+                    A typical remodeling client&apos;s first six months
                   </p>
                   <div className="tseo-score-rows">
                     {ScoreRows.map((row) => (
@@ -1258,18 +1223,18 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your law firm rankings and reviews climb,{" "}
+                    Watch your bathroom remodeling rankings and reviews climb,{" "}
                     <span className="tseo-hl-text">month over month</span>
                   </h2>
                   <p className="tseo-lead">
-                    No black box. Every campaign comes with live rank tracking for
-                    the legal keywords that pay you, review growth monitoring, and
-                    call tracking from your profile — all rolled into one
-                    plain-English monthly report.
+                    No black box. Every campaign comes with live rank tracking
+                    for the bathroom remodeling keywords that pay you, review
+                    growth monitoring, and call tracking from your profile — all
+                    rolled into one plain-English monthly report.
                   </p>
                   <p className="tseo-lead">
-                    If a number moves, you know why. If a number stalls, you know
-                    what we are doing about it.
+                    If a number moves, you know why. If a number stalls, you
+                    know what we are doing about it.
                   </p>
                   <HashScrollLink
                     href="#tseo-form"
@@ -1302,7 +1267,7 @@ function Page() {
                   <div className="tseo-mock-card">
                     <div className="tseo-mock-head">
                       <h3>Review Growth</h3>
-                      <span className="tseo-mock-tag">+34 this quarter</span>
+                      <span className="tseo-mock-tag">+28 this quarter</span>
                     </div>
                     <div className="tseo-review-score">
                       <strong>4.9</strong>
@@ -1315,7 +1280,7 @@ function Page() {
                       </span>
                     </div>
                     <p className="tseo-review-count">
-                      196 Google reviews and counting
+                      176 Google reviews and counting
                     </p>
                     <div className="tseo-review-bars">
                       {ReviewBarHeights.map((height, index) => (
@@ -1341,11 +1306,11 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A law firm local SEO partner, not a monthly invoice
+                  A bathroom remodeling local SEO partner, not a monthly invoice
                 </h2>
                 <p className="tseo-lead">
-                  Rankings are the output. The inputs are strategy, execution, and
-                  accountability — and that is what you are actually buying.
+                  Rankings are the output. The inputs are strategy, execution,
+                  and accountability — and that is what you are actually buying.
                 </p>
               </div>
               <div className="tseo-why-cards">
@@ -1359,12 +1324,13 @@ function Page() {
               </div>
               <div className="tseo-why-banner">
                 <div className="tseo-why-banner-text">
-                  <p className="tseo-eyebrow">Free Law Firm SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your law firm rankings</h3>
+                  <p className="tseo-eyebrow">Free Bathroom Remodeling SEO Audit</p>
+                  <h3>See exactly how we&apos;ll grow your remodeling rankings</h3>
                   <p>
-                    We&apos;ll map your profile, citations, reviews, and rankings
-                    — and show you the clear path to the top three for the legal
-                    searches in your market. Free, and yours to keep either way.
+                    We&apos;ll map your profile, citations, reviews, and
+                    rankings — and show you the clear path to the top three for
+                    the bathroom remodeling searches in your market. Free, and
+                    yours to keep either way.
                   </p>
                   <div className="tseo-banner-checks">
                     {BannerChecks.map((check) => (
@@ -1400,8 +1366,8 @@ function Page() {
                     <div className="tseo-audit-ring-info">
                       <strong>Excellent</strong>
                       <small>
-                        Where our law firm campaigns typically land after six
-                        months of compounding local SEO work
+                        Where our bathroom remodeling campaigns typically land
+                        after six months of compounding local SEO work
                       </small>
                     </div>
                   </div>
@@ -1458,15 +1424,16 @@ function Page() {
           <section className="tseo-nationwide">
             <div className="tseo-container">
               <div className="tseo-sec-head-center">
-                <p className="tseo-eyebrow">Wherever You Practice</p>
+                <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for law firms in every market in the US
+                  Local SEO for bathroom remodelers in every market in the US
                 </h2>
                 <p className="tseo-lead">
-                  From solo practitioners to multi-location firms, we run local
-                  SEO campaigns in every state. Everything happens remotely —
-                  audits, strategy calls, reporting — so you get the same process
-                  whether you are in Delaware, Texas, or California.
+                  From single-crew remodelers to multi-location renovation
+                  brands, we run local SEO campaigns in every state. Everything
+                  happens remotely — audits, strategy calls, reporting — so you
+                  get the same process whether you are in Delaware, Texas, or
+                  California.
                 </p>
               </div>
               <div className="tseo-coverage" aria-hidden="true">
@@ -1526,12 +1493,13 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about law firm local SEO
+                    Straight answers about bathroom remodeling local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves law
-                    firm rankings. If your question is not here, send it through
-                    the form — a strategist answers, not a sales script.
+                    Pricing, timelines, guarantees, and what actually moves
+                    bathroom remodeling rankings. If your question is not here,
+                    send it through the form — a strategist answers, not a sales
+                    script.
                   </p>
                   <div className="tseo-faq-cta">
                     <HashScrollLink
@@ -1547,7 +1515,7 @@ function Page() {
                   </div>
                 </div>
                 <div>
-                  <GmbFaqs items={LawSeoFaqs} />
+                  <GmbFaqs items={BathSeoFaqs} />
                 </div>
               </div>
             </div>
@@ -1588,13 +1556,13 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free law firm local SEO audit
+                    Claim your free bathroom remodeling local SEO audit
                   </h2>
                   <p className="tseo-lead">
-                    Tell us about your firm and we will send a full local
-                    visibility audit — rankings, profile, citations, reviews —
-                    plus a flat-price growth plan to take you to the top of your
-                    market and grow qualified case inquiries.
+                    Tell us about your remodeling business and we will send a
+                    full local visibility audit — rankings, profile, citations,
+                    reviews — plus a flat-price growth plan to take you to the
+                    top of your market.
                   </p>
                   <div className="tseo-form-contacts">
                     <a
@@ -1641,11 +1609,11 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free law firm SEO audit"
-                    subtitle="No contracts, no pressure — just a clear picture of where your firm stands and what it takes to win more clients in your market."
+                    title="Get your free bathroom remodeling SEO audit"
+                    subtitle="No contracts, no pressure — just a clear picture of where your bathroom remodeling company stands and what it takes to win your market."
                     submitText="Send My Free Audit"
-                    messageLabel="Tell us about your law firm"
-                    messagePlaceholder="Your practice areas, your city, and what you'd like to improve"
+                    messageLabel="Tell us about your bathroom remodeling business"
+                    messagePlaceholder="Your services, your city, and what you'd like to improve"
                     defaultServices={["Local SEO"]}
                   />
                 </div>

@@ -15,6 +15,15 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineInfo } from "react-icons/md";
 import {
   MdGavel,
+  MdOutlineBathtub,
+  MdOutlineCountertops,
+  MdOutlineEngineering,
+  MdOutlineForest,
+  MdOutlineKitchen,
+  MdOutlineLayers,
+  MdOutlinePool,
+  MdOutlineSensorDoor,
+  MdOutlineWaterDrop,
   MdOutlineCarRepair,
   MdOutlineChildCare,
   MdOutlineCleaningServices,
@@ -208,6 +217,118 @@ const seoServiceLinks = [
       "House cleaning leads from local search, Maps, and review visibility.",
     link: "/services/industry/local-seo-services-for-residential-cleaning",
     icon: <FaBroom />,
+  },
+  {
+    id: "local-seo-for-bathroom-remodelers",
+    title: "Local SEO for Bathroom Remodelers",
+    description:
+      "Rank for bathroom remodel searches and book more in-home estimates.",
+    link: "/services/industry/local-seo-for-bathroom-remodelers",
+    icon: <MdOutlineBathtub />,
+  },
+  {
+    id: "local-seo-for-kitchen-remodelers",
+    title: "Local SEO for Kitchen Remodelers",
+    description:
+      "Win 'kitchen remodeler near me' searches and fill your estimate calendar.",
+    link: "/services/industry/local-seo-for-kitchen-remodelers",
+    icon: <MdOutlineCountertops />,
+  },
+  {
+    id: "local-seo-for-general-contractors",
+    title: "Local SEO for General Contractors",
+    description:
+      "Rank in the map pack for remodels, additions, and build projects.",
+    link: "/services/industry/local-seo-for-general-contractors",
+    icon: <MdOutlineEngineering />,
+  },
+  {
+    id: "local-seo-for-flooring-companies",
+    title: "Local SEO for Flooring Companies",
+    description:
+      "Get found for hardwood, tile, and vinyl flooring installs nearby.",
+    link: "/services/industry/local-seo-for-flooring-companies",
+    icon: <MdOutlineLayers />,
+  },
+  {
+    id: "local-seo-for-window-and-door-companies",
+    title: "Local SEO for Window & Door Companies",
+    description:
+      "Turn 'window replacement near me' searches into booked estimates.",
+    link: "/services/industry/local-seo-for-window-and-door-companies",
+    icon: <MdOutlineSensorDoor />,
+  },
+  {
+    id: "local-seo-for-painting-contractors",
+    title: "Local SEO for Painting Contractors",
+    description:
+      "Rank for interior and exterior painting searches in your service area.",
+    link: "/services/industry/local-seo-for-painting-contractors",
+    icon: <MdOutlineFormatPaint />,
+  },
+  {
+    id: "local-seo-for-electricians",
+    title: "SEO for Electricians",
+    description:
+      "Win 'electrician near me' searches and more urgent service calls.",
+    link: "/services/industry/local-seo-for-electricians",
+    icon: <MdOutlineElectricalServices />,
+  },
+  {
+    id: "local-seo-for-garage-door-companies",
+    title: "Local SEO for Garage Door Companies",
+    description:
+      "Rank for garage door repair and installation searches on Google Maps.",
+    link: "/services/industry/local-seo-for-garage-door-companies",
+    icon: <MdOutlineGarage />,
+  },
+  {
+    id: "local-seo-for-appliance-repair",
+    title: "Local SEO for Appliance Repair",
+    description:
+      "Get found for same-day refrigerator, washer, and dryer repair searches.",
+    link: "/services/industry/local-seo-for-appliance-repair",
+    icon: <MdOutlineKitchen />,
+  },
+  {
+    id: "local-seo-for-landscaping-companies",
+    title: "Local SEO for Landscaping Companies",
+    description:
+      "Rank for landscaping, lawn care, and hardscaping searches nearby.",
+    link: "/services/industry/local-seo-for-landscaping-companies",
+    icon: <MdOutlineGrass />,
+  },
+  {
+    id: "local-seo-for-pool-service-companies",
+    title: "Local SEO for Pool Service Companies",
+    description:
+      "Win pool cleaning, repair, and maintenance searches in your area.",
+    link: "/services/industry/local-seo-for-pool-service-companies",
+    icon: <MdOutlinePool />,
+  },
+  {
+    id: "local-seo-for-gutter-companies",
+    title: "Local SEO for Gutter Companies",
+    description:
+      "Rank for seamless gutter, gutter guard, and cleaning searches.",
+    link: "/services/industry/local-seo-for-gutter-companies",
+    icon: <MdOutlineWaterDrop />,
+  },
+  {
+    id: "local-seo-for-tree-service-companies",
+    title: "Local SEO for Tree Service Companies",
+    description:
+      "Get found for tree removal, trimming, and emergency tree searches.",
+    link: "/services/industry/local-seo-for-tree-service-companies",
+    icon: <MdOutlineForest />,
+  },
+  {
+    id: "local-seo-for-solar-companies",
+    title: "Local SEO for Solar Companies",
+    description:
+      "Turn 'solar installer near me' searches into booked consultations.",
+    link: "/services/industry/local-seo-for-solar-companies",
+    icon: <MdOutlineSolarPower />,
   },
 ];
 
@@ -665,7 +786,10 @@ function Navbar() {
                       Local SEO <MdArrowOutward size={16} />
                     </Link>
 
-                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown">
+                    <div
+                      className="services-dropdown-container services-core-dropdown local-seo-core-dropdown industries-core-dropdown"
+                      data-lenis-prevent
+                    >
                       <div className="services-core-label">
                         Local SEO Services
                       </div>
@@ -784,7 +908,10 @@ function Navbar() {
                       Industries <MdArrowOutward size={16} />
                     </Link>
 
-                    <div className="services-dropdown-container services-core-dropdown local-seo-core-dropdown industries-core-dropdown">
+                    <div
+                      className="services-dropdown-container services-core-dropdown local-seo-core-dropdown industries-core-dropdown"
+                      data-lenis-prevent
+                    >
                       <div className="services-core-label">Industries</div>
 
                       <div className="services-core-grid local-seo-core-grid">

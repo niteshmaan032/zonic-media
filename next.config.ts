@@ -15,7 +15,11 @@ const contentSecurityPolicyReportOnly = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
-  reactCompiler: true,
+  // React Compiler runs as a Babel pass on every module, which makes Turbopack
+  // dev compiles dramatically slower. Keep it for production builds (where the
+  // memoization payoff matters) but skip it in `next dev` so page compiles are
+  // fast. Dev/prod behavior stays identical — the compiler only adds memoization.
+  reactCompiler: process.env.NODE_ENV === "production",
   images: {
     remotePatterns: [
       {
