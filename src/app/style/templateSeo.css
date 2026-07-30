@@ -2456,78 +2456,134 @@
 /* ---------- 13. lead form ---------- */
 
 .tseo-page .tseo-form-sec {
-  background:
-    radial-gradient(
-      90% 90% at 15% 0%,
-      rgba(37, 103, 232, 0.1) 0%,
-      rgba(37, 103, 232, 0) 60%
-    ),
-    #fff;
+  background: var(--tseo-light);
+  border-top: 1px solid var(--tseo-divider);
 }
 
 .tseo-page .tseo-form-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 64px;
-  align-items: flex-start;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: stretch;
 }
 
-.tseo-page .tseo-form-main {
-  width: 100%;
-  max-width: 500px;
-  justify-self: end;
+/* left column is now a soft gradient card (SEO blue) */
+.tseo-page .tseo-form-aside {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 24px;
+  padding: 48px 44px;
+  background:
+    radial-gradient(
+      70% 90% at 100% 0%,
+      rgba(37, 103, 232, 0.26) 0%,
+      rgba(37, 103, 232, 0) 60%
+    ),
+    linear-gradient(160deg, #dde8fd 0%, #f7faff 70%);
+  border: 1px solid var(--tseo-divider);
 }
 
-.tseo-page .tseo-form-main .slf--card {
-  box-shadow: none;
+.tseo-page .tseo-form-aside > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* column flex would stretch the eyebrow chip full-width — keep it fit-content */
+.tseo-page .tseo-form-aside .tseo-eyebrow {
+  align-self: flex-start;
+}
+
+.tseo-page .tseo-form-aside .tseo-lead {
+  margin-bottom: 0;
+  max-width: 440px;
 }
 
 .tseo-page .tseo-form-contacts {
   display: grid;
-  gap: 14px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 32px;
 }
 
 .tseo-page .tseo-form-contact {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
+  gap: 14px;
+  padding: 12px 14px;
   border: 1px solid var(--tseo-divider);
   border-radius: 14px;
   background: #fff;
   text-decoration: none;
-  transition: border-color 0.2s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .tseo-page .tseo-form-contact:hover {
-  border-color: rgba(37, 103, 232, 0.4);
+  background: #f3f7ff;
+  border-color: var(--tseo-accent);
 }
 
 .tseo-page .tseo-form-contact-icon {
-  display: inline-grid;
+  display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--tseo-accent-soft);
-  color: var(--tseo-accent);
-  font-size: 19px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--tseo-accent);
+  color: #fff;
+  font-size: 17px;
   flex-shrink: 0;
+}
+
+.tseo-page .tseo-form-contact-txt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .tseo-page .tseo-form-contact-txt small {
   display: block;
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--tseo-text);
   margin-bottom: 2px;
 }
 
 .tseo-page .tseo-form-contact-txt strong {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--tseo-ink);
   line-height: 1.4;
+  word-break: break-word;
+}
+
+/* right column: fill the grid cell */
+.tseo-page .tseo-form-main {
+  display: flex;
+}
+
+.tseo-page .tseo-form-main .slf--card {
+  width: 100%;
+  box-shadow: none;
+}
+
+/* re-theme the shared (orange) ServiceLeadForm to the SEO blue primary */
+.tseo-page .slf {
+  --slf-orange: var(--tseo-accent);
+  --slf-orange-dark: var(--tseo-accent-dark);
+  --slf-orange-tint: var(--tseo-accent-soft);
+}
+
+.tseo-page .slf .slf-badge {
+  border-color: rgba(37, 103, 232, 0.18);
+}
+
+.tseo-page .slf input:focus,
+.tseo-page .slf select:focus,
+.tseo-page .slf textarea:focus {
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.12);
 }
 
 /* ---------- responsive ---------- */
@@ -2552,9 +2608,8 @@
     gap: 48px;
   }
 
-  .tseo-page .tseo-form-main {
-    max-width: 100%;
-    justify-self: stretch;
+  .tseo-page .tseo-form-aside {
+    padding: 36px 26px;
   }
 
   .tseo-page .tseo-results-cards {
