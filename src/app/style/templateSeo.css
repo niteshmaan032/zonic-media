@@ -2651,9 +2651,24 @@
     padding: 104px 0 32px;
   }
 
+  .tseo-page .tseo-hero-ctas {
+    gap: 12px;
+  }
+
   .tseo-page .tseo-hero-ctas .tseo-btn,
   .tseo-page .tseo-hero-ctas .tseo-btn-ghost {
     width: fit-content;
+    max-width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 1.35;
+    gap: 8px;
+  }
+
+  .tseo-page .tseo-hero-ctas .tseo-btn-circ {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
   }
 
   .tseo-page .tseo-hero-stats,
