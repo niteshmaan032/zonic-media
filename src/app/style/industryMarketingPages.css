@@ -230,6 +230,7 @@ body:has(.ima-page) .navbar-wrapper.show {
   color: var(--ima-navy);
   font-size: clamp(40px, 4.3vw, 58px);
   line-height: 1.13;
+  text-transform: capitalize;
 }
 
 .ima-hero .hl {

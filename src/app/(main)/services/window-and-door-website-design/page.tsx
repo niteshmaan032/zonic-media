@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/homeImprovementWeb.css";
 import HomeImprovementWebLeadForm from "@/app/components/HomeImprovementWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -456,9 +457,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Window & door website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/window-and-door-hero.webp"
+                      alt="Window and door installer reviewing his company website beside a completed installation"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +533,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Finished replacement window install</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/window-and-door-first-impressions-1.webp"
+                      alt="Completed black-framed window and warm wood entry door installation"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Window & door website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/window-and-door-first-impressions-2.webp"
+                      alt="Window and door company website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -673,9 +684,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive window & door website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/window-and-door-responsive-preview-v4.webp"
+                  alt="Responsive window and door website displayed across desktop, tablet, and phone"
+                  fill
+                  sizes="(max-width: 1199px) 0px, 45vw"
+                />
               </div>
             </div>
           </section>
@@ -899,9 +913,15 @@ function Page() {
                 </Link>
               </div>
               <div className="hiw-banner-media">
-                <div className="hiw-ph">
-                  <span>Installer reviewing new website on a tablet</span>
-                </div>
+                <ServiceSiteMockup
+                  prefix="hiw"
+                  brand="ClearView Windows"
+                  url="clearviewwindows.com"
+                  headline="Windows & doors done right."
+                  primaryCta="Get Free Quote"
+                  chips={["Windows", "Entry Doors", "Patio Doors"]}
+                  toastTitle="New quote request"
+                />
               </div>
               <div className="hiw-banner-feats">
                 {BannerFeats.map((feat) => (

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/homeImprovementWeb.css";
 import HomeImprovementWebLeadForm from "@/app/components/HomeImprovementWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -456,9 +457,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Bathroom remodel website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/bathroom-remodeling-hero.webp"
+                      alt="Bathroom remodeling professional reviewing her company website in a finished bathroom"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +533,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Finished walk-in shower remodel</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/bathroom-remodeling-first-impressions-1.webp"
+                      alt="Completed walk-in shower remodel with warm tile and matte black fixtures"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Remodeling website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/bathroom-remodeling-first-impressions-2.webp"
+                      alt="Bathroom remodeling company website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -896,9 +907,15 @@ function Page() {
                 </Link>
               </div>
               <div className="hiw-banner-media">
-                <div className="hiw-ph">
-                  <span>Remodeler reviewing new website on a tablet</span>
-                </div>
+                <ServiceSiteMockup
+                  prefix="hiw"
+                  brand="Serene Baths"
+                  url="serenebaths.com"
+                  headline="Bathrooms you'll love."
+                  primaryCta="Get Free Quote"
+                  chips={["Walk-in Showers", "Vanities", "Tubs"]}
+                  toastTitle="New quote request"
+                />
               </div>
               <div className="hiw-banner-feats">
                 {BannerFeats.map((feat) => (

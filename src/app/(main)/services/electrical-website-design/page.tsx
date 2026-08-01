@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/electricalWeb.css";
 import ElectricalWebLeadForm from "@/app/components/ElectricalWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -437,8 +438,8 @@ function Page() {
               <div className="ew-hero-visual">
                 <div className="ew-hero-img">
                   <Image
-                    src="/images/electrical-web/hero-image-primary.webp"
-                    alt="Electrician presenting his electrical company website on a laptop"
+                    src="/images/electrical-web/hero-image-primary-v2.webp"
+                    alt="Electrician reviewing an electrical company website on a laptop in his workshop"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -895,11 +896,14 @@ function Page() {
               </Link>
             </div>
             <div className="ew-banner-media">
-              <Image
-                src="/images/electrical-web/why-electrical-companies-choose-us-image.webp"
-                alt="Electrician holding a tablet that displays a new electrical company website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="ew"
+                brand="Voltix Electric"
+                url="voltixelectric.com"
+                headline="Licensed electricians on call."
+                primaryCta="Get a Free Quote"
+                chips={["Panels", "Rewiring", "EV Chargers"]}
+                toastTitle="New quote request"
               />
             </div>
             <div className="ew-banner-feats">

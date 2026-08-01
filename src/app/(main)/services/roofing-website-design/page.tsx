@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/roofingWeb.css";
 import RoofingWebLeadForm from "@/app/components/RoofingWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -436,8 +437,8 @@ function Page() {
               <div className="rw-hero-visual">
                 <div className="rw-hero-img">
                   <Image
-                    src="/images/roofing-web/hero-image-primary.webp"
-                    alt="Roofing contractor presenting his roofing company website on a laptop"
+                    src="/images/roofing-web/hero-image-primary-v3.webp"
+                    alt="Experienced white American roofing contractor reviewing his company website at a residential job site"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -890,11 +891,14 @@ function Page() {
               </Link>
             </div>
             <div className="rw-banner-media">
-              <Image
-                src="/images/roofing-web/why-roofers-choose-us-image.webp"
-                alt="Roofing contractor holding a tablet that displays a new roofing company website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="rw"
+                brand="Apex Roofing"
+                url="apexroofing.com"
+                headline="Roof replacement, done right."
+                primaryCta="Get Free Estimate"
+                chips={["Roof Repair", "Storm Damage", "Metal Roofs"]}
+                toastTitle="New quote request"
               />
             </div>
             <div className="rw-banner-feats">

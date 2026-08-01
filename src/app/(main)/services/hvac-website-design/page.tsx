@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/hvacWeb.css";
 import HvacWebLeadForm from "@/app/components/HvacWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -436,8 +437,8 @@ function Page() {
               <div className="hw-hero-visual">
                 <div className="hw-hero-img">
                   <Image
-                    src="/images/hvac-web/hero-image-primary.webp"
-                    alt="HVAC technician presenting his heating and cooling company website on a laptop"
+                    src="/images/hvac-web/hero-image-primary-v2.webp"
+                    alt="Experienced HVAC technician reviewing a heating and cooling company website on a laptop"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -892,11 +893,14 @@ function Page() {
               </Link>
             </div>
             <div className="hw-banner-media">
-              <Image
-                src="/images/hvac-web/why-hvac-companies-choose-us-image.webp"
-                alt="HVAC technician holding a tablet that displays a new heating and cooling company website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="hw"
+                brand="Summit Air"
+                url="summitair.com"
+                headline="Heating & cooling you can trust."
+                primaryCta="Book a Tune-Up"
+                chips={["AC Repair", "Heating", "Installs"]}
+                toastTitle="New service booking"
               />
             </div>
             <div className="hw-banner-feats">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/pestControlWeb.css";
 import PestControlWebLeadForm from "@/app/components/PestControlWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -440,8 +441,8 @@ function Page() {
               <div className="pc-hero-visual">
                 <div className="pc-hero-img">
                   <Image
-                    src="/images/pest-control-web/hero-image-primary.webp"
-                    alt="Pest control technician presenting his company website on a laptop"
+                    src="/images/pest-control-web/hero-image-primary-v2.webp"
+                    alt="Pest control business owner reviewing his company website on a laptop beside a service van"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -898,11 +899,14 @@ function Page() {
               </Link>
             </div>
             <div className="pc-banner-media">
-              <Image
-                src="/images/pest-control-web/why-pest-control-companies-choose-us-image.webp"
-                alt="Pest control technician holding a tablet that displays a new company website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="pc"
+                brand="GuardPest"
+                url="guardpest.com"
+                headline="Pest-free, guaranteed."
+                primaryCta="Get Free Inspection"
+                chips={["Ants", "Termites", "Rodents"]}
+                toastTitle="New inspection request"
               />
             </div>
             <div className="pc-banner-feats">

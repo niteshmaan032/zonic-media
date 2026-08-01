@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/homeImprovementWeb.css";
 import HomeImprovementWebLeadForm from "@/app/components/HomeImprovementWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -455,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Contractor website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/general-contractor-hero.webp"
+                      alt="General contractor reviewing his construction company website at a residential job site"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -527,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Finished home remodel project</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/general-contractor-first-impressions-1.webp"
+                      alt="Completed residential addition with a covered timber patio"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Contractor website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/general-contractor-first-impressions-2.webp"
+                      alt="General contractor website displayed on a desktop monitor at a job site"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -670,9 +681,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive contractor website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/general-contractor-responsive-preview-v4.webp"
+                  alt="Responsive general contractor website displayed across desktop, tablet, and phone"
+                  fill
+                  sizes="(max-width: 1199px) 0px, 45vw"
+                />
               </div>
             </div>
           </section>
@@ -896,9 +910,15 @@ function Page() {
                 </Link>
               </div>
               <div className="hiw-banner-media">
-                <div className="hiw-ph">
-                  <span>Contractor reviewing new website on a tablet</span>
-                </div>
+                <ServiceSiteMockup
+                  prefix="hiw"
+                  brand="BuildRight Co."
+                  url="buildrightco.com"
+                  headline="Full-home builds & remodels."
+                  primaryCta="Request a Consult"
+                  chips={["Additions", "Remodels", "New Builds"]}
+                  toastTitle="New project inquiry"
+                />
               </div>
               <div className="hiw-banner-feats">
                 {BannerFeats.map((feat) => (

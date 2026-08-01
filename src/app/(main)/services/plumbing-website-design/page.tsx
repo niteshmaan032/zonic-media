@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/plumbingWeb.css";
 import PlumbingWebLeadForm from "@/app/components/PlumbingWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -435,8 +436,8 @@ function Page() {
               <div className="pw-hero-visual">
                 <div className="pw-hero-img">
                   <Image
-                    src="/images/plumbing-web/hero-image-primary.webp"
-                    alt="Plumber presenting his plumbing company website on a laptop"
+                    src="/images/plumbing-web/hero-image-primary-v3.webp"
+                    alt="Male plumbing contractor reviewing his plumbing company website on a laptop in the workshop"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -892,11 +893,14 @@ function Page() {
               </Link>
             </div>
             <div className="pw-banner-media">
-              <Image
-                src="/images/plumbing-web/why-plumbing-companies-choose-us-image.webp"
-                alt="Plumber holding a tablet that displays a new plumbing company website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="pw"
+                brand="FlowPro Plumbing"
+                url="flowproplumbing.com"
+                headline="Fast, reliable plumbing."
+                primaryCta="Request Service"
+                chips={["Drains", "Water Heaters", "Leaks"]}
+                toastTitle="New service request"
               />
             </div>
             <div className="pw-banner-feats">

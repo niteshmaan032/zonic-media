@@ -250,6 +250,7 @@
   letter-spacing: -0.025em;
   color: #fff;
   margin: 0 0 20px;
+  text-transform: capitalize;
 }
 
 .dw-page .dw-h1-img {
@@ -2008,4 +2009,264 @@
 .dw-page .dw-why-banner .dw-inline-link,
 .dw-page .dw-form-aside .dw-inline-link {
   color: var(--dw-hl);
+}
+
+/* ---------- 10b. banner "live site preview" mockup (replaces middle image) ---------- */
+
+.dw-page .dw-banner-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dw-page .dw-siteui {
+  position: relative;
+  width: 100%;
+  max-width: 384px;
+}
+
+.dw-page .dw-siteui-window {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 18px;
+  box-shadow: 0 28px 55px -22px rgba(8, 15, 30, 0.3);
+}
+
+.dw-page .dw-siteui-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 15px;
+  background: color-mix(in srgb, var(--dw-accent) 6%, #fff);
+  border-bottom: 1px solid var(--dw-divider);
+}
+
+.dw-page .dw-siteui-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--dw-ink) 20%, #fff);
+  flex-shrink: 0;
+}
+
+.dw-page .dw-siteui-url {
+  margin-left: 6px;
+  flex: 1;
+  min-width: 0;
+  padding: 5px 12px;
+  font-size: 11px;
+  color: var(--dw-text);
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dw-page .dw-siteui-screen {
+  padding: 18px 18px 20px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--dw-accent) 7%, #fff) 0%,
+    #fff 55%
+  );
+}
+
+.dw-page .dw-siteui-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dw-page .dw-siteui-brand {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--dw-ink);
+}
+
+.dw-page .dw-siteui-navcta {
+  padding: 5px 12px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--dw-accent);
+  border-radius: 100px;
+}
+
+.dw-page .dw-siteui-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 12px;
+  font-size: 11.5px;
+  color: var(--dw-text);
+}
+
+.dw-page .dw-siteui-rating svg {
+  color: var(--dw-accent);
+  font-size: 11px;
+}
+
+.dw-page .dw-siteui-rating b {
+  margin-left: 5px;
+  font-weight: 700;
+  color: var(--dw-ink);
+}
+
+.dw-page .dw-siteui-h {
+  margin: 0 0 16px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: var(--dw-ink);
+}
+
+.dw-page .dw-siteui-btns {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.dw-page .dw-siteui-btn {
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--dw-accent);
+  border-radius: 10px;
+}
+
+.dw-page .dw-siteui-btn-ghost {
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dw-ink);
+  border: 1px solid var(--dw-divider);
+  border-radius: 10px;
+}
+
+.dw-page .dw-siteui-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.dw-page .dw-siteui-chips span {
+  padding: 5px 11px;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--dw-text);
+  background: color-mix(in srgb, var(--dw-accent) 8%, #fff);
+  border: 1px solid color-mix(in srgb, var(--dw-accent) 16%, #fff);
+  border-radius: 100px;
+}
+
+.dw-page .dw-siteui-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--dw-divider);
+}
+
+.dw-page .dw-siteui-card {
+  position: relative;
+  height: 48px;
+  background: color-mix(in srgb, var(--dw-accent) 5%, #fff);
+  border: 1px solid var(--dw-divider);
+  border-radius: 9px;
+}
+
+.dw-page .dw-siteui-card::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--dw-accent) 26%, #fff);
+}
+
+.dw-page .dw-siteui-card::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  bottom: 11px;
+  height: 5px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--dw-ink) 12%, #fff);
+}
+
+.dw-page .dw-siteui-toast {
+  position: absolute;
+  left: -16px;
+  bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 15px 11px 12px;
+  background: #fff;
+  border: 1px solid var(--dw-divider);
+  border-radius: 14px;
+  box-shadow: 0 16px 34px -12px rgba(8, 15, 30, 0.32);
+  animation: dw-siteui-float 4.5s ease-in-out infinite;
+}
+
+.dw-page .dw-siteui-toast-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--dw-accent) 13%, #fff);
+  color: var(--dw-accent);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.dw-page .dw-siteui-toast-txt {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.dw-page .dw-siteui-toast-txt strong {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--dw-ink);
+}
+
+.dw-page .dw-siteui-toast-txt small {
+  font-size: 10.5px;
+  color: var(--dw-text);
+}
+
+@keyframes dw-siteui-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dw-page .dw-siteui-toast {
+    animation: none;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .dw-page .dw-banner-media {
+    display: none;
+  }
 }

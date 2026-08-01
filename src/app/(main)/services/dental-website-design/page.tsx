@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/dentalWeb.css";
 import DentalWebLeadForm from "@/app/components/DentalWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -452,8 +453,8 @@ function Page() {
               <div className="dw-hero-visual">
                 <div className="dw-hero-img">
                   <Image
-                    src="/images/dental-web/hero-image-primary.webp"
-                    alt="Dentist presenting a custom dental practice website on a laptop"
+                    src="/images/dental-web/hero-image-primary-v2.webp"
+                    alt="Dentist reviewing a modern dental practice website on a laptop in her clinic"
                     fill
                     priority
                     sizes="(max-width: 991px) 100vw, 45vw"
@@ -907,11 +908,15 @@ function Page() {
               </Link>
             </div>
             <div className="dw-banner-media">
-              <Image
-                src="/images/dental-web/why-choose-dentists-image.webp"
-                alt="Dentist holding a laptop that displays a new dental practice website"
-                fill
-                sizes="(max-width: 1199px) 0px, 30vw"
+              <ServiceSiteMockup
+                prefix="dw"
+                brand="Bright Smile Dental"
+                url="brightsmiledental.com"
+                navCta="Book Now"
+                headline="Modern dentistry, gentle care."
+                primaryCta="Book Appointment"
+                chips={["Implants", "Invisalign", "Whitening"]}
+                toastTitle="New appointment booked"
               />
             </div>
             <div className="dw-banner-feats">

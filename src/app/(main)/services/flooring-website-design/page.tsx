@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/style/homeImprovementWeb.css";
 import HomeImprovementWebLeadForm from "@/app/components/HomeImprovementWebLeadForm";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
@@ -456,9 +457,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Flooring website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/flooring-hero.webp"
+                      alt="Flooring specialist reviewing her company website while comparing material samples"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +533,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Finished hardwood floor install</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/flooring-first-impressions-1.webp"
+                      alt="Completed herringbone hardwood flooring installation in a bright living room"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Flooring website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/flooring-first-impressions-2.webp"
+                      alt="Flooring company website displayed on a desktop monitor in a showroom"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -671,9 +682,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive flooring website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/flooring-responsive-preview-v4.webp"
+                  alt="Responsive flooring contractor website displayed across desktop, tablet, and phone"
+                  fill
+                  sizes="(max-width: 1199px) 0px, 45vw"
+                />
               </div>
             </div>
           </section>
@@ -897,9 +911,15 @@ function Page() {
                 </Link>
               </div>
               <div className="hiw-banner-media">
-                <div className="hiw-ph">
-                  <span>Flooring pro reviewing new website on a tablet</span>
-                </div>
+                <ServiceSiteMockup
+                  prefix="hiw"
+                  brand="Prime Floors"
+                  url="primefloors.com"
+                  headline="Floors that last for decades."
+                  primaryCta="Get Free Estimate"
+                  chips={["Hardwood", "Luxury Vinyl", "Tile"]}
+                  toastTitle="New estimate request"
+                />
               </div>
               <div className="hiw-banner-feats">
                 {BannerFeats.map((feat) => (
