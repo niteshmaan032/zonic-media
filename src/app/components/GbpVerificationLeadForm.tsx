@@ -199,25 +199,19 @@ export default function GbpVerificationLeadForm() {
   };
 
   return (
-    <div className="gbv-form-card">
+    <div className="lp-form">
       {siteKey ? (
         <LazyRecaptcha siteKey={siteKey} />
       ) : null}
 
-      <div className="gbv-form-head">
-        <h3>Free Verification Diagnosis</h3>
-        <p>
-          Tell us your situation. We&apos;ll identify the exact issue and map
-          the fastest path to getting verified — same business day, no charge.
-        </p>
-      </div>
+      <h3>Free verification diagnosis</h3>
+      <p className="lp-form-sub">
+        Tell us your situation. We&apos;ll identify the exact issue and map the
+        fastest path to getting verified — same business day, no charge.
+      </p>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        noValidate
-        className="gbv-form-body"
-      >
-        <div className="gbv-fg">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+        <div className="lp-fg">
           <label htmlFor="gbv-fullName">Full Name</label>
           <input
             id="gbv-fullName"
@@ -231,11 +225,11 @@ export default function GbpVerificationLeadForm() {
             })}
           />
           {errors.fullName && (
-            <p className="gbv-field-error">{errors.fullName.message}</p>
+            <p className="lp-field-error">{errors.fullName.message}</p>
           )}
         </div>
 
-        <div className="gbv-fg">
+        <div className="lp-fg">
           <label htmlFor="gbv-contact">Phone Number</label>
           <input
             id="gbv-contact"
@@ -256,11 +250,11 @@ export default function GbpVerificationLeadForm() {
             })}
           />
           {errors.contact && (
-            <p className="gbv-field-error">{errors.contact.message}</p>
+            <p className="lp-field-error">{errors.contact.message}</p>
           )}
         </div>
 
-        <div className="gbv-fg">
+        <div className="lp-fg">
           <label htmlFor="gbv-email">Email Address</label>
           <input
             id="gbv-email"
@@ -276,11 +270,11 @@ export default function GbpVerificationLeadForm() {
             })}
           />
           {errors.email && (
-            <p className="gbv-field-error">{errors.email.message}</p>
+            <p className="lp-field-error">{errors.email.message}</p>
           )}
         </div>
 
-        <div className="gbv-fg">
+        <div className="lp-fg">
           <label htmlFor="gbv-businessName">Business Name</label>
           <input
             id="gbv-businessName"
@@ -294,11 +288,11 @@ export default function GbpVerificationLeadForm() {
             })}
           />
           {errors.businessName && (
-            <p className="gbv-field-error">{errors.businessName.message}</p>
+            <p className="lp-field-error">{errors.businessName.message}</p>
           )}
         </div>
 
-        <div className="gbv-fg">
+        <div className="lp-fg">
           <label htmlFor="gbv-whatsHappening">What&apos;s Happening?</label>
           <select
             id="gbv-whatsHappening"
@@ -318,11 +312,11 @@ export default function GbpVerificationLeadForm() {
             ))}
           </select>
           {errors.whatsHappening && (
-            <p className="gbv-field-error">{errors.whatsHappening.message}</p>
+            <p className="lp-field-error">{errors.whatsHappening.message}</p>
           )}
         </div>
 
-        <div className="gbv-fg">
+        <div className="lp-fg">
           <label htmlFor="gbv-industry">Your Industry</label>
           <select
             id="gbv-industry"
@@ -340,7 +334,7 @@ export default function GbpVerificationLeadForm() {
           </select>
         </div>
 
-        <p className="gbv-form-fine">
+        <p className="lp-form-fine">
           Or call:{" "}
           <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a> ·
           Mon–Fri 9AM–5PM ET
@@ -348,31 +342,32 @@ export default function GbpVerificationLeadForm() {
           100% confidential · Same-day response · No commitment
         </p>
 
-        <div className="gbv-form-trust">
-          <span className="gbv-ft-i">🛡️ Money-back guaranteed</span>
-          <span className="gbv-ft-i">⚡ Same-day response</span>
+        <div className="lp-form-trust">
+          <span className="lp-ft-i">Free diagnosis first</span>
+          <span className="lp-ft-i">Same-day response</span>
+          <span className="lp-ft-i">No commitment</span>
         </div>
 
         {!siteKey && (
-          <p className="gbv-form-error">reCAPTCHA is not configured.</p>
+          <p className="lp-field-error lp-error-center">reCAPTCHA is not configured.</p>
         )}
 
         <LeadConsentCheckbox
-          className="gbv-sms-consent"
+          className="lp-sms-consent"
           checked={smsConsent}
           onChange={setSmsConsent}
         />
 
-        {submitError && <p className="gbv-form-error">{submitError}</p>}
+        {submitError && <p className="lp-field-error lp-error-center">{submitError}</p>}
 
         <button
           type="submit"
-          className="gbv-form-submit"
+          className="lp-form-submit"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
             <>
-              <span className="gbv-form-spinner" aria-hidden="true" />
+              <span className="lp-form-spinner" aria-hidden="true" />
               Sending...
             </>
           ) : (

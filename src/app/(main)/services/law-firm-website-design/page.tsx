@@ -448,9 +448,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Law firm website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/law-firm-hero-v2.webp"
+                      alt="Attorney presenting a law firm website from his office"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -520,14 +524,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Attorney meeting with a client</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/law-firm-first-impressions-1.webp"
+                      alt="Attorney meeting with a client across a conference table"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Law firm website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/law-firm-first-impressions-2.webp"
+                      alt="Sterling and Rowe law firm website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -661,9 +671,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive law firm website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/law-firm-responsive-preview-square.webp"
+                  alt="Sterling and Rowe website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -767,10 +780,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/local-seo-for-law-firms"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      law firm SEO
+                      pay-per-click campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -973,7 +986,14 @@ function Page() {
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, case intake, and what
                     happens to your current rankings. If your question is not here,
-                    send it through the form — a strategist answers, not a sales
+                    or you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      Google Business Profile reinstatement
+                    </Link>{" "}
+                    for a suspended listing, send it through the form — a strategist answers, not a sales
                     script.
                   </p>
                   <div className="hiw-faq-cta">

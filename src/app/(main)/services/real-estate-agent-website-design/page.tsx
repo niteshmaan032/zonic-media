@@ -453,9 +453,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Real estate website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/real-estate-agent-hero.webp"
+                      alt="Real estate agent reviewing the Oak and Key website inside a modern home"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -525,14 +529,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Agent showing a home</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/real-estate-agent-first-impressions-1.webp"
+                      alt="Real estate agent showing a bright home to prospective buyers"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Real estate website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/real-estate-agent-first-impressions-2.webp"
+                      alt="Oak and Key Realty website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -666,9 +676,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive real estate website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/real-estate-agent-responsive-preview-square.webp"
+                  alt="Oak and Key Realty website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -772,10 +785,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/real-estate-seo-services"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      real estate SEO
+                      paid search campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -977,8 +990,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, IDX and valuations, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or your profile is suspended and you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      GBP reinstatement help
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

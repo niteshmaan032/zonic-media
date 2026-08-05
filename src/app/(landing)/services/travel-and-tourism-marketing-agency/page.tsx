@@ -634,8 +634,12 @@ function Page() {
                     booking flow wins the reservation.
                   </p>
                   <p className="tt-lead">
-                    As a travel and tourism marketing agency we build your
-                    presence across that whole journey. From the first daydream
+                    As a travel and tourism marketing agency backed by a{" "}
+                    <Link href="/services" className="tt-inline-link">
+                      full-service marketing
+                    </Link>{" "}
+                    team, we build your presence across that whole journey.
+                    From the first daydream
                     search to the confirmation email, the goal stays the same:
                     the booking lands on your engine instead of an OTA&apos;s.
                   </p>

@@ -89,7 +89,7 @@ const PAGE_PATH = "/services/industry/chiropractor-local-seo-services";
 export const metadata: Metadata = {
   title: "Local SEO for Chiropractors That Books Patients",
   description:
-    "Local SEO for chiropractors that wins the Google map pack — profile optimization, reviews, and pages that turn 'chiropractor near me' searches into booked patients. Get a free audit.",
+    "Local SEO for chiropractors that wins the Google map pack — GBP optimization, reviews & pages that turn 'chiropractor near me' into booked patients. Free audit.",
   keywords: [
     "local SEO for chiropractors",
     "chiropractor SEO",
@@ -484,7 +484,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and appointment-based businesses
-                    climb into the Google map pack and grow. Zonic Media builds
+                    climb into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds
                     the full local ranking system for chiropractic clinics —
                     Google Business Profile, citations, reviews, and
                     service-area content — so when someone searches
@@ -1061,7 +1061,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your chiropractic services and
-                    cities, then the foundation work: profile optimization,
+                    cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization,
                     citation cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1153,7 +1153,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different specialties — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/chiropractor-website-design" className="tseo-inline-link">chiropractor website design</Link> that turns the extra traffic into booked appointments.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1182,7 +1182,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for appointment-based businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/chiropractic-marketing-agency" className="tseo-inline-link">chiropractic marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1543,7 +1543,7 @@ function Page() {
                     Straight answers about chiropractic local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for chiropractors</Link>, and what actually moves
                     chiropractic rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

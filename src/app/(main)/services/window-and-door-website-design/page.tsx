@@ -685,10 +685,10 @@ function Page() {
               </div>
               <div className="hiw-band-media">
                 <Image
-                  src="/images/home-improvement-web/window-and-door-responsive-preview-v4.webp"
-                  alt="Responsive window and door website displayed across desktop, tablet, and phone"
+                  src="/images/home-improvement-web/window-and-door-responsive-preview-square.webp"
+                  alt="Window and door website displayed on a desktop monitor and tablet"
                   fill
-                  sizes="(max-width: 1199px) 0px, 45vw"
+                  sizes="(max-width: 991px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -793,10 +793,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/local-seo-for-window-and-door-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      window and door SEO
+                      Google Ads campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -998,8 +998,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, galleries, and what
-                    happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    happens to your current rankings. If your question is not here,
+                    or you need to{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      recover a suspended Google Business Profile
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

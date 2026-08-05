@@ -1,0 +1,709 @@
+/* CSS-animated signature visuals for the white-label services page
+   (BrandSwapVisual, FulfillmentFlowVisual, MarginMeterVisual). Homepage
+   console idiom: keyframe loops on a shared cadence, staggered by --n vars.
+   Tokens read the wl- palette with hm- values as fallbacks. */
+
+.wlv {
+  --wlv-ink: var(--wl-ink, #0c1526);
+  --wlv-text: var(--wl-text, #47546e);
+  --wlv-muted: var(--wl-muted, #7a869e);
+  --wlv-accent: var(--wl-blue, #2567e8);
+  --wlv-accent-dark: var(--wl-blue-dark, #1c4fc4);
+  --wlv-accent-soft: var(--wl-blue-soft, #eaf0fe);
+  --wlv-gold: var(--wl-gold, #fdc115);
+  --wlv-green: var(--wl-green, #34a852);
+  --wlv-line: var(--wl-line, #e3e9f7);
+  --wlv-bg: var(--wl-bg, #f5f8fd);
+  --wlv-loop: 9s;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--wlv-line);
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--wlv-text);
+}
+
+.wlv * {
+  box-sizing: border-box;
+}
+
+.wlv svg {
+  display: block;
+}
+
+/* Rhythm inside the wl- sections: the hero visual gets space above, the
+   in-section visuals separate from the grids/prose they follow. */
+.wl-hero .wlv {
+  margin: 34px 0 0;
+}
+.wl-section .wlv {
+  margin: 34px 0 0;
+}
+
+/* ------------------------------------------------------- shared chrome --- */
+
+.wlv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wlv-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  color: var(--wlv-accent-dark);
+  background: var(--wlv-accent-soft);
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.wlv-chip svg {
+  width: 13px;
+  height: 13px;
+}
+
+.wlv-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--wlv-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wlv-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--wlv-green);
+  animation: wlv-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes wlv-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+/* homepage flip idiom */
+.wlv-flip {
+  position: relative;
+  display: inline-grid;
+}
+
+.wlv-flip > * {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
+.wlv-flip-b {
+  opacity: 0;
+  animation: wlv-flip-b var(--wlv-loop) ease-in-out infinite;
+}
+
+.wlv-flip-a {
+  opacity: 1;
+  animation: wlv-flip-a var(--wlv-loop) ease-in-out infinite;
+}
+
+@keyframes wlv-flip-b {
+  0%, 38% { opacity: 1; }
+  46%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes wlv-flip-a {
+  0%, 38% { opacity: 0; }
+  46%, 92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* shared toast (pops near the end of each loop) */
+.wlv-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 11px 14px;
+  background: var(--wlv-bg);
+  border: 1px solid var(--wlv-line);
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: wlv-toast-pop var(--wlv-loop) ease-in-out infinite;
+}
+
+@keyframes wlv-toast-pop {
+  0%, 66% { opacity: 0; transform: translateY(6px); }
+  72%, 93% { opacity: 1; transform: translateY(0); }
+  98%, 100% { opacity: 0; transform: translateY(6px); }
+}
+
+.wlv-toast-ic {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  color: #fff;
+  background: var(--wlv-ink);
+  border-radius: 50%;
+}
+
+.wlv-toast-ic--gold {
+  color: var(--wlv-ink);
+  background: var(--wlv-gold);
+}
+
+.wlv-toast-ic svg {
+  width: 14px;
+  height: 14px;
+}
+
+.wlv-toast b {
+  display: block;
+  color: var(--wlv-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wlv-toast small {
+  color: var(--wlv-muted);
+  font-size: 11.5px;
+}
+
+/* ============================================================ brand swap === */
+
+.wlv-report {
+  overflow: hidden;
+  background: var(--wlv-bg);
+  border: 1px solid var(--wlv-line);
+  border-radius: 14px;
+}
+
+.wlv-report-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 15px;
+  background: #fff;
+  border-bottom: 1px solid var(--wlv-line);
+}
+
+.wlv-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.wlv-brand-logo {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.wlv-brand-logo b {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  background: var(--wlv-ink);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.wlv-brand-logo b.wlv-brand-logo--yours {
+  color: var(--wlv-ink);
+  background: var(--wlv-gold);
+}
+
+.wlv-brand-meta b {
+  display: block;
+  color: var(--wlv-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.wlv-brand-meta small {
+  display: block;
+  color: var(--wlv-muted);
+  font-size: 11.5px;
+}
+
+.wlv-swap-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  color: var(--wlv-ink);
+  background: var(--wlv-gold);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  /* Badge arrives with the rebrand flip. */
+  opacity: 0;
+  animation: wlv-flip-a var(--wlv-loop) ease-in-out infinite;
+}
+
+.wlv-swap-badge svg {
+  width: 11px;
+  height: 11px;
+}
+
+.wlv-report-rows {
+  display: grid;
+  gap: 8px;
+  padding: 13px 15px;
+}
+
+.wlv-report-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  background: #fff;
+  border: 1px solid var(--wlv-line);
+  border-radius: 12px;
+  opacity: 0.45;
+  animation: wlv-row-glow var(--wlv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.1s + 0.6s);
+}
+
+@keyframes wlv-row-glow {
+  0%, 4%, 30%, 100% {
+    opacity: 0.45;
+    border-color: var(--wlv-line);
+    transform: translateY(0);
+  }
+  10%, 22% {
+    opacity: 1;
+    border-color: var(--wlv-accent);
+    transform: translateY(-1px);
+  }
+}
+
+.wlv-report-ic {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  color: var(--wlv-accent);
+  background: var(--wlv-accent-soft);
+  border-radius: 50%;
+}
+
+.wlv-report-ic svg {
+  width: 13px;
+  height: 13px;
+}
+
+.wlv-report-row b {
+  color: var(--wlv-ink);
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wlv-report-check {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  margin-left: auto;
+  color: #fff;
+  background: var(--wlv-green);
+  border-radius: 50%;
+}
+
+.wlv-report-check svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* ====================================================== fulfillment flow === */
+
+.wlv-flow-rail {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 16px;
+}
+
+.wlv-flow-step {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+}
+
+.wlv-flow-step:last-child {
+  flex: 0 0 auto;
+}
+
+.wlv-flow-node {
+  display: grid;
+  gap: 7px;
+  justify-items: center;
+  padding: 13px 8px 11px;
+  flex: 0 0 auto;
+  min-width: 86px;
+  background: var(--wlv-bg);
+  border: 1px solid var(--wlv-line);
+  border-radius: 14px;
+  text-align: center;
+  animation: wlv-node-pulse var(--wlv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.1s);
+}
+
+@keyframes wlv-node-pulse {
+  0%, 8%, 24%, 100% { border-color: var(--wlv-line); transform: translateY(0); }
+  12%, 18% {
+    border-color: var(--wlv-accent);
+    transform: translateY(-2px);
+  }
+}
+
+.wlv-flow-node--end {
+  background: var(--wlv-ink);
+  border-color: var(--wlv-ink);
+}
+
+.wlv-flow-node--end small {
+  color: #cddcfb;
+}
+
+.wlv-flow-node--end .wlv-flow-ic {
+  color: var(--wlv-ink);
+  background: var(--wlv-gold);
+}
+
+.wlv-flow-ic {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--wlv-accent);
+  background: var(--wlv-accent-soft);
+  border-radius: 10px;
+}
+
+.wlv-flow-ic svg {
+  width: 15px;
+  height: 15px;
+}
+
+.wlv-flow-node small {
+  max-width: 96px;
+  color: var(--wlv-text);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.wlv-flow-link {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  min-width: 14px;
+  margin: 0 6px;
+  background: var(--wlv-line);
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.wlv-flow-link i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--wlv-accent);
+  animation: wlv-flow-dot var(--wlv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.1s + 0.45s);
+  opacity: 0;
+}
+
+@keyframes wlv-flow-dot {
+  0%, 6% { left: 0; opacity: 0; }
+  9% { opacity: 1; }
+  17% { left: calc(100% - 8px); opacity: 1; }
+  20%, 100% { left: calc(100% - 8px); opacity: 0; }
+}
+
+.wlv-feed {
+  display: grid;
+  gap: 8px;
+}
+
+.wlv-feed-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  background: #fff;
+  border: 1px solid var(--wlv-line);
+  border-radius: 12px;
+  opacity: 0.45;
+  animation: wlv-feed-glow var(--wlv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.4s + 4.2s);
+}
+
+@keyframes wlv-feed-glow {
+  0%, 6%, 30%, 100% {
+    opacity: 0.45;
+    border-color: var(--wlv-line);
+    transform: translateY(0);
+  }
+  12%, 22% {
+    opacity: 1;
+    border-color: var(--wlv-accent);
+    transform: translateY(-1px);
+  }
+}
+
+.wlv-feed-ic {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  color: var(--wlv-accent);
+  background: var(--wlv-accent-soft);
+  border-radius: 50%;
+}
+
+.wlv-feed-ic svg {
+  width: 13px;
+  height: 13px;
+}
+
+.wlv-feed-ic--gold {
+  color: #8a6a02;
+  background: rgba(253, 193, 21, 0.18);
+}
+
+.wlv-feed-ic--green {
+  color: #fff;
+  background: var(--wlv-green);
+}
+
+.wlv-feed-row b {
+  display: block;
+  color: var(--wlv-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.wlv-feed-row small {
+  color: var(--wlv-muted);
+  font-size: 11.5px;
+}
+
+/* ========================================================== margin meter === */
+
+.wlv-margin-badge {
+  padding: 5px 11px;
+  color: var(--wlv-ink);
+  background: var(--wlv-gold);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wlv-margin-rows {
+  display: grid;
+  gap: 14px;
+}
+
+.wlv-margin-row {
+  display: grid;
+  gap: 7px;
+}
+
+.wlv-margin-label {
+  color: var(--wlv-ink);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.wlv-margin-track {
+  position: relative;
+  height: 22px;
+  background: var(--wlv-bg);
+  border: 1px solid var(--wlv-line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.wlv-margin-track i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.wlv-margin-cost {
+  left: 0;
+  width: var(--w);
+  background: linear-gradient(90deg, var(--wlv-accent-dark), var(--wlv-accent));
+  border-radius: 999px 0 0 999px;
+}
+
+/* The gold markup grows in on top of the wholesale segment each loop. */
+.wlv-margin-gain {
+  left: var(--x);
+  width: var(--w);
+  background: linear-gradient(90deg, var(--wlv-gold), #e0a90a);
+  border-radius: 0 999px 999px 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: wlv-margin-grow var(--wlv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 0.5s + 0.8s);
+}
+
+@keyframes wlv-margin-grow {
+  0%, 6% { transform: scaleX(0); }
+  16%, 88% { transform: scaleX(1); }
+  96%, 100% { transform: scaleX(0); }
+}
+
+.wlv-margin-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 14px;
+  color: var(--wlv-muted);
+  font-size: 11.5px;
+}
+
+.wlv-margin-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wlv-margin-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--wlv-accent);
+}
+
+.wlv-margin-legend .wlv-dot--gold {
+  background: var(--wlv-gold);
+}
+
+.wlv-toast--margin {
+  animation-delay: 0.6s;
+}
+
+/* ----------------------------------------------------------- responsive --- */
+
+@media (max-width: 720px) {
+  .wlv {
+    padding: 18px 16px;
+  }
+
+  .wl-hero .wlv,
+  .wl-section .wlv {
+    margin-top: 28px;
+  }
+
+  .wlv-swap-badge {
+    display: none;
+  }
+
+  /* Rail goes vertical on phones: nodes stack, dots travel downward. */
+  .wlv-flow-rail {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wlv-flow-step {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wlv-flow-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 11px 14px;
+    text-align: left;
+  }
+
+  .wlv-flow-node small {
+    max-width: none;
+  }
+
+  .wlv-flow-link {
+    flex: 0 0 auto;
+    width: 2px;
+    height: 18px;
+    min-width: 0;
+    margin: 4px 0 4px 29px;
+  }
+
+  .wlv-flow-link i {
+    top: 0;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -4px;
+    animation-name: wlv-flow-dot-v;
+  }
+
+  @keyframes wlv-flow-dot-v {
+    0%, 6% { top: 0; opacity: 0; }
+    9% { opacity: 1; }
+    17% { top: calc(100% - 8px); opacity: 1; }
+    20%, 100% { top: calc(100% - 8px); opacity: 0; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wlv *,
+  .wlv *::before,
+  .wlv *::after {
+    animation: none !important;
+  }
+
+  /* Rest on the "delivered" frame: your brand shows, everything is lit. */
+  .wlv-flip-b { opacity: 0; }
+  .wlv-flip-a { opacity: 1; }
+  .wlv-swap-badge { opacity: 1; }
+  .wlv-report-row,
+  .wlv-feed-row { opacity: 1; }
+  .wlv-toast { opacity: 1; transform: none; }
+  .wlv-flow-link i { opacity: 0; }
+  .wlv-margin-gain { transform: scaleX(1); }
+}

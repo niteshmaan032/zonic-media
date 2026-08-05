@@ -10,10 +10,16 @@ import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import {
+  GrowthCurveVisual,
+  LeadEngineVisual,
+  MapPackRaceVisual,
+} from "@/app/components/IndustryMarketingVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
@@ -42,6 +48,14 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     url: "/services/home-inspector-marketing",
   },
 ]);
+
+const visualCopy = {
+  industry: "home inspection",
+  industryTitle: "Home Inspection",
+  business: "home inspection company",
+  jobsNoun: "booked inspections",
+  mapQuery: "home inspector near me",
+};
 
 const tickerItems = [
   "Free Home Inspector Marketing Audit",
@@ -391,6 +405,15 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
   areaServed: { type: "Country", name: "United States" },
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "Home Inspector Marketing Agency",
+  description:
+    "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
+  pageUrl: "/services/home-inspector-marketing",
+  serviceType: "Home Inspector Marketing",
+  areaServed: "United States",
+});
+
 function Page() {
   return (
     <>
@@ -410,6 +433,11 @@ function Page() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessJsonLd),
         }}
+      />
+      <Script
+        id="hia-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
       <div id="hia-top" className="hia-page">
@@ -613,6 +641,8 @@ function Page() {
                 </div>
               </section>
 
+              <MapPackRaceVisual copy={visualCopy} />
+
               {/* SERVICES */}
               <section className="hia-section hia-services-sec" id="hia-services">
                 <div className="hia-sec-label">Complete Digital Marketing Stack</div>
@@ -650,6 +680,8 @@ function Page() {
                   ))}
                 </div>
               </section>
+
+              <LeadEngineVisual copy={visualCopy} />
 
               {/* CHANNEL MIX TABLE */}
               <section className="hia-section" id="hia-channels">
@@ -832,7 +864,14 @@ function Page() {
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
                   agencies can&apos;t edit, filter, or fake. The same operators
-                  who hired us to fix their booking pipeline left these.
+                  who hired us to fix their booking pipeline — from{" "}
+                  <Link
+                    href="/services/home-inspector-marketing/florida"
+                    className="hia-inline-link"
+                  >
+                    Florida home inspection companies
+                  </Link>{" "}
+                  to multi-state firms — left these.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -846,11 +885,13 @@ function Page() {
                   <ClutchWidget
                     widgetType="12"
                     height="375"
-                    primaryColor="#f97316"
+                    primaryColor="#2567e8"
                     reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                   />
                 </div>
               </section>
+
+              <GrowthCurveVisual copy={visualCopy} />
 
               {/* PRICING */}
               <section className="hia-section hia-pricing-sec" id="hia-pricing">

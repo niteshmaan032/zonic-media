@@ -15,13 +15,22 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { buildBreadcrumbJsonLd, buildServiceJsonLd } from "@/shared/seoSchemas";
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
   { name: "Launchpad", url: "/services/launchpad" },
 ]);
+
+const serviceJsonLd = buildServiceJsonLd({
+  name: "Zonic Launchpad — Business Launch Program",
+  description:
+    "Done-for-you launch system for new businesses: branding, website design, Google Business Profile setup, local SEO, and lead generation.",
+  pageUrl: "/services/launchpad",
+  serviceType: "Business Launch Marketing",
+  areaServed: "United States",
+});
 
 export const metadata: Metadata = {
   title: "Business Launch Services | Start Your Business",
@@ -188,6 +197,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <div className="launchpad-sec-1">
         <Col lg={8} className="launch-col">
@@ -732,7 +745,14 @@ function page() {
                   <span>
                     <FaCheck />
                   </span>
-                  Google Business Profile setup and optimization
+                  Google Business Profile setup,{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="launchpad-inline-link"
+                  >
+                    profile verification
+                  </Link>
+                  , and optimization
                 </li>
               </ul>
             </div>

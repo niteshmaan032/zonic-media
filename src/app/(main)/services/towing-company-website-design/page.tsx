@@ -453,9 +453,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Towing company website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/towing-company-hero.webp"
+                      alt="Tow truck operator reviewing the RoadReady website beside a flatbed truck"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -525,14 +529,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Flatbed tow truck on a call</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/towing-company-first-impressions-1.webp"
+                      alt="Tow truck operator safely securing a vehicle on a flatbed"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Towing website on a phone</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/towing-company-first-impressions-2.webp"
+                      alt="RoadReady Towing website displayed on a dispatch office monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -640,14 +650,14 @@ function Page() {
                   we design around your service mix, your coverage area, and the
                   way drivers in your market actually search. Your site should
                   feel like your company, not like a template every competitor is
-                  also using — and it should be built to rank with{" "}
+                  also using — and it should be built to rank, with a{" "}
                   <Link
-                    href="/services/industry/seo-services-for-car-towing"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    SEO services for car towing
+                    verified Google Business Profile
                   </Link>{" "}
-                  from day one.
+                  supporting it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -665,9 +675,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive towing website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/towing-company-responsive-preview-square.webp"
+                  alt="RoadReady Towing website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -770,10 +783,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/seo-services-for-car-towing"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      towing SEO
+                      paid search campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -974,8 +987,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, roadside calls, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or your profile is suspended and you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      GBP reinstatement help
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

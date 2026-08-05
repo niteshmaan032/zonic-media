@@ -15,10 +15,12 @@ import ChatBot from "@/app/components/ChatBot";
 // pages — see GhlChatWidget.tsx. This component just keeps the rest of the UI
 // in sync: hide our own ChatBot on GHL pages, and remove any widget DOM that
 // lingers after a client-side navigation to a page that has a lead form.
+// NOTE: /services/delaware/digital-marketing was removed from this list in
+// Aug 2026 — that page now carries its own ServiceLeadForm, which would trip
+// GHL's "multiple opt-in sources" check, so it runs our own ChatBot instead.
 const GHL_PAGES = [
   "/services",
   "/services/launchpad",
-  "/services/delaware/digital-marketing",
   "/services/google-ads",
 ];
 

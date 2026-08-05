@@ -14,6 +14,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 const PAGE_PATH =
@@ -22,7 +23,7 @@ const PAGE_PATH =
 export const metadata: Metadata = {
   title: "GBP Services for Real Estate Agents & Brokers",
   description:
-    "GBP reinstatement, verification, and management for real estate agents and brokers. Local SEO and real estate website design across FL, TX, CA, NY & AZ. 700+ profiles reinstated.",
+    "GBP reinstatement, verification & management for real estate agents and brokers, plus local SEO and realtor website design. 700+ profiles reinstated.",
   keywords: [
     "Google Business Profile for real estate agents",
     "realtor GBP suspended",
@@ -377,9 +378,23 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
   areaServed: { type: "Country", name: "United States" },
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "Google Business Profile Services for Real Estate Agents",
+  description:
+    "GBP reinstatement, verification, and management for real estate agents and brokers, plus local SEO and realtor website design.",
+  pageUrl: PAGE_PATH,
+  serviceType: "Google Business Profile Management",
+  areaServed: "United States",
+});
+
 function Page() {
   return (
     <>
+      <Script
+        id="gre-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Script
         id="gre-breadcrumb-schema"
         type="application/ld+json"
@@ -655,7 +670,12 @@ function Page() {
                   </div>
                   <div className="gre-clickshare-cap">
                     Position #1 captures the call. A suspended profile — even a
-                    strong one — takes 0% until it&apos;s reinstated.
+                    strong one — takes 0% until it&apos;s reinstated, which is
+                    why many agents bridge the gap with{" "}
+                    <Link href="/services/google-ads" className="gre-inline-link">
+                      PPC campaigns
+                    </Link>
+                    .
                   </div>
                 </div>
               </section>
@@ -878,7 +898,7 @@ function Page() {
                   <ClutchWidget
                     widgetType="12"
                     height="375"
-                    primaryColor="#f97316"
+                    primaryColor="#2567e8"
                     reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                   />
                 </div>

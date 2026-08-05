@@ -42,7 +42,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-tree-service-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Tree Service Companies",
   description:
-    "Local SEO for tree service companies that books more jobs — rank for 'tree service near me' and 'tree removal near me' with Google Business Profile, reviews, and pages. Get a free audit.",
+    "Local SEO for tree service companies — rank for 'tree service near me' and 'tree removal near me' with GBP, reviews & pages. Free audit.",
   keywords: [
     "local SEO for tree service companies",
     "tree service near me",
@@ -440,7 +440,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and home-service businesses climb
-                    into the Google map pack and grow. Zonic Media builds the
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
                     full local ranking system for tree service companies — Google
                     Business Profile, citations, reviews, and service-area
                     content — so when homeowners search &ldquo;tree service near
@@ -1017,7 +1017,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your tree services and cities, then
-                    the foundation work: profile optimization, citation cleanup,
+                    the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization, citation cleanup,
                     and on-page fixes.
                   </p>
                 </article>
@@ -1109,7 +1109,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, and often a <Link href="/services/tree-service-website-design" className="tseo-inline-link">tree service website design</Link> that converts that traffic into booked jobs.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1138,7 +1138,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/tree-service-marketing-agency" className="tseo-inline-link">tree service marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1501,7 +1501,7 @@ function Page() {
                     Straight answers about tree service local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves tree
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for tree services</Link>, and what actually moves tree
                     service rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

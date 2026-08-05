@@ -1,0 +1,744 @@
+/* CSS-animated signature visuals shared by the industry marketing pages
+   (MapPackRaceVisual, LeadEngineVisual, GrowthCurveVisual). Homepage console
+   idiom: keyframe loops on a shared cadence, staggered by --n vars.
+   Tokens read the ima- palette with hm- fallbacks so the visuals also work
+   on the hia-family and non-profit pages, and pick up solar's gold theme. */
+
+.imv {
+  --imv-ink: var(--ima-navy, #0c1526);
+  --imv-text: var(--ima-slate, #47546e);
+  --imv-muted: var(--ima-muted, #7a869e);
+  --imv-accent: var(--ima-orange, #2567e8);
+  --imv-accent-dark: var(--ima-orange-dark, #1c4fc4);
+  --imv-accent-soft: var(--ima-orange-tint, #eaf0fe);
+  --imv-gold: var(--ima-gold, #fdc115);
+  --imv-green: var(--ima-green, #34a852);
+  --imv-line: var(--ima-border, #e3e9f7);
+  --imv-bg: var(--ima-bg, #f5f8fd);
+  --imv-loop: 9s;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--imv-line);
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--imv-text);
+}
+
+.imv * {
+  box-sizing: border-box;
+}
+
+/* Rhythm around the visuals. They sit between the source-content sections,
+   whose own 66px padding lands on one side only — so a visual that follows a
+   section had a canyon above it while the one under the dark/alt panel butted
+   straight against it. Trim the neighbouring plain sections and give the
+   visual its own symmetric margin instead: an even ~40-66px on both sides.
+   (.alt / .navy keep their padding — it's the inside of a coloured panel.) */
+.ima-source-content > .imv {
+  margin: 40px 0;
+}
+.ima-source-content > div:has(+ .imv) .section:not(.alt):not(.navy) {
+  padding-bottom: 26px;
+}
+.ima-source-content > .imv + div .section:not(.alt):not(.navy) {
+  padding-top: 26px;
+}
+
+.imv svg {
+  display: block;
+}
+
+/* ------------------------------------------------------- shared chrome --- */
+
+.imv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.imv-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  color: var(--imv-accent-dark);
+  background: var(--imv-accent-soft);
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.imv-chip svg {
+  width: 13px;
+  height: 13px;
+}
+
+.imv-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--imv-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.imv-live i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--imv-green);
+  animation: imv-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes imv-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+/* homepage flip idiom */
+.imv-flip {
+  position: relative;
+  display: inline-grid;
+}
+
+.imv-flip > span {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
+.imv-flip-b {
+  opacity: 0;
+  animation: imv-flip-b var(--imv-loop) ease-in-out infinite;
+}
+
+.imv-flip-a {
+  opacity: 1;
+  animation: imv-flip-a var(--imv-loop) ease-in-out infinite;
+}
+
+@keyframes imv-flip-b {
+  0%, 38% { opacity: 1; }
+  46%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes imv-flip-a {
+  0%, 38% { opacity: 0; }
+  46%, 92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* =========================================================== rank race === */
+
+.imv-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  margin-bottom: 16px;
+  color: var(--imv-ink);
+  background: var(--imv-bg);
+  border: 1px solid var(--imv-line);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.imv-search svg {
+  width: 15px;
+  height: 15px;
+  color: var(--imv-muted);
+}
+
+.imv-caret {
+  width: 1.5px;
+  height: 15px;
+  background: var(--imv-accent);
+  animation: imv-blink 1.1s steps(2) infinite;
+}
+
+.imv-rank-board {
+  --imv-rh: 58px;
+  --imv-rgap: 8px;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 10px;
+}
+
+.imv-rank-rail {
+  display: grid;
+  gap: var(--imv-rgap);
+}
+
+.imv-rank-rail span {
+  display: grid;
+  place-items: center;
+  height: var(--imv-rh);
+  color: var(--imv-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.imv-rank-rows {
+  position: relative;
+  height: calc(var(--imv-rh) * 3 + var(--imv-rgap) * 2);
+}
+
+.imv-rank-row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: var(--imv-rh);
+  padding: 0 14px;
+  background: #fff;
+  border: 1px solid var(--imv-line);
+  border-radius: 12px;
+}
+
+/* The three rows swap places over the loop: You climbs 3 → 2 → 1 while the
+   competitors get pushed down, then everything resets for the next lap. */
+.imv-rank-row--a {
+  animation: imv-rank-a var(--imv-loop) ease-in-out infinite;
+}
+
+.imv-rank-row--b {
+  animation: imv-rank-b var(--imv-loop) ease-in-out infinite;
+}
+
+.imv-rank-row--you {
+  border: 1.5px solid var(--imv-accent);
+  animation: imv-rank-you var(--imv-loop) ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes imv-rank-you {
+  0%, 26% { transform: translateY(calc((var(--imv-rh) + var(--imv-rgap)) * 2)); }
+  36%, 54% { transform: translateY(calc(var(--imv-rh) + var(--imv-rgap))); }
+  64%, 93% { transform: translateY(0); }
+  100% { transform: translateY(calc((var(--imv-rh) + var(--imv-rgap)) * 2)); }
+}
+
+@keyframes imv-rank-a {
+  0%, 54% { transform: translateY(0); }
+  64%, 93% { transform: translateY(calc(var(--imv-rh) + var(--imv-rgap))); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes imv-rank-b {
+  0%, 26% { transform: translateY(calc(var(--imv-rh) + var(--imv-rgap))); }
+  36%, 93% { transform: translateY(calc((var(--imv-rh) + var(--imv-rgap)) * 2)); }
+  100% { transform: translateY(calc(var(--imv-rh) + var(--imv-rgap))); }
+}
+
+.imv-rank-ava {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  color: var(--imv-muted);
+  background: var(--imv-bg);
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.imv-rank-row--you .imv-rank-ava {
+  color: #fff;
+  background: var(--imv-accent);
+}
+
+.imv-rank-meta {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.imv-rank-meta b {
+  color: var(--imv-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.imv-rank-meta small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--imv-muted);
+  font-size: 11.5px;
+}
+
+.imv-rank-meta small svg {
+  width: 11px;
+  height: 11px;
+  color: var(--imv-gold);
+  fill: var(--imv-gold);
+}
+
+.imv-rank-you {
+  margin-left: auto;
+  padding: 3px 9px;
+  color: var(--imv-accent-dark);
+  background: var(--imv-accent-soft);
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Call toast pops in while the You row holds #1. */
+.imv-rank-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 11px 14px;
+  background: var(--imv-bg);
+  border: 1px solid var(--imv-line);
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: imv-call-pop var(--imv-loop) ease-in-out infinite;
+}
+
+@keyframes imv-call-pop {
+  0%, 66% { opacity: 0; transform: translateY(6px); }
+  72%, 93% { opacity: 1; transform: translateY(0); }
+  98%, 100% { opacity: 0; transform: translateY(6px); }
+}
+
+.imv-rank-call-ic {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  color: #fff;
+  background: var(--imv-green);
+  border-radius: 50%;
+  animation: imv-ring 1.2s ease-in-out infinite;
+}
+
+.imv-rank-call-ic svg {
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes imv-ring {
+  0%, 100% { transform: rotate(0); }
+  12% { transform: rotate(-12deg); }
+  24% { transform: rotate(10deg); }
+  36% { transform: rotate(0); }
+}
+
+.imv-rank-call b {
+  display: block;
+  color: var(--imv-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.imv-rank-call small {
+  color: var(--imv-muted);
+  font-size: 11.5px;
+}
+
+/* ========================================================= lead engine === */
+
+.imv-flow-rail {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 16px;
+}
+
+.imv-flow-step {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  min-width: 0;
+}
+
+.imv-flow-step:last-child {
+  flex: 0 0 auto;
+}
+
+.imv-flow-node {
+  display: grid;
+  gap: 7px;
+  justify-items: center;
+  padding: 13px 8px 11px;
+  flex: 0 0 auto;
+  min-width: 86px;
+  background: var(--imv-bg);
+  border: 1px solid var(--imv-line);
+  border-radius: 14px;
+  text-align: center;
+  animation: imv-node-pulse var(--imv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.1s);
+}
+
+@keyframes imv-node-pulse {
+  0%, 8%, 24%, 100% { border-color: var(--imv-line); transform: translateY(0); }
+  12%, 18% {
+    border-color: var(--imv-accent);
+    transform: translateY(-2px);
+  }
+}
+
+.imv-flow-node--end {
+  background: var(--imv-ink);
+  border-color: var(--imv-ink);
+}
+
+.imv-flow-node--end small {
+  color: #cddcfb;
+}
+
+.imv-flow-node--end .imv-flow-ic {
+  color: var(--imv-ink);
+  background: var(--imv-gold);
+}
+
+.imv-flow-ic {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--imv-accent);
+  background: var(--imv-accent-soft);
+  border-radius: 10px;
+}
+
+.imv-flow-ic svg {
+  width: 15px;
+  height: 15px;
+}
+
+.imv-flow-node small {
+  max-width: 90px;
+  color: var(--imv-text);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.imv-flow-link {
+  position: relative;
+  flex: 1;
+  height: 2px;
+  min-width: 14px;
+  margin: 0 6px;
+  background: var(--imv-line);
+  border-radius: 2px;
+  overflow: visible;
+}
+
+.imv-flow-link i {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--imv-accent);
+  animation: imv-flow-dot var(--imv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.1s + 0.45s);
+  opacity: 0;
+}
+
+@keyframes imv-flow-dot {
+  0%, 6% { left: 0; opacity: 0; }
+  9% { opacity: 1; }
+  17% { left: calc(100% - 8px); opacity: 1; }
+  20%, 100% { left: calc(100% - 8px); opacity: 0; }
+}
+
+.imv-feed {
+  display: grid;
+  gap: 8px;
+}
+
+.imv-feed-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 13px;
+  background: #fff;
+  border: 1px solid var(--imv-line);
+  border-radius: 12px;
+  opacity: 0.45;
+  animation: imv-feed-glow var(--imv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 1.4s + 4.2s);
+}
+
+@keyframes imv-feed-glow {
+  0%, 6%, 30%, 100% {
+    opacity: 0.45;
+    border-color: var(--imv-line);
+    transform: translateY(0);
+  }
+  12%, 22% {
+    opacity: 1;
+    border-color: var(--imv-accent);
+    transform: translateY(-1px);
+  }
+}
+
+.imv-feed-ic {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  color: var(--imv-accent);
+  background: var(--imv-accent-soft);
+  border-radius: 50%;
+}
+
+.imv-feed-ic svg {
+  width: 13px;
+  height: 13px;
+}
+
+.imv-feed-ic--gold {
+  color: #8a6a02;
+  background: rgba(253, 193, 21, 0.18);
+}
+
+.imv-feed-ic--green {
+  color: #fff;
+  background: var(--imv-green);
+}
+
+.imv-feed-row b {
+  display: block;
+  color: var(--imv-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.imv-feed-row small {
+  color: var(--imv-muted);
+  font-size: 11.5px;
+}
+
+/* ======================================================== growth curve === */
+
+.imv-growth-pct {
+  padding: 5px 11px;
+  color: var(--imv-ink);
+  background: var(--imv-gold);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.imv-growth-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.imv-growth-stat > b {
+  color: var(--imv-ink);
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.imv-growth-stat > span {
+  color: var(--imv-muted);
+  font-size: 12.5px;
+}
+
+.imv-growth-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  height: 130px;
+  padding: 0 4px 10px;
+  border-bottom: 1px solid var(--imv-line);
+}
+
+.imv-growth-chart i {
+  flex: 1;
+  height: var(--h);
+  background: linear-gradient(180deg, var(--imv-accent), var(--imv-accent-dark));
+  border-radius: 6px 6px 3px 3px;
+  transform-origin: bottom;
+  animation: imv-bar var(--imv-loop) ease-in-out infinite;
+  animation-delay: calc(var(--n) * 0.28s);
+}
+
+.imv-growth-chart i:last-child {
+  background: linear-gradient(180deg, var(--imv-gold), #e0a90a);
+}
+
+@keyframes imv-bar {
+  0% { transform: scaleY(0.1); opacity: 0.4; }
+  9%, 88% { transform: scaleY(1); opacity: 1; }
+  96%, 100% { transform: scaleY(0.1); opacity: 0.4; }
+}
+
+.imv-growth-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 12px;
+  color: var(--imv-muted);
+  font-size: 11.5px;
+}
+
+.imv-growth-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.imv-growth-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--imv-accent);
+}
+
+.imv-growth-legend .imv-dot--gold {
+  background: var(--imv-gold);
+}
+
+.imv-growth-legend .imv-dot--green {
+  background: var(--imv-green);
+}
+
+/* ----------------------------------------------------------- responsive --- */
+
+@media (max-width: 720px) {
+  .imv {
+    margin: 0;
+    padding: 18px 16px;
+  }
+
+  .ima-source-content > .imv {
+    margin: 28px 0;
+  }
+  .ima-source-content > div:has(+ .imv) .section:not(.alt):not(.navy) {
+    padding-bottom: 18px;
+  }
+  .ima-source-content > .imv + div .section:not(.alt):not(.navy) {
+    padding-top: 18px;
+  }
+
+  .imv-rank-board {
+    --imv-rh: 54px;
+    grid-template-columns: 18px 1fr;
+    gap: 8px;
+  }
+
+  .imv-rank-meta b {
+    font-size: 12.5px;
+  }
+
+  .imv-rank-you {
+    display: none;
+  }
+
+  /* Rail goes vertical on phones: nodes stack, dots travel downward. */
+  .imv-flow-rail {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .imv-flow-step {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .imv-flow-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 11px 14px;
+    text-align: left;
+  }
+
+  .imv-flow-node small {
+    max-width: none;
+  }
+
+  .imv-flow-link {
+    flex: 0 0 auto;
+    width: 2px;
+    height: 18px;
+    min-width: 0;
+    margin: 4px 0 4px 29px;
+  }
+
+  .imv-flow-link i {
+    top: 0;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -4px;
+    animation-name: imv-flow-dot-v;
+  }
+
+  @keyframes imv-flow-dot-v {
+    0%, 6% { top: 0; opacity: 0; }
+    9% { opacity: 1; }
+    17% { top: calc(100% - 8px); opacity: 1; }
+    20%, 100% { top: calc(100% - 8px); opacity: 0; }
+  }
+
+  .imv-growth-chart {
+    height: 110px;
+    gap: 6px;
+  }
+
+  .imv-growth-stat > b {
+    font-size: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imv *,
+  .imv *::before,
+  .imv *::after {
+    animation: none !important;
+  }
+
+  /* Rest on the "won" frame: You holds #1, the call toast shows. */
+  .imv-rank-row--you { transform: translateY(0); }
+  .imv-rank-row--a { transform: translateY(calc(var(--imv-rh) + var(--imv-rgap))); }
+  .imv-rank-row--b { transform: translateY(calc((var(--imv-rh) + var(--imv-rgap)) * 2)); }
+  .imv-rank-call { opacity: 1; transform: none; }
+  .imv-feed-row { opacity: 1; }
+  .imv-flow-link i { opacity: 0; }
+  .imv-growth-chart i { transform: scaleY(1); opacity: 1; }
+  .imv-flip-b { opacity: 0; }
+  .imv-flip-a { opacity: 1; }
+}

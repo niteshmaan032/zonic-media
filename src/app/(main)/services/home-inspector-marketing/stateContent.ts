@@ -669,7 +669,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     metaTitle:
       "California Home Inspector Marketing & SEO",
     metaDescription:
-      "Home inspector marketing for California. Local SEO, Google Ads, GBP for inspectors in Los Angeles, San Diego, San Francisco, San Jose, Sacramento. Free audit, no contracts.",
+      "Home inspector marketing for California. Local SEO, Google Ads & GBP optimization that put inspectors in the map pack statewide. Free audit, no contracts.",
     ticker: [
       "Free California Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",

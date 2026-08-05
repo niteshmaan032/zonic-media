@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/pool-service-website-design";
 export const metadata: Metadata = {
   title: "Pool Service Website Design That Books Jobs",
   description:
-    "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, before-and-after galleries, and design that books cleanings and repairs.",
+    "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, and design that books cleanings and repairs.",
   keywords: [
     "pool service website design",
     "pool company website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Pool Service Website Design That Books Jobs | Zonic Media",
     description:
-      "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, before-and-after galleries, and design that books cleanings and repairs.",
+      "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, and design that books cleanings and repairs.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -347,7 +347,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-pool-service-companies",
+    href: "/services/industry/local-seo-for-pool-service-companies",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Pool Service Companies",
     desc: "Rank for pool cleaning, repair, and maintenance searches across Google Search and Maps in every area you cover.",
@@ -456,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Pool service website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pool-service-hero.webp"
+                      alt="Pool technician reviewing the BlueCurrent website beside a clean pool"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Sparkling clean backyard pool</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pool-service-first-impressions-1.webp"
+                      alt="Pool technician testing water chemistry beside the pump system"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Pool service website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pool-service-first-impressions-2.webp"
+                      alt="BlueCurrent Pool Care website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -577,7 +587,7 @@ function Page() {
                     what does service cost, and how do I start — and then makes
                     signing up effortless. It is also the foundation of any wider{" "}
                     <Link
-                      href="/services/local-seo-for-pool-service-companies"
+                      href="/services/industry/local-seo-for-pool-service-companies"
                       className="hiw-inline-link"
                     >
                       pool service SEO
@@ -643,14 +653,14 @@ function Page() {
                   renovations — we design around your service mix, your routes,
                   and the way homeowners in your market actually search. Your site
                   should feel like your company, not like a template every
-                  competitor is also using — and it should be built to rank with{" "}
+                  competitor is also using — and it should be built to rank, with a{" "}
                   <Link
-                    href="/services/local-seo-for-pool-service-companies"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    local SEO for pool service companies
+                    verified Google Business Profile
                   </Link>{" "}
-                  from day one.
+                  supporting it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -668,9 +678,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive pool service website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/pool-service-responsive-preview-square.webp"
+                  alt="BlueCurrent Pool Care website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -774,10 +787,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-pool-service-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      pool service SEO
+                      Google Ads campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -978,8 +991,15 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, recurring sign-ups,
-                    and what happens to your current rankings. If your question is
-                    not here, send it through the form — a strategist answers, not
+                    and what happens to your current rankings. If your question is not here,
+                    or you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      Google Business Profile reinstatement
+                    </Link>{" "}
+                    for a suspended listing, send it through the form — a strategist answers, not
                     a sales script.
                   </p>
                   <div className="hiw-faq-cta">

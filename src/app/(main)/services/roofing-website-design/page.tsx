@@ -769,10 +769,10 @@ function Page() {
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
                   <Link
-                    href="/services/industry/local-seo-for-roofing-companies"
+                    href="/services/google-ads"
                     className="rw-inline-link"
                   >
-                    roofing local SEO
+                    Google Ads
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -980,8 +980,14 @@ function Page() {
                 </h2>
                 <p className="rw-lead">
                   Straight answers on pricing, timelines, storm season, and
-                  what happens to your current rankings. If your question is
-                  not here, send it through the form — a strategist answers,
+                  what happens to your current rankings. If your question is not here,
+                  or Google has suspended your listing and you need{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="rw-inline-link"
+                  >
+                    GMB reinstatement service
+                  </Link>, send it through the form — a strategist answers,
                   not a sales script.
                 </p>
                 <div className="rw-faq-cta">

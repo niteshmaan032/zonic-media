@@ -76,7 +76,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-law-firms";
 export const metadata: Metadata = {
   title: "Local SEO for Law Firms That Wins Cases",
   description:
-    "Local SEO for law firms that ranks you for 'lawyer near me' and 'attorney near me' — Google Business Profile, reviews, and citations that turn searches into signed clients. Get a free audit.",
+    "Local SEO for law firms that ranks you for 'lawyer near me' and 'attorney near me' — GBP, reviews & citations that sign clients. Free audit.",
   keywords: [
     "lawyer near me",
     "personal injury attorney",
@@ -472,7 +472,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and service businesses climb into
-                    the Google map pack and grow. Zonic Media builds the full
+                    the <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">Google map pack</Link> and grow. Zonic Media builds the full
                     local ranking system for law firms — Google Business Profile,
                     citations, reviews, and practice-area content — so when
                     someone searches &ldquo;personal injury lawyer near me,&rdquo;
@@ -1048,7 +1048,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your practice areas and cities, then
-                    the foundation work: profile optimization, citation cleanup,
+                    the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization, citation cleanup,
                     and on-page fixes.
                   </p>
                 </article>
@@ -1140,7 +1140,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different practice areas — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/law-firm-website-design" className="tseo-inline-link">law firm website design</Link> that turns the extra traffic into signed cases.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1169,7 +1169,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for service businesses is all we do, and it shows.
-                  Here is exactly what working with a dedicated local team looks
+                  Here is exactly what working with a dedicated <Link href="/services/law-firm-marketing-agency" className="tseo-inline-link">law firm marketing agency</Link> looks
                   like.
                 </p>
               </div>
@@ -1529,7 +1529,7 @@ function Page() {
                     Straight answers about law firm local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves law
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for law firms</Link>, and what actually moves law
                     firm rankings. If your question is not here, send it through
                     the form — a strategist answers, not a sales script.
                   </p>

@@ -13,9 +13,9 @@ import "@/app/style/Blogs.css";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Blog | Digital Marketing & SEO Insights",
+  title: "Blog | Local SEO, GBP & Digital Marketing Guides",
   description:
-    "Read the latest digital marketing, local SEO, web design, and Google Ads insights from the Zonic Media team.",
+    "Guides on local SEO, Google Business Profile suspensions & reinstatement, Google Maps ranking, web design, and Google Ads from the Zonic Media team.",
   alternates: {
     canonical: "/blog",
   },
@@ -51,6 +51,18 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       url: `${SITE_URL}/blog/${blog.slug}`,
       name: blog.blogTitle,
     })),
+  };
+
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    name: "Zonic Media Blog",
+    description:
+      "Guides on local SEO, Google Business Profile suspensions and reinstatement, Google Maps ranking, web design, and Google Ads.",
+    url: `${SITE_URL}/blog`,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en-US",
   };
 
   if (blogs.length === 0) {
@@ -89,6 +101,11 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         id="blog-itemlist-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+      <Script
+        id="blog-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
       />
 
       <div className="bp-wrapper">

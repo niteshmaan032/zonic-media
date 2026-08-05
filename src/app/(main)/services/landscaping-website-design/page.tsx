@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/landscaping-website-design";
 export const metadata: Metadata = {
   title: "Landscaping Website Design That Books Jobs",
   description:
-    "Landscaping website design built as a lead system — instant quote flows, before-and-after galleries, seasonal service pages, and design that books installs and maintenance.",
+    "Landscaping website design built as a lead system — instant quote flows, galleries, and seasonal pages that book installs and maintenance.",
   keywords: [
     "landscaping website design",
     "landscaping company website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Landscaping Website Design That Books Jobs | Zonic Media",
     description:
-      "Landscaping website design built as a lead system — instant quote flows, before-and-after galleries, seasonal service pages, and design that books installs and maintenance.",
+      "Landscaping website design built as a lead system — instant quote flows, galleries, and seasonal pages that book installs and maintenance.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -347,7 +347,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-landscaping-companies",
+    href: "/services/industry/local-seo-for-landscaping-companies",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Landscaping Companies",
     desc: "Rank for landscape design, lawn care, and hardscaping searches across Google Search and Maps in every city you serve.",
@@ -456,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Landscaping website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/landscaping-hero.webp"
+                      alt="Landscape designer reviewing the Greenstone website in a finished backyard"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Finished landscape design project</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/landscaping-first-impressions-1.webp"
+                      alt="Landscape designer inspecting a completed garden and patio"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Landscaping website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/landscaping-first-impressions-2.webp"
+                      alt="Greenstone Landscapes website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -578,7 +588,7 @@ function Page() {
                     makes requesting a quote effortless. It is also the
                     foundation of any wider{" "}
                     <Link
-                      href="/services/local-seo-for-landscaping-companies"
+                      href="/services/industry/local-seo-for-landscaping-companies"
                       className="hiw-inline-link"
                     >
                       landscaping SEO
@@ -646,12 +656,12 @@ function Page() {
                   feel like your work, not like a template every competitor is
                   also using — and it should be built to rank with{" "}
                   <Link
-                    href="/services/local-seo-for-landscaping-companies"
+                    href="/services/landscaping-marketing-agency"
                     className="hiw-inline-link"
                   >
-                    local SEO for landscaping companies
+                    landscaping marketing
                   </Link>{" "}
-                  from day one.
+                  behind it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -669,9 +679,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive landscaping website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/landscaping-responsive-preview-square.webp"
+                  alt="Greenstone Landscapes website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -775,10 +788,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-landscaping-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      landscaping SEO
+                      Google Ads campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -979,8 +992,15 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, galleries, and what
-                    happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    happens to your current rankings. If your question is not here,
+                    or you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      suspended profile reinstatement
+                    </Link>{" "}
+                    for your Google listing, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

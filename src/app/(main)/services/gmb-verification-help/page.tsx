@@ -125,9 +125,11 @@ const GmbVeriFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: "Fix Google Business Profile Verification Issues & Get Verified Fast",
+  title: {
+    absolute: "Google Business Profile Verification Help | Get Verified",
+  },
   description:
-    "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
+    "Can't verify your Google Business Profile? Zonic Media fixes failed postcard, video, phone & email verification and verification loops. Free consultation.",
   keywords: [
     "Google Business Profile verification help",
     "GMB verification",
@@ -157,7 +159,7 @@ export const metadata: Metadata = {
     title:
       "Fix Google Business Profile Verification Issues & Get Verified Fast",
     description:
-      "Struggling to verify your Google Business Profile? Zonic Media resolves all GBP verification issues - failed postcards, video verification, phone & email issues. Free consultation.",
+      "Can't verify your Google Business Profile? Zonic Media fixes failed postcard, video, phone & email verification and verification loops. Free consultation.",
     url: "/services/gmb-verification-help",
     type: "website",
   },
@@ -671,7 +673,11 @@ function page() {
                 <p className="gmb-reinst-card-descrp">
                   SAB verification is complex and different from standard
                   listings. We have proven strategies specifically for
-                  businesses without a public-facing address.
+                  businesses without a public-facing address, including{" "}
+                  <Link href="/services/google-business-profile-services-real-estate-agents" className="gmb-inline-link">
+                    real estate agents
+                  </Link>
+                  .
                 </p>
               </div>
 

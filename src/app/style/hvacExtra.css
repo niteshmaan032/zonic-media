@@ -25,8 +25,8 @@
   flex-shrink: 0;
   width: 28px;
   height: 28px;
-  background: #fff7ed;
-  color: #f97316;
+  background: #eaf0fe;
+  color: #2567e8;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
 /* Contextual in-body internal links. Scoped under the page wrapper so the
    selector never leaks site-wide. Uses the shared orange accent. */
 .hia-page .hvac-inline-link {
-  color: #f97316;
+  color: #2567e8;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: 600;
@@ -75,7 +75,7 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: #fff7ed;
+  background: #eaf0fe;
   font-size: 20px;
   margin-bottom: 12px;
 }

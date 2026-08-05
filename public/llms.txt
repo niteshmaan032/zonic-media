@@ -27,27 +27,89 @@
 ## Google Business Profile Services (flagship)
 
 - [GMB Reinstatement Service](https://www.zonicllc.com/services/gmb-reinstatement-help): Recovers suspended and disabled Google Business Profiles. Handles soft suspensions, hard suspensions, disabled listings, and profiles suspended pending verification. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, No Fix, No Charge on the reinstatement fee, post-reinstatement optimization included.
-- [GMB Reinstatement Agency (overview)](https://www.zonicllc.com/gmb-reinstatement-service-agency): Fast-track landing page for suspended Google Business Profiles.
+- [Rejected GBP Appeal — Escalation Desk](https://www.zonicllc.com/gmb-reinstatement-service-agency): For Google Business Profile cases that have already failed at least one appeal — rejected reinstatement requests, profiles disabled after repeated attempts, listings suspended again after reinstatement, and multi-location or agency portfolios. Decodes Google's rejection wording, fixes the root cause, and re-files on the correct track. Free case review, No Fix, No Charge on the reinstatement fee.
 - [GMB Verification Help](https://www.zonicllc.com/services/gmb-verification-help): Fixes failed postcard, video, phone, and email verification and verification loops.
-- [GBP Verification Help 2026](https://www.zonicllc.com/google-business-profile-verification-help-2026): Current-year guide and service for every GBP verification failure type.
+- [GBP Verification Rules 2026](https://www.zonicllc.com/google-business-profile-verification-help-2026): What changed in Google Business Profile verification for 2026 — video as the default method since 2024, live video calls introduced in 2025, the six elements Google checks in a verification video, the edits that trigger re-verification, and how service-area businesses film without a storefront.
 - [GMB Optimization](https://www.zonicllc.com/services/gmb-optimization): Google Business Profile optimization to rank in the local Map Pack.
-- [Local SEO & GBP Optimization](https://www.zonicllc.com/local-seo-google-business-optimization): Map Pack ranking service for live profiles.
+- [Google Map Pack Ranking](https://www.zonicllc.com/local-seo-google-business-optimization): How local 3-Pack rankings are decided — proximity, relevance and prominence, which of them a business can actually move, geo-grid rank scanning across a whole service area, and why a profile ranks #1 at its own address but disappears a few miles away. Free geo-grid scan.
 - [GBP Services for Real Estate Agents](https://www.zonicllc.com/services/google-business-profile-services-real-estate-agents): Reinstatement, verification, and management for realtors and brokers.
 
 ## Services
 
 - [All Services](https://www.zonicllc.com/services): Overview of Zonic Media's digital marketing services.
 - [Web Design](https://www.zonicllc.com/services/web-design): Custom, conversion-focused website design and development.
-- [Dental Website Design](https://www.zonicllc.com/services/dental-website-design): Dental practice websites built as patient acquisition systems — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.
 - [Local SEO for HVAC](https://www.zonicllc.com/services/industry/local-seo-services-for-hvac): SEO built for HVAC contractors.
 - [White-Label Services for Agencies](https://www.zonicllc.com/services/white-label-services): Resell GBP reinstatement, verification, management, local SEO, and web design under your own brand.
 - [Launchpad](https://www.zonicllc.com/services/launchpad): Growth program for newly launching businesses.
-- [Plumbing Marketing Agency](https://www.zonicllc.com/services/plumbing-marketing-agency): Marketing for plumbing contractors, with state pages for AZ, CA, FL, GA, IL, NC, and TX.
-- [HVAC Marketing Agency](https://www.zonicllc.com/services/hvac-marketing-agency): Marketing for HVAC contractors, with state pages for AZ, CA, FL, GA, IL, NC, and TX.
-- [Septic Marketing Agency](https://www.zonicllc.com/services/septic-marketing-agency): Local SEO, Google Map Pack, Google Ads, and exclusive lead generation for septic pumping, installation, and repair companies.
-- [Solar Marketing Agency](https://www.zonicllc.com/services/solar-marketing-agency): Local SEO, Google Map Pack, Google Ads, and exclusive lead generation for solar installers and battery storage providers.
+
+## Industry Website Design
+
+Conversion-focused website design programs per trade, each with industry-specific booking flows, trust signals, and local SEO foundations:
+
+- [Dental Website Design](https://www.zonicllc.com/services/dental-website-design): Dental practice websites built as patient acquisition systems — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.
+- [Roofing Website Design](https://www.zonicllc.com/services/roofing-website-design)
+- [HVAC Website Design](https://www.zonicllc.com/services/hvac-website-design)
+- [Plumbing Website Design](https://www.zonicllc.com/services/plumbing-website-design)
+- [Electrical Website Design](https://www.zonicllc.com/services/electrical-website-design)
+- [Pest Control Website Design](https://www.zonicllc.com/services/pest-control-website-design)
+- [Bathroom Remodeling Website Design](https://www.zonicllc.com/services/bathroom-remodeling-website-design)
+- [Kitchen Remodeling Website Design](https://www.zonicllc.com/services/kitchen-remodeling-website-design)
+- [General Contractor Website Design](https://www.zonicllc.com/services/general-contractor-website-design)
+- [Flooring Website Design](https://www.zonicllc.com/services/flooring-website-design)
+- [Window & Door Website Design](https://www.zonicllc.com/services/window-and-door-website-design)
+- [Painting Contractor Website Design](https://www.zonicllc.com/services/painting-contractor-website-design)
+- [Garage Door Website Design](https://www.zonicllc.com/services/garage-door-website-design)
+- [Appliance Repair Website Design](https://www.zonicllc.com/services/appliance-repair-website-design)
+- [Towing Company Website Design](https://www.zonicllc.com/services/towing-company-website-design)
+- [Landscaping Website Design](https://www.zonicllc.com/services/landscaping-website-design)
+- [Pool Service Website Design](https://www.zonicllc.com/services/pool-service-website-design)
+- [Gutter Company Website Design](https://www.zonicllc.com/services/gutter-company-website-design)
+- [Tree Service Website Design](https://www.zonicllc.com/services/tree-service-website-design)
+- [Solar Website Design](https://www.zonicllc.com/services/solar-website-design)
+- [Commercial Cleaning Website Design](https://www.zonicllc.com/services/commercial-cleaning-website-design)
+- [Residential Cleaning Website Design](https://www.zonicllc.com/services/residential-cleaning-website-design)
+- [Chiropractor Website Design](https://www.zonicllc.com/services/chiropractor-website-design)
+- [Pediatrician Website Design](https://www.zonicllc.com/services/pediatrician-website-design)
+- [Law Firm Website Design](https://www.zonicllc.com/services/law-firm-website-design)
+- [Real Estate Agent Website Design](https://www.zonicllc.com/services/real-estate-agent-website-design)
+
+## Industry Marketing Agencies
+
+Full marketing programs (local SEO, Google Map Pack, Google Ads, exclusive lead generation) per industry:
+
+- [Plumbing Marketing Agency](https://www.zonicllc.com/services/plumbing-marketing-agency): With state pages for AZ, CA, FL, GA, IL, NC, and TX.
+- [HVAC Marketing Agency](https://www.zonicllc.com/services/hvac-marketing-agency): With state pages for AZ, CA, FL, GA, IL, NC, and TX.
+- [Home Inspector Marketing](https://www.zonicllc.com/services/home-inspector-marketing): With state pages for CA, FL, GA, NC, and TX.
+- [Septic Marketing Agency](https://www.zonicllc.com/services/septic-marketing-agency): For septic pumping, installation, and repair companies.
+- [Solar Marketing Agency](https://www.zonicllc.com/services/solar-marketing-agency): For solar installers and battery storage providers.
+- [Roofing Marketing Agency](https://www.zonicllc.com/services/roofing-marketing-agency)
+- [Dental Marketing Agency](https://www.zonicllc.com/services/dental-marketing-agency)
+- [Chiropractic Marketing Agency](https://www.zonicllc.com/services/chiropractic-marketing-agency)
+- [Law Firm Marketing Agency](https://www.zonicllc.com/services/law-firm-marketing-agency)
+- [Real Estate Marketing Agency](https://www.zonicllc.com/services/real-estate-marketing-agency)
+- [Electrician Marketing Agency](https://www.zonicllc.com/services/electrician-marketing-agency)
+- [Pest Control Marketing Agency](https://www.zonicllc.com/services/pest-control-marketing-agency)
+- [Landscaping Marketing Agency](https://www.zonicllc.com/services/landscaping-marketing-agency)
+- [Garage Door Marketing Agency](https://www.zonicllc.com/services/garage-door-marketing-agency)
+- [Auto Repair Marketing Agency](https://www.zonicllc.com/services/auto-repair-marketing-agency)
+- [Cleaning Company Marketing Agency](https://www.zonicllc.com/services/cleaning-company-marketing-agency)
+- [Moving Company Marketing Agency](https://www.zonicllc.com/services/moving-company-marketing-agency)
+- [Painting Contractor Marketing Agency](https://www.zonicllc.com/services/painting-contractor-marketing-agency)
+- [Towing Marketing Agency](https://www.zonicllc.com/services/towing-marketing-agency)
+- [Pediatric Marketing Agency](https://www.zonicllc.com/services/pediatric-marketing-agency)
+- [Bathroom Remodeling Marketing Agency](https://www.zonicllc.com/services/bathroom-remodeling-marketing-agency)
+- [Kitchen Remodeling Marketing Agency](https://www.zonicllc.com/services/kitchen-remodeling-marketing-agency)
+- [General Contractor Marketing Agency](https://www.zonicllc.com/services/general-contractor-marketing-agency)
+- [Flooring Marketing Agency](https://www.zonicllc.com/services/flooring-marketing-agency)
+- [Window & Door Marketing Agency](https://www.zonicllc.com/services/window-and-door-marketing-agency)
+- [Appliance Repair Marketing Agency](https://www.zonicllc.com/services/appliance-repair-marketing-agency)
+- [Pool Service Marketing Agency](https://www.zonicllc.com/services/pool-service-marketing-agency)
+- [Gutter Marketing Agency](https://www.zonicllc.com/services/gutter-marketing-agency)
+- [Tree Service Marketing Agency](https://www.zonicllc.com/services/tree-service-marketing-agency)
+- [Non-Profit Marketing Agency](https://www.zonicllc.com/services/non-profit-marketing-agency)
+- [Travel & Tourism Marketing Agency](https://www.zonicllc.com/services/travel-and-tourism-marketing-agency)
 
 ## Industries
 
@@ -63,6 +125,20 @@
 - [Law Firm Local SEO](https://www.zonicllc.com/services/industry/local-seo-for-law-firms)
 - [Commercial Cleaning Local SEO](https://www.zonicllc.com/services/industry/local-seo-for-commercial-cleaning)
 - [Residential Cleaning Local SEO](https://www.zonicllc.com/services/industry/local-seo-services-for-residential-cleaning)
+- [Local SEO for Electricians](https://www.zonicllc.com/services/industry/local-seo-for-electricians)
+- [Local SEO for Appliance Repair](https://www.zonicllc.com/services/industry/local-seo-for-appliance-repair)
+- [Local SEO for Garage Door Companies](https://www.zonicllc.com/services/industry/local-seo-for-garage-door-companies)
+- [Local SEO for Landscaping Companies](https://www.zonicllc.com/services/industry/local-seo-for-landscaping-companies)
+- [Local SEO for Pool Service Companies](https://www.zonicllc.com/services/industry/local-seo-for-pool-service-companies)
+- [Local SEO for Gutter Companies](https://www.zonicllc.com/services/industry/local-seo-for-gutter-companies)
+- [Local SEO for Tree Service Companies](https://www.zonicllc.com/services/industry/local-seo-for-tree-service-companies)
+- [Local SEO for Solar Companies](https://www.zonicllc.com/services/industry/local-seo-for-solar-companies)
+- [Local SEO for Bathroom Remodelers](https://www.zonicllc.com/services/industry/local-seo-for-bathroom-remodelers)
+- [Local SEO for Kitchen Remodelers](https://www.zonicllc.com/services/industry/local-seo-for-kitchen-remodelers)
+- [Local SEO for General Contractors](https://www.zonicllc.com/services/industry/local-seo-for-general-contractors)
+- [Local SEO for Flooring Companies](https://www.zonicllc.com/services/industry/local-seo-for-flooring-companies)
+- [Local SEO for Window & Door Companies](https://www.zonicllc.com/services/industry/local-seo-for-window-and-door-companies)
+- [Local SEO for Painting Contractors](https://www.zonicllc.com/services/industry/local-seo-for-painting-contractors)
 
 ## Locations
 

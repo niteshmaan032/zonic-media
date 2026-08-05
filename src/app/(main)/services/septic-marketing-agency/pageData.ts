@@ -24,6 +24,13 @@ export const septicMarketingPage: IndustryMarketingPageData = {
   description:
     "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for pumping, repairs & installs. Free audit.",
   themeClass: "ima-septic",
+  visualCopy: {
+    industry: "septic",
+    industryTitle: "Septic",
+    business: "septic company",
+    jobsNoun: "booked jobs",
+    mapQuery: "septic tank pumping near me",
+  },
   tickerHtml: `${tickerRun}\n${tickerRun}`,
   heroHtml: `<span class="eyebrow">Septic Marketing Agency</span>
 <h1>The <span class="hl">septic marketing agency</span> that keeps your pump trucks booked.</h1>

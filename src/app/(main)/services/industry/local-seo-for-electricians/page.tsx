@@ -42,7 +42,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-electricians";
 export const metadata: Metadata = {
   title: "SEO for Electricians That Wins Local Service Calls",
   description:
-    "SEO for electricians that wins the map pack when homeowners search 'electrician near me' — GBP optimization, citations, reviews, and pages that book jobs. Get a free audit.",
+    "SEO for electricians that wins the map pack for 'electrician near me' — GBP optimization, citations, reviews & pages that book jobs. Free audit.",
   keywords: [
     "electrician near me",
     "emergency electrician",
@@ -434,7 +434,7 @@ function Page() {
                     <span className="tseo-hl">books more jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for electricians — Google Business
                     Profile, citations, reviews, and service-area content — so
@@ -1012,7 +1012,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your electrical services and
-                    cities, then the foundation work: profile optimization,
+                    cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization,
                     citation cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1104,7 +1104,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different specialties — the same system,
-                  executed month after month.
+                  executed month after month, and often an <Link href="/services/electrical-website-design" className="tseo-inline-link">electrical website design</Link> that converts that traffic into booked service calls.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1133,7 +1133,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/electrician-marketing-agency" className="tseo-inline-link">electrician marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1495,7 +1495,7 @@ function Page() {
                     Straight answers about electrician local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for electricians</Link>, and what actually moves
                     electrician rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

@@ -997,8 +997,14 @@ function Page() {
                 </h2>
                 <p className="dw-lead">
                   Straight answers on pricing, timelines, compliance, and what
-                  happens to your current rankings. If your question is not
-                  here, send it through the form — a strategist answers, not a
+                  happens to your current rankings. If your question is not here,
+                  or you are facing a suspension and need{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="dw-inline-link"
+                  >
+                    Google Business Profile reinstatement help
+                  </Link>, send it through the form — a strategist answers, not a
                   sales script.
                 </p>
                 <div className="dw-faq-cta">

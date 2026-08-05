@@ -777,10 +777,10 @@ function Page() {
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
                   <Link
-                    href="/services/industry/seo-services-for-pest-control"
+                    href="/services/google-ads"
                     className="pc-inline-link"
                   >
-                    pest control SEO
+                    Google Ads management
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -989,7 +989,13 @@ function Page() {
                 <p className="pc-lead">
                   Straight answers on pricing, timelines, recurring plans,
                   and what happens to your current rankings. If your question
-                  is not here, send it through the form — a strategist
+                  is not here, or Google has suspended your listing and you need{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="pc-inline-link"
+                  >
+                    GMB reinstatement service
+                  </Link>, send it through the form — a strategist
                   answers, not a sales script.
                 </p>
                 <div className="pc-faq-cta">

@@ -435,7 +435,7 @@ function Page() {
                     <span className="tseo-hl">books installs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for solar companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1012,7 +1012,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your solar services and cities, then
-                    the foundation work: profile optimization, citation cleanup,
+                    the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation cleanup,
                     and on-page fixes.
                   </p>
                 </article>
@@ -1103,8 +1103,7 @@ function Page() {
                   What happens when solar local SEO is done properly
                 </h2>
                 <p className="tseo-lead">
-                  Different markets, different offers — the same system, executed
-                  month after month.
+                  Different markets, different offers — the same system, executed month after month, often paired with a <Link href="/services/solar-website-design" className="tseo-inline-link">solar website design</Link> that turns the extra traffic into booked consultations.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1133,7 +1132,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/solar-marketing-agency" className="tseo-inline-link">solar marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1494,7 +1493,7 @@ function Page() {
                     Straight answers about solar local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves solar
+                    Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for solar companies</Link> fits alongside SEO, and what actually moves solar
                     rankings. If your question is not here, send it through the
                     form — a strategist answers, not a sales script.
                   </p>

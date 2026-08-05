@@ -428,7 +428,7 @@ function Page() {
                     <span className="tseo-hl">books calls</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for appliance repair companies —
                     Google Business Profile, citations, reviews, and service-area
@@ -1006,7 +1006,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your appliance repair services and
-                    cities, then the foundation work: profile optimization,
+                    cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization,
                     citation cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1098,7 +1098,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different appliances — the same system,
-                  executed month after month.
+                  executed month after month, often paired with an <Link href="/services/appliance-repair-website-design" className="tseo-inline-link">appliance repair website design</Link> that turns the extra traffic into booked repairs.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1128,7 +1128,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/appliance-repair-marketing-agency" className="tseo-inline-link">appliance repair marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1494,7 +1494,7 @@ function Page() {
                     Straight answers about appliance repair local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for appliance repair</Link>, and what actually moves
                     appliance repair rankings. If your question is not here, send
                     it through the form — a strategist answers, not a sales
                     script.

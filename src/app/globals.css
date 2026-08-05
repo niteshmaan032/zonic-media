@@ -12,6 +12,17 @@ body h5,
 body p {
   margin: 0;
 }
+
+/* Site-wide heading case: every heading renders in Title Case */
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  text-transform: capitalize;
+}
+
 .margin-box {
   margin-bottom: 70px;
 }

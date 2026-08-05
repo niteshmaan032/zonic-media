@@ -42,7 +42,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-flooring-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Flooring Companies That Wins Jobs",
   description:
-    "Local SEO for flooring companies that wins the map pack — turn 'flooring installer near me' and 'flooring company near me' searches into booked estimates. Get a free audit.",
+    "Local SEO for flooring companies that wins the map pack — turn 'flooring installer near me' searches into booked estimates. Free audit.",
   keywords: [
     "local SEO for flooring companies",
     "flooring installer near me",
@@ -436,7 +436,7 @@ function Page() {
                     <span className="tseo-hl">books jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for flooring companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1014,7 +1014,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your flooring services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1106,7 +1106,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different products — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/flooring-website-design" className="tseo-inline-link">flooring website design</Link> that turns the extra traffic into booked estimates.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1135,7 +1135,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/flooring-marketing-agency" className="tseo-inline-link">flooring marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1497,7 +1497,7 @@ function Page() {
                     Straight answers about flooring local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for flooring companies</Link>, and what actually moves
                     flooring rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

@@ -7,6 +7,18 @@ const contactBreadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Contact Us", url: "/contact-us" },
 ]);
 
+const contactPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.zonicllc.com/contact-us#contact-page",
+  name: "Contact Zonic Media",
+  url: "https://www.zonicllc.com/contact-us",
+  description:
+    "Contact Zonic Media for local SEO, Google Business Profile reinstatement and optimization, web design, and Google Ads services.",
+  about: { "@id": "https://www.zonicllc.com/#organization" },
+  inLanguage: "en-US",
+};
+
 export const metadata: Metadata = {
   title: "Contact Us | Digital Marketing Agency",
   description:
@@ -48,6 +60,13 @@ function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(contactBreadcrumbJsonLd),
+        }}
+      />
+      <script
+        id="contact-page-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(contactPageJsonLd),
         }}
       />
       <ContactUsPage />

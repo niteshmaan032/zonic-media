@@ -480,7 +480,7 @@ function Page() {
                     <span className="tseo-hl">books more jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for pest control companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1057,7 +1057,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your pest control services and
-                    cities, then the foundation work: profile optimization,
+                    cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization,
                     citation cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1149,7 +1149,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/pest-control-website-design" className="tseo-inline-link">pest control website design</Link> that turns the extra traffic into booked treatments.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1178,7 +1178,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/pest-control-marketing-agency" className="tseo-inline-link">pest control marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1540,7 +1540,7 @@ function Page() {
                     Straight answers about pest control local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves pest
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for pest control</Link>, and what actually moves pest
                     control rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

@@ -66,6 +66,10 @@ const appRoutes = new Set(
     .filter((route) => !route.includes("[") && !route.startsWith("/admin")),
 );
 for (const slug of Object.keys(industryData)) appRoutes.add(`/services/${slug}`);
+// Dynamic /legal/[slug] pages (see src/shared/conditions) can't be walked.
+for (const slug of ["privacy-policy", "terms-conditions", "refund-policy"]) {
+  appRoutes.add(`/legal/${slug}`);
+}
 
 const css = walkFiles(APP_ROOT, [".css"])
   .map((file) => fs.readFileSync(file, "utf8"))
@@ -132,9 +136,22 @@ const representedRoutes = (file, route) => {
     );
 };
 
+// Legacy components whose imports are commented out in their page.tsx —
+// never rendered, so their links must not count toward any route.
+const DEAD_COMPONENTS = new Set([
+  "ChiroDigitalPage.tsx",
+  "CommercialSeoPage.tsx",
+  "LawSeoPage.tsx",
+  "ResidentialSeoPage.tsx",
+  "CarTowSeoPage.tsx",
+]);
+
 for (const file of walkFiles(APP_ROOT, [".tsx", ".jsx"])) {
+  if (DEAD_COMPONENTS.has(path.basename(file))) continue;
   const sourceText = fs.readFileSync(file, "utf8");
-  if (!sourceText.includes("inline-link")) continue;
+  // gbp-lp landing pages style in-body links as "lp-link" (gbpLanding.css).
+  if (!sourceText.includes("inline-link") && !sourceText.includes("lp-link"))
+    continue;
 
   const sourceFile = ts.createSourceFile(
     file,
@@ -149,13 +166,17 @@ for (const file of walkFiles(APP_ROOT, [".tsx", ".jsx"])) {
     if (ts.isJsxElement(node)) {
       const tag = node.openingElement.tagName.getText();
       const className = attributeValue(node.openingElement.attributes, "className");
-      if (className?.split(/\s+/).some((name) => name.endsWith("inline-link"))) {
+      if (
+        className
+          ?.split(/\s+/)
+          .some((name) => name.endsWith("inline-link") || name === "lp-link")
+      ) {
         const href = attributeValue(node.openingElement.attributes, "href");
         const anchor = normalizeAnchor(node.children.map(jsxText).join(" "));
         const line = sourceFile.getLineAndCharacterOfPosition(node.getStart()).line + 1;
         const cssClass = className
           .split(/\s+/)
-          .find((name) => name.endsWith("inline-link"));
+          .find((name) => name.endsWith("inline-link") || name === "lp-link");
         links.push({ href, anchor, line, cssClass, ancestors });
       }
       const nextAncestors = [...ancestors, tag];
@@ -170,8 +191,8 @@ for (const file of walkFiles(APP_ROOT, [".tsx", ".jsx"])) {
   const route = routeForFile(file);
   reports.push({ source: relative, routes: representedRoutes(file, route), links });
 
-  if (links.length !== 7) {
-    issues.push(`${relative}: expected 7 links, found ${links.length}`);
+  if (links.length < 8) {
+    issues.push(`${relative}: expected at least 8 links, found ${links.length}`);
   }
 
   const hrefCounts = new Map();
@@ -221,7 +242,8 @@ for (const [slug, page] of Object.entries(industryData)) {
   appRoutes.add(route);
   const source = `src/data/industryMarketingPages.generated.json#${slug}`;
   reports.push({ source, routes: [route], links });
-  if (links.length !== 7) issues.push(`${source}: expected 7 links, found ${links.length}`);
+  if (links.length < 8)
+    issues.push(`${source}: expected at least 8 links, found ${links.length}`);
 
   const hrefCounts = new Map();
   for (const link of links) {

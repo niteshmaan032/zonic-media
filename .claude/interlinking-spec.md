@@ -1,6 +1,6 @@
-# Zonic Media — Internal Linking Spec (July 2026)
+# Zonic Media — Internal Linking Spec (updated August 2026)
 
-Goal: every public page carries **7 contextual internal links inside its body copy** (not nav, not footer, not buttons, not breadcrumbs), each linking a keyword phrase to the most relevant page.
+Goal: every public page carries **at least 8 contextual internal links inside its body copy** (not nav, not footer, not buttons, not breadcrumbs), each linking a keyword phrase to the most relevant page. Target 8, cap at 10.
 
 ## Canonical link targets (keyword → URL)
 
@@ -80,7 +80,7 @@ Keyword: "home inspector marketing", "plumbing marketing", "HVAC marketing", "{t
 
 ## Rules (STRICT)
 
-1. **7 contextual in-body links per page.** Count links already present inside body copy (paragraphs, FAQ answers, feature card descriptions) toward the 7. Add links to reach exactly 7 (8 max). Nav/footer/breadcrumb/CTA-button links DO NOT count.
+1. **At least 8 contextual in-body links per page.** Count links already present inside body copy (paragraphs, FAQ answers, feature card descriptions) toward the 8. Add links to reach at least 8 (10 max). Nav/footer/breadcrumb/CTA-button links DO NOT count.
 2. **Placement:** only inside flowing text a reader actually reads — `<p>`, list items, FAQ answers, section descriptions. NEVER in H1. Sparingly in H2/H3 (avoid; prefer body text). Never inside existing `<Link>`/`<a>`, never in buttons or CTAs.
 3. **Anchor text:** use a keyword phrase that already exists in the sentence whenever possible. If a page has no natural mention for a needed link, you may minimally extend/adjust ONE sentence so the phrase fits naturally — meaning must not change, tone must match. Anchors: 2–6 words, descriptive, varied (don't use the identical exact-match anchor for the same target across every page — mix e.g. "GBP reinstatement service" / "recover a suspended Google Business Profile" / "Google Business Profile reinstatement help").
 4. **No self-links.** Never link a page to itself. Max **one** link per target URL per page. Spread the 7 links across different sections of the page — never 3+ in a single paragraph/section.

@@ -15,6 +15,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 import {
@@ -101,6 +102,14 @@ export default function StatePage({ state }: { state: StateContent }) {
     areaServed: stateName,
   });
 
+  const serviceJsonLd = buildServiceJsonLd({
+    name: `Home Inspector Marketing in ${stateName}`,
+    description: state.metaDescription,
+    pageUrl: `/services/home-inspector-marketing/${state.slug}`,
+    serviceType: "Home Inspector Marketing",
+    areaServed: stateName,
+  });
+
   const processStepsLocal = processSteps.map((s) => ({
     n: s.n,
     h: s.h,
@@ -125,6 +134,11 @@ export default function StatePage({ state }: { state: StateContent }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessJsonLd),
         }}
+      />
+      <Script
+        id="his-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
       <div id="hia-top" className="hia-page">
@@ -514,7 +528,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <ClutchWidget
                     widgetType="12"
                     height="375"
-                    primaryColor="#f97316"
+                    primaryColor="#2567e8"
                     reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                   />
                 </div>
@@ -579,7 +593,11 @@ export default function StatePage({ state }: { state: StateContent }) {
                     verify a new Google Business Profile
                   </Link>{" "}
                   — just include it in the audit form and we will answer it in
-                  the written report.
+                  the written report. You can also browse the full menu of{" "}
+                  <Link href="/services" className="hia-inline-link">
+                    digital marketing services
+                  </Link>{" "}
+                  we run for local service businesses.
                 </p>
                 <HiaFaqAccordion items={state.faqs} defaultOpen={0} />
               </section>

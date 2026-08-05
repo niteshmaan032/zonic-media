@@ -77,7 +77,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-roofing-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Roofing Companies That Win Jobs",
   description:
-    "Local SEO for roofing companies that owns the map pack — GBP optimization, reviews, and service-area pages that turn 'roof repair near me' and 'roofer near me' into booked jobs. Get a free audit.",
+    "Local SEO for roofing companies that owns the map pack — GBP optimization & reviews that turn 'roof repair near me' into booked jobs. Free audit.",
   keywords: [
     "local SEO for roofing companies",
     "roofer near me",
@@ -471,7 +471,7 @@ function Page() {
                     <span className="tseo-hl">books more jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for roofing companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1048,7 +1048,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your roofing services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1140,7 +1140,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, and often a <Link href="/services/roofing-website-design" className="tseo-inline-link">roofing website design</Link> that converts that traffic into booked jobs.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1169,7 +1169,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/roofing-marketing-agency" className="tseo-inline-link">roofing marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1530,7 +1530,7 @@ function Page() {
                     Straight answers about roofing local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for roofers</Link>, and what actually moves
                     roofing rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

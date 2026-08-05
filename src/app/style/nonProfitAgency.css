@@ -1,46 +1,57 @@
 /* ============================================================
    Zonic · Nonprofit Marketing Agency
    The page reuses the home-inspector SHELL (nav + left content /
-   right sticky form + form card) from homeInspAgency.css, but every
-   CONTENT SECTION below is a faithful port of the reference template
-   (zonic-media-landing.html) — same content, cards, numbers, icons,
-   and colors. Only the page layout differs (content left, form right).
+   right sticky form + form card) from homeInspAgency.css; every
+   override below is scoped under .npm-page so nothing leaks to
+   the other hia-family pages.
 
-   Palette (from the template):
-   Ink #14243D · Parchment #F5F1E8 · Brass #B08A3E · Sage #5B7362 · Paper #FBFAF6
+   Palette: HOMEPAGE design language (hm-). Ink #0c1526 · Deep
+   #16233d · Blue #2567e8 (dark #1c4fc4, soft #eaf0fe) · Gold
+   #fdc115 · Text #47546e · Muted #7a869e · Light #f5f8fd ·
+   Line #e3e9f7. Legacy variable NAMES (brass/sage/parchment/…)
+   are kept because the rules below reference them — only the
+   values changed to the homepage palette.
    Type: inherits the site font (same as the home-inspector page).
    ============================================================ */
 
 .hia-page.npm-page {
   /* Shell/form variables (drive the reused hia- layout + form card). */
-  --navy: #14243d; /* ink */
-  --navy-2: #22364f; /* ink-soft */
-  --navy-3: #2f4459;
-  --slate: #46586e;
-  --slate-light: #7c879a;
-  --orange: #b08a3e; /* brass */
-  --orange-dark: #8f6d2c;
-  --orange-tint: #f2ead8;
-  --hia-white: #fbfaf6; /* paper */
-  --bg-alt: #f5f1e8; /* parchment */
-  --border: #e6dfcd;
-  --border-strong: #cdbf9c;
-  --text: #14243d;
+  --navy: #0c1526; /* hm-ink */
+  --navy-2: #16233d; /* hm-deep */
+  --navy-3: #22345c;
+  --slate: #47546e; /* hm-text */
+  --slate-light: #7a869e; /* hm-muted */
+  --orange: #2567e8; /* hm-blue — primary accent */
+  --orange-dark: #1c4fc4; /* hm-blue-dark */
+  --orange-tint: #eaf0fe; /* hm-blue-soft */
+  --hia-white: #ffffff;
+  --hia-page-bg: #ffffff;
+  --bg-alt: #f5f8fd; /* hm-light */
+  --border: #e3e9f7; /* hm-line */
+  --border-strong: #c9d6f2;
+  --text: #16233d;
 
-  /* Template palette (drives the faithful section ports below). */
-  --ink: #14243d;
-  --ink-soft: #22364f;
-  --parchment: #f5f1e8;
-  --parchment-deep: #ece5d6;
-  --brass: #b08a3e;
-  --brass-bright: #c69a45;
-  --sage: #5b7362;
-  --paper: #fbfaf6;
-  --line: rgba(20, 36, 61, 0.12);
-  --ink-70: rgba(20, 36, 61, 0.72);
-  --ink-55: rgba(20, 36, 61, 0.55);
-  --cream-70: rgba(245, 241, 232, 0.78);
-  --cream-45: rgba(245, 241, 232, 0.5);
+  /* Template palette (legacy names, homepage values). */
+  --ink: #0c1526;
+  --ink-soft: #16233d;
+  --parchment: #f5f8fd; /* light bg on white, near-white text on dark */
+  --parchment-deep: #e3e9f7;
+  --brass: #2567e8; /* primary accent — hm-blue */
+  --brass-bright: #fdc115; /* highlight accent — hm-gold */
+  --sage: #16233d; /* dark surface — hm-deep */
+  --green: #34a852;
+  --paper: #ffffff;
+  --line: #e3e9f7;
+  --ink-70: #47546e;
+  --ink-55: #7a869e;
+  --cream-70: #aab6c8; /* body text on dark surfaces */
+  --cream-45: rgba(255, 255, 255, 0.5);
+}
+
+/* Inline emphasis follows the homepage 600 weight (display numbers below
+   keep their own 500 rules). */
+.npm-page :is(strong, b, th) {
+  font-weight: 600;
 }
 
 .hia-page.npm-page .npm-inline-link {
@@ -49,8 +60,11 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+.hia-page.npm-page .npm-inline-link:hover {
+  color: var(--orange-dark);
+}
 
-/* ──────────────── CTAs (ink bg, white text) ──────────────── */
+/* ──────────────── CTAs (homepage pill idiom) ──────────────── */
 .npm-page .hia-btn-primary,
 .npm-page .hia-btn-primary:link,
 .npm-page .hia-btn-primary:visited,
@@ -58,42 +72,82 @@
 .npm-page .hia-nav-cta,
 .npm-page .hia-nav-cta:link,
 .npm-page .hia-nav-cta:visited {
-  background: var(--ink);
+  background: var(--orange);
   color: #ffffff;
 }
 .npm-page .hia-btn-primary:hover,
 .npm-page .hia-form-submit:hover:not(:disabled),
 .npm-page .hia-nav-cta:hover {
-  background: var(--ink-soft);
+  background: var(--orange-dark);
   color: #ffffff;
 }
 
-/* "Free Consult" stamp on the form — white text on brass. */
+/* Pill radius + lift on hover, matching the homepage buttons. */
+.npm-page .hia-btn,
+.npm-page .hia-nav-cta,
+.npm-page .hia-form-submit,
+.npm-page .hia-fc-call,
+.npm-page .hia-fc-form {
+  border-radius: 999px;
+}
+.npm-page .hia-nav-cta {
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.npm-page .hia-btn:hover,
+.npm-page .hia-nav-cta:hover,
+.npm-page .hia-fc-call:hover,
+.npm-page .hia-fc-form:hover {
+  transform: translateY(-2px);
+}
+.npm-page .hia-btn-ghost {
+  background: #ffffff;
+}
+.npm-page .hia-btn-ghost:hover {
+  border-color: var(--orange);
+  color: var(--orange-dark);
+}
+
+/* "Free Consult" stamp on the form — white text on blue. */
 .npm-page .hia-form-stamp {
   color: #ffffff;
 }
 
-/* Form card: flat, no shadow (keeps the brass border + top bar). */
+/* Form card: flat, no shadow (keeps the blue border + top bar). */
 .npm-page .hia-form-card {
   box-shadow: none;
 }
 .npm-page .hia-form-stamp {
-  box-shadow: 0 4px 12px -2px rgba(176, 138, 62, 0.4);
+  box-shadow: 0 4px 12px -2px rgba(37, 103, 232, 0.35);
 }
 .npm-page .hia-nav-phone::before {
-  box-shadow: 0 0 0 4px rgba(176, 138, 62, 0.15);
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.15);
+  animation-name: npm-pulse;
+}
+@keyframes npm-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(37, 103, 232, 0.05);
+  }
+}
+/* Input focus ring — blue instead of the shell's orange literal. */
+.npm-page .hia-fg input:focus,
+.npm-page .hia-fg textarea:focus {
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.12);
 }
 .npm-page .hia-final-cta::before {
   background: radial-gradient(
     circle,
-    rgba(176, 138, 62, 0.16) 0%,
+    rgba(37, 103, 232, 0.16) 0%,
     transparent 60%
   );
 }
 .npm-page .hia-final-cta::after {
   background: radial-gradient(
     circle,
-    rgba(91, 115, 98, 0.12) 0%,
+    rgba(253, 193, 21, 0.1) 0%,
     transparent 60%
   );
 }
@@ -104,18 +158,96 @@
   color: #ffffff;
 }
 
-/* ──────────────── SECTION HEADINGS (template look) ──────────────── */
-.npm-page .hia-sec-label {
-  letter-spacing: 0.14em;
+/* ──────────────── HOMEPAGE HERO BAND ──────────────── */
+/* Blue wash fading downward plus a 54px line grid masked toward the edges,
+   spanning the full width behind the hero copy and the top of the sticky
+   form column — mirrors .ima-main::before/::after. */
+.npm-page .hia-main-wrapper {
+  position: relative;
 }
-/* Emphasized words are italic accents, matching the template. */
+.npm-page .hia-main-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 680px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 103, 232, 0.1) 0%,
+    rgba(37, 103, 232, 0.045) 46%,
+    rgba(37, 103, 232, 0) 88%
+  );
+  pointer-events: none;
+}
+.npm-page .hia-main-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 680px;
+  background-image:
+    linear-gradient(to right, rgba(37, 103, 232, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 103, 232, 0.09) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: radial-gradient(78% 82% at 50% 0%, #000 0%, transparent 88%);
+  mask-image: radial-gradient(78% 82% at 50% 0%, #000 0%, transparent 88%);
+  pointer-events: none;
+}
+.npm-page .hia-row {
+  position: relative;
+  z-index: 1;
+}
+
+/* ──────────────── EYEBROWS & HEADINGS (homepage idiom) ──────────────── */
+.npm-page .hia-eyebrow {
+  gap: 8px;
+  padding: 7px 16px;
+  background: var(--orange-tint);
+  color: var(--orange-dark);
+  border: 0;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.npm-page .hia-eyebrow::before {
+  width: 7px;
+  height: 7px;
+  background: var(--brass-bright);
+}
+/* Section labels become the same gold-dot chip (no hairline, no border). */
+.npm-page .hia-sec-label {
+  gap: 8px;
+  padding: 7px 16px;
+  background: var(--orange-tint);
+  color: var(--orange-dark);
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+.npm-page .hia-sec-label::before {
+  content: "";
+  position: static;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brass-bright);
+  transform: none;
+}
+/* Emphasized words: blue on light sections, gold on dark bands. */
 .npm-page .hia-hero h1 em {
   font-style: italic;
-  color: var(--brass-bright);
+  color: var(--brass);
 }
 .npm-page .hia-sec-h2 em {
   font-style: italic;
-  color: var(--sage);
+  color: var(--brass);
 }
 .npm-page .hia-final-cta h2 em {
   font-style: italic;
@@ -124,7 +256,7 @@
 
 /* ──────────────── HERO SIGNATURE: CASE-FOR-SUPPORT CARD ──────────────── */
 .npm-cfs {
-  background: var(--parchment);
+  background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 26px 24px;
@@ -133,9 +265,9 @@
 }
 .npm-cfs-label {
   font-size: 11.5px;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--ink-55);
 }
 .npm-cfs-raw {
@@ -143,7 +275,7 @@
   color: var(--ink-70);
   margin-top: 8px;
   padding: 12px 14px;
-  background: var(--paper);
+  background: var(--bg-alt);
   border: 1px dashed var(--border-strong);
   border-radius: 6px;
 }
@@ -154,7 +286,7 @@
   margin: 16px 2px;
   color: var(--brass);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -172,7 +304,7 @@
 }
 .npm-cfs-story strong {
   color: var(--brass);
-  font-weight: 500;
+  font-weight: 600;
 }
 .npm-cfs-foot {
   margin-top: 18px;
@@ -202,7 +334,7 @@
 .npm-stat:first-child {
   border-left: none;
 }
-/* Brass hairline tick — the same signature motif as the section eyebrows. */
+/* Gold hairline tick — the same signature motif as the eyebrow dots. */
 .npm-stat::before {
   content: "";
   position: absolute;
@@ -210,7 +342,7 @@
   left: 28px;
   width: 22px;
   height: 2px;
-  background: var(--brass);
+  background: var(--brass-bright);
 }
 .npm-stat b {
   display: block;
@@ -309,8 +441,10 @@
   border-radius: 14px;
   padding: 48px 40px;
 }
+/* Light eyebrow variant inside the dark panel (gold dot kept). */
 .npm-svc .hia-sec-label {
-  color: var(--brass-bright);
+  color: #cddcfb;
+  background: rgba(255, 255, 255, 0.08);
 }
 .npm-svc .hia-sec-label::before {
   background: var(--brass-bright);
@@ -331,23 +465,25 @@
   gap: 20px;
 }
 .npm-scard {
-  background: rgba(245, 241, 232, 0.04);
-  border: 1px solid rgba(245, 241, 232, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   padding: 28px 26px;
   transition: transform 0.22s, border-color 0.22s, background 0.22s;
 }
 .npm-scard:hover {
   transform: translateY(-4px);
-  border-color: rgba(176, 138, 62, 0.5);
-  background: rgba(245, 241, 232, 0.06);
+  border-color: rgba(253, 193, 21, 0.5);
+  background: rgba(255, 255, 255, 0.06);
 }
+/* On the dark panel the blue accent sinks — icons go gold (currentColor). */
 .npm-scard-ico {
   width: 44px;
   height: 44px;
   border-radius: 6px;
-  background: rgba(176, 138, 62, 0.14);
-  border: 1px solid rgba(176, 138, 62, 0.4);
+  color: var(--brass-bright);
+  background: rgba(253, 193, 21, 0.12);
+  border: 1px solid rgba(253, 193, 21, 0.38);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,8 +506,8 @@
   display: inline-block;
   margin-top: 14px;
   font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brass-bright);
 }
@@ -401,7 +537,7 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--brass);
+  background: var(--brass-bright);
   margin-top: 6px;
 }
 .npm-serve-item h3 {
@@ -426,7 +562,7 @@
 }
 .npm-note strong {
   color: var(--ink);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ──────────────── APPROACH ──────────────── */
@@ -480,8 +616,8 @@
   margin: 0;
 }
 .npm-aside-q strong {
-  color: var(--sage);
-  font-weight: 500;
+  color: var(--brass);
+  font-weight: 600;
 }
 .npm-aside p {
   font-size: 15px;
@@ -508,29 +644,30 @@
 }
 .npm-pledge li::before {
   content: "✓";
-  color: var(--sage);
+  color: var(--green);
   font-weight: 600;
   flex-shrink: 0;
 }
 
-/* ──────────────── CAPABILITY (sage block) ──────────────── */
+/* ──────────────── CAPABILITY (deep navy block) ──────────────── */
 .npm-cap {
   background: var(--sage);
   border-radius: 14px;
   padding: 48px 40px;
 }
 .npm-cap .hia-sec-label {
-  color: var(--parchment);
+  color: #cddcfb;
+  background: rgba(255, 255, 255, 0.08);
 }
 .npm-cap .hia-sec-label::before {
-  background: var(--parchment);
+  background: var(--brass-bright);
 }
 .npm-cap .hia-sec-h2 {
   color: #ffffff;
 }
 .npm-cap .hia-sec-h2 em,
 .npm-cap .hia-accent {
-  color: var(--parchment);
+  color: var(--brass-bright);
 }
 .npm-cap .hia-sec-sub {
   color: var(--cream-70);
@@ -541,8 +678,8 @@
   gap: 18px;
 }
 .npm-cap-item {
-  background: rgba(20, 36, 61, 0.24);
-  border: 1px solid rgba(245, 241, 232, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: 24px 22px;
 }
@@ -570,7 +707,7 @@
 }
 .npm-cap-note strong {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ──────────────── MINIMAL FOOTER (from template) ──────────────── */
@@ -591,7 +728,50 @@
 }
 
 /* ──────────────── RESPONSIVE ──────────────── */
+@media (max-width: 991.98px) {
+  /* The desktop hero band lives on .hia-main-wrapper; on tablet/mobile the
+     hero goes full-bleed instead, carrying the same wash + line grid
+     (mirrors the .ima-hero rules in industryMarketingPages.css). */
+  .npm-page .hia-main-wrapper::before,
+  .npm-page .hia-main-wrapper::after {
+    display: none;
+  }
+  .npm-page .hia-main-wrapper {
+    padding-top: 0;
+  }
+  .npm-page .hia-hero {
+    position: relative;
+    margin-inline: -32px;
+    padding: 54px 32px 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 103, 232, 0.12) 0%,
+      rgba(37, 103, 232, 0.05) 55%,
+      rgba(37, 103, 232, 0) 100%
+    );
+  }
+  .npm-page .hia-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(37, 103, 232, 0.09) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(37, 103, 232, 0.09) 1px, transparent 1px);
+    background-size: 54px 54px;
+    -webkit-mask-image: radial-gradient(90% 88% at 50% 0%, #000 0%, transparent 92%);
+    mask-image: radial-gradient(90% 88% at 50% 0%, #000 0%, transparent 92%);
+    pointer-events: none;
+  }
+  .npm-page .hia-hero > * {
+    position: relative;
+  }
+}
+
 @media (max-width: 575.98px) {
+  .npm-page .hia-hero {
+    margin-inline: -18px;
+    padding: 46px 18px 24px;
+  }
   .npm-svc,
   .npm-cap {
     padding: 36px 22px;

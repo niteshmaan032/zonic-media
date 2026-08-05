@@ -1,34 +1,55 @@
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { Metadata } from "next";
 
+import "@/app/style/gbpLanding.css";
 import "@/app/style/localOpt.css";
 
-import LeadContactForm from "@/app/components/LeadContactForm";
+import MapPackLeadForm from "@/app/components/MapPackLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
+/* ---------------------------------------------------------------------------
+   POSITIONING — read this before editing the copy.
+
+   /services/gmb-optimization owns the head term "Google Business Profile
+   optimization" and the deliverables list (categories, description, photos,
+   posts, Q&A, review generation). Do not restate that list here.
+
+   This page owns the *ranking mechanics* query set:
+
+     · "how to rank in the Google Map Pack" / "local 3-pack ranking"
+     · "Google Maps ranking factors" / proximity, relevance, prominence
+     · "why am I not showing up on Google Maps"
+     · geo-grid rank tracking and "near me" visibility
+
+   Always link UP to /services/gmb-optimization using the head term as anchor
+   text so it consolidates on the hub instead of splitting across two URLs.
+
+   TYPE + CHROME come from gbpLanding.css (.gbp-lp) — shared with the other two
+   GBP landing pages. Don't reintroduce local font/heading rules here.
+--------------------------------------------------------------------------- */
+
 export const metadata: Metadata = {
-  title: "GBP Optimization | Rank in the Google Map Pack",
+  title: {
+    absolute: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
+  },
   description:
-    "Your GBP is live — but is it ranking? Zonic Media's GBP optimization service gets local businesses into the top-3 Map Pack, generating more calls, clicks, and revenue.",
+    "Why you rank on Google Maps in one neighbourhood and vanish in the next — the three factors behind local 3-Pack rankings, plus a free geo-grid scan.",
   keywords: [
-    "local SEO services",
-    "Google Business Profile optimization",
-    "rank in Google Map Pack",
+    "how to rank in Google Map Pack",
     "local 3-pack ranking",
-    "GBP optimization service",
-    "Google Maps SEO",
-    "local search rankings",
-    "GBP management",
-    "local SEO agency",
-    "Google Business Profile ranking",
-    "best local SEO agency for small business",
-    "local SEO and GBP optimization service",
-    "rank in AI Overviews local search",
+    "Google Maps ranking factors",
+    "why am I not showing up on Google Maps",
+    "geo grid rank tracking",
     "near me search ranking",
+    "Google Maps proximity ranking",
+    "local pack visibility",
+    "map pack SEO",
+    "improve Google Maps ranking",
   ],
   alternates: { canonical: "/local-seo-google-business-optimization" },
   openGraph: {
@@ -40,19 +61,24 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title:
-      "Google Business Profile Optimization | Rank in the Map Pack | Zonic Media",
+    title: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
     description:
-      "Your GBP is live — but is it ranking? Zonic Media's GBP optimization service gets local businesses into the top-3 Map Pack, generating more calls, clicks, and revenue.",
+      "Proximity, relevance and prominence — what actually decides the local 3-Pack, which levers you control, and a free geo-grid scan of your service area.",
     url: "/local-seo-google-business-optimization",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
+    description:
+      "Why you rank here and vanish three miles away — and which Map Pack ranking factors you can actually move.",
   },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   {
-    name: "Local SEO & Google Business Optimization",
+    name: "Google Map Pack Ranking",
     url: "/local-seo-google-business-optimization",
   },
 ]);
@@ -60,17 +86,17 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.zonicllc.com/local-seo-google-business-optimization#service",
-  name: "Local SEO & Google Business Profile Optimization",
+  "@id":
+    "https://www.zonicllc.com/local-seo-google-business-optimization#service",
+  name: "Google Map Pack Ranking & Local Visibility",
   alternateName: [
-    "Local SEO Services",
-    "GBP Optimization Service",
-    "Google Map Pack Ranking Service",
-    "Local Search Optimization",
+    "Local 3-Pack ranking service",
+    "Google Maps ranking service",
+    "Geo-grid rank tracking",
   ],
-  serviceType: "Local SEO",
+  serviceType: "Local Map Pack ranking",
   description:
-    "Zonic Media's local SEO and Google Business Profile optimization service gets local businesses into the top-3 Google Map Pack and cited in AI-powered local search results. Category strategy, keyword placement, review generation, Q&A management, citations, and ongoing profile activity. Verified client reviews on Trustpilot and Clutch.",
+    "Zonic Media improves Google Map Pack visibility across a whole service area rather than at a single pin: geo-grid rank scanning to find where a business actually ranks, diagnosis against Google's proximity, relevance and prominence factors, and work on the levers a business can move — service-area configuration, category and service alignment, review velocity and local link prominence.",
   url: "https://www.zonicllc.com/local-seo-google-business-optimization",
   provider: {
     "@type": "Organization",
@@ -82,377 +108,273 @@ const serviceJsonLd = {
   areaServed: { "@type": "Country", name: "United States" },
   audience: {
     "@type": "BusinessAudience",
-    name: "Local and service-area businesses that want more calls and customers from Google Search and Maps",
+    name: "Local and service-area businesses that are verified on Google but not ranking in the Map Pack",
+  },
+  isRelatedTo: {
+    "@type": "Service",
+    "@id": "https://www.zonicllc.com/services/gmb-optimization#service",
+    name: "Google Business Profile Optimization",
   },
   offers: {
     "@type": "Offer",
-    name: "Free GBP audit",
+    name: "Free geo-grid rank scan",
     price: "0",
     priceCurrency: "USD",
     description:
-      "Free Google Business Profile audit showing why your profile isn't ranking in the Map Pack and what it would take to get there.",
+      "A free geo-grid scan showing where the business ranks in the Map Pack across every part of its service area.",
   },
 };
 
-const formHead = {
-  leadFormTitle: "Get Your Free GBP Audit",
-  leadCallText: (
-    <>
-      Or call directly:{" "}
-      <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-        {SITE_CONTACT.phoneDisplay}
-      </a>{" "}
-      · Mon–Fri 9AM–5PM · Dover, Delaware.
-    </>
-  ),
-  submitButtonText: "Send Me My Free GBP Audit",
-};
+/* ----------------------------------------------------------------- content */
 
+// Rendered twice back to back — the track animates to -50%, so the second
+// copy is what makes the loop seamless.
 const tickerItems = [
-  "Category Optimization",
-  "Business Description Rewrite",
-  "Photo Strategy",
-  "Google Posts",
-  "Q&A Management",
-  "Review Generation",
-  "Service Area Setup",
-  "Keyword Placement",
-  "Attribute Optimization",
-  "Competitor Analysis",
-  "Map Pack Ranking",
-  "Call Click Tracking",
+  <>
+    <b>1500+</b> Google Business Profiles optimized
+  </>,
+  <>
+    ★ <b>5.0</b> rating on Clutch
+  </>,
+  <>Free geo-grid scan of your service area</>,
+  <>No long-term contracts</>,
+  <>US-based specialists · Dover, DE</>,
+  <>Map Pack, &ldquo;near me&rdquo; and AI local answers</>,
 ];
 
-const auditCards = [
-  {
-    icon: "🗂️",
-    title: "Wrong or Missing Categories",
-    body: "Google uses your primary and secondary categories as hard eligibility gates. Pick the wrong primary category or skip secondary ones, and you're simply not appearing in searches for your most valuable services — even when you're the best option in the area.",
-    consequence: "↓ Missing up to 60% of eligible searches",
-  },
-  {
-    icon: "📝",
-    title: "Keyword-Blind Business Description",
-    body: "Your 750-character business description is indexable content Google uses to determine relevance. Most descriptions read like a tagline (\"We're a trusted local plumber\"). They should be keyword-rich, location-specific, and service-detailed — written to rank, not just to sound nice.",
-    consequence: "↓ Low relevance score in local algorithm",
-  },
-  {
-    icon: "📸",
-    title: "Thin, Static Photo Library",
-    body: "Profiles with 40+ real job-site photos receive 3× more direction requests and 2× more call clicks than profiles with under 10 photos. Google's algorithm reads photo engagement as a trust and activity signal. Eight photos from setup three years ago isn't a photo strategy — it's a ranking liability.",
-    consequence: "↓ 2× fewer call clicks vs. optimized profiles",
-  },
-  {
-    icon: "📅",
-    title: "No Post Activity = Invisible Signal",
-    body: "Google Posts generate engagement signals that the local ranking algorithm directly measures. An inactive profile — nothing posted in 60+ days — signals to Google that the business may be closed or unengaged. Weekly, hyperlocal posts that answer real customer questions outperform generic updates by a significant margin.",
-    consequence: "↓ Deprioritized in local rankings",
-  },
-  {
-    icon: "❓",
-    title: "Abandoned Q&A Section",
-    body: "The Q&A section is publicly editable and directly visible on your profile. Unanswered questions from 2 years ago, or worse — answers from competitors — are costing you conversions in real time. Seeding your own Q&A with keyword-rich, trust-building answers adds indexable content and removes objections before a customer even calls.",
-    consequence: "↓ Trust erosion at the decision moment",
-  },
-  {
-    icon: "⭐",
-    title: "No Systematic Review Generation",
-    body: "Reviews are Google's #1 local ranking signal and a homeowner's primary trust document. A competitor with 120 recent, specific, well-responded reviews will outrank and out-convert you regardless of service quality. Reviews don't happen by accident — they require a timed, systematized ask process that most businesses have never built.",
-    consequence: "↓ Outranked by competitors with more reviews",
-  },
+const navLinks = [
+  { href: "#lo-factors", label: "Ranking factors" },
+  { href: "#lo-why", label: "Why you're not ranking" },
+  { href: "#lo-levers", label: "What we change" },
+  { href: "#lo-pricing", label: "Pricing" },
+  { href: "#lo-faq", label: "FAQ" },
 ];
 
-const optimizeCards = [
+/* A 5×5 geo-grid: rank at the business pin vs rank at the edge of the area.
+   The centre cell (0) is the pin itself. */
+const geoGrid = [
+  18, 14, 11, 15, 21, 12, 6, 4, 7, 16, 9, 3, 0, 2, 12, 11, 5, 3, 6, 17, 19, 13,
+  10, 14, 22,
+];
+
+const rankBand = (rank: number) => {
+  if (rank === 0) return "is-pin";
+  if (rank <= 3) return "is-top";
+  if (rank <= 10) return "is-mid";
+  return "is-low";
+};
+
+const factors = [
   {
-    icon: "🗂️",
-    title: "Business Categories",
-    body: "Primary category chosen for maximum ranking value. All applicable secondary categories added — each one unlocks an additional search query set you're currently invisible for.",
-    impact: "High ranking impact",
+    name: "Proximity",
+    weight: 45,
+    lever: "Mostly fixed",
+    cls: "is-fixed",
+    body: "How close the searcher is to your address when they search. It is the strongest single factor in the Map Pack and the one you have least control over — which is exactly why a business can sit at #1 outside its own front door and be invisible four miles away. You cannot move proximity, but you can stop it being the only thing carrying you.",
   },
   {
-    icon: "✍️",
-    title: "Business Description",
-    body: "Full 750-character rewrite. Keyword-rich, location-specific, service-detailed. Written to match the search queries your customers actually use — not to sound impressive in a brochure.",
-    impact: "High ranking + conversion impact",
+    name: "Relevance",
+    weight: 30,
+    lever: "Fully yours",
+    cls: "is-open",
+    body: "How well Google understands that you do the specific thing being searched for. Primary category does most of the work here, then services, attributes and the wording on your site. This is the fastest lever in local search: a category correction can change a whole service area's rankings inside a fortnight.",
   },
   {
-    icon: "📸",
-    title: "Photos & Videos",
-    body: "Right types (exterior, interior, team, job-site work), right quantity, geo-tagged, correctly named for algorithmic indexing. Includes guidance on ongoing photo capture from your team.",
-    impact: "High engagement + trust impact",
-  },
-  {
-    icon: "🔑",
-    title: "Keywords & Attributes",
-    body: "Strategic keyword placement across every indexable field. Attributes (emergency service, financing available, women-owned, etc.) completed and verified — these appear directly on your Map Pack card.",
-    impact: "Moderate ranking impact",
-  },
-  {
-    icon: "📢",
-    title: "Google Posts Calendar",
-    body: "Hyperlocal, seasonal, service-specific post strategy published on a consistent weekly cadence. We write and schedule these — not generic filler, but posts that answer questions real customers have in your market.",
-    impact: "Activity + relevance signal",
-  },
-  {
-    icon: "❓",
-    title: "Q&A Population",
-    body: "We seed 8–12 high-value questions your customers ask most, with keyword-rich answers that remove objections and build trust before the phone call happens. All existing unanswered questions addressed.",
-    impact: "Trust + conversion impact",
-  },
-  {
-    icon: "⭐",
-    title: "Review Strategy",
-    body: "A timed, 3-touch review request system specific to your service workflow. Includes the exact message sequence, timing, and single-tap link setup. No begging. No awkward asks. Consistent monthly volume.",
-    impact: "Top local ranking factor",
-  },
-  {
-    icon: "🗺️",
-    title: "Service Area & NAP",
-    body: "Service area configured for geographic relevance — not maximum radius, which dilutes local signal. NAP consistency verified across the web. Citation mismatches identified and flagged for correction.",
-    impact: "Local relevance signal",
+    name: "Prominence",
+    weight: 25,
+    lever: "Yours, slowly",
+    cls: "is-partial",
+    body: "How well known Google thinks you are — review count and velocity, consistency of your details across the web, local press and links, and general brand signals. It moves slowly, but it is what lets a business outrank a nearer competitor. Prominence is how you beat proximity.",
   },
 ];
 
-const processItems = [
+const whyNotRanking = [
   {
-    num: "01",
-    timeline: "Day 1 — Same Business Day",
-    title: "Full GBP Diagnostic Audit",
-    body: "We run a complete health check against 40+ ranking signals: category selection, keyword coverage, photo quantity and types, post activity, Q&A state, review velocity, attribute completeness, and NAP consistency. You receive a scored report showing exactly where you stand against your top 3 local competitors.",
-    deliverables: [
-      "Competitor analysis",
-      "40-point profile score",
-      "Priority gap list",
-      "Keyword opportunity map",
-    ],
+    n: "01",
+    title: "Your primary category doesn't match the search",
+    body: "A general contractor set to \"Construction company\" will not rank for \"bathroom remodeler\" no matter how good the profile is. Primary category is the single biggest relevance signal, and the wrong one caps your ceiling everywhere in the area.",
   },
   {
-    num: "02",
-    timeline: "Days 1–2 — Within 48 Hours",
-    title: "Custom Optimization Strategy",
-    body: "Using your audit findings, we build a tailored plan: which categories to add, which keywords to target based on actual search volume in your service area, what photo types to prioritize, and what your post calendar should cover for the next 90 days. Industry-specific — an HVAC strategy looks completely different from a dental or legal strategy.",
-    deliverables: [
-      "Category selection brief",
-      "Keyword target list",
-      "90-day post calendar",
-      "Photo brief",
-    ],
+    n: "02",
+    title: "Your service area is drawn wrong",
+    body: "Too large and Google dilutes you across places you'll never win; too small and you disappear from the suburbs that actually convert. Service-area businesses in particular get this wrong, then blame the profile.",
   },
   {
-    num: "03",
-    timeline: "Days 3–7 — Full Implementation",
-    title: "Complete Profile Optimization",
-    body: "We implement everything simultaneously: category updates, full business description rewrite, keyword placement across all indexable fields, services and products section buildout, attribute completion, photo upload and optimization, Q&A seeding, and the first round of Google Posts. Nothing left as \"to do later.\"",
-    deliverables: [
-      "Categories updated",
-      "Description rewritten",
-      "Photos optimized",
-      "Q&A seeded",
-      "Posts live",
-    ],
+    n: "03",
+    title: "You're only measuring rank at your own address",
+    body: "Checking your ranking from the office tells you almost nothing — you're standing at the point of maximum proximity. A single average rank number hides that you're #2 in one neighbourhood and #19 in the next. This is what the grid scan is for.",
   },
   {
-    num: "04",
-    timeline: "Ongoing — Monthly Reporting",
-    title: "Monitoring, Posts & Ranking Growth",
-    body: "For Manage plan clients: we track profile views, call clicks, direction requests, and Map Pack position monthly. We publish 4 posts per month, respond to reviews, monitor Q&A, and make algorithm-driven adjustments as Google updates its local ranking signals. You receive a plain-language report showing what moved and what's next.",
-    deliverables: [
-      "Monthly ranking report",
-      "4 posts/month",
-      "Review response",
-      "Competitor monitoring",
-    ],
+    n: "04",
+    title: "Review velocity has stalled",
+    body: "A profile with 80 reviews and none in eight months reads as less active than a competitor with 40 and one a week. Google weighs recency and pace, not just the total, and stalled velocity shows up as a slow slide down the pack.",
+  },
+  {
+    n: "05",
+    title: "Your details don't match across the web",
+    body: "A different suite number on your site, an old phone on a directory, a former trading name on an aggregator — each mismatch chips at prominence. It rarely causes a dramatic drop; it quietly stops you climbing.",
+  },
+  {
+    n: "06",
+    title: "Competitors are simply doing more of it",
+    body: "The Map Pack is comparative, not absolute. If three competitors added photos, posts and reviews all year and you didn't, you'll fall even though nothing about your profile got worse. Local rankings decay without maintenance.",
   },
 ];
 
-const results = [
+const levers = [
   {
-    biz: "HVAC Contractor",
-    loc: "New Castle County, Delaware",
-    metrics: [
-      { label: "Profile Views / Mo", before: "340", after: "1,240" },
-      { label: "Call Clicks / Mo", before: "18", after: "74" },
-      { label: "Map Pack Position", before: "Not ranked", after: "#1" },
-      { label: "Reviews", before: "14 reviews", after: "91 reviews" },
-    ],
-    quote:
-      "We went from invisible to getting 3–4 calls a day from Google Maps alone. The investment paid for itself in the first week.",
+    n: "01",
+    title: "Grid-scan first, so we're fixing the real problem",
+    body: "Before touching anything we scan your rankings across a grid of points spanning the service area, for the terms that actually bring work. That map tells us whether you have a relevance problem, a prominence problem, or a coverage problem — three different jobs.",
   },
   {
-    biz: "Dental Practice",
-    loc: "Dover, Delaware",
-    metrics: [
-      { label: "Profile Views / Mo", before: "220", after: "890" },
-      { label: "New Patient Inquiries", before: "4/mo", after: "22/mo" },
-      { label: "Map Pack Position", before: "#7 (not visible)", after: "#2" },
-      { label: "Reviews", before: "27 reviews", after: "86 reviews" },
-    ],
-    quote:
-      "We'd been open 8 years and invisible on Google Maps. Two months after Zonic optimized our profile, new patient inquiries from Google were up 5×.",
+    n: "02",
+    title: "Category and service alignment",
+    body: "Primary category set to the highest-intent match, secondaries chosen so they widen coverage without muddying relevance, and the services list built out to mirror how customers actually phrase the job.",
+  },
+  {
+    n: "03",
+    title: "Service-area geometry",
+    body: "Coverage redrawn around where you genuinely compete and want to work, rather than an optimistic radius. For service-area businesses this is usually the biggest single change available.",
+  },
+  {
+    n: "04",
+    title: "Review velocity, not review count",
+    body: "A repeatable request flow so reviews arrive steadily instead of in bursts, with replies on every one. Pace and recency are what the algorithm reads.",
+  },
+  {
+    n: "05",
+    title: "Consistency and local prominence",
+    body: "Details reconciled everywhere Google cross-checks them, plus the local links and mentions that separate a known business from a listed one. Slow, but it's what beats a closer competitor.",
+  },
+  {
+    n: "06",
+    title: "Re-scan and compare",
+    body: "The same grid, the same terms, monthly. You see coverage change square by square instead of trusting a single number that could move for any reason.",
   },
 ];
 
 const pricing = [
   {
-    name: "One-Time",
-    price: "397",
-    period: " once",
-    desc: "Full GBP optimization done right, one time. Best for businesses who want to fix the foundation themselves.",
+    name: "Grid Scan & Diagnosis",
+    price: "0",
+    from: "Free, one per business",
+    desc: "The scan and the read on it. You get the map of where you rank across the area and a plain explanation of what's capping you.",
     features: [
-      { text: "Complete 40-point GBP audit", dim: false },
-      { text: "Category & keyword optimization", dim: false },
-      { text: "Full business description rewrite", dim: false },
-      { text: "Photo optimization guidance", dim: false },
-      { text: "Services & attributes setup", dim: false },
-      { text: "Q&A seeding (8 questions)", dim: false },
-      { text: "First month Google Posts (4 posts)", dim: false },
-      { text: "Competitor comparison report", dim: false },
-      { text: "Ongoing monthly management", dim: true },
-      { text: "Review generation system", dim: true },
+      { text: "Geo-grid scan of your service area", dim: false },
+      { text: "Up to 3 priority search terms", dim: false },
+      { text: "Category and service-area review", dim: false },
+      { text: "Competitor comparison in the pack", dim: false },
+      { text: "Written diagnosis and priorities", dim: false },
+      { text: "Ongoing ranking work", dim: true },
+      { text: "Monthly re-scan reporting", dim: true },
     ],
-    btn: "Start One-Time Optimization",
-    note: "Delivered in 5–7 business days",
+    btn: "Get the free scan",
+    note: "No card, no commitment",
     featured: false,
   },
   {
-    name: "Optimize + Manage",
-    price: "197",
-    period: "/mo",
-    desc: "Full optimization plus ongoing management. For businesses serious about holding a top-3 Map Pack position month after month.",
+    name: "Map Pack Growth",
+    price: "597",
+    per: "/mo",
+    from: "Month to month, no lock-in",
+    desc: "The ongoing work: relevance and coverage fixed, prominence built, and the grid re-scanned every month so you can see it move.",
     features: [
-      { text: "Everything in One-Time", dim: false },
-      { text: "4 Google Posts per month", dim: false },
-      { text: "Review generation system setup", dim: false },
-      { text: "Monthly review response management", dim: false },
-      { text: "Monthly performance report", dim: false },
-      { text: "Ongoing keyword & attribute updates", dim: false },
-      { text: "Competitor monitoring & alerts", dim: false },
-      { text: "Q&A monitoring & updates", dim: false },
+      { text: "Everything in Grid Scan & Diagnosis", dim: false },
+      { text: "Category & service buildout", dim: false },
+      { text: "Service-area geometry rework", dim: false },
+      { text: "Review request flow & replies", dim: false },
+      { text: "Consistency cleanup across the web", dim: false },
+      { text: "Local links & mentions", dim: false },
+      { text: "Monthly grid re-scan & report", dim: false },
     ],
-    btn: "Start Optimize + Manage",
-    note: "No long-term contract · Cancel anytime",
+    btn: "Start Map Pack Growth",
+    note: "Cancel any time · Reporting you can read",
     featured: true,
-    badge: "Most Popular",
+    badge: "Most chosen",
   },
   {
     name: "Multi-Location",
-    price: "147",
-    period: "/loc/mo",
-    desc: "For agencies, franchises, and businesses managing 3+ locations. Volume pricing with white-label reporting available.",
+    price: "397",
+    per: "/loc/mo",
+    from: "Volume rate, minimum 3 locations",
+    desc: "For brands and agencies running several profiles, where coverage overlap between locations is its own problem.",
     features: [
-      { text: "Everything in Optimize + Manage", dim: false },
-      { text: "Volume pricing (3+ locations)", dim: false },
+      { text: "Everything in Map Pack Growth", dim: false },
+      { text: "Per-location grid scanning", dim: false },
+      { text: "Overlap & cannibalisation analysis", dim: false },
+      { text: "Cross-location consistency audit", dim: false },
       { text: "Dedicated account manager", dim: false },
-      { text: "Priority support & response", dim: false },
-      { text: "White-label reporting available", dim: false },
-      { text: "Cross-location competitor analysis", dim: false },
-      { text: "Unified dashboard access", dim: false },
-      { text: "Agency partner program", dim: false },
+      { text: "White-label reporting", dim: false },
+      { text: "Agency partner program access", dim: false },
     ],
-    btn: "Get Multi-Location Quote",
+    btn: "Get a multi-location quote",
     note: "Min. 3 locations · Custom onboarding",
     featured: false,
   },
 ];
 
-const compareRows = [
+const faqs = [
   {
-    factor: "Industry-specific strategy",
-    zonic: { icon: "✓", iconClass: "lo-chk", text: "Built for your vertical" },
-    diy: { icon: "~", iconClass: "lo-prt", text: "Generic Google guides" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "One template for all" },
+    q: "Why do I rank #1 at my office but disappear a few miles away?",
+    a: "Because proximity is the strongest factor in the Map Pack, and at your own address you are standing at the point where it is strongest. Google builds a different result for every searcher based on where they are, so there is no single \"my ranking\" — there is a ranking at every point in your service area. Checking from the office is the most flattering possible test. A geo-grid scan checks from dozens of points instead, which is usually the first time an owner sees the actual shape of their visibility.",
   },
   {
-    factor: "Competitor analysis included",
-    zonic: { icon: "✓", iconClass: "lo-chk", text: "Your top 3 mapped" },
-    diy: { icon: "✗", iconClass: "lo-crs", text: "No structured analysis" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "Not included" },
+    q: "What is a geo-grid scan and why does it matter?",
+    a: "It queries your target search terms from a grid of coordinates spread across your service area and records your Map Pack position at each one, producing a map of green, amber and red squares. It matters because the average rank number most tools report can stay flat while your coverage collapses in the neighbourhoods that actually generate work. The grid shows the shape of the problem, which is what tells you whether to fix relevance, coverage, or prominence.",
   },
   {
-    factor: "Keyword research for your market",
-    zonic: { icon: "✓", iconClass: "lo-chk", text: "Local + service-specific" },
-    diy: { icon: "~", iconClass: "lo-prt", text: "Manual guesswork" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "Generic keywords" },
+    q: "Can I outrank a competitor who is physically closer to the searcher?",
+    a: "Yes, though not everywhere. Proximity is the heaviest factor but it is not the only one, and a business with stronger relevance and prominence regularly beats a nearer competitor with a thin profile. What is not realistic is outranking a well-run competitor at their own front door. The honest goal is to widen the area where you place in the top three, not to win every square on the grid.",
   },
   {
-    factor: "Ongoing post management",
-    zonic: { icon: "✓", iconClass: "lo-chk", text: "4/mo, hyperlocal content" },
-    diy: { icon: "~", iconClass: "lo-prt", text: "If you remember to do it" },
-    cheap: { icon: "~", iconClass: "lo-prt", text: "Generic filler posts" },
+    q: "How long does it take to move in the Map Pack?",
+    a: "Relevance changes move fastest — a corrected primary category or a properly built service list often shows up within two to four weeks. Coverage changes from service-area work land in a similar window. Prominence is the slow one: review velocity and local links compound over three to six months. Anyone promising top-three across a whole metro in thirty days is describing the proximity effect at a single point, not a real ranking change.",
   },
   {
-    factor: "Review generation system",
-    zonic: { icon: "✓", iconClass: "lo-chk", text: "Timed 3-touch sequence" },
-    diy: { icon: "~", iconClass: "lo-prt", text: "Manual, inconsistent" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "Not included" },
+    q: "Is this the same as Google Business Profile optimization?",
+    a: "They overlap but they answer different questions. Google Business Profile optimization is about building the profile itself out properly — categories, description, photos, posts, Q&A and reviews. This page is about where that profile ranks geographically and what moves it: measuring coverage across the area, then working proximity, relevance and prominence against the competitors in each part of it. Most businesses need the profile built out first, then the ranking work on top.",
   },
   {
-    factor: "Monthly ranking reports",
-    zonic: {
-      icon: "✓",
-      iconClass: "lo-chk",
-      text: "Calls, views, map position",
-    },
-    diy: { icon: "✗", iconClass: "lo-crs", text: "No structured reporting" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "No reporting" },
+    q: "Do I need to be verified before any of this works?",
+    a: "Yes, and it is not negotiable. An unverified profile cannot rank in the Map Pack at all, and it is also missing from Google's AI-generated local answers. If your profile is unverified, suspended, or stuck in a verification loop, that has to be resolved before ranking work makes any sense — none of the levers on this page can lift a listing Google will not display.",
   },
   {
-    factor: "GBP reinstatement if suspended",
-    zonic: {
-      icon: "✓",
-      iconClass: "lo-chk",
-      text: "Full reinstatement service",
-    },
-    diy: { icon: "✗", iconClass: "lo-crs", text: "You're on your own" },
-    cheap: { icon: "✗", iconClass: "lo-crs", text: "Not offered" },
+    q: "Does any of this help with \"near me\" searches?",
+    a: "It is essentially the same mechanism. Google treats \"near me\" as a proximity-weighted local query, so the results come from the same Map Pack logic — there is no separate \"near me\" ranking to optimise for. Widening the area where you place in the top three is what increases how often you appear for \"near me\", because more searchers are standing inside your strong zone.",
+  },
+  {
+    q: "What do you need from me to run the free scan?",
+    a: "The business name as it appears on the profile, the city or area you want scanned, and up to three search terms that actually bring you work — the phrases a customer would type, not industry jargon. That is enough to run the grid and send you the map with a written read on what it shows.",
   },
 ];
 
-const faqs = [
-  {
-    q: "How long before I see results from GBP optimization?",
-    a: "Most clients see measurable improvements in profile views and call clicks within 2–4 weeks of full optimization. Map Pack ranking improvements for moderately competitive keywords typically appear within 4–8 weeks. The longer your profile stays optimized and actively managed, the stronger it performs — local SEO compounds over time rather than plateauing.",
-  },
-  {
-    q: "My profile is already set up. Do I actually need optimization?",
-    a: "Almost certainly yes. \"Set up\" and \"optimized\" are very different. In our audits of Delaware and Mid-Atlantic businesses, the most common profile has one category (when 4–5 apply), a generic description with no keywords, under 15 photos, zero Q&A answers, and no post activity in 90+ days. Each of those gaps is costing you ranking position every day.",
-  },
-  {
-    q: "What's the difference between your One-Time and Optimize + Manage plans?",
-    a: "The One-Time plan gets your profile fully optimized with a strong foundation — it's ideal if you want us to fix everything and then manage posts and reviews yourself. The Optimize + Manage plan adds ongoing monthly posts (the activity signal Google measures), review generation management, and monthly ranking reports. If you want to hold a top-3 position rather than just improve from your current ranking, ongoing management is necessary because competitors are actively managing their profiles too.",
-  },
-  {
-    q: "What if my Google Business Profile gets suspended?",
-    aNode: (
-      <>
-        GBP suspensions are increasingly common, especially for service-area
-        businesses, recently verified profiles, and profiles that have had
-        multiple edits in a short period. If your profile is suspended, we offer
-        a{" "}
-        <Link
-          href="/services/gmb-reinstatement-help"
-          className="lo-inline-link"
-        >
-          dedicated GBP reinstatement service
-        </Link>
-        . For active Optimize + Manage clients, suspension monitoring and
-        reinstatement support is included.
-      </>
-    ),
-  },
-  {
-    q: "Do you specialize in specific industries?",
-    a: "Yes — and this matters. Optimizing a dental practice GBP is fundamentally different from optimizing a roofing contractor or a law firm. The category structures, keyword targets, photo types, and post content differ significantly. We've built industry-specific optimization systems for HVAC, roofing, pest control, plumbing, dental, legal, real estate, and home services. Our strategy is always tailored to your specific vertical and local market.",
-  },
-  {
-    q: "Is there a long-term contract for the monthly management plan?",
-    a: "No. Our Optimize + Manage plan is month-to-month with no lock-in contract. We earn your continued business by showing measurable results in your monthly ranking report. If you're not seeing improvement in profile views, call clicks, and Map Pack position, you can cancel. We've never had a client leave because results weren't there — but the option is yours.",
-  },
-];
+const PhoneIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
+  </svg>
+);
+
+const ArrowIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M13 6l6 6-6 6" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+    <path d="M20 6 9 17l-5-5" />
+  </svg>
+);
+
+const onDarkCard = {
+  background: "rgba(255,255,255,.04)",
+  borderColor: "rgba(255,255,255,.1)",
+};
 
 function Page() {
   return (
-    <>
+    <div className="gbp-lp lo-page">
       <Script
         id="lo-breadcrumb-schema"
         type="application/ld+json"
@@ -464,675 +386,701 @@ function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
-      <div id="lo-top" className="lo-page">
-        {/* NAV */}
-        <nav className="lo-nav">
-          <Link href="/" className="lo-nav-logo">
-            Z<span>O</span>NIC MEDIA
-          </Link>
-          <ul className="lo-nav-links">
-            <li>
-              <Link href="/services/local-seo-for-home-services">Local SEO</Link>
-            </li>
-            <li>
-              <Link href="/services/google-ads">Google Ads</Link>
-            </li>
-            <li>
-              <Link href="/services/gmb-reinstatement-help">
-                GBP Reinstatement
-              </Link>
-            </li>
-            <li>
-              <Link href="/services/gmb-verification-help">
-                GBP Verification
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-          </ul>
-          <div className="lo-nav-right">
-            <Link href={SITE_CONTACT.phoneHref} className="lo-nav-phone">
-              📞 {SITE_CONTACT.phoneDisplay}
-            </Link>
-            <HashScrollLink href="#lo-audit-form" className="lo-nav-cta">
-              Get Free GBP Audit
-            </HashScrollLink>
-          </div>
-        </nav>
-
-        {/* HERO */}
-        <section className="lo-hero">
-          <div className="lo-hero-body">
-            <div>
-              <div className="lo-hero-eyebrow">
-                📍 Google Business Profile Optimization
-              </div>
-              <h1>
-                YOUR GBP IS LIVE.{" "}
-                <span className="lo-accent">IS IT</span>{" "}
-                <span className="lo-outline">RANKING?</span>
-              </h1>
-              <p className="lo-hero-sub">
-                Having a Google Business Profile and having one that ranks in
-                the Map Pack, generates calls, and wins customers are{" "}
-                <strong>two completely different things.</strong> Zonic Media
-                fixes the gap.
-              </p>
-              <div className="lo-hero-actions">
-                <HashScrollLink
-                  href="#lo-audit-form"
-                  className="lo-btn-primary"
-                >
-                  Get My Free GBP Audit
-                </HashScrollLink>
-                <Link href={SITE_CONTACT.phoneHref} className="lo-btn-outline">
-                  📞 Call {SITE_CONTACT.phoneDisplay}
-                </Link>
-              </div>
-              <div className="lo-hero-trust">
-                <div className="lo-ht-item">
-                  <div className="lo-ht-dot"></div>1,500+ Profiles Optimized
-                </div>
-                <div className="lo-ht-item">
-                  <div className="lo-ht-dot"></div>48-hr Turnaround
-                </div>
-                <div className="lo-ht-item">
-                  <div className="lo-ht-dot"></div>Mid-Atlantic Specialists
-                </div>
-              </div>
-            </div>
-
-            <div className="lo-gbp-mockup">
-              <p className="lo-mockup-label">
-                Live Map Pack — Optimized Result
-              </p>
-              <div className="lo-map-container">
-                <div className="lo-map-bar">
-                  <div className="lo-map-bar-input">
-                    <span className="lo-map-search-icon">🔍</span>
-                    <span>HVAC repair near me</span>
-                  </div>
-                </div>
-                <div className="lo-map-pack">
-                  <div className="lo-mp-header">
-                    <span>Map Pack Results</span>
-                    <span className="lo-mp-badge lo-mp-badge-ok">
-                      Optimized ✓
-                    </span>
-                  </div>
-                  <div className="lo-mp-result lo-featured">
-                    <div className="lo-mp-rank lo-r1">1</div>
-                    <div className="lo-mp-info">
-                      <div className="lo-mp-name">Your Business ✦</div>
-                      <div className="lo-mp-stars">
-                        ★★★★★ <span>4.8 (94 reviews)</span>
-                      </div>
-                      <div className="lo-mp-cat">
-                        HVAC Contractor · Emergency · Open now
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lo-mp-result">
-                    <div className="lo-mp-rank lo-r2">2</div>
-                    <div className="lo-mp-info">
-                      <div className="lo-mp-name lo-dim">
-                        Competitor HVAC Co.
-                      </div>
-                      <div className="lo-mp-stars">
-                        ★★★★★ <span>4.9 (142 reviews)</span>
-                      </div>
-                      <div className="lo-mp-cat">HVAC Contractor</div>
-                    </div>
-                  </div>
-                  <div className="lo-mp-result">
-                    <div className="lo-mp-rank lo-r3">3</div>
-                    <div className="lo-mp-info">
-                      <div className="lo-mp-name lo-dim">
-                        ABC Heating &amp; Cooling
-                      </div>
-                      <div className="lo-mp-stars">
-                        ★★★★☆ <span>4.6 (88 reviews)</span>
-                      </div>
-                      <div className="lo-mp-cat">Air Conditioning Repair</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="lo-metrics-strip">
-                  <div className="lo-ms-item">
-                    <div className="lo-ms-num">64</div>
-                    <div className="lo-ms-label">Profile Photos</div>
-                  </div>
-                  <div className="lo-ms-item">
-                    <div className="lo-ms-num">94</div>
-                    <div className="lo-ms-label">Reviews</div>
-                  </div>
-                  <div className="lo-ms-item">
-                    <div className="lo-ms-num">4.8★</div>
-                    <div className="lo-ms-label">Rating</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* TICKER */}
-        <div className="lo-ticker-wrap">
-          <div className="lo-ticker-track">
-            {[...tickerItems, ...tickerItems].map((t, i) => (
-              <span key={i} className="lo-ticker-item">
-                {t}
+      {/* ============================ TICKER ============================ */}
+      <div className="lp-ticker" aria-label="Zonic Media highlights">
+        <div className="lp-ticker-track">
+          {[0, 1].map((copy) =>
+            tickerItems.map((item, i) => (
+              <span key={`${copy}-${i}`} aria-hidden={copy === 1}>
+                {item}
               </span>
-            ))}
-          </div>
+            )),
+          )}
         </div>
+      </div>
 
-        {/* TWO-COL CONTENT */}
-        <div className="lo-page-outer">
-          <div className="lo-row">
-            {/* Left content (col-8) */}
-            <div className="lo-content-col">
-              {/* Audit findings */}
-              <section className="lo-section">
-                <div className="lo-section-label">The Real Diagnosis</div>
-                <h2>
-                  6 Reasons Your GBP Isn&apos;t{" "}
-                  <span className="lo-accent">Generating Calls</span>
-                </h2>
-                <p className="lo-section-sub">
-                  Most Google Business Profiles don&apos;t fail because
-                  they&apos;re inactive. They fail because of specific, fixable
-                  gaps that silently cost business owners leads every single
-                  day — the same gaps our{" "}
-                  <Link
-                    href="/services/gmb-optimization"
-                    className="lo-inline-link"
-                  >
-                    Google Business Profile optimization service
-                  </Link>{" "}
-                  is built to close.
+      {/* ============================ HEADER ============================ */}
+      <nav className="lp-nav">
+        <Link href="/" className="lp-nav-logo" aria-label="Zonic Media home">
+          <Image
+            src="/images/logo.webp"
+            width={132}
+            height={50}
+            alt="Zonic Media"
+            priority
+          />
+        </Link>
+
+        <ul className="lp-nav-links">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <HashScrollLink href={link.href} offset={80}>
+                {link.label}
+              </HashScrollLink>
+            </li>
+          ))}
+        </ul>
+
+        <div className="lp-nav-right">
+          <a href={SITE_CONTACT.phoneHref} className="lp-nav-phone">
+            <PhoneIcon />
+            <span>{SITE_CONTACT.phoneDisplay}</span>
+          </a>
+          <HashScrollLink href="#lo-scan-form" className="lp-nav-cta">
+            Free grid scan
+          </HashScrollLink>
+        </div>
+      </nav>
+
+      <div className="lp-alert">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 16v-4M12 8h.01" />
+        </svg>
+        <span>
+          <strong>Checking your rank from the office?</strong> That&apos;s the
+          one spot where you always look good — it tells you nothing about the
+          rest of your service area.
+        </span>
+        <HashScrollLink href="#lo-scan-form" className="lp-alert-cta">
+          Scan the whole area →
+        </HashScrollLink>
+      </div>
+
+      <div className="lp-wrap">
+        {/* ========================= LEFT: CONTENT ========================= */}
+        <div className="lp-col">
+          {/* ------------------------------ HERO ------------------------------ */}
+          <section className="lp-panel-dark">
+            <span className="lp-eyebrow on-dark">Map Pack ranking</span>
+
+            <h1 className="lp-h1">
+              You rank #1 outside your own front door.{" "}
+              <span className="lp-accent">
+                Three miles away, you don&apos;t exist.
+              </span>
+            </h1>
+
+            <p className="lp-lead">
+              Google builds a different Map Pack for every searcher, weighted
+              heavily by how close they are standing. So there is no single
+              ranking to chase — there is a map of them. We scan yours, show you
+              where the green stops, and work on the factors that widen it.
+            </p>
+
+            <div
+              className="lp-final-actions"
+              style={{ justifyContent: "flex-start", marginTop: 28 }}
+            >
+              <HashScrollLink href="#lo-scan-form" className="lp-btn">
+                Get a free grid scan
+                <ArrowIcon />
+              </HashScrollLink>
+              <a href={SITE_CONTACT.phoneHref} className="lp-btn lp-btn-on-dark">
+                <PhoneIcon />
+                {SITE_CONTACT.phoneDisplay}
+              </a>
+            </div>
+
+            {/* --- signature: the geo-grid --- */}
+            <div className="lo-geo">
+              <div
+                className="lo-geo-map"
+                role="img"
+                aria-label="Geo-grid showing Map Pack rank at 25 points across one service area: top three beside the business, outside the top twenty at the edges."
+              >
+                {geoGrid.map((rank, i) => (
+                  <div key={i} className={`lo-cell ${rankBand(rank)}`}>
+                    {rank === 0 ? (
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    ) : (
+                      rank
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="lo-geo-side">
+                <p className="lo-geo-title">
+                  Rank by location · &ldquo;emergency plumber&rdquo;
                 </p>
-                <div className="lo-audit-grid">
-                  {auditCards.map((c, i) => (
-                    <div key={i} className="lo-audit-card">
-                      <div className="lo-ac-icon">{c.icon}</div>
-                      <div className="lo-ac-title">{c.title}</div>
-                      <p className="lo-ac-body">{c.body}</p>
-                      <div className="lo-ac-consequence">{c.consequence}</div>
-                    </div>
-                  ))}
+                <div className="lo-geo-legend">
+                  <div>
+                    <i className="k-top"></i> Top 3 — in the pack
+                  </div>
+                  <div>
+                    <i className="k-mid"></i> 4–10 — page one, rarely clicked
+                  </div>
+                  <div>
+                    <i className="k-low"></i> 11+ — effectively invisible
+                  </div>
                 </div>
-              </section>
-
-              {/* What we optimize */}
-              <section className="lo-section lo-mid">
-                <div className="lo-section-label">What Gets Optimized</div>
-                <h2>
-                  Every Ranking Signal.{" "}
-                  <span className="lo-accent">Nothing Left Out.</span>
-                </h2>
-                <p className="lo-section-sub">
-                  We optimize every element Google scores — not just the
-                  visible ones. Here&apos;s exactly what changes in your
-                  profile. It&apos;s the same discipline we bring to{" "}
-                  <Link
-                    href="/services/local-seo-for-home-services"
-                    className="lo-inline-link"
-                  >
-                    local SEO for home services
-                  </Link>{" "}
-                  and contractor businesses across the Mid-Atlantic.
+                <p className="lo-geo-note">
+                  Same business, same profile, same day. The average of these 25
+                  points is a rank of 11 — a number that describes none of them.
                 </p>
-                <div className="lo-optimize-grid">
-                  {optimizeCards.map((c, i) => (
-                    <div key={i} className="lo-opt-card">
-                      <div className="lo-opt-icon">{c.icon}</div>
-                      <div className="lo-opt-title">{c.title}</div>
-                      <p className="lo-opt-body">{c.body}</p>
-                      <span className="lo-opt-impact">{c.impact}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              </div>
+            </div>
+          </section>
 
-              {/* Process */}
-              <section className="lo-section">
-                <div className="lo-section-label">How It Works</div>
-                <h2>
-                  Fully Optimized in{" "}
-                  <span className="lo-accent">Under 7 Days</span>
-                </h2>
-                <p className="lo-section-sub">
-                  A structured four-phase process with specific deliverables and
-                  timelines — not vague &quot;ongoing work&quot; with no
-                  milestones. If your profile isn&apos;t live yet, we can start
-                  with{" "}
+          {/* Mobile form — the sticky right column is desktop-only */}
+          <div className="d-block d-lg-none" id="lo-scan-form">
+            <MapPackLeadForm />
+          </div>
+
+          {/* ------------------------------ STATS ------------------------------ */}
+          <section className="lp-panel">
+            <div className="lp-stats">
+              <div className="lp-stat">
+                <div className="lp-stat-num">
+                  1500<span>+</span>
+                </div>
+                <p className="lp-stat-cap">Profiles optimized</p>
+              </div>
+              <div className="lp-stat">
+                <div className="lp-stat-num">
+                  25<span>pt</span>
+                </div>
+                <p className="lp-stat-cap">Grid scanned per service area</p>
+              </div>
+              <div className="lp-stat">
+                <div className="lp-stat-num">
+                  2–4<span>wk</span>
+                </div>
+                <p className="lp-stat-cap">Typical relevance-fix response</p>
+              </div>
+              <div className="lp-stat">
+                <div className="lp-stat-num">
+                  5.0<span>★</span>
+                </div>
+                <p className="lp-stat-cap">Rating on Clutch</p>
+              </div>
+            </div>
+          </section>
+
+          {/* -------------------------- RANKING FACTORS -------------------------- */}
+          <section className="lp-panel" id="lo-factors">
+            <div className="lp-head">
+              <span className="lp-eyebrow">What decides the pack</span>
+              <h2 className="lp-h2">
+                Three factors, and only two of them are yours
+              </h2>
+              <p className="lp-lead">
+                Google names proximity, relevance and prominence as what
+                determines local ranking. Knowing which one is holding you back
+                is the whole diagnosis — the work for each is completely
+                different, and one of them you cannot change at all.
+              </p>
+            </div>
+            <div className="lo-factors">
+              {factors.map((f) => (
+                <article className={`lo-factor ${f.cls}`} key={f.name}>
+                  <div className="lo-factor-top">
+                    <h3 className="lp-h3" style={{ margin: 0 }}>
+                      {f.name}
+                    </h3>
+                    <span className="lo-factor-lever">{f.lever}</span>
+                  </div>
+                  <div className="lo-factor-bar">
+                    <div
+                      className="lo-factor-fill"
+                      style={{ width: `${f.weight}%` }}
+                    />
+                  </div>
+                  <p className="lp-body">{f.body}</p>
+                </article>
+              ))}
+            </div>
+            <p className="lp-small" style={{ marginTop: 18 }}>
+              Bar widths illustrate relative influence. Google does not publish
+              weightings.
+            </p>
+          </section>
+
+          {/* --------------------------- WHY NOT RANKING --------------------------- */}
+          <section className="lp-panel" id="lo-why">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Diagnosis</span>
+              <h2 className="lp-h2">
+                Six reasons a good profile still doesn&apos;t rank
+              </h2>
+              <p className="lp-lead">
+                A profile can be complete, verified and well filled in and still
+                sit outside the pack. When it does, it is almost always one of
+                these — and none of them are fixed by adding more photos.
+              </p>
+            </div>
+            <div className="lp-grid-2">
+              {whyNotRanking.map((item) => (
+                <div className="lp-card" key={item.n}>
+                  <div className="lp-ic lp-ic-red">{item.n}</div>
+                  <h3 className="lp-h3">{item.title}</h3>
+                  <p className="lp-body">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ------------------------------ LEVERS ------------------------------ */}
+          <section className="lp-panel" id="lo-levers">
+            <div className="lp-head">
+              <span className="lp-eyebrow">What we actually change</span>
+              <h2 className="lp-h2">The levers, in the order we pull them</h2>
+              <p className="lp-lead">
+                Ranking work is sequenced, not bundled. Relevance first because
+                it moves fastest, coverage next, prominence last because it
+                compounds slowly. If the profile itself still needs building
+                out, that belongs with Google Business Profile optimization
+                before any of this.
+              </p>
+            </div>
+            <div className="lo-levers">
+              {levers.map((lever) => (
+                <div className="lo-lever" key={lever.n}>
+                  <span className="lo-lever-n">{lever.n}</span>
+                  <div>
+                    <h3 className="lp-h4">{lever.title}</h3>
+                    <p className="lp-body">{lever.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* --------------------------- PREREQUISITE --------------------------- */}
+          <section className="lp-panel-dark">
+            <div className="lp-head">
+              <span className="lp-eyebrow on-dark">Before ranking work</span>
+              <h2 className="lp-h2">
+                A listing Google won&apos;t show can&apos;t be ranked
+              </h2>
+              <p className="lp-lead">
+                None of the levers on this page lift a profile that is
+                unverified, suspended or disabled — it isn&apos;t in the pool
+                being ranked at all. If that&apos;s where you are, start there
+                and come back once the listing is live.
+              </p>
+            </div>
+            <div className="lp-grid-3">
+              <div className="lp-card-soft" style={onDarkCard}>
+                <h3 className="lp-h4" style={{ color: "#fff" }}>
+                  Not verified yet
+                </h3>
+                <p className="lp-body">
+                  Video is the default method now and the rules changed twice
+                  since 2024 — see the{" "}
+                  <Link
+                    href="/google-business-profile-verification-help-2026"
+                    className="lp-link"
+                  >
+                    2026 verification rules
+                  </Link>
+                  , or get{" "}
                   <Link
                     href="/services/gmb-verification-help"
-                    className="lo-inline-link"
+                    className="lp-link"
                   >
-                    Google Business Profile verification
-                  </Link>{" "}
-                  before optimization begins.
+                    GMB verification help
+                  </Link>
+                  .
                 </p>
-                <div className="lo-process-list">
-                  {processItems.map((p, i) => (
-                    <div key={i} className="lo-process-item">
-                      <div className="lo-pi-num">{p.num}</div>
-                      <div>
-                        <div className="lo-pi-timeline">{p.timeline}</div>
-                        <div className="lo-pi-title">{p.title}</div>
-                        <p className="lo-pi-body">{p.body}</p>
-                        <div className="lo-pi-deliverables">
-                          {p.deliverables.map((d, j) => (
-                            <span key={j} className="lo-pi-del">
-                              {d}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Results */}
-              <section className="lo-section lo-mid">
-                <div className="lo-section-label">Real Results</div>
-                <h2>
-                  Before &amp; After:{" "}
-                  <span className="lo-accent">What Changes</span>
-                </h2>
-                <p className="lo-section-sub">
-                  Measured outcomes from real Mid-Atlantic businesses — not
-                  generic case study language. We see the same pattern in our{" "}
+              </div>
+              <div className="lp-card-soft" style={onDarkCard}>
+                <h3 className="lp-h4" style={{ color: "#fff" }}>
+                  Suspended
+                </h3>
+                <p className="lp-body">
+                  A suspended listing is off the map entirely. Our{" "}
                   <Link
-                    href="/services/industry/local-seo-services-for-hvac"
-                    className="lo-inline-link"
+                    href="/services/gmb-reinstatement-help"
+                    className="lp-link"
                   >
-                    local SEO for HVAC companies
+                    GMB reinstatement service
                   </Link>{" "}
-                  work, where Map Pack visibility drives most of the phone
-                  calls.
+                  handles first-time suspensions.
                 </p>
-                <div className="lo-results-grid">
-                  {results.map((r, i) => (
-                    <div key={i} className="lo-result-card">
-                      <div className="lo-rc-biz">{r.biz}</div>
-                      <div className="lo-rc-loc">{r.loc}</div>
-                      <div className="lo-rc-metrics">
-                        {r.metrics.map((m, j) => (
-                          <div key={j} className="lo-rcm-item">
-                            <div className="lo-rcm-label">{m.label}</div>
-                            <div className="lo-rcm-before">{m.before}</div>
-                            <div className="lo-rcm-after">{m.after}</div>
-                          </div>
-                        ))}
-                      </div>
-                      <p className="lo-rc-quote">&ldquo;{r.quote}&rdquo;</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Pricing */}
-              <section className="lo-section">
-                <div className="lo-section-label">Transparent Pricing</div>
-                <h2>
-                  Simple Plans.{" "}
-                  <span className="lo-accent">Real Prices.</span>
-                </h2>
-                <p className="lo-section-sub">
-                  No &quot;contact us for pricing.&quot; No hidden setup fees.
-                  Three clear options depending on whether you need a one-time
-                  fix or ongoing Map Pack dominance.
-                </p>
-                <div className="lo-pricing-grid">
-                  {pricing.map((p, i) => (
-                    <div
-                      key={i}
-                      className={`lo-price-card ${
-                        p.featured ? "lo-featured" : ""
-                      }`}
-                    >
-                      {p.featured && p.badge ? (
-                        <div className="lo-pc-badge">{p.badge}</div>
-                      ) : null}
-                      <div className="lo-pc-name">{p.name}</div>
-                      <div className="lo-pc-price">
-                        <sup>$</sup>
-                        {p.price}
-                        <span className="lo-pc-period">{p.period}</span>
-                      </div>
-                      <p className="lo-pc-desc">{p.desc}</p>
-                      <ul className="lo-pc-features">
-                        {p.features.map((f, j) => (
-                          <li key={j} className={f.dim ? "lo-dim" : ""}>
-                            {f.text}
-                          </li>
-                        ))}
-                      </ul>
-                      <HashScrollLink
-                        href="#lo-audit-form"
-                        className="lo-pc-cta"
-                      >
-                        {p.btn}
-                      </HashScrollLink>
-                      <p className="lo-pc-note">{p.note}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Comparison */}
-              <section className="lo-section lo-mid">
-                <div className="lo-section-label">Why Zonic Media</div>
-                <h2>
-                  Zonic vs. DIY vs.{" "}
-                  <span className="lo-accent">Cheap Freelancer</span>
-                </h2>
-                <p className="lo-section-sub">
-                  Three realistic options for GBP optimization. Here&apos;s how
-                  they actually compare across the factors that determine
-                  whether your profile ranks. For businesses that also want paid
-                  reach, our{" "}
-                  <Link href="/services/google-ads" className="lo-inline-link">
-                    Google Ads management
+              </div>
+              <div className="lp-card-soft" style={onDarkCard}>
+                <h3 className="lp-h4" style={{ color: "#fff" }}>
+                  Appeal already rejected
+                </h3>
+                <p className="lp-body">
+                  If Google has already turned down an appeal, that&apos;s a
+                  different job —{" "}
+                  <Link
+                    href="/gmb-reinstatement-service-agency"
+                    className="lp-link"
+                  >
+                    the escalation desk
                   </Link>{" "}
-                  pairs well with a fully optimized profile.
+                  picks it up from there.
                 </p>
-                <div className="lo-compare-wrap">
-                  <table className="lo-compare-table">
-                    <thead>
-                      <tr>
-                        <th style={{ width: "30%" }}>What matters</th>
-                        <th className="lo-hl" style={{ width: "23%" }}>
-                          🚀 Zonic Media
-                        </th>
-                        <th style={{ width: "23%" }}>DIY Yourself</th>
-                        <th style={{ width: "23%" }}>
-                          Cheap Freelancer
-                          <br />
-                          ($49 Fiverr)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {compareRows.map((row, i) => (
-                        <tr key={i}>
-                          <td>{row.factor}</td>
-                          <td className="lo-hl">
-                            <span className={row.zonic.iconClass}>
-                              {row.zonic.icon}
-                            </span>{" "}
-                            {row.zonic.text}
-                          </td>
-                          <td>
-                            <span className={row.diy.iconClass}>
-                              {row.diy.icon}
-                            </span>{" "}
-                            {row.diy.text}
-                          </td>
-                          <td>
-                            <span className={row.cheap.iconClass}>
-                              {row.cheap.icon}
-                            </span>{" "}
-                            {row.cheap.text}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-
-              {/* Testimonials — Google reviews widget */}
-              <section className="lo-section">
-                <div className="lo-section-label">Client Results</div>
-                <h2>
-                  What Happens When{" "}
-                  <span className="lo-accent">
-                    Your GBP Actually Works
-                  </span>
-                </h2>
-                <LenisIframeGuard
-                  className="lo-reviews-widget"
-                  widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c"
-                />
-              </section>
-
-              {/* FAQ */}
-              <section className="lo-section">
-                <div className="lo-section-label">Common Questions</div>
-                <h2>
-                  Everything You Need{" "}
-                  <span className="lo-accent">To Know First</span>
-                </h2>
-                <p className="lo-section-sub">
-                  Specific answers — not the generic FAQ that applies to every
-                  agency on the internet. We also connect this work to{" "}
-                  <Link href="/services/web-design" className="lo-inline-link">
-                    conversion-focused websites
-                  </Link>{" "}
-                  when your profile traffic needs a stronger place to land.
-                </p>
-                <div className="lo-faq-list">
-                  {faqs.map((f, i) => (
-                    <div key={i} className="lo-faq-item">
-                      <p className="lo-faq-q">{f.q}</p>
-                      <div className="lo-faq-a">{f.aNode ?? f.a}</div>
-                    </div>
-                  ))}
-                </div>
-                <Script
-                  id="lo-faq-schema"
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      url: "https://zonicllc.com/local-seo-google-business-optimization",
-                      mainEntity: faqs.map((f) => ({
-                        "@type": "Question",
-                        name: f.q,
-                        acceptedAnswer: {
-                          "@type": "Answer",
-                          text: f.a ?? "",
-                        },
-                      })),
-                    }),
-                  }}
-                />
-              </section>
-
-              {/* Mobile-only inline form */}
-              <div
-                className="lo-mob-form d-block d-lg-none"
-                id="lo-audit-form"
-              >
-                <div className="lo-form-card">
-                  <LeadContactForm
-                    leadFormTitle={formHead.leadFormTitle}
-                    leadCallText={formHead.leadCallText}
-                    submitButtonText={formHead.submitButtonText}
-                  />
-                </div>
               </div>
             </div>
+          </section>
 
-            {/* Right sticky form (col-4) */}
-            <div
-              className="lo-form-col d-none d-lg-block"
-              data-scroll-target="lo-audit-form"
-            >
-              <div className="lo-sticky-form">
-                <div className="lo-form-card">
-                  <LeadContactForm
-                    leadFormTitle={formHead.leadFormTitle}
-                    leadCallText={formHead.leadCallText}
-                    submitButtonText={formHead.submitButtonText}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA BAND */}
-        <div className="lo-cta-band">
-          <div className="lo-cta-band-inner">
-            <div className="lo-mono-label">
-              Every day without optimization = leads going to your competitors
-            </div>
-            <h2>
-              YOUR COMPETITORS
-              <br />
-              <span className="lo-outline">ARE RANKED.</span>
-            </h2>
-            <p>
-              Right now, customers in your area are searching for exactly what
-              you offer. The businesses in the top-3 Map Pack are capturing
-              those leads. Is yours one of them?
-            </p>
-            <div className="lo-cta-band-actions">
-              <HashScrollLink href="#lo-audit-form" className="lo-btn-dark">
-                Get My Free GBP Audit
-              </HashScrollLink>
-              <Link
-                href={SITE_CONTACT.phoneHref}
-                className="lo-btn-dark-outline"
-              >
-                📞 Call {SITE_CONTACT.phoneDisplay}
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* FOOTER */}
-        <footer className="lo-footer">
-          <div className="lo-footer-top">
-            <div className="lo-footer-brand">
-              <div className="lo-footer-brand-name">
-                Z<span>O</span>NIC MEDIA
-              </div>
-              <p>
-                Delaware&apos;s GBP optimization and local SEO specialists for
-                home services, contractors, dental, and local businesses across
-                the Mid-Atlantic.
+          {/* ---------------------------- PRICING ---------------------------- */}
+          <section className="lp-panel" id="lo-pricing">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Engagements</span>
+              <h2 className="lp-h2">Start with the scan — it costs nothing</h2>
+              <p className="lp-lead">
+                The scan and the diagnosis are free because they&apos;re how
+                both of us find out whether there&apos;s work worth doing.
+                Ongoing work is month to month, with the same grid re-run so you
+                can see what moved. Need leads while rankings build?{" "}
+                <Link href="/services/google-ads" className="lp-link">
+                  Google Ads management
+                </Link>{" "}
+                covers the gap.
               </p>
-              <Link href={SITE_CONTACT.phoneHref} className="lo-footer-phone">
-                {SITE_CONTACT.phoneDisplay}
-              </Link>
             </div>
-            <div className="lo-footer-col">
-              <h4>GBP Services</h4>
-              <ul>
-                <li>
-                  <Link href="/services/gmb-optimization">GBP Optimization</Link>
-                </li>
-                <li>
-                  <Link href="/services/gmb-reinstatement-help">
-                    GBP Reinstatement
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/gmb-verification-help">
-                    GBP Verification
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/local-seo-for-home-services">
-                    Local SEO
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/google-ads">Google Ads</Link>
-                </li>
-              </ul>
+            <div className="lp-price-grid">
+              {pricing.map((tier) => (
+                <div
+                  className={`lp-pc${tier.featured ? " is-featured" : ""}`}
+                  key={tier.name}
+                >
+                  {tier.featured && tier.badge ? (
+                    <span className="lp-pc-badge">{tier.badge}</span>
+                  ) : null}
+
+                  <div className="lp-pc-main">
+                    <div className="lp-pc-name">{tier.name}</div>
+                    <div className="lp-pc-price">
+                      <sup>$</sup>
+                      {tier.price}
+                      {tier.per ? (
+                        <span className="lp-pc-per">{tier.per}</span>
+                      ) : null}
+                    </div>
+                    <p className="lp-pc-from">{tier.from}</p>
+                    <p className="lp-pc-desc">{tier.desc}</p>
+                    <HashScrollLink href="#lo-scan-form" className="lp-pc-btn">
+                      {tier.btn}
+                    </HashScrollLink>
+                    <p className="lp-pc-note">{tier.note}</p>
+                  </div>
+
+                  <div className="lp-pc-side">
+                    <p className="lp-pc-side-label">What&apos;s included</p>
+                    <ul className="lp-pc-feats">
+                      {tier.features.map((f) => (
+                        <li key={f.text} className={f.dim ? "is-dim" : ""}>
+                          {f.text}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="lo-footer-col">
-              <h4>Industries</h4>
-              <ul>
-                <li>
-                  <Link href="/services/industry/local-seo-services-for-hvac">
-                    HVAC
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/industry/local-seo-for-roofing-companies">
-                    Roofing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/industry/pest-control">
-                    Pest Control
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services/industry/plumber">Plumbing</Link>
-                </li>
-                <li>
-                  <Link href="/services/industry/dental-seo-services">
-                    Dental
-                  </Link>
-                </li>
-              </ul>
+          </section>
+
+          {/* --------------------------- REVIEWS --------------------------- */}
+          <section className="lp-panel">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Client results</span>
+              <h2 className="lp-h2">What clients say about the work</h2>
             </div>
-            <div className="lo-footer-col">
-              <h4>Company</h4>
-              <ul>
-                <li>
-                  <Link href="/about">About Zonic Media</Link>
-                </li>
-                <li>
-                  <Link href="/blog">Blog</Link>
-                </li>
-                <li>
-                  <Link href="/contact-us">Contact Us</Link>
-                </li>
-                <li>
-                  <Link href="/services/delaware/digital-marketing">
-                    Delaware Marketing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/legal/privacy-policy">Privacy Policy</Link>
-                </li>
-              </ul>
+            <LenisIframeGuard
+              className="lo-reviews-widget"
+              widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c"
+            />
+          </section>
+
+          {/* ----------------------------- FAQ ----------------------------- */}
+          <section className="lp-panel" id="lo-faq">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Map Pack questions</span>
+              <h2 className="lp-h2">What owners ask about local rankings</h2>
             </div>
-          </div>
-          <div className="lo-footer-bottom">
-            <span>
-              © 2026 Zonic Media LLC · 8 The Green, STE B, Dover, DE 19901
-            </span>
-            <div className="lo-footer-socials">
-              <a
-                href="https://www.linkedin.com/company/zonic-media/"
-                title="LinkedIn"
-              >
-                in
-              </a>
-              <a
-                href="https://www.facebook.com/zonicmediallc/"
-                title="Facebook"
-              >
-                f
-              </a>
-              <a href="https://www.instagram.com/zonicmedia" title="Instagram">
-                ig
-              </a>
-              <a
-                href="https://www.youtube.com/@ZonicMediaDelware"
-                title="YouTube"
-              >
-                ▶
-              </a>
+
+            {faqs.map((faq, index) => (
+              <details className="lp-faq-item" key={faq.q} open={index === 0}>
+                <summary className="lp-faq-q">
+                  {faq.q}
+                  <span className="lp-faq-pm">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="lp-faq-a">{faq.a}</div>
+              </details>
+            ))}
+
+            <Script
+              id="lo-faq-schema"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  url: "https://www.zonicllc.com/local-seo-google-business-optimization",
+                  mainEntity: faqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.q,
+                    acceptedAnswer: { "@type": "Answer", text: faq.a },
+                  })),
+                }),
+              }}
+            />
+          </section>
+
+          {/* ------------------------- RELATED SERVICES ------------------------- */}
+          <section className="lp-panel">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Related work</span>
+              <h2 className="lp-h2">Where this sits in the rest of it</h2>
+              <p className="lp-lead">
+                Ranking work assumes a profile that is already built out —
+                that&apos;s{" "}
+                <Link href="/services/gmb-optimization" className="lp-link">
+                  Google Business Profile optimization
+                </Link>
+                . For trades specifically, most of the coverage problems on this
+                page show up inside{" "}
+                <Link
+                  href="/services/local-seo-for-home-services"
+                  className="lp-link"
+                >
+                  local SEO for home services
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/services/industry/local-seo-services-for-hvac"
+                  className="lp-link"
+                >
+                  local SEO for HVAC companies
+                </Link>
+                . Once the calls start, a{" "}
+                <Link href="/services/web-design" className="lp-link">
+                  conversion-focused website
+                </Link>{" "}
+                is what turns them into booked jobs.
+              </p>
             </div>
-          </div>
-        </footer>
+          </section>
+        </div>
+
+        {/* ===================== RIGHT: STICKY FORM (desktop) ===================== */}
+        <aside
+          className="lp-form-col d-none d-lg-block"
+          data-scroll-target="lo-scan-form"
+        >
+          <MapPackLeadForm />
+        </aside>
       </div>
-    </>
+
+      {/* ========================== FINAL CTA BAND ========================== */}
+      <section className="lp-final">
+        <div className="lp-final-inner">
+          <span className="lp-eyebrow on-dark">See the map first</span>
+          <h2 className="lp-h2">Find out where your green actually stops</h2>
+          <p className="lp-lead">
+            The scan is free and takes a day. You get the grid, the diagnosis,
+            and an honest answer on whether there&apos;s enough headroom to be
+            worth paying for.
+          </p>
+          <div className="lp-final-actions">
+            <HashScrollLink href="#lo-scan-form" className="lp-btn">
+              Get a free grid scan
+              <ArrowIcon />
+            </HashScrollLink>
+            <a href={SITE_CONTACT.phoneHref} className="lp-btn lp-btn-white">
+              <PhoneIcon />
+              {SITE_CONTACT.phoneDisplay}
+            </a>
+          </div>
+          <div className="lp-final-sub">
+            <span>
+              <CheckIcon />
+              Free scan, no card
+            </span>
+            <span>
+              <CheckIcon />
+              Month to month, no lock-in
+            </span>
+            <span>
+              <CheckIcon />
+              Dover, DE · serving the US
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================= FOOTER ============================= */}
+      <footer className="lp-footer">
+        <div className="lp-footer-top">
+          <div className="lp-footer-brand">
+            <Link
+              href="/"
+              className="lp-footer-logo"
+              aria-label="Zonic Media home"
+            >
+              <Image
+                src="/images/logo.webp"
+                width={132}
+                height={50}
+                alt="Zonic Media"
+              />
+            </Link>
+            <p className="lp-footer-blurb">
+              A Delaware digital marketing agency specialising in Google
+              Business Profile work — Map Pack ranking, optimization,
+              verification and reinstatement — for local and service-area
+              businesses across the United States.
+            </p>
+            <div className="lp-footer-contact">
+              <span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                8 The Green, STE B, Dover, DE 19901
+              </span>
+              <a href={SITE_CONTACT.phoneHref}>
+                <PhoneIcon />
+                {SITE_CONTACT.phoneDisplay}
+              </a>
+              <a href={SITE_CONTACT.emailHref}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m2 7 10 6 10-6" />
+                </svg>
+                {SITE_CONTACT.email}
+              </a>
+            </div>
+          </div>
+
+          <div className="lp-footer-col">
+            <h3>Google Business Profile</h3>
+            <ul>
+              <li>
+                <Link href="/services/gmb-optimization">
+                  Profile optimization
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/gmb-reinstatement-help">
+                  GMB reinstatement service
+                </Link>
+              </li>
+              <li>
+                <Link href="/gmb-reinstatement-service-agency">
+                  Rejected appeal help
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/gmb-verification-help">
+                  GMB verification help
+                </Link>
+              </li>
+              <li>
+                <Link href="/google-business-profile-verification-help-2026">
+                  2026 verification rules
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="lp-footer-col">
+            <h3>More services</h3>
+            <ul>
+              <li>
+                <Link href="/services/local-seo-for-home-services">
+                  Local SEO for home services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/google-ads">Google Ads management</Link>
+              </li>
+              <li>
+                <Link href="/services/web-design">Web design</Link>
+              </li>
+              <li>
+                <Link href="/services/white-label-services">
+                  White-label for agencies
+                </Link>
+              </li>
+              <li>
+                <Link href="/services">All services</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="lp-footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li>
+                <Link href="/about">About Zonic Media</Link>
+              </li>
+              <li>
+                <Link href="/contact-us">Contact</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link href="/industries">Industries we serve</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="lp-footer-bottom">
+          <span>
+            © {new Date().getFullYear()} Zonic Media LLC. All rights reserved.
+          </span>
+          <div className="lp-footer-legal">
+            <Link href="/legal/privacy-policy">Privacy policy</Link>
+            <Link href="/legal/refund-policy">Refund policy</Link>
+            <Link href="/legal/terms-conditions">Terms &amp; conditions</Link>
+          </div>
+        </div>
+      </footer>
+
+      {/* =========================== STICKY CTA =========================== */}
+      <div className="lp-sticky-bar">
+        <div className="lp-sb-left">
+          <strong>Not in the 3-Pack?</strong> Free geo-grid scan of your whole
+          service area
+        </div>
+        <div className="lp-sb-right">
+          <a href={SITE_CONTACT.phoneHref} className="lp-sb-call">
+            <PhoneIcon />
+            {SITE_CONTACT.phoneDisplay}
+          </a>
+          <HashScrollLink href="#lo-scan-form" className="lp-sb-form">
+            Free grid scan
+          </HashScrollLink>
+        </div>
+      </div>
+    </div>
   );
 }
 

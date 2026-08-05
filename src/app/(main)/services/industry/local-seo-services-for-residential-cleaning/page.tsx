@@ -74,7 +74,7 @@ const PAGE_PATH = "/services/industry/local-seo-services-for-residential-cleanin
 export const metadata: Metadata = {
   title: "Residential Cleaning SEO That Books More Clients",
   description:
-    "Residential cleaning SEO that wins the Google map pack for 'house cleaning near me' and 'maid service near me' — profile, reviews & pages that book more clients. Free audit.",
+    "Residential cleaning SEO that wins the map pack for 'house cleaning near me' — GBP, reviews & pages that book more clients. Free audit.",
   keywords: [
     "house cleaning near me",
     "maid service near me",
@@ -469,7 +469,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and home-service businesses climb
-                    into the Google map pack and grow. Zonic Media builds the
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
                     full local ranking system for house cleaning companies —
                     Google Business Profile, citations, reviews, and service-area
                     content — so when homeowners search &ldquo;house cleaning near
@@ -1045,7 +1045,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your cleaning services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1137,7 +1137,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different services — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/residential-cleaning-website-design" className="tseo-inline-link">house cleaning website design</Link> that turns the extra traffic into booked cleanings.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1166,7 +1166,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/cleaning-company-marketing-agency" className="tseo-inline-link">cleaning marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1528,7 +1528,7 @@ function Page() {
                     Straight answers about house cleaning local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for cleaning companies</Link>, and what actually moves
                     cleaning rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

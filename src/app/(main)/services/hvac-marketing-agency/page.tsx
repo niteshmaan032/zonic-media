@@ -12,11 +12,17 @@ import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import {
+  GrowthCurveVisual,
+  LeadEngineVisual,
+  MapPackRaceVisual,
+} from "@/app/components/IndustryMarketingVisuals";
 import HvacConsentNotice from "./HvacConsentNotice";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
@@ -43,6 +49,14 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "HVAC Marketing Agency", url: "/services/hvac-marketing-agency" },
 ]);
+
+const visualCopy = {
+  industry: "HVAC",
+  industryTitle: "HVAC",
+  business: "HVAC company",
+  jobsNoun: "booked service calls",
+  mapQuery: "ac repair near me",
+};
 
 const tickerItems = [
   "Free HVAC Marketing Audit",
@@ -226,6 +240,15 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
   areaServed: { type: "Country", name: "United States" },
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "HVAC Marketing Agency",
+  description:
+    "HVAC marketing agency for HVAC contractors. Google Business Profile, Google Maps ranking, ads, maintenance memberships, websites, and reviews. Free audit.",
+  pageUrl: "/services/hvac-marketing-agency",
+  serviceType: "HVAC Marketing",
+  areaServed: "United States",
+});
+
 function Page() {
   return (
     <>
@@ -245,6 +268,11 @@ function Page() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessJsonLd),
         }}
+      />
+      <Script
+        id="hvac-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
       <div id="hia-top" className="hia-page">
@@ -312,8 +340,14 @@ function Page() {
                   >
                     Google Business Profile optimization
                   </Link>{" "}
-                  that gets you into the map pack, websites
-                  that convert mobile emergencies, reviews that compound month
+                  that gets you into the map pack,{" "}
+                  <Link
+                    href="/services/hvac-website-design"
+                    className="hvac-inline-link"
+                  >
+                    HVAC websites that convert mobile emergencies
+                  </Link>
+                  , reviews that compound month
                   over month, paid ads tuned to HVAC seasonal patterns, and
                   local SEO across every submarket you serve. Across home
                   services we&apos;ve helped HVAC contractors rank in their map
@@ -392,6 +426,8 @@ function Page() {
                 </div>
               </section>
 
+              <MapPackRaceVisual copy={visualCopy} />
+
               {/* MAP PACK */}
               <section className="hia-section hia-results-sec" id="hia-map">
                 <div className="hia-sec-label">
@@ -461,6 +497,8 @@ function Page() {
                   ))}
                 </div>
               </section>
+
+              <LeadEngineVisual copy={visualCopy} />
 
               {/* SPECIALTIES */}
               <section className="hia-section" id="hia-specialties">
@@ -654,11 +692,13 @@ function Page() {
                   <ClutchWidget
                     widgetType="12"
                     height="375"
-                    primaryColor="#f97316"
+                    primaryColor="#2567e8"
                     reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                   />
                 </div>
               </section>
+
+              <GrowthCurveVisual copy={visualCopy} />
 
               {/* PRICING */}
               <section className="hia-section hia-pricing-sec" id="hia-pricing">

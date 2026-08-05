@@ -1,6 +1,6 @@
 # Google Ads (PPC) Management — Zonic Media
 
-> Zonic Media creates, optimizes, and scales Google Ads campaigns for small and mid-size businesses — search ads, Local Services Ads, and remarketing built to generate qualified leads and maximize return on ad spend. 4.9 average client rating.
+> Zonic Media creates, optimizes, and scales Google Ads campaigns for small and mid-size businesses — search ads, Local Services Ads, and remarketing built to generate qualified leads and maximize return on ad spend. 5.0 rating on Clutch (21 reviews).
 
 Service page: https://www.zonicllc.com/services/google-ads
 Philadelphia PPC: https://www.zonicllc.com/services/philadelphia/ppc

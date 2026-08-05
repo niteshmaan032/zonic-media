@@ -970,6 +970,7 @@
 .hiw-page .hiw-band-media {
   position: relative;
   min-height: 360px;
+  overflow: hidden;
 }
 
 .hiw-page .hiw-band-media img {
@@ -1929,6 +1930,11 @@
     grid-template-columns: 1fr;
   }
 
+  .hiw-page .hiw-band-media {
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+  }
+
   .hiw-page .hiw-band-content {
     padding: 64px var(--hiw-inset);
   }
@@ -2091,7 +2097,7 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--hiw-ink);
   margin: 0 0 20px;
 }

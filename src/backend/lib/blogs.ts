@@ -76,6 +76,7 @@ export type PublicBlog = {
   faqs: FaqItem[];
   excerpt: string;
   publishedAt: string | null;
+  updatedAt: string;
 };
 
 declare global {
@@ -429,6 +430,7 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
     excerpt:
       plainText.length > 150 ? `${plainText.slice(0, 147).trim()}...` : plainText,
     publishedAt: blog.publishedAt?.toISOString() ?? null,
+    updatedAt: blog.updatedAt.toISOString(),
   };
 }
 

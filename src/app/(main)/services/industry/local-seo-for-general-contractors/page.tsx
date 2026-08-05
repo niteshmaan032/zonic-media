@@ -42,7 +42,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-general-contractors";
 export const metadata: Metadata = {
   title: "Local SEO for General Contractors That Wins Jobs",
   description:
-    "Local SEO for general contractors that wins the 'general contractor near me' map pack — Google Business Profile, citations, reviews, and service-area pages. Get a free audit.",
+    "Local SEO for general contractors that wins the 'general contractor near me' map pack — GBP, citations, reviews & service-area pages. Free audit.",
   keywords: [
     "local SEO for general contractors",
     "contractor SEO",
@@ -436,7 +436,7 @@ function Page() {
                     <span className="tseo-hl">wins jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for general contractors and
                     remodelers — Google Business Profile, citations, reviews, and
@@ -1018,7 +1018,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your contracting services and
-                    cities, then the foundation work: profile optimization,
+                    cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization,
                     citation cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1110,7 +1110,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different project types — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/general-contractor-website-design" className="tseo-inline-link">general contractor website design</Link> that turns the extra traffic into signed projects.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1140,7 +1140,7 @@ function Page() {
                 <p className="tseo-lead">
                   Local SEO for home-service and construction businesses is all
                   we do, and it shows. Here is exactly what working with a
-                  dedicated local team looks like.
+                  dedicated <Link href="/services/general-contractor-marketing-agency" className="tseo-inline-link">general contractor marketing agency</Link> looks like.
                 </p>
               </div>
               <div className="tseo-compare-grid">
@@ -1501,7 +1501,7 @@ function Page() {
                     Straight answers about contractor local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for contractors</Link>, and what actually moves
                     contractor rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

@@ -636,14 +636,14 @@ function Page() {
                 job mix, your service area, and the way homeowners in your
                 market actually search. Your site should feel like your
                 company, not like a template every competitor is also using —
-                and it should be built to rank with{" "}
+                and it should be built to rank, with a{" "}
                 <Link
-                  href="/services/local-seo-for-home-services"
+                  href="/services/gmb-verification-help"
                   className="ew-inline-link"
                 >
-                  local SEO for home services
+                  verified Business Profile
                 </Link>{" "}
-                from day one.
+                supporting it from day one.
               </p>
               <div className="ew-band-stats">
                 {BandStats.map((stat) => (
@@ -775,10 +775,10 @@ function Page() {
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
                   <Link
-                    href="/services/local-seo-for-home-services"
+                    href="/services/google-ads"
                     className="ew-inline-link"
                   >
-                    local SEO
+                    pay-per-click campaigns
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -985,7 +985,14 @@ function Page() {
                 <p className="ew-lead">
                   Straight answers on pricing, timelines, EV charger pages,
                   and what happens to your current rankings. If your question
-                  is not here, send it through the form — a strategist
+                  is not here, or you need{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="ew-inline-link"
+                  >
+                    suspended profile reinstatement
+                  </Link>{" "}
+                  for your Google listing, send it through the form — a strategist
                   answers, not a sales script.
                 </p>
                 <div className="ew-faq-cta">

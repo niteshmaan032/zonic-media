@@ -1,6 +1,6 @@
 # Local SEO Services — Zonic Media
 
-> Zonic Media's local SEO service gets local and service-area businesses into the top-3 Google Map Pack, ranking for "near me" searches, and cited in AI-powered local search results. Rated 4.9 by clients; part of a full-stack local growth offering that includes GBP optimization, web design, and Google Ads.
+> Zonic Media's local SEO service gets local and service-area businesses into the top-3 Google Map Pack, ranking for "near me" searches, and cited in AI-powered local search results. Rated 5.0 on Clutch (21 reviews); part of a full-stack local growth offering that includes GBP optimization, web design, and Google Ads.
 
 Service pages:
 - https://www.zonicllc.com/local-seo-google-business-optimization

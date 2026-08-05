@@ -81,7 +81,7 @@ const PAGE_PATH = "/services/industry/local-seo-services-for-hvac";
 export const metadata: Metadata = {
   title: "Local SEO Services for HVAC Companies",
   description:
-    "Local SEO services for HVAC companies that win the Google map pack — Google Business Profile optimization, citations, reviews, and service-area pages that turn 'AC repair near me' searches into booked jobs.",
+    "Local SEO services for HVAC companies that win the Google map pack — GBP optimization, reviews & pages that turn 'AC repair near me' into booked jobs. Free audit.",
   keywords: [
     "local SEO services for HVAC",
     "HVAC SEO company",
@@ -475,7 +475,7 @@ function Page() {
                     <span className="tseo-hl">books more jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for HVAC companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1051,7 +1051,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your HVAC services and cities, then
-                    the foundation work: profile optimization, citation cleanup,
+                    the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation cleanup,
                     and on-page fixes.
                   </p>
                 </article>
@@ -1143,7 +1143,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, and often an <Link href="/services/hvac-website-design" className="tseo-inline-link">HVAC website design</Link> that converts that traffic into booked service calls.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1172,7 +1172,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/hvac-marketing-agency" className="tseo-inline-link">HVAC marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1533,7 +1533,7 @@ function Page() {
                     Straight answers about HVAC local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves HVAC
+                    Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for HVAC companies</Link> fits alongside SEO, and what actually moves HVAC
                     rankings. If your question is not here, send it through the
                     form — a strategist answers, not a sales script.
                   </p>

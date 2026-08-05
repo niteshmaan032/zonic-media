@@ -23,8 +23,16 @@ export const solarMarketingPage: IndustryMarketingPageData = {
   title: "Solar Marketing Agency | Local SEO & Ads | Zonic Media",
   description:
     "Solar marketing agency for US installers. Local SEO, Google Map Pack ranking, Google Ads & exclusive solar leads for installs & battery storage. Free audit.",
+  // ima-solar now only scopes the sp-band photo styles — the palette is the
+  // shared homepage blue (no accentColor override).
   themeClass: "ima-solar",
-  accentColor: "#f8bc26",
+  visualCopy: {
+    industry: "solar",
+    industryTitle: "Solar",
+    business: "solar company",
+    jobsNoun: "booked consultations",
+    mapQuery: "solar installers near me",
+  },
   tickerHtml: `${tickerRun}\n${tickerRun}`,
   heroHtml: `<span class="eyebrow">Solar Marketing Agency</span>
 <h1>The <span class="hl">solar marketing agency</span> that keeps your install crews busy.</h1>

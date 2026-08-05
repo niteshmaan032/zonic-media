@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/appliance-repair-website-design";
 export const metadata: Metadata = {
   title: "Appliance Repair Website Design That Books Jobs",
   description:
-    "Appliance repair website design built as a lead system — same-day booking flows, brand and service pages, transparent pricing UX, and mobile-first pages that book repairs.",
+    "Appliance repair website design built as a lead system — same-day booking flows, brand pages, and mobile-first pricing UX that books repairs.",
   keywords: [
     "appliance repair website design",
     "appliance repair company website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Appliance Repair Website Design That Books Jobs | Zonic Media",
     description:
-      "Appliance repair website design built as a lead system — same-day booking flows, brand and service pages, transparent pricing UX, and mobile-first pages that book repairs.",
+      "Appliance repair website design built as a lead system — same-day booking flows, brand pages, and mobile-first pricing UX that books repairs.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -347,7 +347,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-appliance-repair",
+    href: "/services/industry/local-seo-for-appliance-repair",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Appliance Repair",
     desc: "Rank for refrigerator, washer, and oven repair searches across Google Search and Maps in every city you cover.",
@@ -456,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Appliance repair website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/appliance-repair-hero-v2.webp"
+                      alt="Appliance repair technician presenting a service website beside household appliances"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Technician repairing an appliance</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/appliance-repair-first-impressions-1.webp"
+                      alt="Appliance technician diagnosing a refrigerator in a bright kitchen"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Appliance repair website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/appliance-repair-first-impressions-2.webp"
+                      alt="SwiftFix Appliance website displayed on a desktop monitor in a repair workshop"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -578,7 +588,7 @@ function Page() {
                     then makes booking effortless. It is also the foundation of
                     any wider{" "}
                     <Link
-                      href="/services/local-seo-for-appliance-repair"
+                      href="/services/industry/local-seo-for-appliance-repair"
                       className="hiw-inline-link"
                     >
                       appliance repair SEO
@@ -645,14 +655,14 @@ function Page() {
                   around your service mix, your coverage area, and the way
                   homeowners in your market actually search. Your site should
                   feel like your company, not like a template every competitor
-                  is also using — and it should be built to rank with{" "}
+                  is also using — and it should be built to rank, with a{" "}
                   <Link
-                    href="/services/local-seo-for-appliance-repair"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    local SEO for appliance repair
+                    verified Google Business Profile
                   </Link>{" "}
-                  from day one.
+                  supporting it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -670,9 +680,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive appliance repair website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/appliance-repair-responsive-preview-square.webp"
+                  alt="SwiftFix Appliance website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -775,10 +788,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-appliance-repair"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      appliance repair SEO
+                      Google Ads campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -980,7 +993,14 @@ function Page() {
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, same-day bookings,
                     and what happens to your current rankings. If your question
-                    is not here, send it through the form — a strategist answers,
+                    is not here, or you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      Google Business Profile reinstatement
+                    </Link>{" "}
+                    for a suspended listing, send it through the form — a strategist answers,
                     not a sales script.
                   </p>
                   <div className="hiw-faq-cta">

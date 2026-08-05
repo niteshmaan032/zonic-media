@@ -57,10 +57,65 @@ export function buildLocalBusinessJsonLd({
       postalCode: "19901",
       addressCountry: "US",
     },
+    // Matches the Clutch rating shown on-page and the site-wide LocalBusiness
+    // schema in layout.tsx — keep all three in sync.
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
+      ratingValue: "5.0",
+      reviewCount: "21",
+      bestRating: "5",
+    },
+  };
+}
+
+type ServiceOptions = {
+  /** Human-readable service name, e.g. "HVAC Marketing in California". */
+  name: string;
+  /** Page description (meta description works well). */
+  description: string;
+  /** Absolute or relative page URL (relative gets prefixed with SITE_URL). */
+  pageUrl: string;
+  /** e.g. "Digital Marketing", "Local SEO", "Web Design". */
+  serviceType?: string;
+  /** State name, "United States" (default), or explicit type+name. */
+  areaServed?: string | { type: "State" | "Country"; name: string };
+};
+
+/**
+ * Service entity naming Zonic Media as provider. NEVER add aggregateRating
+ * here — Google Search Console flags aggregateRating on Service as a critical
+ * error (it is only valid on LocalBusiness/ProfessionalService).
+ */
+export function buildServiceJsonLd({
+  name,
+  description,
+  pageUrl,
+  serviceType,
+  areaServed,
+}: ServiceOptions) {
+  const url = pageUrl.startsWith("http") ? pageUrl : `${SITE_URL}${pageUrl}`;
+  const area =
+    typeof areaServed === "string"
+      ? areaServed === "United States"
+        ? { "@type": "Country", name: "United States" }
+        : { "@type": "State", name: areaServed }
+      : areaServed
+        ? { "@type": areaServed.type, name: areaServed.name }
+        : { "@type": "Country", name: "United States" };
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    ...(serviceType ? { serviceType } : {}),
+    areaServed: area,
+    provider: {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Zonic Media",
+      url: SITE_URL,
     },
   };
 }

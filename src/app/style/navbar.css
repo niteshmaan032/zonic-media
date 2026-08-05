@@ -111,27 +111,19 @@
 .services-core-dropdown {
   width: 100%;
   max-width: 100%;
-  padding: 18px;
+  padding: 30px;
   border-radius: 24px;
   background: var(--white);
   border: 1px solid var(--stroke);
   box-sizing: border-box;
 }
 
-.services-core-label,
 .services-core-grid,
 .services-core-divider,
 .services-core-bottom {
   width: min(100%, 1120px);
   margin-left: auto;
   margin-right: auto;
-}
-
-.services-core-label {
-  color: var(--color2);
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 16px;
 }
 
 .services-core-grid {
@@ -145,7 +137,7 @@
 }
 
 .others-core-dropdown {
-  min-width: 960px;
+  min-width: 1020px;
 }
 
 .others-core-grid {
@@ -153,59 +145,87 @@
 }
 
 .areas-core-dropdown {
-  min-width: 960px;
+  min-width: 1020px;
 }
 
 .areas-core-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.local-seo-core-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* ---- Niche dropdowns (Local SEO / Web Design / Industries) ----
+   Same compact card layout as the Services dropdown, split into category
+   sections so the 25-30 pages in each menu stay scannable. */
+.niche-core-dropdown {
+  width: min(1160px, calc(100vw - 64px));
+  min-width: 0;
+  max-width: none;
+  padding: 32px;
 }
 
-/* Compact Industries dropdown — icon + title + 2-line description, tighter spacing */
-.local-seo-core-dropdown {
-  min-width: 960px;
-  padding: 20px;
+/* Higher-specificity (.services-dropdown-container.niche-core-dropdown) so it
+   beats .services-dropdown-container's min-height:100%. That inherited
+   min-height resolves to the full viewport height (the panel is absolutely
+   positioned against the viewport), which makes the panel taller than the
+   screen and defeats max-height — so the page scrolls instead of the dropdown.
+   Forcing min-height:0 lets max-height cap the panel so its content scrolls. */
+.services-dropdown-container.niche-core-dropdown {
+  min-height: 0;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  /* Keep wheel scrolling inside the dropdown instead of chaining to the body. */
+  overscroll-behavior: contain;
 }
-.local-seo-core-dropdown .services-core-label,
-.local-seo-core-dropdown .services-core-grid {
+
+.niche-core-section + .niche-core-section {
+  margin-top: 26px;
+}
+
+.niche-core-heading {
+  margin: 0 0 16px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--stroke);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.niche-core-dropdown .niche-core-grid {
   width: 100%;
   max-width: 100%;
-}
-.local-seo-core-dropdown .services-core-label {
-  margin-bottom: 14px;
-  font-size: 15px;
-}
-.local-seo-core-dropdown .local-seo-core-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px 12px;
+  gap: 12px 16px;
 }
-.local-seo-core-dropdown .services-core-card {
+
+.niche-core-dropdown .services-core-card {
   padding: 13px 14px;
   gap: 12px;
   align-items: flex-start;
   border-radius: 10px;
 }
-.local-seo-core-dropdown .services-core-icon {
+
+.niche-core-dropdown .services-core-icon {
   width: 38px;
   height: 38px;
   flex: 0 0 38px;
   font-size: 17px;
   border-radius: 9px;
 }
-.local-seo-core-dropdown .services-core-content {
+
+.niche-core-dropdown .services-core-content {
   min-width: 0;
   gap: 2px;
 }
-.local-seo-core-dropdown .services-core-content strong {
+
+.niche-core-dropdown .services-core-content strong {
   font-size: 15px;
   line-height: 1.3;
   margin-bottom: 3px;
   font-weight: 500;
 }
-.local-seo-core-dropdown .services-core-content > span:not(.services-core-tags) {
+
+.niche-core-dropdown .services-core-content > span {
   font-size: 12.5px;
   line-height: 1.45;
   display: -webkit-box;
@@ -215,38 +235,13 @@
 }
 
 @media (max-width: 1199.98px) {
-  .local-seo-core-dropdown {
-    min-width: 800px;
+  .niche-core-dropdown {
+    width: min(880px, calc(100vw - 48px));
+    padding: 24px;
   }
-  .local-seo-core-dropdown .local-seo-core-grid {
+  .niche-core-dropdown .niche-core-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-/* Industries dropdown holds 19 links — 4 columns keeps it short, and the
-   viewport-clamped width + max-height keep it from running off screen. */
-.industries-core-dropdown {
-  width: min(1240px, calc(100vw - 64px));
-  min-width: 0;
-  max-width: none;
-}
-
-/* Higher-specificity (.services-dropdown-container.industries-core-dropdown)
-   so it beats .services-dropdown-container's min-height:100%. That inherited
-   min-height resolves to the full viewport height (the panel is absolutely
-   positioned against the viewport), which makes the panel taller than the
-   screen and defeats max-height — so the page scrolls instead of the dropdown.
-   Forcing min-height:0 lets max-height cap the panel so its content scrolls. */
-.services-dropdown-container.industries-core-dropdown {
-  min-height: 0;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  /* Keep wheel scrolling inside the dropdown instead of chaining to the body. */
-  overscroll-behavior: contain;
-}
-
-.industries-core-dropdown .local-seo-core-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .nav-link-with-icon {
@@ -294,14 +289,14 @@
   width: 40px;
   height: 40px;
   flex: 0 0 40px;
-  border: 1px solid var(--color2);
+  border: 1px solid #2567e8;
   border-radius: 10px;
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: var(--color2);
+  color: #2567e8;
 }
 
 .services-core-content {
@@ -357,7 +352,6 @@
 }
 
 @media (min-width: 991.98px) and (max-width: 1199.98px) {
-  .services-core-label,
   .services-core-grid,
   .services-core-divider,
   .services-core-bottom {
@@ -365,8 +359,7 @@
   }
 
   .services-core-grid,
-  .others-core-grid,
-  .local-seo-core-grid {
+  .others-core-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -655,6 +648,29 @@
   font-size: 18px !important;
   color: var(--color2) !important;
   font-weight: 500 !important;
+}
+
+/* Mobile version of the grouped niche menus: category heading + its links */
+.mob-tab-nav-menus .mobile-niche-group {
+  margin-bottom: 18px;
+}
+
+.mobile-niche-group-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.mob-tab-nav-menus .mobile-niche-sublist li {
+  margin-bottom: 8px;
+}
+
+.mob-tab-nav-menus .accordion-body .mobile-niche-sublist li a {
+  font-size: 17px;
+  font-weight: 400;
 }
 
 /*responsive*/

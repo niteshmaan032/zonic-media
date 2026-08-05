@@ -1908,6 +1908,12 @@
   font-weight: 600;
 }
 
+/* Inline links on the dark band — the accent blue disappears against the
+   navy gradient, so switch to the light highlight there. */
+.ew-page .ew-band-content .ew-inline-link {
+  color: var(--ew-hl);
+}
+
 /* ---------- page footer (replaces the global site footer) ---------- */
 
 .ew-page .ew-footer {
@@ -1964,7 +1970,7 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--ew-ink);
   margin: 0 0 20px;
 }

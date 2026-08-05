@@ -771,10 +771,10 @@ function Page() {
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
                   <Link
-                    href="/services/industry/local-seo-services-for-hvac"
+                    href="/services/google-ads"
                     className="hw-inline-link"
                   >
-                    HVAC local SEO
+                    paid search campaigns
                   </Link>{" "}
                   and{" "}
                   <Link
@@ -982,7 +982,13 @@ function Page() {
                 <p className="hw-lead">
                   Straight answers on pricing, timelines, booking software,
                   and what happens to your current rankings. If your question
-                  is not here, send it through the form — a strategist
+                  is not here, or you are facing a suspension and need{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="hw-inline-link"
+                  >
+                    Google Business Profile reinstatement help
+                  </Link>, send it through the form — a strategist
                   answers, not a sales script.
                 </p>
                 <div className="hw-faq-cta">

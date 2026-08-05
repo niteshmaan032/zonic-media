@@ -455,9 +455,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>House cleaning website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/residential-cleaning-hero.webp"
+                      alt="House cleaning business owner reviewing the Nest and Shine website"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -527,14 +531,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Clean, bright living room</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/residential-cleaning-first-impressions-1.webp"
+                      alt="Professional house cleaner finishing a bright living room"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>House cleaning website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/residential-cleaning-first-impressions-2.webp"
+                      alt="Nest and Shine website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -645,12 +655,12 @@ function Page() {
                   company, not like a template every competitor is also using —
                   and it should be built to rank with{" "}
                   <Link
-                    href="/services/industry/local-seo-services-for-residential-cleaning"
+                    href="/services/cleaning-company-marketing-agency"
                     className="hiw-inline-link"
                   >
-                    local SEO for residential cleaning
+                    marketing for cleaning companies
                   </Link>{" "}
-                  from day one.
+                  behind it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -668,9 +678,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive house cleaning website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/residential-cleaning-responsive-preview-square.webp"
+                  alt="Nest and Shine website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -773,10 +786,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/local-seo-services-for-residential-cleaning"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      residential cleaning SEO
+                      pay-per-click campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -977,8 +990,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, online booking, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or you need to{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      recover a suspended Google Business Profile
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

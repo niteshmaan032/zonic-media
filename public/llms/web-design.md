@@ -1,6 +1,6 @@
 # Web Design Services — Zonic Media
 
-> Zonic Media designs fast, mobile-friendly, SEO-ready websites for small and mid-size businesses — built to rank on Google and convert visitors into leads and customers. Custom design (no bloated templates), responsive development, and conversion-focused structure. 4.9 average client rating.
+> Zonic Media designs fast, mobile-friendly, SEO-ready websites for small and mid-size businesses — built to rank on Google and convert visitors into leads and customers. Custom design (no bloated templates), responsive development, and conversion-focused structure. 5.0 rating on Clutch (21 reviews).
 
 Service pages:
 - https://www.zonicllc.com/services/web-design

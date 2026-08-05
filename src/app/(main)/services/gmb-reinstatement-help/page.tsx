@@ -3,10 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
 import Script from "next/script";
-import { Manrope, Inter } from "next/font/google";
 
 import Footer from "@/app/components/Footer";
 import GmbAuditForm from "@/app/components/GmbAuditForm";
+import GmbAuditScanner from "@/app/components/GmbAuditScanner";
+import GmbMapPackConsole from "@/app/components/GmbMapPackConsole";
 import GmbProfileCard from "@/app/components/GmbProfileCard";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import ScrollToFormLink from "@/app/components/ScrollToFormLink";
@@ -15,20 +16,6 @@ import {
   buildLocalBusinessJsonLd,
 } from "@/shared/seoSchemas";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
@@ -150,7 +137,7 @@ export const metadata: Metadata = {
       "GMB Reinstatement Service | Fix Suspended Google Business Profile",
   },
   description:
-    "Suspended Google Business Profile? Zonic Media's GMB reinstatement service recovers suspended & disabled GBP listings in 5–7 days. 700+ profiles reinstated. No Fix, No Charge.",
+    "Suspended Google Business Profile? Our GMB reinstatement service recovers suspended & disabled listings in 5–7 days. 700+ reinstated. No Fix, No Charge.",
   keywords: [
     "GMB reinstatement service",
     "Google Business Profile reinstatement",
@@ -194,7 +181,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-    <div className={`gmb-reinst-page ${manrope.variable} ${inter.variable}`}>
+    <div className="gmb-reinst-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -213,7 +200,7 @@ function page() {
         {/* ============ LEFT: CONTENT ============ */}
         <div className="gmb-content">
           {/* HERO */}
-          <section className="gmb-panel-navy hero">
+          <section className="gmb-panel hero">
             <span className="hero-badge">
               <span className="ping"></span>No. 1 Google Business Profile
               reinstatement agency in the US
@@ -221,7 +208,12 @@ function page() {
 
             <h1>
               Suspended Google Business Profile?{" "}
-              <span className="accent">Get Reinstated Fast.</span>
+              <span className="accent">
+                Get Reinstated Fast.
+                <svg viewBox="0 0 300 20" aria-hidden="true">
+                  <path d="M4 14 C 70 5, 230 3, 296 11" />
+                </svg>
+              </span>
             </h1>
 
             <p className="lead">
@@ -261,11 +253,12 @@ function page() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                {/* dark-text variant — the hero band is light now */}
                 <Image
                   className="hero-trust-badge"
-                  width={110}
-                  height={51}
-                  src="/images/Trustpilot-Logo.png"
+                  width={121}
+                  height={56}
+                  src="/images/trust-black.png"
                   alt="Zonic Media reviews on Trustpilot"
                 />
               </a>
@@ -278,7 +271,7 @@ function page() {
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </ScrollToFormLink>
-              <a href={SITE_CONTACT.phoneHref} className="btn btn-ghost-light">
+              <a href={SITE_CONTACT.phoneHref} className="btn btn-ghost">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 17, height: 17 }}>
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
                 </svg>
@@ -332,8 +325,11 @@ function page() {
                 Business Profile reinstatement) in the United States,
                 specializing in restoring suspended, disabled, and
                 pending-verification Google Business Profiles for small and
-                mid-size local businesses nationwide — from home services and
-                trades to{" "}
+                mid-size local businesses nationwide — across the{" "}
+                <Link href="/industries" className="gmb-inline-link">
+                  industries we serve
+                </Link>
+                , from home services and trades to{" "}
                 <Link href="/services/google-business-profile-services-real-estate-agents" className="gmb-inline-link">
                   real estate agents
                 </Link>{" "}
@@ -549,10 +545,13 @@ function page() {
             </div>
           </section>
 
+          {/* ===== BAND 1 — animated suspension audit scanner ===== */}
+          <GmbAuditScanner />
+
           {/* PROCESS */}
-          <section className="gmb-panel-navy gmb-process">
+          <section className="gmb-panel gmb-process">
             <div className="sec-head">
-              <span className="eyebrow light">How it works</span>
+              <span className="eyebrow">How it works</span>
               <h2>Back on Google in four proven steps</h2>
               <p>
                 A structured, transparent process — no guesswork. You&apos;ll
@@ -786,10 +785,13 @@ function page() {
             </div>
           </section>
 
+          {/* ===== BAND 2 — animated Map Pack visibility console ===== */}
+          <GmbMapPackConsole />
+
           {/* AUDIT CTA BAND */}
-          <section className="gmb-panel-navy gmb-auditcta">
+          <section className="gmb-panel-brand gmb-auditcta">
             <span className="eyebrow light">Free suspension audit</span>
-            <h2 style={{ fontSize: "clamp(24px,3.2vw,34px)", fontWeight: 800, color: "#fff", margin: "14px 0 0" }}>
+            <h2 style={{ fontSize: "clamp(24px,3.2vw,34px)", fontWeight: 500, letterSpacing: "-0.02em", color: "#fff", margin: "14px 0 0" }}>
               Every hour suspended, customers find your competitors
             </h2>
             <ul className="auditcta-points">

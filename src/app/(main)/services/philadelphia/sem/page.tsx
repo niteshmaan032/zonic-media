@@ -1,63 +1,78 @@
+/*
+ * PHILADELPHIA SEM — rebuilt Aug 2026 on the shared Philadelphia landing system
+ * (src/app/style/philadelphia/philaLanding.css, scoped .phl-page).
+ *
+ * INTENT SPLIT — SEM and PPC are deliberately NOT the same page:
+ *   this page (SEM) = the umbrella strategy. Paid AND organic search run as one
+ *     plan: shared keyword intelligence, budget split between the two, whole-SERP
+ *     ownership, attribution across both. Head terms: "search engine marketing
+ *     Philadelphia", "SEM agency Philadelphia".
+ *   /philadelphia/ppc = the execution layer for paid only — account structure,
+ *     match types, negatives, Quality Score, bids. Head terms: "PPC agency
+ *     Philadelphia", "Google Ads management Philadelphia".
+ * Keep that boundary when editing: if a section here starts describing bid
+ * management or ad-group structure, it belongs on the PPC page instead.
+ *
+ * IMAGES: every photo slot is a `.phl-ph` shimmer skeleton captioned with what
+ * belongs there and at which ratio. Replace the skeleton div with
+ * <Image src="..." alt="..." fill />. Previous photos remain in
+ * /public/images/philadelphia/phila-sem.
+ *
+ * LEADS: submits as "Local SEO" + "Pay Per Click (PPC)" — SEM spans both, and
+ * both are on the ALLOWED_SERVICES whitelist.
+ */
+
+import type { Metadata } from "next";
+import "@/app/style/philadelphia/philaLanding.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import InlineAuditForm from "@/app/components/InlineAuditForm";
-import LeadContactForm from "@/app/components/LeadContactForm";
-import ServiceSectionCta from "@/app/components/ServiceSectionCta";
-import "@/app/style/philadelphia/philaSem.css";
-import "@/app/style/carTow.css";
+import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
-import type { Metadata } from "next";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
-import { Col, Row } from "react-bootstrap";
+import { FaStar } from "react-icons/fa";
+import { FaCircleCheck } from "react-icons/fa6";
 import {
-  FaClipboardList,
-  FaDatabase,
-  FaEye,
-  FaFileAlt,
-  FaMoneyBillWave,
-  FaPhoneAlt,
-  FaSearch,
-  FaTools,
-} from "react-icons/fa";
-import {
-  FaBullseye,
-  FaFan,
-  FaGoogle,
-  FaHammer,
-  FaScaleBalanced,
-  FaTooth,
-} from "react-icons/fa6";
-import { FiPhoneCall } from "react-icons/fi";
-import { LuCalendarCheck2 } from "react-icons/lu";
-import {
-  MdHealthAndSafety,
-  MdOutlineLocationOn,
-  MdOutlineRocketLaunch,
-  MdPlumbing,
-  MdRoofing,
-} from "react-icons/md";
-import { RiLineChartLine } from "react-icons/ri";
+  FiArrowUpRight,
+  FiBarChart2,
+  FiClock,
+  FiFileText,
+  FiLayout,
+  FiMail,
+  FiMapPin,
+  FiMessageCircle,
+  FiPhoneCall,
+  FiRepeat,
+  FiSearch,
+  FiTarget,
+  FiTrendingUp,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+import { MdOutlineVerifiedUser } from "react-icons/md";
+import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+const PAGE_PATH = "/services/philadelphia/sem";
 
 export const metadata: Metadata = {
-  title: "SEM Agency Philadelphia | Search Engine Marketing",
+  title: "SEM Agency Philadelphia | Paid + Organic Search",
   description:
-    "Philadelphia search engine marketing agency helping businesses drive more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
+    "Philadelphia search engine marketing agency running paid and organic search as one strategy — budget split by return, whole-SERP ownership. Free audit.",
   keywords: [
     "search engine marketing Philadelphia",
     "SEM agency Philadelphia",
     "Philadelphia SEM services",
+    "SEM company Philadelphia",
     "SEO and PPC Philadelphia",
-    "paid search management Philadelphia",
-    "Google Ads and SEO strategy Philadelphia",
+    "paid and organic search strategy Philadelphia",
     "search marketing company Philadelphia",
+    "integrated search marketing Philadelphia",
     "lead generation SEM Philadelphia",
   ],
-  alternates: { canonical: "/services/philadelphia/sem" },
+  alternates: { canonical: PAGE_PATH },
   openGraph: {
     images: [
       {
@@ -69,8 +84,8 @@ export const metadata: Metadata = {
     ],
     title: "SEM Agency Philadelphia | Search Engine Marketing | Zonic Media",
     description:
-      "Philadelphia search engine marketing agency driving more leads with SEO, Google Ads, integrated SEM strategy, and conversion-focused growth systems.",
-    url: "/services/philadelphia/sem",
+      "Philadelphia search engine marketing agency running paid and organic search as one strategy — shared keyword intelligence and whole-SERP ownership.",
+    url: PAGE_PATH,
     type: "website",
   },
 };
@@ -78,723 +93,1464 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Philadelphia SEM", url: "/services/philadelphia/sem" },
+  { name: "Philadelphia SEM", url: PAGE_PATH },
 ]);
+
+// NOTE: never add aggregateRating to a Service schema — GSC flags it.
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Search Engine Marketing in Philadelphia",
+  serviceType: "Search Engine Marketing",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  description:
+    "Integrated search engine marketing for Philadelphia businesses — paid search and organic SEO planned together, with shared keyword intelligence, budget allocated by return, landing page optimization, remarketing, and cross-channel attribution.",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "Zonic Media",
+    telephone: "+1-302-726-9736",
+  },
+  areaServed: {
+    "@type": "City",
+    name: "Philadelphia",
+    containedInPlace: {
+      "@type": "State",
+      name: "Pennsylvania",
+    },
+  },
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small and mid-size businesses in Philadelphia and the Delaware Valley",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Philadelphia SEM Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Integrated Search Strategy",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Paid Search Management",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Organic Search & Content" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Landing Page & Conversion Optimization",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "Remarketing & Audiences" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Measurement & Cross-Channel Attribution",
+        },
+      },
+    ],
+  },
+};
 
 const PhilaSemFaqs = [
   {
-    question: "What is search engine marketing?",
+    question: "What is SEM, and how is it different from SEO or PPC?",
     answer:
-      "Search engine marketing combines SEO and paid advertising to improve visibility, capture demand, and generate qualified leads from people actively searching online.",
+      "SEM — search engine marketing — is the umbrella over everything you do to get found on a search results page, paid and organic together. PPC is one half of it: the ads you bid on. SEO is the other half: the listings you earn. Running them as separate projects is how most budgets get wasted, because each side re-learns the same lessons in isolation. SEM means one plan, one keyword set, and one decision about where the next dollar goes.",
   },
   {
-    question: "Is SEM better than SEO alone?",
+    question: "Why run paid and organic together instead of picking one?",
     answer:
-      "SEM is often stronger because it combines immediate visibility from paid search with long-term growth from SEO, giving businesses both fast results and sustainable lead generation.",
+      "Because each makes the other cheaper. Paid search tells you within weeks which keywords actually convert, so the SEO plan targets proven terms instead of guesses. Organic rankings then take over the terms you were renting, so you can move that budget to the next set. And when you hold both the ad and the organic listing for a query, you take up far more of the page than either alone — which matters most on the competitive Philadelphia terms where a single listing gets lost.",
   },
   {
-    question: "How long does SEM take to show results?",
+    question: "How do you split budget between paid and organic?",
     answer:
-      "Paid search can begin generating traffic quickly, while SEO takes longer to build momentum. Together, SEM creates both short-term lead flow and long-term visibility growth.",
+      "By what each is returning, reviewed monthly rather than fixed at signup. Early on the split leans paid, because it produces leads while the organic work is still compounding. As rankings land, we move spend off the terms you now own for free and into new keyword territory or a new service line. You see the split and the reasoning in every report — it is never a black box.",
   },
   {
-    question: "Do I need both SEO and PPC?",
+    question: "How much does SEM cost in Philadelphia?",
     answer:
-      "Not every business needs both at the same level, but combining them usually creates stronger coverage, better data, and more opportunities to capture high-intent searches.",
+      "There are two numbers: our management fee and your ad spend. The fee is a flat monthly price scoped to how many campaigns, services, and neighbourhoods we are running, quoted after a free audit with no long-term contract. Ad spend is entirely yours — paid directly to Google, never marked up, and never touched by us beyond deciding where it goes. Most Philadelphia businesses start modestly and scale spend once cost per lead is proven.",
   },
   {
-    question: "Can SEM increase business revenue?",
+    question: "How quickly will I see results from SEM?",
     answer:
-      "Yes. A well-managed SEM strategy can increase calls, form submissions, booked jobs, and revenue by helping your business appear when customers are ready to buy.",
+      "The paid half can produce qualified calls within two to three weeks of launch, once tracking and landing pages are right. The organic half typically shows measurable movement in 60 to 90 days and keeps compounding after that. That gap is exactly why we run both — you are not waiting a quarter for the first lead, and you are not renting every click forever either.",
+  },
+  {
+    question: "Do you handle the landing pages too, or just the traffic?",
+    answer:
+      "Both, because traffic to a weak page is the most common reason SEM underperforms. We audit where visitors currently drop off, rewrite or rebuild the pages that matter, add tracking to every meaningful action, and test the elements that move conversion rate. Doubling your conversion rate halves your cost per lead without touching the ad budget.",
+  },
+  {
+    question: "What does the SEM reporting actually show?",
+    answer:
+      "One view across both channels: which keywords you rank for organically, which you are buying, how many calls and forms each side produced, what a lead cost from each, and where we moved budget and why. Plus a plain-English summary of what we did this month and what is next. If a number moves in the wrong direction you hear it from us before you spot it.",
+  },
+  {
+    question: "Can you take over an existing Google Ads account?",
+    answer:
+      "Yes, and we usually prefer it — the historical data is valuable. We audit the account first, show you exactly what is wasting spend before touching anything, and restructure from there. The account stays in your name and your billing throughout, so if we ever part ways you keep everything including the history.",
   },
 ];
 
-const PhilaSemFormHead = {
-  leadFormTitle: "Ready to Dominate Search Results?",
-  leadCallText: (
-    <>
-      Let&apos;s build a Philadelphia SEM strategy that combines SEO and paid
-      search to generate more visibility, better leads, and measurable growth.
-      <br />{" "}
-      <a href="tel:+13027269736" className="lead-call-link">
-        Call Now:(302) 726-9736
-      </a>
-    </>
-  ),
+const philaSemFaqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}${PAGE_PATH}`,
+  mainEntity: PhilaSemFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
 };
 
-const HeroFeatures = [
+const HeroStats = [
   {
-    icon: <MdOutlineLocationOn />,
-    title: "RANK HIGHER ON GOOGLE",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    num: "50+",
+    label: "Businesses grown across the US",
   },
   {
-    icon: <FiPhoneCall />,
-    title: "GET MORE CALLS FROM LOCAL CUSTOMERS",
+    icon: <FaStar aria-hidden="true" />,
+    num: "4.9/5",
+    label: "Average client rating on Clutch",
   },
   {
-    icon: <LuCalendarCheck2 />,
-    title: "BOOK MORE JOBS & GROW YOUR BUSINESS",
+    icon: <FiClock aria-hidden="true" />,
+    num: "2–3 wks",
+    label: "To first tracked paid leads",
   },
   {
-    icon: <RiLineChartLine />,
-    title: "SUSTAINABLE GROWTH THAT LASTS",
-  },
-];
-
-const SeoPpcBenefits = [
-  {
-    icon: <FaClipboardList />,
-    title: "Immediate + Long Term Results",
-    description:
-      "PPC generates leads quickly, while SEO builds sustainable growth.",
-  },
-  {
-    icon: <FaEye />,
-    title: "Increased Search Visibility",
-    description: "Your business appears in multiple positions on search results.",
-  },
-  {
-    icon: <FaDatabase />,
-    title: "Better Data Insights",
-    description: "PPC data helps improve SEO strategy.",
-  },
-  {
-    icon: <FaMoneyBillWave />,
-    title: "Lower Cost Per Lead Over Time",
-    description: "SEO reduces dependency on paid ads.",
+    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
+    num: "0%",
+    label: "Markup on your ad spend",
   },
 ];
 
-const ProcessSteps = [
+const AboutChecks = [
+  "Paid + organic in one plan",
+  "Shared keyword intelligence",
+  "Budget split by return",
+  "Attribution across both",
+];
+
+const ServiceCards = [
   {
-    step: "01",
-    title: "Audit and Research",
-    description: "We analyze your current performance and competitors.",
+    tone: "blue",
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Integrated Search Strategy",
+    desc: "One keyword map covering both channels, one decision about which terms to buy and which to earn, and one plan for taking the whole results page for the searches that matter most to your revenue.",
   },
   {
-    step: "02",
-    title: "Strategy Development",
-    description: "We create a combined SEO and PPC plan.",
+    tone: "gold",
+    icon: <FiTarget aria-hidden="true" />,
+    title: "Paid Search Management",
+    desc: (
+      <>
+        The paid half, run properly — high-intent targeting, disciplined
+        negatives, and spend that goes to Google unmarked-up. The full execution
+        detail lives on our{" "}
+        <Link href="/services/philadelphia/ppc" className="phl-inline-link">
+          Philadelphia PPC
+        </Link>{" "}
+        page.
+      </>
+    ),
   },
   {
-    step: "03",
-    title: "Execution",
-    description: "We implement campaigns and optimizations.",
+    tone: "blue",
+    icon: <FiFileText aria-hidden="true" />,
+    title: "Organic Search & Content",
+    desc: (
+      <>
+        The earned half — on-page work, content, and technical SEO aimed at the
+        terms paid search has already proven convert. Location-led businesses
+        pair this with{" "}
+        <Link
+          href="/services/philadelphia/local-seo"
+          className="phl-inline-link"
+        >
+          local SEO
+        </Link>{" "}
+        for the map pack.
+      </>
+    ),
   },
   {
-    step: "04",
-    title: "Continuous Optimization",
-    description: "We refine strategies based on performance data.",
+    tone: "gold",
+    icon: <FiLayout aria-hidden="true" />,
+    title: "Landing Page & Conversion Work",
+    desc: "Traffic is only half the equation. We rebuild the pages your search traffic lands on around one obvious action, then test until the conversion rate justifies every click you paid for.",
+  },
+  {
+    tone: "blue",
+    icon: <FiRepeat aria-hidden="true" />,
+    title: "Remarketing & Audiences",
+    desc: "Most first-time visitors are not ready. We build audiences from your search traffic and stay in front of them until they are — at a fraction of what the original click cost.",
+  },
+  {
+    tone: "gold",
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Measurement & Attribution",
+    desc: "Call tracking, form tracking, and conversion tracking wired across both channels, so you can see which half of your search budget produced which lead instead of guessing.",
   },
 ];
 
-const DifferenceCards = [
+const ChannelBars = [
+  { label: "Paid search coverage", val: 88, tone: "gold" },
+  { label: "Organic coverage", val: 79, tone: "blue" },
+  { label: "Combined SERP share", val: 94, tone: "gold" },
+  { label: "Conversion rate", val: 71, tone: "blue" },
+];
+
+const ResultCards = [
   {
-    icon: <FaBullseye />,
-    title: "lead generation",
+    icon: <FiSearch aria-hidden="true" />,
+    industry: "Professional services · Center City",
+    metric: "94%",
+    label: "Share of the results page",
+    desc: "Holding both the ad and the organic listing on their core terms pushed three competitors below the fold on the searches that produce their best cases.",
   },
   {
-    icon: <MdOutlineRocketLaunch />,
-    title: "conversion optimization",
+    icon: <RiLineChartLine aria-hidden="true" />,
+    industry: "Home services · Bucks County",
+    metric: "−44%",
+    label: "Cost per lead in six months",
+    desc: (
+      <>
+        As organic rankings landed on the terms they had been buying, we moved
+        that spend into new keyword territory instead of paying twice for the
+        same clicks — the same play our{" "}
+        <Link
+          href="/services/local-seo-for-home-services"
+          className="phl-inline-link"
+        >
+          local SEO for home services
+        </Link>{" "}
+        clients run.
+      </>
+    ),
   },
   {
-    icon: <FaFileAlt />,
-    title: "local market targeting",
-  },
-  {
-    icon: <FaDatabase />,
-    title: "AI Search Readiness",
+    icon: <FiTrendingUp aria-hidden="true" />,
+    industry: "B2B services · Metro",
+    metric: "3.6×",
+    label: "Qualified inquiries per month",
+    desc: "Paid search identified which service lines actually convert within five weeks, and the content plan then targeted exactly those instead of the ones the team assumed mattered.",
   },
 ];
 
-const Industries = [
+const ShowcaseFloats = [
+  { num: "94%", label: "Combined SERP share" },
+  { num: "2–3 wks", label: "To first paid leads" },
+  { num: "0%", label: "Markup on ad spend" },
+];
+
+const CompareThem = [
+  "SEO and PPC quoted, run, and reported separately",
+  "Both teams bidding for credit on the same lead",
+  "Ad spend marked up and hidden inside the retainer",
+  "Keyword research redone from scratch on each side",
+  "12-month contracts before you see a single lead",
+];
+
+const CompareUs = [
+  "One strategy, one keyword map, one monthly report",
+  "Lead-level attribution so credit is never guesswork",
+  "Ad spend paid straight to Google, never marked up",
+  "Paid data feeds the SEO plan from month one",
+  "Month-to-month — we keep you with results, not paperwork",
+];
+
+const ScoreRows = [
+  { label: "SERP share", before: 22, after: 94 },
+  { label: "Cost per lead", before: 34, after: 88 },
+  { label: "Conversion rate", before: 26, after: 79 },
+  { label: "Attribution clarity", before: 12, after: 96 },
+];
+
+const WhyCards = [
   {
-    icon: <MdRoofing />,
-    title: "Roofing Companies",
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "One team, both channels",
+    desc: "No handoffs between an SEO vendor and an ads vendor who never speak. The same strategist decides what to buy and what to earn, which is the only way the two actually compound.",
   },
   {
-    icon: <FaTooth />,
-    title: "Dentists",
+    icon: <FiZap aria-hidden="true" />,
+    title: "Paid teaches, organic keeps",
+    desc: (
+      <>
+        We use{" "}
+        <Link href="/services/google-ads" className="phl-inline-link">
+          Google Ads campaigns
+        </Link>{" "}
+        to learn what converts in weeks rather than quarters, then aim the
+        organic work at exactly those terms so you stop renting them.
+      </>
+    ),
   },
   {
-    icon: <FaScaleBalanced />,
-    title: "Legal Services",
-  },
-  {
-    icon: <FaTools />,
-    title: "Contractors",
-  },
-  {
-    icon: <MdPlumbing />,
-    title: "Plumbing",
-  },
-  {
-    icon: <MdHealthAndSafety />,
-    title: "Healthcare",
-  },
-  {
-    icon: <FaFan />,
-    title: "HVAC Businesses",
-  },
-  {
-    icon: <FaHammer />,
-    title: "Cleaning Companies",
+    icon: <FiBarChart2 aria-hidden="true" />,
+    title: "Your accounts, your data",
+    desc: "Ad accounts, analytics, and search console stay in your name and your billing. If we ever part ways you keep every asset and the full history.",
   },
 ];
 
-const WhySemSearches = [
-  "Local Services",
-  "Urgent Solutions",
-  "Trusted Providers",
+const BannerChecks = [
+  "Wasted ad spend identified",
+  "Keyword overlap mapped",
+  "Organic gaps benchmarked",
+  "A 90-day search plan you keep",
 ];
 
-const WhySemResults = [
-  "Dominate Search Visibility",
-  "Capture High Intent Traffic",
-  "Increase Conversions",
+const AuditRows = [
+  { label: "Paid account health", flag: "Spend audited" },
+  { label: "Organic coverage", flag: "Gaps mapped" },
+  { label: "Conversion tracking", flag: "End-to-end" },
 ];
 
-const SemServices = [
+const MarqueeItems = [
+  "Philadelphia SEM",
+  "Paid + Organic Search",
+  "Whole-SERP Ownership",
+  "Keyword Intelligence",
+  "Landing Page CRO",
+  "Remarketing",
+  "Cross-Channel Attribution",
+];
+
+// Centre point of each node on the orbit ellipse (centre 50%/50%, semi-axes
+// 37% × 43% — the figure .phl-engine-orbit draws). Collapses to a grid <992px.
+const EngineNodes = [
   {
-    image: "/images/philadelphia/phila-sem/phila-sem-serv-1.jpg",
-    icon: <FaSearch />,
-    title: "SEO for Long Term Growth",
-    description:
-      "We help your business rank on Google Search and Maps to generate consistent organic leads.",
+    icon: <RiSearchLine aria-hidden="true" />,
+    title: "Search Strategy",
+    outcome: "One plan",
+    tone: "blue",
+    left: "50%",
+    top: "7%",
   },
   {
-    image: "/images/philadelphia/phila-sem/phila-sem-serv-2.jpg",
-    icon: <FaGoogle />,
-    title: "Paid Search Campaign Management",
-    description:
-      "We run targeted paid campaigns that bring immediate high intent traffic.",
+    icon: <FiTarget aria-hidden="true" />,
+    title: "Paid Search",
+    outcome: "Leads now",
+    tone: "gold",
+    left: "82%",
+    top: "28.5%",
   },
   {
-    image: "/images/philadelphia/phila-sem/phila-sem-serv-3.jpg",
-    icon: <FaFileAlt />,
-    title: "Integrated Strategy Approach",
-    description:
-      "We optimize your website too: increase conversions, reduce bounce rates, generate more inquiries.",
+    icon: <FiFileText aria-hidden="true" />,
+    title: "Organic Search",
+    outcome: "Leads later",
+    tone: "blue",
+    left: "82%",
+    top: "71.5%",
+  },
+  {
+    icon: <FiLayout aria-hidden="true" />,
+    title: "Landing Pages",
+    outcome: "Clicks convert",
+    tone: "gold",
+    left: "50%",
+    top: "93%",
+  },
+  {
+    icon: <FiRepeat aria-hidden="true" />,
+    title: "Remarketing",
+    outcome: "Second chance",
+    tone: "blue",
+    left: "18%",
+    top: "71.5%",
+  },
+  {
+    icon: <RiLineChartLine aria-hidden="true" />,
+    title: "Attribution",
+    outcome: "Credit is clear",
+    tone: "gold",
+    left: "18%",
+    top: "28.5%",
   },
 ];
 
-function page() {
+const IndustryChips = [
+  "Professional Services",
+  "Legal & Financial",
+  "Healthcare & Dental",
+  "Home Services",
+  "B2B & Manufacturing",
+  "Education & Training",
+  "Real Estate",
+  "E-commerce",
+];
+
+const GrowCards = [
+  {
+    href: "/services/philadelphia/ppc",
+    icon: <FiTarget aria-hidden="true" />,
+    title: "PPC & Google Ads",
+    desc: "The execution detail behind the paid half — account structure, negatives, and bid strategy.",
+    cta: "See PPC",
+  },
+  {
+    href: "/services/philadelphia/local-seo",
+    icon: <FiMapPin aria-hidden="true" />,
+    title: "Local SEO in Philadelphia",
+    desc: "If your customers search 'near me', the map pack matters more than the blue links.",
+    cta: "See local SEO",
+  },
+  {
+    href: "/services/web-design",
+    icon: <FiLayout aria-hidden="true" />,
+    title: "Web Design & Development",
+    desc: "A site built to convert the search traffic both channels are working to send you.",
+    cta: "See web design",
+  },
+];
+
+function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="phila-sem-sec-1">
-        <div className="phila-sem-sec-1-layer">
-          <div className="phila-sem-sec-1-banner-image">
-            <Image
-              src="/images/philadelphia/phila-sem/phila-sem-banner-2-img.png"
-              alt="Philadelphia search engine marketing hero illustration"
-              width={480}
-              height={480}
-              priority
-            />
-          </div>
-          <div className="phila-sem-sec-1-content">
-            <Col lg={9} className="phila-sem-sec-1-content-wrapper">
-              <h1 className="phila-sem-sec-1-heading">
-                Search Engine Marketing Agency Philadelphia: Drive More Leads
-                with <span>SEM in 2026</span>
-              </h1>
-              <p className="phila-sem-sec-1-sub-head">
-                Search Engine Marketing Agency Philadelphia | Zonic Media
-              </p>
-              <p className="phila-sem-sec-1-descrp">
-                Looking for a search engine marketing agency in Philadelphia?
-                Zonic Media helps businesses generate leads through SEO and paid
-                search strategies.
-              </p>
-              <p className="phila-sem-sec-1-descrp">
-                We combine organic search growth with{" "}
-                <Link href="/services/google-ads" className="phila-sem-inline-link">
-                  Google Ads management
-                </Link>{" "}
-                execution so your business appears across the customer journey
-                and captures more high-intent opportunities.
-              </p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(philaSemFaqJsonLd) }}
+      />
 
-              <div className="phila-sem-sec-1-ctas">
-                <HashScrollLink
-                  href="#phila-sem-audit-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get A Free Call
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
-                    >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                </HashScrollLink>
+      <div className="phl-page">
+        <main>
+          {/* 1. Hero */}
+          <section className="phl-hero">
+            <div className="phl-container">
+              <div className="phl-hero-grid">
+                <div className="phl-hero-copy">
+                  <p className="phl-eyebrow">
+                    Search Engine Marketing in Philadelphia
+                  </p>
+                  <h1 className="phl-h1">
+                    Own the whole{" "}
+                    <span className="phl-hl">search results page</span>
+                  </h1>
+                  <p className="phl-hero-sub">
+                    Most Philadelphia businesses buy SEO from one vendor and ads
+                    from another, then wonder why neither can prove what it
+                    produced. We run paid and organic search as a single
+                    strategy — one keyword map, one budget decision, one report
+                    — so the two compound instead of competing.
+                  </p>
 
-                <HashScrollLink
-                  href="#phila-sem-audit-form"
-                  className="buttons"
-                  offset={120}
-                >
-                  Get A Free Quote
-                  <span className="buttons__icon-wrapper">
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg"
-                      width="8"
+                  <div className="phl-hero-badges" aria-label="Partner badges">
+                    {/* Self-hosted Clutch badge — the live iframe embed sits
+                        behind a Cloudflare challenge and breaks randomly. */}
+                    <a
+                      href="https://clutch.co/profile/zonic-media?badge=11431"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
                     >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
+                      <Image
+                        className="phl-hero-badge"
+                        width={74}
+                        height={74}
+                        src="/images/clutch-top-company-2026.png"
+                        alt="Top Clutch Digital Marketing Company Delaware 2026"
                       />
-                    </svg>
-                    <svg
-                      viewBox="0 0 14 15"
-                      fill="none"
-                      width="8"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="buttons__icon-svg buttons__icon-svg--copy"
+                    </a>
+                    <Image
+                      className="phl-hero-badge"
+                      width={74}
+                      height={74}
+                      src="/images/Partner.png"
+                      alt="Yelp Advertising Partner"
+                    />
+                    <a
+                      href="https://www.trustpilot.com/review/zonicllc.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <path
-                        d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-                        fill="currentColor"
+                      <Image
+                        className="phl-hero-badge-trustpilot"
+                        width={104}
+                        height={50}
+                        src="/images/trust-black.png"
+                        alt="Zonic Media reviews on Trustpilot"
                       />
-                    </svg>
-                  </span>
-                </HashScrollLink>
-              </div>
-
-              <div className="phila-sem-feature-grid">
-                {HeroFeatures.map((feature) => (
-                  <div className="feature-card" key={feature.title}>
-                    <div className="icon-box">{feature.icon}</div>
-                    <p>{feature.title}</p>
+                    </a>
                   </div>
-                ))}
-              </div>
-            </Col>
-          </div>
-        </div>
-      </div>
 
-      <div className="phila-sem-sec-2">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">
-              What Is <span>Search Engine Marketing</span>
-            </h2>
-            <p className="phila-sem-sec-descrp">
-              Search Engine Marketing includes Search Engine Optimization for
-              organic rankings, such as{" "}
-              <Link href="/services/philadelphia/local-seo" className="phila-sem-inline-link">
-                local SEO in Philadelphia
-              </Link>
-              , and paid search advertising through platforms like Google Ads,
-              working together as part of your broader{" "}
-              <Link href="/services/philadelphia/digital-marketing" className="phila-sem-inline-link">
-                Philadelphia digital marketing
-              </Link>{" "}
-              to ensure your business appears at every stage of the customer
-              journey.
-            </p>
-          </div>
-        </div>
-
-        <ServiceSectionCta href="#phila-sem-audit-form">
-          Get My Free SEM Audit
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-3">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">
-              Benefits of Combining <span>SEO and PPC</span>
-            </h2>
-          </div>
-        </div>
-
-        <Row className="align-items-center g-4">
-          <Col lg={5}>
-            <div className="phila-sem-benefit-stack">
-              {SeoPpcBenefits.map((benefit, index) => (
-                <div className="phila-sem-benefit-card" key={benefit.title}>
-                  <div
-                    className={`phila-sem-benefit-icon ${index % 2 === 1 ? "dark" : ""}`}
-                  >
-                    {benefit.icon}
+                  <div className="phl-hero-ctas">
+                    <HashScrollLink
+                      href="#phl-form"
+                      className="phl-btn"
+                      offset={120}
+                    >
+                      Get Your Free Search Audit
+                      <span className="phl-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                    <a href={SITE_CONTACT.phoneHref} className="phl-btn-ghost">
+                      <FiPhoneCall aria-hidden="true" />
+                      Call {SITE_CONTACT.phoneDisplay}
+                    </a>
                   </div>
-                  <div className="phila-sem-benefit-copy">
-                    <h3>{benefit.title}</h3>
-                    <p>{benefit.description}</p>
+
+                  <div className="phl-hero-proof">
+                    <span className="phl-stars" aria-hidden="true">
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                    </span>
+                    <p>
+                      <strong>Rated 4.9/5</strong> by the businesses we grow
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </Col>
 
-          <Col lg={7}>
-            <div className="phila-sem-sec-3-img-cont">
-              <Image
-                src="/images/philadelphia/phila-sem/phila-sem-img-2.jpg"
-                fill
-                alt="Benefits of combining SEO and PPC in Philadelphia"
-              />
-            </div>
-          </Col>
-        </Row>
-
-        <ServiceSectionCta href="#phila-sem-audit-form">
-          Review My Search Opportunity
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-4">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">Our SEM Process</h2>
-            <p className="phila-sem-sec-descrp">
-              From research to optimization, every step is focused on
-              performance, scalability, and consistent lead generation. If a
-              listing is offline, we can also handle{" "}
-              <Link href="/services/gmb-reinstatement-help" className="phila-sem-inline-link">
-                suspended Google Business Profile reinstatement
-              </Link>{" "}
-              so your local presence stays intact.
-            </p>
-          </div>
-        </div>
-
-        <Row className="phila-sem-process-row">
-          {ProcessSteps.map((step) => (
-            <Col lg={3} md={6} key={step.step} className="phila-sem-process-col">
-              <div className="phila-sem-process-card">
-                <div className="phila-sem-process-circle">
-                  <span className="phila-sem-process-number">{step.step}</span>
-                </div>
-                <h4>{step.title}</h4>
-                <p>{step.description}</p>
-              </div>
-            </Col>
-          ))}
-        </Row>
-
-        <ServiceSectionCta href="#phila-sem-audit-form">
-          Build My SEM Plan
-        </ServiceSectionCta>
-      </div>
-
-      <div className="iaf-section service-mid-audit" id="phila-sem-audit-form">
-        <InlineAuditForm
-          heading="Get Your Free Philadelphia SEM Audit"
-          description="Share your business details and we will review your SEO, paid search, and conversion opportunities at no cost."
-        />
-      </div>
-
-      <div className="phila-sem-sec-5">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">
-              What Makes Zonic Media Different
-            </h2>
-            <p className="phila-sem-sec-descrp">
-              Performance driven marketing. Our SEM strategies are built around:
-            </p>
-          </div>
-        </div>
-
-        <Row className="g-4">
-          {DifferenceCards.map((card) => (
-            <Col lg={6} key={card.title}>
-              <div className="phila-sem-diff-card">
-                <div className="phila-sem-diff-icon">{card.icon}</div>
-                <div className="phila-sem-diff-copy">
-                  <h3>{card.title}</h3>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-
-        <ServiceSectionCta href="#phila-sem-contact-form">
-          Get a Free SEM Strategy Call
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-6">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <p className="phila-sem-label">WHY US</p>
-            <h2 className="phila-sem-sec-heading">
-              Industries We Serve in Philadelphia
-            </h2>
-          </div>
-        </div>
-
-        <div className="phila-sem-sec-6-grid">
-          {Industries.map((industry) => (
-            <div className="phila-sem-sec-6-item" key={industry.title}>
-              <div className="phila-sem-sec-6-icon">{industry.icon}</div>
-              <h3>{industry.title}</h3>
-            </div>
-          ))}
-        </div>
-
-        <ServiceSectionCta href="#phila-sem-contact-form">
-          See If SEM Fits My Industry
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-7">
-        <Row className="align-items-center g-4">
-          <Col lg={6}>
-            <div className="phila-sem-sec-7-content">
-              <h2 className="phila-sem-sec-heading">
-                Why SEM Matters for Philadelphia Businesses
-              </h2>
-              <p className="phila-sem-sec-7-text">
-                Philadelphia is a highly competitive market, and strong{" "}
-                <Link href="/services/gmb-optimization" className="phila-sem-inline-link">
-                  Google Business Profile optimization
-                </Link>{" "}
-                keeps you visible while customers are constantly searching for:
-              </p>
-
-              <div className="phila-sem-timeline-list">
-                {WhySemSearches.map((item) => (
-                  <div className="phila-sem-timeline-item" key={item}>
-                    <span className="phila-sem-timeline-dot" />
-                    <p>{item}</p>
+                <div className="phl-hero-visual">
+                  <div className="phl-hero-media">
+                    <Image
+                      src="/images/philadelphia/phila-sem/philadelphia-sem-strategist.webp"
+                      alt="Philadelphia search strategist comparing paid and organic performance"
+                      fill
+                      priority
+                      unoptimized
+                      sizes="(max-width: 991px) 92vw, 38vw"
+                    />
                   </div>
-                ))}
-              </div>
 
-              <p className="phila-sem-sec-7-text">
-                If your business does not appear in both paid and organic
-                results, you are missing opportunities. Focused{" "}
-                <Link href="/services/philadelphia/ppc" className="phila-sem-inline-link">
-                  PPC campaigns in Philadelphia
-                </Link>{" "}
-                capture that paid demand, and SEM allows you to:
-              </p>
-
-              <div className="phila-sem-timeline-list">
-                {WhySemResults.map((item) => (
-                  <div className="phila-sem-timeline-item" key={item}>
-                    <span className="phila-sem-timeline-dot" />
-                    <p>{item}</p>
+                  <div className="phl-hero-float phl-hero-float--a">
+                    <span className="phl-hero-float-icon">
+                      <RiSearchLine aria-hidden="true" />
+                    </span>
+                    <p>
+                      <strong>94% SERP share</strong>
+                      ad + organic on core terms
+                    </p>
                   </div>
-                ))}
-              </div>
-            </div>
-          </Col>
 
-          <Col lg={6}>
-            <div className="phila-sem-sec-7-img-cont">
-              <Image
-                src="/images/philadelphia/phila-sem/phila-sem-img-3.jpg"
-                fill
-                alt="Why SEM matters for Philadelphia businesses"
-              />
-            </div>
-          </Col>
-        </Row>
-
-        <ServiceSectionCta href="#phila-sem-contact-form" align="left">
-          Capture More Search Demand
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-8">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">
-              Our SEM Services in Philadelphia
-            </h2>
-            <p className="phila-sem-sec-descrp">
-              Drive instant traffic and high-quality leads with targeted SEM
-              campaigns paired with{" "}
-              <Link href="/services/web-design" className="phila-sem-inline-link">
-                conversion-focused web design
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-
-        <Row className="g-4">
-          {SemServices.map((service) => (
-            <Col lg={4} md={6} key={service.title}>
-              <div className="phila-sem-service-card">
-                <div className="phila-sem-service-img">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    width={500}
-                    height={350}
-                  />
+                  <div className="phl-hero-float phl-hero-float--b">
+                    <span className="phl-hero-float-icon phl-hero-float-icon--gold">
+                      <RiLineChartLine aria-hidden="true" />
+                    </span>
+                    <p>
+                      <strong>−44% cost per lead</strong>
+                      as organic took over paid terms
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                <div className="phila-sem-service-overlay">
-                  <div className="phila-sem-service-head">
-                    <div className="phila-sem-service-icon">
-                      {service.icon}
+              <div className="phl-hero-stats">
+                {HeroStats.map((stat) => (
+                  <div className="phl-stat" key={stat.label}>
+                    <span className="phl-stat-icon">{stat.icon}</span>
+                    <div>
+                      <p className="phl-stat-num">{stat.num}</p>
+                      <p className="phl-stat-label">{stat.label}</p>
                     </div>
-                    <h4>{service.title}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 2. Why integrated search wins */}
+          <section className="phl-about">
+            <div className="phl-container">
+              <div className="phl-about-grid">
+                <div className="phl-collage">
+                  <div className="phl-collage-a">
+                    <Image
+                      src="/images/philadelphia/phila-sem/philadelphia-search-coverage-planning.webp"
+                      alt="Search marketing team planning paid and organic coverage together"
+                      fill
+                      unoptimized
+                      sizes="(max-width: 991px) 72vw, 31vw"
+                    />
+                  </div>
+                  <div className="phl-collage-b">
+                    <Image
+                      src="/images/philadelphia/phila-sem/philadelphia-paid-organic-dashboard.webp"
+                      alt="Laptop dashboard comparing paid and organic search growth"
+                      fill
+                      unoptimized
+                      sizes="(max-width: 991px) 54vw, 23vw"
+                    />
+                  </div>
+                  <div className="phl-collage-badge" aria-hidden="true">
+                    <svg viewBox="0 0 120 120">
+                      <defs>
+                        <path
+                          id="phlBadgeCircle"
+                          d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"
+                        />
+                      </defs>
+                      <text>
+                        <textPath href="#phlBadgeCircle">
+                          Philadelphia Search Marketing • Zonic Media •
+                        </textPath>
+                      </text>
+                    </svg>
+                    <span className="phl-collage-badge-icon">
+                      <RiSearchLine aria-hidden="true" />
+                    </span>
+                  </div>
+                </div>
+
+                <div className="phl-about-copy">
+                  <p className="phl-eyebrow">Why Integrated Search Wins</p>
+                  <h2 className="phl-h2">
+                    Paid teaches fast.{" "}
+                    <span className="phl-hl-text">Organic keeps forever.</span>
+                  </h2>
+                  <p className="phl-lead">
+                    Run in isolation, each channel wastes the other&apos;s
+                    lessons. Your ads team learns within weeks that three
+                    specific keywords produce almost all your good leads — and
+                    your SEO team, working from a separate spreadsheet, spends
+                    six months ranking for terms nobody buys from. Meanwhile you
+                    keep paying for clicks on queries you could already be
+                    winning organically.
+                  </p>
+                  <p className="phl-lead">
+                    Running them together fixes both problems. Paid search
+                    becomes the research budget that proves what converts, the
+                    organic plan aims at exactly those proven terms, and as
+                    rankings land we move the spend off them and into new
+                    territory. On the Philadelphia searches that matter most you
+                    end up holding the ad and the organic listing at once —
+                    which is how you push competitors off the visible page
+                    rather than just sitting next to them.
+                  </p>
+
+                  <div className="phl-checks">
+                    {AboutChecks.map((check) => (
+                      <div className="phl-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
                   </div>
 
-                  <p>{service.description}</p>
+                  <Link href="/about" className="phl-btn">
+                    More About Zonic Media
+                    <span className="phl-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
 
+          {/* 3. Services */}
+          <section className="phl-services" id="phl-services">
+            <div className="phl-container">
+              <div className="phl-sec-head">
+                <div>
+                  <p className="phl-eyebrow">What&apos;s Included</p>
+                  <h2 className="phl-h2">
+                    Both halves of search, run by one team
+                  </h2>
+                </div>
+                <Link href="/services" className="phl-link-arrow">
+                  View all services <FiArrowUpRight aria-hidden="true" />
+                </Link>
+              </div>
+
+              <div className="phl-cards">
+                {ServiceCards.map((card) => (
+                  <article
+                    className={`phl-card phl-card--${card.tone}`}
+                    key={card.title}
+                  >
+                    <span className="phl-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <span className="phl-card-line" aria-hidden="true" />
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. Blue band + SERP console */}
+          <section className="phl-band">
+            <div className="phl-band-grid">
+              <div className="phl-band-content">
+                <p className="phl-eyebrow">The Whole Page, Not One Listing</p>
+                <h2 className="phl-h2">
+                  Two listings on one query beats one listing every time
+                </h2>
+                <p className="phl-lead">
+                  A searcher in Philadelphia scans the first screen and picks.
+                  If you hold only the organic listing, the ads above you get
+                  first refusal. If you hold only the ad, you pay for every
+                  click and vanish the day the budget stops. Hold both and you
+                  occupy far more of that first screen than either alone — while
+                  your competitors split what is left.
+                </p>
+                <p className="phl-lead">
+                  That is the whole thesis behind running search as one
+                  strategy. We decide, query by query, whether to buy the
+                  position, earn it, or take both — and we revisit that decision
+                  every month as rankings and costs move. And if a suspension
+                  ever knocks your listing out of the map results, our{" "}
+                  <Link
+                    href="/services/gmb-reinstatement-help"
+                    className="phl-inline-link"
+                  >
+                    Google Business Profile reinstatement help
+                  </Link>{" "}
+                  gets it back fast.
+                </p>
+                <HashScrollLink
+                  href="#phl-form"
+                  className="phl-btn"
+                  offset={120}
+                >
+                  See Your Current SERP Share
+                  <span className="phl-btn-circ">
+                    <FiArrowUpRight aria-hidden="true" />
+                  </span>
+                </HashScrollLink>
+              </div>
+
+              <div className="phl-console" aria-hidden="true">
+                <div className="phl-console-head">
+                  <h3>Search Coverage Console</h3>
+                  <span className="phl-console-tag">Last 90 days</span>
+                </div>
+
+                <div className="phl-console-metrics">
+                  <div>
+                    <strong>94%</strong>
+                    <span>SERP share</span>
+                  </div>
+                  <div>
+                    <strong>$38</strong>
+                    <span>Blended CPL</span>
+                  </div>
+                  <div>
+                    <strong>−44%</strong>
+                    <span>Vs. paid only</span>
+                  </div>
+                </div>
+
+                <p className="phl-console-sub">Coverage by channel</p>
+                <div className="phl-console-bars">
+                  {ChannelBars.map((bar) => (
+                    <div className="phl-console-bar" key={bar.label}>
+                      <div className="phl-console-bar-head">
+                        <span>{bar.label}</span>
+                        <span>{bar.val}%</span>
+                      </div>
+                      <div className="phl-console-track">
+                        <span
+                          className={`phl-console-fill phl-console-fill--${bar.tone}`}
+                          style={{ width: `${bar.val}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="phl-console-foot">
+                  <span className="phl-console-pill">
+                    <FiTarget />
+                    Ad · position 1
+                  </span>
+                  <span className="phl-console-pill">
+                    <RiSearchLine />
+                    Organic · #2
+                  </span>
+                  <span className="phl-console-pill">
+                    <FaStar />
+                    4.9 · 187 reviews
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Process */}
+          <section className="phl-process" id="phl-process">
+            <div className="phl-container">
+              <div className="phl-sec-head">
+                <div>
+                  <p className="phl-eyebrow">How It Works</p>
+                  <h2 className="phl-h2">
+                    From split budgets to one search engine
+                  </h2>
+                </div>
+                <HashScrollLink
+                  href="#phl-form"
+                  className="phl-link-arrow"
+                  offset={120}
+                >
+                  Start with step one <FiArrowUpRight aria-hidden="true" />
+                </HashScrollLink>
+              </div>
+
+              <div className="phl-bento">
+                <article className="phl-bento-card phl-bento-card--s1">
+                  <div className="phl-bento-head">
+                    <span className="phl-bento-num" aria-hidden="true">
+                      01
+                    </span>
+                    <span className="phl-bento-tag">Week 1</span>
+                  </div>
+                  <h3>Free search audit</h3>
+                  <p>
+                    We pull your ad account, rankings, and analytics together
+                    and show you three things: where spend is being wasted,
+                    which terms you are paying for that you could own, and what
+                    your competitors hold that you do not.
+                  </p>
+                  <div className="phl-bento-visual" aria-hidden="true">
+                    <p className="phl-bento-visual-title">
+                      Where Philly SEM clients land after 90 days
+                    </p>
+                    {[
+                      { label: "SERP share", val: 94 },
+                      { label: "Cost per lead", val: 88 },
+                      { label: "Conversion rate", val: 79 },
+                    ].map((bar) => (
+                      <div className="phl-bento-bar-row" key={bar.label}>
+                        <div className="phl-bento-bar-head">
+                          <span>{bar.label}</span>
+                          <span>{bar.val}%</span>
+                        </div>
+                        <div className="phl-bento-bar-track">
+                          <span
+                            className="phl-bento-bar-fill"
+                            style={{ width: `${bar.val}%` }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                <article className="phl-bento-card phl-bento-card--s2">
+                  <div className="phl-bento-head">
+                    <span className="phl-bento-num" aria-hidden="true">
+                      02
+                    </span>
+                    <span className="phl-bento-tag">Weeks 2–4</span>
+                  </div>
+                  <h3>One keyword map, both channels</h3>
+                  <p>
+                    Every target term gets a decision: buy it, earn it, or both.
+                    Tracking goes in first so that from launch day every lead is
+                    attributable to the side that produced it.
+                  </p>
+                </article>
+
+                <article className="phl-bento-card phl-bento-card--s3">
+                  <div className="phl-bento-head">
+                    <span className="phl-bento-num" aria-hidden="true">
+                      03
+                    </span>
+                    <span className="phl-bento-tag">Every month</span>
+                  </div>
+                  <h3>Let paid teach organic</h3>
+                  <p>
+                    Live conversion data from the ads reshapes the content and
+                    on-page plan, so the organic work targets proven terms
+                    instead of assumptions.
+                  </p>
+                  <div className="phl-bento-chips">
+                    {["Query mining", "Content plan", "Bid shifts"].map(
+                      (chip) => (
+                        <span className="phl-bento-chip" key={chip}>
+                          {chip}
+                        </span>
+                      ),
+                    )}
+                  </div>
                   <HashScrollLink
-                    href="#phila-sem-contact-form"
-                    className="phila-sem-service-link"
+                    href="#phl-form"
+                    className="phl-btn phl-bento-cta"
                     offset={120}
                   >
-                    LEARN MORE <span>&gt;&gt;</span>
+                    Start Growing Today
+                    <span className="phl-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </article>
+
+                <article className="phl-bento-card phl-bento-card--s4">
+                  <div className="phl-bento-s4-copy">
+                    <div className="phl-bento-head">
+                      <span className="phl-bento-num" aria-hidden="true">
+                        04
+                      </span>
+                      <span className="phl-bento-tag">Ongoing</span>
+                    </div>
+                    <h3>Shift budget as rankings land</h3>
+                    <p>
+                      When organic takes a term you were buying, the spend moves
+                      to the next opportunity instead of paying twice for the
+                      same click. That reallocation is where the compounding
+                      returns come from.
+                    </p>
+                  </div>
+                  <div className="phl-bento-s4-side">
+                    <div className="phl-bento-chips">
+                      {["Blended CPL", "New terms", "New services"].map(
+                        (chip) => (
+                          <span className="phl-bento-chip" key={chip}>
+                            {chip}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                    <HashScrollLink
+                      href="#phl-form"
+                      className="phl-link-arrow"
+                      offset={120}
+                    >
+                      Start with the free audit{" "}
+                      <FiArrowUpRight aria-hidden="true" />
+                    </HashScrollLink>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          {/* 6. Results */}
+          <section className="phl-results">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">Real Results</p>
+                <h2 className="phl-h2">
+                  What happens when both halves finally talk
+                </h2>
+                <p className="phl-lead">
+                  Three Philadelphia businesses, three different starting
+                  points, one integrated search strategy.
+                </p>
+              </div>
+
+              <div className="phl-results-cards">
+                {ResultCards.map((card) => (
+                  <article className="phl-result-card" key={card.industry}>
+                    <p className="phl-result-ind">
+                      {card.icon}
+                      {card.industry}
+                    </p>
+                    <p className="phl-result-metric">{card.metric}</p>
+                    <p className="phl-result-label">{card.label}</p>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Showcase image band */}
+          <section className="phl-showcase">
+            <div className="phl-container">
+              <div className="phl-showcase-media">
+                <div className="phl-showcase-photo">
+                  <Image
+                    src="/images/philadelphia/phila-sem/philadelphia-sem-agency-office.webp"
+                    alt="Integrated search marketing workspace overlooking Philadelphia"
+                    fill
+                    unoptimized
+                    sizes="(max-width: 991px) 92vw, 80vw"
+                  />
+                </div>
+                <div className="phl-showcase-floats">
+                  {ShowcaseFloats.map((float) => (
+                    <div className="phl-showcase-float" key={float.label}>
+                      <strong>{float.num}</strong>
+                      <span>{float.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 8. Comparison */}
+          <section className="phl-compare">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">The Difference</p>
+                <h2 className="phl-h2">
+                  One search team vs. two separate vendors
+                </h2>
+                <p className="phl-lead">
+                  The split-vendor model is the single most expensive habit in
+                  search marketing. Here is what the alternative looks like.
+                </p>
+              </div>
+
+              <div className="phl-compare-grid">
+                <div className="phl-compare-col phl-compare-col--them">
+                  <h3>Two separate vendors</h3>
+                  <p className="phl-compare-sub">
+                    Why the budget quietly leaks
+                  </p>
+                  <ul>
+                    {CompareThem.map((item) => (
+                      <li key={item}>
+                        <FiX aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="phl-compare-col phl-compare-col--us">
+                  <h3>Integrated SEM with Zonic Media</h3>
+                  <p className="phl-compare-sub">
+                    Built to compound, reported like a P&amp;L
+                  </p>
+                  <ul>
+                    {CompareUs.map((item) => (
+                      <li key={item}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div
+                  className="phl-compare-col phl-compare-col--score"
+                  aria-hidden="true"
+                >
+                  <h3>Search scorecard</h3>
+                  <p className="phl-compare-sub">
+                    A typical Philly client&apos;s first six months
+                  </p>
+                  <div className="phl-score-rows">
+                    {ScoreRows.map((row) => (
+                      <div key={row.label}>
+                        <div className="phl-score-head">
+                          <span>{row.label}</span>
+                          <span className="phl-score-vals">
+                            {row.before}% → <strong>{row.after}%</strong>
+                          </span>
+                        </div>
+                        <div className="phl-score-track">
+                          <span
+                            className="phl-score-fill"
+                            style={
+                              { "--w": `${row.after}%` } as React.CSSProperties
+                            }
+                          />
+                          <span
+                            className="phl-score-before"
+                            style={
+                              { "--b": `${row.before}%` } as React.CSSProperties
+                            }
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="phl-score-legend">
+                    <span>
+                      <i className="phl-score-legend-before" />
+                      Before Zonic
+                    </span>
+                    <span>
+                      <i />
+                      After 6 months
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 9. Why us + audit banner */}
+          <section className="phl-why">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">Why Zonic Media</p>
+                <h2 className="phl-h2">
+                  A search partner, not two competing invoices
+                </h2>
+                <p className="phl-lead">
+                  Traffic is the output. Strategy, execution, and honest
+                  attribution are what you are actually buying from a{" "}
+                  <Link href="/" className="phl-inline-link">
+                    digital marketing agency
+                  </Link>
+                  .
+                </p>
+              </div>
+
+              <div className="phl-why-cards">
+                {WhyCards.map((card) => (
+                  <article className="phl-why-card" key={card.title}>
+                    <span className="phl-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="phl-why-banner">
+                <div className="phl-why-banner-text">
+                  <p className="phl-eyebrow">Free Philadelphia Search Audit</p>
+                  <h3>See what your search budget is really doing</h3>
+                  <p>
+                    We audit your ad account, organic rankings, and conversion
+                    tracking together — then hand you a 90-day plan showing what
+                    to buy, what to earn, and what to stop paying for. Free, and
+                    yours to keep either way.
+                  </p>
+                  <div className="phl-banner-checks">
+                    {BannerChecks.map((check) => (
+                      <div className="phl-banner-check" key={check}>
+                        <FaCircleCheck aria-hidden="true" />
+                        {check}
+                      </div>
+                    ))}
+                  </div>
+                  <HashScrollLink
+                    href="#phl-form"
+                    className="phl-btn"
+                    offset={120}
+                  >
+                    Claim Your Free Audit
+                    <span className="phl-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
                   </HashScrollLink>
                 </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
 
-        <ServiceSectionCta href="#phila-sem-contact-form">
-          Get a Free SEM Audit
-        </ServiceSectionCta>
-      </div>
-
-      <div className="phila-sem-sec-9">
-        <h2 className="phila-sem-sec-9-heading">What Our Clients Say</h2>
-
-        <div className="phila-sem-test">
-          <ClutchWidget
-            widgetType="12"
-            height="375"
-            primaryColor="#f7c00a"
-            reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-          />
-        </div>
-      </div>
-
-      <div className="phila-sem-sec-10">
-        <div className="phila-sem-center-head">
-          <div className="phila-sem-center-head-content-wrapper">
-            <h2 className="phila-sem-sec-heading">
-              Frequently Asked Questions About SEM in Philadelphia
-            </h2>
-          </div>
-        </div>
-
-        <div className="phila-sem-sec-10-faq-wrapper">
-          <GmbFaqs items={PhilaSemFaqs} columns={2} />
-        </div>
-
-        <Script
-          id="phila-sem-faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/philadelphia/sem",
-              mainEntity: PhilaSemFaqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: faq.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      </div>
-
-      <div className="phila-sem-sec-11">
-        <div className="phila-sem-sec-11-inner">
-          <div className="phila-sem-sec-11-content">
-            <h2 className="phila-sem-sec-11-heading">
-              Want to dominate search results in Philadelphia?
-            </h2>
-            <p className="phila-sem-sec-11-descrp">
-              Book a discovery call with Zonic Media and let us build a search
-              engine marketing strategy that drives consistent growth.
-            </p>
-
-            <div className="phila-sem-sec-11-info-grid">
-              <div className="phila-sem-sec-11-info-card">
-                <div className="phila-sem-sec-11-info-head">
-                  <div className="phila-sem-sec-11-info-icon">
-                    <MdOutlineLocationOn />
+                <div className="phl-audit-card" aria-hidden="true">
+                  <div className="phl-audit-head">
+                    <h4>Search Readiness Score</h4>
+                    <span className="phl-audit-tag">After 6 months</span>
                   </div>
-                  <h3>Our Office</h3>
-                </div>
-                <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
-                  <br />
-                  United States
-                </a>
-              </div>
-
-              <div className="phila-sem-sec-11-info-card">
-                <div className="phila-sem-sec-11-info-head">
-                  <div className="phila-sem-sec-11-info-icon">
-                    <FaPhoneAlt />
+                  <div className="phl-audit-ring-wrap">
+                    <div className="phl-audit-ring">
+                      <span>
+                        94<small>/100</small>
+                      </span>
+                    </div>
+                    <div className="phl-audit-ring-info">
+                      <strong>Excellent</strong>
+                      <small>
+                        Where our Philadelphia SEM campaigns typically land
+                        after six months of compounding work
+                      </small>
+                    </div>
                   </div>
-                  <h3>Contact Us</h3>
+                  {AuditRows.map((row) => (
+                    <div className="phl-audit-row" key={row.label}>
+                      <span>{row.label}</span>
+                      <span className="phl-audit-flag">{row.flag}</span>
+                    </div>
+                  ))}
                 </div>
-                <a href={SITE_CONTACT.emailHref}>contact@zonicllc.com</a>
-                <a href={SITE_CONTACT.phoneHref}>(302) 726-9736</a>
               </div>
             </div>
+          </section>
 
-            <div className="phila-sem-sec-11-image-wrap">
-              <Image
-                src="/images/contact-section.jpg"
-                fill
-                alt="Philadelphia marketing consultation and contact"
-                className="phila-sem-sec-11-image"
-              />
+          {/* 10. Reviews */}
+          <section className="phl-reviews" aria-labelledby="phl-reviews-title">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">Verified Client Reviews</p>
+                <h2 className="phl-h2" id="phl-reviews-title">
+                  Trusted by small &amp; mid-size businesses across the US
+                </h2>
+              </div>
+              <div className="phl-reviews-widget">
+                <ClutchWidget
+                  widgetType="12"
+                  height="375"
+                  primaryColor="#2567e8"
+                  reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* 11. Marquee */}
+          <div className="phl-marquee" aria-hidden="true">
+            <div className="phl-marquee-track">
+              {[0, 1].map((copy) => (
+                <span className="phl-marquee-item" key={copy}>
+                  {MarqueeItems.map((item) => (
+                    <span className="phl-marquee-item" key={item}>
+                      {item} <FaStar aria-hidden="true" />
+                    </span>
+                  ))}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div
-            className="phila-sem-sec-11-contact-form"
-            id="phila-sem-contact-form"
-          >
-            <LeadContactForm
-              leadFormTitle={PhilaSemFormHead.leadFormTitle}
-              leadCallText={PhilaSemFormHead.leadCallText}
-              submitButtonText="Contact Us"
-            />
-          </div>
-        </div>
+          {/* 12. Search engine — the six SEM parts */}
+          <section className="phl-engine-sec">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">Everything Working Together</p>
+                <h2 className="phl-h2">Six parts, one search engine</h2>
+                <p className="phl-lead">
+                  Paid and organic are not two projects, they are two halves of
+                  the same machine. Each part below feeds the next, and every
+                  one is run by the same team from Center City out through
+                  Montgomery, Bucks, Delaware, and Chester counties — and across
+                  the state line for our{" "}
+                  <Link
+                    href="/services/delaware/digital-marketing"
+                    className="phl-inline-link"
+                  >
+                    Delaware digital marketing
+                  </Link>{" "}
+                  clients.
+                </p>
+              </div>
+
+              <div className="phl-engine">
+                <div className="phl-engine-orbit" aria-hidden="true" />
+
+                <div className="phl-engine-core">
+                  <span className="phl-engine-core-icon" aria-hidden="true">
+                    <RiSearchLine />
+                  </span>
+                  <strong>Your search presence</strong>
+                  <span>Paid + organic · one plan</span>
+                  <HashScrollLink
+                    href="#phl-form"
+                    className="phl-btn phl-engine-core-cta"
+                    offset={120}
+                  >
+                    Get Your Free Audit
+                    <span className="phl-btn-circ">
+                      <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </HashScrollLink>
+                </div>
+
+                {EngineNodes.map((node) => (
+                  <div
+                    className={`phl-engine-node phl-engine-node--${node.tone}`}
+                    style={
+                      {
+                        "--l": node.left,
+                        "--t": node.top,
+                      } as React.CSSProperties
+                    }
+                    key={node.title}
+                  >
+                    <span className="phl-engine-node-icon">{node.icon}</span>
+                    <span className="phl-engine-node-txt">
+                      <strong>{node.title}</strong>
+                      <small>{node.outcome}</small>
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="phl-chips-label">
+                Running integrated search for Philadelphia businesses in
+              </p>
+              <div className="phl-chips">
+                {IndustryChips.map((chip) => (
+                  <span className="phl-chip" key={chip}>
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 13. FAQs */}
+          <section className="phl-faqs" id="phl-faqs">
+            <div className="phl-container">
+              <div className="phl-split-grid">
+                <div>
+                  <p className="phl-eyebrow">FAQs</p>
+                  <h2 className="phl-h2">
+                    Straight answers about SEM in Philadelphia
+                  </h2>
+                  <p className="phl-lead">
+                    Pricing, budget splits, timelines, and how paid and organic
+                    actually feed each other. If your question is not here, send
+                    it through the form — a strategist answers, not a sales
+                    script.
+                  </p>
+                  <div className="phl-faq-cta">
+                    <HashScrollLink
+                      href="#phl-form"
+                      className="phl-btn"
+                      offset={120}
+                    >
+                      Ask About Your Market
+                      <span className="phl-btn-circ">
+                        <FiArrowUpRight aria-hidden="true" />
+                      </span>
+                    </HashScrollLink>
+                  </div>
+                </div>
+                <div>
+                  <GmbFaqs items={PhilaSemFaqs} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 14. Grow further — internal links */}
+          <section className="phl-grow">
+            <div className="phl-container">
+              <div className="phl-sec-head-center">
+                <p className="phl-eyebrow">Grow Further</p>
+                <h2 className="phl-h2">Go deeper on either half</h2>
+                <p className="phl-lead">
+                  Want the whole picture beyond search? See the full{" "}
+                  <Link
+                    href="/services/philadelphia/digital-marketing"
+                    className="phl-inline-link"
+                  >
+                    Philadelphia marketing engine
+                  </Link>
+                  .
+                </p>
+              </div>
+              <div className="phl-grow-cards">
+                {GrowCards.map((card) => (
+                  <Link
+                    href={card.href}
+                    className="phl-grow-card"
+                    key={card.href}
+                  >
+                    <span className="phl-card-icon">{card.icon}</span>
+                    <h3>{card.title}</h3>
+                    <p>{card.desc}</p>
+                    <span className="phl-grow-link">
+                      {card.cta} <FiArrowUpRight aria-hidden="true" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 15. Lead form */}
+          <section className="phl-form-sec" id="phl-form">
+            <div className="phl-container">
+              <div className="phl-form-grid">
+                <aside className="phl-form-aside">
+                  <p className="phl-eyebrow">Get Started</p>
+                  <h2 className="phl-h2">
+                    Claim your free Philadelphia search audit
+                  </h2>
+                  <p className="phl-lead">
+                    Tell us about your business and we will audit both halves —
+                    ad account, organic rankings, and conversion tracking — then
+                    send a flat-price plan for the next 90 days.
+                  </p>
+
+                  <div className="phl-form-contacts">
+                    <a
+                      href={SITE_CONTACT.emailHref}
+                      className="phl-form-contact"
+                    >
+                      <span className="phl-form-contact-icon">
+                        <FiMail aria-hidden="true" />
+                      </span>
+                      <span className="phl-form-contact-txt">
+                        <small>Email us anytime</small>
+                        <strong>{SITE_CONTACT.email}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.phoneHref}
+                      className="phl-form-contact"
+                    >
+                      <span className="phl-form-contact-icon">
+                        <FiPhoneCall aria-hidden="true" />
+                      </span>
+                      <span className="phl-form-contact-txt">
+                        <small>Speak with a strategist</small>
+                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
+                      </span>
+                    </a>
+                    <a
+                      href={SITE_CONTACT.mapHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="phl-form-contact"
+                    >
+                      <span className="phl-form-contact-icon">
+                        <FiMapPin aria-hidden="true" />
+                      </span>
+                      <span className="phl-form-contact-txt">
+                        <small>Our office</small>
+                        <strong>{SITE_CONTACT.address}</strong>
+                      </span>
+                    </a>
+                    <div className="phl-form-contact phl-form-contact--static">
+                      <span className="phl-form-contact-icon">
+                        <FiMessageCircle aria-hidden="true" />
+                      </span>
+                      <span className="phl-form-contact-txt">
+                        <small>Prefer to chat?</small>
+                        <strong>
+                          Use the chat bubble — a real strategist replies
+                        </strong>
+                      </span>
+                    </div>
+                  </div>
+                </aside>
+
+                <div className="phl-form-main">
+                  <ServiceLeadForm
+                    formType="philadelphia-sem"
+                    badge="Free Audit"
+                    title="Get your free search audit"
+                    subtitle="No contracts, no pressure — just a clear picture of what your search budget is doing and where it should go instead."
+                    submitText="Send My Free Audit"
+                    messageLabel="Tell us about your business"
+                    messagePlaceholder="Your services, your current ad spend, and what you'd like to improve"
+                    defaultServices={["Local SEO", "Pay Per Click (PPC)"]}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
 
       <Footer />
@@ -802,4 +1558,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

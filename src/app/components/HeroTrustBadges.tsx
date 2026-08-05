@@ -4,7 +4,7 @@ import Image from "next/image";
  * Hero trust badges: the same static Clutch "Top Company" badge used in the
  * site footer, next to the Yelp Advertising Partner seal. Shared across the
  * home-inspector and white-label heroes. Neutral (unprefixed) class names —
- * matching styles live in both homeInspAgency.css and whiteLableStyle.css so
+ * matching styles live in both homeInspAgency.css and whiteLabelServices.css so
  * it drops into either scope.
  */
 export default function HeroTrustBadges({

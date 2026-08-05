@@ -1,0 +1,321 @@
+/* =====================================================================
+   Contact-us page (`.ctc-page`).
+
+   Rebuilt Aug 2026 under a new filename + `ctc-` prefix. The previous
+   contactUs.css shipped on a Turbopack dev chunk URL derived from the file
+   PATH (src_app_style_<hash>._.css), so the URL never changed when the file
+   did — a stale copy of that chunk could survive reloads and cache clears and
+   render the page against dead rules. A new path means a new chunk URL, and a
+   prefix no old stylesheet defines means nothing cached can style this markup.
+
+   LAYOUT: one section, two columns — copy + contact channels on the left, the
+   shared ServiceLeadForm on the right. Every box in the chain carries an
+   explicit `width: 100%` and the columns are `minmax(0, 1fr)`, so the grid
+   cannot collapse to its content width if an ancestor ever ends up
+   shrink-to-fit.
+
+   PALETTE is the /services hub set: deep ink #0c1526, electric blue #2567e8 as
+   the single accent, #eaf0fe tint. Blue on white is 4.9:1; ink on white ~15:1.
+
+   FLAT: no decorative shadows (the hub's rule). The only ones left are input
+   focus rings — an accessibility affordance.
+
+   SCOPING: every selector sits under `.ctc-page`. Side insets track the fixed
+   navbar's paddings via --ctc-inset (100/72/56/40/20px), no max-width.
+   ===================================================================== */
+
+.ctc-page {
+  --ctc-ink: #0c1526;
+  --ctc-accent: #2567e8;
+  --ctc-accent-dark: #1c4fc4;
+  --ctc-accent-soft: #eaf0fe;
+  --ctc-text: #47546e;
+  --ctc-muted: #7a869e;
+  --ctc-divider: #e3e9f7;
+  --ctc-inset: 100px;
+
+  width: 100%;
+  background: #fff;
+  color: var(--ctc-ink);
+  /* `clip` (not `hidden`) — it guards against stray mobile overflow without
+     creating a scroll container, so the sticky aside keeps working */
+  overflow-x: clip;
+}
+
+/* ---------- shell ---------- */
+/* padding-top clears the fixed navbar — this section starts the page */
+.ctc-page .ctc-section {
+  width: 100%;
+  padding: 136px 0 100px;
+}
+
+.ctc-page .ctc-container {
+  width: 100%;
+  padding: 0 var(--ctc-inset);
+}
+
+.ctc-page .ctc-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 64px;
+}
+
+/* ---------- left column ----------
+   No card, no chrome: the copy sits on the page background and sticks while
+   the taller form column scrolls past it. */
+.ctc-page .ctc-aside {
+  min-width: 0;
+  align-self: start;
+  position: sticky;
+  top: 108px;
+  padding-top: 8px;
+}
+
+.ctc-page .ctc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: var(--ctc-accent-soft);
+  color: var(--ctc-accent-dark);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 16px;
+}
+
+.ctc-page .ctc-eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ctc-accent);
+  flex-shrink: 0;
+}
+
+.ctc-page .ctc-title {
+  font-size: clamp(30px, 3.4vw, 46px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--ctc-ink);
+  margin: 0 0 16px;
+}
+
+.ctc-page .ctc-lead {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ctc-text);
+  margin: 0;
+}
+
+/* channels are hairline rows rather than filled tiles — one less box */
+.ctc-page .ctc-channels {
+  width: 100%;
+  margin-top: 36px;
+  border-top: 1px solid var(--ctc-divider);
+}
+
+.ctc-page .ctc-channel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--ctc-divider);
+  text-decoration: none;
+  transition: padding-left 0.25s ease;
+}
+
+.ctc-page a.ctc-channel:hover,
+.ctc-page a.ctc-channel:focus-visible {
+  padding-left: 10px;
+}
+
+.ctc-page .ctc-channel--static {
+  cursor: default;
+}
+
+.ctc-page .ctc-channel-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: var(--ctc-accent-soft);
+  color: var(--ctc-accent);
+  font-size: 17px;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.ctc-page a.ctc-channel:hover .ctc-channel-icon,
+.ctc-page a.ctc-channel:focus-visible .ctc-channel-icon {
+  background: var(--ctc-accent);
+  border-color: var(--ctc-accent);
+  color: #fff;
+}
+
+.ctc-page .ctc-channel-txt {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ctc-page .ctc-channel-txt small {
+  font-size: 13.5px;
+  color: var(--ctc-muted);
+  margin-bottom: 3px;
+}
+
+.ctc-page .ctc-channel-txt strong {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--ctc-ink);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- right column ---------- */
+.ctc-page .ctc-formcol {
+  min-width: 0;
+  width: 100%;
+}
+
+/* shared ServiceLeadForm: re-tint its orange tokens to the hub's electric
+   blue and let the card fill the column */
+.ctc-page .slf {
+  --slf-orange: var(--ctc-accent);
+  --slf-orange-dark: var(--ctc-accent-dark);
+  --slf-orange-tint: var(--ctc-accent-soft);
+}
+
+/* the only card on the page — the shared form's accent border kept, re-tinted,
+   flat per the hub's no-shadow rule */
+.ctc-page .ctc-formcol .slf--card {
+  width: 100%;
+  border: 1.5px solid var(--ctc-accent);
+  border-radius: 24px;
+  padding: 40px 38px;
+  box-shadow: none;
+}
+
+.ctc-page .slf .slf-badge {
+  border-color: var(--ctc-accent-soft);
+  box-shadow: none;
+}
+
+/* sized to its label instead of the shared form's full-bleed default, so it
+   reads as a button rather than a bar. Pill radius matches `.svc-btn`. */
+.ctc-page .slf .slf-submit {
+  width: auto;
+  padding: 15px 28px;
+  border-radius: 100px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.ctc-page .slf .slf-legal {
+  text-align: center;
+}
+
+/* the consent "Read more" toggle is hard-coded orange in globals.css */
+.ctc-page .slf .lead-consent-toggle {
+  color: var(--ctc-accent-dark);
+}
+
+/* input focus rings kept — accessibility affordance, re-tinted off the
+   hard-coded orange in service-lead-form.css */
+.ctc-page .slf input:focus,
+.ctc-page .slf select:focus,
+.ctc-page .slf textarea:focus {
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.14);
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 1399.98px) {
+  .ctc-page {
+    --ctc-inset: 72px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .ctc-page {
+    --ctc-inset: 56px;
+  }
+  .ctc-page .ctc-grid {
+    gap: 44px;
+  }
+  .ctc-page .ctc-formcol .slf--card {
+    padding: 34px 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ctc-page {
+    --ctc-inset: 40px;
+  }
+  .ctc-page .ctc-section {
+    padding: 116px 0 64px;
+  }
+  .ctc-page .ctc-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+  }
+  /* stacked: the aside sits above the form, so there is nothing to stick to */
+  .ctc-page .ctc-aside {
+    position: static;
+    padding-top: 0;
+  }
+  .ctc-page .ctc-lead {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ctc-page {
+    --ctc-inset: 20px;
+  }
+  .ctc-page .ctc-section {
+    padding: 96px 0 48px;
+  }
+  .ctc-page .ctc-grid {
+    gap: 34px;
+  }
+  .ctc-page .ctc-eyebrow {
+    white-space: normal;
+  }
+  .ctc-page .ctc-channels {
+    margin-top: 28px;
+  }
+  .ctc-page .ctc-channel {
+    gap: 13px;
+    padding: 14px 2px;
+  }
+  .ctc-page .ctc-channel-txt strong {
+    font-size: 16px;
+  }
+  .ctc-page .ctc-formcol .slf--card {
+    border-radius: 20px;
+    padding: 28px 22px;
+  }
+}
+
+/* respect reduced-motion: the only transitions here are hover states */
+@media (prefers-reduced-motion: reduce) {
+  .ctc-page .ctc-channel,
+  .ctc-page .ctc-channel-icon {
+    transition: none;
+  }
+  .ctc-page a.ctc-channel:hover,
+  .ctc-page a.ctc-channel:focus-visible {
+    padding-left: 4px;
+  }
+}

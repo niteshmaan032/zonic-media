@@ -31,7 +31,7 @@
   outline: none;
   border-color: var(--orange);
   background-color: var(--hia-white);
-  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.1);
 }
 .hia-page .hia-fg select[aria-invalid="true"] {
   border-color: #ef4444;
@@ -148,7 +148,7 @@
   height: 360px;
   background: radial-gradient(
     circle,
-    rgba(249, 115, 22, 0.14) 0%,
+    rgba(37, 103, 232, 0.14) 0%,
     transparent 62%
   );
   pointer-events: none;
@@ -184,8 +184,8 @@
   padding: 16px 20px;
 }
 .gre-rank-1 {
-  border-color: rgba(249, 115, 22, 0.5);
-  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(37, 103, 232, 0.5);
+  background: rgba(37, 103, 232, 0.1);
 }
 .gre-rank-pin {
   width: 38px;

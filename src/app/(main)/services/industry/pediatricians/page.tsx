@@ -80,7 +80,7 @@ const PAGE_PATH = "/services/industry/pediatricians";
 export const metadata: Metadata = {
   title: "Pediatrician SEO & Marketing That Wins Families",
   description:
-    "Pediatrician SEO that wins the map pack for 'pediatrician near me' — Google Business Profile, reviews, and local pages that turn parent searches into booked visits. Get a free audit.",
+    "Pediatrician SEO that wins the map pack for 'pediatrician near me' — GBP, reviews & local pages that turn parent searches into booked visits. Free audit.",
   keywords: [
     "pediatrician near me",
     "children's doctor near me",
@@ -475,7 +475,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local practices and home-service
-                    businesses climb into the Google map pack and grow. Zonic
+                    businesses climb into the <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">Google map pack</Link> and grow. Zonic
                     Media builds the full local ranking system for pediatric
                     practices — Google Business Profile, citations, reviews, and
                     local pages — so when parents search &ldquo;pediatrician near
@@ -1050,8 +1050,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your pediatric services and
-                    neighborhoods, then the foundation work: profile
-                    optimization, citation cleanup, and on-page fixes.
+                    neighborhoods, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization, citation cleanup, and on-page fixes.
                   </p>
                 </article>
 
@@ -1142,7 +1141,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, and often a <Link href="/services/pediatrician-website-design" className="tseo-inline-link">pediatrician website design</Link> that converts that traffic into booked visits.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1171,8 +1170,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for practices and home-service businesses is all we
-                  do, and it shows. Here is exactly what working with a dedicated
-                  local team looks like.
+                  do, and it shows. Here is exactly what working with a dedicated <Link href="/services/pediatric-marketing-agency" className="tseo-inline-link">pediatric marketing agency</Link> looks like.
                 </p>
               </div>
               <div className="tseo-compare-grid">
@@ -1532,7 +1530,7 @@ function Page() {
                     Straight answers about pediatrician SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for pediatricians</Link>, and what actually moves
                     pediatric rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

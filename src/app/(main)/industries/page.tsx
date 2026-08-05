@@ -8,7 +8,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Local SEO & Marketing by Industry",
+  title: "Industries We Serve | Marketing by Industry",
   description:
     "Zonic Media builds industry-specific marketing for local service businesses: roofers, HVAC, plumbers, dentists, lawyers, movers and more. Find your niche and grow.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Industries We Serve | Local SEO & Marketing by Industry",
+    title: "Industries We Serve | Marketing by Industry",
     description:
       "One specialist team, a dedicated playbook for every niche. See how Zonic Media grows roofers, HVAC, plumbing, dental, legal, real estate and more.",
     url: "/industries",
@@ -73,7 +73,9 @@ function BtnArrow() {
 
 type IndustryIcon = "auto" | "chiro" | "clean" | "dental" | "electric"
   | "garage" | "landscape" | "law" | "moving" | "painting" | "pest"
-  | "realestate" | "roofing" | "septic" | "solar" | "inspection" | "plumbing" | "hvac";
+  | "realestate" | "roofing" | "septic" | "solar" | "inspection" | "plumbing" | "hvac"
+  | "nonprofit" | "towing" | "pediatric" | "bathroom" | "kitchen" | "contractor"
+  | "flooring" | "windows" | "appliance" | "pool" | "gutter" | "tree";
 
 function Icon({ name }: { name: IndustryIcon }) {
   const common = {
@@ -208,6 +210,97 @@ function Icon({ name }: { name: IndustryIcon }) {
         <svg {...common}>
           <circle cx="12" cy="12" r="3" />
           <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" />
+        </svg>
+      );
+    case "nonprofit":
+      return (
+        <svg {...common}>
+          <path d="M12 20s-6-4.2-6-8.5A3.5 3.5 0 0 1 12 9a3.5 3.5 0 0 1 6 2.5C18 15.8 12 20 12 20z" />
+        </svg>
+      );
+    case "towing":
+      return (
+        <svg {...common}>
+          <path d="M2 16V8h9l2 4h4a3 3 0 0 1 3 3v1" />
+          <path d="M13 12l6-5" />
+          <circle cx="6.5" cy="18" r="1.8" />
+          <circle cx="17.5" cy="18" r="1.8" />
+        </svg>
+      );
+    case "pediatric":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="7" r="3" />
+          <path d="M8 21v-4a4 4 0 0 1 8 0v4" />
+          <path d="M9 12l-3 2M15 12l3 2" />
+        </svg>
+      );
+    case "bathroom":
+      return (
+        <svg {...common}>
+          <path d="M4 12V6a2 2 0 0 1 4 0" />
+          <path d="M2 12h20v2a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5z" />
+          <path d="M7 19v2M17 19v2" />
+        </svg>
+      );
+    case "kitchen":
+      return (
+        <svg {...common}>
+          <path d="M7 10V6a5 5 0 0 1 10 0v4" />
+          <rect x="3" y="10" width="18" height="10" rx="2" />
+        </svg>
+      );
+    case "contractor":
+      return (
+        <svg {...common}>
+          <path d="M3 17h18" />
+          <path d="M5 17v-2a7 7 0 0 1 14 0v2" />
+          <path d="M10 8V4h4v4" />
+        </svg>
+      );
+    case "flooring":
+      return (
+        <svg {...common}>
+          <rect x="3" y="4" width="18" height="16" rx="1" />
+          <path d="M3 9h18M3 14h18M9 4v5M15 9v5M9 14v6" />
+        </svg>
+      );
+    case "windows":
+      return (
+        <svg {...common}>
+          <rect x="3" y="3" width="18" height="18" rx="1" />
+          <path d="M12 3v18M3 12h18" />
+        </svg>
+      );
+    case "appliance":
+      return (
+        <svg {...common}>
+          <rect x="4" y="2" width="16" height="20" rx="2" />
+          <path d="M4 9h16M8 5.5h.01" />
+          <circle cx="12" cy="15" r="3" />
+        </svg>
+      );
+    case "pool":
+      return (
+        <svg {...common}>
+          <path d="M2 17c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2" />
+          <path d="M7 15V5a2 2 0 0 1 4 0M13 15V5a2 2 0 0 1 4 0" />
+          <path d="M7 9h4M13 9h4" />
+        </svg>
+      );
+    case "gutter":
+      return (
+        <svg {...common}>
+          <path d="M3 8l9-5 9 5" />
+          <path d="M3 8v3h18V8" />
+          <path d="M7 15v1M12 15v2M17 15v1" />
+        </svg>
+      );
+    case "tree":
+      return (
+        <svg {...common}>
+          <circle cx="12" cy="9" r="5" />
+          <path d="M12 14v8M12 18l-3-2M12 17l3-2" />
         </svg>
       );
   }
@@ -385,6 +478,114 @@ const INDUSTRIES: Industry[] = [
     tagline:
       "Capture heating and cooling demand at every seasonal peak in demand.",
     icon: "hvac",
+  },
+  {
+    id: "nonprofit",
+    name: "Nonprofit",
+    href: "/services/non-profit-marketing-agency",
+    anchor: "Nonprofit marketing",
+    tagline:
+      "Grow donations and advocacy reach with search, social, and the Google Ad Grant.",
+    icon: "nonprofit",
+  },
+  {
+    id: "towing",
+    name: "Towing",
+    href: "/services/towing-marketing-agency",
+    anchor: "Towing marketing",
+    tagline:
+      "Win cash calls from stranded drivers instead of living on motor club rates.",
+    icon: "towing",
+  },
+  {
+    id: "pediatric",
+    name: "Pediatrics",
+    href: "/services/pediatric-marketing-agency",
+    anchor: "Pediatric marketing",
+    tagline:
+      "Fill your schedule with new families searching for a pediatrician nearby.",
+    icon: "pediatric",
+  },
+  {
+    id: "bathroom-remodeling",
+    name: "Bathroom Remodeling",
+    href: "/services/bathroom-remodeling-marketing-agency",
+    anchor: "Bathroom remodeling marketing",
+    tagline:
+      "Book in-home estimates for shower conversions and full bath renovations.",
+    icon: "bathroom",
+  },
+  {
+    id: "kitchen-remodeling",
+    name: "Kitchen Remodeling",
+    href: "/services/kitchen-remodeling-marketing-agency",
+    anchor: "Kitchen remodeling marketing",
+    tagline:
+      "Turn idea-stage homeowners into booked design consultations, not tire-kickers.",
+    icon: "kitchen",
+  },
+  {
+    id: "general-contractor",
+    name: "General Contractor",
+    href: "/services/general-contractor-marketing-agency",
+    anchor: "General contractor marketing",
+    tagline:
+      "Build a pipeline for additions, remodels, and ADUs that outlasts referrals.",
+    icon: "contractor",
+  },
+  {
+    id: "flooring",
+    name: "Flooring",
+    href: "/services/flooring-marketing-agency",
+    anchor: "Flooring marketing",
+    tagline:
+      "Own the product searches — LVP, hardwood, tile — that fill the measure calendar.",
+    icon: "flooring",
+  },
+  {
+    id: "window-and-door",
+    name: "Window & Door",
+    href: "/services/window-and-door-marketing-agency",
+    anchor: "Window and door marketing",
+    tagline:
+      "Compete with the national replacement brands on your own home turf.",
+    icon: "windows",
+  },
+  {
+    id: "appliance-repair",
+    name: "Appliance Repair",
+    href: "/services/appliance-repair-marketing-agency",
+    anchor: "Appliance repair marketing",
+    tagline:
+      "Same-day service calls at a cost per lead a repair ticket can actually carry.",
+    icon: "appliance",
+  },
+  {
+    id: "pool-service",
+    name: "Pool Service",
+    href: "/services/pool-service-marketing-agency",
+    anchor: "Pool service marketing",
+    tagline:
+      "Convert one-off cleanups into recurring accounts that tighten your routes.",
+    icon: "pool",
+  },
+  {
+    id: "gutter",
+    name: "Gutter",
+    href: "/services/gutter-marketing-agency",
+    anchor: "Gutter marketing",
+    tagline:
+      "Seamless gutter, guard, and cleaning work that scales with every storm.",
+    icon: "gutter",
+  },
+  {
+    id: "tree-service",
+    name: "Tree Service",
+    href: "/services/tree-service-marketing-agency",
+    anchor: "Tree service marketing",
+    tagline:
+      "High-ticket removals and emergency storm response, booked before crews clear.",
+    icon: "tree",
   },
 ];
 
@@ -732,8 +933,12 @@ function Page() {
               </div>
               <div className="story-body">
                 <p>
-                  A generic agency runs the same checklist whether you fix roofs
-                  or file lawsuits. We don&apos;t. Every industry has its own{" "}
+                  A generic agency runs the same checklist whether you fix
+                  roofs or run a{" "}
+                  <Link href="/services/law-firm-marketing-agency" className="ind-inline-link">
+                    law firm
+                  </Link>
+                  . We don&apos;t. Every industry has its own{" "}
                   <strong>customers, search terms, seasons, and competitors</strong>
                   , and marketing that ignores those differences leaves calls on
                   the table.

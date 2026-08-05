@@ -92,7 +92,7 @@ const PAGE_PATH = "/services/industry/seo-services-for-plumber";
 export const metadata: Metadata = {
   title: "SEO for Plumbers That Win Local Service Calls",
   description:
-    "SEO for plumbers that turns 'plumber near me' searches into booked jobs — Google Business Profile optimization, citations, reviews, and service-area pages. Get your free audit.",
+    "SEO for plumbers that turns 'plumber near me' into booked jobs — GBP optimization, citations, reviews & service-area pages. Free audit.",
   keywords: [
     "SEO for plumbers",
     "plumber near me",
@@ -487,7 +487,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and home-service businesses climb
-                    into the Google map pack and grow. Zonic Media builds the
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
                     full local ranking system for plumbers — Google Business
                     Profile, citations, reviews, and service-area content — so
                     when homeowners search &ldquo;emergency plumber near
@@ -1064,7 +1064,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your plumbing services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1156,7 +1156,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different services — the same system,
-                  executed month after month.
+                  executed month after month, and often a <Link href="/services/plumbing-website-design" className="tseo-inline-link">plumbing website design</Link> that converts that traffic into booked jobs.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1185,7 +1185,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/plumbing-marketing-agency" className="tseo-inline-link">plumbing marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1546,7 +1546,7 @@ function Page() {
                     Straight answers about plumber SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for plumbers</Link> fits alongside SEO, and what actually moves
                     plumbing rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

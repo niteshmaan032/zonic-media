@@ -349,7 +349,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-garage-door-companies",
+    href: "/services/industry/local-seo-for-garage-door-companies",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Garage Door Companies",
     desc: "Rank for garage door repair and installation searches across Google Search and Maps in every city you cover.",
@@ -458,9 +458,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Garage door website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/garage-door-hero-v2.webp"
+                      alt="Garage door technician presenting a service website from his workshop"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -530,14 +534,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>New garage door installation</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/garage-door-first-impressions-1.webp"
+                      alt="Technician installing and aligning a modern garage door"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Garage door website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/garage-door-first-impressions-2.webp"
+                      alt="Summit Garage Door website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -580,7 +590,7 @@ function Page() {
                     makes requesting service effortless. It is also the
                     foundation of any wider{" "}
                     <Link
-                      href="/services/local-seo-for-garage-door-companies"
+                      href="/services/industry/local-seo-for-garage-door-companies"
                       className="hiw-inline-link"
                     >
                       garage door SEO
@@ -648,12 +658,12 @@ function Page() {
                   feel like your company, not like a template every competitor
                   is also using — and it should be built to rank with{" "}
                   <Link
-                    href="/services/local-seo-for-garage-door-companies"
+                    href="/services/garage-door-marketing-agency"
                     className="hiw-inline-link"
                   >
-                    local SEO for garage door companies
+                    garage door marketing
                   </Link>{" "}
-                  from day one.
+                  behind it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -671,9 +681,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive garage door website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/garage-door-responsive-preview-square.webp"
+                  alt="Summit Garage Door website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -777,10 +790,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-garage-door-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      garage door SEO
+                      Google Ads campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -983,8 +996,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, emergency leads, and
-                    what happens to your current rankings. If your question is
-                    not here, send it through the form — a strategist answers,
+                    what happens to your current rankings. If your question is not here,
+                    or your profile is suspended and you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      GBP reinstatement help
+                    </Link>, send it through the form — a strategist answers,
                     not a sales script.
                   </p>
                   <div className="hiw-faq-cta">

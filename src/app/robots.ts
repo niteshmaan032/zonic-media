@@ -1,6 +1,12 @@
 import type { MetadataRoute } from "next";
 
-const DISALLOWED = ["/coming-soon", "/admindashboard", "/404", "/thank-you"];
+const DISALLOWED = [
+  "/coming-soon",
+  "/admindashboard",
+  "/404",
+  "/thank-you",
+  "/api/",
+];
 
 export default function robots(): MetadataRoute.Robots {
   return {

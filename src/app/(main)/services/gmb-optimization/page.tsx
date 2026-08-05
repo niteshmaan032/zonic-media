@@ -664,8 +664,12 @@ function page() {
                 </h3>
                 <p className="gmb-reinst-card-descrp">
                   Our specialists have optimized 1,500+ Google Business Profiles
-                  across dozens of industries. We know what Google&apos;s
-                  algorithm actually responds to - not what worked 3 years ago.
+                  across{" "}
+                  <Link href="/industries" className="gmb-inline-link">
+                    dozens of industries
+                  </Link>
+                  . We know what Google&apos;s algorithm actually responds to -
+                  not what worked 3 years ago.
                 </p>
               </div>
 

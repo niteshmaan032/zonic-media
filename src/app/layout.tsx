@@ -104,6 +104,22 @@ const localBusinessJsonLd = {
   areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
   sameAs: sameAsLinks,
   knowsAbout: knowsAboutTopics,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "21",
+    bestRating: "5",
+  },
+};
+
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: "Zonic Media",
+  url: SITE_URL,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  inLanguage: "en-US",
 };
 
 export const metadata: Metadata = {
@@ -182,6 +198,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
+
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteJsonLd),
           }}
         />
 

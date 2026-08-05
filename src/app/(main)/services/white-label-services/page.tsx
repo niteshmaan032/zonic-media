@@ -3,21 +3,27 @@ import Link from "next/link";
 import Script from "next/script";
 import { Metadata } from "next";
 
-import "@/app/style/whiteLableStyle.css";
+import "@/app/style/whiteLabelServices.css";
 
 import WhiteLabelLeadForm from "@/app/components/WhiteLabelLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import {
+  BrandSwapVisual,
+  FulfillmentFlowVisual,
+  MarginMeterVisual,
+} from "@/app/components/WhiteLabelVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title: "White-Label GBP, SEO & Web Design for Agencies",
   description:
-    "White-label digital marketing fulfillment for agencies. Resell Google Business Profile reinstatement, verification, management, local SEO, and WordPress web design under your own brand. We stay invisible.",
+    "White-label local SEO, GBP reinstatement, verification & web design for agencies — resell under your own brand at wholesale rates. We stay invisible.",
   keywords: [
     "white label GMB reinstatement",
     "white label local SEO",
@@ -42,62 +48,11 @@ export const metadata: Metadata = {
     title:
       "White-Label Services for Agencies | GBP Reinstatement, Local SEO & Web Design",
     description:
-      "White-label digital marketing fulfillment for agencies. Resell Google Business Profile reinstatement, verification, management, local SEO, and WordPress web design under your own brand. We stay invisible.",
+      "White-label local SEO, GBP reinstatement, verification & web design for agencies — resell under your own brand at wholesale rates. We stay invisible.",
     url: "/services/white-label-services",
     type: "website",
   },
 };
-
-// Partnership diagram from the source design: "Your Agency" (the visible
-// brand) on top, linked to Zonic's invisible fulfillment stack below.
-// Injected as raw markup so the SVG stays byte-for-byte identical.
-const HERO_ART_SVG = `<svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="White-label partnership: Zonic Media fulfills the work, your agency delivers it under its own brand">
-  <defs>
-    <linearGradient id="wlCardA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1E293B"/><stop offset="1" stop-color="#0B1220"/>
-    </linearGradient>
-    <linearGradient id="wlCardB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F97316"/><stop offset="1" stop-color="#ea670c"/>
-    </linearGradient>
-    <linearGradient id="wlFlow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F5C518"/><stop offset="1" stop-color="#F97316"/>
-    </linearGradient>
-    <filter id="wlSoft" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
-    </filter>
-  </defs>
-  <path d="M260 168 L 260 200" stroke="url(#wlFlow)" stroke-width="3" fill="none" stroke-dasharray="6 7" opacity="0.75"/>
-  <path d="M260 260 L 260 292" stroke="url(#wlFlow)" stroke-width="3" fill="none" stroke-dasharray="6 7" opacity="0.75"/>
-  <g filter="url(#wlSoft)">
-    <rect x="96" y="40" width="328" height="128" rx="18" fill="url(#wlCardB)"/>
-  </g>
-  <text x="260" y="78" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="13" letter-spacing="1.5" fill="#fff" opacity="0.85">YOUR AGENCY</text>
-  <circle cx="175" cy="118" r="20" fill="#fff" opacity="0.95"/>
-  <text x="175" y="124" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="18" fill="#ea670c">A</text>
-  <rect x="208" y="104" width="150" height="11" rx="5.5" fill="#fff" opacity="0.95"/>
-  <rect x="208" y="124" width="104" height="9" rx="4.5" fill="#fff" opacity="0.6"/>
-  <circle cx="260" cy="230" r="30" fill="#0B1220" stroke="#F5C518" stroke-width="2.5"/>
-  <g stroke="#F5C518" stroke-width="3" fill="none" stroke-linecap="round">
-    <rect x="244" y="222" width="20" height="13" rx="6.5"/>
-    <rect x="256" y="225" width="20" height="13" rx="6.5"/>
-  </g>
-  <g filter="url(#wlSoft)">
-    <rect x="96" y="292" width="328" height="128" rx="18" fill="url(#wlCardA)" stroke="#334155" stroke-width="1"/>
-  </g>
-  <rect x="116" y="312" width="160" height="26" rx="13" fill="none" stroke="#64748B" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <text x="196" y="329" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="700" font-size="11" letter-spacing="0.5" fill="#94A3B8">INVISIBLE FULFILLMENT</text>
-  <g font-family="Inter,sans-serif" font-weight="600" font-size="10.5" fill="#E2E8F0">
-    <rect x="116" y="350" width="86" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="159" y="366" text-anchor="middle">GBP Reinstate</text>
-    <rect x="210" y="350" width="70" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="245" y="366" text-anchor="middle">Local SEO</text>
-    <rect x="288" y="350" width="62" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="319" y="366" text-anchor="middle">Verify</text>
-    <rect x="116" y="382" width="74" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="153" y="398" text-anchor="middle">WordPress</text>
-    <rect x="198" y="382" width="86" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="241" y="398" text-anchor="middle">GBP Manage</text>
-    <rect x="292" y="382" width="58" height="24" rx="12" fill="#0B1220" stroke="#334155"/><text x="321" y="398" text-anchor="middle">Content</text>
-  </g>
-  <g fill="#F5C518">
-    <path d="M260 274 l-5 9 h10 z"/>
-  </g>
-</svg>`;
 
 const trustItems = [
   { num: "700+", label: "GBP profiles reinstated" },
@@ -243,9 +198,23 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
   areaServed: { type: "Country", name: "United States" },
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "White-Label Digital Marketing Services for Agencies",
+  description:
+    "White-label local SEO, Google Business Profile reinstatement, verification, management, and web design fulfillment agencies resell under their own brand.",
+  pageUrl: "/services/white-label-services",
+  serviceType: "White-Label Marketing Fulfillment",
+  areaServed: "United States",
+});
+
 export default function Page() {
   return (
     <>
+      <Script
+        id="wl-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Script
         id="wl-breadcrumb-schema"
         type="application/ld+json"
@@ -344,11 +313,8 @@ export default function Page() {
                   ))}
                 </div>
 
-                {/* Partnership illustration (from source design) */}
-                <div
-                  className="wl-hero-art"
-                  dangerouslySetInnerHTML={{ __html: HERO_ART_SVG }}
-                />
+                {/* Animated white-label delivery console */}
+                <BrandSwapVisual />
 
                 {/* Mobile/Tab top inline form */}
                 <div
@@ -439,6 +405,7 @@ export default function Page() {
                     </article>
                   ))}
                 </div>
+                <FulfillmentFlowVisual />
               </section>
 
               {/* HOW IT WORKS */}
@@ -512,8 +479,11 @@ export default function Page() {
                   </p>
                   <h3>Your brand stays front and center</h3>
                   <p>
-                    In a fully white-label arrangement, your client never learns
-                    we exist. Deliverables, reports, and communication carry your
+                    In a fully white-label arrangement, your client never learns{" "}
+                    <Link href="/about" className="wl-inline-link">
+                      our US-based team
+                    </Link>{" "}
+                    exists. Deliverables, reports, and communication carry your
                     branding. We don&apos;t contact your clients, our name appears
                     nowhere in what they receive, and as far as they&apos;re
                     concerned, your agency did the work.{" "}
@@ -534,6 +504,7 @@ export default function Page() {
                     better your wholesale rate becomes.
                   </p>
                 </div>
+                <MarginMeterVisual />
                 <div className="wl-section-cta">
                   <Link href={SITE_CONTACT.phoneHref} className="wl-cta-call">
                     <span className="wl-cta-call-dot" aria-hidden="true" />

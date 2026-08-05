@@ -8,7 +8,7 @@ import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import WhyHomeSeo from "@/app/components/WhyHomeSeo";
 import "@/app/style/localSeoHome.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { buildBreadcrumbJsonLd, buildServiceJsonLd } from "@/shared/seoSchemas";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -126,12 +126,25 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   },
 ]);
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "Local SEO for Home Services",
+  description:
+    "Local SEO for home service businesses that need more calls, local rankings, and booked jobs — plumbers, HVAC, roofers, electricians, and more.",
+  pageUrl: "/services/local-seo-for-home-services",
+  serviceType: "Local SEO",
+  areaServed: "United States",
+});
+
 function page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <div id="local-seo-home-top"></div>
       <div className="local-seo-home-wrapper">
@@ -153,15 +166,8 @@ function page() {
               Zonic Media helps home service companies generate more leads
               through strategic local SEO. We improve your rankings on Google
               Search and Maps, increase visibility in your service areas, and
-              turn high-intent searches into real customers for roofing,{" "}
-              <Link
-                href="/services/industry/local-seo-services-for-hvac"
-                className="lsh-inline-link"
-              >
-                local SEO for HVAC companies
-              </Link>
-              , plumbing, electrical, pest control, and other service
-              businesses.
+              turn high-intent searches into real customers for roofing, HVAC,
+              plumbing, electrical, pest control, and other service businesses.
             </p>
 
             <div className="local-seo-sec-1-cta-clutch">
@@ -451,14 +457,8 @@ function page() {
                 <p className="local-seo-home-descrp">
                   We work with a wide range of home service businesses that rely
                   on local visibility, phone calls, and booked jobs to grow
-                  revenue — including roofers who lean on our{" "}
-                  <Link
-                    href="/services/industry/local-seo-for-roofing-companies"
-                    className="lsh-inline-link"
-                  >
-                    local SEO for roofing companies
-                  </Link>
-                  . Whether you serve residential, commercial, or multi-location
+                  revenue — including roofers, remodelers, and repair pros.
+                  Whether you serve residential, commercial, or multi-location
                   markets, our Local SEO strategies are built to generate
                   consistent leads and stronger rankings.
                 </p>
@@ -1165,14 +1165,8 @@ function page() {
           <p className="local-seo-home-sec-12-descrp">
             We rank your business at the top of Google—so you get more calls,
             more jobs, and steady growth without ads, whether you run a
-            remodeling crew or need dedicated{" "}
-            <Link
-              href="/services/industry/seo-services-for-pest-control"
-              className="lsh-inline-link"
-            >
-              SEO for pest control companies
-            </Link>
-            , consistently attracting homeowners ready to hire.
+            remodeling crew or a dedicated pest control route, consistently
+            attracting homeowners ready to hire.
           </p>
 
           <div className="local-seo-home-sec-12-ctas">

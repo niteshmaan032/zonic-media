@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/tree-service-website-design";
 export const metadata: Metadata = {
   title: "Tree Service Website Design That Books Jobs",
   description:
-    "Tree service website design built as a lead system — emergency removal pages, instant quote flows, before-and-after galleries, and design that books removals and trimming.",
+    "Tree service website design built as a lead system — emergency removal pages, quote flows, and design that books removals and trimming.",
   keywords: [
     "tree service website design",
     "tree care website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Tree Service Website Design That Books Jobs | Zonic Media",
     description:
-      "Tree service website design built as a lead system — emergency removal pages, instant quote flows, before-and-after galleries, and design that books removals and trimming.",
+      "Tree service website design built as a lead system — emergency removal pages, quote flows, and design that books removals and trimming.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -347,7 +347,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-tree-service-companies",
+    href: "/services/industry/local-seo-for-tree-service-companies",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Tree Service Companies",
     desc: "Rank for tree removal, trimming, and stump grinding searches across Google Search and Maps in every city you cover.",
@@ -456,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Tree service website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/tree-service-hero.webp"
+                      alt="Arborist reviewing the Canopy Pro website beneath mature trees"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Arborist removing a large tree</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/tree-service-first-impressions-1.webp"
+                      alt="Arborist directing a controlled tree removal from a secured work zone"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Tree service website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/tree-service-first-impressions-2.webp"
+                      alt="Canopy Pro Tree Care website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -578,7 +588,7 @@ function Page() {
                     makes requesting an estimate effortless. It is also the
                     foundation of any wider{" "}
                     <Link
-                      href="/services/local-seo-for-tree-service-companies"
+                      href="/services/industry/local-seo-for-tree-service-companies"
                       className="hiw-inline-link"
                     >
                       tree service SEO
@@ -644,14 +654,14 @@ function Page() {
                   mix, your area, and the way homeowners in your market actually
                   search. Your site should feel like your company, not like a
                   template every competitor is also using — and it should be built
-                  to rank with{" "}
+                  to rank, with{" "}
                   <Link
-                    href="/services/local-seo-for-tree-service-companies"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    local SEO for tree service companies
+                    Google Business Profile verification
                   </Link>{" "}
-                  from day one.
+                  done right from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -669,9 +679,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive tree service website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/tree-service-responsive-preview-square.webp"
+                  alt="Canopy Pro Tree Care website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -774,10 +787,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-tree-service-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      tree service SEO
+                      PPC campaigns
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -978,8 +991,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, emergency leads, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or you are facing a suspension and need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      Google Business Profile reinstatement help
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

@@ -347,7 +347,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/local-seo-for-gutter-companies",
+    href: "/services/industry/local-seo-for-gutter-companies",
     icon: <RiSearchLine aria-hidden="true" />,
     title: "Local SEO for Gutter Companies",
     desc: "Rank for seamless gutter, gutter guard, and repair searches across Google Search and Maps in every city you cover.",
@@ -456,9 +456,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Gutter company website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/gutter-company-hero-v2.webp"
+                      alt="Seamless gutter installer presenting a company website from his workshop"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -528,14 +532,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Seamless gutter installation</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/gutter-company-first-impressions-1.webp"
+                      alt="Installer fitting a seamless gutter along a residential roofline"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Gutter company website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/gutter-company-first-impressions-2.webp"
+                      alt="FlowGuard Gutters website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -578,7 +588,7 @@ function Page() {
                     requesting a quote effortless. It is also the foundation of
                     any wider{" "}
                     <Link
-                      href="/services/local-seo-for-gutter-companies"
+                      href="/services/industry/local-seo-for-gutter-companies"
                       className="hiw-inline-link"
                     >
                       gutter SEO
@@ -644,14 +654,14 @@ function Page() {
                   around your service mix, your area, and the way homeowners in
                   your market actually search. Your site should feel like your
                   company, not like a template every competitor is also using —
-                  and it should be built to rank with{" "}
+                  and it should be built to rank, with{" "}
                   <Link
-                    href="/services/local-seo-for-gutter-companies"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    local SEO for gutter companies
+                    Google Business Profile verification
                   </Link>{" "}
-                  from day one.
+                  done right from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -669,9 +679,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive gutter website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/gutter-company-responsive-preview-square.webp"
+                  alt="FlowGuard Gutters website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -774,10 +787,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/local-seo-for-gutter-companies"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      gutter SEO
+                      Google Ads management
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -978,8 +991,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, keyword pages, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or Google has suspended your listing and you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      GMB reinstatement service
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

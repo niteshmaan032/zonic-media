@@ -2,17 +2,76 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ClutchWidget from "@/app/components/ClutchWidget";
+import HashScrollLink from "@/app/components/HashScrollLink";
 import IndustryMarketingLeadForm from "@/app/components/IndustryMarketingLeadForm";
+import {
+  GrowthCurveVisual,
+  LeadEngineVisual,
+  MapPackRaceVisual,
+  visualCopyFromSlug,
+  type IndustryVisualCopy,
+} from "@/app/components/IndustryMarketingVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+
+/* Every ima- page (13 generated + septic + solar) ships the same seven
+   content sections in the same order, but the source HTML carries no ids.
+   We stamp them in render order so the header can scroll to them the way
+   the hia-family pages (plumbing, HVAC, home inspector) do. */
+const SECTION_IDS = [
+  "ima-problem",
+  "ima-system",
+  "ima-services",
+  "ima-map",
+  "ima-pricing",
+  "ima-process",
+  "ima-faq",
+] as const;
+
+const NAV_LINKS = [
+  { id: "ima-problem", label: "The Problem" },
+  { id: "ima-system", label: "What We Do" },
+  { id: "ima-map", label: "Map Pack" },
+  { id: "ima-pricing", label: "Pricing" },
+  { id: "ima-process", label: "Process" },
+  { id: "ima-faq", label: "FAQ" },
+];
+
+// Sticky header clearance so a scrolled-to heading isn't hidden behind it.
+const SCROLL_OFFSET = 76;
+
+function countSections(html: string) {
+  return (html.match(/<section\b/g) ?? []).length;
+}
+
+// Adds id="..." to each <section> that doesn't already have one, continuing
+// the id sequence from `startIndex` (contentHtml is rendered in two chunks).
+function withSectionIds(html: string, startIndex: number) {
+  let i = startIndex;
+  return html.replace(/<section\b(?![^>]*\sid=)/g, () => {
+    const id = SECTION_IDS[i++];
+    return id ? `<section id="${id}"` : "<section";
+  });
+}
+
+// Splits stamped HTML in two at the opening tag of the given section id, so
+// the animated visuals can be interleaved between the source sections.
+function splitAtSection(html: string, id: string): [string, string] {
+  const marker = `<section id="${id}"`;
+  const index = html.indexOf(marker);
+  return index >= 0 ? [html.slice(0, index), html.slice(index)] : [html, ""];
+}
 
 export type IndustryMarketingPageData = {
   slug: string;
   title: string;
   description: string;
-  // Optional palette override (e.g. "ima-septic"); the 13 generated JSON
-  // pages omit both and keep the default orange accent.
+  // Optional palette override (e.g. "ima-solar"); the 13 generated JSON
+  // pages omit both and keep the default homepage-blue accent.
   themeClass?: string;
   accentColor?: string;
+  // Trade words for the animated visuals. The generated JSON pages omit this
+  // and fall back to slug-derived copy.
+  visualCopy?: IndustryVisualCopy;
   tickerHtml: string;
   heroHtml: string;
   trustbarHtml: string;
@@ -53,6 +112,33 @@ export default function IndustryMarketingPage({ page }: Props) {
   const contentAfterReviews =
     faqSectionIndex >= 0 ? page.contentHtml.slice(faqSectionIndex) : "";
 
+  const beforeSectionCount = countSections(contentBeforeReviews);
+  const contentBeforeHtml = withSectionIds(contentBeforeReviews, 0);
+  const contentAfterHtml = withSectionIds(
+    contentAfterReviews,
+    beforeSectionCount,
+  );
+
+  // Interleave the three animated visuals between the source sections:
+  // problem → rank race, system → lead engine, map → growth curve → pricing.
+  const visualCopy = page.visualCopy ?? visualCopyFromSlug(page.slug);
+  const [problemChunk, afterProblem] = splitAtSection(
+    contentBeforeHtml,
+    "ima-system",
+  );
+  const [systemChunk, afterSystem] = splitAtSection(
+    afterProblem,
+    "ima-services",
+  );
+  const [answerMapChunk, pricingChunk] = splitAtSection(
+    afterSystem,
+    "ima-pricing",
+  );
+  const stampedIds = new Set<string>(
+    SECTION_IDS.slice(0, beforeSectionCount + countSections(contentAfterReviews)),
+  );
+  const navLinks = NAV_LINKS.filter((link) => stampedIds.has(link.id));
+
   return (
     <>
       {page.schemas.map((schema, index) => (
@@ -85,6 +171,19 @@ export default function IndustryMarketingPage({ page }: Props) {
               priority
             />
           </Link>
+          {navLinks.length > 0 ? (
+            <nav className="ima-header-links" aria-label="On this page">
+              {navLinks.map((link) => (
+                <HashScrollLink
+                  key={link.id}
+                  href={`#${link.id}`}
+                  offset={SCROLL_OFFSET}
+                >
+                  {link.label}
+                </HashScrollLink>
+              ))}
+            </nav>
+          ) : null}
           <div className="ima-header-actions">
             <Link href={SITE_CONTACT.phoneHref} className="ima-header-phone">
               {SITE_CONTACT.phoneDisplay}
@@ -162,9 +261,21 @@ export default function IndustryMarketingPage({ page }: Props) {
                 dangerouslySetInnerHTML={{ __html: page.trustbarHtml }}
               />
               <div className="ima-source-content">
-                <div
-                  dangerouslySetInnerHTML={{ __html: contentBeforeReviews }}
-                />
+                <div dangerouslySetInnerHTML={{ __html: problemChunk }} />
+                {systemChunk ? <MapPackRaceVisual copy={visualCopy} /> : null}
+                {systemChunk ? (
+                  <div dangerouslySetInnerHTML={{ __html: systemChunk }} />
+                ) : null}
+                {answerMapChunk ? (
+                  <LeadEngineVisual copy={visualCopy} />
+                ) : null}
+                {answerMapChunk ? (
+                  <div dangerouslySetInnerHTML={{ __html: answerMapChunk }} />
+                ) : null}
+                {pricingChunk ? <GrowthCurveVisual copy={visualCopy} /> : null}
+                {pricingChunk ? (
+                  <div dangerouslySetInnerHTML={{ __html: pricingChunk }} />
+                ) : null}
                 <section className="ima-reviews-section" aria-labelledby="ima-reviews-title">
                   <div className="ima-reviews-heading">
                     <span className="eyebrow">Verified Client Reviews</span>
@@ -176,14 +287,14 @@ export default function IndustryMarketingPage({ page }: Props) {
                     <ClutchWidget
                       widgetType="12"
                       height="375"
-                      primaryColor={page.accentColor ?? "#f97316"}
+                      primaryColor={page.accentColor ?? "#2567e8"}
                       reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                     />
                   </div>
                 </section>
-                {contentAfterReviews ? (
+                {contentAfterHtml ? (
                   <div
-                    dangerouslySetInnerHTML={{ __html: contentAfterReviews }}
+                    dangerouslySetInnerHTML={{ __html: contentAfterHtml }}
                   />
                 ) : null}
               </div>

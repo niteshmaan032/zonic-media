@@ -1,46 +1,86 @@
 import Link from "next/link";
-import Image from "next/image";
+import type { CSSProperties, ReactNode } from "react";
 import type { Metadata } from "next";
+
 import Footer from "@/app/components/Footer";
-import LeadContactForm from "@/app/components/LeadContactForm";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
-import "@/app/style/services-page.css";
+import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
+import GrowthConsole from "@/app/components/services/GrowthConsole";
+import SpeedGauges from "@/app/components/services/SpeedGauges";
+import RankFlip from "@/app/components/services/RankFlip";
+import GbpFlip from "@/app/components/services/GbpFlip";
+import AdsPanel from "@/app/components/services/AdsPanel";
+import GrowthLoop from "@/app/components/services/GrowthLoop";
+
+import "@/app/style/servicesHub.css";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
 import {
-  FaArrowRight,
-  FaBullhorn,
-  FaChartLine,
-  FaMagnifyingGlass,
-  FaRocket,
-  FaStar,
-  FaCircleCheck,
-  FaStore,
-  FaBuilding,
-  FaHouse,
-  FaBriefcase,
-  FaCheck,
-  FaLocationDot,
-  FaPhoneVolume,
-  FaClipboardCheck,
-  FaHandshake,
-  FaLaptopCode,
-  FaXmark,
-} from "react-icons/fa6";
+  FiActivity,
+  FiArrowRight,
+  FiArrowUpRight,
+  FiAward,
+  FiBriefcase,
+  FiCheck,
+  FiCheckCircle,
+  FiClipboard,
+  FiCode,
+  FiCompass,
+  FiEye,
+  FiHeart,
+  FiHome,
+  FiLayers,
+  FiMapPin,
+  FiPenTool,
+  FiPhone,
+  FiSearch,
+  FiShoppingBag,
+  FiStar,
+  FiTarget,
+  FiUsers,
+  FiX,
+  FiZap,
+} from "react-icons/fi";
+
+/* ---------------------------------------------------------------------------
+   POSITIONING — read before editing copy.
+
+   This is the SERVICES HUB. It owns the head term "digital marketing services"
+   and the supporting set ("digital marketing agency for small business",
+   "full service digital marketing"). It must describe each discipline at
+   summary depth only, then link DOWN to the page that owns that head term:
+
+     web design           → /services/web-design
+     local SEO            → /services/local-seo-for-home-services
+     GBP optimization     → /services/gmb-optimization
+     GBP reinstatement    → /services/gmb-reinstatement-help
+     GBP verification     → /services/gmb-verification-help
+     Map Pack ranking     → /local-seo-google-business-optimization
+     Google Ads / PPC     → /services/google-ads
+     white label          → /services/white-label-services
+
+   Never restate a child page's full deliverables list here, and never link a
+   card back to /services (a self-link on the hub wastes the slot).
+
+   VISUALS: no photography on this page. Every panel is a CSS-animated UI
+   component under `.svc-page` in servicesHub.css. Before/after visuals rest in
+   the "after" state so prefers-reduced-motion users see the result.
+--------------------------------------------------------------------------- */
 
 const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
   title: "Digital Marketing Services | SEO, PPC & Web Design",
   description:
-    "Grow online with Zonic Media's digital marketing services, including web design, local SEO, Google Ads, GMB optimization, branding, and custom software.",
+    "Digital marketing services for local and mid-size businesses: conversion-built websites, local SEO, Google Business Profile work and Google Ads. Free audit, no lock-in.",
   keywords: [
     "digital marketing services",
+    "full service digital marketing agency",
     "local SEO services",
     "Google Ads management",
     "web design services",
     "Google Business Profile optimization",
-    "branding and logo design services",
     "PPC advertising services",
     "digital marketing for local business",
     "small business marketing services",
@@ -60,7 +100,7 @@ export const metadata: Metadata = {
     ],
     title: "Digital Marketing Services | SEO, PPC & Web Design",
     description:
-      "Grow online with Zonic Media's full-service digital marketing solutions for SEO, PPC, web design, GMB optimization, branding, and software.",
+      "Websites that convert, local SEO that wins the Map Pack, and Google Ads that pay for themselves. One team, one strategy, one report.",
     url: "/services",
     type: "website",
   },
@@ -68,453 +108,462 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Digital Marketing Services | SEO, PPC & Web Design",
     description:
-      "Grow online with Zonic Media's digital marketing services, including web design, local SEO, Google Ads, GMB optimization, branding, and custom software.",
+      "Digital marketing services for local and mid-size businesses: web design, local SEO, Google Business Profile and Google Ads under one roof.",
   },
 };
 
-function BtnArrow() {
-  return (
-    <span className="buttons__icon-wrapper">
-      <svg
-        viewBox="0 0 14 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="buttons__icon-svg"
-        width="8"
-      >
-        <path
-          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-          fill="currentColor"
-        />
-      </svg>
-      <svg
-        viewBox="0 0 14 15"
-        fill="none"
-        width="8"
-        xmlns="http://www.w3.org/2000/svg"
-        className="buttons__icon-svg buttons__icon-svg--copy"
-      >
-        <path
-          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
-}
-
-/* ── DATA ──────────────────────────────────────────────────── */
+/* ────────────────────────────────────────────────────────────── data ───── */
 
 const heroStats = [
-  { value: "200%", label: "Average Growth Rate" },
-  { value: "100+", label: "Brands Scaled" },
-  { value: "50+", label: "Projects Delivered" },
-  { value: "4.9★", label: "Client Rating" },
+  { v: "200%", k: "Average client growth in year one" },
+  { v: "100+", k: "Brands scaled since launch" },
+  { v: "1,500+", k: "Google profiles optimized" },
+  { v: "4.9★", k: "Average client rating" },
 ];
 
-const services = [
+type ServiceCard = {
+  visual: "site" | "bars" | "pins" | "ad" | "brand" | "flow";
+  title: string;
+  desc: string;
+  points: string[];
+  href: string;
+  cta: string;
+};
+
+const services: ServiceCard[] = [
   {
-    img: "/images/new-home/graphic-design.png",
-    cardClass: "st2-card-design",
+    visual: "site",
     title: "Web Design & Development",
-    desc: "High-converting, mobile-first websites engineered for speed, SEO performance, and user experience. Every page is built to turn visitors into paying customers.",
-    features: [
-      "Landing Pages & Business Sites",
-      "WordPress & Custom CMS",
-      "Core Web Vitals Optimized",
+    desc: "Fast, mobile-first websites built around one job: turning the visit into a call or a form. Structure, copy and speed are set up for search from the first build.",
+    points: [
+      "Business sites, landing pages and rebuilds",
+      "WordPress, headless and custom builds",
+      "Core Web Vitals passed at launch",
     ],
     href: "/services/web-design",
+    cta: "See web design",
   },
   {
-    img: "/images/new-home/ui.png",
-    cardClass: "st2-card-ui",
-    title: "UI/UX Design",
-    desc: "Intuitive, conversion-focused interfaces rooted in user psychology. We create design systems that guide users toward meaningful actions at every step.",
-    features: [
-      "User Research & Wireframing",
-      "Design Systems & Prototypes",
-      "Accessibility-First Approach",
-    ],
-    href: "/services",
-  },
-  {
-    img: "/images/new-home/branding.png",
-    cardClass: "st2-card-brand",
-    title: "Branding & Identity",
-    desc: "Strategic brand identities that build instant recognition and long-term trust. Logo, visual language, and messaging — crafted to differentiate and resonate.",
-    features: [
-      "Logo & Visual Identity",
-      "Brand Guidelines & Style Guides",
-      "Messaging & Positioning",
-    ],
-    href: "/services",
-  },
-  {
-    img: "/images/new-home/search-engine-optimization.png",
-    cardClass: "st2-card-seo",
-    title: "Local SEO & GMB Optimization",
-    desc: "Rank in the Google Map Pack and dominate local search. We build sustainable organic visibility that generates qualified leads month after month.",
-    features: [
-      "Google Business Profile Optimization",
-      "Local Keyword Strategy",
-      "Citation Building & Reviews",
+    visual: "bars",
+    title: "Local SEO",
+    desc: "Rankings across a whole service area, not just at your front door. Service pages, location pages, citations and reviews built into one plan.",
+    points: [
+      "Service and location page architecture",
+      "Citation cleanup and local link building",
+      "Review generation that keeps velocity up",
     ],
     href: "/services/local-seo-for-home-services",
+    cta: "See local SEO",
   },
   {
-    img: "/images/new-home/campaign.png",
-    cardClass: "st2-card-marketing",
+    visual: "pins",
+    title: "Google Business Profile",
+    desc: "Your listing is where most local buyers decide. We set categories, services, photos, posts and reviews so the profile works as a channel, not a formality.",
+    points: [
+      "Category, service and attribute alignment",
+      "Photo, post and Q&A programme",
+      "Suspension appeals and video verification",
+    ],
+    href: "/services/gmb-optimization",
+    cta: "See profile work",
+  },
+  {
+    visual: "ad",
     title: "Google Ads & PPC",
-    desc: "High-ROAS campaigns engineered to attract high-intent buyers. Every dollar of ad spend is optimized for maximum conversions and measurable returns.",
-    features: [
-      "Strategic Keyword Targeting",
-      "A/B Tested Landing Pages",
-      "Full Conversion Tracking",
+    desc: "Tight campaigns aimed at buyers who are ready now. Wasted clicks get cut every week, and the landing page matches the search that paid for it.",
+    points: [
+      "Search, Local Services and Performance Max",
+      "Intent-matched landing pages",
+      "Call tracking and revenue reporting",
     ],
     href: "/services/google-ads",
+    cta: "See Google Ads",
   },
   {
-    img: "/images/new-home/app-development.png",
-    cardClass: "st2-card-software",
-    title: "Custom Software Solutions",
-    desc: "Scalable, purpose-built web applications and automation tools designed to solve your specific business challenges and compound efficiency over time.",
-    features: [
-      "Web Apps & Client Portals",
-      "API Integrations & Automation",
-      "Workflow & Process Tools",
+    visual: "brand",
+    title: "Branding & UI/UX Design",
+    desc: "Identity, interface and messaging that make a small company read as the safe choice. Design systems your team can keep using after handover.",
+    points: [
+      "Logo, colour and type systems",
+      "Wireframes, prototypes and design systems",
+      "Accessibility checked at AA contrast",
     ],
-    href: "/services",
+    href: "/contact-us",
+    cta: "Request a quote",
+  },
+  {
+    visual: "flow",
+    title: "Custom Software & Automation",
+    desc: "Client portals, booking flows and integrations that remove the manual steps between an enquiry and a booked job.",
+    points: [
+      "Web apps and client portals",
+      "CRM and API integrations",
+      "Workflow automation and internal tools",
+    ],
+    href: "/contact-us",
+    cta: "Request a quote",
   },
 ];
 
-const whyPoints = [
+type Block = {
+  badge: string;
+  heading: string;
+  body: ReactNode;
+  points: string[];
+  href: string;
+  cta: string;
+  reverse: boolean;
+  visual: ReactNode;
+};
+
+const blocks: Block[] = [
   {
-    icon: <FaClipboardCheck />,
-    title: "Strategy Before Execution",
-    desc: "We audit your goals, market, and audience before writing a line of code. Every decision is strategic — never guesswork.",
+    badge: "Web design & development",
+    heading: "A website that loads fast and asks for the job",
+    body: (
+      <>
+        Most small business sites look fine and still leak enquiries. Our{" "}
+        <Link href="/services/web-design" className="svc-inline-link">
+          website design and development
+        </Link>{" "}
+        starts from the search that brings someone in, then removes every step
+        between that search and the phone ringing. Speed is treated as a
+        feature, not a cleanup task, so the build passes Core Web Vitals before
+        it goes live.
+      </>
+    ),
+    points: [
+      "Page speed budgeted during the build, not patched after launch",
+      "Layouts shaped around call, quote and booking intent",
+      "Technical SEO, schema and tracking wired in from day one",
+      "Trade-specific builds for roofing, HVAC, plumbing and remodeling",
+    ],
+    href: "/services/web-design",
+    cta: "Start a website project",
+    reverse: false,
+    visual: (
+      <>
+        <ServiceSiteMockup
+          prefix="svc"
+          brand="Your Business"
+          url="yourbusiness.com"
+          headline="Same-day service across the metro, booked online in 60 seconds"
+          primaryCta="Get a free quote"
+          secondaryCta="Call now"
+          chips={["Licensed & insured", "Upfront pricing", "Open 24/7"]}
+          toastTitle="New quote request"
+          reviews="214 reviews"
+        />
+        <SpeedGauges />
+      </>
+    ),
   },
   {
-    icon: <FaLaptopCode />,
-    title: "Built for Long-Term Scale",
-    desc: "Systems engineered to grow with your business. We build for the next three years, not just for the launch day.",
+    badge: "Local SEO",
+    heading: "Rankings across the service area, not just at your pin",
+    body: (
+      <>
+        A business can sit at number one outside its own office and be invisible
+        four miles away. Our{" "}
+        <Link href="/services/local-seo-for-home-services" className="svc-inline-link">
+          local SEO service
+        </Link>{" "}
+        fixes that with the levers you actually control: category and service
+        relevance, page architecture per town, and the local prominence signals
+        that let you outrank a closer competitor. If you want the mechanics
+        behind it, we break down{" "}
+        <Link
+          href="/local-seo-google-business-optimization"
+          className="svc-inline-link"
+        >
+          how Map Pack ranking works
+        </Link>
+        .
+      </>
+    ),
+    points: [
+      "Geo-grid scanning to find where you rank across the whole area",
+      "One indexable page per service and per town you serve",
+      "Citation consistency, local links and review velocity",
+      "Monthly rank reporting tied to calls, not impressions",
+    ],
+    href: "/services/local-seo-for-home-services",
+    cta: "Get found locally",
+    reverse: true,
+    visual: <RankFlip />,
   },
   {
-    icon: <FaChartLine />,
-    title: "Conversion-Focused Design",
-    desc: "Every layout decision is grounded in user psychology and data — maximizing engagement, trust, and lead generation.",
+    badge: "Google Business Profile",
+    heading: "From suspended listing back to live on Maps",
+    body: (
+      <>
+        A suspension takes the phone off the hook overnight. Our team handles{" "}
+        <Link href="/services/gmb-reinstatement-help" className="svc-inline-link">
+          suspended profile reinstatement
+        </Link>{" "}
+        and{" "}
+        <Link href="/services/gmb-verification-help" className="svc-inline-link">
+          stuck video verification
+        </Link>
+        , then keeps the listing healthy with ongoing{" "}
+        <Link href="/services/gmb-optimization" className="svc-inline-link">
+          Google Business Profile optimization
+        </Link>{" "}
+        so it does not happen twice.
+      </>
+    ),
+    points: [
+      "Root-cause audit before any appeal is filed",
+      "Guideline violations fixed, then a documented appeal",
+      "Video verification prep and re-verification support",
+      "Ongoing posts, photos, services and review response",
+    ],
+    href: "/services/gmb-optimization",
+    cta: "Fix my Google profile",
+    reverse: false,
+    visual: <GbpFlip />,
   },
   {
-    icon: <FaHandshake />,
-    title: "Radical Transparency",
-    desc: "Clear milestones, open dashboards, and proactive reporting — you always know exactly where your results stand.",
-  },
-  {
-    icon: <FaRocket />,
-    title: "Results After Launch",
-    desc: "Ongoing optimization, strategy reviews, and growth reporting keep results compounding well beyond the launch date.",
+    badge: "Google Ads & PPC",
+    heading: "Ad budget that stops paying for the wrong clicks",
+    body: (
+      <>
+        Most underperforming accounts are not short of budget, they are short of
+        negatives. Our{" "}
+        <Link href="/services/google-ads" className="svc-inline-link">
+          Google Ads management
+        </Link>{" "}
+        rebuilds the account around buyer intent, sends each campaign to a page
+        written for that search, and reports on booked revenue rather than
+        clicks.
+      </>
+    ),
+    points: [
+      "Search term audits and weekly negative keyword work",
+      "Landing pages matched to the query that paid for the click",
+      "Call tracking with recorded lead quality scoring",
+      "Local Services Ads set up alongside search where it fits",
+    ],
+    href: "/services/google-ads",
+    cta: "Review my ad account",
+    reverse: true,
+    visual: <AdsPanel />,
   },
 ];
 
 const processSteps = [
   {
     num: "01",
-    title: "Discover",
-    desc: "Deep research into your business, competitors, and audience. We identify the fastest growth levers before touching a keyboard.",
+    title: "Audit",
+    desc: "We scan your site, rankings, profile and ad account, then compare them against the competitors already taking the calls.",
   },
   {
     num: "02",
-    title: "Strategize",
-    desc: "A clear roadmap — timelines, priorities, channel selection, and measurable milestones so everyone is aligned from day one.",
+    title: "Plan",
+    desc: "You get a prioritised roadmap: what moves first, what it should return, and what it costs. No 40-slide deck.",
   },
   {
     num: "03",
-    title: "Design",
-    desc: "Pixel-perfect, conversion-optimized designs built around your brand and user behavior patterns at every touchpoint.",
+    title: "Build",
+    desc: "Design, copy, page architecture and tracking are built together so nothing waits on another vendor.",
   },
   {
     num: "04",
-    title: "Build & Launch",
-    desc: "Clean code, full QA, SEO setup, and a seamless go-live experience — engineered to perform flawlessly from the first visit.",
+    title: "Launch",
+    desc: "Full QA, redirects, schema and analytics checked before go-live, so rankings carry over instead of resetting.",
   },
   {
     num: "05",
-    title: "Optimize & Grow",
-    desc: "Post-launch analytics, A/B testing, SEO reporting, and continuous iteration keep your results compounding over time.",
+    title: "Compound",
+    desc: "Monthly reporting, testing and content keep the gains stacking after launch instead of levelling off.",
   },
 ];
 
-const featuredServices = [
+const whyPoints = [
   {
-    badge: "Web Design & Development",
-    heading: "Websites Built to Win — Not Just to Look Good",
-    body: (
-      <>
-        Most websites look decent but fail to convert. Our{" "}
-        <Link href="/services/web-design" className="st2-inline-link">
-          website design services
-        </Link>{" "}
-        engineer digital experiences that are fast, mobile-first, SEO-optimized,
-        and designed around the psychology of your target customer — so every
-        visit has a higher chance of turning into a lead or sale.
-      </>
-    ),
-    points: [
-      "Performance-first architecture with sub-2s load times",
-      "Conversion-focused layouts based on user intent data",
-      "Technical SEO foundation built in from day one",
-      "Full mobile responsiveness and accessibility compliance",
-    ],
-    img: "/images/services/ChatGPT Image May 21, 2026, 01_17_42 PM.png",
-    href: "/services/web-design",
-    cta: "Start Your Website Project",
-    reverse: false,
+    icon: <FiClipboard />,
+    title: "Audit before proposal",
+    desc: "We look at your numbers before we quote. If a channel is not worth funding yet, we say so.",
   },
   {
-    badge: "Google Business Profile Optimization",
-    heading: "Turn Local Searches Into Calls, Directions, and Bookings",
-    body: (
-      <>
-        Your Google Business Profile is often the first place customers decide
-        whether to trust you. Our{" "}
-        <Link href="/services/gmb-optimization" className="st2-inline-link">
-          GBP optimization
-        </Link>{" "}
-        dials in categories, services, photos, posts, reviews, and conversion
-        signals so your listing performs like a real acquisition channel — and
-        if your listing ever goes dark, our{" "}
-        <Link href="/services/gmb-reinstatement-help" className="st2-inline-link">
-          suspended profile reinstatement
-        </Link>{" "}
-        team gets it back online.
-      </>
-    ),
-    points: [
-      "Complete GMB profile setup, cleanup, and optimization",
-      "Category, service, and keyword alignment for local intent",
-      "Review and reputation strategy that builds trust at scale",
-      "Ongoing profile updates that keep your listing active",
-    ],
-    img: "/images/services/ChatGPT Image May 21, 2026, 01_03_49 PM.png",
-    href: "/services/gmb-optimization",
-    cta: "Optimize My GMB Profile",
-    reverse: true,
+    icon: <FiLayers />,
+    title: "One team, one strategy",
+    desc: "Site, SEO, profile and ads run off the same plan, so the channels stop competing for credit.",
   },
   {
-    badge: "Local SEO & Google Business Profile",
-    heading: "Dominate Local Search and the Google Map Pack",
-    body: "When someone in your city searches for your service, your business needs to appear at the top — and we make that happen. Our local SEO strategy covers GMB optimization, citation building, on-page content, and a review generation system that builds trust at scale.",
-    points: [
-      "Complete Google Business Profile setup and optimization",
-      "Map Pack ranking through citation authority and proximity signals",
-      "On-page local SEO for every key service and location page",
-      "Review generation system for consistent 5-star credibility",
-    ],
-    img: "/images/services/ChatGPT Image May 21, 2026, 01_14_07 PM.png",
-    href: "/services/local-seo-for-home-services",
-    cta: "Get Found Locally",
-    reverse: false,
+    icon: <FiActivity />,
+    title: "Reporting you can read",
+    desc: "Calls, forms and booked jobs in plain language, with the ranking data underneath if you want it.",
   },
   {
-    badge: "Google Ads & PPC Management",
-    heading: "Ad Campaigns That Generate Revenue, Not Just Clicks",
-    body: (
-      <>
-        Clicks are worthless without conversions. Our PPC team builds tightly
-        structured{" "}
-        <Link href="/services/google-ads" className="st2-inline-link">
-          Google Ads campaigns
-        </Link>{" "}
-        targeting high-intent buyers, with fully optimized landing pages, smart
-        bidding strategies, and transparent reporting that shows exactly what
-        your ad spend is generating.
-      </>
-    ),
-    points: [
-      "Strategic campaign architecture for maximum ROAS",
-      "Intent-matched landing pages built for conversion",
-      "Negative keyword management to eliminate wasted spend",
-      "Full attribution tracking with revenue-level reporting",
-    ],
-    img: "/images/services/ChatGPT Image May 21, 2026, 01_15_57 PM.png",
-    href: "/services/google-ads",
-    cta: "Launch a High-ROAS Campaign",
-    reverse: true,
+    icon: <FiZap />,
+    title: "Senior people on the work",
+    desc: "The specialist who audits your account is the one who runs it. Nothing is passed to a junior queue.",
+  },
+  {
+    icon: <FiAward />,
+    title: "No long lock-ins",
+    desc: "Month to month after the initial build period. We keep the account by keeping it profitable.",
   },
 ];
 
 const industries = [
   {
-    icon: <FaRocket />,
-    title: "Startups",
-    desc: "Launch fast with product pages, investor-ready branding, and acquisition systems built to validate and scale quickly.",
+    icon: <FiHome />,
+    title: "Home services",
+    desc: "Roofing, HVAC, plumbing, electrical and remodeling companies competing on Map Pack position and speed to answer.",
   },
   {
-    icon: <FaBriefcase />,
-    title: "Professional Services",
-    desc: "Law firms, consultants, accountants — authority-first presences that convert high-intent visitors into booked clients.",
+    icon: <FiBriefcase />,
+    title: "Professional services",
+    desc: "Law firms, accountants and consultants who need authority signals before a high-value enquiry converts.",
   },
   {
-    icon: <FaStore />,
+    icon: <FiHeart />,
+    title: "Healthcare & wellness",
+    desc: "Dentists, chiropractors, pediatricians and clinics where reviews and local visibility drive the booking.",
+  },
+  {
+    icon: <FiCompass />,
+    title: "Real estate",
+    desc: "Agents and brokerages building local search presence, listing funnels and follow-up that survives a slow market.",
+  },
+  {
+    icon: <FiShoppingBag />,
     title: "E-commerce",
-    desc: "Conversion-focused storefronts, paid traffic funnels, and SEO foundations that increase AOV and repeat purchases.",
+    desc: "Stores that need product-level SEO, paid traffic that clears its own cost, and a checkout that stops leaking.",
   },
   {
-    icon: <FaHouse />,
-    title: "Real Estate",
-    desc: "Local SEO, listing funnels, and lead capture systems that help agents and brokerages attract qualified buyers.",
+    icon: <FiCode />,
+    title: "SaaS & tech",
+    desc: "Product-led pages, onboarding flows and feature positioning aimed at trial signups rather than raw traffic.",
   },
   {
-    icon: <FaBuilding />,
-    title: "Local Businesses",
-    desc: "Map Pack visibility, review strategy, and service pages that turn nearby searches into booked calls and appointments.",
+    icon: <FiUsers />,
+    title: "Non-profits",
+    desc: "Grant-funded and donor-funded organisations that need reach without an enterprise budget behind it.",
   },
   {
-    icon: <FaStar />,
-    title: "Healthcare & Wellness",
-    desc: "Digital strategies for clinics, chiropractors, dentists, and wellness brands seeking strong local visibility.",
-  },
-  {
-    icon: <FaBullhorn />,
-    title: "Marketing Agencies",
+    icon: <FiPenTool />,
+    title: "Agencies",
     desc: (
       <>
-        <Link href="/services/white-label-services" className="st2-inline-link">
-          White-label design
-        </Link>
-        , development support, and reliable delivery capacity for agencies that
-        need a trusted partner.
+        <Link href="/services/white-label-services" className="svc-inline-link">
+          White-label design and development
+        </Link>{" "}
+        capacity for agencies that need delivery they can put their name on.
       </>
     ),
-  },
-  {
-    icon: <FaChartLine />,
-    title: "SaaS & Tech",
-    desc: "Product-led landing pages, onboarding flows, and feature positioning that drive signups and support retention.",
   },
 ];
 
 const withoutPoints = [
-  "Campaigns running in separate lanes with no unified strategy",
-  "Reports that show surface-level numbers — not real revenue impact",
-  "Landing pages leaking leads and wasting ad spend every day",
-  "No clear visibility into what is actually generating growth",
-  "New competitors outranking you while your digital presence stalls",
+  "Four vendors, four plans, and nobody accountable for the lead count",
+  "Reports full of impressions and sessions that never reach revenue",
+  "Ad spend paying for searches you would never quote on",
+  "A site that ranks but does not ask anyone to call",
+  "Competitors taking the Map Pack while your listing sits half filled in",
 ];
 
 const withPoints = [
-  "SEO, ads, content, and web design all working as one growth system",
-  "Monthly dashboards that connect activity directly to revenue outcomes",
-  "Conversion-optimized pages that turn traffic into qualified leads",
-  "Clear priorities and full reporting so you always know what to invest in next",
-  "Sustained competitive advantage built on compounding organic and paid growth",
-];
-
-const auditIncludes = [
-  {
-    icon: <FaMagnifyingGlass />,
-    title: "Website & SEO Audit",
-    desc: "We review your site speed, structure, and current search rankings to find what is holding you back.",
-  },
-  {
-    icon: <FaChartLine />,
-    title: "Competitor Analysis",
-    desc: "See exactly where your top competitors are winning online and where the gaps are for you to take market share.",
-  },
-  {
-    icon: <FaClipboardCheck />,
-    title: "Growth Opportunity Map",
-    desc: "A prioritized list of the highest-impact actions to take across SEO, ads, and your website — specific to your business.",
-  },
-  {
-    icon: <FaRocket />,
-    title: "Custom Recommendation Plan",
-    desc: "A realistic, jargon-free plan aligned to your goals and budget — with clear next steps you can act on immediately.",
-  },
+  "Site, SEO, profile and ads run off one plan with one owner",
+  "Monthly reporting that ends at calls, forms and booked jobs",
+  "Search terms and landing pages reviewed together every week",
+  "Pages built to convert the traffic they earn",
+  "Local visibility that keeps compounding after the build is paid for",
 ];
 
 const benefits = [
   {
-    value: "3–5×",
-    label: "More Qualified Leads",
-    desc: "Businesses working with us see a 3–5× increase in qualified inbound leads within 90 days of launch.",
+    v: "3–5×",
+    k: "More qualified leads",
+    d: "Typical lift in qualified inbound enquiries within 90 days of the rebuild going live.",
+    w: 82,
   },
   {
-    value: "Top 3",
-    label: "Local Search Rankings",
-    desc: "Our local SEO clients consistently reach the top 3 results in Google Maps for their primary keywords.",
+    v: "Top 3",
+    k: "Map Pack position",
+    d: "Where our local SEO clients land for their primary service term across the core service area.",
+    w: 94,
   },
   {
-    value: "40%+",
-    label: "Conversion Rate Lift",
-    desc: "Our conversion-focused design and CRO work delivers measurable gains in lead-to-visitor ratios post-launch.",
+    v: "40%+",
+    k: "Conversion rate lift",
+    d: "Improvement in visitor-to-lead rate after the conversion and speed work on a rebuilt site.",
+    w: 68,
   },
   {
-    value: "90%",
-    label: "Client Retention Rate",
-    desc: "Nine out of ten clients stay with us beyond the initial engagement — because the results keep compounding.",
+    v: "90%",
+    k: "Client retention",
+    d: "Nine in ten clients stay past the initial engagement, on month-to-month terms.",
+    w: 90,
+  },
+];
+
+const auditIncludes = [
+  {
+    icon: <FiSearch />,
+    title: "Website and technical review",
+    desc: "Speed, structure, indexing and the pages that should be ranking but are not.",
+  },
+  {
+    icon: <FiMapPin />,
+    title: "Local visibility scan",
+    desc: "Where you rank across the service area, and how the profile compares to the businesses above you.",
+  },
+  {
+    icon: <FiEye />,
+    title: "Competitor gap analysis",
+    desc: "What the top three in your market are doing that you are not, listed in order of effort.",
+  },
+  {
+    icon: <FiTarget />,
+    title: "Prioritised action plan",
+    desc: "The fixes worth doing first, with rough effort and expected return next to each one.",
   },
 ];
 
 const faqs = [
   {
-    q: "What types of businesses does Zonic Media work with?",
-    a: "We work with a wide range of businesses — from local service providers and professional firms to e-commerce stores, SaaS companies, and digital agencies. Our strategies are fully tailored to your specific industry, market, and growth goals.",
+    q: "What do your digital marketing services include?",
+    a: "Web design and development, local SEO, Google Business Profile optimization and reinstatement, Google Ads and PPC management, branding and UI/UX design, and custom software or automation work. Most clients start with one or two of these and add channels as the numbers justify it.",
   },
   {
-    q: "How long does it take to see results from SEO?",
-    a: "Local SEO typically shows meaningful ranking improvements within 60–90 days. For competitive national keywords, expect 3–6 months. We share transparent monthly reporting so you always know exactly where you stand and what is driving progress.",
+    q: "How much do digital marketing services cost?",
+    a: "It depends on the market and the channel mix. Website projects are quoted as a fixed scope. Local SEO and Google Ads run as monthly retainers, with ad spend paid directly to Google rather than through us. You get the number in writing after the audit, before any commitment.",
   },
   {
-    q: "Do you offer one-time projects or ongoing retainers?",
-    a: "Both. We offer one-time engagements for web design, branding, and development projects, as well as ongoing monthly retainers for SEO, Google Ads, and content marketing. Most clients start with a project and transition into a growth retainer.",
+    q: "How long before I see results from SEO?",
+    a: "Local SEO usually shows movement in 60 to 90 days, with the bigger gains between months four and six as review velocity and local links build. Competitive national terms take longer. Google Ads produces leads in the first week, which is why we often run it alongside SEO in year one.",
   },
   {
-    q: "Can you handle both design and development for our website?",
-    a: "Yes — design, development, content, SEO setup, and launch are all handled under one roof. You get a single accountable team instead of coordinating between multiple vendors, which keeps timelines tight and quality consistent.",
+    q: "Do you work with businesses outside the United States?",
+    a: "Yes. Most of our clients are US-based, and we also work with businesses in Canada, the UK, Australia and the UAE. Local SEO work is done against whichever market you sell in.",
   },
   {
-    q: "What makes your Google Ads management different?",
-    a: "We focus on revenue, not vanity metrics. Every campaign is built with intent-matched landing pages, proper conversion tracking, and negative keyword management to reduce wasted spend. You get full transparency with reporting that shows actual business outcomes — not just click data.",
+    q: "Do I have to sign a long-term contract?",
+    a: "No. Website projects run on a fixed scope, and ongoing services are month to month after the initial build period. If a channel stops earning its keep, you can pause it.",
   },
   {
-    q: "Do you provide reports and updates throughout the project?",
-    a: "Absolutely. We provide regular progress updates, milestone reports, and — for ongoing retainers — monthly performance dashboards with clear data on rankings, traffic, conversions, and ad spend efficiency. You will never be left in the dark.",
+    q: "Can you take over an account another agency built?",
+    a: "Yes, and it is common. We audit what is there first, keep what is working, and document what we change. You keep ownership of every account, property and profile, including anything we create.",
   },
   {
-    q: "How do we get started with Zonic Media?",
-    a: "Book a free strategy call. We will audit your current digital presence, identify your biggest growth opportunities, and recommend a plan aligned to your goals and budget — with no pressure and no generic pitch decks.",
+    q: "Who actually does the work?",
+    a: "The specialist who audits your account runs it. You get named contacts for SEO, ads and development rather than a rotating account manager, and you can talk to them directly.",
+  },
+  {
+    q: "How do we get started?",
+    a: "Book a free audit. We review your site, rankings, Google profile and ad account, then walk you through what we found and what we would do first. There is no obligation to buy anything at the end of it.",
   },
 ];
 
-/* ── PAGE ──────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────── structured data ─ */
 
-const contactFormHead = {
-  leadFormTitle: "Ready to Grow Your Business?",
-  leadCallText: (
-    <>
-      Let&apos;s build a digital marketing strategy that drives more leads,
-      stronger visibility, and long-term business growth.
-      <br />{" "}
-      <a href={SITE_CONTACT.phoneHref} className="lead-call-link">
-        Call Now:{SITE_CONTACT.phoneDisplay}
-      </a>
-    </>
-  ),
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "url": `${SITE_URL}/services`,
-  mainEntity: faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.a,
-    },
-  })),
-};
+const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+  { name: "Home", url: "/" },
+  { name: "Services", url: "/services" },
+]);
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -523,12 +572,14 @@ const serviceJsonLd = {
   name: "Digital Marketing Services",
   url: `${SITE_URL}/services`,
   description:
-    "Full-service digital marketing services from Zonic Media, including web design, local SEO, Google Ads, Google Business Profile optimization, branding, UI/UX design, and custom software solutions.",
+    "Full-service digital marketing from Zonic Media: web design and development, local SEO, Google Business Profile optimization and reinstatement, Google Ads management, branding and UI/UX design, and custom software.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: "Zonic Media",
     url: SITE_URL,
+    telephone: "+1-302-726-9736",
+    email: "contact@zonicllc.com",
   },
   areaServed: [
     "United States",
@@ -549,18 +600,11 @@ const serviceJsonLd = {
         "@type": "Service",
         name: service.title,
         description: service.desc,
-        provider: {
-          "@id": `${SITE_URL}/#organization`,
-        },
+        provider: { "@id": `${SITE_URL}/#organization` },
       },
     })),
   },
 };
-
-const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-  { name: "Home", url: "/" },
-  { name: "Services", url: "/services" },
-]);
 
 const howToJsonLd = {
   "@context": "https://schema.org",
@@ -568,7 +612,7 @@ const howToJsonLd = {
   "@id": `${SITE_URL}/services#how-to-start-a-project`,
   name: "How to start a digital marketing project with Zonic Media",
   description:
-    "Zonic Media's visible 5-step process for taking a digital marketing project from discovery through launch and ongoing growth.",
+    "Zonic Media's five-step process for taking a digital marketing project from audit through launch and ongoing growth.",
   supply: [
     {
       "@type": "HowToSupply",
@@ -589,457 +633,462 @@ const howToJsonLd = {
   })),
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  url: `${SITE_URL}/services`,
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
+/* ──────────────────────────────────────────────── small inline visuals ─── */
+
+/** Decorative micro-animation on each service card. Purely presentational. */
+function MiniVisual({ kind }: { kind: ServiceCard["visual"] }) {
+  if (kind === "site") {
+    return (
+      <div className="svc-mini svc-mini-site" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+        <b />
+      </div>
+    );
+  }
+  if (kind === "bars") {
+    return (
+      <div className="svc-mini svc-mini-bars" aria-hidden="true">
+        {[0, 1, 2, 3, 4, 5].map((n) => (
+          <i key={n} />
+        ))}
+      </div>
+    );
+  }
+  if (kind === "pins") {
+    return (
+      <div className="svc-mini svc-mini-pins" aria-hidden="true">
+        {Array.from({ length: 15 }, (_, n) => (
+          <i key={n} style={{ "--n": n } as CSSProperties} />
+        ))}
+      </div>
+    );
+  }
+  if (kind === "ad") {
+    return (
+      <div className="svc-mini svc-mini-ad" aria-hidden="true">
+        <span>Sponsored</span>
+        <i />
+        <i />
+        <b />
+      </div>
+    );
+  }
+  if (kind === "brand") {
+    return (
+      <div className="svc-mini svc-mini-brand" aria-hidden="true">
+        {[0, 1, 2, 3].map((n) => (
+          <i key={n} style={{ "--n": n } as CSSProperties} />
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="svc-mini svc-mini-flow" aria-hidden="true">
+      <i />
+      <span />
+      <i />
+      <span />
+      <i />
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────── page ─── */
+
 export default function ServicesPage() {
   return (
-    <>
-      {/* ══════════════════════════════════════════════════════
-          SECTION 1 — HERO  (split two-column layout)
-      ══════════════════════════════════════════════════════ */}
+    <div className="svc-page">
       <script
         id="services-breadcrumb-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <script
         id="services-service-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         id="services-howto-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(howToJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <script
         id="services-faq-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="st2-hero">
-        <div className="st2-hero-grid">
-          {/* Left: copy */}
-          <div className="st2-hero-left">
-            <p className="st2-hero-overline">Full-Service Digital Agency</p>
-            <h1 className="st2-hero-h1">
-              Digital Services
-              <br />
-              That <span className="st2-hero-accent">Generate</span>
-              {" "}Real Growth
-            </h1>
-            <p className="st2-hero-p">
-              From conversion-focused web design and{" "}
-              <Link href="/services/local-seo-for-home-services" className="st2-inline-link">
-                local SEO
-              </Link>{" "}
-              to high-ROAS Google Ads and custom software — we deliver
-              full-service digital solutions engineered for measurable, scalable
-              results.
-            </p>
-            <div className="st2-hero-ctas">
-              <Link href="/contact-us" className="buttons st2-btn-dark">
-                Get Free Consultation <BtnArrow />
-              </Link>
-              <Link href={SITE_CONTACT.phoneHref} className="buttons st2-btn-ghost">
-                Call {SITE_CONTACT.phoneDisplay} <BtnArrow />
-              </Link>
+
+      {/* ═══════════════════════════════════════════ 1 · HERO ═══════════ */}
+      <section className="svc-hero">
+        <div className="svc-container">
+          <div className="svc-hero-grid">
+            <div>
+              <p className="svc-eyebrow">Full-service digital agency</p>
+              <h1 className="svc-hero-h1">
+                Digital Marketing Services That Turn Local Searches Into{" "}
+                <span className="svc-hl">Booked Jobs</span>
+              </h1>
+              <p className="svc-hero-sub">
+                Zonic Media runs the digital marketing services a local or
+                mid-size business actually needs: a website built to convert,
+                local SEO and Google Business Profile work that wins the Map
+                Pack, and Google Ads that pay for themselves. One team, one
+                plan, one report at the end of the month.
+              </p>
+              <div className="svc-hero-ctas">
+                <Link href="/contact-us" className="svc-btn">
+                  Get a free growth audit
+                  <span className="svc-btn-arrow" aria-hidden="true">
+                    <FiArrowUpRight />
+                  </span>
+                </Link>
+                <a href={SITE_CONTACT.phoneHref} className="svc-btn-ghost">
+                  <FiPhone aria-hidden="true" />
+                  {SITE_CONTACT.phoneDisplay}
+                </a>
+              </div>
+              <div className="svc-hero-trust">
+                <span>
+                  <span className="svc-hero-stars" aria-hidden="true">
+                    <FiStar />
+                  </span>
+                  4.9 average client rating
+                </span>
+                <span>
+                  <FiCheck size={14} aria-hidden="true" />
+                  100+ brands scaled
+                </span>
+                <span>
+                  <FiCheck size={14} aria-hidden="true" />
+                  No long-term lock-in
+                </span>
+              </div>
             </div>
-            <div className="st2-hero-trust">
-              <span className="st2-hero-trust-item">
-                <FaCheck size={11} /> 100+ Brands Scaled
-              </span>
-              <span className="st2-hero-trust-item">
-                <FaCheck size={11} /> 4.9★ Average Rating
-              </span>
-              <span className="st2-hero-trust-item">
-                <FaCheck size={11} /> No Long-Term Lock-In
-              </span>
+
+            <div>
+              <GrowthConsole />
             </div>
           </div>
 
-          {/* Right: image + floating stat card */}
-          <div className="st2-hero-right">
-            <div className="st2-hero-img-wrap">
-              <Image
-                src="/images/new-home/ChatGPT Image May 4, 2026, 04_33_14 PM.png"
-                fill
-                alt="Zonic Media digital agency — web design and digital marketing services"
-                sizes="(max-width: 991px) 100vw, 45vw"
-                style={{ objectFit: "cover", objectPosition: "center" }}
-                priority
-              />
-            </div>
-            <div className="st2-hero-stat-card">
-              <p>200%</p>
-              <p>Average client growth rate</p>
-            </div>
+          <div className="svc-stats">
+            {heroStats.map((s) => (
+              <div className="svc-stat" key={s.k}>
+                <p className="svc-stat-v">{s.v}</p>
+                <p className="svc-stat-k">{s.k}</p>
+              </div>
+            ))}
           </div>
-        </div>
-
-        {/* Stats bar */}
-        <div className="st2-hero-statsbar">
-          {heroStats.map((s, i) => (
-            <div key={i} className="st2-hero-statsbar-item">
-              <p className="st2-hero-statsbar-val">{s.value}</p>
-              <p className="st2-hero-statsbar-lbl">{s.label}</p>
-            </div>
-          ))}
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 2 — SERVICES OVERVIEW
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-services-section" id="st2-services">
-        <div className="st2-container">
-          <div className="st2-section-header">
-            <p className="st2-label">Our Services</p>
-            <h2 className="st2-section-heading">
-              Everything Your Business Needs to Grow Online
+      {/* ═══════════════════════════════════════ 2 · SERVICE GRID ═══════ */}
+      <section className="svc-section svc-services" id="services">
+        <div className="svc-container">
+          <div className="svc-sec-head-center">
+            <p className="svc-eyebrow">What we do</p>
+            <h2 className="svc-h2">
+              Every digital marketing service under one roof
             </h2>
-            <p className="st2-section-sub">
-              Six core disciplines, executed at the highest level — so every
-              part of your digital presence works together to generate
-              visibility, trust, and revenue.
+            <p className="svc-lead">
+              Six disciplines, run by the same team off the same plan. Start
+              with one, add the next when the numbers say it is worth funding.
             </p>
           </div>
 
-          <div className="st2-services-grid">
-            {services.map((svc, i) => (
-              <div key={i} className={`st2-service-card ${svc.cardClass}`}>
-                <div className="st2-service-card-top">
-                  <div className="st2-service-icon">
-                    <Image
-                      src={svc.img}
-                      alt={svc.title}
-                      width={80}
-                      height={80}
-                      className="st2-service-icon-img"
-                    />
-                  </div>
-                  <h3 className="st2-service-title">{svc.title}</h3>
-                  <p className="st2-service-desc">{svc.desc}</p>
-                  <ul className="st2-service-features">
-                    {svc.features.map((f, j) => (
-                      <li key={j}>
-                        <FaCheck size={10} /> {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="st2-service-card-bottom">
-                  <Link href={svc.href} className="st2-learn-more">
-                    Learn more <FaArrowRight size={11} />
+          <div className="svc-services-grid">
+            {services.map((svc) => (
+              <div className="svc-card" key={svc.title}>
+                <MiniVisual kind={svc.visual} />
+                <h3 className="svc-card-title">{svc.title}</h3>
+                <p className="svc-card-desc">{svc.desc}</p>
+                <ul className="svc-card-list">
+                  {svc.points.map((p) => (
+                    <li key={p}>
+                      <FiCheck size={13} aria-hidden="true" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+                <div className="svc-card-foot">
+                  <Link href={svc.href} className="svc-arrow-link">
+                    {svc.cta}
+                    <FiArrowRight size={14} aria-hidden="true" />
                   </Link>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="st2-cta-center">
-            <Link href="/contact-us" className="buttons st2-btn-primary">
-              Start Your Project <BtnArrow />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 3 — WHY CHOOSE US
-          Layout: header row → full-width image → cards grid
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-why-section">
-        <div className="st2-container">
-          {/* Header row: left heading, right subtext */}
-          <div className="st2-why-header">
-            <div className="st2-why-header-left">
-              <p className="st2-label">Why Zonic Media</p>
-              <h2 className="st2-why-heading">
-                The Growth Partner Built
-                <br />
-                for Measurable Outcomes
-              </h2>
-            </div>
-            <p className="st2-why-header-sub">
-              We combine deep strategy, premium design, and performance-first
-              execution to deliver results that matter to your bottom line —
-              not just your portfolio. Every decision is in service of your
-              measurable business goals.
-            </p>
-          </div>
-
-          {/* Full-width image */}
-          <div className="st2-why-img-container">
-            <Image
-              src="/images/new-home/ChatGPT Image May 5, 2026, 04_29_24 PM.png"
-              fill
-              alt="Zonic Media team building client growth strategy"
-              sizes="100vw"
-              style={{ objectFit: "cover", objectPosition: "center top" }}
-            />
-            {/* Stat pills overlaid at bottom-left of image */}
-            <div className="st2-why-img-stats">
-              <div className="st2-why-stat-pill">
-                <strong>90%</strong>
-                <span>Client Retention</span>
-              </div>
-              <div className="st2-why-stat-pill">
-                <strong>4.9★</strong>
-                <span>Average Rating</span>
-              </div>
-              <div className="st2-why-stat-pill">
-                <strong>100+</strong>
-                <span>Brands Grown</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Cards grid below the image */}
-          <div className="st2-why-cards">
-            {whyPoints.map((pt, i) => (
-              <div key={i} className="st2-why-card">
-                <div className="st2-why-card-icon">{pt.icon}</div>
-                <p className="st2-why-card-title">{pt.title}</p>
-                <p className="st2-why-card-desc">{pt.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="st2-cta-center">
-            <Link href="/contact-us" className="buttons st2-btn-dark">
-              Talk to Our Experts <BtnArrow />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════
-          SECTION 4 — OUR PROCESS
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-process-section">
-        <div className="st2-container">
-          <div className="st2-process-head">
-            <div className="st2-process-head-left">
-              <p className="st2-label st2-label-accent">5-Step Process</p>
-              <h2 className="st2-process-heading">
-                Effortless Process,
-                <br />
-                Exceptional Results
-              </h2>
-            </div>
-            <div className="st2-process-rule" />
-          </div>
-
-          <div className="st2-process-grid">
-            {processSteps.map((step, i) => (
-              <div key={i} className="st2-process-card">
-                <p className="st2-process-num">{step.num}</p>
-                <h3 className="st2-process-title">{step.title}</h3>
-                <p className="st2-process-desc">{step.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="st2-process-footer">
-            <div className="st2-proof">
-              <div className="st2-avatars">
-                <span>Z</span>
-                <span>O</span>
-                <span>N</span>
-                <span>I</span>
-                <span>C</span>
-              </div>
-              <p>Trusted by 100+ businesses that choose growth</p>
-            </div>
-            <Link href="/contact-us" className="buttons st2-btn-yellow">
-              Start Now <BtnArrow />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════════════════
-          SECTION 5 — FEATURED SERVICE DETAILS
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-featured-section">
-        <div className="st2-container">
-          <div className="st2-section-header">
-            <p className="st2-label">What We Build</p>
-            <h2 className="st2-section-heading">
-              Deep Expertise Across Core Digital Disciplines
+      {/* ═══════════════════════════════════ 3 · FEATURED BLOCKS ════════ */}
+      <section className="svc-section svc-band svc-featured">
+        <div className="svc-container">
+          <div className="svc-sec-head-center">
+            <p className="svc-eyebrow">How it works</p>
+            <h2 className="svc-h2">
+              What each service changes, shown rather than claimed
             </h2>
-            <p className="st2-section-sub">
-              Each service is built around a single objective: turning your
-              digital investment into predictable, measurable revenue growth.
+            <p className="svc-lead">
+              The panels below are illustrative views of the shift we are hired
+              to produce: a faster site, a listing back on Maps, rankings across
+              a service area, and an ad account that stops funding the wrong
+              clicks.
             </p>
           </div>
 
-          {featuredServices.map((svc, i) => (
+          {blocks.map((b) => (
             <div
-              key={i}
-              className={`st2-featured-block${svc.reverse ? " st2-featured-reverse" : ""}`}
+              className={`svc-block${b.reverse ? " svc-block-reverse" : ""}`}
+              key={b.heading}
             >
-              <div className="st2-featured-img-wrap">
-                <Image
-                  src={svc.img}
-                  fill
-                  alt={svc.heading}
-                  sizes="(max-width: 991px) 100vw, 48vw"
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                />
-              </div>
-              <div className="st2-featured-content">
-                <span className="st2-featured-badge">{svc.badge}</span>
-                <h3 className="st2-featured-heading">{svc.heading}</h3>
-                <p className="st2-featured-body">{svc.body}</p>
-                <ul className="st2-featured-points">
-                  {svc.points.map((pt, j) => (
-                    <li key={j}>
-                      <FaCircleCheck size={14} /> {pt}
+              <div>
+                <p className="svc-block-badge">{b.badge}</p>
+                <h3 className="svc-h3">{b.heading}</h3>
+                <p className="svc-lead">{b.body}</p>
+                <ul className="svc-block-points">
+                  {b.points.map((p) => (
+                    <li key={p}>
+                      <FiCheckCircle size={15} aria-hidden="true" />
+                      {p}
                     </li>
                   ))}
                 </ul>
-                <Link href={svc.href} className="buttons st2-btn-dark">
-                  {svc.cta} <BtnArrow />
+                <Link href={b.href} className="svc-btn">
+                  {b.cta}
+                  <span className="svc-btn-arrow" aria-hidden="true">
+                    <FiArrowUpRight />
+                  </span>
                 </Link>
               </div>
+              <div className="svc-block-visual">{b.visual}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 6 — INDUSTRIES WE SERVE
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-industries-section">
-        <div className="st2-container">
-          <div className="st2-section-header">
-            <p className="st2-label">Who We Serve</p>
-            <h2 className="st2-section-heading">Industries We Work With</h2>
-            <p className="st2-section-sub">
-              From lean startups to established enterprises — we build tailored
-              digital strategies for the unique challenges and growth goals of
-              the{" "}
-              <Link href="/industries" className="st2-inline-link">
+      {/* ═══════════════════════════════════════════ 4 · PROCESS ════════ */}
+      <section className="svc-section svc-band svc-process">
+        <div className="svc-container">
+          <div className="svc-sec-head">
+            <p className="svc-eyebrow svc-eyebrow-light">Five-step process</p>
+            <h2 className="svc-h2">
+              A process you can follow without a project manager
+            </h2>
+            <p className="svc-lead">
+              Same five steps whether we are building a site, rescuing a Google
+              profile or rebuilding an ad account. You always know which step
+              you are on.
+            </p>
+          </div>
+
+          <div className="svc-process-track">
+            {processSteps.map((step, i) => (
+              <div
+                className="svc-step"
+                key={step.num}
+                style={{ "--i": i } as CSSProperties}
+              >
+                <p className="svc-step-num">{step.num}</p>
+                <h3 className="svc-step-title">{step.title}</h3>
+                <p className="svc-step-desc">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="svc-process-foot">
+            <p>Trusted by 100+ businesses across home services, health and professional trades.</p>
+            <Link href="/contact-us" className="svc-btn-gold">
+              Book the audit
+              <span className="svc-btn-arrow" aria-hidden="true">
+                <FiArrowUpRight />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════ 5 · WHY ZONIC ═══════ */}
+      <section className="svc-section">
+        <div className="svc-container">
+          <div className="svc-why-grid">
+            <div>
+              <p className="svc-eyebrow">Why Zonic Media</p>
+              <h2 className="svc-h2">
+                Four channels, one growth system instead of four invoices
+              </h2>
+              <p className="svc-lead">
+                Splitting a website across one vendor, SEO across another and
+                ads across a third is how a marketing budget quietly stops
+                working. Nobody owns the lead count, and every report measures a
+                different thing.
+              </p>
+              <p className="svc-lead">
+                We run all four off one plan. The site is built for the
+                keywords SEO is chasing, the ad landing pages reuse the same
+                conversion patterns, and the Google profile feeds both. One
+                report tells you what produced the calls.
+              </p>
+              <Link href="/about" className="svc-arrow-link">
+                More about how we work
+                <FiArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </div>
+            <div>
+              <GrowthLoop />
+            </div>
+          </div>
+
+          <div className="svc-why-cards">
+            {whyPoints.map((p) => (
+              <div className="svc-why-card" key={p.title}>
+                <div className="svc-why-icon" aria-hidden="true">
+                  {p.icon}
+                </div>
+                <p className="svc-why-card-title">{p.title}</p>
+                <p className="svc-why-card-desc">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═════════════════════════════════════════ 6 · INDUSTRIES ═══════ */}
+      <section className="svc-section svc-band svc-industries">
+        <div className="svc-container">
+          <div className="svc-sec-head-center">
+            <p className="svc-eyebrow">Who we serve</p>
+            <h2 className="svc-h2">Industries we work with</h2>
+            <p className="svc-lead">
+              The strategy changes by market. A roofer competes on Map Pack
+              position and speed to answer; a law firm competes on authority and
+              review depth. See all the{" "}
+              <Link href="/industries" className="svc-inline-link">
                 industries we serve
               </Link>
               .
             </p>
           </div>
 
-          <div className="st2-industries-grid">
-            {industries.map((ind, i) => (
-              <div key={i} className="st2-industry-card">
-                <div className="st2-industry-icon">{ind.icon}</div>
-                <h3 className="st2-industry-title">{ind.title}</h3>
-                <p className="st2-industry-desc">{ind.desc}</p>
+          <div className="svc-ind-grid">
+            {industries.map((ind) => (
+              <div className="svc-ind-card" key={ind.title}>
+                <div className="svc-ind-icon" aria-hidden="true">
+                  {ind.icon}
+                </div>
+                <h3 className="svc-ind-title">{ind.title}</h3>
+                <p className="svc-ind-desc">{ind.desc}</p>
               </div>
             ))}
           </div>
-
-          <div className="st2-cta-center">
-            <Link href="/contact-us" className="buttons st2-btn-primary">
-              Request a Quote <BtnArrow />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 7 — THE ZONIC DIFFERENCE  (NEW)
-          Before/After comparison
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-comparison-section">
-        <div className="st2-container">
-          <div className="st2-section-header">
-            <p className="st2-label">The Zonic Difference</p>
-            <h2 className="st2-section-heading">
-              What Changes When You Work With Us
+      {/* ═════════════════════════════════════════ 7 · COMPARISON ═══════ */}
+      <section className="svc-section">
+        <div className="svc-container">
+          <div className="svc-sec-head-center">
+            <p className="svc-eyebrow">The difference</p>
+            <h2 className="svc-h2">
+              What changes when the channels stop working in isolation
             </h2>
-            <p className="st2-section-sub">
-              Most businesses run disconnected digital activity and wonder why
-              growth feels unpredictable. Here is what shifts when strategy,
-              design, and execution finally move together.
+            <p className="svc-lead">
+              Most businesses are not short of marketing activity. They are
+              short of a single plan that ties the activity to booked work.
             </p>
           </div>
 
-          <div className="st2-comparison-grid">
-            {/* Without card */}
-            <div className="st2-comparison-card st2-comparison-without">
-              <p className="st2-comparison-label">Without a clear digital strategy</p>
-              <h3 className="st2-comparison-card-heading">
-                Marketing feels busy but results stay flat
+          <div className="svc-compare-grid">
+            <div className="svc-compare-card">
+              <p className="svc-compare-label">Running channels separately</p>
+              <h3 className="svc-compare-heading">
+                Busy months, flat lead count
               </h3>
-              <ul className="st2-comparison-list">
-                {withoutPoints.map((pt, i) => (
-                  <li key={i} className="st2-comparison-item">
-                    <span className="st2-cmp-icon st2-cmp-icon-x">
-                      <FaXmark size={10} />
+              <ul className="svc-compare-list">
+                {withoutPoints.map((p) => (
+                  <li key={p}>
+                    <span className="svc-compare-ico is-x" aria-hidden="true">
+                      <FiX />
                     </span>
-                    {pt}
+                    {p}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* With Zonic card */}
-            <div className="st2-comparison-card st2-comparison-with">
-              <p className="st2-comparison-label">Working with Zonic Media</p>
-              <h3 className="st2-comparison-card-heading">
-                Growth becomes focused, measurable, and scalable
+            <div className="svc-compare-card is-with">
+              <p className="svc-compare-label">Working with Zonic Media</p>
+              <h3 className="svc-compare-heading">
+                One plan, one owner, one number that matters
               </h3>
-              <ul className="st2-comparison-list">
-                {withPoints.map((pt, i) => (
-                  <li key={i} className="st2-comparison-item">
-                    <span className="st2-cmp-icon st2-cmp-icon-check">
-                      <FaCheck size={10} />
+              <ul className="svc-compare-list">
+                {withPoints.map((p) => (
+                  <li key={p}>
+                    <span
+                      className="svc-compare-ico is-check"
+                      aria-hidden="true"
+                    >
+                      <FiCheck />
                     </span>
-                    {pt}
+                    {p}
                   </li>
                 ))}
               </ul>
-              <Link href="/contact-us" className="buttons st2-btn-yellow">
-                Start Growing <BtnArrow />
+              <Link href="/contact-us" className="svc-btn">
+                Start with an audit
+                <span className="svc-btn-arrow" aria-hidden="true">
+                  <FiArrowUpRight />
+                </span>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 8 — RESULTS / BENEFITS
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-results-section">
-        <div className="st2-container">
-          <div className="st2-results-inner">
-            <div className="st2-results-left">
-              <p className="st2-label st2-label-accent">Measurable Outcomes</p>
-              <h2 className="st2-results-heading">
-                What Businesses Gain Working With Us
-              </h2>
-              <p className="st2-results-sub">
-                Our clients don&apos;t just get deliverables. They get a
-                measurable shift in how their business performs online — more
-                visibility, more qualified leads, and a digital presence that
-                compounds over time.
+      {/* ═══════════════════════════════════════════ 8 · RESULTS ════════ */}
+      <section className="svc-section">
+        <div className="svc-container">
+          <div className="svc-results-grid">
+            <div>
+              <p className="svc-eyebrow">Measurable outcomes</p>
+              <h2 className="svc-h2">What clients gain in the first year</h2>
+              <p className="svc-lead">
+                These are the ranges we see across active accounts, not a best
+                case pulled from one campaign. Where a market is unusually
+                competitive we say so during the audit rather than after you
+                sign.
               </p>
-              <Link href="/contact-us" className="buttons st2-btn-yellow">
-                Grow My Business <BtnArrow />
+              <Link href="/contact-us" className="svc-btn">
+                Grow my business
+                <span className="svc-btn-arrow" aria-hidden="true">
+                  <FiArrowUpRight />
+                </span>
               </Link>
             </div>
-            <div className="st2-results-right">
+
+            <div className="svc-benefits">
               {benefits.map((b, i) => (
-                <div key={i} className="st2-benefit-card">
-                  <p className="st2-benefit-val">{b.value}</p>
-                  <p className="st2-benefit-label">{b.label}</p>
-                  <p className="st2-benefit-desc">{b.desc}</p>
+                <div className="svc-benefit" key={b.k}>
+                  <div className="svc-benefit-bar" aria-hidden="true">
+                    <i style={{ "--w": `${b.w}%`, "--i": i } as CSSProperties} />
+                  </div>
+                  <p className="svc-benefit-v">{b.v}</p>
+                  <p className="svc-benefit-k">{b.k}</p>
+                  <p className="svc-benefit-d">{b.d}</p>
                 </div>
               ))}
             </div>
@@ -1047,64 +1096,46 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="st2-results-banner-section">
-        <div className="st2-container">
-          <div className="st2-results-banner">
-            <div className="st2-results-banner-copy">
-              <p className="st2-label st2-label-accent">Growth Roadmap</p>
-              <h2 className="st2-results-banner-heading">
-                See the Fastest Path From Traffic to Revenue
+      {/* ═════════════════════════════════════════════ 9 · AUDIT ════════ */}
+      <section className="svc-section svc-band svc-audit">
+        <div className="svc-container">
+          <div className="svc-audit-grid">
+            <div>
+              <p className="svc-eyebrow">Free strategy session</p>
+              <h2 className="svc-h2">
+                Start with a free digital marketing audit
               </h2>
-              <p className="st2-results-banner-sub">
-                We connect your website, SEO, GMB, and ad campaigns into one
-                clear plan so every channel supports the same measurable goal:
-                more qualified leads.
+              <p className="svc-lead">
+                Before we recommend a single service, we look at what you
+                already have: the site, the rankings, the Google profile and the
+                ad account. You leave the call with the findings whether or not
+                you hire us.
               </p>
-            </div>
-            <div className="st2-results-banner-actions">
-              <Link href="/contact-us" className="buttons st2-btn-dark">
-                Get My Roadmap <BtnArrow />
+              <p className="svc-audit-proof">
+                <FiCheckCircle size={16} aria-hidden="true" />
+                Free, roughly 30 minutes, no obligation
+              </p>
+              <Link href="/contact-us" className="svc-btn">
+                Book my free audit
+                <span className="svc-btn-arrow" aria-hidden="true">
+                  <FiArrowUpRight />
+                </span>
               </Link>
-              <Link href={SITE_CONTACT.phoneHref} className="buttons st2-btn-ghost">
-                Call {SITE_CONTACT.phoneDisplay} <BtnArrow />
-              </Link>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 9 — FREE STRATEGY SESSION  (NEW)
-          What you get in the free audit call
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-audit-section">
-        <div className="st2-container">
-          <div className="st2-audit-inner">
-            <div className="st2-audit-content">
-              <p className="st2-label">Free Strategy Session</p>
-              <h2 className="st2-audit-heading">
-                Get a Free Digital Audit Before You Commit to Anything
-              </h2>
-              <p className="st2-audit-sub">
-                Before we recommend a single service, we audit your current
-                digital presence, map your competitive landscape, and identify
-                where the biggest growth opportunities are. No pitch, no
-                pressure — just clarity.
-              </p>
-              <p className="st2-audit-proof">
-                <FaCheck size={12} /> 100% Free — No Obligation
-              </p>
-              <Link href="/contact-us" className="buttons st2-btn-dark">
-                Book My Free Audit <BtnArrow />
-              </Link>
-            </div>
-            <div className="st2-audit-items">
+            <div className="svc-audit-list">
               {auditIncludes.map((item, i) => (
-                <div key={i} className="st2-audit-item">
-                  <div className="st2-audit-item-icon">{item.icon}</div>
+                <div
+                  className="svc-audit-item"
+                  key={item.title}
+                  style={{ "--i": i } as CSSProperties}
+                >
+                  <span className="svc-audit-tick" aria-hidden="true">
+                    {item.icon}
+                  </span>
                   <div>
-                    <p className="st2-audit-item-title">{item.title}</p>
-                    <p className="st2-audit-item-desc">{item.desc}</p>
+                    <p className="svc-audit-title">{item.title}</p>
+                    <p className="svc-audit-desc">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -1113,34 +1144,34 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 10 — FAQ
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-faq-section">
-        <div className="st2-container">
-          <div className="st2-faq-inner">
-            <div className="st2-faq-left">
-              <p className="st2-label">FAQ</p>
-              <h2 className="st2-faq-heading">
-                Common Questions About Our Services
+      {/* ═══════════════════════════════════════════════ 10 · FAQ ═══════ */}
+      <section className="svc-section">
+        <div className="svc-container">
+          <div className="svc-faq-grid">
+            <div>
+              <p className="svc-eyebrow">FAQ</p>
+              <h2 className="svc-h2">
+                Digital marketing services: common questions
               </h2>
-              <p className="st2-faq-sub">
-                Still have questions? We are happy to walk you through anything
-                during a free strategy call — no pressure, no pitch.
+              <p className="svc-lead">
+                Anything not covered here, ask on the audit call. We answer
+                pricing and timeline questions directly rather than routing them
+                to a proposal.
               </p>
-              <Link href="/contact-us" className="buttons st2-btn-dark">
-                Book a Strategy Call <BtnArrow />
+              <Link href="/contact-us" className="svc-btn-ghost">
+                Book a strategy call
+                <FiArrowRight size={15} aria-hidden="true" />
               </Link>
             </div>
 
-            <div className="st2-faq-right">
-              {faqs.map((faq, i) => (
-                <details key={i} className="st2-faq-item">
-                  <summary className="st2-faq-question">
+            <div className="svc-faq-list">
+              {faqs.map((faq) => (
+                <details className="svc-faq-item" key={faq.q}>
+                  <summary className="svc-faq-q">
                     {faq.q}
-                    <span className="st2-faq-icon" aria-hidden="true" />
+                    <span className="svc-faq-icon" aria-hidden="true" />
                   </summary>
-                  <p className="st2-faq-answer">{faq.a}</p>
+                  <p className="svc-faq-a">{faq.a}</p>
                 </details>
               ))}
             </div>
@@ -1148,105 +1179,44 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════
-          SECTION 11 — FINAL CTA
-      ══════════════════════════════════════════════════════ */}
-      <section className="st2-section st2-finalcta-section">
-        <div className="st2-container">
-          <div className="st2-finalcta-card">
-            <p className="st2-label st2-label-light">Ready to Start?</p>
-            <h2 className="st2-finalcta-heading">
-              Let&apos;s Build a Digital Growth System
-              <br />
-              <span>That Turns Attention Into Revenue</span>
-            </h2>
-            <p className="st2-finalcta-sub">
-              Whether you need a new website, a full-scale marketing strategy,
-              or a complete digital transformation — Zonic Media delivers
-              results from day one. No fluff, no bloated timelines, just
-              measurable outcomes aligned to your business goals.
-            </p>
-            <div className="st2-finalcta-actions">
-              <Link href="/contact-us" className="buttons st2-btn-yellow">
-                Get Free Consultation <BtnArrow />
-              </Link>
-              <Link
-                href={SITE_CONTACT.phoneHref}
-                className="buttons st2-btn-ghost-light"
-              >
-                {SITE_CONTACT.phoneDisplay} <BtnArrow />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact section hidden — GHL chat widget handles leads on this page. Change false to true to restore. */}
-      {false && (
-      <section className="st2-contact-section">
-        <div className="st2-container">
-          <div className="st2-contact-inner">
-            <div className="st2-contact-content">
-              <h2 className="st2-contact-heading">
-                Looking to Grow Your Business with a Digital Marketing Agency?
+      {/* ═════════════════════════════════════════ 11 · FINAL CTA ═══════ */}
+      <section className="svc-final">
+        <div className="svc-container">
+          <div className="svc-final-card">
+            <div className="svc-final-inner">
+              <p className="svc-eyebrow svc-eyebrow-light">Ready to start?</p>
+              <h2 className="svc-final-h">
+                Let us find where your leads are leaking,{" "}
+                <span>then fix that first</span>
               </h2>
-              <p className="st2-contact-desc">
-                Book a discovery call with Zonic Media, a results-driven
-                digital marketing agency. Let&apos;s build a custom strategy
-                focused on more leads, stronger online visibility, and real
-                business growth through SEO, Google Ads, web design, and
-                full-service digital marketing.
+              <p className="svc-final-sub">
+                Whether you need a new website, local rankings, a Google profile
+                back on Maps or an ad account that finally returns its spend, it
+                starts the same way: a free audit and a plan you can act on with
+                or without us.
               </p>
-
-              <div className="st2-contact-info-grid">
-                <div className="st2-contact-info-card">
-                  <div className="st2-contact-info-head">
-                    <div className="st2-contact-info-icon">
-                      <FaLocationDot />
-                    </div>
-                    <h3>Our Office</h3>
-                  </div>
-                  <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                    8 The Green, STE B Dover, Kent, DE 19901
-                    <br />
-                    United States
-                  </a>
-                </div>
-                <div className="st2-contact-info-card">
-                  <div className="st2-contact-info-head">
-                    <div className="st2-contact-info-icon">
-                      <FaPhoneVolume />
-                    </div>
-                    <h3>Contact Us</h3>
-                  </div>
-                  <a href={SITE_CONTACT.emailHref}>contact@zonicllc.com</a>
-                  <a href={SITE_CONTACT.phoneHref}>{SITE_CONTACT.phoneDisplay}</a>
-                </div>
+              <div className="svc-final-actions">
+                <Link href="/contact-us" className="svc-btn-gold">
+                  Get my free audit
+                  <span className="svc-btn-arrow" aria-hidden="true">
+                    <FiArrowUpRight />
+                  </span>
+                </Link>
+                <a
+                  href={SITE_CONTACT.phoneHref}
+                  className="svc-btn-outline-light"
+                >
+                  <FiPhone aria-hidden="true" />
+                  {SITE_CONTACT.phoneDisplay}
+                </a>
               </div>
-
-              <div className="st2-contact-image-wrap">
-                <Image
-                  src="/images/contact-section.jpg"
-                  fill
-                  alt="Digital marketing consultation and contact"
-                  className="st2-contact-image"
-                />
-              </div>
-            </div>
-
-            <div className="st2-contact-form" id="services-contact-form">
-              <LeadContactForm
-                leadFormTitle={contactFormHead.leadFormTitle}
-                leadCallText={contactFormHead.leadCallText}
-                submitButtonText="Contact Us"
-              />
             </div>
           </div>
         </div>
       </section>
-      )}
+
       <GhlChatWidget />
       <Footer />
-    </>
+    </div>
   );
 }

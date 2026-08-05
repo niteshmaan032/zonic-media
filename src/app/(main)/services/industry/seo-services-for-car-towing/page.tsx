@@ -85,7 +85,7 @@ const PAGE_PATH = "/services/industry/seo-services-for-car-towing";
 export const metadata: Metadata = {
   title: "SEO for Towing Companies That Win Local Calls",
   description:
-    "SEO for towing companies that wins the map pack — rank for 'tow truck near me,' optimize your Google Business Profile, and turn stranded drivers into dispatched calls. Get your free audit.",
+    "SEO for towing companies that wins the map pack — rank for 'tow truck near me' and turn stranded drivers into dispatched calls. Free audit.",
   keywords: [
     "SEO for towing companies",
     "towing company SEO",
@@ -479,7 +479,7 @@ function Page() {
                     <span className="tseo-hl">wins more calls</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
+                    We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
                     into the Google map pack and grow. Zonic Media builds the
                     full local ranking system for towing companies — Google
                     Business Profile, citations, reviews, and service-area
@@ -1056,7 +1056,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your towing services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1148,7 +1148,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different fleets — the same system,
-                  executed month after month.
+                  executed month after month, and often a <Link href="/services/towing-company-website-design" className="tseo-inline-link">towing company website design</Link> that converts that traffic into dispatched calls.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1177,8 +1177,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for call-driven service businesses is all we do, and
-                  it shows. Here is exactly what working with a dedicated local
-                  team looks like.
+                  it shows. Here is exactly what working with a dedicated <Link href="/services/towing-marketing-agency" className="tseo-inline-link">towing marketing agency</Link> looks like.
                 </p>
               </div>
               <div className="tseo-compare-grid">
@@ -1539,7 +1538,7 @@ function Page() {
                     Straight answers about towing local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for towing companies</Link>, and what actually moves
                     towing rankings. If your question is not here, send it
                     through the form — a strategist answers, not a sales script.
                   </p>

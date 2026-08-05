@@ -682,10 +682,10 @@ function Page() {
               </div>
               <div className="hiw-band-media">
                 <Image
-                  src="/images/home-improvement-web/painting-contractor-responsive-preview-v4.webp"
-                  alt="Responsive painting contractor website displayed across desktop, tablet, and phone"
+                  src="/images/home-improvement-web/painting-contractor-responsive-preview-square.webp"
+                  alt="Painting contractor website displayed on a desktop monitor and tablet"
                   fill
-                  sizes="(max-width: 1199px) 0px, 45vw"
+                  sizes="(max-width: 991px) 100vw, 50vw"
                 />
               </div>
             </div>
@@ -790,10 +790,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/local-seo-for-painting-contractors"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      painting contractor SEO
+                      Google Ads
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -896,7 +896,7 @@ function Page() {
                   choose a painter — and what makes them request a quote
                   instead of keep scrolling. If the project touches ads,
                   content, or profile work, our{" "}
-                  <Link href="/services/painting-contractor-marketing-agency" className="hiw-inline-link">
+                  <Link href="/services" className="hiw-inline-link">
                     full-service marketing
                   </Link>{" "}
                   team can keep the whole system aligned.
@@ -994,8 +994,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, galleries, and what
-                    happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    happens to your current rankings. If your question is not here,
+                    or your profile is suspended and you need{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      GBP reinstatement help
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

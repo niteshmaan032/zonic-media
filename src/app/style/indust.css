@@ -1,30 +1,34 @@
 /* ============================================================
    INDUSTRIES HUB  ·  scoped under .industries-hub
-   Mirrors the About / home design system
-   (navy / orange / yellow, Manrope + Inter,
-   header-aligned side padding 100/72/56/40/20).
+   Mirrors the home (home.css) / services hub (servicesHub.css)
+   design system: white base, deep navy ink, electric blue
+   #2567e8 accent, brand gold #fdc115 reserved for highlights
+   and dark-band CTAs. Typography inherits the site font
+   (Neue Haas via globals.css) — no font-family overrides —
+   weights 500/600 only, headings 500 with -0.02em tracking.
+   Flat design: no shadows, depth from 1px dividers and tints.
    Header (Navbar) + Footer are shared and unaffected by this file.
    ============================================================ */
 
 .industries-hub {
-  --navy: #0f172a;
-  --navy-2: #1e293b;
-  --orange: #f97316;
-  --orange-dark: #ea580c;
-  --yellow: #f5c518;
-  --slate: #475569;
-  --slate-light: #64748b;
-  --line: #e2e8f0;
+  --ink: #0c1526;
+  --deep: #16233d;
+  --blue: #2567e8;
+  --blue-dark: #1c4fc4;
+  --blue-soft: #eaf0fe;
+  --gold: #fdc115;
+  --gold-soft: #fff6db;
+  --green: #34a852;
+  --green-soft: #e7f6ec;
+  --text: #47546e;
+  --muted: #7a869e;
+  --line: #e3e9f7;
   --bg: #ffffff;
-  --bg-soft: #f8fafc;
-  --radius-lg: 22px;
-  --nh-radius: 14px;
-  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 10px 30px -12px rgba(15, 23, 42, 0.18);
-  --shadow-lg: 0 30px 60px -20px rgba(15, 23, 42, 0.28);
+  --bg-soft: #f5f8fd;
+  --radius-lg: 18px;
+  --nh-radius: 15px;
 
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: var(--navy);
+  color: var(--ink);
   background: var(--bg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -39,11 +43,11 @@
 .industries-hub h2,
 .industries-hub h3,
 .industries-hub h4 {
-  font-family: "Manrope", system-ui, sans-serif;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.18;
+  line-height: 1.16;
   margin: 0;
+  color: var(--ink);
 }
 
 .industries-hub p {
@@ -67,66 +71,84 @@
   padding: 0 100px;
 }
 
-/* ── EYEBROW ──────────────────────────────────────────────── */
+/* ── EYEBROW (pill, matches hm-eyebrow) ───────────────────── */
 .industries-hub .eyebrow {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--orange);
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: var(--blue-soft);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-dark);
 }
 .industries-hub .eyebrow::before {
   content: "";
-  width: 22px;
-  height: 2px;
-  background: var(--orange);
-  display: inline-block;
-  border-radius: 2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
 }
 .industries-hub .eyebrow.center {
   justify-content: center;
 }
 
-/* ── BUTTONS (override global yellow with brand orange) ───── */
+/* ── BUTTONS (re-skin the global pill blue; gold on dark bands) */
 .industries-hub .buttons {
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
   color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .industries-hub .buttons:hover {
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--blue-dark);
+  border-color: var(--blue-dark);
+  transform: translateY(-2px);
+}
+.industries-hub .ind-hero .buttons,
+.industries-hub .cta-final .buttons {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.industries-hub .ind-hero .buttons:hover,
+.industries-hub .cta-final .buttons:hover {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  filter: brightness(1.05);
+  transform: translateY(-2px);
 }
 .industries-hub .btn {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 15px;
   padding: 14px 26px;
   border-radius: 999px;
   cursor: pointer;
   border: 0;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  transition: transform 0.18s ease, background 0.18s ease,
+    border-color 0.18s ease;
   white-space: nowrap;
 }
 .industries-hub .btn-ghost-light {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
-  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .industries-hub .btn-ghost-light:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
   transform: translateY(-2px);
 }
 .industries-hub .btn-white {
   background: #fff;
-  color: var(--navy);
+  color: var(--ink);
 }
 .industries-hub .btn-white:hover {
   transform: translateY(-2px);
@@ -145,21 +167,24 @@
   margin-inline: auto;
 }
 .industries-hub .sec-head h2 {
-  font-size: clamp(28px, 3.6vw, 44px);
-  margin: 14px 0 12px;
+  font-size: clamp(28px, 3.4vw, 42px);
+  margin: 16px 0 12px;
 }
 .industries-hub .sec-head p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--slate);
+  font-size: 16.5px;
+  line-height: 1.72;
+  color: var(--text);
 }
 
 /* =========================================================
-   HERO  (navy, gradient wash — mirrors about hero)
+   HERO  (blue-gradient dark band — mirrors hm-banner)
    ========================================================= */
 .industries-hub .ind-hero {
   position: relative;
-  background: var(--navy);
+  background:
+    radial-gradient(50% 80% at 85% 0%, rgba(253, 193, 21, 0.14) 0%, transparent 60%),
+    radial-gradient(40% 70% at 8% 100%, rgba(37, 103, 232, 0.35) 0%, transparent 65%),
+    linear-gradient(150deg, #123a8f 0%, var(--blue-dark) 45%, var(--blue) 100%);
   color: #fff;
   overflow: hidden;
   padding: 150px 0 64px;
@@ -168,12 +193,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-      900px 500px at 82% -10%,
-      rgba(249, 115, 22, 0.28),
-      transparent 60%
-    ),
-    radial-gradient(700px 500px at 8% 112%, rgba(30, 41, 59, 0.9), transparent 55%);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
   pointer-events: none;
 }
 .industries-hub .ind-hero .wrap {
@@ -186,27 +209,31 @@
   align-items: center;
 }
 .industries-hub .ind-hero .eyebrow {
-  color: #fdba74;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffe9a3;
   margin-bottom: 22px;
 }
 .industries-hub .ind-hero .eyebrow::before {
-  background: #fdba74;
+  background: var(--gold);
 }
 .industries-hub .hero-copy {
   max-width: 640px;
 }
 .industries-hub .ind-hero h1 {
   font-size: clamp(38px, 5.2vw, 60px);
-  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  color: #fff;
   margin-bottom: 22px;
 }
 .industries-hub .ind-hero h1 .accent {
-  color: var(--yellow);
+  color: var(--gold);
 }
 .industries-hub .ind-hero p.lead {
-  font-size: clamp(17px, 1.5vw, 20px);
-  color: #cbd5e1;
-  line-height: 1.75;
+  font-size: clamp(16.5px, 1.5vw, 19px);
+  color: #d4e1fb;
+  line-height: 1.72;
   margin-bottom: 32px;
   max-width: 720px;
 }
@@ -223,10 +250,9 @@
 }
 .industries-hub .cover-card {
   background: #fff;
-  color: var(--navy);
+  color: var(--ink);
   border-radius: var(--radius-lg);
   padding: 24px;
-  box-shadow: var(--shadow-lg);
   position: relative;
 }
 .industries-hub .cover-head {
@@ -236,30 +262,29 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 12px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--slate-light);
+  color: var(--muted);
 }
 .industries-hub .cover-ping {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #16a34a;
-  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.55);
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(52, 168, 82, 0.55);
   animation: ind-ping 2s infinite;
 }
 @keyframes ind-ping {
   0% {
-    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5);
+    box-shadow: 0 0 0 0 rgba(52, 168, 82, 0.5);
   }
   70% {
-    box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+    box-shadow: 0 0 0 8px rgba(52, 168, 82, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+    box-shadow: 0 0 0 0 rgba(52, 168, 82, 0);
   }
 }
 .industries-hub .cover-count {
@@ -269,15 +294,15 @@
   margin-top: 12px;
 }
 .industries-hub .cc-num {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 46px;
   line-height: 1;
-  color: var(--navy);
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 .industries-hub .cc-lbl {
   font-size: 13px;
-  color: var(--slate-light);
+  color: var(--muted);
   line-height: 1.4;
   max-width: 170px;
 }
@@ -288,8 +313,9 @@
   padding: 16px;
   border-radius: 14px;
   border: 1px solid var(--line);
-  background: linear-gradient(0deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px), #f8fafc;
+  background: linear-gradient(0deg, rgba(12, 21, 38, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(12, 21, 38, 0.03) 1px, transparent 1px),
+    var(--bg-soft);
   background-size: 30px 30px;
   margin-bottom: 18px;
 }
@@ -301,34 +327,31 @@
   border-radius: 12px;
   background: #fff;
   border: 1px solid var(--line);
-  color: var(--orange);
-  box-shadow: var(--shadow-sm);
+  color: var(--blue);
 }
 .industries-hub .cover-tile svg {
   width: 22px;
   height: 22px;
 }
 .industries-hub .cover-tile--more {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 15px;
   color: #fff;
-  background: var(--orange);
-  border-color: var(--orange);
+  background: var(--blue);
+  border-color: var(--blue);
 }
 .industries-hub .cover-foot {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 13.5px;
-  color: var(--navy);
+  color: var(--ink);
 }
 .industries-hub .cover-foot svg {
   width: 18px;
   height: 18px;
-  color: #16a34a;
+  color: var(--green);
   flex-shrink: 0;
 }
 
@@ -336,8 +359,8 @@
 .industries-hub .cover-badge {
   position: absolute;
   background: #fff;
+  border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: var(--shadow-md);
   padding: 12px 15px;
   display: flex;
   align-items: center;
@@ -356,23 +379,23 @@
   height: 20px;
 }
 .industries-hub .cover-badge .ic-rank {
-  background: rgba(249, 115, 22, 0.14);
-  color: var(--orange);
+  background: var(--blue-soft);
+  color: var(--blue-dark);
 }
 .industries-hub .cover-badge .ic-play {
-  background: rgba(34, 197, 94, 0.12);
-  color: #16a34a;
+  background: var(--green-soft);
+  color: var(--green);
 }
 .industries-hub .cover-badge .lbl {
   font-size: 11.5px;
-  color: var(--slate-light);
+  color: var(--muted);
   line-height: 1.2;
 }
 .industries-hub .cover-badge .val {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  color: var(--navy);
+  font-weight: 600;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
   line-height: 1.1;
   margin-top: 2px;
 }
@@ -403,27 +426,26 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-lg);
   padding: 26px 30px;
 }
 .industries-hub .hero-stats .st .n {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 38px);
+  letter-spacing: -0.02em;
   line-height: 1;
   color: #fff;
 }
 .industries-hub .hero-stats .st .n span {
-  color: var(--orange);
+  color: var(--gold);
 }
 .industries-hub .hero-stats .st .c {
   font-size: 13.5px;
-  color: #94a3b8;
+  color: #c3d4f8;
   margin-top: 8px;
-  font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* =========================================================
@@ -448,16 +470,16 @@
 }
 .industries-hub .story-body p {
   font-size: 16.5px;
-  line-height: 1.8;
-  color: var(--slate);
+  line-height: 1.75;
+  color: var(--text);
   margin-bottom: 18px;
 }
 .industries-hub .story-body p:last-child {
   margin-bottom: 0;
 }
 .industries-hub .story-body strong {
-  color: var(--navy);
-  font-weight: 700;
+  color: var(--ink);
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -480,24 +502,23 @@
   border-radius: var(--radius-lg);
   padding: 28px 26px;
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
 }
 .industries-hub .ind-card::after {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  height: 4px;
+  height: 3px;
   width: 100%;
-  background: var(--orange);
+  background: var(--blue);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s;
 }
 .industries-hub .ind-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: rgba(37, 103, 232, 0.45);
 }
 .industries-hub .ind-card:hover::after {
   transform: scaleX(1);
@@ -506,8 +527,8 @@
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: rgba(249, 115, 22, 0.1);
-  color: var(--orange);
+  background: var(--blue-soft);
+  color: var(--blue-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -519,17 +540,19 @@
   height: 26px;
 }
 .industries-hub .ind-card:hover .ind-ic {
-  background: var(--orange);
+  background: var(--blue);
   color: #fff;
 }
 .industries-hub .ind-card h3 {
-  font-size: 20px;
+  font-size: 19px;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
   margin-bottom: 9px;
 }
 .industries-hub .ind-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--slate);
+  color: var(--text);
   margin-bottom: 18px;
   flex: 1 1 auto;
 }
@@ -537,10 +560,9 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
-  color: var(--orange-dark);
+  color: var(--blue);
 }
 .industries-hub .ind-link svg {
   width: 16px;
@@ -567,19 +589,18 @@
   border-radius: var(--radius-lg);
   padding: 30px 28px;
   background: #fff;
-  transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
+  transition: transform 0.18s, border-color 0.18s;
 }
 .industries-hub .inc-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--orange);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: rgba(37, 103, 232, 0.45);
 }
 .industries-hub .inc-ic {
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: rgba(249, 115, 22, 0.1);
-  color: var(--orange);
+  background: var(--blue-soft);
+  color: var(--blue-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -591,21 +612,23 @@
   height: 26px;
 }
 .industries-hub .inc-card:hover .inc-ic {
-  background: var(--orange);
+  background: var(--blue);
   color: #fff;
 }
 .industries-hub .inc-card h3 {
   font-size: 19px;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
   margin-bottom: 10px;
 }
 .industries-hub .inc-card p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--slate);
+  color: var(--text);
 }
 
 /* =========================================================
-   FAQ  (about-style disclosure list)
+   FAQ  (hm-faq style disclosure list)
    ========================================================= */
 .industries-hub .ind-faq {
   background: var(--bg-soft);
@@ -626,46 +649,49 @@
   border: 1px solid var(--line);
   border-radius: var(--nh-radius);
   overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+.industries-hub .faq-item[open] {
+  border-color: rgba(37, 103, 232, 0.4);
 }
 .industries-hub .faq-q {
   width: 100%;
   text-align: left;
   cursor: pointer;
-  padding: 22px 24px;
+  padding: 19px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 18px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-  font-size: 16.5px;
-  color: var(--navy);
+  font-weight: 500;
+  font-size: 15.5px;
+  color: var(--ink);
 }
 .industries-hub .faq-q .pm {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: var(--bg-soft);
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: var(--blue-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: 0.2s;
-  color: var(--orange);
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  color: var(--blue-dark);
 }
 .industries-hub .faq-q .pm svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 .industries-hub .faq-item[open] .faq-q .pm {
-  background: var(--orange);
+  background: var(--blue);
   color: #fff;
   transform: rotate(45deg);
 }
 .industries-hub .faq-a {
-  padding: 0 24px 22px;
-  color: var(--slate);
-  font-size: 15px;
+  padding: 0 22px 20px;
+  color: var(--text);
+  font-size: 14.5px;
   line-height: 1.7;
 }
 .industries-hub details summary {
@@ -697,8 +723,8 @@
 }
 .industries-hub .contact-copy > p {
   font-size: 16.5px;
-  line-height: 1.75;
-  color: var(--slate);
+  line-height: 1.72;
+  color: var(--text);
   margin-bottom: 30px;
   max-width: 520px;
 }
@@ -726,8 +752,8 @@
   width: 50px;
   height: 50px;
   border-radius: 14px;
-  background: rgba(249, 115, 22, 0.1);
-  color: var(--orange-dark);
+  background: var(--blue-soft);
+  color: var(--blue-dark);
   display: grid;
   place-items: center;
   transition: background 0.18s ease, color 0.18s ease;
@@ -737,7 +763,7 @@
   height: 22px;
 }
 .industries-hub .contact-details li > a:hover .ic {
-  background: var(--orange);
+  background: var(--blue);
   color: #fff;
 }
 .industries-hub .contact-details .ct {
@@ -747,22 +773,21 @@
   min-width: 0;
 }
 .industries-hub .contact-details .lbl {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 11.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--slate-light);
+  color: var(--muted);
 }
 .industries-hub .contact-details .val {
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15.5px;
-  color: var(--navy);
+  letter-spacing: -0.01em;
+  color: var(--ink);
   transition: color 0.18s ease;
 }
 .industries-hub .contact-details li > a:hover .val {
-  color: var(--orange-dark);
+  color: var(--blue-dark);
 }
 .industries-hub .contact-form-col {
   position: sticky;
@@ -770,24 +795,27 @@
 }
 
 /* =========================================================
-   FINAL CTA  (navy — mirrors about cta-final)
+   FINAL CTA  (blue-gradient dark band — mirrors hm-banner)
    ========================================================= */
 .industries-hub .cta-final {
-  background: var(--navy);
+  background:
+    radial-gradient(50% 80% at 85% 10%, rgba(253, 193, 21, 0.16) 0%, transparent 60%),
+    radial-gradient(40% 70% at 10% 90%, rgba(37, 103, 232, 0.35) 0%, transparent 65%),
+    linear-gradient(150deg, #123a8f 0%, var(--blue-dark) 45%, var(--blue) 100%);
   color: #fff;
   position: relative;
   overflow: hidden;
-  padding: 96px 0;
+  padding: 90px 0;
 }
 .industries-hub .cta-final::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    800px 460px at 50% -20%,
-    rgba(249, 115, 22, 0.26),
-    transparent 62%
-  );
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  pointer-events: none;
 }
 .industries-hub .cta-inner {
   position: relative;
@@ -796,21 +824,22 @@
   margin: 0 auto;
 }
 .industries-hub .cta-inner .eyebrow {
-  color: #fdba74;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffe9a3;
 }
 .industries-hub .cta-inner .eyebrow::before {
-  background: #fdba74;
+  background: var(--gold);
 }
 .industries-hub .cta-inner h2 {
-  font-size: clamp(30px, 4vw, 46px);
+  font-size: clamp(29px, 3.8vw, 44px);
   color: #fff;
-  margin: 16px 0 20px;
+  margin: 18px 0 18px;
 }
 .industries-hub .cta-inner p {
-  font-size: 18px;
-  line-height: 1.75;
-  color: #cbd5e1;
-  margin-bottom: 34px;
+  font-size: 16.5px;
+  line-height: 1.72;
+  color: #d4e1fb;
+  margin-bottom: 32px;
 }
 .industries-hub .cta-actions {
   display: flex;
@@ -919,15 +948,29 @@
   }
 }
 .industries-hub :focus-visible {
-  outline: 3px solid var(--orange);
+  outline: 3px solid var(--blue);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* Contextual in-body internal links */
 .industries-hub .ind-inline-link {
-  color: var(--orange);
+  color: var(--blue);
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  font-weight: 600;
+  text-decoration-color: rgba(37, 103, 232, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+.industries-hub .ind-inline-link:hover {
+  text-decoration-color: var(--blue);
+}
+
+/* light variant for inline links sitting on the dark hero band */
+.industries-hub .ind-hero .ind-inline-link {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+}
+.industries-hub .ind-hero .ind-inline-link:hover {
+  text-decoration-color: #fff;
 }

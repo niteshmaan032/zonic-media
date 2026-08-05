@@ -16,6 +16,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 import {
@@ -58,6 +59,14 @@ export default function StatePage({ state }: { state: StateContent }) {
     areaServed: stateName,
   });
 
+  const serviceJsonLd = buildServiceJsonLd({
+    name: `Plumbing Marketing in ${stateName}`,
+    description: state.metaDescription,
+    pageUrl: `/services/plumbing-marketing-agency/${state.slug}`,
+    serviceType: "Plumbing Marketing",
+    areaServed: stateName,
+  });
+
   return (
     <>
       <Script
@@ -76,6 +85,11 @@ export default function StatePage({ state }: { state: StateContent }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessJsonLd),
         }}
+      />
+      <Script
+        id="pmb-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
 
       <div id="hia-top" className="hia-page">
@@ -327,8 +341,15 @@ export default function StatePage({ state }: { state: StateContent }) {
                     className="pmb-inline-link"
                   >
                     Google Business Profile optimization
-                  </Link>{" "}
-                  and to win the map pack left these.
+                  </Link>
+                  , for{" "}
+                  <Link
+                    href="/services/gmb-verification-help"
+                    className="pmb-inline-link"
+                  >
+                    GBP verification help
+                  </Link>
+                  , and to win the map pack left these.
                 </p>
                 <div className="hia-section-cta">
                   <HashScrollLink
@@ -342,7 +363,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <ClutchWidget
                     widgetType="12"
                     height="375"
-                    primaryColor="#f97316"
+                    primaryColor="#2567e8"
                     reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
                   />
                 </div>

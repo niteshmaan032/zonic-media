@@ -1908,6 +1908,12 @@
   font-weight: 600;
 }
 
+/* Inline links on the dark band — the accent green disappears against the
+   deep green gradient, so switch to the light highlight there. */
+.pc-page .pc-band-content .pc-inline-link {
+  color: var(--pc-hl);
+}
+
 /* ---------- page footer (replaces the global site footer) ---------- */
 
 .pc-page .pc-footer {
@@ -1964,7 +1970,7 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: var(--pc-ink);
   margin: 0 0 20px;
 }

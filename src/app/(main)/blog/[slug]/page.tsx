@@ -29,7 +29,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const seoTitle = blog.metaTitle?.trim() || blog.blogTitle;
-  const seoDescription = blog.metaDescription?.trim() || blog.excerpt;
+  // CMS text is unvalidated — clamp to SERP-safe length at a word boundary.
+  const rawDescription = blog.metaDescription?.trim() || blog.excerpt;
+  const seoDescription =
+    rawDescription.length > 160
+      ? `${rawDescription.slice(0, 157).replace(/\s+\S*$/, "")}…`
+      : rawDescription;
 
   return {
     title: seoTitle,

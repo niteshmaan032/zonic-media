@@ -221,7 +221,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "arizona",
     metaTitle: "HVAC Marketing Agency in Arizona",
     metaDescription:
-      "HVAC marketing agency for Arizona contractors. Map pack rankings across Phoenix, Tucson, Mesa, Scottsdale. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for Arizona contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free Arizona HVAC Audit",
       "Phoenix · Tucson · Mesa · Scottsdale",
@@ -352,7 +352,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "california",
     metaTitle: "HVAC Marketing Agency in California",
     metaDescription:
-      "HVAC marketing agency for California contractors. Map pack rankings across Los Angeles, San Francisco Bay Area, San Diego, Sacramento. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for California contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free California HVAC Audit",
       "Los Angeles · San Francisco Bay Area · San Diego · Sacramento",
@@ -484,7 +484,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "florida",
     metaTitle: "HVAC Marketing Agency in Florida",
     metaDescription:
-      "HVAC marketing agency for Florida contractors. Map pack rankings across Miami, Tampa, Orlando, Jacksonville. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for Florida contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free Florida HVAC Audit",
       "Miami · Tampa · Orlando · Jacksonville",
@@ -615,7 +615,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "georgia",
     metaTitle: "HVAC Marketing Agency in Georgia",
     metaDescription:
-      "HVAC marketing agency for Georgia contractors. Map pack rankings across Atlanta, Augusta, Savannah, Columbus. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for Georgia contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free Georgia HVAC Audit",
       "Atlanta · Augusta · Savannah · Columbus",
@@ -746,7 +746,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "illinois",
     metaTitle: "HVAC Marketing Agency in Illinois",
     metaDescription:
-      "HVAC marketing agency for Illinois contractors. Map pack rankings across Chicago, Aurora, Naperville, Rockford. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for Illinois contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free Illinois HVAC Audit",
       "Chicago · Aurora · Naperville · Rockford",
@@ -877,7 +877,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "north-carolina",
     metaTitle: "HVAC Marketing Agency in North Carolina",
     metaDescription:
-      "HVAC marketing agency for North Carolina contractors. Map pack rankings across Charlotte, Raleigh, Greensboro, Durham. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for North Carolina contractors. Map pack rankings, GBP optimization, Google Ads, memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free North Carolina HVAC Audit",
       "Charlotte · Raleigh · Greensboro · Durham",
@@ -1009,7 +1009,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     slug: "texas",
     metaTitle: "HVAC Marketing Agency in Texas",
     metaDescription:
-      "HVAC marketing agency for Texas contractors. Map pack rankings across Houston, Dallas, Austin, San Antonio. GBP optimization, paid ads, maintenance memberships, website design, reviews. Starting at $750/mo.",
+      "HVAC marketing agency for Texas contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
     ticker: [
       "Free Texas HVAC Audit",
       "Houston · Dallas · Austin · San Antonio",

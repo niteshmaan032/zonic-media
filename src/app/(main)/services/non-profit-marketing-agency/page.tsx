@@ -9,16 +9,23 @@ import "@/app/style/nonProfitAgency.css";
 import NonProfitLeadForm from "@/app/components/NonProfitLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
+import {
+  GrowthCurveVisual,
+  LeadEngineVisual,
+  MapPackRaceVisual,
+  type IndustryVisualCopy,
+} from "@/app/components/IndustryMarketingVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
+  buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Marketing Agency | Digital Fundraising & Advocacy",
+  title: "Nonprofit Marketing Agency | Digital Fundraising",
   description:
-    "Zonic Media is a digital fundraising and advocacy studio for nonprofits. Social media, Google Ad Grant management, video, strategy, and board-ready reporting. Discounted nonprofit rates, short initial term.",
+    "Nonprofit marketing agency for digital fundraising and advocacy — social media, Google Ad Grant management, video & strategy. Discounted nonprofit rates.",
   keywords: [
     "nonprofit marketing agency",
     "nonprofit digital marketing",
@@ -41,6 +48,14 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     url: "/services/non-profit-marketing-agency",
   },
 ]);
+
+const visualCopy: IndustryVisualCopy = {
+  industry: "nonprofit",
+  industryTitle: "Nonprofit",
+  business: "organization",
+  jobsNoun: "new donors & signups",
+  mapQuery: "charities near me",
+};
 
 const stripStats = [
   { b: "3×/wk", s: "content cadence" },
@@ -192,9 +207,23 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
   areaServed: { type: "Country", name: "United States" },
 });
 
+const serviceJsonLd = buildServiceJsonLd({
+  name: "Nonprofit Marketing Agency Services",
+  description:
+    "Digital fundraising and advocacy for nonprofits — social media, Google Ad Grant management, video, and strategy at discounted nonprofit rates.",
+  pageUrl: "/services/non-profit-marketing-agency",
+  serviceType: "Nonprofit Digital Marketing",
+  areaServed: "United States",
+});
+
 function Page() {
   return (
     <>
+      <Script
+        id="npm-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <Script
         id="npm-breadcrumb-schema"
         type="application/ld+json"
@@ -357,6 +386,8 @@ function Page() {
                 </div>
               </section>
 
+              <MapPackRaceVisual copy={visualCopy} />
+
               {/* SERVICES */}
               <section className="hia-section" id="npm-services">
                 <div className="npm-svc">
@@ -378,8 +409,8 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <path d="M4 5h16v11H8l-4 3z" stroke="#c69a45" strokeWidth="1.5" strokeLinejoin="round" />
-                          <path d="M8 9h8M8 12h5" stroke="#c69a45" strokeWidth="1.5" strokeLinecap="round" />
+                          <path d="M4 5h16v11H8l-4 3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                          <path d="M8 9h8M8 12h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                       </div>
                       <h3>Social media management</h3>
@@ -395,8 +426,8 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <circle cx="12" cy="12" r="8" stroke="#c69a45" strokeWidth="1.5" />
-                          <path d="M12 8v4l3 2" stroke="#c69a45" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.5" />
+                          <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                       <h3>Google Ads for nonprofits</h3>
@@ -415,9 +446,9 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#c69a45" strokeWidth="1.5" />
-                          <circle cx="9" cy="9" r="1.6" stroke="#c69a45" strokeWidth="1.3" />
-                          <path d="M5 16l4-4 3 3 3-4 4 5" stroke="#c69a45" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                          <circle cx="9" cy="9" r="1.6" stroke="currentColor" strokeWidth="1.3" />
+                          <path d="M5 16l4-4 3 3 3-4 4 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                       <h3>Graphics &amp; data visualization</h3>
@@ -440,8 +471,8 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <rect x="3" y="6" width="13" height="12" rx="2" stroke="#c69a45" strokeWidth="1.5" />
-                          <path d="M16 10l5-3v10l-5-3z" stroke="#c69a45" strokeWidth="1.5" strokeLinejoin="round" />
+                          <rect x="3" y="6" width="13" height="12" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                          <path d="M16 10l5-3v10l-5-3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
                         </svg>
                       </div>
                       <h3>Video production &amp; editing</h3>
@@ -459,7 +490,7 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke="#c69a45" strokeWidth="1.4" strokeLinejoin="round" />
+                          <path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
                         </svg>
                       </div>
                       <h3>Strategy &amp; PR copywriting</h3>
@@ -475,14 +506,21 @@ function Page() {
                     <div className="npm-scard">
                       <div className="npm-scard-ico">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                          <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="#c69a45" strokeWidth="1.5" strokeLinecap="round" />
+                          <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                       </div>
                       <h3>Board-ready reporting</h3>
                       <p>
-                        Monthly analytics on engagement, local reach, ad
-                        performance, and inbound donor inquiries — in plain
-                        language your board understands, never vanity metrics.
+                        Monthly analytics on engagement,{" "}
+                        <Link
+                          href="/services/local-seo-for-home-services"
+                          className="npm-inline-link"
+                        >
+                          local search visibility
+                        </Link>
+                        , ad performance, and inbound donor inquiries — in
+                        plain language your board understands, never vanity
+                        metrics.
                       </p>
                       <span className="npm-tag">
                         Monthly performance reporting
@@ -491,6 +529,8 @@ function Page() {
                   </div>
                 </div>
               </section>
+
+              <LeadEngineVisual copy={visualCopy} />
 
               {/* WHO WE SERVE */}
               <section className="hia-section" id="npm-serve">
@@ -600,6 +640,8 @@ function Page() {
                   </p>
                 </div>
               </section>
+
+              <GrowthCurveVisual copy={visualCopy} />
 
               {/* FAQ */}
               <section className="hia-section" id="npm-faq">

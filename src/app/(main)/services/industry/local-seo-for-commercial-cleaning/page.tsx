@@ -78,7 +78,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-commercial-cleaning";
 export const metadata: Metadata = {
   title: "Local SEO for Commercial Cleaning Companies",
   description:
-    "Local SEO for commercial cleaning that ranks you for 'commercial cleaning near me' and 'office cleaning services' — GBP, reviews, and pages that win contracts. Get a free audit.",
+    "Local SEO for commercial cleaning that ranks you for 'commercial cleaning near me' — GBP, reviews & pages that win contracts. Free audit.",
   keywords: [
     "local SEO for commercial cleaning",
     "commercial cleaning near me",
@@ -473,7 +473,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and B2B service businesses climb
-                    into the Google map pack and grow. Zonic Media builds the
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
                     full local ranking system for commercial cleaning companies —
                     Google Business Profile, citations, reviews, and service-area
                     content — so when a facility or office manager searches
@@ -1054,7 +1054,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your cleaning services and cities,
-                    then the foundation work: profile optimization, citation
+                    then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation
                     cleanup, and on-page fixes.
                   </p>
                 </article>
@@ -1147,7 +1147,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different facilities — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/commercial-cleaning-website-design" className="tseo-inline-link">commercial cleaning website design</Link> that turns the extra traffic into signed contracts.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1176,7 +1176,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for B2B service businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/cleaning-company-marketing-agency" className="tseo-inline-link">cleaning company marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1539,7 +1539,7 @@ function Page() {
                     Straight answers about commercial cleaning local SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves
+                    Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for commercial cleaning</Link> fits alongside SEO, and what actually moves
                     commercial cleaning rankings. If your question is not here,
                     send it through the form — a strategist answers, not a sales
                     script.

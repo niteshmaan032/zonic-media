@@ -33,7 +33,7 @@ const PAGE_PATH = "/services/pediatrician-website-design";
 export const metadata: Metadata = {
   title: "Pediatrician Website Design That Books Families",
   description:
-    "Pediatrician website design built as a patient acquisition system — online scheduling, new-patient and well-visit info, insurance UX, and warm, mobile-first design parents trust.",
+    "Pediatrician website design built as a patient acquisition system — online scheduling, insurance UX, and warm mobile-first design parents trust.",
   keywords: [
     "pediatrician website design",
     "pediatric website design",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     ],
     title: "Pediatrician Website Design That Books Families | Zonic Media",
     description:
-      "Pediatrician website design built as a patient acquisition system — online scheduling, new-patient and well-visit info, insurance UX, and warm, mobile-first design parents trust.",
+      "Pediatrician website design built as a patient acquisition system — online scheduling, insurance UX, and warm mobile-first design parents trust.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -457,9 +457,13 @@ function Page() {
 
                 <div className="hiw-hero-visual">
                   <div className="hiw-hero-img">
-                    <div className="hiw-ph">
-                      <span>Pediatric website mockup</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pediatrician-hero-v2.webp"
+                      alt="Pediatrician presenting a clinic website in a child-friendly exam room"
+                      fill
+                      priority
+                      sizes="(max-width: 991px) 100vw, 45vw"
+                    />
                   </div>
                   <div className="hiw-hero-badge">
                     <span className="hiw-hero-badge-stars" aria-hidden="true">
@@ -529,14 +533,20 @@ function Page() {
               <div className="hiw-about-grid">
                 <div className="hiw-collage">
                   <div className="hiw-collage-img-1">
-                    <div className="hiw-ph">
-                      <span>Pediatrician with a young patient</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pediatrician-first-impressions-1.webp"
+                      alt="Pediatrician listening to a young patient's heartbeat with her mother present"
+                      fill
+                      sizes="(max-width: 991px) 80vw, 32vw"
+                    />
                   </div>
                   <div className="hiw-collage-img-2">
-                    <div className="hiw-ph">
-                      <span>Pediatric website on desktop</span>
-                    </div>
+                    <Image
+                      src="/images/home-improvement-web/pediatrician-first-impressions-2.webp"
+                      alt="BrightSteps Pediatrics website displayed on a desktop monitor"
+                      fill
+                      sizes="(max-width: 991px) 70vw, 30vw"
+                    />
                   </div>
                   <div className="hiw-collage-badge" aria-hidden="true">
                     <svg viewBox="0 0 120 120">
@@ -645,14 +655,14 @@ function Page() {
                   insurance you accept, and the way parents in your community
                   search. Your site should feel like your practice, not like a
                   template every competitor is also using — and it should be built
-                  to rank with{" "}
+                  to rank, with a{" "}
                   <Link
-                    href="/services/industry/pediatricians"
+                    href="/services/gmb-verification-help"
                     className="hiw-inline-link"
                   >
-                    pediatric SEO
+                    verified Business Profile
                   </Link>{" "}
-                  from day one.
+                  supporting it from day one.
                 </p>
                 <div className="hiw-band-stats">
                   {BandStats.map((stat) => (
@@ -670,9 +680,12 @@ function Page() {
                 </HashScrollLink>
               </div>
               <div className="hiw-band-media">
-                <div className="hiw-ph">
-                  <span>Responsive pediatric website preview</span>
-                </div>
+                <Image
+                  src="/images/home-improvement-web/pediatrician-responsive-preview-square.webp"
+                  alt="BrightSteps Pediatrics website displayed on a desktop monitor and tablet"
+                  fill
+                  sizes="(max-width: 991px) 100vw, 50vw"
+                />
               </div>
             </div>
           </section>
@@ -775,10 +788,10 @@ function Page() {
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
                     <Link
-                      href="/services/industry/pediatricians"
+                      href="/services/google-ads"
                       className="hiw-inline-link"
                     >
-                      pediatric SEO
+                      Google Ads
                     </Link>{" "}
                     and{" "}
                     <Link
@@ -980,8 +993,14 @@ function Page() {
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, online scheduling, and
-                    what happens to your current rankings. If your question is not
-                    here, send it through the form — a strategist answers, not a
+                    what happens to your current rankings. If your question is not here,
+                    or you need to{" "}
+                    <Link
+                      href="/services/gmb-reinstatement-help"
+                      className="hiw-inline-link"
+                    >
+                      recover a suspended Google Business Profile
+                    </Link>, send it through the form — a strategist answers, not a
                     sales script.
                   </p>
                   <div className="hiw-faq-cta">

@@ -1,30 +1,87 @@
-import "@/app/style/about.css";
-import Script from "next/script";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { CSSProperties } from "react";
+import type { Metadata } from "next";
+
 import Footer from "@/app/components/Footer";
 import ClutchWidget from "@/app/components/ClutchWidget";
-import ServiceLeadForm from "@/app/components/ServiceLeadForm";
-import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
+import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import WinsBoard from "@/app/components/about/WinsBoard";
+import CoverageBoard from "@/app/components/about/CoverageBoard";
+import TimelineBars from "@/app/components/about/TimelineBars";
 
-const SITE_URL = "https://www.zonicllc.com";
+import "@/app/style/about.css";
+import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+
+import {
+  FiActivity,
+  FiArrowRight,
+  FiArrowUpRight,
+  FiAward,
+  FiCheck,
+  FiHome,
+  FiLayers,
+  FiMapPin,
+  FiMousePointer,
+  FiPhone,
+  FiSearch,
+  FiStar,
+  FiTarget,
+  FiUsers,
+  FiZap,
+} from "react-icons/fi";
+
+/* ---------------------------------------------------------------------------
+   POSITIONING — read this before editing the copy.
+
+   This is the site's primary E-E-A-T page. Its job is not to rank for a
+   service head term — the hubs own those — it is to make Zonic Media
+   legible as a real, locatable, accountable business: who we are, where
+   we are, and what we're good at.
+
+   Rules that keep it that way:
+
+     · Never restate a hub's deliverables list. Link up to the hub with
+       the head term as anchor text instead (/services/gmb-optimization,
+       /services/local-seo-for-home-services, /services/web-design,
+       /services/google-ads).
+     · Every number here must match the number used elsewhere on the site.
+       1,500+ optimized / 500+ reinstated / 5.0 Clutch is the canonical
+       set — the same figures the GBP landing pages use.
+     · NAP (Dover, DE address + phone) stays visible in the markup, not
+       only in JSON-LD. It is a trust signal for humans first.
+     · Don't invent founding dates, headcounts or client names. If we
+       can't source it, it doesn't go on this page.
+     · POSITIVE FRAMING ONLY. State what we do well and what clients
+       gain. Don't sell against other agencies, don't lead with the
+       reader's problems, and don't describe failure states — the same
+       rule the visuals follow (see the header of about.css).
+
+   DESIGN: about.css (.abt-page) is a direct continuation of the /services
+   hub (servicesHub.css, .svc-page) — identical palette, atoms and section
+   rhythm. Hard rules carried over: no shadows, no photography, and every
+   visual rests in its winning state. The three panels are CSS-keyframed
+   components in components/about/ (WinsBoard, CoverageBoard, TimelineBars)
+   and the card mini-visuals are inline below, so this stays a server
+   component with no scroll-triggered animation anywhere on the page.
+--------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Zonic Media | Digital Marketing Agency for SMBs",
+    absolute: "About Zonic Media | Local SEO & Web Design Agency, Dover DE",
   },
   description:
-    "Meet Zonic Media — a US marketing agency helping small and mid-size businesses grow with Local SEO, Google Business Profile management, website design, and PPC. Based in Dover, DE, serving businesses nationwide.",
+    "Meet Zonic Media, a Dover, Delaware agency running Local SEO, Google Business Profile, web design and Google Ads for small and mid-size US businesses.",
   keywords: [
     "about Zonic Media",
-    "marketing agency for small business",
-    "local SEO agency",
-    "digital marketing agency Dover DE",
-    "Google Business Profile management",
-    "marketing agency for local businesses",
-    "web design and SEO agency",
-    "US marketing agency for service businesses",
+    "Zonic Media agency",
+    "local marketing agency for small business",
+    "local SEO agency Dover DE",
+    "Google Business Profile agency",
+    "digital marketing agency Delaware",
+    "marketing agency for service businesses",
+    "web design and SEO agency US",
   ],
   alternates: {
     canonical: "/about",
@@ -38,92 +95,221 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title:
-      "About Zonic Media | Marketing Agency for Small & Mid-Size Businesses",
+    title: "About Zonic Media | Local SEO & Web Design Agency, Dover DE",
     description:
-      "Meet the team helping small and mid-size US businesses get found, look established, and bring in more customers — Local SEO, GBP, web design, and PPC under one roof.",
+      "A small, senior team in Dover, Delaware running Local SEO, Google Business Profile, web design and Google Ads for small and mid-size US businesses.",
     url: "/about",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Zonic Media | Local SEO & Web Design Agency, Dover DE",
+    description:
+      "Who we are, where we are, and the local search work we're known for.",
+  },
 };
 
-function BtnArrow() {
-  return (
-    <span className="buttons__icon-wrapper">
-      <svg
-        viewBox="0 0 14 15"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="buttons__icon-svg"
-        width="8"
-      >
-        <path
-          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-          fill="currentColor"
-        />
-      </svg>
-      <svg
-        viewBox="0 0 14 15"
-        fill="none"
-        width="8"
-        xmlns="http://www.w3.org/2000/svg"
-        className="buttons__icon-svg buttons__icon-svg--copy"
-      >
-        <path
-          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
-}
+/* ────────────────────────────────────────────────────────────── data ───── */
 
-const ABOUT_SERVICE_OPTIONS = [
-  "Web Design",
-  "Pay Per Click (PPC)",
-  "Google My Business (GMB)",
-  "Web Development",
-  "Local SEO",
+/* Canonical figures — these must match the GBP landing pages. */
+const heroStats = [
+  { v: "1,500+", k: "Google Business Profiles optimized" },
+  { v: "500+", k: "Suspended profiles restored" },
+  { v: "5.0★", k: "Average rating on Clutch" },
+  { v: "20+", k: "Local service niches served" },
+];
+
+const pillars = [
+  {
+    icon: <FiMapPin />,
+    title: "Local search specialists",
+    desc: "Google Business Profile and Map Pack work is the core of the practice — the area we've gone deepest in and the one clients come to us for by name.",
+  },
+  {
+    icon: <FiUsers />,
+    title: "One senior team",
+    desc: "The people who audit your account are the people who run it, across search, the profile, the website and the ads.",
+  },
+  {
+    icon: <FiHome />,
+    title: "Dover, DE — working nationwide",
+    desc: "A real office in Delaware, a remote-first team, and clients winning in markets right across the United States.",
+  },
+];
+
+const companyFacts = [
+  { k: "Head office", v: "8 The Green, STE B, Dover, DE 19901" },
+  { k: "Coverage", v: "United States, remote-first" },
+  { k: "Who we work with", v: "Local and service-area businesses" },
+  { k: "Engagements", v: "Month to month, no lock-in" },
+];
+
+type ServiceCard = {
+  visual: "serp" | "map" | "site" | "ads";
+  title: string;
+  desc: string;
+  points: string[];
+  href: string;
+  cta: string;
+};
+
+const services: ServiceCard[] = [
+  {
+    visual: "serp",
+    title: "Local SEO",
+    desc: "Getting a business found by the people already searching for what it does, in every town it can serve.",
+    points: [
+      "Category and service alignment",
+      "Location content that ranks",
+      "Review velocity and local links",
+    ],
+    href: "/services/local-seo-for-home-services",
+    cta: "Local SEO for home services",
+  },
+  {
+    visual: "map",
+    title: "Google Business Profile",
+    desc: "Our deepest specialism: profiles built, verified and optimized to hold the Map Pack — and listings recovered when they need it.",
+    points: [
+      "Verification and full buildout",
+      "Map Pack coverage across the area",
+      "Fast, documented listing recovery",
+    ],
+    href: "/services/gmb-optimization",
+    cta: "Google Business Profile optimization",
+  },
+  {
+    visual: "site",
+    title: "Website design & development",
+    desc: "Fast, conversion-shaped sites that make a small business look established and give rankings somewhere worth landing.",
+    points: [
+      "Built to convert, not to win awards",
+      "Core Web Vitals in the green",
+      "Yours to edit after launch",
+    ],
+    href: "/services/web-design",
+    cta: "Web design services",
+  },
+  {
+    visual: "ads",
+    title: "Google Ads (PPC)",
+    desc: "Paid search run to a cost-per-call number, filling the pipeline from week one while the organic side compounds.",
+    points: [
+      "Managed to cost per lead",
+      "Local intent and geo-targeting",
+      "Accounts stay in your name",
+    ],
+    href: "/services/google-ads",
+    cta: "Google Ads management",
+  },
+];
+
+const processSteps = [
+  {
+    num: "01",
+    title: "Audit",
+    desc: "Profile health, where you rank across the whole service area, site speed and conversion, and the openings the data shows are worth taking first.",
+  },
+  {
+    num: "02",
+    title: "Plan",
+    desc: "The work sequenced with reasoning attached — what's first, why it's first, and what each stage should move. Flat monthly cost, agreed up front.",
+  },
+  {
+    num: "03",
+    title: "Build",
+    desc: "The same team writes the content, builds the profile, ships the site and structures the campaigns, all against the audit they ran.",
+  },
+  {
+    num: "04",
+    title: "Launch",
+    desc: "Calls and form fills tracked from day one, so reporting is about outcomes. You can see what a channel is producing inside three weeks.",
+  },
+  {
+    num: "05",
+    title: "Compound",
+    desc: "Review velocity, profile currency and fresh content keep the coverage widening, so month six is stronger than month three.",
+  },
+];
+
+const principles = [
+  {
+    icon: <FiTarget />,
+    title: "Strategy tied to booked work",
+    desc: "The plan is built around what the business needs to book next quarter, and every task on it traces back to that number.",
+  },
+  {
+    icon: <FiLayers />,
+    title: "One team, one accountable plan",
+    desc: "Search, the profile, the website and the ads sit with the same people, so the four channels reinforce each other.",
+  },
+  {
+    icon: <FiActivity />,
+    title: "We report calls and leads",
+    desc: "Map Pack coverage, qualified calls, form leads and cost per lead, in plain English, with the ranking data underneath if you want it.",
+  },
+  {
+    icon: <FiAward />,
+    title: "Month to month, always",
+    desc: "Clients stay because the leads keep arriving, which means we re-earn the relationship every single cycle.",
+  },
+  {
+    icon: <FiMapPin />,
+    title: "Local search is the specialism",
+    desc: "Verification, Map Pack coverage and listing recovery are the problems we've solved most, across more than 20 trades.",
+  },
+  {
+    icon: <FiZap />,
+    title: "Built for smaller budgets",
+    desc: "Scoped so a business with three trucks can compete with a name ten times its size in the same market.",
+  },
 ];
 
 const aboutFaqs = [
   {
-    question: "What kind of businesses does Zonic Media work with?",
-    answer:
-      "We work with small and mid-size US businesses — mostly local and service-based: roofers, HVAC and plumbing companies, dental and chiropractic practices, real estate agents, cleaning and towing companies, law firms, and other local providers. Our focus is helping these businesses get found on Google and turn nearby searches into phone calls.",
+    q: "What kind of businesses does Zonic Media work with?",
+    a: "Small and mid-size US businesses, almost all of them local or service-area: roofers, HVAC, plumbing and electrical companies, dental and chiropractic practices, cleaning and towing companies, pest control, real estate agents and law firms among them. The common thread is that customers find them through a nearby search, so Map Pack visibility and a website that converts are what keep them busy.",
   },
   {
-    question: "Where is Zonic Media based, and do you work nationwide?",
-    answer:
-      "We're based in Dover, Delaware, with deep roots across the Mid-Atlantic. Our work is remote-first, so we serve local businesses across the United States — your location is never a barrier to working together.",
+    q: "Where is Zonic Media based, and do you work nationwide?",
+    a: "Our office is at 8 The Green, STE B, Dover, Delaware 19901. The team works remote-first and serves businesses right across the United States — the work happens inside Google's tools and your own accounts, so we can take on a client in any US market.",
   },
   {
-    question: "What services does Zonic Media offer?",
-    answer:
-      "Everything a growing business needs to compete online, under one roof: Local SEO, Google Business Profile setup, optimization and reinstatement, website design and development, Google Ads (PPC), and graphic and logo design.",
+    q: "What services does Zonic Media offer?",
+    a: "Four things, under one roof: Local SEO, Google Business Profile work (setup, verification, optimization and reinstatement), website design and development, and Google Ads management. We also handle graphic and logo design where a brand is being rebuilt alongside the site.",
   },
   {
-    question: "What makes Zonic Media different from other agencies?",
-    answer:
-      "We're strategy-first and results-focused. One team handles your search visibility, website, and ads — so nothing falls through the cracks. We don't lock you into long-term contracts, and we report in plain English on the metrics that actually matter: calls, leads, and rankings.",
+    q: "What makes Zonic Media a good fit?",
+    a: "Two things. The first is depth in local search specifically — verification, Map Pack coverage and listing recovery are the problems we've solved most, across 1,500+ profiles. The second is that one team owns the profile, the site and the ads, so the four channels pull in the same direction. Engagements are month to month, and reporting is in plain English about calls and leads.",
   },
   {
-    question: "How do you measure project success?",
-    answer:
-      "By real business outcomes, not vanity metrics. We track Map Pack rankings, qualified calls and form leads, conversion rates, and return on investment — so you always know exactly what's working and where your dollars are going.",
+    q: "How do you measure whether the work is succeeding?",
+    a: "By Map Pack coverage across the service area, qualified calls, form leads, conversion rate and cost per lead. Rankings are the diagnostic underneath; booked work is the result we report on.",
   },
   {
-    question: "Do you provide ongoing support after launch?",
-    answer:
-      "Yes. Most of our relationships are month to month — we keep optimizing, monitoring performance, and reporting so your growth compounds over time. Clients stay because the leads keep coming, not because they're contractually tied to us.",
+    q: "How long does it take to see results?",
+    a: "Relevance moves fastest — a corrected primary category or a properly built service list typically shows within two to four weeks. Website and conversion gains register as soon as traffic arrives. Map Pack coverage widens over four to eight weeks, and authority signals like review velocity and local links keep compounding from month three onward. We set that timeline out on day one so you know what to expect at each stage.",
+  },
+  {
+    q: "Do you lock clients into long-term contracts?",
+    a: "No. Every engagement is month to month. Most clients stay for years because the leads keep arriving, and that arrangement keeps us sharp: the work has to earn its cost every cycle.",
+  },
+  {
+    q: "Do you provide ongoing support after a project launches?",
+    a: "Yes, and for local search it's the part that pays off most. Ongoing work covers review velocity, profile currency, content, campaign tuning and a monthly re-scan of Map Pack coverage, so the position you win keeps widening rather than holding still.",
   },
 ];
+
+/* ─────────────────────────────────────────────────────── structured data ─ */
 
 const aboutBreadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "About Us", url: "/about" },
 ]);
 
+/* Organization and LocalBusiness are emitted once in the root layout.
+   Reference them by @id rather than redefining them — a second inline
+   Organization would create a duplicate, unlinked entity. */
 const aboutPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
@@ -131,702 +317,572 @@ const aboutPageJsonLd = {
   url: `${SITE_URL}/about`,
   name: "About Zonic Media",
   description:
-    "Zonic Media is a US marketing agency helping small and mid-size businesses grow with Local SEO, Google Business Profile management, website design, and PPC.",
-  mainEntity: {
-    "@type": "Organization",
-    name: "Zonic Media",
-    url: SITE_URL,
-    email: SITE_CONTACT.email,
-    telephone: SITE_CONTACT.phoneDisplay,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "8 The Green, STE B",
-      addressLocality: "Dover",
-      addressRegion: "DE",
-      postalCode: "19901",
-      addressCountry: "US",
-    },
-    areaServed: { "@type": "Country", name: "United States" },
+    "Zonic Media is a Dover, Delaware marketing agency helping small and mid-size US businesses grow with Local SEO, Google Business Profile management, website design and Google Ads.",
+  inLanguage: "en-US",
+  mainEntity: { "@id": `${SITE_URL}/#organization` },
+  about: { "@id": `${SITE_URL}/#organization` },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/images/og-image.jpg`,
   },
 };
 
 const aboutFaqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": `${SITE_URL}/about#faq`,
   mainEntity: aboutFaqs.map((faq) => ({
     "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
   })),
 };
 
-function Page() {
+/* ──────────────────────────────────────────────── card mini-visuals ────── */
+
+/**
+ * Decorative micro-animation on each service card, in the same idiom as
+ * `MiniVisual` on the /services hub — but each one is a miniature of the
+ * service itself rather than a generic chart, so the graphic identifies the
+ * card before the title is read:
+ *
+ *   serp — a search results page with the client resting at position 1
+ *   map  — a map pin landing and holding the top spot
+ *   site — a browser window with a live call-to-action
+ *   ads  — a paid result being clicked, converting to a booked lead
+ *
+ * All four animate into their winning state and rest there, so the frozen
+ * frame is always the result rather than the problem.
+ */
+function MiniVisual({ kind }: { kind: ServiceCard["visual"] }) {
+  if (kind === "serp") {
+    return (
+      <div className="abt-mini abt-mini-serp" aria-hidden="true">
+        <span className="abt-mini-query">
+          <FiSearch />
+          roofer near me
+        </span>
+        {[0, 1, 2].map((n) => (
+          <span
+            className={`abt-mini-res${n === 0 ? " is-top" : ""}`}
+            key={n}
+            style={{ "--n": n } as CSSProperties}
+          >
+            <i>{n + 1}</i>
+            <b />
+          </span>
+        ))}
+      </div>
+    );
+  }
+  if (kind === "map") {
+    return (
+      <div className="abt-mini abt-mini-map" aria-hidden="true">
+        <span className="abt-mini-badge">
+          <FiStar size={8} />
+          #1
+        </span>
+        <span className="abt-mini-pin">
+          <FiMapPin />
+        </span>
+      </div>
+    );
+  }
+  if (kind === "site") {
+    return (
+      <div className="abt-mini abt-mini-site" aria-hidden="true">
+        <span className="abt-mini-chrome">
+          <em />
+          <em />
+          <em />
+          <span />
+        </span>
+        <span className="abt-mini-body">
+          <i style={{ "--n": 0 } as CSSProperties} />
+          <i style={{ "--n": 1 } as CSSProperties} />
+          <b />
+        </span>
+      </div>
+    );
+  }
+  return (
+    <div className="abt-mini abt-mini-ads" aria-hidden="true">
+      <span className="abt-mini-tag">Sponsored</span>
+      <i style={{ "--n": 0 } as CSSProperties} />
+      <i style={{ "--n": 1 } as CSSProperties} />
+      <span className="abt-mini-won">
+        <FiCheck size={9} />
+        Lead booked
+      </span>
+      <span className="abt-mini-cursor">
+        <FiMousePointer />
+      </span>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────────────────────────── page ─── */
+
+export default function AboutPage() {
   return (
     <>
-      <Script
-        id="about-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(aboutBreadcrumbJsonLd),
-        }}
-      />
-      <Script
-        id="about-page-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
-      />
-      <Script
-        id="about-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqJsonLd) }}
-      />
+      <main className="abt-page">
+        <script
+          id="about-breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aboutBreadcrumbJsonLd),
+          }}
+        />
+        <script
+          id="about-page-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+        />
+        <script
+          id="about-faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqJsonLd) }}
+        />
 
-      <main className="about-revamp">
-        {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="about-hero">
-          <div className="wrap">
-            <div className="hero-grid">
-              <div className="hero-copy">
-                <span className="eyebrow">About Zonic Media</span>
-                <h1>
-                  The marketing team behind{" "}
-                  <span className="accent">small-business growth.</span>
+        {/* ═══════════════════════════════════════════ 1 · HERO ═══════════ */}
+        <section className="abt-hero">
+          <div className="abt-container">
+            <div className="abt-hero-grid">
+              <div>
+                <p className="abt-eyebrow">About Zonic Media</p>
+                <h1 className="abt-hero-h1">
+                  The local marketing agency built for{" "}
+                  <span className="abt-hl">smaller budgets</span> and bigger
+                  goals
                 </h1>
-                <p className="lead">
-                  We help small and mid-size US businesses get found, look
-                  established, and bring in more customers — with{" "}
-                  <Link href="/services/local-seo-for-home-services" className="ab-inline-link">
-                    Local SEO
+                <p className="abt-hero-sub">
+                  Zonic Media is a Dover, Delaware agency that helps small and
+                  mid-size US businesses get found on Google and turn nearby
+                  searches into booked work — Local SEO, Google Business Profile
+                  management,{" "}
+                  <Link href="/services/web-design" className="abt-inline-link">
+                    website design
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/services/google-ads" className="abt-inline-link">
+                    Google Ads
                   </Link>
-                  , Google Business Profile management, website design, and PPC
-                  handled by one team that actually understands smaller budgets
-                  and bigger goals.
+                  , run by one team under one plan.
                 </p>
-                <div className="hero-actions">
-                  <a href={SITE_CONTACT.bookCallHref} className="buttons">
-                    Book a Free Strategy Call
-                    <BtnArrow />
-                  </a>
-                  <a
-                    href={SITE_CONTACT.phoneHref}
-                    className="btn btn-ghost-light"
-                  >
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      style={{ width: 17, height: 17 }}
-                    >
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
-                    </svg>
+
+                {/* Platform badges sit above the CTAs so the proof is read
+                    before the ask. */}
+                <HeroTrustBadges />
+
+                <div className="abt-hero-ctas">
+                  <Link href={SITE_CONTACT.bookCallHref} className="abt-btn">
+                    Book a free strategy call
+                    <span className="abt-btn-arrow" aria-hidden="true">
+                      <FiArrowUpRight />
+                    </span>
+                  </Link>
+                  <a href={SITE_CONTACT.phoneHref} className="abt-btn-ghost">
+                    <FiPhone aria-hidden="true" />
                     {SITE_CONTACT.phoneDisplay}
                   </a>
                 </div>
+
+                <div className="abt-hero-trust">
+                  <span>
+                    <span className="abt-hero-stars" aria-hidden="true">
+                      <FiStar />
+                    </span>
+                    5.0 rating on Clutch
+                  </span>
+                  <span>
+                    <FiCheck size={14} aria-hidden="true" />
+                    1,500+ profiles optimized
+                  </span>
+                  <span>
+                    <FiCheck size={14} aria-hidden="true" />
+                    Month to month, no lock-in
+                  </span>
+                </div>
               </div>
 
-              {/* Digital-marketing performance snapshot */}
-              <div className="hero-visual" aria-hidden="true">
-                <div className="growth-card">
-                  <div className="gc-head">
-                    <div>
-                      <span className="gc-eyebrow">
-                        <span className="gc-ping"></span>Campaign performance
-                      </span>
-                      <div className="gc-metric">
-                        <span className="gc-num">+142%</span>
-                        <span className="gc-up">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                          >
-                            <path d="M3 17l6-6 4 4 8-8" />
-                            <path d="M17 7h4v4" />
-                          </svg>
-                        </span>
-                      </div>
-                      <div className="gc-cap">Qualified leads vs. last quarter</div>
-                    </div>
-                  </div>
-
-                  <div className="gc-chart">
-                    <svg viewBox="0 0 300 120" preserveAspectRatio="none">
-                      <defs>
-                        <linearGradient id="gcFill" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#f97316" stopOpacity="0.34" />
-                          <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
-                        </linearGradient>
-                      </defs>
-                      <path
-                        d="M0 96 L50 88 L100 92 L150 64 L200 58 L250 30 L300 14 L300 120 L0 120 Z"
-                        fill="url(#gcFill)"
-                      />
-                      <path
-                        d="M0 96 L50 88 L100 92 L150 64 L200 58 L250 30 L300 14"
-                        fill="none"
-                        stroke="#f97316"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <circle cx="300" cy="14" r="4.5" fill="#f97316" />
-                    </svg>
-                  </div>
-
-                  <div className="gc-channels">
-                    <div className="gc-ch">
-                      <span className="gc-ch-lbl">Local SEO</span>
-                      <span className="gc-bar">
-                        <i style={{ width: "88%" }}></i>
-                      </span>
-                      <span className="gc-ch-val">88</span>
-                    </div>
-                    <div className="gc-ch">
-                      <span className="gc-ch-lbl">Google Ads</span>
-                      <span className="gc-bar">
-                        <i style={{ width: "64%" }}></i>
-                      </span>
-                      <span className="gc-ch-val">64</span>
-                    </div>
-                    <div className="gc-ch">
-                      <span className="gc-ch-lbl">GBP</span>
-                      <span className="gc-bar">
-                        <i style={{ width: "94%" }}></i>
-                      </span>
-                      <span className="gc-ch-val">94</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="gc-badge b1">
-                  <div className="ic ic-rank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="lbl">Map Pack</div>
-                    <div className="val">Top 3</div>
-                  </div>
-                </div>
-                <div className="gc-badge b2">
-                  <div className="ic ic-call">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                    >
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="lbl">Calls this month</div>
-                    <div className="val">+38%</div>
-                  </div>
-                </div>
+              <div>
+                <WinsBoard />
               </div>
             </div>
 
-            <div className="hero-stats">
-              <div className="st">
-                <div className="n">
-                  700<span>+</span>
-                </div>
-                <div className="c">
-                  Google Business Profiles reinstated &amp; verified
-                </div>
-              </div>
-              <div className="st">
-                <div className="n">
-                  5.0<span>★</span>
-                </div>
-                <div className="c">Average client rating</div>
-              </div>
-              <div className="st">
-                <div className="n">
-                  95<span>%</span>
-                </div>
-                <div className="c">Client growth success rate</div>
-              </div>
-              <div className="st">
-                <div className="n">
-                  20<span>+</span>
-                </div>
-                <div className="c">Local service niches served</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── STORY / WHO WE ARE ───────────────────────────── */}
-        <section className="story">
-          <div className="wrap">
-            <div className="story-grid">
-              <div className="story-label">
-                <span className="eyebrow">Who we are</span>
-                <h2>A smarter model for sustainable growth.</h2>
-              </div>
-              <div className="story-body">
-                <p>
-                  Zonic Media is a performance-focused marketing agency built for
-                  the local service businesses bigger agencies overlook, with a
-                  dedicated playbook for every{" "}
-                  <Link href="/industries" className="ab-inline-link">
-                    industry we serve
-                  </Link>
-                  . We believe a strong digital presence comes from{" "}
-                  <strong>strategy, clarity, and results</strong> — never
-                  guesswork or busywork that looks good on a report but never
-                  rings the phone.
-                </p>
-                <p>
-                  Every engagement starts with understanding your business, your
-                  customers, and how people actually search for what you do. From
-                  there we build a clear plan — Local SEO, a{" "}
-                  <Link href="/services/web-design" className="ab-inline-link">
-                    conversion-ready website
-                  </Link>
-                  , a healthy{" "}
-                  <Link href="/services/gmb-optimization" className="ab-inline-link">
-                    Google Business Profile
-                  </Link>
-                  , and ads tuned to cost-per-call — and we ship the work, not
-                  just a slide deck.
-                </p>
-                <p>
-                  Based in Dover, Delaware and working remote-first with clients
-                  across the United States, we keep the same focus from research
-                  to launch to ongoing optimization:{" "}
-                  <strong>
-                    steady growth, stronger visibility, and measurable results
-                  </strong>{" "}
-                  for every business we partner with.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── JOURNEY / HOW WE WORK ────────────────────────── */}
-        <section className="journey">
-          <div className="wrap">
-            <div className="sec-head center">
-              <span className="eyebrow center">How we work</span>
-              <h2>A clear path from strategy to steady leads</h2>
-              <p>
-                No black boxes. Every partnership moves through the same three
-                stages — so you always know what we&apos;re doing and why.
-              </p>
-            </div>
-            <div className="journey-grid">
-              <div className="journey-card">
-                <div className="journey-num" aria-hidden="true"></div>
-                <h3>Discover</h3>
-                <div className="kicker">Strategy &amp; research</div>
-                <p>
-                  We analyze your business, audience, competitors, and local
-                  search opportunities to build a clear, data-driven roadmap
-                  aimed at the fastest routes to more leads.
-                </p>
-              </div>
-              <div className="journey-card">
-                <div className="journey-num" aria-hidden="true"></div>
-                <h3>Design</h3>
-                <div className="kicker">Brand, web &amp; content</div>
-                <p>
-                  We turn the plan into a conversion-focused website, a polished
-                  brand, and content built to rank — crafted with real user
-                  experience at the core, not templates.
-                </p>
-              </div>
-              <div className="journey-card">
-                <div className="journey-num" aria-hidden="true"></div>
-                <h3>Deliver</h3>
-                <div className="kicker">Launch, growth &amp; optimization</div>
-                <p>
-                  We launch, monitor, and continuously optimize your search
-                  visibility, profile, and{" "}
-                  <Link href="/services/google-ads" className="ab-inline-link">
-                    Google Ads campaigns
-                  </Link>{" "}
-                  — then report in plain English on the leads and dollars they
-                  generate.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── DIFFERENTIATORS / WHY CHOOSE US ──────────────── */}
-        <section className="why">
-          <div className="wrap">
-            <div className="sec-head center">
-              <span className="eyebrow center">Why choose us</span>
-              <h2>Built to make your brand stand out locally</h2>
-              <p>
-                We position small and mid-size businesses to compete — and win —
-                in a digital-first world where the top of Google is where
-                customers decide.
-              </p>
-            </div>
-            <div className="why-grid">
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <path d="M12 2 4 7v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-5Z" />
-                    <path d="m9 12 2 2 4-4" />
-                  </svg>
-                </div>
-                <h3>Strategy before tactics</h3>
-                <p>
-                  We start with a plan tied to your goals — not a checklist of
-                  activities that keep an agency busy but never move your
-                  numbers.
-                </p>
-              </div>
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.87" />
-                  </svg>
-                </div>
-                <h3>One team, everything covered</h3>
-                <p>
-                  Our{" "}
-                  <Link href="/services" className="ab-inline-link">
-                    full-service marketing
-                  </Link>{" "}
-                  covers SEO, your Google profile, website, and ads all under one
-                  roof — aligned and accountable, so nothing falls through the
-                  cracks between vendors.
-                </p>
-              </div>
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <path d="M3 3v18h18" />
-                    <path d="m7 14 4-4 3 3 5-6" />
-                  </svg>
-                </div>
-                <h3>Measured by real results</h3>
-                <p>
-                  We report on calls, leads, and rankings — the metrics that pay
-                  the bills — with clear, honest numbers you can actually act on.
-                </p>
-              </div>
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                </div>
-                <h3>No long-term lock-in</h3>
-                <p>
-                  We earn the relationship month to month. Most clients stay
-                  because the leads keep coming — not because a contract forces
-                  them to.
-                </p>
-              </div>
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <h3>Local search specialists</h3>
-                <p>
-                  Map Pack visibility and{" "}
-                  <Link href="/services/gmb-reinstatement-help" className="ab-inline-link">
-                    Google Business Profile recovery
-                  </Link>{" "}
-                  are what we do best — including 500+ suspended profiles
-                  we&apos;ve helped reinstate.
-                </p>
-              </div>
-              <div className="why-card">
-                <div className="why-ic">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.9"
-                  >
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                    <path d="M14 2v6h6M8 13h8M8 17h5" />
-                  </svg>
-                </div>
-                <h3>Built for smaller budgets</h3>
-                <p>
-                  We make every dollar work harder, so a growing business can
-                  look established and compete with far bigger names in its
-                  market.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── IMPACT BY THE NUMBERS ────────────────────────── */}
-        <section className="numbers">
-          <div className="wrap">
-            <div className="sec-head center">
-              <span className="eyebrow center light">Our impact</span>
-              <h2>Results we measure by impact, not just design</h2>
-              <p>
-                Bold work is only worth it if it moves the numbers that matter to
-                your business.
-              </p>
-            </div>
-            <div className="numbers-grid">
-              <div className="num-card">
-                <div className="n">
-                  10<span>+</span>
-                </div>
-                <div className="c">
-                  Years of combined SEO, web, and marketing experience.
-                </div>
-              </div>
-              <div className="num-card">
-                <div className="n">
-                  500<span>+</span>
-                </div>
-                <div className="c">
-                  Suspended Google Business Profiles reinstated.
-                </div>
-              </div>
-              <div className="num-card">
-                <div className="n">
-                  100<span>+</span>
-                </div>
-                <div className="c">
-                  Projects delivered for businesses across the US.
-                </div>
-              </div>
-              <div className="num-card">
-                <div className="n">
-                  92<span>%</span>
-                </div>
-                <div className="c">
-                  Client satisfaction from post-project feedback.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── TESTIMONIALS (Clutch reviews) ────────────────── */}
-        <section className="testimonials">
-          <div className="wrap">
-            <div className="sec-head center">
-              <span className="eyebrow center">Client results</span>
-              <h2>Hear what our clients say about working with us</h2>
-            </div>
-            <div className="testi-clutch">
-              <ClutchWidget
-                widgetType="12"
-                height="375"
-                primaryColor="#f7c00a"
-                reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ──────────────────────────────────────────── */}
-        <section className="faq">
-          <div className="wrap">
-            <div className="sec-head center">
-              <span className="eyebrow center">Common questions</span>
-              <h2>Frequently asked questions</h2>
-            </div>
-            <div className="faq-wrap">
-              {[aboutFaqs.slice(0, 3), aboutFaqs.slice(3)].map((column, ci) => (
-                <div className="faq-col" key={ci}>
-                  {column.map((faq, i) => (
-                    <details
-                      className="faq-item"
-                      key={faq.question}
-                      open={ci === 0 && i === 0}
-                    >
-                      <summary className="faq-q">
-                        {faq.question}
-                        <span className="pm">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2.5"
-                          >
-                            <path d="M12 5v14M5 12h14" />
-                          </svg>
-                        </span>
-                      </summary>
-                      <div className="faq-a">{faq.answer}</div>
-                    </details>
-                  ))}
+            <div className="abt-stats">
+              {heroStats.map((stat) => (
+                <div className="abt-stat" key={stat.k}>
+                  <p className="abt-stat-v">{stat.v}</p>
+                  <p className="abt-stat-k">{stat.k}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── CONTACT (contact-us form + details) ──────────── */}
-        <section className="contact" id="contact">
-          <div className="wrap">
-            <div className="contact-grid">
-              <div className="contact-copy">
-                <span className="eyebrow">Get in touch</span>
-                <h2>Let&apos;s start your project</h2>
-                <p>
-                  Tell us where you want to grow and we&apos;ll come back with the
-                  fastest next step — a free review of your Google profile, search
-                  visibility, and website. No obligation.
-                </p>
+        {/* ════════════════════════════════════════ 2 · MARQUEE ═══════════ */}
+        <div className="abt-marquee">
+          <HomeSeoMarquee />
+        </div>
 
-                <ul className="contact-details">
-                  <li>
-                    <a href={SITE_CONTACT.phoneHref}>
-                      <span className="ic">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
-                        </svg>
-                      </span>
-                      <span className="ct">
-                        <span className="lbl">Call us</span>
-                        <span className="val">
-                          {SITE_CONTACT.phoneDisplay}
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={SITE_CONTACT.emailHref}>
-                      <span className="ic">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <rect x="3" y="5" width="18" height="14" rx="2" />
-                          <path d="m3 7 9 6 9-6" />
-                        </svg>
-                      </span>
-                      <span className="ct">
-                        <span className="lbl">Email us</span>
-                        <span className="val">{SITE_CONTACT.email}</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={SITE_CONTACT.mapHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="ic">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
-                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                          <circle cx="12" cy="10" r="3" />
-                        </svg>
-                      </span>
-                      <span className="ct">
-                        <span className="lbl">Visit us</span>
-                        <span className="val">{SITE_CONTACT.address}</span>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
+        {/* ══════════════════════════════════════════ 3 · STORY ═══════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-sec-head-center">
+              <p className="abt-eyebrow">Who we are</p>
+              <h2 className="abt-h2">
+                A senior team, built around{" "}
+                <span className="abt-hl">local businesses</span>
+              </h2>
+              <p className="abt-lead">
+                Zonic Media is a small, senior group in Dover, Delaware doing
+                one kind of work well: making local and service-area businesses
+                the obvious choice in the searches their customers are already
+                running.
+              </p>
+            </div>
+
+            <div className="abt-pillars">
+              {pillars.map((pillar) => (
+                <div className="abt-pillar" key={pillar.title}>
+                  <span className="abt-pillar-ic" aria-hidden="true">
+                    {pillar.icon}
+                  </span>
+                  <div>
+                    <p className="abt-pillar-title">{pillar.title}</p>
+                    <p className="abt-pillar-desc">{pillar.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="abt-split">
+              <div>
+                <CoverageBoard />
               </div>
 
-              <div className="contact-form-col">
-                <ServiceLeadForm
-                  formType="about"
-                  badge="Free consultation"
-                  title="Send us a message"
-                  subtitle="We'll reply within one business day."
-                  submitText="Send Message"
-                  showBusinessName={false}
-                  serviceOptions={ABOUT_SERVICE_OPTIONS}
-                  messagePlaceholder="Tell us a bit about your goals or project"
-                />
+              <div>
+                <h3 className="abt-h3">
+                  Where the work happens, and who it&apos;s for
+                </h3>
+                <p className="abt-lead">
+                  We built this agency for the roofer with three trucks, the
+                  two-chair dental practice and the cleaning company that just
+                  hired its first crew — the businesses where one extra job a
+                  week genuinely changes the year. Scoping the work for that
+                  budget is the whole point.
+                </p>
+                <p className="abt-lead">
+                  Every engagement starts the same way: understand the business,
+                  look at how its customers actually search, and take the
+                  shortest route between the two. Then we build it — the site,
+                  the profile, the content, the campaigns — with the same team
+                  that ran the audit.
+                </p>
+                <p className="abt-lead">
+                  Google Business Profile work is where we go deepest, and it
+                  keeps the rest of the stack honest: a profile that wins the{" "}
+                  <Link
+                    href="/services/local-seo-for-home-services"
+                    className="abt-inline-link"
+                  >
+                    local Map Pack
+                  </Link>
+                  , a site that converts the click it sends, and ads held to a
+                  cost-per-call number.
+                </p>
+                <Link href="/services" className="abt-arrow-link">
+                  See how we work across all four channels
+                  <FiArrowRight size={14} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="abt-facts abt-facts-row">
+              {companyFacts.map((fact) => (
+                <div className="abt-fact" key={fact.k}>
+                  <span className="abt-fact-k">{fact.k}</span>
+                  <span className="abt-fact-v">{fact.v}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════ 4 · WHAT WE DO ════════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-sec-head-center">
+              <p className="abt-eyebrow">What we do</p>
+              <h2 className="abt-h2">
+                Four disciplines, deliberately kept in{" "}
+                <span className="abt-hl">one team</span>
+              </h2>
+              <p className="abt-lead">
+                Local visibility compounds when the four channels are built
+                together — a profile that ranks, a site that converts the
+                traffic it earns, and ads that cover the ground organic
+                hasn&apos;t reached yet.
+              </p>
+            </div>
+
+            <div className="abt-cards">
+              {services.map((service) => (
+                <div className="abt-card" key={service.title}>
+                  <MiniVisual kind={service.visual} />
+                  <h3 className="abt-card-title">{service.title}</h3>
+                  <p className="abt-card-desc">{service.desc}</p>
+                  <ul className="abt-card-list">
+                    {service.points.map((point) => (
+                      <li key={point}>
+                        <FiCheck size={13} aria-hidden="true" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="abt-card-foot">
+                    <Link href={service.href} className="abt-arrow-link">
+                      {service.cta}
+                      <FiArrowRight size={14} aria-hidden="true" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="abt-note-line">
+              Working in a specific trade? Each one has its own playbook — see
+              the{" "}
+              <Link href="/industries" className="abt-inline-link">
+                industries we serve
+              </Link>{" "}
+              or browse{" "}
+              <Link href="/services" className="abt-inline-link">
+                all services
+              </Link>
+              . Need a listing back on Maps quickly? That&apos;s our most
+              requested job —{" "}
+              <Link href="/services/gmb-reinstatement-help" className="abt-inline-link">
+                GMB reinstatement help
+              </Link>{" "}
+              covers how we handle it.
+            </p>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════ 5 · PROCESS ═══════════ */}
+        <section className="abt-section abt-band">
+          <div className="abt-container">
+            <div className="abt-sec-head">
+              <p className="abt-eyebrow abt-eyebrow-light">How we work</p>
+              <h2 className="abt-h2">
+                Five stages, in this order, on every engagement
+              </h2>
+              <p className="abt-lead">
+                Same five steps whether we&apos;re building a website, restoring
+                a listing or opening an ad account. You always know which one
+                you&apos;re on and what it should move.
+              </p>
+            </div>
+
+            <div className="abt-process-track">
+              {processSteps.map((step, i) => (
+                <div
+                  className="abt-step"
+                  key={step.num}
+                  style={{ "--i": i } as CSSProperties}
+                >
+                  <p className="abt-step-num">{step.num}</p>
+                  <h3 className="abt-step-title">{step.title}</h3>
+                  <p className="abt-step-desc">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="abt-process-foot">
+              <p>
+                The audit comes before the proposal, every time — so the plan
+                you get is priced against what the data actually shows.
+              </p>
+              <Link href={SITE_CONTACT.bookCallHref} className="abt-btn-gold">
+                Start with the audit
+                <span className="abt-btn-arrow" aria-hidden="true">
+                  <FiArrowUpRight />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ═════════════════════════════════════ 6 · PRINCIPLES ═══════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-sec-head-center">
+              <p className="abt-eyebrow">What you can count on</p>
+              <h2 className="abt-h2">Six things we hold the work to</h2>
+              <p className="abt-lead">
+                These are the standards every engagement is scoped against, and
+                the fastest way to tell whether we&apos;re the right fit before
+                anyone books a call.
+              </p>
+            </div>
+
+            <div className="abt-why-cards">
+              {principles.map((item) => (
+                <div className="abt-why-card" key={item.title}>
+                  <div className="abt-why-icon" aria-hidden="true">
+                    {item.icon}
+                  </div>
+                  <p className="abt-why-card-title">{item.title}</p>
+                  <p className="abt-why-card-desc">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════ 7 · TRACK RECORD ═══════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-split">
+              <div>
+                <p className="abt-eyebrow">Our track record</p>
+                <h2 className="abt-h2">
+                  The numbers behind the work, and{" "}
+                  <span className="abt-hl">when each gain lands</span>
+                </h2>
+                <p className="abt-lead">
+                  1,500+{" "}
+                  <Link
+                    href="/services/gmb-optimization"
+                    className="abt-inline-link"
+                  >
+                    profiles optimized
+                  </Link>
+                  , 500+ listings restored and a 5.0 rating on Clutch,
+                  cumulative across every engagement to date.
+                  Clutch verifies each reviewer before publishing, so that score
+                  reflects confirmed work rather than collected testimonials.
+                </p>
+                <p className="abt-lead">
+                  The three levers of local search each land in their own
+                  window, and every one of them keeps building after it arrives.
+                  Setting that out on day one is how an engagement stays on
+                  track — more on the mechanics in{" "}
+                  <Link
+                    href="/local-seo-google-business-optimization"
+                    className="abt-inline-link"
+                  >
+                    how Map Pack ranking is decided
+                  </Link>
+                  .
+                </p>
+                <Link href={SITE_CONTACT.bookCallHref} className="abt-btn">
+                  Get a free visibility review
+                  <span className="abt-btn-arrow" aria-hidden="true">
+                    <FiArrowUpRight />
+                  </span>
+                </Link>
+              </div>
+
+              <div>
+                <TimelineBars />
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── FINAL CTA ────────────────────────────────────── */}
-        <section className="cta-final">
-          <div className="wrap">
-            <div className="cta-inner">
-              <span className="eyebrow center">Ready when you are</span>
-              <h2>Let&apos;s map your growth plan</h2>
-              <p>
-                Book a free strategy call and we&apos;ll walk you through the
-                fastest next step for your profile, search visibility, and
-                website — with no obligation.
+        {/* ════════════════════════════════════════ 8 · REVIEWS ═══════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-sec-head-center">
+              <p className="abt-eyebrow">Client reviews</p>
+              <h2 className="abt-h2">
+                What clients say, <span className="abt-hl">verified</span> by
+                Clutch
+              </h2>
+              <p className="abt-lead">
+                Clutch confirms every reviewer before publishing, so each of
+                these comes from a client who verified the engagement.
               </p>
-              <div className="cta-actions">
-                <a href={SITE_CONTACT.bookCallHref} className="buttons">
-                  Book a Free Strategy Call
-                  <BtnArrow />
+            </div>
+
+            <div className="abt-reviews">
+              <ClutchWidget
+                widgetType="12"
+                height="375"
+                primaryColor="#2567e8"
+                reviews="448872,448007,448005,448004,447635,447416,447409,446728,446721,446262,445981,446714,446714,446714"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════ 9 · FAQ ═══════════ */}
+        <section className="abt-section">
+          <div className="abt-container">
+            <div className="abt-faq-grid">
+              <div>
+                <p className="abt-eyebrow">Common questions</p>
+                <h2 className="abt-h2">
+                  Questions we get before the first call
+                </h2>
+                <p className="abt-lead">
+                  Anything not covered here, call and ask — you&apos;ll get a
+                  direct answer, with no requirement to book anything first.
+                </p>
+                <a href={SITE_CONTACT.phoneHref} className="abt-btn-ghost">
+                  <FiPhone aria-hidden="true" />
+                  {SITE_CONTACT.phoneDisplay}
                 </a>
-                <a href={SITE_CONTACT.phoneHref} className="btn btn-white">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    style={{ width: 17, height: 17 }}
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.89.34 1.84.57 2.81.7A2 2 0 0 1 22 16.92Z" />
-                  </svg>
+              </div>
+
+              <div className="abt-faq-list">
+                {aboutFaqs.map((faq) => (
+                  <details className="abt-faq-item" key={faq.q}>
+                    <summary className="abt-faq-q">
+                      {faq.q}
+                      <span className="abt-faq-icon" aria-hidden="true" />
+                    </summary>
+                    <p className="abt-faq-a">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════ 10 · FINAL CTA ══════════ */}
+        {/* Full-bleed closing band — no .abt-container here on purpose; the
+            card carries the side inset itself so it runs edge to edge. This
+            is the page's only conversion point now that the contact section
+            is gone, so both the call and the phone number live here. */}
+        <section className="abt-final">
+          <div className="abt-final-card">
+            <div className="abt-final-inner">
+              <p className="abt-eyebrow abt-eyebrow-light">Ready when you are</p>
+              <h2 className="abt-final-h">
+                Let&apos;s map your <span>growth plan</span>
+              </h2>
+              <p className="abt-final-sub">
+                Book a free strategy call and we&apos;ll walk you through the
+                fastest next step for your profile, your search visibility and
+                your website — with no obligation.
+              </p>
+              <div className="abt-final-actions">
+                <Link href={SITE_CONTACT.bookCallHref} className="abt-btn-gold">
+                  Book a free strategy call
+                  <span className="abt-btn-arrow" aria-hidden="true">
+                    <FiArrowUpRight />
+                  </span>
+                </Link>
+                <a
+                  href={SITE_CONTACT.phoneHref}
+                  className="abt-btn-outline-light"
+                >
+                  <FiPhone aria-hidden="true" />
                   {SITE_CONTACT.phoneDisplay}
                 </a>
               </div>
@@ -839,5 +895,3 @@ function Page() {
     </>
   );
 }
-
-export default Page;

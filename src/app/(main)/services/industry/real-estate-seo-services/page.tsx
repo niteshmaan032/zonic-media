@@ -77,7 +77,7 @@ const PAGE_PATH = "/services/industry/real-estate-seo-services";
 export const metadata: Metadata = {
   title: "Real Estate SEO Services That Win Local Leads",
   description:
-    "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' and 'real estate agent near me' — GBP, reviews, and buyer/seller leads. Get a free audit.",
+    "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' — GBP, reviews & buyer/seller leads. Free audit.",
   keywords: [
     "real estate SEO services",
     "realtor near me",
@@ -472,7 +472,7 @@ function Page() {
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and lead-driven businesses climb
-                    into the Google map pack and grow. Zonic Media builds the
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
                     full local ranking system for real estate agents, teams, and
                     brokerages — Google Business Profile, citations, reviews, and
                     neighborhood content — so when buyers and sellers search
@@ -1049,7 +1049,7 @@ function Page() {
                   <h3>Strategy &amp; foundation fixes</h3>
                   <p>
                     A keyword-mapped plan for your markets and neighborhoods, then
-                    the foundation work: profile optimization, citation cleanup,
+                    the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation cleanup,
                     and on-page fixes.
                   </p>
                 </article>
@@ -1141,7 +1141,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
-                  executed month after month.
+                  executed month after month, often paired with a <Link href="/services/real-estate-agent-website-design" className="tseo-inline-link">real estate agent website design</Link> that turns the extra traffic into signed clients.
                 </p>
               </div>
               <div className="tseo-results-cards">
@@ -1170,7 +1170,7 @@ function Page() {
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for lead-driven businesses is all we do, and it
-                  shows. Here is exactly what working with a dedicated local team
+                  shows. Here is exactly what working with a dedicated <Link href="/services/real-estate-marketing-agency" className="tseo-inline-link">real estate marketing agency</Link>
                   looks like.
                 </p>
               </div>
@@ -1531,7 +1531,7 @@ function Page() {
                     Straight answers about real estate SEO
                   </h2>
                   <p className="tseo-lead">
-                    Pricing, timelines, guarantees, and what actually moves real
+                    Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for real estate</Link> fits alongside SEO, and what actually moves real
                     estate rankings. If your question is not here, send it through
                     the form — a strategist answers, not a sales script.
                   </p>

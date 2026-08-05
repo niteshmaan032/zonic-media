@@ -1,9 +1,23 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
+import lastmodJson from "@/data/sitemapLastmod.generated.json";
 
 export const revalidate = 300;
 
 const BASE_URL = "https://www.zonicllc.com";
+
+// route -> ISO date, produced by `node scripts/generate-sitemap-lastmod.mjs`
+// from each page's git history. Re-run the script after content edits.
+const LASTMOD = lastmodJson as Record<string, string>;
+
+const withLastModified = (
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap =>
+  entries.map((entry) => {
+    const route = entry.url.replace(BASE_URL, "").replace(/\/$/, "") || "/";
+    const lastModified = LASTMOD[route];
+    return lastModified ? { ...entry, lastModified } : entry;
+  });
 
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Core
@@ -70,6 +84,17 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/roofing-marketing-agency`,             changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/septic-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/solar-marketing-agency`,               changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/towing-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/pediatric-marketing-agency`,           changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/bathroom-remodeling-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/kitchen-remodeling-marketing-agency`,  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/general-contractor-marketing-agency`,  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/flooring-marketing-agency`,            changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/window-and-door-marketing-agency`,     changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/appliance-repair-marketing-agency`,    changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/pool-service-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/gutter-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/tree-service-marketing-agency`,        changeFrequency: "monthly", priority: 0.8 },
 
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
@@ -150,6 +175,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const blogs = await getPublishedBlogs();
     blogEntries = blogs.map((blog) => ({
       url: `${BASE_URL}/blog/${blog.slug}`,
+      lastModified: blog.updatedAt,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
@@ -157,5 +183,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If the DB is unreachable during sitemap generation, skip blog entries
   }
 
-  return [...STATIC_PAGES, ...blogEntries];
+  return [...withLastModified(STATIC_PAGES), ...blogEntries];
 }
