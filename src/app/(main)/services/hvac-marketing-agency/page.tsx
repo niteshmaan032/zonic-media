@@ -127,19 +127,19 @@ const problemProse = [
 
 const problemCards = [
   {
-    h: "70% of annual demand hits in two narrow windows.",
+    h: "70% of Annual Demand Hits in Two Narrow Windows.",
     p: "Late May through September for cooling. Late November through February for heating. Miss either window because rankings weren't established and you've lost a year of growth.",
   },
   {
-    h: "Timing the launch matters more than in any other category.",
+    h: "Timing the Launch Matters More Than in Any Other Category.",
     p: "Foundational work has to begin 90-180 days before the peak season. March-April launches catch the cooling peak. September launches catch the heating peak. June launches miss both.",
   },
   {
-    h: "Maintenance contracts are the highest-leverage HVAC asset.",
+    h: "Maintenance Contracts are the Highest-Leverage HVAC Asset.",
     p: "Recurring revenue at 80%+ margins. Two visits per year keep customers loyal and create referrals. Most HVAC contractors leave this on the table because no one marketed for it.",
   },
   {
-    h: "The R-410A to R-454B refrigerant transition is reshaping repair-vs-replace decisions.",
+    h: "The R-410A to R-454B Refrigerant Transition is Reshaping Repair-Vs-Replace Decisions.",
     p: "Customers are confused about A2L refrigerants. Contractors who address the transition openly capture the conversation. Those who avoid it lose trust to those who don't.",
   },
 ];
@@ -159,22 +159,22 @@ const resultsProse = [
 const resultStats = [
   {
     big: "6.3×",
-    h: "Peak month lead volume vs Month 1",
+    h: "Peak Month Lead Volume Vs Month 1",
     p: "Representative HVAC contractor trajectory across the first year on plan.",
   },
   {
     big: "90-180",
-    h: "Days to top-three rankings",
+    h: "Days to Top-Three Rankings",
     p: "Depending on metro competitive density; suburban submarkets are faster.",
   },
   {
     big: "$15-25",
-    h: "Cost per organic HVAC lead",
+    h: "Cost Per Organic HVAC Lead",
     p: "Versus $300-500 effective CAC on shared-lead platforms like Angi.",
   },
   {
     big: "30-50%",
-    h: "Revenue from memberships at scale",
+    h: "Revenue from Memberships at Scale",
     p: "Recurring maintenance-contract revenue at 80%+ gross margin.",
   },
 ];
@@ -393,8 +393,8 @@ function Page() {
                   Why HVAC Marketing Is Different
                 </div>
                 <h2 className="hia-sec-h2">
-                  HVAC has the most extreme seasonal demand asymmetry in{" "}
-                  <span className="hia-accent">home services.</span>
+                  HVAC Has the Most Extreme Seasonal Demand Asymmetry in{" "}
+                  <span className="hia-accent">Home Services.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   70% of annual call volume is concentrated in two peak windows
@@ -434,8 +434,8 @@ function Page() {
                   How Customers Find HVAC Contractors
                 </div>
                 <h2 className="hia-sec-h2">
-                  &ldquo;AC repair near me&rdquo; at 95°F is a{" "}
-                  <span className="hia-accent">30-second decision.</span>
+                  &ldquo;AC Repair Near Me&rdquo; at 95°F is a{" "}
+                  <span className="hia-accent">30-Second Decision.</span>
                 </h2>
                 <div className="hia-results-prose">
                   {mapPackParas.map((p, i) => (
@@ -461,8 +461,8 @@ function Page() {
                   What an HVAC Marketing Agency Delivers
                 </div>
                 <h2 className="hia-sec-h2">
-                  Six marketing functions, tuned for{" "}
-                  <span className="hia-accent">HVAC economics.</span>
+                  Six Marketing Functions, Tuned for{" "}
+                  <span className="hia-accent">HVAC Economics.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Every service below is calibrated to how HVAC customers
@@ -504,8 +504,8 @@ function Page() {
               <section className="hia-section" id="hia-specialties">
                 <div className="hia-sec-label">HVAC Specialties We Market</div>
                 <h2 className="hia-sec-h2">
-                  Eight HVAC service categories where map pack visibility{" "}
-                  <span className="hia-accent">decides who books.</span>
+                  Eight HVAC Service Categories Where Map Pack Visibility{" "}
+                  <span className="hia-accent">Decides Who Books.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Each specialty has its own customer search behavior, its own
@@ -539,9 +539,9 @@ function Page() {
               <section className="hia-section hia-results-sec" id="hia-results">
                 <div className="hia-sec-label">What This Actually Produces</div>
                 <h2 className="hia-sec-h2">
-                  Two peaks. One predictable pattern.{" "}
+                  Two Peaks. One Predictable Pattern.{" "}
                   <span className="hia-accent">
-                    Years of compounding leads.
+                    Years of Compounding Leads.
                   </span>
                 </h2>
                 <p className="hia-sec-sub">
@@ -585,8 +585,8 @@ function Page() {
               <section className="hia-section hia-states" id="hia-states">
                 <div className="hia-sec-label">States We Cover</div>
                 <h2 className="hia-sec-h2">
-                  HVAC marketing tuned to the climate and competitive density of{" "}
-                  <span className="hia-accent">each state.</span>
+                  HVAC Marketing Tuned to the Climate and Competitive Density of{" "}
+                  <span className="hia-accent">Each State.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   HVAC markets vary dramatically by state. Phoenix runs cooling
@@ -635,8 +635,8 @@ function Page() {
                   How We Work With HVAC Contractors
                 </div>
                 <h2 className="hia-sec-h2">
-                  Three-step start, timed to your{" "}
-                  <span className="hia-accent">peak season.</span>
+                  Three-Step Start, Timed to Your{" "}
+                  <span className="hia-accent">Peak Season.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   HVAC marketing timing matters more than launch speed. We
@@ -672,8 +672,8 @@ function Page() {
                   Trusted by Clients Nationwide
                 </div>
                 <h2 className="hia-sec-h2">
-                  What HVAC contractors and other service businesses{" "}
-                  <span className="hia-accent">say about working with us.</span>
+                  What HVAC Contractors and Other Service Businesses{" "}
+                  <span className="hia-accent">Say About Working with Us.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
@@ -706,8 +706,8 @@ function Page() {
                   Transparent Pricing, Month to Month
                 </div>
                 <h2 className="hia-sec-h2">
-                  Three plans built for where your HVAC company is{" "}
-                  <span className="hia-accent">right now.</span>
+                  Three Plans Built for Where Your HVAC Company is{" "}
+                  <span className="hia-accent">Right Now.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — move up or down
@@ -759,8 +759,8 @@ function Page() {
                   Common Questions From HVAC Contractors
                 </div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">strategy call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Strategy Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question here, include it in the

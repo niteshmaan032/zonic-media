@@ -122,27 +122,27 @@ const serviceJsonLd = {
 
 const ResidentialCleaningWebFaqs = [
   {
-    question: "How much does house cleaning website design cost?",
+    question: "How Much Does House Cleaning Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, booking and pricing integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-team, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a house cleaning website?",
+    question: "How Long Does It Take to Design a House Cleaning Website?",
     answer:
       "Most house cleaning websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website give instant online booking with upfront pricing?",
+    question: "Can My Website Give Instant Online Booking with Upfront Pricing?",
     answer:
       "Yes — that is the single biggest lever for a cleaning company. We build a booking flow where a homeowner picks bedrooms, bathrooms, and frequency and sees a price on the spot, then books without a phone call. Instant, transparent booking is what turns a late-night search into a scheduled clean.",
   },
   {
-    question: "Can you integrate my booking software?",
+    question: "Can You Integrate My Booking Software?",
     answer:
       "Yes. We connect the tools cleaning companies already run — Launch27, BookingKoala, Jobber, or a structured request flow that routes straight to your office. Either way, homeowners can book a clean without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -163,7 +163,7 @@ const residentialCleaningWebFaqJsonLd = {
 };
 
 const AboutChecks = [
-  "Instant online booking",
+  "Instant Online Booking",
   "Upfront transparent pricing",
   "Recurring plan UX",
   "Local SEO foundations",
@@ -224,37 +224,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Instant online booking",
+    title: "Instant Online Booking",
     desc: "Homeowners pick beds, baths, and frequency and book in a few taps — integrated with the booking tools cleaning companies already use.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Upfront pricing UX",
+    title: "Upfront Pricing UX",
     desc: "Transparent, size-based pricing shown before booking, so homeowners never have to call to find out what a clean costs.",
   },
   {
     icon: <FiRepeat aria-hidden="true" />,
-    title: "Recurring plan flows",
+    title: "Recurring Plan Flows",
     desc: "Weekly and biweekly plans front and center, turning one-time cleans into the recurring revenue that grows a cleaning business.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "Trust & safety UX",
+    title: "Trust & Safety UX",
     desc: "Background checks, insurance, and reviews placed up front, so homeowners feel safe letting your team into their home.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners book a clean on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Instant book & click-to-call",
+    title: "Instant Book & Click-to-Call",
     desc: "One thumb-tap from any page to a booking or a call, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them before letting a team inside.",
   },
   {
@@ -262,19 +262,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Upfront pricing & plans",
+    title: "Upfront Pricing & Plans",
     desc: "Transparent pricing and recurring plans on the page, because homeowners book the company that answers the cost question.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you serve, built to rank for local house cleaning searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you clean, and what you offer.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -282,22 +282,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & service mix mapping",
+    title: "Discovery & Service Mix Mapping",
     desc: "The cleans you want more of, the cities you serve, how booking works today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, booking flows, and pricing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the bookings coming.",
   },
 ];
@@ -310,7 +310,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -409,8 +409,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">House Cleaning Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    House cleaning website design that turns visitors into{" "}
-                    <span className="hiw-hl">booked cleans</span>
+                    House Cleaning Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Booked Cleans</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs house cleaning websites that work like a
@@ -568,9 +568,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first walkthrough</span> a
-                    homeowner gives your company
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Walkthrough</span> a
+                    Homeowner Gives Your Company
                   </h2>
                   <p className="hiw-lead">
                     Before a homeowner ever lets a team into their home, they have
@@ -620,7 +620,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    House cleaning website design for every stage of your company
+                    House Cleaning Website Design for Every Stage of Your Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -645,7 +645,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Service Type</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of clean
+                  Web Design for Every Kind of Clean
                 </h2>
                 <p className="hiw-lead">
                   Recurring cleaning, deep cleans, move-in and move-out,
@@ -694,7 +694,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book cleans
+                  More Than a Brochure — A System Built to Book Cleans
                 </h2>
                 <p className="hiw-lead">
                   Most house cleaning websites are digital business cards: a stock
@@ -722,7 +722,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting cleaning website
+                    The Anatomy of a High-Converting Cleaning Website
                   </h2>
                   <p className="hiw-lead">
                     The best house cleaning website design is not about decoration
@@ -769,7 +769,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -781,7 +781,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -805,7 +805,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones homeowners actually use</h3>
+                  <h3>Fast on the Phones Homeowners Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most cleaning bookings happen on a phone, often late
@@ -816,7 +816,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where homeowners look for them</h3>
+                  <h3>Trust Signals Where Homeowners Look for Them</h3>
                   <p>
                     Background checks, insurance, satisfaction guarantees, and
                     reviews placed in the layout — the proof a homeowner needs
@@ -827,7 +827,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, booking
                     flows, and local SEO foundations your site needs — no
@@ -857,7 +857,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -887,7 +887,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Cleaning Pros Choose Us</p>
-                <h2 className="hiw-h2">Sparkle customers can see</h2>
+                <h2 className="hiw-h2">Sparkle Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how homeowners choose
                   a cleaning company — and what makes them book instead of keep
@@ -951,7 +951,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  House cleaning website design across the United States
+                  House Cleaning Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From solo maid services to multi-team cleaning companies, Zonic
@@ -986,7 +986,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything cleaning pros ask us about website design
+                    Everything Cleaning Pros Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, online booking, and
@@ -1026,7 +1026,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills your calendar.
+                  Your Website is Step One. Here is What Fills Your Calendar.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1055,7 +1055,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free house cleaning website consult
+                    Book Your Free House Cleaning Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

@@ -38,17 +38,17 @@ export const poolServiceMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "chart",
-      title: "Chasing one-off jobs, not accounts",
+      title: "Chasing One-off Jobs, Not Accounts",
       body: "A single green-to-clean is worth a few hundred dollars. That same customer on weekly maintenance is worth thousands a year. Marketing that isn't built to convert one-time calls into recurring accounts leaves most of the money on the table.",
     },
     {
       icon: "pin",
-      title: "Losing routes to the guy one street over",
+      title: "Losing Routes to the Guy One Street Over",
       body: "Pool service margins live and die on route density. Ranking outside the top three in a specific neighborhood means driving past a competitor's customers to reach your own — burning hours you can't bill.",
     },
     {
       icon: "clock",
-      title: "Feast-and-famine seasonality",
+      title: "Feast-and-Famine Seasonality",
       body: "Spring openings overload the schedule, winter goes quiet. Without off-season campaigns for closings, heaters, covers, and equipment upgrades, you spend half the year rebuilding demand from scratch.",
     },
   ],
@@ -116,7 +116,7 @@ export const poolServiceMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to fill your routes with recurring accounts?",
+  finalHeading: "Ready to Fill Your Routes with Recurring Accounts?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

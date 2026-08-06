@@ -384,7 +384,6 @@
   color: var(--secondary);
   text-align: center;
   font-size: 32px;
-  text-transform: capitalize;
   max-width: 760px;
   margin-inline: auto;
 }
@@ -446,8 +445,8 @@
   height: 54px;
   white-space: nowrap;
   justify-content: center;
-  justify-self: stretch;
-  width: 100%;
+  justify-self: start;
+  width: fit-content;
   margin-top: 0;
 }
 
@@ -893,7 +892,7 @@
   }
 
   .cseo-inline-audit-form .buttons {
-    width: 100%;
+    width: fit-content;
   }
 
   .cseo-journey-image-frame {

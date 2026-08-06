@@ -159,7 +159,7 @@ const services: ServiceCard[] = [
     title: "Local SEO",
     desc: "Getting a business found by the people already searching for what it does, in every town it can serve.",
     points: [
-      "Category and service alignment",
+      "Category and Service Alignment",
       "Location content that ranks",
       "Review velocity and local links",
     ],
@@ -180,7 +180,7 @@ const services: ServiceCard[] = [
   },
   {
     visual: "site",
-    title: "Website design & development",
+    title: "Website Design & Development",
     desc: "Fast, conversion-shaped sites that make a small business look established and give rankings somewhere worth landing.",
     points: [
       "Built to convert, not to win awards",
@@ -452,9 +452,9 @@ export default function AboutPage() {
               <div>
                 <p className="abt-eyebrow">About Zonic Media</p>
                 <h1 className="abt-hero-h1">
-                  The local marketing agency built for{" "}
-                  <span className="abt-hl">smaller budgets</span> and bigger
-                  goals
+                  The Local Marketing Agency Built for{" "}
+                  <span className="abt-hl">Smaller Budgets</span> and Bigger
+                  Goals
                 </h1>
                 <p className="abt-hero-sub">
                   Zonic Media is a Dover, Delaware agency that helps small and
@@ -533,8 +533,8 @@ export default function AboutPage() {
             <div className="abt-sec-head-center">
               <p className="abt-eyebrow">Who we are</p>
               <h2 className="abt-h2">
-                A senior team, built around{" "}
-                <span className="abt-hl">local businesses</span>
+                A Senior Team, Built Around{" "}
+                <span className="abt-hl">Local Businesses</span>
               </h2>
               <p className="abt-lead">
                 Zonic Media is a small, senior group in Dover, Delaware doing
@@ -565,7 +565,7 @@ export default function AboutPage() {
 
               <div>
                 <h3 className="abt-h3">
-                  Where the work happens, and who it&apos;s for
+                  Where the Work Happens, and Who It&apos;s For
                 </h3>
                 <p className="abt-lead">
                   We built this agency for the roofer with three trucks, the
@@ -617,8 +617,8 @@ export default function AboutPage() {
             <div className="abt-sec-head-center">
               <p className="abt-eyebrow">What we do</p>
               <h2 className="abt-h2">
-                Four disciplines, deliberately kept in{" "}
-                <span className="abt-hl">one team</span>
+                Four Disciplines, Deliberately Kept in{" "}
+                <span className="abt-hl">One Team</span>
               </h2>
               <p className="abt-lead">
                 Local visibility compounds when the four channels are built
@@ -678,7 +678,7 @@ export default function AboutPage() {
             <div className="abt-sec-head">
               <p className="abt-eyebrow abt-eyebrow-light">How we work</p>
               <h2 className="abt-h2">
-                Five stages, in this order, on every engagement
+                Five Stages, in This Order, on Every Engagement
               </h2>
               <p className="abt-lead">
                 Same five steps whether we&apos;re building a website, restoring
@@ -721,7 +721,7 @@ export default function AboutPage() {
           <div className="abt-container">
             <div className="abt-sec-head-center">
               <p className="abt-eyebrow">What you can count on</p>
-              <h2 className="abt-h2">Six things we hold the work to</h2>
+              <h2 className="abt-h2">Six Things We Hold the Work To</h2>
               <p className="abt-lead">
                 These are the standards every engagement is scoped against, and
                 the fastest way to tell whether we&apos;re the right fit before
@@ -750,8 +750,8 @@ export default function AboutPage() {
               <div>
                 <p className="abt-eyebrow">Our track record</p>
                 <h2 className="abt-h2">
-                  The numbers behind the work, and{" "}
-                  <span className="abt-hl">when each gain lands</span>
+                  The Numbers Behind the Work, and{" "}
+                  <span className="abt-hl">When Each Gain Lands</span>
                 </h2>
                 <p className="abt-lead">
                   1,500+{" "}
@@ -800,7 +800,7 @@ export default function AboutPage() {
             <div className="abt-sec-head-center">
               <p className="abt-eyebrow">Client reviews</p>
               <h2 className="abt-h2">
-                What clients say, <span className="abt-hl">verified</span> by
+                What Clients Say, <span className="abt-hl">Verified</span> by
                 Clutch
               </h2>
               <p className="abt-lead">
@@ -827,7 +827,7 @@ export default function AboutPage() {
               <div>
                 <p className="abt-eyebrow">Common questions</p>
                 <h2 className="abt-h2">
-                  Questions we get before the first call
+                  Questions We Get Before the First Call
                 </h2>
                 <p className="abt-lead">
                   Anything not covered here, call and ask — you&apos;ll get a
@@ -841,7 +841,7 @@ export default function AboutPage() {
 
               <div className="abt-faq-list">
                 {aboutFaqs.map((faq) => (
-                  <details className="abt-faq-item" key={faq.q}>
+                  <details className="abt-faq-item" name="abt-faq" key={faq.q}>
                     <summary className="abt-faq-q">
                       {faq.q}
                       <span className="abt-faq-icon" aria-hidden="true" />
@@ -864,7 +864,7 @@ export default function AboutPage() {
             <div className="abt-final-inner">
               <p className="abt-eyebrow abt-eyebrow-light">Ready when you are</p>
               <h2 className="abt-final-h">
-                Let&apos;s map your <span>growth plan</span>
+                Let&apos;s Map Your <span>Growth Plan</span>
               </h2>
               <p className="abt-final-sub">
                 Book a free strategy call and we&apos;ll walk you through the

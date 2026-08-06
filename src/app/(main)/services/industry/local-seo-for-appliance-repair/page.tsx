@@ -132,37 +132,37 @@ const serviceJsonLd = {
 
 const ApplianceSeoFaqs = [
   {
-    question: "What's included in your appliance repair local SEO services?",
+    question: "What's Included in Your Appliance Repair Local SEO Services?",
     answer:
       "Every appliance repair campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your refrigerator, washer, dryer, dishwasher, and oven repair pages, local content, and a monthly report that shows rankings, calls, and booked service calls — not vanity metrics.",
   },
   {
-    question: "How long does appliance repair SEO take to show results?",
+    question: "How Long Does Appliance Repair SEO Take to Show Results?",
     answer:
       "Most appliance repair companies see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'appliance repair near me' and 'refrigerator repair near me.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds month after month.",
   },
   {
-    question: "How much does local SEO for appliance repair cost?",
+    question: "How Much Does Local SEO for Appliance Repair Cost?",
     answer:
       "Pricing depends on how many locations you run, how competitive your market is, and how aggressively you want to grow across refrigerator, washer, dryer, dishwasher, and oven repair searches. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for appliance repair keywords?",
+    question: "Do You Guarantee First-Page Google Rankings for Appliance Repair Keywords?",
     answer:
       "Our track record speaks for itself — most appliance repair clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do appliance repair companies really need Google Business Profile optimization?",
+    question: "Do Appliance Repair Companies Really Need Google Business Profile Optimization?",
     answer:
       "Yes — it is the single biggest lever in appliance repair local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for refrigerator, washer, dryer, or oven repair, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and homeowners choose it.",
   },
   {
-    question: "Can you help multi-location or wide service-area appliance repair companies?",
+    question: "Can You Help Multi-Location or Wide Service-Area Appliance Repair Companies?",
     answer:
       "Absolutely. We build local SEO systems for single-technician operators and multi-location appliance repair brands alike — service-area targeting, individual location pages, and map visibility for every city and neighborhood you cover, all reported in one clear dashboard.",
   },
   {
-    question: "Why choose Zonic Media over another appliance repair SEO company?",
+    question: "Why Choose Zonic Media over Another Appliance Repair SEO Company?",
     answer:
       "We specialize in local home-service businesses like appliance repair, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked service calls, and work that is built to compound month after month — not churn.",
   },
@@ -337,17 +337,17 @@ const CompareUs = [
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Home services is all we do",
+    title: "Home Services is All We Do",
     desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked jobs for appliance repair and home-service businesses is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter — so you start capturing 'appliance repair near me' calls sooner. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
@@ -424,8 +424,8 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for Appliance Repair</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for appliance repair that{" "}
-                    <span className="tseo-hl">books calls</span>
+                    Local SEO for Appliance Repair That{" "}
+                    <span className="tseo-hl">Books Calls</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
@@ -752,9 +752,9 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    Homeowners are searching for appliance repair.{" "}
+                    Homeowners are Searching for Appliance Repair.{" "}
                     <span className="tseo-hl-text">
-                      We make sure they find you.
+                      We Make Sure They Find You.
                     </span>
                   </h2>
                   <p className="tseo-lead">
@@ -801,7 +801,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your appliance repair rankings need, in one system
+                    Everything Your Appliance Repair Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -826,8 +826,8 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your appliance repair company in the top three — and
-                  keep it there
+                  We Put Your Appliance Repair Company in the Top Three — And
+                  Keep It There
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
@@ -943,7 +943,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">How It Works</p>
                   <h2 className="tseo-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -963,7 +963,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free appliance repair visibility audit</h3>
+                  <h3>Free Appliance Repair Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the refrigerator,
@@ -1003,7 +1003,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your appliance repair services and
                     cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization,
@@ -1019,7 +1019,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1055,7 +1055,7 @@ function Page() {
                       </span>
                       <span className="tseo-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and booked service calls,
                       not vanity metrics. As rankings lock in, we expand to more
@@ -1094,7 +1094,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when appliance repair local SEO is done properly
+                  What Happens When Appliance Repair Local SEO is Done Properly
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different appliances — the same system,
@@ -1123,8 +1123,8 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical appliance repair SEO
-                  agency
+                  What You Get with Zonic Vs. A Typical Appliance Repair SEO
+                  Agency
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
@@ -1134,7 +1134,7 @@ function Page() {
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="tseo-compare-sub">
                     Why most appliance repair campaigns quietly stall
                   </p>
@@ -1217,8 +1217,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your appliance repair rankings and reviews climb,{" "}
-                    <span className="tseo-hl-text">month over month</span>
+                    Watch Your Appliance Repair Rankings and Reviews Climb,{" "}
+                    <span className="tseo-hl-text">Month over Month</span>
                   </h2>
                   <p className="tseo-lead">
                     No black box. Every campaign comes with live rank tracking
@@ -1300,7 +1300,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  An appliance repair local SEO partner, not a monthly invoice
+                  An Appliance Repair Local SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1320,8 +1320,8 @@ function Page() {
                 <div className="tseo-why-banner-text">
                   <p className="tseo-eyebrow">Free Appliance Repair SEO Audit</p>
                   <h3>
-                    See exactly how we&apos;ll grow your appliance repair
-                    rankings
+                    See Exactly How We&apos;ll Grow Your Appliance Repair
+                    Rankings
                   </h3>
                   <p>
                     We&apos;ll map your profile, citations, reviews, and
@@ -1388,7 +1388,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Verified Client Reviews</p>
                 <h2 className="tseo-h2" id="tseo-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="tseo-reviews-widget">
@@ -1423,7 +1423,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for appliance repair companies in every market in the
+                  Local SEO for Appliance Repair Companies in Every Market in the
                   US
                 </h2>
                 <p className="tseo-lead">
@@ -1491,7 +1491,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about appliance repair local SEO
+                    Straight Answers About Appliance Repair Local SEO
                   </h2>
                   <p className="tseo-lead">
                     Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for appliance repair</Link>, and what actually moves
@@ -1525,7 +1525,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Grow Further</p>
                 <h2 className="tseo-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
               </div>
               <div className="tseo-grow-cards">
@@ -1554,7 +1554,7 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free appliance repair local SEO audit
+                    Claim Your Free Appliance Repair Local SEO Audit
                   </h2>
                   <p className="tseo-lead">
                     Tell us about your appliance repair business and we will send
@@ -1607,7 +1607,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free appliance repair SEO audit"
+                    title="Get Your Free Appliance Repair SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where your appliance repair company stands and what it takes to win your market."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your appliance repair business"

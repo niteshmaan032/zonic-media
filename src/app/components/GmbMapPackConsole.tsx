@@ -91,7 +91,7 @@ export default function GmbMapPackConsole() {
 
         <div className="gmb-band-copy">
           <span className="eyebrow">After the appeal lands</span>
-          <h2>Back on the map, back in the phone queue</h2>
+          <h2>Back on the Map, Back in the Phone Queue</h2>
           <p>
             Reinstatement is only worth what it earns you. Once the listing is
             live we rebuild the signals that decide the local pack — categories,

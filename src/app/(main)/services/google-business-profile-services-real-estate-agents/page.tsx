@@ -80,19 +80,19 @@ const trustItems = [
 
 const problemCards = [
   {
-    h: "Multi-agent brokerage addresses look like spam to Google.",
+    h: "Multi-Agent Brokerage Addresses Look Like Spam to Google.",
     p: "Fifty agents at one office address creates a duplicate-listing pattern Google's algorithms automatically flag. The most active profiles get suspended first.",
   },
   {
-    h: "Personal branding habits violate name guidelines.",
+    h: "Personal Branding Habits Violate Name Guidelines.",
     p: "“Top Realtor,” “Luxury Specialist,” city names — all flagged as keyword stuffing the moment a competitor reports the profile. Real estate is the worst category for this.",
   },
   {
-    h: "Home-based agents trigger SAB verification confusion.",
+    h: "Home-Based Agents Trigger SAB Verification Confusion.",
     p: "Service-area-business rules say home addresses should be hidden. Many agents leave them visible, generating verification failures, neighbor complaints, and suspensions.",
   },
   {
-    h: "Competitor false reporting is endemic in dense markets.",
+    h: "Competitor False Reporting is Endemic in Dense Markets.",
     p: "Manhattan, Beverly Hills, Miami Beach — every agent in the same submarket competes for the same map pack ranking. False reports compound automatically.",
   },
 ];
@@ -538,8 +538,8 @@ function Page() {
                   Why Real Estate Suspends More Than Anyone Else
                 </div>
                 <h2 className="hia-sec-h2">
-                  Real estate has the highest GBP suspension rate of any{" "}
-                  <span className="hia-accent">service category.</span>
+                  Real Estate Has the Highest GBP Suspension Rate of Any{" "}
+                  <span className="hia-accent">Service Category.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Plumbers, HVAC contractors, dentists, restaurants — none face
@@ -602,8 +602,8 @@ function Page() {
               <section className="hia-section" id="gre-triggers">
                 <div className="hia-sec-label">The Six Most Common Triggers</div>
                 <h2 className="hia-sec-h2">
-                  Six suspension triggers we see almost weekly in{" "}
-                  <span className="hia-accent">real estate.</span>
+                  Six Suspension Triggers We See Almost Weekly in{" "}
+                  <span className="hia-accent">Real Estate.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   After reinstating 700-plus profiles, the same six patterns show
@@ -634,8 +634,8 @@ function Page() {
                   How Real Estate Customers Find Agents
                 </div>
                 <h2 className="hia-sec-h2">
-                  The map pack is where buyers and sellers actually{" "}
-                  <span className="hia-accent">decide who to call.</span>
+                  The Map Pack is Where Buyers and Sellers Actually{" "}
+                  <span className="hia-accent">Decide Who to Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   “Realtor near me,” “real estate agent [neighborhood],” and
@@ -687,8 +687,8 @@ function Page() {
               >
                 <div className="hia-sec-label">Core Services</div>
                 <h2 className="hia-sec-h2">
-                  Five services calibrated to how real estate actually{" "}
-                  <span className="hia-accent">wins in local search.</span>
+                  Five Services Calibrated to How Real Estate Actually{" "}
+                  <span className="hia-accent">Wins in Local Search.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Every service is built around the structural realities of real
@@ -735,8 +735,8 @@ function Page() {
                   The Real-Estate-Specific Knowledge Generalists Don&apos;t Have
                 </div>
                 <h2 className="hia-sec-h2">
-                  Individual agent profile vs brokerage profile. The wrong choice
-                  causes <span className="hia-accent">most suspensions.</span>
+                  Individual Agent Profile Vs Brokerage Profile. The Wrong Choice
+                  Causes <span className="hia-accent">Most Suspensions.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   The single most consequential decision in real estate GBP
@@ -802,8 +802,8 @@ function Page() {
               <section className="hia-section" id="gre-states">
                 <div className="hia-sec-label">States We Serve</div>
                 <h2 className="hia-sec-h2">
-                  Real estate GBP services calibrated to the five largest{" "}
-                  <span className="hia-accent">US markets.</span>
+                  Real Estate GBP Services Calibrated to the Five Largest{" "}
+                  <span className="hia-accent">US Markets.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Each state has its own licensing body, dominant brokerage
@@ -850,8 +850,8 @@ function Page() {
                   How We Work With Agents and Brokers
                 </div>
                 <h2 className="hia-sec-h2">
-                  Audit first, then reinstatement or verification, then{" "}
-                  <span className="hia-accent">ongoing management.</span>
+                  Audit First, Then Reinstatement or Verification, Then{" "}
+                  <span className="hia-accent">Ongoing Management.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Agents and brokers are running transactions, managing clients,
@@ -886,8 +886,8 @@ function Page() {
               <section className="hia-section hia-reviews-sec" id="hia-reviews">
                 <div className="hia-sec-label">Trusted by Clients Nationwide</div>
                 <h2 className="hia-sec-h2">
-                  What agents and other service businesses{" "}
-                  <span className="hia-accent">say about working with us.</span>
+                  What Agents and Other Service Businesses{" "}
+                  <span className="hia-accent">Say About Working with Us.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform agencies
@@ -910,8 +910,8 @@ function Page() {
                   Common Questions From Agents and Brokers
                 </div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">audit call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Audit Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question below, include it in the

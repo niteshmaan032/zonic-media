@@ -772,7 +772,7 @@ export default function ResidentialSeoPage() {
           </Row>
           <div className="car-tow-final-cta rseo-cta-banner rseo-cta-banner-tight" style={{ marginTop: "40px", padding: "40px" }}>
             <p className="car-tow-eyebrow">Start With a Free Audit</p>
-            <h2>Find Out Exactly Where Your Cleaning Business Is Losing Bookings</h2>
+            <h2>Find Out Exactly Where Your Cleaning Business is Losing Bookings</h2>
             <p>
               Request a free residential cleaning SEO audit and we will review
               your local rankings, Google Business Profile,{" "}
@@ -804,9 +804,9 @@ export default function ResidentialSeoPage() {
                 <p className="car-tow-eyebrow">How Homeowners Choose Cleaners</p>
                 <h2>How Homeowners Find and Book a Residential Cleaning Company</h2>
                 <h3 className="car-tow-sub-heading">
-                  Homeowners searching for a cleaning service are not browsing
-                  casually. They are ready to book, and they want to find a
-                  cleaner they can trust quickly and easily.
+                  Homeowners Searching for a Cleaning Service are Not Browsing
+                  Casually. They are Ready to Book, and They Want to Find a
+                  Cleaner They Can Trust Quickly and Easily.
                 </h3>
                 <p>
                   When a homeowner needs cleaning help, they typically open
@@ -975,7 +975,7 @@ export default function ResidentialSeoPage() {
           <div className="rseo-inline-form-banner">
             <div className="rseo-inline-form-copy">
               <p className="car-tow-eyebrow">Quick Audit Request</p>
-              <h2>Start your free residential cleaning SEO review.</h2>
+              <h2>Start Your Free Residential Cleaning SEO Review.</h2>
               <p>
                 Share your business details below and we will review your local
                 rankings, Google Business Profile, and booking conversion gaps
@@ -1113,9 +1113,9 @@ export default function ResidentialSeoPage() {
                 <p className="car-tow-eyebrow">After Choosing Zonic Media</p>
                 <h2>What a Focused Residential Cleaning SEO Strategy Produces</h2>
                 <h3 className="car-tow-sub-heading">
-                  When local SEO is executed correctly for residential cleaning
-                  businesses, the impact goes well beyond more website traffic —
-                  it creates a sustainable booking engine.
+                  When Local SEO is Executed Correctly for Residential Cleaning
+                  Businesses, the Impact Goes Well Beyond More Website Traffic —
+                  It Creates a Sustainable Booking Engine.
                 </h3>
                 <p>
                   Cleaning companies working with a structured local SEO system
@@ -1214,11 +1214,11 @@ export default function ResidentialSeoPage() {
               <div className="car-tow-case-copy">
                 <p className="car-tow-eyebrow">Example Growth Scenario</p>
                 <h2>
-                  What a focused residential cleaning SEO system can realistically improve.
+                  What a Focused Residential Cleaning SEO System Can Realistically Improve.
                 </h2>
                 <h3 className="car-tow-sub-heading">
-                  The right local SEO setup improves both booking volume and
-                  the quality of residential cleaning clients over time.
+                  The Right Local SEO Setup Improves Both Booking Volume and
+                  the Quality of Residential Cleaning Clients over Time.
                 </h3>
                 <p>
                   Consider a residential cleaning company serving homeowners
@@ -1312,11 +1312,11 @@ export default function ResidentialSeoPage() {
             <Col lg={6}>
               <div className="car-tow-split-copy">
                 <p className="car-tow-eyebrow">Professional Presence</p>
-                <h2>Visibility works better when your cleaning company also looks trustworthy.</h2>
+                <h2>Visibility Works Better When Your Cleaning Company Also Looks Trustworthy.</h2>
                 <h3 className="car-tow-sub-heading">
-                  Strong local rankings help homeowners find you, but a
-                  professional digital presence turns that visibility into
-                  actual booked cleaning jobs.
+                  Strong Local Rankings Help Homeowners Find You, but a
+                  Professional Digital Presence Turns That Visibility into
+                  Actual Booked Cleaning Jobs.
                 </h3>
                 <p>
                   Homeowners inviting a cleaner into their home make an
@@ -1524,7 +1524,7 @@ export default function ResidentialSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Strategy Comparison</p>
-              <h2>Local SEO vs Lead Platforms for Residential Cleaning Companies</h2>
+              <h2>Local SEO Vs Lead Platforms for Residential Cleaning Companies</h2>
               <p className="car-tow-section-descrp">
                 Many cleaning companies rely on Thumbtack, Angi, or similar
                 platforms for leads. Understanding how local SEO, lead
@@ -1590,7 +1590,7 @@ export default function ResidentialSeoPage() {
         <div className="car-tow-container">
           <div className="car-tow-final-cta rseo-cta-banner rseo-cta-banner-spacious">
             <p className="car-tow-eyebrow">Start Growing Today</p>
-            <h2>More residential cleaning bookings from Google and Maps.</h2>
+            <h2>More Residential Cleaning Bookings from Google and Maps.</h2>
             <p>
               Zonic Media builds local SEO systems that help house cleaning and
               maid service businesses generate more qualified booking requests

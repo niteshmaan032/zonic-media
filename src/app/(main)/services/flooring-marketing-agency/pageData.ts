@@ -38,17 +38,17 @@ export const flooringMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "pin",
-      title: "Outspent by big-box and national installers",
+      title: "Outspent by Big-Box and National Installers",
       body: "Home improvement chains and national install brands dominate paid search. Without a top-three Map Pack position and product-level pages, local flooring companies never enter the comparison.",
     },
     {
       icon: "photo",
-      title: "No product depth on your site",
+      title: "No Product Depth on Your Site",
       body: "A homeowner searching \"waterproof vinyl plank installation\" won't settle for a generic services page. One page per product line — with photos, pricing ranges, and rooms — is what turns a browser into a measure appointment.",
     },
     {
       icon: "flame",
-      title: "Wasted ad spend on DIY searches",
+      title: "Wasted Ad Spend on DIY Searches",
       body: "Half of flooring search volume is people planning to install it themselves. Without careful negatives and proper <a class=\"ima-inline-link\" href=\"/services/google-ads\">Google Ads management</a>, your budget funds YouTube tutorials instead of booked installs.",
     },
   ],
@@ -118,7 +118,7 @@ export const flooringMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to book more flooring installs?",
+  finalHeading: "Ready to Book More Flooring Installs?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

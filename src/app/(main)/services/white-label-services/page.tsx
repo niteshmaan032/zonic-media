@@ -86,7 +86,7 @@ const resellServices = [
   {
     h: "Local SEO",
     p: "Full local SEO fulfillment — on-page, citations, content, and authority building that moves your clients' local rankings.",
-    tag: "White-label reporting",
+    tag: "White-Label Reporting",
   },
   {
     h: "WordPress Website Design",
@@ -122,7 +122,7 @@ const whyCards = [
     p: "Clear timelines and consistent delivery so you can make promises to your clients and keep them.",
   },
   {
-    h: "Scales With You",
+    h: "Scales with You",
     p: "Send one profile or fifty. Capacity flexes with your pipeline so you can take on work you'd otherwise turn away.",
   },
 ];
@@ -329,7 +329,7 @@ export default function Page() {
               <section className="wl-section">
                 <div className="wl-sec-label">Quick Answer</div>
                 <h2 className="wl-sec-h2">
-                  What are white-label digital marketing services?
+                  What are White-Label Digital Marketing Services?
                 </h2>
                 <div className="wl-answer">
                   <p>
@@ -361,8 +361,8 @@ export default function Page() {
               <section className="wl-section" id="wl-resell">
                 <div className="wl-sec-label">What You Can Resell</div>
                 <h2 className="wl-sec-h2">
-                  Six services, delivered{" "}
-                  <span className="wl-accent">under your brand.</span>
+                  Six Services, Delivered{" "}
+                  <span className="wl-accent">Under Your Brand.</span>
                 </h2>
                 <p className="wl-sec-sub">
                   Add specialist capabilities to your agency overnight. Resell
@@ -388,8 +388,8 @@ export default function Page() {
               <section className="wl-section" id="wl-why">
                 <div className="wl-sec-label">Why Partner With Us</div>
                 <h2 className="wl-sec-h2">
-                  Built to make your agency{" "}
-                  <span className="wl-accent">look good.</span>
+                  Built to Make Your Agency{" "}
+                  <span className="wl-accent">Look Good.</span>
                 </h2>
                 <p className="wl-sec-sub">
                   You resell a proven fulfillment team that stays invisible —
@@ -412,7 +412,7 @@ export default function Page() {
               <section className="wl-section wl-steps-sec" id="wl-how">
                 <div className="wl-sec-label">How It Works</div>
                 <h2 className="wl-sec-h2">
-                  From handoff to margin in four steps.
+                  From Handoff to Margin in Four Steps.
                 </h2>
                 <p className="wl-sec-sub">
                   A simple, repeatable partnership flow — the same every time,
@@ -436,7 +436,7 @@ export default function Page() {
                 <div className="wl-sec-label">The Case for Partnering</div>
                 <div className="wl-prose">
                   <h2 className="wl-sec-h2">
-                    Why agencies partner instead of hiring.
+                    Why Agencies Partner Instead of Hiring.
                   </h2>
                   <p>
                     Every growing agency hits the same wall: a client wants a
@@ -477,7 +477,7 @@ export default function Page() {
                     reinstatements behind it, without becoming a reinstatement
                     expert yourself.
                   </p>
-                  <h3>Your brand stays front and center</h3>
+                  <h3>Your Brand Stays Front and Center</h3>
                   <p>
                     In a fully white-label arrangement, your client never learns{" "}
                     <Link href="/about" className="wl-inline-link">
@@ -489,7 +489,7 @@ export default function Page() {
                     concerned, your agency did the work.{" "}
                     <strong>That discretion is non-negotiable.</strong>
                   </p>
-                  <h3>Margins that make it worthwhile</h3>
+                  <h3>Margins That Make It Worthwhile</h3>
                   <p>
                     Reseller pricing sits below our standard rates, giving you
                     room to mark up to your own client price and keep a
@@ -516,14 +516,14 @@ export default function Page() {
               {/* FAQ */}
               <section className="wl-section" id="wl-faq">
                 <div className="wl-sec-label">FAQ</div>
-                <h2 className="wl-sec-h2">Agency partner questions.</h2>
+                <h2 className="wl-sec-h2">Agency Partner Questions.</h2>
                 <p className="wl-sec-sub">
                   If your question isn&apos;t here, add it to the form and
                   we&apos;ll answer it when we send your partner details.
                 </p>
                 <div className="wl-faq">
                   {faqs.map((f, i) => (
-                    <details key={i} open={i === 0}>
+                    <details key={i} name="wl-faq" open={i === 0}>
                       <summary>{f.q}</summary>
                       <p>{f.a}</p>
                     </details>
@@ -552,7 +552,7 @@ export default function Page() {
         {/* FINAL CTA */}
         <section className="wl-final-cta">
           <div className="wl-fc-inner">
-            <h2>Add services without adding headcount.</h2>
+            <h2>Add Services Without Adding Headcount.</h2>
             <p className="wl-fc-lede">
               Partner with a fulfillment team that stays invisible — so your
               agency gets the credit, the clients, and the margin.

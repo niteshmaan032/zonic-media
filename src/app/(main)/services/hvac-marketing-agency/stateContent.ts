@@ -84,32 +84,32 @@ export const BASE_TRUST = [
 export const SERVICES: HvacServiceCard[] = [
   {
     num: "01 · GBP & MAP PACK",
-    h: "Google Business Profile rebuild for HVAC map pack visibility.",
+    h: "Google Business Profile Rebuild for HVAC Map Pack Visibility.",
     p: "Complete GBP rebuild with HVAC-specific categories (HVAC contractor, AC contractor, heating contractor, furnace repair service), NATE-certification trust signals, manufacturer credential markup (Carrier, Trane, Lennox, Goodman, Daikin, Mitsubishi), 24/7 emergency attributes, geo-tagged jobsite photos, weekly Posts on an HVAC seasonal calendar.",
   },
   {
     num: "02 · GOOGLE ADS / PPC",
-    h: "Paid search timed to HVAC seasonal peaks.",
+    h: "Paid Search Timed to HVAC Seasonal Peaks.",
     p: "HVAC contractor-specific keyword targeting, geo-modified emergency keywords, ad copy tuned to mobile decision compression, conversion tracking integrated with your dispatch software, and Local Services Ads management where available in your metro.",
   },
   {
     num: "03 · WEBSITE DESIGN",
-    h: "Mobile-first HVAC websites that convert summer and winter emergencies.",
+    h: "Mobile-First HVAC Websites That Convert Summer and Winter Emergencies.",
     p: "Sub-2-second mobile load times, persistent click-to-call across every page, maintenance-contract membership signup flow, online booking integration, schema markup for HVAC contractor and LocalBusiness, dedicated submarket and service landing pages, R-454B refrigerant transition content.",
   },
   {
     num: "04 · MEMBERSHIPS & RETENTION",
-    h: "Maintenance-contract program development and customer retention.",
+    h: "Maintenance-Contract Program Development and Customer Retention.",
     p: "Membership program structure, landing pages, automated email sequences for two-visit-per-year touchpoints, retention dashboards. Maintenance contracts at 80%+ gross margin are the highest-leverage HVAC marketing asset and most contractors leave them on the table.",
   },
   {
     num: "05 · REVIEW VELOCITY",
-    h: "Automated reviews after every HVAC service call.",
+    h: "Automated Reviews After Every HVAC Service Call.",
     p: "SMS plus email review requests fire automatically after every completed service or installation. Keyword-coached templates that mention neighborhood, equipment type (heat pump, AC, furnace), and service. Multi-platform monitoring. Negative-review response protocols. Review request integration with dispatch software.",
   },
   {
     num: "06 · LOCAL SEO & CITATIONS",
-    h: "Citations, submarket pages, and HVAC-specific directory work.",
+    h: "Citations, Submarket Pages, and HVAC-Specific Directory Work.",
     p: "NAP consistency across 60+ general and HVAC-specific directories including manufacturer dealer locators (Carrier, Trane, Lennox dealer pages count as citations). Submarket-specific landing pages. R-454B transition content. Title 24 compliance content for California. GBP reinstatement included.",
   },
 ];

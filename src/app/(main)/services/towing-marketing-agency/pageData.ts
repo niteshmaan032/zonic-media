@@ -38,17 +38,17 @@ export const towingMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "pin",
-      title: "Buried below other tow trucks",
+      title: "Buried Below Other Tow Trucks",
       body: "Drivers call one of the top-three results on Google Maps, usually within 60 seconds of breaking down. Ranking fourth means the tow goes to the company one exit over — every single time.",
     },
     {
       icon: "wallet",
-      title: "Stuck on motor club rates",
+      title: "Stuck on Motor Club Rates",
       body: "Motor club and insurance dispatch keeps trucks busy at rates you didn't set. Cash calls from your own listing pay far more per hook — but only if drivers can actually find you first.",
     },
     {
       icon: "flame",
-      title: "Wasted ad spend",
+      title: "Wasted Ad Spend",
       body: "Without tight radius targeting and proper <a class=\"ima-inline-link\" href=\"/services/google-ads\">Google Ads management</a>, your budget burns on junk-hauling searches and out-of-territory clicks instead of drivers who need a truck right now.",
     },
   ],
@@ -116,7 +116,7 @@ export const towingMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to keep every truck dispatched?",
+  finalHeading: "Ready to Keep Every Truck Dispatched?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

@@ -83,19 +83,19 @@ const states = [
 
 const problemCards = [
   {
-    h: "Agent referrals are slowing down.",
+    h: "Agent Referrals are Slowing Down.",
     p: "The agents who built your pipeline are retiring, switching brokerages, or splitting their referrals across multiple inspectors. You can't grow on a shrinking source.",
   },
   {
-    h: "Your Google listing is invisible.",
+    h: "Your Google Listing is Invisible.",
     p: "You don't show up in the local pack for \"home inspector + your city.\" The map shows three other companies — and they're getting the buyer calls you should be getting.",
   },
   {
-    h: "Your website doesn't convert.",
+    h: "Your Website Doesn't Convert.",
     p: "The traffic you do get bounces because there's no online booking, no clear pricing direction, and the mobile experience is broken. People leave and never come back.",
   },
   {
-    h: "Winter is killing your revenue.",
+    h: "Winter is Killing Your Revenue.",
     p: "Your busy season is six months long. The other six months you're burning savings. A diversified marketing engine smooths out the year so the dead months stop being dead.",
   },
 ];
@@ -163,7 +163,7 @@ const services = [
   },
   {
     num: "06 · REVIEWS & REPUTATION",
-    h: "Turn Every Inspection Into a Five-Star Public Endorsement.",
+    h: "Turn Every Inspection into a Five-Star Public Endorsement.",
     p: "Reviews are the single biggest factor — after distance — in whether a buyer chooses your inspection company over the one three blocks away. We build an automated review request system that fires the right message at the right time after every inspection, monitors review activity across Google, Yelp, Angi, and NextDoor, and writes professional response templates for negative reviews so a one-star complaint doesn't bury you on Page One.",
     items: [
       "Automated review requests by SMS and email after every inspection",
@@ -247,22 +247,22 @@ const processSteps = [
 const statRows = [
   {
     big: "3.2×",
-    h: "More direct calls within 90 days",
+    h: "More Direct Calls Within 90 Days",
     p: "Average increase in non-referred phone calls from buyers and sellers.",
   },
   {
     big: "52%",
-    h: "Lower cost per booked inspection",
+    h: "Lower Cost Per Booked Inspection",
     p: "Comparing month-one acquisition cost to month-twelve, blended across all channels.",
   },
   {
     big: "#1",
-    h: "Local map pack rankings",
+    h: "Local Map Pack Rankings",
     p: "Within 6 months for primary inspection keyword in target city.",
   },
   {
     big: "60%",
-    h: "Less winter revenue drop",
+    h: "Less Winter Revenue Drop",
     p: "Off-season bookings stabilize as agent-referral dependency breaks.",
   },
 ];
@@ -536,8 +536,8 @@ function Page() {
               <section className="hia-section hia-states">
                 <div className="hia-sec-label">Where We Work</div>
                 <h2 className="hia-sec-h2">
-                  Home inspectors we help grow across{" "}
-                  <span className="hia-accent">5 states.</span>
+                  Home Inspectors We Help Grow Across{" "}
+                  <span className="hia-accent">5 States.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Zonic Media helps{" "}
@@ -583,8 +583,8 @@ function Page() {
               <section className="hia-section" id="hia-problem">
                 <div className="hia-sec-label">Why Home Inspectors Stop Growing</div>
                 <h2 className="hia-sec-h2">
-                  Your phone rings when an agent refers you. Then it{" "}
-                  <span className="hia-accent">goes quiet.</span>
+                  Your Phone Rings When an Agent Refers You. Then It{" "}
+                  <span className="hia-accent">Goes Quiet.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   This is the pattern almost every home inspector knows. Two
@@ -647,8 +647,8 @@ function Page() {
               <section className="hia-section hia-services-sec" id="hia-services">
                 <div className="hia-sec-label">Complete Digital Marketing Stack</div>
                 <h2 className="hia-sec-h2">
-                  Everything a home inspection company needs to{" "}
-                  <span className="hia-accent">grow online.</span>
+                  Everything a Home Inspection Company Needs to{" "}
+                  <span className="hia-accent">Grow Online.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   We are not a &ldquo;just SEO&rdquo; shop or a &ldquo;just
@@ -687,8 +687,8 @@ function Page() {
               <section className="hia-section" id="hia-channels">
                 <div className="hia-sec-label">Channel Mix at a Glance</div>
                 <h2 className="hia-sec-h2">
-                  What each marketing channel does — and{" "}
-                  <span className="hia-accent">how fast it pays back.</span>
+                  What Each Marketing Channel Does — And{" "}
+                  <span className="hia-accent">How Fast It Pays Back.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Use this grid as a planning guide.{" "}
@@ -737,8 +737,8 @@ function Page() {
               <section className="hia-section">
                 <div className="hia-sec-label">How We Work With You</div>
                 <h2 className="hia-sec-h2">
-                  A clean three-step start. Then we{" "}
-                  <span className="hia-accent">get to work.</span>
+                  A Clean Three-Step Start. Then We{" "}
+                  <span className="hia-accent">Get to Work.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   No tedious onboarding deck. No fifty-question intake form.
@@ -767,8 +767,8 @@ function Page() {
               <section className="hia-section hia-results-sec" id="hia-results">
                 <div className="hia-sec-label">Real Outcomes, Not Vanity Metrics</div>
                 <h2 className="hia-sec-h2">
-                  What changes when home inspectors stop{" "}
-                  <span className="hia-accent">relying on referrals alone.</span>
+                  What Changes When Home Inspectors Stop{" "}
+                  <span className="hia-accent">Relying on Referrals Alone.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   These are the patterns we see across the home inspection
@@ -828,8 +828,8 @@ function Page() {
               <section className="hia-section">
                 <div className="hia-sec-label">Who We Work With</div>
                 <h2 className="hia-sec-h2">
-                  Built for the full spectrum of the{" "}
-                  <span className="hia-accent">home inspection industry.</span>
+                  Built for the Full Spectrum of the{" "}
+                  <span className="hia-accent">Home Inspection Industry.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Whether you&apos;re a solo inspector running one calendar
@@ -858,8 +858,8 @@ function Page() {
               <section className="hia-section hia-reviews-sec" id="hia-reviews">
                 <div className="hia-sec-label">Trusted by Clients Nationwide</div>
                 <h2 className="hia-sec-h2">
-                  What inspectors and other service businesses{" "}
-                  <span className="hia-accent">say about working with us.</span>
+                  What Inspectors and Other Service Businesses{" "}
+                  <span className="hia-accent">Say About Working with Us.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
@@ -897,8 +897,8 @@ function Page() {
               <section className="hia-section hia-pricing-sec" id="hia-pricing">
                 <div className="hia-sec-label">Transparent Pricing, Month to Month</div>
                 <h2 className="hia-sec-h2">
-                  Three plans built for where your inspection business is{" "}
-                  <span className="hia-accent">right now.</span>
+                  Three Plans Built for Where Your Inspection Business is{" "}
+                  <span className="hia-accent">Right Now.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — you can move
@@ -940,8 +940,8 @@ function Page() {
               <section className="hia-section" id="hia-faq">
                 <div className="hia-sec-label">Common Questions From Home Inspectors</div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">strategy call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Strategy Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question below — whether it&apos;s

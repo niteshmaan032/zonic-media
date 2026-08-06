@@ -117,27 +117,27 @@ const serviceJsonLd = {
 
 const RoofingWebFaqs = [
   {
-    question: "How much does roofing website design cost?",
+    question: "How Much Does Roofing Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, quote flow and financing integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-crew, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a roofing website?",
+    question: "How Long Does It Take to Design a Roofing Website?",
     answer:
       "Most roofing company websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website capture storm damage leads?",
+    question: "Can My Website Capture Storm Damage Leads?",
     answer:
       "Yes — that is one of the main reasons roofers hire us. We build dedicated storm damage and insurance claim landing pages you can point ads and social posts at within hours of a hail or wind event, with quote forms and click-to-call built for homeowners who need help fast. When the storm hits, your site is ready before your competitors have written their first post.",
   },
   {
-    question: "Can you integrate my roofing CRM or quoting software?",
+    question: "Can You Integrate My Roofing CRM or Quoting Software?",
     answer:
       "Yes. We connect the tools roofing companies already run — AccuLynx, JobNimbus, Roofr, CompanyCam galleries — or build a structured quote request flow that routes straight to your office. Either way, homeowners can request an estimate without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -159,7 +159,7 @@ const roofingWebFaqJsonLd = {
 
 const AboutChecks = [
   "Quote-first layouts",
-  "Financing & insurance UX",
+  "Financing & Insurance UX",
   "Project gallery proof",
   "Local SEO foundations",
 ];
@@ -219,37 +219,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "Instant quote flows",
+    title: "Instant Quote Flows",
     desc: "Homeowners request an estimate in a few taps — integrated with the CRM and quoting tools roofing companies already use.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Financing & insurance UX",
+    title: "Financing & Insurance UX",
     desc: "Payment options and claim guidance up front, so sticker shock and insurance confusion stop killing your leads.",
   },
   {
     icon: <FiCloudLightning aria-hidden="true" />,
-    title: "Storm response pages",
+    title: "Storm Response Pages",
     desc: "Hail and wind damage landing pages ready to catch the surge of searches every storm season brings to your market.",
   },
   {
     icon: <FiImage aria-hidden="true" />,
-    title: "Project galleries & reviews",
+    title: "Project Galleries & Reviews",
     desc: "Before-and-after photos and Google reviews placed where hesitant homeowners actually look before they call anyone.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners find a roofer on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & quote request",
+    title: "Click-to-Call & Quote Request",
     desc: "One thumb-tap from any page to a call or an estimate request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them.",
   },
   {
@@ -257,19 +257,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Before & after galleries",
+    title: "Before & After Galleries",
     desc: "Real project photos organized by job type, because homeowners buy the roof they can see.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you work, built to rank for local roofing searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you install.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -277,22 +277,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & job mix mapping",
+    title: "Discovery & Job Mix Mapping",
     desc: "The jobs you want more of, the cities you work, how your office handles leads today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, quote flows, and storm landing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then roofing SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -305,7 +305,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -390,8 +390,8 @@ function Page() {
               <div className="rw-hero-copy">
                 <p className="rw-eyebrow">Roofing Website Design</p>
                 <h1 className="rw-hero-h1">
-                  Roofing website design that turns visitors into{" "}
-                  <span className="rw-hl">booked jobs</span>
+                  Roofing Website Design That Turns Visitors into{" "}
+                  <span className="rw-hl">Booked Jobs</span>
                 </h1>
                 <p className="rw-hero-sub">
                   Zonic Media designs roofing company websites that work like a
@@ -549,9 +549,9 @@ function Page() {
               <div className="rw-about-copy">
                 <p className="rw-eyebrow">First Impressions</p>
                 <h2 className="rw-h2">
-                  Your website is the{" "}
-                  <span className="rw-hl-text">first inspection</span>{" "}
-                  homeowners run on your company
+                  Your Website is the{" "}
+                  <span className="rw-hl-text">First Inspection</span>{" "}
+                  Homeowners Run on Your Company
                 </h2>
                 <p className="rw-lead">
                   Before a homeowner ever lets you on their roof, they have
@@ -601,7 +601,7 @@ function Page() {
               <div>
                 <p className="rw-eyebrow">What We Build</p>
                 <h2 className="rw-h2">
-                  Roofing website design for every stage of your company
+                  Roofing Website Design for Every Stage of Your Company
                 </h2>
               </div>
               <Link href="/services" className="rw-link-arrow">
@@ -625,7 +625,7 @@ function Page() {
           <div className="rw-band-grid">
             <div className="rw-band-content">
               <p className="rw-eyebrow">Every Roofing Vertical</p>
-              <h2 className="rw-h2">Web design for every kind of roofing</h2>
+              <h2 className="rw-h2">Web Design for Every Kind of Roofing</h2>
               <p className="rw-lead">
                 Residential replacements, commercial flat roofs, metal
                 installers, storm restoration crews, and gutter and siding
@@ -677,7 +677,7 @@ function Page() {
             <div className="rw-sec-head-center">
               <p className="rw-eyebrow">The Job Acquisition System</p>
               <h2 className="rw-h2">
-                More than a brochure — a system built to book jobs
+                More Than a Brochure — A System Built to Book Jobs
               </h2>
               <p className="rw-lead">
                 Most roofing websites are digital business cards: a stock photo
@@ -705,7 +705,7 @@ function Page() {
               <div>
                 <p className="rw-eyebrow">Built Into Every Site</p>
                 <h2 className="rw-h2">
-                  The anatomy of a high-converting roofing website
+                  The Anatomy of a High-Converting Roofing Website
                 </h2>
                 <p className="rw-lead">
                   The best roofing website design is not about decoration — it
@@ -752,7 +752,7 @@ function Page() {
           <div className="rw-container">
             <div className="rw-sec-head-center">
               <p className="rw-eyebrow">Why Zonic Media</p>
-              <h2 className="rw-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="rw-h2">Designed to Convert. Built to Rank.</h2>
               <p className="rw-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at once,
@@ -764,7 +764,7 @@ function Page() {
                 <span className="rw-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -788,7 +788,7 @@ function Page() {
                 <span className="rw-why-card-icon">
                   <FiZap aria-hidden="true" />
                 </span>
-                <h3>Fast on the phones homeowners actually use</h3>
+                <h3>Fast on the Phones Homeowners Actually Use</h3>
                 <p>
                   Mobile-first layouts and Core Web Vitals-friendly builds,
                   because most roofing searches happen on a phone — often
@@ -799,7 +799,7 @@ function Page() {
                 <span className="rw-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>Trust signals where homeowners look for them</h3>
+                <h3>Trust Signals Where Homeowners Look for Them</h3>
                 <p>
                   License numbers, insurance proof, manufacturer
                   certifications, and warranty details placed in the layout —
@@ -810,7 +810,7 @@ function Page() {
             <div className="rw-why-banner">
               <div className="rw-why-banner-text">
                 <p className="rw-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your company actually needs?</h3>
+                <h3>Not Sure What Your Company Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages, quote
                   flows, and local SEO foundations your site needs — no
@@ -840,7 +840,7 @@ function Page() {
               <div>
                 <p className="rw-eyebrow">How It Works</p>
                 <h2 className="rw-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -871,7 +871,7 @@ function Page() {
             <div className="rw-banner-copy">
               <p className="rw-eyebrow">Why Roofers Choose Us</p>
               <h2 className="rw-h2">
-                Craftsmanship customers can see
+                Craftsmanship Customers Can See
               </h2>
               <p className="rw-lead">
                 A website built by a team that understands how homeowners
@@ -936,7 +936,7 @@ function Page() {
             <div className="rw-sec-head-center">
               <p className="rw-eyebrow">Wherever You Work</p>
               <h2 className="rw-h2">
-                Roofing website design services across the United States
+                Roofing Website Design Services Across the United States
               </h2>
               <p className="rw-lead">
                 From single-crew startups to multi-market storm restoration
@@ -976,7 +976,7 @@ function Page() {
               <div>
                 <p className="rw-eyebrow">FAQs</p>
                 <h2 className="rw-h2">
-                  Everything roofers ask us about website design
+                  Everything Roofers Ask Us About Website Design
                 </h2>
                 <p className="rw-lead">
                   Straight answers on pricing, timelines, storm season, and
@@ -1016,7 +1016,7 @@ function Page() {
             <div className="rw-sec-head-center">
               <p className="rw-eyebrow">Grow Further</p>
               <h2 className="rw-h2">
-                Your website is step one. Here is what fills it with jobs.
+                Your Website is Step One. Here is What Fills It with Jobs.
               </h2>
             </div>
             <div className="rw-grow-cards">
@@ -1041,7 +1041,7 @@ function Page() {
               <aside className="rw-form-aside">
                 <p className="rw-eyebrow">Get Started</p>
                 <h2 className="rw-h2">
-                  Book your free roofing website consult
+                  Book Your Free Roofing Website Consult
                 </h2>
                 <p className="rw-lead">
                   Tell us about your company and we will send a custom homepage

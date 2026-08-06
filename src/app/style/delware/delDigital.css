@@ -2611,7 +2611,7 @@
 
   .deldg-page .deldg-hero-ctas .deldg-btn,
   .deldg-page .deldg-hero-ctas .deldg-btn-ghost {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
   }
 

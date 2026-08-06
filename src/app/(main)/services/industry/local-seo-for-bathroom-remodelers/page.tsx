@@ -140,37 +140,37 @@ const serviceJsonLd = {
 
 const BathSeoFaqs = [
   {
-    question: "What's included in your local SEO for bathroom remodelers?",
+    question: "What's Included in Your Local SEO for Bathroom Remodelers?",
     answer:
       "Every bathroom remodeling campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your shower remodel, tub replacement, and service-area pages, local content, and a monthly report that shows rankings, calls, and booked estimates — not vanity metrics.",
   },
   {
-    question: "How long does bathroom remodeling SEO take to show results?",
+    question: "How Long Does Bathroom Remodeling SEO Take to Show Results?",
     answer:
       "Most bathroom remodelers see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'bathroom remodeler near me' and 'shower remodel near me.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds every month.",
   },
   {
-    question: "How much does local SEO for bathroom remodelers cost?",
+    question: "How Much Does Local SEO for Bathroom Remodelers Cost?",
     answer:
       "Pricing depends on how many locations you run, how competitive your market is, and how aggressively you want to grow. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items, so you can plan around booked estimates instead of paperwork.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for bathroom remodeling keywords?",
+    question: "Do You Guarantee First-Page Google Rankings for Bathroom Remodeling Keywords?",
     answer:
       "Our track record speaks for itself — most bathroom remodeling clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do bathroom remodelers really need Google Business Profile optimization?",
+    question: "Do Bathroom Remodelers Really Need Google Business Profile Optimization?",
     answer:
       "Yes — it is the single biggest lever in bathroom remodeling local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for a bathroom remodel, and it drives your call volume, estimate requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and homeowners choose it.",
   },
   {
-    question: "Can you help multi-location or wide service-area bathroom remodeling companies?",
+    question: "Can You Help Multi-Location or Wide Service-Area Bathroom Remodeling Companies?",
     answer:
       "Absolutely. We build local SEO systems for single-crew remodelers and multi-location bathroom renovation brands alike — service-area targeting, individual location pages, and map visibility for every city and neighborhood you cover, all reported in one clear dashboard.",
   },
   {
-    question: "Why choose Zonic Media over another bathroom remodeling SEO company?",
+    question: "Why Choose Zonic Media over Another Bathroom Remodeling SEO Company?",
     answer:
       "We specialize in local home-service businesses like bathroom remodeling, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound month after month — not churn.",
   },
@@ -345,17 +345,17 @@ const CompareUs = [
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Home services is all we do",
+    title: "Home Services is All We Do",
     desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked estimates for bathroom remodelers and home-service contractors is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter — so you start capturing bathroom remodel searches sooner. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
@@ -432,8 +432,8 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for Bathroom Remodelers</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for bathroom remodelers that{" "}
-                    <span className="tseo-hl">books jobs</span>
+                    Local SEO for Bathroom Remodelers That{" "}
+                    <span className="tseo-hl">Books Jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
@@ -760,9 +760,9 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    Homeowners are searching for a bathroom remodel.{" "}
+                    Homeowners are Searching for a Bathroom Remodel.{" "}
                     <span className="tseo-hl-text">
-                      We make sure they find you.
+                      We Make Sure They Find You.
                     </span>
                   </h2>
                   <p className="tseo-lead">
@@ -810,7 +810,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your bathroom remodeling rankings need, in one system
+                    Everything Your Bathroom Remodeling Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -835,7 +835,7 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your bathroom remodeling company in the top three — and keep it there
+                  We Put Your Bathroom Remodeling Company in the Top Three — And Keep It There
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
@@ -951,7 +951,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">How It Works</p>
                   <h2 className="tseo-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -971,7 +971,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free bathroom remodeling visibility audit</h3>
+                  <h3>Free Bathroom Remodeling Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the bathroom remodel
@@ -1010,7 +1010,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your bathroom remodeling services
                     and cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification</Link> if your listing is not verified yet, profile optimization,
@@ -1026,7 +1026,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1062,7 +1062,7 @@ function Page() {
                       </span>
                       <span className="tseo-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and booked estimates, not
                       vanity metrics. As rankings lock in, we expand to more
@@ -1101,7 +1101,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when bathroom remodeling local SEO is done properly
+                  What Happens When Bathroom Remodeling Local SEO is Done Properly
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different price points — the same system,
@@ -1130,7 +1130,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical bathroom remodeling SEO agency
+                  What You Get with Zonic Vs. A Typical Bathroom Remodeling SEO Agency
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service businesses is all we do, and it
@@ -1140,7 +1140,7 @@ function Page() {
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="tseo-compare-sub">
                     Why most bathroom remodeling campaigns quietly stall
                   </p>
@@ -1223,8 +1223,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your bathroom remodeling rankings and reviews climb,{" "}
-                    <span className="tseo-hl-text">month over month</span>
+                    Watch Your Bathroom Remodeling Rankings and Reviews Climb,{" "}
+                    <span className="tseo-hl-text">Month over Month</span>
                   </h2>
                   <p className="tseo-lead">
                     No black box. Every campaign comes with live rank tracking
@@ -1306,7 +1306,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A bathroom remodeling local SEO partner, not a monthly invoice
+                  A Bathroom Remodeling Local SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1325,7 +1325,7 @@ function Page() {
               <div className="tseo-why-banner">
                 <div className="tseo-why-banner-text">
                   <p className="tseo-eyebrow">Free Bathroom Remodeling SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your remodeling rankings</h3>
+                  <h3>See Exactly How We&apos;ll Grow Your Remodeling Rankings</h3>
                   <p>
                     We&apos;ll map your profile, citations, reviews, and
                     rankings — and show you the clear path to the top three for
@@ -1391,7 +1391,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Verified Client Reviews</p>
                 <h2 className="tseo-h2" id="tseo-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="tseo-reviews-widget">
@@ -1426,7 +1426,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for bathroom remodelers in every market in the US
+                  Local SEO for Bathroom Remodelers in Every Market in the US
                 </h2>
                 <p className="tseo-lead">
                   From single-crew remodelers to multi-location renovation
@@ -1493,7 +1493,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about bathroom remodeling local SEO
+                    Straight Answers About Bathroom Remodeling Local SEO
                   </h2>
                   <p className="tseo-lead">
                     Pricing, timelines, guarantees, how local SEO compares with <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for remodelers</Link>, and what actually moves
@@ -1527,7 +1527,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Grow Further</p>
                 <h2 className="tseo-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
               </div>
               <div className="tseo-grow-cards">
@@ -1556,7 +1556,7 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free bathroom remodeling local SEO audit
+                    Claim Your Free Bathroom Remodeling Local SEO Audit
                   </h2>
                   <p className="tseo-lead">
                     Tell us about your remodeling business and we will send a
@@ -1609,7 +1609,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free bathroom remodeling SEO audit"
+                    title="Get Your Free Bathroom Remodeling SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where your bathroom remodeling company stands and what it takes to win your market."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your bathroom remodeling business"

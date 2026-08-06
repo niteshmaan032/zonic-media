@@ -38,17 +38,17 @@ export const bathroomRemodelingMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "pin",
-      title: "Outranked by the one-day bath franchises",
+      title: "Outranked by the One-Day Bath Franchises",
       body: "National tub-and-shower brands buy the top of every search result. Without a strong Map Pack position and local authority, independent remodelers never get compared at all — the homeowner books the franchise consult first.",
     },
     {
       icon: "photo",
-      title: "No visual proof of your work",
+      title: "No Visual Proof of Your Work",
       body: "Nobody spends $25,000 on a bathroom from a stock photo. Without organized before-and-after galleries, project pages, and reviews tied to real neighborhoods, your best work never does any selling for you.",
     },
     {
       icon: "clock",
-      title: "Leads that go cold in the research phase",
+      title: "Leads That Go Cold in the Research Phase",
       body: "Most homeowners take one to three months from first search to signed contract. Without <a class=\"ima-inline-link\" href=\"/services/google-ads\">retargeting and follow-up</a>, the estimate you gave in March gets awarded to whoever stayed visible in May.",
     },
   ],
@@ -118,7 +118,7 @@ export const bathroomRemodelingMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to book more bathroom remodels?",
+  finalHeading: "Ready to Book More Bathroom Remodels?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

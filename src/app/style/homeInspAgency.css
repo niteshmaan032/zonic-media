@@ -337,7 +337,6 @@ body:has(.hia-page) .floating-phone-link {
   margin: 0 0 24px;
   letter-spacing: -0.025em;
   color: var(--navy);
-  text-transform: capitalize;
 }
 .hia-accent {
   color: var(--orange);
@@ -404,7 +403,7 @@ body:has(.hia-page) .floating-phone-link {
   color: var(--navy);
 }
 .hia-btn-block {
-  width: 100%;
+  width: fit-content;
 }
 
 /* Trust row */
@@ -1722,7 +1721,6 @@ body:has(.hia-page) .floating-phone-link {
   font-size: 12.5px;
   letter-spacing: 0.12em;
   margin-bottom: 14px;
-  text-transform: capitalize;
   font-weight: 500;
 }
 .hia-footer-col a,

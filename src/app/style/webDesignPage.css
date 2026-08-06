@@ -385,7 +385,6 @@
   font-size: 9.5px;
   font-weight: 600;
   letter-spacing: 0.09em;
-  text-transform: capitalize;
   color: var(--wd-muted);
   margin: 0 0 4px 8px;
 }

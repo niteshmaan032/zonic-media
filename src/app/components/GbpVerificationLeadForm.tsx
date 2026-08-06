@@ -204,7 +204,7 @@ export default function GbpVerificationLeadForm() {
         <LazyRecaptcha siteKey={siteKey} />
       ) : null}
 
-      <h3>Free verification diagnosis</h3>
+      <h3>Free Verification Diagnosis</h3>
       <p className="lp-form-sub">
         Tell us your situation. We&apos;ll identify the exact issue and map the
         fastest path to getting verified — same business day, no charge.

@@ -13,7 +13,7 @@ function BlogPostFaqs({ items }: BlogPostFaqsProps) {
   return (
     <section className="bp-faqs" aria-labelledby="bp-faqs-heading">
       <h2 id="bp-faqs-heading" className="bp-faqs-heading">
-        Frequently asked questions
+        Frequently Asked Questions
       </h2>
 
       <Accordion defaultActiveKey="0" className="global-faqs-accordion">

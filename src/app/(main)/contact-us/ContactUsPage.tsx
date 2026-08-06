@@ -44,7 +44,7 @@ function ContactUsPageClient() {
             <div className="ctc-grid">
               <aside className="ctc-aside">
                 <p className="ctc-eyebrow">Get in touch</p>
-                <h1 className="ctc-title">Contact us</h1>
+                <h1 className="ctc-title">Contact Us</h1>
                 <p className="ctc-lead">
                   Tell us where you want to grow and we&apos;ll come back with
                   the fastest next step — a free review of your Google profile,
@@ -105,7 +105,7 @@ function ContactUsPageClient() {
                 <ServiceLeadForm
                   formType="contact"
                   badge="Free consultation"
-                  title="Send us a message"
+                  title="Send Us a Message"
                   subtitle="No contracts, no pressure — just a clear picture of where your business stands and what it takes to grow."
                   submitText="Send Message"
                   showBusinessName={false}

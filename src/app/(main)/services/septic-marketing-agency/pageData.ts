@@ -33,7 +33,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
   },
   tickerHtml: `${tickerRun}\n${tickerRun}`,
   heroHtml: `<span class="eyebrow">Septic Marketing Agency</span>
-<h1>The <span class="hl">septic marketing agency</span> that keeps your pump trucks booked.</h1>
+<h1>The <span class="hl">Septic Marketing Agency</span> That Keeps Your Pump Trucks Booked.</h1>
 <p class="hero-lead">Local SEO, Google Ads, social, and lead generation built for septic companies — so homeowners searching for septic tank pumping, repairs, or a new system find your company first. Exclusive leads, never shared.</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Local SEO &amp; Map Pack</span>
@@ -62,19 +62,19 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">The septic marketing problem</span>
-<h2>Why septic companies lose nearby homeowners</h2>
+<h2>Why Septic Companies Lose Nearby Homeowners</h2>
 <p>When a tank backs up or an inspection is due, homeowners pick a septic company fast — usually from the first three results on Google Maps. Generic agencies don&#x27;t understand how urgency, trust, and proximity drive that decision.</p>
 </div>
 <div class="prob-grid">
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Buried below other septic companies</h3><p>Homeowners call the top-3 septic services on Google Maps. Ranking lower means losing pump-outs, drain field repairs, and full installs to the company down the road.</p></div>
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Forgotten between pump-outs</h3><p>A septic tank only needs pumping every three to five years. Without reviews, reminders, and steady visibility, past customers can&#x27;t remember your name when it&#x27;s finally time to book again.</p></div>
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><h3>Wasted ad spend</h3><p>Without tight targeting and proper <a class="ima-inline-link" href="/services/google-ads">Google Ads management</a>, your budget goes to DIY drain-cleaning searches and out-of-area clicks instead of homeowners ready to book a pump-out or repair today.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Buried Below Other Septic Companies</h3><p>Homeowners call the top-3 septic services on Google Maps. Ranking lower means losing pump-outs, drain field repairs, and full installs to the company down the road.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Forgotten Between Pump-Outs</h3><p>A septic tank only needs pumping every three to five years. Without reviews, reminders, and steady visibility, past customers can&#x27;t remember your name when it&#x27;s finally time to book again.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><h3>Wasted Ad Spend</h3><p>Without tight targeting and proper <a class="ima-inline-link" href="/services/google-ads">Google Ads management</a>, your budget goes to DIY drain-cleaning searches and out-of-area clicks instead of homeowners ready to book a pump-out or repair today.</p></div>
 </div>
 </div></section>
 <section class="section navy"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">Everything under one roof</span>
-<h2>The complete septic marketing system</h2>
+<h2>The Complete Septic Marketing System</h2>
 <p>Not six vendors and six invoices. One team running every channel that brings septic companies booked jobs — a <a class="ima-inline-link" href="/services">full-service marketing</a> approach built around your trade, not a generic playbook.</p>
 </div>
 <div class="svc-grid">
@@ -91,7 +91,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <div class="answer-wrap">
 <div class="answer-main">
 <span class="eyebrow">The short answer</span>
-<h2>What does a septic marketing agency do?</h2>
+<h2>What Does a Septic Marketing Agency Do?</h2>
 <p class="answer-lead">A septic marketing agency helps septic companies get found online and turn local searches — septic tank pumping, cleaning, installation, inspections, and drain field repair — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so owners can focus on the work while leads come in.</p>
 <div class="answer-facts">
 <div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>
@@ -109,7 +109,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <section class="section alt"><div class="wrap map-wrap">
 <div class="map-copy">
 <span class="eyebrow">Where homeowners actually look</span>
-<h2>Get into the top 3 of the Google Map Pack</h2>
+<h2>Get into the Top 3 of the Google Map Pack</h2>
 <p>Most septic customers never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Geo-grid rank tracking</span>
@@ -147,7 +147,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Simple, transparent pricing</span>
-<h2>Septic marketing plans</h2>
+<h2>Septic Marketing Plans</h2>
 <p>Month-to-month. No long-term contracts, no setup fees. Pick the level of growth you're ready for.</p>
 </div>
 <div class="price-grid">
@@ -209,14 +209,14 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <section class="section alt"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">How we work</span>
-<h2>A clear plan before we build anything</h2>
+<h2>A Clear Plan Before We Build Anything</h2>
 <p>Every septic engagement starts with your goals and the fastest route to more booked jobs — then we ship the work, not a slide deck.</p>
 </div>
 <div class="proc-grid">
-<div class="proc"><div class="num">01</div><h3>Audit the gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more septic leads.</p></div>
-<div class="proc"><div class="num">02</div><h3>Build the plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your company.</p></div>
-<div class="proc"><div class="num">03</div><h3>Launch the work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
-<div class="proc"><div class="num">04</div><h3>Grow &amp; report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
+<div class="proc"><div class="num">01</div><h3>Audit the Gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more septic leads.</p></div>
+<div class="proc"><div class="num">02</div><h3>Build the Plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your company.</p></div>
+<div class="proc"><div class="num">03</div><h3>Launch the Work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
+<div class="proc"><div class="num">04</div><h3>Grow &amp; Report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
 </div>
 </div></section>
 <figure class="sp-shot sp-band">
@@ -225,20 +225,20 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Common questions</span>
-<h2>What septic company owners ask us</h2>
+<h2>What Septic Company Owners Ask Us</h2>
 </div>
 <div class="faq-list">
-<details class="faq" open><summary>How fast can a septic company get more calls?<span class="x"></span></summary><div class="a">Google Ads can bring qualified calls within the first weeks of launch. Local SEO and Map Pack ranking build over three to six months and lower your long-term cost per booked job.</div></details>
-<details class="faq"><summary>Can you bring back repeat pumping customers?<span class="x"></span></summary><div class="a">Yes. Septic tanks need pumping every three to five years, so we set up review follow-ups, email and SMS reminders, and retargeting that keep your name in front of past customers until it&#x27;s time to book again.</div></details>
-<details class="faq"><summary>Are the septic leads exclusive?<span class="x"></span></summary><div class="a">Yes. We never share or resell leads. Everything from your ads, website, and profile comes only to your company, not shared with competitors.</div></details>
-<details class="faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 700+ profiles for local businesses.</div></details>
-<details class="faq"><summary>Do you also work with plumbing and excavation companies?<span class="x"></span></summary><div class="a">Yes. Many septic contractors also run plumbing or excavation crews. We market those services too — including a dedicated <a class="ima-inline-link" href="/services/plumbing-marketing-agency">plumbing marketing</a> program — so one team covers everything you offer.</div></details>
-<details class="faq"><summary>Do you require long-term contracts?<span class="x"></span></summary><div class="a">No. We don't lock you into long-term contracts. We earn the relationship month to month by delivering results — most septic clients stay because the leads keep coming, not because they're tied to us.</div></details>
-<details class="faq"><summary>Do you only work with businesses in Delaware?<span class="x"></span></summary><div class="a">No. We're based in Dover, Delaware with deep roots in the Mid-Atlantic, but we serve septic companies across the United States. Our work is remote-first, so your location is never a barrier.</div></details>
+<details class="faq" name="ima-faq" open><summary>How fast can a septic company get more calls?<span class="x"></span></summary><div class="a">Google Ads can bring qualified calls within the first weeks of launch. Local SEO and Map Pack ranking build over three to six months and lower your long-term cost per booked job.</div></details>
+<details class="faq" name="ima-faq"><summary>Can you bring back repeat pumping customers?<span class="x"></span></summary><div class="a">Yes. Septic tanks need pumping every three to five years, so we set up review follow-ups, email and SMS reminders, and retargeting that keep your name in front of past customers until it&#x27;s time to book again.</div></details>
+<details class="faq" name="ima-faq"><summary>Are the septic leads exclusive?<span class="x"></span></summary><div class="a">Yes. We never share or resell leads. Everything from your ads, website, and profile comes only to your company, not shared with competitors.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 700+ profiles for local businesses.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you also work with plumbing and excavation companies?<span class="x"></span></summary><div class="a">Yes. Many septic contractors also run plumbing or excavation crews. We market those services too — including a dedicated <a class="ima-inline-link" href="/services/plumbing-marketing-agency">plumbing marketing</a> program — so one team covers everything you offer.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you require long-term contracts?<span class="x"></span></summary><div class="a">No. We don't lock you into long-term contracts. We earn the relationship month to month by delivering results — most septic clients stay because the leads keep coming, not because they're tied to us.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you only work with businesses in Delaware?<span class="x"></span></summary><div class="a">No. We're based in Dover, Delaware with deep roots in the Mid-Atlantic, but we serve septic companies across the United States. Our work is remote-first, so your location is never a barrier.</div></details>
 </div>
 </div></section>`,
   finalHtml: `<section class="final"><div class="wrap final-in">
-<h2>Ready to keep your pump trucks rolling?</h2>
+<h2>Ready to Keep Your Pump Trucks Rolling?</h2>
 <p>Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.</p>
 <div class="final-actions">
 <a class="btn btn-orange" href="#industry-audit">Get My Free Marketing Audit</a>
@@ -268,7 +268,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <li><a href="https://www.zonicllc.com/contact-us">Contact Us</a></li>
 <li><a href="https://www.zonicllc.com/services">All Industries</a></li>
 </ul></div>
-<div><h4>Get in touch</h4><ul>
+<div><h4>Get in Touch</h4><ul>
 <li><a href="tel:+13027269736">(302) 726-9736</a></li>
 <li><a href="mailto:contact@zonicllc.com">contact@zonicllc.com</a></li>
 <li>8 The Green, STE B<br>Dover, DE 19901</li>
@@ -415,7 +415,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
     }),
   ],
   form: {
-    title: "Get your free septic marketing audit",
+    title: "Get Your Free Septic Marketing Audit",
     subtitle: "See exactly where you're losing leads — no obligation, takes a minute.",
     labels: [
       "Full name",

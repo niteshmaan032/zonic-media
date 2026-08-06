@@ -140,37 +140,37 @@ const serviceJsonLd = {
 
 const ContractorSeoFaqs = [
   {
-    question: "What's included in your local SEO services for general contractors?",
+    question: "What's Included in Your Local SEO Services for General Contractors?",
     answer:
       "Every contractor campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your remodeling, additions, and service-area pages, local content, and a monthly report that shows rankings, calls, and booked estimates — not vanity metrics.",
   },
   {
-    question: "How long does contractor SEO take to show results?",
+    question: "How Long Does Contractor SEO Take to Show Results?",
     answer:
       "Most general contractors see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'general contractor near me' and 'home remodeling contractor.' Competitive markets take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds through every building season.",
   },
   {
-    question: "How much does local SEO for general contractors cost?",
+    question: "How Much Does Local SEO for General Contractors Cost?",
     answer:
       "Pricing depends on how many locations or service areas you cover, how competitive your market is, and how aggressively you want to grow across remodels, additions, and new builds. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for contractor keywords?",
+    question: "Do You Guarantee First-Page Google Rankings for Contractor Keywords?",
     answer:
       "Our track record speaks for itself — most contractor clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do general contractors really need Google Business Profile optimization?",
+    question: "Do General Contractors Really Need Google Business Profile Optimization?",
     answer:
       "Yes — it is the single biggest lever in contractor local SEO. Your Google Business Profile decides whether you show up in the local map pack when a homeowner searches for a remodeler or builder, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, project photo, and post so Google trusts your profile and homeowners choose it.",
   },
   {
-    question: "Can you help multi-location or service-area contractors?",
+    question: "Can You Help Multi-Location or Service-Area Contractors?",
     answer:
       "Absolutely. We build local SEO systems for single-crew builders and multi-location construction brands alike — service-area targeting, individual location pages, and map visibility for every city and neighborhood you work in, all reported in one clear dashboard.",
   },
   {
-    question: "Why choose Zonic Media over another contractor SEO company?",
+    question: "Why Choose Zonic Media over Another Contractor SEO Company?",
     answer:
       "We specialize in local home-service and construction businesses, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound project after project — not churn.",
   },
@@ -345,17 +345,17 @@ const CompareUs = [
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Home services is all we do",
+    title: "Home Services is All We Do",
     desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and booked estimates for general contractors and home-service businesses is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into peak remodeling and addition demand. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
@@ -432,8 +432,8 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for General Contractors</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for general contractors that{" "}
-                    <span className="tseo-hl">wins jobs</span>
+                    Local SEO for General Contractors That{" "}
+                    <span className="tseo-hl">Wins Jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
@@ -762,9 +762,9 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    Homeowners are searching for a contractor.{" "}
+                    Homeowners are Searching for a Contractor.{" "}
                     <span className="tseo-hl-text">
-                      We make sure they find you.
+                      We Make Sure They Find You.
                     </span>
                   </h2>
                   <p className="tseo-lead">
@@ -812,7 +812,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your contractor rankings need, in one system
+                    Everything Your Contractor Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -837,8 +837,8 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your contracting company in the top three — and keep it
-                  there
+                  We Put Your Contracting Company in the Top Three — And Keep It
+                  There
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
@@ -956,7 +956,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">How It Works</p>
                   <h2 className="tseo-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -976,7 +976,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free contractor visibility audit</h3>
+                  <h3>Free Contractor Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the remodel and
@@ -1015,7 +1015,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your contracting services and
                     cities, then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">Google Business Profile verification help</Link> when a listing is unverified, profile optimization,
@@ -1031,7 +1031,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1067,7 +1067,7 @@ function Page() {
                       </span>
                       <span className="tseo-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and booked estimates, not
                       vanity metrics. As rankings lock in, we expand to more
@@ -1106,7 +1106,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when contractor local SEO is done properly
+                  What Happens When Contractor Local SEO is Done Properly
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different project types — the same system,
@@ -1135,7 +1135,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical contractor SEO agency
+                  What You Get with Zonic Vs. A Typical Contractor SEO Agency
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for home-service and construction businesses is all
@@ -1145,7 +1145,7 @@ function Page() {
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="tseo-compare-sub">
                     Why most contractor campaigns quietly stall
                   </p>
@@ -1228,8 +1228,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your contractor rankings and reviews climb,{" "}
-                    <span className="tseo-hl-text">month over month</span>
+                    Watch Your Contractor Rankings and Reviews Climb,{" "}
+                    <span className="tseo-hl-text">Month over Month</span>
                   </h2>
                   <p className="tseo-lead">
                     No black box. Every campaign comes with live rank tracking
@@ -1311,7 +1311,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A contractor local SEO partner, not a monthly invoice
+                  A Contractor Local SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1330,7 +1330,7 @@ function Page() {
               <div className="tseo-why-banner">
                 <div className="tseo-why-banner-text">
                   <p className="tseo-eyebrow">Free Contractor SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your contractor rankings</h3>
+                  <h3>See Exactly How We&apos;ll Grow Your Contractor Rankings</h3>
                   <p>
                     We&apos;ll map your profile, citations, reviews, and
                     rankings — and show you the clear path to the top three for
@@ -1396,7 +1396,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Verified Client Reviews</p>
                 <h2 className="tseo-h2" id="tseo-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="tseo-reviews-widget">
@@ -1431,7 +1431,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for general contractors in every market in the US
+                  Local SEO for General Contractors in Every Market in the US
                 </h2>
                 <p className="tseo-lead">
                   From single-crew builders to multi-location construction
@@ -1498,7 +1498,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about contractor local SEO
+                    Straight Answers About Contractor Local SEO
                   </h2>
                   <p className="tseo-lead">
                     Pricing, timelines, guarantees, how SEO stacks up against <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for contractors</Link>, and what actually moves
@@ -1531,7 +1531,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Grow Further</p>
                 <h2 className="tseo-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
               </div>
               <div className="tseo-grow-cards">
@@ -1560,7 +1560,7 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free contractor local SEO audit
+                    Claim Your Free Contractor Local SEO Audit
                   </h2>
                   <p className="tseo-lead">
                     Tell us about your contracting business and we will send a
@@ -1613,7 +1613,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free contractor SEO audit"
+                    title="Get Your Free Contractor SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where your contracting company stands and what it takes to win your market."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your contracting business"

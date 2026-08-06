@@ -772,7 +772,7 @@ export default function CommercialSeoPage() {
           </Row>
           <div className="car-tow-final-cta cseo-cta-banner cseo-cta-banner-tight" style={{ marginTop: "40px", padding: "40px" }}>
             <p className="car-tow-eyebrow">Start With a Free Audit</p>
-            <h2>Find Out Exactly Where Your Cleaning Company Is Losing Leads</h2>
+            <h2>Find Out Exactly Where Your Cleaning Company is Losing Leads</h2>
             <p>
               Request a free commercial cleaning SEO audit and we will review
               your local rankings, Google Business Profile,{" "}
@@ -804,9 +804,9 @@ export default function CommercialSeoPage() {
                 <p className="car-tow-eyebrow">How Clients Choose Cleaners</p>
                 <h2>How Businesses Actually Find and Hire a Cleaning Company Online</h2>
                 <h3 className="car-tow-sub-heading">
-                  Facility managers and business owners searching for commercial
-                  cleaning do not browse. They shortlist, compare, and contact
-                  the company that looks most credible and easy to reach.
+                  Facility Managers and Business Owners Searching for Commercial
+                  Cleaning Do Not Browse. They Shortlist, Compare, and Contact
+                  the Company That Looks Most Credible and Easy to Reach.
                 </h3>
                 <p>
                   Businesses looking for commercial cleaning services are not
@@ -1026,7 +1026,7 @@ export default function CommercialSeoPage() {
           <div className="cseo-inline-form-banner">
             <div className="cseo-inline-form-copy">
               <p className="car-tow-eyebrow">Quick Audit Request</p>
-              <h2>Start your free commercial cleaning SEO review.</h2>
+              <h2>Start Your Free Commercial Cleaning SEO Review.</h2>
               <p>
                 Share your business details below and we will review your local
                 rankings, Google Business Profile, and conversion gaps at no cost.
@@ -1164,9 +1164,9 @@ export default function CommercialSeoPage() {
                 <p className="car-tow-eyebrow">After Choosing Zonic Media</p>
                 <h2>What a Focused Commercial Cleaning SEO Strategy Produces</h2>
                 <h3 className="car-tow-sub-heading">
-                  When local SEO is executed correctly for commercial cleaning
-                  businesses, the impact goes well beyond more website traffic —
-                  it creates a sustainable lead engine.
+                  When Local SEO is Executed Correctly for Commercial Cleaning
+                  Businesses, the Impact Goes Well Beyond More Website Traffic —
+                  It Creates a Sustainable Lead Engine.
                 </h3>
                 <p>
                   Cleaning companies working with a structured local SEO system
@@ -1265,11 +1265,11 @@ export default function CommercialSeoPage() {
               <div className="car-tow-case-copy">
                 <p className="car-tow-eyebrow">Example Growth Scenario</p>
                 <h2>
-                  What a focused commercial cleaning SEO system can realistically improve.
+                  What a Focused Commercial Cleaning SEO System Can Realistically Improve.
                 </h2>
                 <h3 className="car-tow-sub-heading">
-                  The right local SEO setup improves both inquiry volume and
-                  the quality of cleaning contract leads over time.
+                  The Right Local SEO Setup Improves Both Inquiry Volume and
+                  the Quality of Cleaning Contract Leads over Time.
                 </h3>
                 <p>
                   Consider a commercial cleaning company serving offices, retail
@@ -1363,11 +1363,11 @@ export default function CommercialSeoPage() {
             <Col lg={6}>
               <div className="car-tow-split-copy">
                 <p className="car-tow-eyebrow">Professional Presence</p>
-                <h2>Visibility works better when your cleaning company also looks credible.</h2>
+                <h2>Visibility Works Better When Your Cleaning Company Also Looks Credible.</h2>
                 <h3 className="car-tow-sub-heading">
-                  Strong local rankings get you seen, but professional brand
-                  presentation helps turn that visibility into real commercial
-                  quote requests.
+                  Strong Local Rankings Get You Seen, but Professional Brand
+                  Presentation Helps Turn That Visibility into Real Commercial
+                  Quote Requests.
                 </h3>
                 <p>
                   Decision makers looking for a commercial cleaning company do
@@ -1573,7 +1573,7 @@ export default function CommercialSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Strategy Comparison</p>
-              <h2>SEO vs Paid Ads for Commercial Cleaning Companies</h2>
+              <h2>SEO Vs Paid Ads for Commercial Cleaning Companies</h2>
               <p className="car-tow-section-descrp">
                 Marketing budget decisions matter for every cleaning business.
                 Understanding how local SEO and{" "}
@@ -1648,7 +1648,7 @@ export default function CommercialSeoPage() {
         <div className="car-tow-container">
           <div className="car-tow-final-cta cseo-cta-banner cseo-cta-banner-spacious">
             <p className="car-tow-eyebrow">Start Growing Today</p>
-            <h2>More qualified cleaning contract leads from Google and Maps.</h2>
+            <h2>More Qualified Cleaning Contract Leads from Google and Maps.</h2>
             <p>
               Zonic Media builds local SEO systems that help commercial cleaning
               companies generate more qualified contract inquiries through Google

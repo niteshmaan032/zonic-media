@@ -553,8 +553,8 @@ function Page() {
                     Search Engine Marketing in Philadelphia
                   </p>
                   <h1 className="phl-h1">
-                    Own the whole{" "}
-                    <span className="phl-hl">search results page</span>
+                    Own the Whole{" "}
+                    <span className="phl-hl">Search Results Page</span>
                   </h1>
                   <p className="phl-hero-sub">
                     Most Philadelphia businesses buy SEO from one vendor and ads
@@ -727,8 +727,8 @@ function Page() {
                 <div className="phl-about-copy">
                   <p className="phl-eyebrow">Why Integrated Search Wins</p>
                   <h2 className="phl-h2">
-                    Paid teaches fast.{" "}
-                    <span className="phl-hl-text">Organic keeps forever.</span>
+                    Paid Teaches Fast.{" "}
+                    <span className="phl-hl-text">Organic Keeps Forever.</span>
                   </h2>
                   <p className="phl-lead">
                     Run in isolation, each channel wastes the other&apos;s
@@ -777,7 +777,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Both halves of search, run by one team
+                    Both Halves of Search, Run by One Team
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -807,7 +807,7 @@ function Page() {
               <div className="phl-band-content">
                 <p className="phl-eyebrow">The Whole Page, Not One Listing</p>
                 <h2 className="phl-h2">
-                  Two listings on one query beats one listing every time
+                  Two Listings on One Query Beats One Listing Every Time
                 </h2>
                 <p className="phl-lead">
                   A searcher in Philadelphia scans the first screen and picks.
@@ -907,7 +907,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">How It Works</p>
                   <h2 className="phl-h2">
-                    From split budgets to one search engine
+                    From Split Budgets to One Search Engine
                   </h2>
                 </div>
                 <HashScrollLink
@@ -927,7 +927,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free search audit</h3>
+                  <h3>Free Search Audit</h3>
                   <p>
                     We pull your ad account, rankings, and analytics together
                     and show you three things: where spend is being wasted,
@@ -966,7 +966,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>One keyword map, both channels</h3>
+                  <h3>One Keyword Map, Both Channels</h3>
                   <p>
                     Every target term gets a decision: buy it, earn it, or both.
                     Tracking goes in first so that from launch day every lead is
@@ -981,7 +981,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Every month</span>
                   </div>
-                  <h3>Let paid teach organic</h3>
+                  <h3>Let Paid Teach Organic</h3>
                   <p>
                     Live conversion data from the ads reshapes the content and
                     on-page plan, so the organic work targets proven terms
@@ -1016,7 +1016,7 @@ function Page() {
                       </span>
                       <span className="phl-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Shift budget as rankings land</h3>
+                    <h3>Shift Budget as Rankings Land</h3>
                     <p>
                       When organic takes a term you were buying, the spend moves
                       to the next opportunity instead of paying twice for the
@@ -1054,7 +1054,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Real Results</p>
                 <h2 className="phl-h2">
-                  What happens when both halves finally talk
+                  What Happens When Both Halves Finally Talk
                 </h2>
                 <p className="phl-lead">
                   Three Philadelphia businesses, three different starting
@@ -1109,7 +1109,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">The Difference</p>
                 <h2 className="phl-h2">
-                  One search team vs. two separate vendors
+                  One Search Team Vs. Two Separate Vendors
                 </h2>
                 <p className="phl-lead">
                   The split-vendor model is the single most expensive habit in
@@ -1119,7 +1119,7 @@ function Page() {
 
               <div className="phl-compare-grid">
                 <div className="phl-compare-col phl-compare-col--them">
-                  <h3>Two separate vendors</h3>
+                  <h3>Two Separate Vendors</h3>
                   <p className="phl-compare-sub">
                     Why the budget quietly leaks
                   </p>
@@ -1152,7 +1152,7 @@ function Page() {
                   className="phl-compare-col phl-compare-col--score"
                   aria-hidden="true"
                 >
-                  <h3>Search scorecard</h3>
+                  <h3>Search Scorecard</h3>
                   <p className="phl-compare-sub">
                     A typical Philly client&apos;s first six months
                   </p>
@@ -1203,7 +1203,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A search partner, not two competing invoices
+                  A Search Partner, Not Two Competing Invoices
                 </h2>
                 <p className="phl-lead">
                   Traffic is the output. Strategy, execution, and honest
@@ -1228,7 +1228,7 @@ function Page() {
               <div className="phl-why-banner">
                 <div className="phl-why-banner-text">
                   <p className="phl-eyebrow">Free Philadelphia Search Audit</p>
-                  <h3>See what your search budget is really doing</h3>
+                  <h3>See What Your Search Budget is Really Doing</h3>
                   <p>
                     We audit your ad account, organic rankings, and conversion
                     tracking together — then hand you a 90-day plan showing what
@@ -1291,7 +1291,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Verified Client Reviews</p>
                 <h2 className="phl-h2" id="phl-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="phl-reviews-widget">
@@ -1325,7 +1325,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Everything Working Together</p>
-                <h2 className="phl-h2">Six parts, one search engine</h2>
+                <h2 className="phl-h2">Six Parts, One Search Engine</h2>
                 <p className="phl-lead">
                   Paid and organic are not two projects, they are two halves of
                   the same machine. Each part below feeds the next, and every
@@ -1403,7 +1403,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">FAQs</p>
                   <h2 className="phl-h2">
-                    Straight answers about SEM in Philadelphia
+                    Straight Answers About SEM in Philadelphia
                   </h2>
                   <p className="phl-lead">
                     Pricing, budget splits, timelines, and how paid and organic
@@ -1436,7 +1436,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Grow Further</p>
-                <h2 className="phl-h2">Go deeper on either half</h2>
+                <h2 className="phl-h2">Go Deeper on Either Half</h2>
                 <p className="phl-lead">
                   Want the whole picture beyond search? See the full{" "}
                   <Link
@@ -1474,7 +1474,7 @@ function Page() {
                 <aside className="phl-form-aside">
                   <p className="phl-eyebrow">Get Started</p>
                   <h2 className="phl-h2">
-                    Claim your free Philadelphia search audit
+                    Claim Your Free Philadelphia Search Audit
                   </h2>
                   <p className="phl-lead">
                     Tell us about your business and we will audit both halves —

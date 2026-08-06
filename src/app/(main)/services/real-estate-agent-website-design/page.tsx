@@ -121,27 +121,27 @@ const serviceJsonLd = {
 
 const RealEstateWebFaqs = [
   {
-    question: "How much does real estate agent website design cost?",
+    question: "How Much Does Real Estate Agent Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of neighborhood and landing pages, IDX and valuation integrations, and whether content and photography are included. A focused agent site costs considerably less than a large team or brokerage build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a real estate website?",
+    question: "How Long Does It Take to Design a Real Estate Website?",
     answer:
       "Most real estate websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with IDX integration or many neighborhood pages can take longer.",
   },
   {
-    question: "Can my website include IDX listing search?",
+    question: "Can My Website Include IDX Listing Search?",
     answer:
       "Yes. We build IDX-ready sites that connect to your MLS feed so buyers can search live listings on your site instead of leaving for a portal. Paired with a saved-search sign-up, that listing search becomes a steady buyer-lead engine rather than a dead-end feature.",
   },
   {
-    question: "Can my website capture seller leads with a home valuation?",
+    question: "Can My Website Capture Seller Leads with a Home Valuation?",
     answer:
       "Yes — the home-valuation offer is one of the best seller-lead magnets there is. We build a simple 'what's my home worth' flow that captures the address and contact details and routes the lead straight to you, so sellers raise their hand before they interview another agent.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -223,37 +223,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiSearch aria-hidden="true" />,
-    title: "IDX search & saved alerts",
+    title: "IDX Search & Saved Alerts",
     desc: "Live MLS search on your site with saved-search sign-ups, so buyers stay with you instead of a national portal.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Home-valuation capture",
+    title: "Home-Valuation Capture",
     desc: "A simple valuation flow that captures seller leads by address and routes them to you the moment they are ready.",
   },
   {
     icon: <FiMapPin aria-hidden="true" />,
-    title: "Neighborhood content",
+    title: "Neighborhood Content",
     desc: "Community pages that rank for local searches and make you the obvious agent for the areas you know best.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "Trust & proof UX",
+    title: "Trust & Proof UX",
     desc: "Testimonials, recent sales, and your personal brand placed up front, because clients hire the agent they trust.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Buyers and sellers browse on their phone at night — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & lead capture",
+    title: "Click-to-Call & Lead Capture",
     desc: "One thumb-tap from any page to a call, a saved search, or a valuation, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious buyers and sellers actually read them before they choose you.",
   },
   {
@@ -261,19 +261,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "IDX & neighborhood content",
+    title: "IDX & Neighborhood Content",
     desc: "Live listings and community pages that keep visitors on your site and rank for local searches.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and neighborhood you serve, built to rank for local real estate searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you sell, and what you specialize in.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -281,22 +281,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & market mapping",
+    title: "Discovery & Market Mapping",
     desc: "The clients you want more of, the neighborhoods you sell, how you capture leads today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your personal brand and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "IDX search, valuation flows, and neighborhood pages — every page written around the searches buyers and sellers use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the leads coming.",
   },
 ];
@@ -309,7 +309,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -408,8 +408,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Real Estate Agent Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Real estate agent website design that turns visitors into{" "}
-                    <span className="hiw-hl">buyer & seller leads</span>
+                    Real Estate Agent Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Buyer & Seller Leads</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs real estate websites that work like a lead
@@ -566,9 +566,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first showing</span> a client
-                    gives you
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Showing</span> a Client
+                    Gives You
                   </h2>
                   <p className="hiw-lead">
                     Before a buyer or seller ever calls, they have already judged
@@ -618,7 +618,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Real estate website design for every stage of your business
+                    Real Estate Website Design for Every Stage of Your Business
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -643,7 +643,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Kind of Client</p>
                 <h2 className="hiw-h2">
-                  Web design for buyers, sellers, and everything between
+                  Web Design for Buyers, Sellers, and Everything Between
                 </h2>
                 <p className="hiw-lead">
                   IDX listing search for buyers, home valuations for sellers,
@@ -692,7 +692,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to win clients
+                  More Than a Brochure — A System Built to Win Clients
                 </h2>
                 <p className="hiw-lead">
                   Most agent websites are digital business cards: a headshot, a
@@ -721,7 +721,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting real estate website
+                    The Anatomy of a High-Converting Real Estate Website
                   </h2>
                   <p className="hiw-lead">
                     The best real estate website design is not about decoration —
@@ -768,7 +768,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -780,7 +780,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -804,7 +804,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones clients actually use</h3>
+                  <h3>Fast on the Phones Clients Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most home searches happen on a phone, on the couch,
@@ -815,7 +815,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiHome aria-hidden="true" />
                   </span>
-                  <h3>Leads that stay yours, not a portal&apos;s</h3>
+                  <h3>Leads That Stay Yours, Not a Portal&apos;s</h3>
                   <p>
                     IDX search, saved alerts, and valuation capture built into your
                     own site — so the buyer and seller leads you earn belong to you,
@@ -826,7 +826,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your business actually needs?</h3>
+                  <h3>Not Sure What Your Business Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, lead
                     flows, and local SEO foundations your site needs — no
@@ -856,7 +856,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -886,7 +886,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Agents Choose Us</p>
-                <h2 className="hiw-h2">Expertise clients can see</h2>
+                <h2 className="hiw-h2">Expertise Clients Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how buyers and sellers
                   choose an agent — and what makes them reach out instead of keep
@@ -951,7 +951,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Sell</p>
                 <h2 className="hiw-h2">
-                  Real estate website design across the United States
+                  Real Estate Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From solo agents to teams and brokerages, Zonic Media designs
@@ -986,7 +986,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything agents ask us about website design
+                    Everything Agents Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, IDX and valuations, and
@@ -1026,7 +1026,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with leads.
+                  Your Website is Step One. Here is What Fills It with Leads.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1055,7 +1055,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free real estate website consult
+                    Book Your Free Real Estate Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your business and we will send a custom homepage

@@ -739,7 +739,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">Full-service digital agency</p>
               <h1 className="svc-hero-h1">
-                Digital Marketing Services That Turn Local Searches Into{" "}
+                Digital Marketing Services That Turn Local Searches into{" "}
                 <span className="svc-hl">Booked Jobs</span>
               </h1>
               <p className="svc-hero-sub">
@@ -801,7 +801,7 @@ export default function ServicesPage() {
           <div className="svc-sec-head-center">
             <p className="svc-eyebrow">What we do</p>
             <h2 className="svc-h2">
-              Every digital marketing service under one roof
+              Every Digital Marketing Service Under One Roof
             </h2>
             <p className="svc-lead">
               Six disciplines, run by the same team off the same plan. Start
@@ -841,7 +841,7 @@ export default function ServicesPage() {
           <div className="svc-sec-head-center">
             <p className="svc-eyebrow">How it works</p>
             <h2 className="svc-h2">
-              What each service changes, shown rather than claimed
+              What Each Service Changes, Shown Rather Than Claimed
             </h2>
             <p className="svc-lead">
               The panels below are illustrative views of the shift we are hired
@@ -887,7 +887,7 @@ export default function ServicesPage() {
           <div className="svc-sec-head">
             <p className="svc-eyebrow svc-eyebrow-light">Five-step process</p>
             <h2 className="svc-h2">
-              A process you can follow without a project manager
+              A Process You Can Follow Without a Project Manager
             </h2>
             <p className="svc-lead">
               Same five steps whether we are building a site, rescuing a Google
@@ -929,7 +929,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">Why Zonic Media</p>
               <h2 className="svc-h2">
-                Four channels, one growth system instead of four invoices
+                Four Channels, One Growth System Instead of Four Invoices
               </h2>
               <p className="svc-lead">
                 Splitting a website across one vendor, SEO across another and
@@ -972,7 +972,7 @@ export default function ServicesPage() {
         <div className="svc-container">
           <div className="svc-sec-head-center">
             <p className="svc-eyebrow">Who we serve</p>
-            <h2 className="svc-h2">Industries we work with</h2>
+            <h2 className="svc-h2">Industries We Work With</h2>
             <p className="svc-lead">
               The strategy changes by market. A roofer competes on Map Pack
               position and speed to answer; a law firm competes on authority and
@@ -1004,7 +1004,7 @@ export default function ServicesPage() {
           <div className="svc-sec-head-center">
             <p className="svc-eyebrow">The difference</p>
             <h2 className="svc-h2">
-              What changes when the channels stop working in isolation
+              What Changes When the Channels Stop Working in Isolation
             </h2>
             <p className="svc-lead">
               Most businesses are not short of marketing activity. They are
@@ -1016,7 +1016,7 @@ export default function ServicesPage() {
             <div className="svc-compare-card">
               <p className="svc-compare-label">Running channels separately</p>
               <h3 className="svc-compare-heading">
-                Busy months, flat lead count
+                Busy Months, Flat Lead Count
               </h3>
               <ul className="svc-compare-list">
                 {withoutPoints.map((p) => (
@@ -1033,7 +1033,7 @@ export default function ServicesPage() {
             <div className="svc-compare-card is-with">
               <p className="svc-compare-label">Working with Zonic Media</p>
               <h3 className="svc-compare-heading">
-                One plan, one owner, one number that matters
+                One Plan, One Owner, One Number That Matters
               </h3>
               <ul className="svc-compare-list">
                 {withPoints.map((p) => (
@@ -1065,7 +1065,7 @@ export default function ServicesPage() {
           <div className="svc-results-grid">
             <div>
               <p className="svc-eyebrow">Measurable outcomes</p>
-              <h2 className="svc-h2">What clients gain in the first year</h2>
+              <h2 className="svc-h2">What Clients Gain in the First Year</h2>
               <p className="svc-lead">
                 These are the ranges we see across active accounts, not a best
                 case pulled from one campaign. Where a market is unusually
@@ -1103,7 +1103,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">Free strategy session</p>
               <h2 className="svc-h2">
-                Start with a free digital marketing audit
+                Start with a Free Digital Marketing Audit
               </h2>
               <p className="svc-lead">
                 Before we recommend a single service, we look at what you
@@ -1151,7 +1151,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">FAQ</p>
               <h2 className="svc-h2">
-                Digital marketing services: common questions
+                Digital Marketing Services: Common Questions
               </h2>
               <p className="svc-lead">
                 Anything not covered here, ask on the audit call. We answer
@@ -1166,7 +1166,7 @@ export default function ServicesPage() {
 
             <div className="svc-faq-list">
               {faqs.map((faq) => (
-                <details className="svc-faq-item" key={faq.q}>
+                <details className="svc-faq-item" name="svc-faq" key={faq.q}>
                   <summary className="svc-faq-q">
                     {faq.q}
                     <span className="svc-faq-icon" aria-hidden="true" />
@@ -1186,8 +1186,8 @@ export default function ServicesPage() {
             <div className="svc-final-inner">
               <p className="svc-eyebrow svc-eyebrow-light">Ready to start?</p>
               <h2 className="svc-final-h">
-                Let us find where your leads are leaking,{" "}
-                <span>then fix that first</span>
+                Let Us Find Where Your Leads are Leaking,{" "}
+                <span>Then Fix That First</span>
               </h2>
               <p className="svc-final-sub">
                 Whether you need a new website, local rankings, a Google profile

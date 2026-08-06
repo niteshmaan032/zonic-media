@@ -175,37 +175,37 @@ const serviceJsonLd = {
 
 const RealEstateSeoFaqs = [
   {
-    question: "What's included in your real estate SEO services?",
+    question: "What's Included in Your Real Estate SEO Services?",
     answer:
       "Every real estate campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your city and neighborhood pages, local content, and a monthly report that shows rankings, calls, and buyer and seller leads — not vanity metrics.",
   },
   {
-    question: "How long do real estate SEO services take to show results?",
+    question: "How Long Do Real Estate SEO Services Take to Show Results?",
     answer:
       "Most agents see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls for searches like 'realtor near me' and 'real estate agent near me.' Competitive metros take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds every listing season.",
   },
   {
-    question: "How much do real estate SEO services cost?",
+    question: "How Much Do Real Estate SEO Services Cost?",
     answer:
       "Pricing depends on how many markets you work, how competitive your metro is, and how aggressively you want to grow your buyer and seller pipeline. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for realtor keywords?",
+    question: "Do You Guarantee First-Page Google Rankings for Realtor Keywords?",
     answer:
       "Our track record speaks for itself — most real estate clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do real estate agents really need Google Business Profile optimization?",
+    question: "Do Real Estate Agents Really Need Google Business Profile Optimization?",
     answer:
       "Yes — it is the single biggest lever in real estate local SEO. Your Google Business Profile decides whether you show up in the local map pack when a buyer or seller searches for an agent nearby, and it drives your call volume, direction requests, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and clients choose it.",
   },
   {
-    question: "Can you help real estate teams, brokerages, and multi-agent offices?",
+    question: "Can You Help Real Estate Teams, Brokerages, and Multi-Agent Offices?",
     answer:
       "Absolutely. We build local SEO systems for solo agents and multi-agent brokerages alike — market and neighborhood targeting, individual agent and location pages, and map visibility for every city and neighborhood you cover, all reported in one clear dashboard.",
   },
   {
-    question: "Why choose Zonic Media over another real estate SEO company?",
+    question: "Why Choose Zonic Media over Another Real Estate SEO Company?",
     answer:
       "We specialize in local, lead-driven businesses like real estate, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and buyer and seller leads, and work that is built to compound listing season after listing season — not churn.",
   },
@@ -380,17 +380,17 @@ const CompareUs = [
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Lead-driven local is all we do",
+    title: "Lead-Driven Local is All We Do",
     desc: "We are not a generalist agency dabbling in maps. Local rankings, local calls, and buyer and seller leads for real estate agents and teams is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into peak buying and listing demand. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
@@ -467,8 +467,8 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Real Estate SEO Services</p>
                   <h1 className="tseo-hero-h1">
-                    Real estate SEO that{" "}
-                    <span className="tseo-hl">wins more leads</span>
+                    Real Estate SEO That{" "}
+                    <span className="tseo-hl">Wins More Leads</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and lead-driven businesses climb
@@ -796,9 +796,9 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    Buyers and sellers are searching for an agent.{" "}
+                    Buyers and Sellers are Searching for an Agent.{" "}
                     <span className="tseo-hl-text">
-                      We make sure they find you.
+                      We Make Sure They Find You.
                     </span>
                   </h2>
                   <p className="tseo-lead">
@@ -844,7 +844,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your real estate rankings need, in one system
+                    Everything Your Real Estate Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -869,8 +869,8 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your real estate business in the top three — and keep it
-                  there
+                  We Put Your Real Estate Business in the Top Three — And Keep It
+                  There
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
@@ -987,7 +987,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">How It Works</p>
                   <h2 className="tseo-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -1007,7 +1007,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free real estate visibility audit</h3>
+                  <h3>Free Real Estate Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the buyer and seller
@@ -1046,7 +1046,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your markets and neighborhoods, then
                     the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation cleanup,
@@ -1062,7 +1062,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1098,7 +1098,7 @@ function Page() {
                       </span>
                       <span className="tseo-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and buyer and seller leads,
                       not vanity metrics. As rankings lock in, we expand to more
@@ -1137,7 +1137,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when real estate SEO is done properly
+                  What Happens When Real Estate SEO is Done Properly
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different seasons — the same system,
@@ -1166,7 +1166,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical real estate SEO agency
+                  What You Get with Zonic Vs. A Typical Real Estate SEO Agency
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for lead-driven businesses is all we do, and it
@@ -1176,7 +1176,7 @@ function Page() {
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="tseo-compare-sub">
                     Why most real estate campaigns quietly stall
                   </p>
@@ -1259,8 +1259,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your real estate rankings and reviews climb,{" "}
-                    <span className="tseo-hl-text">month over month</span>
+                    Watch Your Real Estate Rankings and Reviews Climb,{" "}
+                    <span className="tseo-hl-text">Month over Month</span>
                   </h2>
                   <p className="tseo-lead">
                     No black box. Every campaign comes with live rank tracking
@@ -1342,7 +1342,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A real estate SEO partner, not a monthly invoice
+                  A Real Estate SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1361,7 +1361,7 @@ function Page() {
               <div className="tseo-why-banner">
                 <div className="tseo-why-banner-text">
                   <p className="tseo-eyebrow">Free Real Estate SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your real estate rankings</h3>
+                  <h3>See Exactly How We&apos;ll Grow Your Real Estate Rankings</h3>
                   <p>
                     We&apos;ll map your profile, citations, reviews, and
                     rankings — and show you the clear path to the top three for
@@ -1427,7 +1427,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Verified Client Reviews</p>
                 <h2 className="tseo-h2" id="tseo-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="tseo-reviews-widget">
@@ -1462,7 +1462,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for real estate agents in every market in the US
+                  Local SEO for Real Estate Agents in Every Market in the US
                 </h2>
                 <p className="tseo-lead">
                   From solo agents to multi-office brokerages, we run local SEO
@@ -1528,7 +1528,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about real estate SEO
+                    Straight Answers About Real Estate SEO
                   </h2>
                   <p className="tseo-lead">
                     Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for real estate</Link> fits alongside SEO, and what actually moves real
@@ -1561,7 +1561,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Grow Further</p>
                 <h2 className="tseo-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
               </div>
               <div className="tseo-grow-cards">
@@ -1590,7 +1590,7 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free real estate local SEO audit
+                    Claim Your Free Real Estate Local SEO Audit
                   </h2>
                   <p className="tseo-lead">
                     Tell us about your real estate business and we will send a
@@ -1643,7 +1643,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free real estate SEO audit"
+                    title="Get Your Free Real Estate SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where your real estate business stands and what it takes to win your market."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your real estate business"

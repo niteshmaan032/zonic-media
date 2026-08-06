@@ -263,7 +263,6 @@
   letter-spacing: -0.025em;
   color: var(--tseo-ink);
   margin: 0 0 20px;
-  text-transform: capitalize;
 }
 
 .tseo-page .tseo-hl {
@@ -369,7 +368,6 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--tseo-ink);
   margin: 0;
 }
@@ -1668,7 +1666,6 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--tseo-ink);
   margin: 0;
 }
@@ -2099,7 +2096,6 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--tseo-ink);
   margin: 0;
 }

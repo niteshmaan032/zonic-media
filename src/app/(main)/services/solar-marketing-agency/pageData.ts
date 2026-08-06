@@ -35,7 +35,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
   },
   tickerHtml: `${tickerRun}\n${tickerRun}`,
   heroHtml: `<span class="eyebrow">Solar Marketing Agency</span>
-<h1>The <span class="hl">solar marketing agency</span> that keeps your install crews busy.</h1>
+<h1>The <span class="hl">Solar Marketing Agency</span> That Keeps Your Install Crews Busy.</h1>
 <p class="hero-lead">Local SEO, Google Ads, social, and lead generation built for solar companies — so homeowners searching for solar installers near them find your company first. Exclusive solar leads, never resold to competitors.</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Local SEO &amp; Map Pack</span>
@@ -64,19 +64,19 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">The solar marketing problem</span>
-<h2>Why solar companies lose ready-to-buy homeowners</h2>
+<h2>Why Solar Companies Lose Ready-to-Buy Homeowners</h2>
 <p>2026 is a harder market: the federal residential tax credit is gone, buyers research longer, and shared lead marketplaces resell the same homeowner to five installers. The companies still winning own their local search results — and their reputation.</p>
 </div>
 <div class="prob-grid">
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Buried below other installers</h3><p>Homeowners shortlist the top-3 results for &quot;solar companies near me&quot; on Google Maps. Ranking lower means losing panel installs and battery projects to the installer across town.</p></div>
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Skeptical homeowners</h3><p>Nearly half of homeowners say it&#x27;s hard to tell real installers from solar scams. Thin reviews, no local proof, and a weak profile send your best prospects to bigger brands.</p></div>
-<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><h3>Shared leads &amp; wasted spend</h3><p>Marketplace leads get resold to five competitors, and without tight <a class="ima-inline-link" href="/services/google-ads">Google Ads management</a> your budget goes to renters, DIY researchers, and out-of-area clicks instead of qualified homeowners.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Buried Below Other Installers</h3><p>Homeowners shortlist the top-3 results for &quot;solar companies near me&quot; on Google Maps. Ranking lower means losing panel installs and battery projects to the installer across town.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Skeptical Homeowners</h3><p>Nearly half of homeowners say it&#x27;s hard to tell real installers from solar scams. Thin reviews, no local proof, and a weak profile send your best prospects to bigger brands.</p></div>
+<div class="prob"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div><h3>Shared Leads &amp; Wasted Spend</h3><p>Marketplace leads get resold to five competitors, and without tight <a class="ima-inline-link" href="/services/google-ads">Google Ads management</a> your budget goes to renters, DIY researchers, and out-of-area clicks instead of qualified homeowners.</p></div>
 </div>
 </div></section>
 <section class="section navy"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">Everything under one roof</span>
-<h2>The complete solar marketing system</h2>
+<h2>The Complete Solar Marketing System</h2>
 <p>Not six vendors and six invoices. One team running every channel that brings solar companies booked consultations — a <a class="ima-inline-link" href="/services">full-service marketing</a> approach built around your trade, not a generic playbook.</p>
 </div>
 <div class="svc-grid">
@@ -93,7 +93,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <div class="answer-wrap">
 <div class="answer-main">
 <span class="eyebrow">The short answer</span>
-<h2>What does a solar marketing agency do?</h2>
+<h2>What Does a Solar Marketing Agency Do?</h2>
 <p class="answer-lead">A solar marketing agency helps solar companies get found online and turn local searches — solar panel installation, battery storage, solar repair, and financing questions — into booked consultations. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so owners can focus on installs while leads come in.</p>
 <div class="answer-facts">
 <div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>
@@ -111,7 +111,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <section class="section alt"><div class="wrap map-wrap">
 <div class="map-copy">
 <span class="eyebrow">Where homeowners actually look</span>
-<h2>Get into the top 3 of the Google Map Pack</h2>
+<h2>Get into the Top 3 of the Google Map Pack</h2>
 <p>Most solar customers never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Geo-grid rank tracking</span>
@@ -149,7 +149,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Simple, transparent pricing</span>
-<h2>Solar marketing plans</h2>
+<h2>Solar Marketing Plans</h2>
 <p>Month-to-month. No long-term contracts, no setup fees. Pick the level of growth you're ready for.</p>
 </div>
 <div class="price-grid">
@@ -211,14 +211,14 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <section class="section alt"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">How we work</span>
-<h2>A clear plan before we build anything</h2>
+<h2>A Clear Plan Before We Build Anything</h2>
 <p>Every solar engagement starts with your goals and the fastest route to more booked installs — then we ship the work, not a slide deck.</p>
 </div>
 <div class="proc-grid">
-<div class="proc"><div class="num">01</div><h3>Audit the gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more solar leads.</p></div>
-<div class="proc"><div class="num">02</div><h3>Build the plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your company.</p></div>
-<div class="proc"><div class="num">03</div><h3>Launch the work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
-<div class="proc"><div class="num">04</div><h3>Grow &amp; report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
+<div class="proc"><div class="num">01</div><h3>Audit the Gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more solar leads.</p></div>
+<div class="proc"><div class="num">02</div><h3>Build the Plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your company.</p></div>
+<div class="proc"><div class="num">03</div><h3>Launch the Work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
+<div class="proc"><div class="num">04</div><h3>Grow &amp; Report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
 </div>
 </div></section>
 <figure class="sp-shot sp-band">
@@ -227,20 +227,20 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Common questions</span>
-<h2>What solar company owners ask us</h2>
+<h2>What Solar Company Owners Ask Us</h2>
 </div>
 <div class="faq-list">
-<details class="faq" open><summary>How fast can a solar company get more leads?<span class="x"></span></summary><div class="a">Google Ads can bring qualified consultations within the first weeks of launch. Local SEO and Map Pack ranking build over three to six months and lower your long-term cost per booked install.</div></details>
-<details class="faq"><summary>Is solar marketing still worth it after the federal tax credit expired?<span class="x"></span></summary><div class="a">Yes — arguably more than ever. The 30% residential credit ended December 31, 2025 for purchased systems, so fewer homeowners are casually shopping and the ones still searching are serious. Leases and PPAs keep incentives through 2027, battery storage demand keeps growing, and rising utility rates keep solar attractive in high-rate states. The installers that stay visible win a bigger share of a more selective market.</div></details>
-<details class="faq"><summary>Are the solar leads exclusive?<span class="x"></span></summary><div class="a">Yes. We never share or resell leads — unlike marketplace platforms that sell the same homeowner to five installers. Everything from your ads, website, and profile comes only to your company.</div></details>
-<details class="faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 700+ profiles for local businesses.</div></details>
-<details class="faq"><summary>Do you also work with roofing companies?<span class="x"></span></summary><div class="a">Yes. Solar and roofing go together — many installers replace roofs before mounting panels, and many roofers sell solar. We run a dedicated <a class="ima-inline-link" href="/services/roofing-marketing-agency">roofing marketing</a> program too, so one team covers everything you offer.</div></details>
-<details class="faq"><summary>Do you require long-term contracts?<span class="x"></span></summary><div class="a">No. We don't lock you into long-term contracts. We earn the relationship month to month by delivering results — most solar clients stay because the leads keep coming, not because they're tied to us.</div></details>
-<details class="faq"><summary>Do you only work with businesses in Delaware?<span class="x"></span></summary><div class="a">No. We're based in Dover, Delaware with deep roots in the Mid-Atlantic, but we serve solar companies across the United States. Our work is remote-first, so your location is never a barrier.</div></details>
+<details class="faq" name="ima-faq" open><summary>How fast can a solar company get more leads?<span class="x"></span></summary><div class="a">Google Ads can bring qualified consultations within the first weeks of launch. Local SEO and Map Pack ranking build over three to six months and lower your long-term cost per booked install.</div></details>
+<details class="faq" name="ima-faq"><summary>Is solar marketing still worth it after the federal tax credit expired?<span class="x"></span></summary><div class="a">Yes — arguably more than ever. The 30% residential credit ended December 31, 2025 for purchased systems, so fewer homeowners are casually shopping and the ones still searching are serious. Leases and PPAs keep incentives through 2027, battery storage demand keeps growing, and rising utility rates keep solar attractive in high-rate states. The installers that stay visible win a bigger share of a more selective market.</div></details>
+<details class="faq" name="ima-faq"><summary>Are the solar leads exclusive?<span class="x"></span></summary><div class="a">Yes. We never share or resell leads — unlike marketplace platforms that sell the same homeowner to five installers. Everything from your ads, website, and profile comes only to your company.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 700+ profiles for local businesses.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you also work with roofing companies?<span class="x"></span></summary><div class="a">Yes. Solar and roofing go together — many installers replace roofs before mounting panels, and many roofers sell solar. We run a dedicated <a class="ima-inline-link" href="/services/roofing-marketing-agency">roofing marketing</a> program too, so one team covers everything you offer.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you require long-term contracts?<span class="x"></span></summary><div class="a">No. We don't lock you into long-term contracts. We earn the relationship month to month by delivering results — most solar clients stay because the leads keep coming, not because they're tied to us.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you only work with businesses in Delaware?<span class="x"></span></summary><div class="a">No. We're based in Dover, Delaware with deep roots in the Mid-Atlantic, but we serve solar companies across the United States. Our work is remote-first, so your location is never a barrier.</div></details>
 </div>
 </div></section>`,
   finalHtml: `<section class="final"><div class="wrap final-in">
-<h2>Ready to fill your install calendar?</h2>
+<h2>Ready to Fill Your Install Calendar?</h2>
 <p>Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.</p>
 <div class="final-actions">
 <a class="btn btn-orange" href="#industry-audit">Get My Free Marketing Audit</a>
@@ -270,7 +270,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <li><a href="https://www.zonicllc.com/contact-us">Contact Us</a></li>
 <li><a href="https://www.zonicllc.com/services">All Industries</a></li>
 </ul></div>
-<div><h4>Get in touch</h4><ul>
+<div><h4>Get in Touch</h4><ul>
 <li><a href="tel:+13027269736">(302) 726-9736</a></li>
 <li><a href="mailto:contact@zonicllc.com">contact@zonicllc.com</a></li>
 <li>8 The Green, STE B<br>Dover, DE 19901</li>
@@ -418,7 +418,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
     }),
   ],
   form: {
-    title: "Get your free solar marketing audit",
+    title: "Get Your Free Solar Marketing Audit",
     subtitle: "See exactly where you're losing leads — no obligation, takes a minute.",
     labels: [
       "Full name",

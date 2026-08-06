@@ -2417,7 +2417,7 @@
 
   .phl-page .phl-hero-ctas .phl-btn,
   .phl-page .phl-hero-ctas .phl-btn-ghost {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
   }
 

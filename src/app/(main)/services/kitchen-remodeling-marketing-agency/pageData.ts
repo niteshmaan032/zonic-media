@@ -38,17 +38,17 @@ export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "photo",
-      title: "Your best kitchens are invisible",
+      title: "Your Best Kitchens are Invisible",
       body: "Homeowners judge a remodeler on portfolio depth before price. Without organized project galleries, style pages, and reviews tied to real neighborhoods, your finished kitchens sit on a phone instead of selling the next job.",
     },
     {
       icon: "clock",
-      title: "Long research window, short memory",
+      title: "Long Research Window, Short Memory",
       body: "Three to six months typically pass between the first idea search and a signed contract. Without steady visibility and follow-up, the homeowner who loved your work in January signs with whoever stayed in front of them in April.",
     },
     {
       icon: "wallet",
-      title: "Budget-shoppers eating your calendar",
+      title: "Budget-Shoppers Eating Your Calendar",
       body: "Estimate appointments with people pricing a $12,000 refresh against a $70,000 renovation waste weeks. Without qualifying copy, budget filters, and <a class=\"ima-inline-link\" href=\"/services/google-ads\">properly targeted ads</a>, your team drives to the wrong houses.",
     },
   ],
@@ -118,7 +118,7 @@ export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to book more kitchen projects?",
+  finalHeading: "Ready to Book More Kitchen Projects?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

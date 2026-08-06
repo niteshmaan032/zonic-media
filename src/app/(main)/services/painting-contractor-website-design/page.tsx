@@ -123,27 +123,27 @@ const serviceJsonLd = {
 
 const PaintingWebFaqs = [
   {
-    question: "How much does painting contractor website design cost?",
+    question: "How Much Does Painting Contractor Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, quote and financing integrations, gallery volume, and whether content and photography are included. A focused redesign costs considerably less than a large multi-crew, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a painting website?",
+    question: "How Long Does It Take to Design a Painting Website?",
     answer:
       "Most painting websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website show off before-and-after project photos?",
+    question: "Can My Website Show off Before-and-After Project Photos?",
     answer:
       "Yes — for a painter, the gallery is the sale. We build fast, filterable before-and-after galleries organized by job type (interior, exterior, cabinet refinishing) so homeowners can see your finish before they ever call. Every gallery is paired with a quote button, because a photo that impresses should never leave a visitor with nowhere to go.",
   },
   {
-    question: "Can you integrate my CRM or estimating software?",
+    question: "Can You Integrate My CRM or Estimating Software?",
     answer:
       "Yes. We connect the tools painters already run — Jobber, Housecall Pro, PaintScout, or a structured quote request flow that routes straight to your office. Either way, homeowners can request an estimate without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -165,8 +165,8 @@ const paintingWebFaqJsonLd = {
 
 const AboutChecks = [
   "Quote-first layouts",
-  "Before-and-after galleries",
-  "Financing & pricing UX",
+  "Before-and-After Galleries",
+  "Financing & Pricing UX",
   "Local SEO foundations",
 ];
 
@@ -225,37 +225,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "Instant quote flows",
+    title: "Instant Quote Flows",
     desc: "Homeowners request an estimate or design consultation in a few taps — integrated with the CRM and estimating tools painters already use.",
   },
   {
     icon: <FiImage aria-hidden="true" />,
-    title: "Before-and-after galleries",
+    title: "Before-and-After Galleries",
     desc: "Filterable job photos organized by paint type, placed where hesitant homeowners actually decide whether your work is worth the call.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Financing & pricing UX",
+    title: "Financing & Pricing UX",
     desc: "Payment options and honest price-range guidance up front, so sticker shock stops killing leads before they reach your inbox.",
   },
   {
     icon: <FiDroplet aria-hidden="true" />,
-    title: "Color-driven service pages",
+    title: "Color-Driven Service Pages",
     desc: "Interior, exterior, and cabinet work shown in the colors homeowners are dreaming about — pages that sell the finish, not just the trade.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners plan a paint job on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & quote request",
+    title: "Click-to-Call & Quote Request",
     desc: "One thumb-tap from any page to a call or an estimate request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them before spending big.",
   },
   {
@@ -263,19 +263,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Before & after galleries",
+    title: "Before & After Galleries",
     desc: "Real project photos organized by job type, because homeowners buy the finish they can already picture.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you work, built to rank for local painting searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you paint.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -283,22 +283,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & project mix mapping",
+    title: "Discovery & Project Mix Mapping",
     desc: "The jobs you want more of, the cities you work, how your office handles leads today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your best projects — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, quote flows, and project galleries — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the pipeline growing.",
   },
 ];
@@ -311,7 +311,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -410,8 +410,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Painting Contractor Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Painting contractor website design that turns browsers into{" "}
-                    <span className="hiw-hl">booked paint jobs</span>
+                    Painting Contractor Website Design That Turns Browsers into{" "}
+                    <span className="hiw-hl">Booked Paint Jobs</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs painting contractor websites that work
@@ -570,9 +570,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first coat</span>{" "}
-                    homeowners judge you on
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Coat</span>{" "}
+                    Homeowners Judge You On
                   </h2>
                   <p className="hiw-lead">
                     Before a homeowner ever lets a crew into their house, they
@@ -622,8 +622,8 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Painting contractor website design for every stage of your
-                    company
+                    Painting Contractor Website Design for Every Stage of Your
+                    Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -648,7 +648,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Paint Job</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of painting work
+                  Web Design for Every Kind of Painting Work
                 </h2>
                 <p className="hiw-lead">
                   Interior repaints, exterior jobs, cabinet refinishing,
@@ -697,7 +697,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book renovations
+                  More Than a Brochure — A System Built to Book Renovations
                 </h2>
                 <p className="hiw-lead">
                   Most painting websites are digital business cards: a stock
@@ -726,7 +726,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting painting website
+                    The Anatomy of a High-Converting Painting Website
                   </h2>
                   <p className="hiw-lead">
                     The best painting contractor website design is not about
@@ -773,7 +773,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -785,7 +785,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -809,7 +809,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones homeowners actually use</h3>
+                  <h3>Fast on the Phones Homeowners Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most painting research happens on a phone, while they look at the walls they want repainted.
@@ -819,7 +819,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where homeowners look for them</h3>
+                  <h3>Trust Signals Where Homeowners Look for Them</h3>
                   <p>
                     License numbers, insurance proof, manufacturer
                     certifications, and warranty details placed in the layout —
@@ -830,7 +830,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, quote
                     flows, and local SEO foundations your site needs — no
@@ -860,7 +860,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -890,7 +890,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Painters Choose Us</p>
-                <h2 className="hiw-h2">Craftsmanship customers can see</h2>
+                <h2 className="hiw-h2">Craftsmanship Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how homeowners
                   choose a painter — and what makes them request a quote
@@ -954,7 +954,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  Painting contractor website design across the United States
+                  Painting Contractor Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-crew startups to multi-market painting
@@ -990,7 +990,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything painters ask us about website design
+                    Everything Painters Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, galleries, and what
@@ -1030,7 +1030,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with jobs.
+                  Your Website is Step One. Here is What Fills It with Jobs.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1059,7 +1059,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free painting website consult
+                    Book Your Free Painting Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

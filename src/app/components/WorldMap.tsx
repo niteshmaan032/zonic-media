@@ -5,7 +5,7 @@ function WorldMap() {
   return (
     <div className="world-map-wrapper">
       <div className="world-map-cont">
-        <h2 className="world-map-heading">Serving Clients Across the globe</h2>
+        <h2 className="world-map-heading">Serving Clients Across the Globe</h2>
 
         <p className="world-map-descrp">
           Zonic Media works with businesses across the US, providing web design,

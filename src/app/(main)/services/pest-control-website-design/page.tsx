@@ -121,27 +121,27 @@ const serviceJsonLd = {
 
 const PestWebFaqs = [
   {
-    question: "How much does pest control website design cost?",
+    question: "How Much Does Pest Control Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of pest and city pages, scheduling and plan-signup integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-branch build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a pest control website?",
+    question: "How Long Does It Take to Design a Pest Control Website?",
     answer:
       "Most pest control websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many pest or service-area pages can take longer.",
   },
   {
-    question: "Can my website sell recurring service plans?",
+    question: "Can My Website Sell Recurring Service Plans?",
     answer:
       "Yes — recurring plans are where we focus, because ongoing service makes up around 85% of residential pest control revenue. We build plan comparison pages, clear quarterly and monthly pricing presentation, and signup flows that turn a one-time bed bug emergency into a year-round customer your business can count on.",
   },
   {
-    question: "Can you integrate my pest control software?",
+    question: "Can You Integrate My Pest Control Software?",
     answer:
       "Yes. We connect the tools pest control companies already run — FieldRoutes, PestPac, GorillaDesk, Jobber — or build a structured scheduling request flow that routes straight to your office. Either way, customers can request service without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -162,7 +162,7 @@ const pestWebFaqJsonLd = {
 };
 
 const AboutChecks = [
-  "Recurring plan signups",
+  "Recurring Plan Signups",
   "Pest-specific pages",
   "Family & pet safe messaging",
   "Local SEO foundations",
@@ -223,37 +223,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiRepeat aria-hidden="true" />,
-    title: "Recurring plan signups",
+    title: "Recurring Plan Signups",
     desc: "Plan pages and signup flows that turn a one-time treatment into quarterly service — the revenue pest control runs on.",
   },
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    title: "Emergency pest UX",
+    title: "Emergency Pest UX",
     desc: "A found-bed-bugs-tonight visitor decides in minutes. Click-to-call and same-day CTAs stay one thumb-tap away on every page.",
   },
   {
     icon: <RiPagesLine aria-hidden="true" />,
-    title: "Pest-specific landing pages",
+    title: "Pest-Specific Landing Pages",
     desc: "Termites, bed bugs, rodents, mosquitoes — each pest gets its own page built to rank for the searches homeowners actually type.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "Family & pet safe trust",
+    title: "Family & Pet Safe Trust",
     desc: "Licensing, safety messaging, and guarantees placed where worried homeowners look before they let anyone spray their home.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners search for pest control on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & tap-to-schedule",
+    title: "Click-to-Call & Tap-to-Schedule",
     desc: "One thumb-tap from any page to a call or a service request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where worried homeowners actually read them.",
   },
   {
@@ -261,19 +261,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you serve, built to rank for local exterminator searches.",
   },
   {
-    title: "Seasonal pest content",
+    title: "Seasonal Pest Content",
     desc: "Ant season, mosquito season, rodent season — content mapped to the pests your market searches each quarter.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you treat.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -281,22 +281,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & service mix mapping",
+    title: "Discovery & Service Mix Mapping",
     desc: "The jobs and plans you want more of, the cities you serve, how your office schedules today, and who outranks you — mapped into the pages your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Pest pages, plan signups, and scheduling integration — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then pest control SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -309,7 +309,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -394,8 +394,8 @@ function Page() {
               <div className="pc-hero-copy">
                 <p className="pc-eyebrow">Pest Control Website Design</p>
                 <h1 className="pc-hero-h1">
-                  Pest control website design that turns panic searches into{" "}
-                  <span className="pc-hl">scheduled service</span>
+                  Pest Control Website Design That Turns Panic Searches into{" "}
+                  <span className="pc-hl">Scheduled Service</span>
                 </h1>
                 <p className="pc-hero-sub">
                   Zonic Media designs pest control websites that work like a
@@ -553,9 +553,9 @@ function Page() {
               <div className="pc-about-copy">
                 <p className="pc-eyebrow">First Impressions</p>
                 <h2 className="pc-h2">
-                  Three kinds of visitors.{" "}
-                  <span className="pc-hl-text">One website</span> has to win
-                  them all.
+                  Three Kinds of Visitors.{" "}
+                  <span className="pc-hl-text">One Website</span> Has to Win
+                  Them All.
                 </h2>
                 <p className="pc-lead">
                   A pest control website serves three completely different
@@ -605,7 +605,7 @@ function Page() {
               <div>
                 <p className="pc-eyebrow">What We Build</p>
                 <h2 className="pc-h2">
-                  Pest control website design for every stage of your company
+                  Pest Control Website Design for Every Stage of Your Company
                 </h2>
               </div>
               <Link href="/services" className="pc-link-arrow">
@@ -630,7 +630,7 @@ function Page() {
             <div className="pc-band-content">
               <p className="pc-eyebrow">Every Service Line</p>
               <h2 className="pc-h2">
-                Web design for every pest you treat
+                Web Design for Every Pest You Treat
               </h2>
               <p className="pc-lead">
                 General pest, termites, bed bugs, rodents, mosquitoes,
@@ -683,7 +683,7 @@ function Page() {
             <div className="pc-sec-head-center">
               <p className="pc-eyebrow">The Recurring Revenue System</p>
               <h2 className="pc-h2">
-                More than a brochure — a system built to fill routes
+                More Than a Brochure — A System Built to Fill Routes
               </h2>
               <p className="pc-lead">
                 Most pest control websites are digital business cards: a
@@ -712,7 +712,7 @@ function Page() {
               <div>
                 <p className="pc-eyebrow">Built Into Every Site</p>
                 <h2 className="pc-h2">
-                  The anatomy of a high-converting pest control website
+                  The Anatomy of a High-Converting Pest Control Website
                 </h2>
                 <p className="pc-lead">
                   The best pest control website design is not about
@@ -759,7 +759,7 @@ function Page() {
           <div className="pc-container">
             <div className="pc-sec-head-center">
               <p className="pc-eyebrow">Why Zonic Media</p>
-              <h2 className="pc-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="pc-h2">Designed to Convert. Built to Rank.</h2>
               <p className="pc-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at
@@ -772,7 +772,7 @@ function Page() {
                 <span className="pc-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -796,7 +796,7 @@ function Page() {
                 <span className="pc-why-card-icon">
                   <FiRepeat aria-hidden="true" />
                 </span>
-                <h3>Built around recurring revenue</h3>
+                <h3>Built Around Recurring Revenue</h3>
                 <p>
                   Roughly 85% of residential pest control revenue is
                   recurring service. Your plan pages, pricing, and signup
@@ -808,7 +808,7 @@ function Page() {
                 <span className="pc-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>Trust signals where homeowners look for them</h3>
+                <h3>Trust Signals Where Homeowners Look for Them</h3>
                 <p>
                   Licensing, family-and-pet-safe messaging, and guarantees
                   placed in the layout — not buried on an about page nobody
@@ -820,7 +820,7 @@ function Page() {
             <div className="pc-why-banner">
               <div className="pc-why-banner-text">
                 <p className="pc-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your company actually needs?</h3>
+                <h3>Not Sure What Your Company Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages, plan
                   flows, and local SEO foundations your site needs — no
@@ -850,7 +850,7 @@ function Page() {
               <div>
                 <p className="pc-eyebrow">How It Works</p>
                 <h2 className="pc-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -880,7 +880,7 @@ function Page() {
           <div className="pc-banner-grid">
             <div className="pc-banner-copy">
               <p className="pc-eyebrow">Why Pest Control Companies Choose Us</p>
-              <h2 className="pc-h2">Protection customers can see</h2>
+              <h2 className="pc-h2">Protection Customers Can See</h2>
               <p className="pc-lead">
                 A website built by a team that understands how homeowners
                 choose an exterminator — and what makes them schedule instead
@@ -944,7 +944,7 @@ function Page() {
             <div className="pc-sec-head-center">
               <p className="pc-eyebrow">Wherever You Work</p>
               <h2 className="pc-h2">
-                Pest control website design services across the United States
+                Pest Control Website Design Services Across the United States
               </h2>
               <p className="pc-lead">
                 From single-route startups to multi-branch companies, Zonic
@@ -983,8 +983,8 @@ function Page() {
               <div>
                 <p className="pc-eyebrow">FAQs</p>
                 <h2 className="pc-h2">
-                  Everything pest control companies ask us about website
-                  design
+                  Everything Pest Control Companies Ask Us About Website
+                  Design
                 </h2>
                 <p className="pc-lead">
                   Straight answers on pricing, timelines, recurring plans,
@@ -1024,7 +1024,7 @@ function Page() {
             <div className="pc-sec-head-center">
               <p className="pc-eyebrow">Grow Further</p>
               <h2 className="pc-h2">
-                Your website is step one. Here is what fills your routes.
+                Your Website is Step One. Here is What Fills Your Routes.
               </h2>
             </div>
             <div className="pc-grow-cards">
@@ -1049,7 +1049,7 @@ function Page() {
               <aside className="pc-form-aside">
                 <p className="pc-eyebrow">Get Started</p>
                 <h2 className="pc-h2">
-                  Book your free pest control website consult
+                  Book Your Free Pest Control Website Consult
                 </h2>
                 <p className="pc-lead">
                   Tell us about your company and we will send a custom

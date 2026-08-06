@@ -311,7 +311,7 @@ body:has(.wl-page) .floating-phone-link {
   color: var(--wl-blue-dark);
 }
 .wl-btn-block {
-  width: 100%;
+  width: fit-content;
 }
 
 /* ──────────────── HERO TRUST BADGES (shared component) ──────────────── */
@@ -1169,9 +1169,9 @@ body:has(.wl-page) .floating-phone-link {
   .wl-hero { margin-inline: -18px; padding: 46px 18px 36px; }
   .wl-hero h1 { font-size: clamp(35px, 10vw, 46px); line-height: 1.24; }
   .wl-hero-sub { font-size: 16px; }
-  .wl-hero-ctas { align-items: stretch; flex-direction: column; }
+  .wl-hero-ctas { align-items: flex-start; flex-direction: column; }
   .wl-hero-ctas .wl-btn {
-    width: 100%;
+    width: fit-content;
     max-width: none;
   }
   .wl-final-cta,

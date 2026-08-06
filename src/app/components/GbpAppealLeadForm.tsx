@@ -141,7 +141,7 @@ export default function GbpAppealLeadForm() {
         Free case review
       </span>
 
-      <h3>Send us the rejected case</h3>
+      <h3>Send Us the Rejected Case</h3>
       <p className="lp-form-sub">
         We read Google&apos;s rejection, tell you what it actually means, and
         give you an honest read on the odds — before you pay anything.

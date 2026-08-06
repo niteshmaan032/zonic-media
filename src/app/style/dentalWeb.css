@@ -250,7 +250,6 @@
   letter-spacing: -0.025em;
   color: #fff;
   margin: 0 0 20px;
-  text-transform: capitalize;
 }
 
 .dw-page .dw-h1-img {
@@ -1916,7 +1915,6 @@
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--dw-navy);
   margin: 0 0 20px;
 }
@@ -2268,5 +2266,20 @@
 @media (max-width: 1199.98px) {
   .dw-page .dw-banner-media {
     display: none;
+  }
+}
+
+/* ---------- mobile: flat white sections ----------
+   The tinted section washes read as stray patches of colour on a phone, so
+   every light-tinted section falls back to white below 768px. Dark bands
+   (white text on navy/green) keep their background — flattening those would
+   leave white-on-white text. */
+@media (max-width: 767.98px) {
+.dw-page .dw-services,
+.dw-page .dw-system,
+.dw-page .dw-nationwide,
+.dw-page .dw-form-sec,
+.dw-page .dw-footer {
+    background: #fff;
   }
 }

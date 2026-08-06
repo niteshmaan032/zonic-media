@@ -571,9 +571,9 @@ export default function ChiroDigitalPage() {
                 <p className="car-tow-eyebrow">Understanding Patient Behavior</p>
                 <h2>How Patients Actually Choose a Chiropractor Online</h2>
                 <h3 className="car-tow-sub-heading">
-                  Patients looking for chiropractic care often have pain,
-                  discomfort, or urgency. They compare a short list quickly and
-                  book the clinic that feels most credible and accessible.
+                  Patients Looking for Chiropractic Care Often Have Pain,
+                  Discomfort, or Urgency. They Compare a Short List Quickly and
+                  Book the Clinic That Feels Most Credible and Accessible.
                 </h3>
                 <p>
                   Most chiropractic patients are not leisurely browsing options.
@@ -635,10 +635,10 @@ export default function ChiroDigitalPage() {
           <Row className="align-items-center gy-4">
             <Col lg={12}>
               <div className="car-tow-feature-copy car-tow-feature-copy-split">
-                <h2>A focused system built for consistent chiropractic patient growth.</h2>
+                <h2>A Focused System Built for Consistent Chiropractic Patient Growth.</h2>
                 <h3 className="car-tow-sub-heading">
-                  Local SEO for chiropractic clinics has to support trust,
-                  urgency, and an easy path to booking.
+                  Local SEO for Chiropractic Clinics Has to Support Trust,
+                  Urgency, and an Easy Path to Booking.
                 </h3>
                 <p>
                   We align{" "}
@@ -675,10 +675,10 @@ export default function ChiroDigitalPage() {
             <Col lg={7}>
               <div className="car-tow-case-copy">
                 <p className="car-tow-eyebrow">Case Study Example</p>
-                <h2>Real results from a focused chiropractor digital marketing campaign.</h2>
+                <h2>Real Results from a Focused Chiropractor Digital Marketing Campaign.</h2>
                 <h3 className="car-tow-sub-heading">
-                  The right local SEO setup improves both patient visibility and
-                  appointment quality over time.
+                  The Right Local SEO Setup Improves Both Patient Visibility and
+                  Appointment Quality over Time.
                 </h3>
                 <p>
                   Consider a chiropractic clinic in a mid-size metro area with
@@ -718,7 +718,7 @@ export default function ChiroDigitalPage() {
           <div className="car-tow-before-after">
             <div className="car-tow-compare-card chiro-ba-before">
               <span className="chiro-ba-label-before">Before Zonic Media</span>
-              <h3>Common problems without a strategy</h3>
+              <h3>Common Problems Without a Strategy</h3>
               <ul className="chiro-ba-list-inner">
                 {beforePoints.map((p, i) => (
                   <li key={i}><FaTimesCircle className="chiro-icon-red" />{p}</li>
@@ -727,7 +727,7 @@ export default function ChiroDigitalPage() {
             </div>
             <div className="car-tow-compare-card car-tow-compare-card-accent chiro-ba-after">
               <span className="chiro-ba-label-after">After Choosing Zonic Media</span>
-              <h3>What a focused system produces</h3>
+              <h3>What a Focused System Produces</h3>
               <ul className="chiro-ba-list-inner">
                 {afterPoints.map((p, i) => (
                   <li key={i}><FaCheckCircle className="chiro-icon-green" />{p}</li>
@@ -805,7 +805,7 @@ export default function ChiroDigitalPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Strategy Comparison</p>
-              <h2>SEO vs Paid Ads for Chiropractors</h2>
+              <h2>SEO Vs Paid Ads for Chiropractors</h2>
               <p className="car-tow-section-descrp">
                 Both approaches can generate patient leads, but they work
                 differently and serve different timeframes. Understanding the
@@ -1013,7 +1013,7 @@ export default function ChiroDigitalPage() {
         <div className="car-tow-container">
           <div className="car-tow-final-cta">
             <p className="car-tow-eyebrow">Start Growing Today</p>
-            <h2>More chiropractic patients from Google and Maps.</h2>
+            <h2>More Chiropractic Patients from Google and Maps.</h2>
             <p>
               Zonic Media builds local SEO systems and{" "}
               <Link href="/services/web-design" className="chiro-inline-link">conversion-focused websites</Link>{" "}

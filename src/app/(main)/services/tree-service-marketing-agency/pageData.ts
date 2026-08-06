@@ -38,17 +38,17 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "storm",
-      title: "Missing the post-storm window",
+      title: "Missing the Post-Storm Window",
       body: "The hours right after a storm produce the highest-value emergency removals of the year. If you aren't already ranking and already bidding, that window closes before your campaign can react.",
     },
     {
       icon: "users",
-      title: "Losing bids to uninsured crews",
+      title: "Losing Bids to Uninsured Crews",
       body: "Homeowners are genuinely afraid of a tree falling the wrong way. Without certification, insurance, and equipment proof front and center, you get compared on price alone against a truck-and-chainsaw operation.",
     },
     {
       icon: "flame",
-      title: "Wasted ad spend on the wrong work",
+      title: "Wasted Ad Spend on the Wrong Work",
       body: "Firewood, stump-only, and lot-clearing searches drain budget that should go to removals. Without careful segmentation and proper <a class=\"ima-inline-link\" href=\"/services/google-ads\">Google Ads management</a>, you pay premium clicks for your lowest-margin jobs.",
     },
   ],
@@ -116,7 +116,7 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to keep your crews booked?",
+  finalHeading: "Ready to Keep Your Crews Booked?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

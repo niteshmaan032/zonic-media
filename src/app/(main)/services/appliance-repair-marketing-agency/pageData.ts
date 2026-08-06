@@ -38,17 +38,17 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "pin",
-      title: "Buried below the aggregators",
+      title: "Buried Below the Aggregators",
       body: "Lead-resale sites and national dispatch networks crowd the first screen. Ranking below them means paying for the same customer twice — once to the aggregator, once in the margin you give up on the job.",
     },
     {
       icon: "phone",
-      title: "Missed and unanswered calls",
+      title: "Missed and Unanswered Calls",
       body: "In a same-day trade, a missed call is a lost job — the homeowner dials the next result within seconds. Without call tracking, routing, and after-hours capture, you never even learn how many you're losing.",
     },
     {
       icon: "wallet",
-      title: "Ad spend that outruns a service ticket",
+      title: "Ad Spend That Outruns a Service Ticket",
       body: "Repair tickets are small compared to remodeling, so cost-per-lead discipline is everything. Without brand and appliance-level campaign structure and proper <a class=\"ima-inline-link\" href=\"/services/google-ads\">Google Ads management</a>, one careless campaign eats the profit from a whole week of calls.",
     },
   ],
@@ -115,7 +115,7 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to fill every tech's route?",
+  finalHeading: "Ready to Fill Every Tech's Route?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

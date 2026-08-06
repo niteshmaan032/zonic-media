@@ -538,8 +538,8 @@ function Page() {
                 <div className="phl-hero-copy">
                   <p className="phl-eyebrow">PPC Agency in Philadelphia</p>
                   <h1 className="phl-h1">
-                    Google Ads that buy{" "}
-                    <span className="phl-hl">leads, not clicks</span>
+                    Google Ads That Buy{" "}
+                    <span className="phl-hl">Leads, Not Clicks</span>
                   </h1>
                   <p className="phl-hero-sub">
                     Most Philadelphia Google Ads accounts waste a third of their
@@ -712,9 +712,9 @@ function Page() {
                 <div className="phl-about-copy">
                   <p className="phl-eyebrow">Where The Budget Actually Goes</p>
                   <h2 className="phl-h2">
-                    You are not short on clicks.{" "}
+                    You are Not Short on Clicks.{" "}
                     <span className="phl-hl-text">
-                      You are short on the right ones.
+                      You are Short on the Right Ones.
                     </span>
                   </h2>
                   <p className="phl-lead">
@@ -770,7 +770,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Everything a paid search account needs, worked weekly
+                    Everything a Paid Search Account Needs, Worked Weekly
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -800,7 +800,7 @@ function Page() {
               <div className="phl-band-content">
                 <p className="phl-eyebrow">No Markup, No Mystery</p>
                 <h2 className="phl-h2">
-                  Your spend goes to Google. Our fee is separate.
+                  Your Spend Goes to Google. Our Fee is Separate.
                 </h2>
                 <p className="phl-lead">
                   A lot of agencies quote one number that bundles their fee and
@@ -894,7 +894,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">How It Works</p>
                   <h2 className="phl-h2">
-                    From wasted spend to tracked leads in four steps
+                    From Wasted Spend to Tracked Leads in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -914,7 +914,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free Google Ads audit</h3>
+                  <h3>Free Google Ads Audit</h3>
                   <p>
                     We go through your account line by line and show you what
                     each problem is costing — the wasted queries, the structural
@@ -953,7 +953,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Weeks 2–3</span>
                   </div>
-                  <h3>Tracking, then structure</h3>
+                  <h3>Tracking, Then Structure</h3>
                   <p>
                     Conversion tracking goes in before anything else, because
                     optimizing against bad data is worse than not optimizing.
@@ -968,7 +968,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Every week</span>
                   </div>
-                  <h3>Mine, cut, and refine</h3>
+                  <h3>Mine, Cut, and Refine</h3>
                   <p>
                     Search terms reviewed weekly, negatives added, bids adjusted
                     against what a lead is actually worth. This is the work that
@@ -1001,7 +1001,7 @@ function Page() {
                       </span>
                       <span className="phl-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Scale what converts</h3>
+                    <h3>Scale What Converts</h3>
                     <p>
                       Once cost per lead is stable and predictable, we scale
                       budget into the campaigns earning it and expand into new
@@ -1045,7 +1045,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Real Results</p>
                 <h2 className="phl-h2">
-                  What happens when the waste gets cut first
+                  What Happens When the Waste Gets Cut First
                 </h2>
                 <p className="phl-lead">
                   Three Philadelphia accounts, three different problems, the
@@ -1100,7 +1100,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">The Difference</p>
                 <h2 className="phl-h2">
-                  Zonic Media vs. a typical PPC agency
+                  Zonic Media Vs. A Typical PPC Agency
                 </h2>
                 <p className="phl-lead">
                   The difference is mostly about what you can see. Here is what
@@ -1114,7 +1114,7 @@ function Page() {
 
               <div className="phl-compare-grid">
                 <div className="phl-compare-col phl-compare-col--them">
-                  <h3>Typical PPC agency</h3>
+                  <h3>Typical PPC Agency</h3>
                   <p className="phl-compare-sub">
                     Why the budget quietly leaks
                   </p>
@@ -1147,7 +1147,7 @@ function Page() {
                   className="phl-compare-col phl-compare-col--score"
                   aria-hidden="true"
                 >
-                  <h3>Account scorecard</h3>
+                  <h3>Account Scorecard</h3>
                   <p className="phl-compare-sub">
                     A typical Philly account&apos;s first six months
                   </p>
@@ -1198,7 +1198,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A PPC partner, not a percentage of your spend
+                  A PPC Partner, Not a Percentage of Your Spend
                 </h2>
                 <p className="phl-lead">
                   Clicks are the output. Structure, discipline, and honest
@@ -1219,7 +1219,7 @@ function Page() {
               <div className="phl-why-banner">
                 <div className="phl-why-banner-text">
                   <p className="phl-eyebrow">Free Google Ads Audit</p>
-                  <h3>See exactly what your ad spend is buying</h3>
+                  <h3>See Exactly What Your Ad Spend is Buying</h3>
                   <p>
                     We go through your account and show you the wasted queries,
                     the structural problems, and whether your tracking is
@@ -1282,7 +1282,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Verified Client Reviews</p>
                 <h2 className="phl-h2" id="phl-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="phl-reviews-widget">
@@ -1316,7 +1316,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Everything Working Together</p>
-                <h2 className="phl-h2">Six levers, one paid engine</h2>
+                <h2 className="phl-h2">Six Levers, One Paid Engine</h2>
                 <p className="phl-lead">
                   A Google Ads account is not one setting you optimize, it is
                   six levers that only work pulled together. Neglect any one and
@@ -1394,7 +1394,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">FAQs</p>
                   <h2 className="phl-h2">
-                    Straight answers about PPC in Philadelphia
+                    Straight Answers About PPC in Philadelphia
                   </h2>
                   <p className="phl-lead">
                     Pricing, budgets, timelines, account ownership, and why your
@@ -1428,7 +1428,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Grow Further</p>
                 <h2 className="phl-h2">
-                  Ads are the fastest channel. Not the only one.
+                  Ads are the Fastest Channel. Not the Only One.
                 </h2>
                 <p className="phl-lead">
                   Paid search buys you the top of the page today — see the full{" "}
@@ -1467,7 +1467,7 @@ function Page() {
                 <aside className="phl-form-aside">
                   <p className="phl-eyebrow">Get Started</p>
                   <h2 className="phl-h2">
-                    Claim your free Google Ads audit
+                    Claim Your Free Google Ads Audit
                   </h2>
                   <p className="phl-lead">
                     Send us your account and we will show you exactly where the

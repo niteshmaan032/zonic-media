@@ -69,52 +69,52 @@ export const metadata: Metadata = {
 
 const LaunchpadServiceFaqItems = [
   {
-    question: "How much does it cost to start a business with Zonic LaunchPad?",
+    question: "How Much Does It Cost to Start a Business with Zonic LaunchPad?",
     answer:
       "The cost depends on your business needs, but most clients invest between $1,500 and $3,000 for a complete setup that includes website, branding, and local presence.",
   },
   {
-    question: "What do I need before getting started?",
+    question: "What Do I Need Before Getting Started?",
     answer:
       "You only need a basic idea of your business. We handle everything else from branding to setup and launch.",
   },
   {
-    question: "How long does it take to launch my business?",
+    question: "How Long Does It Take to Launch My Business?",
     answer:
       "Most businesses are ready within 7 to 14 days depending on the scope and feedback speed.",
   },
   {
-    question: "Will my business start getting customers immediately?",
+    question: "Will My Business Start Getting Customers Immediately?",
     answer:
       "We build your business with a strong foundation for visibility and lead generation. Results can vary, but many clients start seeing inquiries within the first few weeks.",
   },
   {
-    question: "Do you provide support after the launch?",
+    question: "Do You Provide Support After the Launch?",
     answer:
       "Yes, we offer ongoing support and marketing services including SEO and paid ads to help you grow.",
   },
   {
-    question: "Can you help if I already have a business but need improvement?",
+    question: "Can You Help If I Already Have a Business but Need Improvement?",
     answer:
       "Yes, we can upgrade your existing setup, improve your website, and optimize your online presence.",
   },
   {
-    question: "Do I need technical or marketing knowledge?",
+    question: "Do I Need Technical or Marketing Knowledge?",
     answer:
       "No, our team handles everything. You can focus on running your business while we manage the setup.",
   },
   {
-    question: "What makes Zonic different from freelancers?",
+    question: "What Makes Zonic Different from Freelancers?",
     answer:
       "Instead of hiring multiple people, you get one team that handles everything with a structured process focused on results.",
   },
   {
-    question: "Can I scale my business after launch?",
+    question: "Can I Scale My Business After Launch?",
     answer:
       "Yes, you can upgrade to advanced marketing services like SEO and ads anytime as your business grows.",
   },
   {
-    question: "Do you work with US-based businesses?",
+    question: "Do You Work with US-Based Businesses?",
     answer:
       "Yes, we primarily work with US clients and understand local market requirements and competition.",
   },
@@ -400,7 +400,7 @@ function page() {
                     <span>
                       <PiBagSimple />
                     </span>{" "}
-                    Starting a business feels exciting at first
+                    Starting a Business Feels Exciting at First
                   </h3>
                 </div>
 
@@ -875,7 +875,7 @@ function page() {
               <div className="launchpad-box-card-content-wrapper">
                 <div className="launchpad-box-card-heading-container">
                   <h3 className="launchpad-box-card-heading">
-                    What do you need to launch your business online?{" "}
+                    What Do You Need to Launch Your Business Online?{" "}
                   </h3>
                 </div>
 
@@ -914,7 +914,7 @@ function page() {
               <div className="launchpad-box-card-content-wrapper">
                 <div className="launchpad-box-card-heading-container">
                   <h3 className="launchpad-box-card-heading">
-                    How can you launch your business online the right way?
+                    How Can You Launch Your Business Online the Right Way?
                   </h3>
                 </div>
 
@@ -945,7 +945,7 @@ function page() {
               <div className="launchpad-box-card-content-wrapper">
                 <div className="launchpad-box-card-heading-container">
                   <h3 className="launchpad-box-card-heading">
-                    Why is local SEO important for home service businesses?
+                    Why is Local SEO Important for Home Service Businesses?
                   </h3>
                 </div>
 
@@ -1033,7 +1033,7 @@ function page() {
               <div className="launchpad-box-card-content-wrapper">
                 <div className="launchpad-box-card-heading-container">
                   <h3 className="launchpad-box-card-heading">
-                    Why choose Zonic Media to launch and grow your business?
+                    Why Choose Zonic Media to Launch and Grow Your Business?
                   </h3>
                 </div>
 

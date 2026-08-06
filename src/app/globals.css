@@ -13,14 +13,20 @@ body p {
   margin: 0;
 }
 
-/* Site-wide heading case: every heading renders in Title Case */
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-  text-transform: capitalize;
+/* Headings render in the case they are authored in — sentence case for section
+   headings, Title Case for short labels. Do NOT re-add text-transform here:
+   `capitalize` uppercases every word, which breaks small words ("Judged Like A
+   Broken AC", "What Kind Of Businesses…"). */
+
+/* Mobile: section headings get more room between lines. Page stylesheets set
+   their own line-height with class selectors, so this needs !important to
+   apply site-wide. Scoped to h1–h3 so small card/label headings keep theirs. */
+@media (max-width: 767.98px) {
+  body h1,
+  body h2,
+  body h3 {
+    line-height: 1.34 !important;
+  }
 }
 
 .margin-box {
@@ -113,7 +119,8 @@ body h6 {
   width: fit-content;
   font-weight: 400;
   border: 1px solid var(--primary);
-  text-transform: capitalize;
+  /* No text-transform: labels are authored correctly ("Book a Free Call") and
+     `capitalize` broke them into "Book A Free Call". */
 }
 
 .buttons__icon-wrapper {
@@ -369,7 +376,7 @@ body h6 {
 }
 
 .faqs-question-box .buttons {
-  width: 100%;
+  width: fit-content;
   justify-content: center;
   border-radius: 0;
   margin-top: 20px;
@@ -552,7 +559,7 @@ body h6 {
   }
 
   .service-section-cta .buttons {
-    width: 100%;
+    width: fit-content;
   }
 
   .service-mid-audit {

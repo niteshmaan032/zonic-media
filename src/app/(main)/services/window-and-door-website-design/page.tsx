@@ -114,7 +114,7 @@ const serviceJsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Quote & In-Home Estimate Flows",
+          name: "Quote & in-Home Estimate Flows",
         },
       },
     ],
@@ -123,27 +123,27 @@ const serviceJsonLd = {
 
 const WindowDoorWebFaqs = [
   {
-    question: "How much does window and door website design cost?",
+    question: "How Much Does Window and Door Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, quote and financing integrations, gallery volume, and whether content and photography are included. A focused redesign costs considerably less than a large multi-crew, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a window and door website?",
+    question: "How Long Does It Take to Design a Window and Door Website?",
     answer:
       "Most window and door websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website show off my past projects?",
+    question: "Can My Website Show off My Past Projects?",
     answer:
       "Yes — the gallery does a lot of the selling. We build fast, filterable galleries organized by product (replacement windows, entry doors, patio doors) so homeowners can see the style and quality before they ever call. Every gallery is paired with a quote button, because a project that impresses should never leave a visitor with nowhere to go.",
   },
   {
-    question: "Can you integrate my CRM or estimating software?",
+    question: "Can You Integrate My CRM or Estimating Software?",
     answer:
       "Yes. We connect the tools window and door companies already run — Leap, Improveit 360, JobProgress, or a structured quote request flow that routes straight to your office. Either way, homeowners can request a quote or book an in-home estimate without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -165,8 +165,8 @@ const windowDoorWebFaqJsonLd = {
 
 const AboutChecks = [
   "Quote-first layouts",
-  "Product & project galleries",
-  "Financing & rebate UX",
+  "Product & Project Galleries",
+  "Financing & Rebate UX",
   "Local SEO foundations",
 ];
 
@@ -200,7 +200,7 @@ const ServiceCards = [
   },
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Quote & In-Home Estimate Flows",
+    title: "Quote & in-Home Estimate Flows",
     desc: "Leap, Improveit 360, JobProgress, or a clean quote request flow routed to your office — homeowners book an in-home estimate in a few taps, day or night.",
   },
   {
@@ -225,37 +225,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "Instant quote flows",
+    title: "Instant Quote Flows",
     desc: "Homeowners request an estimate or design consultation in a few taps — integrated with the CRM and estimating tools window and door companies already use.",
   },
   {
     icon: <FiImage aria-hidden="true" />,
-    title: "Product & project galleries",
+    title: "Product & Project Galleries",
     desc: "Filterable photos organized by product and style, placed where hesitant homeowners actually decide whether your work is worth the call.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Financing & rebate UX",
+    title: "Financing & Rebate UX",
     desc: "Payment options and honest price-range guidance up front, so sticker shock stops killing leads before they reach your inbox.",
   },
   {
     icon: <FiSun aria-hidden="true" />,
-    title: "Energy-efficiency service pages",
+    title: "Energy-Efficiency Service Pages",
     desc: "Style, materials, and energy ratings shown the way homeowners compare them — pages that sell the upgrade, not just the install.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners shop for new windows on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & quote request",
+    title: "Click-to-Call & Quote Request",
     desc: "One thumb-tap from any page to a call or an estimate request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them before spending big.",
   },
   {
@@ -263,19 +263,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Product & project galleries",
+    title: "Product & Project Galleries",
     desc: "Real project photos organized by product, because homeowners buy the upgrade they can already picture.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you work, built to rank for local window and door searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you install.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -283,22 +283,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & project mix mapping",
+    title: "Discovery & Project Mix Mapping",
     desc: "The installs you want more of, the cities you work, how your office handles leads today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your best projects — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, quote flows, and project galleries — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the pipeline growing.",
   },
 ];
@@ -311,7 +311,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -410,8 +410,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Window & Door Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Window and door website design that turns browsers into{" "}
-                    <span className="hiw-hl">booked installs</span>
+                    Window and Door Website Design That Turns Browsers into{" "}
+                    <span className="hiw-hl">Booked Installs</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs window and door websites that work
@@ -570,9 +570,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first quote</span>{" "}
-                    homeowners compare
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Quote</span>{" "}
+                    Homeowners Compare
                   </h2>
                   <p className="hiw-lead">
                     Before a homeowner ever lets a crew into their house, they
@@ -624,8 +624,8 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Window and door website design for every stage of your
-                    company
+                    Window and Door Website Design for Every Stage of Your
+                    Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -650,7 +650,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Product Line</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of window and door work
+                  Web Design for Every Kind of Window and Door Work
                 </h2>
                 <p className="hiw-lead">
                   Replacement windows, entry doors, patio and sliding doors,
@@ -700,7 +700,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book renovations
+                  More Than a Brochure — A System Built to Book Renovations
                 </h2>
                 <p className="hiw-lead">
                   Most window and door websites are digital business cards: a stock
@@ -729,7 +729,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting window and door website
+                    The Anatomy of a High-Converting Window and Door Website
                   </h2>
                   <p className="hiw-lead">
                     The best window and door website design is not about
@@ -776,7 +776,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -788,7 +788,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -812,7 +812,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones homeowners actually use</h3>
+                  <h3>Fast on the Phones Homeowners Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most window research happens on a phone, while they
@@ -823,7 +823,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where homeowners look for them</h3>
+                  <h3>Trust Signals Where Homeowners Look for Them</h3>
                   <p>
                     License numbers, insurance proof, manufacturer
                     certifications, and warranty details placed in the layout —
@@ -834,7 +834,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, quote
                     flows, and local SEO foundations your site needs — no
@@ -864,7 +864,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -894,7 +894,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Installers Choose Us</p>
-                <h2 className="hiw-h2">Craftsmanship customers can see</h2>
+                <h2 className="hiw-h2">Craftsmanship Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how homeowners
                   choose a window and door company — and what makes them request a quote
@@ -958,7 +958,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  Window and door website design across the United States
+                  Window and Door Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-crew startups to multi-market window and door
@@ -994,7 +994,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything installers ask us about website design
+                    Everything Installers Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, galleries, and what
@@ -1034,7 +1034,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with jobs.
+                  Your Website is Step One. Here is What Fills It with Jobs.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1063,7 +1063,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free window & door website consult
+                    Book Your Free Window & Door Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

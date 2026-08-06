@@ -495,8 +495,8 @@ export default function CarTowSeoPage() {
             <Row>
               <Col lg={9} className="car-tow-hero-copy">
                 <h1>
-                  Car towing SEO services built to turn urgent searches into
-                  more direct calls.
+                  Car Towing SEO Services Built to Turn Urgent Searches into
+                  More Direct Calls.
                 </h1>
                 <p className="car-tow-hero-sub-head">
                   Local SEO for tow truck companies, emergency towing services,
@@ -564,7 +564,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Why Towing Companies Lose Calls</p>
-              <h2>Towing companies lose calls, not local demand.</h2>
+              <h2>Towing Companies Lose Calls, Not Local Demand.</h2>
               <p className="car-tow-section-descrp">
                 Search behavior in towing is unforgiving. Drivers are usually on
                 the side of the road, on a deadline, or dealing with a stressful
@@ -598,7 +598,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
             <p className="car-tow-eyebrow">Customer Search Behavior</p>
-            <h2>Towing buyers decide in under a minute.</h2>
+            <h2>Towing Buyers Decide in Under a Minute.</h2>
             <p className="car-tow-section-descrp">
               That compressed search journey is exactly why towing SEO needs a
               different strategy than normal local business SEO. The goal is not
@@ -630,7 +630,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
             <p className="car-tow-eyebrow">High-Intent Keywords</p>
-            <h2>Target terms that produce the fastest towing leads.</h2>
+            <h2>Target Terms That Produce the Fastest Towing Leads.</h2>
             <p className="car-tow-section-descrp">
               Keyword strategy for towing should stay close to immediate service
               demand. The priority is not high-volume traffic for its own sake.
@@ -664,7 +664,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content car-tow-center-head-content-light">
             <p className="car-tow-eyebrow">Core Services</p>
-            <h2>SEO built to generate more towing calls.</h2>
+            <h2>SEO Built to Generate More Towing Calls.</h2>
             <p className="car-tow-section-descrp">
               Every part of the service stack is aimed at stronger local
               visibility and cleaner conversion paths. That means better
@@ -715,10 +715,10 @@ export default function CarTowSeoPage() {
             </Col>
             <Col lg={7}>
               <div className="car-tow-feature-copy car-tow-feature-copy-split">
-                <h2>Visibility built for dispatch growth and more calls.</h2>
+                <h2>Visibility Built for Dispatch Growth and More Calls.</h2>
                 <h3 className="car-tow-sub-heading">
-                  Local SEO for towing companies has to support urgency, trust,
-                  and quick decisions.
+                  Local SEO for Towing Companies Has to Support Urgency, Trust,
+                  and Quick Decisions.
                 </h3>
                 <p>
                   We align{" "}
@@ -766,10 +766,10 @@ export default function CarTowSeoPage() {
             <Col lg={7}>
             <div className="car-tow-split-copy">
               <p className="car-tow-eyebrow">Google Maps Domination</p>
-              <h2>Google Maps is where most towing calls start.</h2>
+              <h2>Google Maps is Where Most Towing Calls Start.</h2>
               <h3 className="car-tow-sub-heading">
-                Nearby customers usually call from the map results before they
-                compare many websites.
+                Nearby Customers Usually Call from the Map Results Before They
+                Compare Many Websites.
               </h3>
               <p>
                 Google Maps often becomes the first screen that matters. Drivers
@@ -819,7 +819,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
             <p className="car-tow-eyebrow">Why Choose Zonic Media</p>
-            <h2>We focus on calls, not vanity rankings.</h2>
+            <h2>We Focus on Calls, Not Vanity Rankings.</h2>
             <p className="car-tow-section-descrp">
               The towing industry is fast, local, and highly transactional. SEO
               has to reflect that. We focus on the signals that support urgent
@@ -853,7 +853,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
             <p className="car-tow-eyebrow">Towing Industry Insight</p>
-            <h2>Towing SEO demands a unique customer mindset.</h2>
+            <h2>Towing SEO Demands a Unique Customer Mindset.</h2>
             <p className="car-tow-section-descrp">
               Traditional local businesses often sell through consideration,
               repeat visits, or slower research. Towing companies usually do
@@ -897,7 +897,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content car-tow-center-head-content-light">
               <p className="car-tow-eyebrow">Our Process</p>
-              <h2>Four steps built for measurable towing SEO growth.</h2>
+              <h2>Four Steps Built for Measurable Towing SEO Growth.</h2>
               <p className="car-tow-section-descrp">
                 The process is structured to improve visibility first, then
                 reinforce trust and conversion. That keeps the work tied to
@@ -974,10 +974,10 @@ export default function CarTowSeoPage() {
             <Col lg={7}>
             <div className="car-tow-case-copy">
               <p className="car-tow-eyebrow">Case Study Example</p>
-              <h2>Real results from a focused towing SEO campaign.</h2>
+              <h2>Real Results from a Focused Towing SEO Campaign.</h2>
               <h3 className="car-tow-sub-heading">
-                The right local SEO setup improves both visibility and job
-                quality over time.
+                The Right Local SEO Setup Improves Both Visibility and Job
+                Quality over Time.
               </h3>
               <p>
                 Consider a regional towing company serving multiple nearby
@@ -1025,7 +1025,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-before-after">
             <div className="car-tow-compare-card">
               <span>Before</span>
-              <h3>Weak coverage and uneven call flow</h3>
+              <h3>Weak Coverage and Uneven Call Flow</h3>
               <p>
                 Limited location targeting, underused Google Business Profile
                 content, and poor mobile conversion flow left valuable demand on
@@ -1034,7 +1034,7 @@ export default function CarTowSeoPage() {
             </div>
             <div className="car-tow-compare-card car-tow-compare-card-accent">
               <span>After</span>
-              <h3>Stronger local presence and more qualified jobs</h3>
+              <h3>Stronger Local Presence and More Qualified Jobs</h3>
               <p>
                 Better map relevance, broader service-area visibility, and
                 cleaner website conversion signals created a more stable inbound
@@ -1077,7 +1077,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
             <p className="car-tow-eyebrow">SEO vs Lead Platforms</p>
-            <h2>Own demand instead of renting it from platforms.</h2>
+            <h2>Own Demand Instead of Renting It from Platforms.</h2>
             <p className="car-tow-section-descrp">
               Many towing businesses rely heavily on lead marketplaces because
               they can produce jobs quickly. The problem is that those leads are
@@ -1126,7 +1126,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Results You Want</p>
-              <h2>Results that matter to your towing operation.</h2>
+              <h2>Results That Matter to Your Towing Operation.</h2>
               <p className="car-tow-section-descrp">
                 The best outcome is a search presence that consistently supports
                 your operation. That means more urgent calls from nearby drivers,
@@ -1162,7 +1162,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-limited">
             <div className="car-tow-limited-copy">
               <p className="car-tow-eyebrow">Limited Availability</p>
-              <h2>Selective coverage keeps every towing campaign stronger.</h2>
+              <h2>Selective Coverage Keeps Every Towing Campaign Stronger.</h2>
               <p>
                 Towing SEO works best when location strategy is deliberate. We
                 limit how many towing clients we support in overlapping service
@@ -1221,7 +1221,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Frequently Asked Questions</p>
-              <h2>Common towing SEO questions answered clearly.</h2>
+              <h2>Common Towing SEO Questions Answered Clearly.</h2>
             </div>
           </div>
           <div className="car-tow-faq-wrapper">
@@ -1253,7 +1253,7 @@ export default function CarTowSeoPage() {
         <div className="car-tow-container">
           <div className="car-tow-final-cta">
             <p className="car-tow-eyebrow">Start Growing Today</p>
-            <h2>More towing calls from Google and Maps.</h2>
+            <h2>More Towing Calls from Google and Maps.</h2>
             <p>
               Zonic Media builds local SEO systems for tow truck companies that
               need more direct calls, stronger emergency search coverage, and
@@ -1290,7 +1290,7 @@ export default function CarTowSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Testimonials</p>
-              <h2>What our clients say about working with Zonic Media.</h2>
+              <h2>What Our Clients Say About Working with Zonic Media.</h2>
             </div>
           </div>
           <div className="car-tow-testimonial-card">

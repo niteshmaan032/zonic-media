@@ -190,39 +190,39 @@ const decoder = [
   {
     quote:
       "Your business does not comply with our guidelines. We are unable to reinstate this listing.",
-    heading: "A live violation is still on the profile",
+    heading: "A Live Violation is Still on the Profile",
     body: "This is the catch-all rejection. It almost never means the case is unwinnable — it means Google reviewed the profile as it exists right now and still found something that breaks policy: a keyword in the business name, a category that doesn't match the licence, or an address that can't be occupied by this business.",
     fix: "We audit the profile against current guidelines, remove the violation, wait out the indexing delay, and only then re-file — with a before-and-after record showing the fix.",
   },
   {
     quote:
       "We could not verify that your business operates at the address provided.",
-    heading: "An address or occupancy problem, not a conduct problem",
+    heading: "An Address or Occupancy Problem, Not a Conduct Problem",
     body: "Google's reviewers could not tie your business to that address. Coworking suites, virtual offices, a unit number that Street View can't confirm, or a service-area business showing a residential address all land here — and so does a perfectly legitimate address with no visible signage.",
     fix: "We rebuild the occupancy evidence (lease or deed, utility bill, insurance certificate, dated signage photos), correct the address configuration first, then appeal.",
   },
   {
     quote: "This account has been suspended.",
-    heading: "The suspension is on the account, not the listing",
+    heading: "The Suspension is on the Account, Not the Listing",
     body: "The most misread rejection of all. When the Google account itself is flagged, appealing the listing does nothing — the listing appeal is closed automatically. Businesses spend weeks re-filing listing appeals that were never going to be read.",
     fix: "We identify whether the flag sits on the listing, the account, or the organisation, and file on the correct track. Wrong track means an automatic no, every time.",
   },
   {
     quote: "Your business is a duplicate of an existing Business Profile.",
-    heading: "Another listing is claiming your place on the map",
+    heading: "Another Listing is Claiming Your Place on the Map",
     body: "There is a second profile for the same business — often created by a previous owner, a former agency, an aggregator feed, or you, during an earlier failed appeal. Until the conflict is resolved, every appeal on the suspended profile is dismissed.",
     fix: "We find every duplicate across the account and public map data, resolve or merge them in the right order, and appeal once the map shows a single entity.",
   },
   {
     quote:
       "We are unable to reinstate this profile at this time. This decision is final.",
-    heading: "The current appeal thread is closed — not the case",
+    heading: "The Current Appeal Thread is Closed — Not the Case",
     body: "\"Final\" refers to that appeal thread, not the profile's lifetime eligibility. What it does mean is that filing again through the same form, with the same information, will be dismissed without a human reading it.",
     fix: "We change what is materially true about the case before re-filing, and route it through a different channel with a new evidence package rather than resubmitting the same request.",
   },
   {
     quote: "Your Business Profile has been disabled.",
-    heading: "The listing has been removed from Maps entirely",
+    heading: "The Listing Has Been Removed from Maps Entirely",
     body: "Disabled sits a level above suspended, and it usually follows a run of failed appeals. Recovery is slower and the evidence bar is higher, but disabled profiles are still recovered regularly — provided nobody creates a replacement listing in the meantime.",
     fix: "We treat these as documentation cases: registration, tax and licence records, operating history and premises evidence, assembled before a single form is submitted.",
   },
@@ -231,32 +231,32 @@ const decoder = [
 const whyDenied = [
   {
     n: "01",
-    title: "The appeal was filed before the violation was fixed",
+    title: "The Appeal was Filed Before the Violation was Fixed",
     body: "The single most common reason. Google reviews the profile in its current state, not your explanation of it. If the keyword is still in the business name when a reviewer opens the case, the appeal is denied no matter how well it was written.",
   },
   {
     n: "02",
-    title: "The wrong appeal form was used",
+    title: "The Wrong Appeal Form was Used",
     body: "There are separate paths for listing suspensions, account-level suspensions, verification failures and ownership disputes. A listing appeal filed on an account-level suspension is closed automatically — which reads to the owner as a rejection on the merits.",
   },
   {
     n: "03",
-    title: "Nothing changed between submissions",
+    title: "Nothing Changed Between Submissions",
     body: "Re-filing the same case with the same wording and the same evidence trains the system to dismiss it faster. Each identical resubmission lowers the chance a human ever reads the thread.",
   },
   {
     n: "04",
-    title: "The documentation didn't prove what the reviewer needed",
+    title: "The Documentation Didn't Prove What the Reviewer Needed",
     body: "A business card and a website screenshot don't establish occupancy. Reviewers are looking for records that independently tie the legal entity to the address — a lease, a utility bill, a licence, an insurance certificate — in the name on the profile.",
   },
   {
     n: "05",
-    title: "The appeal came from an account without ownership rights",
+    title: "The Appeal Came from an Account Without Ownership Rights",
     body: "Appeals filed from a manager-level account, an old agency account, or an email that was never the primary owner carry far less weight. Sorting out ownership before appealing changes the outcome more often than the wording of the appeal does.",
   },
   {
     n: "06",
-    title: "A replacement listing was created mid-appeal",
+    title: "A Replacement Listing was Created Mid-Appeal",
     body: "Creating a new profile while the original is under appeal ties the two together through address, phone and account signals. The new listing is usually suspended too, and the original case gets materially harder to win.",
   },
 ];
@@ -265,31 +265,31 @@ const ladder = [
   {
     step: "01",
     owner: true,
-    title: "The standard reinstatement request",
+    title: "The Standard Reinstatement Request",
     body: "The public appeal form every owner starts with. It works well for straightforward first-time cases — which is exactly why re-filing it unchanged after a rejection so rarely does anything.",
     tags: ["Where most owners stop", "Automated triage first"],
   },
   {
     step: "02",
-    title: "A re-file with materially new evidence",
+    title: "A Re-File with Materially New Evidence",
     body: "A fresh submission that references the prior case, states plainly what changed on the profile since the rejection, and attaches evidence that wasn't in the first package. The change is the reason a human looks again.",
     tags: ["New evidence required", "Prior case referenced"],
   },
   {
     step: "03",
-    title: "Support escalation with a case ID",
+    title: "Support Escalation with a Case ID",
     body: "Working the existing case ID through Google Business Profile support rather than opening new threads — keeping one reviewable history instead of a scatter of duplicate requests that compete with each other.",
     tags: ["One thread", "Case history preserved"],
   },
   {
     step: "04",
-    title: "Product-expert and forum escalation",
+    title: "Product-Expert and Forum Escalation",
     body: "Public escalation channels where documented, well-presented cases can be picked up for a second look. Useless for a thin case; genuinely effective for a case with a clean paper trail behind it.",
     tags: ["Public record", "Documentation-led"],
   },
   {
     step: "05",
-    title: "Rebuild, then re-approach",
+    title: "Rebuild, Then Re-Approach",
     body: "When every channel is exhausted, the answer is rarely a new listing at the same address. We stabilise what's recoverable, fix the underlying entity data, and re-approach on a timeline — and we tell you if that's where your case sits.",
     tags: ["Last resort", "Honest read on the odds"],
   },
@@ -297,38 +297,38 @@ const ladder = [
 
 const stopList = [
   {
-    title: "Don't create a replacement listing",
+    title: "Don't Create a Replacement Listing",
     body: "Google links it to the suspended profile through address, phone and account signals. The new listing usually gets suspended too, and the original case becomes harder to win.",
   },
   {
-    title: "Don't file another identical appeal",
+    title: "Don't File Another Identical Appeal",
     body: "Repeat submissions with nothing new attached get dismissed faster each time. Wait until something about the case has genuinely changed.",
   },
   {
-    title: "Don't edit the name, address or phone right now",
+    title: "Don't Edit the Name, Address or Phone Right Now",
     body: "Core-field edits during an open appeal look like evasion to the review system. Any correction needs to be sequenced deliberately, not made in a panic.",
   },
   {
-    title: "Don't remove the previous owner from the account",
+    title: "Don't Remove the Previous Owner from the Account",
     body: "Ownership history is evidence. Strip it out mid-case and you lose the record that proves continuity of the business.",
   },
   {
-    title: "Don't buy a \"guaranteed reinstatement\"",
+    title: "Don't Buy a \"Guaranteed Reinstatement\"",
     body: "Nobody outside Google can guarantee the decision. What an honest provider can promise is the process — and that you aren't charged a reinstatement fee if the profile doesn't come back.",
   },
 ];
 
 const agencyCards = [
   {
-    title: "Portfolio triage first",
+    title: "Portfolio Triage First",
     body: "With several profiles down, order matters. We rank the portfolio by recoverability and revenue impact, and work the winnable cases first instead of filing everything at once.",
   },
   {
-    title: "Shared-cause detection",
+    title: "Shared-Cause Detection",
     body: "Multi-location suspensions usually trace to one shared trigger — a bulk edit, a template naming convention, a chain-wide category change. Fix the pattern and the individual cases get much easier.",
   },
   {
-    title: "White-label reporting",
+    title: "White-Label Reporting",
     body: "Agencies get per-location status reporting they can put their own logo on, plus a single point of contact instead of a separate thread per listing.",
   },
 ];
@@ -536,8 +536,8 @@ function Page() {
             <span className="lp-eyebrow on-dark">Escalation desk</span>
 
             <h1 className="lp-h1">
-              Google rejected your appeal.{" "}
-              <span className="lp-accent">The case isn&apos;t over.</span>
+              Google Rejected Your Appeal.{" "}
+              <span className="lp-accent">The Case Isn&apos;t Over.</span>
             </h1>
 
             <p className="lp-lead">
@@ -629,7 +629,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">Rejection decoder</span>
               <h2 className="lp-h2">
-                What Google&apos;s rejection message actually means
+                What Google&apos;s Rejection Message Actually Means
               </h2>
               <p className="lp-lead">
                 Google rejects appeals with a short, standardised line and no
@@ -668,7 +668,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">Why first appeals fail</span>
               <h2 className="lp-h2">
-                Six reasons a reinstatement appeal gets denied
+                Six Reasons a Reinstatement Appeal Gets Denied
               </h2>
               <p className="lp-lead">
                 These are failures of process, not of the business. A profile
@@ -694,7 +694,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow on-dark">The escalation ladder</span>
               <h2 className="lp-h2">
-                What sits above the appeal form you already used
+                What Sits Above the Appeal Form You Already Used
               </h2>
               <p className="lp-lead">
                 Most owners only ever see rung one, then repeat it. These are the
@@ -729,7 +729,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Before you touch it again</span>
-              <h2 className="lp-h2">Five things that make a rejected case worse</h2>
+              <h2 className="lp-h2">Five Things That Make a Rejected Case Worse</h2>
               <p className="lp-lead">
                 Everything below is reversible damage we see weekly — and all of
                 it happens after the first rejection, while the owner is trying
@@ -757,7 +757,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Agencies &amp; multi-location</span>
-              <h2 className="lp-h2">When several profiles go down at once</h2>
+              <h2 className="lp-h2">When Several Profiles Go Down at Once</h2>
               <p className="lp-lead">
                 A portfolio suspension is a different problem from a single
                 rejected appeal, and filing every location in parallel repeats
@@ -792,7 +792,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">What escalated cases cost</span>
               <h2 className="lp-h2">
-                Priced by case complexity, quoted after the review
+                Priced by Case Complexity, Quoted After the Review
               </h2>
               <p className="lp-lead">
                 A rejected appeal costs more to fix than a clean first-time
@@ -845,7 +845,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">How we work with you</span>
-              <h2 className="lp-h2">What we promise, and what we won&apos;t</h2>
+              <h2 className="lp-h2">What We Promise, and What We Won&apos;t</h2>
               <p className="lp-lead">
                 Nobody outside Google can promise the decision. We can promise
                 how the case is handled, who handles it, and what happens if it
@@ -860,7 +860,7 @@ function Page() {
                     <path d="M12 8v4M12 16h.01" />
                   </svg>
                 </div>
-                <h3 className="lp-h4">An honest read before you pay</h3>
+                <h3 className="lp-h4">An Honest Read Before You Pay</h3>
                 <p className="lp-body">
                   The case review is free, and it includes an honest assessment
                   of the odds. If we think a case is unwinnable, we say so rather
@@ -878,7 +878,7 @@ function Page() {
                     <path d="M12 7v5l3 2" />
                   </svg>
                 </div>
-                <h3 className="lp-h4">We file when it&apos;s ready</h3>
+                <h3 className="lp-h4">We File When It&apos;s Ready</h3>
                 <p className="lp-body">
                   Escalated cases run ten to fourteen business days because the
                   fix has to be live and indexed first. Filing early is the
@@ -893,7 +893,7 @@ function Page() {
                     <path d="M19 8v6M22 11h-6" />
                   </svg>
                 </div>
-                <h3 className="lp-h4">One specialist, start to finish</h3>
+                <h3 className="lp-h4">One Specialist, Start to Finish</h3>
                 <p className="lp-body">
                   The person who reads your rejection is the person who writes
                   and files the appeal. No handoffs to a junior, no automated
@@ -907,7 +907,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Client results</span>
-              <h2 className="lp-h2">Cases that came back after a rejection</h2>
+              <h2 className="lp-h2">Cases That Came Back After a Rejection</h2>
             </div>
             <LenisIframeGuard
               className="gbr-reviews-widget"
@@ -919,11 +919,11 @@ function Page() {
           <section className="lp-panel" id="gbr-faq">
             <div className="lp-head">
               <span className="lp-eyebrow">Rejected-appeal questions</span>
-              <h2 className="lp-h2">What owners ask after a rejection</h2>
+              <h2 className="lp-h2">What Owners Ask After a Rejection</h2>
             </div>
 
             {faqs.map((faq, index) => (
-              <details className="lp-faq-item" key={faq.q} open={index === 0}>
+              <details className="lp-faq-item" name="lp-faq" key={faq.q} open={index === 0}>
                 <summary className="lp-faq-q">
                   {faq.q}
                   <span className="lp-faq-pm">
@@ -958,7 +958,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Not a rejected appeal?</span>
-              <h2 className="lp-h2">Start on the right page</h2>
+              <h2 className="lp-h2">Start on the Right Page</h2>
               <p className="lp-lead">
                 This page is for cases that have already failed an appeal. If
                 that isn&apos;t you, one of these will get you there faster: a
@@ -1007,7 +1007,7 @@ function Page() {
       <section className="lp-final">
         <div className="lp-final-inner">
           <span className="lp-eyebrow on-dark">One rejection isn&apos;t the end</span>
-          <h2 className="lp-h2">Send us the rejection before you file again</h2>
+          <h2 className="lp-h2">Send Us the Rejection Before You File Again</h2>
           <p className="lp-lead">
             Every identical resubmission makes the next one harder. Let us read
             what Google actually said, fix what the last attempt left in place,
@@ -1110,7 +1110,7 @@ function Page() {
           </div>
 
           <div className="lp-footer-col">
-            <h3>More services</h3>
+            <h3>More Services</h3>
             <ul>
               <li>
                 <Link href="/services/local-seo-for-home-services">

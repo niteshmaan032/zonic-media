@@ -118,27 +118,27 @@ const serviceJsonLd = {
 
 const ElectricalWebFaqs = [
   {
-    question: "How much does electrician website design cost?",
+    question: "How Much Does Electrician Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, booking and financing integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-crew build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design an electrician website?",
+    question: "How Long Does It Take to Design an Electrician Website?",
     answer:
       "Most electrical contractor websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website capture EV charger installation leads?",
+    question: "Can My Website Capture EV Charger Installation Leads?",
     answer:
       "Yes — EV charger installation is one of the fastest-growing electrical searches, and most contractors still have no page for it. We build a dedicated landing page for home and commercial charger installs, wired for the searches homeowners actually type, plus pages for panel upgrades and generator installs — the big-ticket work that pays for the site many times over.",
   },
   {
-    question: "Can you integrate my field service software?",
+    question: "Can You Integrate My Field Service Software?",
     answer:
       "Yes. We integrate the tools electrical contractors already run — ServiceTitan, Housecall Pro, Jobber — or build a structured booking request flow that routes straight to your office. Either way, homeowners can book a service call without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -220,37 +220,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiBatteryCharging aria-hidden="true" />,
-    title: "EV & upgrade landing pages",
+    title: "EV & Upgrade Landing Pages",
     desc: "EV chargers, panel upgrades, generators — the big-ticket searches get dedicated pages built to rank and convert.",
   },
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    title: "Emergency call UX",
+    title: "Emergency Call UX",
     desc: "A no-power-at-9-PM visitor decides in seconds. Click-to-call and emergency CTAs stay one thumb-tap away on every page.",
   },
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Online booking flows",
+    title: "Online Booking Flows",
     desc: "Homeowners book or request a service call in a few taps — integrated with the field service tools electricians already use.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "License-first trust signals",
+    title: "License-First Trust Signals",
     desc: "License numbers, insurance, and certifications placed where cautious homeowners look before letting anyone near the panel.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners search for an electrician on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & tap-to-book",
+    title: "Click-to-Call & Tap-to-Book",
     desc: "One thumb-tap from any page to a call or a booking request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them.",
   },
   {
@@ -258,19 +258,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you serve, built to rank for local electrician searches.",
   },
   {
-    title: "Problem-based content",
+    title: "Problem-Based Content",
     desc: "Pages for “breaker keeps tripping” and “flickering lights” that catch homeowners while they research.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you install.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -278,22 +278,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & job mix mapping",
+    title: "Discovery & Job Mix Mapping",
     desc: "The jobs you want more of, the cities you serve, how your office books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, booking integration, and EV charger landing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then electrician SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -306,7 +306,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -391,8 +391,8 @@ function Page() {
               <div className="ew-hero-copy">
                 <p className="ew-eyebrow">Electrician Website Design</p>
                 <h1 className="ew-hero-h1">
-                  Electrician website design that turns searches into{" "}
-                  <span className="ew-hl">booked jobs</span>
+                  Electrician Website Design That Turns Searches into{" "}
+                  <span className="ew-hl">Booked Jobs</span>
                 </h1>
                 <p className="ew-hero-sub">
                   Zonic Media designs electrical contractor websites that work
@@ -550,9 +550,9 @@ function Page() {
               <div className="ew-about-copy">
                 <p className="ew-eyebrow">First Impressions</p>
                 <h2 className="ew-h2">
-                  Homeowners run a{" "}
-                  <span className="ew-hl-text">background check</span> before
-                  they let you near the panel
+                  Homeowners Run a{" "}
+                  <span className="ew-hl-text">Background Check</span> Before
+                  They Let You Near the Panel
                 </h2>
                 <p className="ew-lead">
                   Electrical work is the trade homeowners trust least to
@@ -603,7 +603,7 @@ function Page() {
               <div>
                 <p className="ew-eyebrow">What We Build</p>
                 <h2 className="ew-h2">
-                  Electrician website design for every stage of your company
+                  Electrician Website Design for Every Stage of Your Company
                 </h2>
               </div>
               <Link href="/services" className="ew-link-arrow">
@@ -628,7 +628,7 @@ function Page() {
             <div className="ew-band-content">
               <p className="ew-eyebrow">Every Service Line</p>
               <h2 className="ew-h2">
-                Web design for every kind of electrical work
+                Web Design for Every Kind of Electrical Work
               </h2>
               <p className="ew-lead">
                 Panel upgrades, EV charger installs, generators, rewiring,
@@ -681,7 +681,7 @@ function Page() {
             <div className="ew-sec-head-center">
               <p className="ew-eyebrow">The Job Acquisition System</p>
               <h2 className="ew-h2">
-                More than a brochure — a system built to book jobs
+                More Than a Brochure — A System Built to Book Jobs
               </h2>
               <p className="ew-lead">
                 Most electrician websites are digital business cards: a stock
@@ -710,7 +710,7 @@ function Page() {
               <div>
                 <p className="ew-eyebrow">Built Into Every Site</p>
                 <h2 className="ew-h2">
-                  The anatomy of a high-converting electrician website
+                  The Anatomy of a High-Converting Electrician Website
                 </h2>
                 <p className="ew-lead">
                   The best electrician website design is not about decoration
@@ -757,7 +757,7 @@ function Page() {
           <div className="ew-container">
             <div className="ew-sec-head-center">
               <p className="ew-eyebrow">Why Zonic Media</p>
-              <h2 className="ew-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="ew-h2">Designed to Convert. Built to Rank.</h2>
               <p className="ew-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at
@@ -770,7 +770,7 @@ function Page() {
                 <span className="ew-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -794,7 +794,7 @@ function Page() {
                 <span className="ew-why-card-icon">
                   <FiBatteryCharging aria-hidden="true" />
                 </span>
-                <h3>Built for where the trade is going</h3>
+                <h3>Built for Where the Trade is Going</h3>
                 <p>
                   EV chargers, panel upgrades for electrified homes, battery
                   and generator installs — your site is structured to catch
@@ -806,7 +806,7 @@ function Page() {
                 <span className="ew-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>License-first trust, everywhere</h3>
+                <h3>License-First Trust, Everywhere</h3>
                 <p>
                   License numbers, insurance proof, and certifications placed
                   in the layout — not buried on an about page nobody reads —
@@ -817,7 +817,7 @@ function Page() {
             <div className="ew-why-banner">
               <div className="ew-why-banner-text">
                 <p className="ew-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your company actually needs?</h3>
+                <h3>Not Sure What Your Company Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages,
                   booking flows, and local SEO foundations your site needs —
@@ -847,7 +847,7 @@ function Page() {
               <div>
                 <p className="ew-eyebrow">How It Works</p>
                 <h2 className="ew-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -877,7 +877,7 @@ function Page() {
           <div className="ew-banner-grid">
             <div className="ew-banner-copy">
               <p className="ew-eyebrow">Why Electricians Choose Us</p>
-              <h2 className="ew-h2">Craftsmanship customers can see</h2>
+              <h2 className="ew-h2">Craftsmanship Customers Can See</h2>
               <p className="ew-lead">
                 A website built by a team that understands how homeowners
                 choose an electrician — and what makes them book instead of
@@ -941,7 +941,7 @@ function Page() {
             <div className="ew-sec-head-center">
               <p className="ew-eyebrow">Wherever You Work</p>
               <h2 className="ew-h2">
-                Electrician website design services across the United States
+                Electrician Website Design Services Across the United States
               </h2>
               <p className="ew-lead">
                 From single-van startups to multi-crew contractors, Zonic
@@ -980,7 +980,7 @@ function Page() {
               <div>
                 <p className="ew-eyebrow">FAQs</p>
                 <h2 className="ew-h2">
-                  Everything electricians ask us about website design
+                  Everything Electricians Ask Us About Website Design
                 </h2>
                 <p className="ew-lead">
                   Straight answers on pricing, timelines, EV charger pages,
@@ -1021,7 +1021,7 @@ function Page() {
             <div className="ew-sec-head-center">
               <p className="ew-eyebrow">Grow Further</p>
               <h2 className="ew-h2">
-                Your website is step one. Here is what fills it with jobs.
+                Your Website is Step One. Here is What Fills It with Jobs.
               </h2>
             </div>
             <div className="ew-grow-cards">
@@ -1046,7 +1046,7 @@ function Page() {
               <aside className="ew-form-aside">
                 <p className="ew-eyebrow">Get Started</p>
                 <h2 className="ew-h2">
-                  Book your free electrician website consult
+                  Book Your Free Electrician Website Consult
                 </h2>
                 <p className="ew-lead">
                   Tell us about your company and we will send a custom

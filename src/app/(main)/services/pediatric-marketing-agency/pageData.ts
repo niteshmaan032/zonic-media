@@ -38,17 +38,17 @@ export const pediatricMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "pin",
-      title: "Buried below other practices",
+      title: "Buried Below Other Practices",
       body: "Parents call one of the top-three pediatricians on Google Maps. Ranking lower means losing a family that would have stayed with your practice for 18 years — to the office down the street.",
     },
     {
       icon: "review",
-      title: "Too few recent parent reviews",
+      title: "Too Few Recent Parent Reviews",
       body: "Pediatrics runs on trust. A practice with 40 recent five-star reviews wins the new family over one with 12 from three years ago, no matter how good the care is.",
     },
     {
       icon: "users",
-      title: "No answers for the questions parents actually ask",
+      title: "No Answers for the Questions Parents Actually Ask",
       body: "Insurance accepted, new-patient openings, same-day sick visits, well-child schedules, vaccine policy. If your site doesn't answer these, parents keep searching until another practice does.",
     },
   ],
@@ -116,7 +116,7 @@ export const pediatricMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to fill your schedule with new families?",
+  finalHeading: "Ready to Fill Your Schedule with New Families?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

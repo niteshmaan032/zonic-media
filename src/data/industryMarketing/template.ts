@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import type { IndustryMarketingPageData } from "@/app/components/IndustryMarketingPage";
+import { titleCaseHeadings } from "@/shared/titleCase";
 
 /* Shared builder for the ima- industry marketing landing pages.
  *
@@ -258,14 +259,14 @@ function contentHtml(c: IndustryMarketingConfig) {
   const faqs = c.faqs
     .map(
       (f, i) =>
-        `<details class="faq"${i === 0 ? " open" : ""}><summary>${f.q}<span class="x"></span></summary><div class="a">${f.a}</div></details>`,
+        `<details class="faq" name="ima-faq"${i === 0 ? " open" : ""}><summary>${f.q}<span class="x"></span></summary><div class="a">${f.a}</div></details>`,
     )
     .join("\n");
 
   return `<section class="section"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">The ${c.industry} marketing problem</span>
-<h2>Why ${c.businesses} lose nearby ${c.customers}</h2>
+<h2>Why ${c.businesses} Lose Nearby ${c.customers}</h2>
 <p>${c.problemIntro}</p>
 </div>
 <div class="prob-grid">
@@ -275,7 +276,7 @@ ${problems}
 <section class="section navy"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">Everything under one roof</span>
-<h2>The complete ${c.industry} marketing system</h2>
+<h2>The Complete ${c.industry} Marketing System</h2>
 <p>Not six vendors and six invoices. One team running every channel that brings ${c.businesses} ${c.jobsNoun} — a <a class="ima-inline-link" href="/services">full-service marketing</a> approach built around your trade, not a generic playbook.</p>
 </div>
 <div class="svc-grid">
@@ -292,7 +293,7 @@ ${problems}
 <div class="answer-wrap">
 <div class="answer-main">
 <span class="eyebrow">The short answer</span>
-<h2>What does a ${c.industry} marketing agency do?</h2>
+<h2>What Does a ${c.industry} Marketing Agency Do?</h2>
 <p class="answer-lead">${c.answerLead}</p>
 <div class="answer-facts">
 ${facts}
@@ -303,7 +304,7 @@ ${facts}
 <section class="section alt"><div class="wrap map-wrap">
 <div class="map-copy">
 <span class="eyebrow">${c.mapEyebrow}</span>
-<h2>Get into the top 3 of the Google Map Pack</h2>
+<h2>Get into the Top 3 of the Google Map Pack</h2>
 <p>${c.mapIntro}</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Geo-grid rank tracking</span>
@@ -320,7 +321,7 @@ ${MAP_VIZ_HTML}
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Simple, transparent pricing</span>
-<h2>${c.industryTitle} marketing plans</h2>
+<h2>${c.industryTitle} Marketing Plans</h2>
 <p>Month-to-month. No long-term contracts, no setup fees. Pick the level of growth you're ready for.</p>
 </div>
 <div class="price-grid">
@@ -379,20 +380,20 @@ ${MAP_VIZ_HTML}
 <section class="section alt"><div class="wrap">
 <div class="s-head">
 <span class="eyebrow">How we work</span>
-<h2>A clear plan before we build anything</h2>
+<h2>A Clear Plan Before We Build Anything</h2>
 <p>${c.processIntro}</p>
 </div>
 <div class="proc-grid">
-<div class="proc"><div class="num">01</div><h3>Audit the gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more ${c.industry} leads.</p></div>
-<div class="proc"><div class="num">02</div><h3>Build the plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your business.</p></div>
-<div class="proc"><div class="num">03</div><h3>Launch the work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
-<div class="proc"><div class="num">04</div><h3>Grow &amp; report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
+<div class="proc"><div class="num">01</div><h3>Audit the Gaps</h3><p>We review your profile, rankings, website, and ad opportunities to find the fastest routes to more ${c.industry} leads.</p></div>
+<div class="proc"><div class="num">02</div><h3>Build the Plan</h3><p>A clear roadmap with priorities, timelines, and the metrics that actually define success for your business.</p></div>
+<div class="proc"><div class="num">03</div><h3>Launch the Work</h3><p>We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into measurable execution.</p></div>
+<div class="proc"><div class="num">04</div><h3>Grow &amp; Report</h3><p>Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars come from.</p></div>
 </div>
 </div></section>
 <section class="section"><div class="wrap">
 <div class="s-head center">
 <span class="eyebrow">Common questions</span>
-<h2>What ${c.owners} ask us</h2>
+<h2>What ${c.owners} Ask Us</h2>
 </div>
 <div class="faq-list">
 ${faqs}
@@ -435,7 +436,7 @@ function footerHtml(c: IndustryMarketingConfig) {
 <li><a href="${SITE}/contact-us">Contact Us</a></li>
 <li><a href="${SITE}/services">All Industries</a></li>
 </ul></div>
-<div><h4>Get in touch</h4><ul>
+<div><h4>Get in Touch</h4><ul>
 <li><a href="${PHONE_HREF}">${PHONE_DISPLAY}</a></li>
 <li><a href="mailto:contact@zonicllc.com">contact@zonicllc.com</a></li>
 <li>8 The Green, STE B<br>Dover, DE 19901</li>
@@ -536,11 +537,16 @@ export function buildIndustryMarketingPage(
         mapQuery: c.mapQuery,
       },
       tickerHtml: `${run}\n${run}`,
-      heroHtml: heroHtml(c),
+      /* Headings here are assembled from lowercase config values
+         (c.industry = "appliance repair", c.businesses = "appliance repair
+         companies"), so the assembled HTML is title-cased after the fact —
+         wrapping each interpolation individually would get clause position
+         wrong. See shared/titleCase.ts. */
+      heroHtml: titleCaseHeadings(heroHtml(c)),
       trustbarHtml: TRUSTBAR_HTML,
-      contentHtml: contentHtml(c),
-      finalHtml: finalHtml(c),
-      footerHtml: footerHtml(c),
+      contentHtml: titleCaseHeadings(contentHtml(c)),
+      finalHtml: titleCaseHeadings(finalHtml(c)),
+      footerHtml: titleCaseHeadings(footerHtml(c)),
       schemas: schemas(c),
       form: {
         title: `Get your free ${c.industry} marketing audit`,

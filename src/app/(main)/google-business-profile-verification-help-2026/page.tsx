@@ -121,7 +121,7 @@ const serviceJsonLd = {
   },
   offers: {
     "@type": "Offer",
-    name: "Free verification diagnosis",
+    name: "Free Verification Diagnosis",
     price: "0",
     priceCurrency: "USD",
     description:
@@ -180,25 +180,25 @@ const whatChanged = [
   {
     tag: "New in 2026",
     tone: "",
-    title: "Unverified profiles miss the AI answer layer",
+    title: "Unverified Profiles Miss the AI Answer Layer",
     body: "Google's AI-generated answers pull from verified, active Business Profiles. That matters more than another ranking position: a growing share of local searches now get answered above the results, and a profile that was never verified simply isn't in the pool the answer is built from.",
   },
   {
     tag: "Since 2025",
     tone: "is-blue",
-    title: "Live video calls are a real method, not a rumour",
+    title: "Live Video Calls are a Real Method, Not a Rumour",
     body: "For accounts Google wants a closer look at, verification happens as a scheduled call. A person asks you to walk the premises on camera and may ask for a lease, licence or utility bill on the spot. You get a notification, not an option to request it — and almost nothing written about GBP verification prepares owners for it.",
   },
   {
     tag: "Since 2024",
     tone: "",
-    title: "Video is the default, and it is reviewed by a person",
+    title: "Video is the Default, and It is Reviewed by a Person",
     body: "Most new listings are pushed straight to video. A reviewer watches the recording against a fixed checklist, and a rejection usually arrives with no specific reason — which is why owners resubmit the same footage and fail again. The requirements are narrow, and every one of them is knowable in advance.",
   },
   {
     tag: "Ongoing",
     tone: "is-grey",
-    title: "The name on the profile has to match the name on the door",
+    title: "The Name on the Profile Has to Match the Name on the Door",
     body: "Reviewers compare the business name in the profile against your signage, your website and your registration. An abbreviation, a missing LLC, a DBA that differs from the registered entity, or an added service keyword is enough to fail the check — and resubmitting the video without fixing the name never resolves it.",
   },
 ];
@@ -207,7 +207,7 @@ const shots = [
   {
     time: "0:00",
     step: "Shot 1 of 6",
-    title: "Approach the building from the street",
+    title: "Approach the Building from the Street",
     body: "Start outside and walk in. The opening seconds establish that a physical place exists and that you are standing in it — a video that begins inside the room skips the only evidence that ties you to the address.",
     miss: "Starting the recording indoors, so nothing links the footage to the address on the profile.",
     icon: (
@@ -220,7 +220,7 @@ const shots = [
   {
     time: "0:20",
     step: "Shot 2 of 6",
-    title: "Hold on the signage until the name is readable",
+    title: "Hold on the Signage Until the Name is Readable",
     body: "Get close enough that the business name is legible on playback, not just recognisable to you. The name in shot has to match the name on the profile character for character — same suffix, same spelling, no added service words.",
     miss: "Filming the sign from too far away, at an angle, or against glare that makes the name unreadable.",
     icon: (
@@ -233,7 +233,7 @@ const shots = [
   {
     time: "0:45",
     step: "Shot 3 of 6",
-    title: "Show the space where the work happens",
+    title: "Show the Space Where the Work Happens",
     body: "Interior, workshop, treatment room, kitchen, bay, yard — whatever your category implies. The reviewer is checking that the operation matches the category on the profile, so show the thing that category names.",
     miss: "An empty room with no evidence of the trade, or an interior that doesn't match the chosen category.",
     icon: (
@@ -246,7 +246,7 @@ const shots = [
   {
     time: "1:10",
     step: "Shot 4 of 6",
-    title: "Prove the business is yours to operate",
+    title: "Prove the Business is Yours to Operate",
     body: "Branded vehicle, tools with the company name, stock, licences, certificates on the wall, register or point-of-sale. Anything that a passer-by could not produce. This is the shot service-area businesses lean on hardest.",
     miss: "Skipping ownership evidence entirely — the most common reason a well-filmed video still fails.",
     icon: (
@@ -258,7 +258,7 @@ const shots = [
   {
     time: "1:35",
     step: "Shot 5 of 6",
-    title: "Sign in and show the profile on your screen",
+    title: "Sign in and Show the Profile on Your Screen",
     body: "Still recording, open the Business Profile dashboard on your phone and show that you are signed in to the account that manages this listing. It connects the person filming to the account making the claim.",
     miss: "Cutting to a screen recording afterwards, or showing the public listing rather than the signed-in dashboard.",
     icon: (
@@ -271,7 +271,7 @@ const shots = [
   {
     time: "1:55",
     step: "Shot 6 of 6",
-    title: "Stop recording without ever having stopped",
+    title: "Stop Recording Without Ever Having Stopped",
     body: "One take, no cuts, no edits, no stitched clips, no music, no titles. If the file shows any sign of editing it is rejected on that basis alone, regardless of how complete the content is.",
     miss: "Pausing to reposition, then joining the clips — the edit is detectable and the video is rejected.",
     icon: (
@@ -286,32 +286,32 @@ const shots = [
 const rejections = [
   {
     n: "01",
-    title: "The recording was not one continuous take",
+    title: "The Recording was Not One Continuous Take",
     body: "Google requires a single unbroken clip. Anything paused, trimmed, sped up, or assembled from several files is rejected automatically — usually with no explanation, which is why owners re-record the same way and fail twice.",
   },
   {
     n: "02",
-    title: "The business name did not match the signage",
+    title: "The Business Name Did Not Match the Signage",
     body: "The profile name has to match your signage, website and registration exactly. Any variation — a dropped LLC, an abbreviation, a DBA that differs from the registered entity, an extra service keyword — fails the check, and resubmitting the video never fixes it.",
   },
   {
     n: "03",
-    title: "One of the six required elements was missing",
+    title: "One of the Six Required Elements was Missing",
     body: "Exterior, legible signage, operating interior, ownership evidence, live dashboard access, one unbroken take. Reviewers work through the list. Miss any single item and the whole submission is refused.",
   },
   {
     n: "04",
-    title: "The profile was configured wrong before filming",
+    title: "The Profile was Configured Wrong Before Filming",
     body: "A service-area business set up as a storefront, an address hidden before verification was offered, or a service radius set at the wrong level will fail no matter how good the footage is. Configuration has to be right before the attempt, not after it.",
   },
   {
     n: "05",
-    title: "Repeated failures moved the account to closer review",
+    title: "Repeated Failures Moved the Account to Closer Review",
     body: "Every failed attempt is logged. After two or three, submissions are held to a higher standard, so each subsequent try is harder than the last. Fixing the cause before attempting again matters more with every failure.",
   },
   {
     n: "06",
-    title: "A duplicate listing was blocking the verification",
+    title: "A Duplicate Listing was Blocking the Verification",
     body: "An older profile for the same business — from a previous owner, a former agency, or an auto-generated listing — creates a conflict Google won't verify through. Owners usually have no idea the duplicate exists until someone goes looking.",
   },
 ];
@@ -353,27 +353,27 @@ const methods = [
 
 const reverifyTriggers = [
   {
-    title: "You changed the address",
+    title: "You Changed the Address",
     body: "Any move — even one suite along — puts the listing back through verification. The new address needs to be verifiable before you make the edit, not after.",
   },
   {
-    title: "You changed the business name",
+    title: "You Changed the Business Name",
     body: "Renames and rebrands trigger a fresh check, and the new name has to be live on your signage, site and registration before the check happens.",
   },
   {
-    title: "You changed the primary category",
+    title: "You Changed the Primary Category",
     body: "Some categories carry stricter verification rules than others. Moving into one can require re-verification even though nothing else about the business changed.",
   },
   {
-    title: "Ownership or account access moved",
+    title: "Ownership or Account Access Moved",
     body: "Transferring primary ownership, or losing access to the original account, commonly forces re-verification — and it is much easier to do before the handover than after.",
   },
   {
-    title: "You edited the service area",
+    title: "You Edited the Service Area",
     body: "Redrawing service areas after verification can trigger a new request, which is why service-area businesses should set their coverage correctly the first time.",
   },
   {
-    title: "The listing sat dormant, or was marked closed",
+    title: "The Listing Sat Dormant, or was Marked Closed",
     body: "Long inactivity, or reopening a profile that was marked permanently closed, brings the listing back for review. Reopening is usually the harder of the two.",
   },
 ];
@@ -388,7 +388,7 @@ const loopSteps = [
   {
     n: "Step 2",
     bad: true,
-    title: "Flagged days later",
+    title: "Flagged Days Later",
     body: "An automated check finds the conflict that was there the whole time.",
   },
   {
@@ -400,7 +400,7 @@ const loopSteps = [
   {
     n: "Step 4",
     bad: true,
-    title: "Re-submitted",
+    title: "Re-Submitted",
     body: "A new attempt goes in without the cause fixed, and the cycle restarts.",
   },
   {
@@ -412,13 +412,13 @@ const loopSteps = [
   {
     n: "Step 6",
     bad: false,
-    title: "Fixed first",
+    title: "Fixed First",
     body: "The cause is resolved and indexed before any new attempt is made.",
   },
   {
     n: "Step 7",
     bad: false,
-    title: "Verified once",
+    title: "Verified Once",
     body: "The check has nothing left to catch, so the verification holds.",
   },
   {
@@ -433,7 +433,7 @@ const process = [
   {
     n: "01",
     when: "Day 1 — same business day",
-    title: "Free verification diagnosis",
+    title: "Free Verification Diagnosis",
     body: "We review the profile, the attempt history, duplicate listings, business-data consistency across the web, and the category configuration. You get a specific diagnosis and a realistic timeline before paying anything.",
     tags: [
       "Attempt history",
@@ -445,7 +445,7 @@ const process = [
   {
     n: "02",
     when: "Days 1–2",
-    title: "Fix the cause before anything is submitted",
+    title: "Fix the Cause Before Anything is Submitted",
     body: "Duplicates resolved, business data aligned across your site and directories, the profile name brought in line with your signage and registration, and the listing configured for the specific method that will be used. This is the step DIY attempts skip.",
     tags: [
       "Duplicate resolution",
@@ -457,14 +457,14 @@ const process = [
   {
     n: "03",
     when: "Days 2–7",
-    title: "Guided attempt — shot list or call briefing",
+    title: "Guided Attempt — Shot List or Call Briefing",
     body: "For video, the shot-by-shot list above, built around your premises and trade. For a live video call, a full briefing covering the questions an agent is likely to ask and the documents to have ready. We stay on the case until the profile is live.",
     tags: ["Custom shot list", "Live call briefing", "Document pack", "Follow-up"],
   },
   {
     n: "04",
     when: "After verification",
-    title: "Optimize, then keep it stable",
+    title: "Optimize, Then Keep It Stable",
     body: "A verified profile with nothing else done to it is a missed opportunity. Categories, services, attributes, photos, description and posts get built out, and we set the service-area and edit practices that stop re-verification requests recurring.",
     tags: [
       "Full optimization",
@@ -671,8 +671,8 @@ function Page() {
             </span>
 
             <h1 className="lp-h1">
-              Google Business Profile verification in 2026 —{" "}
-              <span className="gbv-accent">what actually changed</span>
+              Google Business Profile Verification in 2026 —{" "}
+              <span className="gbv-accent">What Actually Changed</span>
             </h1>
 
             <p className="lp-lead">
@@ -763,7 +763,7 @@ function Page() {
           <section className="lp-panel" id="gbv-changed">
             <div className="lp-head">
               <span className="lp-eyebrow">The 2026 rules</span>
-              <h2 className="lp-h2">Four changes that broke the old verification advice</h2>
+              <h2 className="lp-h2">Four Changes That Broke the Old Verification Advice</h2>
               <p>
                 If you last verified a Google Business Profile before 2024, none
                 of this existed. Each change moved the bar, and each one explains
@@ -785,7 +785,7 @@ function Page() {
           <section className="lp-panel" id="gbv-shots">
             <div className="lp-head">
               <span className="lp-eyebrow">The shot list</span>
-              <h2 className="lp-h2">Six shots, one take — what to film, in order</h2>
+              <h2 className="lp-h2">Six Shots, One Take — What to Film, in Order</h2>
               <p>
                 Google reviews the recording against a fixed checklist and tells
                 you almost nothing when it fails. This is that checklist as a
@@ -836,7 +836,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Why attempts get refused</span>
-              <h2 className="lp-h2">Six reasons a verification attempt gets rejected</h2>
+              <h2 className="lp-h2">Six Reasons a Verification Attempt Gets Rejected</h2>
               <p>
                 Google refuses without a reason, so owners guess — and usually
                 guess that the video was the problem when the profile was. These
@@ -858,7 +858,7 @@ function Page() {
           <section className="lp-panel" id="gbv-methods">
             <div className="lp-head">
               <span className="lp-eyebrow">Methods, current status</span>
-              <h2 className="lp-h2">Which verification method you actually get</h2>
+              <h2 className="lp-h2">Which Verification Method You Actually Get</h2>
               <p>
                 You don&apos;t choose the method — Google offers it based on
                 category, listing age and account history. Knowing which one
@@ -898,7 +898,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">No storefront</span>
-              <h2 className="lp-h2">Filming the video when there is nothing to film</h2>
+              <h2 className="lp-h2">Filming the Video When There is Nothing to Film</h2>
               <p>
                 Plumbers, roofers, HVAC, pest control, electricians, landscapers
                 — if you go to the customer, the standard walkthrough advice does
@@ -916,7 +916,7 @@ function Page() {
             </div>
             <div className="gbv-sab">
               <div className="gbv-sab-col">
-                <h3 className="lp-h3">Your business goes to the customer. The check assumes the opposite.</h3>
+                <h3 className="lp-h3">Your Business Goes to the Customer. The Check Assumes the Opposite.</h3>
                 <p>
                   Service-area businesses hide their address on Maps, which is
                   correct under Google&apos;s own policy for businesses that
@@ -962,23 +962,23 @@ function Page() {
                 <div className="gbv-sab-list">
                   {[
                     {
-                      title: "The address was hidden too early",
+                      title: "The Address was Hidden Too Early",
                       body: "Hide it before verification is offered and video may never appear as an option. The configuration order matters more than the setting itself.",
                     },
                     {
-                      title: "Nothing on camera carries the business name",
+                      title: "Nothing on Camera Carries the Business Name",
                       body: "An unbranded van and plain tools prove nothing. Magnetic door signs, a decal, or a licence in the business name close the gap.",
                     },
                     {
-                      title: "The service area is drawn at the wrong level",
+                      title: "The Service Area is Drawn at the Wrong Level",
                       body: "Too large, too small, or set by the wrong geography causes failures and ranking problems that persist long after verification.",
                     },
                     {
-                      title: "The document pack is missing a licence",
+                      title: "The Document Pack is Missing a Licence",
                       body: "Most trades need a state contractor licence and a liability certificate in the same name as the profile. Assemble both before filming.",
                     },
                     {
-                      title: "Editing the service area restarted the check",
+                      title: "Editing the Service Area Restarted the Check",
                       body: "Changing coverage after verification can trigger a fresh request. Set it correctly once instead of adjusting it repeatedly.",
                     },
                   ].map((item) => (
@@ -1004,7 +1004,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Re-verification</span>
-              <h2 className="lp-h2">Six edits that send a verified profile back for review</h2>
+              <h2 className="lp-h2">Six Edits That Send a Verified Profile Back for Review</h2>
               <p>
                 Verification is not permanent. These are the changes that most
                 often put a live listing back in the queue — worth knowing before
@@ -1036,7 +1036,7 @@ function Page() {
           <section className="lp-panel-dark">
             <div className="lp-head">
               <span className="lp-eyebrow on-dark">Verified, then revoked</span>
-              <h2 className="lp-h2">The loop, and where it breaks</h2>
+              <h2 className="lp-h2">The Loop, and Where It Breaks</h2>
               <p>
                 Verifying and being revoked days later is the most misunderstood
                 GBP problem, because the obvious response — verify again — is the
@@ -1083,7 +1083,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">How we work</span>
-              <h2 className="lp-h2">Four phases, with real timelines</h2>
+              <h2 className="lp-h2">Four Phases, with Real Timelines</h2>
               <p>
                 No &quot;we&apos;ll handle it.&quot; Here is what happens at each
                 step — and once you&apos;re live,{" "}
@@ -1118,7 +1118,7 @@ function Page() {
           <section className="lp-panel" id="gbv-pricing">
             <div className="lp-head">
               <span className="lp-eyebrow">Done-for-you options</span>
-              <h2 className="lp-h2">Clear prices, quoted after the free diagnosis</h2>
+              <h2 className="lp-h2">Clear Prices, Quoted After the Free Diagnosis</h2>
               <p>
                 The diagnosis costs nothing and comes with a realistic timeline.
                 While verification is in progress, many clients run{" "}
@@ -1174,11 +1174,11 @@ function Page() {
           <section className="lp-panel" id="gbv-faq">
             <div className="lp-head">
               <span className="lp-eyebrow">Verification questions</span>
-              <h2 className="lp-h2">What owners ask about the 2026 rules</h2>
+              <h2 className="lp-h2">What Owners Ask About the 2026 Rules</h2>
             </div>
 
             {faqs.map((faq, index) => (
-              <details className="lp-faq-item" key={faq.q} open={index === 0}>
+              <details className="lp-faq-item" name="lp-faq" key={faq.q} open={index === 0}>
                 <summary className="lp-faq-q">
                   {faq.q}
                   <span className="lp-faq-pm">
@@ -1213,7 +1213,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Different problem?</span>
-              <h2 className="lp-h2">Start on the right page</h2>
+              <h2 className="lp-h2">Start on the Right Page</h2>
               <p>
                 This page covers the current rules and the video mechanics. If you
                 just want it handled, our{" "}
@@ -1264,7 +1264,7 @@ function Page() {
           <span className="lp-eyebrow on-dark">
             Unverified means missing from Maps and from AI answers
           </span>
-          <h2 className="lp-h2">Find out what&apos;s blocking it, before you film again</h2>
+          <h2 className="lp-h2">Find Out What&apos;s Blocking It, Before You Film Again</h2>
           <p>
             Free diagnosis, same-day response, no commitment. We&apos;ll tell you
             which method your profile is on, what refused the last attempt, and
@@ -1381,7 +1381,7 @@ function Page() {
           </div>
 
           <div className="lp-footer-col">
-            <h3 className="lp-h3">More services</h3>
+            <h3 className="lp-h3">More Services</h3>
             <ul>
               <li>
                 <Link href="/services/local-seo-for-home-services">

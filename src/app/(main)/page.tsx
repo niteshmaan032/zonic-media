@@ -533,22 +533,22 @@ const homeServices: HomeService[] = [
 const processSteps = [
   {
     num: "01",
-    title: "Audit the gaps",
+    title: "Audit the Gaps",
     desc: "We review your profile, rankings, website, and ad opportunities to find the fastest routes to more leads.",
   },
   {
     num: "02",
-    title: "Build the plan",
+    title: "Build the Plan",
     desc: "You get a clear roadmap with priorities, timelines, and the metrics that actually define success for your business.",
   },
   {
     num: "03",
-    title: "Launch the work",
+    title: "Launch the Work",
     desc: "We ship the pages, profile fixes, campaigns, and tracking — moving from strategy into real, measurable execution.",
   },
   {
     num: "04",
-    title: "Grow & report",
+    title: "Grow & Report",
     desc: "Ongoing optimization and plain-English reporting that shows exactly where your leads and dollars are coming from.",
   },
 ];
@@ -556,12 +556,12 @@ const processSteps = [
 const launchSteps = [
   {
     day: "Day 1–2",
-    title: "Logo & brand identity",
+    title: "Logo & Brand Identity",
     desc: "Colors, logo, and a look that reads established from day one.",
   },
   {
     day: "Day 3–7",
-    title: "Website built & tested",
+    title: "Website Built & Tested",
     desc: "A fast, conversion-ready site built to turn visits into calls.",
   },
   {
@@ -571,7 +571,7 @@ const launchSteps = [
   },
   {
     day: "Day 10–14",
-    title: "Live & taking leads",
+    title: "Live & Taking Leads",
     desc: "Tracking wired in, socials set, and the phone starts ringing.",
   },
 ];
@@ -1152,7 +1152,7 @@ export default async function Home() {
               <div>
                 <span className="hm-eyebrow">About Zonic Media</span>
                 <h2 className="hm-h2">
-                  The growth team behind 700+ local business comebacks
+                  The Growth Team Behind 700+ Local Business Comebacks
                 </h2>
                 <p className="hm-lead">
                   Zonic Media is a digital marketing agency built for the way
@@ -1211,17 +1211,17 @@ export default async function Home() {
                 </div>
                 <div className="hm-stat">
                   <p className="hm-stat-num">
-                    4.9<span>★</span>
+                    1,500<span>+</span>
                   </p>
                   <p className="hm-stat-cap">
-                    Average client rating on Clutch &amp; Google
+                    Google Business Profiles optimized
                   </p>
                 </div>
                 <div className="hm-stat">
-                  <p className="hm-stat-num">
-                    95<span>%</span>
+                  <p className="hm-stat-num">4</p>
+                  <p className="hm-stat-cap">
+                    Channels under one roof — SEO, GBP, web &amp; ads
                   </p>
-                  <p className="hm-stat-cap">Client growth success rate</p>
                 </div>
                 <div className="hm-stat">
                   <p className="hm-stat-num">
@@ -1287,7 +1287,7 @@ export default async function Home() {
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">Client results</span>
               <h2 className="hm-h2">
-                Trusted by small &amp; mid-size businesses across the US
+                Trusted by Small &amp; Mid-Size Businesses Across the US
               </h2>
             </div>
             <div className="hm-testi-clutch">
@@ -1309,7 +1309,7 @@ export default async function Home() {
                 <span className="hm-eyebrow hm-eyebrow--light">
                   Our home turf · Google Business Profile
                 </span>
-                <h2>Suspended, stuck, or invisible? We fix Google profiles.</h2>
+                <h2>Suspended, Stuck, or Invisible? We Fix Google Profiles.</h2>
                 <p className="hm-lead">
                   A{" "}
                   <Link
@@ -1329,7 +1329,7 @@ export default async function Home() {
                       <FiSearch />
                     </span>
                     <div>
-                      <h4>Diagnose the cause</h4>
+                      <h4>Diagnose the Cause</h4>
                       <p>
                         We pinpoint the exact policy that triggered the
                         suspension before anything is filed.
@@ -1341,7 +1341,7 @@ export default async function Home() {
                       <FiFileText />
                     </span>
                     <div>
-                      <h4>Build the appeal</h4>
+                      <h4>Build the Appeal</h4>
                       <p>
                         Documentation and evidence packaged the way Google
                         wants it.
@@ -1353,7 +1353,7 @@ export default async function Home() {
                       <FiShield />
                     </span>
                     <div>
-                      <h4>Protect it after</h4>
+                      <h4>Protect It After</h4>
                       <p>
                         We harden the profile so it doesn&apos;t get flagged
                         again.
@@ -1365,7 +1365,7 @@ export default async function Home() {
                       <FiTrendingUp />
                     </span>
                     <div>
-                      <h4>Rank it higher</h4>
+                      <h4>Rank It Higher</h4>
                       <p>
                         Once it&apos;s back, we optimize it for the Map Pack.
                       </p>
@@ -1397,7 +1397,7 @@ export default async function Home() {
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">Done-for-you launch</span>
               <h2 className="hm-h2">
-                Launchpad: your business online in 7 to 14 days
+                Launchpad: Your Business Online in 7 to 14 Days
               </h2>
               <p className="hm-lead">
                 Logo, website, Google Business Profile, social setup, and a
@@ -1462,7 +1462,7 @@ export default async function Home() {
           <div className="hm-wrap">
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">How we work</span>
-              <h2 className="hm-h2">A clear plan before we build anything</h2>
+              <h2 className="hm-h2">A Clear Plan Before We Build Anything</h2>
               <p className="hm-lead">
                 Every engagement starts with your goals and the fastest route
                 to better leads — then we ship the work, not just a slide deck.
@@ -1486,13 +1486,13 @@ export default async function Home() {
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">The difference</span>
               <h2 className="hm-h2">
-                Marketing that&apos;s busy vs. marketing that books jobs
+                Marketing That&apos;s Busy Vs. Marketing That Books Jobs
               </h2>
             </div>
             <div className="hm-cmp-grid">
               <div className="hm-cmp-card hm-cmp--without">
                 <span className="hm-cmp-tag">Going it alone</span>
-                <h3>Lots of activity, unpredictable results</h3>
+                <h3>Lots of Activity, Unpredictable Results</h3>
                 <div className="hm-cmp-li">
                   <svg
                     viewBox="0 0 24 24"
@@ -1544,7 +1544,7 @@ export default async function Home() {
               </div>
               <div className="hm-cmp-card hm-cmp--with">
                 <span className="hm-cmp-tag">Working with Zonic</span>
-                <h3>Focused, measurable, easier to scale</h3>
+                <h3>Focused, Measurable, Easier to Scale</h3>
                 <div className="hm-cmp-li">
                   <FiCheck aria-hidden="true" />
                   Your profile ranks in the top 3 where buyers look
@@ -1573,8 +1573,8 @@ export default async function Home() {
               <div>
                 <span className="hm-eyebrow">Always measurable</span>
                 <h2 className="hm-h2">
-                  Watch your rankings and reviews climb,{" "}
-                  <span className="hm-hl-text">month over month</span>
+                  Watch Your Rankings and Reviews Climb,{" "}
+                  <span className="hm-hl-text">Month over Month</span>
                 </h2>
                 <p className="hm-lead">
                   No black box. Every campaign comes with live rank tracking
@@ -1652,7 +1652,7 @@ export default async function Home() {
             <div className="hm-audit-banner">
               <div className="hm-audit-text">
                 <span className="hm-eyebrow">Free marketing audit</span>
-                <h3>See exactly how we&apos;ll grow your local rankings</h3>
+                <h3>See Exactly How We&apos;ll Grow Your Local Rankings</h3>
                 <p>
                   We&apos;ll map your profile, citations, reviews, and rankings
                   — and show you the clear path to the top three for the
@@ -1713,12 +1713,12 @@ export default async function Home() {
           <div className="hm-wrap">
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">Common questions</span>
-              <h2 className="hm-h2">What local business owners ask us</h2>
+              <h2 className="hm-h2">What Local Business Owners Ask Us</h2>
             </div>
             <div className="hm-faq-cols">
               <div>
                 {faqsLeft.map((faq, i) => (
-                  <details className="hm-faq-item" open={i === 0} key={faq.q}>
+                  <details className="hm-faq-item" name="hm-faq" open={i === 0} key={faq.q}>
                     <summary className="hm-faq-q">
                       {faq.q}
                       <span className="hm-faq-pm" aria-hidden="true">
@@ -1738,7 +1738,7 @@ export default async function Home() {
               </div>
               <div>
                 {faqsRight.map((faq) => (
-                  <details className="hm-faq-item" key={faq.q}>
+                  <details className="hm-faq-item" name="hm-faq" key={faq.q}>
                     <summary className="hm-faq-q">
                       {faq.q}
                       <span className="hm-faq-pm" aria-hidden="true">
@@ -1775,7 +1775,7 @@ export default async function Home() {
             <div className="hm-contact-grid">
               <aside className="hm-contact-aside">
                 <span className="hm-eyebrow">Get in touch</span>
-                <h2 className="hm-h2">Tell us where you want to grow</h2>
+                <h2 className="hm-h2">Tell Us Where You Want to Grow</h2>
                 <p className="hm-lead">
                   Send us a few details about your business and the leads
                   you&apos;re after. We&apos;ll review your Google profile,
@@ -1822,7 +1822,7 @@ export default async function Home() {
                 <ServiceLeadForm
                   formType="home-strategy"
                   badge="Free strategy session"
-                  title="Request your free strategy session"
+                  title="Request Your Free Strategy Session"
                   subtitle="Takes about a minute — no commitment required."
                   submitText="Request My Free Session"
                   defaultServices={["Local SEO"]}
@@ -1856,7 +1856,7 @@ export default async function Home() {
           <div className="hm-wrap">
             <div className="hm-banner-inner">
               <span className="hm-banner-eyebrow">Ready when you are</span>
-              <h2>Let&apos;s put your business where customers are looking</h2>
+              <h2>Let&apos;s Put Your Business Where Customers are Looking</h2>
               <p>
                 Book a free strategy call and we&apos;ll walk through your
                 Google profile, search visibility, and website — then map the

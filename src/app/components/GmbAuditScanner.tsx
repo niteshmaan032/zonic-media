@@ -21,7 +21,7 @@ export default function GmbAuditScanner() {
       <div className="gmb-band-inner">
         <div className="gmb-band-copy">
           <span className="eyebrow">Free suspension audit</span>
-          <h2>We find the real reason Google pulled your profile</h2>
+          <h2>We Find the Real Reason Google Pulled Your Profile</h2>
           <p>
             Guessing costs you appeals. Every case starts with a full signal
             audit — the same checklist Google&apos;s reviewers work from — so the

@@ -38,17 +38,17 @@ export const gutterMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "storm",
-      title: "Only visible when it rains",
+      title: "Only Visible When It Rains",
       body: "Demand spikes after the first big storm and after leaf drop. If your rankings and campaigns only wake up when the phone does, you're competing for attention at the most expensive possible moment.",
     },
     {
       icon: "wallet",
-      title: "Outspent on gutter guards",
+      title: "Outspent on Gutter Guards",
       body: "National guard brands run relentless paid search and TV. Without local map dominance and honest side-by-side comparison content, homeowners never learn a local company installs the same product for less.",
     },
     {
       icon: "chart",
-      title: "Cleanings that never become replacements",
+      title: "Cleanings That Never Become Replacements",
       body: "A $200 cleaning is an introduction to a $3,000 guard install or full seamless replacement. Without follow-up, inspection reporting, and reactivation campaigns, that customer just disappears until next fall.",
     },
   ],
@@ -116,7 +116,7 @@ export const gutterMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to book more gutter installs?",
+  finalHeading: "Ready to Book More Gutter Installs?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

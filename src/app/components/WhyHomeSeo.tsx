@@ -7,7 +7,7 @@ import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 
 const whyHomeSeoItems = [
   {
-    title: "01. More Calls From Local Customers",
+    title: "01. More Calls from Local Customers",
     content:
       "Homeowners search Google when they need immediate help. If your business is not visible, those calls go to competitors. Local SEO helps you appear first and generate more inbound calls from ready-to-book customers.",
   },

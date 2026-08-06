@@ -116,27 +116,27 @@ const serviceJsonLd = {
 
 const PlumbingWebFaqs = [
   {
-    question: "How much does plumbing website design cost?",
+    question: "How Much Does Plumbing Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, booking and financing integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-truck, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a plumbing website?",
+    question: "How Long Does It Take to Design a Plumbing Website?",
     answer:
       "Most plumbing company websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website capture emergency plumbing calls?",
+    question: "Can My Website Capture Emergency Plumbing Calls?",
     answer:
       "Yes — that is the heart of plumber web design. A homeowner with a burst pipe at midnight decides in seconds, so click-to-call stays one thumb-tap away on every page, emergency service pages rank for the panic searches, and the site loads fast enough that nobody bails before it opens. When the water is rising, your number is the first one they can tap.",
   },
   {
-    question: "Can you integrate my plumbing booking software?",
+    question: "Can You Integrate My Plumbing Booking Software?",
     answer:
       "Yes. We integrate the field service tools plumbers already run — ServiceTitan, Housecall Pro, Jobber — or build a structured booking request flow that routes straight to your dispatcher. Either way, homeowners can book a service call without waiting for office hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -218,37 +218,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    title: "Emergency call UX",
+    title: "Emergency Call UX",
     desc: "A burst-pipe-at-midnight visitor decides in seconds. Click-to-call and emergency CTAs stay one thumb-tap away on every page.",
   },
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Online booking flows",
+    title: "Online Booking Flows",
     desc: "Homeowners book or request a service call in a few taps — integrated with the field service tools plumbers already use.",
   },
   {
     icon: <FiDroplet aria-hidden="true" />,
-    title: "Service landing pages",
+    title: "Service Landing Pages",
     desc: "Drain cleaning, water heaters, sewer repair, repipes — each high-value service gets its own page built to rank and convert.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Reviews & service areas",
+    title: "Reviews & Service Areas",
     desc: "Google reviews and a page for every city you serve, placed where cautious homeowners actually look before they call anyone.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners search for a plumber on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & tap-to-book",
+    title: "Click-to-Call & Tap-to-Book",
     desc: "One thumb-tap from any page to a call or a booking request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where stressed homeowners actually read them.",
   },
   {
@@ -256,19 +256,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you serve, built to rank for local plumbing searches.",
   },
   {
-    title: "Service-specific content",
+    title: "Service-Specific Content",
     desc: "Drain, water heater, sewer, and repipe pages written in plain language that answer real questions and earn rankings.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you fix.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -276,22 +276,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & job mix mapping",
+    title: "Discovery & Job Mix Mapping",
     desc: "The jobs you want more of, the cities you serve, how your dispatcher books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, booking integration, and emergency landing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then plumbing SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -304,7 +304,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -389,8 +389,8 @@ function Page() {
               <div className="pw-hero-copy">
                 <p className="pw-eyebrow">Plumbing Website Design</p>
                 <h1 className="pw-hero-h1">
-                  Plumbing website design that turns emergency searches into{" "}
-                  <span className="pw-hl">booked jobs</span>
+                  Plumbing Website Design That Turns Emergency Searches into{" "}
+                  <span className="pw-hl">Booked Jobs</span>
                 </h1>
                 <p className="pw-hero-sub">
                   Zonic Media designs plumbing company websites that work like
@@ -548,9 +548,9 @@ function Page() {
               <div className="pw-about-copy">
                 <p className="pw-eyebrow">First Impressions</p>
                 <h2 className="pw-h2">
-                  Your website gets judged with{" "}
-                  <span className="pw-hl-text">water on the floor</span> — in
-                  seconds
+                  Your Website Gets Judged with{" "}
+                  <span className="pw-hl-text">Water on the Floor</span> — In
+                  Seconds
                 </h2>
                 <p className="pw-lead">
                   Nobody browses plumbing websites for fun. Your visitors
@@ -601,7 +601,7 @@ function Page() {
               <div>
                 <p className="pw-eyebrow">What We Build</p>
                 <h2 className="pw-h2">
-                  Plumbing website design for every stage of your company
+                  Plumbing Website Design for Every Stage of Your Company
                 </h2>
               </div>
               <Link href="/services" className="pw-link-arrow">
@@ -626,7 +626,7 @@ function Page() {
             <div className="pw-band-content">
               <p className="pw-eyebrow">Every Service Line</p>
               <h2 className="pw-h2">
-                Web design for every kind of plumbing work
+                Web Design for Every Kind of Plumbing Work
               </h2>
               <p className="pw-lead">
                 Emergency service, drain cleaning, water heaters, sewer and
@@ -679,7 +679,7 @@ function Page() {
             <div className="pw-sec-head-center">
               <p className="pw-eyebrow">The Call Acquisition System</p>
               <h2 className="pw-h2">
-                More than a brochure — a system built to book calls
+                More Than a Brochure — A System Built to Book Calls
               </h2>
               <p className="pw-lead">
                 Most plumbing websites are digital business cards: a stock
@@ -708,7 +708,7 @@ function Page() {
               <div>
                 <p className="pw-eyebrow">Built Into Every Site</p>
                 <h2 className="pw-h2">
-                  The anatomy of a high-converting plumbing website
+                  The Anatomy of a High-Converting Plumbing Website
                 </h2>
                 <p className="pw-lead">
                   The best plumbing website design is not about decoration —
@@ -755,7 +755,7 @@ function Page() {
           <div className="pw-container">
             <div className="pw-sec-head-center">
               <p className="pw-eyebrow">Why Zonic Media</p>
-              <h2 className="pw-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="pw-h2">Designed to Convert. Built to Rank.</h2>
               <p className="pw-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at
@@ -768,7 +768,7 @@ function Page() {
                 <span className="pw-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -792,7 +792,7 @@ function Page() {
                 <span className="pw-why-card-icon">
                   <FiZap aria-hidden="true" />
                 </span>
-                <h3>Built for the emergency-search moment</h3>
+                <h3>Built for the Emergency-Search Moment</h3>
                 <p>
                   Mobile-first layouts, fast Core Web Vitals, and
                   click-to-call everywhere — because your best lead is
@@ -803,7 +803,7 @@ function Page() {
                 <span className="pw-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>Trust signals where homeowners look for them</h3>
+                <h3>Trust Signals Where Homeowners Look for Them</h3>
                 <p>
                   License numbers, insurance proof, guarantees, and real
                   before-and-after work placed in the layout — not buried on
@@ -814,7 +814,7 @@ function Page() {
             <div className="pw-why-banner">
               <div className="pw-why-banner-text">
                 <p className="pw-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your company actually needs?</h3>
+                <h3>Not Sure What Your Company Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages,
                   booking flows, and local SEO foundations your site needs —
@@ -844,7 +844,7 @@ function Page() {
               <div>
                 <p className="pw-eyebrow">How It Works</p>
                 <h2 className="pw-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -874,7 +874,7 @@ function Page() {
           <div className="pw-banner-grid">
             <div className="pw-banner-copy">
               <p className="pw-eyebrow">Why Plumbers Choose Us</p>
-              <h2 className="pw-h2">Workmanship customers can see</h2>
+              <h2 className="pw-h2">Workmanship Customers Can See</h2>
               <p className="pw-lead">
                 A website built by a team that understands how homeowners
                 choose a plumber — and what makes them call instead of keep
@@ -938,7 +938,7 @@ function Page() {
             <div className="pw-sec-head-center">
               <p className="pw-eyebrow">Wherever You Work</p>
               <h2 className="pw-h2">
-                Plumbing website design services across the United States
+                Plumbing Website Design Services Across the United States
               </h2>
               <p className="pw-lead">
                 From single-truck startups to multi-market companies, Zonic
@@ -977,7 +977,7 @@ function Page() {
               <div>
                 <p className="pw-eyebrow">FAQs</p>
                 <h2 className="pw-h2">
-                  Everything plumbers ask us about website design
+                  Everything Plumbers Ask Us About Website Design
                 </h2>
                 <p className="pw-lead">
                   Straight answers on pricing, timelines, booking software,
@@ -1018,7 +1018,7 @@ function Page() {
             <div className="pw-sec-head-center">
               <p className="pw-eyebrow">Grow Further</p>
               <h2 className="pw-h2">
-                Your website is step one. Here is what fills it with calls.
+                Your Website is Step One. Here is What Fills It with Calls.
               </h2>
             </div>
             <div className="pw-grow-cards">
@@ -1043,7 +1043,7 @@ function Page() {
               <aside className="pw-form-aside">
                 <p className="pw-eyebrow">Get Started</p>
                 <h2 className="pw-h2">
-                  Book your free plumbing website consult
+                  Book Your Free Plumbing Website Consult
                 </h2>
                 <p className="pw-lead">
                   Tell us about your company and we will send a custom

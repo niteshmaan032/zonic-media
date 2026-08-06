@@ -424,7 +424,7 @@
   }
 
   .chiro-page .buttons {
-    width: 100%;
+    width: fit-content;
     justify-content: space-between;
     gap: 14px;
   }

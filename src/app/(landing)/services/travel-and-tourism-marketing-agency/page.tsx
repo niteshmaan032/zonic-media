@@ -308,7 +308,7 @@ const EngineCards = [
   },
   {
     icon: <FaStar aria-hidden="true" />,
-    title: "Reviews & reputation",
+    title: "Reviews & Reputation",
     desc: "Review velocity on Google and TripAdvisor with reputation flows that keep your score climbing while you sleep.",
   },
 ];
@@ -525,8 +525,8 @@ function Page() {
             <div className="tt-container tt-hero-content">
               <p className="tt-hero-eyebrow">For Hotels, Tour Operators &amp; DMOs</p>
               <h1 className="tt-hero-h1">
-                The Travel And Tourism Marketing Agency That Turns Wanderlust
-                Into <span className="tt-hero-hl">Booked Trips</span>
+                The Travel and Tourism Marketing Agency That Turns Wanderlust
+                into <span className="tt-hero-hl">Booked Trips</span>
               </h1>
               <p className="tt-hero-sub">
                 <Link href="/" className="tt-inline-link">
@@ -623,8 +623,8 @@ function Page() {
                 <div className="tt-about-copy">
                   <p className="tt-eyebrow">The Booking Journey</p>
                   <h2 className="tt-h2">
-                    Travelers plan for months.{" "}
-                    <span className="tt-hl">You only get one glance.</span>
+                    Travelers Plan for Months.{" "}
+                    <span className="tt-hl">You Only Get One Glance.</span>
                   </h2>
                   <p className="tt-lead">
                     A traveler researches a trip for 30 to 120 days. They
@@ -668,7 +668,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">What We Do</p>
                 <h2 className="tt-h2">
-                  Tourism marketing services for the full trip-planning funnel
+                  Tourism Marketing Services for the Full Trip-Planning Funnel
                 </h2>
               </div>
               <div className="tt-cards">
@@ -689,7 +689,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">Why It Matters</p>
                 <h2 className="tt-h2">
-                  Every direct booking is margin you keep
+                  Every Direct Booking is Margin You Keep
                 </h2>
                 <p className="tt-lead">
                   OTAs are a distribution channel rather than a growth
@@ -732,7 +732,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">The Direct Booking Engine</p>
                 <h2 className="tt-h2">
-                  A system built to win the booking, not just the click
+                  A System Built to Win the Booking, Not Just the Click
                 </h2>
                 <p className="tt-lead">
                   Most travel marketing stops at traffic. Ours follows the
@@ -758,7 +758,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">Every Kind of Trip</p>
                 <h2 className="tt-h2">
-                  Destination marketing campaigns for every trip you sell
+                  Destination Marketing Campaigns for Every Trip You Sell
                 </h2>
               </div>
             </div>
@@ -787,7 +787,7 @@ function Page() {
             <div className="tt-container">
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">How It Works</p>
-                <h2 className="tt-h2">Your growth itinerary, in four legs</h2>
+                <h2 className="tt-h2">Your Growth Itinerary, in Four Legs</h2>
               </div>
               <div className="tt-steps">
                 {ProcessSteps.map((step) => (
@@ -809,7 +809,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">Why Zonic Media</p>
                 <h2 className="tt-h2">
-                  A tourism marketing partner that thinks in seasons and margins
+                  A Tourism Marketing Partner That Thinks in Seasons and Margins
                 </h2>
               </div>
               <div className="tt-why-cards">
@@ -831,7 +831,7 @@ function Page() {
                 </div>
                 <div className="tt-why-banner-copy">
                   <p className="tt-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure which channel should come first?</h3>
+                  <h3>Not Sure Which Channel Should Come First?</h3>
                   <p>
                     Tell us your destinations, seasons, and booking goals. On a
                     free call a strategist maps the channels worth your budget
@@ -854,7 +854,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">Who We Serve</p>
                 <h2 className="tt-h2">
-                  Travel marketing for every corner of the industry
+                  Travel Marketing for Every Corner of the Industry
                 </h2>
                 <p className="tt-lead">
                   From a twelve-room boutique hotel to a statewide destination
@@ -896,7 +896,7 @@ function Page() {
                 <div>
                   <p className="tt-eyebrow">FAQs</p>
                   <h2 className="tt-h2">
-                    Everything travel brands ask a travel marketing agency
+                    Everything Travel Brands Ask a Travel Marketing Agency
                   </h2>
                   <p className="tt-lead">
                     Straight answers on OTAs, seasonality, pricing, and
@@ -923,7 +923,7 @@ function Page() {
               <div className="tt-sec-head-center">
                 <p className="tt-eyebrow">Grow Further</p>
                 <h2 className="tt-h2">
-                  The services powering our travel growth plans
+                  The Services Powering Our Travel Growth Plans
                 </h2>
               </div>
               <div className="tt-grow-cards">
@@ -946,7 +946,7 @@ function Page() {
               <div className="tt-cta-panel">
                 <p className="tt-eyebrow tt-eyebrow-light">Ready When You Are</p>
                 <h2 className="tt-h2 tt-h2-light">
-                  Let&apos;s fill your next season with direct bookings
+                  Let&apos;s Fill Your Next Season with Direct Bookings
                 </h2>
                 <p className="tt-lead tt-lead-light">
                   Share your travel brand below and we will come back with a
@@ -979,7 +979,7 @@ function Page() {
                 <div className="tt-contact-info">
                   <p className="tt-eyebrow">Contact Us</p>
                   <h2 className="tt-h2">
-                    Tell us where you want more bookings
+                    Tell Us Where You Want More Bookings
                   </h2>
                   <p className="tt-lead">
                     Share a few details about your travel brand. A strategist

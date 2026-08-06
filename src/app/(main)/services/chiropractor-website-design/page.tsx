@@ -124,27 +124,27 @@ const serviceJsonLd = {
 
 const ChiroWebFaqs = [
   {
-    question: "How much does chiropractor website design cost?",
+    question: "How Much Does Chiropractor Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of condition and service pages, booking and insurance integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-provider build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a chiropractic website?",
+    question: "How Long Does It Take to Design a Chiropractic Website?",
     answer:
       "Most chiropractic websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many condition pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website book new patients online?",
+    question: "Can My Website Book New Patients Online?",
     answer:
       "Yes — that is the point. We build online booking and new-patient offer flows so a person in pain can grab the next open slot in a couple of taps, day or night, instead of waiting to call. A strong new-patient special on the page, paired with easy booking, is what turns a search into a scheduled visit.",
   },
   {
-    question: "Can you integrate my scheduling software?",
+    question: "Can You Integrate My Scheduling Software?",
     answer:
       "Yes. We integrate the tools chiropractic offices already use — Jane, ChiroTouch, Zocdoc — or build a structured appointment request flow that routes straight to your front desk. Either way, patients can book without calling during office hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -226,37 +226,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Online booking flows",
+    title: "Online Booking Flows",
     desc: "Patients book or request appointments in a few taps — integrated with the scheduling tools chiropractic offices already use.",
   },
   {
     icon: <FiActivity aria-hidden="true" />,
-    title: "Condition landing pages",
+    title: "Condition Landing Pages",
     desc: "Back pain, sciatica, and headache pages that match how patients search and route them to a booking, not a wall of text.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "New-patient & insurance UX",
+    title: "New-Patient & Insurance UX",
     desc: "New-patient offers and insurance participation up front, so patients confirm they can afford care before they book.",
   },
   {
     icon: <MdOutlineHealthAndSafety aria-hidden="true" />,
-    title: "HIPAA-aware forms",
+    title: "HIPAA-Aware Forms",
     desc: "Encrypted intake and contact forms designed so patient information never leaks into analytics or ad pixels.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most patients find a chiropractor on their phone, in pain — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & book online",
+    title: "Click-to-Call & Book Online",
     desc: "One thumb-tap from any page to a call or an appointment request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where hesitant patients actually read them before they book.",
   },
   {
@@ -264,19 +264,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Condition & service content",
+    title: "Condition & Service Content",
     desc: "Plain-language pages for the conditions you treat that answer real questions and earn rankings.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and neighborhood you serve, built to rank for local chiropractor searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you practice, and what you treat.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -284,22 +284,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & patient journey mapping",
+    title: "Discovery & Patient Journey Mapping",
     desc: "The conditions you want more of, the insurance you accept, how your front desk books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your patients — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Condition pages, booking flows, and new-patient offers — every page written around the searches patients use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the schedule full.",
   },
 ];
@@ -312,7 +312,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -411,8 +411,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Chiropractor Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Chiropractor website design that turns visitors into{" "}
-                    <span className="hiw-hl">booked patients</span>
+                    Chiropractor Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Booked Patients</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs chiropractic websites that work like a
@@ -571,9 +571,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first consultation</span>{" "}
-                    patients give your practice
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Consultation</span>{" "}
+                    Patients Give Your Practice
                   </h2>
                   <p className="hiw-lead">
                     Before a patient ever lies on your table, they have already
@@ -622,7 +622,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Chiropractor website design for every stage of your practice
+                    Chiropractor Website Design for Every Stage of Your Practice
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -647,7 +647,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Condition</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of chiropractic care
+                  Web Design for Every Kind of Chiropractic Care
                 </h2>
                 <p className="hiw-lead">
                   Back and neck pain, sciatica, headaches, sports injuries, and
@@ -696,7 +696,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Patient Acquisition System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book patients
+                  More Than a Brochure — A System Built to Book Patients
                 </h2>
                 <p className="hiw-lead">
                   Most chiropractic websites are digital business cards: a photo
@@ -724,7 +724,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting chiropractic website
+                    The Anatomy of a High-Converting Chiropractic Website
                   </h2>
                   <p className="hiw-lead">
                     The best chiropractic website design is not about decoration —
@@ -771,7 +771,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -783,7 +783,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -807,7 +807,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones patients actually use</h3>
+                  <h3>Fast on the Phones Patients Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most chiropractic searches happen on a phone, from
@@ -818,7 +818,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Compliance-minded from the first wireframe</h3>
+                  <h3>Compliance-Minded from the First Wireframe</h3>
                   <p>
                     HIPAA-aware forms, accessible layouts, and honest tracking —
                     so your marketing site never becomes a liability for your
@@ -829,7 +829,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your practice actually needs?</h3>
+                  <h3>Not Sure What Your Practice Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, booking
                     flows, and local SEO foundations your site needs — no
@@ -859,7 +859,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -889,7 +889,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Chiropractors Choose Us</p>
-                <h2 className="hiw-h2">Care patients can feel from the first click</h2>
+                <h2 className="hiw-h2">Care Patients Can Feel from the First Click</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how patients choose a
                   chiropractor — and what makes them book instead of keep
@@ -954,7 +954,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Practice</p>
                 <h2 className="hiw-h2">
-                  Chiropractor website design across the United States
+                  Chiropractor Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From solo practices to multi-provider clinics, Zonic Media
@@ -989,7 +989,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything chiropractors ask us about website design
+                    Everything Chiropractors Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, online booking, and
@@ -1029,7 +1029,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with patients.
+                  Your Website is Step One. Here is What Fills It with Patients.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1058,7 +1058,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free chiropractic website consult
+                    Book Your Free Chiropractic Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your practice and we will send a custom homepage

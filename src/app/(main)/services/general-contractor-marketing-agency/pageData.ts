@@ -38,17 +38,17 @@ export const generalContractorMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "chart",
-      title: "One referral pipeline, no backup",
+      title: "One Referral Pipeline, No Backup",
       body: "When referrals slow down, there's nothing underneath them. Crews idle, overhead doesn't, and you take on work you'd normally pass on just to fill the schedule.",
     },
     {
       icon: "pin",
-      title: "Invisible for the work you want most",
+      title: "Invisible for the Work You Want Most",
       body: "Additions, ADUs, whole-home remodels, and custom builds all get searched by name. Ranking outside the top three for those means the highest-margin projects in your market never reach you.",
     },
     {
       icon: "users",
-      title: "Nothing that proves you're the safe choice",
+      title: "Nothing That Proves You're the Safe Choice",
       body: "Six-figure projects go to whoever looks least risky. Without license and insurance details, permit-ready process pages, real project galleries, and recent reviews, you're just another quote.",
     },
   ],
@@ -116,7 +116,7 @@ export const generalContractorMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to stop depending on referrals?",
+  finalHeading: "Ready to Stop Depending on Referrals?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

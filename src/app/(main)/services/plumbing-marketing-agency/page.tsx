@@ -130,19 +130,19 @@ const problemProse = [
 
 const problemCards = [
   {
-    h: "The decision happens in under 60 seconds.",
+    h: "The Decision Happens in Under 60 Seconds.",
     p: "Plumbing emergencies don't allow research. Customers open Google, look at three results, and call one. The other dozens of plumbers in that submarket are invisible.",
   },
   {
-    h: "Shared-lead platforms are a tax, not a channel.",
+    h: "Shared-Lead Platforms are a Tax, Not a Channel.",
     p: "Angi, HomeAdvisor, Networx, Thumbtack — same lead sold to four competitors at $80-150 each. Effective CAC runs $300-500 per booked job. The math gets worse every year.",
   },
   {
-    h: "Organic compounds. Paid evaporates.",
+    h: "Organic Compounds. Paid Evaporates.",
     p: "Map pack ranking, once won, keeps producing leads for months without additional spend. Google Ads stops the day you stop paying. Both have a place; the mix matters.",
   },
   {
-    h: "GBP suspensions strike when you can least afford them.",
+    h: "GBP Suspensions Strike When You Can Least Afford Them.",
     p: "Service-area-business verification, competitor reports, duplicate listings — all common triggers. Suspension in peak season is one of the most expensive avoidable losses in plumbing marketing.",
   },
 ];
@@ -162,22 +162,22 @@ const resultsProse = [
 const resultStats = [
   {
     big: "8.6×",
-    h: "Month 12 lead volume vs Month 1",
+    h: "Month 12 Lead Volume Vs Month 1",
     p: "Representative plumbing contractor trajectory across the first year on plan.",
   },
   {
     big: "90-180",
-    h: "Days to top-three rankings",
+    h: "Days to Top-Three Rankings",
     p: "Depending on metro competitive density; suburban submarkets are faster.",
   },
   {
     big: "$15-25",
-    h: "Cost per organic plumber lead",
+    h: "Cost Per Organic Plumber Lead",
     p: "Versus $300-500 effective CAC on shared-lead platforms like Angi.",
   },
   {
     big: "7+ mo",
-    h: "Average #1 position duration",
+    h: "Average #1 Position Duration",
     p: "Map pack ranking, once won, keeps producing without proportional spend.",
   },
 ];
@@ -392,8 +392,8 @@ function Page() {
                   Why Plumbing Marketing Is Different
                 </div>
                 <h2 className="hia-sec-h2">
-                  Plumbing customers don&apos;t compare. They call the first
-                  plumber <span className="hia-accent">they see.</span>
+                  Plumbing Customers Don&apos;t Compare. They Call the First
+                  Plumber <span className="hia-accent">They See.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Plumbing has the shortest decision cycle of any home service
@@ -432,8 +432,8 @@ function Page() {
               <section className="hia-section hia-results-sec" id="hia-map">
                 <div className="hia-sec-label">How Customers Find Plumbers</div>
                 <h2 className="hia-sec-h2">
-                  Three pinned results. One winner.{" "}
-                  <span className="hia-accent">Roughly 73% of all calls.</span>
+                  Three Pinned Results. One Winner.{" "}
+                  <span className="hia-accent">Roughly 73% of All Calls.</span>
                 </h2>
                 <div className="hia-results-prose">
                   {mapPackParas.map((p, i) => (
@@ -459,8 +459,8 @@ function Page() {
                   What a Plumbing Marketing Agency Delivers
                 </div>
                 <h2 className="hia-sec-h2">
-                  Six marketing functions, tuned for{" "}
-                  <span className="hia-accent">plumbing economics.</span>
+                  Six Marketing Functions, Tuned for{" "}
+                  <span className="hia-accent">Plumbing Economics.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Every service below is calibrated to how plumbing customers
@@ -504,8 +504,8 @@ function Page() {
                   Plumbing Specialties We Market
                 </div>
                 <h2 className="hia-sec-h2">
-                  Eight plumbing service categories where local visibility{" "}
-                  <span className="hia-accent">decides who books.</span>
+                  Eight Plumbing Service Categories Where Local Visibility{" "}
+                  <span className="hia-accent">Decides Who Books.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Each specialty has its own customer search behavior, its own
@@ -539,9 +539,9 @@ function Page() {
               <section className="hia-section hia-results-sec" id="hia-results">
                 <div className="hia-sec-label">What This Actually Produces</div>
                 <h2 className="hia-sec-h2">
-                  Three phases. One outcome.{" "}
+                  Three Phases. One Outcome.{" "}
                   <span className="hia-accent">
-                    Leads compounding for years.
+                    Leads Compounding for Years.
                   </span>
                 </h2>
                 <p className="hia-sec-sub">
@@ -585,8 +585,8 @@ function Page() {
               <section className="hia-section hia-states" id="hia-states">
                 <div className="hia-sec-label">States We Cover</div>
                 <h2 className="hia-sec-h2">
-                  Plumbing marketing built for the state you{" "}
-                  <span className="hia-accent">actually operate in.</span>
+                  Plumbing Marketing Built for the State You{" "}
+                  <span className="hia-accent">Actually Operate In.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Plumbing markets vary dramatically by state. Florida&apos;s
@@ -642,8 +642,8 @@ function Page() {
                   How We Work With Plumbing Contractors
                 </div>
                 <h2 className="hia-sec-h2">
-                  Three-step start. Then we{" "}
-                  <span className="hia-accent">get to work.</span>
+                  Three-Step Start. Then We{" "}
+                  <span className="hia-accent">Get to Work.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Plumbing contractors are running crews, dispatching emergency
@@ -677,8 +677,8 @@ function Page() {
                   Trusted by Clients Nationwide
                 </div>
                 <h2 className="hia-sec-h2">
-                  What plumbers and other service businesses{" "}
-                  <span className="hia-accent">say about working with us.</span>
+                  What Plumbers and Other Service Businesses{" "}
+                  <span className="hia-accent">Say About Working with Us.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
@@ -711,8 +711,8 @@ function Page() {
                   Transparent Pricing, Month to Month
                 </div>
                 <h2 className="hia-sec-h2">
-                  Three plans built for where your plumbing company is{" "}
-                  <span className="hia-accent">right now.</span>
+                  Three Plans Built for Where Your Plumbing Company is{" "}
+                  <span className="hia-accent">Right Now.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — move up or down
@@ -763,8 +763,8 @@ function Page() {
                   Common Questions From Plumbing Contractors
                 </div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">strategy call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Strategy Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question here, include it in the

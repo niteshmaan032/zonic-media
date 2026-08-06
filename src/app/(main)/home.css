@@ -2784,7 +2784,6 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--hm-ink);
   margin: 0;
 }
@@ -2989,7 +2988,6 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
-  text-transform: capitalize;
   color: var(--hm-ink);
   margin: 0;
 }
@@ -3538,13 +3536,18 @@
 
 @media (max-width: 575.98px) {
   /* the nowrap highlight span is wider than small phones — let it wrap and
-     swap the SVG swoosh for a plain gold underline that wraps per-line */
+     swap the absolutely-positioned SVG swoosh for the same curve painted as a
+     background image, which box-decoration-break repeats under every line */
   .hm-page .hm-hl {
     white-space: normal;
-    text-decoration: underline;
-    text-decoration-color: var(--hm-gold);
-    text-decoration-thickness: 4px;
-    text-underline-offset: 5px;
+    text-decoration: none;
+    padding-bottom: 0.14em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M4 14 C 70 5, 230 3, 296 11' fill='none' stroke='%23fdc115' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0.24em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 
   .hm-page .hm-hl svg {

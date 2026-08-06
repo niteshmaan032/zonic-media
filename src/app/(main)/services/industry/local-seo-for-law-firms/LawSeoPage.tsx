@@ -745,7 +745,7 @@ export default function LawSeoPage() {
             style={{ marginTop: "40px", padding: "40px" }}
           >
             <p className="car-tow-eyebrow">Start With a Free Audit</p>
-            <h2>Find Out Exactly Where Your Firm Is Losing Case Inquiries</h2>
+            <h2>Find Out Exactly Where Your Firm is Losing Case Inquiries</h2>
             <p>
               Request a free law firm marketing audit and we will review your
               <Link
@@ -798,9 +798,9 @@ export default function LawSeoPage() {
                 <p className="car-tow-eyebrow">Understanding Client Behavior</p>
                 <h2>How Potential Clients Actually Choose a Law Firm Online</h2>
                 <h3 className="car-tow-sub-heading">
-                  Prospective legal clients are searching with urgency. They
-                  compare a short list of options quickly and contact the firm
-                  that appears most credible, accessible, and relevant.
+                  Prospective Legal Clients are Searching with Urgency. They
+                  Compare a Short List of Options Quickly and Contact the Firm
+                  That Appears Most Credible, Accessible, and Relevant.
                 </h3>
                 <p>
                   People facing legal challenges are not leisurely browsing law
@@ -1035,10 +1035,10 @@ export default function LawSeoPage() {
             <Col lg={7}>
               <div className="car-tow-feature-copy car-tow-feature-copy-split">
                 <p className="car-tow-eyebrow">The Connected Approach</p>
-                <h2>A connected system for steady law firm inquiry growth.</h2>
+                <h2>A Connected System for Steady Law Firm Inquiry Growth.</h2>
                 <h3 className="car-tow-sub-heading">
-                  Your local visibility, trust signals, and consultation path
-                  need to work together.
+                  Your Local Visibility, Trust Signals, and Consultation Path
+                  Need to Work Together.
                 </h3>
                 <p>
                   We connect{" "}
@@ -1093,7 +1093,7 @@ export default function LawSeoPage() {
           <div className="law-inline-form-banner">
             <div className="law-inline-form-copy">
               <p className="car-tow-eyebrow">Quick Audit Request</p>
-              <h2>Start your free law firm visibility review.</h2>
+              <h2>Start Your Free Law Firm Visibility Review.</h2>
               <p>
                 Share your firm details below and we will review your rankings,
                 Maps presence, and conversion gaps.
@@ -1245,9 +1245,9 @@ export default function LawSeoPage() {
                 <p className="car-tow-eyebrow">After Choosing Zonic Media</p>
                 <h2>What a Focused Law Firm Marketing Strategy Produces</h2>
                 <h3 className="car-tow-sub-heading">
-                  When law firm digital marketing services are executed
-                  correctly, the impact goes well beyond increased website
-                  traffic - it creates a sustainable case inquiry engine.
+                  When Law Firm Digital Marketing Services are Executed
+                  Correctly, the Impact Goes Well Beyond Increased Website
+                  Traffic - It Creates a Sustainable Case Inquiry Engine.
                 </h3>
                 <p>
                   Law firms working with a structured marketing system see
@@ -1353,12 +1353,12 @@ export default function LawSeoPage() {
               <div className="car-tow-case-copy">
                 <p className="car-tow-eyebrow">Example Growth Scenario</p>
                 <h2>
-                  What a focused law firm marketing system can realistically
-                  improve.
+                  What a Focused Law Firm Marketing System Can Realistically
+                  Improve.
                 </h2>
                 <h3 className="car-tow-sub-heading">
-                  The right local SEO setup improves both case inquiry volume
-                  and the quality of consultations over time.
+                  The Right Local SEO Setup Improves Both Case Inquiry Volume
+                  and the Quality of Consultations over Time.
                 </h3>
                 <p>
                   Consider a mid-size law firm practicing personal injury and
@@ -1450,7 +1450,7 @@ export default function LawSeoPage() {
           <div className="car-tow-center-head">
             <div className="car-tow-center-head-content">
               <p className="car-tow-eyebrow">Strategy Comparison</p>
-              <h2>SEO vs Paid Ads for Law Firms</h2>
+              <h2>SEO Vs Paid Ads for Law Firms</h2>
               <p className="car-tow-section-descrp">
                 Legal marketing involves significant budget decisions.
                 Understanding how SEO and{" "}
@@ -1744,7 +1744,7 @@ export default function LawSeoPage() {
         <div className="car-tow-container">
           <div className="car-tow-final-cta law-cta-banner law-cta-banner-spacious">
             <p className="car-tow-eyebrow">Start Growing Today</p>
-            <h2>More qualified case inquiries from Google and Maps.</h2>
+            <h2>More Qualified Case Inquiries from Google and Maps.</h2>
             <p>
               Zonic Media builds law firm marketing services that help attorneys
               generate more qualified consultations through local SEO, Google

@@ -177,37 +177,37 @@ const serviceJsonLd = {
 
 const CommercialSeoFaqs = [
   {
-    question: "What's included in your commercial cleaning local SEO services?",
+    question: "What's Included in Your Commercial Cleaning Local SEO Services?",
     answer:
       "Every commercial cleaning campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your janitorial, office cleaning, and service-area pages, local content, and a monthly report that shows rankings, RFQ inquiries, and signed contracts — not vanity metrics.",
   },
   {
-    question: "How long does janitorial SEO take to show results?",
+    question: "How Long Does Janitorial SEO Take to Show Results?",
     answer:
       "Most commercial cleaning companies see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more inquiries for searches like 'commercial cleaning near me' and 'office cleaning services.' Competitive metros take longer to fully dominate, but the trajectory is visible from the first monthly report, and momentum compounds as more facility and property managers find you.",
   },
   {
-    question: "How much does local SEO for commercial cleaning cost?",
+    question: "How Much Does Local SEO for Commercial Cleaning Cost?",
     answer:
       "Pricing depends on how many locations you cover, how competitive your market is, and how aggressively you want to grow your contract pipeline. After a free audit we quote a flat monthly price — no long-term contracts and no surprise line items.",
   },
   {
-    question: "Do you guarantee first-page Google rankings for cleaning keywords?",
+    question: "Do You Guarantee First-Page Google Rankings for Cleaning Keywords?",
     answer:
       "Our track record speaks for itself — most commercial cleaning clients reach top-three map pack positions for their core keywords, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no agency can honestly promise a fixed position, so we guarantee what matters: full transparency. You see exactly where you rank, what improved, and what we did each month — and with no long-term contracts, we earn your business with results.",
   },
   {
-    question: "Do commercial cleaning companies really need Google Business Profile optimization?",
+    question: "Do Commercial Cleaning Companies Really Need Google Business Profile Optimization?",
     answer:
       "Yes — it is the single biggest lever in commercial cleaning local SEO. Your Google Business Profile decides whether you appear in the local map pack when a facility or office manager searches for janitorial help, and it drives your inquiry volume, website visits, and review visibility. We optimize every field, category, photo, and post so Google trusts your profile and decision-makers shortlist you.",
   },
   {
-    question: "Can you help multi-site and B2B commercial cleaning companies?",
+    question: "Can You Help Multi-Site and B2B Commercial Cleaning Companies?",
     answer:
       "Absolutely. We build local SEO systems for single-territory operators and multi-site janitorial brands alike — service-area targeting, individual location pages, and map visibility for every city and business district you cover, all reported in one clear dashboard aimed at the property and facility managers who sign the contracts.",
   },
   {
-    question: "Why choose Zonic Media over another janitorial SEO company?",
+    question: "Why Choose Zonic Media over Another Janitorial SEO Company?",
     answer:
       "We specialize in local B2B service businesses like commercial cleaning, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to RFQs and signed contracts, and work that is built to compound month after month — not churn.",
   },
@@ -381,17 +381,17 @@ const CompareUs = [
 const WhyCards = [
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Local B2B services is all we do",
+    title: "Local B2B Services is All We Do",
     desc: "We are not a generalist agency dabbling in maps. Local rankings, qualified inquiries, and signed contracts for commercial cleaning and janitorial companies is the entire practice.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter — so you are stronger heading into your next round of RFQs and bid seasons. Every month of work stacks on the last.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips, you hear it from us first — with the fix already moving.",
   },
 ];
@@ -468,8 +468,8 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for Commercial Cleaning</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for commercial cleaning that{" "}
-                    <span className="tseo-hl">wins contracts</span>
+                    Local SEO for Commercial Cleaning That{" "}
+                    <span className="tseo-hl">Wins Contracts</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and B2B service businesses climb
@@ -799,9 +799,9 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">The Local Growth Opportunity</p>
                   <h2 className="tseo-h2">
-                    Facility managers are searching for cleaning help.{" "}
+                    Facility Managers are Searching for Cleaning Help.{" "}
                     <span className="tseo-hl-text">
-                      We make sure they find you.
+                      We Make Sure They Find You.
                     </span>
                   </h2>
                   <p className="tseo-lead">
@@ -848,8 +848,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything your commercial cleaning rankings need, in one
-                    system
+                    Everything Your Commercial Cleaning Rankings Need, in One
+                    System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -874,8 +874,8 @@ function Page() {
               <div className="tseo-band-content">
                 <p className="tseo-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="tseo-h2">
-                  We put your cleaning company in the top three — and keep it
-                  there
+                  We Put Your Cleaning Company in the Top Three — And Keep It
+                  There
                 </h2>
                 <p className="tseo-lead">
                   The map pack gets the majority of clicks and nearly all of the
@@ -992,7 +992,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">How It Works</p>
                   <h2 className="tseo-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -1012,7 +1012,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free commercial cleaning visibility audit</h3>
+                  <h3>Free Commercial Cleaning Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the office and
@@ -1051,7 +1051,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your cleaning services and cities,
                     then the foundation work: <Link href="/services/gmb-verification-help" className="tseo-inline-link">GBP verification support</Link> where a listing needs it, profile optimization, citation
@@ -1067,7 +1067,7 @@ function Page() {
                     </span>
                     <span className="tseo-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1103,7 +1103,7 @@ function Page() {
                       </span>
                       <span className="tseo-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to inquiries and signed contracts,
                       not vanity metrics. As rankings lock in, we expand to more
@@ -1142,8 +1142,8 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Real Results</p>
                 <h2 className="tseo-h2">
-                  What happens when commercial cleaning local SEO is done
-                  properly
+                  What Happens When Commercial Cleaning Local SEO is Done
+                  Properly
                 </h2>
                 <p className="tseo-lead">
                   Different markets, different facilities — the same system,
@@ -1172,7 +1172,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">The Difference</p>
                 <h2 className="tseo-h2">
-                  What you get with Zonic vs. a typical janitorial SEO agency
+                  What You Get with Zonic Vs. A Typical Janitorial SEO Agency
                 </h2>
                 <p className="tseo-lead">
                   Local SEO for B2B service businesses is all we do, and it
@@ -1182,7 +1182,7 @@ function Page() {
               </div>
               <div className="tseo-compare-grid">
                 <div className="tseo-compare-col tseo-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="tseo-compare-sub">
                     Why most cleaning campaigns quietly stall
                   </p>
@@ -1265,8 +1265,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">Always Measurable</p>
                   <h2 className="tseo-h2">
-                    Watch your cleaning rankings and reviews climb,{" "}
-                    <span className="tseo-hl-text">month over month</span>
+                    Watch Your Cleaning Rankings and Reviews Climb,{" "}
+                    <span className="tseo-hl-text">Month over Month</span>
                   </h2>
                   <p className="tseo-lead">
                     No black box. Every campaign comes with live rank tracking
@@ -1348,7 +1348,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A commercial cleaning local SEO partner, not a monthly invoice
+                  A Commercial Cleaning Local SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1367,7 +1367,7 @@ function Page() {
               <div className="tseo-why-banner">
                 <div className="tseo-why-banner-text">
                   <p className="tseo-eyebrow">Free Commercial Cleaning SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your cleaning rankings</h3>
+                  <h3>See Exactly How We&apos;ll Grow Your Cleaning Rankings</h3>
                   <p>
                     We&apos;ll map your profile, citations, reviews, and
                     rankings — and show you the clear path to the top three for
@@ -1433,7 +1433,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Verified Client Reviews</p>
                 <h2 className="tseo-h2" id="tseo-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="tseo-reviews-widget">
@@ -1468,7 +1468,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for commercial cleaning companies in every market in
+                  Local SEO for Commercial Cleaning Companies in Every Market in
                   the US
                 </h2>
                 <p className="tseo-lead">
@@ -1536,7 +1536,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">FAQs</p>
                   <h2 className="tseo-h2">
-                    Straight answers about commercial cleaning local SEO
+                    Straight Answers About Commercial Cleaning Local SEO
                   </h2>
                   <p className="tseo-lead">
                     Pricing, timelines, guarantees, where <Link href="/services/google-ads" className="tseo-inline-link">Google Ads for commercial cleaning</Link> fits alongside SEO, and what actually moves
@@ -1570,7 +1570,7 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Grow Further</p>
                 <h2 className="tseo-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
               </div>
               <div className="tseo-grow-cards">
@@ -1599,7 +1599,7 @@ function Page() {
                 <aside className="tseo-form-aside">
                   <p className="tseo-eyebrow">Get Started</p>
                   <h2 className="tseo-h2">
-                    Claim your free commercial cleaning local SEO audit
+                    Claim Your Free Commercial Cleaning Local SEO Audit
                   </h2>
                   <p className="tseo-lead">
                     Tell us about your commercial cleaning business and we will
@@ -1652,7 +1652,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="local-seo"
                     badge="Free Audit"
-                    title="Get your free commercial cleaning SEO audit"
+                    title="Get Your Free Commercial Cleaning SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where your cleaning company stands and what it takes to win contracts in your market."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your commercial cleaning business"

@@ -3435,7 +3435,7 @@
   .svc-page .svc-hero-ctas .svc-btn-ghost,
   .svc-page .svc-final-actions .svc-btn-gold,
   .svc-page .svc-final-actions .svc-btn-outline-light {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
   }
 

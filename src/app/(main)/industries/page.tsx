@@ -632,7 +632,7 @@ const included = [
     ),
   },
   {
-    title: "Conversion-ready website",
+    title: "Conversion-Ready Website",
     body: "A fast, industry-specific site built to turn visitors into booked calls and submitted forms.",
     icon: (
       <>
@@ -642,7 +642,7 @@ const included = [
     ),
   },
   {
-    title: "Google Ads that pay back",
+    title: "Google Ads That Pay Back",
     body: (
       <>
         <Link href="/services/google-ads" className="ind-inline-link">
@@ -660,7 +660,7 @@ const included = [
     ),
   },
   {
-    title: "Reviews & reputation",
+    title: "Reviews & Reputation",
     body: "Systems that grow genuine 5-star reviews and keep your rating ahead of local competitors.",
     icon: (
       <>
@@ -669,7 +669,7 @@ const included = [
     ),
   },
   {
-    title: "Plain-English reporting",
+    title: "Plain-English Reporting",
     body: "Clear monthly numbers on calls, leads, and rankings, so you always know what your budget is doing.",
     icon: (
       <>
@@ -779,8 +779,8 @@ function Page() {
               <div className="hero-copy">
                 <span className="eyebrow">Industries we serve</span>
                 <h1>
-                  Local marketing built around{" "}
-                  <span className="accent">your industry.</span>
+                  Local Marketing Built Around{" "}
+                  <span className="accent">Your Industry.</span>
                 </h1>
                 <p className="lead">
                   Roofers, dentists, movers, and law firms don&apos;t win
@@ -929,7 +929,7 @@ function Page() {
             <div className="story-grid">
               <div className="story-label">
                 <span className="eyebrow">Why it matters</span>
-                <h2>One playbook per niche beats one for everyone.</h2>
+                <h2>One Playbook Per Niche Beats One for Everyone.</h2>
               </div>
               <div className="story-body">
                 <p>
@@ -979,7 +979,7 @@ function Page() {
           <div className="wrap">
             <div className="sec-head center">
               <span className="eyebrow center">Pick your industry</span>
-              <h2>Marketing tailored to your line of work</h2>
+              <h2>Marketing Tailored to Your Line of Work</h2>
               <p>
                 Choose your industry to see exactly how we generate leads for
                 businesses like yours, or call us and we&apos;ll map it out live.
@@ -1017,7 +1017,7 @@ function Page() {
           <div className="wrap">
             <div className="sec-head center">
               <span className="eyebrow center">What every engagement includes</span>
-              <h2>The same growth engine, aimed at your niche</h2>
+              <h2>The Same Growth Engine, Aimed at Your Niche</h2>
               <p>
                 No matter which industry you&apos;re in, these are the levers we
                 pull, then tune to the way your customers search and buy.
@@ -1052,7 +1052,7 @@ function Page() {
           <div className="wrap">
             <div className="sec-head center">
               <span className="eyebrow center">Common questions</span>
-              <h2>Industries, answered</h2>
+              <h2>Industries, Answered</h2>
             </div>
             <div className="faq-wrap">
               {[industryFaqs.slice(0, 3), industryFaqs.slice(3)].map(
@@ -1061,6 +1061,7 @@ function Page() {
                     {column.map((faq, i) => (
                       <details
                         className="faq-item"
+                        name="ind-faq"
                         key={faq.question}
                         open={ci === 0 && i === 0}
                       >
@@ -1093,7 +1094,7 @@ function Page() {
             <div className="contact-grid">
               <div className="contact-copy">
                 <span className="eyebrow">Tell us your industry</span>
-                <h2>Get a plan built for your business</h2>
+                <h2>Get a Plan Built for Your Business</h2>
                 <p>
                   Share a little about what you do and where you want to grow.
                   We&apos;ll come back with the fastest next step for your
@@ -1169,7 +1170,7 @@ function Page() {
                 <ServiceLeadForm
                   formType="industries"
                   badge="Free consultation"
-                  title="Request your free plan"
+                  title="Request Your Free Plan"
                   subtitle="We'll reply within one business day."
                   submitText="Get My Plan"
                   serviceOptions={INDUSTRY_SERVICE_OPTIONS}
@@ -1185,7 +1186,7 @@ function Page() {
           <div className="wrap">
             <div className="cta-inner">
               <span className="eyebrow center">Ready when you are</span>
-              <h2>Let&apos;s grow your business, your way</h2>
+              <h2>Let&apos;s Grow Your Business, Your Way</h2>
               <p>
                 Book a free strategy call and we&apos;ll walk you through the
                 fastest next step for your industry, with a look at your Google

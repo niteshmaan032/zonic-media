@@ -120,27 +120,27 @@ const serviceJsonLd = {
 
 const TowingWebFaqs = [
   {
-    question: "How much does towing company website design cost?",
+    question: "How Much Does Towing Company Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, dispatch integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-truck, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a towing website?",
+    question: "How Long Does It Take to Design a Towing Website?",
     answer:
       "Most towing websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website capture emergency roadside calls?",
+    question: "Can My Website Capture Emergency Roadside Calls?",
     answer:
       "Yes — that is the whole point. A stranded driver is not filling out a long form; they are tapping to call. We build every page with a giant click-to-call button in the header, fast-loading roadside pages, and location signals up top, so a driver on the shoulder reaches you in one tap instead of the next tow truck on the list.",
   },
   {
-    question: "Can you integrate my dispatch or towing software?",
+    question: "Can You Integrate My Dispatch or Towing Software?",
     answer:
       "Yes. We connect the tools towing companies already run — Towbook, TRAXERO, or a clean request flow that routes straight to your dispatcher — and keep click-to-call front and center so calls never depend on a form. Either way, a driver can reach you without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -222,37 +222,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    title: "Click-to-call everywhere",
+    title: "Click-to-Call Everywhere",
     desc: "A tap-to-call button fixed to every screen, because a stranded driver calls — they do not fill out a form or read your about page.",
   },
   {
     icon: <FiClock aria-hidden="true" />,
-    title: "24/7 response pages",
+    title: "24/7 Response Pages",
     desc: "Fast, around-the-clock roadside pages built to catch the 2 a.m. breakdown search and turn it into a ringing phone.",
   },
   {
     icon: <FiMapPin aria-hidden="true" />,
-    title: "Coverage & GPS signals",
+    title: "Coverage & GPS Signals",
     desc: "Service-area pages and location signals that tell drivers and Google exactly where you run, so you show up along every route you cover.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "Trust & speed UX",
+    title: "Trust & Speed UX",
     desc: "Response-time promises, insurance and licensing proof, and reviews placed up top, so a nervous driver trusts you enough to call.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Every towing search happens on a phone, often on the shoulder of a road — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "One-tap click-to-call",
+    title: "One-Tap Click-to-Call",
     desc: "A call button fixed to the header on every page, always visible, never more than one thumb-tap away.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where nervous drivers actually read them before they trust you with their car.",
   },
   {
@@ -260,19 +260,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds on a weak roadside signal — speed is a ranking factor and a rescue factor.",
   },
   {
-    title: "Roadside service pages",
+    title: "Roadside Service Pages",
     desc: "Dedicated pages for lockouts, jump starts, winch-outs, and flatbed towing, matched to how drivers actually search.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and highway corridor you run, built to rank for local towing searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you tow, and that you are open 24/7.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -280,22 +280,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & coverage mapping",
+    title: "Discovery & Coverage Mapping",
     desc: "The jobs you want more of, the corridors and cities you run, how dispatch works today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your coverage area — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, click-to-call, and roadside landing pages — every page written around the searches drivers use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every call button tested, every old URL redirected, call tracking wired up — then local SEO and GBP work keep the phone ringing.",
   },
 ];
@@ -308,7 +308,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -407,8 +407,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Towing Company Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Towing company website design that turns searches into{" "}
-                    <span className="hiw-hl">ringing phones</span>
+                    Towing Company Website Design That Turns Searches into{" "}
+                    <span className="hiw-hl">Ringing Phones</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs towing websites that work like a lead
@@ -566,9 +566,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first call</span> a stranded
-                    driver makes
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Call</span> a Stranded
+                    Driver Makes
                   </h2>
                   <p className="hiw-lead">
                     When a driver is stuck on the shoulder, they grab their phone
@@ -617,7 +617,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Towing website design for every stage of your company
+                    Towing Website Design for Every Stage of Your Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -642,7 +642,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Kind of Call</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of tow
+                  Web Design for Every Kind of Tow
                 </h2>
                 <p className="hiw-lead">
                   Roadside assistance, lockouts and jump starts, winch-outs,
@@ -691,7 +691,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book calls
+                  More Than a Brochure — A System Built to Book Calls
                 </h2>
                 <p className="hiw-lead">
                   Most towing websites bury the phone number under a slideshow
@@ -719,7 +719,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting towing website
+                    The Anatomy of a High-Converting Towing Website
                   </h2>
                   <p className="hiw-lead">
                     The best towing website design is not about decoration — it
@@ -766,7 +766,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -778,7 +778,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -802,7 +802,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones drivers actually use</h3>
+                  <h3>Fast on the Phones Drivers Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because every towing search happens on a phone — often on a
@@ -813,7 +813,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where drivers look for them</h3>
+                  <h3>Trust Signals Where Drivers Look for Them</h3>
                   <p>
                     Response-time promises, insurance and licensing proof, and
                     reviews placed in the layout — not buried on an about page a
@@ -824,7 +824,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, call
                     flows, and local SEO foundations your site needs — no
@@ -854,7 +854,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -884,7 +884,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Towing Pros Choose Us</p>
-                <h2 className="hiw-h2">Speed customers can feel</h2>
+                <h2 className="hiw-h2">Speed Customers Can Feel</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how drivers choose a
                   tow company — and what makes them call instead of keep
@@ -948,7 +948,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Run</p>
                 <h2 className="hiw-h2">
-                  Towing website design across the United States
+                  Towing Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-truck operators to multi-market recovery companies,
@@ -983,7 +983,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything towing pros ask us about website design
+                    Everything Towing Pros Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, roadside calls, and
@@ -1023,7 +1023,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with calls.
+                  Your Website is Step One. Here is What Fills It with Calls.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1052,7 +1052,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free towing website consult
+                    Book Your Free Towing Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

@@ -103,7 +103,7 @@ function Blogs({ blogs }: BlogsProps) {
     <section className="blog-section">
       <div className="blog-section-header">
         <h2 className="blog-section-heading">
-          Explore our <span>latest blogs</span>
+          Explore Our <span>Latest Blogs</span>
         </h2>
 
         <div className="blog-header-actions">

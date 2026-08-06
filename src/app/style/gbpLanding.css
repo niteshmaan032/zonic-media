@@ -1102,7 +1102,6 @@ body:has(.gbp-lp) .floating-phone-link {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  text-transform: capitalize;
   color: var(--text-soft);
   margin-bottom: 18px;
 }

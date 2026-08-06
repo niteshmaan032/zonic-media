@@ -30,7 +30,7 @@ function Faqs({ items, defaultActiveKey = "0", showQuestionBox = true }: FaqsPro
 
   return (
     <div className="global-faqs-section">
-      <h2 className="faq-heading">Frequently asked questions</h2>
+      <h2 className="faq-heading">Frequently Asked Questions</h2>
 
       <Row className="justify-content-between ">
         {/* LEFT FAQ */}

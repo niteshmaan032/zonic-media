@@ -38,17 +38,17 @@ export const windowAndDoorMarketing = buildIndustryMarketingPage({
   problems: [
     {
       icon: "wallet",
-      title: "The tax-credit pitch stopped working",
+      title: "The Tax-Credit Pitch Stopped Working",
       body: "The federal energy-efficiency credit that covered window and door upgrades no longer applies to work placed in service after 2025. Campaigns still leading with it are selling a discount that isn't there — and losing trust when homeowners find out.",
     },
     {
       icon: "pin",
-      title: "Outranked by national replacement brands",
+      title: "Outranked by National Replacement Brands",
       body: "Renewal-style franchises buy the top of every search result and every retargeting slot. Without a top-three Map Pack position and local authority, an independent dealer never enters the three-quote shortlist.",
     },
     {
       icon: "clock",
-      title: "Estimates that sit and go cold",
+      title: "Estimates That Sit and Go Cold",
       body: "Homeowners typically gather quotes over several weeks. Without <a class=\"ima-inline-link\" href=\"/services/google-ads\">retargeting and structured follow-up</a>, the quote you delivered in week one loses to the company that stayed visible through week five.",
     },
   ],
@@ -116,7 +116,7 @@ export const windowAndDoorMarketing = buildIndustryMarketingPage({
     },
   ],
 
-  finalHeading: "Ready to book more window and door estimates?",
+  finalHeading: "Ready to Book More Window and Door Estimates?",
   finalLead:
     "Tell us where you want to grow and we'll come back with the fastest next step — a free audit of your profile, rankings, and website, with no obligation.",
 

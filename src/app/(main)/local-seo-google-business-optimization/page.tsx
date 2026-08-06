@@ -191,32 +191,32 @@ const factors = [
 const whyNotRanking = [
   {
     n: "01",
-    title: "Your primary category doesn't match the search",
+    title: "Your Primary Category Doesn't Match the Search",
     body: "A general contractor set to \"Construction company\" will not rank for \"bathroom remodeler\" no matter how good the profile is. Primary category is the single biggest relevance signal, and the wrong one caps your ceiling everywhere in the area.",
   },
   {
     n: "02",
-    title: "Your service area is drawn wrong",
+    title: "Your Service Area is Drawn Wrong",
     body: "Too large and Google dilutes you across places you'll never win; too small and you disappear from the suburbs that actually convert. Service-area businesses in particular get this wrong, then blame the profile.",
   },
   {
     n: "03",
-    title: "You're only measuring rank at your own address",
+    title: "You're Only Measuring Rank at Your Own Address",
     body: "Checking your ranking from the office tells you almost nothing — you're standing at the point of maximum proximity. A single average rank number hides that you're #2 in one neighbourhood and #19 in the next. This is what the grid scan is for.",
   },
   {
     n: "04",
-    title: "Review velocity has stalled",
+    title: "Review Velocity Has Stalled",
     body: "A profile with 80 reviews and none in eight months reads as less active than a competitor with 40 and one a week. Google weighs recency and pace, not just the total, and stalled velocity shows up as a slow slide down the pack.",
   },
   {
     n: "05",
-    title: "Your details don't match across the web",
+    title: "Your Details Don't Match Across the Web",
     body: "A different suite number on your site, an old phone on a directory, a former trading name on an aggregator — each mismatch chips at prominence. It rarely causes a dramatic drop; it quietly stops you climbing.",
   },
   {
     n: "06",
-    title: "Competitors are simply doing more of it",
+    title: "Competitors are Simply Doing More of It",
     body: "The Map Pack is comparative, not absolute. If three competitors added photos, posts and reviews all year and you didn't, you'll fall even though nothing about your profile got worse. Local rankings decay without maintenance.",
   },
 ];
@@ -224,32 +224,32 @@ const whyNotRanking = [
 const levers = [
   {
     n: "01",
-    title: "Grid-scan first, so we're fixing the real problem",
+    title: "Grid-Scan First, So we're Fixing the Real Problem",
     body: "Before touching anything we scan your rankings across a grid of points spanning the service area, for the terms that actually bring work. That map tells us whether you have a relevance problem, a prominence problem, or a coverage problem — three different jobs.",
   },
   {
     n: "02",
-    title: "Category and service alignment",
+    title: "Category and Service Alignment",
     body: "Primary category set to the highest-intent match, secondaries chosen so they widen coverage without muddying relevance, and the services list built out to mirror how customers actually phrase the job.",
   },
   {
     n: "03",
-    title: "Service-area geometry",
+    title: "Service-Area Geometry",
     body: "Coverage redrawn around where you genuinely compete and want to work, rather than an optimistic radius. For service-area businesses this is usually the biggest single change available.",
   },
   {
     n: "04",
-    title: "Review velocity, not review count",
+    title: "Review Velocity, Not Review Count",
     body: "A repeatable request flow so reviews arrive steadily instead of in bursts, with replies on every one. Pace and recency are what the algorithm reads.",
   },
   {
     n: "05",
-    title: "Consistency and local prominence",
+    title: "Consistency and Local Prominence",
     body: "Details reconciled everywhere Google cross-checks them, plus the local links and mentions that separate a known business from a listed one. Slow, but it's what beats a closer competitor.",
   },
   {
     n: "06",
-    title: "Re-scan and compare",
+    title: "Re-Scan and Compare",
     body: "The same grid, the same terms, monthly. You see coverage change square by square instead of trusting a single number that could move for any reason.",
   },
 ];
@@ -305,7 +305,7 @@ const pricing = [
       { text: "Overlap & cannibalisation analysis", dim: false },
       { text: "Cross-location consistency audit", dim: false },
       { text: "Dedicated account manager", dim: false },
-      { text: "White-label reporting", dim: false },
+      { text: "White-Label Reporting", dim: false },
       { text: "Agency partner program access", dim: false },
     ],
     btn: "Get a multi-location quote",
@@ -455,9 +455,9 @@ function Page() {
             <span className="lp-eyebrow on-dark">Map Pack ranking</span>
 
             <h1 className="lp-h1">
-              You rank #1 outside your own front door.{" "}
+              You Rank #1 Outside Your Own Front Door.{" "}
               <span className="lp-accent">
-                Three miles away, you don&apos;t exist.
+                Three Miles Away, You Don&apos;t Exist.
               </span>
             </h1>
 
@@ -571,7 +571,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">What decides the pack</span>
               <h2 className="lp-h2">
-                Three factors, and only two of them are yours
+                Three Factors, and Only Two of Them are Yours
               </h2>
               <p className="lp-lead">
                 Google names proximity, relevance and prominence as what
@@ -610,7 +610,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">Diagnosis</span>
               <h2 className="lp-h2">
-                Six reasons a good profile still doesn&apos;t rank
+                Six Reasons a Good Profile Still Doesn&apos;t Rank
               </h2>
               <p className="lp-lead">
                 A profile can be complete, verified and well filled in and still
@@ -633,7 +633,7 @@ function Page() {
           <section className="lp-panel" id="lo-levers">
             <div className="lp-head">
               <span className="lp-eyebrow">What we actually change</span>
-              <h2 className="lp-h2">The levers, in the order we pull them</h2>
+              <h2 className="lp-h2">The Levers, in the Order We Pull Them</h2>
               <p className="lp-lead">
                 Ranking work is sequenced, not bundled. Relevance first because
                 it moves fastest, coverage next, prominence last because it
@@ -660,7 +660,7 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow on-dark">Before ranking work</span>
               <h2 className="lp-h2">
-                A listing Google won&apos;t show can&apos;t be ranked
+                A Listing Google Won&apos;t Show Can&apos;t be Ranked
               </h2>
               <p className="lp-lead">
                 None of the levers on this page lift a profile that is
@@ -672,7 +672,7 @@ function Page() {
             <div className="lp-grid-3">
               <div className="lp-card-soft" style={onDarkCard}>
                 <h3 className="lp-h4" style={{ color: "#fff" }}>
-                  Not verified yet
+                  Not Verified Yet
                 </h3>
                 <p className="lp-body">
                   Video is the default method now and the rules changed twice
@@ -710,7 +710,7 @@ function Page() {
               </div>
               <div className="lp-card-soft" style={onDarkCard}>
                 <h3 className="lp-h4" style={{ color: "#fff" }}>
-                  Appeal already rejected
+                  Appeal Already Rejected
                 </h3>
                 <p className="lp-body">
                   If Google has already turned down an appeal, that&apos;s a
@@ -731,7 +731,7 @@ function Page() {
           <section className="lp-panel" id="lo-pricing">
             <div className="lp-head">
               <span className="lp-eyebrow">Engagements</span>
-              <h2 className="lp-h2">Start with the scan — it costs nothing</h2>
+              <h2 className="lp-h2">Start with the Scan — It Costs Nothing</h2>
               <p className="lp-lead">
                 The scan and the diagnosis are free because they&apos;re how
                 both of us find out whether there&apos;s work worth doing.
@@ -789,7 +789,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Client results</span>
-              <h2 className="lp-h2">What clients say about the work</h2>
+              <h2 className="lp-h2">What Clients Say About the Work</h2>
             </div>
             <LenisIframeGuard
               className="lo-reviews-widget"
@@ -801,11 +801,11 @@ function Page() {
           <section className="lp-panel" id="lo-faq">
             <div className="lp-head">
               <span className="lp-eyebrow">Map Pack questions</span>
-              <h2 className="lp-h2">What owners ask about local rankings</h2>
+              <h2 className="lp-h2">What Owners Ask About Local Rankings</h2>
             </div>
 
             {faqs.map((faq, index) => (
-              <details className="lp-faq-item" key={faq.q} open={index === 0}>
+              <details className="lp-faq-item" name="lp-faq" key={faq.q} open={index === 0}>
                 <summary className="lp-faq-q">
                   {faq.q}
                   <span className="lp-faq-pm">
@@ -845,7 +845,7 @@ function Page() {
           <section className="lp-panel">
             <div className="lp-head">
               <span className="lp-eyebrow">Related work</span>
-              <h2 className="lp-h2">Where this sits in the rest of it</h2>
+              <h2 className="lp-h2">Where This Sits in the Rest of It</h2>
               <p className="lp-lead">
                 Ranking work assumes a profile that is already built out —
                 that&apos;s{" "}
@@ -890,7 +890,7 @@ function Page() {
       <section className="lp-final">
         <div className="lp-final-inner">
           <span className="lp-eyebrow on-dark">See the map first</span>
-          <h2 className="lp-h2">Find out where your green actually stops</h2>
+          <h2 className="lp-h2">Find Out Where Your Green Actually Stops</h2>
           <p className="lp-lead">
             The scan is free and takes a day. You get the grid, the diagnosis,
             and an honest answer on whether there&apos;s enough headroom to be
@@ -1009,7 +1009,7 @@ function Page() {
           </div>
 
           <div className="lp-footer-col">
-            <h3>More services</h3>
+            <h3>More Services</h3>
             <ul>
               <li>
                 <Link href="/services/local-seo-for-home-services">

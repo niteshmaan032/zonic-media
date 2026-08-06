@@ -140,7 +140,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       stats: [
         {
           big: "3.1×",
-          h: "More direct calls within 90 days",
+          h: "More Direct Calls Within 90 Days",
           p: "Average increase across metro Atlanta and secondary Georgia metros.",
         },
         {
@@ -150,7 +150,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           big: "50%",
-          h: "Lower cost per booked inspection",
+          h: "Lower Cost Per Booked Inspection",
           p: "Comparing month-one CAC to month-twelve, blended across all channels.",
         },
         {
@@ -340,12 +340,12 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       stats: [
         {
           big: "3.4×",
-          h: "More direct calls within 90 days",
+          h: "More Direct Calls Within 90 Days",
           p: "Average increase in non-referred calls from buyers across Texas metros.",
         },
         {
           big: "48%",
-          h: "Lower cost per booked inspection",
+          h: "Lower Cost Per Booked Inspection",
           p: "Comparing month-one CAC to month-twelve, blended across all channels.",
         },
         {
@@ -546,7 +546,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           big: "55%",
-          h: "Lower cost per booked inspection",
+          h: "Lower Cost Per Booked Inspection",
           p: "Comparing month-one CAC to month-twelve, blended across all channels.",
         },
         {
@@ -746,7 +746,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       stats: [
         {
           big: "2.8×",
-          h: "More direct calls within 90 days",
+          h: "More Direct Calls Within 90 Days",
           p: "Average increase in non-referred buyer inquiries across California metros.",
         },
         {
@@ -761,7 +761,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         },
         {
           big: "44%",
-          h: "Lower cost per booked inspection",
+          h: "Lower Cost Per Booked Inspection",
           p: "Comparing month-one CAC to month-twelve, blended across channels.",
         },
       ],
@@ -948,7 +948,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       stats: [
         {
           big: "3.5×",
-          h: "More direct calls within 90 days",
+          h: "More Direct Calls Within 90 Days",
           p: "Especially strong in Charlotte and Triangle metros with high transplant volume.",
         },
         {
@@ -1154,7 +1154,7 @@ export function buildStateServices(stateName: string): StateService[] {
     },
     {
       num: "06 · REVIEWS & REPUTATION",
-      h: "Turn Every Inspection Into a Five-Star Public Endorsement.",
+      h: "Turn Every Inspection into a Five-Star Public Endorsement.",
       p: "Reviews are the single biggest factor — after distance — in whether a buyer chooses your inspection company over the one three blocks away. We build an automated review request system that fires the right message at the right time after every inspection, monitors review activity across Google, Yelp, Angi, and NextDoor, and writes professional response templates for negative reviews so a one-star complaint doesn't bury you on Page One.",
       items: [
         "Automated review requests by SMS and email after every inspection",

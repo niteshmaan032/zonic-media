@@ -236,8 +236,8 @@ export default function StatePage({ state }: { state: StateContent }) {
                   What a Plumbing Marketing Agency Delivers
                 </div>
                 <h2 className="hia-sec-h2">
-                  Six marketing functions, tuned for {stateName}{" "}
-                  <span className="hia-accent">plumbing economics.</span>
+                  Six Marketing Functions, Tuned for {stateName}{" "}
+                  <span className="hia-accent">Plumbing Economics.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Every service below is calibrated to how {stateName} plumbing
@@ -329,8 +329,8 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Trusted by Clients Nationwide
                 </div>
                 <h2 className="hia-sec-h2">
-                  What plumbers and other service businesses{" "}
-                  <span className="hia-accent">say about working with us.</span>
+                  What Plumbers and Other Service Businesses{" "}
+                  <span className="hia-accent">Say About Working with Us.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Verified reviews from Clutch — the independent platform
@@ -378,8 +378,8 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Transparent Pricing, Month to Month
                 </div>
                 <h2 className="hia-sec-h2">
-                  Three plans built for where your {stateName} plumbing company
-                  is <span className="hia-accent">right now.</span>
+                  Three Plans Built for Where Your {stateName} Plumbing Company
+                  is <span className="hia-accent">Right Now.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Pick the plan that fits where you are today — move up or down
@@ -430,8 +430,8 @@ export default function StatePage({ state }: { state: StateContent }) {
               <section className="hia-section" id="hia-faq">
                 <div className="hia-sec-label">{state.faqEyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">strategy call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Strategy Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question below, just include it in

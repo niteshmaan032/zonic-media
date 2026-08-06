@@ -398,12 +398,12 @@ const WhyCards = [
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter. Profile, citations, and on-page work stack month over month rather than resetting.",
   },
   {
     icon: <FiBarChart2 aria-hidden="true" />,
-    title: "Transparent to a fault",
+    title: "Transparent to a Fault",
     desc: "You own every account and asset. You see every change in the monthly report. If a number dips you hear it from us first, with the fix already moving.",
   },
 ];
@@ -544,8 +544,8 @@ function Page() {
                 <div className="phl-hero-copy">
                   <p className="phl-eyebrow">Local SEO in Philadelphia</p>
                   <h1 className="phl-h1">
-                    Local SEO that wins the{" "}
-                    <span className="phl-hl">Philly map pack</span>
+                    Local SEO That Wins the{" "}
+                    <span className="phl-hl">Philly Map Pack</span>
                   </h1>
                   <p className="phl-hero-sub">
                     When somebody in Philadelphia searches &ldquo;near
@@ -720,9 +720,9 @@ function Page() {
                 <div className="phl-about-copy">
                   <p className="phl-eyebrow">The Local Search Opportunity</p>
                   <h2 className="phl-h2">
-                    Three results get the calls.{" "}
+                    Three Results Get the Calls.{" "}
                     <span className="phl-hl-text">
-                      We make sure one is yours.
+                      We Make Sure One is Yours.
                     </span>
                   </h2>
                   <p className="phl-lead">
@@ -771,7 +771,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Everything your local rankings need, in one system
+                    Everything Your Local Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -801,7 +801,7 @@ function Page() {
               <div className="phl-band-content">
                 <p className="phl-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="phl-h2">
-                  We put you in the top three — and keep you there
+                  We Put You in the Top Three — And Keep You There
                 </h2>
                 <p className="phl-lead">
                   The map pack takes the majority of clicks and nearly all of
@@ -909,7 +909,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">How It Works</p>
                   <h2 className="phl-h2">
-                    From invisible to unavoidable in four steps
+                    From Invisible to Unavoidable in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -929,7 +929,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free local visibility audit</h3>
+                  <h3>Free Local Visibility Audit</h3>
                   <p>
                     We audit your rankings, profile, citations, reviews, and
                     competitors — and show you exactly where the calls you are
@@ -967,7 +967,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation fixes</h3>
+                  <h3>Strategy &amp; Foundation Fixes</h3>
                   <p>
                     A keyword-mapped plan for your services and neighbourhoods,
                     then the foundation work: profile optimization, citation
@@ -982,7 +982,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Every month</span>
                   </div>
-                  <h3>Build authority every month</h3>
+                  <h3>Build Authority Every Month</h3>
                   <p>
                     Local content, links, review growth, and profile activity —
                     the compounding signals that move you up the map pack and
@@ -1017,7 +1017,7 @@ function Page() {
                       </span>
                       <span className="phl-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and direction requests,
                       not vanity metrics. As rankings lock in, we expand to more
@@ -1056,7 +1056,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Real Results</p>
                 <h2 className="phl-h2">
-                  What happens when local SEO is done properly
+                  What Happens When Local SEO is Done Properly
                 </h2>
                 <p className="phl-lead">
                   Different neighbourhoods, different categories — the same
@@ -1110,7 +1110,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">The Difference</p>
-                <h2 className="phl-h2">Zonic vs. a typical local SEO agency</h2>
+                <h2 className="phl-h2">Zonic Vs. A Typical Local SEO Agency</h2>
                 <p className="phl-lead">
                   Local SEO for local businesses is all we do, and it shows.
                   Here is what working with a dedicated local team looks like.
@@ -1119,7 +1119,7 @@ function Page() {
 
               <div className="phl-compare-grid">
                 <div className="phl-compare-col phl-compare-col--them">
-                  <h3>Typical SEO agency</h3>
+                  <h3>Typical SEO Agency</h3>
                   <p className="phl-compare-sub">
                     Why most local campaigns quietly stall
                   </p>
@@ -1203,7 +1203,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A local SEO partner, not a monthly invoice
+                  A Local SEO Partner, Not a Monthly Invoice
                 </h2>
                 <p className="phl-lead">
                   Rankings are the output. The inputs are strategy, execution,
@@ -1224,7 +1224,7 @@ function Page() {
               <div className="phl-why-banner">
                 <div className="phl-why-banner-text">
                   <p className="phl-eyebrow">Free Local SEO Audit</p>
-                  <h3>See exactly how we&apos;ll grow your local rankings</h3>
+                  <h3>See Exactly How We&apos;ll Grow Your Local Rankings</h3>
                   <p>
                     We map your profile, citations, reviews, and rankings — and
                     show you the clear path to the top three for the searches
@@ -1287,7 +1287,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Verified Client Reviews</p>
                 <h2 className="phl-h2" id="phl-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="phl-reviews-widget">
@@ -1321,7 +1321,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Everything Working Together</p>
-                <h2 className="phl-h2">Six signals, one ranking engine</h2>
+                <h2 className="phl-h2">Six Signals, One Ranking Engine</h2>
                 <p className="phl-lead">
                   Local rankings are not one lever, they are six working at
                   once. Skip any of them and the map pack notices. We run all
@@ -1399,7 +1399,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">FAQs</p>
                   <h2 className="phl-h2">
-                    Straight answers about local SEO in Philadelphia
+                    Straight Answers About Local SEO in Philadelphia
                   </h2>
                   <p className="phl-lead">
                     Pricing, timelines, guarantees, and what actually moves map
@@ -1432,7 +1432,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Grow Further</p>
                 <h2 className="phl-h2">
-                  Rankings are step one. Here is what multiplies them.
+                  Rankings are Step One. Here is What Multiplies Them.
                 </h2>
                 <p className="phl-lead">
                   Local SEO is one channel inside a bigger system — see the full{" "}
@@ -1471,7 +1471,7 @@ function Page() {
                 <aside className="phl-form-aside">
                   <p className="phl-eyebrow">Get Started</p>
                   <h2 className="phl-h2">
-                    Claim your free Philadelphia local SEO audit
+                    Claim Your Free Philadelphia Local SEO Audit
                   </h2>
                   <p className="phl-lead">
                     Tell us about your business and we will send a full local
@@ -1537,7 +1537,7 @@ function Page() {
                   <ServiceLeadForm
                     formType="philadelphia-local-seo"
                     badge="Free Audit"
-                    title="Get your free local SEO audit"
+                    title="Get Your Free Local SEO Audit"
                     subtitle="No contracts, no pressure — just a clear picture of where you rank today and what it takes to win your neighbourhood."
                     submitText="Send My Free Audit"
                     messageLabel="Tell us about your business"

@@ -60,7 +60,7 @@ import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
 const services = [
   {
     id: "gmb",
-    label: "google my business (GMB)",
+    label: "Google My Business (GMB)",
     image: "/images/header-gmb.webp",
     alt: "google my business",
     link: "/services/gmb-reinstatement-help",

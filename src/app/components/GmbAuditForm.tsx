@@ -114,7 +114,7 @@ export default function GmbAuditForm() {
         </svg>
         Free Suspension Audit
       </span>
-      <h3>Get your free case review</h3>
+      <h3>Get Your Free Case Review</h3>
       <p>We&apos;ll respond within one business day.</p>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>

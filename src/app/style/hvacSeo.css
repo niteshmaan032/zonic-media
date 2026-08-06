@@ -289,7 +289,7 @@
   }
 
   .hvac-results-cta {
-    width: 100%;
+    width: fit-content;
     justify-content: center;
     text-align: center;
   }

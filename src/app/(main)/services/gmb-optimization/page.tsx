@@ -79,42 +79,42 @@ const serviceJsonLd = {
 
 const GmbOptimFaqs = [
   {
-    question: "How long before I see results from GMB optimization?",
+    question: "How Long Before I See Results from GMB Optimization?",
     answer:
       "Most clients see measurable improvements in profile views and ranking within 2-4 weeks of optimization. Local SEO results compound over time - the longer your profile stays optimized and active, the stronger it performs.",
   },
   {
-    question: "My profile is already set up - do I still need optimization?",
+    question: "My Profile is Already Set Up - Do I Still Need Optimization?",
     answer:
       'Yes. Having a profile is just the baseline. Most "set up" profiles are missing critical ranking signals - wrong categories, weak descriptions, no keyword strategy, minimal photos. A proper optimization can dramatically improve your visibility.',
   },
   {
-    question: "Do you manage reviews as part of optimization?",
+    question: "Do You Manage Reviews as Part of Optimization?",
     answer:
       "Yes - in our Optimize + Manage package, we provide a review generation strategy to help you consistently earn 5-star reviews from happy customers, which is one of Google's top local ranking factors.",
   },
   {
-    question: "What industries do you optimize for?",
+    question: "What Industries Do You Optimize For?",
     answer:
       "We optimize profiles across all local service industries - restaurants, medical practices, law firms, home services, retail, and more. Our strategy is always tailored to your specific industry and local market.",
   },
   {
-    question: "Can you optimize multiple locations?",
+    question: "Can You Optimize Multiple Locations?",
     answer:
       "Yes. We work with multi-location businesses and agencies managing large numbers of profiles. Contact us for bulk pricing and white-label options.",
   },
   {
-    question: "What's the difference between GMB optimization and Local SEO?",
+    question: "What's the Difference Between GMB Optimization and Local SEO?",
     answer:
       "GMB optimization focuses specifically on your Google Business Profile - categories, photos, posts, reviews. Local SEO is broader and includes your website, citations, and backlinks. Both work together - we offer both services.",
   },
   {
-    question: "Does GMB optimization help my business appear in Google's AI Overviews?",
+    question: "Does GMB Optimization Help My Business Appear in Google's AI Overviews?",
     answer:
       "Yes. Google's AI Overviews for local searches pull from verified, complete, and active Google Business Profiles - businesses with strong categories, recent reviews above 4.3 stars, fresh posts, and accurate service data are the ones AI answers cite. Our optimization covers exactly those signals, so your profile is eligible for both the Map Pack and AI-generated results.",
   },
   {
-    question: "What makes Zonic Media one of the best GMB optimization services?",
+    question: "What Makes Zonic Media One of the Best GMB Optimization Services?",
     answer:
       "Zonic Media has optimized 1500+ Google Business Profiles with 95% client satisfaction and a 4.9 average rating. Every engagement starts with a free audit, the strategy is tailored to your industry and local market, and independent client reviews are published on Trustpilot and Clutch. We're also a reinstatement and verification specialist, so profiles we optimize stay compliant with Google's guidelines.",
   },
@@ -199,7 +199,7 @@ function page() {
             </div>
 
             <h1 className="gmb-reinst-main-heading">
-              Your GMB is Live. But Is It Actually Working?
+              Your GMB is Live. But is It Actually Working?
             </h1>
 
             <p className="gmb-reinst-descrp">
@@ -1074,7 +1074,7 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Three guarantee pillars
+                Three Guarantee Pillars
               </h2>
             </div>
 
@@ -1177,7 +1177,7 @@ function page() {
       {/*gmb-reinst-banner-3*/}
       <div className="gmb-reinst-banner-3">
         <h2 className="gmb-reisnt-banner-3-heading">
-          Your Competitors Are Optimized. Are You?
+          Your Competitors are Optimized. Are You?
         </h2>
         <p className="gmb-reisnt-banner-3-descrp">
           Right now, customers in your area are searching for exactly what you

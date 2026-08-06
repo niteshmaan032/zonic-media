@@ -190,7 +190,7 @@ const wdServices: WdService[] = [
   },
   {
     visual: "shop",
-    title: "Responsive Shopify eCommerce Stores",
+    title: "Responsive Shopify ECommerce Stores",
     desc: (
       <>
         Launch a conversion-focused Shopify store with optimized product pages,
@@ -659,7 +659,7 @@ function Page() {
                 <span className="wd-eyebrow wd-eyebrow--light">
                   Speed is a feature
                 </span>
-                <h2>Built to pass Core Web Vitals — and to ask for the job</h2>
+                <h2>Built to Pass Core Web Vitals — And to Ask for the Job</h2>
                 <p className="wd-lead">
                   Most small business sites look fine and still leak enquiries.
                   We treat speed as a feature, not a cleanup task, and shape
@@ -672,7 +672,7 @@ function Page() {
                       <FiZap />
                     </span>
                     <div>
-                      <h4>Speed budgeted in</h4>
+                      <h4>Speed Budgeted In</h4>
                       <p>
                         Page speed is planned during the build, not patched
                         after launch.
@@ -684,7 +684,7 @@ function Page() {
                       <FiSearch />
                     </span>
                     <div>
-                      <h4>SEO structure first</h4>
+                      <h4>SEO Structure First</h4>
                       <p>
                         Technical SEO, schema, and tracking wired in from day
                         one.
@@ -696,7 +696,7 @@ function Page() {
                       <FiTrendingUp />
                     </span>
                     <div>
-                      <h4>Layouts that convert</h4>
+                      <h4>Layouts That Convert</h4>
                       <p>
                         Built around call, quote, and booking intent — not just
                         looks.
@@ -708,7 +708,7 @@ function Page() {
                       <FiActivity />
                     </span>
                     <div>
-                      <h4>Tracking included</h4>
+                      <h4>Tracking Included</h4>
                       <p>
                         Calls and forms measured, so you know what the site
                         earns.
@@ -875,12 +875,12 @@ function Page() {
           <div className="wd-wrap">
             <div className="wd-sec-head wd-sec-head--center">
               <span className="wd-eyebrow">Common questions</span>
-              <h2 className="wd-h2">Web design questions, answered</h2>
+              <h2 className="wd-h2">Web Design Questions, Answered</h2>
             </div>
             <div className="wd-faq-cols">
               <div>
                 {wdFaqsLeft.map((faq, i) => (
-                  <details className="wd-faq-item" open={i === 0} key={faq.q}>
+                  <details className="wd-faq-item" name="wd-faq" open={i === 0} key={faq.q}>
                     <summary className="wd-faq-q">
                       {faq.q}
                       <span className="wd-faq-pm" aria-hidden="true">
@@ -900,7 +900,7 @@ function Page() {
               </div>
               <div>
                 {wdFaqsRight.map((faq) => (
-                  <details className="wd-faq-item" key={faq.q}>
+                  <details className="wd-faq-item" name="wd-faq" key={faq.q}>
                     <summary className="wd-faq-q">
                       {faq.q}
                       <span className="wd-faq-pm" aria-hidden="true">
@@ -928,7 +928,7 @@ function Page() {
             <div className="wd-contact-grid">
               <aside className="wd-contact-aside">
                 <span className="wd-eyebrow">Get started</span>
-                <h2 className="wd-h2">High-converting business websites</h2>
+                <h2 className="wd-h2">High-Converting Business Websites</h2>
                 <p className="wd-lead">
                   Tell us about your business and we&apos;ll come back with a
                   design direction, an SEO-ready structure, and a transparent
@@ -975,7 +975,7 @@ function Page() {
                 <ServiceLeadForm
                   formType="web-design"
                   badge="Free consultation"
-                  title="Start your website project"
+                  title="Start Your Website Project"
                   subtitle="Takes about a minute — no commitment required."
                   submitText="Book a Strategy Call"
                   defaultServices={["Web Design"]}

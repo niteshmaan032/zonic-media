@@ -408,7 +408,7 @@ const WhyCards = [
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter. Every month of work stacks on the last, so month twelve is worth far more than month one.",
   },
   {
@@ -558,8 +558,8 @@ function Page() {
                     Digital Marketing Agency in Philadelphia
                   </p>
                   <h1 className="phl-h1">
-                    Digital marketing in Philly that{" "}
-                    <span className="phl-hl">drives real growth</span>
+                    Digital Marketing in Philly That{" "}
+                    <span className="phl-hl">Drives Real Growth</span>
                   </h1>
                   <p className="phl-hero-sub">
                     Zonic Media helps Philadelphia businesses turn search, ads,
@@ -732,9 +732,9 @@ function Page() {
                 <div className="phl-about-copy">
                   <p className="phl-eyebrow">The Philadelphia Opportunity</p>
                   <h2 className="phl-h2">
-                    Six million people in the metro.{" "}
+                    Six Million People in the Metro.{" "}
                     <span className="phl-hl-text">
-                      All of them search first.
+                      All of Them Search First.
                     </span>
                   </h2>
                   <p className="phl-lead">
@@ -790,7 +790,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What We Do</p>
                   <h2 className="phl-h2">
-                    Every channel a Philadelphia business needs, under one roof
+                    Every Channel a Philadelphia Business Needs, Under One Roof
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -820,7 +820,7 @@ function Page() {
               <div className="phl-band-content">
                 <p className="phl-eyebrow">One System, Not Six Invoices</p>
                 <h2 className="phl-h2">
-                  Channels that feed each other instead of competing for credit
+                  Channels That Feed Each Other Instead of Competing for Credit
                 </h2>
                 <p className="phl-lead">
                   Most agencies sell channels in isolation, so nobody can tell
@@ -926,7 +926,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">How It Works</p>
                   <h2 className="phl-h2">
-                    From guesswork to a growth engine in four steps
+                    From Guesswork to a Growth Engine in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -946,7 +946,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free Philadelphia growth audit</h3>
+                  <h3>Free Philadelphia Growth Audit</h3>
                   <p>
                     We map your rankings, Google Business Profile, ad spend,
                     website conversion, and the competitors currently taking the
@@ -985,7 +985,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation</h3>
+                  <h3>Strategy &amp; Foundation</h3>
                   <p>
                     A channel plan built around your margins, then the
                     groundwork: tracking installed, profile optimized, campaigns
@@ -1000,7 +1000,7 @@ function Page() {
                     </span>
                     <span className="phl-bento-tag">Every month</span>
                   </div>
-                  <h3>Launch, test, compound</h3>
+                  <h3>Launch, Test, Compound</h3>
                   <p>
                     Campaigns live, content shipping, reviews growing, and
                     budget shifting toward whatever is producing the cheapest
@@ -1035,7 +1035,7 @@ function Page() {
                       </span>
                       <span className="phl-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and booked revenue, not
                       vanity metrics. As the core market locks in, we expand to
@@ -1074,7 +1074,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Real Results</p>
                 <h2 className="phl-h2">
-                  What happens when the channels finally work together
+                  What Happens When the Channels Finally Work Together
                 </h2>
                 <p className="phl-lead">
                   Three very different businesses across the Philadelphia metro
@@ -1129,7 +1129,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">The Difference</p>
                 <h2 className="phl-h2">
-                  Zonic Media vs. a typical Philadelphia agency
+                  Zonic Media Vs. A Typical Philadelphia Agency
                 </h2>
                 <p className="phl-lead">
                   Same monthly invoice, very different month. Here is what
@@ -1139,7 +1139,7 @@ function Page() {
 
               <div className="phl-compare-grid">
                 <div className="phl-compare-col phl-compare-col--them">
-                  <h3>Typical agency</h3>
+                  <h3>Typical Agency</h3>
                   <p className="phl-compare-sub">
                     Why most campaigns quietly stall
                   </p>
@@ -1154,7 +1154,7 @@ function Page() {
                 </div>
 
                 <div className="phl-compare-col phl-compare-col--us">
-                  <h3>Digital marketing with Zonic Media</h3>
+                  <h3>Digital Marketing with Zonic Media</h3>
                   <p className="phl-compare-sub">
                     Built to compound, reported like a P&amp;L
                   </p>
@@ -1172,7 +1172,7 @@ function Page() {
                   className="phl-compare-col phl-compare-col--score"
                   aria-hidden="true"
                 >
-                  <h3>Growth scorecard</h3>
+                  <h3>Growth Scorecard</h3>
                   <p className="phl-compare-sub">
                     A typical Philly client&apos;s first six months
                   </p>
@@ -1223,7 +1223,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A Philadelphia growth partner, not a monthly invoice
+                  A Philadelphia Growth Partner, Not a Monthly Invoice
                 </h2>
                 <p className="phl-lead">
                   Rankings and impressions are the output. Strategy, execution,
@@ -1246,7 +1246,7 @@ function Page() {
                   <p className="phl-eyebrow">
                     Free Philadelphia Marketing Audit
                   </p>
-                  <h3>See exactly where your growth is leaking</h3>
+                  <h3>See Exactly Where Your Growth is Leaking</h3>
                   <p>
                     We audit your search visibility, ad spend, website
                     conversion, and competitors — then hand you a 90-day plan
@@ -1309,7 +1309,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Verified Client Reviews</p>
                 <h2 className="phl-h2" id="phl-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="phl-reviews-widget">
@@ -1343,7 +1343,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Everything Working Together</p>
-                <h2 className="phl-h2">Six services, one growth engine</h2>
+                <h2 className="phl-h2">Six Services, One Growth Engine</h2>
                 <p className="phl-lead">
                   Nothing here runs in a silo. Each service feeds the next, and
                   all six point at the same outcome — more qualified inquiries
@@ -1414,7 +1414,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">FAQs</p>
                   <h2 className="phl-h2">
-                    Straight answers about digital marketing in Philadelphia
+                    Straight Answers About Digital Marketing in Philadelphia
                   </h2>
                   <p className="phl-lead">
                     Pricing, timelines, channel choices, and what actually shows
@@ -1447,7 +1447,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Grow Further</p>
-                <h2 className="phl-h2">Want to go deeper on one channel?</h2>
+                <h2 className="phl-h2">Want to Go Deeper on One Channel?</h2>
                 <p className="phl-lead">
                   Each of these runs as part of the engine above — or on its own
                   if that is where your gap is. Serving Delaware too? We cover
@@ -1487,7 +1487,7 @@ function Page() {
                 <aside className="phl-form-aside">
                   <p className="phl-eyebrow">Get Started</p>
                   <h2 className="phl-h2">
-                    Claim your free Philadelphia marketing audit
+                    Claim Your Free Philadelphia Marketing Audit
                   </h2>
                   <p className="phl-lead">
                     Tell us about your business and we will send back a full

@@ -33,52 +33,52 @@ import { MdLocationOn } from "react-icons/md";
 
 const SeoHomeFaqs = [
   {
-    question: "What is local SEO for home service businesses?",
+    question: "What is Local SEO for Home Service Businesses?",
     answer:
       "Local SEO is the process of improving your online visibility so customers can find your business on Google Search and Google Maps when searching for nearby services like plumbing, HVAC, roofing, or electrical work.",
   },
   {
-    question: "Why is local SEO important for home service companies?",
+    question: "Why is Local SEO Important for Home Service Companies?",
     answer:
       "Local SEO helps home service companies generate more calls, leads, and booked jobs by appearing in front of customers who are actively searching for services in their area.",
   },
   {
-    question: "How long does local SEO take to show results?",
+    question: "How Long Does Local SEO Take to Show Results?",
     answer:
       "Most businesses begin seeing improvements within 2 to 3 months, while stronger rankings and lead growth typically happen within 4 to 6 months depending on competition.",
   },
   {
-    question: "Can local SEO help me get more phone calls?",
+    question: "Can Local SEO Help Me Get More Phone Calls?",
     answer:
       "Yes. Local SEO improves your visibility in local search results and Google Maps, helping more customers call your business when they need immediate service.",
   },
   {
-    question: "What types of businesses benefit from local SEO?",
+    question: "What Types of Businesses Benefit from Local SEO?",
     answer:
       "Roofers, HVAC companies, plumbers, electricians, landscapers, pest control companies, remodelers, and most home service businesses benefit from local SEO.",
   },
   {
-    question: "What is included in local SEO services?",
+    question: "What is Included in Local SEO Services?",
     answer:
       "Local SEO services usually include Google Business Profile optimization, keyword targeting, citation building, on-page SEO, review strategies, backlink building, and monthly reporting.",
   },
   {
-    question: "How does Google Business Profile help local SEO?",
+    question: "How Does Google Business Profile Help Local SEO?",
     answer:
       "A well-optimized Google Business Profile improves your chances of ranking in Google Maps, generating calls, collecting reviews, and attracting nearby customers.",
   },
   {
-    question: "Is local SEO better than paid ads?",
+    question: "Is Local SEO Better Than Paid Ads?",
     answer:
       "Local SEO provides long-term visibility and sustainable leads, while paid ads generate faster short-term traffic. Many businesses use both for best results.",
   },
   {
-    question: "How much does local SEO cost for home service businesses?",
+    question: "How Much Does Local SEO Cost for Home Service Businesses?",
     answer:
       "Pricing depends on your market competition, service areas, and goals. Most local SEO campaigns range from basic single-location plans to advanced multi-city growth campaigns.",
   },
   {
-    question: "Why choose Zonic Media for home service SEO?",
+    question: "Why Choose Zonic Media for Home Service SEO?",
     answer:
       "Zonic Media specializes in helping home service businesses generate more booked jobs, calls, and local leads through proven SEO strategies built for real business growth.",
   },
@@ -201,7 +201,7 @@ function page() {
             <ServiceLeadForm
               formType="local-seo-home-services"
               badge="Free Local SEO Audit"
-              title="Get your free local SEO audit"
+              title="Get Your Free Local SEO Audit"
               subtitle="We'll respond within one business day."
               submitText="Get My Free Audit"
               defaultServices={["Local SEO"]}
@@ -222,7 +222,7 @@ function page() {
               <div className="local-seo-home-heading-wrapper">
                 <p className="local-seo-home-label">Why Local SEO Matters</p>
                 <h2 className="local-seo-home-sec-head">
-                  Why Local SEO Is Essential for Home Service Businesses
+                  Why Local SEO is Essential for Home Service Businesses
                 </h2>
               </div>
             </Col>
@@ -908,7 +908,7 @@ function page() {
                   Trusted by Home Service Businesses Ready to Grow
                 </p>
                 <h2 className="local-seo-home-sec-head">
-                  Why Choose Zonic Media Over Other Home Service SEO Companies
+                  Why Choose Zonic Media over Other Home Service SEO Companies
                 </h2>
               </div>
             </Col>
@@ -1003,8 +1003,8 @@ function page() {
         {/*--local-seo-home-sec-9--*/}
         <div className="local-seo-home-sec-9">
           <h2 className="testimonial-heading">
-            Hear what our clients say about
-            <span> working with Zonic Media.</span>
+            Hear What Our Clients Say About
+            <span> Working with Zonic Media.</span>
           </h2>
           <div className="local-seo-home-testimonial-widget">
             <ClutchWidget
@@ -1145,7 +1145,7 @@ function page() {
               <ServiceLeadForm
                 formType="local-seo-home-services"
                 badge="Free Local SEO Audit"
-                title="Get your free local SEO audit"
+                title="Get Your Free Local SEO Audit"
                 subtitle="We'll respond within one business day."
                 submitText="Get My Free Audit"
                 defaultServices={["Local SEO"]}

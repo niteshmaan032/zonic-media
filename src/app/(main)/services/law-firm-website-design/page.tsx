@@ -115,27 +115,27 @@ const serviceJsonLd = {
 
 const LawWebFaqs = [
   {
-    question: "How much does law firm website design cost?",
+    question: "How Much Does Law Firm Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of practice-area and city pages, intake integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-practice, multi-office build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a law firm website?",
+    question: "How Long Does It Take to Design a Law Firm Website?",
     answer:
       "Most law firm websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many practice-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website bring in qualified case leads?",
+    question: "Can My Website Bring in Qualified Case Leads?",
     answer:
       "Yes — that is the entire point. We build practice-area pages that match how clients search, paired with 24/7 case-intake forms and click-to-call, so a person with a legal problem can reach you the moment they decide to act. Clear results and credentials on the page are what make them choose your firm over the next listing.",
   },
   {
-    question: "Can you integrate my intake or CRM software?",
+    question: "Can You Integrate My Intake or CRM Software?",
     answer:
       "Yes. We connect the tools firms already run — Clio, Filevine, Lawmatics, or a structured case-intake flow that routes straight to your intake team. Either way, prospective clients can start a case without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -157,7 +157,7 @@ const lawWebFaqJsonLd = {
 
 const AboutChecks = [
   "Intake-first layouts",
-  "Practice-area pages",
+  "Practice-Area Pages",
   "Results & trust proof",
   "Local SEO foundations",
 ];
@@ -217,37 +217,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiClock aria-hidden="true" />,
-    title: "24/7 case intake",
+    title: "24/7 Case Intake",
     desc: "Always-on intake forms and click-to-call, because legal problems do not keep business hours and the first firm to respond usually wins the case.",
   },
   {
     icon: <RiPagesLine aria-hidden="true" />,
-    title: "Practice-area pages",
+    title: "Practice-Area Pages",
     desc: "A focused page for each practice area that matches how clients search and routes them to a consultation, not a wall of legalese.",
   },
   {
     icon: <FiAward aria-hidden="true" />,
-    title: "Results & trust UX",
+    title: "Results & Trust UX",
     desc: "Verdicts, settlements, credentials, and reviews placed up front, because clients hire the firm that proves it wins.",
   },
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "Qualified intake flows",
+    title: "Qualified Intake Flows",
     desc: "Intake questions that pre-qualify a case and route it to the right attorney, so your team spends time on cases worth signing.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most legal searches happen on a phone, often in a stressful moment — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & case intake",
+    title: "Click-to-Call & Case Intake",
     desc: "One thumb-tap from any page to a call or a case-intake form, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious clients actually read them before they call.",
   },
   {
@@ -255,19 +255,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a credibility factor.",
   },
   {
-    title: "Practice-area content",
+    title: "Practice-Area Content",
     desc: "Plain-language pages for each practice area that answer real questions and earn rankings.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and county you serve, built to rank for local attorney searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you practice, and what cases you take.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -275,22 +275,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & practice-area mapping",
+    title: "Discovery & Practice-Area Mapping",
     desc: "The cases you want more of, the areas you serve, how intake works today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your firm and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Practice-area pages, intake flows, and results content — every page written around the searches clients use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep qualified cases coming.",
   },
 ];
@@ -303,7 +303,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -402,8 +402,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Law Firm Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Law firm website design that turns visitors into{" "}
-                    <span className="hiw-hl">signed cases</span>
+                    Law Firm Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Signed Cases</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs law firm websites that work like a client
@@ -561,9 +561,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first consultation</span> a
-                    client gives your firm
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Consultation</span> a
+                    Client Gives Your Firm
                   </h2>
                   <p className="hiw-lead">
                     Before a client ever calls, they have already judged your firm
@@ -613,7 +613,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Law firm website design for every stage of your firm
+                    Law Firm Website Design for Every Stage of Your Firm
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -638,7 +638,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Practice Area</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of practice
+                  Web Design for Every Kind of Practice
                 </h2>
                 <p className="hiw-lead">
                   Personal injury, family law, criminal defense, estate planning,
@@ -687,7 +687,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Client Acquisition System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to sign cases
+                  More Than a Brochure — A System Built to Sign Cases
                 </h2>
                 <p className="hiw-lead">
                   Most law firm websites are digital business cards: a stock photo
@@ -716,7 +716,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting law firm website
+                    The Anatomy of a High-Converting Law Firm Website
                   </h2>
                   <p className="hiw-lead">
                     The best law firm website design is not about decoration — it
@@ -763,7 +763,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -775,7 +775,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -799,7 +799,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones clients actually use</h3>
+                  <h3>Fast on the Phones Clients Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most legal searches happen on a phone, in the moment a
@@ -810,7 +810,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where clients look for them</h3>
+                  <h3>Trust Signals Where Clients Look for Them</h3>
                   <p>
                     Case results, verdicts, attorney credentials, and reviews
                     placed in the layout — the proof a client needs before they
@@ -821,7 +821,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your firm actually needs?</h3>
+                  <h3>Not Sure What Your Firm Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, intake
                     flows, and local SEO foundations your site needs — no
@@ -851,7 +851,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -881,7 +881,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Law Firms Choose Us</p>
-                <h2 className="hiw-h2">Authority clients can see</h2>
+                <h2 className="hiw-h2">Authority Clients Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how clients choose a
                   firm — and what makes them start a case instead of keep
@@ -946,7 +946,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Practice</p>
                 <h2 className="hiw-h2">
-                  Law firm website design across the United States
+                  Law Firm Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From solo practitioners to multi-attorney firms, Zonic Media
@@ -981,7 +981,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything firms ask us about website design
+                    Everything Firms Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, case intake, and what
@@ -1022,7 +1022,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with cases.
+                  Your Website is Step One. Here is What Fills It with Cases.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1051,7 +1051,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free law firm website consult
+                    Book Your Free Law Firm Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your firm and we will send a custom homepage

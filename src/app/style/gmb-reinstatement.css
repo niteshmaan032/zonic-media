@@ -2120,8 +2120,10 @@
     --inset: 16px;
   }
   .gmb-reinst-page .gmb-main-wrapper {
-    /* just clears the fixed navbar so the hero sits right under the header */
-    padding: 68px var(--inset) 40px;
+    /* The mobile navbar is fixed and ~61px tall (10px padding + 41px logo +
+       10px). 68px left the hero badge tucked under it, so clear the header
+       properly and leave real breathing room below it. */
+    padding: 96px var(--inset) 40px;
     gap: 18px;
   }
   /* bands flatten with the rest of the panels, but keep a hairline card so
@@ -2186,9 +2188,11 @@
     border-radius: 0;
     background: none;
   }
-  /* keeps "Get Reinstated Fast." (nowrap, for the underline) inside 320px */
+  /* Scales with the viewport so the headline reads large on a normal phone
+     while "Get Reinstated Fast." (nowrap, for the underline) still fits the
+     320px floor: 26px @320, 32px @390, capped at 34px. */
   .gmb-reinst-page .hero h1 {
-    font-size: 27px;
+    font-size: clamp(27px, 8.2vw, 34px);
   }
   /* Badge: wraps cleanly on narrow screens; the ping dot stays on line 1. */
   .gmb-reinst-page .hero-badge {

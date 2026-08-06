@@ -125,27 +125,27 @@ const serviceJsonLd = {
 
 const GarageWebFaqs = [
   {
-    question: "How much does garage door website design cost?",
+    question: "How Much Does Garage Door Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, quote and booking integrations, gallery volume, and whether content and photography are included. A focused redesign costs considerably less than a large multi-truck, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a garage door website?",
+    question: "How Long Does It Take to Design a Garage Door Website?",
     answer:
       "Most garage door websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website capture emergency and same-day repair leads?",
+    question: "Can My Website Capture Emergency and Same-Day Repair Leads?",
     answer:
       "Yes — a broken spring or a door stuck down is an emergency, and those searches convert fast. We build dedicated repair and same-day service pages with click-to-call above the fold, a short quote form, and trust signals right where a stressed homeowner looks. Your site is built so an after-hours search still turns into a booked call.",
   },
   {
-    question: "Can you integrate my scheduling or CRM software?",
+    question: "Can You Integrate My Scheduling or CRM Software?",
     answer:
       "Yes. We connect the tools garage door companies already run — ServiceTitan, Housecall Pro, Jobber, or a clean quote request flow that routes straight to your office. Either way, homeowners can request service or book an install without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -168,7 +168,7 @@ const garageWebFaqJsonLd = {
 const AboutChecks = [
   "Quote-first layouts",
   "Emergency repair UX",
-  "Before-and-after galleries",
+  "Before-and-After Galleries",
   "Local SEO foundations",
 ];
 
@@ -227,37 +227,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Instant quote & booking flows",
+    title: "Instant Quote & Booking Flows",
     desc: "Homeowners request service or an install in a few taps — integrated with the scheduling and CRM tools garage door companies already use.",
   },
   {
     icon: <FiClock aria-hidden="true" />,
-    title: "Emergency repair response",
+    title: "Emergency Repair Response",
     desc: "Same-day and after-hours repair pages with click-to-call up top, built to catch the homeowner whose door just failed and needs help now.",
   },
   {
     icon: <FiImage aria-hidden="true" />,
-    title: "Before-and-after galleries",
+    title: "Before-and-After Galleries",
     desc: "Filterable project photos by door style and material, placed where hesitant homeowners actually decide whether your work is worth the call.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Financing & pricing UX",
+    title: "Financing & Pricing UX",
     desc: "Payment options and honest price-range guidance up front, so sticker shock stops killing new-door leads before they reach your inbox.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners find a garage door company on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & quote request",
+    title: "Click-to-Call & Quote Request",
     desc: "One thumb-tap from any page to a call or a service request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them before booking a repair.",
   },
   {
@@ -265,19 +265,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Before & after galleries",
+    title: "Before & After Galleries",
     desc: "Real project photos organized by door type, because homeowners buy the door they can already picture on their house.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you cover, built to rank for local garage door repair searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you repair and install.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -285,22 +285,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & service mix mapping",
+    title: "Discovery & Service Mix Mapping",
     desc: "The jobs you want more of, the cities you cover, how your office books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, quote flows, and repair landing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the pipeline growing.",
   },
 ];
@@ -313,7 +313,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -412,8 +412,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Garage Door Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Garage door website design that turns visitors into{" "}
-                    <span className="hiw-hl">booked jobs</span>
+                    Garage Door Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Booked Jobs</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs garage door websites that work like a
@@ -571,9 +571,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first call</span> a homeowner
-                    makes when the door fails
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Call</span> a Homeowner
+                    Makes When the Door Fails
                   </h2>
                   <p className="hiw-lead">
                     When a spring snaps or a door jams halfway, the homeowner
@@ -623,7 +623,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Garage door website design for every stage of your company
+                    Garage Door Website Design for Every Stage of Your Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -648,7 +648,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Service Type</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of garage door job
+                  Web Design for Every Kind of Garage Door Job
                 </h2>
                 <p className="hiw-lead">
                   Spring and cable repair, opener installs, off-track fixes, new
@@ -697,7 +697,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to book jobs
+                  More Than a Brochure — A System Built to Book Jobs
                 </h2>
                 <p className="hiw-lead">
                   Most garage door websites are digital business cards: a stock
@@ -726,7 +726,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting garage door website
+                    The Anatomy of a High-Converting Garage Door Website
                   </h2>
                   <p className="hiw-lead">
                     The best garage door website design is not about decoration
@@ -773,7 +773,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -785,7 +785,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -809,7 +809,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones homeowners actually use</h3>
+                  <h3>Fast on the Phones Homeowners Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most garage door searches happen on a phone — often
@@ -821,7 +821,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where homeowners look for them</h3>
+                  <h3>Trust Signals Where Homeowners Look for Them</h3>
                   <p>
                     License numbers, insurance proof, manufacturer
                     certifications, and warranty details placed in the layout —
@@ -832,7 +832,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, quote
                     flows, and local SEO foundations your site needs — no
@@ -862,7 +862,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -892,7 +892,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Garage Door Pros Choose Us</p>
-                <h2 className="hiw-h2">Craftsmanship customers can see</h2>
+                <h2 className="hiw-h2">Craftsmanship Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how homeowners
                   choose a garage door company — and what makes them request
@@ -956,7 +956,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  Garage door website design across the United States
+                  Garage Door Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-truck startups to multi-market garage door
@@ -992,7 +992,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything garage door pros ask us about website design
+                    Everything Garage Door Pros Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, emergency leads, and
@@ -1032,7 +1032,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with jobs.
+                  Your Website is Step One. Here is What Fills It with Jobs.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1061,7 +1061,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free garage door website consult
+                    Book Your Free Garage Door Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

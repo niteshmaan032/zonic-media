@@ -66,68 +66,68 @@ const stripStats = [
 const problemCards = [
   {
     n: "— 01",
-    h: "The case for support is buried in a spreadsheet",
+    h: "The Case for Support is Buried in a Spreadsheet",
     p: "Your impact is real, but it lives in program numbers and demographic data. We translate it into scannable, donor-ready narrative and infographics that make the need impossible to ignore.",
   },
   {
     n: "— 02",
-    h: "Leadership should be visible, but has no time",
+    h: "Leadership Should be Visible, but Has No Time",
     p: "Your Executive Director and board carry the credibility. We ghostwrite the LinkedIn thought leadership and editorial that puts their voice in front of policymakers and corporate foundations — without adding to their week.",
   },
   {
     n: "— 03",
-    h: "Every post should lead somewhere",
+    h: "Every Post Should Lead Somewhere",
     p: "Awareness that doesn't convert is a cost, not a campaign. We build content that connects directly to your funding priorities, so attention turns into gifts, sponsorships, and advocacy.",
   },
 ];
 
 const serveCards = [
   {
-    h: "Human services & poverty relief",
+    h: "Human Services & Poverty Relief",
     p: "Food banks, shelters, housing, and family-support organizations.",
   },
   {
-    h: "Health & medical causes",
+    h: "Health & Medical Causes",
     p: "Clinics, patient advocacy, research foundations, and hospices.",
   },
   {
-    h: "Education & youth",
+    h: "Education & Youth",
     p: "Scholarship funds, after-school programs, literacy, and mentoring.",
   },
   {
-    h: "Seniors & aging",
+    h: "Seniors & Aging",
     p: "Senior housing, care networks, and aging-in-place programs.",
   },
   {
-    h: "Animal welfare & rescue",
+    h: "Animal Welfare & Rescue",
     p: "Shelters, sanctuaries, and conservation-focused rescues.",
   },
   {
-    h: "Environment & conservation",
+    h: "Environment & Conservation",
     p: "Land trusts, climate advocacy, and community sustainability groups.",
   },
   {
-    h: "Arts & culture",
+    h: "Arts & Culture",
     p: "Museums, theaters, public media, and cultural preservation.",
   },
   {
-    h: "Faith & community",
+    h: "Faith & Community",
     p: "Congregations, community foundations, and civic associations.",
   },
   {
-    h: "Veterans & military families",
+    h: "Veterans & Military Families",
     p: "Support services, reintegration, and advocacy organizations.",
   },
   {
-    h: "Advocacy & civil rights",
+    h: "Advocacy & Civil Rights",
     p: "Policy campaigns, legal aid, and community organizing.",
   },
   {
-    h: "International & relief",
+    h: "International & Relief",
     p: "Global development, disaster response, and humanitarian aid.",
   },
   {
-    h: "Foundations & grantmakers",
+    h: "Foundations & Grantmakers",
     p: "Community foundations and grantmaking bodies raising their profile.",
   },
 ];
@@ -135,22 +135,22 @@ const serveCards = [
 const approachSteps = [
   {
     n: "1",
-    h: "Listen & frame",
+    h: "Listen & Frame",
     p: "We start with your funding priorities and the audiences that matter, then define the single story your campaign needs to tell.",
   },
   {
     n: "2",
-    h: "Produce authentically",
+    h: "Produce Authentically",
     p: "Photography and video are shot on-site with real people from your organization — authentic to your community, never stock.",
   },
   {
     n: "3",
-    h: "Publish with rhythm",
+    h: "Publish with Rhythm",
     p: "A dependable content calendar keeps your organization present and credible, week after week, across the channels that reach decision-makers.",
   },
   {
     n: "4",
-    h: "Report & refine",
+    h: "Report & Refine",
     p: "Every month we show what moved — engagement, reach, and donor inquiries — and adjust the plan around it.",
   },
 ];
@@ -283,8 +283,8 @@ function Page() {
                   Fundraising &amp; advocacy studio
                 </div>
                 <h1>
-                  We turn a nonprofit&apos;s hardest number into its{" "}
-                  <em>strongest story.</em>
+                  We Turn a Nonprofit&apos;s Hardest Number into Its{" "}
+                  <em>Strongest Story.</em>
                 </h1>
                 <p className="hia-hero-sub">
                   <Link href="/" className="npm-inline-link">
@@ -366,8 +366,8 @@ function Page() {
               <section className="hia-section" id="npm-understand">
                 <div className="hia-sec-label">What we understand</div>
                 <h2 className="hia-sec-h2">
-                  You&apos;re not trying to go viral. You&apos;re trying to{" "}
-                  <em>move the right people.</em>
+                  You&apos;re Not Trying to Go Viral. You&apos;re Trying to{" "}
+                  <em>Move the Right People.</em>
                 </h2>
                 <p className="hia-sec-sub">
                   Nonprofit marketing isn&apos;t about reach for its own sake.
@@ -393,8 +393,8 @@ function Page() {
                 <div className="npm-svc">
                   <div className="hia-sec-label">What we do</div>
                   <h2 className="hia-sec-h2">
-                    Everything your campaign needs,{" "}
-                    <em>from one partner.</em>
+                    Everything Your Campaign Needs,{" "}
+                    <em>from One Partner.</em>
                   </h2>
                   <p className="hia-sec-sub">
                     Strategy, content,{" "}
@@ -413,7 +413,7 @@ function Page() {
                           <path d="M8 9h8M8 12h5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                       </div>
-                      <h3>Social media management</h3>
+                      <h3>Social Media Management</h3>
                       <p>
                         A structured calendar of 3+ high-quality posts a week
                         across Facebook, LinkedIn, and Instagram — each tied to
@@ -430,7 +430,7 @@ function Page() {
                           <path d="M12 8v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <h3>Google Ads for nonprofits</h3>
+                      <h3>Google Ads for Nonprofits</h3>
                       <p>
                         We help you claim and manage the Google Ad Grant — up
                         to $10,000/month in free search ads — and build
@@ -451,7 +451,7 @@ function Page() {
                           <path d="M5 16l4-4 3 3 3-4 4 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <h3>Graphics &amp; data visualization</h3>
+                      <h3>Graphics &amp; Data Visualization</h3>
                       <p>
                         Demographic and program data turned into clean,
                         scannable infographics — plus campaign graphics, impact
@@ -475,7 +475,7 @@ function Page() {
                           <path d="M16 10l5-3v10l-5-3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <h3>Video production &amp; editing</h3>
+                      <h3>Video Production &amp; Editing</h3>
                       <p>
                         On-site shoots that capture real stories, community
                         life, and leadership interviews — anchored by a hero
@@ -493,7 +493,7 @@ function Page() {
                           <path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
                         </svg>
                       </div>
-                      <h3>Strategy &amp; PR copywriting</h3>
+                      <h3>Strategy &amp; PR Copywriting</h3>
                       <p>
                         A multi-month campaign concept, donor and policymaker
                         personas, and monthly editorial — including ghostwritten
@@ -509,7 +509,7 @@ function Page() {
                           <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                       </div>
-                      <h3>Board-ready reporting</h3>
+                      <h3>Board-Ready Reporting</h3>
                       <p>
                         Monthly analytics on engagement,{" "}
                         <Link
@@ -536,8 +536,8 @@ function Page() {
               <section className="hia-section" id="npm-serve">
                 <div className="hia-sec-label">Who we serve</div>
                 <h2 className="hia-sec-h2">
-                  If your mission depends on donors, we can{" "}
-                  <em>help you tell it.</em>
+                  If Your Mission Depends on Donors, We Can{" "}
+                  <em>Help You Tell It.</em>
                 </h2>
                 <p className="hia-sec-sub">
                   Zonic Media works across the nonprofit sector and the wider{" "}
@@ -570,8 +570,8 @@ function Page() {
               <section className="hia-section" id="npm-approach">
                 <div className="hia-sec-label">How we work</div>
                 <h2 className="hia-sec-h2">
-                  Deliberate, transparent, and built to{" "}
-                  <em>de-risk the decision.</em>
+                  Deliberate, Transparent, and Built to{" "}
+                  <em>De-Risk the Decision.</em>
                 </h2>
                 <div className="npm-steps">
                   {approachSteps.map((s, i) => (
@@ -616,8 +616,8 @@ function Page() {
                 <div className="npm-cap">
                   <div className="hia-sec-label">What a month looks like</div>
                   <h2 className="hia-sec-h2">
-                    A clear, consistent program —{" "}
-                    <em>not scattered posts.</em>
+                    A Clear, Consistent Program —{" "}
+                    <em>Not Scattered Posts.</em>
                   </h2>
                   <p className="hia-sec-sub">
                     Here&apos;s the standard rhythm of a Zonic Media engagement,
@@ -647,8 +647,8 @@ function Page() {
               <section className="hia-section" id="npm-faq">
                 <div className="hia-sec-label">Common questions</div>
                 <h2 className="hia-sec-h2">
-                  What nonprofits ask before the{" "}
-                  <em>first conversation.</em>
+                  What Nonprofits Ask Before the{" "}
+                  <em>First Conversation.</em>
                 </h2>
                 <p className="hia-sec-sub">
                   Straight answers on cost, the Google Ad Grant, and how the
@@ -680,7 +680,7 @@ function Page() {
         <section className="hia-final-cta" id="npm-contact">
           <div className="hia-fc-inner">
             <h2>
-              Let&apos;s build your <em>case for support.</em>
+              Let&apos;s Build Your <em>Case for Support.</em>
             </h2>
             <p className="hia-fc-lede">
               Tell us about your mission and your next fundraising goal.

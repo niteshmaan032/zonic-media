@@ -84,32 +84,32 @@ export const BASE_TRUST = [
 export const SERVICES: PlumbServiceCard[] = [
   {
     num: "01 · GBP & MAP PACK",
-    h: "Google Business Profile rebuild for plumber map pack visibility.",
+    h: "Google Business Profile Rebuild for Plumber Map Pack Visibility.",
     p: "Complete GBP rebuild in the first 30 days. Plumber-specific categories, service-area-business verification, 24/7 emergency attributes, geo-tagged jobsite photos, weekly Posts on a seasonal plumbing calendar. Ongoing monthly management to defend the ranking once it's won.",
   },
   {
     num: "02 · GOOGLE ADS / PPC",
-    h: "Paid search built around plumbing emergency intent.",
+    h: "Paid Search Built Around Plumbing Emergency Intent.",
     p: "Plumber-specific keyword targeting, geo-modified emergency keywords, ad copy tuned to mobile decision compression, conversion tracking integrated with your dispatch software, and Local Services Ads management where available in your metro.",
   },
   {
     num: "03 · WEBSITE DESIGN",
-    h: "Mobile-first plumber websites that convert emergencies.",
+    h: "Mobile-First Plumber Websites That Convert Emergencies.",
     p: "Sub-2-second mobile load times, persistent click-to-call across every page, online booking integration with ServiceTitan, FieldEdge, or Housecall Pro, schema markup for Plumber and LocalBusiness, dedicated submarket and service landing pages.",
   },
   {
     num: "04 · REVIEW VELOCITY",
-    h: "Automated reviews after every plumbing service call.",
+    h: "Automated Reviews After Every Plumbing Service Call.",
     p: "SMS plus email review requests fire automatically after every completed job. Keyword-coached templates that mention neighborhood and service type. Multi-platform monitoring across Google, Yelp, Facebook, and BBB. Negative-review response protocols.",
   },
   {
     num: "05 · LOCAL SEO",
-    h: "Citations, submarket pages, and on-page SEO for plumbers.",
+    h: "Citations, Submarket Pages, and on-Page SEO for Plumbers.",
     p: "NAP consistency across 60+ general and plumber-specific directories. Submarket-specific landing pages for every service area you cover. On-page SEO with proper schema, internal linking, and content tuned to plumbing search behavior.",
   },
   {
     num: "06 · GBP REINSTATEMENT",
-    h: "Suspension defense and rapid reinstatement when needed.",
+    h: "Suspension Defense and Rapid Reinstatement When Needed.",
     p: "Daily monitoring for suspension early-warning signs. False-report defense, duplicate listing cleanup, and SAB verification work. If suspension happens anyway: root cause diagnosis, documentation prep, appeal filing. Included on every plan.",
   },
 ];

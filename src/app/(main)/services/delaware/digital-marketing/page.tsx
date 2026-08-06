@@ -406,7 +406,7 @@ const WhyCards = [
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, compounding execution",
+    title: "Fast, Compounding Execution",
     desc: "Foundation fixes ship in the first weeks, not the first quarter. Every month of work stacks on the last, so month twelve is worth far more than month one.",
   },
   {
@@ -558,8 +558,8 @@ function Page() {
                     Digital Marketing Agency in Delaware
                   </p>
                   <h1 className="deldg-h1">
-                    Digital marketing in Delaware that{" "}
-                    <span className="deldg-hl">drives real growth</span>
+                    Digital Marketing in Delaware That{" "}
+                    <span className="deldg-hl">Drives Real Growth</span>
                   </h1>
                   <p className="deldg-hero-sub">
                     Zonic Media is a Dover-based{" "}
@@ -742,9 +742,9 @@ function Page() {
                 <div className="deldg-about-copy">
                   <p className="deldg-eyebrow">The Delaware Opportunity</p>
                   <h2 className="deldg-h2">
-                    Delaware is a small state.{" "}
+                    Delaware is a Small State.{" "}
                     <span className="deldg-hl-text">
-                      The search demand is not.
+                      The Search Demand is Not.
                     </span>
                   </h2>
                   <p className="deldg-lead">
@@ -801,7 +801,7 @@ function Page() {
                 <div>
                   <p className="deldg-eyebrow">What We Do</p>
                   <h2 className="deldg-h2">
-                    Every channel a Delaware business needs, under one roof
+                    Every Channel a Delaware Business Needs, Under One Roof
                   </h2>
                 </div>
                 <Link href="/services" className="deldg-link-arrow">
@@ -831,7 +831,7 @@ function Page() {
               <div className="deldg-band-content">
                 <p className="deldg-eyebrow">One System, Not Six Invoices</p>
                 <h2 className="deldg-h2">
-                  Channels that feed each other instead of competing for credit
+                  Channels That Feed Each Other Instead of Competing for Credit
                 </h2>
                 <p className="deldg-lead">
                   Most agencies sell channels in isolation, so nobody can tell
@@ -930,7 +930,7 @@ function Page() {
                 <div>
                   <p className="deldg-eyebrow">How It Works</p>
                   <h2 className="deldg-h2">
-                    From guesswork to a growth engine in four steps
+                    From Guesswork to a Growth Engine in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -950,7 +950,7 @@ function Page() {
                     </span>
                     <span className="deldg-bento-tag">Week 1</span>
                   </div>
-                  <h3>Free Delaware growth audit</h3>
+                  <h3>Free Delaware Growth Audit</h3>
                   <p>
                     We map your rankings, Google Business Profile, ad spend,
                     website conversion, and the competitors currently taking the
@@ -989,7 +989,7 @@ function Page() {
                     </span>
                     <span className="deldg-bento-tag">Weeks 2–4</span>
                   </div>
-                  <h3>Strategy &amp; foundation</h3>
+                  <h3>Strategy &amp; Foundation</h3>
                   <p>
                     A channel plan built around your margins, then the
                     groundwork: tracking installed, profile optimized, campaigns
@@ -1004,7 +1004,7 @@ function Page() {
                     </span>
                     <span className="deldg-bento-tag">Every month</span>
                   </div>
-                  <h3>Launch, test, compound</h3>
+                  <h3>Launch, Test, Compound</h3>
                   <p>
                     Campaigns live, content shipping, reviews growing, and
                     budget shifting toward whatever is producing the cheapest
@@ -1039,7 +1039,7 @@ function Page() {
                       </span>
                       <span className="deldg-bento-tag">Ongoing</span>
                     </div>
-                    <h3>Report, refine, expand</h3>
+                    <h3>Report, Refine, Expand</h3>
                     <p>
                       Monthly reporting tied to calls and booked revenue, not
                       vanity metrics. As the core market locks in, we expand to
@@ -1078,7 +1078,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Real Results</p>
                 <h2 className="deldg-h2">
-                  What happens when the channels finally work together
+                  What Happens When the Channels Finally Work Together
                 </h2>
                 <p className="deldg-lead">
                   Three Delaware counties, three very different businesses — the
@@ -1130,7 +1130,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">The Difference</p>
                 <h2 className="deldg-h2">
-                  Zonic Media vs. a typical marketing agency
+                  Zonic Media Vs. A Typical Marketing Agency
                 </h2>
                 <p className="deldg-lead">
                   Same monthly invoice, very different month. Here is what
@@ -1140,7 +1140,7 @@ function Page() {
 
               <div className="deldg-compare-grid">
                 <div className="deldg-compare-col deldg-compare-col--them">
-                  <h3>Typical agency</h3>
+                  <h3>Typical Agency</h3>
                   <p className="deldg-compare-sub">
                     Why most campaigns quietly stall
                   </p>
@@ -1155,7 +1155,7 @@ function Page() {
                 </div>
 
                 <div className="deldg-compare-col deldg-compare-col--us">
-                  <h3>Digital marketing with Zonic Media</h3>
+                  <h3>Digital Marketing with Zonic Media</h3>
                   <p className="deldg-compare-sub">
                     Built to compound, reported like a P&amp;L
                   </p>
@@ -1173,7 +1173,7 @@ function Page() {
                   className="deldg-compare-col deldg-compare-col--score"
                   aria-hidden="true"
                 >
-                  <h3>Growth scorecard</h3>
+                  <h3>Growth Scorecard</h3>
                   <p className="deldg-compare-sub">
                     A typical Delaware client&apos;s first six months
                   </p>
@@ -1224,7 +1224,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Why Zonic Media</p>
                 <h2 className="deldg-h2">
-                  A Delaware growth partner, not a monthly invoice
+                  A Delaware Growth Partner, Not a Monthly Invoice
                 </h2>
                 <p className="deldg-lead">
                   Rankings and impressions are the output. Strategy, execution,
@@ -1245,7 +1245,7 @@ function Page() {
               <div className="deldg-why-banner">
                 <div className="deldg-why-banner-text">
                   <p className="deldg-eyebrow">Free Delaware Marketing Audit</p>
-                  <h3>See exactly where your growth is leaking</h3>
+                  <h3>See Exactly Where Your Growth is Leaking</h3>
                   <p>
                     We audit your search visibility, ad spend, website
                     conversion, and competitors — then hand you a 90-day plan
@@ -1311,7 +1311,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Verified Client Reviews</p>
                 <h2 className="deldg-h2" id="deldg-reviews-title">
-                  Trusted by small &amp; mid-size businesses across the US
+                  Trusted by Small &amp; Mid-Size Businesses Across the US
                 </h2>
               </div>
               <div className="deldg-reviews-widget">
@@ -1346,7 +1346,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Everything Working Together</p>
                 <h2 className="deldg-h2">
-                  Six services, one growth engine
+                  Six Services, One Growth Engine
                 </h2>
                 <p className="deldg-lead">
                   Nothing here runs in a silo. Each service feeds the next, and
@@ -1426,7 +1426,7 @@ function Page() {
                 <div>
                   <p className="deldg-eyebrow">FAQs</p>
                   <h2 className="deldg-h2">
-                    Straight answers about digital marketing in Delaware
+                    Straight Answers About Digital Marketing in Delaware
                   </h2>
                   <p className="deldg-lead">
                     Pricing, timelines, channel choices, and what actually shows
@@ -1460,7 +1460,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Grow Further</p>
                 <h2 className="deldg-h2">
-                  Visibility is step one. Here is what multiplies it.
+                  Visibility is Step One. Here is What Multiplies It.
                 </h2>
               </div>
               <div className="deldg-grow-cards">
@@ -1489,7 +1489,7 @@ function Page() {
                 <aside className="deldg-form-aside">
                   <p className="deldg-eyebrow">Get Started</p>
                   <h2 className="deldg-h2">
-                    Claim your free Delaware marketing audit
+                    Claim Your Free Delaware Marketing Audit
                   </h2>
                   <p className="deldg-lead">
                     Tell us about your business and we will send back a full

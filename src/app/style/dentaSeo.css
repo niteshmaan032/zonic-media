@@ -47,7 +47,6 @@
   font-size: 60px;
   font-weight: 500;
   color: var(--white);
-  text-transform: capitalize;
   line-height: 1.14;
 }
 
@@ -60,7 +59,6 @@
 }
 
 .dent-sec-1-sub-head {
-  text-transform: capitalize;
   color: var(--white);
   font-size: 25px;
   margin: 0;

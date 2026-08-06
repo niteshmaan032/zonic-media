@@ -76,7 +76,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         <div className="bp-wrapper">
           <div className="bp-container">
             <section className="bp-empty">
-              <h1>No published blogs yet.</h1>
+              <h1>No Published Blogs Yet.</h1>
               <p>Published admin blogs will appear here automatically.</p>
               <Link href="/" className="bp-empty-link">
                 <FaArrowRightLong size={12} />
@@ -112,7 +112,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         <div className="bp-container">
           <header className="bp-listing-header">
             <h1 className="bp-listing-title">
-              Insights from the Zonic Media team
+              Insights from the Zonic Media Team
             </h1>
             <p className="bp-listing-sub">
               Practical guides on digital marketing, local SEO, web design,

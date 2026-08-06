@@ -128,7 +128,7 @@ export default function MapPackLeadForm() {
         Free grid scan
       </span>
 
-      <h3>See where you actually rank</h3>
+      <h3>See Where You Actually Rank</h3>
       <p className="lp-form-sub">
         We run a geo-grid scan across your service area and send you the map —
         your real position in every neighbourhood, not one average number.

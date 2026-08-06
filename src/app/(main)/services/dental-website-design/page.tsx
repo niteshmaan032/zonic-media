@@ -117,27 +117,27 @@ const serviceJsonLd = {
 
 const DentalWebFaqs = [
   {
-    question: "How much does dental website design cost?",
+    question: "How Much Does Dental Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of pages, treatment landing pages, booking and insurance integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-location build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a dental website?",
+    question: "How Long Does It Take to Design a Dental Website?",
     answer:
       "Most dental practice websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many treatment pages or custom integrations can take longer.",
   },
   {
-    question: "Will my dental website be HIPAA compliant?",
+    question: "Will My Dental Website be HIPAA Compliant?",
     answer:
       "We build HIPAA-aware: secure encrypted forms, no patient information passed to analytics or ad pixels, and intake flows designed so protected health information is handled by your practice systems, not the marketing site. Full HIPAA compliance also depends on your internal processes and the agreements you hold with software vendors, and we flag exactly what to confirm on your side.",
   },
   {
-    question: "Can you integrate online booking software?",
+    question: "Can You Integrate Online Booking Software?",
     answer:
       "Yes. We integrate the scheduling tools dental offices already use, such as NexHealth, LocalMed, and Flex, or build a structured appointment request flow that routes straight to your front desk. Either way, patients can request a visit without calling during office hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -159,8 +159,8 @@ const dentalWebFaqJsonLd = {
 
 const AboutChecks = [
   "Booking-first layouts",
-  "Insurance verification UX",
-  "HIPAA-aware forms",
+  "Insurance Verification UX",
+  "HIPAA-Aware Forms",
   "Local SEO foundations",
 ];
 
@@ -219,37 +219,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Online booking flows",
+    title: "Online Booking Flows",
     desc: "Patients book or request appointments in a few taps — integrated with the scheduling tools dental offices already use.",
   },
   {
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Insurance verification UX",
+    title: "Insurance Verification UX",
     desc: "Patients confirm you take their plan before they book, so your front desk stops answering “do you accept my insurance?”",
   },
   {
     icon: <RiPagesLine aria-hidden="true" />,
-    title: "Treatment landing pages",
+    title: "Treatment Landing Pages",
     desc: "Implants, Invisalign, veneers, emergency dentistry — each high-value treatment gets its own page built to rank and convert.",
   },
   {
     icon: <MdOutlineHealthAndSafety aria-hidden="true" />,
-    title: "HIPAA-aware forms",
+    title: "HIPAA-Aware Forms",
     desc: "Encrypted intake and contact forms designed so patient information never leaks into analytics or ad pixels.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most patients find a dentist on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & tap-to-book",
+    title: "Click-to-Call & Tap-to-Book",
     desc: "One thumb-tap from any page to a call or an appointment request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where hesitant patients actually read them.",
   },
   {
@@ -257,19 +257,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "ADA-accessible layouts",
+    title: "ADA-Accessible Layouts",
     desc: "Readable contrast, keyboard navigation, and screen-reader support that also protect your practice legally.",
   },
   {
-    title: "Patient education content",
+    title: "Patient Education Content",
     desc: "Treatment pages written in plain language that answer real questions and earn rankings.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you practice, and what you treat.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -277,22 +277,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & patient journey mapping",
+    title: "Discovery & Patient Journey Mapping",
     desc: "The treatments you want more of, the insurance you accept, how your front desk books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your patients — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Treatment pages, booking integration, and HIPAA-aware forms — every page written around the searches patients use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then dental SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -305,7 +305,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -390,7 +390,7 @@ function Page() {
               <div className="dw-hero-copy">
                 <p className="dw-eyebrow">Dental Website Design</p>
                 <h1 className="dw-hero-h1">
-                  Dental website design{" "}
+                  Dental Website Design{" "}
                   <span className="dw-h1-img" aria-hidden="true">
                     <Image
                       src="/images/dental-web/hero-title-img-1.webp"
@@ -399,8 +399,8 @@ function Page() {
                       sizes="120px"
                     />
                   </span>{" "}
-                  that turns visitors into{" "}
-                  <span className="dw-hl">booked patients</span>{" "}
+                  That Turns Visitors into{" "}
+                  <span className="dw-hl">Booked Patients</span>{" "}
                   <span className="dw-h1-img" aria-hidden="true">
                     <Image
                       src="/images/dental-web/hero-title-img-2.webp"
@@ -565,9 +565,9 @@ function Page() {
               <div className="dw-about-copy">
                 <p className="dw-eyebrow">First Impressions</p>
                 <h2 className="dw-h2">
-                  Your website is the{" "}
-                  <span className="dw-hl-text">first exam</span> patients give
-                  your practice
+                  Your Website is the{" "}
+                  <span className="dw-hl-text">First Exam</span> Patients Give
+                  Your Practice
                 </h2>
                 <p className="dw-lead">
                   Before a patient ever sits in your chair, they have already
@@ -616,7 +616,7 @@ function Page() {
               <div>
                 <p className="dw-eyebrow">What We Build</p>
                 <h2 className="dw-h2">
-                  Dental website design for every stage of your practice
+                  Dental Website Design for Every Stage of Your Practice
                 </h2>
               </div>
               <Link href="/services" className="dw-link-arrow">
@@ -641,7 +641,7 @@ function Page() {
             <div className="dw-band-content">
               <p className="dw-eyebrow">Every Specialty</p>
               <h2 className="dw-h2">
-                Web design for every kind of dentistry
+                Web Design for Every Kind of Dentistry
               </h2>
               <p className="dw-lead">
                 General and family practices, pediatric dentistry,
@@ -695,7 +695,7 @@ function Page() {
             <div className="dw-sec-head-center">
               <p className="dw-eyebrow">The Patient Acquisition System</p>
               <h2 className="dw-h2">
-                More than a brochure — a system built to book patients
+                More Than a Brochure — A System Built to Book Patients
               </h2>
               <p className="dw-lead">
                 Most dental websites are digital business cards: a photo of the
@@ -723,7 +723,7 @@ function Page() {
               <div>
                 <p className="dw-eyebrow">Built Into Every Site</p>
                 <h2 className="dw-h2">
-                  The anatomy of a high-converting dental website
+                  The Anatomy of a High-Converting Dental Website
                 </h2>
                 <p className="dw-lead">
                   The best dental website design is not about decoration — it
@@ -770,7 +770,7 @@ function Page() {
           <div className="dw-container">
             <div className="dw-sec-head-center">
               <p className="dw-eyebrow">Why Zonic Media</p>
-              <h2 className="dw-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="dw-h2">Designed to Convert. Built to Rank.</h2>
               <p className="dw-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at once,
@@ -782,7 +782,7 @@ function Page() {
                 <span className="dw-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -806,7 +806,7 @@ function Page() {
                 <span className="dw-why-card-icon">
                   <FiZap aria-hidden="true" />
                 </span>
-                <h3>Fast on the phones patients actually use</h3>
+                <h3>Fast on the Phones Patients Actually Use</h3>
                 <p>
                   Mobile-first layouts and Core Web Vitals-friendly builds,
                   because most dental searches happen on a phone and slow pages
@@ -817,7 +817,7 @@ function Page() {
                 <span className="dw-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>Compliance-minded from the first wireframe</h3>
+                <h3>Compliance-Minded from the First Wireframe</h3>
                 <p>
                   HIPAA-aware forms, accessible layouts, and honest tracking —
                   so your marketing site never becomes a liability for your
@@ -828,7 +828,7 @@ function Page() {
             <div className="dw-why-banner">
               <div className="dw-why-banner-text">
                 <p className="dw-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your practice actually needs?</h3>
+                <h3>Not Sure What Your Practice Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages, booking
                   flows, and local SEO foundations your site needs — no
@@ -858,7 +858,7 @@ function Page() {
               <div>
                 <p className="dw-eyebrow">How It Works</p>
                 <h2 className="dw-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -889,7 +889,7 @@ function Page() {
             <div className="dw-banner-copy">
               <p className="dw-eyebrow">Why Dentists Choose Us</p>
               <h2 className="dw-h2">
-                Excellence your patients can see from the first click
+                Excellence Your Patients Can See from the First Click
               </h2>
               <p className="dw-lead">
                 A website built by a team that understands how patients choose
@@ -954,7 +954,7 @@ function Page() {
             <div className="dw-sec-head-center">
               <p className="dw-eyebrow">Wherever You Practice</p>
               <h2 className="dw-h2">
-                Dental website design services across the United States
+                Dental Website Design Services Across the United States
               </h2>
               <p className="dw-lead">
                 From single-chair startups to multi-location groups, Zonic
@@ -993,7 +993,7 @@ function Page() {
               <div>
                 <p className="dw-eyebrow">FAQs</p>
                 <h2 className="dw-h2">
-                  Everything dentists ask us about website design
+                  Everything Dentists Ask Us About Website Design
                 </h2>
                 <p className="dw-lead">
                   Straight answers on pricing, timelines, compliance, and what
@@ -1033,7 +1033,7 @@ function Page() {
             <div className="dw-sec-head-center">
               <p className="dw-eyebrow">Grow Further</p>
               <h2 className="dw-h2">
-                Your website is step one. Here is what fills it with patients.
+                Your Website is Step One. Here is What Fills It with Patients.
               </h2>
             </div>
             <div className="dw-grow-cards">
@@ -1058,7 +1058,7 @@ function Page() {
               <aside className="dw-form-aside">
                 <p className="dw-eyebrow">Get Started</p>
                 <h2 className="dw-h2">
-                  Book your free dental website consult
+                  Book Your Free Dental Website Consult
                 </h2>
                 <p className="dw-lead">
                   Tell us about your practice and we will send a custom homepage

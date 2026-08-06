@@ -282,8 +282,8 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Complete Digital Marketing Stack
                 </div>
                 <h2 className="hia-sec-h2">
-                  Everything a {stateName} home inspection company needs to{" "}
-                  <span className="hia-accent">grow online.</span>
+                  Everything a {stateName} Home Inspection Company Needs to{" "}
+                  <span className="hia-accent">Grow Online.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   We are not a &ldquo;just SEO&rdquo; shop or a &ldquo;just
@@ -333,8 +333,8 @@ export default function StatePage({ state }: { state: StateContent }) {
               <section className="hia-section" id="hia-channels">
                 <div className="hia-sec-label">Channel Mix at a Glance</div>
                 <h2 className="hia-sec-h2">
-                  What each marketing channel does — and{" "}
-                  <span className="hia-accent">how fast it pays back.</span>
+                  What Each Marketing Channel Does — And{" "}
+                  <span className="hia-accent">How Fast It Pays Back.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Use this grid as a planning guide.{" "}
@@ -390,8 +390,8 @@ export default function StatePage({ state }: { state: StateContent }) {
               <section className="hia-section">
                 <div className="hia-sec-label">How We Work With You</div>
                 <h2 className="hia-sec-h2">
-                  A clean three-step start. Then we{" "}
-                  <span className="hia-accent">get to work.</span>
+                  A Clean Three-Step Start. Then We{" "}
+                  <span className="hia-accent">Get to Work.</span>
                 </h2>
                 <p className="hia-sec-sub">{state.processLede}</p>
                 <div className="hia-section-cta">
@@ -494,9 +494,9 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Trusted by Clients Nationwide
                 </div>
                 <h2 className="hia-sec-h2">
-                  What inspectors and other service businesses{" "}
+                  What Inspectors and Other Service Businesses{" "}
                   <span className="hia-accent">
-                    say about working with us.
+                    Say About Working with Us.
                   </span>
                 </h2>
                 <p className="hia-sec-sub">
@@ -580,8 +580,8 @@ export default function StatePage({ state }: { state: StateContent }) {
               <section className="hia-section" id="hia-faq">
                 <div className="hia-sec-label">{state.faqEyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  Everything you wanted to ask before that{" "}
-                  <span className="hia-accent">strategy call.</span>
+                  Everything You Wanted to Ask Before That{" "}
+                  <span className="hia-accent">Strategy Call.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   If you don&apos;t see your question below — whether it&apos;s
@@ -630,7 +630,7 @@ export default function StatePage({ state }: { state: StateContent }) {
               Start With the Free Audit
             </div>
             <h2>
-              Get a Marketing Audit Built for{" "}
+              Get a Marketing Audit Built For{" "}
               <span className="hia-accent">{state.final.accent}</span>
             </h2>
             <p className="hia-fc-lede">{state.final.lede}</p>

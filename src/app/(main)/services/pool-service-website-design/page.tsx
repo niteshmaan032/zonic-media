@@ -123,27 +123,27 @@ const serviceJsonLd = {
 
 const PoolWebFaqs = [
   {
-    question: "How much does pool service website design cost?",
+    question: "How Much Does Pool Service Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, booking integrations, gallery volume, and whether content and photography are included. A focused redesign costs considerably less than a large multi-route, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a pool service website?",
+    question: "How Long Does It Take to Design a Pool Service Website?",
     answer:
       "Most pool service websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website sign homeowners up for recurring service?",
+    question: "Can My Website Sign Homeowners up for Recurring Service?",
     answer:
       "Yes — recurring routes are the backbone of a pool business, so we design for them. We build clear weekly and biweekly maintenance plans with simple sign-up flows, so homeowners choose a program on the spot instead of calling around. Recurring revenue should start on the website, not after three phone calls.",
   },
   {
-    question: "Can you integrate my pool CRM or route software?",
+    question: "Can You Integrate My Pool CRM or Route Software?",
     answer:
       "Yes. We connect the tools pool companies already run — Skimmer, Jobber, Pool Brain, or a clean request flow that routes straight to your office. Either way, homeowners can start service or request a repair without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -165,7 +165,7 @@ const poolWebFaqJsonLd = {
 
 const AboutChecks = [
   "Recurring service sign-ups",
-  "Before-and-after galleries",
+  "Before-and-After Galleries",
   "Repair & build UX",
   "Local SEO foundations",
 ];
@@ -200,7 +200,7 @@ const ServiceCards = [
   },
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Sign-Up & Booking Flows",
+    title: "Sign-up & Booking Flows",
     desc: "Skimmer, Jobber, Pool Brain, or a clean request flow routed to your office — homeowners start service or book a repair in a few taps, day or night.",
   },
   {
@@ -225,37 +225,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Recurring sign-up flows",
+    title: "Recurring Sign-up Flows",
     desc: "Weekly and biweekly maintenance sign-ups in a few taps — integrated with the route and CRM tools pool companies already use.",
   },
   {
     icon: <FiDroplet aria-hidden="true" />,
-    title: "Service & repair pages",
+    title: "Service & Repair Pages",
     desc: "Green-to-clean, equipment repair, and seasonal opening pages that capture the exact searches homeowners make each season.",
   },
   {
     icon: <FiImage aria-hidden="true" />,
-    title: "Before-and-after galleries",
+    title: "Before-and-After Galleries",
     desc: "Filterable transformation photos, placed where hesitant homeowners actually decide whether your work is worth the call.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Plan & pricing UX",
+    title: "Plan & Pricing UX",
     desc: "Clear maintenance-plan pricing up front, so homeowners choose a program instead of bouncing to compare quotes.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners find a pool company on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & sign-up",
+    title: "Click-to-Call & Sign-up",
     desc: "One thumb-tap from any page to a call or a service sign-up, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious homeowners actually read them before handing over a key to the backyard.",
   },
   {
@@ -263,19 +263,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Before & after galleries",
+    title: "Before & After Galleries",
     desc: "Real transformation photos, because homeowners buy the sparkling pool they can already picture.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and neighborhood on your routes, built to rank for local pool service searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you service, and what you offer.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -283,22 +283,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & route mapping",
+    title: "Discovery & Route Mapping",
     desc: "The service you want more of, the areas you cover, how sign-ups work today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, sign-up flows, and transformation galleries — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep your routes full.",
   },
 ];
@@ -311,7 +311,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -410,8 +410,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Pool Service Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Pool service website design that turns visitors into{" "}
-                    <span className="hiw-hl">recurring customers</span>
+                    Pool Service Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Recurring Customers</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs pool service websites that work like a
@@ -569,9 +569,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first dip</span> a homeowner
-                    takes with your company
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Dip</span> a Homeowner
+                    Takes with Your Company
                   </h2>
                   <p className="hiw-lead">
                     Before a homeowner ever hands over a gate code, they have
@@ -620,7 +620,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Pool service website design for every stage of your company
+                    Pool Service Website Design for Every Stage of Your Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -645,7 +645,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Service Type</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of pool work
+                  Web Design for Every Kind of Pool Work
                 </h2>
                 <p className="hiw-lead">
                   Weekly cleaning and maintenance, equipment and heater repair,
@@ -694,7 +694,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to fill your routes
+                  More Than a Brochure — A System Built to Fill Your Routes
                 </h2>
                 <p className="hiw-lead">
                   Most pool service websites are digital business cards: a stock
@@ -723,7 +723,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting pool service website
+                    The Anatomy of a High-Converting Pool Service Website
                   </h2>
                   <p className="hiw-lead">
                     The best pool service website design is not about decoration
@@ -770,7 +770,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -782,7 +782,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -806,7 +806,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the phones homeowners actually use</h3>
+                  <h3>Fast on the Phones Homeowners Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because most pool searches happen on a phone, often standing
@@ -817,7 +817,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiTool aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where homeowners look for them</h3>
+                  <h3>Trust Signals Where Homeowners Look for Them</h3>
                   <p>
                     License numbers, insurance proof, certifications, and
                     warranty details placed in the layout — not buried on an
@@ -828,7 +828,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, sign-up
                     flows, and local SEO foundations your site needs — no
@@ -858,7 +858,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -888,7 +888,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Pool Pros Choose Us</p>
-                <h2 className="hiw-h2">Clarity customers can see</h2>
+                <h2 className="hiw-h2">Clarity Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how homeowners
                   choose a pool company — and what makes them sign up instead of
@@ -952,7 +952,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  Pool service website design across the United States
+                  Pool Service Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-route startups to multi-market pool companies,
@@ -987,7 +987,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything pool pros ask us about website design
+                    Everything Pool Pros Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, recurring sign-ups,
@@ -1028,7 +1028,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills your routes.
+                  Your Website is Step One. Here is What Fills Your Routes.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1057,7 +1057,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free pool service website consult
+                    Book Your Free Pool Service Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage

@@ -308,7 +308,6 @@ body:has(.ima-page) .navbar-wrapper.show {
   color: var(--ima-navy);
   font-size: clamp(40px, 4.3vw, 58px);
   line-height: 1.14;
-  text-transform: capitalize;
 }
 
 .ima-hero .hl {
@@ -860,7 +859,7 @@ body:has(.ima-page) .navbar-wrapper.show {
 }
 
 .ima-page .price .btn {
-  width: 100%;
+  width: fit-content;
   margin-top: auto;
 }
 
@@ -1367,8 +1366,8 @@ body:has(.ima-page) .navbar-wrapper.show {
   .ima-hero-badges { gap: 16px; margin-bottom: 20px; }
   .ima-hero-badge { width: 74px; height: 74px; }
   .ima-hero-badge-trustpilot { width: 96px; }
-  .ima-page .hero-actions { align-items: stretch; flex-direction: column; }
-  .ima-page .hero-actions .btn { width: 100%; }
+  .ima-page .hero-actions { align-items: flex-start; flex-direction: column; }
+  .ima-page .hero-actions .btn { width: fit-content; }
   .ima-page .trustbar { padding: 22px 18px; }
   .ima-page .trustbar-in { grid-template-columns: repeat(2, 1fr); }
   .ima-source-content .section { padding: 50px 0; }

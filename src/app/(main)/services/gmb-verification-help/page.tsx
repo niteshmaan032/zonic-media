@@ -74,38 +74,38 @@ const serviceJsonLd = {
 
 const GmbVerifiFaqs = [
   {
-    question: "What verification methods does Google offer?",
+    question: "What Verification Methods Does Google Offer?",
     answer:
       "Google offers several methods depending on your business type: postcard by mail, video recording, phone call, email, and in some cases instant verification. We'll identify which options are available for your specific profile and guide you through the right one.",
   },
   {
-    question: "My postcard keeps getting lost - what can I do?",
+    question: "My Postcard Keeps Getting Lost - What Can I Do?",
     answer:
       "We help businesses unlock alternative verification methods so you're not stuck waiting on a postcard that never arrives. In most cases, we can get you verified without a postcard at all.",
   },
   {
-    question: "What does video verification involve?",
+    question: "What Does Video Verification Involve?",
     answer:
       "Google requires a short video showing your business location, signage, equipment, and proof of operation. We give you a precise checklist of exactly what to film so it gets approved first time.",
   },
   {
-    question: "My verification got revoked after passing - why?",
+    question: "My Verification Got Revoked After Passing - Why?",
     answer:
       "This usually indicates a deeper compliance issue - a duplicate listing conflict, a policy violation, or inconsistent business data. We diagnose the root cause and fix it so your verification sticks.",
   },
   {
     question:
-      "I run a service area business with no storefront - can I still get verified?",
+      "I Run a Service Area Business with No Storefront - Can I Still Get Verified?",
     answer:
       "Yes. Service area businesses can be verified without displaying a physical address. We specialize in SAB verification and know exactly how to get these listings live on Google Maps.",
   },
   {
-    question: "How long does verification take?",
+    question: "How Long Does Verification Take?",
     answer:
       "Most cases are resolved within 5-7 business days depending on the verification method. We'll give you a realistic timeline after your free audit.",
   },
   {
-    question: "What makes Zonic Media one of the best GMB verification services?",
+    question: "What Makes Zonic Media One of the Best GMB Verification Services?",
     answer:
       "Zonic Media has verified and restored 1500+ Google Business Profile listings with a 95% success rate and a 48-hour average resolution time. The team handles every failure type — postcard, video, phone, email, verification loops, and revoked verifications — and starts with a free audit so you know the exact path before paying anything. Independent client reviews are published on Trustpilot and Clutch.",
   },
@@ -927,7 +927,7 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Three guarantee pillars
+                Three Guarantee Pillars
               </h2>
             </div>
 

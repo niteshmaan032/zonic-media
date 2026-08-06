@@ -12,6 +12,7 @@ import {
   type IndustryVisualCopy,
 } from "@/app/components/IndustryMarketingVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { titleCaseHeadings, titleCaseText } from "@/shared/titleCase";
 
 /* Every ima- page (13 generated + septic + solar) ships the same seven
    content sections in the same order, but the source HTML carries no ids.
@@ -95,22 +96,36 @@ type Props = {
 };
 
 export default function IndustryMarketingPage({ page }: Props) {
-  const leadForm = <IndustryMarketingLeadForm slug={page.slug} {...page.form} />;
+  /* Headings on these pages are assembled from lowercase config values
+     ("appliance repair companies"), and the 13 imported pages ship as pre-baked
+     HTML in industryMarketingPages.generated.json. Title-casing here is the one
+     choke point that covers both sources. Idempotent, so template-built pages
+     that are already correct pass through unchanged. */
+  const heroHtmlCased = titleCaseHeadings(page.heroHtml);
+  const contentHtmlCased = titleCaseHeadings(page.contentHtml);
+
+  const leadForm = (
+    <IndustryMarketingLeadForm
+      slug={page.slug}
+      {...page.form}
+      title={titleCaseText(page.form.title)}
+    />
+  );
   const heroTrustMarker = '<div class="hero-trust">';
-  const heroTrustIndex = page.heroHtml.indexOf(heroTrustMarker);
+  const heroTrustIndex = heroHtmlCased.indexOf(heroTrustMarker);
   const heroBeforeTrust =
-    heroTrustIndex >= 0 ? page.heroHtml.slice(0, heroTrustIndex) : page.heroHtml;
+    heroTrustIndex >= 0 ? heroHtmlCased.slice(0, heroTrustIndex) : heroHtmlCased;
   const heroTrust =
-    heroTrustIndex >= 0 ? page.heroHtml.slice(heroTrustIndex) : "";
-  const faqSectionIndex = page.contentHtml.lastIndexOf(
+    heroTrustIndex >= 0 ? heroHtmlCased.slice(heroTrustIndex) : "";
+  const faqSectionIndex = contentHtmlCased.lastIndexOf(
     '<section class="section">',
   );
   const contentBeforeReviews =
     faqSectionIndex >= 0
-      ? page.contentHtml.slice(0, faqSectionIndex)
-      : page.contentHtml;
+      ? contentHtmlCased.slice(0, faqSectionIndex)
+      : contentHtmlCased;
   const contentAfterReviews =
-    faqSectionIndex >= 0 ? page.contentHtml.slice(faqSectionIndex) : "";
+    faqSectionIndex >= 0 ? contentHtmlCased.slice(faqSectionIndex) : "";
 
   const beforeSectionCount = countSections(contentBeforeReviews);
   const contentBeforeHtml = withSectionIds(contentBeforeReviews, 0);
@@ -280,7 +295,7 @@ export default function IndustryMarketingPage({ page }: Props) {
                   <div className="ima-reviews-heading">
                     <span className="eyebrow">Verified Client Reviews</span>
                     <h2 id="ima-reviews-title">
-                      Trusted by small &amp; mid-size businesses across the US
+                      Trusted by Small &amp; Mid-Size Businesses Across the US
                     </h2>
                   </div>
                   <div className="ima-reviews-widget">

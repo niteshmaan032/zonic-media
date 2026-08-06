@@ -117,27 +117,27 @@ const serviceJsonLd = {
 
 const HvacWebFaqs = [
   {
-    question: "How much does HVAC website design cost?",
+    question: "How Much Does HVAC Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of service and city pages, booking and financing integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-location build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design an HVAC website?",
+    question: "How Long Does It Take to Design an HVAC Website?",
     answer:
       "Most HVAC company websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can you integrate my HVAC booking software?",
+    question: "Can You Integrate My HVAC Booking Software?",
     answer:
       "Yes. We integrate the field service tools HVAC companies already run — ServiceTitan, Housecall Pro, Jobber — or build a structured booking request flow that routes straight to your dispatcher. Either way, homeowners can book a service call without waiting for office hours, which matters most when the AC dies at 9 PM.",
   },
   {
-    question: "Can my website capture seasonal AC and furnace demand?",
+    question: "Can My Website Capture Seasonal AC and Furnace Demand?",
     answer:
       "Yes — that swing is the heart of HVAC web design. We build dedicated seasonal landing pages for AC repair, furnace repair, heat pump installs, and tune-up specials, so you can point ads and Google Business Profile posts at the right page as the temperature moves. When the first heat wave or cold snap hits, your site is ready before the phones start ringing.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -219,37 +219,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <LuCalendarCheck2 aria-hidden="true" />,
-    title: "Online booking flows",
+    title: "Online Booking Flows",
     desc: "Homeowners book or request a service call in a few taps — integrated with the field service tools HVAC companies already use.",
   },
   {
     icon: <FiPhoneCall aria-hidden="true" />,
-    title: "Emergency call UX",
+    title: "Emergency Call UX",
     desc: "A no-AC-at-midnight visitor decides in seconds. Click-to-call and emergency CTAs stay one thumb-tap away on every page.",
   },
   {
     icon: <FiThermometer aria-hidden="true" />,
-    title: "Seasonal landing pages",
+    title: "Seasonal Landing Pages",
     desc: "AC pages for the heat wave, furnace pages for the cold snap — ready to catch the surge every season brings to your market.",
   },
   {
     icon: <FiDollarSign aria-hidden="true" />,
-    title: "Maintenance plan signups",
+    title: "Maintenance Plan Signups",
     desc: "Membership and tune-up plan pages that turn one-time emergency calls into predictable recurring revenue.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Most homeowners search for HVAC help on their phone — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & tap-to-book",
+    title: "Click-to-Call & Tap-to-Book",
     desc: "One thumb-tap from any page to a call or a booking request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where stressed homeowners actually read them.",
   },
   {
@@ -257,19 +257,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a patience factor.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and suburb you serve, built to rank for local HVAC searches.",
   },
   {
-    title: "Seasonal service content",
+    title: "Seasonal Service Content",
     desc: "AC, furnace, heat pump, and IAQ pages written in plain language that answer real questions and earn rankings.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you service.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -277,22 +277,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & service mix mapping",
+    title: "Discovery & Service Mix Mapping",
     desc: "The calls you want more of, the cities you serve, how your dispatcher books today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full project.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Service pages, booking integration, and seasonal landing pages — every page written around the searches homeowners use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then HVAC SEO and GBP services keep the pipeline growing.",
   },
 ];
@@ -305,7 +305,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -390,8 +390,8 @@ function Page() {
               <div className="hw-hero-copy">
                 <p className="hw-eyebrow">HVAC Website Design</p>
                 <h1 className="hw-hero-h1">
-                  HVAC website design that turns emergency searches into{" "}
-                  <span className="hw-hl">booked service calls</span>
+                  HVAC Website Design That Turns Emergency Searches into{" "}
+                  <span className="hw-hl">Booked Service Calls</span>
                 </h1>
                 <p className="hw-hero-sub">
                   Zonic Media designs HVAC company websites that work like a
@@ -549,9 +549,9 @@ function Page() {
               <div className="hw-about-copy">
                 <p className="hw-eyebrow">First Impressions</p>
                 <h2 className="hw-h2">
-                  Your website gets judged like a{" "}
-                  <span className="hw-hl-text">broken AC</span> — under
-                  pressure, in seconds
+                  Your Website Gets Judged Like a{" "}
+                  <span className="hw-hl-text">Broken AC</span> — Under
+                  Pressure, in Seconds
                 </h2>
                 <p className="hw-lead">
                   Nobody browses HVAC websites for fun. Your visitors arrive
@@ -600,7 +600,7 @@ function Page() {
               <div>
                 <p className="hw-eyebrow">What We Build</p>
                 <h2 className="hw-h2">
-                  HVAC website design for every stage of your company
+                  HVAC Website Design for Every Stage of Your Company
                 </h2>
               </div>
               <Link href="/services" className="hw-link-arrow">
@@ -625,7 +625,7 @@ function Page() {
             <div className="hw-band-content">
               <p className="hw-eyebrow">Every Service Line</p>
               <h2 className="hw-h2">
-                Web design for heating, cooling, and everything between
+                Web Design for Heating, Cooling, and Everything Between
               </h2>
               <p className="hw-lead">
                 AC repair and installation, furnaces and boilers, heat pumps
@@ -678,7 +678,7 @@ function Page() {
             <div className="hw-sec-head-center">
               <p className="hw-eyebrow">The Call Acquisition System</p>
               <h2 className="hw-h2">
-                More than a brochure — a system built to book calls
+                More Than a Brochure — A System Built to Book Calls
               </h2>
               <p className="hw-lead">
                 Most HVAC websites are digital business cards: a stock photo of
@@ -707,7 +707,7 @@ function Page() {
               <div>
                 <p className="hw-eyebrow">Built Into Every Site</p>
                 <h2 className="hw-h2">
-                  The anatomy of a high-converting HVAC website
+                  The Anatomy of a High-Converting HVAC Website
                 </h2>
                 <p className="hw-lead">
                   The best HVAC website design is not about decoration — it is
@@ -754,7 +754,7 @@ function Page() {
           <div className="hw-container">
             <div className="hw-sec-head-center">
               <p className="hw-eyebrow">Why Zonic Media</p>
-              <h2 className="hw-h2">Designed to convert. Built to rank.</h2>
+              <h2 className="hw-h2">Designed to Convert. Built to Rank.</h2>
               <p className="hw-lead">
                 A beautiful website that nobody finds is as useless as a
                 ranking site that nobody trusts. We build both halves at once,
@@ -766,7 +766,7 @@ function Page() {
                 <span className="hw-why-card-icon">
                   <RiSearchLine aria-hidden="true" />
                 </span>
-                <h3>A local SEO foundation, not an afterthought</h3>
+                <h3>A Local SEO Foundation, Not an Afterthought</h3>
                 <p>
                   Schema markup, keyword-mapped pages, and a structure that
                   plugs straight into{" "}
@@ -790,7 +790,7 @@ function Page() {
                 <span className="hw-why-card-icon">
                   <FiWind aria-hidden="true" />
                 </span>
-                <h3>Built for the emergency-search moment</h3>
+                <h3>Built for the Emergency-Search Moment</h3>
                 <p>
                   Mobile-first layouts, fast Core Web Vitals, and click-to-call
                   everywhere — because your best lead is standing in a
@@ -801,7 +801,7 @@ function Page() {
                 <span className="hw-why-card-icon">
                   <FiShield aria-hidden="true" />
                 </span>
-                <h3>Trust signals where homeowners look for them</h3>
+                <h3>Trust Signals Where Homeowners Look for Them</h3>
                 <p>
                   License numbers, insurance proof, NATE certifications, and
                   guarantee details placed in the layout — not buried on an
@@ -812,7 +812,7 @@ function Page() {
             <div className="hw-why-banner">
               <div className="hw-why-banner-text">
                 <p className="hw-eyebrow">Free Strategy Call</p>
-                <h3>Not sure what your company actually needs?</h3>
+                <h3>Not Sure What Your Company Actually Needs?</h3>
                 <p>
                   Tell us your goals and we&apos;ll map the exact pages,
                   booking flows, and local SEO foundations your site needs —
@@ -842,7 +842,7 @@ function Page() {
               <div>
                 <p className="hw-eyebrow">How It Works</p>
                 <h2 className="hw-h2">
-                  From first call to launch in four steps
+                  From First Call to Launch in Four Steps
                 </h2>
               </div>
               <HashScrollLink
@@ -873,7 +873,7 @@ function Page() {
             <div className="hw-banner-copy">
               <p className="hw-eyebrow">Why HVAC Companies Choose Us</p>
               <h2 className="hw-h2">
-                Comfort your customers can feel from the first click
+                Comfort Your Customers Can Feel from the First Click
               </h2>
               <p className="hw-lead">
                 A website built by a team that understands how homeowners
@@ -938,7 +938,7 @@ function Page() {
             <div className="hw-sec-head-center">
               <p className="hw-eyebrow">Wherever You Work</p>
               <h2 className="hw-h2">
-                HVAC website design services across the United States
+                HVAC Website Design Services Across the United States
               </h2>
               <p className="hw-lead">
                 From single-truck startups to multi-location companies, Zonic
@@ -977,7 +977,7 @@ function Page() {
               <div>
                 <p className="hw-eyebrow">FAQs</p>
                 <h2 className="hw-h2">
-                  Everything HVAC contractors ask us about website design
+                  Everything HVAC Contractors Ask Us About Website Design
                 </h2>
                 <p className="hw-lead">
                   Straight answers on pricing, timelines, booking software,
@@ -1017,7 +1017,7 @@ function Page() {
             <div className="hw-sec-head-center">
               <p className="hw-eyebrow">Grow Further</p>
               <h2 className="hw-h2">
-                Your website is step one. Here is what fills it with calls.
+                Your Website is Step One. Here is What Fills It with Calls.
               </h2>
             </div>
             <div className="hw-grow-cards">
@@ -1041,7 +1041,7 @@ function Page() {
             <div className="hw-form-grid">
               <aside className="hw-form-aside">
                 <p className="hw-eyebrow">Get Started</p>
-                <h2 className="hw-h2">Book your free HVAC website consult</h2>
+                <h2 className="hw-h2">Book Your Free HVAC Website Consult</h2>
                 <p className="hw-lead">
                   Tell us about your company and we will send a custom homepage
                   mockup plus a flat-price quote — free, and yours to keep

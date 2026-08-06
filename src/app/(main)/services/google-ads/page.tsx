@@ -422,7 +422,7 @@ function GaVisual({ kind }: { kind: GaFeature["visual"] }) {
     return (
       <div className="ga-visual" aria-hidden="true">
         <div className="ga-visual-head">
-          <h4>Campaign structure</h4>
+          <h4>Campaign Structure</h4>
           <span className="ga-visual-tag">Built right</span>
         </div>
         <div className="ga-tree">
@@ -451,7 +451,7 @@ function GaVisual({ kind }: { kind: GaFeature["visual"] }) {
     return (
       <div className="ga-visual" aria-hidden="true">
         <div className="ga-visual-head">
-          <h4>Search term review</h4>
+          <h4>Search Term Review</h4>
           <span className="ga-visual-tag">Weekly</span>
         </div>
         <div className="ga-filter-rows">
@@ -486,7 +486,7 @@ function GaVisual({ kind }: { kind: GaFeature["visual"] }) {
   return (
     <div className="ga-visual" aria-hidden="true">
       <div className="ga-visual-head">
-        <h4>Landing page</h4>
+        <h4>Landing Page</h4>
         <span className="ga-visual-tag">Converting</span>
       </div>
       <div className="ga-lp">
@@ -745,7 +745,7 @@ function Page() {
             <div className="ga-sec-head ga-sec-head--center">
               <span className="ga-eyebrow">Why Zonic Media</span>
               <h2 className="ga-h2">
-                Why Work With Zonic Media for Google Ads Management
+                Why Work with Zonic Media for Google Ads Management
               </h2>
             </div>
             <div className="ga-why-grid">
@@ -767,12 +767,12 @@ function Page() {
           <div className="ga-wrap">
             <div className="ga-sec-head ga-sec-head--center">
               <span className="ga-eyebrow">Common questions</span>
-              <h2 className="ga-h2">Google Ads questions, answered</h2>
+              <h2 className="ga-h2">Google Ads Questions, Answered</h2>
             </div>
             <div className="ga-faq-cols">
               <div>
                 {gaFaqsLeft.map((faq, i) => (
-                  <details className="ga-faq-item" open={i === 0} key={faq.q}>
+                  <details className="ga-faq-item" name="ga-faq" open={i === 0} key={faq.q}>
                     <summary className="ga-faq-q">
                       {faq.q}
                       <span className="ga-faq-pm" aria-hidden="true">
@@ -792,7 +792,7 @@ function Page() {
               </div>
               <div>
                 {gaFaqsRight.map((faq) => (
-                  <details className="ga-faq-item" key={faq.q}>
+                  <details className="ga-faq-item" name="ga-faq" key={faq.q}>
                     <summary className="ga-faq-q">
                       {faq.q}
                       <span className="ga-faq-pm" aria-hidden="true">
@@ -819,7 +819,7 @@ function Page() {
           <div className="ga-wrap">
             <div className="ga-cta-inner">
               <span className="ga-eyebrow">Free Google Ads audit</span>
-              <h2>Find out where your ad budget is leaking</h2>
+              <h2>Find Out Where Your Ad Budget is Leaking</h2>
               <p>
                 We&apos;ll audit your account — wasted spend, missed keywords,
                 and the fastest path to a higher return on ad spend. Free, and

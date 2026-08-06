@@ -122,27 +122,27 @@ const serviceJsonLd = {
 
 const CommercialCleaningWebFaqs = [
   {
-    question: "How much does commercial cleaning website design cost?",
+    question: "How Much Does Commercial Cleaning Website Design Cost?",
     answer:
       "Pricing depends on the size of the build: number of industry and service pages, quote and bid integrations, and whether content and photography are included. A focused redesign costs considerably less than a large multi-site, multi-market build. After a short discovery call we quote a flat project price, so there are no hourly surprises.",
   },
   {
-    question: "How long does it take to design a commercial cleaning website?",
+    question: "How Long Does It Take to Design a Commercial Cleaning Website?",
     answer:
       "Most commercial cleaning websites launch in one to two weeks. You see a free homepage mockup within about a week of our discovery call, and once the design direction is approved we move into build, content, and on-page SEO. Larger sites with many industry and service-area pages or custom integrations can take longer.",
   },
   {
-    question: "Can my website help win commercial contracts?",
+    question: "Can My Website Help Win Commercial Contracts?",
     answer:
       "Yes — that is the whole point. Facility managers vet vendors online before they ever send an RFP. We build industry-specific pages, proof of insurance and bonding, and a clean quote-request flow, so a decision-maker can see you are credible and request a walkthrough in a couple of clicks instead of moving to the next bidder.",
   },
   {
-    question: "Can you integrate my CRM or quoting software?",
+    question: "Can You Integrate My CRM or Quoting Software?",
     answer:
       "Yes. We connect the tools cleaning companies already run — Jobber, Swept, Salesforce, or a structured bid request flow that routes straight to your office. Either way, facility managers can request a quote without waiting for business hours.",
   },
   {
-    question: "Can you redesign my site without losing my current rankings?",
+    question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
   },
@@ -164,7 +164,7 @@ const commercialCleaningWebFaqJsonLd = {
 
 const AboutChecks = [
   "Quote & bid request flows",
-  "Industry-specific pages",
+  "Industry-Specific Pages",
   "Insurance & bonding proof",
   "Local SEO foundations",
 ];
@@ -224,37 +224,37 @@ const BandStats = [
 const SystemCards = [
   {
     icon: <FiClipboard aria-hidden="true" />,
-    title: "Bid & quote request flows",
+    title: "Bid & Quote Request Flows",
     desc: "Facility managers request a walkthrough or quote in a few clicks — integrated with the CRM and quoting tools cleaning companies already use.",
   },
   {
     icon: <FiGrid aria-hidden="true" />,
-    title: "Industry-specific pages",
+    title: "Industry-Specific Pages",
     desc: "Offices, medical, retail, and industrial pages that speak to each buyer and rank for the exact service they search.",
   },
   {
     icon: <FiShield aria-hidden="true" />,
-    title: "Trust & compliance UX",
+    title: "Trust & Compliance UX",
     desc: "Insurance, bonding, and background-check proof placed up front, because contracts are won on credibility before price.",
   },
   {
     icon: <FiFileText aria-hidden="true" />,
-    title: "Case studies & proof",
+    title: "Case Studies & Proof",
     desc: "Client logos, testimonials, and results placed where decision-makers actually look before they shortlist a vendor.",
   },
 ];
 
 const AnatomyItems = [
   {
-    title: "Mobile-first design",
+    title: "Mobile-First Design",
     desc: "Facility managers vet vendors on their phone between meetings — every layout starts at 375px, not on a desktop monitor.",
   },
   {
-    title: "Click-to-call & quote request",
+    title: "Click-to-Call & Quote Request",
     desc: "One tap from any page to a call or a bid request, always visible, never buried.",
   },
   {
-    title: "Google reviews integration",
+    title: "Google Reviews Integration",
     desc: "Your best reviews pulled onto the site where cautious decision-makers actually read them before shortlisting you.",
   },
   {
@@ -262,19 +262,19 @@ const AnatomyItems = [
     desc: "Pages that load in under two seconds — speed is a ranking factor and a credibility factor.",
   },
   {
-    title: "Industry & service pages",
+    title: "Industry & Service Pages",
     desc: "Dedicated pages for each facility type and service, matched to how buyers actually search.",
   },
   {
-    title: "Service area pages",
+    title: "Service Area Pages",
     desc: "A dedicated page for every city and district you cover, built to rank for local commercial cleaning searches.",
   },
   {
-    title: "Local schema markup",
+    title: "Local Schema Markup",
     desc: "Structured data that tells Google exactly who you are, where you work, and what you clean.",
   },
   {
-    title: "Secure hosting & SSL",
+    title: "Secure Hosting & SSL",
     desc: "Fast, monitored hosting with daily backups — your site stays online and stays yours.",
   },
 ];
@@ -282,22 +282,22 @@ const AnatomyItems = [
 const ProcessSteps = [
   {
     num: "01",
-    title: "Discovery & buyer mapping",
+    title: "Discovery & Buyer Mapping",
     desc: "The contracts you want more of, the facility types you serve, how your team handles bids today, and who outranks you — mapped into the pages and flows your site needs.",
   },
   {
     num: "02",
-    title: "Free homepage mockup",
+    title: "Free Homepage Mockup",
     desc: "Within about a week you see a custom homepage mockup built around your brand and your market — before you commit to the full build.",
   },
   {
     num: "03",
-    title: "Build, content & on-page SEO",
+    title: "Build, Content & on-Page SEO",
     desc: "Industry pages, bid flows, and trust content — every page written around the searches decision-makers use, with schema and fast load times baked in.",
   },
   {
     num: "04",
-    title: "Launch, tracking & growth",
+    title: "Launch, Tracking & Growth",
     desc: "Every form tested, every old URL redirected, call and form tracking wired up — then local SEO and GBP work keep the pipeline growing.",
   },
 ];
@@ -310,7 +310,7 @@ const BannerFeats = [
   },
   {
     icon: <RiSearchLine aria-hidden="true" />,
-    title: "Built-In Local SEO",
+    title: "Built-in Local SEO",
     desc: "Schema, keyword-mapped pages, and fast Core Web Vitals from day one.",
   },
   {
@@ -409,8 +409,8 @@ function Page() {
                 <div className="hiw-hero-copy">
                   <p className="hiw-eyebrow">Commercial Cleaning Website Design</p>
                   <h1 className="hiw-hero-h1">
-                    Commercial cleaning website design that turns visitors into{" "}
-                    <span className="hiw-hl">signed contracts</span>
+                    Commercial Cleaning Website Design That Turns Visitors into{" "}
+                    <span className="hiw-hl">Signed Contracts</span>
                   </h1>
                   <p className="hiw-hero-sub">
                     Zonic Media designs commercial cleaning websites that work
@@ -568,9 +568,9 @@ function Page() {
                 <div className="hiw-about-copy">
                   <p className="hiw-eyebrow">First Impressions</p>
                   <h2 className="hiw-h2">
-                    Your website is the{" "}
-                    <span className="hiw-hl-text">first vendor check</span> a
-                    facility manager runs
+                    Your Website is the{" "}
+                    <span className="hiw-hl-text">First Vendor Check</span> a
+                    Facility Manager Runs
                   </h2>
                   <p className="hiw-lead">
                     Before a facility manager ever sends an RFP, they have already
@@ -620,8 +620,8 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">What We Build</p>
                   <h2 className="hiw-h2">
-                    Commercial cleaning website design for every stage of your
-                    company
+                    Commercial Cleaning Website Design for Every Stage of Your
+                    Company
                   </h2>
                 </div>
                 <Link href="/services" className="hiw-link-arrow">
@@ -646,7 +646,7 @@ function Page() {
               <div className="hiw-band-content">
                 <p className="hiw-eyebrow">Every Facility Type</p>
                 <h2 className="hiw-h2">
-                  Web design for every kind of cleaning contract
+                  Web Design for Every Kind of Cleaning Contract
                 </h2>
                 <p className="hiw-lead">
                   Offices, medical facilities, retail and restaurants, industrial
@@ -695,7 +695,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">The Lead System</p>
                 <h2 className="hiw-h2">
-                  More than a brochure — a system built to win contracts
+                  More Than a Brochure — A System Built to Win Contracts
                 </h2>
                 <p className="hiw-lead">
                   Most commercial cleaning websites are digital business cards: a
@@ -724,7 +724,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">Built Into Every Site</p>
                   <h2 className="hiw-h2">
-                    The anatomy of a high-converting cleaning website
+                    The Anatomy of a High-Converting Cleaning Website
                   </h2>
                   <p className="hiw-lead">
                     The best commercial cleaning website design is not about
@@ -771,7 +771,7 @@ function Page() {
             <div className="hiw-container">
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Why Zonic Media</p>
-                <h2 className="hiw-h2">Designed to convert. Built to rank.</h2>
+                <h2 className="hiw-h2">Designed to Convert. Built to Rank.</h2>
                 <p className="hiw-lead">
                   A beautiful website that nobody finds is as useless as a
                   ranking site that nobody trusts. We build both halves at once,
@@ -783,7 +783,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <RiSearchLine aria-hidden="true" />
                   </span>
-                  <h3>A local SEO foundation, not an afterthought</h3>
+                  <h3>A Local SEO Foundation, Not an Afterthought</h3>
                   <p>
                     Schema markup, keyword-mapped pages, and a structure that
                     plugs straight into{" "}
@@ -807,7 +807,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiZap aria-hidden="true" />
                   </span>
-                  <h3>Fast on the screens buyers actually use</h3>
+                  <h3>Fast on the Screens Buyers Actually Use</h3>
                   <p>
                     Mobile-first layouts and Core Web Vitals-friendly builds,
                     because facility managers vet vendors between meetings and
@@ -818,7 +818,7 @@ function Page() {
                   <span className="hiw-why-card-icon">
                     <FiShield aria-hidden="true" />
                   </span>
-                  <h3>Trust signals where buyers look for them</h3>
+                  <h3>Trust Signals Where Buyers Look for Them</h3>
                   <p>
                     Insurance, bonding, background checks, and compliance details
                     placed in the layout — the credibility a decision-maker needs
@@ -829,7 +829,7 @@ function Page() {
               <div className="hiw-why-banner">
                 <div className="hiw-why-banner-text">
                   <p className="hiw-eyebrow">Free Strategy Call</p>
-                  <h3>Not sure what your company actually needs?</h3>
+                  <h3>Not Sure What Your Company Actually Needs?</h3>
                   <p>
                     Tell us your goals and we&apos;ll map the exact pages, bid
                     flows, and local SEO foundations your site needs — no
@@ -859,7 +859,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">How It Works</p>
                   <h2 className="hiw-h2">
-                    From first call to launch in four steps
+                    From First Call to Launch in Four Steps
                   </h2>
                 </div>
                 <HashScrollLink
@@ -889,7 +889,7 @@ function Page() {
             <div className="hiw-banner-grid">
               <div className="hiw-banner-copy">
                 <p className="hiw-eyebrow">Why Cleaning Pros Choose Us</p>
-                <h2 className="hiw-h2">Credibility customers can see</h2>
+                <h2 className="hiw-h2">Credibility Customers Can See</h2>
                 <p className="hiw-lead">
                   A website built by a team that understands how facility managers
                   choose a cleaning vendor — and what makes them request a
@@ -953,7 +953,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Wherever You Work</p>
                 <h2 className="hiw-h2">
-                  Commercial cleaning website design across the United States
+                  Commercial Cleaning Website Design Across the United States
                 </h2>
                 <p className="hiw-lead">
                   From single-crew janitorial startups to multi-site commercial
@@ -988,7 +988,7 @@ function Page() {
                 <div>
                   <p className="hiw-eyebrow">FAQs</p>
                   <h2 className="hiw-h2">
-                    Everything cleaning pros ask us about website design
+                    Everything Cleaning Pros Ask Us About Website Design
                   </h2>
                   <p className="hiw-lead">
                     Straight answers on pricing, timelines, winning contracts, and
@@ -1028,7 +1028,7 @@ function Page() {
               <div className="hiw-sec-head-center">
                 <p className="hiw-eyebrow">Grow Further</p>
                 <h2 className="hiw-h2">
-                  Your website is step one. Here is what fills it with contracts.
+                  Your Website is Step One. Here is What Fills It with Contracts.
                 </h2>
               </div>
               <div className="hiw-grow-cards">
@@ -1057,7 +1057,7 @@ function Page() {
                 <aside className="hiw-form-aside">
                   <p className="hiw-eyebrow">Get Started</p>
                   <h2 className="hiw-h2">
-                    Book your free commercial cleaning website consult
+                    Book Your Free Commercial Cleaning Website Consult
                   </h2>
                   <p className="hiw-lead">
                     Tell us about your company and we will send a custom homepage
