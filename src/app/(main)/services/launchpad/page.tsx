@@ -3,7 +3,6 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import type { Metadata } from "next";
 import { Col, Row } from "react-bootstrap";
 import { FaArrowTrendUp, FaCheck, FaCircleExclamation } from "react-icons/fa6";
@@ -1155,7 +1154,7 @@ function page() {
           <GmbFaqs items={LaunchpadServiceFaqItems} />
         </div>
 
-        <Script
+        <script
           id="launchpad-service-faq-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{

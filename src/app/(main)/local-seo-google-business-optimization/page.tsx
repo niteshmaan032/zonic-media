@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import { Metadata } from "next";
 
 import "@/app/style/gbpLanding.css";
@@ -375,12 +374,12 @@ const onDarkCard = {
 function Page() {
   return (
     <div className="gbp-lp lo-page">
-      <Script
+      <script
         id="lo-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="lo-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -823,7 +822,7 @@ function Page() {
               </details>
             ))}
 
-            <Script
+            <script
               id="lo-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{

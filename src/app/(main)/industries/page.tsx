@@ -1,5 +1,4 @@
 import "@/app/style/indust.css";
-import Script from "next/script";
 import Link from "next/link";
 import { Metadata } from "next";
 import Footer from "@/app/components/Footer";
@@ -755,17 +754,17 @@ const faqJsonLd = {
 function Page() {
   return (
     <>
-      <Script
+      <script
         id="industries-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="industries-collection-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
-      <Script
+      <script
         id="industries-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

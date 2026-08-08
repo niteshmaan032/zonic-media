@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 import "@/app/style/homeInspAgency.css";
 import "@/app/style/homeInspState.css";
@@ -69,24 +68,24 @@ export default function StatePage({ state }: { state: StateContent }) {
 
   return (
     <>
-      <Script
+      <script
         id="pmb-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="pmb-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="pmb-localbusiness-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(localBusinessJsonLd),
         }}
       />
-      <Script
+      <script
         id="pmb-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}

@@ -185,7 +185,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        <Script
+        <script
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -193,7 +193,7 @@ export default function RootLayout({
           }}
         />
 
-        <Script
+        <script
           id="local-business-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -201,7 +201,7 @@ export default function RootLayout({
           }}
         />
 
-        <Script
+        <script
           id="website-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{

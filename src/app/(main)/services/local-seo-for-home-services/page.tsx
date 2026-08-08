@@ -12,7 +12,6 @@ import { buildBreadcrumbJsonLd, buildServiceJsonLd } from "@/shared/seoSchemas";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Col, Row } from "react-bootstrap";
 import {
   FaCalendarCheck,
@@ -545,7 +544,7 @@ function page() {
                       href="/services/industry/local-seo-for-electricians"
                       className="lsh-inline-link"
                     >
-                      Electricians
+                      Electrical Contractors
                     </Link>
                   </li>
                   <li>
@@ -554,7 +553,7 @@ function page() {
                       href="/services/industry/seo-services-for-plumber"
                       className="lsh-inline-link"
                     >
-                      Plumbers
+                      Plumbing Companies
                     </Link>
                   </li>
                   <li>
@@ -702,7 +701,7 @@ function page() {
                       href="/services/industry/chiropractor-local-seo-services"
                       className="lsh-inline-link"
                     >
-                      Chiropractors
+                      Chiropractic Clinics
                     </Link>
                   </li>
                   <li>
@@ -711,7 +710,7 @@ function page() {
                       href="/services/industry/dental-seo-services"
                       className="lsh-inline-link"
                     >
-                      Dentists
+                      Dental Practices
                     </Link>
                   </li>
                   <li>
@@ -720,7 +719,7 @@ function page() {
                       href="/services/industry/pediatricians"
                       className="lsh-inline-link"
                     >
-                      Pediatricians
+                      Pediatric Practices
                     </Link>
                   </li>
                   <li>
@@ -1048,7 +1047,7 @@ function page() {
             <GmbFaqs items={SeoHomeFaqs} />
           </div>
 
-          <Script
+          <script
             id="local-seo-home-faq-schema"
             type="application/ld+json"
             dangerouslySetInnerHTML={{

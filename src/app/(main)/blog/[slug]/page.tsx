@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Script from "next/script";
 import { FaCalendarDays, FaCircleUser } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import BlogPostFaqs from "@/app/components/BlogPostFaqs";
@@ -142,18 +141,18 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
-      <Script
+      <script
         id="blog-post-breadcrumb-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="blog-post-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {faqJsonLd ? (
-        <Script
+        <script
           id="blog-post-faq-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

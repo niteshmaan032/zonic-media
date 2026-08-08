@@ -2,7 +2,6 @@ import "@/app/style/gmb-reinstatement.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import Script from "next/script";
 
 import Footer from "@/app/components/Footer";
 import GmbAuditForm from "@/app/components/GmbAuditForm";
@@ -912,7 +911,7 @@ function page() {
               </details>
             ))}
 
-            <Script
+            <script
               id="gmb-reinst-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{

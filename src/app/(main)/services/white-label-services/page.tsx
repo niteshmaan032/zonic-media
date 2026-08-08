@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Metadata } from "next";
 
 import "@/app/style/whiteLabelServices.css";
@@ -210,22 +209,22 @@ const serviceJsonLd = buildServiceJsonLd({
 export default function Page() {
   return (
     <>
-      <Script
+      <script
         id="wl-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Script
+      <script
         id="wl-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="wl-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="wl-localbusiness-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{

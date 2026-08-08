@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import Script from "next/script";
 import {
   FaAlignLeft,
   FaArrowRight,
@@ -1143,7 +1142,7 @@ function page() {
               <GmbFaqs items={GmbOptimFaqs} />
             </div>
 
-            <Script
+            <script
               id="gmb-optim-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{

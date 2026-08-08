@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { Metadata } from "next";
 
 import "@/app/style/homeInspAgency.css";
@@ -219,22 +218,22 @@ const serviceJsonLd = buildServiceJsonLd({
 function Page() {
   return (
     <>
-      <Script
+      <script
         id="npm-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <Script
+      <script
         id="npm-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="npm-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Script
+      <script
         id="npm-localbusiness-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
-import Script from "next/script";
 import {
   FaArrowRight,
   FaMailBulk,
@@ -996,7 +995,7 @@ function page() {
               <GmbFaqs items={GmbVerifiFaqs} />
             </div>
 
-            <Script
+            <script
               id="gmb-verifi-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{

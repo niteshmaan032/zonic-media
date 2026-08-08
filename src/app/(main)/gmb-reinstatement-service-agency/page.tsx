@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import { Metadata } from "next";
 
 import "@/app/style/gbpLanding.css";
@@ -456,12 +455,12 @@ const CheckIcon = () => (
 function Page() {
   return (
     <div className="gbp-lp gbr-page">
-      <Script
+      <script
         id="gbr-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="gbr-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -936,7 +935,7 @@ function Page() {
               </details>
             ))}
 
-            <Script
+            <script
               id="gbr-faq-schema"
               type="application/ld+json"
               dangerouslySetInnerHTML={{

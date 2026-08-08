@@ -1,6 +1,5 @@
 import { permanentRedirect } from "next/navigation";
 import Link from "next/link";
-import Script from "next/script";
 import type { Metadata } from "next";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
@@ -68,7 +67,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   if (blogs.length === 0) {
     return (
       <>
-        <Script
+        <script
           id="blog-breadcrumb-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -92,17 +91,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   return (
     <>
-      <Script
+      <script
         id="blog-breadcrumb-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Script
+      <script
         id="blog-itemlist-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
-      <Script
+      <script
         id="blog-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
