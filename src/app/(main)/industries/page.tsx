@@ -903,9 +903,7 @@ function Page() {
                 <div className="n">
                   700<span>+</span>
                 </div>
-                <div className="c">
-                  Google Business Profiles reinstated &amp; verified
-                </div>
+                <div className="c">Google Business Profiles optimized</div>
               </div>
               <div className="st">
                 <div className="n">

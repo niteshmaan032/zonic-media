@@ -176,7 +176,7 @@ function stripTags(html: string) {
 
 function ticker(specialists: string) {
   return [
-    "<span><b>700+</b> Google Business Profiles reinstated &amp; verified</span>",
+    "<span><b>700+</b> Google Business Profiles optimized</span>",
     "<span>★ <b>5.0</b> rating on Clutch</span>",
     "<span>No long-term contracts</span>",
     "<span>US-based team</span>",
@@ -186,7 +186,7 @@ function ticker(specialists: string) {
 }
 
 const TRUSTBAR_HTML = `<div class="trustbar"><div class="wrap trustbar-in">
-<div class="stat"><div class="n">700<span class="u">+</span></div><div class="l">GBP profiles reinstated &amp; verified</div></div>
+<div class="stat"><div class="n">700<span class="u">+</span></div><div class="l">GBP profiles optimized</div></div>
 <div class="stat"><div class="n">5.0<span class="u">★</span></div><div class="l">Average client rating</div></div>
 <div class="stat"><div class="n">20<span class="u">+</span></div><div class="l">Local service niches served</div></div>
 <div class="stat"><div class="n">US<span class="u">-based</span></div><div class="l">Team, no offshore guesswork</div></div>
@@ -232,7 +232,7 @@ function heroHtml(c: IndustryMarketingConfig) {
 </div>
 <div class="hero-trust">
 <span><span class="stars">★★★★★</span> <b>5.0</b> client rating</span>
-<span><b>700+</b> profiles reinstated</span>
+<span><b>700+</b> profiles optimized</span>
 </div>`;
 }
 

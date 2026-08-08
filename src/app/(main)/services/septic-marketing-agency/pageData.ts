@@ -16,7 +16,7 @@ const STAR_SVG =
   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
 
 const tickerRun =
-  "<span><b>700+</b> Google Business Profiles reinstated &amp; verified</span><span>★ <b>5.0</b> rating on Clutch</span><span>No long-term contracts</span><span>US-based team</span><span>Exclusive leads — never shared</span><span>Septic specialists</span>";
+  "<span><b>700+</b> Google Business Profiles optimized</span><span>★ <b>5.0</b> rating on Clutch</span><span>No long-term contracts</span><span>US-based team</span><span>Exclusive leads — never shared</span><span>Septic specialists</span>";
 
 export const septicMarketingPage: IndustryMarketingPageData = {
   slug: "septic-marketing-agency",
@@ -48,10 +48,10 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 </div>
 <div class="hero-trust">
 <span><span class="stars">★★★★★</span> <b>5.0</b> client rating</span>
-<span><b>700+</b> profiles reinstated</span>
+<span><b>700+</b> profiles optimized</span>
 </div>`,
   trustbarHtml: `<div class="trustbar"><div class="wrap trustbar-in">
-<div class="stat"><div class="n">700<span class="u">+</span></div><div class="l">GBP profiles reinstated &amp; verified</div></div>
+<div class="stat"><div class="n">700<span class="u">+</span></div><div class="l">GBP profiles optimized</div></div>
 <div class="stat"><div class="n">5.0<span class="u">★</span></div><div class="l">Average client rating</div></div>
 <div class="stat"><div class="n">20<span class="u">+</span></div><div class="l">Local service niches served</div></div>
 <div class="stat"><div class="n">US<span class="u">-based</span></div><div class="l">Team, no offshore guesswork</div></div>

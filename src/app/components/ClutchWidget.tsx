@@ -12,11 +12,18 @@ declare global {
   }
 }
 
+/** Review IDs Clutch supplies for the carousel embed (widget type 12). */
+export const CLUTCH_SLIDER_REVIEWS =
+  "448872,448007,448005,447416,446728,446721,446714,446262,441531,442062,445226,445524";
+
 type ClutchWidgetProps = {
   widgetType?: string;
   height?: string;
   primaryColor?: string;
   reviews?: string;
+  /** Clutch ships the review carousel with data-expandifr on; the compact
+      rating badge (type 14) must stay off or it grows on load. */
+  expandIframe?: boolean;
 };
 
 let clutchInitScheduled = false;
@@ -44,6 +51,7 @@ export default function ClutchWidget({
   height = "50",
   primaryColor,
   reviews,
+  expandIframe = widgetType === "12",
 }: ClutchWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
   const initializedRef = useRef(false);
@@ -121,7 +129,9 @@ export default function ClutchWidget({
       style={
         reservedHeight
           ? {
-              height: reservedHeight,
+              // An expanding widget keeps the reserved height as a floor only,
+              // otherwise .clutch-widget's overflow:hidden would clip it.
+              height: expandIframe ? undefined : reservedHeight,
               minHeight: reservedHeight,
             }
           : undefined
@@ -130,7 +140,7 @@ export default function ClutchWidget({
       data-widget-type={widgetType}
       data-height={height}
       data-nofollow="false"
-      data-expandifr="false"
+      data-expandifr={expandIframe ? "true" : "false"}
       data-scale="100"
       data-primary-color={primaryColor}
       data-reviews={reviews}
