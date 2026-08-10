@@ -89,7 +89,13 @@ const organizationJsonLd = {
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
+  // Single type, not ["LocalBusiness", "ProfessionalService"]. A type array on
+  // the node that carries aggregateRating gets expanded into two rated items
+  // named "Zonic Media", which Search Console flags as "Review has multiple
+  // aggregate ratings" (2 affected items on /services, Aug 2026).
+  // ProfessionalService is already a subtype of LocalBusiness, so nothing is
+  // lost. This is the ONLY aggregateRating that may appear on a page.
+  "@type": "ProfessionalService",
   "@id": `${SITE_URL}/#local-business`,
   name: "Zonic Media",
   description:

@@ -36,7 +36,6 @@ import {
   FiPhone,
   FiSearch,
   FiShoppingBag,
-  FiStar,
   FiTarget,
   FiUsers,
   FiX,
@@ -762,12 +761,6 @@ export default function ServicesPage() {
                 </a>
               </div>
               <div className="svc-hero-trust">
-                <span>
-                  <span className="svc-hero-stars" aria-hidden="true">
-                    <FiStar />
-                  </span>
-                  4.9 average client rating
-                </span>
                 <span>
                   <FiCheck size={14} aria-hidden="true" />
                   100+ brands scaled
