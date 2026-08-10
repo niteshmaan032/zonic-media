@@ -89,12 +89,14 @@ const organizationJsonLd = {
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  // Single type, not ["LocalBusiness", "ProfessionalService"]. A type array on
-  // the node that carries aggregateRating gets expanded into two rated items
-  // named "Zonic Media", which Search Console flags as "Review has multiple
-  // aggregate ratings" (2 affected items on /services, Aug 2026).
-  // ProfessionalService is already a subtype of LocalBusiness, so nothing is
-  // lost. This is the ONLY aggregateRating that may appear on a page.
+  // Single type (ProfessionalService is a LocalBusiness subtype) and NO
+  // aggregateRating. Google's Rich Results Test built two "Zonic Media"
+  // review-snippet items from this node + the Organization node above and
+  // flagged "Review has multiple aggregate ratings" (Aug 2026). Self-serving
+  // ratings on LocalBusiness/Organization are ineligible for stars per
+  // Google's review-snippet guidelines, so the markup could only ever produce
+  // errors. Keep the 5.0/21 Clutch rating in visible page text instead —
+  // never re-add it as structured data anywhere.
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}/#local-business`,
   name: "Zonic Media",
@@ -110,12 +112,6 @@ const localBusinessJsonLd = {
   areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
   sameAs: sameAsLinks,
   knowsAbout: knowsAboutTopics,
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "21",
-    bestRating: "5",
-  },
 };
 
 const webSiteJsonLd = {

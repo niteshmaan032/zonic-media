@@ -57,14 +57,12 @@ export function buildLocalBusinessJsonLd({
       postalCode: "19901",
       addressCountry: "US",
     },
-    // Matches the Clutch rating shown on-page and the site-wide LocalBusiness
-    // schema in layout.tsx — keep all three in sync.
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "21",
-      bestRating: "5",
-    },
+    // NO aggregateRating here — ever. Pages using this helper stack a second
+    // "Zonic Media" business node on top of the root layout's, and any rating
+    // in the pair triggers GSC's "Review has multiple aggregate ratings"
+    // critical error (confirmed via Rich Results Test on /services, Aug 2026).
+    // Self-serving LocalBusiness ratings are ineligible for star snippets per
+    // Google's guidelines anyway. Cite the Clutch rating in visible text.
   };
 }
 
