@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/style/service-lead-form.css";
 import "@/app/style/google-fonts.css";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
@@ -243,6 +245,8 @@ export default function RootLayout({
             globally here would put the widget on the same pages as our lead
             forms and trigger a "multiple opt-in sources" rejection. */}
         <SiteFloatingWidgets />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
