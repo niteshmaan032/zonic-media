@@ -4,6 +4,7 @@ import Link from "next/link";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import IndustryMarketingLeadForm from "@/app/components/IndustryMarketingLeadForm";
+import RelatedServices from "@/app/components/RelatedServices";
 import {
   GrowthCurveVisual,
   LeadEngineVisual,
@@ -327,6 +328,7 @@ export default function IndustryMarketingPage({ page }: Props) {
           className="ima-source-final"
           dangerouslySetInnerHTML={{ __html: page.finalHtml }}
         />
+        <RelatedServices current={`/services/${page.slug}`} />
         <div
           className="ima-source-footer"
           dangerouslySetInnerHTML={{ __html: page.footerHtml }}

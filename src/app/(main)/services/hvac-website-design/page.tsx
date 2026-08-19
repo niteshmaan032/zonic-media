@@ -78,8 +78,19 @@ const serviceJsonLd = {
   description:
     "Custom HVAC company website design with online booking integration, 24/7 emergency call UX, seasonal AC and furnace landing pages, and maintenance plan signup flows.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

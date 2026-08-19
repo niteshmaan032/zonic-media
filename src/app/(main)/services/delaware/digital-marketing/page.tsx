@@ -22,6 +22,7 @@ import type { Metadata } from "next";
 import "@/app/style/delware/delDigital.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LocalRankTracker, {
@@ -56,9 +57,9 @@ import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/delaware/digital-marketing";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Delaware | SEO & Ads",
+  title: "Digital Marketing Agency in Delaware",
   description:
-    "Delaware digital marketing agency in Dover. Local SEO, Google Ads, social & conversion-focused web design — reported against calls and revenue. Free audit.",
+    "Grow your Delaware business with SEO, Google Ads, social media, content, AI search, and conversion-focused web design. Get a free marketing audit.",
   keywords: [
     "digital marketing agency Delaware",
     "Delaware digital marketing agency",
@@ -109,8 +110,10 @@ const serviceJsonLd = {
   description:
     "Full-service digital marketing for Delaware businesses — local SEO and Google Business Profile optimization, Google Ads management, social media, email, content and AI search visibility, and conversion-focused web design, all measured against calls and booked revenue.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "8 The Green, STE B",
@@ -559,7 +562,7 @@ function Page() {
                   </p>
                   <h1 className="deldg-h1">
                     Digital Marketing in Delaware That{" "}
-                    <span className="deldg-hl">Drives Real Growth</span>
+                    <span className="deldg-hl">Drives More Qualified Leads</span>
                   </h1>
                   <p className="deldg-hero-sub">
                     Zonic Media is a Dover-based{" "}
@@ -1569,6 +1572,7 @@ function Page() {
         </main>
       </div>
 
+      <RelatedServices current="/services/delaware/digital-marketing" />
       <Footer />
     </>
   );

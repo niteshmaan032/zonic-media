@@ -76,8 +76,19 @@ const serviceJsonLd = {
   description:
     "Custom law firm website design with practice-area landing pages, case-intake and consultation flows, results and trust content, and service-area pages built to sign cases.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

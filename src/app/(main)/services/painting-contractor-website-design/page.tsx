@@ -78,8 +78,19 @@ const serviceJsonLd = {
   description:
     "Custom painting contractor website design with instant quote request flows, before-and-after galleries, financing pages, and service-specific landing pages built to book interior, exterior, and cabinet painting jobs.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

@@ -1,5 +1,6 @@
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -84,9 +85,9 @@ const SeoHomeFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Local SEO for Home Services | More Calls & Jobs",
+  title: "Local SEO for Home Service Businesses",
   description:
-    "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",
+    "Grow your home service business with local SEO that drives higher Google Maps rankings, more calls, qualified leads, and booked jobs. Get a free audit.",
   keywords: [
     "local SEO for home services",
     "local SEO for contractors",
@@ -108,9 +109,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO for Home Services | More Calls & Jobs | Zonic Media",
+    title: "Local SEO for Home Service Businesses | Zonic Media",
     description:
-      "Local SEO for home service businesses that need more calls, local rankings, and booked jobs. Zonic Media helps plumbers, HVAC, roofers, and more grow.",
+      "Grow your home service business with local SEO that drives higher Google Maps rankings, more calls, qualified leads, and booked jobs. Get a free audit.",
     url: "/services/local-seo-for-home-services",
     type: "website",
   },
@@ -150,23 +151,27 @@ function page() {
         {/*--local-seo-home-sec-1--*/}
         <div className="local-seo-home-sec-1">
           <div className="local-seo-home-content">
-            <p className="local-seo-home-label">Grow your Business </p>
+            <p className="local-seo-home-label">
+              Get More Calls &amp; Booked Jobs From Local Search
+            </p>
             <h1 className="local-seo-home-main-heading">
-              Local SEO Built to Grow Home Service Businesses
+              Local SEO for Home Service Businesses That Drives More Calls
+              &amp; Jobs
             </h1>
             <p className="local-seo-home-descrp">
-              Homeowners search online every day for reliable local
-              professionals they can trust. If your business is not appearing in
-              those searches, you are missing calls, estimates, and booked jobs
-              that are going directly to competitors in your area.
+              Zonic Media provides local SEO for home service businesses —
+              plumbers, HVAC companies, roofers, electricians, pest control,
+              and other contractors — combining Google Business Profile
+              optimization, local keyword strategy, citations, reviews, and
+              service-area content to rank your company in the Google Map Pack
+              and turn nearby searches into calls and booked jobs.
             </p>
 
             <p className="local-seo-home-descrp">
-              Zonic Media helps home service companies generate more leads
-              through strategic local SEO. We improve your rankings on Google
-              Search and Maps, increase visibility in your service areas, and
-              turn high-intent searches into real customers for roofing, HVAC,
-              plumbing, electrical, pest control, and other service businesses.
+              Homeowners search online every day for reliable local
+              professionals they can trust. If your business is not appearing
+              in those searches, the calls, estimates, and booked jobs are
+              going directly to competitors in your area.
             </p>
 
             <div className="local-seo-sec-1-cta-clutch">
@@ -1231,6 +1236,7 @@ function page() {
           </div>
         </div>
 
+        <RelatedServices current="/services/local-seo-for-home-services" />
         <Footer />
       </div>
     </>

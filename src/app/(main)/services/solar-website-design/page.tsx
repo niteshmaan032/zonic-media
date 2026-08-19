@@ -77,8 +77,19 @@ const serviceJsonLd = {
   description:
     "Custom solar company website design with savings estimate flows, instant quote requests, financing and incentive pages, and service-area pages built to book consultations and installs.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

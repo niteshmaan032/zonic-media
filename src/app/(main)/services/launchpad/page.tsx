@@ -10,6 +10,7 @@ import { PiBagSimple } from "react-icons/pi";
 import { IoRocket } from "react-icons/io5";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
@@ -1336,6 +1337,7 @@ function page() {
       </div>
 
       <GhlChatWidget />
+      <RelatedServices current="/services/launchpad" />
       <Footer />
     </>
   );

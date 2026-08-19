@@ -69,7 +69,17 @@ function Footer() {
 
                   <li>
                     <Link href="/services/gmb-reinstatement-help">
-                      Google My Business (GMB)
+                      GMB Reinstatement
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/gmb-verification-help">
+                      GMB Verification
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/gmb-optimization">
+                      GBP Optimization
                     </Link>
                   </li>
                   <li>
@@ -78,6 +88,16 @@ function Footer() {
                   <li>
                     <Link href="/services/local-seo-for-home-services">
                       Local SEO
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/philadelphia/local-seo">
+                      Local SEO Philadelphia
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/delaware/digital-marketing">
+                      Digital Marketing Delaware
                     </Link>
                   </li>
                   <li>

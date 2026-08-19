@@ -78,8 +78,19 @@ const serviceJsonLd = {
   description:
     "Custom pool service company website design with recurring service sign-ups, instant quote flows, before-and-after galleries, and service-area pages built to book cleanings, repairs, and renovations.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

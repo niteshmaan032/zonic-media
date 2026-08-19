@@ -45,6 +45,7 @@ import type { Metadata } from "next";
 import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
@@ -75,7 +76,7 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/real-estate-seo-services";
 
 export const metadata: Metadata = {
-  title: "Real Estate SEO Services That Win Local Leads",
+  title: "Real Estate SEO Company for Realtors & Agents",
   description:
     "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' — GBP, reviews & buyer/seller leads. Free audit.",
   keywords: [
@@ -125,8 +126,19 @@ const serviceJsonLd = {
   description:
     "Real estate SEO services covering Google Business Profile optimization, citation building, review growth, on-page SEO, and neighborhood content — built to rank realtors, teams, and brokerages in the Google map pack and grow buyer and seller leads.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",
@@ -1658,6 +1670,7 @@ function Page() {
       </div>
 
       {/* 14. Global site footer */}
+      <RelatedServices current="/services/industry/real-estate-seo-services" />
       <Footer />
     </>
   );

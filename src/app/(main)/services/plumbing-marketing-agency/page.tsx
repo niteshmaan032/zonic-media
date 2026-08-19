@@ -11,6 +11,7 @@ import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import {
   GrowthCurveVisual,
   LeadEngineVisual,
@@ -834,6 +835,7 @@ function Page() {
 
       {/* FOOTER */}
       <PlumbingConsentNotice />
+      <RelatedServices current="/services/plumbing-marketing-agency" />
       <Footer />
     </>
   );

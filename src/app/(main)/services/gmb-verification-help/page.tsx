@@ -21,6 +21,7 @@ import { LuUserRound } from "react-icons/lu";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
@@ -101,7 +102,7 @@ const GmbVerifiFaqs = [
   {
     question: "How Long Does Verification Take?",
     answer:
-      "Most cases are resolved within 5-7 business days depending on the verification method. We'll give you a realistic timeline after your free audit.",
+      "Typical cases are resolved within 5-7 business days depending on the verification method, though final approval timing is always controlled by Google. We'll give you a realistic timeline after your free audit.",
   },
   {
     question: "What Makes Zonic Media One of the Best GMB Verification Services?",
@@ -125,10 +126,10 @@ const GmbVeriFormHead = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Google Business Profile Verification Help | Get Verified",
+    absolute: "Google Business Profile Verification Help | Zonic Media",
   },
   description:
-    "Can't verify your Google Business Profile? Zonic Media fixes failed postcard, video, phone & email verification and verification loops. Free consultation.",
+    "Can't verify your Google Business Profile? Get expert help with postcard, video, phone, email, and other verification issues. Free consultation.",
   keywords: [
     "Google Business Profile verification help",
     "GMB verification",
@@ -191,7 +192,8 @@ function page() {
             </div>
 
             <h1 className="gmb-reinst-main-heading">
-              Can&apos;t Verify Your Google Business Profile? We Solve That.
+              Google Business Profile Verification Help That Gets Your Listing
+              Verified
             </h1>
 
             <p className="gmb-reinst-descrp">
@@ -1099,6 +1101,7 @@ function page() {
         </div>
       </div>
 
+      <RelatedServices current="/services/gmb-verification-help" />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import Footer from "@/app/components/Footer";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
+import ServicesDirectory from "@/app/components/ServicesDirectory";
 import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GrowthConsole from "@/app/components/services/GrowthConsole";
 import SpeedGauges from "@/app/components/services/SpeedGauges";
@@ -1207,6 +1208,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <ServicesDirectory />
 
       <GhlChatWidget />
       <Footer />

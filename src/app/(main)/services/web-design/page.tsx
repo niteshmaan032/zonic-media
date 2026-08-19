@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "@/app/style/webDesignPage.css";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { Metadata } from "next";
@@ -988,6 +989,7 @@ function Page() {
         </section>
       </main>
 
+      <RelatedServices current="/services/web-design" />
       <Footer />
     </>
   );

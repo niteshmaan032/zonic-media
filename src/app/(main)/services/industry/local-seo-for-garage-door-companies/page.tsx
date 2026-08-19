@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
@@ -90,8 +91,19 @@ const serviceJsonLd = {
   description:
     "Local SEO for garage door companies covering Google Business Profile optimization, citation building, review growth, on-page SEO, and service-area content — built to rank garage door repair and installation businesses in the Google map pack and grow booked jobs.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",
@@ -1623,6 +1635,7 @@ function Page() {
       </div>
 
       {/* 14. Global site footer */}
+      <RelatedServices current="/services/industry/local-seo-for-garage-door-companies" />
       <Footer />
     </>
   );

@@ -57,6 +57,7 @@ import type { Metadata } from "next";
 import "@/app/style/templateSeo.css";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
@@ -87,7 +88,7 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/chiropractor-local-seo-services";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Chiropractors That Books Patients",
+  title: "Chiropractor SEO Company That Books Patients",
   description:
     "Local SEO for chiropractors that wins the Google map pack — GBP optimization, reviews & pages that turn 'chiropractor near me' into booked patients. Free audit.",
   keywords: [
@@ -137,8 +138,19 @@ const serviceJsonLd = {
   description:
     "Local SEO for chiropractors covering Google Business Profile optimization, citation building, review growth, on-page SEO, and service-area content — built to rank chiropractic clinics in the Google map pack and book more new patients.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",
@@ -1670,6 +1682,7 @@ function Page() {
       </div>
 
       {/* 14. Global site footer */}
+      <RelatedServices current="/services/industry/chiropractor-local-seo-services" />
       <Footer />
     </>
   );

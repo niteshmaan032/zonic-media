@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import GmbAuditForm from "@/app/components/GmbAuditForm";
 import GmbAuditScanner from "@/app/components/GmbAuditScanner";
 import GmbMapPackConsole from "@/app/components/GmbMapPackConsole";
@@ -989,6 +990,7 @@ function page() {
       </section>
     </div>
 
+    <RelatedServices current="/services/gmb-reinstatement-help" />
     <Footer />
     </>
   );

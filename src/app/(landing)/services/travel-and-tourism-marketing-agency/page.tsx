@@ -79,8 +79,19 @@ const serviceJsonLd = {
   description:
     "Full-funnel travel and tourism marketing — travel SEO, paid media, destination content, social campaigns, and booking-optimized websites for hotels, tour operators, DMOs, and travel brands.",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "Organization",
+    "@id": "https://www.zonicllc.com/#organization",
     name: "Zonic Media",
+    url: "https://www.zonicllc.com",
+    telephone: "+1-302-726-9736",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "8 The Green, STE B",
+      addressLocality: "Dover",
+      addressRegion: "DE",
+      postalCode: "19901",
+      addressCountry: "US",
+    },
   },
   areaServed: {
     "@type": "Country",

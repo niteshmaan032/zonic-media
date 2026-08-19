@@ -3,6 +3,7 @@ import Link from "next/link";
 import "@/app/style/googleAdsPage.css";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import type { ReactNode } from "react";
@@ -855,6 +856,7 @@ function Page() {
       </main>
 
       <GhlChatWidget />
+      <RelatedServices current="/services/google-ads" />
       <Footer />
     </>
   );

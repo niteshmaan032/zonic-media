@@ -317,6 +317,22 @@ const nextConfig: NextConfig = {
         destination: "/services/industry/local-seo-services-for-hvac",
         permanent: true,
       },
+      // Last three flat industry URLs still 404ing in GSC (Aug 2026)
+      {
+        source: "/plumber-seo-services",
+        destination: "/services/industry/seo-services-for-plumber",
+        permanent: true,
+      },
+      {
+        source: "/dentist-seo-services",
+        destination: "/services/industry/dental-seo-services",
+        permanent: true,
+      },
+      {
+        source: "/pest-seo-services",
+        destination: "/services/industry/seo-services-for-pest-control",
+        permanent: true,
+      },
       {
         source: "/roofing-seo-services",
         destination: "/services/industry/local-seo-for-roofing-companies",

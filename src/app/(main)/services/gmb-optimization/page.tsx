@@ -27,6 +27,7 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import RelatedServices from "@/app/components/RelatedServices";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
@@ -1247,6 +1248,7 @@ function page() {
         </div>
       </div>
 
+      <RelatedServices current="/services/gmb-optimization" />
       <Footer />
     </>
   );
