@@ -2,7 +2,7 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const treeServiceMarketing = buildIndustryMarketingPage({
   slug: "tree-service-marketing-agency",
-  title: "Tree Service Marketing Agency | Tree Care SEO & Ads | Zonic Media",
+  title: "Tree Service Marketing Agency | SEO & Ads | Zonic Media",
   description:
     "Tree service marketing agency for US tree companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive tree removal and trimming leads. Free audit.",
   keywords: [

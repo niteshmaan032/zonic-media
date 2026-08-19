@@ -43,7 +43,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-pool-service-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Pool Service Companies",
   description:
-    "Local SEO for pool service companies that turns 'pool service near me' and 'pool cleaning near me' searches into booked, recurring clients. Get your free audit today.",
+    "Local SEO for pool service companies that turns 'pool service near me' searches into booked, recurring clients. Free audit.",
   keywords: [
     "pool service near me",
     "pool cleaning near me",

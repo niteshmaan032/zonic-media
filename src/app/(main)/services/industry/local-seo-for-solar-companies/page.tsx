@@ -43,7 +43,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-solar-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Solar Companies That Wins Installs",
   description:
-    "Local SEO for solar companies that ranks you for 'solar installer near me' and 'solar company near me' — GBP, reviews, and service-area pages. Book a free audit.",
+    "Local SEO for solar companies that ranks you for 'solar installer near me' — GBP, reviews, and service-area pages. Free audit.",
   keywords: [
     "local SEO for solar companies",
     "solar installer near me",

@@ -2,7 +2,7 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const pediatricMarketing = buildIndustryMarketingPage({
   slug: "pediatric-marketing-agency",
-  title: "Pediatric Marketing Agency | Pediatrician SEO & Ads | Zonic Media",
+  title: "Pediatric Marketing Agency | SEO & Ads | Zonic Media",
   description:
     "Pediatric marketing agency for US practices. Local SEO, Google Map Pack ranking, Google Ads & new-patient lead generation for pediatricians. Free audit.",
   keywords: [

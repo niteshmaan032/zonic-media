@@ -82,7 +82,7 @@ const PAGE_PATH = "/services/industry/local-seo-services-for-hvac";
 export const metadata: Metadata = {
   title: "Local SEO Services for HVAC Companies",
   description:
-    "Local SEO services for HVAC companies that win the Google map pack — GBP optimization, reviews & pages that turn 'AC repair near me' into booked jobs. Free audit.",
+    "Local SEO for HVAC companies that wins the Google map pack — GBP optimization, reviews & pages that turn 'AC repair near me' into booked jobs. Free audit.",
   keywords: [
     "local SEO services for HVAC",
     "HVAC SEO company",

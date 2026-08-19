@@ -87,7 +87,7 @@ const PAGE_PATH = "/services/industry/seo-services-for-pest-control";
 export const metadata: Metadata = {
   title: "SEO for Pest Control That Wins Local Jobs",
   description:
-    "SEO for pest control that turns 'exterminator near me' and 'pest control near me' searches into booked treatments — GBP, citations, reviews & rankings. Get a free audit.",
+    "SEO for pest control that turns 'exterminator near me' searches into booked treatments — GBP, citations, reviews & rankings. Free audit.",
   keywords: [
     "SEO for pest control",
     "pest control near me",

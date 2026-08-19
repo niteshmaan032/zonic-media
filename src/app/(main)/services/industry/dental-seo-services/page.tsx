@@ -85,7 +85,7 @@ const PAGE_PATH = "/services/industry/dental-seo-services";
 export const metadata: Metadata = {
   title: "Dental SEO Services That Book More Patients",
   description:
-    "Dental SEO services that win 'dentist near me' — Google Business Profile optimization, reviews, and local pages that turn searches into booked patients. Get a free audit.",
+    "Dental SEO services that win 'dentist near me' — GBP optimization, reviews, and local pages that turn searches into booked patients. Free audit.",
   keywords: [
     "dental SEO services",
     "dentist near me",

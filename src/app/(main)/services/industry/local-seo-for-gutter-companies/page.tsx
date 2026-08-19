@@ -43,7 +43,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-gutter-companies";
 export const metadata: Metadata = {
   title: "Local SEO for Gutter Companies That Wins Jobs",
   description:
-    "Local SEO for gutter companies that wins the Google map pack — turn 'gutter installation near me' and 'gutter cleaning near me' into booked estimates. Free audit.",
+    "Local SEO for gutter companies that wins the Google map pack — turn 'gutter installation near me' searches into booked estimates. Free audit.",
   keywords: [
     "local SEO for gutter companies",
     "gutter installation near me",

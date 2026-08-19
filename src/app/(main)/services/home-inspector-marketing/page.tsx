@@ -22,7 +22,7 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Home Inspector Marketing Agency | Local SEO & Leads",
+  title: "Home Inspector Marketing Agency | SEO & Leads",
   description:
     "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
   keywords: [

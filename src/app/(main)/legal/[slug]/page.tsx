@@ -23,7 +23,7 @@ const LEGAL_META_DESCRIPTIONS: Record<string, string> = {
   "privacy-policy":
     "Learn how Zonic Media LLC collects, uses, stores, and protects your personal information. Read our Privacy Policy to understand your data rights and security practices.",
   "terms-conditions":
-    "Review Zonic Media LLC's Terms & Conditions to understand the rules, responsibilities, service terms, disclaimers, and conditions for using our website and services.",
+    "Review Zonic Media LLC's Terms & Conditions — the rules, service terms, disclaimers, and conditions for using our website and services.",
   "refund-policy":
     "Read Zonic Media LLC's Refund Policy to understand when refunds apply to our services, including our No Fix, No Charge commitment on GBP reinstatement fees.",
 };

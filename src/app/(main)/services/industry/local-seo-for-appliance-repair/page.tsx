@@ -35,7 +35,7 @@ const PAGE_PATH = "/services/industry/local-seo-for-appliance-repair";
 export const metadata: Metadata = {
   title: "Local SEO for Appliance Repair Companies",
   description:
-    "Local SEO for appliance repair companies that wins the map pack — rank for 'appliance repair near me,' grow reviews, and turn local searches into booked service calls.",
+    "Local SEO for appliance repair companies that wins the map pack — rank for 'appliance repair near me' and turn searches into booked calls. Free audit.",
   keywords: [
     "local SEO for appliance repair",
     "appliance repair near me",
