@@ -30,7 +30,7 @@ const PAGE_PATH = "/services/real-estate-agent-website-design";
 export const metadata: Metadata = {
   title: "Real Estate Agent Website Design That Wins Clients",
   description:
-    "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, buyer and seller pages, and mobile-first design that wins clients.",
+    "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, and buyer & seller pages that win clients.",
   keywords: [
     "real estate agent website design",
     "realtor website design",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Real Estate Agent Website Design That Wins Clients | Zonic Media",
     description:
-      "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, buyer and seller pages, and mobile-first design that wins clients.",
+      "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, and buyer & seller pages that win clients.",
     url: PAGE_PATH,
     type: "website",
   },

@@ -31,7 +31,7 @@ const PAGE_PATH = "/services/commercial-cleaning-website-design";
 export const metadata: Metadata = {
   title: "Commercial Cleaning Website Design That Wins Bids",
   description:
-    "Commercial cleaning website design built as a lead system — quote and bid request flows, industry and service pages, trust UX, and design that wins janitorial contracts.",
+    "Commercial cleaning website design built as a lead system — quote and bid flows, service pages, and trust UX that wins janitorial contracts.",
   keywords: [
     "commercial cleaning website design",
     "janitorial website design",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "Commercial Cleaning Website Design That Wins Bids | Zonic Media",
     description:
-      "Commercial cleaning website design built as a lead system — quote and bid request flows, industry and service pages, trust UX, and design that wins janitorial contracts.",
+      "Commercial cleaning website design built as a lead system — quote and bid flows, service pages, and trust UX that wins janitorial contracts.",
     url: PAGE_PATH,
     type: "website",
   },

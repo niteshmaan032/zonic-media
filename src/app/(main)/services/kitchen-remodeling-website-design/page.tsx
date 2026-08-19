@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/kitchen-remodeling-website-design";
 export const metadata: Metadata = {
   title: "Kitchen Remodeling Website Design That Books Jobs",
   description:
-    "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and design-driven pages that book renovations.",
+    "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
   keywords: [
     "kitchen remodeling website design",
     "kitchen remodeler website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Kitchen Remodeling Website Design That Books Jobs | Zonic Media",
     description:
-      "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and design-driven pages that book renovations.",
+      "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
     url: PAGE_PATH,
     type: "website",
   },

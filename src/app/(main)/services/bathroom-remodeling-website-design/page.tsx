@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/bathroom-remodeling-website-design";
 export const metadata: Metadata = {
   title: "Bathroom Remodeling Website Design That Books Jobs",
   description:
-    "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and design-driven pages that book renovations.",
+    "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
   keywords: [
     "bathroom remodeling website design",
     "bathroom remodeler website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Bathroom Remodeling Website Design That Books Jobs | Zonic Media",
     description:
-      "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and design-driven pages that book renovations.",
+      "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
     url: PAGE_PATH,
     type: "website",
   },

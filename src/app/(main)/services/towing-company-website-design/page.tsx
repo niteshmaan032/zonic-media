@@ -29,7 +29,7 @@ const PAGE_PATH = "/services/towing-company-website-design";
 export const metadata: Metadata = {
   title: "Towing Company Website Design That Books Calls",
   description:
-    "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, service-area pages, and mobile-first design that books tows fast.",
+    "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, and service-area pages that book tows fast.",
   keywords: [
     "towing company website design",
     "tow truck website design",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "Towing Company Website Design That Books Calls | Zonic Media",
     description:
-      "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, service-area pages, and mobile-first design that books tows fast.",
+      "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, and service-area pages that book tows fast.",
     url: PAGE_PATH,
     type: "website",
   },

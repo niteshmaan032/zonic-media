@@ -32,7 +32,7 @@ const PAGE_PATH = "/services/gutter-company-website-design";
 export const metadata: Metadata = {
   title: "Gutter Company Website Design That Books Jobs",
   description:
-    "Gutter company website design built as a lead system — instant quote flows, seamless gutter and guard pages, before-and-after galleries, and design that books installs.",
+    "Gutter company website design built as a lead system — instant quote flows, gutter and guard pages, and galleries that book installs.",
   keywords: [
     "gutter company website design",
     "gutter website design",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Gutter Company Website Design That Books Jobs | Zonic Media",
     description:
-      "Gutter company website design built as a lead system — instant quote flows, seamless gutter and guard pages, before-and-after galleries, and design that books installs.",
+      "Gutter company website design built as a lead system — instant quote flows, gutter and guard pages, and galleries that book installs.",
     url: PAGE_PATH,
     type: "website",
   },

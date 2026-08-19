@@ -31,7 +31,7 @@ const PAGE_PATH = "/services/residential-cleaning-website-design";
 export const metadata: Metadata = {
   title: "House Cleaning Website Design That Books Cleans",
   description:
-    "House cleaning website design built as a lead system — instant online booking, upfront pricing, recurring plans, and mobile-first design that books cleans while you work.",
+    "House cleaning website design built as a lead system — instant online booking, upfront pricing, and recurring plans that book cleans while you work.",
   keywords: [
     "residential cleaning website design",
     "house cleaning website design",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "House Cleaning Website Design That Books Cleans | Zonic Media",
     description:
-      "House cleaning website design built as a lead system — instant online booking, upfront pricing, recurring plans, and mobile-first design that books cleans while you work.",
+      "House cleaning website design built as a lead system — instant online booking, upfront pricing, and recurring plans that book cleans while you work.",
     url: PAGE_PATH,
     type: "website",
   },

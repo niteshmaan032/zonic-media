@@ -30,7 +30,7 @@ const PAGE_PATH = "/services/law-firm-website-design";
 export const metadata: Metadata = {
   title: "Law Firm Website Design That Signs Cases",
   description:
-    "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, trust and results UX, and mobile-first design that signs cases.",
+    "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, and trust UX that signs cases.",
   keywords: [
     "law firm website design",
     "attorney website design",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Law Firm Website Design That Signs Cases | Zonic Media",
     description:
-      "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, trust and results UX, and mobile-first design that signs cases.",
+      "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, and trust UX that signs cases.",
     url: PAGE_PATH,
     type: "website",
   },

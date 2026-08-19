@@ -21,7 +21,7 @@ type PageProps = {
 // producing duplicate descriptions across /legal/* in SEO crawls).
 const LEGAL_META_DESCRIPTIONS: Record<string, string> = {
   "privacy-policy":
-    "Learn how Zonic Media LLC collects, uses, stores, and protects your personal information. Read our Privacy Policy to understand your data rights and security practices.",
+    "Learn how Zonic Media LLC collects, uses, stores, and protects your personal information across our website and services.",
   "terms-conditions":
     "Review Zonic Media LLC's Terms & Conditions — the rules, service terms, disclaimers, and conditions for using our website and services.",
   "refund-policy":

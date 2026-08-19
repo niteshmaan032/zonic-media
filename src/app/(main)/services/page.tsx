@@ -73,7 +73,7 @@ const SITE_URL = "https://www.zonicllc.com";
 export const metadata: Metadata = {
   title: "Digital Marketing Services | SEO, PPC & Web Design",
   description:
-    "Digital marketing services for local and mid-size businesses: conversion-built websites, local SEO, Google Business Profile work and Google Ads. Free audit, no lock-in.",
+    "Digital marketing services for local businesses: conversion-built websites, local SEO, Google Business Profile work and Google Ads. Free audit, no lock-in.",
   keywords: [
     "digital marketing services",
     "full service digital marketing agency",

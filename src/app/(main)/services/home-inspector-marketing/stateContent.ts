@@ -874,7 +874,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
     metaTitle:
       "North Carolina Home Inspector Marketing & SEO",
     metaDescription:
-      "Home inspector marketing for North Carolina. Local SEO, Google Ads, GBP for inspectors in Charlotte, Raleigh, Durham, Greensboro, Asheville. Free audit, no contracts.",
+      "Home inspector marketing for North Carolina. Local SEO, Google Ads & GBP for inspectors in Charlotte, Raleigh, Durham, Greensboro. Free audit.",
     ticker: [
       "Free North Carolina Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
