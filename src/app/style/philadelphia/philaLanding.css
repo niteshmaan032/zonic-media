@@ -354,23 +354,6 @@
   background: linear-gradient(180deg, var(--phl-accent-soft) 0%, #ffffff 100%);
 }
 
-.phl-page .phl-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(37, 103, 232, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 103, 232, 0.07) 1px, transparent 1px);
-  background-size: 44px 44px;
-  -webkit-mask-image: radial-gradient(
-    80% 70% at 50% 0%,
-    #000 30%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(80% 70% at 50% 0%, #000 30%, transparent 100%);
-  pointer-events: none;
-}
-
 .phl-page .phl-hero-grid {
   position: relative;
   display: grid;
@@ -1725,17 +1708,6 @@
   margin-bottom: 40px;
 }
 
-/* faint blue grid, same treatment as the hero */
-.phl-page .phl-engine::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(37, 103, 232, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 103, 232, 0.08) 1px, transparent 1px);
-  background-size: 38px 38px;
-}
-
 /* two concentric dashed rings — the outer one is the ellipse the nodes sit on
    (74% × 86% = semi-axes 37% × 43%, matching the EngineNodes coordinates) */
 .phl-page .phl-engine-orbit {
@@ -2238,8 +2210,19 @@
   }
 
   .phl-page .phl-hero-visual {
+    /* width:100% is required — auto side margins on a grid item switch the
+       track from stretch to fit-content, which collapsed the stacked hero
+       image to ~250px inside a 390px screen. */
+    width: 100%;
     max-width: 460px;
     margin: 0 auto;
+  }
+
+  /* the hero photos are 4:5; matching the box to the source ratio shows the
+     whole frame instead of the tall centre slice the 520px floor produced. */
+  .phl-page .phl-hero-media {
+    min-height: 0;
+    aspect-ratio: 4 / 5;
   }
 
   .phl-page .phl-hero-stats {

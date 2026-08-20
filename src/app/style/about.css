@@ -387,23 +387,6 @@
     linear-gradient(180deg, var(--abt-light) 0%, #fff 100%);
 }
 
-.abt-page .abt-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(37, 103, 232, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 103, 232, 0.05) 1px, transparent 1px);
-  background-size: 44px 44px;
-  -webkit-mask-image: radial-gradient(
-    80% 70% at 50% 0%,
-    #000 30%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(80% 70% at 50% 0%, #000 30%, transparent 100%);
-  pointer-events: none;
-}
-
 .abt-page .abt-hero-grid {
   position: relative;
   display: grid;
@@ -1872,17 +1855,6 @@
     var(--abt-ink);
   overflow: hidden;
   text-align: center;
-}
-
-.abt-page .abt-final-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 46px 46px;
-  pointer-events: none;
 }
 
 .abt-page .abt-final-inner {

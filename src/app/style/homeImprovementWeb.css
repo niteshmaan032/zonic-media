@@ -4,7 +4,8 @@
    under .hiw-page so nothing leaks site-wide. Palette is set per page via a
    .hiw-theme-* modifier class; the body only references CSS variables (and
    color-mix() tints derived from them), so each service gets its own colour
-   world from a seven-token block. Image slots are .hiw-ph shimmer skeletons
+   world. Newer themes declare a single --hiw-accent and every other token is
+   a tint of that one hue. Image slots are .hiw-ph shimmer skeletons
    until real photography is dropped in. Side insets track the fixed navbar
    paddings via --hiw-inset (no max-width). */
 
@@ -12,8 +13,20 @@
   /* structural (theme-agnostic) */
   --hiw-inset: 100px;
 
+  /* ---- single-hue defaults ----------------------------------------------
+     A theme only has to declare --hiw-accent. Everything else below is a
+     tint of that ONE colour (or a shared neutral), so a page never mixes two
+     unrelated hues. The twelve older themes further down still declare the
+     full seven tokens explicitly; those declarations are more specific and
+     simply win over these defaults. */
+  --hiw-ink: #111318;
+  --hiw-text: #5b6169;
+  --hiw-second: color-mix(in srgb, var(--hiw-accent) 62%, #fff);
+  --hiw-hl: color-mix(in srgb, var(--hiw-accent) 32%, #fff);
+  --hiw-light: color-mix(in srgb, var(--hiw-accent) 5%, #fff);
+  --hiw-divider: color-mix(in srgb, var(--hiw-accent) 16%, #fff);
+
   /* derived tints — computed from the theme palette on this same element */
-  --hiw-wash-1: color-mix(in srgb, var(--hiw-accent) 16%, #fff);
   --hiw-wash-2: color-mix(in srgb, var(--hiw-accent) 8%, #fff);
   --hiw-wash-3: color-mix(in srgb, var(--hiw-accent) 3%, #fff);
   --hiw-skeleton-a: color-mix(in srgb, var(--hiw-accent) 12%, #fff);
@@ -23,12 +36,8 @@
   --hiw-chip-border: color-mix(in srgb, var(--hiw-accent) 22%, #fff);
   --hiw-placeholder: color-mix(in srgb, var(--hiw-ink) 34%, #fff);
   --hiw-icon-bg: color-mix(in srgb, var(--hiw-accent) 10%, transparent);
-  --hiw-accent-04: color-mix(in srgb, var(--hiw-accent) 4%, transparent);
   --hiw-accent-08: color-mix(in srgb, var(--hiw-accent) 8%, transparent);
-  --hiw-accent-18: color-mix(in srgb, var(--hiw-accent) 18%, transparent);
   --hiw-accent-55: color-mix(in srgb, var(--hiw-accent) 55%, transparent);
-  --hiw-hl-35: color-mix(in srgb, var(--hiw-hl) 35%, transparent);
-  --hiw-hl-40: color-mix(in srgb, var(--hiw-hl) 40%, transparent);
   --hiw-ink-12: color-mix(in srgb, var(--hiw-ink) 12%, transparent);
   --hiw-duo: linear-gradient(90deg, var(--hiw-accent) 0%, var(--hiw-second) 100%);
 
@@ -37,16 +46,13 @@
   overflow-x: clip;
 }
 
-/* ---------- theme palettes (one seven-token block per service) ---------- */
+/* ---------- theme palettes ----------
+   Newer themes set a single --hiw-accent and inherit every other token as a
+   tint of it. Older themes still carry an explicit seven-token block. */
 
 .hiw-page.hiw-theme-bathroom {
-  --hiw-ink: #12211e;
-  --hiw-accent: #0c837a;
-  --hiw-second: #45c4b8;
-  --hiw-hl: #7fd8ce;
-  --hiw-text: #55635f;
-  --hiw-light: #eef9f7;
-  --hiw-divider: #cfebe6;
+  /* Deep aqua — single hue; every other token is a tint of it */
+  --hiw-accent: #0d6f83;
 }
 
 .hiw-page.hiw-theme-kitchen {
@@ -71,14 +77,8 @@
 }
 
 .hiw-page.hiw-theme-flooring {
-  /* Charcoal & Amber — modern hard-surface / luxury-vinyl showroom palette */
-  --hiw-ink: #211f1c;
-  --hiw-accent: #a86a22;
-  --hiw-second: #d9a24a;
-  --hiw-hl: #e6be79;
-  --hiw-text: #5d574d;
-  --hiw-light: #f7f3ec;
-  --hiw-divider: #ebddc6;
+  /* Burgundy — premium showroom, deliberately not a wood tone */
+  --hiw-accent: #8c1d3f;
 }
 
 .hiw-page.hiw-theme-window {
@@ -92,26 +92,15 @@
 }
 
 .hiw-page.hiw-theme-painting {
-  --hiw-ink: #1c1530;
+  /* Violet — single hue; every other token is a tint of it */
   --hiw-accent: #6d28d9;
-  --hiw-second: #ec5b9c;
-  --hiw-hl: #b79cf0;
-  --hiw-text: #5c556b;
-  --hiw-light: #f5f1fd;
-  --hiw-divider: #e4daf7;
 }
 
 /* --- service website-design pages added Aug 2026 (one palette per trade) --- */
 
 .hiw-page.hiw-theme-garage-door {
-  /* Steel & safety orange */
-  --hiw-ink: #23262b;
-  --hiw-accent: #c15a1e;
-  --hiw-second: #e2893c;
-  --hiw-hl: #f0b483;
-  --hiw-text: #5c6067;
-  --hiw-light: #f6f3ef;
-  --hiw-divider: #e7ded3;
+  /* Steel graphite — matches the door hardware, lets the warm workshop photography carry the warmth */
+  --hiw-accent: #42505f;
 }
 
 .hiw-page.hiw-theme-appliance {
@@ -126,14 +115,8 @@
 }
 
 .hiw-page.hiw-theme-towing {
-  /* Recovery amber & asphalt */
-  --hiw-ink: #1c1a17;
-  --hiw-accent: #a86e18;
-  --hiw-second: #ddab3f;
-  --hiw-hl: #efcb79;
-  --hiw-text: #58544b;
-  --hiw-light: #f6f3ea;
-  --hiw-divider: #e9e0cd;
+  /* Deep slate blue — roadside-assistance rather than emergency-services */
+  --hiw-accent: #2d4a7c;
 }
 
 .hiw-page.hiw-theme-landscaping {
@@ -159,14 +142,8 @@
 }
 
 .hiw-page.hiw-theme-gutter {
-  /* Slate & copper */
-  --hiw-ink: #1d2730;
-  --hiw-accent: #46637c;
-  --hiw-second: #c1834b;
-  --hiw-hl: #dbb083;
-  --hiw-text: #56616a;
-  --hiw-light: #eff3f7;
-  --hiw-divider: #dae2ea;
+  /* Rainwater blue — single hue; every other token is a tint of it */
+  --hiw-accent: #1e63d0;
 }
 
 .hiw-page.hiw-theme-tree {
@@ -181,14 +158,8 @@
 }
 
 .hiw-page.hiw-theme-solar {
-  /* Solar gold & midnight */
-  --hiw-ink: #171a2b;
-  --hiw-accent: #a5741a;
-  --hiw-second: #f1b53c;
-  --hiw-hl: #f6cd77;
-  --hiw-text: #565769;
-  --hiw-light: #f6f2e7;
-  --hiw-divider: #e9dfc9;
+  /* Night-sky indigo against the sunlit panel photography */
+  --hiw-accent: #4338ca;
 }
 
 .hiw-page.hiw-theme-commercial-cleaning {
@@ -236,25 +207,13 @@
 }
 
 .hiw-page.hiw-theme-law {
-  /* Navy & gold */
-  --hiw-ink: #10151d;
-  --hiw-accent: #22385a;
-  --hiw-second: #b58f3f;
-  --hiw-hl: #d7bd7e;
-  --hiw-text: #525a66;
-  --hiw-light: #eef1f6;
-  --hiw-divider: #dae1ea;
+  /* Counsel navy — single hue; every other token is a tint of it */
+  --hiw-accent: #1e40af;
 }
 
 .hiw-page.hiw-theme-real-estate {
-  /* Hunter green & gold */
-  --hiw-ink: #14231b;
-  --hiw-accent: #2f6b4c;
-  --hiw-second: #c2a24a;
-  --hiw-hl: #a6cbb3;
-  --hiw-text: #53605a;
-  --hiw-light: #eef5f0;
-  --hiw-divider: #d5e7dc;
+  /* Deep teal — single hue; every other token is a tint of it */
+  --hiw-accent: #0f766e;
 }
 
 @media (max-width: 1399.98px) {
@@ -490,18 +449,10 @@
 
 .hiw-page .hiw-hero {
   position: relative;
-  background:
-    radial-gradient(
-      55% 70% at 80% 8%,
-      var(--hiw-hl-35) 0%,
-      transparent 70%
-    ),
-    linear-gradient(
-      160deg,
-      var(--hiw-wash-1) 0%,
-      var(--hiw-wash-2) 45%,
-      #ffffff 100%
-    );
+  /* one clean top-to-bottom wash. The old stack layered a radial blob of
+     --hiw-hl over the linear one, and its transparent stop drew a visible
+     arc across the section — the "patch". A single gradient has no seam. */
+  background: linear-gradient(180deg, var(--hiw-wash-2) 0%, #ffffff 100%);
   padding: 150px 0 90px;
   overflow: hidden;
 }
@@ -911,18 +862,11 @@
 }
 
 .hiw-page .hiw-band-content {
-  background:
-    radial-gradient(
-      55% 70% at 85% 10%,
-      var(--hiw-hl-35) 0%,
-      transparent 70%
-    ),
-    linear-gradient(
-      160deg,
-      var(--hiw-wash-1) 0%,
-      var(--hiw-wash-2) 55%,
-      var(--hiw-wash-3) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    var(--hiw-wash-2) 0%,
+    var(--hiw-wash-3) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1145,36 +1089,15 @@
   justify-content: space-between;
   gap: 44px;
   flex-wrap: wrap;
-  background:
-    radial-gradient(
-      70% 130% at 100% 0%,
-      var(--hiw-hl-40) 0%,
-      transparent 55%
-    ),
-    linear-gradient(
-      135deg,
-      var(--hiw-wash-1) 0%,
-      var(--hiw-wash-2) 45%,
-      var(--hiw-wash-3) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    var(--hiw-wash-2) 0%,
+    var(--hiw-wash-3) 100%
+  );
   border: 1px solid var(--hiw-divider);
   border-radius: 26px;
   padding: 46px 52px;
   margin-top: 44px;
-}
-
-.hiw-page .hiw-why-banner::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -70px;
-  transform: translateY(-50%);
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  border: 1px solid var(--hiw-accent-18);
-  box-shadow: 0 0 0 42px var(--hiw-accent-04);
-  pointer-events: none;
 }
 
 .hiw-page .hiw-why-banner-text {
@@ -1258,13 +1181,7 @@
 .hiw-page .hiw-banner {
   padding: 0;
   position: relative;
-  background:
-    radial-gradient(
-      60% 90% at 85% 10%,
-      var(--hiw-hl-35) 0%,
-      transparent 70%
-    ),
-    linear-gradient(150deg, var(--hiw-wash-1) 0%, var(--hiw-light) 65%);
+  background: linear-gradient(180deg, var(--hiw-wash-2) 0%, var(--hiw-light) 100%);
   overflow: hidden;
 }
 
@@ -1328,8 +1245,10 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: var(--hiw-accent);
-  color: #fff;
+  /* tinted, not filled — a solid accent block at this size reads as a dark
+     card rather than an icon, especially on the deeper palettes. */
+  background: var(--hiw-icon-bg);
+  color: var(--hiw-accent);
   font-size: 21px;
   flex-shrink: 0;
 }
@@ -1392,10 +1311,9 @@
 
 .hiw-page .hiw-nationwide {
   background: linear-gradient(
-    165deg,
-    var(--hiw-light) 0%,
-    var(--hiw-wash-2) 40%,
-    var(--hiw-wash-1) 100%
+    180deg,
+    var(--hiw-wash-3) 0%,
+    var(--hiw-wash-2) 100%
   );
 }
 
@@ -1501,11 +1419,6 @@
   border-color: var(--hiw-accent);
 }
 
-.hiw-page .hiw-grow-card .hiw-card-icon {
-  background: var(--hiw-accent);
-  color: #fff;
-}
-
 .hiw-page .hiw-grow-card h3 {
   font-size: 19px;
   font-weight: 500;
@@ -1552,13 +1465,11 @@
   justify-content: center;
   border-radius: 24px;
   padding: 48px 44px;
-  background:
-    radial-gradient(
-      70% 90% at 100% 0%,
-      var(--hiw-hl-40) 0%,
-      transparent 60%
-    ),
-    linear-gradient(160deg, var(--hiw-wash-1) 0%, var(--hiw-wash-3) 70%);
+  background: linear-gradient(
+    180deg,
+    var(--hiw-wash-2) 0%,
+    var(--hiw-wash-3) 100%
+  );
   border: 1px solid var(--hiw-divider);
 }
 
@@ -1989,10 +1900,6 @@
   .hiw-page .hiw-why-banner {
     padding: 34px 26px;
     gap: 28px;
-  }
-
-  .hiw-page .hiw-why-banner::before {
-    display: none;
   }
 
   .hiw-page .hiw-form-aside {

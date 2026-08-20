@@ -231,23 +231,6 @@
     linear-gradient(180deg, #f4f7fe 0%, #ffffff 100%);
 }
 
-.tseo-page .tseo-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(37, 103, 232, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 103, 232, 0.05) 1px, transparent 1px);
-  background-size: 44px 44px;
-  -webkit-mask-image: radial-gradient(
-    80% 70% at 50% 0%,
-    #000 30%,
-    transparent 100%
-  );
-  mask-image: radial-gradient(80% 70% at 50% 0%, #000 30%, transparent 100%);
-  pointer-events: none;
-}
-
 .tseo-page .tseo-hero-grid {
   position: relative;
   display: grid;
@@ -2595,13 +2578,17 @@
     padding: 120px 0 40px;
   }
 
+  /* every stacked track below uses minmax(0, 1fr), not a bare 1fr: a bare 1fr
+     floors at the track's min-content, which on a 390px screen let the hero
+     copy and the dashboard render ~433px wide and get clipped by the page's
+     overflow-x: clip. minmax(0, …) lets the track shrink to the viewport. */
   .tseo-page .tseo-hero-grid,
   .tseo-page .tseo-problem-grid,
   .tseo-page .tseo-band-grid,
   .tseo-page .tseo-split-grid,
   .tseo-page .tseo-tracking-grid,
   .tseo-page .tseo-form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 48px;
   }
 
@@ -2610,7 +2597,7 @@
   }
 
   .tseo-page .tseo-results-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tseo-page .tseo-hero-dash-wrap {
@@ -2618,7 +2605,7 @@
   }
 
   .tseo-page .tseo-hero-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     margin-top: 48px;
   }
@@ -2631,11 +2618,11 @@
   .tseo-page .tseo-cards,
   .tseo-page .tseo-why-cards,
   .tseo-page .tseo-grow-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tseo-page .tseo-compare-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     max-width: 640px;
     margin: 0 auto;
   }
@@ -2665,7 +2652,7 @@
 
   /* bento reflows to two columns */
   .tseo-page .tseo-bento {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
       "s1 s1"
       "s2 s3"
@@ -2681,7 +2668,7 @@
   }
 
   .tseo-page .tseo-why-banner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 38px 32px;
   }
 
@@ -2732,11 +2719,11 @@
   .tseo-page .tseo-results-cards,
   .tseo-page .tseo-mocks,
   .tseo-page .tseo-banner-checks {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .tseo-page .tseo-bento {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "s1"
       "s2"
@@ -2759,8 +2746,16 @@
   }
 
   .tseo-page .tseo-dash-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
+  }
+
+  /* single column here, so the map-pack label has room to wrap rather than be
+     cut off mid-phrase by the desktop nowrap + ellipsis. */
+  .tseo-page .tseo-dash-sub {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .tseo-page .tseo-dash-bars {

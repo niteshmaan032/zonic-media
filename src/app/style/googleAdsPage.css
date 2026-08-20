@@ -246,19 +246,6 @@
     #fff;
 }
 
-.ga-page .ga-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(37, 103, 232, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 103, 232, 0.08) 1px, transparent 1px);
-  background-size: 54px 54px;
-  -webkit-mask-image: radial-gradient(70% 80% at 40% 20%, #000 0%, transparent 80%);
-  mask-image: radial-gradient(70% 80% at 40% 20%, #000 0%, transparent 80%);
-  pointer-events: none;
-}
-
 .ga-page .ga-hero-grid {
   position: relative;
   display: grid;
