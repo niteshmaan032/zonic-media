@@ -117,9 +117,6 @@ function Footer() {
                   <li>
                     <Link href={SITE_PATHS.about}>About Us</Link>
                   </li>
-                  <li>
-                    <Link href={SITE_PATHS.blogs}>Blogs</Link>
-                  </li>
                   {/* <li>
                     <Link href="#!">Pricing</Link>
                   </li> */}

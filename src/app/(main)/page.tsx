@@ -115,7 +115,6 @@ const siteNavigationItems = [
   { name: "Local SEO", url: `${SITE_URL}/services/local-seo-for-home-services` },
   { name: "GMB Reinstatement", url: `${SITE_URL}/services/gmb-reinstatement-help` },
   { name: "Launchpad", url: `${SITE_URL}/services/launchpad` },
-  { name: "Blog", url: `${SITE_URL}/blog` },
   { name: "About Us", url: `${SITE_URL}/about` },
   { name: "Contact Us", url: `${SITE_URL}/contact-us` },
 ];

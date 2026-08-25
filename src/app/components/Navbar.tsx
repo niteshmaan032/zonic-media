@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { FaBroom, FaTooth, FaUserDoctor } from "react-icons/fa6";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
@@ -1430,22 +1429,6 @@ function Navbar() {
                         </Link>
 
                         <Link
-                          href={SITE_PATHS.blogs}
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaRegNewspaper />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Blog</strong>
-                            <span>
-                              Read insights, guides, and updates around SEO,
-                              websites, ads, and local growth.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
                           href={SITE_PATHS.contact}
                           className="services-core-card"
                         >
@@ -1797,14 +1780,6 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           About Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href={SITE_PATHS.blogs}
-                          onClick={() => handleToggleMobileMenu(false)}
-                        >
-                          Blog
                         </Link>
                       </li>
                       <li>
