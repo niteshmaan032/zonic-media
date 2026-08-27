@@ -3,16 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaRegNewspaper } from "react-icons/fa6";
 import { FaStore } from "react-icons/fa6";
 import { FaBroom, FaTooth, FaUserDoctor } from "react-icons/fa6";
-import { HiMiniRocketLaunch } from "react-icons/hi2";
 import { IoDesktopOutline } from "react-icons/io5";
 import { LuPlaneTakeoff } from "react-icons/lu";
 import { MdArrowOutward } from "react-icons/md";
-import { MdOutlineMail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
-import { MdOutlineInfo } from "react-icons/md";
 import {
   MdGavel,
   MdOutlineBathtub,
@@ -1469,79 +1465,15 @@ function Navbar() {
                       groups={industryGroups}
                     />
                   </li>
-                  <li className="services-dropdown">
-                    <Link href={SITE_PATHS.about}>
-                      Others <MdArrowOutward size={16} />
+                  <li>
+                    <Link href="/website-design-agency-us/offer">
+                      Free Website
                     </Link>
-
-                    <div className="services-dropdown-container services-core-dropdown others-core-dropdown">
-                      <div className="services-core-grid others-core-grid">
-                        <Link
-                          href="/services/launchpad"
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <HiMiniRocketLaunch />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Launchpad</strong>
-                            <span>
-                              Our fast-start program for new businesses ready to
-                              get online and generating leads.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href={SITE_PATHS.about}
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <MdOutlineInfo />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>About Us</strong>
-                            <span>
-                              Learn about Zonic Media, our process, and how we
-                              help businesses grow online.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href={SITE_PATHS.blogs}
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <FaRegNewspaper />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Blog</strong>
-                            <span>
-                              Read insights, guides, and updates around SEO,
-                              websites, ads, and local growth.
-                            </span>
-                          </span>
-                        </Link>
-
-                        <Link
-                          href={SITE_PATHS.contact}
-                          className="services-core-card"
-                        >
-                          <span className="services-core-icon">
-                            <MdOutlineMail />
-                          </span>
-                          <span className="services-core-content">
-                            <strong>Contact Us</strong>
-                            <span>
-                              Reach out to Zonic Media for your next website,
-                              SEO, or ads project.
-                            </span>
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
                   </li>
+                  {/* Desktop "Others" dropdown removed Aug 2026 — its links
+                      (Launchpad, About, Blog, Contact, Free Website) live in
+                      the footer Others column; the mobile menu keeps its own
+                      Others accordion. */}
                 </ul>
               </nav>
             </Col>
@@ -1875,6 +1807,14 @@ function Navbar() {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
+            </li>
+            <li>
+              <Link
+                href="/website-design-agency-us/offer"
+                onClick={() => handleToggleMobileMenu(false)}
+              >
+                Free Website
+              </Link>
             </li>
             <li>
               <Accordion

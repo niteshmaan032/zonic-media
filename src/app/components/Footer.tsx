@@ -110,11 +110,14 @@ function Footer() {
                   <li>
                     <Link href={SITE_PATHS.about}>About Us</Link>
                   </li>
-                  {/* <li>
-                    <Link href="#!">Pricing</Link>
-                  </li> */}
                   <li>
                     <Link href={SITE_PATHS.services}>Services</Link>
+                  </li>
+                  <li>
+                    <Link href="/services/launchpad">Launchpad</Link>
+                  </li>
+                  <li>
+                    <Link href={SITE_PATHS.blogs}>Blog</Link>
                   </li>
                   <li>
                     <Link href={SITE_PATHS.contact}>Contact Us</Link>
