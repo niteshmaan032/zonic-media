@@ -81,8 +81,14 @@ export default function FreeWebsiteDesignServicePage() {
             </div>
 
             <h1 id="hero-title">
-              Get your new website
-              <span className="headline-accent"> FREE.</span>
+              Get Your New Website
+              <span className="headline-accent">
+                {" "}
+                FREE.
+                <svg viewBox="0 0 300 24" aria-hidden="true">
+                  <path d="M6 18 C 80 4, 220 4, 294 14" />
+                </svg>
+              </span>
             </h1>
 
             <p className="hero-lede">
@@ -925,8 +931,8 @@ export default function FreeWebsiteDesignServicePage() {
               With a qualifying marketing plan at $895/month or above on a
               six-month term.
             </p>
-            <a href="#contact">
-              See if you qualify <Icon name="arrow-right" />
+            <a href="#free-design-form">
+              Get my free website <Icon name="arrow-right" />
             </a>
           </div>
         </div>

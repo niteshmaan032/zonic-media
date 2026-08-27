@@ -30,7 +30,7 @@ export default function FaqList() {
   return (
     <div className="faq-list">
       {FAQS.map((faq, index) => (
-        <details key={faq.question} open={index === 0}>
+        <details key={faq.question} name="fwd-faq" open={index === 0}>
           <summary>
             <span>{String(index + 1).padStart(2, "0")}</span>
             {faq.question}

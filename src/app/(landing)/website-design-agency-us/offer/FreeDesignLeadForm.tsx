@@ -32,10 +32,35 @@ type FormValues = {
   email: string;
   website: string;
   serviceArea: string;
+  businessType: string;
   budget: string;
 };
 
 const DEFAULT_SERVICE = "Web Design";
+
+const BUSINESS_TYPES = [
+  "HVAC",
+  "Roofing",
+  "Plumbing",
+  "Electrical",
+  "Home Inspection",
+  "Pest Control",
+  "Towing",
+  "Landscaping",
+  "Commercial Cleaning",
+  "Garage Door",
+  "House Cleaning",
+  "Movers",
+  "Auto Repair",
+  "Painting",
+  "General Contractor",
+  "Kitchen Remodeling",
+  "Bathroom Remodeling",
+  "Flooring",
+  "Dental",
+  "Real Estate",
+  "Other",
+];
 
 const BUDGET_OPTIONS = [
   { value: "under-895", label: "Under $895 — not ready yet" },
@@ -119,6 +144,7 @@ export default function FreeDesignLeadForm() {
       email: "",
       website: "",
       serviceArea: "",
+      businessType: "",
       budget: "",
     },
   });
@@ -139,6 +165,7 @@ export default function FreeDesignLeadForm() {
 
       const messageParts = [
         `Business: ${data.company}`,
+        `Business type: ${data.businessType}`,
         `Current website: ${data.website || "none provided"}`,
         `Service area: ${data.serviceArea}`,
         `Monthly marketing budget: ${budgetLabel}`,
@@ -189,6 +216,7 @@ export default function FreeDesignLeadForm() {
 
   return (
     <form
+      id="free-design-form"
       className="eligibility-form"
       onSubmit={handleSubmit(onSubmit)}
       noValidate
@@ -315,6 +343,33 @@ export default function FreeDesignLeadForm() {
           />
           {errors.serviceArea && (
             <p className="form-field-error">{errors.serviceArea.message}</p>
+          )}
+        </div>
+
+        <div className="form-field form-field--full">
+          <label htmlFor="fwd-business-type">
+            What&rsquo;s your business type? *
+          </label>
+          <select
+            id="fwd-business-type"
+            className="form-select standalone-select"
+            defaultValue=""
+            aria-invalid={errors.businessType ? "true" : "false"}
+            {...register("businessType", {
+              required: "Please select your business type.",
+            })}
+          >
+            <option value="" disabled>
+              Select your industry
+            </option>
+            {BUSINESS_TYPES.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+          {errors.businessType && (
+            <p className="form-field-error">{errors.businessType.message}</p>
           )}
         </div>
 

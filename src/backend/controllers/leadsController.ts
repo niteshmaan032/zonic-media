@@ -126,6 +126,7 @@ const buildBrandedThankYouEmail = ({
   signatureRole,
   disclaimer,
   accentColor = "#e8401c",
+  ctaButton,
 }: {
   subject: string;
   headerTag: string;
@@ -134,6 +135,8 @@ const buildBrandedThankYouEmail = ({
   signatureRole: string;
   disclaimer: string;
   accentColor?: string;
+  /** Optional booking/action button rendered between the body and call line. */
+  ctaButton?: { label: string; href: string };
 }) => {
   const closingLine = `If you'd like to speak with a specialist right away, feel free to call us at ${SITE_CONTACT.phoneDisplay}.`;
 
@@ -141,6 +144,7 @@ const buildBrandedThankYouEmail = ({
     `Hi ${greetingName},`,
     "",
     ...bodyParagraphs.flatMap((paragraph) => [paragraph, ""]),
+    ...(ctaButton ? [`${ctaButton.label}: ${ctaButton.href}`, ""] : []),
     closingLine,
     "",
     "Talk soon,",
@@ -156,6 +160,15 @@ const buildBrandedThankYouEmail = ({
         `<p style="font-size:15px; color:#333; margin:0 0 18px; line-height:1.8;">${escapeHtml(paragraph)}</p>`,
     )
     .join("\n            ");
+  const ctaButtonHtml = ctaButton
+    ? `<table cellpadding="0" cellspacing="0" border="0" style="margin:0 0 28px;">
+              <tr>
+                <td style="border-radius:8px; background:${accentColor};">
+                  <a href="${ctaButton.href}" style="display:inline-block; padding:14px 26px; font-size:14px; font-weight:700; color:#ffffff; text-decoration:none; border-radius:8px;">${escapeHtml(ctaButton.label)}</a>
+                </td>
+              </tr>
+            </table>`
+    : "";
 
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -184,6 +197,7 @@ const buildBrandedThankYouEmail = ({
           <td style="padding:36px 40px 32px;">
             <p style="font-size:15px; color:#1a1a1a; margin:0 0 20px; line-height:1.6;">Hi <strong>${safeGreeting}</strong>,</p>
             ${paragraphsHtml}
+            ${ctaButtonHtml}
             <p style="font-size:15px; color:#333; margin:0 0 32px; line-height:1.8;">If you'd like to speak with a specialist right away, feel free to call us at <a href="${SITE_CONTACT.phoneHref}" style="color:${accentColor}; font-weight:700; text-decoration:none;">${SITE_CONTACT.phoneDisplay}</a>.</p>
             <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;"><tr><td style="height:1px; background:#f0ede8;"></td></tr></table>
             <p style="font-size:15px; color:#333; margin:0 0 6px; line-height:1.7;">Talk soon,</p>
@@ -581,6 +595,32 @@ export const sendUserThankYouEmail = async (payload: LeadPayload) => {
 </html>`,
     });
 
+    return;
+  }
+
+  // Free website launch-offer landing page.
+  if (formType === "free-website-design") {
+    const businessLabel = businessName?.trim() || "your business";
+    const subject = "Your Free Website Request Is Being Reviewed - Zonic Media";
+    const { text, html } = buildBrandedThankYouEmail({
+      subject,
+      accentColor: "#2167f5",
+      headerTag: "Website Launch Offer",
+      greetingName: getFirstName(fullName),
+      bodyParagraphs: [
+        `Thank you for claiming the Zonic website launch offer. We've received the eligibility request for ${businessLabel} and our team is already reviewing your industry, market, and growth goals.`,
+        "One of our specialists will call or email you shortly with your eligibility result and a written proposal covering the website scope, the qualifying marketing plan, and clear terms - no surprises.",
+      ],
+      ctaButton: {
+        label: "Book a Call With Zonic",
+        href: "https://www.zonicllc.com/contact-us",
+      },
+      signatureRole: "Websites & Local Growth Specialists",
+      disclaimer:
+        "You're receiving this email because you requested the free website offer at zonicllc.com.",
+    });
+
+    await transporter.sendMail({ from, to: email, subject, text, html });
     return;
   }
 
