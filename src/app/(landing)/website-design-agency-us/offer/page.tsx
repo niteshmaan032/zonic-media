@@ -134,6 +134,15 @@ export default function FreeWebsiteDesignServicePage() {
                   <small>Website + marketing plan</small>
                 </span>
               </div>
+              <div className="proof-item proof-item--purple proof-item--mobile">
+                <span className="proof-icon">
+                  <Icon name="shield" />
+                </span>
+                <span>
+                  <strong>Clear terms</strong>
+                  <small>Scope agreed in writing</small>
+                </span>
+              </div>
             </div>
           </div>
 
