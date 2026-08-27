@@ -195,7 +195,10 @@ function Photo({
       fill
       sizes={sizes}
       priority={priority}
-      quality={85}
+      /* Raw file serving, same as the Philadelphia location pages — the
+         optimizer route 400'd on quality until Aug 27 and those errors sit in
+         browser caches; raw URLs always served. */
+      unoptimized
     />
   );
 }

@@ -2,7 +2,7 @@ const FAQS = [
   {
     question: "Is the professional website really free?",
     answer:
-      "The upfront website design and development fee is waived when you start an eligible recurring marketing plan with Zonic Media. Your written proposal will clearly define the included scope and plan terms before work begins.",
+      "The upfront design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $895/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
   },
   {
     question: "Which marketing plans qualify?",
@@ -22,7 +22,7 @@ const FAQS = [
   {
     question: "Are there commitment or cancellation terms?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "Yes. The qualifying plan runs on a six-month minimum term, and that's what the waived $2,000 build fee is set against. We host the site during those six months; ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website doesn't transfer. Your written proposal restates all of this before you sign anything.",
   },
 ];
 

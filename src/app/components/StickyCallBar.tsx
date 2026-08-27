@@ -20,11 +20,22 @@ const SERVICE_PATH_PREFIXES = [
   "/local-seo-google-business-optimization",
 ];
 
+// The location landing pages carry their own hero call CTA and footer contact
+// rails; the extra fixed bar doubled up on small screens, so they opt out.
+const EXCLUDED_PATH_PREFIXES = [
+  "/services/delaware",
+  "/services/philadelphia",
+  "/services/wilmington",
+  "/services/nyc",
+];
+
 export default function StickyCallBar() {
   const pathname = usePathname();
-  const isServicePage = SERVICE_PATH_PREFIXES.some(
-    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
-  );
+  const matches = (prefix: string) =>
+    pathname === prefix || pathname.startsWith(`${prefix}/`);
+  const isServicePage =
+    SERVICE_PATH_PREFIXES.some(matches) &&
+    !EXCLUDED_PATH_PREFIXES.some(matches);
 
   if (!isServicePage) {
     return null;

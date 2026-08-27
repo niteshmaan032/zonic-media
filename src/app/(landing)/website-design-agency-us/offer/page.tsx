@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 import GhlChatWidget from "@/app/components/GhlChatWidget";
+import HeroTrustBadges from "@/app/components/HeroTrustBadges";
 import { SITE_CONTACT, SITE_PATHS } from "@/shared/siteConfig";
 
 import FaqList from "./FaqList";
@@ -96,6 +97,8 @@ export default function FreeWebsiteDesignServicePage() {
               build your professional, conversion-focused website with no
               upfront development fee.
             </p>
+
+            <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
@@ -688,40 +691,44 @@ export default function FreeWebsiteDesignServicePage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>Website scope</strong>
+                <strong>What&rsquo;s waived</strong>
                 <small>
-                  Agreed page count, standard functionality, content
-                  responsibilities, and reasonable revision limits.
+                  The website development fee, valued at $2,000. Your monthly
+                  plan is billed at full rate and is not discounted.
                 </small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>Marketing eligibility</strong>
+                <strong>What qualifies you</strong>
                 <small>
-                  The recurring services and plan level that qualify your
-                  business for the waived development fee.
+                  Any Zonic marketing plan at $895/month or above — Local
+                  Foundation, Growth, or Full Market — on a six-month minimum
+                  term. Advertising spend is billed separately by the platform.
                 </small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>Engagement terms</strong>
+                <strong>What you own</strong>
                 <small>
-                  Any minimum commitment, hosting, cancellation, and website
-                  ownership terms shown in writing.
+                  Your domain is registered in your business&rsquo;s name from
+                  day one. We host and maintain the site during the term; full
+                  ownership of the website and hosting transfers to you at the
+                  completion of month six.
                 </small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>No surprise setup fee</strong>
+                <strong>If you cancel early</strong>
                 <small>
-                  The approved proposal clearly states what is included at no
-                  upfront development cost.
+                  You keep your domain and any content you supplied. The
+                  website does not transfer, because the build fee was waived
+                  against the full six-month engagement.
                 </small>
               </span>
             </div>
@@ -938,16 +945,25 @@ export default function FreeWebsiteDesignServicePage() {
         </div>
 
         <div className="footer-bottom">
+          <small>
+            <strong>OFFER TERMS.</strong> Website development fee, valued at
+            $2,000, is waived for new clients who start a qualifying Zonic
+            Media marketing plan at $895 per month or above on a six-month
+            minimum term. Client owns and registers the domain from the start
+            of the engagement. Zonic Media hosts and maintains the website
+            during the term; full ownership of the website and hosting
+            transfers to the client on completion of month six. Build scope is
+            a homepage plus ten pages and up to five city pages, with two
+            rounds of design revisions; additional pages, revisions and custom
+            functionality are quoted separately. Advertising spend is billed by
+            the ad platform and is not included in the monthly management fee.
+            New clients only; not combinable with other promotions. Zonic Media
+            reserves the right to decline applications.
+          </small>
           <p>
             Zonic Media LLC · 8 The Green, STE B, Dover, DE 19901 ·{" "}
             <a href="https://zonicllc.com">zonicllc.com</a>
           </p>
-          <small>
-            Website development fee, valued at $2,000, is waived for eligible
-            new clients. Advertising spend is separate. Build scope, revisions,
-            hosting, ownership transfer, and full offer terms are confirmed in
-            writing before engagement.
-          </small>
           <span>
             © 2026 Zonic Media LLC ·{" "}
             <span className="footer-legal">

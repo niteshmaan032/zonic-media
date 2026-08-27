@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
+    // Next 16 rejects any quality not listed here with a 400 ("q" parameter
+    // not allowed), which silently breaks every <Image quality={85}> — the
+    // geo location pages request 85 for their photography.
+    qualities: [75, 85],
   },
 
   async headers() {

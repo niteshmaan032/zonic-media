@@ -2391,10 +2391,48 @@
     aspect-ratio: 4 / 5;
   }
 
+  /* Tighten the ~115px void the desktop paddings stacked around the stats
+     strip once the layout went single column (kept in sync with the phl port). */
+  .deldg-page .deldg-hero-visual {
+    padding-bottom: 0;
+  }
+
+  /* Mobile stats become a compact 2×2 card grid — the flat divider list
+     read as loose text once stacked. */
   .deldg-page .deldg-hero-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-top: 48px;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .deldg-page .deldg-stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid var(--dd-divider);
+  }
+
+  .deldg-page .deldg-stat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .deldg-page .deldg-stat-num {
+    font-size: 22px;
+  }
+
+  .deldg-page .deldg-stat-label {
+    font-size: 12px;
+  }
+
+  .deldg-page .deldg-about {
+    padding-top: 40px;
   }
 
   .deldg-page .deldg-stat + .deldg-stat {
@@ -2406,6 +2444,18 @@
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
+    padding-bottom: 0;
+  }
+
+  /* Mobile shows one clean photo — the overlap + rotating badge were built
+     for the wide two-column layout. */
+  .deldg-page .deldg-collage-a {
+    width: 100%;
+  }
+
+  .deldg-page .deldg-collage-b,
+  .deldg-page .deldg-collage-badge {
+    display: none;
   }
 
   .deldg-page .deldg-cards,
@@ -2499,11 +2549,11 @@
     white-space: normal;
   }
 
+  /* The floating stat cards overlap the photo on desktop; the stacked mobile
+     layout pushed them below the image instead — hide them there. */
   .deldg-page .deldg-hero-float--a,
   .deldg-page .deldg-hero-float--b {
-    position: static;
-    max-width: none;
-    margin-top: 12px;
+    display: none;
   }
 
   .deldg-page .deldg-cards,
@@ -2588,8 +2638,7 @@
 
 @media (max-width: 575.98px) {
   .deldg-page .deldg-hero-stats {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 8px;
   }
 
   .deldg-page .deldg-hero-ctas .deldg-btn,
