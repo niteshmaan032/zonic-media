@@ -84,6 +84,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Free website landing page moved
+      {
+        source: "/free-website-design-service",
+        destination: "/website-design-agency-us/offer",
+        permanent: true,
+      },
+
       // Service URL changes
       {
         source: "/service/google-my-business/gmb-suspension-reinstatement",
