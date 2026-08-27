@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import Icon from "./Icon";
@@ -60,10 +61,10 @@ export default function FreeWebsiteDesignHeader() {
       </a>
 
       <header className={`nav-wrap${scrolled || menuOpen ? " is-scrolled" : ""}`}>
-        <a
+        <Link
           className="nav-logo"
-          href="#top"
-          aria-label="Zonic Media — back to top"
+          href="/"
+          aria-label="Zonic Media — home"
           onClick={closeMenu}
         >
           <Image
@@ -73,7 +74,7 @@ export default function FreeWebsiteDesignHeader() {
             height={113}
             priority
           />
-        </a>
+        </Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
           {NAV_ITEMS.map((item) => (

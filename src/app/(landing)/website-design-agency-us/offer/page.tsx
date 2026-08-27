@@ -359,6 +359,41 @@ export default function FreeWebsiteDesignServicePage() {
           </div>
 
           <IndustryTabs />
+
+          <div className="niche-banner">
+            <div className="niche-banner-copy">
+              <span className="section-kicker section-kicker--dark">
+                Beyond these six
+              </span>
+              <h3>We build for every local niche.</h3>
+              <p>
+                The tabs are just a sample — if customers search for your
+                service, we can build for it.
+              </p>
+            </div>
+            <div className="niche-banner-tags">
+              {[
+                "Electrical",
+                "Home Inspection",
+                "Pest Control",
+                "Towing",
+                "Movers",
+                "Auto Repair",
+                "Painting",
+                "Dental",
+                "Real Estate",
+              ].map((tag) => (
+                <span key={tag}>{tag}</span>
+              ))}
+              <span className="niche-banner-more">+ every other niche</span>
+            </div>
+            <a className="section-button section-button--light" href="#contact">
+              <span>Claim my free website</span>
+              <i>
+                <Icon name="arrow-up-right" />
+              </i>
+            </a>
+          </div>
         </section>
 
         {/* ───────────── What's included ───────────── */}
