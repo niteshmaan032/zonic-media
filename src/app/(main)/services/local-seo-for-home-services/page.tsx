@@ -85,9 +85,11 @@ const SeoHomeFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Local SEO for Home Service Businesses",
+  title: {
+    absolute: "Local SEO for Home Service Pros — Rank in the Map Pack",
+  },
   description:
-    "Grow your home service business with local SEO that drives higher Google Maps rankings, more calls, qualified leads, and booked jobs. Get a free audit.",
+    "Roofers, HVAC, plumbers: get found in the Google Map Pack in your service area. Local SEO built for home service businesses. Free profile audit.",
   keywords: [
     "local SEO for home services",
     "local SEO for contractors",
@@ -239,7 +241,7 @@ function page() {
                   when people need help, you lose high-intent leads to
                   competitors. Strong{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="lsh-inline-link"
                   >
                     Google Business Profile optimization

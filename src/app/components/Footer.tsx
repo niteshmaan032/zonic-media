@@ -78,7 +78,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/gmb-optimization">
+                    <Link href="/local-seo-google-business-optimization">
                       GBP Optimization
                     </Link>
                   </li>
@@ -91,14 +91,7 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/philadelphia/local-seo">
-                      Local SEO Philadelphia
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/delaware/digital-marketing">
-                      Digital Marketing Delaware
-                    </Link>
+                    <Link href="/services/seo-services">SEO Services</Link>
                   </li>
                   <li>
                     <Link href="/services/white-label-services">

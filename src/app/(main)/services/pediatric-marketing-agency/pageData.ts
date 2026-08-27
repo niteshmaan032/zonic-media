@@ -71,7 +71,7 @@ export const pediatricMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where parents actually look",
   mapIntro:
-    'Most parents never scroll past the first three map results when searching for a pediatrician. We track your rank across a geo-grid of your area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, parent reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most parents never scroll past the first three map results when searching for a pediatrician. We track your rank across a geo-grid of your area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, parent reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "pediatrician near me",
 
   foundationDesc:

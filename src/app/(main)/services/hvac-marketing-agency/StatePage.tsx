@@ -336,7 +336,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   agencies can&apos;t edit, filter, or fake. The same operators
                   who hired us for{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="hvac-inline-link"
                   >
                     Google Business Profile optimization

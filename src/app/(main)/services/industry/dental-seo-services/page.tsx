@@ -41,7 +41,7 @@
  *
  * OLD data arrays also included: DentalFormHead, DentalProcessSteps (6),
  * DentalChoosePoints (4), DentalServices (8). Old internal hrefs:
- * /services/gmb-optimization, /services/gmb-reinstatement-help,
+ * /local-seo-google-business-optimization, /services/gmb-reinstatement-help,
  * /services/gmb-verification-help, /services/local-seo-for-home-services,
  * /services/google-ads, /services, /services/dental-website-design.
  *
@@ -295,7 +295,7 @@ const ServiceCards = [
       <>
         Your profile is your new front door in the map pack. We optimize every
         field, dental category, photo, and post — the same system behind our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and patients choose you.
@@ -436,7 +436,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most patients pick a dentist straight from the map pack. We optimize your profile so that practice is yours.",

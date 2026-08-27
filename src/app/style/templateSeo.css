@@ -2829,3 +2829,271 @@
     transition: none;
   }
 }
+
+
+/* ── Pricing tier cards (packages page) ──────────────────────────────────────
+   Design ported from the approved /website-design-agency-us/offer pricing
+   cards: numbered head, large price, generous spacing, check list, full-width
+   CTA with icon chip, and a lifted dark featured middle card. Recoloured with
+   the tseo palette so it sits naturally in this template. */
+
+.tseo-page .tseo-price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  margin-top: 8px;
+}
+
+.tseo-page .tseo-price-card {
+  position: relative;
+  min-height: 560px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--tseo-divider);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(10, 27, 61, 0.07);
+}
+
+.tseo-page .tseo-price-card::after {
+  content: "";
+  position: absolute;
+  right: -65px;
+  top: -65px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--tseo-accent-soft);
+}
+
+.tseo-page .tseo-price-card--featured {
+  border: 2px solid var(--tseo-accent);
+  background: var(--tseo-ink);
+  color: #fff;
+  box-shadow: 0 25px 58px rgba(10, 27, 61, 0.22);
+  transform: translateY(-10px);
+}
+
+.tseo-page .tseo-price-card--featured::after {
+  background: rgba(37, 103, 232, 0.32);
+}
+
+.tseo-page .tseo-price-popular {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  top: 18px;
+  padding: 7px 11px;
+  border-radius: 99px;
+  background: var(--tseo-gold);
+  color: var(--tseo-ink);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tseo-page .tseo-price-head {
+  position: relative;
+  z-index: 2;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tseo-page .tseo-price-head > span {
+  color: var(--tseo-accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tseo-page .tseo-price-card--featured .tseo-price-head > span {
+  color: var(--tseo-gold);
+}
+
+.tseo-page .tseo-price-head small {
+  margin-top: 5px;
+  color: #7b889d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tseo-page .tseo-price-card h3 {
+  position: relative;
+  z-index: 2;
+  margin: 18px 0 10px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--tseo-ink);
+}
+
+.tseo-page .tseo-price-card--featured h3 {
+  color: #fff;
+}
+
+.tseo-page .tseo-price-amount {
+  position: relative;
+  z-index: 2;
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--tseo-ink);
+}
+
+.tseo-page .tseo-price-card--featured .tseo-price-amount {
+  color: #fff;
+}
+
+.tseo-page .tseo-price-amount span {
+  color: #8793a6;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.tseo-page .tseo-price-card > p {
+  min-height: 72px;
+  margin: 16px 0 4px;
+  color: var(--tseo-text);
+  font-size: 14.5px;
+  line-height: 1.62;
+}
+
+.tseo-page .tseo-price-card--featured > p {
+  color: #aebad0;
+}
+
+.tseo-page .tseo-price-card ul {
+  list-style: none;
+  padding: 18px 0 0;
+  margin: 14px 0 28px;
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--tseo-divider);
+}
+
+.tseo-page .tseo-price-card--featured ul {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.tseo-page .tseo-price-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #46536a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.tseo-page .tseo-price-card--featured li {
+  color: #d7deeb;
+}
+
+.tseo-page .tseo-price-card li svg {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--tseo-green);
+}
+
+.tseo-page .tseo-price-cta {
+  margin-top: auto;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 8px 7px 20px;
+  border-radius: 16px;
+  background: var(--tseo-ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(10, 27, 61, 0.14);
+  transition: transform 0.15s ease;
+}
+
+.tseo-page .tseo-price-cta:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.tseo-page .tseo-price-card--featured .tseo-price-cta {
+  background: var(--tseo-accent);
+}
+
+.tseo-page .tseo-price-cta-circ {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--tseo-gold);
+  color: var(--tseo-ink);
+}
+
+.tseo-page .tseo-price-cta-circ svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tseo-page .tseo-price-note {
+  width: fit-content;
+  margin: 26px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6c7a8f;
+  font-size: 12.5px;
+  text-align: center;
+}
+
+.tseo-page .tseo-price-note svg {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  color: var(--tseo-green);
+}
+
+@media (max-width: 1199.98px) {
+  .tseo-page .tseo-price-grid {
+    gap: 16px;
+  }
+
+  .tseo-page .tseo-price-card {
+    padding: 26px;
+    min-height: auto;
+  }
+
+  .tseo-page .tseo-price-amount {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .tseo-page .tseo-price-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tseo-page .tseo-price-card--featured {
+    transform: none;
+  }
+
+  .tseo-page .tseo-price-card > p {
+    min-height: auto;
+  }
+}

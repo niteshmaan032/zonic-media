@@ -642,7 +642,7 @@ export default function ChiroDigitalPage() {
                 </h3>
                 <p>
                   We align{" "}
-                  <Link href="/services/gmb-optimization" className="chiro-inline-link">Google Business Profile optimization</Link>, location pages,
+                  <Link href="/local-seo-google-business-optimization" className="chiro-inline-link">Google Business Profile optimization</Link>, location pages,
                   review signals, and conversion-focused website content so your
                   clinic can compete for high-intent patient searches with more
                   consistency. The goal is a stronger local presence that helps

@@ -366,7 +366,7 @@ const GrowCards = [
     cta: "See HVAC local SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most homeowners pick an HVAC company straight from the map pack. We optimize your profile so that company is you.",
@@ -789,7 +789,7 @@ function Page() {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="hw-inline-link"
                   >
                     Google Business Profile optimization

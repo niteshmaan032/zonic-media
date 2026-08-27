@@ -53,7 +53,7 @@ import {
 
      web design           → /services/web-design
      local SEO            → /services/local-seo-for-home-services
-     GBP optimization     → /services/gmb-optimization
+     GBP optimization     → /local-seo-google-business-optimization
      GBP reinstatement    → /services/gmb-reinstatement-help
      GBP verification     → /services/gmb-verification-help
      Map Pack ranking     → /local-seo-google-business-optimization
@@ -71,9 +71,11 @@ import {
 const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Services | SEO, PPC & Web Design",
+  title: {
+    absolute: "SEO Services for Local Businesses | Zonic Media",
+  },
   description:
-    "Digital marketing services for local businesses: conversion-built websites, local SEO, Google Business Profile work and Google Ads. Free audit, no lock-in.",
+    "Local SEO, Google Business Profile management, GBP reinstatement, Google Ads and web design for home service and healthcare businesses.",
   keywords: [
     "digital marketing services",
     "full service digital marketing agency",
@@ -106,9 +108,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Services | SEO, PPC & Web Design",
+    title: "SEO Services for Local Businesses | Zonic Media",
     description:
-      "Digital marketing services for local and mid-size businesses: web design, local SEO, Google Business Profile and Google Ads under one roof.",
+      "Local SEO, Google Business Profile management, GBP reinstatement, Google Ads and web design for home service and healthcare businesses.",
   },
 };
 
@@ -164,7 +166,7 @@ const services: ServiceCard[] = [
       "Photo, post and Q&A programme",
       "Suspension appeals and video verification",
     ],
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     cta: "See profile work",
   },
   {
@@ -306,7 +308,7 @@ const blocks: Block[] = [
           stuck video verification
         </Link>
         , then keeps the listing healthy with ongoing{" "}
-        <Link href="/services/gmb-optimization" className="svc-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="svc-inline-link">
           Google Business Profile optimization
         </Link>{" "}
         so it does not happen twice.
@@ -318,7 +320,7 @@ const blocks: Block[] = [
       "Video verification prep and re-verification support",
       "Ongoing posts, photos, services and review response",
     ],
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     cta: "Fix my Google profile",
     reverse: false,
     visual: <GbpFlip />,
@@ -739,7 +741,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">Full-service digital agency</p>
               <h1 className="svc-hero-h1">
-                Digital Marketing Services That Turn Local Searches into{" "}
+                SEO Services That Turn Local Searches into{" "}
                 <span className="svc-hl">Booked Jobs</span>
               </h1>
               <p className="svc-hero-sub">

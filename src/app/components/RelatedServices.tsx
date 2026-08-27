@@ -12,7 +12,7 @@ import Link from "next/link";
 type RelLink = { href: string; label: string };
 
 const CORE_LINKS: RelLink[] = [
-  { href: "/services/gmb-optimization", label: "Google Business Profile Optimization" },
+  { href: "/local-seo-google-business-optimization", label: "Google Business Profile Optimization" },
   { href: "/services/gmb-reinstatement-help", label: "GMB Reinstatement" },
   { href: "/services/local-seo-for-home-services", label: "Local SEO for Home Services" },
   { href: "/services/web-design", label: "Web Design" },

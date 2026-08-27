@@ -29,7 +29,11 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+  SITE_URL,
+} from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
@@ -95,6 +99,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Philadelphia PPC", url: PAGE_PATH },
 ]);
+
+// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
+const professionalServiceJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: PAGE_PATH,
+  areaServed: { type: "City", name: "Philadelphia" },
+});
+
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
@@ -530,6 +541,12 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceJsonLd),
+        }}
       />
       <script
         type="application/ld+json"

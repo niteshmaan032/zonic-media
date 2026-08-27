@@ -111,6 +111,12 @@ const localBusinessJsonLd = {
   logo: `${SITE_URL}/images/logo.webp`,
   address: postalAddressJsonLd,
   priceRange: "$$",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
   areaServed: ["United States", "Canada", "United Kingdom", "Australia", "United Arab Emirates", "India"],
   sameAs: sameAsLinks,
   knowsAbout: knowsAboutTopics,

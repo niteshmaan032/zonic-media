@@ -71,7 +71,7 @@ export const flooringMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where flooring buyers actually look",
   mapIntro:
-    'Most homeowners never scroll past the first three map results when pricing new floors. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, project photos, reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most homeowners never scroll past the first three map results when pricing new floors. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, project photos, reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "flooring installation near me",
 
   foundationDesc:

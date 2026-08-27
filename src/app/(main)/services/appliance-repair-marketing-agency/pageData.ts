@@ -71,7 +71,7 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where broken-appliance searches land",
   mapIntro:
-    'Most homeowners never scroll past the first three map results when an appliance quits. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most homeowners never scroll past the first three map results when an appliance quits. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "appliance repair near me",
 
   foundationDesc:

@@ -76,7 +76,7 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/real-estate-seo-services";
 
 export const metadata: Metadata = {
-  title: "Real Estate SEO Company for Realtors & Agents",
+  title: "Real Estate SEO Experts — SEO Company for Realtors & Agents",
   description:
     "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' — GBP, reviews & buyer/seller leads. Free audit.",
   keywords: [
@@ -289,7 +289,7 @@ const ServiceCards = [
         Your profile is your new homepage in the map pack. We optimize every
         field, real estate category, photo, and post — the same system behind
         our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and buyers and sellers choose you.
@@ -430,7 +430,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most buyers and sellers pick an agent straight from the map pack. We optimize your profile so that agent is you.",
@@ -479,14 +479,14 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Real Estate SEO Services</p>
                   <h1 className="tseo-hero-h1">
-                    Real Estate SEO That{" "}
-                    <span className="tseo-hl">Wins More Leads</span>
+                    Real Estate SEO Experts That{" "}
+                    <span className="tseo-hl">Win More Leads</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and lead-driven businesses climb
-                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
-                    full local ranking system for real estate agents, teams, and
-                    brokerages — Google Business Profile, citations, reviews, and
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media is a real estate SEO
+                    company and agency building the full ranking system for
+                    agents, teams, and brokerages — Google Business Profile, citations, reviews, and
                     neighborhood content — so when buyers and sellers search
                     &ldquo;realtor near me,&rdquo; they find you first.
                   </p>
@@ -856,7 +856,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything Your Real Estate Rankings Need, in One System
+                    Real Estate SEO Services — Everything Your Rankings Need
+                    in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -1474,7 +1475,8 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Wherever You Work</p>
                 <h2 className="tseo-h2">
-                  Local SEO for Real Estate Agents in Every Market in the US
+                  SEO for Realtors, Agents &amp; Commercial Real Estate in
+                  Every US Market
                 </h2>
                 <p className="tseo-lead">
                   From solo agents to multi-office brokerages, we run local SEO

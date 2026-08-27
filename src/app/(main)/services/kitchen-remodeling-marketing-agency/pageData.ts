@@ -71,7 +71,7 @@ export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where remodel buyers actually look",
   mapIntro:
-    'Most homeowners never scroll past the first three map results when they start pricing a kitchen. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, project photos, reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most homeowners never scroll past the first three map results when they start pricing a kitchen. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, project photos, reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "kitchen remodeler near me",
 
   foundationDesc:

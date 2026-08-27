@@ -217,7 +217,7 @@ const ServiceCards = [
     desc: (
       <>
         Your profile is your best free lead source. We handle{" "}
-        <Link href="/services/gmb-optimization" className="tt-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tt-inline-link">
           Google Business Profile optimization
         </Link>{" "}
         to rank and generate reviews, and when a profile is suspended, we help{" "}
@@ -392,7 +392,7 @@ const GrowCards = [
     cta: "See web design",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <FiMapPin aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Travelers check the map before they book. We make sure your profile, photos, and reviews win that glance.",

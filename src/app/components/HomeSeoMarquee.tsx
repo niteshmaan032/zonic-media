@@ -2,8 +2,8 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import "@/app/style/localSeoHome.css";
 
-function HomeSeoMarquee() {
-  const services = [
+function HomeSeoMarquee({ items }: { items?: string[] }) {
+  const services = items ?? [
     "Bathroom Remodelers",
     "Kitchen Remodelers",
     "General Contractors",

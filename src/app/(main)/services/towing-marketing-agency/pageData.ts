@@ -70,7 +70,7 @@ export const towingMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where stranded drivers actually look",
   mapIntro:
-    'Most towing customers never scroll past the first three map results — they tap the first number that looks close. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most towing customers never scroll past the first three map results — they tap the first number that looks close. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "tow truck near me",
 
   foundationDesc:

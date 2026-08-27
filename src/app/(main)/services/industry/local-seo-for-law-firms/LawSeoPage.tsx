@@ -1043,7 +1043,7 @@ export default function LawSeoPage() {
                 <p>
                   We connect{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="law-inline-link"
                   >
                     Google Business Profile optimization

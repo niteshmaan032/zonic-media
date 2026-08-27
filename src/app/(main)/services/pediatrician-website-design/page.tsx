@@ -366,7 +366,7 @@ const GrowCards = [
     cta: "See pediatric SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most parents pick a pediatrician straight from the map pack. We optimize your profile so that practice is you.",
@@ -806,7 +806,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

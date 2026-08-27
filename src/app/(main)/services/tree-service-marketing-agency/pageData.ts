@@ -71,7 +71,7 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where homeowners actually look",
   mapIntro:
-    'Most homeowners never scroll past the first three map results — especially with a limb already down. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, job photos, reviews, citations, and links — to move you into the spots that get the calls.',
+    'Most homeowners never scroll past the first three map results — especially with a limb already down. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, job photos, reviews, citations, and links — to move you into the spots that get the calls.',
   mapQuery: "tree removal near me",
 
   foundationDesc:

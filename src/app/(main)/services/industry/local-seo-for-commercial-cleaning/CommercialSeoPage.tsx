@@ -880,7 +880,7 @@ export default function CommercialSeoPage() {
               <p className="car-tow-section-descrp">
                 We build a full commercial cleaning SEO system that connects
                 <Link
-                  href="/services/gmb-optimization"
+                  href="/local-seo-google-business-optimization"
                   className="cseo-inline-link"
                 >
                   Google Business Profile optimization

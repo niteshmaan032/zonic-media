@@ -58,6 +58,8 @@ export const metadata: Metadata = {
   description:
     "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
   keywords: [
+    "web seo services in delaware",
+    "delaware seo and web design agency",
     "web design services for small business",
     "conversion focused website design",
     "local business website design",
@@ -182,7 +184,7 @@ const wdServices: WdService[] = [
         Fully responsive WordPress websites that work seamlessly across
         desktops, tablets, and mobile devices — optimized for speed, SEO
         performance, and easy content management, alongside{" "}
-        <Link href="/services/gmb-optimization" className="wd-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="wd-inline-link">
           Google Business Profile optimization
         </Link>
         .
@@ -920,6 +922,29 @@ function Page() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Delaware pointer — the mapped web-design demand in this dataset is
+            all Delaware/New Castle-scoped (Aug 2026 SEO plan). */}
+        <section className="wd-band">
+          <div className="wd-wrap">
+            <span className="wd-eyebrow">Local to Delaware?</span>
+            <h2 className="wd-h2">
+              Web SEO Services in Delaware, From a Delaware Agency
+            </h2>
+            <p className="wd-lead">
+              We are a Delaware SEO and web design agency headquartered in
+              Dover. If you need custom website design in New Castle County,
+              Dover or the Sussex beaches — built with local search rankings in
+              mind — see our dedicated{" "}
+              <Link href="/services/delaware/web-design">
+                Delaware web design
+              </Link>{" "}
+              page, or pair it with{" "}
+              <Link href="/services/delaware/seo">Delaware SEO</Link> for the
+              full program.
+            </p>
           </div>
         </section>
 

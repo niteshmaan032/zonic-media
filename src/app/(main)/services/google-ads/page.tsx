@@ -58,6 +58,9 @@ export const metadata: Metadata = {
   description:
     "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
   keywords: [
+    "digital ads business near me",
+    "digital advertising agency delaware",
+    "delaware ppc agency",
     "Google Ads management services",
     "PPC agency for local business",
     "local services ads management",
@@ -632,7 +635,7 @@ function Page() {
                   exactly when potential customers are looking for your
                   services. Paired with{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="ga-inline-link"
                   >
                     Google Business Profile optimization

@@ -818,3 +818,61 @@
     margin-left: 10px;
   }
 }
+
+
+/* ── MID-ARTICLE SERVICE CTA (Aug 2026 SEO plan) ─────────────────────────── */
+
+.bp-mid-cta {
+  margin: 28px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--stroke);
+  border-left: 4px solid var(--secondary);
+  border-radius: 10px;
+  background: var(--color1);
+}
+
+.bp-mid-cta-kicker {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--secondary);
+  margin: 0 0 6px;
+}
+
+.bp-mid-cta-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2a2a2a;
+  margin: 0 0 14px;
+}
+
+.bp-mid-cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.bp-mid-cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bp-mid-cta-btn:hover {
+  opacity: 0.88;
+  color: #fff;
+}
+
+.bp-mid-cta-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+  text-decoration: underline;
+}

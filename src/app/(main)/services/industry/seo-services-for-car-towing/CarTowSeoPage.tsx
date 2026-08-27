@@ -723,7 +723,7 @@ export default function CarTowSeoPage() {
                 <p>
                   We align{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="cartow-inline-link"
                   >
                     Google Business Profile optimization

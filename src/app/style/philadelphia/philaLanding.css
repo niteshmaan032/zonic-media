@@ -168,22 +168,17 @@
 }
 
 /* blue text, yellow underline — yellow on white is ~1.7:1 and can't carry
-   text, so the accent lands on the rule beneath it instead. */
+   text, so the accent lands on the rule beneath it instead. The rule is a
+   per-line background (box-decoration-break: clone) rather than nowrap +
+   ::after — long highlights must wrap, not overflow behind the hero visual. */
 .phl-page .phl-hl {
-  position: relative;
   color: var(--phl-accent);
-  white-space: nowrap;
-}
-
-.phl-page .phl-hl::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0.04em;
-  height: 0.11em;
-  border-radius: 100px;
-  background: var(--phl-gold);
+  background-image: linear-gradient(var(--phl-gold), var(--phl-gold));
+  background-repeat: no-repeat;
+  background-size: 100% 0.11em;
+  background-position: 0 calc(100% - 0.04em);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .phl-page .phl-h2 {
@@ -2326,10 +2321,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-  }
-
-  .phl-page .phl-hl {
-    white-space: normal;
   }
 
   .phl-page .phl-hero-float--a,

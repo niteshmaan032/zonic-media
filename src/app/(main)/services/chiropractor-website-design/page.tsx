@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   description:
     "Chiropractor website design built as a patient acquisition system — online booking, new-patient offers, insurance UX, and mobile-first pages that fill your schedule.",
   keywords: [
+    "chiropractic website seo",
+    "best chiropractic website companies",
     "chiropractor website design",
     "chiropractic website design",
     "chiropractic practice website design",
@@ -373,7 +375,7 @@ const GrowCards = [
     cta: "Explore chiropractic marketing",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most patients pick a chiropractor straight from the map pack. We optimize your profile so that clinic is you.",
@@ -806,7 +808,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

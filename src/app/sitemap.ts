@@ -31,7 +31,6 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Services
   { url: `${BASE_URL}/services/web-design`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/gmb-reinstatement-help`,       changeFrequency: "weekly",  priority: 0.9 },
-  { url: `${BASE_URL}/services/gmb-optimization`,             changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/gmb-verification-help`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-ads`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-for-home-services`,  changeFrequency: "monthly", priority: 0.8 },
@@ -98,8 +97,6 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/gmb-reinstatement-service-agency`,              changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/google-business-profile-verification-help-2026`, changeFrequency: "monthly", priority: 0.8 },
 
   // Home inspector marketing
   { url: `${BASE_URL}/services/home-inspector-marketing`,                changeFrequency: "monthly", priority: 0.8 },
@@ -129,8 +126,18 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/hvac-marketing-agency/north-carolina`, changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/hvac-marketing-agency/texas`,          changeFrequency: "monthly", priority: 0.7 },
 
+  // SEO-plan pages (Aug 2026)
+  { url: `${BASE_URL}/services/seo-services`,               changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/services/local-seo-for-small-business`, changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/local-seo-packages`,         changeFrequency: "monthly", priority: 0.8 },
+
   // Locations
   { url: `${BASE_URL}/services/delaware/digital-marketing`,     changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/delaware/seo`,                   changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/services/delaware/web-design`,            changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/wilmington/digital-marketing`,   changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/nyc/local-seo`,                  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/nyc/digital-marketing`,          changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/philadelphia/digital-marketing`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/philadelphia/local-seo`,         changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/philadelphia/sem`,               changeFrequency: "monthly", priority: 0.7 },

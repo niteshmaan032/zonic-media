@@ -808,7 +808,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

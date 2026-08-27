@@ -112,7 +112,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <div class="map-copy">
 <span class="eyebrow">Where homeowners actually look</span>
 <h2>Get into the Top 3 of the Google Map Pack</h2>
-<p>Most solar customers never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.</p>
+<p>Most solar customers never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls.</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Geo-grid rank tracking</span>
 <span class="pill">${CHECK_SVG} Review generation</span>

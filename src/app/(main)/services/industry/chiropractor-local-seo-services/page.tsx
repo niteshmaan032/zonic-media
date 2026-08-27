@@ -301,7 +301,7 @@ const ServiceCards = [
         Your profile is your new homepage in the map pack. We optimize every
         field, chiropractic category, photo, and post — the same system behind
         our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and new patients choose you.
@@ -442,7 +442,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most patients pick a chiropractor straight from the map pack. We optimize your profile so that clinic is yours.",
@@ -489,15 +489,16 @@ function Page() {
             <div className="tseo-container">
               <div className="tseo-hero-grid">
                 <div className="tseo-hero-copy">
-                  <p className="tseo-eyebrow">Local SEO for Chiropractors</p>
+                  <p className="tseo-eyebrow">Chiropractor SEO Company</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for Chiropractors That{" "}
+                    Chiropractor SEO That{" "}
                     <span className="tseo-hl">Books Patients</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and appointment-based businesses
-                    climb into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds
-                    the full local ranking system for chiropractic clinics —
+                    climb into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media&apos;s chiropractor SEO
+                    experts build the full ranking system for chiropractic
+                    clinics — chiropractic SEO services covering
                     Google Business Profile, citations, reviews, and
                     service-area content — so when someone searches
                     &ldquo;chiropractor near me,&rdquo; they find you first.
@@ -869,7 +870,8 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything Your Chiropractic Rankings Need, in One System
+                    Chiropractic SEO Services — Everything Your Rankings
+                    Need in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">
@@ -1366,7 +1368,8 @@ function Page() {
               <div className="tseo-sec-head-center">
                 <p className="tseo-eyebrow">Why Zonic Media</p>
                 <h2 className="tseo-h2">
-                  A Chiropractic Local SEO Partner, Not a Monthly Invoice
+                  Chiropractor SEO Experts as a Partner, Not a Monthly
+                  Invoice
                 </h2>
                 <p className="tseo-lead">
                   Rankings are the output. The inputs are strategy, execution,

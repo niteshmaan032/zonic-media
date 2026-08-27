@@ -296,7 +296,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   program builds the whole funnel for {stateName} home
                   inspectors, from the way you appear on Google Maps through{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="hia-inline-link"
                   >
                     Google Business Profile optimization

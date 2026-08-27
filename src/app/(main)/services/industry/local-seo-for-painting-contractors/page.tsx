@@ -255,7 +255,7 @@ const ServiceCards = [
         Your profile is your new homepage in the map pack. We optimize every
         field, painting category, project photo, and post — the same system
         behind our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and homeowners choose you.
@@ -396,7 +396,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most homeowners pick a painting contractor straight from the map pack. We optimize your profile so that company is you.",

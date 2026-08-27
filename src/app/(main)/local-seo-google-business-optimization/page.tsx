@@ -14,7 +14,7 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 /* ---------------------------------------------------------------------------
    POSITIONING — read this before editing the copy.
 
-   /services/gmb-optimization owns the head term "Google Business Profile
+   /local-seo-google-business-optimization owns the head term "Google Business Profile
    optimization" and the deliverables list (categories, description, photos,
    posts, Q&A, review generation). Do not restate that list here.
 
@@ -25,7 +25,7 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
      · "why am I not showing up on Google Maps"
      · geo-grid rank tracking and "near me" visibility
 
-   Always link UP to /services/gmb-optimization using the head term as anchor
+   Always link UP to /local-seo-google-business-optimization using the head term as anchor
    text so it consolidates on the hub instead of splitting across two URLs.
 
    TYPE + CHROME come from gbpLanding.css (.gbp-lp) — shared with the other two
@@ -34,11 +34,16 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
+    absolute: "Local SEO Services — Rank in the Google Map Pack",
   },
   description:
-    "Why you rank on Google Maps in one neighbourhood and vanish in the next — the three factors behind local 3-Pack rankings, plus a free geo-grid scan.",
+    "Local SEO services from a local SEO company that maps your rankings street by street — Google Business Profile, citations and reviews, plus a free geo-grid scan.",
   keywords: [
+    "local seo services",
+    "local seo company",
+    "local seo agency",
+    "local seo service",
+    "local seo services near me",
     "how to rank in Google Map Pack",
     "local 3-pack ranking",
     "Google Maps ranking factors",
@@ -111,7 +116,7 @@ const serviceJsonLd = {
   },
   isRelatedTo: {
     "@type": "Service",
-    "@id": "https://www.zonicllc.com/services/gmb-optimization#service",
+    "@id": "https://www.zonicllc.com/local-seo-google-business-optimization#service",
     name: "Google Business Profile Optimization",
   },
   offers: {
@@ -451,7 +456,7 @@ function Page() {
         <div className="lp-col">
           {/* ------------------------------ HERO ------------------------------ */}
           <section className="lp-panel-dark">
-            <span className="lp-eyebrow on-dark">Map Pack ranking</span>
+            <span className="lp-eyebrow on-dark">Local SEO services</span>
 
             <h1 className="lp-h1">
               You Rank #1 Outside Your Own Front Door.{" "}
@@ -461,10 +466,12 @@ function Page() {
             </h1>
 
             <p className="lp-lead">
-              Google builds a different Map Pack for every searcher, weighted
-              heavily by how close they are standing. So there is no single
-              ranking to chase — there is a map of them. We scan yours, show you
-              where the green stops, and work on the factors that widen it.
+              Our local SEO services start from a truth most local SEO
+              companies skip: Google builds a different Map Pack for every
+              searcher, weighted heavily by how close they are standing. So
+              there is no single ranking to chase — there is a map of them. We
+              scan yours, show you where the green stops, and work the factors
+              that widen it.
             </p>
 
             <div
@@ -677,7 +684,7 @@ function Page() {
                   Video is the default method now and the rules changed twice
                   since 2024 — see the{" "}
                   <Link
-                    href="/google-business-profile-verification-help-2026"
+                    href="/services/gmb-verification-help"
                     className="lp-link"
                   >
                     2026 verification rules
@@ -715,7 +722,7 @@ function Page() {
                   If Google has already turned down an appeal, that&apos;s a
                   different job —{" "}
                   <Link
-                    href="/gmb-reinstatement-service-agency"
+                    href="/services/gmb-reinstatement-help"
                     className="lp-link"
                   >
                     the escalation desk
@@ -739,7 +746,11 @@ function Page() {
                 <Link href="/services/google-ads" className="lp-link">
                   Google Ads management
                 </Link>{" "}
-                covers the gap.
+                covers the gap — and our{" "}
+                <Link href="/services/local-seo-packages" className="lp-link">
+                  local SEO packages
+                </Link>{" "}
+                show what each affordable tier includes.
               </p>
             </div>
             <div className="lp-price-grid">
@@ -848,7 +859,7 @@ function Page() {
               <p className="lp-lead">
                 Ranking work assumes a profile that is already built out —
                 that&apos;s{" "}
-                <Link href="/services/gmb-optimization" className="lp-link">
+                <Link href="/local-seo-google-business-optimization" className="lp-link">
                   Google Business Profile optimization
                 </Link>
                 . For trades specifically, most of the coverage problems on this
@@ -980,7 +991,7 @@ function Page() {
             <h3>Google Business Profile</h3>
             <ul>
               <li>
-                <Link href="/services/gmb-optimization">
+                <Link href="/local-seo-google-business-optimization">
                   Profile optimization
                 </Link>
               </li>
@@ -990,7 +1001,7 @@ function Page() {
                 </Link>
               </li>
               <li>
-                <Link href="/gmb-reinstatement-service-agency">
+                <Link href="/services/gmb-reinstatement-help">
                   Rejected appeal help
                 </Link>
               </li>
@@ -1000,7 +1011,7 @@ function Page() {
                 </Link>
               </li>
               <li>
-                <Link href="/google-business-profile-verification-help-2026">
+                <Link href="/services/gmb-verification-help">
                   2026 verification rules
                 </Link>
               </li>

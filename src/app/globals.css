@@ -796,3 +796,35 @@ body p {
 body:not(.ghl-page) chat-widget {
   display: none !important;
 }
+
+
+/* ── Sticky mobile click-to-call bar on service pages (Aug 2026 SEO plan) ── */
+.sticky-call-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .sticky-call-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+    background: var(--secondary);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+  }
+
+  .sticky-call-bar:hover,
+  .sticky-call-bar:focus {
+    color: #fff;
+  }
+}

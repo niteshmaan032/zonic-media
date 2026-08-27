@@ -28,7 +28,11 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+  SITE_URL,
+} from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
@@ -96,6 +100,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Philadelphia Digital Marketing", url: PAGE_PATH },
 ]);
+
+// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
+const professionalServiceJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: PAGE_PATH,
+  areaServed: { type: "City", name: "Philadelphia" },
+});
+
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
@@ -280,7 +291,7 @@ const ServiceCards = [
           href="/services/philadelphia/local-seo"
           className="phl-inline-link"
         >
-          Philadelphia local SEO
+          Philadelphia SEO company
         </Link>{" "}
         page.
       </>
@@ -520,9 +531,9 @@ const GrowCards = [
   {
     href: "/services/philadelphia/local-seo",
     icon: <FiMapPin aria-hidden="true" />,
-    title: "Local SEO in Philadelphia",
-    desc: "Own the map pack for every neighbourhood and ZIP you actually serve.",
-    cta: "See local SEO",
+    title: "Philadelphia SEO Company",
+    desc: "Our dedicated Philly SEO page — map pack, organic rankings and the full local system.",
+    cta: "See Philadelphia SEO",
   },
   {
     href: "/services/philadelphia/ppc",
@@ -546,6 +557,12 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceJsonLd),
+        }}
       />
       <script
         type="application/ld+json"
@@ -764,7 +781,7 @@ function Page() {
                     find the searches worth winning in your specific
                     neighbourhoods and take them — through local SEO and a{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="phl-inline-link"
                     >
                       properly built Google Business Profile

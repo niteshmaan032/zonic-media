@@ -24,7 +24,7 @@ type LocalBusinessOptions = {
   /** Defaults to "ProfessionalService". Use "LocalBusiness" if you prefer. */
   type?: "ProfessionalService" | "LocalBusiness";
   /** Either a US state name (renders as schema:State) or "United States" for nationwide. */
-  areaServed?: string | { type: "State" | "Country"; name: string };
+  areaServed?: string | { type: "State" | "Country" | "City"; name: string };
 };
 
 export function buildLocalBusinessJsonLd({
@@ -76,7 +76,7 @@ type ServiceOptions = {
   /** e.g. "Digital Marketing", "Local SEO", "Web Design". */
   serviceType?: string;
   /** State name, "United States" (default), or explicit type+name. */
-  areaServed?: string | { type: "State" | "Country"; name: string };
+  areaServed?: string | { type: "State" | "Country" | "City"; name: string };
 };
 
 /**

@@ -359,7 +359,7 @@ const GrowCards = [
     cta: "Explore dental SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most patients pick a dentist straight from the map pack. We optimize your profile so that dentist is you.",
@@ -805,7 +805,7 @@ function Page() {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="dw-inline-link"
                   >
                     Google Business Profile optimization

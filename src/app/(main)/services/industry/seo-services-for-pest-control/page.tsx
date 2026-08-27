@@ -43,7 +43,7 @@
  * ];
  *
  * Old internal links: /services/pest-control-marketing-agency, /services/local-seo-for-home-services,
- * /services/gmb-optimization, /services/web-design, /services/google-ads,
+ * /local-seo-google-business-optimization, /services/web-design, /services/google-ads,
  * /services/gmb-verification-help, /services/gmb-reinstatement-help.
  *
  * (Full previous hero/process/map/why/services/results/contact JSX preserved in
@@ -298,7 +298,7 @@ const ServiceCards = [
         Your profile is your new homepage in the map pack. We optimize every
         field, pest control category, photo, and post — the same system behind
         our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and homeowners choose you.
@@ -439,7 +439,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most homeowners pick a pest control company straight from the map pack. We optimize your profile so that company is you.",

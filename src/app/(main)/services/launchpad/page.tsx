@@ -565,7 +565,7 @@ function page() {
                           <FaCheck />
                         </span>
                         <Link
-                          href="/services/gmb-optimization"
+                          href="/local-seo-google-business-optimization"
                           className="launchpad-inline-link"
                         >
                           Google Business Profile setup and optimization

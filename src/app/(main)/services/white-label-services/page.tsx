@@ -441,7 +441,7 @@ export default function Page() {
                     Every growing agency hits the same wall: a client wants a
                     service you don&apos;t fulfill in-house — ongoing{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="wl-inline-link"
                     >
                       Google Business Profile management
@@ -594,7 +594,7 @@ export default function Page() {
                   <Link href="/services/gmb-reinstatement-help">
                     GBP Reinstatement
                   </Link>
-                  <Link href="/services/gmb-optimization">GBP Management</Link>
+                  <Link href="/local-seo-google-business-optimization">GBP Management</Link>
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>

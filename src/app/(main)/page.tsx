@@ -62,11 +62,10 @@ function BtnArrow() {
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Marketing Agency for Small & Mid-Size Businesses | Zonic Media",
+    absolute: "GMB Suspension & Local SEO Experts | Zonic Media",
   },
   description:
-    "Zonic Media helps small US businesses grow with local SEO, Google Business Profile reinstatement & optimization, website design, and Google Ads. Free audit.",
+    "Google Business Profile suspended? We specialise in GBP reinstatement and local SEO for home service businesses. Free case review.",
   keywords: [
     "digital marketing agency for small business",
     "local SEO agency USA",
@@ -651,7 +650,7 @@ const faqsLeft: Faq[] = [
       <>
         Local SEO focuses on getting you into the Google Map Pack and local
         results for customers searching nearby. It centers on{" "}
-        <Link href="/services/gmb-optimization" className="hm-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="hm-inline-link">
           Google Business Profile optimization
         </Link>
         , citations, reviews, and location-relevant content — rather than
@@ -1052,10 +1051,10 @@ export default async function Home() {
                 Businesses.
               </h1>
               <p className="hm-hero-sub">
+                The digital marketing agency near you when it counts — in the
+                Map Pack, in search, and in the AI answers customers now trust.
                 Local SEO, Google Business Profile, website design, graphic
-                &amp; logo design, and PPC ads — one team that gets your
-                business found on Google Maps, in search, and in the AI answers
-                customers now trust.
+                &amp; logo design, and PPC ads from one team.
               </p>
               <div className="hm-hero-badges">
                 {/* Self-hosted Clutch badge — the live iframe embed sits

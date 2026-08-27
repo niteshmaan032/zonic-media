@@ -371,7 +371,7 @@ const GrowCards = [
     cta: "Explore cleaning marketing",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <RiPagesLine aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most cleaning bookings start in the map pack. We optimize your profile so that company is you.",
@@ -804,7 +804,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

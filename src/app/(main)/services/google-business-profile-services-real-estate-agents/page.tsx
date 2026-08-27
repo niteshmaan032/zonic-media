@@ -857,7 +857,7 @@ function Page() {
                   and serving showings. Total time investment across the first
                   two weeks is under an hour. After that, monthly reports keep{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="gre-inline-link"
                   >
                     Google Business Profile optimization

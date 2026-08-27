@@ -13,6 +13,7 @@ import {
   type IndustryVisualCopy,
 } from "@/app/components/IndustryMarketingVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 import { titleCaseHeadings, titleCaseText } from "@/shared/titleCase";
 
 /* Every ima- page (13 generated + septic + solar) ships the same seven
@@ -155,6 +156,12 @@ export default function IndustryMarketingPage({ page }: Props) {
   );
   const navLinks = NAV_LINKS.filter((link) => stampedIds.has(link.id));
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: page.title, url: `/services/${page.slug}` },
+  ]);
+
   return (
     <>
       {page.schemas.map((schema, index) => (
@@ -164,6 +171,11 @@ export default function IndustryMarketingPage({ page }: Props) {
           dangerouslySetInnerHTML={{ __html: schema }}
         />
       ))}
+      <script
+        id={`${page.slug}-breadcrumb-jsonld`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <div
         className={

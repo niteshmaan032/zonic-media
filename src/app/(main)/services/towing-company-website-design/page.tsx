@@ -362,7 +362,7 @@ const GrowCards = [
     cta: "See towing SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <RiPagesLine aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most roadside calls come straight from the map pack. We optimize your profile so that tow truck is yours.",
@@ -801,7 +801,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

@@ -610,7 +610,7 @@ function page() {
                 Getting your listing back is the starting line, not the finish.
                 Once you&apos;re live again, our team turns your recovered profile
                 into a lead-generating asset with ongoing{" "}
-                <Link href="/services/gmb-optimization" className="gmb-inline-link">
+                <Link href="/local-seo-google-business-optimization" className="gmb-inline-link">
                   Google Business Profile optimization
                 </Link>{" "}
                 — optimized to rank in the Map Pack, build trust, and stay

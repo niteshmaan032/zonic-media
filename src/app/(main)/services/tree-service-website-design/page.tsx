@@ -365,7 +365,7 @@ const GrowCards = [
     cta: "See tree service SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <RiPagesLine aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most tree jobs start in the map pack. We optimize your profile so that crew is yours.",
@@ -805,7 +805,7 @@ function Page() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hiw-inline-link"
                     >
                       Google Business Profile optimization

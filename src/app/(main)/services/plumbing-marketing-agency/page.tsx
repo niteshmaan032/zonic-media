@@ -334,7 +334,7 @@ function Page() {
                   research. They search and they call. We help plumbing
                   contractors win those calls — through{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="pmb-inline-link"
                   >
                     Google Business Profile optimization

@@ -335,7 +335,7 @@ function Page() {
                   5°F, customers don&apos;t research — they search and they
                   call. We help HVAC contractors win those calls through{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="hvac-inline-link"
                   >
                     Google Business Profile optimization

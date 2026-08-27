@@ -43,7 +43,7 @@ import {
    Rules that keep it that way:
 
      · Never restate a hub's deliverables list. Link up to the hub with
-       the head term as anchor text instead (/services/gmb-optimization,
+       the head term as anchor text instead (/local-seo-google-business-optimization,
        /services/local-seo-for-home-services, /services/web-design,
        /services/google-ads).
      · Every number here must match the number used elsewhere on the site.
@@ -69,10 +69,10 @@ import {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Zonic Media | Local SEO & Web Design Agency, Dover DE",
+    absolute: "About Zonic Media — GBP Reinstatement Specialists",
   },
   description:
-    "Meet Zonic Media, a Dover, Delaware agency running Local SEO, Google Business Profile, web design and Google Ads for small and mid-size US businesses.",
+    "We recover suspended Google Business Profiles and run local SEO for home service businesses across Delaware, Philadelphia and NYC.",
   keywords: [
     "about Zonic Media",
     "Zonic Media agency",
@@ -175,7 +175,7 @@ const services: ServiceCard[] = [
       "Map Pack coverage across the area",
       "Fast, documented listing recovery",
     ],
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     cta: "Google Business Profile optimization",
   },
   {
@@ -756,7 +756,7 @@ export default function AboutPage() {
                 <p className="abt-lead">
                   1,500+{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="abt-inline-link"
                   >
                     profiles optimized

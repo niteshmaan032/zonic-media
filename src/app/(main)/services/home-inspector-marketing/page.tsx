@@ -609,7 +609,7 @@ function Page() {
                   <p>
                     If your{" "}
                     <Link
-                      href="/services/gmb-optimization"
+                      href="/local-seo-google-business-optimization"
                       className="hia-inline-link"
                     >
                       Google Business Profile
@@ -1034,7 +1034,7 @@ function Page() {
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>
-                  <Link href="/gmb-reinstatement-service-agency">
+                  <Link href="/services/gmb-reinstatement-help">
                     Google Business Profile
                   </Link>
                   <Link href="/services">Google Ads Management</Link>

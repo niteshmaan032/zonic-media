@@ -955,7 +955,7 @@ function Page() {
                 </p>
                 <p>
                   Under the hood the tools are consistent, Local SEO, a healthy{" "}
-                  <Link href="/services/gmb-optimization" className="ind-inline-link">
+                  <Link href="/local-seo-google-business-optimization" className="ind-inline-link">
                     Google Business Profile
                   </Link>
                   , a{" "}

@@ -126,10 +126,10 @@ const GmbVeriFormHead = {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Google Business Profile Verification Help | Zonic Media",
+    absolute: "GMB Verification Help — Video & Instant Verification Fixes",
   },
   description:
-    "Can't verify your Google Business Profile? Get expert help with postcard, video, phone, email, and other verification issues. Free consultation.",
+    "Failed video verification? Postcard never arrived? We get Google Business Profiles verified when the standard process fails. Talk to a specialist today.",
   keywords: [
     "Google Business Profile verification help",
     "GMB verification",
@@ -529,7 +529,7 @@ function page() {
                 </h3>
                 <p className="gmb-reinst-card-descrp">
                   Once verified, we handle full{" "}
-                  <Link href="/services/gmb-optimization" className="gmb-inline-link">
+                  <Link href="/local-seo-google-business-optimization" className="gmb-inline-link">
                     Google Business Profile optimization
                   </Link>{" "}
                   - categories, keywords, photos, posts - so you start ranking in

@@ -120,7 +120,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service/google-my-business",
-        destination: "/services/gmb-optimization",
+        destination: "/local-seo-google-business-optimization",
         permanent: true,
       },
       { source: "/service", destination: "/services", permanent: true },
@@ -142,7 +142,7 @@ const nextConfig: NextConfig = {
       },
       { source: "/company/white-label", destination: "/", permanent: true },
       { source: "/company/reviews", destination: "/", permanent: true },
-      { source: "/company", destination: "/services", permanent: true },
+      { source: "/company", destination: "/about", permanent: true },
 
       // Blog redirects
       {
@@ -152,7 +152,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/category/google-my-business",
-        destination: "/services/gmb-optimization",
+        destination: "/local-seo-google-business-optimization",
         permanent: true,
       },
 
@@ -295,6 +295,47 @@ const nextConfig: NextConfig = {
 
       // Contact
       { source: "/contact", destination: "/contact-us", permanent: true },
+
+      // Cannibalisation merges (Aug 2026 SEO action plan) — one URL per service.
+      // Root URL wins for optimization (59 mapped keywords); /services wins for
+      // reinstatement + verification (silo consistency, no year-in-slug).
+      {
+        source: "/services/gmb-optimization",
+        destination: "/local-seo-google-business-optimization",
+        permanent: true,
+      },
+      {
+        source: "/gmb-reinstatement-service-agency",
+        destination: "/services/gmb-reinstatement-help",
+        permanent: true,
+      },
+      {
+        source: "/google-business-profile-verification-help-2026",
+        destination: "/services/gmb-verification-help",
+        permanent: true,
+      },
+
+      // Reinstatement-timeline blog consolidation — 4 posts split one query
+      // set; how-long-does-google-business-profile-reinstatement-take-in-2026
+      // is the surviving guide.
+      {
+        source: "/blog/how-long-gbp-reinstatement-takes",
+        destination:
+          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-happens-after-you-submit-a-gbp-reinstatement-request",
+        destination:
+          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/after-gbp-reinstatement-request",
+        destination:
+          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
+        permanent: true,
+      },
 
       // Services internal redirects
       {

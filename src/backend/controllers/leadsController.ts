@@ -22,11 +22,11 @@ const OWNER_LEAD_CC_EMAILS = [
 
 const GMB_REINSTATEMENT_TEMPLATE_PAGES = new Set([
   "/services/gmb-reinstatement-help",
-  "/gmb-reinstatement-service-agency",
+  "/services/gmb-reinstatement-help",
 ]);
 
 const GMB_OPTIMIZATION_TEMPLATE_PAGES = new Set([
-  "/services/gmb-optimization",
+  "/local-seo-google-business-optimization",
   "/local-seo-google-business-optimization",
 ]);
 

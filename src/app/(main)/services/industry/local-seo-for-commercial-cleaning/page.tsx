@@ -37,7 +37,7 @@
  * };
  *
  * (Old FAQ/data arrays and the full prior JSX lived in ./CommercialSeoPage.tsx.
- *  Salvaged internal links: /services/web-design, /services/gmb-optimization,
+ *  Salvaged internal links: /services/web-design, /local-seo-google-business-optimization,
  *  /services/google-ads, /services/gmb-reinstatement-help. Full prior JSX in
  *  git history at commit 60fb83f.)
  */
@@ -290,7 +290,7 @@ const ServiceCards = [
       <>
         Your profile is your new homepage in the map pack. We optimize every
         field, cleaning category, photo, and post — the same system behind our{" "}
-        <Link href="/services/gmb-optimization" className="tseo-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="tseo-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and facility managers shortlist you.
@@ -431,7 +431,7 @@ const NationwideChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most facility managers shortlist a cleaning company straight from the map pack. We optimize your profile so that company is you.",

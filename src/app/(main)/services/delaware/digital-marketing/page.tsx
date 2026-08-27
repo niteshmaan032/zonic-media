@@ -30,7 +30,11 @@ import LocalRankTracker, {
 } from "@/app/components/LocalRankTracker";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+  SITE_URL,
+} from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
@@ -99,6 +103,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Delaware Digital Marketing", url: PAGE_PATH },
 ]);
+
+// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
+const professionalServiceJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: PAGE_PATH,
+  areaServed: { type: "State", name: "Delaware" },
+});
+
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
@@ -273,7 +284,7 @@ const ServiceCards = [
         The map pack is where Delaware buying decisions get made. We optimize
         every profile field, category, photo, and post — the same system behind
         our{" "}
-        <Link href="/services/gmb-optimization" className="deldg-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="deldg-inline-link">
           Google Business Profile optimization
         </Link>{" "}
         — then build the citations and reviews that hold the position.
@@ -541,6 +552,12 @@ function Page() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
@@ -762,12 +779,13 @@ function Page() {
                   </p>
                   <p className="deldg-lead">
                     The catch is that most of it goes to whoever shows up first.
-                    Our job is to make that you — through{" "}
+                    Our job as a marketing agency in Delaware is to make that
+                    you — through dedicated{" "}
                     <Link
-                      href="/services/local-seo-for-home-services"
+                      href="/services/delaware/seo"
                       className="deldg-inline-link"
                     >
-                      local SEO
+                      Delaware SEO
                     </Link>{" "}
                     and a properly built Google Business Profile, paid search
                     that covers the terms worth buying, content that earns
@@ -793,6 +811,49 @@ function Page() {
                     </span>
                   </Link>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SEO + web design combined block — quick win for
+              "seo website marketing agency in delaware" (#11 -> page 1). */}
+          <section className="deldg-about">
+            <div className="deldg-container">
+              <div className="deldg-about-copy">
+                <p className="deldg-eyebrow">SEO + Web Design, One Agency</p>
+                <h2 className="deldg-h2">
+                  An SEO and Website Marketing Agency in Delaware — Both Jobs,
+                  One Team
+                </h2>
+                <p className="deldg-lead">
+                  The agencies at the top of Delaware&apos;s search results all
+                  have one thing in common: they treat the website and the SEO
+                  as a single system. So do we. Our{" "}
+                  <Link
+                    href="/services/delaware/seo"
+                    className="deldg-inline-link"
+                  >
+                    Delaware SEO program
+                  </Link>{" "}
+                  and our{" "}
+                  <Link
+                    href="/services/delaware/web-design"
+                    className="deldg-inline-link"
+                  >
+                    Delaware web design work
+                  </Link>{" "}
+                  are run by the same in-house team, so the site is built on the
+                  architecture the rankings need and every design decision is
+                  accountable to search performance. One agency, one strategy —
+                  from Wilmington and{" "}
+                  <Link
+                    href="/services/wilmington/digital-marketing"
+                    className="deldg-inline-link"
+                  >
+                    New Castle County
+                  </Link>{" "}
+                  to the Sussex beaches.
+                </p>
               </div>
             </div>
           </section>

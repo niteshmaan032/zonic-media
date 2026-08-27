@@ -367,7 +367,7 @@ const GrowCards = [
     cta: "See local SEO",
   },
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most homeowners pick an electrician straight from the map pack. We optimize your profile so that electrician is you.",
@@ -793,7 +793,7 @@ function Page() {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/services/gmb-optimization"
+                    href="/local-seo-google-business-optimization"
                     className="ew-inline-link"
                   >
                     Google Business Profile optimization

@@ -25,7 +25,11 @@ import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
-import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+import {
+  buildBreadcrumbJsonLd,
+  buildLocalBusinessJsonLd,
+  SITE_URL,
+} from "@/shared/seoSchemas";
 import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
@@ -52,10 +56,17 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/local-seo";
 
 export const metadata: Metadata = {
-  title: "Philadelphia SEO Company | Local SEO & Map Pack",
+  title: {
+    absolute: "Philadelphia SEO Company — SEO Services & Map Pack Rankings",
+  },
   description:
-    "Local SEO services in Philadelphia that win the Google map pack — GBP optimization, citations & reviews that turn 'near me' searches into calls. Free audit.",
+    "Philadelphia SEO company for local businesses — search engine optimization, Google Business Profile and Map Pack rankings that turn Philly searches into calls. Free audit.",
   keywords: [
+    "philadelphia seo",
+    "philadelphia seo company",
+    "seo company philadelphia",
+    "philadelphia seo firm",
+    "search engine optimization philadelphia",
     "local SEO Philadelphia",
     "Philadelphia local SEO company",
     "local SEO services Philadelphia",
@@ -77,7 +88,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Philadelphia | Google Maps Rankings | Zonic Media",
+    title: "Philadelphia SEO Company — SEO Services & Map Pack Rankings",
     description:
       "Local SEO services in Philadelphia that win the Google map pack — profile optimization, citations, reviews, and neighbourhood pages that turn 'near me' searches into calls.",
     url: PAGE_PATH,
@@ -88,8 +99,15 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Philadelphia Local SEO", url: PAGE_PATH },
+  { name: "Philadelphia SEO Company", url: PAGE_PATH },
 ]);
+
+// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
+const professionalServiceJsonLd = buildLocalBusinessJsonLd({
+  pageUrl: PAGE_PATH,
+  areaServed: { type: "City", name: "Philadelphia" },
+});
+
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
@@ -270,7 +288,7 @@ const ServiceCards = [
       <>
         Your profile is the new homepage for local search. We optimize every
         field, category, photo, service, and post — the same system behind our{" "}
-        <Link href="/services/gmb-optimization" className="phl-inline-link">
+        <Link href="/local-seo-google-business-optimization" className="phl-inline-link">
           GBP optimization service
         </Link>{" "}
         — so Google trusts it and Philadelphians choose it.
@@ -508,7 +526,7 @@ const IndustryChips = [
 
 const GrowCards = [
   {
-    href: "/services/gmb-optimization",
+    href: "/local-seo-google-business-optimization",
     icon: <MdOutlineVerifiedUser aria-hidden="true" />,
     title: "Google Business Profile Optimization",
     desc: "Most local buyers pick straight from the map pack. We make sure that pick is you.",
@@ -539,6 +557,12 @@ function Page() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(professionalServiceJsonLd),
+        }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
@@ -553,18 +577,18 @@ function Page() {
             <div className="phl-container">
               <div className="phl-hero-grid">
                 <div className="phl-hero-copy">
-                  <p className="phl-eyebrow">Local SEO in Philadelphia</p>
+                  <p className="phl-eyebrow">SEO Company in Philadelphia</p>
                   <h1 className="phl-h1">
-                    Local SEO That Wins the{" "}
-                    <span className="phl-hl">Philly Map Pack</span>
+                    The Philadelphia SEO Company That Wins the{" "}
+                    <span className="phl-hl">Map Pack</span>
                   </h1>
                   <p className="phl-hero-sub">
-                    When somebody in Philadelphia searches &ldquo;near
-                    me,&rdquo; three businesses get the call and everyone else
-                    gets scrolled past. Zonic Media builds the full local
-                    ranking system — Google Business Profile, citations,
-                    reviews, and neighbourhood pages — so the business they call
-                    is yours.
+                    Zonic Media is a Philadelphia SEO company for businesses
+                    that need calls, not charts. Our search engine optimization
+                    work in Philadelphia covers the whole ranking system —
+                    Google Business Profile, on-page SEO, citations, reviews,
+                    and neighbourhood pages — so when somebody in Philly
+                    searches, the business they call is yours.
                   </p>
 
                   <div className="phl-hero-badges" aria-label="Partner badges">
@@ -1121,7 +1145,7 @@ function Page() {
             <div className="phl-container">
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">The Difference</p>
-                <h2 className="phl-h2">Zonic Vs. A Typical Local SEO Agency</h2>
+                <h2 className="phl-h2">Zonic vs. a Typical Philadelphia SEO Firm</h2>
                 <p className="phl-lead">
                   Local SEO for local businesses is all we do, and it shows.
                   Here is what working with a dedicated local team looks like.

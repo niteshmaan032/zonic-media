@@ -882,7 +882,7 @@ export default function ResidentialSeoPage() {
               <p className="car-tow-section-descrp">
                 We build a full residential cleaning SEO system that connects
                 <Link
-                  href="/services/gmb-optimization"
+                  href="/local-seo-google-business-optimization"
                   className="rseo-inline-link"
                 >
                   Google Business Profile optimization

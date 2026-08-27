@@ -10,7 +10,9 @@ import {
   getPublishedBlogs,
 } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
-import { splitOnFaqMarker } from "@/shared/blogContent";
+import { splitAfterFirstSection, splitOnFaqMarker } from "@/shared/blogContent";
+import { BLOG_SEO_OVERRIDES } from "@/shared/blogSeoOverrides";
+import BlogMidArticleCta from "@/app/components/BlogMidArticleCta";
 import "@/app/style/BlogPage.css";
 
 export const revalidate = 300;
@@ -27,9 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Blog Not Found" };
   }
 
-  const seoTitle = blog.metaTitle?.trim() || blog.blogTitle;
+  // Aug 2026 SEO plan rewrites take precedence over CMS copy for the mapped
+  // posts (see blogSeoOverrides.ts).
+  const override = BLOG_SEO_OVERRIDES[slug];
+  const seoTitle = override?.title || blog.metaTitle?.trim() || blog.blogTitle;
   // CMS text is unvalidated — clamp to SERP-safe length at a word boundary.
-  const rawDescription = blog.metaDescription?.trim() || blog.excerpt;
+  const rawDescription =
+    override?.description || blog.metaDescription?.trim() || blog.excerpt;
   const seoDescription =
     rawDescription.length > 160
       ? `${rawDescription.slice(0, 157).replace(/\s+\S*$/, "")}…`
@@ -124,6 +130,13 @@ export default async function BlogPostPage({ params }: Props) {
     splitOnFaqMarker(blog.descriptionHtml);
   const hasFaqs = blog.faqs.length > 0;
 
+  // Mid-article CTA lands after the first section (Aug 2026 plan, action 18).
+  const {
+    intro: introHtml,
+    rest: restHtml,
+    hasSplit: hasMidCta,
+  } = splitAfterFirstSection(contentBefore);
+
   const faqJsonLd = hasFaqs
     ? {
         "@context": "https://schema.org",
@@ -190,29 +203,26 @@ export default async function BlogPostPage({ params }: Props) {
                   />
                 </div>
 
-                {hasMarker ? (
+                <div
+                  className="bp-content"
+                  dangerouslySetInnerHTML={{ __html: introHtml }}
+                />
+                {hasMidCta ? (
                   <>
+                    <BlogMidArticleCta />
                     <div
                       className="bp-content"
-                      dangerouslySetInnerHTML={{ __html: contentBefore }}
+                      dangerouslySetInnerHTML={{ __html: restHtml }}
                     />
-                    {hasFaqs ? <BlogPostFaqs items={blog.faqs} /> : null}
-                    {contentAfter ? (
-                      <div
-                        className="bp-content"
-                        dangerouslySetInnerHTML={{ __html: contentAfter }}
-                      />
-                    ) : null}
                   </>
-                ) : (
-                  <>
-                    <div
-                      className="bp-content"
-                      dangerouslySetInnerHTML={{ __html: contentBefore }}
-                    />
-                    {hasFaqs ? <BlogPostFaqs items={blog.faqs} /> : null}
-                  </>
-                )}
+                ) : null}
+                {hasFaqs ? <BlogPostFaqs items={blog.faqs} /> : null}
+                {hasMarker && contentAfter ? (
+                  <div
+                    className="bp-content"
+                    dangerouslySetInnerHTML={{ __html: contentAfter }}
+                  />
+                ) : null}
               </article>
             </div>
 

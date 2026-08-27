@@ -43,7 +43,7 @@ import {
   MdOutlineVolunteerActivism,
   MdRoofing,
 } from "react-icons/md";
-import { RiMapPinLine } from "react-icons/ri";
+import { RiLineChartLine, RiMapPinLine, RiSearchLine } from "react-icons/ri";
 import { SiGoogleads } from "react-icons/si";
 import { useContext, useEffect, useRef, useState } from "react";
 import {
@@ -109,13 +109,14 @@ const gmbServiceLinks = [
   {
     id: "gmb-optimization",
     label: "GMB Optimization",
-    link: "/services/gmb-optimization",
+    link: "/local-seo-google-business-optimization",
   },
 ];
 
 // Niche dropdowns (Local SEO / Web Design / Industries) all share this category
 // taxonomy so the same trade sits under the same heading in every menu.
 const NICHE_GROUP_ORDER = [
+  "Core SEO Services",
   "Repair & Installation",
   "Remodeling & Construction",
   "Outdoor & Property Care",
@@ -144,6 +145,34 @@ function groupNicheLinks(links: NicheLink[]) {
 }
 
 const seoServiceLinks: NicheLink[] = [
+  // Core SEO Services (Aug 2026 SEO-plan pages)
+  {
+    id: "seo-services",
+    title: "SEO Services",
+    description:
+      "The full stack — technical, local, content and links, reported in calls.",
+    link: "/services/seo-services",
+    icon: <RiSearchLine />,
+    group: "Core SEO Services",
+  },
+  {
+    id: "local-seo-for-small-business",
+    title: "Local SEO for Small Business",
+    description:
+      "Map pack rankings and reviews for storefronts, practices and studios.",
+    link: "/services/local-seo-for-small-business",
+    icon: <FaStore />,
+    group: "Core SEO Services",
+  },
+  {
+    id: "local-seo-packages",
+    title: "Local SEO Packages",
+    description:
+      "Three flat-scope plans with deliverables you can read before you pay.",
+    link: "/services/local-seo-packages",
+    icon: <RiLineChartLine />,
+    group: "Core SEO Services",
+  },
   // Repair & Installation
   {
     id: "local-seo-services-for-hvac",
@@ -1332,6 +1361,27 @@ function Navbar() {
                               Delaware businesses focused on visibility, leads,
                               and long-term growth.
                             </span>
+
+                            <span className="services-core-tags">
+                              <Link
+                                href="/services/delaware/seo"
+                                className="services-core-tag"
+                              >
+                                SEO Company Delaware
+                              </Link>
+                              <Link
+                                href="/services/delaware/web-design"
+                                className="services-core-tag"
+                              >
+                                Delaware Web Design
+                              </Link>
+                              <Link
+                                href="/services/wilmington/digital-marketing"
+                                className="services-core-tag"
+                              >
+                                Wilmington
+                              </Link>
+                            </span>
                           </span>
                         </div>
 
@@ -1358,7 +1408,7 @@ function Navbar() {
                                 href="/services/philadelphia/local-seo"
                                 className="services-core-tag"
                               >
-                                Local SEO Agency Philadelphia
+                                Philadelphia SEO Company
                               </Link>
                               <Link
                                 href="/services/philadelphia/sem"
@@ -1371,6 +1421,35 @@ function Navbar() {
                                 className="services-core-tag"
                               >
                                 PPC Agency Philadelphia
+                              </Link>
+                            </span>
+                          </span>
+                        </div>
+
+                        <div className="services-core-card services-core-card--with-tags">
+                          <span className="services-core-icon">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>
+                              <Link
+                                href="/services/nyc/digital-marketing"
+                                className="services-core-title-link"
+                              >
+                                Digital Marketing Agency in NYC
+                              </Link>
+                            </strong>
+                            <span>
+                              Borough-level SEO, ads, and web design for New
+                              York City businesses across all five boroughs.
+                            </span>
+
+                            <span className="services-core-tags">
+                              <Link
+                                href="/services/nyc/local-seo"
+                                className="services-core-tag"
+                              >
+                                NYC Local SEO
                               </Link>
                             </span>
                           </span>
@@ -1708,10 +1787,34 @@ function Navbar() {
                       </li>
                       <li>
                         <Link
+                          href="/services/delaware/seo"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          SEO Company Delaware
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/delaware/web-design"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Delaware Web Design
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/wilmington/digital-marketing"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Wilmington Digital Marketing
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
                           href="/services/philadelphia/local-seo"
                           onClick={() => handleToggleMobileMenu(false)}
                         >
-                          Local SEO Agency Philadelphia
+                          Philadelphia SEO Company
                         </Link>
                       </li>
                       <li>
@@ -1728,6 +1831,22 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           PPC Agency Philadelphia
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/nyc/digital-marketing"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          NYC Digital Marketing
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/nyc/local-seo"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          NYC Local SEO
                         </Link>
                       </li>
                     </ul>

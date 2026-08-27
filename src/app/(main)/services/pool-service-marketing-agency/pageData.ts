@@ -71,7 +71,7 @@ export const poolServiceMarketing = buildIndustryMarketingPage({
 
   mapEyebrow: "Where pool owners actually look",
   mapIntro:
-    'Most pool owners never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/services/gmb-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls, street by street.',
+    'Most pool owners never scroll past the first three map results. We track your rank across a geo-grid of your service area and work every signal — <a class="ima-inline-link" href="/local-seo-google-business-optimization">Google Business Profile optimization</a>, reviews, citations, and links — to move you into the spots that get the calls, street by street.',
   mapQuery: "pool service near me",
 
   foundationDesc:
