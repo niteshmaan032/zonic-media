@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import OfferPopupModal from "@/app/components/OfferPopupModal";
 import {
   buildBreadcrumbJsonLd,
   buildServiceJsonLd,
@@ -997,6 +998,26 @@ export default function HvacOfferPage() {
           </span>
         </div>
       </footer>
+
+      <OfferPopupModal
+        idPrefix="hwd"
+        formType="free-hvac-website"
+        heading="Get your HVAC website with no upfront fee."
+        serviceLabel="HVAC work you want more of"
+        servicePlaceholder="Select an HVAC service"
+        services={[
+          "AC Repair",
+          "Heating / Furnace Repair",
+          "AC or Furnace Replacement",
+          "Heat Pumps",
+          "Ductless Mini-Splits",
+          "Indoor Air Quality",
+          "Maintenance Plans",
+          "Commercial HVAC",
+          "Emergency Service",
+          "Mix of the above",
+        ]}
+      />
 
       <GhlChatWidget />
     </div>

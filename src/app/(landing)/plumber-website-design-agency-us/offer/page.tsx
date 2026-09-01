@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import OfferPopupModal from "@/app/components/OfferPopupModal";
 import {
   buildBreadcrumbJsonLd,
   buildServiceJsonLd,
@@ -997,6 +998,25 @@ export default function PlumbingOfferPage() {
           </span>
         </div>
       </footer>
+
+      <OfferPopupModal
+        idPrefix="pwd"
+        formType="free-plumbing-website"
+        heading="Get your plumbing website with no upfront fee."
+        serviceLabel="Plumbing work you want more of"
+        servicePlaceholder="Select a plumbing service"
+        services={[
+          "Emergency Plumbing",
+          "Drain Cleaning",
+          "Water Heaters",
+          "Sewer Lines",
+          "Leak Detection",
+          "Repiping",
+          "Sump Pumps",
+          "Commercial Plumbing",
+          "Mix of the above",
+        ]}
+      />
 
       <GhlChatWidget />
     </div>

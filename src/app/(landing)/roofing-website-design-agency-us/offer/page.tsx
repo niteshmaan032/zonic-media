@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import OfferPopupModal from "@/app/components/OfferPopupModal";
 import {
   buildBreadcrumbJsonLd,
   buildServiceJsonLd,
@@ -1125,6 +1126,26 @@ export default function FreeRoofingWebsiteOfferPage() {
           </span>
         </div>
       </footer>
+
+      <OfferPopupModal
+        idPrefix="rwd"
+        formType="free-roofing-website"
+        heading="Get your roofing website with no upfront fee."
+        serviceLabel="Roofing work you want more of"
+        servicePlaceholder="Select a roofing service"
+        services={[
+          "Roof Repair",
+          "Roof Replacement",
+          "Storm Damage / Insurance",
+          "Shingle Roofing",
+          "Metal Roofing",
+          "Flat / Commercial Roofing",
+          "Emergency Roofing",
+          "Gutters",
+          "Siding",
+          "Mix of the above",
+        ]}
+      />
 
       <GhlChatWidget />
     </div>

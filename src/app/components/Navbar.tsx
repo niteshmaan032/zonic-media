@@ -1874,7 +1874,7 @@ function Navbar() {
                   )
                 }
               >
-                <Accordion.Item eventKey="6">
+                <Accordion.Item eventKey="7">
                   <div className="mob-acc-link-header">
                     <Link
                       href="/website-design-agency-us/offer"
@@ -1883,7 +1883,7 @@ function Navbar() {
                       Free Website
                     </Link>
                     <MobileAccordionToggle
-                      eventKey="6"
+                      eventKey="7"
                       label="Toggle free website menu"
                     />
                   </div>

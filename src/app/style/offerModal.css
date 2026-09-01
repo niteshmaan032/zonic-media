@@ -1,0 +1,392 @@
+/* ── Offer popup modal ─────────────────────────────────────────────────────
+   Timed offer form for the free-website landers.
+
+   Colours are read from custom properties rather than hard-coded, so the
+   modal picks up whichever lander it renders inside — orange on roofing, teal
+   on HVAC, blue on plumbing — with no per-page stylesheet. Fallbacks cover
+   any page that does not define them. */
+
+/* The component pins `top` to the current scroll offset and restores it on
+   close. `position: fixed` is what actually stops iOS Safari from scrolling
+   the page behind the modal — `overflow: hidden` alone leaks there. */
+body.offer-modal-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.offer-modal {
+  --om-ink: var(--ink, #111a27);
+  --om-accent: var(--blue, #2167f5);
+  --om-highlight: var(--yellow, #ffc928);
+
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.offer-modal *,
+.offer-modal *::before,
+.offer-modal *::after {
+  box-sizing: border-box;
+}
+
+.offer-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 21, 47, 0.62);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: offer-modal-fade 0.25s ease both;
+}
+
+/* No overflow here, so the corner badge can hang past the edge. The inner
+   scroll wrapper handles overflow instead. */
+.offer-modal__panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100%, 520px);
+  max-height: calc(100vh - 40px);
+  border-radius: 26px;
+  background: #fff;
+  color: var(--om-ink);
+  box-shadow: 0 40px 90px rgba(7, 21, 47, 0.34);
+  animation: offer-modal-rise 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.offer-modal__scroll {
+  width: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 56px 30px 24px;
+  border-radius: inherit;
+}
+
+.offer-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #eef2f8;
+  color: #55637a;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.offer-modal__close:hover {
+  background: var(--om-ink);
+  color: #fff;
+}
+
+.offer-modal__close svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.offer-modal__panel h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 27px;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+  font-weight: 850;
+}
+
+/* Circular "claim offer" seal over the panel's top-left corner.
+   Motion follows the ui-ux-pro-max guidance: transform/opacity only (cheap to
+   composite) and ease-out overshoot on entry. A translucent halo sits behind
+   the seal as a soft backing circle, and the seal keeps a slow double-thump
+   beat once it has landed. */
+.offer-modal__badge {
+  position: absolute;
+  top: -26px;
+  left: -22px;
+  z-index: 2;
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-content: center;
+  gap: 2px;
+  border-radius: 50%;
+  background: var(--om-highlight);
+  /* Ink on the accent yellows clears 4.5:1 on all four landers. */
+  color: var(--om-ink);
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow:
+    0 0 0 11px color-mix(in srgb, var(--om-highlight) 26%, transparent),
+    0 14px 30px rgba(7, 21, 47, 0.32);
+  transform: rotate(-12deg);
+  animation:
+    offer-badge-pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1) 120ms both,
+    offer-badge-beat 2.4s ease-in-out 620ms infinite;
+}
+
+.offer-modal__badge b {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.offer-modal__badge i {
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1;
+}
+
+@keyframes offer-badge-pop {
+  from {
+    opacity: 0;
+    transform: rotate(-34deg) scale(0.35);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1);
+  }
+}
+
+/* Double thump, then rest — a heartbeat rather than a spin. */
+@keyframes offer-badge-beat {
+  0%,
+  38%,
+  100% {
+    transform: rotate(-12deg) scale(1);
+  }
+  10% {
+    transform: rotate(-12deg) scale(1.12);
+  }
+  20% {
+    transform: rotate(-12deg) scale(1);
+  }
+  29% {
+    transform: rotate(-12deg) scale(1.07);
+  }
+}
+
+.offer-modal__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.offer-modal__field {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.offer-modal__field label {
+  color: #35425a;
+  font-size: 12.5px;
+  font-weight: 800;
+}
+
+.offer-modal__field--full {
+  grid-column: 1 / -1;
+}
+
+.offer-modal__field input,
+.offer-modal__field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  border: 1px solid #dde4ef;
+  border-radius: 11px;
+  background: #f8faff;
+  color: var(--om-ink);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+/* Native arrow replaced with a drawn chevron so the select matches the inputs
+   across browsers. */
+.offer-modal__field select {
+  appearance: none;
+  padding-right: 34px;
+  background-image: linear-gradient(45deg, transparent 50%, #758196 50%),
+    linear-gradient(135deg, #758196 50%, transparent 50%);
+  background-position: calc(100% - 18px) 19px, calc(100% - 13px) 19px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.offer-modal__field input:focus-visible,
+.offer-modal__field select:focus-visible {
+  border-color: var(--om-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--om-accent) 16%, transparent);
+}
+
+.offer-modal__error {
+  margin: 0;
+  color: #d4380d;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.offer-modal__consent {
+  margin: 16px 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #66738a;
+  font-size: 10px;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.offer-modal__consent input {
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  margin: 2px 0 0;
+  accent-color: var(--om-accent);
+}
+
+.offer-modal__consent .lead-consent-toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--om-accent);
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.offer-modal__submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 16px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--om-ink);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-modal__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 26px rgba(7, 21, 47, 0.22);
+}
+
+.offer-modal__submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+.offer-modal .consent-legal-links {
+  margin: 8px 0 0;
+  color: #748196;
+  font-size: 11px;
+  text-align: center;
+}
+
+.offer-modal .consent-legal-links a {
+  color: var(--om-accent);
+  font-weight: 700;
+}
+
+@keyframes offer-modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes offer-modal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 560px) {
+  .offer-modal {
+    padding: 12px;
+  }
+
+  .offer-modal__panel {
+    max-height: calc(100vh - 24px);
+    border-radius: 22px;
+  }
+
+  .offer-modal__scroll {
+    padding: 48px 20px 20px;
+  }
+
+  .offer-modal__panel h2 {
+    font-size: 23px;
+  }
+
+  .offer-modal__badge {
+    top: -20px;
+    left: -14px;
+    width: 66px;
+    height: 66px;
+  }
+
+  .offer-modal__badge b {
+    font-size: 14px;
+  }
+
+  .offer-modal__badge i {
+    font-size: 8px;
+  }
+
+  .offer-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-modal__field--full {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offer-modal__backdrop,
+  .offer-modal__panel,
+  .offer-modal__badge {
+    animation: none !important;
+  }
+
+  .offer-modal__badge {
+    opacity: 1;
+    transform: rotate(-12deg) scale(1);
+  }
+
+  .offer-modal__submit {
+    transition: none !important;
+  }
+}
