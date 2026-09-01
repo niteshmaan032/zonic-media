@@ -161,7 +161,10 @@ body.hwd-menu-is-open {
   gap: clamp(36px, 5vw, 96px);
 }
 
-.hwd-page .hero-copy { max-width: 680px; }
+/* Hero columns are top-aligned here (not centred like the base page) so the
+   copy can be nudged down without dragging the mock-up with it. */
+.hwd-page .hero { align-items: start; }
+.hwd-page .hero-copy { max-width: 680px; margin-top: 24px; }
 .hwd-page .eyebrow { width: fit-content; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border: 1px solid rgba(8, 126, 164, .2); border-radius: 999px; background: rgba(255, 255, 255, .8); box-shadow: 0 8px 24px rgba(20, 52, 78, .07); font-size: 14px; letter-spacing: .055em; text-transform: uppercase; font-weight: 800; color: #4f5967; }
 .hwd-page .eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
 .hwd-page .eyebrow__pulse { width: 8px; height: 8px; border-radius: 50%; background: #35c879; box-shadow: 0 0 0 5px rgba(53, 200, 121, .13); }
@@ -197,7 +200,7 @@ body.hwd-menu-is-open {
 .hwd-page .htb-trustpilot-img { width: 104px; height: auto; }
 
 /* ── Hero concept stage ───────────────────────────────────── */
-.hwd-page .concept-stage { position: relative; min-height: 620px; margin-top: -56px; display: grid; place-items: center; isolation: isolate; }
+.hwd-page .concept-stage { position: relative; min-height: 620px; margin-top: 42px; display: grid; place-items: center; isolation: isolate; }
 .hwd-page .concept-stage::before { content: ""; position: absolute; width: 82%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(8,126,164,.2), rgba(49,93,120,.05) 48%, transparent 70%); filter: blur(2px); z-index: -3; }
 .hwd-page .stage-orbit { position: absolute; border-radius: 50%; border: 1px solid rgba(8,126,164,.18); z-index: -2; }
 .hwd-page .stage-orbit--one { width: 590px; height: 590px; }
@@ -676,9 +679,16 @@ body.hwd-menu-is-open {
   .hwd-page .niche-site-copy h4 { margin: 7px 0 0; font-size: 19px; }
   .hwd-page .niche-site-actions { margin-top: 11px; }
   .hwd-page .niche-site-nav { height: 44px; padding: 0 14px; }
-  .hwd-page .niche-mobile { width: 100px; height: 205px; right: 0; border-width: 4px; }
-  .hwd-page .niche-mobile-content h5 { font-size: 11px; }
-  .hwd-page .niche-mobile-image { height: 52px; }
+  /* The phone mock keeps a fixed height, so its contents have to be sized
+     to fit at this breakpoint — the kicker and heading otherwise wrap to
+     four lines and push the button out through the bottom of the frame. */
+  .hwd-page .niche-mobile { width: 100px; height: 205px; right: 0; border-width: 4px; overflow: hidden; }
+  .hwd-page .niche-mobile-content { overflow: hidden; padding: 14px 8px 8px; }
+  .hwd-page .niche-mobile-top { margin-bottom: 8px; }
+  .hwd-page .niche-mobile-content > span { display: block; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hwd-page .niche-mobile-content h5 { margin: 5px 0 7px; font-size: 10px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .hwd-page .niche-mobile-image { height: 44px; }
+  .hwd-page .niche-mobile-button { margin-top: 7px; padding: 6px; }
   .hwd-page .niche-result-card { bottom: 0; left: 0; }
   .hwd-page .niche-banner { margin-top: 16px; padding: 28px 18px; border-radius: 22px; }
   .hwd-page .niche-banner-copy h3 { font-size: 21px; }
