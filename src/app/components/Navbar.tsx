@@ -982,6 +982,56 @@ function MobileAccordionToggle({
   );
 }
 
+/* ── Free Website offer landers ──────────────────────────────────────────
+   The industry-specific versions of the offer. The general offer page is the
+   parent nav link itself, so it is deliberately not repeated in this list. */
+type FreeWebsiteLink = Omit<NicheLink, "group">;
+
+const freeWebsiteLinks: FreeWebsiteLink[] = [
+  {
+    id: "free-website-roofing",
+    title: "Roofing Websites",
+    description:
+      "Built around repair, replacement, and storm-damage search intent.",
+    link: "/roofing-website-design-agency-us/offer",
+    icon: <MdRoofing />,
+  },
+  {
+    id: "free-website-hvac",
+    title: "HVAC Websites",
+    description:
+      "Built around AC repair, heating, and seasonal maintenance demand.",
+    link: "/hvac-website-design-agency-us/offer",
+    icon: <MdOutlineHvac />,
+  },
+  {
+    id: "free-website-plumbing",
+    title: "Plumbing Websites",
+    description:
+      "Built around emergency calls, drains, and water-heater replacements.",
+    link: "/plumber-website-design-agency-us/offer",
+    icon: <MdOutlinePlumbing />,
+  },
+];
+
+function FreeWebsiteMenu() {
+  return (
+    <div className="services-dropdown-container services-core-dropdown free-website-dropdown">
+      <div className="services-core-grid free-website-grid">
+        {freeWebsiteLinks.map((item) => (
+          <Link href={item.link} className="services-core-card" key={item.id}>
+            <span className="services-core-icon">{item.icon}</span>
+            <span className="services-core-content">
+              <strong>{item.title}</strong>
+              <span>{item.description}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 type NicheSection = { group: string; items: NicheLink[] };
 
 // Desktop mega menu: the same card layout as the Services dropdown, split into
@@ -1465,10 +1515,15 @@ function Navbar() {
                       groups={industryGroups}
                     />
                   </li>
-                  <li>
-                    <Link href="/website-design-agency-us/offer">
-                      Free Website
+                  <li className="services-dropdown services-dropdown--anchored">
+                    <Link
+                      href="/website-design-agency-us/offer"
+                      className="nav-link-with-icon"
+                    >
+                      Free Website <MdArrowOutward size={16} />
                     </Link>
+
+                    <FreeWebsiteMenu />
                   </li>
                   {/* Desktop "Others" dropdown removed Aug 2026 — its links
                       (Launchpad, About, Blog, Contact, Free Website) live in
@@ -1809,12 +1864,45 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Link
-                href="/website-design-agency-us/offer"
-                onClick={() => handleToggleMobileMenu(false)}
+              <Accordion
+                flush
+                id="mobileFreeWebsiteAccordion"
+                activeKey={accordionKey}
+                onSelect={(eventKey) =>
+                  setAccordionKey(
+                    typeof eventKey === "string" ? eventKey : null,
+                  )
+                }
               >
-                Free Website
-              </Link>
+                <Accordion.Item eventKey="6">
+                  <div className="mob-acc-link-header">
+                    <Link
+                      href="/website-design-agency-us/offer"
+                      onClick={() => handleToggleMobileMenu(false)}
+                    >
+                      Free Website
+                    </Link>
+                    <MobileAccordionToggle
+                      eventKey="6"
+                      label="Toggle free website menu"
+                    />
+                  </div>
+                  <Accordion.Body>
+                    <ul className="mobile-niche-sublist">
+                      {freeWebsiteLinks.map((item) => (
+                        <li key={item.id}>
+                          <Link
+                            href={item.link}
+                            onClick={() => handleToggleMobileMenu(false)}
+                          >
+                            {item.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </li>
             <li>
               <Accordion

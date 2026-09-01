@@ -35,29 +35,6 @@
   font-size: 14px;
 }
 
-/* SMS/messaging consent disclosure that sits directly above the site footer. */
-.hvac-consent-footer {
-  background: #0a1120;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px 0;
-}
-.hvac-consent-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-.hvac-consent-inner p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12.5px;
-  line-height: 1.7;
-}
-@media (max-width: 560px) {
-  .hvac-consent-inner {
-    padding: 0 20px;
-  }
-}
-
 /* Contextual in-body internal links. Scoped under the page wrapper so the
    selector never leaks site-wide. Uses the shared orange accent. */
 .hia-page .hvac-inline-link {

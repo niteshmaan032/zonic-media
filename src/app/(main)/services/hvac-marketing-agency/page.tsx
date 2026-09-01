@@ -17,7 +17,6 @@ import {
   LeadEngineVisual,
   MapPackRaceVisual,
 } from "@/app/components/IndustryMarketingVisuals";
-import HvacConsentNotice from "./HvacConsentNotice";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -828,7 +827,6 @@ function Page() {
       </div>
 
       {/* FOOTER */}
-      <HvacConsentNotice />
       <RelatedServices current="/services/hvac-marketing-agency" />
       <Footer />
     </>

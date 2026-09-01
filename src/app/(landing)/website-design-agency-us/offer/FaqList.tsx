@@ -1,4 +1,5 @@
-const FAQS = [
+/** Exported so the page can emit FAQPage schema from the same source. */
+export const FAQS = [
   {
     question: "Is the professional website really free?",
     answer:

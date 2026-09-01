@@ -22,6 +22,13 @@ const GHL_PAGES = [
   "/services",
   "/services/launchpad",
   "/services/google-ads",
+  // Free-website offer landers. NOTE: these four DO carry a lead form with a
+  // phone field and SMS consent, which is the "multiple opt-in sources" shape
+  // GHL's compliance crawler rejects — added on explicit request.
+  "/website-design-agency-us/offer",
+  "/roofing-website-design-agency-us/offer",
+  "/hvac-website-design-agency-us/offer",
+  "/plumber-website-design-agency-us/offer",
 ];
 
 // Remove the loader script and every node the widget injects so it does not

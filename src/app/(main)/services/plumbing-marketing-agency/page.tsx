@@ -17,7 +17,6 @@ import {
   LeadEngineVisual,
   MapPackRaceVisual,
 } from "@/app/components/IndustryMarketingVisuals";
-import PlumbingConsentNotice from "./PlumbingConsentNotice";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -834,7 +833,6 @@ function Page() {
       </div>
 
       {/* FOOTER */}
-      <PlumbingConsentNotice />
       <RelatedServices current="/services/plumbing-marketing-agency" />
       <Footer />
     </>

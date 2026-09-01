@@ -1,5 +1,4 @@
 import Navbar from "@/app/components/Navbar";
-import StickyCallBar from "@/app/components/StickyCallBar";
 
 export default function MainLayout({
   children,
@@ -10,7 +9,6 @@ export default function MainLayout({
     <>
       <Navbar />
       {children}
-      <StickyCallBar />
     </>
   );
 }

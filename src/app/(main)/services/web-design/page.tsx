@@ -156,7 +156,11 @@ const wdServices: WdService[] = [
         <Link href="/services" className="wd-inline-link">
           full-service marketing
         </Link>{" "}
-        system.
+        system. On a qualifying plan the build is covered by our{" "}
+        <Link href="/website-design-agency-us/offer" className="wd-inline-link">
+          free website offer
+        </Link>
+        .
       </>
     ),
   },

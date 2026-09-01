@@ -98,6 +98,12 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
 
+  // Free-website offer landers
+  { url: `${BASE_URL}/website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/roofing-website-design-agency-us/offer`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/hvac-website-design-agency-us/offer`,           changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/plumber-website-design-agency-us/offer`,        changeFrequency: "monthly", priority: 0.8 },
+
   // Home inspector marketing
   { url: `${BASE_URL}/services/home-inspector-marketing`,                changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/home-inspector-marketing/california`,     changeFrequency: "monthly", priority: 0.7 },

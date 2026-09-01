@@ -10,7 +10,6 @@ import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
-import HvacConsentNotice from "./HvacConsentNotice";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -498,7 +497,6 @@ export default function StatePage({ state }: { state: StateContent }) {
       </div>
 
       {/* FOOTER */}
-      <HvacConsentNotice />
       <Footer />
     </>
   );
