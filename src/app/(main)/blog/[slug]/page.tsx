@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { FaCalendarDays, FaCircleUser } from "react-icons/fa6";
 import Footer from "@/app/components/Footer";
 import BlogPostFaqs from "@/app/components/BlogPostFaqs";
@@ -10,7 +11,13 @@ import {
   getPublishedBlogs,
 } from "@/backend/lib/blogs";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
-import { splitAfterFirstSection, splitOnFaqMarker } from "@/shared/blogContent";
+import {
+  canonicalizeHostLinks,
+  ensureImageAlts,
+  pickRelatedPosts,
+  splitAfterFirstSection,
+  splitOnFaqMarker,
+} from "@/shared/blogContent";
 import { BLOG_SEO_OVERRIDES } from "@/shared/blogSeoOverrides";
 import BlogMidArticleCta from "@/app/components/BlogMidArticleCta";
 import "@/app/style/BlogPage.css";
@@ -41,8 +48,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `${rawDescription.slice(0, 157).replace(/\s+\S*$/, "")}…`
       : rawDescription;
 
+  // The layout template appends " | Zonic Media" (14 chars). 63 of 180 live
+  // titles overflowed 60 chars that way, so long titles render absolute.
+  const title =
+    seoTitle.length + 14 > 60 ? { absolute: seoTitle } : seoTitle;
+
   return {
-    title: seoTitle,
+    title,
     description: seoDescription,
     alternates: {
       canonical: `/blog/${slug}`,
@@ -88,6 +100,12 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const relatedPosts = pickRelatedPosts(
+    { slug, blogTitle: blog.blogTitle },
+    publishedBlogs,
+    4,
+  );
+
   const recentPosts = publishedBlogs
     .filter((recent) => recent.slug !== slug)
     .map((recent) => ({
@@ -102,16 +120,29 @@ export default async function BlogPostPage({ params }: Props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${SITE_URL}/blog/${slug}#article`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${slug}`,
+    },
     headline: blog.blogTitle,
     image: blog.featuredImageUrl,
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
     author: {
       "@type": "Person",
       name: blog.authorName,
+      worksFor: { "@id": `${SITE_URL}/#organization` },
     },
     publisher: {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Zonic Media",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/logo.webp`,
+      },
     },
     datePublished: blog.publishDate,
     dateModified: blog.publishedAt
@@ -127,7 +158,9 @@ export default async function BlogPostPage({ params }: Props) {
   ]);
 
   const { before: contentBefore, after: contentAfter, hasMarker } =
-    splitOnFaqMarker(blog.descriptionHtml);
+    splitOnFaqMarker(
+      canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+    );
   const hasFaqs = blog.faqs.length > 0;
 
   // Mid-article CTA lands after the first section (Aug 2026 plan, action 18).
@@ -222,6 +255,24 @@ export default async function BlogPostPage({ params }: Props) {
                     className="bp-content"
                     dangerouslySetInnerHTML={{ __html: contentAfter }}
                   />
+                ) : null}
+
+                {relatedPosts.length > 0 ? (
+                  <nav className="bp-related" aria-label="Related guides">
+                    <h2 className="bp-related-heading">Related guides</h2>
+                    <ul className="bp-related-list">
+                      {relatedPosts.map((post) => (
+                        <li key={post.id}>
+                          <Link
+                            href={`/blog/${post.slug}`}
+                            className="bp-related-link"
+                          >
+                            {post.blogTitle}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
                 ) : null}
               </article>
             </div>

@@ -29,20 +29,19 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/solar-website-design";
 
 export const metadata: Metadata = {
-  title: "Solar Website Design That Books Consultations",
+  title: { absolute: "Solar Website Design Agency | Sites That Book Consultations" },
   description:
-    "Solar website design built as a lead system — savings estimates, instant quote flows, financing UX, and mobile-first design that books consultations and installs.",
+    "Solar website design agency for installers: savings estimators, incentive pages, financing UX and consultation booking that turn solar research into installs.",
   keywords: [
     "solar website design",
+    "solar website design agency",
     "solar company website design",
-    "solar installer website design",
-    "solar panel website design",
-    "websites for solar companies",
-    "solar energy website design",
     "solar web design",
-    "solar lead generation website",
-    "solar landing page design",
-    "solar company web designer",
+    "best solar website design",
+    "solar panel website design",
+    "solar energy website design",
+    "solar contractor websites design",
+    "solar website design ideas",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Solar Website Design That Books Consultations | Zonic Media",
     description:
-      "Solar website design built as a lead system — savings estimates, instant quote flows, financing UX, and mobile-first design that books consultations and installs.",
+      "Solar website design agency for installers: savings estimators, incentive pages, financing UX and consultation booking that turn solar research into installs.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -150,6 +149,11 @@ const SolarWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What should a solar company website include to convert consultations?",
+    answer:
+      "Solar buyers research for months and compare on savings, so the site needs a savings estimator or clear savings examples by home size, a page on federal and state incentives that is kept current, financing options, warranty details, and installation galleries with locations. A consultation form that captures the utility bill range qualifies leads. Zonic Media builds solar sites around that journey and updates incentive pages as programs change.",
   },
 ];
 
@@ -426,6 +430,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked consultations, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/solar-website-design-agency-us/offer" className="hiw-inline-link">
+                      free solar website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

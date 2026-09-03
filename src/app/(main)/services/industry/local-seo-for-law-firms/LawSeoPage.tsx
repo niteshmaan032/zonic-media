@@ -1728,7 +1728,7 @@ export default function LawSeoPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/local-seo-for-law-firms",
+              "url": "https://www.zonicllc.com/services/industry/local-seo-for-law-firms",
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

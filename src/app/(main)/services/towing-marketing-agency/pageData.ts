@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const towingMarketing = buildIndustryMarketingPage({
   slug: "towing-marketing-agency",
-  title: "Towing Marketing Agency | Tow Truck SEO & Ads | Zonic Media",
+  title: "Towing Marketing Agency | Tow Truck SEO, Ads & Calls",
   description:
-    "Towing marketing agency for US tow truck & roadside assistance companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive towing leads. Free audit.",
+    "Towing marketing agency for tow and roadside companies: emergency-search Map Pack rankings, Google Business Profile, Google Ads.",
   keywords: [
     "towing marketing agency",
-    "tow truck marketing",
+    "tow marketing agency",
     "towing company marketing",
-    "marketing for towing companies",
+    "how to advertise a towing business",
+    "towing seo",
+    "towing company google ads",
+    "tow truck marketing",
     "towing lead generation",
-    "tow truck SEO",
-    "local SEO for towing companies",
-    "roadside assistance marketing",
-    "Google Ads for towing companies",
-    "towing company leads",
   ],
 
   eyebrow: "Towing Marketing Agency",

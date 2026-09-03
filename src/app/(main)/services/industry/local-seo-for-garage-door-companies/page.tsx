@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-garage-door-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Garage Door Companies",
+  title: { absolute: "Garage Door SEO | Local SEO for Garage Door Companies" },
   description:
-    "Local SEO for garage door companies that turns 'garage door repair near me' into booked jobs — GBP, citations, reviews & pages. Free audit.",
+    "Garage door SEO for repair and installation companies: emergency repair pages, Google Business Profile, service-area pages.",
   keywords: [
-    "local SEO for garage door companies",
-    "garage door repair near me",
-    "garage door installation",
-    "garage door spring repair",
-    "garage door opener repair",
-    "garage door company near me",
-    "garage door SEO",
-    "SEO for garage door companies",
-    "local SEO for garage door repair",
-    "Google Business Profile for garage door",
-    "garage door lead generation",
+    "local seo for garage door companies",
+    "garage door seo",
+    "garage door repair website seo",
+    "garage door company seo",
+    "garage door repair website marketing",
+    "local garage door companies",
+    "garage door marketing",
+    "garage door leads",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const GarageSeoFaqs = [
     question: "Why Choose Zonic Media over Another Garage Door SEO Company?",
     answer:
       "We specialize in local home-service businesses like garage door repair and installation, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "How do garage door companies rank for emergency repair searches?",
+    answer:
+      "Emergency searches are decided in the Map Pack, so the Google Business Profile must show 24-hour or same-day availability, the Garage Door Repair primary category, recent reviews that mention springs or openers, and a phone number that answers. The website needs a spring repair page, an opener repair page and a city page for every service area. Zonic Media fixes the profile first and builds the pages behind it.",
   },
 ];
 

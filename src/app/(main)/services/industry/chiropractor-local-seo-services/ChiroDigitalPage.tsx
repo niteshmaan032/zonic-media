@@ -997,7 +997,7 @@ export default function ChiroDigitalPage() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/industry/chiropractor-local-seo-services",
+              "url": "https://www.zonicllc.com/services/industry/chiropractor-local-seo-services",
               mainEntity: faqs.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

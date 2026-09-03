@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const poolServiceMarketing = buildIndustryMarketingPage({
   slug: "pool-service-marketing-agency",
-  title: "Pool Service Marketing Agency | Pool SEO & Ads | Zonic Media",
+  title: "Pool Service Marketing Agency | SEO, Ads & Weekly Accounts",
   description:
-    "Pool service marketing agency for US pool companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive pool cleaning and repair leads. Free audit.",
+    "Pool service marketing agency for cleaning, repair and maintenance companies: Google Business Profile, local SEO, Google Ads.",
   keywords: [
     "pool service marketing agency",
+    "pool service marketing company",
+    "pool cleaning website marketing",
+    "pool management marketing services",
+    "pool service seo",
+    "pool company google ads",
+    "pool service lead generation",
     "pool cleaning marketing",
-    "marketing for pool companies",
-    "pool service leads",
-    "pool cleaning lead generation",
-    "pool service SEO",
-    "local SEO for pool companies",
-    "Google Ads for pool service",
-    "pool maintenance marketing",
-    "pool repair leads",
   ],
 
   eyebrow: "Pool Service Marketing Agency",

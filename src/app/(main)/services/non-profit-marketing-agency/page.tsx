@@ -22,20 +22,19 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Nonprofit Marketing Agency | Digital Fundraising",
+  title: { absolute: "Nonprofit Digital Marketing Agency | Fundraising & Awareness" },
   description:
-    "Nonprofit marketing agency for digital fundraising and advocacy — social media, Google Ad Grant management, video & strategy. Discounted nonprofit rates.",
+    "Nonprofit digital marketing agency for donations and awareness: Google Ad Grants, local SEO, donor-focused websites.",
   keywords: [
     "nonprofit marketing agency",
-    "nonprofit digital marketing",
-    "Google Ad Grant management",
-    "nonprofit fundraising marketing",
-    "nonprofit social media management",
+    "nonprofit digital marketing agency",
+    "nonprofit marketing agency near me",
     "nonprofit advertising agency",
-    "digital advocacy agency",
-    "nonprofit video production",
-    "nonprofit content marketing",
-    "marketing for charities",
+    "marketing company for non profit",
+    "best nonprofit marketing agencies",
+    "google ad grants management",
+    "nonprofit seo services",
+    "nonprofit website design",
   ],
   alternates: { canonical: "/services/non-profit-marketing-agency" },
 };
@@ -188,12 +187,17 @@ const faqs = [
     q: "Do you work with small or grassroots nonprofits?",
     a: "Yes. We work across the sector, from grassroots groups to established foundations. The channels stay the same and the story changes with your cause, so we build a program that fits your budget and your stage.",
   },
+  {
+    q: "How can a nonprofit use the Google Ad Grant alongside SEO?",
+    a:
+      "The Google Ad Grant gives eligible nonprofits up to $10,000 a month in search advertising, but it only works on keywords with real search demand and pages that convert. We pair the grant with local SEO and a donation-focused website so grant traffic lands on pages that rank organically too, doubling visibility for program, volunteer and donation searches. Reporting shows donations and sign-ups, not just clicks.",
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: "https://zonicllc.com/services/non-profit-marketing-agency",
+  url: "https://www.zonicllc.com/services/non-profit-marketing-agency",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,

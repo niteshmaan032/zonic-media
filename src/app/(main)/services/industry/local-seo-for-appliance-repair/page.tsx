@@ -33,21 +33,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-appliance-repair";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Appliance Repair Companies",
+  title: { absolute: "Appliance Repair SEO | Local SEO for Appliance Repair" },
   description:
-    "Local SEO for appliance repair companies that wins the map pack — rank for 'appliance repair near me' and turn searches into booked calls. Free audit.",
+    "Appliance repair SEO: brand and appliance-specific pages, Google Business Profile, service-area pages and reviews that book same-day service calls.",
   keywords: [
-    "local SEO for appliance repair",
-    "appliance repair near me",
-    "refrigerator repair near me",
-    "washer repair",
-    "dryer repair",
-    "dishwasher repair",
-    "oven repair near me",
-    "appliance repair SEO",
-    "SEO for appliance repair",
-    "Google Business Profile for appliance repair",
-    "appliance repair lead generation",
+    "local seo for appliance repair",
+    "appliance repair seo",
+    "home repair website seo",
+    "appliance repair company seo",
+    "appliance repair marketing",
+    "appliance repair service company",
+    "appliance repair leads",
+    "local seo for service businesses",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -177,6 +174,11 @@ const ApplianceSeoFaqs = [
     question: "Why Choose Zonic Media over Another Appliance Repair SEO Company?",
     answer:
       "We specialize in local home-service businesses like appliance repair, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked service calls, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "Should an appliance repair company build pages for every brand it services?",
+    answer:
+      "Yes, for the major brands. Homeowners search the brand and the appliance, such as Whirlpool washer repair or LG refrigerator repair, so a page for each brand and each appliance type captures searches a generic services page never will. Add a city page for every service area and keep the Google Business Profile services list matching. Zonic Media builds that structure and tracks calls by brand and appliance.",
   },
 ];
 

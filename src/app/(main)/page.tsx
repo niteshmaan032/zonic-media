@@ -61,26 +61,22 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "GMB Suspension & Local SEO Experts | Zonic Media",
-  },
+  title: { absolute: "Digital Marketing Agency for Small Business | Zonic Media" },
   description:
-    "Google Business Profile suspended? We specialise in GBP reinstatement and local SEO for home service businesses. Free case review.",
+    "Affordable digital marketing agency for small businesses in the USA: local SEO, Google Business Profile, web design and Google Ads. 5.0 on Clutch. Free audit.",
   keywords: [
     "digital marketing agency for small business",
-    "local SEO agency USA",
-    "Google Business Profile services",
-    "marketing agency for small businesses",
-    "local SEO services for small business",
+    "affordable digital marketing agency for small business",
+    "best digital marketing company for small business",
+    "digital marketing agency usa",
+    "digital marketing agency near me",
+    "top digital marketing companies for small businesses",
+    "local seo agency usa",
+    "google business profile services",
     "small business website design",
-    "PPC management for small business",
-    "Google Maps ranking services",
-    "logo and graphic design services",
-    "online marketing agency USA",
-    "best digital marketing agency for small business",
-    "GMB reinstatement service",
-    "Google Business Profile optimization agency",
-    "best local SEO company USA",
+    "google ads management for small business",
+    "how much do digital marketing agencies charge",
+    "ai seo agency",
   ],
   alternates: {
     canonical: "/",
@@ -94,7 +90,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Marketing Agency for Small & Mid-Size Businesses | Zonic Media",
+    title: "Digital Marketing Agency for Small Business | Zonic Media",
     description:
       "Local SEO, Google Business Profile, website design, graphic & logo design, and PPC ads for small and mid-size US businesses.",
     url: "/",
@@ -124,23 +120,6 @@ const siteNavigationJsonLd = {
   "@id": `${SITE_URL}/#site-navigation`,
   name: siteNavigationItems.map((item) => item.name),
   url: siteNavigationItems.map((item) => item.url),
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
-  name: "Zonic Media",
-  url: SITE_URL,
-  inLanguage: "en-US",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/blog?search={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 const serviceJsonLd = {
@@ -658,6 +637,11 @@ const faqsLeft: Faq[] = [
       </>
     ),
   },
+  {
+    q: "How much do digital marketing agencies charge small businesses in 2026?",
+    a:
+      "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $750 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
+  },
 ];
 
 const faqsRight: Faq[] = [
@@ -1010,11 +994,6 @@ export default async function Home() {
   return (
     <>
       <script
-        id="home-website-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
-      <script
         id="home-site-navigation-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationJsonLd) }}
@@ -1041,7 +1020,7 @@ export default async function Home() {
                 Built for small &amp; mid-size US businesses
               </span>
               <h1 className="hm-hero-h1">
-                Marketing Agency for{" "}
+                Digital Marketing Agency for{" "}
                 <span className="hm-hl">
                   Small and Mid&#8209;Size
                   <svg viewBox="0 0 300 20" aria-hidden="true">
@@ -1259,7 +1238,7 @@ export default async function Home() {
             <div className="hm-sec-head hm-sec-head--center">
               <span className="hm-eyebrow">What we do</span>
               <h2 className="hm-h2">
-                No. 1 Marketing &amp; SEO Agency for Small Businesses in the US
+                A Top-Rated Marketing &amp; SEO Agency for Small Businesses in the US
               </h2>
               <p className="hm-lead">
                 Everything a small or mid-size business needs to grow online —
@@ -1846,7 +1825,7 @@ export default async function Home() {
         <section className="hm-banner">
           <span className="hm-banner-chip hm-banner-chip--a" aria-hidden="true">
             <FiStar />
-            4.9 rated on Clutch
+            5.0 rated on Clutch
           </span>
           <span className="hm-banner-chip hm-banner-chip--b" aria-hidden="true">
             <FiMapPin />

@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-general-contractors";
 
 export const metadata: Metadata = {
-  title: "Local SEO for General Contractors That Wins Jobs",
+  title: { absolute: "General Contractor SEO | Local SEO for General Contractors" },
   description:
-    "Local SEO for general contractors that wins the 'general contractor near me' map pack — GBP, citations, reviews & service-area pages. Free audit.",
+    "General contractor SEO for builders and construction companies: Google Business Profile, project pages, service-area pages.",
   keywords: [
-    "local SEO for general contractors",
-    "contractor SEO",
-    "general contractor near me",
-    "home remodeling contractor",
-    "home addition contractor",
-    "construction company near me",
-    "SEO for general contractors",
-    "local SEO for contractors",
-    "Google Business Profile for contractors",
-    "remodeling contractor near me",
-    "design build contractor",
+    "local seo for general contractors",
+    "general contractor seo",
+    "seo for contractors",
+    "construction company seo",
+    "contractor seo services",
+    "seo program for contractors",
+    "local seo for construction companies",
+    "general contractor services near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const ContractorSeoFaqs = [
     question: "Why Choose Zonic Media over Another Contractor SEO Company?",
     answer:
       "We specialize in local home-service and construction businesses, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound project after project — not churn.",
+  },
+  {
+    question: "Which Google Business Profile category should a general contractor use?",
+    answer:
+      "General Contractor as the primary category, with secondary categories for the work you actually want, such as Remodeler, Custom Home Builder or Construction Company. The wrong primary category is the most common reason contractors rank for jobs they do not want. Zonic Media audits the categories against the competitors in your Map Pack, sets the services list to match, and tracks which categories produce estimate requests.",
   },
 ];
 

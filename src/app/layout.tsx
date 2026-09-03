@@ -61,6 +61,8 @@ const knowsAboutTopics = [
   "Web design for small businesses",
   "Google Ads management",
   "Answer engine optimization (AEO)",
+  "Generative engine optimization (GEO)",
+  "Digital marketing for small business",
 ];
 
 const organizationJsonLd = {
@@ -69,6 +71,9 @@ const organizationJsonLd = {
   "@id": `${SITE_URL}/#organization`,
   name: "Zonic Media",
   legalName: "Zonic Media LLC",
+  alternateName: ["Zonic Media LLC", "Zonic LLC", "zonicllc.com"],
+  description:
+    "Digital marketing agency for small and mid-size businesses: local SEO, Google Business Profile reinstatement and optimization, web design, Google Ads and AI search optimization (AEO/GEO). Headquartered in Dover, Delaware; serving clients across the United States.",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",

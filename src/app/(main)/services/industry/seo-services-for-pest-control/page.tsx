@@ -85,21 +85,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/seo-services-for-pest-control";
 
 export const metadata: Metadata = {
-  title: "SEO for Pest Control That Wins Local Jobs",
+  title: { absolute: "Pest Control SEO Company | SEO Services for Pest Control" },
   description:
-    "SEO for pest control that turns 'exterminator near me' searches into booked treatments — GBP, citations, reviews & rankings. Free audit.",
+    "Pest control SEO company for companies across the USA: pest-specific pages, Google Business Profile, local SEO and reviews that book treatments.",
   keywords: [
-    "SEO for pest control",
-    "pest control near me",
-    "exterminator near me",
-    "termite treatment",
-    "bed bug removal",
-    "rodent control",
-    "pest control SEO company",
-    "SEO for exterminators",
-    "local SEO for pest control",
-    "Google Business Profile for pest control",
-    "pest control lead generation",
+    "pest control seo",
+    "pest control seo services",
+    "pest control seo company",
+    "pest control seo agency",
+    "pest control seo expert",
+    "pest control local seo",
+    "seo for pest control companies",
+    "pest control marketing",
+    "online marketing for pest control services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -229,6 +227,11 @@ const PestSeoFaqs = [
     question: "Why Choose Zonic Media over Another Pest Control SEO Company?",
     answer:
       "We specialize in local home-service businesses like pest control, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked treatments, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "How should pest control SEO be structured for different pests?",
+    answer:
+      "Every pest is a separate search with separate seasonality. Termite, bed bug, rodent, mosquito and wildlife pages each need their own content, price ranges and treatment explanation, and the Google Business Profile services list should mirror them. Seasonal content published before the spring and fall spikes captures the demand early. Zonic Media builds pest control SEO on that structure and tracks calls by pest and by city.",
   },
 ];
 

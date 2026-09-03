@@ -22,7 +22,9 @@ import {
   buildStateServices,
   buildStatePriceCards,
   CHANNEL_TABLE,
+  STATE_CONTENT,
 } from "./stateContent";
+import StateSiblingLinks from "@/app/components/StateSiblingLinks";
 
 const trustItems = [
   { num: "500+", label: "Businesses Ranked" },
@@ -75,7 +77,7 @@ export default function StatePage({ state }: { state: StateContent }) {
   const services = buildStateServices(stateName);
   const priceCards = buildStatePriceCards(stateName);
 
-  const pageUrl = `https://zonicllc.com/services/home-inspector-marketing/${state.slug}`;
+  const pageUrl = `https://www.zonicllc.com/services/home-inspector-marketing/${state.slug}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", url: "/" },
     {
@@ -662,6 +664,13 @@ export default function StatePage({ state }: { state: StateContent }) {
             </div>
           </div>
         </section>
+
+        <StateSiblingLinks
+          basePath="/services/home-inspector-marketing"
+          programLabel="Home inspector marketing"
+          states={STATE_CONTENT}
+          currentSlug={state.slug}
+        />
 
         {/* FOOTER */}
         <footer className="hia-footer">

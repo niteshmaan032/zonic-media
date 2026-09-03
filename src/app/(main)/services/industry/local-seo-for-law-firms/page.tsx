@@ -75,22 +75,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-law-firms";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Law Firms That Wins Cases",
+  title: { absolute: "Law Firm SEO Company | Local SEO for Law Firms & Attorneys" },
   description:
-    "Local SEO for law firms that ranks you for 'lawyer near me' and 'attorney near me' — GBP, reviews & citations that sign clients. Free audit.",
+    "Law firm SEO company for solo and small firms: local SEO, Google Business Profile, practice-area pages and reviews that turn legal searches into signed cases.",
   keywords: [
-    "lawyer near me",
-    "personal injury attorney",
-    "criminal defense lawyer",
-    "divorce attorney",
-    "law firm SEO",
-    "attorney SEO company",
-    "local SEO for law firms",
-    "SEO for lawyers",
-    "Google Business Profile for attorneys",
-    "legal lead generation",
-    "attorney local SEO",
-    "law firm marketing agency",
+    "local seo for law firms",
+    "seo for law firms",
+    "law firm seo services",
+    "law firm seo agency",
+    "attorney seo services",
+    "seo for attorneys and law firms",
+    "best seo companies for small law firms",
+    "law firm seo providers",
+    "seo company for attorneys near me",
+    "lawyer seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -220,6 +218,11 @@ const LawSeoFaqs = [
     question: "Why Choose Zonic Media over Another Attorney SEO Company?",
     answer:
       "We specialize in local service businesses and understand how cautious legal clients search and choose, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and qualified case inquiries, and work built to compound month after month — not churn.",
+  },
+  {
+    question: "Why is local SEO the best investment for a small law firm in 2026?",
+    answer:
+      "Because legal keywords are among the most expensive to advertise, often $50 or more per click, while the Google Map Pack shows three firms for free on every local legal search. A verified profile in the right practice category, reviews that mention the case type, and practice-area pages for your city capture that traffic at a fraction of paid cost. Zonic Media builds law firm SEO around those signals with bar-compliant content and intake tracking.",
   },
 ];
 

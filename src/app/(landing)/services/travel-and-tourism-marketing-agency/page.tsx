@@ -31,20 +31,19 @@ import { RiLineChartLine } from "react-icons/ri";
 const PAGE_PATH = "/services/travel-and-tourism-marketing-agency";
 
 export const metadata: Metadata = {
-  title: "Travel & Tourism Marketing Agency That Books Trips",
+  title: { absolute: "Travel & Tourism Marketing Agency USA | Bookings & Leads" },
   description:
-    "Zonic Media is a travel and tourism marketing agency driving direct bookings for hotels, tour operators, and DMOs with travel SEO, paid media, and web design.",
+    "Travel and tourism marketing agency for tour operators and destinations: SEO, Google Ads, social and booking-focused websites that turn research into bookings.",
   keywords: [
     "travel marketing agency",
     "tourism marketing agency",
-    "travel and tourism marketing agency",
-    "travel digital marketing agency",
-    "hotel marketing agency",
-    "destination marketing agency",
+    "best travel marketing agency",
+    "travel agency marketing strategy",
+    "travel industry marketing agency based in us",
+    "digital marketing for travel agency",
+    "travel agency seo",
     "tour operator marketing",
-    "travel SEO agency",
-    "tourism advertising agency",
-    "marketing for travel companies",
+    "destination marketing agency",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -155,6 +154,11 @@ const TravelFaqs = [
     question: "How soon should we expect results?",
     answer:
       "Paid campaigns typically produce measurable booking activity within the first 30 to 60 days. Travel SEO and destination content compound more slowly. Meaningful movement usually shows in three to six months and keeps building after that. We report both tracks side by side every month so you can watch quick wins fund the long-term asset.",
+  },
+  {
+    question: "What travel marketing strategy works best for a small tour operator in 2026?",
+    answer:
+      "Own the searches travelers make in the planning phase: destination plus activity keywords, Google Business Profile for the departure location, and reviews on Google and TripAdvisor. Then retarget planners with Google Ads and social ads timed to booking windows. Because AI travel planners now recommend operators by name, we also structure your itineraries, prices and policies so AI Overviews and ChatGPT can cite them accurately.",
   },
 ];
 

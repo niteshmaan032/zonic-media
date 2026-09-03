@@ -59,23 +59,19 @@ import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/digital-marketing";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency Philadelphia | SEO & Ads",
+  title: { absolute: "Digital Marketing Agency in Philadelphia | Zonic Media" },
   description:
-    "Philadelphia digital marketing agency running local SEO, Google Ads, social, and web design — reported against calls and booked revenue. Free audit.",
+    "Philadelphia digital marketing agency for local businesses: SEO, Google Business Profile, Google Ads and web design across Philly and the suburbs.",
   keywords: [
-    "digital marketing agency Philadelphia",
-    "Philadelphia digital marketing agency",
-    "digital marketing Philadelphia",
-    "marketing agency Philadelphia",
-    "Philadelphia SEO company",
-    "local SEO Philadelphia",
-    "Google Ads management Philadelphia",
-    "PPC agency Philadelphia",
-    "social media marketing Philadelphia",
-    "content marketing Philadelphia",
-    "web design Philadelphia",
-    "Philadelphia marketing agency for small business",
-    "lead generation Philadelphia",
+    "digital marketing agency philadelphia",
+    "digital marketing agency philly",
+    "digital marketing company in philadelphia",
+    "best digital marketing agency in philadelphia",
+    "marketing agencies in philadelphia",
+    "social media marketing agency philadelphia",
+    "seo company philadelphia",
+    "ppc agency philadelphia",
+    "philadelphia web design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -229,6 +225,11 @@ const PhilaDigitalFaqs = [
     question: "What is actually in the monthly report?",
     answer:
       "Calls, form fills, and chat conversations with the channel each one came from; rankings and Google Business Profile actions; ad spend against cost per lead; and a plain-English summary of what we did, what moved, and what is next. No jargon dashboard you have to interpret. If a number drops you hear it from us first, with the fix already underway.",
+  },
+  {
+    question: "What should a Philadelphia business look for in a digital marketing agency?",
+    answer:
+      "Look for an agency that knows the Philadelphia market's shape: dense neighborhood competition inside the city, suburban demand in Montgomery, Delaware and Bucks counties, and heavy mobile search. It should show you Philadelphia clients, report in calls and leads, and run search, profile and ads as one plan. Zonic Media serves Philadelphia from Dover, Delaware and prices every engagement flat and month to month.",
   },
 ];
 

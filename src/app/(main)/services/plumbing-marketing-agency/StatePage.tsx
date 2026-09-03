@@ -11,6 +11,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import StateSiblingLinks from "@/app/components/StateSiblingLinks";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
@@ -21,14 +22,13 @@ import {
   StateContent,
   BASE_TRUST,
   SERVICES,
-  PRICE_CARDS,
-} from "./stateContent";
+  PRICE_CARDS, STATE_CONTENT } from "./stateContent";
 
 export default function StatePage({ state }: { state: StateContent }) {
   const stateName = state.name;
   const trustItems = [...BASE_TRUST, state.hero.trustExtra];
 
-  const pageUrl = `https://zonicllc.com/services/plumbing-marketing-agency/${state.slug}`;
+  const pageUrl = `https://www.zonicllc.com/services/plumbing-marketing-agency/${state.slug}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", url: "/" },
     {
@@ -495,6 +495,13 @@ export default function StatePage({ state }: { state: StateContent }) {
           </div>
         </section>
       </div>
+
+      <StateSiblingLinks
+        basePath="/services/plumbing-marketing-agency"
+        programLabel="Plumbing marketing"
+        states={STATE_CONTENT}
+        currentSlug={state.slug}
+      />
 
       {/* FOOTER */}
       <Footer />

@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/flooring-website-design";
 
 export const metadata: Metadata = {
-  title: "Flooring Website Design That Books Jobs",
+  title: { absolute: "Flooring Website Design | Sites That Book Installs" },
   description:
-    "Flooring website design built as a lead system — instant quote flows, room-visualizer galleries, financing UX, and product pages that book measures and installs.",
+    "Flooring website design for installers and showrooms: product and room galleries, instant quote flows, financing UX.",
   keywords: [
     "flooring website design",
     "flooring company website design",
-    "flooring web design",
-    "flooring contractor website design",
-    "websites for flooring companies",
+    "websites for flooring contractors",
+    "residential flooring company design",
+    "flooring contractor website",
     "flooring store website design",
-    "flooring installer website design",
-    "flooring landing page design",
-    "flooring lead generation website",
-    "flooring web designer",
+    "hardwood flooring website design",
+    "flooring installation website",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Flooring Website Design That Books Jobs | Zonic Media",
     description:
-      "Flooring website design built as a lead system — instant quote flows, room-visualizer galleries, financing UX, and product pages that book measures and installs.",
+      "Flooring website design for installers and showrooms: product and room galleries, instant quote flows, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const FlooringWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Should a flooring company website focus on products or installation services?",
+    answer:
+      "Both, on separate pages. Homeowners search products first, such as luxury vinyl plank, hardwood or tile, then search for an installer near them. A site that has a page for each product category with photos and price ranges, plus service pages for installation and refinishing, and city pages for the service area, captures both stages. Zonic Media structures flooring sites that way and adds an in-home measure request on every page.",
   },
 ];
 
@@ -434,6 +437,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked estimates, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/flooring-website-design-agency-us/offer" className="hiw-inline-link">
+                      free flooring website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

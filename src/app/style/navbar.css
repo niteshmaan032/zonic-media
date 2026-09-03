@@ -748,27 +748,48 @@
 }
 
 /* ---- Free Website dropdown ----
-   Three offer landers only, so it stays a narrow single-column panel rather
-   than the full-width niche mega menu. */
+   Twenty offer landers grouped into three sections, so it uses the same
+   scrollable mega-menu shell as the Industries / Web Design menus. */
 
 /* The other dropdowns are position:static so their panel spans the whole nav.
-   This one is small, so it anchors to its own <li> and hangs under the link. */
-.services-dropdown.services-dropdown--anchored {
-  position: relative;
-}
-
+   This one anchors to its own <li> so it hangs under the link. */
+/* Right-anchoring this panel to its own <li> worked at 880px but pushed the
+   left edge off screen once it grew. It now centres under the header like the
+   Services mega menu, which keeps it on screen at any width. */
 .services-dropdown-container.free-website-dropdown {
-  width: 360px;
+  width: min(1180px, calc(100vw - 40px));
   min-width: 0;
   min-height: 0;
-  max-width: calc(100vw - 32px);
-  padding: 18px;
+  max-width: none;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 24px 26px;
   border-radius: 24px;
 }
 
 .free-website-dropdown .free-website-grid {
   width: 100%;
   max-width: 100%;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 8px;
+  /* Four across: 20 landers in two columns made the panel taller than the
+     viewport, so three of the links sat below a scroll. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px 10px;
+}
+
+.free-website-dropdown .services-core-card {
+  padding: 10px 12px;
+}
+
+/* Below ~1240px the 1180px panel no longer clears the viewport gutters, so
+   drop back to two columns rather than squeezing the cards. */
+@media (max-width: 1239.98px) {
+  .services-dropdown-container.free-website-dropdown {
+    width: calc(100vw - 32px);
+    padding: 22px;
+  }
+
+  .free-website-dropdown .free-website-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

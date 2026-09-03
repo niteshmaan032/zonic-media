@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/bathroom-remodeling-website-design";
 
 export const metadata: Metadata = {
-  title: "Bathroom Remodeling Website Design That Books Jobs",
+  title: { absolute: "Bathroom Remodeling Website Design | Sites That Book" },
   description:
-    "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
+    "Bathroom remodeling website design for contractors: before-and-after galleries, financing UX, design consultation booking.",
   keywords: [
     "bathroom remodeling website design",
-    "bathroom remodeler website design",
-    "bathroom remodeling web design",
-    "bathroom remodel website design",
-    "websites for bathroom remodelers",
-    "bathroom renovation website design",
-    "bathroom remodeling company website design",
-    "bathroom remodeling landing page design",
-    "bathroom remodel lead generation website",
-    "bathroom remodeler web designer",
+    "home remodeling website design",
+    "bathroom remodel design services",
+    "bathroom remodeling company website",
+    "bathroom remodeling design service",
+    "remodeling contractor website design",
+    "bathroom remodeling experts online",
+    "best bathroom remodeling company design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Bathroom Remodeling Website Design That Books Jobs | Zonic Media",
     description:
-      "Bathroom remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
+      "Bathroom remodeling website design for contractors: before-and-after galleries, financing UX, design consultation booking.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const BathroomWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What should a bathroom remodeling website show to win design consultations?",
+    answer:
+      "Homeowners compare remodelers visually, so the site needs large before-and-after galleries organized by project type and budget, a clear process page, financing options, and a consultation request that asks about the project scope. Reviews that mention the town and the crew build trust. Zonic Media designs remodeling sites around that buyer journey and tracks which gallery pages lead to consultations.",
   },
 ];
 
@@ -434,6 +437,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked estimates, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/bathroom-remodeling-website-design-agency-us/offer" className="hiw-inline-link">
+                      free bathroom remodeling website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

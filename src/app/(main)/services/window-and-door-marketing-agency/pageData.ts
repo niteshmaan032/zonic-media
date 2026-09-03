@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const windowAndDoorMarketing = buildIndustryMarketingPage({
   slug: "window-and-door-marketing-agency",
-  title: "Window & Door Marketing Agency | SEO & Ads | Zonic Media",
+  title: "Window & Door Marketing Agency | SEO, Ads & Estimate Leads",
   description:
-    "Window and door marketing agency for US replacement companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive window replacement leads. Free audit.",
+    "Window and door marketing agency for replacement and installation companies: Google Business Profile, local SEO, Google Ads.",
   keywords: [
     "window and door marketing agency",
-    "window company marketing",
-    "marketing for window companies",
-    "window replacement leads",
+    "marketing agency for impact windows",
     "window replacement marketing",
+    "window company marketing agency",
     "door installation marketing",
-    "window company SEO",
-    "local SEO for window and door companies",
-    "Google Ads for window companies",
-    "replacement window lead generation",
+    "window and door leads",
+    "window company seo",
+    "window replacement google ads",
   ],
 
   eyebrow: "Window & Door Marketing Agency",

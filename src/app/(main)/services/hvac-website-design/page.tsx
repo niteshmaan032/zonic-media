@@ -30,20 +30,20 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/hvac-website-design";
 
 export const metadata: Metadata = {
-  title: "HVAC Website Design That Books Service Calls",
+  title: { absolute: "HVAC Website Design Company | Sites That Book Service Calls" },
   description:
-    "HVAC website design built as a call acquisition system — online booking, 24/7 emergency CTAs, and seasonal AC and furnace landing pages that fill the schedule.",
+    "HVAC website design company for contractors: emergency-call layouts, maintenance-plan pages, financing UX and city pages that rank.",
   keywords: [
     "hvac website design",
+    "hvac website design company",
+    "hvac website design services",
     "hvac web design",
-    "hvac company website design",
-    "websites for hvac contractors",
-    "hvac website redesign",
-    "ac repair landing page design",
-    "furnace repair website",
-    "hvac lead generation website",
-    "hvac online booking website",
-    "hvac contractor web designer",
+    "hvac web design company",
+    "best hvac website design",
+    "hvac contractor web design services",
+    "air conditioning website design",
+    "hvac website examples",
+    "hvac website design ideas",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "HVAC Website Design That Books Service Calls | Zonic Media",
     description:
-      "HVAC website design built as a call acquisition system — online booking, 24/7 emergency CTAs, and seasonal AC and furnace landing pages that fill the schedule.",
+      "HVAC website design company for contractors: emergency-call layouts, maintenance-plan pages, financing UX and city pages that rank.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -151,6 +151,11 @@ const HvacWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What makes an HVAC website convert emergency searches into service calls?",
+    answer:
+      "Speed and a phone number. Most HVAC emergencies are searched from a phone in a hot or cold house, so the site must load in under two seconds, show a tap-to-call button on the first screen, state 24-hour availability and the service area, and show recent reviews. Maintenance-plan pages and financing pages capture the planned replacements. Zonic Media builds HVAC sites to pass Core Web Vitals and tracks calls by page so you know which pages book jobs.",
   },
 ];
 

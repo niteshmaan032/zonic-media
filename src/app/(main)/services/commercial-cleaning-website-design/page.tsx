@@ -29,20 +29,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/commercial-cleaning-website-design";
 
 export const metadata: Metadata = {
-  title: "Commercial Cleaning Website Design That Wins Bids",
+  title: { absolute: "Commercial Cleaning Website Design | Win More Contracts" },
   description:
-    "Commercial cleaning website design built as a lead system — quote and bid flows, service pages, and trust UX that wins janitorial contracts.",
+    "Commercial cleaning website design for janitorial companies: office, medical and industrial service pages, proposal request flows.",
   keywords: [
     "commercial cleaning website design",
+    "cleaning business website design",
+    "cleaning company website design",
     "janitorial website design",
-    "commercial cleaning company website design",
-    "office cleaning website design",
-    "websites for commercial cleaning companies",
-    "janitorial services website design",
-    "commercial cleaning web design",
-    "commercial cleaning lead generation website",
-    "commercial cleaning landing page design",
-    "janitorial web designer",
+    "commercial cleaning website template",
+    "website for cleaning business",
+    "cleaning services website design",
+    "commercial cleaning marketing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "Commercial Cleaning Website Design That Wins Bids | Zonic Media",
     description:
-      "Commercial cleaning website design built as a lead system — quote and bid flows, service pages, and trust UX that wins janitorial contracts.",
+      "Commercial cleaning website design for janitorial companies: office, medical and industrial service pages, proposal request flows.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -156,6 +154,11 @@ const CommercialCleaningWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How is a commercial cleaning website different from a house cleaning website?",
+    answer:
+      "Commercial cleaning is sold to facility managers on contracts, so the site should show industry pages such as offices, medical, schools and industrial, list certifications, insurance and background-check policies, and offer a proposal or walkthrough request rather than an instant quote. Case studies with square footage and scope build credibility. Zonic Media builds commercial cleaning sites around that buyer and tracks proposal requests.",
   },
 ];
 
@@ -432,6 +435,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked walkthroughs, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/cleaning-company-website-design-agency-us/offer" className="hiw-inline-link">
+                      free cleaning company website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

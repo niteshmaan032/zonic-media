@@ -29,6 +29,23 @@ const GHL_PAGES = [
   "/roofing-website-design-agency-us/offer",
   "/hvac-website-design-agency-us/offer",
   "/plumber-website-design-agency-us/offer",
+  "/auto-repair-website-design-agency-us/offer",
+  "/bathroom-remodeling-website-design-agency-us/offer",
+  "/chiropractic-website-design-agency-us/offer",
+  "/cleaning-company-website-design-agency-us/offer",
+  "/electrician-website-design-agency-us/offer",
+  "/flooring-website-design-agency-us/offer",
+  "/garage-door-website-design-agency-us/offer",
+  "/home-inspector-website-design-agency-us/offer",
+  "/kitchen-remodeling-website-design-agency-us/offer",
+  "/landscaping-website-design-agency-us/offer",
+  "/law-firm-website-design-agency-us/offer",
+  "/moving-company-website-design-agency-us/offer",
+  "/painting-contractor-website-design-agency-us/offer",
+  "/pool-service-website-design-agency-us/offer",
+  "/real-estate-website-design-agency-us/offer",
+  "/solar-website-design-agency-us/offer",
+  "/towing-website-design-agency-us/offer",
 ];
 
 // Remove the loader script and every node the widget injects so it does not

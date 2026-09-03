@@ -30,20 +30,20 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/dental-website-design";
 
 export const metadata: Metadata = {
-  title: "Dental Website Design That Books Patients",
+  title: { absolute: "Dental Website Design Company | Sites That Book Patients" },
   description:
-    "Dental website design built as a patient acquisition system — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.",
+    "Dental website design company building patient-acquisition sites: online booking, insurance UX, treatment pages and HIPAA-aware forms.",
   keywords: [
     "dental website design",
-    "dental web design",
-    "dental practice website design",
-    "websites for dentists",
-    "dental website redesign",
+    "dental website design companies",
     "dental website design company",
-    "dental landing page design",
-    "HIPAA aware dental websites",
-    "online booking for dental websites",
-    "dentist web designer",
+    "dental website design cost",
+    "dental website design services",
+    "best dental website design",
+    "dental website design and marketing",
+    "dental office website design",
+    "dental clinic website design",
+    "dental website examples",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Dental Website Design That Books Patients | Zonic Media",
     description:
-      "Dental website design built as a patient acquisition system — online booking flows, insurance verification UX, treatment landing pages, and HIPAA-aware forms.",
+      "Dental website design company building patient-acquisition sites: online booking, insurance UX, treatment pages and HIPAA-aware forms.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -151,6 +151,11 @@ const DentalWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How much does dental website design cost in 2026?",
+    answer:
+      "A custom dental practice website from a US agency typically costs $4,000 to $12,000 depending on the number of treatment pages, online scheduling and insurance-verification integrations, and whether photography and content are included. Template dental sites cost less but rarely rank or convert new-patient searches. Zonic Media quotes a flat project price after a short discovery call and includes on-page SEO and HIPAA-aware forms in every build.",
   },
 ];
 

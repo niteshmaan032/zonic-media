@@ -41,22 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-tree-service-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Tree Service Companies",
+  title: { absolute: "Tree Service SEO | Local SEO for Tree Service Companies" },
   description:
-    "Local SEO for tree service companies — rank for 'tree service near me' and 'tree removal near me' with GBP, reviews & pages. Free audit.",
+    "Tree service SEO for arborists and removal companies: emergency removal pages, trimming and stump grinding services, Google Business Profile.",
   keywords: [
-    "local SEO for tree service companies",
-    "tree service near me",
-    "tree removal near me",
-    "tree trimming near me",
-    "stump grinding near me",
-    "arborist near me",
-    "emergency tree service",
-    "tree service SEO",
-    "SEO for tree companies",
-    "Google Business Profile for tree service",
-    "tree service lead generation",
-    "tree service map pack ranking",
+    "local seo for tree service companies",
+    "tree service seo",
+    "tree removal seo",
+    "arborist seo",
+    "tree service digital marketing",
+    "local tree service marketing",
+    "tree service companies near me",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,6 +182,11 @@ const TreeSeoFaqs = [
     question: "Why Choose Zonic Media over Another Tree Service SEO Company?",
     answer:
       "We specialize in local home-service businesses like tree care, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "How does a tree service company capture storm-season searches?",
+    answer:
+      "By having the emergency removal page and Google Business Profile ready before the storm. Profiles with 24-hour availability, recent reviews and storm-damage photos rank first when searches spike, and a page for emergency tree removal in each city captures the organic traffic. Zonic Media prepares that coverage ahead of the season and tracks calls during and after storms.",
   },
 ];
 

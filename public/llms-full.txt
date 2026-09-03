@@ -1,6 +1,8 @@
 # Zonic Media
 
-> Zonic Media (Zonic Media LLC) is a US-based digital marketing agency in Dover, Delaware that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 700+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
+> Last updated: 2026-09-03
+
+> Zonic Media (Zonic Media LLC) is a US digital marketing agency for small and mid-size businesses, headquartered in Dover, Delaware, that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 700+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
 
 ## About
 
@@ -9,7 +11,9 @@
 - Contact: contact@zonicllc.com | +1-302-726-9736
 - Areas served: United States, Canada, United Kingdom, Australia, United Arab Emirates, India
 - Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and optimization; local SEO; web design; Google Ads (PPC)
-- Trust signals: 700+ Google Business Profiles reinstated and verified, 5.0 rating on Clutch (21 reviews), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
+- Trust signals: 700+ Google Business Profiles reinstated and verified, 1,500+ profiles optimized, 5.0 rating on Clutch (21 reviews, 100% positive), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
+- Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; minimum project size $1,000+
+- Positioning: a digital marketing agency for small business — local SEO, Google Business Profile, web design, Google Ads and AI search optimization (AEO/GEO) from one team
 - Independent reviews: [Trustpilot](https://www.trustpilot.com/review/zonicllc.com) and [Clutch](https://clutch.co/profile/zonic-media) — reviewers highlight fast GMB suspension recovery, quality web design, and quick communication
 
 - [About Zonic Media](https://www.zonicllc.com/about): Who we are, our team, and our approach to digital marketing.
@@ -27,16 +31,17 @@
 ## Google Business Profile Services (flagship)
 
 - [GMB Reinstatement Service](https://www.zonicllc.com/services/gmb-reinstatement-help): Recovers suspended and disabled Google Business Profiles. Handles soft suspensions, hard suspensions, disabled listings, and profiles suspended pending verification. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, No Fix, No Charge on the reinstatement fee, post-reinstatement optimization included.
-- [Rejected GBP Appeal — Escalation Desk](https://www.zonicllc.com/gmb-reinstatement-service-agency): For Google Business Profile cases that have already failed at least one appeal — rejected reinstatement requests, profiles disabled after repeated attempts, listings suspended again after reinstatement, and multi-location or agency portfolios. Decodes Google's rejection wording, fixes the root cause, and re-files on the correct track. Free case review, No Fix, No Charge on the reinstatement fee.
 - [GMB Verification Help](https://www.zonicllc.com/services/gmb-verification-help): Fixes failed postcard, video, phone, and email verification and verification loops.
-- [GBP Verification Rules 2026](https://www.zonicllc.com/google-business-profile-verification-help-2026): What changed in Google Business Profile verification for 2026 — video as the default method since 2024, live video calls introduced in 2025, the six elements Google checks in a verification video, the edits that trigger re-verification, and how service-area businesses film without a storefront.
-- [GMB Optimization](https://www.zonicllc.com/services/gmb-optimization): Google Business Profile optimization to rank in the local Map Pack.
 - [Google Map Pack Ranking](https://www.zonicllc.com/local-seo-google-business-optimization): How local 3-Pack rankings are decided — proximity, relevance and prominence, which of them a business can actually move, geo-grid rank scanning across a whole service area, and why a profile ranks #1 at its own address but disappears a few miles away. Free geo-grid scan.
 - [GBP Services for Real Estate Agents](https://www.zonicllc.com/services/google-business-profile-services-real-estate-agents): Reinstatement, verification, and management for realtors and brokers.
 
 ## Services
 
-- [All Services](https://www.zonicllc.com/services): Overview of Zonic Media's digital marketing services.
+- [All Services](https://www.zonicllc.com/services): Overview of Zonic Media's digital marketing services for small businesses.
+- [SEO Services](https://www.zonicllc.com/services/seo-services): Full-stack SEO for small and local businesses — technical SEO, local SEO, Google Business Profile, content and links, reported in calls and revenue.
+- [AI SEO Services (AEO / GEO)](https://www.zonicllc.com/services/ai-seo-services): Answer engine optimization and generative engine optimization — getting a business cited and recommended in ChatGPT, Google AI Overviews, AI Mode, Perplexity, Gemini and Claude. Entity consistency, citable content blocks, structured data, review-platform signals and monthly AI-citation monitoring.
+- [Local SEO for Small Business](https://www.zonicllc.com/services/local-seo-for-small-business): Map Pack rankings and reviews for storefronts, practices and studios.
+- [Local SEO Packages](https://www.zonicllc.com/services/local-seo-packages): Three flat-scope plans (Starter, Growth, Dominate) starting at $750, $1,350 and $2,000 per month.
 - [Web Design](https://www.zonicllc.com/services/web-design): Custom, conversion-focused website design and development.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.
@@ -142,6 +147,11 @@ Full marketing programs (local SEO, Google Map Pack, Google Ads, exclusive lead 
 
 ## Locations
 
+- [SEO Company in Delaware](https://www.zonicllc.com/services/delaware/seo): Dover-based SEO for Wilmington, Dover, Newark and Lewes businesses.
+- [Web Design in Delaware](https://www.zonicllc.com/services/delaware/web-design): Custom, SEO-ready website design for New Castle County, Dover and Sussex County.
+- [Wilmington DE Digital Marketing](https://www.zonicllc.com/services/wilmington/digital-marketing): Local SEO, GBP, Google Ads and web design for Wilmington businesses.
+- [NYC Digital Marketing Agency](https://www.zonicllc.com/services/nyc/digital-marketing): Multi-channel marketing for New York City businesses.
+- [NYC Local SEO](https://www.zonicllc.com/services/nyc/local-seo): Google Business Profile and Map Pack rankings across the five boroughs.
 - [Delaware Digital Marketing](https://www.zonicllc.com/services/delaware/digital-marketing)
 - [Philadelphia Digital Marketing](https://www.zonicllc.com/services/philadelphia/digital-marketing)
 - [Philadelphia Local SEO](https://www.zonicllc.com/services/philadelphia/local-seo)
@@ -247,7 +257,7 @@ Fix the violation before appealing: correct the business name, address, categori
 "Deceptive content" suspensions usually trace to name/category/address inconsistencies rather than actual deception. They are recoverable with corrected data and documentation — Zonic Media handles these cases routinely.
 
 **My appeal was rejected by the Google appeal tool — is it over?**
-No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/gmb-reinstatement-service-agency
+No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/services/gmb-reinstatement-help
 
 **Who can help reinstate a suspended Google Business Profile?**
 A specialist agency that fixes root causes and files documented appeals. Zonic Media has reinstated 700+ profiles, offers a free suspension audit, and charges no reinstatement fee if the profile isn't recovered.
@@ -265,7 +275,7 @@ A specialist agency that fixes root causes and files documented appeals. Zonic M
 > Zonic Media resolves every type of Google Business Profile (GMB/GBP) verification failure: postcards that never arrive, rejected video verification, verification loops, revoked verifications, live video call verification, and service-area business (SAB) verification. 1500+ listings verified and restored, 95% success rate, 48-hour average resolution time.
 
 Service page: https://www.zonicllc.com/services/gmb-verification-help
-2026 verification guide: https://www.zonicllc.com/google-business-profile-verification-help-2026
+2026 verification guide: https://www.zonicllc.com/services/gmb-verification-help
 
 ## What this service does
 
@@ -316,7 +326,7 @@ Usually a deeper compliance issue: duplicate listing conflict, policy violation,
 
 > Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1500+ profiles optimized, 95% client satisfaction, 5.0 rating on Clutch (21 reviews).
 
-Service page: https://www.zonicllc.com/services/gmb-optimization
+Service page: https://www.zonicllc.com/local-seo-google-business-optimization
 Related: https://www.zonicllc.com/local-seo-google-business-optimization
 
 ## What this service does

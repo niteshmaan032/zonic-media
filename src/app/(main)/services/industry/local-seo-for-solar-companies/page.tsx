@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-solar-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Solar Companies That Wins Installs",
+  title: { absolute: "Solar SEO Company | Local SEO for Solar Companies" },
   description:
-    "Local SEO for solar companies that ranks you for 'solar installer near me' — GBP, reviews, and service-area pages. Free audit.",
+    "Solar SEO for installers: incentive and savings content, Google Business Profile, service-area pages.",
   keywords: [
-    "local SEO for solar companies",
-    "solar installer near me",
-    "solar company near me",
-    "solar panel installation near me",
-    "residential solar",
-    "solar panel companies",
-    "solar SEO",
-    "SEO for solar companies",
-    "local SEO for solar installers",
-    "Google Business Profile for solar",
+    "local seo for solar companies",
+    "solar seo",
+    "solar company seo",
+    "seo for solar installers",
+    "solar contractor websites seo",
+    "solar marketing",
     "solar lead generation",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const SolarSeoFaqs = [
     question: "Why Choose Zonic Media over Another Solar SEO Company?",
     answer:
       "We specialize in local home-service and home-improvement businesses like solar, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked consultations, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "What solar content ranks and converts in 2026?",
+    answer:
+      "Content that answers the money questions for your state: current federal and state incentives, net metering rules, payback periods by home size, financing options and battery storage costs. Those searches happen months before a homeowner requests quotes, and the company that answered them is the one they call. Zonic Media writes and updates that content for your market, pairs it with a Google Business Profile in the Solar Energy Company category, and tracks consultations by page.",
   },
 ];
 

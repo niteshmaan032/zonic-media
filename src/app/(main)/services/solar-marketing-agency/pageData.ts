@@ -20,9 +20,9 @@ const tickerRun =
 
 export const solarMarketingPage: IndustryMarketingPageData = {
   slug: "solar-marketing-agency",
-  title: "Solar Marketing Agency | Local SEO & Ads | Zonic Media",
+  title: "Solar Marketing Agency USA | SEO, Ads & Solar Leads",
   description:
-    "Solar marketing agency for US installers. Local SEO, Google Map Pack ranking, Google Ads & exclusive solar leads for installs & battery storage. Free audit.",
+    "Solar marketing agency for installers across the USA: local SEO, Google Business Profile, Google Ads and review programs that book consultations and installs.",
   // ima-solar now only scopes the sp-band photo styles — the palette is the
   // shared homepage blue (no accentColor override).
   themeClass: "ima-solar",

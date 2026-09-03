@@ -77,22 +77,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-commercial-cleaning";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Commercial Cleaning Companies",
+  title: { absolute: "Commercial Cleaning SEO | Local SEO for Janitorial Companies" },
   description:
-    "Local SEO for commercial cleaning that ranks you for 'commercial cleaning near me' — GBP, reviews & pages that win contracts. Free audit.",
+    "Commercial cleaning SEO for janitorial and contract cleaning companies: industry pages, Google Business Profile, local SEO.",
   keywords: [
-    "local SEO for commercial cleaning",
-    "commercial cleaning near me",
-    "office cleaning services",
-    "janitorial services",
-    "commercial cleaning company",
-    "janitorial SEO",
-    "SEO for cleaning companies",
-    "Google Business Profile for cleaning companies",
-    "commercial cleaning lead generation",
-    "office cleaning company near me",
-    "commercial cleaning marketing agency",
-    "commercial cleaning contract leads",
+    "commercial cleaning seo",
+    "seo for cleaning company",
+    "cleaning business seo",
+    "contract cleaning seo",
+    "janitorial seo",
+    "commercial cleaning services near me",
+    "commercial cleaning marketing",
+    "local seo for cleaning companies",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -222,6 +218,11 @@ const CommercialSeoFaqs = [
     question: "Why Choose Zonic Media over Another Janitorial SEO Company?",
     answer:
       "We specialize in local B2B service businesses like commercial cleaning, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to RFQs and signed contracts, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "How does SEO for commercial cleaning differ from SEO for house cleaning?",
+    answer:
+      "Commercial cleaning buyers are facility managers searching for office cleaning, medical cleaning or janitorial services in a business district, and they compare on certifications, insurance and references rather than instant prices. SEO should target those industry and district searches with dedicated pages and case studies, and the Google Business Profile should use commercial categories. Zonic Media builds commercial cleaning SEO around that buyer and tracks proposal requests.",
   },
 ];
 

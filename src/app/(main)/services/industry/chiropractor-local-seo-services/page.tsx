@@ -88,21 +88,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/chiropractor-local-seo-services";
 
 export const metadata: Metadata = {
-  title: "Chiropractor SEO Company That Books Patients",
+  title: { absolute: "Chiropractor SEO Company | Chiropractic SEO Services" },
   description:
-    "Local SEO for chiropractors that wins the Google map pack — GBP optimization, reviews & pages that turn 'chiropractor near me' into booked patients. Free audit.",
+    "Chiropractor SEO company that books new patients: Google Business Profile, condition pages, reviews and local SEO for chiropractic practices across the USA.",
   keywords: [
-    "local SEO for chiropractors",
-    "chiropractor SEO",
-    "chiropractor near me",
-    "back pain chiropractor",
-    "spinal adjustment",
-    "sports injury chiropractor",
-    "chiropractic SEO",
-    "SEO for chiropractors",
-    "Google Business Profile for chiropractors",
-    "chiropractic clinic marketing",
-    "chiropractor near me open now",
+    "chiropractor seo",
+    "chiropractor seo company",
+    "chiropractor seo agency",
+    "chiropractor seo services",
+    "chiropractor seo expert",
+    "chiropractic seo",
+    "chiropractic local seo",
+    "seo for chiropractors",
+    "chiropractic marketing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -232,6 +230,11 @@ const ChiroSeoFaqs = [
     question: "Why Choose Zonic Media over Another Chiropractic SEO Company?",
     answer:
       "We specialize in local, appointment-driven businesses like chiropractic clinics, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked patients, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "How do chiropractic practices rank for condition searches like back pain or sciatica?",
+    answer:
+      "By giving each condition its own page that explains symptoms, how chiropractic care treats it, what a first visit looks like, and pricing or insurance details, then linking those pages from your Google Business Profile services list. Reviews that mention the condition treated reinforce the relevance. Zonic Media builds the condition pages around the searches in your city and tracks new-patient bookings by page.",
   },
 ];
 

@@ -30,20 +30,19 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/landscaping-website-design";
 
 export const metadata: Metadata = {
-  title: "Landscaping Website Design That Books Jobs",
+  title: { absolute: "Landscaping Website Design Agency | Sites That Book Jobs" },
   description:
-    "Landscaping website design built as a lead system — instant quote flows, galleries, and seasonal pages that book installs and maintenance.",
+    "Landscaping website design agency for landscapers and lawn care companies: project galleries, seasonal service pages, recurring-plan signups.",
   keywords: [
     "landscaping website design",
-    "landscaping company website design",
+    "landscaping web design agency",
+    "best landscaping website design",
     "lawn care website design",
-    "landscaper website design",
-    "websites for landscaping companies",
-    "landscape design website",
-    "landscaping web design",
-    "landscaping lead generation website",
-    "landscaping landing page design",
-    "landscaper web designer",
+    "lawn care web design",
+    "landscape website design templates",
+    "landscaper web design company",
+    "landscaping website design ideas",
+    "gardening website design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "Landscaping Website Design That Books Jobs | Zonic Media",
     description:
-      "Landscaping website design built as a lead system — instant quote flows, galleries, and seasonal pages that book installs and maintenance.",
+      "Landscaping website design agency for landscapers and lawn care companies: project galleries, seasonal service pages, recurring-plan signups.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +156,11 @@ const LandscapingWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How do landscaping companies turn website visitors into recurring customers?",
+    answer:
+      "By selling the plan, not the one-time job. A landscaping site should have pages for design and installation projects with galleries, and separate pages for recurring lawn care, maintenance and seasonal cleanups with clear plan pricing and a signup form. Seasonal pages published before spring and fall capture the search spikes. Zonic Media builds landscaping sites on that structure and tracks which pages generate plan signups.",
   },
 ];
 
@@ -433,6 +437,12 @@ function Page() {
                       website design services
                     </Link>{" "}
                     are built around booked estimates, not another brochure site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/landscaping-website-design-agency-us/offer" className="hiw-inline-link">
+                      free landscaping website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

@@ -61,24 +61,18 @@ import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/delaware/digital-marketing";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Delaware",
+  title: { absolute: "Digital Marketing Agency in Delaware | Dover & Wilmington" },
   description:
-    "Grow your Delaware business with SEO, Google Ads, social media, content, AI search, and conversion-focused web design. Get a free marketing audit.",
+    "Digital marketing agency in Delaware serving Dover, Wilmington, Newark and Sussex County: local SEO, Google Business Profile, Google Ads and web design.",
   keywords: [
-    "digital marketing agency Delaware",
-    "Delaware digital marketing agency",
-    "digital marketing Delaware",
-    "marketing agency Delaware",
-    "SEO company Delaware",
-    "SEO services Delaware",
-    "local SEO Delaware",
-    "PPC management Delaware",
-    "Google Ads agency Delaware",
-    "social media marketing Delaware",
-    "digital marketing agency Wilmington DE",
-    "marketing agency Dover DE",
-    "small business marketing Delaware",
-    "lead generation Delaware",
+    "digital marketing agency delaware",
+    "digital marketing agency in delaware",
+    "digital marketing agency dover de",
+    "digital marketing agency wilmington de",
+    "marketing agency in delaware",
+    "seo company delaware",
+    "delaware web design",
+    "digital marketing agency near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -227,6 +221,11 @@ const DelDigitalFaqs = [
     question: "What do I actually get in the monthly report?",
     answer:
       "Calls, form fills, and chat conversations with the channel each one came from; rankings and Google Business Profile actions; ad spend against cost per lead; and a plain-English summary of what we did, what moved, and what is next. No jargon dashboard you have to interpret. If a number drops, you hear it from us first, with the fix already underway.",
+  },
+  {
+    question: "Which digital marketing channels work best for Delaware businesses in 2026?",
+    answer:
+      "Delaware is a small state with dense competition in Wilmington and New Castle County and long-tail demand along the beaches and Route 1 corridor. For most businesses the winning mix is Google Business Profile and local SEO for the town-level searches, Google Ads to capture Philadelphia and Maryland commuters, and a fast website that converts mobile traffic. Zonic Media is headquartered in Dover and runs that program for businesses statewide.",
   },
 ];
 

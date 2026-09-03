@@ -76,21 +76,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/real-estate-seo-services";
 
 export const metadata: Metadata = {
-  title: "Real Estate SEO Experts — SEO Company for Realtors & Agents",
+  title: { absolute: "Real Estate SEO Company | SEO Services for Realtors & Agents" },
   description:
-    "Real estate SEO services that put realtors in the Google map pack for 'realtor near me' — GBP, reviews & buyer/seller leads. Free audit.",
+    "Real estate SEO company for agents, teams and brokerages: local SEO, Google Business Profile, neighborhood pages.",
   keywords: [
-    "real estate SEO services",
-    "realtor near me",
-    "real estate agent near me",
-    "homes for sale",
-    "listing agent",
-    "real estate SEO company",
-    "SEO for realtors",
-    "local SEO for real estate agents",
-    "Google Business Profile for realtors",
-    "real estate lead generation",
-    "best realtor near me",
+    "real estate seo",
+    "real estate seo company",
+    "real estate seo agency",
+    "real estate seo expert",
+    "best real estate seo agency",
+    "real estate seo services",
+    "real estate seo keywords",
+    "best seo keywords for real estate agents",
+    "real estate seo 2026",
+    "seo for realtors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -220,6 +219,11 @@ const RealEstateSeoFaqs = [
     question: "Why Choose Zonic Media over Another Real Estate SEO Company?",
     answer:
       "We specialize in local, lead-driven businesses like real estate, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and buyer and seller leads, and work that is built to compound listing season after listing season — not churn.",
+  },
+  {
+    question: "What are the best SEO keywords for real estate agents in 2026?",
+    answer:
+      "The keywords that win are neighborhood and intent based, not generic: homes for sale in a specific neighborhood, best realtor in a town, sell my house fast in a city, and first-time buyer questions for your market. Generic terms like real estate agent are dominated by portals. Zonic Media maps the neighborhoods and price points you actually sell in, builds a page for each, and pairs them with a practitioner Google Business Profile so both the Map Pack and organic results show you.",
   },
 ];
 

@@ -31,20 +31,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/pediatrician-website-design";
 
 export const metadata: Metadata = {
-  title: "Pediatrician Website Design That Books Families",
+  title: { absolute: "Pediatric Website Design | Practice Sites That Book Families" },
   description:
-    "Pediatrician website design built as a patient acquisition system — online scheduling, insurance UX, and warm mobile-first design parents trust.",
+    "Pediatric website design for practices and clinics: new-patient registration, provider bios, insurance UX, patient portal links.",
   keywords: [
-    "pediatrician website design",
     "pediatric website design",
-    "pediatric practice website design",
-    "websites for pediatricians",
-    "pediatrician web design",
     "pediatric clinic website design",
-    "pediatrician website redesign",
-    "pediatric lead generation website",
-    "pediatrician landing page design",
-    "pediatric web designer",
+    "pediatrician website design",
+    "medical website design company",
+    "pediatric practice website",
+    "doctor website design",
+    "pediatric websites for parents",
+    "healthcare website design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -58,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "Pediatrician Website Design That Books Families | Zonic Media",
     description:
-      "Pediatrician website design built as a patient acquisition system — online scheduling, insurance UX, and warm mobile-first design parents trust.",
+      "Pediatric website design for practices and clinics: new-patient registration, provider bios, insurance UX, patient portal links.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -158,6 +156,11 @@ const PediatricWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What do parents look for on a pediatric practice website?",
+    answer:
+      "Whether the practice takes their insurance, which providers see newborns and teens, how to reach the office after hours, and how quickly a sick visit can be scheduled. A pediatric site that answers those on the first screen, shows provider bios with photos, and offers online new-patient registration wins families over practices that only list a phone number. Zonic Media builds pediatric sites around those questions with HIPAA-aware forms.",
   },
 ];
 

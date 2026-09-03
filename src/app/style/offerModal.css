@@ -284,6 +284,8 @@ body.offer-modal-open {
   color: #fff;
   font-size: 15px;
   font-weight: 900;
+  /* Title-cased to match the CTAs on the landers this modal sits inside. */
+  text-transform: capitalize;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -333,8 +335,10 @@ body.offer-modal-open {
 }
 
 @media (max-width: 560px) {
+  /* Roomier gutter than the desktop 20px, because the seal hangs outside the
+     panel — at 12px it clipped against the viewport edge. */
   .offer-modal {
-    padding: 12px;
+    padding: 18px 16px;
   }
 
   .offer-modal__panel {
@@ -351,8 +355,8 @@ body.offer-modal-open {
   }
 
   .offer-modal__badge {
-    top: -20px;
-    left: -14px;
+    top: -18px;
+    left: -12px;
     width: 66px;
     height: 66px;
   }

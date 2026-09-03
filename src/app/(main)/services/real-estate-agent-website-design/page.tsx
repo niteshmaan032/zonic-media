@@ -28,20 +28,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/real-estate-agent-website-design";
 
 export const metadata: Metadata = {
-  title: "Real Estate Agent Website Design That Wins Clients",
+  title: { absolute: "Real Estate Agent Website Design | Sites That Win Clients" },
   description:
-    "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, and buyer & seller pages that win clients.",
+    "Real estate agent website design for agents and brokerages: IDX listings, neighborhood pages, home-value lead capture.",
   keywords: [
     "real estate agent website design",
-    "realtor website design",
     "real estate website design",
-    "real estate broker website design",
-    "websites for real estate agents",
-    "realtor web design",
-    "real estate agent web design",
-    "IDX website design",
-    "real estate lead generation website",
-    "realtor web designer",
+    "real estate agency website design",
+    "best real estate agent website design",
+    "real estate brokerage website design",
+    "real estate web design agency",
+    "real estate agent websites examples",
+    "idx website design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +53,7 @@ export const metadata: Metadata = {
     ],
     title: "Real Estate Agent Website Design That Wins Clients | Zonic Media",
     description:
-      "Real estate agent website design built as a lead system — IDX-ready listings, home-valuation offers, and buyer & seller pages that win clients.",
+      "Real estate agent website design for agents and brokerages: IDX listings, neighborhood pages, home-value lead capture.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -155,6 +153,11 @@ const RealEstateWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Does a real estate agent need their own website in 2026?",
+    answer:
+      "Yes, because the brokerage site markets the brokerage, not you. An agent site with neighborhood pages, a home-value estimator, IDX search and your own reviews ranks for the local searches sellers and buyers make and captures leads that go to you alone. Pair it with a practitioner Google Business Profile and the two reinforce each other. Zonic Media builds agent sites with IDX and lead capture and sets up the profile alongside it.",
   },
 ];
 
@@ -430,6 +433,12 @@ function Page() {
                       website design services
                     </Link>{" "}
                     are built around booked leads, not another brochure site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/real-estate-website-design-agency-us/offer" className="hiw-inline-link">
+                      free real estate website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

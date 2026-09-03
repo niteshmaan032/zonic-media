@@ -21,6 +21,7 @@ body.fwd-menu-is-open {
   --ink: #07152f;
   --muted: #5f6f89;
   --blue: #2167f5;
+  --card-accent: #f97315;
   --yellow: #ffc928;
   --line: rgba(7, 21, 47, 0.11);
   --paper: #f6f9ff;
@@ -292,7 +293,7 @@ body.fwd-menu-is-open {
 .fwd-page .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .fwd-page .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
 .fwd-page .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
-.fwd-page .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.fwd-page .process-grid .process-card--featured { background: var(--card-accent); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(249,115,21,.25); }
 .fwd-page .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
 .fwd-page .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
 .fwd-page .process-card--featured .step-number { color: rgba(255,255,255,.16); }
@@ -422,7 +423,7 @@ body.fwd-menu-is-open {
 .fwd-page .pricing-card--featured .pricing-card-head > span { color: var(--yellow); }
 .fwd-page .pricing-card-head small { margin-top: 5px; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
 .fwd-page .pricing-card h3 { position: relative; z-index: 2; margin: 18px 0 9px; font-size: 26px; letter-spacing: -.04em; }
-.fwd-page .pricing-card--featured h3 { color: white; }
+.fwd-page .pricing-card--featured h3 { color: #fff; }
 .fwd-page .plan-price { position: relative; z-index: 2; font-size: 43px; font-weight: 900; letter-spacing: -.055em; }
 .fwd-page .plan-price span { color: #8793a6; font-size: 11px; font-weight: 700; letter-spacing: 0; }
 .fwd-page .pricing-card > p { min-height: 72px; margin: 15px 0 17px; color: var(--muted); font-size: 15px; line-height: 1.62; }
@@ -450,7 +451,7 @@ body.fwd-menu-is-open {
 .fwd-page .dark-grid article > strong { color: var(--yellow); font-size: 12px; letter-spacing: .1em; }
 .fwd-page .dark-grid h3 { margin: 35px 0 10px; font-size: 20px; }
 .fwd-page .dark-grid p { margin: 0; color: #b4bfd1; font-size: 15px; line-height: 1.62; }
-.fwd-page .dark-grid .dark-stat { display: flex; flex-direction: column; justify-content: center; gap: 13px; background: var(--blue); }
+.fwd-page .dark-grid .dark-stat { display: flex; flex-direction: column; justify-content: center; gap: 13px; background: var(--card-accent); }
 .fwd-page .dark-stat span { display: flex; align-items: baseline; gap: 8px; color: #d9e2f7; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 .fwd-page .dark-stat b { min-width: 45px; color: white; font-size: 27px; letter-spacing: -.04em; text-transform: none; }
 
@@ -485,7 +486,7 @@ body.fwd-menu-is-open {
 .fwd-page .review-grid footer div { display: flex; flex-direction: column; }
 .fwd-page .review-grid footer strong { font-size: 14px; }
 .fwd-page .review-grid footer small { margin-top: 3px; color: #758298; font-size: 12px; }
-.fwd-page .review-grid .review-featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 24px 54px rgba(33,103,245,.2); }
+.fwd-page .review-grid .review-featured { background: var(--card-accent); color: white; transform: translateY(-14px); box-shadow: 0 24px 54px rgba(249,115,21,.2); }
 .fwd-page .review-featured > svg { color: var(--yellow) !important; }
 .fwd-page .review-featured p { color: white; }
 .fwd-page .review-featured footer > span { background: rgba(255,255,255,.15); color: white; }
@@ -812,3 +813,115 @@ body.fwd-menu-is-open {
 .fwd-page .offer-inlink:hover { color: var(--yellow); }
 .fwd-page .dark-grid .offer-inlink,
 .fwd-page .pricing-note .offer-inlink { color: inherit; }
+
+
+/* ══ CTA labels ══════════════════════════════════════════════
+   Title-cased across the offer landers. The hero pair is the tight spot — its
+   buttons carry reduced side padding so the wider labels still fit the column. */
+.fwd-page .nav-cta,
+.fwd-page .mobile-menu-cta,
+.fwd-page .button,
+.fwd-page .section-button,
+.fwd-page .form-submit,
+.fwd-page .pricing-card > a,
+.fwd-page .footer-offer a { text-transform: capitalize; }
+
+
+/* ══ Footer legal block ══════════════════════════════════════
+   The offer terms run the full width of the footer; the address and the
+   copyright line sit beneath them rather than beside. */
+.fwd-page .footer-bottom { grid-template-columns: 1fr auto; gap: 18px 30px; }
+.fwd-page .footer-bottom > small { grid-column: 1 / -1; }
+.fwd-page .footer-bottom > p { grid-column: 1; align-self: center; }
+.fwd-page .footer-bottom > span { grid-column: 2; justify-self: end; align-self: center; }
+
+@media (max-width: 760px) {
+  .fwd-page .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+  .fwd-page .footer-bottom > p,
+  .fwd-page .footer-bottom > span { grid-column: 1; justify-self: start; }
+}
+
+/* ══ Pricing card colours ════════════════════════════════════
+   Growth reads as the warm, chosen plan; Full Market as the calm one above
+   it. Both foreground sets clear 4.5:1 on their own background. */
+.fwd-page .pricing-card--featured { border-color: #f97315; background: #f97315; }
+.fwd-page .pricing-card--featured::after { background: rgba(255, 255, 255, .13); }
+.fwd-page .pricing-card--featured .pricing-card-head > span { color: #fff; }
+.fwd-page .pricing-card--featured .pricing-card-head small { color: #fff; }
+.fwd-page .pricing-card--featured > p { color: #fff; }
+.fwd-page .pricing-card--featured ul { border-color: rgba(255, 255, 255, .34); }
+.fwd-page .pricing-card--featured li { color: #fff; }
+.fwd-page .pricing-card--featured li svg { color: #fff; }
+/* The grey "/ month" is unreadable on the orange; the whole price goes white. */
+.fwd-page .pricing-card--featured .plan-price span { color: rgba(255, 255, 255, .82); }
+.fwd-page .pricing-card--featured > a { background: var(--ink); color: #fff; }
+
+.fwd-page .pricing-card--verdant { border-color: #bfe6cd; background: #e9f7ee; }
+.fwd-page .pricing-card--verdant::after { background: rgba(43, 173, 104, .15); }
+.fwd-page .pricing-card--verdant .pricing-card-head > span { color: #1c7a4a; }
+.fwd-page .pricing-card--verdant li svg { color: #1c8a52; }
+
+/* ══ Lead tracking ═══════════════════════════════════════════
+   Copy left, dashboard right — the same split the terms section uses. */
+.fwd-page .leadtrack-section { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 50px; align-items: center; padding-top: 46px; padding-bottom: 54px; }
+/* One measure for the whole column so the heading, lede and list share an edge. */
+.fwd-page .leadtrack-copy { max-width: 520px; }
+.fwd-page .leadtrack-copy h2 { margin: 16px 0 18px; font-size: clamp(34px, 3.3vw, 48px); line-height: 1.14; letter-spacing: -.05em; }
+.fwd-page .leadtrack-copy > p { margin: 0 0 24px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.fwd-page .leadtrack-points { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.fwd-page .leadtrack-points li { display: flex; align-items: center; gap: 11px; padding: 13px 0; border-bottom: 1px solid var(--line); color: #46536a; font-size: 14.5px; font-weight: 700; }
+.fwd-page .leadtrack-points svg { flex: 0 0 auto; width: 19px; height: 19px; padding: 3px; border-radius: 50%; background: #e9f8ef; color: #1c8a52; }
+
+.fwd-page .leadtrack-panel { padding: 16px; display: grid; gap: 14px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 18px 46px rgba(28,64,123,.08); }
+.fwd-page .leadtrack-statrow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.fwd-page .leadtrack-stat { padding: 12px 13px; border: 1px solid var(--line); border-radius: 14px; background: #f8fbff; }
+.fwd-page .leadtrack-stat > span { display: block; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.fwd-page .leadtrack-stat > strong { display: block; margin-top: 5px; color: var(--ink); font-size: 22px; letter-spacing: -.04em; }
+.fwd-page .leadtrack-stat > small { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; color: #1c8a52; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.fwd-page .leadtrack-stat > small svg { flex: 0 0 auto; width: 12px; }
+.fwd-page .leadtrack-stat--accent { border-color: color-mix(in srgb, var(--blue) 30%, transparent); background: color-mix(in srgb, var(--blue) 8%, #fff); }
+
+.fwd-page .leadtrack-board { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; overflow: hidden; }
+.fwd-page .leadtrack-board > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.fwd-page .leadtrack-tabs { display: flex; gap: 5px; }
+.fwd-page .leadtrack-tabs > * { padding: 5px 10px; border-radius: 99px; color: #6b7891; font-size: 11.5px; font-weight: 800; font-style: normal; }
+.fwd-page .leadtrack-tabs > b { background: var(--ink); color: #fff; }
+.fwd-page .leadtrack-live { display: inline-flex; align-items: center; gap: 6px; color: #1c8a52; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.fwd-page .leadtrack-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #1c8a52; animation: leadtrack-pulse 1.8s ease-in-out infinite; }
+
+.fwd-page .leadtrack-head, .fwd-page .leadtrack-row { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 10px 14px; }
+.fwd-page .leadtrack-head { background: #f8fbff; border-bottom: 1px solid var(--line); color: #8b97ab; font-size: 10px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.fwd-page .leadtrack-row { border-bottom: 1px solid rgba(17,26,39,.06); }
+.fwd-page .leadtrack-row:last-child { border-bottom: 0; }
+.fwd-page .leadtrack-row b { display: block; min-width: 0; color: var(--ink); font-size: 13px; font-weight: 900; }
+.fwd-page .leadtrack-row b small { display: block; margin-top: 2px; color: #7b889d; font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fwd-page .leadtrack-row > span { min-width: 0; color: #46536a; font-size: 12.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fwd-page .leadtrack-pill { justify-self: end; padding: 4px 9px; border-radius: 99px; font-size: 10.5px; font-weight: 900; white-space: nowrap; }
+.fwd-page .leadtrack-pill--new { background: #e6f0ff; color: #1a4fbf; }
+.fwd-page .leadtrack-pill--contacted { background: #fff3dc; color: #8a5800; }
+.fwd-page .leadtrack-pill--quoted { background: #efe8ff; color: #5b34c4; }
+.fwd-page .leadtrack-pill--won { background: #e3f6ea; color: #16714a; }
+.fwd-page .leadtrack-caption { margin: 0; color: #8b97ab; font-size: 11.5px; font-weight: 700; text-align: center; }
+
+@keyframes leadtrack-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+@media (max-width: 1050px) {
+  .fwd-page .leadtrack-section { grid-template-columns: 1fr; gap: 34px; }
+  .fwd-page .leadtrack-copy > p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .fwd-page .leadtrack-panel { padding: 12px; border-radius: 20px; }
+  .fwd-page .leadtrack-statrow { grid-template-columns: 1fr 1fr; }
+  .fwd-page .leadtrack-statrow > :last-child { grid-column: 1 / -1; }
+  .fwd-page .leadtrack-head > span:nth-child(2), .fwd-page .leadtrack-row > span:not(.leadtrack-pill) { display: none; }
+  .fwd-page .leadtrack-head, .fwd-page .leadtrack-row { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fwd-page .leadtrack-live::before { animation: none; }
+}
+
+/* The title-cased hero pair is the widest CTA row on the page; trimming the
+   side padding and icon gap keeps both buttons on one line in the copy column. */
+.fwd-page .hero-actions .button { gap: 14px; padding-left: 18px; }

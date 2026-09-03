@@ -33,27 +33,21 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 --------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Local SEO Services — Rank in the Google Map Pack",
-  },
+  title: { absolute: "Google Business Profile Optimization Service | Local SEO" },
   description:
-    "Local SEO services from a local SEO company that maps your rankings street by street — Google Business Profile, citations and reviews, plus a free geo-grid scan.",
+    "Google Business Profile optimization service and local SEO that maps your Map Pack rankings street by street: categories, reviews, citations and posts.",
   keywords: [
+    "google business profile optimization service",
+    "google business profile optimization services",
+    "google my business optimization service",
+    "optimize google business profile",
+    "how to optimize google business page",
+    "google my business optimization tips",
     "local seo services",
     "local seo company",
-    "local seo agency",
-    "local seo service",
-    "local seo services near me",
-    "how to rank in Google Map Pack",
-    "local 3-pack ranking",
-    "Google Maps ranking factors",
-    "why am I not showing up on Google Maps",
+    "google maps ranking",
+    "map pack seo",
     "geo grid rank tracking",
-    "near me search ranking",
-    "Google Maps proximity ranking",
-    "local pack visibility",
-    "map pack SEO",
-    "improve Google Maps ranking",
   ],
   alternates: { canonical: "/local-seo-google-business-optimization" },
   openGraph: {
@@ -350,6 +344,11 @@ const faqs = [
   {
     q: "What do you need from me to run the free scan?",
     a: "The business name as it appears on the profile, the city or area you want scanned, and up to three search terms that actually bring you work — the phrases a customer would type, not industry jargon. That is enough to run the grid and send you the map with a written read on what it shows.",
+  },
+  {
+    q: "What does a Google Business Profile optimization service actually do each month?",
+    a:
+      "It keeps every ranking signal Google reads current: the primary and secondary categories, the services list with descriptions, the business description, photos and videos, weekly posts, Q&A, and a steady flow of replied-to reviews. It also checks that name, address and phone match across the citations Google cross-references, and tracks rankings on a geo-grid so you can see how far from your address the profile still ranks. Zonic Media has optimized more than 1,500 profiles and reports the grid every month.",
   },
 ];
 

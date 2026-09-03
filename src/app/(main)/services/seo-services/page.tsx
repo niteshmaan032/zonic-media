@@ -29,20 +29,21 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/seo-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO Services — What's Included, Pricing & Process" },
+  title: { absolute: "SEO Services for Small Business | Affordable SEO Company USA" },
   description:
-    "Full-stack SEO services for small and local businesses: local SEO, Google Business Profile, on-page, content and links — reported in calls and revenue. Free audit, no lock-in.",
+    "Affordable SEO services for small businesses from a US SEO company: technical SEO, local SEO, Google Business Profile, content and links.",
   keywords: [
-    "seo services",
+    "seo services for small business",
+    "affordable seo services for small businesses",
+    "best seo companies for small business",
+    "search engine optimization services for small business",
+    "seo company for small business near me",
+    "best seo companies for small business in usa",
+    "low cost seo services for small business",
+    "how much does seo cost for a small business",
+    "seo services packages for small business",
     "seo services near me",
-    "seo agency near me",
     "seo company near me",
-    "seo near me",
-    "search engine optimization services",
-    "best seo company near me",
-    "seo marketing near me",
-    "affordable seo services",
-    "small business seo services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "SEO Services — What's Included, Pricing & Process",
+    title: "SEO Services for Small Business | Affordable SEO Company USA",
     description:
       "Full-stack SEO services for small and local businesses — local SEO, GBP, on-page, content and links, reported in calls and revenue.",
     url: PAGE_PATH,
@@ -160,6 +161,11 @@ const SeoServicesFaqs = [
     question: "What makes Zonic Media different from other SEO agencies?",
     answer:
       "We specialise in local service businesses, we run everything in-house with nothing outsourced, and we report in calls and booked jobs. And because Google Business Profile work is our flagship — 1,500+ profiles optimized — the highest-leverage local signals get expert attention, not an intern's checklist.",
+  },
+  {
+    question: "Is SEO still worth it for a small business now that Google shows AI Overviews?",
+    answer:
+      "Yes, and the data says it is more important, not less. Roughly three quarters of the pages Google cites in AI Overviews already rank in the top ten, and AI Mode leans heavily on Google Business Profile data. So the businesses that rank well organically are the ones AI answers recommend. Our SEO program includes the answer-first content and structured data that AI engines cite, so you are visible in both the classic results and the AI answer.",
   },
 ];
 

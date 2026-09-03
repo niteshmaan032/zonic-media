@@ -54,25 +54,19 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: "Web Design Services for Small Business",
+  title: { absolute: "Web Design Services for Small Business | Affordable & Custom" },
   description:
-    "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+    "Affordable custom web design services for small businesses: fast, mobile-first websites built to rank in Google and convert visitors into calls.",
   keywords: [
-    "web seo services in delaware",
-    "delaware seo and web design agency",
     "web design services for small business",
-    "conversion focused website design",
-    "local business website design",
-    "responsive web design services",
-    "SEO friendly web design",
-    "custom website design",
-    "website redesign services",
-    "mobile friendly website design",
-    "affordable web design for small business",
-    "best web design agency for small business",
-    "small business website design company",
-    "website design and development services",
-    "lead generation website design",
+    "affordable web design services for small businesses",
+    "best web design company for small business",
+    "custom web design for small businesses",
+    "small business website design",
+    "web design companies for small businesses",
+    "average cost of website design for small business",
+    "web designers for small businesses near me",
+    "website design services usa",
   ],
   alternates: { canonical: "/services/web-design" },
   openGraph: {
@@ -86,7 +80,7 @@ export const metadata: Metadata = {
     ],
     title: "Web Design Services for Small Business | Zonic Media",
     description:
-      "Professional web design services focused on speed, SEO, and conversions. We build responsive websites that attract visitors and turn them into customers.",
+      "Affordable custom web design services for small businesses: fast, mobile-first websites built to rank in Google and convert visitors into calls.",
     url: "/services/web-design",
     type: "website",
   },
@@ -275,6 +269,11 @@ const wdFaqsLeft: Faq[] = [
   {
     q: "Do you build SEO-friendly websites?",
     a: "Absolutely. Our websites are built with SEO best practices, including fast loading speeds, optimized structure, clean code, and proper heading hierarchy to help improve search engine visibility.",
+  },
+  {
+    q: "What is the average cost of website design for a small business in 2026?",
+    a:
+      "A custom small-business website from a US agency typically costs $2,500 to $10,000 depending on page count, custom design and integrations, while template builders cost less up front but rarely rank or convert as well. Zonic Media quotes a flat project fee after a free consultation, includes on-page SEO, Core Web Vitals optimization and lead forms in every build, and can bundle a no-upfront-fee website with a qualifying marketing plan for service businesses.",
   },
 ];
 

@@ -82,24 +82,27 @@ const SeoHomeFaqs = [
     answer:
       "Zonic Media specializes in helping home service businesses generate more booked jobs, calls, and local leads through proven SEO strategies built for real business growth.",
   },
+  {
+    question: "How is local SEO for home service companies different from local SEO for a storefront?",
+    answer:
+      "A home service company has no storefront for customers to visit, so Google ranks it by the service area it declares, the cities its website and profile mention, and the proximity of the searcher to the business address. That means service-area pages, job-location photos and reviews that name the town matter more than foot-traffic signals. Zonic Media builds the program around those service-area signals and tracks rankings across the whole territory, not just at your office.",
+  },
 ];
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Local SEO for Home Service Pros — Rank in the Map Pack",
-  },
+  title: { absolute: "Local SEO for Home Service Companies | Map Pack Rankings" },
   description:
-    "Roofers, HVAC, plumbers: get found in the Google Map Pack in your service area. Local SEO built for home service businesses. Free profile audit.",
+    "Local SEO for home service companies: plumbers, HVAC, roofers, electricians and cleaners. Google Business Profile, reviews and citations that win the Map Pack.",
   keywords: [
-    "local SEO for home services",
-    "local SEO for contractors",
-    "home services SEO company",
-    "local SEO for plumbers",
-    "local SEO for HVAC companies",
-    "local SEO for roofers",
-    "Google Maps ranking for home services",
-    "Google Business Profile optimization for contractors",
-    "local SEO agency for service businesses",
+    "local seo for home services",
+    "local seo for home service companies",
+    "local seo for home service business",
+    "seo for home service",
+    "local seo services for small business",
+    "local seo services near me",
+    "best local seo agency services",
+    "local seo cost",
+    "local seo for contractors",
   ],
   alternates: { canonical: "/services/local-seo-for-home-services" },
   openGraph: {
@@ -1061,7 +1064,7 @@ function page() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                url: "https://zonicllc.com/services/local-seo-for-home-services",
+                url: "https://www.zonicllc.com/services/local-seo-for-home-services",
                 mainEntity: SeoHomeFaqs.map((faq) => ({
                   "@type": "Question",
                   name: faq.question,
@@ -1102,7 +1105,7 @@ function page() {
                     src="/images/gmb-reinst/trust-img-1.svg"
                     width={20}
                     height={20}
-                    alt="google logo"
+                    alt="Google logo"
                   />{" "}
                   Google Business Profile Experts
                 </p>
@@ -1112,7 +1115,7 @@ function page() {
                     src="/images/gmb-reinst/trust-img-3.svg"
                     width={20}
                     height={20}
-                    alt="rating star"
+                    alt="Five-star rating icon"
                   />{" "}
                   4.9/5 Client Satisfaction Rating
                 </p>
@@ -1132,7 +1135,7 @@ function page() {
                     src="/images/gmb-reinst/trust-img-2.svg"
                     width={20}
                     height={20}
-                    alt="shield logo"
+                    alt="Trust and security shield icon"
                   />{" "}
                   500+ Businesses Ranked on Google
                 </p>

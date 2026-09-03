@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
   slug: "kitchen-remodeling-marketing-agency",
-  title: "Kitchen Remodeling Marketing Agency | SEO & Ads | Zonic Media",
+  title: "Kitchen Remodeling Marketing Agency | SEO, Ads & Leads",
   description:
-    "Kitchen remodeling marketing agency for US remodelers. Local SEO, Google Map Pack ranking, Google Ads & exclusive kitchen remodel leads. Free audit.",
+    "Kitchen remodeling marketing agency: Google Business Profile, local SEO, Google Ads and project galleries that turn kitchen research into design consultations.",
   keywords: [
     "kitchen remodeling marketing agency",
-    "kitchen remodeler marketing",
-    "marketing for kitchen remodelers",
+    "home remodeling marketing agency",
     "kitchen remodeling leads",
     "kitchen remodel lead generation",
-    "kitchen remodeling SEO",
-    "local SEO for kitchen remodelers",
-    "Google Ads for kitchen remodelers",
-    "cabinet refacing marketing",
-    "kitchen renovation marketing",
+    "kitchen remodeling seo",
+    "remodeling contractor marketing",
+    "design build marketing agency",
+    "home improvement marketing agency",
   ],
 
   eyebrow: "Kitchen Remodeling Marketing Agency",

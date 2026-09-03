@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const flooringMarketing = buildIndustryMarketingPage({
   slug: "flooring-marketing-agency",
-  title: "Flooring Marketing Agency | Flooring SEO & Ads | Zonic Media",
+  title: "Flooring Marketing Agency | Local SEO, Google Ads & Leads",
   description:
-    "Flooring marketing agency for US flooring companies & showrooms. Local SEO, Google Map Pack ranking, Google Ads & exclusive flooring leads. Free audit.",
+    "Flooring marketing agency for installers and showrooms: Google Business Profile, local SEO, Google Ads and product pages that book in-home measures.",
   keywords: [
     "flooring marketing agency",
-    "flooring company marketing",
-    "marketing for flooring companies",
-    "flooring leads",
+    "flooring marketing company",
+    "marketing for flooring contractors",
+    "flooring contractor advertising agency",
+    "epoxy flooring marketing agency",
+    "flooring seo",
+    "flooring store marketing",
     "flooring lead generation",
-    "flooring SEO",
-    "local SEO for flooring companies",
-    "Google Ads for flooring contractors",
-    "flooring showroom marketing",
-    "hardwood flooring marketing",
   ],
 
   eyebrow: "Flooring Marketing Agency",

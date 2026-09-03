@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-flooring-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Flooring Companies That Wins Jobs",
+  title: { absolute: "Flooring SEO Company | Local SEO for Flooring Companies" },
   description:
-    "Local SEO for flooring companies that wins the map pack — turn 'flooring installer near me' searches into booked estimates. Free audit.",
+    "Flooring SEO for installers and showrooms: product pages, Google Business Profile, service-area pages and reviews that book in-home measures and installs.",
   keywords: [
-    "local SEO for flooring companies",
-    "flooring installer near me",
-    "flooring company near me",
-    "hardwood flooring near me",
-    "tile installation near me",
-    "laminate flooring",
-    "vinyl plank flooring",
-    "flooring SEO",
-    "SEO for flooring companies",
-    "Google Business Profile for flooring",
-    "flooring lead generation",
+    "local seo for flooring companies",
+    "flooring seo",
+    "flooring company seo",
+    "websites for flooring contractors",
+    "flooring store seo",
+    "seo for flooring installers",
+    "flooring marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const FlooringSeoFaqs = [
     question: "Why Choose Zonic Media over Another Flooring SEO Company?",
     answer:
       "We specialize in local home-service businesses like flooring, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "Should flooring SEO target products or installation services?",
+    answer:
+      "Both. Homeowners search product terms first, such as luxury vinyl plank, hardwood or tile flooring, then search for installers near them. Product pages with photos and price ranges capture the first stage; installation and refinishing service pages plus city pages capture the second. The Google Business Profile should list both products and services. Zonic Media builds flooring SEO across both stages and tracks measure requests by page.",
   },
 ];
 

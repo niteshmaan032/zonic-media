@@ -31,22 +31,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/chiropractor-website-design";
 
 export const metadata: Metadata = {
-  title: "Chiropractor Website Design That Books Patients",
+  title: { absolute: "Chiropractic Website Design Company | Book More Patients" },
   description:
-    "Chiropractor website design built as a patient acquisition system — online booking, new-patient offers, insurance UX, and mobile-first pages that fill your schedule.",
+    "Chiropractic website design company: online booking, new-patient offers, insurance UX, condition pages and mobile-first design that fills your schedule.",
   keywords: [
-    "chiropractic website seo",
-    "best chiropractic website companies",
-    "chiropractor website design",
     "chiropractic website design",
-    "chiropractic practice website design",
-    "websites for chiropractors",
+    "chiropractor website design",
+    "chiropractic website design companies",
     "chiropractor web design",
-    "chiropractic clinic website design",
-    "chiropractor website redesign",
-    "chiropractic lead generation website",
-    "chiropractor landing page design",
-    "chiropractic web designer",
+    "best chiropractic website design",
+    "chiropractic clinic website",
+    "chiropractor website examples",
+    "chiropractic marketing website",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -60,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "Chiropractor Website Design That Books Patients | Zonic Media",
     description:
-      "Chiropractor website design built as a patient acquisition system — online booking, new-patient offers, insurance UX, and mobile-first pages that fill your schedule.",
+      "Chiropractic website design company: online booking, new-patient offers, insurance UX, condition pages and mobile-first design that fills your schedule.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -160,6 +156,11 @@ const ChiroWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What pages does a chiropractic website need to attract new patients?",
+    answer:
+      "Condition pages such as back pain, neck pain, sciatica and auto injury, because patients search the symptom before the treatment; a new-patient page with the first-visit process and any special offer; an insurance and pricing page; provider bios with credentials; and online booking on every page. Zonic Media builds chiropractic sites around those pages and tracks new-patient bookings by condition.",
   },
 ];
 

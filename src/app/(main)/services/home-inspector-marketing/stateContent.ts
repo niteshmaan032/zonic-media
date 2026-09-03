@@ -64,9 +64,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   georgia: {
     name: "Georgia",
     slug: "georgia",
-    metaTitle: "Georgia Home Inspector Marketing & SEO",
+    metaTitle: "Home Inspector Marketing in Georgia | SEO & Lead Generation",
     metaDescription:
-      "Home inspector marketing for Georgia. Local SEO, Google Ads, GBP for inspectors in Atlanta, Savannah, Augusta, Athens, Marietta. Free audit, no contracts.",
+      "Home inspector marketing for Georgia inspectors in Atlanta, Marietta, Savannah and Augusta: local SEO, Google Business Profile, Google Ads.",
     ticker: [
       "Free Georgia Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
@@ -255,6 +255,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Can you fix my Google Business Profile if it's been suspended?",
         a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
+      {
+        q: "How can a Georgia home inspector rank across the Atlanta metro?",
+        a:
+          "By covering the suburbs individually. Alpharetta, Marietta, Decatur and Lawrenceville each have their own Map Pack for home inspectors, so service-area pages, reviews that name the suburb and a complete Google Business Profile build coverage across the metro. Zonic Media tracks rankings on a grid across the suburbs and expands where the bookings are.",
+      },
     ],
     final: {
       accent: "Georgia Home Inspectors.",
@@ -265,9 +270,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   texas: {
     name: "Texas",
     slug: "texas",
-    metaTitle: "Texas Home Inspector Marketing & SEO",
+    metaTitle: "Home Inspector Marketing in Texas | SEO & Lead Generation",
     metaDescription:
-      "Home inspector marketing for Texas. Local SEO, Google Ads, GBP for inspectors in Houston, Dallas, Austin, San Antonio, Fort Worth. Free audit, no contracts.",
+      "Home inspector marketing for Texas inspectors in Houston, Dallas, Austin and San Antonio: local SEO, Google Business Profile, Google Ads.",
     ticker: [
       "Free Texas Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
@@ -455,6 +460,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Can you fix my Google Business Profile if it's been suspended?",
         a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
+      {
+        q: "How do Texas home inspectors compete in Houston and Dallas?",
+        a:
+          "With suburb-level coverage and reviews. Both metros sprawl across dozens of suburbs that each have their own Map Pack, so service-area pages, reviews that name the suburb and a complete Google Business Profile decide who buyers find. Zonic Media tracks rankings across the metro on a grid and adds coverage where the inspections are booked.",
+      },
     ],
     final: {
       accent: "Texas Home Inspectors.",
@@ -465,9 +475,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   florida: {
     name: "Florida",
     slug: "florida",
-    metaTitle: "Florida Home Inspector Marketing & SEO",
+    metaTitle: "Home Inspector Marketing in Florida | SEO & Lead Generation",
     metaDescription:
-      "Home inspector marketing for Florida. Local SEO, Google Ads, GBP for inspectors in Miami, Tampa, Orlando, Jacksonville, Fort Lauderdale. Free audit, no contracts.",
+      "Home inspector marketing for Florida inspectors in Miami, Tampa, Orlando and Jacksonville: local SEO, Google Business Profile, Google Ads.",
     ticker: [
       "Free Florida Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
@@ -656,6 +666,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Can you fix my Google Business Profile if it's been suspended?",
         a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
+      {
+        q: "Which Florida inspection services should be marketed separately?",
+        a:
+          "Wind mitigation inspections and 4-point inspections, which insurers require and homeowners search for by name, plus new-construction and condo inspections in the coastal metros. Each should have its own page and a place on the Google Business Profile services list. Zonic Media builds those pages for the Florida metros and tracks which inspection types produce bookings.",
+      },
     ],
     final: {
       accent: "Florida Home Inspectors.",
@@ -666,10 +681,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   california: {
     name: "California",
     slug: "california",
-    metaTitle:
-      "California Home Inspector Marketing & SEO",
+    metaTitle: "Home Inspector Marketing in California | SEO & Leads",
     metaDescription:
-      "Home inspector marketing for California. Local SEO, Google Ads & GBP optimization that put inspectors in the map pack statewide. Free audit, no contracts.",
+      "Home inspector marketing for California inspectors in Los Angeles, San Diego, the Bay Area and Sacramento: local SEO, Google Business Profile.",
     ticker: [
       "Free California Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
@@ -861,6 +875,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Can you fix my Google Business Profile if it's been suspended?",
         a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
       },
+      {
+        q: "How do California home inspectors get found by buyers instead of only agents?",
+        a:
+          "Buyers in California increasingly search for their own inspector after going under contract, so a verified Google Business Profile in the Home Inspector category, reviews that name the city, and service pages for each inspection type put you in front of them that day. Zonic Media runs that program alongside an agent-outreach track so both channels produce inspections.",
+      },
     ],
     final: {
       accent: "California Home Inspectors.",
@@ -871,10 +890,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   "north-carolina": {
     name: "North Carolina",
     slug: "north-carolina",
-    metaTitle:
-      "North Carolina Home Inspector Marketing & SEO",
+    metaTitle: "Home Inspector Marketing in North Carolina | SEO & Leads",
     metaDescription:
-      "Home inspector marketing for North Carolina. Local SEO, Google Ads & GBP for inspectors in Charlotte, Raleigh, Durham, Greensboro. Free audit.",
+      "Home inspector marketing for North Carolina inspectors in Charlotte, Raleigh, Greensboro and Wilmington: local SEO, Google Business Profile, Google Ads.",
     ticker: [
       "Free North Carolina Home Inspector Marketing Audit",
       "500+ Local Businesses Ranked",
@@ -1062,6 +1080,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
         a: "Yes. GBP reinstatement is one of our specialties — we've reinstated hundreds of suspended profiles across local service businesses including home inspectors. If your profile is currently suspended, mention it on the audit form and we'll prioritize reviewing the suspension reason and the path to reinstatement. Most cases resolve within seven to twenty-one days once the appeal is properly structured.",
+      },
+      {
+        q: "What do North Carolina buyers search for when choosing a home inspector?",
+        a:
+          "Home inspector plus their city, licensed home inspector near me, and inspection cost questions, followed by reviews. Inspectors with a verified Google Business Profile, recent reviews that mention the city, and a clear pricing page win those searches in Charlotte and Raleigh. Zonic Media builds that presence and tracks bookings by city.",
       },
     ],
     final: {

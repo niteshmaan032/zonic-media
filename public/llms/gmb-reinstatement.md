@@ -53,7 +53,7 @@ Fix the violation before appealing: correct the business name, address, categori
 "Deceptive content" suspensions usually trace to name/category/address inconsistencies rather than actual deception. They are recoverable with corrected data and documentation — Zonic Media handles these cases routinely.
 
 **My appeal was rejected by the Google appeal tool — is it over?**
-No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/gmb-reinstatement-service-agency
+No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/services/gmb-reinstatement-help
 
 **Who can help reinstate a suspended Google Business Profile?**
 A specialist agency that fixes root causes and files documented appeals. Zonic Media has reinstated 700+ profiles, offers a free suspension audit, and charges no reinstatement fee if the profile isn't recovered.

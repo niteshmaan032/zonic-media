@@ -41,7 +41,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Reinstatement",
   description:
-    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified, rated 4.9 out of 5 across 127 verified client reviews on Trustpilot and Clutch.",
+    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified, rated 5.0 out of 5 across 21 verified client reviews on Clutch.",
   url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
   provider: {
     "@type": "Organization",
@@ -129,30 +129,29 @@ const GmbResinstFaqs = [
     answer:
       "Independent client reviews of Zonic Media are published on Trustpilot (trustpilot.com/review/zonicllc.com) and Clutch (clutch.co/profile/zonic-media). Reviewers consistently mention fast GMB suspension recovery, clear communication, and quick response times.",
   },
+  {
+    question: "Should I file the Google Business Profile reinstatement form myself before hiring an expert?",
+    answer:
+      "Only if you know exactly why the profile was suspended and can prove the fix with documents. Google allows limited appeals, and a rejected appeal makes the next one harder. Our free suspension audit tells you the likely trigger within 24 hours; if it is a simple fix we say so, and if it needs evidence and the right escalation track we handle the filing. Reinstatement typically completes in 5 to 7 business days, and the fee is only charged when the profile is back.",
+  },
 ];
 
 export const metadata: Metadata = {
-  title: {
-    absolute:
-      "GMB Reinstatement Service | Fix Suspended Google Business Profile",
-  },
+  title: { absolute: "Google Business Profile Reinstatement Service | GMB Experts" },
   description:
-    "Suspended Google Business Profile? Our GMB reinstatement service recovers suspended & disabled listings in 5–7 days. 700+ reinstated. No Fix, No Charge.",
+    "Google Business Profile suspended? Our reinstatement experts recover suspended and disabled listings in 5 to 7 days. 700+ profiles reinstated.",
   keywords: [
-    "GMB reinstatement service",
-    "Google Business Profile reinstatement",
-    "suspended Google Business Profile",
-    "Google Business Profile suspended",
-    "GBP suspension appeal",
-    "fix suspended GMB listing",
-    "Google My Business reinstatement",
-    "GBP reinstatement service",
-    "Google Business Profile appeal",
-    "reinstate Google Business Profile",
-    "best GMB reinstatement service",
-    "GMB reinstatement agency",
-    "Google Business Profile suspension help",
-    "GBP suspended appeal service",
+    "google business profile reinstatement service",
+    "google business profile reinstatement",
+    "gmb reinstatement service",
+    "gmb reinstatement experts",
+    "google business profile reinstatement expert",
+    "fix suspended google business profile",
+    "google business profile suspended",
+    "google business profile reinstatement form",
+    "how to reinstate google business account",
+    "google business profile reinstatement help",
+    "gmb reinstatement agency",
   ],
   alternates: { canonical: "/services/gmb-reinstatement-help" },
   openGraph: {
@@ -164,7 +163,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "GMB Reinstatement Service | Fix Suspended Google Business Profile",
+    title: "Google Business Profile Reinstatement Service | GMB Experts",
     description:
       "Recover your suspended Google Business Profile in 5–7 business days. Free suspension audit, 700+ profiles reinstated, No Fix, No Charge.",
     url: "/services/gmb-reinstatement-help",
@@ -172,7 +171,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GMB Reinstatement Service | Fix Suspended Google Business Profile",
+    title: "Google Business Profile Reinstatement Service | GMB Experts",
     description:
       "Recover your suspended Google Business Profile in 5–7 business days. Free audit. No Fix, No Charge.",
   },
@@ -919,7 +918,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  url: "https://zonicllc.com/services/gmb-reinstatement-help",
+                  url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
                   mainEntity: GmbResinstFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

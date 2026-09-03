@@ -51,15 +51,15 @@ body.hwd-menu-is-open {
 .hwd-page button { font: inherit; }
 .hwd-page svg { stroke-width: 2; }
 
-/* CTA labels stay sentence case, as written in the design file — capitalizing
-   them widens the hero pair past its column and forces a wrap. */
+/* CTA labels are title-cased. The hero pair is the tight spot — its buttons
+   carry reduced side padding below so the wider labels still fit the column. */
 .hwd-page .nav-cta,
 .hwd-page .mobile-menu-cta,
 .hwd-page .button,
 .hwd-page .section-button,
 .hwd-page .form-submit,
 .hwd-page .pricing-card > a,
-.hwd-page .footer-offer a { text-transform: none; }
+.hwd-page .footer-offer a { text-transform: capitalize; }
 
 .hwd-skip-link {
   position: absolute;
@@ -430,7 +430,7 @@ body.hwd-menu-is-open {
 .hwd-page .pricing-card--featured .pricing-card-head > span { color: var(--yellow); }
 .hwd-page .pricing-card-head small { margin-top: 5px; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
 .hwd-page .pricing-card h3 { position: relative; z-index: 2; margin: 18px 0 9px; font-size: 26px; letter-spacing: -.04em; }
-.hwd-page .pricing-card--featured h3 { color: white; }
+.hwd-page .pricing-card--featured h3 { color: #fff; }
 .hwd-page .plan-price { position: relative; z-index: 2; font-size: 43px; font-weight: 900; letter-spacing: -.055em; }
 .hwd-page .plan-price span { color: #8793a6; font-size: 11px; font-weight: 700; letter-spacing: 0; }
 .hwd-page .pricing-card > p { min-height: 72px; margin: 15px 0 17px; color: var(--muted); font-size: 15px; line-height: 1.62; }
@@ -863,3 +863,103 @@ body.hwd-menu-is-open {
 .hwd-page .offer-inlink:hover { color: var(--yellow); }
 .hwd-page .dark-grid .offer-inlink,
 .hwd-page .pricing-note .offer-inlink { color: inherit; }
+
+
+/* ══ Footer legal block ══════════════════════════════════════
+   The offer terms run the full width of the footer; the address and the
+   copyright line sit beneath them rather than beside. */
+.hwd-page .footer-bottom { grid-template-columns: 1fr auto; gap: 18px 30px; }
+.hwd-page .footer-bottom > small { grid-column: 1 / -1; }
+.hwd-page .footer-bottom > p { grid-column: 1; align-self: center; }
+.hwd-page .footer-bottom > span { grid-column: 2; justify-self: end; align-self: center; }
+
+@media (max-width: 760px) {
+  .hwd-page .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+  .hwd-page .footer-bottom > p,
+  .hwd-page .footer-bottom > span { grid-column: 1; justify-self: start; }
+}
+
+/* ══ Pricing card colours ════════════════════════════════════
+   Growth reads as the warm, chosen plan; Full Market as the calm one above
+   it. Both foreground sets clear 4.5:1 on their own background. */
+.hwd-page .pricing-card--featured { border-color: #f97315; background: #f97315; }
+.hwd-page .pricing-card--featured::after { background: rgba(255, 255, 255, .13); }
+.hwd-page .pricing-card--featured .pricing-card-head > span { color: #fff; }
+.hwd-page .pricing-card--featured .pricing-card-head small { color: #fff; }
+.hwd-page .pricing-card--featured > p { color: #fff; }
+.hwd-page .pricing-card--featured ul { border-color: rgba(255, 255, 255, .34); }
+.hwd-page .pricing-card--featured li { color: #fff; }
+.hwd-page .pricing-card--featured li svg { color: #fff; }
+/* The grey "/ month" is unreadable on the orange; the whole price goes white. */
+.hwd-page .pricing-card--featured .plan-price span { color: rgba(255, 255, 255, .82); }
+.hwd-page .pricing-card--featured > a { background: var(--ink); color: #fff; }
+
+.hwd-page .pricing-card--verdant { border-color: #bfe6cd; background: #e9f7ee; }
+.hwd-page .pricing-card--verdant::after { background: rgba(43, 173, 104, .15); }
+.hwd-page .pricing-card--verdant .pricing-card-head > span { color: #1c7a4a; }
+.hwd-page .pricing-card--verdant li svg { color: #1c8a52; }
+
+/* ══ Lead tracking ═══════════════════════════════════════════
+   Copy left, dashboard right — the same split the terms section uses. */
+.hwd-page .leadtrack-section { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 50px; align-items: center; padding-top: 46px; padding-bottom: 54px; }
+/* One measure for the whole column so the heading, lede and list share an edge. */
+.hwd-page .leadtrack-copy { max-width: 520px; }
+.hwd-page .leadtrack-copy h2 { margin: 16px 0 18px; font-size: clamp(34px, 3.3vw, 48px); line-height: 1.14; letter-spacing: -.05em; }
+.hwd-page .leadtrack-copy > p { margin: 0 0 24px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.hwd-page .leadtrack-points { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.hwd-page .leadtrack-points li { display: flex; align-items: center; gap: 11px; padding: 13px 0; border-bottom: 1px solid var(--line); color: #46536a; font-size: 14.5px; font-weight: 700; }
+.hwd-page .leadtrack-points svg { flex: 0 0 auto; width: 19px; height: 19px; padding: 3px; border-radius: 50%; background: #e9f8ef; color: #1c8a52; }
+
+.hwd-page .leadtrack-panel { padding: 16px; display: grid; gap: 14px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 18px 46px rgba(28,64,123,.08); }
+.hwd-page .leadtrack-statrow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.hwd-page .leadtrack-stat { padding: 12px 13px; border: 1px solid var(--line); border-radius: 14px; background: #f8fbff; }
+.hwd-page .leadtrack-stat > span { display: block; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.hwd-page .leadtrack-stat > strong { display: block; margin-top: 5px; color: var(--ink); font-size: 22px; letter-spacing: -.04em; }
+.hwd-page .leadtrack-stat > small { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; color: #1c8a52; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.hwd-page .leadtrack-stat > small svg { flex: 0 0 auto; width: 12px; }
+.hwd-page .leadtrack-stat--accent { border-color: color-mix(in srgb, var(--blue) 30%, transparent); background: color-mix(in srgb, var(--blue) 8%, #fff); }
+
+.hwd-page .leadtrack-board { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; overflow: hidden; }
+.hwd-page .leadtrack-board > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.hwd-page .leadtrack-tabs { display: flex; gap: 5px; }
+.hwd-page .leadtrack-tabs > * { padding: 5px 10px; border-radius: 99px; color: #6b7891; font-size: 11.5px; font-weight: 800; font-style: normal; }
+.hwd-page .leadtrack-tabs > b { background: var(--ink); color: #fff; }
+.hwd-page .leadtrack-live { display: inline-flex; align-items: center; gap: 6px; color: #1c8a52; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.hwd-page .leadtrack-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #1c8a52; animation: leadtrack-pulse 1.8s ease-in-out infinite; }
+
+.hwd-page .leadtrack-head, .hwd-page .leadtrack-row { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 10px 14px; }
+.hwd-page .leadtrack-head { background: #f8fbff; border-bottom: 1px solid var(--line); color: #8b97ab; font-size: 10px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.hwd-page .leadtrack-row { border-bottom: 1px solid rgba(17,26,39,.06); }
+.hwd-page .leadtrack-row:last-child { border-bottom: 0; }
+.hwd-page .leadtrack-row b { display: block; min-width: 0; color: var(--ink); font-size: 13px; font-weight: 900; }
+.hwd-page .leadtrack-row b small { display: block; margin-top: 2px; color: #7b889d; font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hwd-page .leadtrack-row > span { min-width: 0; color: #46536a; font-size: 12.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hwd-page .leadtrack-pill { justify-self: end; padding: 4px 9px; border-radius: 99px; font-size: 10.5px; font-weight: 900; white-space: nowrap; }
+.hwd-page .leadtrack-pill--new { background: #e6f0ff; color: #1a4fbf; }
+.hwd-page .leadtrack-pill--contacted { background: #fff3dc; color: #8a5800; }
+.hwd-page .leadtrack-pill--quoted { background: #efe8ff; color: #5b34c4; }
+.hwd-page .leadtrack-pill--won { background: #e3f6ea; color: #16714a; }
+.hwd-page .leadtrack-caption { margin: 0; color: #8b97ab; font-size: 11.5px; font-weight: 700; text-align: center; }
+
+@keyframes leadtrack-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+@media (max-width: 1050px) {
+  .hwd-page .leadtrack-section { grid-template-columns: 1fr; gap: 34px; }
+  .hwd-page .leadtrack-copy > p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .hwd-page .leadtrack-panel { padding: 12px; border-radius: 20px; }
+  .hwd-page .leadtrack-statrow { grid-template-columns: 1fr 1fr; }
+  .hwd-page .leadtrack-statrow > :last-child { grid-column: 1 / -1; }
+  .hwd-page .leadtrack-head > span:nth-child(2), .hwd-page .leadtrack-row > span:not(.leadtrack-pill) { display: none; }
+  .hwd-page .leadtrack-head, .hwd-page .leadtrack-row { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hwd-page .leadtrack-live::before { animation: none; }
+}
+
+/* The title-cased hero pair is the widest CTA row on the page; trimming the
+   side padding and icon gap keeps both buttons on one line in the copy column. */
+.hwd-page .hero-actions .button { gap: 14px; padding-left: 18px; }

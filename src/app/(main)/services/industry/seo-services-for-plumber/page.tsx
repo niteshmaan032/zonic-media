@@ -91,22 +91,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/seo-services-for-plumber";
 
 export const metadata: Metadata = {
-  title: "SEO for Plumbers That Win Local Service Calls",
+  title: { absolute: "SEO for Plumbers | Affordable Plumbing SEO Company & Agency" },
   description:
-    "SEO for plumbers that turns 'plumber near me' into booked jobs — GBP optimization, citations, reviews & service-area pages. Free audit.",
+    "Affordable SEO for plumbers and plumbing companies: local SEO, Google Business Profile, emergency-search Map Pack rankings and reviews that book service calls.",
   keywords: [
-    "SEO for plumbers",
-    "plumber near me",
-    "emergency plumber SEO",
-    "SEO for plumbing contractors",
-    "drain cleaning SEO",
-    "water heater repair SEO",
-    "plumbing SEO company",
-    "plumber lead generation",
-    "local SEO for plumbers",
-    "Google Business Profile for plumbers",
-    "plumber map pack ranking",
-    "plumbing contractor SEO",
+    "seo for plumbers",
+    "affordable seo for plumbers",
+    "seo agency for plumbers",
+    "local seo for plumbers",
+    "seo for plumbing companies",
+    "best seo company for plumbers",
+    "seo keywords for plumbers",
+    "local seo services for plumbers",
+    "ai seo for plumbers",
+    "plumbing seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -236,6 +234,11 @@ const PlumberSeoFaqs = [
     question: "Why Choose Zonic Media over Another Plumbing SEO Company?",
     answer:
       "We specialize in local home-service businesses like plumbing, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "What are the most valuable SEO keywords for plumbers?",
+    answer:
+      "Emergency and service-specific terms in each city you serve: emergency plumber near me, water heater replacement in a city, drain cleaning, sewer line repair, and leak detection. Generic terms like plumber convert poorly compared with the job-specific searches. Zonic Media maps the services and towns that produce your best jobs, builds a page for each, and tracks calls by keyword so you can see which searches pay.",
   },
 ];
 

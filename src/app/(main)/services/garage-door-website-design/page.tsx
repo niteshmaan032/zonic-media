@@ -32,20 +32,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/garage-door-website-design";
 
 export const metadata: Metadata = {
-  title: "Garage Door Website Design That Books Jobs",
+  title: { absolute: "Garage Door Website Design | Repair Sites That Book" },
   description:
-    "Garage door website design built as a lead system — emergency repair pages, instant quote flows, financing UX, and mobile-first pages that book repairs and installs.",
+    "Garage door website design for repair and installation companies: emergency repair pages, product galleries, financing UX.",
   keywords: [
     "garage door website design",
-    "garage door company website design",
     "garage door repair website design",
-    "websites for garage door companies",
-    "garage door service website design",
-    "garage door installer web design",
-    "garage door website redesign",
-    "garage door lead generation website",
-    "garage door landing page design",
-    "garage door contractor web designer",
+    "garage door repair website marketing",
+    "garage door company website",
+    "garage door repair website builder",
+    "garage door installation website",
+    "garage door company software",
+    "garage door website services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -59,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Garage Door Website Design That Books Jobs | Zonic Media",
     description:
-      "Garage door website design built as a lead system — emergency repair pages, instant quote flows, financing UX, and mobile-first pages that book repairs and installs.",
+      "Garage door website design for repair and installation companies: emergency repair pages, product galleries, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -159,6 +157,11 @@ const GarageWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Why do garage door repair websites need an emergency-first design?",
+    answer:
+      "Because most garage door searches happen when a door is stuck and a car is trapped inside. The homeowner calls the first result that shows a phone number, same-day availability and a price range for spring or opener repair. The site should put that on the first mobile screen, with installation and product galleries below for planned replacements. Zonic Media designs garage door sites that way and tracks calls by repair type.",
   },
 ];
 
@@ -435,6 +438,12 @@ function Page() {
                       website design services
                     </Link>{" "}
                     are built around booked jobs, not another brochure site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/garage-door-website-design-agency-us/offer" className="hiw-inline-link">
+                      free garage door website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

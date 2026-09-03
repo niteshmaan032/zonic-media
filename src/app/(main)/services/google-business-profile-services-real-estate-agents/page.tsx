@@ -20,19 +20,18 @@ const PAGE_PATH =
   "/services/google-business-profile-services-real-estate-agents";
 
 export const metadata: Metadata = {
-  title: "GBP Services for Real Estate Agents & Brokers",
+  title: { absolute: "Google Business Profile Services for Real Estate Agents" },
   description:
-    "GBP reinstatement, verification & management for real estate agents and brokers, plus local SEO and realtor website design. 700+ profiles reinstated.",
+    "Google Business Profile services for real estate agents and brokers: reinstatement, verification and optimization so buyers find you first. Free audit.",
   keywords: [
-    "Google Business Profile for real estate agents",
-    "realtor GBP suspended",
-    "real estate GMB reinstatement",
-    "Google Business Profile for realtors",
-    "real estate agent GBP verification",
-    "real estate local SEO",
-    "realtor Google Business Profile management",
-    "real estate broker Google Business Profile",
-    "real estate website design",
+    "google business profile for real estate agents",
+    "google business profile real estate agent",
+    "real estate agent google business profile suspended",
+    "gbp for realtors",
+    "google business profile for brokers",
+    "real estate agent profile description",
+    "google my business for real estate agents",
+    "real estate local seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -359,12 +358,17 @@ const faqs = [
     q: "Which states do you actively work in?",
     a: "We work with real estate agents and brokers nationally. The states with the deepest dedicated experience are Florida, Texas, California, New York, and Arizona — the five largest markets by transaction volume and complexity. Each has its own licensing body and its own suspension patterns, and the work calibrates to those state-specific dynamics. We also serve agents and brokers in other states; these five simply have the deepest dedicated content.",
   },
+  {
+    q: "Can a real estate agent have a Google Business Profile separate from the brokerage?",
+    a:
+      "Yes. Google allows an individual agent profile as a practitioner listing alongside the brokerage's office profile, as long as the agent is publicly facing and the two listings use different names and categories. The most common suspension trigger is an agent using a home address or the brokerage's address with a different business name. Zonic Media sets up practitioner profiles correctly, recovers suspended agent listings, and optimizes both profiles so they reinforce rather than compete with each other.",
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: `https://zonicllc.com${PAGE_PATH}`,
+  url: `https://www.zonicllc.com${PAGE_PATH}`,
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,

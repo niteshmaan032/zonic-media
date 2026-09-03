@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-bathroom-remodelers";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Bathroom Remodelers That Wins Jobs",
+  title: { absolute: "Bathroom Remodeling SEO | Local SEO for Bathroom Remodelers" },
   description:
-    "Local SEO for bathroom remodelers that captures 'bathroom remodeler near me' — GBP, reviews & service-area pages that book estimates. Free audit.",
+    "Bathroom remodeling SEO for contractors: Google Business Profile, project galleries, remodel-cost content.",
   keywords: [
-    "local SEO for bathroom remodelers",
-    "bathroom remodeling SEO",
-    "SEO for bathroom remodelers",
-    "bathroom remodeler near me",
-    "bathroom remodeling contractor",
-    "shower remodel near me",
-    "bathroom renovation near me",
-    "local SEO for remodelers",
-    "Google Business Profile for remodelers",
-    "bathroom remodel lead generation",
-    "walk-in shower installation",
+    "local seo for bathroom remodelers",
+    "bathroom remodeling seo marketing",
+    "bathroom remodeling seo",
+    "seo for home builders",
+    "remodeling contractor seo",
+    "bathroom remodel companies near me",
+    "bathroom remodeling marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const BathSeoFaqs = [
     question: "Why Choose Zonic Media over Another Bathroom Remodeling SEO Company?",
     answer:
       "We specialize in local home-service businesses like bathroom remodeling, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "What content ranks a bathroom remodeler in local search?",
+    answer:
+      "Cost guides for your market, because bathroom remodel cost is the most searched question; project pages with before-and-after photos, the town, and the budget range; and a Google Business Profile with services and photos updated after every job. Reviews that describe the project and the crew add relevance. Zonic Media builds that content around your market and tracks consultation requests from each page.",
   },
 ];
 

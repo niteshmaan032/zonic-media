@@ -71,24 +71,21 @@ import {
 const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "SEO Services for Local Businesses | Zonic Media",
-  },
+  title: { absolute: "Digital Marketing Services for Small Business | Zonic Media" },
   description:
-    "Local SEO, Google Business Profile management, GBP reinstatement, Google Ads and web design for home service and healthcare businesses.",
+    "Digital marketing services for small businesses: local SEO, Google Business Profile, GBP reinstatement, web design, Google Ads.",
   keywords: [
-    "digital marketing services",
-    "full service digital marketing agency",
-    "local SEO services",
-    "Google Ads management",
+    "digital marketing services for small business",
+    "digital marketing services near me",
+    "internet marketing services for small businesses",
+    "small business digital marketing solutions",
+    "digital marketing company for small business",
+    "local seo services",
+    "google ads management",
     "web design services",
-    "Google Business Profile optimization",
-    "PPC advertising services",
-    "digital marketing for local business",
-    "small business marketing services",
-    "best digital marketing agency for small business",
-    "GMB reinstatement and verification services",
-    "local SEO agency USA",
+    "google business profile optimization",
+    "ai seo services",
+    "digital marketing cost for small business",
   ],
   alternates: { canonical: "/services" },
   openGraph: {
@@ -108,9 +105,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services for Local Businesses | Zonic Media",
+    title: "Digital Marketing Services for Small Business | Zonic Media",
     description:
-      "Local SEO, Google Business Profile management, GBP reinstatement, Google Ads and web design for home service and healthcare businesses.",
+      "Digital marketing services for small businesses: local SEO, Google Business Profile, GBP reinstatement, web design, Google Ads.",
   },
 };
 
@@ -558,6 +555,11 @@ const faqs = [
     q: "How do we get started?",
     a: "Book a free audit. We review your site, rankings, Google profile and ad account, then walk you through what we found and what we would do first. There is no obligation to buy anything at the end of it.",
   },
+  {
+    q: "Which digital marketing services should a small business start with in 2026?",
+    a:
+      "Start with the channels that capture people already looking for you: a verified, optimized Google Business Profile, local SEO for your service area, and a fast website that converts visitors into calls. Add Google Ads once the profile and site are converting, and layer in AI search optimization so ChatGPT and Google AI Overviews recommend you by name. Social media comes last for most local businesses because it builds awareness rather than capturing demand.",
+  },
 ];
 
 /* ─────────────────────────────────────────────────────── structured data ─ */
@@ -741,7 +743,7 @@ export default function ServicesPage() {
             <div>
               <p className="svc-eyebrow">Full-service digital agency</p>
               <h1 className="svc-hero-h1">
-                SEO Services That Turn Local Searches into{" "}
+                Digital Marketing Services That Turn Local Searches into{" "}
                 <span className="svc-hl">Booked Jobs</span>
               </h1>
               <p className="svc-hero-sub">

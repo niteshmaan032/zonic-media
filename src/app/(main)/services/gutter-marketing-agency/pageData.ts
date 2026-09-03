@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const gutterMarketing = buildIndustryMarketingPage({
   slug: "gutter-marketing-agency",
-  title: "Gutter Marketing Agency | Gutter Company SEO & Ads | Zonic Media",
+  title: "Gutter Marketing Agency | Gutter Company SEO, Ads & Leads",
   description:
-    "Gutter marketing agency for US gutter companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive seamless gutter and gutter guard leads. Free audit.",
+    "Gutter marketing agency for installation, guard and cleaning companies: Google Business Profile, local SEO, Google Ads and reviews that book free estimates.",
   keywords: [
     "gutter marketing agency",
     "gutter company marketing",
-    "marketing for gutter companies",
-    "gutter leads",
+    "gutter company seo",
+    "gutter installation leads",
     "gutter guard marketing",
-    "seamless gutter leads",
-    "gutter company SEO",
-    "local SEO for gutter companies",
-    "Google Ads for gutter companies",
-    "gutter installation lead generation",
+    "gutter cleaning marketing",
+    "gutter company google ads",
+    "gutter contractor advertising",
   ],
 
   eyebrow: "Gutter Marketing Agency",

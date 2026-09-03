@@ -68,6 +68,8 @@ export type IndustryMarketingPageData = {
   slug: string;
   title: string;
   description: string;
+  /** Meta keywords (Sept 2026 keyword pass; read by generateMetadata). */
+  keywords?: string[];
   // Optional palette override (e.g. "ima-solar"); the 13 generated JSON
   // pages omit both and keep the default homepage-blue accent.
   themeClass?: string;
@@ -156,11 +158,20 @@ export default function IndustryMarketingPage({ page }: Props) {
   );
   const navLinks = NAV_LINKS.filter((link) => stampedIds.has(link.id));
 
-  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
-    { name: "Home", url: "/" },
-    { name: "Services", url: "/services" },
-    { name: page.title, url: `/services/${page.slug}` },
-  ]);
+  // 13 of the generated pages ship their own BreadcrumbList inside
+  // page.schemas; emitting the template one as well produced two
+  // BreadcrumbList nodes per page (Sept 2026 crawl). Only add ours when the
+  // page does not already carry one.
+  const hasOwnBreadcrumb = page.schemas.some((schema) =>
+    schema.includes('"BreadcrumbList"'),
+  );
+  const breadcrumbJsonLd = hasOwnBreadcrumb
+    ? null
+    : buildBreadcrumbJsonLd([
+        { name: "Home", url: "/" },
+        { name: "Services", url: "/services" },
+        { name: page.title, url: `/services/${page.slug}` },
+      ]);
 
   return (
     <>
@@ -171,11 +182,15 @@ export default function IndustryMarketingPage({ page }: Props) {
           dangerouslySetInnerHTML={{ __html: schema }}
         />
       ))}
-      <script
-        id={`${page.slug}-breadcrumb-jsonld`}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      {breadcrumbJsonLd ? (
+        <script
+          id={`${page.slug}-breadcrumb-jsonld`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbJsonLd),
+          }}
+        />
+      ) : null}
 
       <div
         className={

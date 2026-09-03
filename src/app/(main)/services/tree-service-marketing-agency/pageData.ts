@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const treeServiceMarketing = buildIndustryMarketingPage({
   slug: "tree-service-marketing-agency",
-  title: "Tree Service Marketing Agency | SEO & Ads | Zonic Media",
+  title: "Tree Service Marketing Agency | Local SEO, Ads & Leads",
   description:
-    "Tree service marketing agency for US tree companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive tree removal and trimming leads. Free audit.",
+    "Tree service marketing agency for arborists and removal companies: storm-season Map Pack rankings, Google Business Profile, Google Ads.",
   keywords: [
     "tree service marketing agency",
-    "tree company marketing",
-    "marketing for tree service companies",
-    "tree service leads",
-    "tree removal leads",
-    "tree service SEO",
-    "local SEO for tree service companies",
-    "Google Ads for tree services",
-    "arborist marketing",
-    "tree trimming lead generation",
+    "tree removal marketing agency",
+    "tree service marketing company",
+    "tree service digital marketing",
+    "local tree service marketing",
+    "best advertising for tree service",
+    "tree service advertising ideas",
+    "tree service seo",
   ],
 
   eyebrow: "Tree Service Marketing Agency",

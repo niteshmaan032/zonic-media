@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-kitchen-remodelers";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Kitchen Remodelers That Wins Jobs",
+  title: { absolute: "Kitchen Remodeling SEO | Local SEO for Kitchen Remodelers" },
   description:
-    "Local SEO for kitchen remodelers that turns 'kitchen remodeler near me' searches into booked estimates. Google Business Profile, reviews, rankings. Free audit.",
+    "Kitchen remodeling SEO for contractors and design-build firms: Google Business Profile, project galleries, cost content.",
   keywords: [
-    "local SEO for kitchen remodelers",
-    "kitchen remodeler near me",
-    "kitchen remodeling contractor",
-    "kitchen renovation near me",
-    "cabinet refacing",
-    "custom cabinets",
-    "kitchen remodeling SEO",
-    "SEO for kitchen remodelers",
-    "local SEO for remodelers",
-    "Google Business Profile for remodelers",
-    "kitchen remodel lead generation",
+    "local seo for kitchen remodelers",
+    "kitchen remodeling seo",
+    "kitchen remodel company seo",
+    "seo for home builders",
+    "remodeling contractor seo",
+    "kitchen remodel company near me",
+    "kitchen remodeling marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const KitchenSeoFaqs = [
     question: "Why Choose Zonic Media over Another Kitchen Remodeling SEO Company?",
     answer:
       "We specialize in local home-improvement businesses like kitchen remodeling, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound project after project — not churn.",
+  },
+  {
+    question: "How long before kitchen remodel searches send consultations from SEO?",
+    answer:
+      "Profile and review improvements move the Map Pack within 4 to 8 weeks. The cost guides and project pages that capture planning-stage searches take 3 to 6 months to rank, but they keep producing consultations for years because homeowners research kitchens long before they buy. Zonic Media reports both tracks monthly and tracks consultations back to the page that produced them.",
   },
 ];
 

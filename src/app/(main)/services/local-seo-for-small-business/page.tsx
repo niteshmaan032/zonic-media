@@ -30,17 +30,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/local-seo-for-small-business";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Services for Small Business | Zonic Media" },
+  title: { absolute: "Best Local SEO Services for Small Business | Zonic Media" },
   description:
-    "Local SEO services for small businesses: Google Business Profile, Map Pack rankings, reviews and local content — priced for small business budgets. Free audit.",
+    "Local SEO services for small businesses that need the Map Pack: Google Business Profile, reviews, citations and local content, reported in calls and directions.",
   keywords: [
     "local seo services for small business",
-    "local business seo services",
-    "seo services for local business",
-    "local seo services for businesses",
+    "best local seo services for small business",
+    "local seo services for small business near me",
+    "best local seo agency for small businesses",
+    "seo company for small business near me",
     "local business seo company",
-    "small business local seo",
-    "affordable local seo services",
+    "is seo worth it for small business",
+    "local seo cost",
+    "how much does seo cost for a small business",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Services for Small Business | Zonic Media",
+    title: "Best Local SEO Services for Small Business | Zonic Media",
     description:
       "Local SEO services for small businesses: GBP, Map Pack rankings, reviews and local content — priced for small business budgets.",
     url: PAGE_PATH,
@@ -158,6 +160,11 @@ const SmallBizFaqs = [
     question: "Why choose Zonic Media as your local business SEO company?",
     answer:
       "We specialise in exactly this: 1,500+ Google Business Profiles optimized, everything run in-house, and every month you get the list of changes we made, dated, with the reason for each. Rankings, calls and direction requests are tracked against a baseline — so 'is this working?' always has a number for an answer.",
+  },
+  {
+    question: "What is the average cost of local SEO for a small business in 2026?",
+    answer:
+      "Credible local SEO for a single-location business runs from about $500 to $2,000 a month in the US, with the low end covering profile management and reviews and the high end adding content, links and multi-city coverage. Zonic Media's packages start at $750 a month with fixed monthly deliverables, and every plan is quoted after a free audit so the price reflects your market and competition rather than a rate card.",
   },
 ];
 

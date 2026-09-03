@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/appliance-repair-website-design";
 
 export const metadata: Metadata = {
-  title: "Appliance Repair Website Design That Books Jobs",
+  title: { absolute: "Appliance Repair Website Design | Sites That Book Calls" },
   description:
-    "Appliance repair website design built as a lead system — same-day booking flows, brand pages, and mobile-first pricing UX that books repairs.",
+    "Appliance repair website design: brand and appliance-specific pages, same-day booking, service-area pages.",
   keywords: [
     "appliance repair website design",
-    "appliance repair company website design",
-    "appliance repair web design",
-    "websites for appliance repair companies",
-    "appliance repair service website",
-    "appliance repair website redesign",
-    "appliance repair lead generation website",
-    "appliance repair landing page design",
-    "appliance repair marketing website",
-    "appliance repair web designer",
+    "appliance repair company website",
+    "appliance repair companies online",
+    "home appliance repair service website",
+    "appliance repair service company",
+    "appliance repair website builder",
+    "appliance repair marketing",
+    "appliance repair seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Appliance Repair Website Design That Books Jobs | Zonic Media",
     description:
-      "Appliance repair website design built as a lead system — same-day booking flows, brand pages, and mobile-first pricing UX that books repairs.",
+      "Appliance repair website design: brand and appliance-specific pages, same-day booking, service-area pages.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const ApplianceWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How should an appliance repair website be organized to rank?",
+    answer:
+      "By appliance and by brand. Homeowners search the problem first, such as refrigerator not cooling or Samsung dryer repair, so a page for each appliance type and each major brand you service captures those searches. Add a same-day booking form, a service-area page for each city, and reviews that mention the appliance fixed. Zonic Media builds appliance repair sites on that structure and connects booking to your dispatch software.",
   },
 ];
 

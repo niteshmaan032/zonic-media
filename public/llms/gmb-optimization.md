@@ -2,7 +2,7 @@
 
 > Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1500+ profiles optimized, 95% client satisfaction, 5.0 rating on Clutch (21 reviews).
 
-Service page: https://www.zonicllc.com/services/gmb-optimization
+Service page: https://www.zonicllc.com/local-seo-google-business-optimization
 Related: https://www.zonicllc.com/local-seo-google-business-optimization
 
 ## What this service does

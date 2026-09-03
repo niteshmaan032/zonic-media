@@ -61,20 +61,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/ppc";
 
 export const metadata: Metadata = {
-  title: "PPC Agency Philadelphia | Google Ads Management",
+  title: { absolute: "PPC Agency Philadelphia | Google Ads Management Company" },
   description:
-    "Philadelphia PPC agency managing Google Ads that generate high-intent leads — tight structure, converting landing pages, zero markup on spend. Free audit.",
+    "Philadelphia PPC agency managing Google Ads, Local Services Ads and remarketing for local businesses: certified specialists, flat fees.",
   keywords: [
-    "PPC agency Philadelphia",
-    "Google Ads management Philadelphia",
-    "PPC management services Philadelphia",
-    "pay per click advertising Philadelphia",
-    "Philadelphia Google Ads agency",
-    "PPC company Philadelphia",
-    "Google Ads consultant Philadelphia",
-    "landing page optimization Philadelphia",
-    "PPC for local business Philadelphia",
-    "conversion tracking PPC Philadelphia",
+    "ppc agency philadelphia",
+    "ppc agencies philadelphia",
+    "google ads management philadelphia",
+    "ppc company near me",
+    "ppc advertising agency services",
+    "law firm ppc services philadelphia",
+    "ppc marketing agency",
+    "philadelphia google ads agency",
+    "local services ads philadelphia",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -227,6 +226,11 @@ const PhilaPpcFaqs = [
     question: "What do you report on each month?",
     answer:
       "Spend, clicks, cost per click, conversions, cost per lead, and which campaigns and keywords produced them — plus a plain-English note on what we changed and why. Not a screenshot of the Google Ads dashboard. If cost per lead moves in the wrong direction you hear it from us with the fix already underway.",
+  },
+  {
+    question: "How much should a Philadelphia business budget for Google Ads?",
+    answer:
+      "Cost per click in Philadelphia ranges from a few dollars for home services to $50 or more for legal and medical keywords, so budgets are set by the industry, not a rule of thumb. A realistic starting point for most local businesses is $1,500 to $4,000 a month in ad spend plus a flat management fee. Zonic Media audits your account free, projects cost per lead before you spend, and reports every dollar against calls and form fills.",
   },
 ];
 

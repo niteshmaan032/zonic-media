@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/tree-service-website-design";
 
 export const metadata: Metadata = {
-  title: "Tree Service Website Design That Books Jobs",
+  title: { absolute: "Tree Service Website Design | Sites That Book Removals" },
   description:
-    "Tree service website design built as a lead system — emergency removal pages, quote flows, and design that books removals and trimming.",
+    "Tree service website design for arborists and tree removal companies: emergency removal pages, trimming and stump grinding services, service-area pages.",
   keywords: [
     "tree service website design",
-    "tree care website design",
-    "arborist website design",
-    "tree removal website design",
-    "websites for tree service companies",
     "tree service web design",
-    "tree company website design",
-    "tree service lead generation website",
-    "tree removal landing page design",
-    "tree service web designer",
+    "tree removal website design",
+    "arborist website design",
+    "tree service digital marketing",
+    "tree service marketing agency",
+    "tree service advertising ideas",
+    "tree service companies",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Tree Service Website Design That Books Jobs | Zonic Media",
     description:
-      "Tree service website design built as a lead system — emergency removal pages, quote flows, and design that books removals and trimming.",
+      "Tree service website design for arborists and tree removal companies: emergency removal pages, trimming and stump grinding services, service-area pages.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const TreeWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How does a tree service website capture both emergency and planned jobs?",
+    answer:
+      "With two front doors. An emergency removal page with a tap-to-call button and storm-damage messaging captures the urgent searches after a storm, while trimming, stump grinding, and tree health pages with galleries and price ranges capture the planned work. Certification and insurance details build trust for both. Zonic Media builds tree service sites on that structure and tracks calls by page.",
   },
 ];
 

@@ -80,22 +80,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-services-for-hvac";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services for HVAC Companies",
+  title: { absolute: "HVAC SEO Company | Local SEO Services for HVAC Companies" },
   description:
-    "Local SEO for HVAC companies that wins the Google map pack — GBP optimization, reviews & pages that turn 'AC repair near me' into booked jobs. Free audit.",
+    "HVAC SEO company for contractors: emergency-search Map Pack rankings, Google Business Profile, seasonal content and reviews that book service calls.",
   keywords: [
-    "local SEO services for HVAC",
-    "HVAC SEO company",
-    "HVAC SEO agency",
-    "SEO for HVAC contractors",
-    "HVAC local SEO",
-    "Google Business Profile for HVAC",
-    "HVAC lead generation SEO",
-    "Google Maps ranking for HVAC",
-    "AC repair SEO",
-    "furnace repair SEO",
-    "SEO for heating and cooling companies",
-    "HVAC map pack ranking",
+    "hvac seo",
+    "hvac seo services",
+    "hvac seo company",
+    "hvac seo agency",
+    "best hvac seo company",
+    "hvac seo expert",
+    "hvac seo cost",
+    "hvac seo keywords",
+    "local seo for hvac",
+    "hvac seo near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -225,6 +223,11 @@ const HvacSeoFaqs = [
     question: "Why Choose Zonic Media over Another HVAC SEO Company?",
     answer:
       "We specialize in local home-service businesses like HVAC, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "How much does HVAC SEO cost in 2026?",
+    answer:
+      "HVAC SEO for a single-location contractor typically runs $750 to $2,500 a month in the US, more in large metros with several established competitors. It should include Google Business Profile management, a review program, seasonal content before the summer and winter spikes, city pages for the service area, and reporting in calls and booked jobs. Zonic Media quotes a flat monthly fee after a free audit of your current Map Pack coverage.",
   },
 ];
 

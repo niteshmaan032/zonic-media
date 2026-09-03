@@ -35,18 +35,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/wilmington/digital-marketing";
 
 export const metadata: Metadata = {
-  title: { absolute: "Wilmington DE Digital Marketing Agency | Zonic Media" },
+  title: { absolute: "Digital Marketing Agency in Wilmington, DE | Zonic Media" },
   description:
-    "Digital marketing and SEO for Wilmington, Delaware businesses — local SEO, Google Business Profile, Google Ads and web design from a Dover-based agency. Free audit.",
+    "Wilmington, Delaware digital marketing agency: local SEO, Google Business Profile, Google Ads and web design for Wilmington and New Castle County businesses.",
   keywords: [
-    "wilmington marketing agency",
-    "marketing company wilmington",
+    "digital marketing agency wilmington de",
+    "marketing agency in delaware",
     "seo company wilmington delaware",
-    "search engine optimization wilmington de",
-    "digital marketing wilmington de",
-    "wilmington delaware seo",
-    "pay per click wilmington",
+    "wilmington marketing agency",
     "wilmington de web design",
+    "google ads wilmington de",
+    "local seo wilmington",
+    "digital marketing agency near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Wilmington DE Digital Marketing Agency | Zonic Media",
+    title: "Digital Marketing Agency in Wilmington, DE | Zonic Media",
     description:
       "Digital marketing and SEO for Wilmington, Delaware businesses — local SEO, GBP, Google Ads and web design. Free audit.",
     url: PAGE_PATH,
@@ -134,6 +134,11 @@ const WilmFaqs = [
     question: "My Google Business Profile is suspended. Can you help?",
     answer:
       "Yes — GBP reinstatement is our flagship service, with 700+ recoveries handled. If your Wilmington profile is down, that is the first thing to fix; no amount of website SEO replaces a live listing.",
+  },
+  {
+    question: "What does a Wilmington business need to rank in the Google Map Pack?",
+    answer:
+      "Wilmington's Map Pack is decided by proximity to the searcher, so a downtown business competes block by block. The levers you control are the primary category, review count and recency, photos, and citations that consistently list the Wilmington address. Zonic Media tracks rankings on a grid across Wilmington, Newark and the surrounding suburbs so you can see exactly where you win and where you need coverage.",
   },
 ];
 

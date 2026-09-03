@@ -33,17 +33,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/local-seo-packages";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Packages — Plans, Deliverables & Pricing" },
+  title: { absolute: "Local SEO Packages & Pricing | Plans from $750/mo" },
   description:
-    "Three local SEO packages with concrete monthly deliverables — Google Business Profile, reviews, content and links. Affordable, flat-scope pricing quoted after a free audit.",
+    "Local SEO packages with transparent pricing: Starter, Growth and Dominate plans from $750 a month with fixed monthly deliverables. Quoted after a free audit.",
   keywords: [
     "local seo packages",
-    "local seo package",
+    "local seo packages pricing",
+    "local seo services cost",
     "affordable local seo services",
     "local seo pricing",
-    "local seo plans",
-    "cheap local seo packages",
-    "small business seo packages",
+    "seo packages in usa",
+    "local seo services usa",
+    "best local seo packages",
+    "local seo package for small business",
+    "monthly seo packages",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Packages — Plans, Deliverables & Pricing",
+    title: "Local SEO Packages & Pricing | Plans from $750/mo",
     description:
       "Three local SEO packages with concrete monthly deliverables. Flat-scope pricing quoted after a free audit.",
     url: PAGE_PATH,
@@ -150,6 +153,11 @@ const PackagesFaqs = [
     question: "Why is pricing quoted after an audit instead of published exactly?",
     answer:
       "Because market competition is the biggest cost driver in local SEO, and one-size-fits-all prices would be wrong for half the people reading them. Affordable local SEO in a small Delaware town and affordable local SEO in a crowded metro are different jobs. The audit prices your actual market — free, with no obligation.",
+  },
+  {
+    question: "What is included in a local SEO package and how do I pick the right tier?",
+    answer:
+      "Every Zonic Media package includes Google Business Profile management, review growth, citation cleanup, monthly reporting and a dedicated strategist. Starter fits a single-location business in a small market, Growth adds local content and links for competitive cities, and Dominate covers multiple locations or metro-wide service areas. Pick the tier by how many competitors sit in the Map Pack for your money keywords; the free audit shows that number before you commit.",
   },
 ];
 

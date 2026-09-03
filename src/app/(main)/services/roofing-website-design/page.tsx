@@ -30,20 +30,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/roofing-website-design";
 
 export const metadata: Metadata = {
-  title: "Roofing Website Design That Books Jobs",
+  title: { absolute: "Roofing Website Design Company | Sites That Book Jobs" },
   description:
-    "Roofing website design built as a job acquisition system — instant quote flows, storm damage landing pages, financing UX, and galleries that win the bid.",
+    "Roofing website design company for contractors: instant quote flows, storm-damage pages, financing UX and galleries that win the bid.",
   keywords: [
     "roofing website design",
-    "roofer website design",
+    "roofing website design company",
+    "roofing website design agency",
     "roofing web design",
+    "roofing web design services",
+    "best roofing website design",
+    "roofing contractor website design",
     "roofing company website design",
-    "websites for roofing companies",
-    "roofing website redesign",
-    "roofing landing page design",
-    "storm damage landing pages",
-    "roofing lead generation website",
-    "roofing contractor web designer",
+    "roofing website design ideas",
+    "roofing website template",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
     title: "Roofing Website Design That Books Jobs | Zonic Media",
     description:
-      "Roofing website design built as a job acquisition system — instant quote flows, storm damage landing pages, financing UX, and galleries that win the bid.",
+      "Roofing website design company for contractors: instant quote flows, storm-damage pages, financing UX and galleries that win the bid.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -151,6 +151,11 @@ const RoofingWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What should a roofing website include to get more estimate requests?",
+    answer:
+      "Six things: a click-to-call number visible on every mobile screen, an instant quote or inspection request form above the fold, a storm-damage page for the weeks after a hail or wind event, financing information, a job gallery with the city named on each project, and reviews pulled from Google. Pages that name the towns you serve rank for the searches homeowners actually type. Zonic Media builds every roofing site around those elements and tracks form fills and calls from day one.",
   },
 ];
 

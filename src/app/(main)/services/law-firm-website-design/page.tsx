@@ -28,20 +28,19 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/law-firm-website-design";
 
 export const metadata: Metadata = {
-  title: "Law Firm Website Design That Signs Cases",
+  title: { absolute: "Law Firm Website Design Company | Sites That Sign Cases" },
   description:
-    "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, and trust UX that signs cases.",
+    "Law firm website design company: practice-area pages, attorney bios, case results, intake flows and mobile-first design that turns searches into signed cases.",
   keywords: [
     "law firm website design",
-    "attorney website design",
-    "lawyer website design",
-    "legal website design",
-    "websites for law firms",
-    "law office website design",
+    "law firm website design company",
+    "law firm website design services",
+    "law firm website design cost",
+    "law firm website design agency",
+    "best law firm website designs",
     "law firm web design",
-    "attorney website redesign",
-    "law firm lead generation website",
-    "legal web designer",
+    "attorney website design",
+    "law firm website design examples",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "Law Firm Website Design That Signs Cases | Zonic Media",
     description:
-      "Law firm website design built as a client acquisition system — practice-area pages, case-intake flows, and trust UX that signs cases.",
+      "Law firm website design company: practice-area pages, attorney bios, case results, intake flows and mobile-first design that turns searches into signed cases.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -149,6 +148,11 @@ const LawWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How much does law firm website design cost in 2026?",
+    answer:
+      "A custom law firm website from a US agency typically costs $5,000 to $15,000 depending on the number of practice-area pages, attorney bios, case-results content and intake integrations, with larger multi-office firms paying more. Because legal keywords are among the most expensive to advertise, a site that ranks organically pays for itself quickly. Zonic Media quotes a flat project price and builds every law firm site with intake tracking and bar-compliant content.",
   },
 ];
 

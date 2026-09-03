@@ -95,25 +95,26 @@ const CAPABILITY_ROW_TWO = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "Get a Free Professional Website",
+  title: { absolute: "Free Website for Small Business | No Upfront Design Fee" },
   description:
-    "Start a qualifying Zonic Media marketing plan and get a professional lead-generation website with no upfront development fee.",
+    "Get a free professional website for your small business, built with no upfront development fee when you start a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
+    "free website for small business",
+    "free website design for small business",
+    "best free website for small business",
+    "free website for small business owners",
+    "free professional website",
+    "small business website no upfront cost",
+    "website design agency usa",
     "free website offer",
-    "free business website",
-    "free website design offer",
-    "free website with marketing plan",
-    "no upfront website cost",
-    "free lead generation website",
-    "website design agency us",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Get a Free Professional Website | Zonic Media",
     description:
-      "Start a qualifying Zonic Media marketing plan and get a professional lead-generation website with no upfront development fee.",
+      "Get a free professional website for your small business, built with no upfront development fee when you start a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -437,6 +438,110 @@ export default function FreeWebsiteDesignServicePage() {
           </div>
         </section>
 
+        {/* ───────────── Lead tracking ───────────── */}
+        <section id="lead-tracking" className="section leadtrack-section">
+          <div className="leadtrack-copy">
+            <span className="section-kicker">Lead tracking system</span>
+            <h2>Every lead in one place.</h2>
+            <p>
+              Calls, forms and chats arrive in one dashboard with the source
+              attached, so you can see which jobs your marketing produced
+              instead of guessing where the phone calls came from.
+            </p>
+            <ul className="leadtrack-points">
+              <li>
+                <Icon name="check" /> Every call, form and chat captured
+              </li>
+              <li>
+                <Icon name="check" /> The source recorded against each lead
+              </li>
+              <li>
+                <Icon name="check" /> Status tracked from new to won
+              </li>
+            </ul>
+            <a className="section-button" href="#contact">
+              <span>See The Tracking Setup</span>
+              <i>
+                <Icon name="arrow-up-right" />
+              </i>
+            </a>
+          </div>
+
+          <div className="leadtrack-panel">
+            <div className="leadtrack-statrow">
+              <div className="leadtrack-stat leadtrack-stat--accent">
+                <span>Leads</span>
+                <strong>128</strong>
+                <small>
+                  <Icon name="arrow-up-right" /> 24%
+                </small>
+              </div>
+              <div className="leadtrack-stat">
+                <span>Avg response</span>
+                <strong>3m 12s</strong>
+              </div>
+              <div className="leadtrack-stat">
+                <span>Booked</span>
+                <strong>41</strong>
+              </div>
+            </div>
+
+            <div className="leadtrack-board">
+              <header>
+                <div className="leadtrack-tabs">
+                  <b>All</b>
+                  <i>New</i>
+                  <i>Won</i>
+                </div>
+                <span className="leadtrack-live">Live</span>
+              </header>
+              <div className="leadtrack-head" aria-hidden="true">
+                <span>Lead</span>
+                <span>Source</span>
+                <span>Status</span>
+              </div>
+            <div className="leadtrack-row">
+              <b>
+                Marcus D.
+                <small>HVAC</small>
+              </b>
+              <span>Google Ads</span>
+              <span className="leadtrack-pill leadtrack-pill--new">New</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Priya S.
+                <small>Roofing</small>
+              </b>
+              <span>Google Business Profile</span>
+              <span className="leadtrack-pill leadtrack-pill--contacted">Contacted</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Dana R.
+                <small>Plumbing</small>
+              </b>
+              <span>Organic search</span>
+              <span className="leadtrack-pill leadtrack-pill--quoted">Quoted</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Elena V.
+                <small>Electrical</small>
+              </b>
+              <span>Call extension</span>
+              <span className="leadtrack-pill leadtrack-pill--won">Won</span>
+            </div>
+            </div>
+
+            <p className="leadtrack-caption">
+              Example dashboard. Yours is set up with your own services and lead
+              sources during onboarding.
+            </p>
+          </div>
+        </section>
+
+
         {/* ───────────── Industries ───────────── */}
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
@@ -652,13 +757,17 @@ export default function FreeWebsiteDesignServicePage() {
                 <li>
                   <Icon name="check" /> Website build included
                 </li>
-              </ul>
+              
+                <li>
+                  <Icon name="check" /> Lead tracking system
+                </li>
+</ul>
               <a href="#contact">
                 Choose Growth <Icon name="arrow-up-right" />
               </a>
             </article>
 
-            <article className="pricing-card">
+            <article className="pricing-card pricing-card--verdant">
               <div className="pricing-card-head">
                 <span>03</span>
                 <small>MARKET EXPANSION</small>
@@ -1105,7 +1214,7 @@ export default function FreeWebsiteDesignServicePage() {
           </small>
           <p>
             Zonic Media LLC · 8 The Green, STE B, Dover, DE 19901 ·{" "}
-            <a href="https://zonicllc.com">zonicllc.com</a>
+            <a href="https://www.zonicllc.com">zonicllc.com</a>
           </p>
           <span>
             © 2026 Zonic Media LLC ·{" "}
@@ -1116,6 +1225,8 @@ export default function FreeWebsiteDesignServicePage() {
           </span>
         </div>
       </footer>
+
+      <GhlChatWidget />
 
       <OfferPopupModal
         idPrefix="fwd"
@@ -1138,8 +1249,6 @@ export default function FreeWebsiteDesignServicePage() {
           "Other home service",
         ]}
       />
-
-      <GhlChatWidget />
     </div>
   );
 }

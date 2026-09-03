@@ -29,20 +29,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/plumbing-website-design";
 
 export const metadata: Metadata = {
-  title: "Plumbing Website Design That Books Jobs",
+  title: { absolute: "Plumbing Website Design Company USA | Sites That Book Jobs" },
   description:
-    "Plumbing website design built as a call acquisition system — 24/7 emergency CTAs, online booking, and water heater and drain landing pages that fill schedules.",
+    "Plumbing website design company in the USA: emergency-call layouts, service and city pages, financing UX and review integration built to book jobs.",
   keywords: [
     "plumbing website design",
-    "plumber website design",
-    "plumbing web design",
+    "plumbing website design company in usa",
+    "plumbing website design services",
     "plumbing company website design",
-    "websites for plumbers",
-    "plumbing website redesign",
-    "emergency plumber landing page",
-    "online booking for plumbers",
-    "plumbing lead generation website",
-    "plumber web designer",
+    "best plumbing website design",
+    "plumbing website design template",
+    "plumbing website examples",
+    "plumbing web design services cost",
+    "website builder for plumbing business",
+    "plumber website design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     ],
     title: "Plumbing Website Design That Books Jobs | Zonic Media",
     description:
-      "Plumbing website design built as a call acquisition system — 24/7 emergency CTAs, online booking, and water heater and drain landing pages that fill schedules.",
+      "Plumbing website design company in the USA: emergency-call layouts, service and city pages, financing UX and review integration built to book jobs.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -150,6 +150,11 @@ const PlumbingWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How much does plumbing website design cost?",
+    answer:
+      "A custom plumbing company website from a US agency typically costs $3,000 to $9,000 depending on how many service and city pages it needs, whether online booking and financing are integrated, and whether content and photography are included. Template builders cost less up front but usually fail to rank for emergency searches. Zonic Media quotes a flat project price and can bundle a no-upfront-fee website with a qualifying plumbing marketing plan.",
   },
 ];
 

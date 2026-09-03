@@ -219,9 +219,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   arizona: {
     name: "Arizona",
     slug: "arizona",
-    metaTitle: "HVAC Marketing Agency in Arizona",
+    metaTitle: "HVAC Marketing Agency in Arizona | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for Arizona contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for Arizona contractors in Phoenix, Mesa, Tucson and Scottsdale: Map Pack rankings, Google Business Profile, Google Ads and reviews.",
     ticker: [
       "Free Arizona HVAC Audit",
       "Phoenix · Tucson · Mesa · Scottsdale",
@@ -333,6 +333,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Will this work for maintenance membership marketing in Arizona?",
         a: "Yes — Arizona is exceptional for membership economics because of the extreme-heat operating conditions. Members get priority service during peak demand windows (a real value differentiator when emergency calls run 5+ days out in July) plus the seasonal cleaning and tune-up cadence that prevents the catastrophic failures Arizona heat causes. We build dedicated membership landing pages and integrate enrollment with your dispatch software.",
       },
+      {
+        q: "When should an Arizona HVAC company start summer marketing?",
+        a:
+          "By early April. Phoenix and Tucson searches for AC repair start climbing when daytime highs pass 95 and peak from June through August, and Google needs four to six weeks to index new pages and profile changes. Zonic Media launches the seasonal content, profile updates and ad campaigns in spring so your company is already ranking when the first heat wave hits.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -350,9 +355,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   california: {
     name: "California",
     slug: "california",
-    metaTitle: "HVAC Marketing Agency in California",
+    metaTitle: "HVAC Marketing Agency in California | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for California contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for California contractors in Los Angeles, San Diego, the Bay Area and the Central Valley: Map Pack rankings, Google Ads and reviews.",
     ticker: [
       "Free California HVAC Audit",
       "Los Angeles · San Francisco Bay Area · San Diego · Sacramento",
@@ -465,6 +470,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve California HVAC contractors outside the four major metros?",
         a: "Yes. We work with HVAC contractors across all of California including Fresno, Bakersfield, Riverside, San Bernardino, Long Beach, Anaheim, Stockton, Modesto, Santa Rosa, and the broader Central Valley. Strategy calibrates to local competitive density and Title 24 enforcement intensity by climate zone.",
       },
+      {
+        q: "How does California's heat pump push change HVAC marketing?",
+        a:
+          "California incentives and building codes are steering homeowners toward heat pumps, so searches for heat pump installation, rebates and electrification have grown faster than traditional AC terms. HVAC companies that publish rebate and heat pump pages for their county, and list heat pump services on their Google Business Profile, capture that demand early. Zonic Media builds and updates that content as the programs change.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -482,9 +492,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   florida: {
     name: "Florida",
     slug: "florida",
-    metaTitle: "HVAC Marketing Agency in Florida",
+    metaTitle: "HVAC Marketing Agency in Florida | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for Florida contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for Florida contractors in Miami, Tampa, Orlando and Jacksonville: year-round AC demand, Map Pack rankings, Google Ads and reviews.",
     ticker: [
       "Free Florida HVAC Audit",
       "Miami · Tampa · Orlando · Jacksonville",
@@ -596,6 +606,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve Florida HVAC contractors outside the four major metros?",
         a: "Yes. We work with HVAC contractors in every Florida metro and most secondary markets — Cape Coral, Fort Myers, Sarasota, Naples, Gainesville, Tallahassee, Pensacola, Daytona, West Palm Beach. Strategy adapts to local competitive density. Smaller markets typically see faster ranking timelines because the competition is less saturated.",
       },
+      {
+        q: "What makes Florida HVAC marketing different from other states?",
+        a:
+          "Demand never fully drops. AC repair searches run year round with spikes after hurricanes and during humidity peaks, and competition in Miami, Tampa and Orlando is among the densest in the country. That rewards continuous review growth, city-by-city coverage and storm-readiness campaigns rather than a single summer push. Zonic Media runs Florida programs on that always-on calendar.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -613,9 +628,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   georgia: {
     name: "Georgia",
     slug: "georgia",
-    metaTitle: "HVAC Marketing Agency in Georgia",
+    metaTitle: "HVAC Marketing Agency in Georgia | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for Georgia contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for Georgia contractors in Atlanta, Marietta, Savannah and Augusta: Map Pack rankings, Google Business Profile, Google Ads and reviews.",
     ticker: [
       "Free Georgia HVAC Audit",
       "Atlanta · Augusta · Savannah · Columbus",
@@ -727,6 +742,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Will this work for maintenance membership marketing in Georgia?",
         a: "Yes. Georgia membership economics are strong because of sustained summer cooling demand combined with rare-but-severe winter events. We build dedicated membership landing pages, integrate enrollment with your dispatch software, and run paid ads tuned to maintenance-intent keywords. Membership programs typically run 80%+ gross margin and produce 30-50% of total revenue once scaled.",
       },
+      {
+        q: "How can an HVAC company compete in the Atlanta metro Map Pack?",
+        a:
+          "By winning suburb by suburb instead of chasing a single Atlanta ranking. Marietta, Alpharetta, Decatur and Lawrenceville each have their own Map Pack, so service-area pages, reviews that name the suburb and job photos with locations build coverage across the metro. Zonic Media tracks rankings on a grid across the suburbs and expands coverage where the calls are.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -744,9 +764,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   illinois: {
     name: "Illinois",
     slug: "illinois",
-    metaTitle: "HVAC Marketing Agency in Illinois",
+    metaTitle: "HVAC Marketing Agency in Illinois | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for Illinois contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for Illinois contractors in Chicago, the suburbs, Naperville and Springfield: furnace and AC seasons, Map Pack rankings.",
     ticker: [
       "Free Illinois HVAC Audit",
       "Chicago · Aurora · Naperville · Rockford",
@@ -858,6 +878,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve Illinois HVAC contractors outside the Chicago metro?",
         a: "Yes. We work with HVAC contractors across all of Illinois including Rockford, Peoria, Springfield, Champaign-Urbana, Bloomington, Decatur, and the broader downstate market. Strategy calibrates to local competitive density and the dominant equipment mix.",
       },
+      {
+        q: "How should an Illinois HVAC company split marketing between furnace and AC seasons?",
+        a:
+          "Two campaigns, each launched six weeks early. Furnace repair and replacement searches climb in October and peak in January, while AC searches spike in June and July, so the profile services, seasonal pages and ad budgets should switch on that calendar. Zonic Media runs both seasons for Illinois contractors and shifts budget as the searches move.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -875,9 +900,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   "north-carolina": {
     name: "North Carolina",
     slug: "north-carolina",
-    metaTitle: "HVAC Marketing Agency in North Carolina",
+    metaTitle: "HVAC Marketing Agency in North Carolina | Local SEO & Ads",
     metaDescription:
-      "HVAC marketing agency for North Carolina contractors. Map pack rankings, GBP optimization, Google Ads, memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for North Carolina contractors in Charlotte, Raleigh, Greensboro and Wilmington: Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free North Carolina HVAC Audit",
       "Charlotte · Raleigh · Greensboro · Durham",
@@ -990,6 +1015,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve NC HVAC contractors outside the major metros?",
         a: "Yes. We work with HVAC contractors across all of North Carolina including Winston-Salem, Wilmington, Asheville, Fayetteville, Greenville, High Point, Concord, Gastonia, and the broader secondary markets. Strategy calibrates to local competitive density and submarket dynamics.",
       },
+      {
+        q: "Which North Carolina markets are most competitive for HVAC search?",
+        a:
+          "Charlotte and Raleigh, where dozens of established contractors compete for the same Map Pack, followed by Greensboro and Wilmington. In those metros the winners have the most recent reviews, complete profiles and city pages for the suburbs. Zonic Media audits your position against the actual competitors in each market before proposing a plan.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -1007,9 +1037,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   texas: {
     name: "Texas",
     slug: "texas",
-    metaTitle: "HVAC Marketing Agency in Texas",
+    metaTitle: "HVAC Marketing Agency in Texas | Local SEO & Google Ads",
     metaDescription:
-      "HVAC marketing agency for Texas contractors. Map pack rankings, GBP optimization, Google Ads, maintenance memberships & reviews. Free audit. From $750/mo.",
+      "HVAC marketing agency for Texas contractors in Houston, Dallas, Austin and San Antonio: Map Pack rankings, Google Business Profile, Google Ads and reviews.",
     ticker: [
       "Free Texas HVAC Audit",
       "Houston · Dallas · Austin · San Antonio",
@@ -1120,6 +1150,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       {
         q: "Do you serve Texas HVAC contractors outside the four major metros?",
         a: "Yes. We work with HVAC contractors across all of Texas including Fort Worth, El Paso, Corpus Christi, McAllen, Lubbock, Amarillo, Waco, Tyler, College Station, and the broader Rio Grande Valley. Strategy calibrates to local competitive density and demographic mix.",
+      },
+      {
+        q: "How much should a Texas HVAC company spend on Google Ads in summer?",
+        a:
+          "Houston, Dallas and Austin are among the most expensive HVAC ad markets in the country, with AC repair clicks often costing $30 to $80 in July. Most contractors budget $3,000 to $10,000 a month for peak season and pair it with Local Services Ads, which charge per lead instead of per click. Zonic Media projects cost per lead for your metro before you spend and reports every dollar against booked calls.",
       },
     ],
     final: {

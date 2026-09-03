@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/pool-service-website-design";
 
 export const metadata: Metadata = {
-  title: "Pool Service Website Design That Books Jobs",
+  title: { absolute: "Pool Service Website Design | Sites That Book Accounts" },
   description:
-    "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, and design that books cleanings and repairs.",
+    "Pool service website design for cleaning, repair and maintenance companies: weekly-service signups, repair pages, service-area pages.",
   keywords: [
     "pool service website design",
-    "pool company website design",
     "pool cleaning website design",
-    "swimming pool website design",
-    "websites for pool companies",
+    "pool service website template",
+    "pool cleaning website services",
+    "pool cleaning website marketing",
+    "pool company website",
     "pool maintenance website design",
-    "pool builder website design",
-    "pool service web design",
-    "pool service lead generation website",
-    "pool service web designer",
+    "pool cleaning website builder",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Pool Service Website Design That Books Jobs | Zonic Media",
     description:
-      "Pool service website design built as a lead system — recurring service sign-ups, instant quote flows, and design that books cleanings and repairs.",
+      "Pool service website design for cleaning, repair and maintenance companies: weekly-service signups, repair pages, service-area pages.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const PoolWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What should a pool service website do differently from a pool builder's site?",
+    answer:
+      "A pool service company sells recurring weekly cleaning and repairs, not construction, so the site should lead with a service-plan page that shows what a weekly visit includes and what it costs, a repair page for pumps, heaters and leaks, and a service-area page for every neighborhood. A signup form that captures pool size and current condition converts better than a generic contact form. Zonic Media builds pool service sites that way and integrates with route software.",
   },
 ];
 
@@ -433,6 +436,12 @@ function Page() {
                       website design services
                     </Link>{" "}
                     are built around booked service, not another brochure site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/pool-service-website-design-agency-us/offer" className="hiw-inline-link">
+                      free pool service website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

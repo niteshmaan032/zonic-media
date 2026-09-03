@@ -76,22 +76,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-roofing-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Roofing Companies That Win Jobs",
+  title: { absolute: "Roofing SEO Company | Local SEO for Roofing Companies" },
   description:
-    "Local SEO for roofing companies that owns the map pack — GBP optimization & reviews that turn 'roof repair near me' into booked jobs. Free audit.",
+    "Roofing SEO company that owns the Map Pack: local SEO for roofing companies and contractors with Google Business Profile, reviews.",
   keywords: [
-    "local SEO for roofing companies",
-    "roofer near me",
-    "roof repair near me",
-    "roof replacement",
-    "storm damage roof repair",
-    "roofing SEO company",
-    "roofing contractor SEO",
-    "local SEO for roofers",
-    "Google Business Profile for roofers",
-    "roofing lead generation",
-    "roof inspection near me",
-    "Google Maps ranking for roofers",
+    "local seo for roofing companies",
+    "local seo for roofing contractors",
+    "roofing seo company",
+    "seo for roofing company",
+    "seo marketing for roofers",
+    "roofing company seo services",
+    "seo for roofing contractors",
+    "roofing seo",
+    "best local seo companies",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -221,6 +218,11 @@ const RoofingSeoFaqs = [
     question: "Why Choose Zonic Media over Another Roofing SEO Company?",
     answer:
       "We specialize in local home-service businesses like roofing, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "How fast can a roofing company rank in the Google Map Pack?",
+    answer:
+      "Profile-driven gains usually show within 4 to 8 weeks: correcting the primary category, adding service descriptions, growing reviews with the town named, and posting job photos with locations. Competitive metro rankings for roof replacement and storm damage take 3 to 6 months of city pages and links. Zonic Media tracks rankings on a grid across your service area so you can see the coverage expand month by month.",
   },
 ];
 

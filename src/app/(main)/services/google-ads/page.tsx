@@ -54,26 +54,20 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: "Google Ads Management Services | PPC Agency",
+  title: { absolute: "Google Ads Management Services | Affordable PPC Agency USA" },
   description:
-    "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
+    "Google Ads management services for small businesses: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
   keywords: [
-    "digital ads business near me",
-    "digital advertising agency delaware",
-    "delaware ppc agency",
-    "Google Ads management services",
-    "PPC agency for local business",
+    "google ads management services",
+    "google ads management services usa",
+    "affordable google ads management services",
+    "google ads campaign management services",
+    "google ads management company",
+    "google ads management agency",
+    "google ads specialist near me",
+    "ppc management for small business",
     "local services ads management",
-    "Google Ads agency for small business",
-    "PPC campaign management",
-    "search ads management",
-    "pay per click advertising services",
-    "Google Ads optimization",
-    "lead generation with Google Ads",
-    "best PPC agency for small business",
-    "Google Ads management company",
-    "local PPC management services",
-    "Google Local Services Ads agency",
+    "google ads management services near me",
   ],
   alternates: { canonical: "/services/google-ads" },
   openGraph: {
@@ -87,7 +81,7 @@ export const metadata: Metadata = {
     ],
     title: "Google Ads Management Services | PPC Agency | Zonic Media",
     description:
-      "Drive high-intent traffic with expert Google Ads management. We create, optimize, and scale PPC campaigns to generate qualified leads and maximize ROI.",
+      "Google Ads management services for small businesses: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
     url: "/services/google-ads",
     type: "website",
   },
@@ -228,6 +222,11 @@ const gaFaqsLeft: Faq[] = [
   {
     q: "How much should I spend on Google Ads?",
     a: "Your Google Ads budget depends on factors such as your industry, competition, and business goals. We help determine the right budget and bidding strategy to maximize your ad performance while keeping costs efficient.",
+  },
+  {
+    q: "How much does Google Ads management cost for a small business in 2026?",
+    a:
+      "Two numbers matter: the ad spend that goes to Google and the management fee that goes to the agency. Most small local businesses spend $1,000 to $5,000 a month on ads, and management fees run 10 to 20 percent of spend or a flat monthly rate. Zonic Media quotes a flat fee after a free account audit, builds Local Services Ads alongside search campaigns where your industry qualifies, and reports on calls and leads rather than clicks.",
   },
 ];
 

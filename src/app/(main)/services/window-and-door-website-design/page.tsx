@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/window-and-door-website-design";
 
 export const metadata: Metadata = {
-  title: "Window & Door Website Design That Books Jobs",
+  title: { absolute: "Window & Door Company Website Design | Sites That Book Jobs" },
   description:
-    "Window and door website design built as a lead system — instant quote flows, product galleries, financing and energy-rebate UX, and pages that book installs.",
+    "Window and door company website design: replacement and installation pages, product galleries, financing UX.",
   keywords: [
+    "windows and doors website design",
+    "window and door company website",
     "window and door website design",
-    "window company website design",
-    "door company website design",
-    "window installer website design",
-    "websites for window and door companies",
-    "replacement window website design",
-    "window and door web design",
-    "window company landing page design",
-    "window replacement lead generation website",
-    "window and door web designer",
+    "window replacement website design",
+    "door installation website",
+    "windows and doors company",
+    "impact windows website design",
+    "window company web design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Window & Door Website Design That Books Jobs | Zonic Media",
     description:
-      "Window and door website design built as a lead system — instant quote flows, product galleries, financing and energy-rebate UX, and pages that book installs.",
+      "Window and door company website design: replacement and installation pages, product galleries, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const WindowDoorWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How do window and door companies generate estimate requests online?",
+    answer:
+      "Replacement windows and doors are researched for weeks, so the site has to answer the comparison questions: window types and materials, energy ratings, warranties, financing, and typical pricing. Pages for each product line, a gallery of completed installations by home style, and a free in-home estimate form on every page capture the research traffic. Zonic Media builds those pages to rank for replacement searches in each city you serve.",
   },
 ];
 

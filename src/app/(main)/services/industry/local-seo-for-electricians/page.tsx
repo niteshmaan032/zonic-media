@@ -41,20 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-electricians";
 
 export const metadata: Metadata = {
-  title: "SEO for Electricians That Wins Local Service Calls",
+  title: { absolute: "Electrician SEO Company | Local SEO for Electricians" },
   description:
-    "SEO for electricians that wins the map pack for 'electrician near me' — GBP optimization, citations, reviews & pages that book jobs. Free audit.",
+    "Electrician SEO company: local SEO for electricians and electrical contractors with Google Business Profile, EV charger and panel-upgrade pages.",
   keywords: [
-    "electrician near me",
-    "emergency electrician",
-    "residential electrician",
-    "licensed electrician near me",
-    "panel upgrade near me",
-    "electrical contractor SEO",
-    "SEO for electricians",
-    "local SEO for electricians",
-    "Google Business Profile for electricians",
-    "electrician lead generation",
+    "local seo for electricians",
+    "electrician seo",
+    "seo for electricians",
+    "electrical contractor website seo",
+    "electrician seo services",
+    "electrical contractor seo",
+    "electrician marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -184,6 +182,11 @@ const ElectricianSeoFaqs = [
     question: "Why Choose Zonic Media over Another Electrician SEO Company?",
     answer:
       "We specialize in local home-service businesses like electrical contractors, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked jobs, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "What are the fastest-growing search terms for electricians in 2026?",
+    answer:
+      "EV charger installation, panel upgrades, whole-home generator installation and smart-home wiring have grown fastest, alongside the evergreen emergency electrician searches. Each deserves a dedicated page with pricing ranges and permit details, and the Google Business Profile services list should include them. Zonic Media builds those pages around the searches in your city and tracks which services generate calls.",
   },
 ];
 

@@ -41,22 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-pool-service-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Pool Service Companies",
+  title: { absolute: "Pool Service SEO | Local SEO for Pool Cleaning & Repair" },
   description:
-    "Local SEO for pool service companies that turns 'pool service near me' searches into booked, recurring clients. Free audit.",
+    "Pool service SEO for cleaning, repair and maintenance companies: weekly-service pages, Google Business Profile, neighborhood pages.",
   keywords: [
-    "pool service near me",
-    "pool cleaning near me",
-    "pool repair near me",
-    "pool maintenance",
-    "pool company near me",
-    "pool service SEO",
-    "SEO for pool companies",
-    "local SEO for pool service",
-    "Google Business Profile for pool service",
-    "pool service lead generation",
-    "local SEO for pool service companies",
-    "pool cleaning SEO",
+    "local seo for pool service companies",
+    "pool service seo",
+    "pool cleaning website seo",
+    "pool company seo",
+    "pool cleaning marketing",
+    "pool service marketing",
+    "pool maintenance seo",
+    "local seo for service businesses",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,6 +182,11 @@ const PoolSeoFaqs = [
     question: "Why Choose Zonic Media over Another Pool Service SEO Company?",
     answer:
       "We specialize in local home-service businesses like pool service, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked clients, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "What does local SEO look like for a pool service company?",
+    answer:
+      "Neighborhood-level coverage, because pool routes are dense and homeowners search pool cleaning near me from a specific subdivision. A Google Business Profile with the Pool Cleaning Service category, service-area pages for each neighborhood or city, a weekly-service page with pricing, repair pages for pumps, heaters and leaks, and reviews that mention the neighborhood. Zonic Media builds that coverage and tracks new weekly accounts by area.",
   },
 ];
 

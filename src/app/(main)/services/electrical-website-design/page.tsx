@@ -28,20 +28,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/electrical-website-design";
 
 export const metadata: Metadata = {
-  title: "Electrician Website Design That Books Jobs",
+  title: { absolute: "Electrician Website Design Company | Sites That Book Jobs" },
   description:
-    "Electrician website design built as a job acquisition system — EV charger and panel upgrade landing pages, online booking, and license-first trust signals.",
+    "Electrician website design company for electrical contractors: emergency and panel-upgrade pages, EV charger and generator services, financing UX.",
   keywords: [
+    "electrical website design",
     "electrician website design",
+    "electrician website design company",
     "electrical contractor website design",
-    "electrician web design",
     "electrical company website design",
-    "websites for electricians",
-    "electrician website redesign",
-    "EV charger installation landing page",
-    "licensed electrician website",
-    "electrician lead generation website",
-    "electrical contractor web designer",
+    "best electrician website design",
+    "electrical services website design",
+    "electrical contractor website marketing",
+    "electrician web design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "Electrician Website Design That Books Jobs | Zonic Media",
     description:
-      "Electrician website design built as a job acquisition system — EV charger and panel upgrade landing pages, online booking, and license-first trust signals.",
+      "Electrician website design company for electrical contractors: emergency and panel-upgrade pages, EV charger and generator services, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -152,6 +151,11 @@ const ElectricalWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Which service pages should an electrician's website have in 2026?",
+    answer:
+      "Beyond the general repair page, the highest-demand searches now are EV charger installation, panel upgrades, whole-home generators, and smart-home wiring, each of which deserves its own page with pricing ranges and permits explained. Add a city page for every town you serve and an emergency page with a tap-to-call button. Zonic Media maps the pages to the searches in your market before designing, so the site ranks for the jobs you want.",
   },
 ];
 
@@ -414,7 +418,13 @@ function Page() {
                     website design services
                   </Link>{" "}
                   are built around booked jobs, not another brochure site.
-                </p>
+                {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/electrician-website-design-agency-us/offer" className="ew-inline-link">
+                      free electrician website offer
+                    </Link>
+                    .
+                  </p>
                 <div className="ew-hero-ctas">
                   <HashScrollLink
                     href="#electrical-web-form"

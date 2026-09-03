@@ -1,0 +1,962 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body:has(.ofr-solar) {
+  background: #f6f9ff;
+}
+
+body:has(.ofr-solar) .floating-phone-link,
+body:has(.ofr-solar) .zoni-greeting-bubble,
+body:has(.ofr-solar) .zoni-trigger,
+body:has(.ofr-solar) .zoni-window {
+  display: none !important;
+}
+
+body.ofr-solar-menu-is-open {
+  overflow: hidden;
+}
+
+.ofr-solar {
+  /* Base offer palette with this industry's accent, matching the design
+     file — it overrides --blue only. */
+  --ink: #07152f;
+  --muted: #5f6f89;
+  --blue: #0785bd;
+  --yellow: #ffc928;
+  --line: rgba(7, 21, 47, 0.11);
+  --paper: #f6f9ff;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(39, 111, 255, .13), transparent 27%),
+    radial-gradient(circle at 18% 82%, rgba(255, 201, 40, .12), transparent 24%),
+    linear-gradient(135deg, #fbfdff 0%, #f0f6ff 52%, #f9fbff 100%);
+}
+
+.ofr-solar,
+.ofr-solar *,
+.ofr-solar *::before,
+.ofr-solar *::after {
+  box-sizing: border-box;
+}
+
+.ofr-solar a { color: inherit; text-decoration: none; }
+.ofr-solar button { font: inherit; }
+.ofr-solar svg { stroke-width: 2; }
+
+/* CTA labels are title-cased. The hero pair is the tight spot — its buttons
+   carry reduced side padding below so the wider labels still fit the column. */
+.ofr-solar .nav-cta,
+.ofr-solar .mobile-menu-cta,
+.ofr-solar .button,
+.ofr-solar .section-button,
+.ofr-solar .form-submit,
+.ofr-solar .pricing-card > a,
+.ofr-solar .footer-offer a { text-transform: capitalize; }
+
+.ofr-solar-skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 120;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  transition: top .2s ease;
+}
+.ofr-solar-skip-link:focus-visible { top: 12px; }
+
+.ofr-solar .aurora { position: absolute; border-radius: 999px; filter: blur(1px); pointer-events: none; }
+.ofr-solar .aurora--one { width: 18rem; height: 18rem; right: -8rem; top: 20rem; border: 1px solid rgba(33, 103, 245, .2); }
+.ofr-solar .aurora--two { width: 12rem; height: 12rem; left: -6rem; bottom: 3rem; border: 1px solid rgba(255, 201, 40, .36); }
+
+/* ── Header (fixed on scroll) ─────────────────────────────── */
+.ofr-solar .nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(91vw, 1540px);
+  min-height: 76px;
+  margin-top: 24px;
+  padding: 10px 12px 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(255, 255, 255, .88);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(32, 70, 128, .09), inset 0 0 0 1px rgba(7, 21, 47, .045);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.ofr-solar .nav-wrap.is-scrolled {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 18px 50px rgba(32, 70, 128, .14), inset 0 0 0 1px rgba(7, 21, 47, .045);
+}
+
+.ofr-solar .nav-logo { display: inline-flex; align-items: center; }
+.ofr-solar .nav-logo img { width: auto; height: 34px; }
+
+.ofr-solar .nav-links { display: flex; align-items: center; gap: clamp(20px, 2vw, 36px); font-size: 14px; font-weight: 700; color: #34425b; }
+.ofr-solar .nav-links a { transition: color .2s ease; }
+.ofr-solar .nav-links a:hover { color: var(--blue); }
+.ofr-solar .nav-cta { display: inline-flex; align-items: center; gap: 11px; padding: 16px 20px; border-radius: 14px; background: var(--ink); color: white; font-size: 14px; font-weight: 800; white-space: nowrap; transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-solar .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(7, 21, 47, .2); }
+.ofr-solar .nav-cta svg { width: 18px; }
+.ofr-solar .menu-button { display: none; border: 0; background: transparent; padding: 8px; color: var(--ink); cursor: pointer; }
+.ofr-solar .menu-button svg { width: 24px; height: 24px; }
+
+.ofr-solar .mobile-menu {
+  position: fixed;
+  z-index: 55;
+  top: 104px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(91vw, 480px);
+  padding: 18px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(255, 255, 255, .97);
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(32, 70, 128, .18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.ofr-solar .mobile-menu.is-open { display: flex; }
+.ofr-solar .mobile-menu a { padding: 12px 14px; border-radius: 12px; font-size: 15px; font-weight: 700; color: #34425b; }
+.ofr-solar .mobile-menu a:hover { background: rgba(7, 133, 189, .08); color: var(--blue); }
+.ofr-solar .mobile-menu .mobile-menu-cta { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--ink); color: white; font-weight: 800; }
+.ofr-solar .mobile-menu .mobile-menu-cta:hover { background: var(--ink); color: white; }
+.ofr-solar .mobile-menu .mobile-menu-cta svg { width: 17px; }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.ofr-solar .hero {
+  position: relative;
+  z-index: 2;
+  width: min(91vw, 1540px);
+  min-height: calc(100vh - 124px);
+  margin: 0 auto;
+  padding: 124px 0 76px;
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(590px, 1.12fr);
+  align-items: center;
+  gap: clamp(36px, 5vw, 96px);
+}
+
+/* Hero columns are top-aligned here (not centred like the base page) so the
+   copy can be nudged down without dragging the mock-up with it. */
+.ofr-solar .hero { align-items: start; }
+.ofr-solar .hero-copy { max-width: 680px; margin-top: 24px; }
+.ofr-solar .eyebrow { width: fit-content; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border: 1px solid rgba(7, 133, 189, .2); border-radius: 999px; background: rgba(255, 255, 255, .8); box-shadow: 0 8px 24px rgba(7, 133, 189, .09); font-size: 14px; letter-spacing: .055em; text-transform: uppercase; font-weight: 800; color: #4f5967; }
+.ofr-solar .eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
+.ofr-solar .eyebrow__pulse { width: 8px; height: 8px; border-radius: 50%; background: #35c879; box-shadow: 0 0 0 5px rgba(53, 200, 121, .13); }
+
+.ofr-solar h1 { margin: 22px 0 20px; max-width: 680px; font-size: clamp(46px, 4.55vw, 74px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
+.ofr-solar .headline-accent { display: block; color: var(--blue); position: relative; }
+.ofr-solar .headline-accent svg { display: block; width: 176px; height: 14px; margin: 10px 0 0 6px; fill: none; stroke: var(--yellow); stroke-width: 8; stroke-linecap: round; }
+.ofr-solar .hero-lede { max-width: 620px; margin: 24px 0 0; font-size: 18px; line-height: 1.72; color: var(--muted); }
+
+.ofr-solar .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.ofr-solar .button { min-height: 58px; display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 22px; border-radius: 17px; background: var(--ink); color: white; font-size: 15px; font-weight: 800; box-shadow: 0 12px 28px rgba(7, 21, 47, .16); transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-solar .button:hover { transform: translateY(-3px); box-shadow: 0 18px 34px rgba(7, 21, 47, .22); }
+.ofr-solar .button__icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: var(--yellow); color: var(--ink); }
+.ofr-solar .button__icon svg { width: 18px; }
+.ofr-solar .button--secondary { background: rgba(255, 255, 255, .7); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.ofr-solar .button--secondary .button__icon { background: #e8effd; }
+/* Keeps the hero CTA pair on one line inside the copy column. */
+.ofr-solar .hero-actions .button { gap: 14px; padding-left: 18px; }
+.ofr-solar .proof-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--line); }
+.ofr-solar .proof-item { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; }
+.ofr-solar .proof-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: #e8f0ff; color: var(--blue); }
+.ofr-solar .proof-icon svg { width: 16px; }
+.ofr-solar .proof-item--yellow .proof-icon { background: #fff3c4; color: #b77900; }
+.ofr-solar .proof-item--green .proof-icon { background: #e6f7ee; color: #1f9d5c; }
+.ofr-solar .proof-item--purple .proof-icon { background: #f2edff; color: #7a4fd8; }
+.ofr-solar .proof-item--mobile { display: none; }
+.ofr-solar .proof-item > span:last-child { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ofr-solar .proof-item strong { font-size: 15px; line-height: 1.3; letter-spacing: -.01em; white-space: nowrap; }
+.ofr-solar .proof-item small { color: #6e7c92; font-size: 13px; line-height: 1.45; }
+
+.ofr-solar .hero-trust-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin: 26px 0 4px; }
+.ofr-solar .htb-clutch { width: 64px; height: 64px; flex-shrink: 0; }
+.ofr-solar .htb-yelp, .ofr-solar .htb-trustpilot { display: inline-flex; align-items: center; }
+.ofr-solar .htb-yelp-img { width: 58px; height: 58px; border-radius: 50%; }
+.ofr-solar .htb-trustpilot-img { width: 104px; height: auto; }
+
+/* ── Hero concept stage ───────────────────────────────────── */
+.ofr-solar .concept-stage { position: relative; min-height: 620px; margin-top: 42px; display: grid; place-items: center; isolation: isolate; }
+.ofr-solar .concept-stage::before { content: ""; position: absolute; width: 82%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(7, 133, 189, .2), rgba(49,93,120,.05) 48%, transparent 70%); filter: blur(2px); z-index: -3; }
+.ofr-solar .stage-orbit { position: absolute; border-radius: 50%; border: 1px solid rgba(7, 133, 189, .18); z-index: -2; }
+.ofr-solar .stage-orbit--one { width: 590px; height: 590px; }
+.ofr-solar .stage-orbit--two { width: 460px; height: 460px; border-style: dashed; animation: ofr-rotate 40s linear infinite; }
+@keyframes ofr-rotate { to { transform: rotate(360deg); } }
+
+.ofr-solar .browser-card { position: relative; z-index: 2; width: min(100%, 760px); aspect-ratio: 1.32; overflow: hidden; border: 8px solid #0b1933; border-radius: 28px; background: white; box-shadow: 0 38px 80px rgba(16, 50, 105, .25), 0 0 0 1px rgba(255,255,255,.8); transform: rotate(1deg); }
+.ofr-solar .browser-topbar { height: 52px; padding: 0 16px; display: grid; grid-template-columns: 1fr 1.5fr 1fr; align-items: center; gap: 12px; background: #0d1b36; color: white; }
+.ofr-solar .browser-dots { display: flex; gap: 5px; }
+.ofr-solar .browser-dots i { width: 8px; height: 8px; border-radius: 50%; background: #ff6a6f; }
+.ofr-solar .browser-dots i:nth-child(2) { background: #ffc928; }
+.ofr-solar .browser-dots i:nth-child(3) { background: #4ed48a; }
+.ofr-solar .address-bar { justify-self: center; width: 100%; padding: 7px 12px; border-radius: 7px; background: rgba(255,255,255,.1); text-align: center; color: #b8c4d9; font-size: 9px; }
+.ofr-solar .browser-live { justify-self: end; display: flex; align-items: center; gap: 5px; font-size: 7px; letter-spacing: .1em; color: #a7b4ca; }
+.ofr-solar .browser-live span { width: 6px; height: 6px; border-radius: 50%; background: #49d48b; }
+
+.ofr-solar .design-toolbar { height: 60px; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e9eef7; }
+.ofr-solar .mini-logo { display: inline-flex; align-items: center; }
+.ofr-solar .design-toolbar .mini-logo img { width: auto; height: 17px; }
+.ofr-solar .mini-nav { display: flex; gap: 20px; font-size: 8px; font-weight: 700; color: #64728a; }
+.ofr-solar .mini-button { padding: 9px 12px; border-radius: 8px; background: var(--ink); color: white; font-size: 7px; font-weight: 800; }
+.ofr-solar .design-canvas { height: calc(100% - 112px); padding: 56px 42px 28px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px; background: linear-gradient(140deg, #fffdf9, #f1eee8); }
+.ofr-solar .skeleton-label { width: fit-content; padding: 6px 8px; border-radius: 99px; background: rgba(7, 133, 189, .08); color: var(--blue); font-size: 7px; font-weight: 900; letter-spacing: .08em; }
+.ofr-solar .canvas-copy h2 { max-width: 340px; margin: 15px 0 11px; font-size: clamp(25px, 2.2vw, 37px); line-height: 1.02; letter-spacing: -.05em; }
+.ofr-solar .canvas-copy p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.6; color: #6b7990; }
+.ofr-solar .canvas-actions { display: flex; gap: 8px; margin-top: 18px; }
+.ofr-solar .canvas-actions span { padding: 10px 13px; border-radius: 8px; background: var(--blue); color: white; font-size: 8px; font-weight: 800; }
+.ofr-solar .canvas-actions span:last-child { background: white; color: var(--ink); border: 1px solid #dbe4f3; }
+.ofr-solar .canvas-trust { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; font-size: 7px; color: #61718a; }
+.ofr-solar .canvas-trust svg { width: 11px; height: 11px; color: #2cad69; }
+.ofr-solar .visual-stack { position: relative; min-height: 260px; }
+.ofr-solar .visual-card { position: absolute; border-radius: 20px; box-shadow: 0 18px 40px rgba(27,63,125,.18); }
+.ofr-solar .visual-card--back { width: 72%; aspect-ratio: .85; right: 0; top: -10px; padding: 18px; background: var(--yellow); transform: rotate(9deg); color: rgba(7,21,47,.4); font-size: 34px; font-weight: 900; }
+.ofr-solar .visual-card--front { width: 82%; aspect-ratio: .9; left: 0; bottom: 3px; padding: 18px; background: linear-gradient(145deg, #2167f5, #123b9e); transform: rotate(-4deg); }
+.ofr-solar .visual-grid { height: 74%; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.ofr-solar .visual-grid i { display: block; border-radius: 9px; background: rgba(255,255,255,.12); }
+.ofr-solar .visual-grid i:first-child { grid-row: span 2; background: rgba(255,255,255,.22); }
+.ofr-solar .visual-chip { width: fit-content; margin-top: 13px; padding: 5px 7px; border-radius: 999px; background: white; font-size: 6px; font-weight: 900; color: var(--blue); }
+.ofr-solar .cursor-badge { position: absolute; right: 25%; bottom: 24%; display: flex; align-items: center; gap: 7px; padding: 7px 9px; background: #0c1a35; color: white; border-radius: 8px 8px 8px 2px; font-size: 7px; box-shadow: 0 9px 22px rgba(7,21,47,.22); animation: ofr-float 3s ease-in-out infinite; }
+.ofr-solar .cursor-badge svg { width: 11px; height: 11px; color: var(--yellow); fill: var(--yellow); }
+
+.ofr-solar .phone-card { position: absolute; z-index: 4; right: -12px; bottom: 10px; width: 178px; height: 354px; padding: 11px; border: 7px solid #0a1830; border-radius: 31px; background: white; box-shadow: 0 25px 50px rgba(16,50,105,.25); transform: rotate(3deg); }
+.ofr-solar .phone-notch { position: absolute; top: 4px; left: 50%; width: 57px; height: 14px; transform: translateX(-50%); border-radius: 0 0 10px 10px; background: #0a1830; }
+.ofr-solar .phone-header { display: flex; align-items: center; justify-content: space-between; height: 41px; padding: 5px 2px 0; }
+.ofr-solar .phone-header .mini-logo img { width: auto; height: 13px; }
+.ofr-solar .phone-header > svg { width: 14px; }
+.ofr-solar .phone-body { height: calc(100% - 42px); padding: 17px 12px; border-radius: 16px; background: linear-gradient(145deg, #edf4ff, white); }
+.ofr-solar .phone-kicker { font-size: 6px; color: var(--blue); font-weight: 900; letter-spacing: .08em; }
+.ofr-solar .phone-body h3 { margin: 9px 0 14px; font-size: 20px; line-height: 1.02; letter-spacing: -.045em; }
+.ofr-solar .phone-art { height: 112px; position: relative; overflow: hidden; border-radius: 14px; background: var(--blue); }
+.ofr-solar .phone-art i { position: absolute; width: 70px; height: 70px; border-radius: 18px; background: rgba(255,255,255,.2); transform: rotate(18deg); }
+.ofr-solar .phone-art i:first-child { left: -20px; bottom: -12px; background: var(--yellow); }
+.ofr-solar .phone-art i:nth-child(2) { right: -12px; top: 5px; }
+.ofr-solar .phone-art i:nth-child(3) { left: 46px; top: 38px; width: 40px; height: 40px; background: white; }
+.ofr-solar .phone-cta { margin-top: 15px; height: 33px; display: flex; align-items: center; justify-content: center; gap: 7px; border-radius: 9px; background: var(--ink); color: white; font-size: 8px; font-weight: 800; }
+.ofr-solar .phone-cta svg { width: 11px; }
+
+.ofr-solar .floating-note { position: absolute; z-index: 7; display: flex; align-items: center; gap: 12px; padding: 13px 17px 13px 13px; border: 1px solid rgba(255,255,255,.8); border-radius: 17px; background: rgba(255,255,255,.92); box-shadow: 0 15px 35px rgba(28,66,128,.14); backdrop-filter: blur(10px); animation: ofr-float 3.8s ease-in-out infinite; }
+.ofr-solar .floating-note--top { top: 10px; right: 40px; }
+.ofr-solar .floating-note--bottom { left: 8px; bottom: 14px; animation-delay: -1.3s; }
+.ofr-solar .note-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: #fff1b7; color: #ad7900; }
+.ofr-solar .note-icon--blue { background: #e6efff; color: var(--blue); }
+.ofr-solar .note-icon svg { width: 16px; }
+.ofr-solar .floating-note > span:last-child { display: flex; flex-direction: column; }
+.ofr-solar .floating-note strong { font-size: 12px; }
+.ofr-solar .floating-note small { margin-top: 3px; font-size: 10px; color: #6f7d91; }
+@keyframes ofr-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* ── Sections ─────────────────────────────────────────────── */
+.ofr-solar .section {
+  position: relative;
+  z-index: 2;
+  width: min(91vw, 1420px);
+  margin: 0 auto;
+  padding: 74px 0;
+}
+
+.ofr-solar .section-heading { margin-bottom: 42px; }
+.ofr-solar .section-heading--center { max-width: 830px; margin-left: auto; margin-right: auto; text-align: center; }
+.ofr-solar .section-heading--split { display: grid; grid-template-columns: 1fr .72fr; gap: 90px; align-items: end; }
+.ofr-solar .section-kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: 14px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.ofr-solar .section-kicker::before { content: ""; width: 25px; height: 3px; border-radius: 99px; background: var(--yellow); }
+.ofr-solar .section-heading h2, .ofr-solar .dark-copy h2, .ofr-solar .faq-intro h2, .ofr-solar .final-cta h2 { margin: 14px 0 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.14; letter-spacing: -.055em; }
+.ofr-solar .section-heading > p, .ofr-solar .section-heading--split > p { margin: 20px auto 0; color: var(--muted); font-size: 19px; line-height: 1.68; }
+.ofr-solar .section-heading--split > p { margin: 0 0 5px; }
+
+/* ── Marquee ──────────────────────────────────────────────── */
+.ofr-solar .marquee-section { position: relative; z-index: 3; width: 100%; padding: 16px 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); background: linear-gradient(90deg, var(--ink), #27394a); color: white; transform: rotate(-1deg) scale(1.01); box-shadow: 0 14px 34px rgba(7,21,47,.14); }
+.ofr-solar .marquee-track { width: max-content; display: flex; align-items: center; animation: ofr-marquee 28s linear infinite; }
+.ofr-solar .marquee-track span { display: inline-flex; align-items: center; gap: 11px; padding: 0 22px; font-size: 14px; font-weight: 800; white-space: nowrap; }
+.ofr-solar .marquee-track svg { width: 16px; color: var(--yellow); fill: var(--yellow); }
+.ofr-solar .marquee-track i { width: 6px; height: 6px; margin-left: 18px; border-radius: 50%; background: var(--blue); }
+@keyframes ofr-marquee { to { transform: translateX(-50%); } }
+
+/* ── Process ──────────────────────────────────────────────── */
+.ofr-solar .process-section { padding-top: 88px; }
+.ofr-solar .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ofr-solar .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
+.ofr-solar .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
+.ofr-solar .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.ofr-solar .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
+.ofr-solar .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
+.ofr-solar .process-card--featured .step-number { color: rgba(255,255,255,.16); }
+.ofr-solar .step-icon { width: 56px; height: 56px; display: grid; place-items: center; margin-bottom: 65px; border-radius: 17px; background: #e9f0ff; color: var(--blue); }
+.ofr-solar .process-card--featured .step-icon { background: var(--yellow); color: var(--ink); }
+.ofr-solar .step-icon svg { width: 24px; }
+.ofr-solar .process-grid h3 { margin: 0; font-size: 25px; letter-spacing: -.035em; }
+.ofr-solar .process-grid p { min-height: 78px; margin: 15px 0 24px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.ofr-solar .process-card--featured p { color: rgba(255,255,255,.75); }
+.ofr-solar .process-grid small { display: inline-flex; padding: 8px 11px; border-radius: 99px; background: #eff4fd; color: #53637c; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .045em; }
+.ofr-solar .process-card--featured small { background: rgba(255,255,255,.13); color: white; }
+
+/* ── Niche tabs ───────────────────────────────────────────── */
+.ofr-solar .niche-section { padding-top: 70px; }
+.ofr-solar .niche-tabs { display: flex; flex-direction: column; gap: 24px; }
+.ofr-solar .niche-tab-list { width: 100%; padding: 8px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.74); box-shadow: 0 14px 42px rgba(28,64,123,.07); }
+.ofr-solar .niche-tab-trigger { min-height: 70px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; gap: 7px; border: 0; border-radius: 14px; background: transparent; color: #627089; white-space: normal; font-size: 12px; font-weight: 800; cursor: pointer; font-family: inherit; transition: color .2s ease, background .2s ease; }
+.ofr-solar .niche-tab-trigger:hover { background: rgba(7, 133, 189, .06); color: var(--blue); }
+.ofr-solar .niche-tab-trigger[data-state="active"] { background: var(--ink); color: white; box-shadow: 0 12px 25px rgba(7,21,47,.18); }
+.ofr-solar .niche-tab-trigger svg { width: 19px; height: 19px; }
+.ofr-solar .niche-panel { margin-top: 0; padding: 54px; overflow: hidden; display: grid; grid-template-columns: .74fr 1.26fr; gap: 64px; align-items: center; border: 1px solid var(--line); border-radius: 30px; background: rgba(255,255,255,.72); box-shadow: 0 24px 65px rgba(28,64,123,.09); }
+.ofr-solar .niche-panel[hidden] { display: none !important; }
+.ofr-solar .niche-panel[data-state="active"] { animation: ofr-panel-in .35s ease both; }
+@keyframes ofr-panel-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.ofr-solar .niche-label { width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 99px; font-size: 12px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.ofr-solar .niche-label svg { width: 14px; }
+.ofr-solar .niche-content h3 { max-width: 500px; margin: 20px 0 17px; font-size: clamp(35px, 3.4vw, 52px); line-height: 1.14; letter-spacing: -.05em; }
+.ofr-solar .niche-content > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-solar .niche-content ul { list-style: none; padding: 0; margin: 25px 0; display: grid; gap: 11px; }
+.ofr-solar .niche-content li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; }
+.ofr-solar .niche-content li svg { width: 18px; color: #2caf6d; }
+.ofr-solar .niche-link { width: fit-content; font-size: 14px; font-weight: 900; }
+.ofr-solar .niche-link svg { width: 16px; }
+
+.ofr-solar .niche-visual { --niche-accent: #2167f5; --niche-soft: #eaf1ff; position: relative; min-height: 510px; display: grid; place-items: center; }
+.ofr-solar .niche-visual::before { content: ""; position: absolute; inset: 5% 3% 3%; border-radius: 50%; background: radial-gradient(circle, var(--niche-soft), transparent 67%); }
+.ofr-solar .niche-browser { position: relative; z-index: 2; width: 92%; aspect-ratio: 1.42; overflow: hidden; border: 7px solid var(--ink); border-radius: 22px; background: white; box-shadow: 0 30px 70px rgba(18,47,99,.21); transform: rotate(1deg); }
+.ofr-solar .niche-browser-bar { height: 35px; padding: 0 12px; display: flex; align-items: center; gap: 5px; background: var(--ink); }
+.ofr-solar .niche-browser-bar i { width: 6px; height: 6px; border-radius: 50%; background: #ff6b70; }
+.ofr-solar .niche-browser-bar i:nth-child(2) { background: #ffc928; }
+.ofr-solar .niche-browser-bar i:nth-child(3) { background: #45d386; }
+.ofr-solar .niche-browser-bar span { margin: 0 auto; padding-right: 28px; color: #9baac3; font-size: 7px; }
+.ofr-solar .niche-site-nav { height: 55px; padding: 0 22px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #edf0f5; }
+.ofr-solar .niche-mini-logo { display: flex; align-items: center; gap: 4px; color: var(--niche-accent); font-size: 10px; }
+.ofr-solar .niche-mini-logo svg { width: 17px; }
+.ofr-solar .niche-mini-logo b { color: var(--ink); }
+.ofr-solar .niche-mini-logo span { font-size: 6px; font-weight: 900; }
+.ofr-solar .niche-mini-links { display: flex; gap: 15px; color: #768297; font-size: 7px; font-weight: 700; }
+.ofr-solar .niche-mini-call { display: flex; align-items: center; gap: 5px; padding: 8px 9px; border-radius: 7px; background: var(--niche-accent); color: white; font-size: 7px; font-weight: 800; }
+.ofr-solar .niche-mini-call svg { width: 9px; }
+.ofr-solar .niche-site-hero { height: calc(100% - 90px); padding: 42px 30px; display: grid; grid-template-columns: 1fr .83fr; gap: 25px; background: linear-gradient(130deg, white, var(--niche-soft)); }
+.ofr-solar .niche-site-copy > span, .ofr-solar .niche-mobile-content > span { color: var(--niche-accent); font-size: 6px; font-weight: 900; letter-spacing: .12em; }
+.ofr-solar .niche-site-copy h4 { max-width: 300px; margin: 11px 0 10px; font-size: clamp(26px, 2.2vw, 38px); line-height: 1; letter-spacing: -.055em; }
+.ofr-solar .niche-site-copy p { max-width: 290px; margin: 0; color: #718097; font-size: 8px; line-height: 1.55; }
+.ofr-solar .niche-site-actions { display: flex; gap: 7px; margin-top: 16px; }
+.ofr-solar .niche-site-actions b { padding: 9px 10px; border-radius: 7px; background: var(--niche-accent); color: white; font-size: 6px; }
+.ofr-solar .niche-site-actions b:last-child { border: 1px solid #dde4ef; background: white; color: var(--ink); }
+.ofr-solar .niche-stars { margin-top: 19px; color: #ffb000; font-size: 8px; letter-spacing: 1px; }
+.ofr-solar .niche-stars small { margin-left: 7px; color: #7b8798; font-size: 6px; letter-spacing: 0; }
+.ofr-solar .niche-photo { position: relative; overflow: hidden; display: grid; place-items: center; border-radius: 18px; background: var(--niche-accent); color: white; }
+.ofr-solar .niche-photo::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 13px; }
+.ofr-solar .niche-photo-mark { width: 90px; height: 90px; display: grid; place-items: center; border-radius: 28px; background: rgba(255,255,255,.18); backdrop-filter: blur(5px); transform: rotate(-7deg); }
+.ofr-solar .niche-photo-mark svg { width: 45px; height: 45px; }
+.ofr-solar .niche-photo > span { position: absolute; bottom: 21px; z-index: 2; font-size: 6px; font-weight: 900; letter-spacing: .18em; }
+.ofr-solar .niche-shape { position: absolute; border-radius: 25px; background: rgba(255,255,255,.1); transform: rotate(25deg); }
+.ofr-solar .niche-shape--one { width: 110px; height: 150px; left: -55px; bottom: -65px; }
+.ofr-solar .niche-shape--two { width: 90px; height: 90px; right: -40px; top: -35px; background: var(--yellow); opacity: .8; }
+.ofr-solar .niche-mobile { position: absolute; z-index: 5; right: -1%; bottom: 0; width: 132px; height: 267px; padding: 8px; border: 6px solid var(--ink); border-radius: 25px; background: white; box-shadow: 0 22px 46px rgba(18,47,99,.24); transform: rotate(3deg); }
+.ofr-solar .niche-mobile-notch { position: absolute; top: 3px; left: 50%; width: 43px; height: 10px; transform: translateX(-50%); border-radius: 0 0 8px 8px; background: var(--ink); }
+.ofr-solar .niche-mobile-content { height: 100%; padding: 18px 9px 9px; border-radius: 14px; background: linear-gradient(140deg, white, var(--niche-soft)); }
+.ofr-solar .niche-mobile-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; color: var(--niche-accent); }
+.ofr-solar .niche-mobile-top svg { width: 13px; }
+.ofr-solar .niche-mobile-content h5 { margin: 7px 0 11px; font-size: 15px; line-height: 1.02; letter-spacing: -.04em; }
+.ofr-solar .niche-mobile-image { height: 76px; display: grid; place-items: center; border-radius: 11px; background: var(--niche-accent); color: white; }
+.ofr-solar .niche-mobile-image svg { width: 30px; }
+.ofr-solar .niche-mobile-button { margin-top: 10px; padding: 8px; border-radius: 7px; background: var(--ink); color: white; text-align: center; font-size: 6px; font-weight: 800; }
+.ofr-solar .niche-result-card { position: absolute; z-index: 6; left: 0; bottom: 15px; display: flex; align-items: center; gap: 12px; padding: 14px 17px; border: 1px solid white; border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 14px 35px rgba(18,47,99,.14); backdrop-filter: blur(8px); }
+.ofr-solar .niche-result-card > svg { width: 26px; height: 26px; color: var(--niche-accent); }
+.ofr-solar .niche-result-card span { display: flex; flex-direction: column; }
+.ofr-solar .niche-result-card strong { font-size: 11px; }
+.ofr-solar .niche-result-card small { margin-top: 3px; color: #6d7a8e; font-size: 9px; }
+
+/* ── Every-niche banner ───────────────────────────────────── */
+.ofr-solar .niche-banner { position: relative; z-index: 2; margin-top: 20px; padding: 30px 34px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 40px; overflow: hidden; border-radius: 26px; background: var(--ink); color: white; box-shadow: 0 24px 55px rgba(7,21,47,.18); }
+.ofr-solar .niche-banner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 90% 10%, rgba(33,103,245,.3), transparent 34%), radial-gradient(circle at 4% 95%, rgba(255,201,40,.12), transparent 28%); pointer-events: none; }
+.ofr-solar .niche-banner > * { position: relative; z-index: 2; }
+.ofr-solar .niche-banner-copy { max-width: 340px; }
+.ofr-solar .niche-banner-copy .section-kicker { font-size: 11px; }
+.ofr-solar .niche-banner-copy h3 { margin: 9px 0 0; font-size: 24px; line-height: 1.2; letter-spacing: -.03em; }
+.ofr-solar .niche-banner-copy p { margin: 9px 0 0; color: #aab7cd; font-size: 13px; line-height: 1.55; }
+.ofr-solar .niche-banner-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ofr-solar .niche-banner-tags span { padding: 8px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 99px; background: rgba(255,255,255,.06); color: #dfe6f3; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.ofr-solar .niche-banner-tags .niche-banner-more { border-color: var(--yellow); background: var(--yellow); color: var(--ink); font-weight: 900; }
+.ofr-solar .niche-banner > .section-button { justify-self: end; }
+
+/* ── Included / deliverables ──────────────────────────────── */
+.ofr-solar .included-section { position: relative; z-index: 2; padding: 74px 4.5vw; overflow: hidden; background: #fbfcff; border-top: 1px solid #e6ebf5; border-bottom: 1px solid #e6ebf5; }
+.ofr-solar .included-section > .section-heading { max-width: 850px; margin-left: auto; margin-right: auto; }
+.ofr-solar .icon-cloud { width: min(92vw, 1260px); margin: 52px auto 65px; display: grid; gap: 10px; }
+.ofr-solar .icon-row { display: flex; justify-content: center; gap: 10px; }
+.ofr-solar .icon-row--two { transform: translateX(18px); }
+.ofr-solar .capability-tile { width: 138px; aspect-ratio: 1.08; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 1px solid rgba(7, 133, 189, .22); border-radius: 24px; background: rgba(7, 133, 189, .08); color: var(--ink); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.ofr-solar .capability-tile:hover { transform: translateY(-6px); background: rgba(7, 133, 189, .04); box-shadow: 0 17px 38px rgba(60,54,45,.10); }
+.ofr-solar .capability-tile svg { width: 28px; height: 28px; color: var(--blue); }
+.ofr-solar .capability-tile span { padding: 0 7px; font-size: 13px; line-height: 1.3; font-weight: 800; text-align: center; }
+.ofr-solar .system-cards { width: min(91vw, 1260px); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ofr-solar .system-cards article { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: start; padding: 32px; border: 1px solid #d5e0e6; border-radius: 26px; background: #eaf0f3; }
+.ofr-solar .system-cards article:nth-child(2) { background: #fff7dd; border-color: #f3e3a8; }
+.ofr-solar .system-card-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #e5edff; color: var(--blue); }
+.ofr-solar .system-card-icon--yellow { background: #fff0b3; color: #b77900; }
+.ofr-solar .system-card-icon svg { width: 21px; }
+.ofr-solar .system-cards small { color: #748197; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.ofr-solar .system-cards h3 { margin: 7px 0 9px; font-size: 23px; letter-spacing: -.035em; }
+.ofr-solar .system-cards p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.ofr-solar .system-cards article > svg { width: 18px; color: #9da7b5; }
+
+/* ── Pricing ──────────────────────────────────────────────── */
+.ofr-solar .pricing-section { padding-top: 72px; padding-bottom: 66px; }
+.ofr-solar .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.ofr-solar .pricing-card { position: relative; min-height: 535px; padding: 30px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 27px; background: rgba(255,255,255,.82); box-shadow: 0 16px 40px rgba(28,64,123,.07); }
+.ofr-solar .pricing-card::after { content: ""; position: absolute; right: -65px; top: -65px; width: 150px; height: 150px; border-radius: 50%; background: #edf3ff; }
+.ofr-solar .pricing-card--featured { border: 2px solid var(--blue); background: var(--ink); color: white; box-shadow: 0 25px 58px rgba(7,21,47,.22); transform: translateY(-10px); }
+.ofr-solar .pricing-card--featured::after { background: rgba(33,103,245,.32); }
+.ofr-solar .pricing-popular { position: absolute; z-index: 2; right: 18px; top: 18px; padding: 7px 10px; border-radius: 99px; background: var(--yellow); color: var(--ink); font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.ofr-solar .pricing-card-head { position: relative; z-index: 2; min-height: 55px; display: flex; flex-direction: column; }
+.ofr-solar .pricing-card-head > span { color: var(--blue); font-size: 11px; font-weight: 900; }
+.ofr-solar .pricing-card--featured .pricing-card-head > span { color: var(--yellow); }
+.ofr-solar .pricing-card-head small { margin-top: 5px; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.ofr-solar .pricing-card h3 { position: relative; z-index: 2; margin: 18px 0 9px; font-size: 26px; letter-spacing: -.04em; }
+.ofr-solar .pricing-card--featured h3 { color: #fff; }
+.ofr-solar .plan-price { position: relative; z-index: 2; font-size: 43px; font-weight: 900; letter-spacing: -.055em; }
+.ofr-solar .plan-price span { color: #8793a6; font-size: 11px; font-weight: 700; letter-spacing: 0; }
+.ofr-solar .pricing-card > p { min-height: 72px; margin: 15px 0 17px; color: var(--muted); font-size: 15px; line-height: 1.62; }
+.ofr-solar .pricing-card--featured > p { color: #aebad0; }
+.ofr-solar .pricing-card ul { list-style: none; padding: 17px 0 0; margin: 0 0 28px; display: grid; gap: 12px; border-top: 1px solid var(--line); }
+.ofr-solar .pricing-card--featured ul { border-color: rgba(255,255,255,.12); }
+.ofr-solar .pricing-card li { display: flex; align-items: center; gap: 9px; color: #46536a; font-size: 14px; font-weight: 700; }
+.ofr-solar .pricing-card--featured li { color: #d7deeb; }
+.ofr-solar .pricing-card li svg { width: 17px; color: #2bad68; }
+.ofr-solar .pricing-card > a { margin-top: auto; min-height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 7px 8px 7px 18px; border-radius: 16px; background: var(--ink); color: white; font-size: 14px; font-weight: 900; box-shadow: 0 12px 28px rgba(7,21,47,.14); }
+.ofr-solar .pricing-card--featured > a { background: var(--blue); color: white; }
+.ofr-solar .pricing-card > a svg { width: 42px; height: 42px; padding: 11px; border-radius: 12px; background: var(--yellow); color: var(--ink); }
+.ofr-solar .pricing-note { width: fit-content; margin: 26px auto 0; display: flex; align-items: center; gap: 8px; color: #6c7a8f; font-size: 12px; text-align: center; }
+.ofr-solar .pricing-note svg { width: 15px; color: #2aaa66; }
+
+/* ── Dark section ─────────────────────────────────────────── */
+.ofr-solar .dark-section { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 38px auto; padding: 74px; overflow: hidden; display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; border-radius: 42px; background: var(--ink); color: white; box-shadow: 0 35px 80px rgba(7,21,47,.25); }
+.ofr-solar .dark-section::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 88% 16%, rgba(33,103,245,.25), transparent 30%); }
+.ofr-solar .dark-glow { position: absolute; left: -120px; bottom: -180px; width: 500px; height: 500px; border-radius: 50%; background: var(--blue); filter: blur(140px); opacity: .25; }
+.ofr-solar .dark-copy, .ofr-solar .dark-grid { position: relative; z-index: 2; }
+.ofr-solar .section-kicker--dark { color: #ffe0cf; }
+.ofr-solar .dark-copy p { margin: 24px 0 32px; color: #adbad0; font-size: 16px; line-height: 1.75; }
+.ofr-solar .dark-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ofr-solar .dark-grid article { min-height: 210px; padding: 27px; border: 1px solid rgba(255,255,255,.1); border-radius: 22px; background: rgba(255,255,255,.055); backdrop-filter: blur(8px); }
+.ofr-solar .dark-grid article > strong { color: var(--yellow); font-size: 12px; letter-spacing: .1em; }
+.ofr-solar .dark-grid h3 { margin: 35px 0 10px; font-size: 20px; }
+.ofr-solar .dark-grid p { margin: 0; color: #b4bfd1; font-size: 15px; line-height: 1.62; }
+.ofr-solar .dark-grid .dark-stat { display: flex; flex-direction: column; justify-content: center; gap: 13px; background: var(--blue); }
+.ofr-solar .dark-stat span { display: flex; align-items: baseline; gap: 8px; color: #d9e2f7; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.ofr-solar .dark-stat b { min-width: 45px; color: white; font-size: 27px; letter-spacing: -.04em; text-transform: none; }
+
+/* ── Terms ────────────────────────────────────────────────── */
+.ofr-solar .terms-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: 68px; align-items: center; padding-top: 40px; padding-bottom: 55px; }
+.ofr-solar .terms-main h2 { margin: 16px 0 20px; font-size: clamp(40px, 4.2vw, 64px); line-height: 1.14; letter-spacing: -.055em; }
+.ofr-solar .terms-main p { max-width: 600px; margin: 0 0 26px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-solar .terms-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ofr-solar .terms-list > div { min-height: 178px; padding: 23px; display: flex; align-items: flex-start; gap: 14px; border: 1px solid var(--line); border-radius: 21px; background: rgba(255,255,255,.76); box-shadow: 0 13px 35px rgba(28,64,123,.06); }
+.ofr-solar .terms-list > div > svg { flex: 0 0 auto; width: 25px; height: 25px; padding: 5px; border-radius: 50%; background: #e9f8ef; color: #2aaa66; }
+.ofr-solar .terms-list span { display: flex; flex-direction: column; }
+.ofr-solar .terms-list strong { font-size: 19px; letter-spacing: -.02em; }
+.ofr-solar .terms-list small { margin-top: 9px; color: var(--muted); font-size: 16px; line-height: 1.62; }
+
+/* ── Reviews / combined offer ─────────────────────────────── */
+.ofr-solar .review-section { padding-top: 44px; }
+.ofr-solar .growth-priority-badge { width: fit-content; justify-self: end; display: flex; align-items: center; gap: 18px; padding: 17px 22px 17px 16px; border: 1px solid #dfe7f4; border-radius: 20px; background: white; box-shadow: 0 12px 30px rgba(28,64,123,.07); }
+.ofr-solar .growth-priority-badge > div { display: flex; }
+.ofr-solar .growth-priority-badge > div span { width: 46px; height: 46px; display: grid; place-items: center; margin-left: -8px; border: 3px solid white; border-radius: 50%; background: #e9f0ff; color: var(--blue); }
+.ofr-solar .growth-priority-badge > div span:first-child { margin-left: 0; background: #fff3bf; color: #a76f00; }
+.ofr-solar .growth-priority-badge > div span:last-child { background: #e8f8f0; color: #168d57; }
+.ofr-solar .growth-priority-badge svg { width: 16px; }
+.ofr-solar .growth-priority-badge p { margin: 0; display: flex; flex-direction: column; }
+.ofr-solar .growth-priority-badge strong { font-size: 15px; }
+.ofr-solar .growth-priority-badge small { margin-top: 4px; color: #6e7b8e; font-size: 10px; text-transform: uppercase; letter-spacing: .065em; }
+.ofr-solar .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ofr-solar .review-grid article { min-height: 330px; padding: 30px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 25px; background: rgba(255,255,255,.74); box-shadow: 0 15px 42px rgba(28,64,123,.06); }
+.ofr-solar .review-grid article > svg { width: 28px; color: var(--blue); }
+.ofr-solar .review-grid p { margin: 35px 0 45px; color: #3f4d63; font-size: 16px; line-height: 1.7; }
+.ofr-solar .review-grid footer { margin-top: auto; display: flex; align-items: center; gap: 11px; }
+.ofr-solar .review-grid footer > span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: #e8efff; color: var(--blue); font-size: 11px; font-weight: 900; }
+.ofr-solar .review-grid footer div { display: flex; flex-direction: column; }
+.ofr-solar .review-grid footer strong { font-size: 14px; }
+.ofr-solar .review-grid footer small { margin-top: 3px; color: #758298; font-size: 12px; }
+.ofr-solar .review-grid .review-featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 24px 54px rgba(33,103,245,.2); }
+.ofr-solar .review-featured > svg { color: var(--yellow) !important; }
+.ofr-solar .review-featured p { color: white; }
+.ofr-solar .review-featured footer > span { background: rgba(255,255,255,.15); color: white; }
+.ofr-solar .review-featured footer small { color: #ffd9c9; }
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.ofr-solar .faq-section { display: grid; grid-template-columns: .7fr 1.3fr; gap: 100px; align-items: start; padding-top: 30px; }
+.ofr-solar .faq-intro { position: sticky; top: 125px; }
+.ofr-solar .faq-intro h2 { margin-top: 16px; }
+.ofr-solar .faq-intro p { margin: 22px 0 28px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-solar .faq-list { border-top: 1px solid var(--line); }
+.ofr-solar .faq-list details { border-bottom: 1px solid var(--line); }
+.ofr-solar .faq-list summary { min-height: 86px; display: grid; grid-template-columns: 40px 1fr 30px; align-items: center; gap: 15px; cursor: pointer; list-style: none; font-size: 17px; font-weight: 800; }
+.ofr-solar .faq-list summary::-webkit-details-marker { display: none; }
+.ofr-solar .faq-list summary span { color: #9aa6b8; font-size: 10px; }
+.ofr-solar .faq-list summary i { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: #e9effa; color: var(--blue); font-size: 17px; font-style: normal; transition: transform .2s ease; }
+.ofr-solar .faq-list details[open] summary i { transform: rotate(45deg); background: var(--blue); color: white; }
+.ofr-solar .faq-list details p { margin: -5px 45px 28px 55px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+
+/* ── Final CTA + form ─────────────────────────────────────── */
+.ofr-solar .final-cta { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 24px auto 0; padding: 62px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(520px, .92fr); gap: 52px; align-items: center; border-radius: 42px 42px 0 0; background: linear-gradient(135deg, #315d78, #192d3c); color: white; }
+.ofr-solar .final-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 8% 5%, rgba(255,255,255,.16), transparent 30%), linear-gradient(120deg, transparent 52%, rgba(7,21,47,.15)); }
+.ofr-solar .cta-orbit { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,.17); }
+.ofr-solar .cta-orbit--one { width: 420px; height: 420px; right: -80px; bottom: -210px; }
+.ofr-solar .cta-orbit--two { width: 310px; height: 310px; right: -25px; bottom: -155px; border-style: dashed; }
+.ofr-solar .cta-content { position: relative; z-index: 2; }
+.ofr-solar .final-cta h2 { max-width: 690px; font-size: clamp(40px, 3.5vw, 56px); }
+.ofr-solar .cta-content > p { max-width: 620px; margin: 22px 0 27px; color: #e4ebff; font-size: 17px; line-height: 1.68; }
+.ofr-solar .contact-points { display: grid; gap: 12px; margin: 28px 0; }
+.ofr-solar .contact-points span { display: flex; align-items: center; gap: 10px; color: #f1f5ff; font-size: 15px; font-weight: 700; }
+.ofr-solar .contact-points svg { width: 18px; height: 18px; padding: 3px; border-radius: 50%; background: rgba(255,255,255,.14); color: var(--yellow); }
+.ofr-solar .cta-direct { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 30px 0 0; }
+.ofr-solar .cta-direct a { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 15px 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgba(255,255,255,.06); transition: background .2s ease, border-color .2s ease; }
+.ofr-solar .cta-direct a:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.22); }
+.ofr-solar .cta-direct svg { flex: 0 0 auto; width: 34px; height: 34px; padding: 9px; border-radius: 10px; background: rgba(255,201,40,.16); color: var(--yellow); }
+.ofr-solar .cta-direct span { display: flex; flex-direction: column; min-width: 0; }
+.ofr-solar .cta-direct small { color: #97a5bd; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.ofr-solar .cta-direct strong { margin-top: 3px; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-solar .eligibility-form { position: relative; z-index: 3; width: 100%; max-width: 610px; justify-self: end; padding: 27px; border-radius: 25px; background: white; color: var(--ink); box-shadow: 0 30px 75px rgba(7,21,47,.28); }
+.ofr-solar .form-heading { margin-bottom: 20px; }
+.ofr-solar .form-heading > span { display: inline-flex; align-items: center; gap: 7px; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.ofr-solar .form-heading > span svg { width: 14px; }
+.ofr-solar .form-heading h3 { margin: 10px 0 8px; font-size: 30px; letter-spacing: -.045em; }
+.ofr-solar .form-heading p { max-width: 590px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.ofr-solar .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.ofr-solar .form-field { display: grid; gap: 8px; }
+.ofr-solar .form-field--full { grid-column: 1 / -1; }
+.ofr-solar .form-field label { color: #35425a; font-size: 13px; font-weight: 800; }
+.ofr-solar .form-field input,
+.ofr-solar .form-select { width: 100%; height: 45px; padding: 0 14px; border: 1px solid #dde4ef; border-radius: 11px; background: #f8faff; box-shadow: none; color: var(--ink); font-size: 14px; font-family: inherit; outline: none; }
+.ofr-solar .form-field input:focus-visible,
+.ofr-solar .form-select:focus-visible { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(7, 133, 189, .14); }
+.ofr-solar .standalone-select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #758196 50%), linear-gradient(135deg, #758196 50%, transparent 50%); background-position: calc(100% - 18px) 19px, calc(100% - 13px) 19px; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+.ofr-solar .form-field-error { margin: 0; color: #d4380d; font-size: 11px; font-weight: 700; }
+.ofr-solar .form-error { margin: 12px 0 0; color: #d4380d; font-size: 12px; font-weight: 700; }
+.ofr-solar .form-consent { margin: 18px 0 0; display: flex; align-items: flex-start; gap: 9px; color: #66738a; font-size: 10px; line-height: 1.45; cursor: pointer; }
+.ofr-solar .form-consent input { width: 15px; height: 15px; margin: 2px 0 0; flex: 0 0 auto; accent-color: var(--blue); }
+.ofr-solar .form-consent .lead-consent-toggle { border: 0; padding: 0; background: none; color: var(--blue); font-size: 10px; font-weight: 800; cursor: pointer; }
+.ofr-solar .form-submit { width: 100%; min-height: 57px; margin-top: 18px; padding: 7px 8px 7px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 0; border-radius: 16px; background: var(--ink); color: white; font-size: 15px; font-weight: 900; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-solar .form-submit:hover { transform: translateY(-2px); box-shadow: 0 13px 25px rgba(7,21,47,.2); }
+.ofr-solar .form-submit:disabled { opacity: .7; cursor: wait; transform: none; box-shadow: none; }
+.ofr-solar .form-submit svg { width: 43px; height: 43px; padding: 12px; border-radius: 12px; background: var(--yellow); color: var(--ink); }
+.ofr-solar .form-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.35); border-top-color: white; border-radius: 50%; animation: ofr-spin .7s linear infinite; }
+@keyframes ofr-spin { to { transform: rotate(360deg); } }
+.ofr-solar .form-note { margin: 11px 0 0; color: #748196; text-align: center; font-size: 11px; line-height: 1.45; }
+.ofr-solar .eligibility-form .consent-legal-links { margin: 8px 0 0; text-align: center; font-size: 11px; color: #748196; }
+.ofr-solar .eligibility-form .consent-legal-links a { color: var(--blue); font-weight: 700; }
+
+/* ── Section CTA buttons ──────────────────────────────────── */
+.ofr-solar .section-cta-row { margin-top: 34px; display: flex; justify-content: center; }
+.ofr-solar .section-button { width: fit-content; min-height: 58px; display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 21px; border: 0; border-radius: 17px; background: var(--ink); color: white; font-size: 15px; font-weight: 900; box-shadow: 0 12px 28px rgba(7,21,47,.16); transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-solar .section-button:hover { transform: translateY(-3px); box-shadow: 0 18px 34px rgba(7,21,47,.22); }
+.ofr-solar .section-button i { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: var(--yellow); color: var(--ink); font-style: normal; }
+.ofr-solar .section-button i svg { width: 18px; height: 18px; padding: 0; color: currentColor; }
+.ofr-solar .section-button--light { background: white; color: var(--ink); }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.ofr-solar .site-footer { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 0 auto 24px; padding: 56px; border-radius: 0 0 42px 42px; background: var(--ink); color: white; }
+.ofr-solar .footer-main { display: grid; grid-template-columns: 1.25fr .65fr .65fr 1fr; gap: 48px; align-items: start; }
+.ofr-solar .footer-wordmark { display: inline-flex; align-items: center; color: white; font-size: 27px; font-weight: 900; letter-spacing: -.04em; }
+.ofr-solar .footer-brand > p { max-width: 340px; margin: 18px 0 21px; color: #b1bdd0; font-size: 14px; line-height: 1.65; }
+.ofr-solar .footer-contact { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.ofr-solar .footer-contact a { width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding-bottom: 5px; border-bottom: 1px solid var(--yellow); color: white; font-size: 13px; font-weight: 900; }
+.ofr-solar .footer-contact a svg { width: 15px; color: var(--yellow); }
+.ofr-solar .footer-nav-group { display: flex; flex-direction: column; gap: 12px; }
+.ofr-solar .footer-nav-group small { margin-bottom: 3px; color: #8794a9; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.ofr-solar .footer-nav-group a { width: fit-content; color: #d3dae6; font-size: 13px; font-weight: 700; transition: color .2s ease; }
+.ofr-solar .footer-nav-group a:hover { color: var(--yellow); }
+.ofr-solar .footer-offer { padding: 23px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: linear-gradient(145deg, rgba(33,103,245,.25), rgba(255,255,255,.04)); }
+.ofr-solar .footer-offer > span { color: var(--yellow); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.ofr-solar .footer-offer strong { display: block; margin-top: 9px; font-size: 18px; letter-spacing: -.025em; }
+.ofr-solar .footer-offer p { margin: 9px 0 17px; color: #b9c4d5; font-size: 13px; line-height: 1.58; }
+.ofr-solar .footer-offer a { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; border-radius: 11px; background: var(--yellow); color: var(--ink); font-size: 13px; font-weight: 900; }
+.ofr-solar .footer-offer a svg { width: 14px; }
+.ofr-solar .footer-bottom { margin-top: 38px; padding-top: 23px; display: grid; grid-template-columns: 1.7fr 1fr auto; gap: 30px; align-items: start; border-top: 1px solid rgba(255,255,255,.1); }
+.ofr-solar .footer-bottom p, .ofr-solar .footer-bottom small, .ofr-solar .footer-bottom span { margin: 0; color: #8f9bb0; font-size: 12px; line-height: 1.65; text-align: left; }
+.ofr-solar .footer-bottom a { color: #b9c3d3; }
+.ofr-solar .footer-bottom span { white-space: nowrap; }
+.ofr-solar .footer-legal { display: inline-flex; gap: 8px; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1180px) {
+  .ofr-solar .nav-links { display: none; }
+  .ofr-solar .hero { grid-template-columns: 1fr 1fr; gap: 35px; }
+  .ofr-solar .proof-row { grid-template-columns: 1fr; gap: 14px; }
+  .ofr-solar .proof-item { flex-direction: row; align-items: center; }
+  .ofr-solar .concept-stage { transform: scale(.86); transform-origin: center; width: 116%; margin-left: -8%; }
+}
+
+@media (max-width: 1050px) {
+  .ofr-solar .section-heading--split { grid-template-columns: 1fr; gap: 20px; }
+  .ofr-solar .process-grid { gap: 12px; }
+  .ofr-solar .process-grid article { padding: 25px; }
+  .ofr-solar .niche-tab-list { grid-template-columns: repeat(3, 1fr); }
+  .ofr-solar .niche-panel { padding: 38px; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: 30px; }
+  .ofr-solar .niche-content { text-align: left; }
+  .ofr-solar .niche-visual { width: 100%; margin: 0; }
+  .ofr-solar .niche-banner { grid-template-columns: 1fr; gap: 22px; text-align: center; }
+  .ofr-solar .niche-banner-copy { max-width: 460px; margin: 0 auto; }
+  .ofr-solar .niche-banner > .section-button { justify-self: center; }
+  .ofr-solar .capability-tile { width: 115px; }
+  .ofr-solar .dark-section { padding: 65px; grid-template-columns: 1fr; gap: 55px; }
+  .ofr-solar .terms-section { grid-template-columns: 1fr; gap: 45px; }
+  .ofr-solar .pricing-grid { grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; }
+  .ofr-solar .pricing-card { min-height: auto; }
+  .ofr-solar .pricing-card--featured { transform: none; }
+  .ofr-solar .growth-priority-badge { justify-self: start; }
+  .ofr-solar .faq-section { grid-template-columns: 1fr; gap: 50px; }
+  .ofr-solar .faq-intro { position: static; max-width: 700px; }
+  .ofr-solar .final-cta { padding: 65px; grid-template-columns: 1fr; gap: 50px; }
+  .ofr-solar .footer-main { grid-template-columns: 1fr 1fr; }
+  .ofr-solar .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+}
+
+@media (max-width: 860px) {
+  .ofr-solar .nav-wrap { width: calc(100% - 28px); margin-top: 14px; min-height: 66px; border-radius: 18px; }
+  .ofr-solar .nav-cta { display: none; }
+  .ofr-solar .menu-button { display: block; }
+  .ofr-solar .mobile-menu { top: 90px; }
+  .ofr-solar .hero { width: calc(100% - 36px); min-height: auto; padding: 116px 0 34px; grid-template-columns: 1fr; text-align: center; }
+  .ofr-solar .hero-copy { max-width: 720px; margin: 0 auto; }
+  .ofr-solar .eyebrow, .ofr-solar .hero-actions { margin-left: auto; margin-right: auto; justify-content: center; }
+  .ofr-solar .hero-trust-badges { justify-content: center; gap: 16px; margin-top: 22px; }
+  .ofr-solar .htb-clutch { width: 54px; height: 54px; }
+  .ofr-solar .htb-yelp-img { width: 50px; height: 50px; }
+  .ofr-solar .htb-trustpilot-img { width: 88px; }
+  .ofr-solar h1 { margin: 20px auto 16px; font-size: clamp(42px, 10.5vw, 62px); line-height: 1.06; font-weight: 900; }
+  .ofr-solar .headline-accent svg { margin: 8px auto 0; }
+  .ofr-solar .hero-lede { margin-top: 16px; }
+  .ofr-solar .proof-row { grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: left; }
+  .ofr-solar .concept-stage { width: 100%; margin: 22px 0 0; transform: scale(.95); min-height: 585px; }
+  .ofr-solar .marquee-section { margin-top: 30px; }
+}
+
+@media (max-width: 760px) {
+  .ofr-solar .section { width: calc(100% - 32px); padding: 54px 0; }
+  .ofr-solar .section-heading { margin-bottom: 30px; }
+  .ofr-solar .section-heading, .ofr-solar .section-heading--split, .ofr-solar .terms-main, .ofr-solar .faq-intro, .ofr-solar .dark-copy, .ofr-solar .cta-content { text-align: center; }
+  .ofr-solar .section-kicker::before { display: none; }
+  .ofr-solar .section-heading h2, .ofr-solar .dark-copy h2, .ofr-solar .faq-intro h2, .ofr-solar .final-cta h2, .ofr-solar .terms-main h2 { margin: 12px auto 0; font-size: clamp(31px, 8.2vw, 38px); line-height: 1.18; }
+  .ofr-solar .section-heading > p, .ofr-solar .section-heading--split > p { margin: 14px auto 0; font-size: 15px; line-height: 1.6; }
+  .ofr-solar .process-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-solar .process-grid .process-card--featured { transform: none; }
+  .ofr-solar .process-grid article { min-height: auto; padding: 26px; }
+  .ofr-solar .step-icon { margin-bottom: 34px; }
+  .ofr-solar .process-grid p { min-height: auto; margin: 14px 0 20px; }
+  .ofr-solar .section-cta-row { margin-top: 28px; }
+  .ofr-solar .niche-tab-list { display: flex; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding: 6px; border-radius: 16px; }
+  .ofr-solar .niche-tab-list::-webkit-scrollbar { display: none; }
+  .ofr-solar .niche-tab-trigger { flex: 0 0 118px; }
+  .ofr-solar .niche-section { padding-top: 22px; }
+  .ofr-solar .niche-panel { padding: 26px 18px; grid-template-columns: 1fr; gap: 16px; display: grid; }
+  .ofr-solar .niche-content { text-align: center; }
+  .ofr-solar .niche-label, .ofr-solar .niche-link { margin-left: auto; margin-right: auto; }
+  .ofr-solar .niche-content > p { margin-left: auto; margin-right: auto; }
+  .ofr-solar .niche-content ul { width: fit-content; margin: 18px auto; text-align: left; }
+  .ofr-solar .niche-content h3 { margin: 14px auto 12px; font-size: 29px; line-height: 1.18; }
+  .ofr-solar .niche-content > p { font-size: 15px; }
+  .ofr-solar .niche-visual { min-height: 332px; margin-top: 12px; place-items: start center; transform: scale(.93); transform-origin: top center; }
+  .ofr-solar .niche-browser { width: 100%; margin-top: 6px; margin-left: 0; border-width: 5px; }
+  .ofr-solar .niche-site-hero { height: calc(100% - 79px); padding: 16px 14px; gap: 12px; }
+  .ofr-solar .niche-site-copy p, .ofr-solar .niche-stars { display: none; }
+  .ofr-solar .niche-site-copy h4 { margin: 7px 0 0; font-size: 19px; }
+  .ofr-solar .niche-site-actions { margin-top: 11px; }
+  .ofr-solar .niche-site-nav { height: 44px; padding: 0 14px; }
+  /* The phone mock keeps a fixed height, so its contents have to be sized
+     to fit at this breakpoint — the kicker and heading otherwise wrap to
+     four lines and push the button out through the bottom of the frame. */
+  .ofr-solar .niche-mobile { width: 100px; height: 205px; right: 0; border-width: 4px; overflow: hidden; }
+  .ofr-solar .niche-mobile-content { overflow: hidden; padding: 14px 8px 8px; }
+  .ofr-solar .niche-mobile-top { margin-bottom: 8px; }
+  .ofr-solar .niche-mobile-content > span { display: block; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ofr-solar .niche-mobile-content h5 { margin: 5px 0 7px; font-size: 10px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ofr-solar .niche-mobile-image { height: 44px; }
+  .ofr-solar .niche-mobile-button { margin-top: 7px; padding: 6px; }
+  .ofr-solar .niche-result-card { bottom: 0; left: 0; }
+  .ofr-solar .niche-banner { margin-top: 16px; padding: 28px 18px; border-radius: 22px; }
+  .ofr-solar .niche-banner-copy h3 { font-size: 21px; }
+  .ofr-solar .included-section { padding: 54px 16px; }
+  .ofr-solar .icon-cloud { width: 100%; margin: 34px auto 40px; overflow: hidden; }
+  .ofr-solar .icon-row { width: max-content; justify-content: flex-start; animation: ofr-icon-slide 24s linear infinite; }
+  .ofr-solar .icon-row--two { transform: none; animation-direction: reverse; }
+  .ofr-solar .capability-tile { flex: 0 0 108px; }
+  .ofr-solar .system-cards { grid-template-columns: 1fr; width: 100%; gap: 16px; }
+  .ofr-solar .system-cards article { grid-template-columns: auto 1fr; padding: 26px; }
+  .ofr-solar .system-cards article > svg { display: none; }
+  .ofr-solar .pricing-grid { gap: 16px; }
+  .ofr-solar .pricing-card { padding: 28px; }
+  .ofr-solar .dark-section { width: 100%; margin: 40px 0; padding: 52px 20px; border-radius: 0; gap: 38px; }
+  .ofr-solar .dark-copy p { margin: 18px auto 26px; }
+  .ofr-solar .dark-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-solar .dark-grid article { min-height: auto; }
+  .ofr-solar .dark-grid h3 { margin: 22px 0 10px; }
+  .ofr-solar .terms-section { gap: 34px; }
+  .ofr-solar .terms-main h2 { margin: 12px auto 14px; }
+  .ofr-solar .terms-main p { margin: 0 auto 22px; }
+  .ofr-solar .terms-list { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-solar .terms-list > div { min-height: auto; padding: 22px; }
+  .ofr-solar .growth-priority-badge { justify-self: center; }
+  .ofr-solar .review-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-solar .review-grid article { min-height: auto; padding: 28px; }
+  .ofr-solar .review-grid p { margin: 22px 0 30px; }
+  .ofr-solar .review-grid .review-featured { transform: none; }
+  .ofr-solar .faq-section { gap: 30px; padding-top: 16px; }
+  .ofr-solar .faq-intro p { margin: 16px auto 22px; }
+  .ofr-solar .faq-list summary { min-height: 68px; font-size: 15px; }
+  .ofr-solar .faq-list details p { margin-left: 0; margin-right: 10px; }
+  .ofr-solar .final-cta { width: 100%; margin-top: 16px; padding: 52px 20px; grid-template-columns: 1fr; gap: 38px; border-radius: 0; }
+  .ofr-solar .cta-content > p { margin: 16px auto 22px; }
+  .ofr-solar .contact-points { width: fit-content; margin: 22px auto; }
+  .ofr-solar .contact-points span { text-align: left; }
+  .ofr-solar .cta-direct { display: flex; flex-direction: column; align-items: center; margin-top: 22px; }
+  .ofr-solar .cta-direct a { width: fit-content; }
+  .ofr-solar .eligibility-form { padding: 25px 18px; border-radius: 22px; justify-self: stretch; }
+  .ofr-solar .form-grid { grid-template-columns: 1fr; }
+  .ofr-solar .form-field--full { grid-column: auto; }
+  .ofr-solar .cta-card { max-width: 430px; transform: none; }
+  .ofr-solar .site-footer { width: 100%; margin: 0; padding: 40px 18px 28px; border-radius: 0; }
+  .ofr-solar .footer-main { grid-template-columns: 1fr 1fr; gap: 30px 16px; }
+  .ofr-solar .footer-brand, .ofr-solar .footer-offer { grid-column: 1 / -1; }
+  .ofr-solar .footer-brand > p { margin: 14px 0 18px; }
+  .ofr-solar .footer-nav-group { padding-top: 0; }
+  .ofr-solar .footer-bottom { margin-top: 26px; }
+  .ofr-solar .footer-bottom span { white-space: normal; }
+}
+
+@keyframes ofr-icon-slide { to { transform: translateX(-40%); } }
+
+@media (max-width: 580px) {
+  .ofr-solar { overflow: clip; }
+  .ofr-solar .nav-logo img { height: 28px; }
+  .ofr-solar .hero { width: calc(100% - 28px); padding: 100px 0 16px; gap: 20px; }
+  .ofr-solar .eyebrow { font-size: 10px; }
+  .ofr-solar h1 { margin: 18px auto 12px; font-size: clamp(38px, 11.5vw, 52px); line-height: 1.1; font-weight: 900; }
+  .ofr-solar .headline-accent svg { width: 140px; height: 11px; }
+  .ofr-solar .hero-lede { margin-top: 12px; font-size: 15px; line-height: 1.6; }
+  .ofr-solar .hero-actions { flex-direction: column; align-items: center; gap: 10px; margin-top: 22px; }
+  .ofr-solar .button { width: fit-content; }
+  .ofr-solar .proof-row { grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; margin: 22px auto 0; padding-top: 22px; gap: 16px 12px; }
+  .ofr-solar .proof-item { flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+  .ofr-solar .proof-item--mobile { display: flex; }
+  .ofr-solar .proof-item strong { font-size: 13.5px; white-space: normal; }
+  .ofr-solar .proof-item small { font-size: 12px; }
+  .ofr-solar .proof-icon { width: 34px; height: 34px; border-radius: 10px; }
+  .ofr-solar .proof-icon svg { width: 17px; }
+  .ofr-solar .concept-stage { min-height: 372px; margin-top: 24px; transform: scale(.92); transform-origin: top center; }
+  .ofr-solar .stage-orbit--one { width: 340px; height: 340px; }
+  .ofr-solar .stage-orbit--two { width: 270px; height: 270px; }
+  .ofr-solar .browser-card { width: 100%; margin-left: 0; border-width: 5px; border-radius: 20px; }
+  .ofr-solar .browser-topbar { height: 37px; }
+  .ofr-solar .design-toolbar { height: 43px; padding: 0 16px; }
+  .ofr-solar .mini-nav { display: none; }
+  .ofr-solar .design-canvas { height: calc(100% - 80px); padding: 28px 21px; gap: 14px; }
+  .ofr-solar .canvas-copy h2 { font-size: 20px; }
+  .ofr-solar .canvas-copy p { font-size: 7px; }
+  .ofr-solar .canvas-actions span { padding: 7px; font-size: 6px; }
+  .ofr-solar .canvas-trust { display: none; }
+  .ofr-solar .visual-stack { min-height: 150px; }
+  .ofr-solar .phone-card { width: 126px; height: 255px; right: 0; bottom: 12px; border-width: 5px; border-radius: 24px; padding: 7px; }
+  .ofr-solar .phone-notch { width: 41px; height: 10px; }
+  .ofr-solar .phone-header { height: 31px; }
+  .ofr-solar .phone-body { padding: 10px 8px; }
+  .ofr-solar .phone-body h3 { font-size: 14px; }
+  .ofr-solar .phone-art { height: 77px; }
+  .ofr-solar .phone-cta { height: 26px; margin-top: 10px; }
+  .ofr-solar .floating-note--top { top: -8px; right: 0; }
+  .ofr-solar .floating-note--bottom { left: 0; bottom: 0; }
+  .ofr-solar .floating-note { padding: 7px; }
+  .ofr-solar .note-icon { width: 28px; height: 28px; }
+  .ofr-solar .floating-note strong { font-size: 8px; }
+  .ofr-solar .floating-note small { font-size: 6px; }
+}
+
+@media (max-width: 480px) {
+  .ofr-solar .marquee-track span { padding: 0 14px; }
+  .ofr-solar .niche-site-nav { padding: 0 12px; }
+  .ofr-solar .niche-mini-links { display: none; }
+  .ofr-solar .niche-site-hero { grid-template-columns: 1.12fr .88fr; gap: 10px; }
+  .ofr-solar .niche-site-copy p, .ofr-solar .niche-stars { display: none; }
+  .ofr-solar .niche-site-actions { flex-direction: column; width: fit-content; }
+  .ofr-solar .niche-site-actions b:last-child { display: none; }
+  .ofr-solar .niche-photo-mark { width: 56px; height: 56px; border-radius: 17px; }
+  .ofr-solar .niche-photo-mark svg { width: 28px; }
+  .ofr-solar .niche-mobile { right: 0; }
+  .ofr-solar .niche-result-card { left: 0; }
+  .ofr-solar .review-grid p { font-size: 15px; }
+  .ofr-solar .faq-list summary { grid-template-columns: 27px 1fr 28px; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ofr-solar *, .ofr-solar *::before, .ofr-solar *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
+
+/* ── Industry photography ──────────────────────────────────────
+   The core offer page fills its mock-site slots with abstract shapes. The
+   lander swaps in real industry photography, so these rules replace the
+   placeholder art in three places: the hero browser mock, each service tab's
+   mock site, and the phone mock. Declared after the responsive blocks above,
+   so each one restates the breakpoints it needs to keep. */
+
+/* Hero browser mock — photo instead of the stacked abstract cards */
+.ofr-solar .industry-visual-stack { position: relative; min-height: 290px; overflow: hidden; border-radius: 20px; background: #202936; box-shadow: 0 20px 45px rgba(17, 26, 39, .2); transform: rotate(2deg); }
+.ofr-solar .industry-visual-stack::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(17, 26, 39, .5)); }
+.ofr-solar .industry-visual-stack img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
+.ofr-solar .industry-visual-stack .visual-chip { position: absolute; z-index: 2; left: 16px; bottom: 16px; margin: 0; padding: 7px 9px; background: var(--yellow); color: var(--ink); }
+
+/* Service-tab mock site — photo panel beside the mock hero copy */
+.ofr-solar .niche-label { background: rgba(7, 133, 189, .08); color: var(--blue); }
+.ofr-solar .niche-site-nav .mini-logo img { width: auto; height: 14px; }
+.ofr-solar .industry-niche-visual { --niche-accent: #ed5a2a; --niche-soft: rgba(7, 133, 189, .08); }
+.ofr-solar .industry-photo { display: block; }
+.ofr-solar .industry-photo::after { z-index: 2; inset: 12px; }
+.ofr-solar .industry-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.ofr-solar .industry-photo > span { left: 18px; right: auto; bottom: 18px; display: flex; align-items: center; gap: 5px; padding: 6px 8px; border-radius: 7px; background: rgba(17, 26, 39, .82); color: white; letter-spacing: .08em; }
+.ofr-solar .industry-photo > span svg { width: 10px; height: 10px; color: var(--yellow); }
+.ofr-solar .industry-mobile-image { background-position: center; background-size: cover; }
+
+/* Phone mock — industry detail shot with a standing "free quote" chip */
+.ofr-solar .phone-art--industry { background: url("/images/free-website/free-solar/detail.webp") center / cover no-repeat; }
+.ofr-solar .phone-art--industry::after { content: "FREE QUOTE"; position: absolute; left: 7px; bottom: 7px; padding: 4px 6px; border-radius: 6px; background: var(--yellow); color: var(--ink); font-size: 5px; font-weight: 900; letter-spacing: .06em; }
+
+@media (max-width: 760px) {
+  .ofr-solar .industry-photo > span { left: 10px; bottom: 10px; padding: 5px 6px; }
+}
+
+@media (max-width: 580px) {
+  .ofr-solar .industry-visual-stack { min-height: 150px; }
+}
+
+/* ── Sibling offer links ──────────────────────────────────────────────────
+   Crawlable cross-links between the free-website landers, so each one is
+   reachable from the others rather than only from the header dropdown. */
+.ofr-solar .offer-siblings { margin-top: 34px; padding-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; border-top: 1px solid rgba(255,255,255,.1); }
+.ofr-solar .offer-siblings small { color: #8794a9; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.ofr-solar .offer-siblings > div { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.ofr-solar .offer-siblings a { padding: 8px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 99px; background: rgba(255,255,255,.06); color: #d3dae6; font-size: 12px; font-weight: 700; transition: color .2s ease, border-color .2s ease; }
+.ofr-solar .offer-siblings a:hover { border-color: var(--yellow); color: var(--yellow); }
+.ofr-solar .footer-bottom { margin-top: 26px; }
+
+@media (max-width: 760px) {
+  .ofr-solar .offer-siblings { margin-top: 26px; }
+}
+
+/* Contextual links out to the wider site. Underlined so they read as links
+   inside body copy, and inheriting colour so they work on light and dark. */
+.ofr-solar .offer-inlink { color: inherit; font-weight: 800; text-decoration: underline; text-decoration-color: var(--yellow); text-underline-offset: 3px; text-decoration-thickness: 2px; transition: color .2s ease; }
+.ofr-solar .offer-inlink:hover { color: var(--yellow); }
+.ofr-solar .dark-grid .offer-inlink,
+.ofr-solar .pricing-note .offer-inlink { color: inherit; }
+
+
+/* ══ Footer legal block ══════════════════════════════════════
+   The offer terms run the full width of the footer; the address and the
+   copyright line sit beneath them rather than beside. */
+.ofr-solar .footer-bottom { grid-template-columns: 1fr auto; gap: 18px 30px; }
+.ofr-solar .footer-bottom > small { grid-column: 1 / -1; }
+.ofr-solar .footer-bottom > p { grid-column: 1; align-self: center; }
+.ofr-solar .footer-bottom > span { grid-column: 2; justify-self: end; align-self: center; }
+
+@media (max-width: 760px) {
+  .ofr-solar .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+  .ofr-solar .footer-bottom > p,
+  .ofr-solar .footer-bottom > span { grid-column: 1; justify-self: start; }
+}
+
+/* ══ Pricing card colours ════════════════════════════════════
+   Growth reads as the warm, chosen plan; Full Market as the calm one above
+   it. Both foreground sets clear 4.5:1 on their own background. */
+.ofr-solar .pricing-card--featured { border-color: #f97315; background: #f97315; }
+.ofr-solar .pricing-card--featured::after { background: rgba(255, 255, 255, .13); }
+.ofr-solar .pricing-card--featured .pricing-card-head > span { color: #fff; }
+.ofr-solar .pricing-card--featured .pricing-card-head small { color: #fff; }
+.ofr-solar .pricing-card--featured > p { color: #fff; }
+.ofr-solar .pricing-card--featured ul { border-color: rgba(255, 255, 255, .34); }
+.ofr-solar .pricing-card--featured li { color: #fff; }
+.ofr-solar .pricing-card--featured li svg { color: #fff; }
+/* The grey "/ month" is unreadable on the orange; the whole price goes white. */
+.ofr-solar .pricing-card--featured .plan-price span { color: rgba(255, 255, 255, .82); }
+.ofr-solar .pricing-card--featured > a { background: var(--ink); color: #fff; }
+
+.ofr-solar .pricing-card--verdant { border-color: #bfe6cd; background: #e9f7ee; }
+.ofr-solar .pricing-card--verdant::after { background: rgba(43, 173, 104, .15); }
+.ofr-solar .pricing-card--verdant .pricing-card-head > span { color: #1c7a4a; }
+.ofr-solar .pricing-card--verdant li svg { color: #1c8a52; }
+
+/* ══ Lead tracking ═══════════════════════════════════════════
+   Copy left, dashboard right — the same split the terms section uses. */
+.ofr-solar .leadtrack-section { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 50px; align-items: center; padding-top: 46px; padding-bottom: 54px; }
+/* One measure for the whole column so the heading, lede and list share an edge. */
+.ofr-solar .leadtrack-copy { max-width: 520px; }
+.ofr-solar .leadtrack-copy h2 { margin: 16px 0 18px; font-size: clamp(34px, 3.3vw, 48px); line-height: 1.14; letter-spacing: -.05em; }
+.ofr-solar .leadtrack-copy > p { margin: 0 0 24px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.ofr-solar .leadtrack-points { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.ofr-solar .leadtrack-points li { display: flex; align-items: center; gap: 11px; padding: 13px 0; border-bottom: 1px solid var(--line); color: #46536a; font-size: 14.5px; font-weight: 700; }
+.ofr-solar .leadtrack-points svg { flex: 0 0 auto; width: 19px; height: 19px; padding: 3px; border-radius: 50%; background: #e9f8ef; color: #1c8a52; }
+
+.ofr-solar .leadtrack-panel { padding: 16px; display: grid; gap: 14px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 18px 46px rgba(28,64,123,.08); }
+.ofr-solar .leadtrack-statrow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ofr-solar .leadtrack-stat { padding: 12px 13px; border: 1px solid var(--line); border-radius: 14px; background: #f8fbff; }
+.ofr-solar .leadtrack-stat > span { display: block; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.ofr-solar .leadtrack-stat > strong { display: block; margin-top: 5px; color: var(--ink); font-size: 22px; letter-spacing: -.04em; }
+.ofr-solar .leadtrack-stat > small { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; color: #1c8a52; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.ofr-solar .leadtrack-stat > small svg { flex: 0 0 auto; width: 12px; }
+.ofr-solar .leadtrack-stat--accent { border-color: color-mix(in srgb, var(--blue) 30%, transparent); background: color-mix(in srgb, var(--blue) 8%, #fff); }
+
+.ofr-solar .leadtrack-board { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; overflow: hidden; }
+.ofr-solar .leadtrack-board > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.ofr-solar .leadtrack-tabs { display: flex; gap: 5px; }
+.ofr-solar .leadtrack-tabs > * { padding: 5px 10px; border-radius: 99px; color: #6b7891; font-size: 11.5px; font-weight: 800; font-style: normal; }
+.ofr-solar .leadtrack-tabs > b { background: var(--ink); color: #fff; }
+.ofr-solar .leadtrack-live { display: inline-flex; align-items: center; gap: 6px; color: #1c8a52; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.ofr-solar .leadtrack-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #1c8a52; animation: leadtrack-pulse 1.8s ease-in-out infinite; }
+
+.ofr-solar .leadtrack-head, .ofr-solar .leadtrack-row { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 10px 14px; }
+.ofr-solar .leadtrack-head { background: #f8fbff; border-bottom: 1px solid var(--line); color: #8b97ab; font-size: 10px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.ofr-solar .leadtrack-row { border-bottom: 1px solid rgba(17,26,39,.06); }
+.ofr-solar .leadtrack-row:last-child { border-bottom: 0; }
+.ofr-solar .leadtrack-row b { display: block; min-width: 0; color: var(--ink); font-size: 13px; font-weight: 900; }
+.ofr-solar .leadtrack-row b small { display: block; margin-top: 2px; color: #7b889d; font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-solar .leadtrack-row > span { min-width: 0; color: #46536a; font-size: 12.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-solar .leadtrack-pill { justify-self: end; padding: 4px 9px; border-radius: 99px; font-size: 10.5px; font-weight: 900; white-space: nowrap; }
+.ofr-solar .leadtrack-pill--new { background: #e6f0ff; color: #1a4fbf; }
+.ofr-solar .leadtrack-pill--contacted { background: #fff3dc; color: #8a5800; }
+.ofr-solar .leadtrack-pill--quoted { background: #efe8ff; color: #5b34c4; }
+.ofr-solar .leadtrack-pill--won { background: #e3f6ea; color: #16714a; }
+.ofr-solar .leadtrack-caption { margin: 0; color: #8b97ab; font-size: 11.5px; font-weight: 700; text-align: center; }
+
+@keyframes leadtrack-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+@media (max-width: 1050px) {
+  .ofr-solar .leadtrack-section { grid-template-columns: 1fr; gap: 34px; }
+  .ofr-solar .leadtrack-copy > p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .ofr-solar .leadtrack-panel { padding: 12px; border-radius: 20px; }
+  .ofr-solar .leadtrack-statrow { grid-template-columns: 1fr 1fr; }
+  .ofr-solar .leadtrack-statrow > :last-child { grid-column: 1 / -1; }
+  .ofr-solar .leadtrack-head > span:nth-child(2), .ofr-solar .leadtrack-row > span:not(.leadtrack-pill) { display: none; }
+  .ofr-solar .leadtrack-head, .ofr-solar .leadtrack-row { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ofr-solar .leadtrack-live::before { animation: none; }
+}

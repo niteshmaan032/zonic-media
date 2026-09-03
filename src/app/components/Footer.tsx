@@ -94,6 +94,11 @@ function Footer() {
                     <Link href="/services/seo-services">SEO Services</Link>
                   </li>
                   <li>
+                    <Link href="/services/ai-seo-services">
+                      AI SEO (AEO &amp; GEO)
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/services/white-label-services">
                       White-Label Services
                     </Link>

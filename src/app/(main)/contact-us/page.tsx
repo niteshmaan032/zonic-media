@@ -20,18 +20,17 @@ const contactPageJsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "Contact Us | Digital Marketing Agency",
+  title: { absolute: "Contact Zonic Media | Digital Marketing Agency USA" },
   description:
-    "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
+    "Contact Zonic Media, a US digital marketing agency in Dover, Delaware. Call +1 302-726-9736 or send your website for a free local SEO audit.",
   keywords: [
-    "contact digital marketing agency",
-    "digital marketing consultation",
-    "free marketing strategy call",
-    "local SEO consultation",
-    "web design quote",
-    "Google Ads management quote",
-    "small business marketing help",
-    "hire a digital marketing agency",
+    "digital marketing agency contact",
+    "contact zonic media",
+    "digital marketing agency usa contact",
+    "digital marketing agency near me",
+    "free seo audit",
+    "free google business profile audit",
+    "zonic media phone number",
   ],
   alternates: {
     canonical: "/contact-us",
@@ -47,7 +46,7 @@ export const metadata: Metadata = {
     ],
     title: "Contact Us | Digital Marketing Agency | Zonic Media",
     description:
-      "Contact Zonic Media for web design, SEO, Google Business Profile optimization, and PPC services. Speak with our experts and grow your business online.",
+      "Contact Zonic Media, a US digital marketing agency in Dover, Delaware. Call +1 302-726-9736 or send your website for a free local SEO audit.",
     url: "/contact-us",
   },
 };

@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const applianceRepairMarketing = buildIndustryMarketingPage({
   slug: "appliance-repair-marketing-agency",
-  title: "Appliance Repair Marketing Agency | SEO & Ads | Zonic Media",
+  title: "Appliance Repair Marketing Agency | Local SEO, Ads & Calls",
   description:
-    "Appliance repair marketing agency for US repair companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive same-day repair leads. Free audit.",
+    "Appliance repair marketing agency: brand and appliance-specific SEO, Google Business Profile, Google Ads and reviews that book same-day service calls.",
   keywords: [
     "appliance repair marketing agency",
     "appliance repair marketing",
-    "marketing for appliance repair companies",
-    "appliance repair leads",
+    "appliance repair seo",
+    "appliance repair google ads",
     "appliance repair lead generation",
-    "appliance repair SEO",
-    "local SEO for appliance repair",
-    "Google Ads for appliance repair",
-    "same day appliance repair marketing",
-    "refrigerator repair leads",
+    "appliance repair advertising",
+    "marketing for appliance repair companies",
+    "appliance repair company marketing",
   ],
 
   eyebrow: "Appliance Repair Marketing Agency",

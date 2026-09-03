@@ -28,20 +28,19 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/pest-control-website-design";
 
 export const metadata: Metadata = {
-  title: "Pest Control Website Design That Books Jobs",
+  title: { absolute: "Pest Control Website Design Agency | Sites That Book Jobs" },
   description:
-    "Pest control website design built as a lead system — recurring plan signups, pest-specific landing pages, online scheduling, and trust signals that win calls.",
+    "Pest control website design agency: same-day service layouts, pest-specific pages, recurring-plan signups and review integration built to book treatments.",
   keywords: [
     "pest control website design",
-    "exterminator website design",
-    "pest control web design",
-    "pest control company website design",
-    "websites for pest control companies",
-    "pest control website redesign",
-    "termite treatment landing page",
-    "bed bug exterminator website",
-    "recurring pest control plan signups",
-    "pest control lead generation website",
+    "pest control web design agency",
+    "pest control web design services",
+    "pest control websites",
+    "pest control company websites",
+    "best pest control website",
+    "pest control website template",
+    "create a pest control website",
+    "online marketing for pest control services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "Pest Control Website Design That Books Jobs | Zonic Media",
     description:
-      "Pest control website design built as a lead system — recurring plan signups, pest-specific landing pages, online scheduling, and trust signals that win calls.",
+      "Pest control website design agency: same-day service layouts, pest-specific pages, recurring-plan signups and review integration built to book treatments.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -155,6 +154,11 @@ const PestWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How should a pest control website be structured to rank for specific pests?",
+    answer:
+      "Give every pest its own page: termites, bed bugs, rodents, ants, mosquitoes, wildlife. Each page should describe signs, the treatment method, pricing ranges and a same-day request form, because homeowners search the pest, not the company. Add quarterly-plan pages for recurring revenue and city pages for the service area. Zonic Media builds the site around that structure and connects the forms to your scheduling software.",
   },
 ];
 

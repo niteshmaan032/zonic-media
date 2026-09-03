@@ -3,7 +3,7 @@
 > Zonic Media resolves every type of Google Business Profile (GMB/GBP) verification failure: postcards that never arrive, rejected video verification, verification loops, revoked verifications, live video call verification, and service-area business (SAB) verification. 1500+ listings verified and restored, 95% success rate, 48-hour average resolution time.
 
 Service page: https://www.zonicllc.com/services/gmb-verification-help
-2026 verification guide: https://www.zonicllc.com/google-business-profile-verification-help-2026
+2026 verification guide: https://www.zonicllc.com/services/gmb-verification-help
 
 ## What this service does
 

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import blogRedirects from "./src/data/blogRedirects.json";
 
 const contentSecurityPolicyReportOnly = [
   "default-src 'self'",
@@ -322,24 +323,15 @@ const nextConfig: NextConfig = {
       // Reinstatement-timeline blog consolidation — 4 posts split one query
       // set; how-long-does-google-business-profile-reinstatement-take-in-2026
       // is the surviving guide.
-      {
-        source: "/blog/how-long-gbp-reinstatement-takes",
-        destination:
-          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
+      // Blog slug merges live in src/data/blogRedirects.json so the sitemap
+      // can exclude the same slugs (they were still listed there while
+      // returning 308s — Sept 2026 crawl). The last entry merges the
+      // duplicate "reinstatement denied" post (identical body + title).
+      ...Object.entries(blogRedirects).map(([from, to]) => ({
+        source: `/blog/${from}`,
+        destination: `/blog/${to}`,
         permanent: true,
-      },
-      {
-        source: "/blog/what-happens-after-you-submit-a-gbp-reinstatement-request",
-        destination:
-          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
-        permanent: true,
-      },
-      {
-        source: "/blog/after-gbp-reinstatement-request",
-        destination:
-          "/blog/how-long-does-google-business-profile-reinstatement-take-in-2026",
-        permanent: true,
-      },
+      })),
 
       // Services internal redirects
       {

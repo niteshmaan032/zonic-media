@@ -33,19 +33,18 @@ const serviceJsonLd = buildServiceJsonLd({
 });
 
 export const metadata: Metadata = {
-  title: "Business Launch Services | Start Your Business",
+  title: { absolute: "Business Launch Services | Website, GBP & SEO Setup | Zonic" },
   description:
-    "Launch your business online with Zonic LaunchPad. Get branding, website design, Google Business setup, local SEO, and lead generation in one done-for-you system.",
+    "Launch your business online in 7 to 14 days: branding, website design, Google Business Profile setup, local SEO foundations and lead capture.",
   keywords: [
     "business launch services",
-    "start a business online",
-    "new business website package",
-    "done for you business setup",
-    "branding for new business",
-    "Google Business Profile setup service",
-    "local SEO for new business",
-    "small business launch package",
-    "logo and branding package for startups",
+    "launch business services",
+    "start business services",
+    "new business marketing package",
+    "business website and google business profile setup",
+    "new business seo setup",
+    "launch a business online",
+    "done for you business launch",
   ],
   alternates: {
     canonical: "/services/launchpad",
@@ -117,6 +116,11 @@ const LaunchpadServiceFaqItems = [
     question: "Do You Work with US-Based Businesses?",
     answer:
       "Yes, we primarily work with US clients and understand local market requirements and competition.",
+  },
+  {
+    question: "What should a new business set up online before opening day?",
+    answer:
+      "Five things, in this order: a Google Business Profile verified under the correct category, a fast website with your services and service area, consistent name, address and phone on the major directories, a review request process, and call tracking so you know which channel each lead came from. Zonic LaunchPad delivers all five in 7 to 14 days so the business starts earning search visibility from its first week.",
   },
 ];
 
@@ -1162,7 +1166,7 @@ function page() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FAQPage",
-              "url": "https://zonicllc.com/services/launchpad",
+              "url": "https://www.zonicllc.com/services/launchpad",
               mainEntity: LaunchpadServiceFaqItems.map((faq) => ({
                 "@type": "Question",
                 name: faq.question,

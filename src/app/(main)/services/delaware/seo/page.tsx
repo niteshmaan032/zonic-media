@@ -39,24 +39,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/delaware/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO Company in Delaware — Dover-Based SEO Services" },
+  title: { absolute: "SEO Company in Delaware | Affordable SEO Services, Dover DE" },
   description:
-    "Delaware SEO service company headquartered in Dover. Local SEO, Google Business Profile and content programs for businesses in Wilmington, Dover, Newark, Lewes and across the state. Free audit.",
+    "Delaware SEO company headquartered in Dover: affordable local SEO, Google Business Profile and content programs for businesses in Wilmington, Dover.",
   keywords: [
     "seo company delaware",
-    "seo service company delaware",
-    "delaware seo",
-    "seo delaware",
-    "delaware seo company",
-    "seo company in delaware",
     "seo services delaware",
-    "seo services in delaware",
-    "seo expert delaware",
-    "delaware seo agency",
-    "seo professionals delaware",
-    "affordable seo packages in delaware",
-    "seo lewes",
-    "seo company wilmington delaware",
+    "affordable seo company in delaware",
+    "best seo company in delaware",
+    "seo service company delaware",
+    "seo services delaware county",
+    "local seo company delaware",
+    "seo company dover de",
+    "seo company wilmington de",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -68,7 +63,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "SEO Company in Delaware — Dover-Based SEO Services",
+    title: "SEO Company in Delaware | Affordable SEO Services, Dover DE",
     description:
       "Delaware SEO service company headquartered in Dover. Local SEO, GBP and content programs for businesses across the state. Free audit.",
     url: PAGE_PATH,
@@ -158,6 +153,11 @@ const DelSeoFaqs = [
     question: "Do you guarantee first-page rankings in Delaware?",
     answer:
       "Our track record speaks for itself — most Delaware clients reach top-three Map Pack positions for their core terms. Because Google's results change daily, no honest agency promises a fixed position; we guarantee what we control: full transparency. You see exactly where you rank, what improved, and what we did each month.",
+  },
+  {
+    question: "How do I choose the best SEO company in Delaware?",
+    answer:
+      "Ask for three things: local proof, meaning Delaware clients you can call; monthly reports that show calls and leads, not just rankings; and a plan built for your town, because Wilmington, Dover and the beach towns have very different competition. Zonic Media is physically in Dover, publishes its Clutch reviews, and quotes a flat monthly price after a free audit of your current rankings.",
   },
 ];
 

@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-gutter-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Gutter Companies That Wins Jobs",
+  title: { absolute: "Gutter Company SEO | Local SEO for Gutter Companies" },
   description:
-    "Local SEO for gutter companies that wins the Google map pack — turn 'gutter installation near me' searches into booked estimates. Free audit.",
+    "Gutter company SEO for installation, guard and cleaning services: service pages, Google Business Profile, service-area pages.",
   keywords: [
-    "local SEO for gutter companies",
-    "gutter installation near me",
-    "gutter cleaning near me",
-    "seamless gutters near me",
-    "gutter guards near me",
-    "gutter repair",
-    "gutter company near me",
-    "gutter SEO",
-    "SEO for gutter companies",
-    "Google Business Profile for gutter companies",
-    "gutter lead generation",
+    "local seo for gutter companies",
+    "gutter company seo",
+    "gutter installation seo",
+    "gutter guard seo",
+    "gutter cleaning seo",
+    "gutter companies near me",
+    "gutter company marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -185,6 +182,11 @@ const GutterSeoFaqs = [
     question: "Why Choose Zonic Media over Another Gutter SEO Company?",
     answer:
       "We specialize in local home-service businesses like gutter contractors, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "Which gutter searches drive the most estimate requests?",
+    answer:
+      "Seamless gutters plus your city, gutter installation near me, gutter guards with the brand names you carry, and gutter cleaning in the fall. Each needs its own page, and the Google Business Profile services list should mirror them. Because most gutter jobs come from homeowners comparing two or three estimates, recent reviews with the town named decide who gets the call. Zonic Media builds those pages and runs the review program.",
   },
 ];
 

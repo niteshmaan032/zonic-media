@@ -35,19 +35,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/delaware/web-design";
 
 export const metadata: Metadata = {
-  title: { absolute: "Web Design Company in Delaware | Zonic Media" },
+  title: { absolute: "Web Design Company in Delaware | Custom Websites" },
   description:
-    "Custom website design and development in Delaware — fast, SEO-ready sites for businesses in New Castle County, Dover and Sussex County, built by a Dover-based agency.",
+    "Delaware web design company in Dover: custom, SEO-ready websites for businesses in New Castle County, Dover and Sussex County, built to rank and convert.",
   keywords: [
-    "delaware web design",
+    "web design delaware",
+    "website design delaware",
     "web design company delaware",
-    "custom website design new castle county",
-    "custom website design services in delaware",
-    "delaware seo and web design agency",
-    "website development company delaware",
+    "custom web design packages in delaware",
     "web design dover de",
     "web design wilmington de",
-    "web seo services in delaware",
+    "delaware website designer",
+    "web design near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Web Design Company in Delaware | Zonic Media",
+    title: "Web Design Company in Delaware | Custom Websites",
     description:
       "Custom website design and development in Delaware — fast, SEO-ready sites built by a Dover-based agency.",
     url: PAGE_PATH,
@@ -131,6 +130,11 @@ const DelWebFaqs = [
     question: "Do I own the website when it's done?",
     answer:
       "Completely. Domain, hosting, code, content, analytics — everything is in your accounts from day one, and every build includes training so your team can edit content without calling us for every comma.",
+  },
+  {
+    question: "How much does a business website cost in Delaware?",
+    answer:
+      "Delaware businesses typically pay $2,500 to $8,000 for a custom site from a local agency, with e-commerce and larger service sites costing more. Zonic Media quotes a flat fee after a free consultation, includes local SEO setup for your Delaware service area, and offers a no-upfront-fee website for service businesses that pair it with a qualifying marketing plan.",
   },
 ];
 
@@ -338,7 +342,7 @@ const data: PhlLandingData = {
       ],
       pills: [
         { icon: "pin", text: "Built in Dover, DE" },
-        { icon: "star", text: "4.9 on Clutch" },
+        { icon: "star", text: "5.0 on Clutch" },
         { icon: "pin", text: "Statewide clients" },
       ],
     },

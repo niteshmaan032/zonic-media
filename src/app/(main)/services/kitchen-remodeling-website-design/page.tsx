@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/kitchen-remodeling-website-design";
 
 export const metadata: Metadata = {
-  title: "Kitchen Remodeling Website Design That Books Jobs",
+  title: { absolute: "Kitchen Remodeling Website Design | Sites That Book Consults" },
   description:
-    "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
+    "Kitchen remodeling website design for contractors and design-build firms: project galleries, financing UX, consultation booking.",
   keywords: [
     "kitchen remodeling website design",
-    "kitchen remodeler website design",
-    "kitchen remodeling web design",
-    "kitchen remodel website design",
-    "websites for kitchen remodelers",
-    "kitchen renovation website design",
-    "kitchen remodeling company website design",
-    "kitchen remodeling landing page design",
-    "kitchen remodel lead generation website",
-    "kitchen remodeler web designer",
+    "home remodeling website design",
+    "kitchen remodel design company",
+    "kitchen design remodeling services",
+    "kitchen remodel website inspiration",
+    "kitchen remodeling designers near me",
+    "design build kitchen website",
+    "kitchen remodel design and build",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Kitchen Remodeling Website Design That Books Jobs | Zonic Media",
     description:
-      "Kitchen remodeling website design built as a lead system — instant quote flows, before-and-after galleries, and financing UX that books renovations.",
+      "Kitchen remodeling website design for contractors and design-build firms: project galleries, financing UX, consultation booking.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const KitchenWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "How do kitchen remodelers get leads from their website in 2026?",
+    answer:
+      "By matching how homeowners research: they search styles and budgets months before they call. A site that ranks for kitchen remodel cost, design ideas and local searches, shows project galleries with real prices, and offers a low-commitment design consultation captures those planners early. Zonic Media builds the content and galleries around those searches and connects the consultation form to your CRM.",
   },
 ];
 
@@ -434,6 +437,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked estimates, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/kitchen-remodeling-website-design-agency-us/offer" className="hiw-inline-link">
+                      free kitchen remodeling website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

@@ -27,20 +27,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/towing-company-website-design";
 
 export const metadata: Metadata = {
-  title: "Towing Company Website Design That Books Calls",
+  title: { absolute: "Towing Company Website Design | Sites That Book Calls Fast" },
   description:
-    "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, and service-area pages that book tows fast.",
+    "Towing company website design: tap-to-call emergency layouts, roadside assistance and service-area pages, dispatch integration.",
   keywords: [
     "towing company website design",
-    "tow truck website design",
-    "towing website design",
-    "websites for towing companies",
-    "roadside assistance website design",
     "towing service website design",
-    "towing company web design",
-    "towing lead generation website",
-    "towing landing page design",
-    "tow truck web designer",
+    "tow truck website design",
+    "roadside assistance website",
+    "towing company website template",
+    "how to advertise a towing business",
+    "towing company marketing",
+    "towing seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -54,7 +52,7 @@ export const metadata: Metadata = {
     ],
     title: "Towing Company Website Design That Books Calls | Zonic Media",
     description:
-      "Towing company website design built as a lead system — click-to-call roadside pages, 24/7 dispatch UX, and service-area pages that book tows fast.",
+      "Towing company website design: tap-to-call emergency layouts, roadside assistance and service-area pages, dispatch integration.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -154,6 +152,11 @@ const TowingWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What matters most on a towing company website?",
+    answer:
+      "One thing: the call. A stranded driver searches from a phone and calls the first result that loads instantly, shows a phone number and says how fast a truck can arrive. Everything else, from pricing to service pages for heavy-duty, roadside assistance and impound, supports that. Zonic Media builds towing sites for sub-two-second loads, tap-to-call on every screen, and call tracking so you know which searches send trucks out.",
   },
 ];
 
@@ -430,6 +433,12 @@ function Page() {
                       website design services
                     </Link>{" "}
                     are built around booked calls, not another brochure site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/towing-website-design-agency-us/offer" className="hiw-inline-link">
+                      free towing website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

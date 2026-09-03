@@ -33,19 +33,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/nyc/digital-marketing";
 
 export const metadata: Metadata = {
-  title: { absolute: "NYC Digital Marketing Agency | Zonic Media" },
+  title: { absolute: "Digital Marketing Agency NYC | New York Marketing Company" },
   description:
-    "Digital marketing for New York City businesses — local SEO, Google Business Profile, Google Ads and web design run as one borough-targeted program. Free audit.",
+    "NYC digital marketing agency for small and mid-size businesses: local SEO, Google Business Profile, Google Ads and web design across the five boroughs.",
   keywords: [
-    "nyc digital marketing agency",
+    "digital marketing agency nyc",
     "digital marketing agency new york",
-    "new york digital marketing",
-    "marketing agency nyc",
-    "digital marketing services nyc",
+    "digital marketing company nyc",
+    "best digital marketing agency nyc",
+    "digital marketing firms nyc",
+    "top digital marketing agencies nyc",
+    "digital advertising agency nyc",
+    "seo agency new york",
     "google ads agency nyc",
-    "web design nyc",
-    "brooklyn marketing agency",
-    "manhattan marketing agency",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "NYC Digital Marketing Agency | Zonic Media",
+    title: "Digital Marketing Agency NYC | New York Marketing Company",
     description:
       "Digital marketing for New York City businesses — local SEO, GBP, Google Ads and web design across all five boroughs.",
     url: PAGE_PATH,
@@ -138,6 +138,11 @@ const NycDmFaqs = [
     question: "Do you need to be based in NYC to do this well?",
     answer:
       "No — most agencies ranking NYC businesses are not on Fifth Avenue either. Execution quality and borough-level strategy decide outcomes; both are location-independent, and video strategy calls run whenever you want them.",
+  },
+  {
+    question: "Are digital marketing agencies worth it for a small NYC business?",
+    answer:
+      "They are when the agency works the channels that capture demand rather than the ones that look busy. For a small New York business that means the Google Map Pack, Google Ads on high-intent searches and a website that converts on a phone. An agency that reports in calls and booked appointments pays for itself; one that reports in impressions usually does not. Zonic Media's NYC program is priced flat, month to month, and reported in leads.",
   },
 ];
 

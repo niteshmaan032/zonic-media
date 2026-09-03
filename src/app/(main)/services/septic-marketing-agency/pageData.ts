@@ -20,9 +20,9 @@ const tickerRun =
 
 export const septicMarketingPage: IndustryMarketingPageData = {
   slug: "septic-marketing-agency",
-  title: "Septic Marketing Agency | Local SEO & Ads | Zonic Media",
+  title: "Septic Marketing Agency | Local SEO, Google Ads & Leads",
   description:
-    "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for pumping, repairs & installs. Free audit.",
+    "Septic marketing agency for pumping, installation and repair companies: Map Pack rankings, Google Business Profile, Google Ads.",
   themeClass: "ima-septic",
   visualCopy: {
     industry: "septic",

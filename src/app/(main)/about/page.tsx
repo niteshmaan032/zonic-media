@@ -68,20 +68,18 @@ import {
 --------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "About Zonic Media — GBP Reinstatement Specialists",
-  },
+  title: { absolute: "About Zonic Media | Digital Marketing Agency in Dover, DE" },
   description:
-    "We recover suspended Google Business Profiles and run local SEO for home service businesses across Delaware, Philadelphia and NYC.",
+    "Zonic Media is a Dover, Delaware digital marketing agency serving small businesses across the USA: local SEO, Google Business Profile recovery.",
   keywords: [
-    "about Zonic Media",
-    "Zonic Media agency",
-    "local marketing agency for small business",
-    "local SEO agency Dover DE",
-    "Google Business Profile agency",
-    "digital marketing agency Delaware",
-    "marketing agency for service businesses",
-    "web design and SEO agency US",
+    "about zonic media",
+    "digital marketing agency delaware",
+    "digital marketing agency dover de",
+    "digital marketing agency in delaware",
+    "marketing agency for small business",
+    "local seo agency dover de",
+    "google business profile agency",
+    "web design and seo agency usa",
   ],
   alternates: {
     canonical: "/about",
@@ -297,6 +295,11 @@ const aboutFaqs = [
   {
     q: "Do you provide ongoing support after a project launches?",
     a: "Yes, and for local search it's the part that pays off most. Ongoing work covers review velocity, profile currency, content, campaign tuning and a monthly re-scan of Map Pack coverage, so the position you win keeps widening rather than holding still.",
+  },
+  {
+    q: "Where is Zonic Media located and who do you work with?",
+    a:
+      "Zonic Media is headquartered at 8 The Green, Dover, Delaware 19901 and works with small and mid-size businesses across all 50 states, plus clients in Canada, the UK, Australia, the UAE and India. Most clients are local service businesses: contractors, healthcare practices, law firms, real estate professionals and cleaning companies. All work is done in-house by our own team, and the agency holds a 5.0 rating from 21 verified reviews on Clutch.",
   },
 ];
 

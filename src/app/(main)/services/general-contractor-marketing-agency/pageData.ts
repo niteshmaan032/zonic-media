@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const generalContractorMarketing = buildIndustryMarketingPage({
   slug: "general-contractor-marketing-agency",
-  title: "General Contractor Marketing Agency | SEO & Ads | Zonic Media",
+  title: "General Contractor Marketing Agency | SEO, Ads & Leads",
   description:
-    "General contractor marketing agency for US builders & remodelers. Local SEO, Google Map Pack ranking, Google Ads & exclusive contractor leads. Free audit.",
+    "General contractor marketing agency for builders and construction companies: Google Business Profile, local SEO, Google Ads.",
   keywords: [
     "general contractor marketing agency",
-    "contractor marketing agency",
+    "marketing agency for contractors",
+    "marketing agency for construction company",
     "marketing for general contractors",
-    "general contractor leads",
+    "marketing company for contractors",
     "construction marketing agency",
-    "general contractor SEO",
-    "local SEO for general contractors",
-    "Google Ads for contractors",
-    "home addition leads",
-    "design build marketing",
+    "contractor seo",
+    "contractor lead generation",
   ],
 
   eyebrow: "General Contractor Marketing Agency",

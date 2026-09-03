@@ -152,6 +152,15 @@ const seoServiceLinks: NicheLink[] = [
     group: "Core SEO Services",
   },
   {
+    id: "ai-seo-services",
+    title: "AI SEO (AEO & GEO)",
+    description:
+      "Get cited in ChatGPT, AI Overviews, AI Mode and Perplexity — not just ranked.",
+    link: "/services/ai-seo-services",
+    icon: <RiSearchLine />,
+    group: "Core SEO Services",
+  },
+  {
     id: "local-seo-for-small-business",
     title: "Local SEO for Small Business",
     description:
@@ -983,51 +992,209 @@ function MobileAccordionToggle({
 }
 
 /* ── Free Website offer landers ──────────────────────────────────────────
-   The industry-specific versions of the offer. The general offer page is the
-   parent nav link itself, so it is deliberately not repeated in this list. */
-type FreeWebsiteLink = Omit<NicheLink, "group">;
+   Twenty industry versions of the offer, grouped so the panel stays
+   scannable. The general offer page is the parent nav link itself, so it is
+   deliberately not repeated in this list. */
+type FreeWebsiteGroup = "Home Services" | "Remodeling & Property" | "Specialist";
+
+const FREE_WEBSITE_GROUP_ORDER: FreeWebsiteGroup[] = [
+  "Home Services",
+  "Remodeling & Property",
+  "Specialist",
+];
+
+type FreeWebsiteLink = Omit<NicheLink, "group"> & { group: FreeWebsiteGroup };
 
 const freeWebsiteLinks: FreeWebsiteLink[] = [
   {
-    id: "free-website-roofing",
+    id: "fw-roofing",
     title: "Roofing Websites",
-    description:
-      "Built around repair, replacement, and storm-damage search intent.",
+    description: "With a qualifying marketing plan.",
     link: "/roofing-website-design-agency-us/offer",
     icon: <MdRoofing />,
+    group: "Home Services",
   },
   {
-    id: "free-website-hvac",
+    id: "fw-hvac",
     title: "HVAC Websites",
-    description:
-      "Built around AC repair, heating, and seasonal maintenance demand.",
+    description: "With a qualifying marketing plan.",
     link: "/hvac-website-design-agency-us/offer",
     icon: <MdOutlineHvac />,
+    group: "Home Services",
   },
   {
-    id: "free-website-plumbing",
+    id: "fw-plumber",
     title: "Plumbing Websites",
-    description:
-      "Built around emergency calls, drains, and water-heater replacements.",
+    description: "With a qualifying marketing plan.",
     link: "/plumber-website-design-agency-us/offer",
     icon: <MdOutlinePlumbing />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-electrician",
+    title: "Electrician Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/electrician-website-design-agency-us/offer",
+    icon: <MdOutlineElectricalServices />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-garage-door",
+    title: "Garage Door Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/garage-door-website-design-agency-us/offer",
+    icon: <MdOutlineGarage />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-landscaping",
+    title: "Landscaping Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/landscaping-website-design-agency-us/offer",
+    icon: <MdOutlineGrass />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-painting-contractor",
+    title: "Painting Contractor Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/painting-contractor-website-design-agency-us/offer",
+    icon: <MdOutlineFormatPaint />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-pool-service",
+    title: "Pool Service Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/pool-service-website-design-agency-us/offer",
+    icon: <MdOutlinePool />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-cleaning-company",
+    title: "Cleaning Company Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/cleaning-company-website-design-agency-us/offer",
+    icon: <MdOutlineCleaningServices />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-solar",
+    title: "Solar Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/solar-website-design-agency-us/offer",
+    icon: <MdOutlineSolarPower />,
+    group: "Home Services",
+  },
+  {
+    id: "fw-bathroom-remodeling",
+    title: "Bathroom Remodeling Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/bathroom-remodeling-website-design-agency-us/offer",
+    icon: <MdOutlineBathtub />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-kitchen-remodeling",
+    title: "Kitchen Remodeling Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/kitchen-remodeling-website-design-agency-us/offer",
+    icon: <MdOutlineKitchen />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-flooring",
+    title: "Flooring Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/flooring-website-design-agency-us/offer",
+    icon: <MdOutlineLayers />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-home-inspector",
+    title: "Home Inspector Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/home-inspector-website-design-agency-us/offer",
+    icon: <MdOutlineHomeWork />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-real-estate",
+    title: "Real Estate Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/real-estate-website-design-agency-us/offer",
+    icon: <MdOutlineRealEstateAgent />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-moving-company",
+    title: "Moving Company Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/moving-company-website-design-agency-us/offer",
+    icon: <MdOutlineLocalShipping />,
+    group: "Remodeling & Property",
+  },
+  {
+    id: "fw-auto-repair",
+    title: "Auto Repair Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/auto-repair-website-design-agency-us/offer",
+    icon: <MdOutlineCarRepair />,
+    group: "Specialist",
+  },
+  {
+    id: "fw-towing",
+    title: "Towing Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/towing-website-design-agency-us/offer",
+    icon: <MdOutlineCarCrash />,
+    group: "Specialist",
+  },
+  {
+    id: "fw-law-firm",
+    title: "Law Firm Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/law-firm-website-design-agency-us/offer",
+    icon: <MdGavel />,
+    group: "Specialist",
+  },
+  {
+    id: "fw-chiropractic",
+    title: "Chiropractic Websites",
+    description: "With a qualifying marketing plan.",
+    link: "/chiropractic-website-design-agency-us/offer",
+    icon: <FaUserDoctor />,
+    group: "Specialist",
   },
 ];
 
+const freeWebsiteGroups = FREE_WEBSITE_GROUP_ORDER.map((group) => ({
+  group,
+  items: freeWebsiteLinks.filter((link) => link.group === group),
+})).filter((section) => section.items.length > 0);
+
 function FreeWebsiteMenu() {
   return (
-    <div className="services-dropdown-container services-core-dropdown free-website-dropdown">
-      <div className="services-core-grid free-website-grid">
-        {freeWebsiteLinks.map((item) => (
-          <Link href={item.link} className="services-core-card" key={item.id}>
-            <span className="services-core-icon">{item.icon}</span>
-            <span className="services-core-content">
-              <strong>{item.title}</strong>
-              <span>{item.description}</span>
-            </span>
-          </Link>
-        ))}
-      </div>
+    <div
+      className="services-dropdown-container services-core-dropdown free-website-dropdown"
+      data-lenis-prevent
+    >
+      {freeWebsiteGroups.map((section) => (
+        <div className="niche-core-section" key={section.group}>
+          <p className="niche-core-heading">{section.group}</p>
+          <div className="services-core-grid free-website-grid">
+            {section.items.map((item) => (
+              <Link href={item.link} className="services-core-card" key={item.id}>
+                <span className="services-core-icon">{item.icon}</span>
+                <span className="services-core-content">
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -1239,7 +1406,7 @@ function Navbar() {
                   src="/images/logo.webp"
                   width={132}
                   height={50}
-                  alt="logo"
+                  alt="Zonic Media logo"
                   className="logo-img"
                   priority
                 />
@@ -1515,7 +1682,7 @@ function Navbar() {
                       groups={industryGroups}
                     />
                   </li>
-                  <li className="services-dropdown services-dropdown--anchored">
+                  <li className="services-dropdown">
                     <Link
                       href="/website-design-agency-us/offer"
                       className="nav-link-with-icon"

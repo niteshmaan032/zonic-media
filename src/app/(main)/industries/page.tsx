@@ -7,17 +7,20 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Marketing by Industry",
+  title: { absolute: "Industries We Serve | Marketing Agency for Contractors" },
   description:
-    "Zonic Media builds industry-specific marketing for local service businesses: roofers, HVAC, plumbers, dentists, lawyers, movers and more. Find your niche and grow.",
+    "Industry-specific marketing for contractors, healthcare, legal, real estate and cleaning businesses: local SEO, websites and Google Ads built for each trade.",
   keywords: [
-    "industries we serve",
+    "marketing agency for contractors",
+    "marketing agency for small business",
     "industry specific marketing agency",
-    "local SEO by industry",
-    "marketing agency for local service businesses",
-    "niche marketing agency",
-    "home services marketing agency",
-    "local business marketing by industry",
+    "marketing agency for home services",
+    "marketing agency for doctors",
+    "marketing agency for law firms",
+    "marketing agency for real estate",
+    "hvac marketing agency",
+    "roofing marketing agency",
+    "plumbing marketing agency",
   ],
   alternates: {
     canonical: "/industries",
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Industries We Serve | Marketing by Industry",
+    title: "Industries We Serve | Marketing Agency for Contractors",
     description:
       "One specialist team, a dedicated playbook for every niche. See how Zonic Media grows roofers, HVAC, plumbing, dental, legal, real estate and more.",
     url: "/industries",
@@ -713,6 +716,11 @@ const industryFaqs = [
     question: "Do you only work with businesses in Delaware?",
     answer:
       "No. We're based in Dover, Delaware, but we work remote-first with local service businesses across the United States. Your location is never a barrier to working together.",
+  },
+  {
+    question: "Why does industry-specific marketing outperform generic marketing for local businesses?",
+    answer:
+      "Because every industry buys differently. A homeowner with a burst pipe calls the first plumber in the Google Map Pack; a patient reads reviews and checks insurance before booking a dentist; a homeowner comparing roofers wants financing and storm-damage pages. Zonic Media builds each program around the search terms, trust signals and booking flows that industry actually uses, which is why the same budget produces more booked jobs than a one-size-fits-all campaign.",
   },
 ];
 

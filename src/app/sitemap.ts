@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import lastmodJson from "@/data/sitemapLastmod.generated.json";
+import blogRedirectsJson from "@/data/blogRedirects.json";
 
 export const revalidate = 300;
 
@@ -9,6 +10,10 @@ const BASE_URL = "https://www.zonicllc.com";
 // route -> ISO date, produced by `node scripts/generate-sitemap-lastmod.mjs`
 // from each page's git history. Re-run the script after content edits.
 const LASTMOD = lastmodJson as Record<string, string>;
+
+// Slugs that 301 elsewhere (next.config reads the same file). They stay
+// "published" in the CMS, so filter them here or the sitemap lists redirects.
+const REDIRECTED_BLOG_SLUGS = new Set(Object.keys(blogRedirectsJson));
 
 const withLastModified = (
   entries: MetadataRoute.Sitemap,
@@ -100,9 +105,26 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // Free-website offer landers
   { url: `${BASE_URL}/website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/roofing-website-design-agency-us/offer`,        changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/hvac-website-design-agency-us/offer`,           changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/plumber-website-design-agency-us/offer`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/roofing-website-design-agency-us/offer`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/hvac-website-design-agency-us/offer`,                 changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/plumber-website-design-agency-us/offer`,              changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/auto-repair-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/bathroom-remodeling-website-design-agency-us/offer`,  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/chiropractic-website-design-agency-us/offer`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/cleaning-company-website-design-agency-us/offer`,     changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/electrician-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/flooring-website-design-agency-us/offer`,             changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/garage-door-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/home-inspector-website-design-agency-us/offer`,       changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/kitchen-remodeling-website-design-agency-us/offer`,   changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/landscaping-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/law-firm-website-design-agency-us/offer`,             changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/moving-company-website-design-agency-us/offer`,       changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/painting-contractor-website-design-agency-us/offer`,  changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/pool-service-website-design-agency-us/offer`,         changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/real-estate-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/solar-website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/towing-website-design-agency-us/offer`,               changeFrequency: "monthly", priority: 0.8 },
 
   // Home inspector marketing
   { url: `${BASE_URL}/services/home-inspector-marketing`,                changeFrequency: "monthly", priority: 0.8 },
@@ -134,6 +156,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // SEO-plan pages (Aug 2026)
   { url: `${BASE_URL}/services/seo-services`,               changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/services/ai-seo-services`,            changeFrequency: "monthly", priority: 0.9 },
   { url: `${BASE_URL}/services/local-seo-for-small-business`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-packages`,         changeFrequency: "monthly", priority: 0.8 },
 
@@ -186,7 +209,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let blogEntries: MetadataRoute.Sitemap = [];
   try {
     const blogs = await getPublishedBlogs();
-    blogEntries = blogs.map((blog) => ({
+    blogEntries = blogs
+      .filter((blog) => !REDIRECTED_BLOG_SLUGS.has(blog.slug))
+      .map((blog) => ({
       url: `${BASE_URL}/blog/${blog.slug}`,
       lastModified: blog.updatedAt,
       changeFrequency: "monthly" as const,

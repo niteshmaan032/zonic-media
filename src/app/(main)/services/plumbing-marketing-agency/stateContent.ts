@@ -216,9 +216,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   arizona: {
     name: "Arizona",
     slug: "arizona",
-    metaTitle: "Plumbing Marketing Agency in Arizona",
+    metaTitle: "Plumbing Marketing Agency in Arizona | Local SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for Arizona contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for Arizona contractors in Phoenix, Mesa, Tucson and Scottsdale: emergency-search Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free Arizona Plumbing Audit",
       "Phoenix · Tucson · Mesa · Scottsdale",
@@ -331,6 +331,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Will this help with pool plumbing service marketing?",
         a: "Yes. Pool plumbing is a meaningful recurring service category for Arizona plumbers because so many homes have pools and the 115°F heat destroys outdoor plumbing equipment. We build dedicated pool plumbing service pages, optimize your GBP for pool-related plumbing categories where available, and seed Q&A with pool plumbing questions Arizona customers actually search for.",
       },
+      {
+        q: "What plumbing searches are most valuable in Arizona?",
+        a:
+          "Water heater replacement, slab leak repair and water softener installation, all driven by Arizona's hard water and slab foundations, alongside emergency plumber searches. Each deserves its own page and a place on the Google Business Profile services list. Zonic Media builds those pages for the Phoenix and Tucson metros and tracks which services produce the calls.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -348,9 +353,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   california: {
     name: "California",
     slug: "california",
-    metaTitle: "Plumbing Marketing Agency in California",
+    metaTitle: "Plumbing Marketing Agency in California | Local SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for California contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for California contractors in Los Angeles, San Diego, the Bay Area and Sacramento: Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free California Plumbing Audit",
       "Los Angeles · San Francisco Bay Area · San Diego · Sacramento",
@@ -463,6 +468,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve California plumbers outside the four major metros?",
         a: "Yes. We work with plumbing contractors across all of California including Fresno, Bakersfield, Riverside, San Bernardino, Long Beach, Anaheim, Stockton, Modesto, Santa Rosa, and the broader Central Valley. Strategy calibrates to local competitive density and demographic mix.",
       },
+      {
+        q: "How does a California plumbing company stand out in a crowded metro Map Pack?",
+        a:
+          "Neighborhood coverage and review velocity. Los Angeles and the Bay Area have a different Map Pack every few miles, so service-area pages for each city, reviews that name the neighborhood, and job photos with locations build coverage across the metro. Zonic Media tracks rankings on a grid across your territory and adds coverage where the calls are.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -480,9 +490,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   florida: {
     name: "Florida",
     slug: "florida",
-    metaTitle: "Plumbing Marketing Agency in Florida",
+    metaTitle: "Plumbing Marketing Agency in Florida | Local SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for Florida contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for Florida contractors in Miami, Tampa, Orlando and Jacksonville: emergency-search Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free Florida Plumbing Audit",
       "Miami · Tampa · Orlando · Jacksonville",
@@ -595,6 +605,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve Florida plumbers outside the four major metros?",
         a: "Yes. We work with plumbing contractors in every Florida metro and most secondary markets — Cape Coral, Fort Myers, Sarasota, Naples, Gainesville, Tallahassee, Pensacola, Daytona, West Palm Beach. The strategy adapts to local competitive density. Smaller markets typically see faster ranking timelines because the competition is less saturated.",
       },
+      {
+        q: "What plumbing marketing works in Florida's storm season?",
+        a:
+          "Being ready before the storm. Sewer backups, water heater failures and repiping searches spike after hurricanes and heavy rain, and the plumbers already ranking with 24-hour availability, recent reviews and emergency pages get the calls. Zonic Media prepares storm-response pages and profile updates ahead of the season and runs emergency campaigns when the weather hits.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -612,9 +627,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   georgia: {
     name: "Georgia",
     slug: "georgia",
-    metaTitle: "Plumbing Marketing Agency in Georgia",
+    metaTitle: "Plumbing Marketing Agency in Georgia | Local SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for Georgia contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for Georgia contractors in Atlanta, Marietta, Savannah and Augusta: Map Pack rankings, Google Business Profile, Google Ads.",
     ticker: [
       "Free Georgia Plumbing Audit",
       "Atlanta · Augusta · Savannah · Columbus",
@@ -727,6 +742,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve Georgia plumbers outside the Atlanta metro?",
         a: "Yes. We work with plumbing contractors across all of Georgia including Macon, Athens, Albany, Valdosta, Warner Robins, Gainesville, Rome, and the broader secondary markets. Strategy calibrates to local competitive density.",
       },
+      {
+        q: "How do Atlanta plumbers win the suburbs?",
+        a:
+          "Each suburb, from Marietta to Alpharetta to Decatur, has its own Map Pack, so the plumbers that win have a service-area page for each suburb, reviews that name it, and job photos with locations. A single Atlanta page cannot rank across the metro. Zonic Media builds suburb-level coverage and tracks it on a grid so you can see where you rank and where you do not.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -744,9 +764,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   illinois: {
     name: "Illinois",
     slug: "illinois",
-    metaTitle: "Plumbing Marketing Agency in Illinois",
+    metaTitle: "Plumbing Marketing Agency in Illinois | Local SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for Illinois contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for Illinois contractors in Chicago, the suburbs, Naperville and Springfield: Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free Illinois Plumbing Audit",
       "Chicago · Aurora · Naperville · Rockford",
@@ -859,6 +879,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve Illinois plumbers outside the Chicago metro?",
         a: "Yes. We work with plumbing contractors across all of Illinois including Rockford, Peoria, Springfield, Champaign-Urbana, Bloomington, Decatur, and the broader downstate market. Strategy calibrates to local competitive density.",
       },
+      {
+        q: "What plumbing searches spike in Illinois winters?",
+        a:
+          "Frozen pipe repair, burst pipe emergencies, water heater failures and sump pump problems during thaws. Plumbers with an emergency page for each, 24-hour availability on their Google Business Profile and recent reviews get the winter calls. Zonic Media publishes the winter pages in early fall and adjusts profile services and ad budgets as the temperature drops.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -876,9 +901,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   "north-carolina": {
     name: "North Carolina",
     slug: "north-carolina",
-    metaTitle: "Plumbing Marketing Agency in North Carolina",
+    metaTitle: "Plumbing Marketing Agency in North Carolina | SEO & Ads",
     metaDescription:
-      "Plumbing marketing agency for North Carolina contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for North Carolina contractors in Charlotte, Raleigh, Greensboro and Wilmington: Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free North Carolina Plumbing Audit",
       "Charlotte · Raleigh · Greensboro · Durham",
@@ -991,6 +1016,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
         q: "Do you serve NC plumbers outside the major metros?",
         a: "Yes. We work with plumbing contractors across all of North Carolina including Winston-Salem, Wilmington, Asheville, Fayetteville, Greenville, High Point, Concord, Gastonia, and the broader secondary markets. Strategy calibrates to local competitive density and submarket dynamics.",
       },
+      {
+        q: "How competitive is plumbing search in Charlotte and Raleigh?",
+        a:
+          "Very. Both metros have grown fast, and dozens of plumbers compete for the same emergency and water heater searches. The winners hold complete Google Business Profiles, the most recent reviews and suburb-level service pages. Zonic Media audits your position against the actual competitors in each Map Pack before proposing a plan, and tracks the grid monthly.",
+      },
     ],
     final: {
       accentTail: "Your Specific Metro.",
@@ -1008,9 +1038,9 @@ export const STATE_CONTENT: Record<string, StateContent> = {
   texas: {
     name: "Texas",
     slug: "texas",
-    metaTitle: "Plumbing Marketing Agency in Texas",
+    metaTitle: "Plumbing Marketing Agency in Texas | Local SEO & Google Ads",
     metaDescription:
-      "Plumbing marketing agency for Texas contractors. Map pack rankings, GBP optimization, Google Ads, website design & reviews. Free audit. From $750/mo.",
+      "Plumbing marketing agency for Texas contractors in Houston, Dallas, Austin and San Antonio: emergency-search Map Pack rankings, Google Business Profile.",
     ticker: [
       "Free Texas Plumbing Audit",
       "Houston · Dallas · Austin · San Antonio",
@@ -1121,6 +1151,11 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       {
         q: "Do you serve Texas plumbers outside the four major metros?",
         a: "Yes. We work with plumbing contractors across all of Texas including Fort Worth, El Paso, Corpus Christi, McAllen, Lubbock, Amarillo, Waco, Tyler, College Station, and the broader Rio Grande Valley. Strategy calibrates to local competitive density and demographic mix.",
+      },
+      {
+        q: "What plumbing services should Texas contractors market first?",
+        a:
+          "Slab leak detection and repair, water heater replacement, sewer line repair and repiping, which Texas soil, water and housing stock drive year round, plus emergency plumber searches. Each needs a page and a profile services entry. Zonic Media builds those pages for the Houston, Dallas, Austin and San Antonio metros and tracks which services produce calls.",
       },
     ],
     final: {

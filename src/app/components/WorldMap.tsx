@@ -19,7 +19,7 @@ function WorldMap() {
         <Image
           src="/images/world-map.svg"
           fill
-          alt="world map"
+          alt="World map of the countries Zonic Media serves"
           className="world-map-img"
           sizes="(max-width: 768px) 100vw, 1200px"
         />
@@ -29,7 +29,7 @@ function WorldMap() {
             <Image
               src="/images/canada.webp"
               fill
-              alt="Canada"
+              alt="Canada flag"
               className="flag-img"
               sizes="30px"
             />
@@ -48,7 +48,7 @@ function WorldMap() {
             <Image
               src="/images/dubai-flag.webp"
               fill
-              alt="Dubai / UAE"
+              alt="United Arab Emirates flag"
               className="flag-img"
               sizes="30px"
             />
@@ -84,7 +84,7 @@ function WorldMap() {
             <Image
               src="/images/australia.webp"
               fill
-              alt="Australia"
+              alt="Australia flag"
               className="flag-img"
               sizes="30px"
             />
@@ -102,7 +102,7 @@ function WorldMap() {
             <Image
               src="/images/india.webp"
               fill
-              alt="India"
+              alt="India flag"
               className="flag-img"
               sizes="30px"
             />
@@ -121,7 +121,7 @@ function WorldMap() {
             <Image
               src="/images/united-kingdom.webp"
               fill
-              alt="India"
+              alt="India flag"
               className="flag-img"
               sizes="30px"
             />

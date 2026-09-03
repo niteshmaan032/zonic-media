@@ -26,20 +26,20 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title: "Plumbing Marketing Agency for Contractors",
+  title: { absolute: "Plumbing Marketing Agency USA | Local SEO & Google Ads" },
   description:
-    "Plumbing marketing agency for contractors. Google Business Profile, Google Maps ranking, paid ads, websites, and reviews. Free plumbing marketing audit.",
+    "Plumbing marketing agency for contractors across the USA: emergency-call Map Pack rankings, Google Business Profile, Google Ads and reviews that book jobs.",
   keywords: [
     "plumbing marketing agency",
-    "marketing for plumbing contractors",
-    "plumber marketing services",
-    "plumbing lead generation",
-    "local SEO for plumbers",
-    "Google Maps ranking for plumbers",
-    "Google Business Profile for plumbers",
-    "Google Ads for plumbers",
-    "plumbing website design",
-    "plumber review management",
+    "plumbing marketing agency usa",
+    "plumbing marketing agency near me",
+    "plumber marketing company",
+    "best plumbing marketing companies",
+    "plumbing marketing ideas",
+    "marketing for plumbing company online",
+    "plumber marketing firm",
+    "online marketing plumbers services",
+    "plumbing seo",
   ],
   alternates: { canonical: "/services/plumbing-marketing-agency" },
 };
@@ -224,12 +224,17 @@ const faqs = [
     q: "What states do you serve?",
     a: "We work with plumbing contractors nationally. The states with our deepest presence and dedicated marketing pages are Florida, Texas, California, Arizona, Illinois, Georgia, and North Carolina. Each state has unique plumbing market dynamics — hard water in Phoenix, slab construction in Florida, freeze events in Illinois — and the marketing strategy adapts to those dynamics. We also serve plumbing contractors in other states; the seven listed are simply the ones with dedicated landing pages.",
   },
+  {
+    q: "What is the fastest way for a plumbing company to get more emergency calls?",
+    a:
+      "Rank in the Google Map Pack for emergency terms in every city you serve and run Local Services Ads with the Google Guaranteed badge. Emergency plumbing searches convert on the first result that shows a phone number, current reviews and 24-hour availability, so the profile, hours and review velocity matter more than the website. Zonic Media fixes those signals first, then adds city pages and Google Ads to widen coverage.",
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: "https://zonicllc.com/services/plumbing-marketing-agency",
+  url: "https://www.zonicllc.com/services/plumbing-marketing-agency",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
@@ -245,7 +250,7 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
 const serviceJsonLd = buildServiceJsonLd({
   name: "Plumbing Marketing Agency",
   description:
-    "Plumbing marketing agency for contractors. Google Business Profile, Google Maps ranking, paid ads, websites, and reviews. Free plumbing marketing audit.",
+    "Plumbing marketing agency for contractors across the USA: emergency-call Map Pack rankings, Google Business Profile, Google Ads and reviews that book jobs.",
   pageUrl: "/services/plumbing-marketing-agency",
   serviceType: "Plumbing Marketing",
   areaServed: "United States",

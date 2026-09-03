@@ -20,19 +20,20 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "White-Label GBP, SEO & Web Design for Agencies",
+  title: { absolute: "White Label SEO Services for Agencies | GBP, Local SEO & Web" },
   description:
-    "White-label local SEO, GBP reinstatement, verification & web design for agencies — resell under your own brand at wholesale rates. We stay invisible.",
+    "White label SEO services for agencies: Google Business Profile reinstatement and management, local SEO and web design delivered under your brand.",
   keywords: [
-    "white label GMB reinstatement",
-    "white label local SEO",
-    "agency fulfillment",
-    "white label digital marketing services",
-    "white label Google Business Profile services",
-    "white label GBP management",
-    "white label web design for agencies",
-    "resell local SEO services",
-    "white label SEO partner",
+    "white label seo services",
+    "white label seo services for agencies",
+    "white label local seo services",
+    "white label local seo",
+    "white label seo reseller services",
+    "white label seo packages",
+    "white label ai seo services",
+    "white label seo services in usa",
+    "white label gbp reinstatement",
+    "white label web design",
   ],
   alternates: { canonical: "/services/white-label-services" },
   openGraph: {
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     title:
       "White-Label Services for Agencies | GBP Reinstatement, Local SEO & Web Design",
     description:
-      "White-label local SEO, GBP reinstatement, verification & web design for agencies — resell under your own brand at wholesale rates. We stay invisible.",
+      "White label SEO services for agencies: Google Business Profile reinstatement and management, local SEO and web design delivered under your brand.",
     url: "/services/white-label-services",
     type: "website",
   },
@@ -173,6 +174,11 @@ const faqs = [
   {
     q: "Is this only for local agencies?",
     a: "No — we partner with agencies, freelancers, and consultants nationwide. Fulfillment is delivered remotely under your brand wherever you and your clients are located.",
+  },
+  {
+    q: "How does white label local SEO work with an agency's existing clients?",
+    a:
+      "Your agency keeps the relationship, the contract and the branding. Zonic Media does the work behind the scenes: profile optimization, reinstatements, citations, reviews, content and rank tracking. Reports carry your logo, communication routes through your account manager, and your client never sees our name. Pricing is a wholesale monthly rate per location so you can set your own margin, with no minimum number of clients.",
   },
 ];
 

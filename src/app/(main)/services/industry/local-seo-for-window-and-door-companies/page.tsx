@@ -41,21 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-window-and-door-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Window & Door Companies",
+  title: { absolute: "Window & Door SEO | Local SEO for Window and Door Companies" },
   description:
-    "Local SEO for window and door companies that wins the map pack — turn 'window replacement near me' searches into booked estimates. Free audit.",
+    "Window and door SEO for replacement and installation companies: product pages, Google Business Profile, service-area pages.",
   keywords: [
-    "local SEO for window and door companies",
-    "window replacement near me",
-    "window installer near me",
-    "door installation near me",
-    "replacement windows",
-    "entry door installation",
-    "patio door installation",
-    "window and door SEO",
-    "SEO for window companies",
-    "Google Business Profile for window companies",
-    "window company lead generation",
+    "local seo for window and door companies",
+    "window company seo",
+    "window replacement seo",
+    "door installation seo",
+    "window and door companies near me",
+    "impact windows seo",
+    "window company marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -188,6 +185,11 @@ const WindowDoorSeoFaqs = [
     question: "Why Choose Zonic Media over Another Window and Door SEO Company?",
     answer:
       "We specialize in local home-improvement businesses like window and door companies, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "What searches should a window and door company rank for?",
+    answer:
+      "Replacement windows plus your city, window installation near me, specific product terms such as impact windows, vinyl windows or entry doors, and cost questions like window replacement cost. Pages for each product line and a page for each city you serve, backed by a Google Business Profile in the Window Installation Service category, capture those searches. Zonic Media builds that structure and tracks estimate requests by product.",
   },
 ];
 

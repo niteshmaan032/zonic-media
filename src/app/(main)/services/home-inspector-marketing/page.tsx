@@ -22,20 +22,19 @@ import {
 } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: "Home Inspector Marketing Agency | SEO & Leads",
+  title: { absolute: "Home Inspector Marketing Agency | SEO, Ads & Leads" },
   description:
-    "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
+    "Home inspector marketing agency: local SEO, Google Business Profile, Google Ads and agent referral campaigns that book more inspections.",
   keywords: [
     "home inspector marketing",
-    "local SEO for home inspectors",
+    "home inspection marketing",
+    "home inspector marketing ideas",
+    "how to get clients as a home inspector",
     "home inspector marketing agency",
-    "home inspector lead generation",
-    "Google Maps ranking for home inspectors",
-    "Google Business Profile for home inspectors",
-    "home inspection SEO services",
-    "Google Ads for home inspectors",
-    "home inspector website design",
-    "home inspection leads",
+    "home inspector seo",
+    "home inspector google ads",
+    "home inspection marketing ideas",
+    "realtors and home inspectors",
   ],
   alternates: { canonical: "/services/home-inspector-marketing" },
 };
@@ -386,12 +385,17 @@ const faqs = [
     q: "What home inspection software do you integrate with?",
     a: "We integrate online booking with the major home inspection scheduling platforms including ISN (Inspection Support Network), Spectora, HomeGauge, HomeHubZone, and Inspector Nexus. If your inspection software is not on that list, we can build a custom intake flow that pushes new bookings into whatever system you currently use.",
   },
+  {
+    q: "How do home inspectors get clients in 2026 beyond agent referrals?",
+    a:
+      "Agent referrals still matter, but buyers increasingly pick their own inspector from Google. A verified Google Business Profile in the right category, reviews that mention the city, service pages for each inspection type, and Google Local Services Ads put you in front of buyers the day they go under contract. Zonic Media runs that program and keeps an agent-outreach track alongside it so both channels compound.",
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: "https://zonicllc.com/services/home-inspector-marketing",
+  url: "https://www.zonicllc.com/services/home-inspector-marketing",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
@@ -407,7 +411,7 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
 const serviceJsonLd = buildServiceJsonLd({
   name: "Home Inspector Marketing Agency",
   description:
-    "Digital marketing agency built for home inspectors. Local SEO, Google Ads, GBP optimization, and websites that book inspections. Free audit, no contracts.",
+    "Home inspector marketing agency: local SEO, Google Business Profile, Google Ads and agent referral campaigns that book more inspections.",
   pageUrl: "/services/home-inspector-marketing",
   serviceType: "Home Inspector Marketing",
   areaServed: "United States",
@@ -622,6 +626,12 @@ function Page() {
                       website that actually loads
                     </Link>{" "}
                     in under three seconds on their phone.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/home-inspector-website-design-agency-us/offer" className="hia-inline-link">
+                      free home inspector website offer
+                    </Link>
+                    .
                   </p>
                 </div>
                 <div className="hia-section-cta">

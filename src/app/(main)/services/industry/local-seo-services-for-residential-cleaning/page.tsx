@@ -73,22 +73,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-services-for-residential-cleaning";
 
 export const metadata: Metadata = {
-  title: "Residential Cleaning SEO That Books More Clients",
+  title: { absolute: "House Cleaning SEO | Local SEO for Residential Cleaning" },
   description:
-    "Residential cleaning SEO that wins the map pack for 'house cleaning near me' — GBP, reviews & pages that book more clients. Free audit.",
+    "House cleaning SEO for maid and residential cleaning services: Google Business Profile, service-area pages, instant-quote content.",
   keywords: [
-    "house cleaning near me",
-    "maid service near me",
-    "home cleaning services",
-    "deep cleaning service",
-    "cleaning company SEO",
-    "SEO for house cleaning",
-    "residential cleaning SEO",
-    "local SEO for cleaning companies",
-    "Google Business Profile for cleaners",
-    "house cleaning lead generation",
-    "house cleaning SEO",
-    "SEO for house cleaning companies",
+    "house cleaning seo",
+    "residential cleaning seo",
+    "seo for cleaning company",
+    "house cleaning website seo",
+    "house cleaning services near me",
+    "local seo for cleaning companies",
+    "maid service seo",
+    "cleaning company local seo",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -218,6 +214,11 @@ const CleaningSeoFaqs = [
     question: "Why Choose Zonic Media over Another House Cleaning SEO Company?",
     answer:
       "We specialize in local home-service businesses like residential cleaning, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked cleanings, and work that is built to compound into recurring clients — not churn.",
+  },
+  {
+    question: "What local SEO signals matter most for a house cleaning company?",
+    answer:
+      "Review recency and volume on Google, because homeowners choose cleaners on trust; a service-area page for every neighborhood you cover; clear pricing content, since price is the first question; and consistent name, address and phone across directories. Zonic Media runs a review program, builds the neighborhood pages and tracks online bookings so you can see which areas produce recurring accounts.",
   },
 ];
 

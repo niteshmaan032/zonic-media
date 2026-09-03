@@ -1234,7 +1234,7 @@ export default function CarTowSeoPage() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
-                "url": "https://zonicllc.com/services/industry/seo-services-for-car-towing",
+                "url": "https://www.zonicllc.com/services/industry/seo-services-for-car-towing",
                 mainEntity: faqs.map((faq) => ({
                   "@type": "Question",
                   name: faq.question,

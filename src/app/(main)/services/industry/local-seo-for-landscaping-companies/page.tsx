@@ -33,22 +33,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-landscaping-companies";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Landscaping Companies That Wins Jobs",
+  title: { absolute: "Landscaping SEO Company | Local SEO for Landscapers" },
   description:
-    "Local SEO for landscaping companies that ranks you for 'landscaper near me' — GBP optimization, reviews & pages that book estimates. Free audit.",
+    "Landscaping SEO for landscapers and lawn care companies: seasonal service pages, Google Business Profile, service-area pages.",
   keywords: [
-    "landscaper near me",
-    "landscaping company near me",
-    "lawn care near me",
-    "landscape design near me",
-    "hardscaping near me",
-    "landscaping SEO",
-    "SEO for landscapers",
-    "local SEO for landscaping",
-    "Google Business Profile for landscapers",
-    "landscaping lead generation",
-    "local SEO for landscaping companies",
-    "landscaping company SEO agency",
+    "local seo for landscaping companies",
+    "landscaping seo",
+    "seo for landscaping company",
+    "lawn care seo",
+    "landscaper seo",
+    "landscaping marketing",
+    "landscaping company seo services",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -178,6 +174,11 @@ const LandscapingSeoFaqs = [
     question: "Why Choose Zonic Media over Another Landscaping SEO Company?",
     answer:
       "We specialize in local home-service businesses like landscaping, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "When should a landscaping company publish seasonal content for SEO?",
+    answer:
+      "Six to eight weeks before the season starts, because Google needs time to index and rank the pages before the searches spike. Spring cleanup and lawn care plans should be live by late February, fall cleanup and leaf removal by early September, and snow removal by October where it applies. Zonic Media schedules the seasonal pages and profile posts on that calendar and tracks the bookings each season produces.",
   },
 ];
 

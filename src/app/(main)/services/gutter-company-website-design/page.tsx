@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/gutter-company-website-design";
 
 export const metadata: Metadata = {
-  title: "Gutter Company Website Design That Books Jobs",
+  title: { absolute: "Gutter Company Website Design | Sites That Book Estimates" },
   description:
-    "Gutter company website design built as a lead system — instant quote flows, gutter and guard pages, and galleries that book installs.",
+    "Gutter company website design for installation, guard and cleaning services: seamless gutter pages, free-estimate flows, service-area pages.",
   keywords: [
     "gutter company website design",
-    "gutter website design",
-    "gutter installation website design",
-    "seamless gutter website design",
-    "websites for gutter companies",
+    "gutter installation website",
+    "seamless gutter company website",
     "gutter guard website design",
-    "gutter web design",
-    "gutter lead generation website",
-    "gutter contractor website design",
-    "gutter company web designer",
+    "gutter cleaning website",
+    "gutter company near me",
+    "gutter installation companies",
+    "gutter contractor website",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Gutter Company Website Design That Books Jobs | Zonic Media",
     description:
-      "Gutter company website design built as a lead system — instant quote flows, gutter and guard pages, and galleries that book installs.",
+      "Gutter company website design for installation, guard and cleaning services: seamless gutter pages, free-estimate flows, service-area pages.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const GutterWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Which gutter services should have their own pages on a gutter company website?",
+    answer:
+      "Seamless gutter installation, gutter guards, gutter repair, and gutter cleaning each answer a different search, and homeowners rarely search the company name first. Each page should explain the options, show a price range, and offer a free estimate form. Add a page for every city you serve and reviews that mention the town. Zonic Media builds gutter sites around those pages and tracks estimate requests by service.",
   },
 ];
 

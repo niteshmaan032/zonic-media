@@ -83,21 +83,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/dental-seo-services";
 
 export const metadata: Metadata = {
-  title: "Dental SEO Services That Book More Patients",
+  title: { absolute: "Dental SEO Company USA | Dental SEO Services & Experts" },
   description:
-    "Dental SEO services that win 'dentist near me' — GBP optimization, reviews, and local pages that turn searches into booked patients. Free audit.",
+    "Dental SEO company for practices across the USA: Google Business Profile, treatment pages, reviews and local SEO that book more new patients.",
   keywords: [
-    "dental SEO services",
-    "dentist near me",
-    "emergency dentist",
-    "dental implants",
-    "cosmetic dentist",
-    "teeth whitening",
-    "SEO for dentists",
-    "dental practice SEO",
-    "local SEO for dentists",
-    "Google Business Profile for dentists",
-    "dental patient acquisition",
+    "dental seo",
+    "dental seo company",
+    "dental seo services",
+    "dental seo expert",
+    "best dental seo company",
+    "dental seo cost",
+    "dental seo services in usa",
+    "dental seo marketing company near me",
+    "top dental seo companies",
+    "seo for dentists",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -227,6 +226,11 @@ const DentalSeoFaqs = [
     question: "Why Choose Zonic Media over Another Dental SEO Company?",
     answer:
       "We specialize in local businesses like dental practices, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked appointments, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "How much does dental SEO cost and what should it include?",
+    answer:
+      "Dental SEO in the US typically runs $1,000 to $3,500 a month for a single practice, more in competitive metros or for multi-location groups. It should include Google Business Profile management, treatment and insurance pages, a review program, technical fixes on the site, and monthly reporting in new-patient calls and bookings rather than rankings alone. Zonic Media quotes a flat monthly fee after a free audit of your practice's current visibility.",
   },
 ];
 

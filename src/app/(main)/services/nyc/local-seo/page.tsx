@@ -34,20 +34,20 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/nyc/local-seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Services in New York City | Zonic Media" },
+  title: { absolute: "Local SEO Company NYC | Local SEO Services New York" },
   description:
-    "Local SEO for NYC businesses — Google Business Profile, Map Pack rankings and neighborhood-level visibility across Manhattan, Brooklyn, Queens, the Bronx and Staten Island.",
+    "Local SEO company for NYC businesses: Google Business Profile, Map Pack rankings and neighborhood visibility across Manhattan, Brooklyn, Queens and the Bronx.",
   keywords: [
     "local seo nyc",
-    "nyc local seo",
-    "local seo services new york",
-    "new york local seo company",
+    "local seo new york",
+    "local seo services nyc",
     "local seo agency nyc",
-    "google business profile nyc",
-    "map pack ranking nyc",
-    "brooklyn local seo",
-    "manhattan local seo",
-    "queens local seo",
+    "local seo company nyc",
+    "local seo manhattan",
+    "seo services in new york",
+    "seo agency new york",
+    "local seo brooklyn",
+    "local seo queens",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Services in New York City | Zonic Media",
+    title: "Local SEO Company NYC | Local SEO Services New York",
     description:
       "Local SEO for NYC businesses — Google Business Profile, Map Pack rankings and neighborhood-level visibility across all five boroughs.",
     url: PAGE_PATH,
@@ -145,6 +145,11 @@ const NycSeoFaqs = [
     question: "Do I need local SEO if I already run Google Ads in NYC?",
     answer:
       "At New York click prices, more than anywhere. Ads buy the top of the page today; local SEO earns Map Pack and organic positions that keep producing after the budget stops. Most NYC clients run both, then shift spend toward SEO as rankings take hold and blended cost per lead drops.",
+  },
+  {
+    question: "How does local SEO work in New York City when competitors are a block away?",
+    answer:
+      "In NYC the Map Pack changes every few blocks, so a single citywide ranking does not exist. What wins is neighborhood-level relevance: reviews that mention the neighborhood, service pages for each area you serve, a primary category chosen against the actual competitors on your street, and photos and posts that keep the profile active. Zonic Media tracks rankings on a grid across the boroughs and builds the program around the neighborhoods that drive your revenue.",
   },
 ];
 

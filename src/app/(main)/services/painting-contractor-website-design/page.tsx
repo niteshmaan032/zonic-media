@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/painting-contractor-website-design";
 
 export const metadata: Metadata = {
-  title: "Painting Contractor Website Design That Books Jobs",
+  title: { absolute: "Painting Contractor Website Design | Sites That Book Jobs" },
   description:
-    "Painting contractor website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and service pages that book paint jobs.",
+    "Painting contractor website design: interior and exterior service pages, before-and-after galleries, financing UX.",
   keywords: [
     "painting contractor website design",
     "painting company website design",
     "painter website design",
-    "painting business website design",
-    "websites for painting contractors",
-    "house painter website design",
+    "house painter website",
+    "contractor website design agency",
+    "painting and decorating contractors website",
     "commercial painting website design",
-    "painting contractor landing page design",
-    "painting lead generation website",
-    "painting contractor web designer",
+    "painting company web design",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "Painting Contractor Website Design That Books Jobs | Zonic Media",
     description:
-      "Painting contractor website design built as a lead system — instant quote flows, before-and-after galleries, financing UX, and service pages that book paint jobs.",
+      "Painting contractor website design: interior and exterior service pages, before-and-after galleries, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const PaintingWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What should a painting company website include to get more quote requests?",
+    answer:
+      "Separate pages for interior, exterior, cabinet and commercial painting, each with a before-and-after gallery and a price range; a fast quote form that asks for square footage and photos; reviews from Google; and city pages for your service area. Painters who show real crews and real homes win over stock-photo sites. Zonic Media builds painting sites around those pages and tracks quote requests by service.",
   },
 ];
 
@@ -434,6 +437,12 @@ function Page() {
                     </Link>{" "}
                     are built around booked estimates, not another brochure
                     site.
+                  {" "}
+                    Starting a marketing plan? See our{" "}
+                    <Link href="/painting-contractor-website-design-agency-us/offer" className="hiw-inline-link">
+                      free painting contractor website offer
+                    </Link>
+                    .
                   </p>
                   <div className="hiw-hero-ctas">
                     <HashScrollLink

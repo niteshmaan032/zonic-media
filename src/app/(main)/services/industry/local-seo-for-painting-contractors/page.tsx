@@ -41,22 +41,18 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/local-seo-for-painting-contractors";
 
 export const metadata: Metadata = {
-  title: "Local SEO for Painting Contractors That Wins Jobs",
+  title: { absolute: "Painting Contractor SEO | Local SEO for Painting Companies" },
   description:
-    "Local SEO for painting contractors that wins the map pack — turn 'painter near me' and 'house painter near me' into booked estimates. Free audit.",
+    "Painting contractor SEO: interior, exterior and commercial painting pages, Google Business Profile, service-area pages and reviews that book paint jobs.",
   keywords: [
-    "local SEO for painting contractors",
-    "painter SEO",
-    "painter near me",
-    "house painter near me",
-    "interior painting near me",
-    "exterior painting near me",
-    "commercial painting",
-    "painting contractor near me",
-    "painting SEO",
-    "SEO for painters",
-    "Google Business Profile for painters",
-    "painting lead generation",
+    "local seo for painting contractors",
+    "seo for painting companies",
+    "painting contractor seo",
+    "painter seo",
+    "painting company seo",
+    "seo for construction companies",
+    "painting company marketing",
+    "local seo for contractors",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,6 +182,11 @@ const PaintingSeoFaqs = [
     question: "Why Choose Zonic Media over Another Painting SEO Company?",
     answer:
       "We specialize in local home-service businesses like painting contractors, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and booked estimates, and work that is built to compound season after season — not churn.",
+  },
+  {
+    question: "How do painting contractors stand out in a crowded Google Map Pack?",
+    answer:
+      "With reviews that name the town and the job, photos of finished rooms and exteriors added to the profile every week, a primary category of Painter with the right secondary categories, and service pages for interior, exterior, cabinet and commercial painting. Painters with the most recent reviews and photos usually win. Zonic Media runs the review and photo program and tracks calls from the profile.",
   },
 ];
 

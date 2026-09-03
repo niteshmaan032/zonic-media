@@ -30,20 +30,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/general-contractor-website-design";
 
 export const metadata: Metadata = {
-  title: "General Contractor Website Design That Books Jobs",
+  title: { absolute: "General Contractor Website Design | Construction Websites" },
   description:
-    "General contractor website design built as a lead system — instant quote flows, project galleries, financing UX, and service pages that book remodels and builds.",
+    "General contractor website design for builders and construction companies: project galleries, service pages, financing UX.",
   keywords: [
     "general contractor website design",
-    "contractor website design",
-    "general contractor web design",
     "construction company website design",
+    "website design for construction companies",
+    "contractor website design agency",
     "websites for general contractors",
-    "contractor website redesign",
-    "home remodeling website design",
-    "general contractor landing page design",
-    "contractor lead generation website",
-    "construction web designer",
+    "construction website design services",
+    "website builder for contractors",
+    "best general contracting website",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     ],
     title: "General Contractor Website Design That Books Jobs | Zonic Media",
     description:
-      "General contractor website design built as a lead system — instant quote flows, project galleries, financing UX, and service pages that book remodels and builds.",
+      "General contractor website design for builders and construction companies: project galleries, service pages, financing UX.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -157,6 +155,11 @@ const GeneralContractorWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "What separates a good general contractor website from a template site?",
+    answer:
+      "Proof and clarity. A good contractor site shows completed projects by type with locations and budgets, explains the process from estimate to final walkthrough, lists licenses and insurance, and makes it easy to request an estimate for a specific project type. Template sites bury all of that behind stock photos. Zonic Media builds contractor sites around real projects and tracks which project pages generate estimate requests.",
   },
 ];
 

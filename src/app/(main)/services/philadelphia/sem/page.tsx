@@ -63,19 +63,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/sem";
 
 export const metadata: Metadata = {
-  title: "Philadelphia Search Marketing — SEM Agency | Zonic Media",
+  title: { absolute: "SEM Agency Philadelphia | Search Engine Marketing" },
   description:
-    "Philadelphia search engine marketing agency running paid and organic search as one strategy — budget split by return, whole-SERP ownership. Free audit.",
+    "Philadelphia search engine marketing agency running SEO and Google Ads as one strategy: budget split by return, whole-page ownership for your money keywords.",
   keywords: [
-    "search engine marketing Philadelphia",
-    "SEM agency Philadelphia",
-    "Philadelphia SEM services",
-    "SEM company Philadelphia",
-    "SEO and PPC Philadelphia",
-    "paid and organic search strategy Philadelphia",
-    "search marketing company Philadelphia",
-    "integrated search marketing Philadelphia",
-    "lead generation SEM Philadelphia",
+    "sem agency philadelphia",
+    "search engine marketing philadelphia",
+    "philadelphia sem services",
+    "sem company philadelphia",
+    "seo and ppc philadelphia",
+    "what is sem marketing",
+    "integrated search marketing philadelphia",
+    "search marketing company philadelphia",
+    "digital marketing agency sem",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -228,6 +228,11 @@ const PhilaSemFaqs = [
     question: "Can you take over an existing Google Ads account?",
     answer:
       "Yes, and we usually prefer it — the historical data is valuable. We audit the account first, show you exactly what is wasting spend before touching anything, and restructure from there. The account stays in your name and your billing throughout, so if we ever part ways you keep everything including the history.",
+  },
+  {
+    question: "What is SEM and how is it different from SEO?",
+    answer:
+      "Search engine marketing (SEM) is the combination of paid search ads and organic SEO managed as one strategy. SEO earns rankings over months; paid search buys visibility today. Run together, the paid data shows which keywords convert so SEO targets the right pages, and organic rankings let you cut ad spend on terms you already own. Zonic Media's Philadelphia SEM program reports both channels in one view and shifts budget to whichever produces cheaper leads.",
   },
 ];
 

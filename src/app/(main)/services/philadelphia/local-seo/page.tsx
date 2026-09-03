@@ -56,27 +56,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/local-seo";
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Philadelphia SEO Company — SEO Services & Map Pack Rankings",
-  },
+  title: { absolute: "Best SEO Company in Philadelphia | Philly SEO Services" },
   description:
-    "Philadelphia SEO company for local businesses — search engine optimization, Google Business Profile and Map Pack rankings that turn Philly searches into calls. Free audit.",
+    "Philadelphia SEO company for local businesses: search engine optimization, Google Business Profile and Map Pack rankings that turn Philly searches into calls.",
   keywords: [
-    "philadelphia seo",
-    "philadelphia seo company",
     "seo company philadelphia",
-    "philadelphia seo firm",
-    "search engine optimization philadelphia",
-    "local SEO Philadelphia",
-    "Philadelphia local SEO company",
-    "local SEO services Philadelphia",
-    "Google Maps ranking Philadelphia",
-    "map pack ranking Philadelphia",
-    "Google Business Profile optimization Philadelphia",
-    "near me SEO Philadelphia",
-    "local SEO for small business Philadelphia",
-    "Philadelphia GBP optimization",
-    "citation building Philadelphia",
+    "best seo company in philadelphia",
+    "top seo companies in philadelphia",
+    "best seo agencies in philadelphia",
+    "philadelphia seo services",
+    "local seo philadelphia",
+    "seo agency philadelphia",
+    "philly seo company",
+    "small business seo company near me",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -88,7 +80,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Philadelphia SEO Company — SEO Services & Map Pack Rankings",
+    title: "Best SEO Company in Philadelphia | Philly SEO Services",
     description:
       "Local SEO services in Philadelphia that win the Google map pack — profile optimization, citations, reviews, and neighbourhood pages that turn 'near me' searches into calls.",
     url: PAGE_PATH,
@@ -232,6 +224,11 @@ const PhilaSeoFaqs = [
     question: "Do I need local SEO if I already run Google Ads?",
     answer:
       "They work best together. Ads buy the top of the page today; local SEO earns the map pack and organic positions that keep producing after you stop paying per click. Many clients start on ads for immediate flow, then shift budget toward local SEO as rankings take hold and cost per lead drops.",
+  },
+  {
+    question: "How long does SEO take to work for a Philadelphia business?",
+    answer:
+      "Google Business Profile and Map Pack improvements typically show within 4 to 8 weeks in Philadelphia because profile signals update quickly. Competitive organic keywords for the city and the suburbs take 3 to 6 months of consistent content and links. Zonic Media reports both tracks every month so you can see the Map Pack gains while the organic rankings build.",
   },
 ];
 

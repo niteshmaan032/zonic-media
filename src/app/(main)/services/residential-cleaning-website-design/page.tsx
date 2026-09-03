@@ -29,20 +29,18 @@ import { RiLineChartLine, RiPagesLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/residential-cleaning-website-design";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Website Design That Books Cleans",
+  title: { absolute: "House Cleaning Website Design | Sites That Book Cleans" },
   description:
-    "House cleaning website design built as a lead system — instant online booking, upfront pricing, and recurring plans that book cleans while you work.",
+    "House cleaning website design for maid and residential cleaning services: instant online quotes, recurring-clean signups, service-area pages.",
   keywords: [
-    "residential cleaning website design",
     "house cleaning website design",
-    "maid service website design",
     "cleaning company website design",
-    "websites for house cleaning companies",
-    "home cleaning website design",
-    "residential cleaning web design",
-    "house cleaning lead generation website",
-    "maid service landing page design",
-    "cleaning company web designer",
+    "cleaning services website design",
+    "house cleaning website marketing",
+    "website for cleaning company",
+    "house cleaning website examples",
+    "maid service website design",
+    "cleaning business website builder",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
     ],
     title: "House Cleaning Website Design That Books Cleans | Zonic Media",
     description:
-      "House cleaning website design built as a lead system — instant online booking, upfront pricing, and recurring plans that book cleans while you work.",
+      "House cleaning website design for maid and residential cleaning services: instant online quotes, recurring-clean signups, service-area pages.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -156,6 +154,11 @@ const ResidentialCleaningWebFaqs = [
     question: "Can You Redesign My Site Without Losing My Current Rankings?",
     answer:
       "Yes. Before anything goes live we map every existing URL, preserve or redirect each page, and carry over the content that is earning you rankings today. Redesigns should recover and grow traffic, not reset it — protecting existing SEO equity is a standard part of our launch checklist.",
+  },
+  {
+    question: "Should a house cleaning website offer instant online booking?",
+    answer:
+      "Yes. Homeowners comparing cleaning services want a price and an open slot without a phone call, so an instant quote calculator based on bedrooms, bathrooms and frequency, followed by online booking, converts far better than a contact form. Recurring-plan pricing shown clearly grows the accounts that matter. Zonic Media builds cleaning sites with instant quotes and connects booking to your scheduling software.",
   },
 ];
 

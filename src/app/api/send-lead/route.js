@@ -137,7 +137,7 @@ function buildHtml(d) {
         <tr>
           <td style="background:#f9f9f9;padding:14px 26px;border-top:1px solid #eeeeee;">
             <p style="margin:0;font-size:11.5px;color:#bbb;text-align:center;line-height:1.6;">
-              Captured by Zoni chatbot · <a href="https://zonicllc.com" style="color:#bbb;">zonicllc.com</a>
+              Captured by Zoni chatbot · <a href="https://www.zonicllc.com" style="color:#bbb;">zonicllc.com</a>
             </p>
           </td>
         </tr>
@@ -287,7 +287,7 @@ function buildUserConfirmationHtml(d) {
         <tr>
           <td style="padding:16px 36px;background:#f9f7f3;border-top:1px solid #f0ede8;">
             <p style="margin:0;font-size:11px;color:#ccc;text-align:center;line-height:1.7;">
-              © Zonic Media · <a href="https://zonicllc.com" style="color:#ccc;text-decoration:none;">zonicllc.com</a>
+              © Zonic Media · <a href="https://www.zonicllc.com" style="color:#ccc;text-decoration:none;">zonicllc.com</a>
               · You received this because you submitted an enquiry via our chatbot.
             </p>
           </td>

@@ -1,0 +1,962 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body:has(.ofr-landscaping) {
+  background: #f6f9ff;
+}
+
+body:has(.ofr-landscaping) .floating-phone-link,
+body:has(.ofr-landscaping) .zoni-greeting-bubble,
+body:has(.ofr-landscaping) .zoni-trigger,
+body:has(.ofr-landscaping) .zoni-window {
+  display: none !important;
+}
+
+body.ofr-landscaping-menu-is-open {
+  overflow: hidden;
+}
+
+.ofr-landscaping {
+  /* Base offer palette with this industry's accent, matching the design
+     file — it overrides --blue only. */
+  --ink: #07152f;
+  --muted: #5f6f89;
+  --blue: #2f7d32;
+  --yellow: #ffc928;
+  --line: rgba(7, 21, 47, 0.11);
+  --paper: #f6f9ff;
+
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(39, 111, 255, .13), transparent 27%),
+    radial-gradient(circle at 18% 82%, rgba(255, 201, 40, .12), transparent 24%),
+    linear-gradient(135deg, #fbfdff 0%, #f0f6ff 52%, #f9fbff 100%);
+}
+
+.ofr-landscaping,
+.ofr-landscaping *,
+.ofr-landscaping *::before,
+.ofr-landscaping *::after {
+  box-sizing: border-box;
+}
+
+.ofr-landscaping a { color: inherit; text-decoration: none; }
+.ofr-landscaping button { font: inherit; }
+.ofr-landscaping svg { stroke-width: 2; }
+
+/* CTA labels are title-cased. The hero pair is the tight spot — its buttons
+   carry reduced side padding below so the wider labels still fit the column. */
+.ofr-landscaping .nav-cta,
+.ofr-landscaping .mobile-menu-cta,
+.ofr-landscaping .button,
+.ofr-landscaping .section-button,
+.ofr-landscaping .form-submit,
+.ofr-landscaping .pricing-card > a,
+.ofr-landscaping .footer-offer a { text-transform: capitalize; }
+
+.ofr-landscaping-skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 120;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  transition: top .2s ease;
+}
+.ofr-landscaping-skip-link:focus-visible { top: 12px; }
+
+.ofr-landscaping .aurora { position: absolute; border-radius: 999px; filter: blur(1px); pointer-events: none; }
+.ofr-landscaping .aurora--one { width: 18rem; height: 18rem; right: -8rem; top: 20rem; border: 1px solid rgba(33, 103, 245, .2); }
+.ofr-landscaping .aurora--two { width: 12rem; height: 12rem; left: -6rem; bottom: 3rem; border: 1px solid rgba(255, 201, 40, .36); }
+
+/* ── Header (fixed on scroll) ─────────────────────────────── */
+.ofr-landscaping .nav-wrap {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(91vw, 1540px);
+  min-height: 76px;
+  margin-top: 24px;
+  padding: 10px 12px 10px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(255, 255, 255, .88);
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(32, 70, 128, .09), inset 0 0 0 1px rgba(7, 21, 47, .045);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.ofr-landscaping .nav-wrap.is-scrolled {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 18px 50px rgba(32, 70, 128, .14), inset 0 0 0 1px rgba(7, 21, 47, .045);
+}
+
+.ofr-landscaping .nav-logo { display: inline-flex; align-items: center; }
+.ofr-landscaping .nav-logo img { width: auto; height: 34px; }
+
+.ofr-landscaping .nav-links { display: flex; align-items: center; gap: clamp(20px, 2vw, 36px); font-size: 14px; font-weight: 700; color: #34425b; }
+.ofr-landscaping .nav-links a { transition: color .2s ease; }
+.ofr-landscaping .nav-links a:hover { color: var(--blue); }
+.ofr-landscaping .nav-cta { display: inline-flex; align-items: center; gap: 11px; padding: 16px 20px; border-radius: 14px; background: var(--ink); color: white; font-size: 14px; font-weight: 800; white-space: nowrap; transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-landscaping .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(7, 21, 47, .2); }
+.ofr-landscaping .nav-cta svg { width: 18px; }
+.ofr-landscaping .menu-button { display: none; border: 0; background: transparent; padding: 8px; color: var(--ink); cursor: pointer; }
+.ofr-landscaping .menu-button svg { width: 24px; height: 24px; }
+
+.ofr-landscaping .mobile-menu {
+  position: fixed;
+  z-index: 55;
+  top: 104px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(91vw, 480px);
+  padding: 18px;
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(255, 255, 255, .97);
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(32, 70, 128, .18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.ofr-landscaping .mobile-menu.is-open { display: flex; }
+.ofr-landscaping .mobile-menu a { padding: 12px 14px; border-radius: 12px; font-size: 15px; font-weight: 700; color: #34425b; }
+.ofr-landscaping .mobile-menu a:hover { background: rgba(47, 125, 50, .08); color: var(--blue); }
+.ofr-landscaping .mobile-menu .mobile-menu-cta { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--ink); color: white; font-weight: 800; }
+.ofr-landscaping .mobile-menu .mobile-menu-cta:hover { background: var(--ink); color: white; }
+.ofr-landscaping .mobile-menu .mobile-menu-cta svg { width: 17px; }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.ofr-landscaping .hero {
+  position: relative;
+  z-index: 2;
+  width: min(91vw, 1540px);
+  min-height: calc(100vh - 124px);
+  margin: 0 auto;
+  padding: 124px 0 76px;
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(590px, 1.12fr);
+  align-items: center;
+  gap: clamp(36px, 5vw, 96px);
+}
+
+/* Hero columns are top-aligned here (not centred like the base page) so the
+   copy can be nudged down without dragging the mock-up with it. */
+.ofr-landscaping .hero { align-items: start; }
+.ofr-landscaping .hero-copy { max-width: 680px; margin-top: 24px; }
+.ofr-landscaping .eyebrow { width: fit-content; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border: 1px solid rgba(47, 125, 50, .2); border-radius: 999px; background: rgba(255, 255, 255, .8); box-shadow: 0 8px 24px rgba(47, 125, 50, .09); font-size: 14px; letter-spacing: .055em; text-transform: uppercase; font-weight: 800; color: #4f5967; }
+.ofr-landscaping .eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
+.ofr-landscaping .eyebrow__pulse { width: 8px; height: 8px; border-radius: 50%; background: #35c879; box-shadow: 0 0 0 5px rgba(53, 200, 121, .13); }
+
+.ofr-landscaping h1 { margin: 22px 0 20px; max-width: 680px; font-size: clamp(46px, 4.55vw, 74px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
+.ofr-landscaping .headline-accent { display: block; color: var(--blue); position: relative; }
+.ofr-landscaping .headline-accent svg { display: block; width: 176px; height: 14px; margin: 10px 0 0 6px; fill: none; stroke: var(--yellow); stroke-width: 8; stroke-linecap: round; }
+.ofr-landscaping .hero-lede { max-width: 620px; margin: 24px 0 0; font-size: 18px; line-height: 1.72; color: var(--muted); }
+
+.ofr-landscaping .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.ofr-landscaping .button { min-height: 58px; display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 22px; border-radius: 17px; background: var(--ink); color: white; font-size: 15px; font-weight: 800; box-shadow: 0 12px 28px rgba(7, 21, 47, .16); transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-landscaping .button:hover { transform: translateY(-3px); box-shadow: 0 18px 34px rgba(7, 21, 47, .22); }
+.ofr-landscaping .button__icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: var(--yellow); color: var(--ink); }
+.ofr-landscaping .button__icon svg { width: 18px; }
+.ofr-landscaping .button--secondary { background: rgba(255, 255, 255, .7); color: var(--ink); box-shadow: inset 0 0 0 1px var(--line); }
+.ofr-landscaping .button--secondary .button__icon { background: #e8effd; }
+/* Keeps the hero CTA pair on one line inside the copy column. */
+.ofr-landscaping .hero-actions .button { gap: 14px; padding-left: 18px; }
+.ofr-landscaping .proof-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 32px; padding-top: 26px; border-top: 1px solid var(--line); }
+.ofr-landscaping .proof-item { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; }
+.ofr-landscaping .proof-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: #e8f0ff; color: var(--blue); }
+.ofr-landscaping .proof-icon svg { width: 16px; }
+.ofr-landscaping .proof-item--yellow .proof-icon { background: #fff3c4; color: #b77900; }
+.ofr-landscaping .proof-item--green .proof-icon { background: #e6f7ee; color: #1f9d5c; }
+.ofr-landscaping .proof-item--purple .proof-icon { background: #f2edff; color: #7a4fd8; }
+.ofr-landscaping .proof-item--mobile { display: none; }
+.ofr-landscaping .proof-item > span:last-child { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ofr-landscaping .proof-item strong { font-size: 15px; line-height: 1.3; letter-spacing: -.01em; white-space: nowrap; }
+.ofr-landscaping .proof-item small { color: #6e7c92; font-size: 13px; line-height: 1.45; }
+
+.ofr-landscaping .hero-trust-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin: 26px 0 4px; }
+.ofr-landscaping .htb-clutch { width: 64px; height: 64px; flex-shrink: 0; }
+.ofr-landscaping .htb-yelp, .ofr-landscaping .htb-trustpilot { display: inline-flex; align-items: center; }
+.ofr-landscaping .htb-yelp-img { width: 58px; height: 58px; border-radius: 50%; }
+.ofr-landscaping .htb-trustpilot-img { width: 104px; height: auto; }
+
+/* ── Hero concept stage ───────────────────────────────────── */
+.ofr-landscaping .concept-stage { position: relative; min-height: 620px; margin-top: 42px; display: grid; place-items: center; isolation: isolate; }
+.ofr-landscaping .concept-stage::before { content: ""; position: absolute; width: 82%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(47, 125, 50, .2), rgba(49,93,120,.05) 48%, transparent 70%); filter: blur(2px); z-index: -3; }
+.ofr-landscaping .stage-orbit { position: absolute; border-radius: 50%; border: 1px solid rgba(47, 125, 50, .18); z-index: -2; }
+.ofr-landscaping .stage-orbit--one { width: 590px; height: 590px; }
+.ofr-landscaping .stage-orbit--two { width: 460px; height: 460px; border-style: dashed; animation: ofr-rotate 40s linear infinite; }
+@keyframes ofr-rotate { to { transform: rotate(360deg); } }
+
+.ofr-landscaping .browser-card { position: relative; z-index: 2; width: min(100%, 760px); aspect-ratio: 1.32; overflow: hidden; border: 8px solid #0b1933; border-radius: 28px; background: white; box-shadow: 0 38px 80px rgba(16, 50, 105, .25), 0 0 0 1px rgba(255,255,255,.8); transform: rotate(1deg); }
+.ofr-landscaping .browser-topbar { height: 52px; padding: 0 16px; display: grid; grid-template-columns: 1fr 1.5fr 1fr; align-items: center; gap: 12px; background: #0d1b36; color: white; }
+.ofr-landscaping .browser-dots { display: flex; gap: 5px; }
+.ofr-landscaping .browser-dots i { width: 8px; height: 8px; border-radius: 50%; background: #ff6a6f; }
+.ofr-landscaping .browser-dots i:nth-child(2) { background: #ffc928; }
+.ofr-landscaping .browser-dots i:nth-child(3) { background: #4ed48a; }
+.ofr-landscaping .address-bar { justify-self: center; width: 100%; padding: 7px 12px; border-radius: 7px; background: rgba(255,255,255,.1); text-align: center; color: #b8c4d9; font-size: 9px; }
+.ofr-landscaping .browser-live { justify-self: end; display: flex; align-items: center; gap: 5px; font-size: 7px; letter-spacing: .1em; color: #a7b4ca; }
+.ofr-landscaping .browser-live span { width: 6px; height: 6px; border-radius: 50%; background: #49d48b; }
+
+.ofr-landscaping .design-toolbar { height: 60px; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e9eef7; }
+.ofr-landscaping .mini-logo { display: inline-flex; align-items: center; }
+.ofr-landscaping .design-toolbar .mini-logo img { width: auto; height: 17px; }
+.ofr-landscaping .mini-nav { display: flex; gap: 20px; font-size: 8px; font-weight: 700; color: #64728a; }
+.ofr-landscaping .mini-button { padding: 9px 12px; border-radius: 8px; background: var(--ink); color: white; font-size: 7px; font-weight: 800; }
+.ofr-landscaping .design-canvas { height: calc(100% - 112px); padding: 56px 42px 28px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px; background: linear-gradient(140deg, #fffdf9, #f1eee8); }
+.ofr-landscaping .skeleton-label { width: fit-content; padding: 6px 8px; border-radius: 99px; background: rgba(47, 125, 50, .08); color: var(--blue); font-size: 7px; font-weight: 900; letter-spacing: .08em; }
+.ofr-landscaping .canvas-copy h2 { max-width: 340px; margin: 15px 0 11px; font-size: clamp(25px, 2.2vw, 37px); line-height: 1.02; letter-spacing: -.05em; }
+.ofr-landscaping .canvas-copy p { max-width: 330px; margin: 0; font-size: 10px; line-height: 1.6; color: #6b7990; }
+.ofr-landscaping .canvas-actions { display: flex; gap: 8px; margin-top: 18px; }
+.ofr-landscaping .canvas-actions span { padding: 10px 13px; border-radius: 8px; background: var(--blue); color: white; font-size: 8px; font-weight: 800; }
+.ofr-landscaping .canvas-actions span:last-child { background: white; color: var(--ink); border: 1px solid #dbe4f3; }
+.ofr-landscaping .canvas-trust { margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 7px; font-size: 7px; color: #61718a; }
+.ofr-landscaping .canvas-trust svg { width: 11px; height: 11px; color: #2cad69; }
+.ofr-landscaping .visual-stack { position: relative; min-height: 260px; }
+.ofr-landscaping .visual-card { position: absolute; border-radius: 20px; box-shadow: 0 18px 40px rgba(27,63,125,.18); }
+.ofr-landscaping .visual-card--back { width: 72%; aspect-ratio: .85; right: 0; top: -10px; padding: 18px; background: var(--yellow); transform: rotate(9deg); color: rgba(7,21,47,.4); font-size: 34px; font-weight: 900; }
+.ofr-landscaping .visual-card--front { width: 82%; aspect-ratio: .9; left: 0; bottom: 3px; padding: 18px; background: linear-gradient(145deg, #2167f5, #123b9e); transform: rotate(-4deg); }
+.ofr-landscaping .visual-grid { height: 74%; display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.ofr-landscaping .visual-grid i { display: block; border-radius: 9px; background: rgba(255,255,255,.12); }
+.ofr-landscaping .visual-grid i:first-child { grid-row: span 2; background: rgba(255,255,255,.22); }
+.ofr-landscaping .visual-chip { width: fit-content; margin-top: 13px; padding: 5px 7px; border-radius: 999px; background: white; font-size: 6px; font-weight: 900; color: var(--blue); }
+.ofr-landscaping .cursor-badge { position: absolute; right: 25%; bottom: 24%; display: flex; align-items: center; gap: 7px; padding: 7px 9px; background: #0c1a35; color: white; border-radius: 8px 8px 8px 2px; font-size: 7px; box-shadow: 0 9px 22px rgba(7,21,47,.22); animation: ofr-float 3s ease-in-out infinite; }
+.ofr-landscaping .cursor-badge svg { width: 11px; height: 11px; color: var(--yellow); fill: var(--yellow); }
+
+.ofr-landscaping .phone-card { position: absolute; z-index: 4; right: -12px; bottom: 10px; width: 178px; height: 354px; padding: 11px; border: 7px solid #0a1830; border-radius: 31px; background: white; box-shadow: 0 25px 50px rgba(16,50,105,.25); transform: rotate(3deg); }
+.ofr-landscaping .phone-notch { position: absolute; top: 4px; left: 50%; width: 57px; height: 14px; transform: translateX(-50%); border-radius: 0 0 10px 10px; background: #0a1830; }
+.ofr-landscaping .phone-header { display: flex; align-items: center; justify-content: space-between; height: 41px; padding: 5px 2px 0; }
+.ofr-landscaping .phone-header .mini-logo img { width: auto; height: 13px; }
+.ofr-landscaping .phone-header > svg { width: 14px; }
+.ofr-landscaping .phone-body { height: calc(100% - 42px); padding: 17px 12px; border-radius: 16px; background: linear-gradient(145deg, #edf4ff, white); }
+.ofr-landscaping .phone-kicker { font-size: 6px; color: var(--blue); font-weight: 900; letter-spacing: .08em; }
+.ofr-landscaping .phone-body h3 { margin: 9px 0 14px; font-size: 20px; line-height: 1.02; letter-spacing: -.045em; }
+.ofr-landscaping .phone-art { height: 112px; position: relative; overflow: hidden; border-radius: 14px; background: var(--blue); }
+.ofr-landscaping .phone-art i { position: absolute; width: 70px; height: 70px; border-radius: 18px; background: rgba(255,255,255,.2); transform: rotate(18deg); }
+.ofr-landscaping .phone-art i:first-child { left: -20px; bottom: -12px; background: var(--yellow); }
+.ofr-landscaping .phone-art i:nth-child(2) { right: -12px; top: 5px; }
+.ofr-landscaping .phone-art i:nth-child(3) { left: 46px; top: 38px; width: 40px; height: 40px; background: white; }
+.ofr-landscaping .phone-cta { margin-top: 15px; height: 33px; display: flex; align-items: center; justify-content: center; gap: 7px; border-radius: 9px; background: var(--ink); color: white; font-size: 8px; font-weight: 800; }
+.ofr-landscaping .phone-cta svg { width: 11px; }
+
+.ofr-landscaping .floating-note { position: absolute; z-index: 7; display: flex; align-items: center; gap: 12px; padding: 13px 17px 13px 13px; border: 1px solid rgba(255,255,255,.8); border-radius: 17px; background: rgba(255,255,255,.92); box-shadow: 0 15px 35px rgba(28,66,128,.14); backdrop-filter: blur(10px); animation: ofr-float 3.8s ease-in-out infinite; }
+.ofr-landscaping .floating-note--top { top: 10px; right: 40px; }
+.ofr-landscaping .floating-note--bottom { left: 8px; bottom: 14px; animation-delay: -1.3s; }
+.ofr-landscaping .note-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: #fff1b7; color: #ad7900; }
+.ofr-landscaping .note-icon--blue { background: #e6efff; color: var(--blue); }
+.ofr-landscaping .note-icon svg { width: 16px; }
+.ofr-landscaping .floating-note > span:last-child { display: flex; flex-direction: column; }
+.ofr-landscaping .floating-note strong { font-size: 12px; }
+.ofr-landscaping .floating-note small { margin-top: 3px; font-size: 10px; color: #6f7d91; }
+@keyframes ofr-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+/* ── Sections ─────────────────────────────────────────────── */
+.ofr-landscaping .section {
+  position: relative;
+  z-index: 2;
+  width: min(91vw, 1420px);
+  margin: 0 auto;
+  padding: 74px 0;
+}
+
+.ofr-landscaping .section-heading { margin-bottom: 42px; }
+.ofr-landscaping .section-heading--center { max-width: 830px; margin-left: auto; margin-right: auto; text-align: center; }
+.ofr-landscaping .section-heading--split { display: grid; grid-template-columns: 1fr .72fr; gap: 90px; align-items: end; }
+.ofr-landscaping .section-kicker { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: 14px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.ofr-landscaping .section-kicker::before { content: ""; width: 25px; height: 3px; border-radius: 99px; background: var(--yellow); }
+.ofr-landscaping .section-heading h2, .ofr-landscaping .dark-copy h2, .ofr-landscaping .faq-intro h2, .ofr-landscaping .final-cta h2 { margin: 14px 0 0; font-size: clamp(40px, 4.4vw, 68px); line-height: 1.14; letter-spacing: -.055em; }
+.ofr-landscaping .section-heading > p, .ofr-landscaping .section-heading--split > p { margin: 20px auto 0; color: var(--muted); font-size: 19px; line-height: 1.68; }
+.ofr-landscaping .section-heading--split > p { margin: 0 0 5px; }
+
+/* ── Marquee ──────────────────────────────────────────────── */
+.ofr-landscaping .marquee-section { position: relative; z-index: 3; width: 100%; padding: 16px 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); background: linear-gradient(90deg, var(--ink), #27394a); color: white; transform: rotate(-1deg) scale(1.01); box-shadow: 0 14px 34px rgba(7,21,47,.14); }
+.ofr-landscaping .marquee-track { width: max-content; display: flex; align-items: center; animation: ofr-marquee 28s linear infinite; }
+.ofr-landscaping .marquee-track span { display: inline-flex; align-items: center; gap: 11px; padding: 0 22px; font-size: 14px; font-weight: 800; white-space: nowrap; }
+.ofr-landscaping .marquee-track svg { width: 16px; color: var(--yellow); fill: var(--yellow); }
+.ofr-landscaping .marquee-track i { width: 6px; height: 6px; margin-left: 18px; border-radius: 50%; background: var(--blue); }
+@keyframes ofr-marquee { to { transform: translateX(-50%); } }
+
+/* ── Process ──────────────────────────────────────────────── */
+.ofr-landscaping .process-section { padding-top: 88px; }
+.ofr-landscaping .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ofr-landscaping .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
+.ofr-landscaping .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
+.ofr-landscaping .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.ofr-landscaping .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
+.ofr-landscaping .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
+.ofr-landscaping .process-card--featured .step-number { color: rgba(255,255,255,.16); }
+.ofr-landscaping .step-icon { width: 56px; height: 56px; display: grid; place-items: center; margin-bottom: 65px; border-radius: 17px; background: #e9f0ff; color: var(--blue); }
+.ofr-landscaping .process-card--featured .step-icon { background: var(--yellow); color: var(--ink); }
+.ofr-landscaping .step-icon svg { width: 24px; }
+.ofr-landscaping .process-grid h3 { margin: 0; font-size: 25px; letter-spacing: -.035em; }
+.ofr-landscaping .process-grid p { min-height: 78px; margin: 15px 0 24px; color: var(--muted); font-size: 16px; line-height: 1.65; }
+.ofr-landscaping .process-card--featured p { color: rgba(255,255,255,.75); }
+.ofr-landscaping .process-grid small { display: inline-flex; padding: 8px 11px; border-radius: 99px; background: #eff4fd; color: #53637c; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .045em; }
+.ofr-landscaping .process-card--featured small { background: rgba(255,255,255,.13); color: white; }
+
+/* ── Niche tabs ───────────────────────────────────────────── */
+.ofr-landscaping .niche-section { padding-top: 70px; }
+.ofr-landscaping .niche-tabs { display: flex; flex-direction: column; gap: 24px; }
+.ofr-landscaping .niche-tab-list { width: 100%; padding: 8px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; border: 1px solid var(--line); border-radius: 20px; background: rgba(255,255,255,.74); box-shadow: 0 14px 42px rgba(28,64,123,.07); }
+.ofr-landscaping .niche-tab-trigger { min-height: 70px; padding: 10px 12px; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; gap: 7px; border: 0; border-radius: 14px; background: transparent; color: #627089; white-space: normal; font-size: 12px; font-weight: 800; cursor: pointer; font-family: inherit; transition: color .2s ease, background .2s ease; }
+.ofr-landscaping .niche-tab-trigger:hover { background: rgba(47, 125, 50, .06); color: var(--blue); }
+.ofr-landscaping .niche-tab-trigger[data-state="active"] { background: var(--ink); color: white; box-shadow: 0 12px 25px rgba(7,21,47,.18); }
+.ofr-landscaping .niche-tab-trigger svg { width: 19px; height: 19px; }
+.ofr-landscaping .niche-panel { margin-top: 0; padding: 54px; overflow: hidden; display: grid; grid-template-columns: .74fr 1.26fr; gap: 64px; align-items: center; border: 1px solid var(--line); border-radius: 30px; background: rgba(255,255,255,.72); box-shadow: 0 24px 65px rgba(28,64,123,.09); }
+.ofr-landscaping .niche-panel[hidden] { display: none !important; }
+.ofr-landscaping .niche-panel[data-state="active"] { animation: ofr-panel-in .35s ease both; }
+@keyframes ofr-panel-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.ofr-landscaping .niche-label { width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 99px; font-size: 12px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.ofr-landscaping .niche-label svg { width: 14px; }
+.ofr-landscaping .niche-content h3 { max-width: 500px; margin: 20px 0 17px; font-size: clamp(35px, 3.4vw, 52px); line-height: 1.14; letter-spacing: -.05em; }
+.ofr-landscaping .niche-content > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-landscaping .niche-content ul { list-style: none; padding: 0; margin: 25px 0; display: grid; gap: 11px; }
+.ofr-landscaping .niche-content li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; }
+.ofr-landscaping .niche-content li svg { width: 18px; color: #2caf6d; }
+.ofr-landscaping .niche-link { width: fit-content; font-size: 14px; font-weight: 900; }
+.ofr-landscaping .niche-link svg { width: 16px; }
+
+.ofr-landscaping .niche-visual { --niche-accent: #2167f5; --niche-soft: #eaf1ff; position: relative; min-height: 510px; display: grid; place-items: center; }
+.ofr-landscaping .niche-visual::before { content: ""; position: absolute; inset: 5% 3% 3%; border-radius: 50%; background: radial-gradient(circle, var(--niche-soft), transparent 67%); }
+.ofr-landscaping .niche-browser { position: relative; z-index: 2; width: 92%; aspect-ratio: 1.42; overflow: hidden; border: 7px solid var(--ink); border-radius: 22px; background: white; box-shadow: 0 30px 70px rgba(18,47,99,.21); transform: rotate(1deg); }
+.ofr-landscaping .niche-browser-bar { height: 35px; padding: 0 12px; display: flex; align-items: center; gap: 5px; background: var(--ink); }
+.ofr-landscaping .niche-browser-bar i { width: 6px; height: 6px; border-radius: 50%; background: #ff6b70; }
+.ofr-landscaping .niche-browser-bar i:nth-child(2) { background: #ffc928; }
+.ofr-landscaping .niche-browser-bar i:nth-child(3) { background: #45d386; }
+.ofr-landscaping .niche-browser-bar span { margin: 0 auto; padding-right: 28px; color: #9baac3; font-size: 7px; }
+.ofr-landscaping .niche-site-nav { height: 55px; padding: 0 22px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #edf0f5; }
+.ofr-landscaping .niche-mini-logo { display: flex; align-items: center; gap: 4px; color: var(--niche-accent); font-size: 10px; }
+.ofr-landscaping .niche-mini-logo svg { width: 17px; }
+.ofr-landscaping .niche-mini-logo b { color: var(--ink); }
+.ofr-landscaping .niche-mini-logo span { font-size: 6px; font-weight: 900; }
+.ofr-landscaping .niche-mini-links { display: flex; gap: 15px; color: #768297; font-size: 7px; font-weight: 700; }
+.ofr-landscaping .niche-mini-call { display: flex; align-items: center; gap: 5px; padding: 8px 9px; border-radius: 7px; background: var(--niche-accent); color: white; font-size: 7px; font-weight: 800; }
+.ofr-landscaping .niche-mini-call svg { width: 9px; }
+.ofr-landscaping .niche-site-hero { height: calc(100% - 90px); padding: 42px 30px; display: grid; grid-template-columns: 1fr .83fr; gap: 25px; background: linear-gradient(130deg, white, var(--niche-soft)); }
+.ofr-landscaping .niche-site-copy > span, .ofr-landscaping .niche-mobile-content > span { color: var(--niche-accent); font-size: 6px; font-weight: 900; letter-spacing: .12em; }
+.ofr-landscaping .niche-site-copy h4 { max-width: 300px; margin: 11px 0 10px; font-size: clamp(26px, 2.2vw, 38px); line-height: 1; letter-spacing: -.055em; }
+.ofr-landscaping .niche-site-copy p { max-width: 290px; margin: 0; color: #718097; font-size: 8px; line-height: 1.55; }
+.ofr-landscaping .niche-site-actions { display: flex; gap: 7px; margin-top: 16px; }
+.ofr-landscaping .niche-site-actions b { padding: 9px 10px; border-radius: 7px; background: var(--niche-accent); color: white; font-size: 6px; }
+.ofr-landscaping .niche-site-actions b:last-child { border: 1px solid #dde4ef; background: white; color: var(--ink); }
+.ofr-landscaping .niche-stars { margin-top: 19px; color: #ffb000; font-size: 8px; letter-spacing: 1px; }
+.ofr-landscaping .niche-stars small { margin-left: 7px; color: #7b8798; font-size: 6px; letter-spacing: 0; }
+.ofr-landscaping .niche-photo { position: relative; overflow: hidden; display: grid; place-items: center; border-radius: 18px; background: var(--niche-accent); color: white; }
+.ofr-landscaping .niche-photo::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 13px; }
+.ofr-landscaping .niche-photo-mark { width: 90px; height: 90px; display: grid; place-items: center; border-radius: 28px; background: rgba(255,255,255,.18); backdrop-filter: blur(5px); transform: rotate(-7deg); }
+.ofr-landscaping .niche-photo-mark svg { width: 45px; height: 45px; }
+.ofr-landscaping .niche-photo > span { position: absolute; bottom: 21px; z-index: 2; font-size: 6px; font-weight: 900; letter-spacing: .18em; }
+.ofr-landscaping .niche-shape { position: absolute; border-radius: 25px; background: rgba(255,255,255,.1); transform: rotate(25deg); }
+.ofr-landscaping .niche-shape--one { width: 110px; height: 150px; left: -55px; bottom: -65px; }
+.ofr-landscaping .niche-shape--two { width: 90px; height: 90px; right: -40px; top: -35px; background: var(--yellow); opacity: .8; }
+.ofr-landscaping .niche-mobile { position: absolute; z-index: 5; right: -1%; bottom: 0; width: 132px; height: 267px; padding: 8px; border: 6px solid var(--ink); border-radius: 25px; background: white; box-shadow: 0 22px 46px rgba(18,47,99,.24); transform: rotate(3deg); }
+.ofr-landscaping .niche-mobile-notch { position: absolute; top: 3px; left: 50%; width: 43px; height: 10px; transform: translateX(-50%); border-radius: 0 0 8px 8px; background: var(--ink); }
+.ofr-landscaping .niche-mobile-content { height: 100%; padding: 18px 9px 9px; border-radius: 14px; background: linear-gradient(140deg, white, var(--niche-soft)); }
+.ofr-landscaping .niche-mobile-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; color: var(--niche-accent); }
+.ofr-landscaping .niche-mobile-top svg { width: 13px; }
+.ofr-landscaping .niche-mobile-content h5 { margin: 7px 0 11px; font-size: 15px; line-height: 1.02; letter-spacing: -.04em; }
+.ofr-landscaping .niche-mobile-image { height: 76px; display: grid; place-items: center; border-radius: 11px; background: var(--niche-accent); color: white; }
+.ofr-landscaping .niche-mobile-image svg { width: 30px; }
+.ofr-landscaping .niche-mobile-button { margin-top: 10px; padding: 8px; border-radius: 7px; background: var(--ink); color: white; text-align: center; font-size: 6px; font-weight: 800; }
+.ofr-landscaping .niche-result-card { position: absolute; z-index: 6; left: 0; bottom: 15px; display: flex; align-items: center; gap: 12px; padding: 14px 17px; border: 1px solid white; border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 14px 35px rgba(18,47,99,.14); backdrop-filter: blur(8px); }
+.ofr-landscaping .niche-result-card > svg { width: 26px; height: 26px; color: var(--niche-accent); }
+.ofr-landscaping .niche-result-card span { display: flex; flex-direction: column; }
+.ofr-landscaping .niche-result-card strong { font-size: 11px; }
+.ofr-landscaping .niche-result-card small { margin-top: 3px; color: #6d7a8e; font-size: 9px; }
+
+/* ── Every-niche banner ───────────────────────────────────── */
+.ofr-landscaping .niche-banner { position: relative; z-index: 2; margin-top: 20px; padding: 30px 34px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 40px; overflow: hidden; border-radius: 26px; background: var(--ink); color: white; box-shadow: 0 24px 55px rgba(7,21,47,.18); }
+.ofr-landscaping .niche-banner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 90% 10%, rgba(33,103,245,.3), transparent 34%), radial-gradient(circle at 4% 95%, rgba(255,201,40,.12), transparent 28%); pointer-events: none; }
+.ofr-landscaping .niche-banner > * { position: relative; z-index: 2; }
+.ofr-landscaping .niche-banner-copy { max-width: 340px; }
+.ofr-landscaping .niche-banner-copy .section-kicker { font-size: 11px; }
+.ofr-landscaping .niche-banner-copy h3 { margin: 9px 0 0; font-size: 24px; line-height: 1.2; letter-spacing: -.03em; }
+.ofr-landscaping .niche-banner-copy p { margin: 9px 0 0; color: #aab7cd; font-size: 13px; line-height: 1.55; }
+.ofr-landscaping .niche-banner-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ofr-landscaping .niche-banner-tags span { padding: 8px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 99px; background: rgba(255,255,255,.06); color: #dfe6f3; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.ofr-landscaping .niche-banner-tags .niche-banner-more { border-color: var(--yellow); background: var(--yellow); color: var(--ink); font-weight: 900; }
+.ofr-landscaping .niche-banner > .section-button { justify-self: end; }
+
+/* ── Included / deliverables ──────────────────────────────── */
+.ofr-landscaping .included-section { position: relative; z-index: 2; padding: 74px 4.5vw; overflow: hidden; background: #fbfcff; border-top: 1px solid #e6ebf5; border-bottom: 1px solid #e6ebf5; }
+.ofr-landscaping .included-section > .section-heading { max-width: 850px; margin-left: auto; margin-right: auto; }
+.ofr-landscaping .icon-cloud { width: min(92vw, 1260px); margin: 52px auto 65px; display: grid; gap: 10px; }
+.ofr-landscaping .icon-row { display: flex; justify-content: center; gap: 10px; }
+.ofr-landscaping .icon-row--two { transform: translateX(18px); }
+.ofr-landscaping .capability-tile { width: 138px; aspect-ratio: 1.08; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 1px solid rgba(47, 125, 50, .22); border-radius: 24px; background: rgba(47, 125, 50, .08); color: var(--ink); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.ofr-landscaping .capability-tile:hover { transform: translateY(-6px); background: rgba(47, 125, 50, .04); box-shadow: 0 17px 38px rgba(60,54,45,.10); }
+.ofr-landscaping .capability-tile svg { width: 28px; height: 28px; color: var(--blue); }
+.ofr-landscaping .capability-tile span { padding: 0 7px; font-size: 13px; line-height: 1.3; font-weight: 800; text-align: center; }
+.ofr-landscaping .system-cards { width: min(91vw, 1260px); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ofr-landscaping .system-cards article { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: start; padding: 32px; border: 1px solid #d5e0e6; border-radius: 26px; background: #eaf0f3; }
+.ofr-landscaping .system-cards article:nth-child(2) { background: #fff7dd; border-color: #f3e3a8; }
+.ofr-landscaping .system-card-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #e5edff; color: var(--blue); }
+.ofr-landscaping .system-card-icon--yellow { background: #fff0b3; color: #b77900; }
+.ofr-landscaping .system-card-icon svg { width: 21px; }
+.ofr-landscaping .system-cards small { color: #748197; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.ofr-landscaping .system-cards h3 { margin: 7px 0 9px; font-size: 23px; letter-spacing: -.035em; }
+.ofr-landscaping .system-cards p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.ofr-landscaping .system-cards article > svg { width: 18px; color: #9da7b5; }
+
+/* ── Pricing ──────────────────────────────────────────────── */
+.ofr-landscaping .pricing-section { padding-top: 72px; padding-bottom: 66px; }
+.ofr-landscaping .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+.ofr-landscaping .pricing-card { position: relative; min-height: 535px; padding: 30px; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 27px; background: rgba(255,255,255,.82); box-shadow: 0 16px 40px rgba(28,64,123,.07); }
+.ofr-landscaping .pricing-card::after { content: ""; position: absolute; right: -65px; top: -65px; width: 150px; height: 150px; border-radius: 50%; background: #edf3ff; }
+.ofr-landscaping .pricing-card--featured { border: 2px solid var(--blue); background: var(--ink); color: white; box-shadow: 0 25px 58px rgba(7,21,47,.22); transform: translateY(-10px); }
+.ofr-landscaping .pricing-card--featured::after { background: rgba(33,103,245,.32); }
+.ofr-landscaping .pricing-popular { position: absolute; z-index: 2; right: 18px; top: 18px; padding: 7px 10px; border-radius: 99px; background: var(--yellow); color: var(--ink); font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.ofr-landscaping .pricing-card-head { position: relative; z-index: 2; min-height: 55px; display: flex; flex-direction: column; }
+.ofr-landscaping .pricing-card-head > span { color: var(--blue); font-size: 11px; font-weight: 900; }
+.ofr-landscaping .pricing-card--featured .pricing-card-head > span { color: var(--yellow); }
+.ofr-landscaping .pricing-card-head small { margin-top: 5px; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.ofr-landscaping .pricing-card h3 { position: relative; z-index: 2; margin: 18px 0 9px; font-size: 26px; letter-spacing: -.04em; }
+.ofr-landscaping .pricing-card--featured h3 { color: #fff; }
+.ofr-landscaping .plan-price { position: relative; z-index: 2; font-size: 43px; font-weight: 900; letter-spacing: -.055em; }
+.ofr-landscaping .plan-price span { color: #8793a6; font-size: 11px; font-weight: 700; letter-spacing: 0; }
+.ofr-landscaping .pricing-card > p { min-height: 72px; margin: 15px 0 17px; color: var(--muted); font-size: 15px; line-height: 1.62; }
+.ofr-landscaping .pricing-card--featured > p { color: #aebad0; }
+.ofr-landscaping .pricing-card ul { list-style: none; padding: 17px 0 0; margin: 0 0 28px; display: grid; gap: 12px; border-top: 1px solid var(--line); }
+.ofr-landscaping .pricing-card--featured ul { border-color: rgba(255,255,255,.12); }
+.ofr-landscaping .pricing-card li { display: flex; align-items: center; gap: 9px; color: #46536a; font-size: 14px; font-weight: 700; }
+.ofr-landscaping .pricing-card--featured li { color: #d7deeb; }
+.ofr-landscaping .pricing-card li svg { width: 17px; color: #2bad68; }
+.ofr-landscaping .pricing-card > a { margin-top: auto; min-height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 7px 8px 7px 18px; border-radius: 16px; background: var(--ink); color: white; font-size: 14px; font-weight: 900; box-shadow: 0 12px 28px rgba(7,21,47,.14); }
+.ofr-landscaping .pricing-card--featured > a { background: var(--blue); color: white; }
+.ofr-landscaping .pricing-card > a svg { width: 42px; height: 42px; padding: 11px; border-radius: 12px; background: var(--yellow); color: var(--ink); }
+.ofr-landscaping .pricing-note { width: fit-content; margin: 26px auto 0; display: flex; align-items: center; gap: 8px; color: #6c7a8f; font-size: 12px; text-align: center; }
+.ofr-landscaping .pricing-note svg { width: 15px; color: #2aaa66; }
+
+/* ── Dark section ─────────────────────────────────────────── */
+.ofr-landscaping .dark-section { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 38px auto; padding: 74px; overflow: hidden; display: grid; grid-template-columns: .82fr 1.18fr; gap: 70px; border-radius: 42px; background: var(--ink); color: white; box-shadow: 0 35px 80px rgba(7,21,47,.25); }
+.ofr-landscaping .dark-section::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 88% 16%, rgba(33,103,245,.25), transparent 30%); }
+.ofr-landscaping .dark-glow { position: absolute; left: -120px; bottom: -180px; width: 500px; height: 500px; border-radius: 50%; background: var(--blue); filter: blur(140px); opacity: .25; }
+.ofr-landscaping .dark-copy, .ofr-landscaping .dark-grid { position: relative; z-index: 2; }
+.ofr-landscaping .section-kicker--dark { color: #ffe0cf; }
+.ofr-landscaping .dark-copy p { margin: 24px 0 32px; color: #adbad0; font-size: 16px; line-height: 1.75; }
+.ofr-landscaping .dark-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ofr-landscaping .dark-grid article { min-height: 210px; padding: 27px; border: 1px solid rgba(255,255,255,.1); border-radius: 22px; background: rgba(255,255,255,.055); backdrop-filter: blur(8px); }
+.ofr-landscaping .dark-grid article > strong { color: var(--yellow); font-size: 12px; letter-spacing: .1em; }
+.ofr-landscaping .dark-grid h3 { margin: 35px 0 10px; font-size: 20px; }
+.ofr-landscaping .dark-grid p { margin: 0; color: #b4bfd1; font-size: 15px; line-height: 1.62; }
+.ofr-landscaping .dark-grid .dark-stat { display: flex; flex-direction: column; justify-content: center; gap: 13px; background: var(--blue); }
+.ofr-landscaping .dark-stat span { display: flex; align-items: baseline; gap: 8px; color: #d9e2f7; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.ofr-landscaping .dark-stat b { min-width: 45px; color: white; font-size: 27px; letter-spacing: -.04em; text-transform: none; }
+
+/* ── Terms ────────────────────────────────────────────────── */
+.ofr-landscaping .terms-section { display: grid; grid-template-columns: .82fr 1.18fr; gap: 68px; align-items: center; padding-top: 40px; padding-bottom: 55px; }
+.ofr-landscaping .terms-main h2 { margin: 16px 0 20px; font-size: clamp(40px, 4.2vw, 64px); line-height: 1.14; letter-spacing: -.055em; }
+.ofr-landscaping .terms-main p { max-width: 600px; margin: 0 0 26px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-landscaping .terms-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ofr-landscaping .terms-list > div { min-height: 178px; padding: 23px; display: flex; align-items: flex-start; gap: 14px; border: 1px solid var(--line); border-radius: 21px; background: rgba(255,255,255,.76); box-shadow: 0 13px 35px rgba(28,64,123,.06); }
+.ofr-landscaping .terms-list > div > svg { flex: 0 0 auto; width: 25px; height: 25px; padding: 5px; border-radius: 50%; background: #e9f8ef; color: #2aaa66; }
+.ofr-landscaping .terms-list span { display: flex; flex-direction: column; }
+.ofr-landscaping .terms-list strong { font-size: 19px; letter-spacing: -.02em; }
+.ofr-landscaping .terms-list small { margin-top: 9px; color: var(--muted); font-size: 16px; line-height: 1.62; }
+
+/* ── Reviews / combined offer ─────────────────────────────── */
+.ofr-landscaping .review-section { padding-top: 44px; }
+.ofr-landscaping .growth-priority-badge { width: fit-content; justify-self: end; display: flex; align-items: center; gap: 18px; padding: 17px 22px 17px 16px; border: 1px solid #dfe7f4; border-radius: 20px; background: white; box-shadow: 0 12px 30px rgba(28,64,123,.07); }
+.ofr-landscaping .growth-priority-badge > div { display: flex; }
+.ofr-landscaping .growth-priority-badge > div span { width: 46px; height: 46px; display: grid; place-items: center; margin-left: -8px; border: 3px solid white; border-radius: 50%; background: #e9f0ff; color: var(--blue); }
+.ofr-landscaping .growth-priority-badge > div span:first-child { margin-left: 0; background: #fff3bf; color: #a76f00; }
+.ofr-landscaping .growth-priority-badge > div span:last-child { background: #e8f8f0; color: #168d57; }
+.ofr-landscaping .growth-priority-badge svg { width: 16px; }
+.ofr-landscaping .growth-priority-badge p { margin: 0; display: flex; flex-direction: column; }
+.ofr-landscaping .growth-priority-badge strong { font-size: 15px; }
+.ofr-landscaping .growth-priority-badge small { margin-top: 4px; color: #6e7b8e; font-size: 10px; text-transform: uppercase; letter-spacing: .065em; }
+.ofr-landscaping .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ofr-landscaping .review-grid article { min-height: 330px; padding: 30px; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 25px; background: rgba(255,255,255,.74); box-shadow: 0 15px 42px rgba(28,64,123,.06); }
+.ofr-landscaping .review-grid article > svg { width: 28px; color: var(--blue); }
+.ofr-landscaping .review-grid p { margin: 35px 0 45px; color: #3f4d63; font-size: 16px; line-height: 1.7; }
+.ofr-landscaping .review-grid footer { margin-top: auto; display: flex; align-items: center; gap: 11px; }
+.ofr-landscaping .review-grid footer > span { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: #e8efff; color: var(--blue); font-size: 11px; font-weight: 900; }
+.ofr-landscaping .review-grid footer div { display: flex; flex-direction: column; }
+.ofr-landscaping .review-grid footer strong { font-size: 14px; }
+.ofr-landscaping .review-grid footer small { margin-top: 3px; color: #758298; font-size: 12px; }
+.ofr-landscaping .review-grid .review-featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 24px 54px rgba(33,103,245,.2); }
+.ofr-landscaping .review-featured > svg { color: var(--yellow) !important; }
+.ofr-landscaping .review-featured p { color: white; }
+.ofr-landscaping .review-featured footer > span { background: rgba(255,255,255,.15); color: white; }
+.ofr-landscaping .review-featured footer small { color: #ffd9c9; }
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.ofr-landscaping .faq-section { display: grid; grid-template-columns: .7fr 1.3fr; gap: 100px; align-items: start; padding-top: 30px; }
+.ofr-landscaping .faq-intro { position: sticky; top: 125px; }
+.ofr-landscaping .faq-intro h2 { margin-top: 16px; }
+.ofr-landscaping .faq-intro p { margin: 22px 0 28px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.ofr-landscaping .faq-list { border-top: 1px solid var(--line); }
+.ofr-landscaping .faq-list details { border-bottom: 1px solid var(--line); }
+.ofr-landscaping .faq-list summary { min-height: 86px; display: grid; grid-template-columns: 40px 1fr 30px; align-items: center; gap: 15px; cursor: pointer; list-style: none; font-size: 17px; font-weight: 800; }
+.ofr-landscaping .faq-list summary::-webkit-details-marker { display: none; }
+.ofr-landscaping .faq-list summary span { color: #9aa6b8; font-size: 10px; }
+.ofr-landscaping .faq-list summary i { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: #e9effa; color: var(--blue); font-size: 17px; font-style: normal; transition: transform .2s ease; }
+.ofr-landscaping .faq-list details[open] summary i { transform: rotate(45deg); background: var(--blue); color: white; }
+.ofr-landscaping .faq-list details p { margin: -5px 45px 28px 55px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+
+/* ── Final CTA + form ─────────────────────────────────────── */
+.ofr-landscaping .final-cta { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 24px auto 0; padding: 62px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(520px, .92fr); gap: 52px; align-items: center; border-radius: 42px 42px 0 0; background: linear-gradient(135deg, #315d78, #192d3c); color: white; }
+.ofr-landscaping .final-cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 8% 5%, rgba(255,255,255,.16), transparent 30%), linear-gradient(120deg, transparent 52%, rgba(7,21,47,.15)); }
+.ofr-landscaping .cta-orbit { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,.17); }
+.ofr-landscaping .cta-orbit--one { width: 420px; height: 420px; right: -80px; bottom: -210px; }
+.ofr-landscaping .cta-orbit--two { width: 310px; height: 310px; right: -25px; bottom: -155px; border-style: dashed; }
+.ofr-landscaping .cta-content { position: relative; z-index: 2; }
+.ofr-landscaping .final-cta h2 { max-width: 690px; font-size: clamp(40px, 3.5vw, 56px); }
+.ofr-landscaping .cta-content > p { max-width: 620px; margin: 22px 0 27px; color: #e4ebff; font-size: 17px; line-height: 1.68; }
+.ofr-landscaping .contact-points { display: grid; gap: 12px; margin: 28px 0; }
+.ofr-landscaping .contact-points span { display: flex; align-items: center; gap: 10px; color: #f1f5ff; font-size: 15px; font-weight: 700; }
+.ofr-landscaping .contact-points svg { width: 18px; height: 18px; padding: 3px; border-radius: 50%; background: rgba(255,255,255,.14); color: var(--yellow); }
+.ofr-landscaping .cta-direct { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 30px 0 0; }
+.ofr-landscaping .cta-direct a { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 15px 16px; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgba(255,255,255,.06); transition: background .2s ease, border-color .2s ease; }
+.ofr-landscaping .cta-direct a:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.22); }
+.ofr-landscaping .cta-direct svg { flex: 0 0 auto; width: 34px; height: 34px; padding: 9px; border-radius: 10px; background: rgba(255,201,40,.16); color: var(--yellow); }
+.ofr-landscaping .cta-direct span { display: flex; flex-direction: column; min-width: 0; }
+.ofr-landscaping .cta-direct small { color: #97a5bd; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.ofr-landscaping .cta-direct strong { margin-top: 3px; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-landscaping .eligibility-form { position: relative; z-index: 3; width: 100%; max-width: 610px; justify-self: end; padding: 27px; border-radius: 25px; background: white; color: var(--ink); box-shadow: 0 30px 75px rgba(7,21,47,.28); }
+.ofr-landscaping .form-heading { margin-bottom: 20px; }
+.ofr-landscaping .form-heading > span { display: inline-flex; align-items: center; gap: 7px; color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+.ofr-landscaping .form-heading > span svg { width: 14px; }
+.ofr-landscaping .form-heading h3 { margin: 10px 0 8px; font-size: 30px; letter-spacing: -.045em; }
+.ofr-landscaping .form-heading p { max-width: 590px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.ofr-landscaping .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.ofr-landscaping .form-field { display: grid; gap: 8px; }
+.ofr-landscaping .form-field--full { grid-column: 1 / -1; }
+.ofr-landscaping .form-field label { color: #35425a; font-size: 13px; font-weight: 800; }
+.ofr-landscaping .form-field input,
+.ofr-landscaping .form-select { width: 100%; height: 45px; padding: 0 14px; border: 1px solid #dde4ef; border-radius: 11px; background: #f8faff; box-shadow: none; color: var(--ink); font-size: 14px; font-family: inherit; outline: none; }
+.ofr-landscaping .form-field input:focus-visible,
+.ofr-landscaping .form-select:focus-visible { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(47, 125, 50, .14); }
+.ofr-landscaping .standalone-select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #758196 50%), linear-gradient(135deg, #758196 50%, transparent 50%); background-position: calc(100% - 18px) 19px, calc(100% - 13px) 19px; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+.ofr-landscaping .form-field-error { margin: 0; color: #d4380d; font-size: 11px; font-weight: 700; }
+.ofr-landscaping .form-error { margin: 12px 0 0; color: #d4380d; font-size: 12px; font-weight: 700; }
+.ofr-landscaping .form-consent { margin: 18px 0 0; display: flex; align-items: flex-start; gap: 9px; color: #66738a; font-size: 10px; line-height: 1.45; cursor: pointer; }
+.ofr-landscaping .form-consent input { width: 15px; height: 15px; margin: 2px 0 0; flex: 0 0 auto; accent-color: var(--blue); }
+.ofr-landscaping .form-consent .lead-consent-toggle { border: 0; padding: 0; background: none; color: var(--blue); font-size: 10px; font-weight: 800; cursor: pointer; }
+.ofr-landscaping .form-submit { width: 100%; min-height: 57px; margin-top: 18px; padding: 7px 8px 7px 20px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 0; border-radius: 16px; background: var(--ink); color: white; font-size: 15px; font-weight: 900; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-landscaping .form-submit:hover { transform: translateY(-2px); box-shadow: 0 13px 25px rgba(7,21,47,.2); }
+.ofr-landscaping .form-submit:disabled { opacity: .7; cursor: wait; transform: none; box-shadow: none; }
+.ofr-landscaping .form-submit svg { width: 43px; height: 43px; padding: 12px; border-radius: 12px; background: var(--yellow); color: var(--ink); }
+.ofr-landscaping .form-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,.35); border-top-color: white; border-radius: 50%; animation: ofr-spin .7s linear infinite; }
+@keyframes ofr-spin { to { transform: rotate(360deg); } }
+.ofr-landscaping .form-note { margin: 11px 0 0; color: #748196; text-align: center; font-size: 11px; line-height: 1.45; }
+.ofr-landscaping .eligibility-form .consent-legal-links { margin: 8px 0 0; text-align: center; font-size: 11px; color: #748196; }
+.ofr-landscaping .eligibility-form .consent-legal-links a { color: var(--blue); font-weight: 700; }
+
+/* ── Section CTA buttons ──────────────────────────────────── */
+.ofr-landscaping .section-cta-row { margin-top: 34px; display: flex; justify-content: center; }
+.ofr-landscaping .section-button { width: fit-content; min-height: 58px; display: inline-flex; align-items: center; gap: 18px; padding: 7px 8px 7px 21px; border: 0; border-radius: 17px; background: var(--ink); color: white; font-size: 15px; font-weight: 900; box-shadow: 0 12px 28px rgba(7,21,47,.16); transition: transform .2s ease, box-shadow .2s ease; }
+.ofr-landscaping .section-button:hover { transform: translateY(-3px); box-shadow: 0 18px 34px rgba(7,21,47,.22); }
+.ofr-landscaping .section-button i { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 13px; background: var(--yellow); color: var(--ink); font-style: normal; }
+.ofr-landscaping .section-button i svg { width: 18px; height: 18px; padding: 0; color: currentColor; }
+.ofr-landscaping .section-button--light { background: white; color: var(--ink); }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.ofr-landscaping .site-footer { position: relative; z-index: 2; width: min(94vw, 1500px); margin: 0 auto 24px; padding: 56px; border-radius: 0 0 42px 42px; background: var(--ink); color: white; }
+.ofr-landscaping .footer-main { display: grid; grid-template-columns: 1.25fr .65fr .65fr 1fr; gap: 48px; align-items: start; }
+.ofr-landscaping .footer-wordmark { display: inline-flex; align-items: center; color: white; font-size: 27px; font-weight: 900; letter-spacing: -.04em; }
+.ofr-landscaping .footer-brand > p { max-width: 340px; margin: 18px 0 21px; color: #b1bdd0; font-size: 14px; line-height: 1.65; }
+.ofr-landscaping .footer-contact { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.ofr-landscaping .footer-contact a { width: fit-content; display: inline-flex; align-items: center; gap: 8px; padding-bottom: 5px; border-bottom: 1px solid var(--yellow); color: white; font-size: 13px; font-weight: 900; }
+.ofr-landscaping .footer-contact a svg { width: 15px; color: var(--yellow); }
+.ofr-landscaping .footer-nav-group { display: flex; flex-direction: column; gap: 12px; }
+.ofr-landscaping .footer-nav-group small { margin-bottom: 3px; color: #8794a9; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.ofr-landscaping .footer-nav-group a { width: fit-content; color: #d3dae6; font-size: 13px; font-weight: 700; transition: color .2s ease; }
+.ofr-landscaping .footer-nav-group a:hover { color: var(--yellow); }
+.ofr-landscaping .footer-offer { padding: 23px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: linear-gradient(145deg, rgba(33,103,245,.25), rgba(255,255,255,.04)); }
+.ofr-landscaping .footer-offer > span { color: var(--yellow); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.ofr-landscaping .footer-offer strong { display: block; margin-top: 9px; font-size: 18px; letter-spacing: -.025em; }
+.ofr-landscaping .footer-offer p { margin: 9px 0 17px; color: #b9c4d5; font-size: 13px; line-height: 1.58; }
+.ofr-landscaping .footer-offer a { display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; border-radius: 11px; background: var(--yellow); color: var(--ink); font-size: 13px; font-weight: 900; }
+.ofr-landscaping .footer-offer a svg { width: 14px; }
+.ofr-landscaping .footer-bottom { margin-top: 38px; padding-top: 23px; display: grid; grid-template-columns: 1.7fr 1fr auto; gap: 30px; align-items: start; border-top: 1px solid rgba(255,255,255,.1); }
+.ofr-landscaping .footer-bottom p, .ofr-landscaping .footer-bottom small, .ofr-landscaping .footer-bottom span { margin: 0; color: #8f9bb0; font-size: 12px; line-height: 1.65; text-align: left; }
+.ofr-landscaping .footer-bottom a { color: #b9c3d3; }
+.ofr-landscaping .footer-bottom span { white-space: nowrap; }
+.ofr-landscaping .footer-legal { display: inline-flex; gap: 8px; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1180px) {
+  .ofr-landscaping .nav-links { display: none; }
+  .ofr-landscaping .hero { grid-template-columns: 1fr 1fr; gap: 35px; }
+  .ofr-landscaping .proof-row { grid-template-columns: 1fr; gap: 14px; }
+  .ofr-landscaping .proof-item { flex-direction: row; align-items: center; }
+  .ofr-landscaping .concept-stage { transform: scale(.86); transform-origin: center; width: 116%; margin-left: -8%; }
+}
+
+@media (max-width: 1050px) {
+  .ofr-landscaping .section-heading--split { grid-template-columns: 1fr; gap: 20px; }
+  .ofr-landscaping .process-grid { gap: 12px; }
+  .ofr-landscaping .process-grid article { padding: 25px; }
+  .ofr-landscaping .niche-tab-list { grid-template-columns: repeat(3, 1fr); }
+  .ofr-landscaping .niche-panel { padding: 38px; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: 30px; }
+  .ofr-landscaping .niche-content { text-align: left; }
+  .ofr-landscaping .niche-visual { width: 100%; margin: 0; }
+  .ofr-landscaping .niche-banner { grid-template-columns: 1fr; gap: 22px; text-align: center; }
+  .ofr-landscaping .niche-banner-copy { max-width: 460px; margin: 0 auto; }
+  .ofr-landscaping .niche-banner > .section-button { justify-self: center; }
+  .ofr-landscaping .capability-tile { width: 115px; }
+  .ofr-landscaping .dark-section { padding: 65px; grid-template-columns: 1fr; gap: 55px; }
+  .ofr-landscaping .terms-section { grid-template-columns: 1fr; gap: 45px; }
+  .ofr-landscaping .pricing-grid { grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; }
+  .ofr-landscaping .pricing-card { min-height: auto; }
+  .ofr-landscaping .pricing-card--featured { transform: none; }
+  .ofr-landscaping .growth-priority-badge { justify-self: start; }
+  .ofr-landscaping .faq-section { grid-template-columns: 1fr; gap: 50px; }
+  .ofr-landscaping .faq-intro { position: static; max-width: 700px; }
+  .ofr-landscaping .final-cta { padding: 65px; grid-template-columns: 1fr; gap: 50px; }
+  .ofr-landscaping .footer-main { grid-template-columns: 1fr 1fr; }
+  .ofr-landscaping .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+}
+
+@media (max-width: 860px) {
+  .ofr-landscaping .nav-wrap { width: calc(100% - 28px); margin-top: 14px; min-height: 66px; border-radius: 18px; }
+  .ofr-landscaping .nav-cta { display: none; }
+  .ofr-landscaping .menu-button { display: block; }
+  .ofr-landscaping .mobile-menu { top: 90px; }
+  .ofr-landscaping .hero { width: calc(100% - 36px); min-height: auto; padding: 116px 0 34px; grid-template-columns: 1fr; text-align: center; }
+  .ofr-landscaping .hero-copy { max-width: 720px; margin: 0 auto; }
+  .ofr-landscaping .eyebrow, .ofr-landscaping .hero-actions { margin-left: auto; margin-right: auto; justify-content: center; }
+  .ofr-landscaping .hero-trust-badges { justify-content: center; gap: 16px; margin-top: 22px; }
+  .ofr-landscaping .htb-clutch { width: 54px; height: 54px; }
+  .ofr-landscaping .htb-yelp-img { width: 50px; height: 50px; }
+  .ofr-landscaping .htb-trustpilot-img { width: 88px; }
+  .ofr-landscaping h1 { margin: 20px auto 16px; font-size: clamp(42px, 10.5vw, 62px); line-height: 1.06; font-weight: 900; }
+  .ofr-landscaping .headline-accent svg { margin: 8px auto 0; }
+  .ofr-landscaping .hero-lede { margin-top: 16px; }
+  .ofr-landscaping .proof-row { grid-template-columns: repeat(3, minmax(0, 1fr)); text-align: left; }
+  .ofr-landscaping .concept-stage { width: 100%; margin: 22px 0 0; transform: scale(.95); min-height: 585px; }
+  .ofr-landscaping .marquee-section { margin-top: 30px; }
+}
+
+@media (max-width: 760px) {
+  .ofr-landscaping .section { width: calc(100% - 32px); padding: 54px 0; }
+  .ofr-landscaping .section-heading { margin-bottom: 30px; }
+  .ofr-landscaping .section-heading, .ofr-landscaping .section-heading--split, .ofr-landscaping .terms-main, .ofr-landscaping .faq-intro, .ofr-landscaping .dark-copy, .ofr-landscaping .cta-content { text-align: center; }
+  .ofr-landscaping .section-kicker::before { display: none; }
+  .ofr-landscaping .section-heading h2, .ofr-landscaping .dark-copy h2, .ofr-landscaping .faq-intro h2, .ofr-landscaping .final-cta h2, .ofr-landscaping .terms-main h2 { margin: 12px auto 0; font-size: clamp(31px, 8.2vw, 38px); line-height: 1.18; }
+  .ofr-landscaping .section-heading > p, .ofr-landscaping .section-heading--split > p { margin: 14px auto 0; font-size: 15px; line-height: 1.6; }
+  .ofr-landscaping .process-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-landscaping .process-grid .process-card--featured { transform: none; }
+  .ofr-landscaping .process-grid article { min-height: auto; padding: 26px; }
+  .ofr-landscaping .step-icon { margin-bottom: 34px; }
+  .ofr-landscaping .process-grid p { min-height: auto; margin: 14px 0 20px; }
+  .ofr-landscaping .section-cta-row { margin-top: 28px; }
+  .ofr-landscaping .niche-tab-list { display: flex; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; padding: 6px; border-radius: 16px; }
+  .ofr-landscaping .niche-tab-list::-webkit-scrollbar { display: none; }
+  .ofr-landscaping .niche-tab-trigger { flex: 0 0 118px; }
+  .ofr-landscaping .niche-section { padding-top: 22px; }
+  .ofr-landscaping .niche-panel { padding: 26px 18px; grid-template-columns: 1fr; gap: 16px; display: grid; }
+  .ofr-landscaping .niche-content { text-align: center; }
+  .ofr-landscaping .niche-label, .ofr-landscaping .niche-link { margin-left: auto; margin-right: auto; }
+  .ofr-landscaping .niche-content > p { margin-left: auto; margin-right: auto; }
+  .ofr-landscaping .niche-content ul { width: fit-content; margin: 18px auto; text-align: left; }
+  .ofr-landscaping .niche-content h3 { margin: 14px auto 12px; font-size: 29px; line-height: 1.18; }
+  .ofr-landscaping .niche-content > p { font-size: 15px; }
+  .ofr-landscaping .niche-visual { min-height: 332px; margin-top: 12px; place-items: start center; transform: scale(.93); transform-origin: top center; }
+  .ofr-landscaping .niche-browser { width: 100%; margin-top: 6px; margin-left: 0; border-width: 5px; }
+  .ofr-landscaping .niche-site-hero { height: calc(100% - 79px); padding: 16px 14px; gap: 12px; }
+  .ofr-landscaping .niche-site-copy p, .ofr-landscaping .niche-stars { display: none; }
+  .ofr-landscaping .niche-site-copy h4 { margin: 7px 0 0; font-size: 19px; }
+  .ofr-landscaping .niche-site-actions { margin-top: 11px; }
+  .ofr-landscaping .niche-site-nav { height: 44px; padding: 0 14px; }
+  /* The phone mock keeps a fixed height, so its contents have to be sized
+     to fit at this breakpoint — the kicker and heading otherwise wrap to
+     four lines and push the button out through the bottom of the frame. */
+  .ofr-landscaping .niche-mobile { width: 100px; height: 205px; right: 0; border-width: 4px; overflow: hidden; }
+  .ofr-landscaping .niche-mobile-content { overflow: hidden; padding: 14px 8px 8px; }
+  .ofr-landscaping .niche-mobile-top { margin-bottom: 8px; }
+  .ofr-landscaping .niche-mobile-content > span { display: block; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ofr-landscaping .niche-mobile-content h5 { margin: 5px 0 7px; font-size: 10px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ofr-landscaping .niche-mobile-image { height: 44px; }
+  .ofr-landscaping .niche-mobile-button { margin-top: 7px; padding: 6px; }
+  .ofr-landscaping .niche-result-card { bottom: 0; left: 0; }
+  .ofr-landscaping .niche-banner { margin-top: 16px; padding: 28px 18px; border-radius: 22px; }
+  .ofr-landscaping .niche-banner-copy h3 { font-size: 21px; }
+  .ofr-landscaping .included-section { padding: 54px 16px; }
+  .ofr-landscaping .icon-cloud { width: 100%; margin: 34px auto 40px; overflow: hidden; }
+  .ofr-landscaping .icon-row { width: max-content; justify-content: flex-start; animation: ofr-icon-slide 24s linear infinite; }
+  .ofr-landscaping .icon-row--two { transform: none; animation-direction: reverse; }
+  .ofr-landscaping .capability-tile { flex: 0 0 108px; }
+  .ofr-landscaping .system-cards { grid-template-columns: 1fr; width: 100%; gap: 16px; }
+  .ofr-landscaping .system-cards article { grid-template-columns: auto 1fr; padding: 26px; }
+  .ofr-landscaping .system-cards article > svg { display: none; }
+  .ofr-landscaping .pricing-grid { gap: 16px; }
+  .ofr-landscaping .pricing-card { padding: 28px; }
+  .ofr-landscaping .dark-section { width: 100%; margin: 40px 0; padding: 52px 20px; border-radius: 0; gap: 38px; }
+  .ofr-landscaping .dark-copy p { margin: 18px auto 26px; }
+  .ofr-landscaping .dark-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-landscaping .dark-grid article { min-height: auto; }
+  .ofr-landscaping .dark-grid h3 { margin: 22px 0 10px; }
+  .ofr-landscaping .terms-section { gap: 34px; }
+  .ofr-landscaping .terms-main h2 { margin: 12px auto 14px; }
+  .ofr-landscaping .terms-main p { margin: 0 auto 22px; }
+  .ofr-landscaping .terms-list { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-landscaping .terms-list > div { min-height: auto; padding: 22px; }
+  .ofr-landscaping .growth-priority-badge { justify-self: center; }
+  .ofr-landscaping .review-grid { grid-template-columns: 1fr; gap: 16px; }
+  .ofr-landscaping .review-grid article { min-height: auto; padding: 28px; }
+  .ofr-landscaping .review-grid p { margin: 22px 0 30px; }
+  .ofr-landscaping .review-grid .review-featured { transform: none; }
+  .ofr-landscaping .faq-section { gap: 30px; padding-top: 16px; }
+  .ofr-landscaping .faq-intro p { margin: 16px auto 22px; }
+  .ofr-landscaping .faq-list summary { min-height: 68px; font-size: 15px; }
+  .ofr-landscaping .faq-list details p { margin-left: 0; margin-right: 10px; }
+  .ofr-landscaping .final-cta { width: 100%; margin-top: 16px; padding: 52px 20px; grid-template-columns: 1fr; gap: 38px; border-radius: 0; }
+  .ofr-landscaping .cta-content > p { margin: 16px auto 22px; }
+  .ofr-landscaping .contact-points { width: fit-content; margin: 22px auto; }
+  .ofr-landscaping .contact-points span { text-align: left; }
+  .ofr-landscaping .cta-direct { display: flex; flex-direction: column; align-items: center; margin-top: 22px; }
+  .ofr-landscaping .cta-direct a { width: fit-content; }
+  .ofr-landscaping .eligibility-form { padding: 25px 18px; border-radius: 22px; justify-self: stretch; }
+  .ofr-landscaping .form-grid { grid-template-columns: 1fr; }
+  .ofr-landscaping .form-field--full { grid-column: auto; }
+  .ofr-landscaping .cta-card { max-width: 430px; transform: none; }
+  .ofr-landscaping .site-footer { width: 100%; margin: 0; padding: 40px 18px 28px; border-radius: 0; }
+  .ofr-landscaping .footer-main { grid-template-columns: 1fr 1fr; gap: 30px 16px; }
+  .ofr-landscaping .footer-brand, .ofr-landscaping .footer-offer { grid-column: 1 / -1; }
+  .ofr-landscaping .footer-brand > p { margin: 14px 0 18px; }
+  .ofr-landscaping .footer-nav-group { padding-top: 0; }
+  .ofr-landscaping .footer-bottom { margin-top: 26px; }
+  .ofr-landscaping .footer-bottom span { white-space: normal; }
+}
+
+@keyframes ofr-icon-slide { to { transform: translateX(-40%); } }
+
+@media (max-width: 580px) {
+  .ofr-landscaping { overflow: clip; }
+  .ofr-landscaping .nav-logo img { height: 28px; }
+  .ofr-landscaping .hero { width: calc(100% - 28px); padding: 100px 0 16px; gap: 20px; }
+  .ofr-landscaping .eyebrow { font-size: 10px; }
+  .ofr-landscaping h1 { margin: 18px auto 12px; font-size: clamp(38px, 11.5vw, 52px); line-height: 1.1; font-weight: 900; }
+  .ofr-landscaping .headline-accent svg { width: 140px; height: 11px; }
+  .ofr-landscaping .hero-lede { margin-top: 12px; font-size: 15px; line-height: 1.6; }
+  .ofr-landscaping .hero-actions { flex-direction: column; align-items: center; gap: 10px; margin-top: 22px; }
+  .ofr-landscaping .button { width: fit-content; }
+  .ofr-landscaping .proof-row { grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; margin: 22px auto 0; padding-top: 22px; gap: 16px 12px; }
+  .ofr-landscaping .proof-item { flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+  .ofr-landscaping .proof-item--mobile { display: flex; }
+  .ofr-landscaping .proof-item strong { font-size: 13.5px; white-space: normal; }
+  .ofr-landscaping .proof-item small { font-size: 12px; }
+  .ofr-landscaping .proof-icon { width: 34px; height: 34px; border-radius: 10px; }
+  .ofr-landscaping .proof-icon svg { width: 17px; }
+  .ofr-landscaping .concept-stage { min-height: 372px; margin-top: 24px; transform: scale(.92); transform-origin: top center; }
+  .ofr-landscaping .stage-orbit--one { width: 340px; height: 340px; }
+  .ofr-landscaping .stage-orbit--two { width: 270px; height: 270px; }
+  .ofr-landscaping .browser-card { width: 100%; margin-left: 0; border-width: 5px; border-radius: 20px; }
+  .ofr-landscaping .browser-topbar { height: 37px; }
+  .ofr-landscaping .design-toolbar { height: 43px; padding: 0 16px; }
+  .ofr-landscaping .mini-nav { display: none; }
+  .ofr-landscaping .design-canvas { height: calc(100% - 80px); padding: 28px 21px; gap: 14px; }
+  .ofr-landscaping .canvas-copy h2 { font-size: 20px; }
+  .ofr-landscaping .canvas-copy p { font-size: 7px; }
+  .ofr-landscaping .canvas-actions span { padding: 7px; font-size: 6px; }
+  .ofr-landscaping .canvas-trust { display: none; }
+  .ofr-landscaping .visual-stack { min-height: 150px; }
+  .ofr-landscaping .phone-card { width: 126px; height: 255px; right: 0; bottom: 12px; border-width: 5px; border-radius: 24px; padding: 7px; }
+  .ofr-landscaping .phone-notch { width: 41px; height: 10px; }
+  .ofr-landscaping .phone-header { height: 31px; }
+  .ofr-landscaping .phone-body { padding: 10px 8px; }
+  .ofr-landscaping .phone-body h3 { font-size: 14px; }
+  .ofr-landscaping .phone-art { height: 77px; }
+  .ofr-landscaping .phone-cta { height: 26px; margin-top: 10px; }
+  .ofr-landscaping .floating-note--top { top: -8px; right: 0; }
+  .ofr-landscaping .floating-note--bottom { left: 0; bottom: 0; }
+  .ofr-landscaping .floating-note { padding: 7px; }
+  .ofr-landscaping .note-icon { width: 28px; height: 28px; }
+  .ofr-landscaping .floating-note strong { font-size: 8px; }
+  .ofr-landscaping .floating-note small { font-size: 6px; }
+}
+
+@media (max-width: 480px) {
+  .ofr-landscaping .marquee-track span { padding: 0 14px; }
+  .ofr-landscaping .niche-site-nav { padding: 0 12px; }
+  .ofr-landscaping .niche-mini-links { display: none; }
+  .ofr-landscaping .niche-site-hero { grid-template-columns: 1.12fr .88fr; gap: 10px; }
+  .ofr-landscaping .niche-site-copy p, .ofr-landscaping .niche-stars { display: none; }
+  .ofr-landscaping .niche-site-actions { flex-direction: column; width: fit-content; }
+  .ofr-landscaping .niche-site-actions b:last-child { display: none; }
+  .ofr-landscaping .niche-photo-mark { width: 56px; height: 56px; border-radius: 17px; }
+  .ofr-landscaping .niche-photo-mark svg { width: 28px; }
+  .ofr-landscaping .niche-mobile { right: 0; }
+  .ofr-landscaping .niche-result-card { left: 0; }
+  .ofr-landscaping .review-grid p { font-size: 15px; }
+  .ofr-landscaping .faq-list summary { grid-template-columns: 27px 1fr 28px; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ofr-landscaping *, .ofr-landscaping *::before, .ofr-landscaping *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
+
+/* ── Industry photography ──────────────────────────────────────
+   The core offer page fills its mock-site slots with abstract shapes. The
+   lander swaps in real industry photography, so these rules replace the
+   placeholder art in three places: the hero browser mock, each service tab's
+   mock site, and the phone mock. Declared after the responsive blocks above,
+   so each one restates the breakpoints it needs to keep. */
+
+/* Hero browser mock — photo instead of the stacked abstract cards */
+.ofr-landscaping .industry-visual-stack { position: relative; min-height: 290px; overflow: hidden; border-radius: 20px; background: #202936; box-shadow: 0 20px 45px rgba(17, 26, 39, .2); transform: rotate(2deg); }
+.ofr-landscaping .industry-visual-stack::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 45%, rgba(17, 26, 39, .5)); }
+.ofr-landscaping .industry-visual-stack img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
+.ofr-landscaping .industry-visual-stack .visual-chip { position: absolute; z-index: 2; left: 16px; bottom: 16px; margin: 0; padding: 7px 9px; background: var(--yellow); color: var(--ink); }
+
+/* Service-tab mock site — photo panel beside the mock hero copy */
+.ofr-landscaping .niche-label { background: rgba(47, 125, 50, .08); color: var(--blue); }
+.ofr-landscaping .niche-site-nav .mini-logo img { width: auto; height: 14px; }
+.ofr-landscaping .industry-niche-visual { --niche-accent: #ed5a2a; --niche-soft: rgba(47, 125, 50, .08); }
+.ofr-landscaping .industry-photo { display: block; }
+.ofr-landscaping .industry-photo::after { z-index: 2; inset: 12px; }
+.ofr-landscaping .industry-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.ofr-landscaping .industry-photo > span { left: 18px; right: auto; bottom: 18px; display: flex; align-items: center; gap: 5px; padding: 6px 8px; border-radius: 7px; background: rgba(17, 26, 39, .82); color: white; letter-spacing: .08em; }
+.ofr-landscaping .industry-photo > span svg { width: 10px; height: 10px; color: var(--yellow); }
+.ofr-landscaping .industry-mobile-image { background-position: center; background-size: cover; }
+
+/* Phone mock — industry detail shot with a standing "free quote" chip */
+.ofr-landscaping .phone-art--industry { background: url("/images/free-website/free-landscaping/detail.webp") center / cover no-repeat; }
+.ofr-landscaping .phone-art--industry::after { content: "FREE QUOTE"; position: absolute; left: 7px; bottom: 7px; padding: 4px 6px; border-radius: 6px; background: var(--yellow); color: var(--ink); font-size: 5px; font-weight: 900; letter-spacing: .06em; }
+
+@media (max-width: 760px) {
+  .ofr-landscaping .industry-photo > span { left: 10px; bottom: 10px; padding: 5px 6px; }
+}
+
+@media (max-width: 580px) {
+  .ofr-landscaping .industry-visual-stack { min-height: 150px; }
+}
+
+/* ── Sibling offer links ──────────────────────────────────────────────────
+   Crawlable cross-links between the free-website landers, so each one is
+   reachable from the others rather than only from the header dropdown. */
+.ofr-landscaping .offer-siblings { margin-top: 34px; padding-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; border-top: 1px solid rgba(255,255,255,.1); }
+.ofr-landscaping .offer-siblings small { color: #8794a9; font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.ofr-landscaping .offer-siblings > div { display: flex; flex-wrap: wrap; gap: 8px 10px; }
+.ofr-landscaping .offer-siblings a { padding: 8px 13px; border: 1px solid rgba(255,255,255,.14); border-radius: 99px; background: rgba(255,255,255,.06); color: #d3dae6; font-size: 12px; font-weight: 700; transition: color .2s ease, border-color .2s ease; }
+.ofr-landscaping .offer-siblings a:hover { border-color: var(--yellow); color: var(--yellow); }
+.ofr-landscaping .footer-bottom { margin-top: 26px; }
+
+@media (max-width: 760px) {
+  .ofr-landscaping .offer-siblings { margin-top: 26px; }
+}
+
+/* Contextual links out to the wider site. Underlined so they read as links
+   inside body copy, and inheriting colour so they work on light and dark. */
+.ofr-landscaping .offer-inlink { color: inherit; font-weight: 800; text-decoration: underline; text-decoration-color: var(--yellow); text-underline-offset: 3px; text-decoration-thickness: 2px; transition: color .2s ease; }
+.ofr-landscaping .offer-inlink:hover { color: var(--yellow); }
+.ofr-landscaping .dark-grid .offer-inlink,
+.ofr-landscaping .pricing-note .offer-inlink { color: inherit; }
+
+
+/* ══ Footer legal block ══════════════════════════════════════
+   The offer terms run the full width of the footer; the address and the
+   copyright line sit beneath them rather than beside. */
+.ofr-landscaping .footer-bottom { grid-template-columns: 1fr auto; gap: 18px 30px; }
+.ofr-landscaping .footer-bottom > small { grid-column: 1 / -1; }
+.ofr-landscaping .footer-bottom > p { grid-column: 1; align-self: center; }
+.ofr-landscaping .footer-bottom > span { grid-column: 2; justify-self: end; align-self: center; }
+
+@media (max-width: 760px) {
+  .ofr-landscaping .footer-bottom { grid-template-columns: 1fr; gap: 13px; }
+  .ofr-landscaping .footer-bottom > p,
+  .ofr-landscaping .footer-bottom > span { grid-column: 1; justify-self: start; }
+}
+
+/* ══ Pricing card colours ════════════════════════════════════
+   Growth reads as the warm, chosen plan; Full Market as the calm one above
+   it. Both foreground sets clear 4.5:1 on their own background. */
+.ofr-landscaping .pricing-card--featured { border-color: #f97315; background: #f97315; }
+.ofr-landscaping .pricing-card--featured::after { background: rgba(255, 255, 255, .13); }
+.ofr-landscaping .pricing-card--featured .pricing-card-head > span { color: #fff; }
+.ofr-landscaping .pricing-card--featured .pricing-card-head small { color: #fff; }
+.ofr-landscaping .pricing-card--featured > p { color: #fff; }
+.ofr-landscaping .pricing-card--featured ul { border-color: rgba(255, 255, 255, .34); }
+.ofr-landscaping .pricing-card--featured li { color: #fff; }
+.ofr-landscaping .pricing-card--featured li svg { color: #fff; }
+/* The grey "/ month" is unreadable on the orange; the whole price goes white. */
+.ofr-landscaping .pricing-card--featured .plan-price span { color: rgba(255, 255, 255, .82); }
+.ofr-landscaping .pricing-card--featured > a { background: var(--ink); color: #fff; }
+
+.ofr-landscaping .pricing-card--verdant { border-color: #bfe6cd; background: #e9f7ee; }
+.ofr-landscaping .pricing-card--verdant::after { background: rgba(43, 173, 104, .15); }
+.ofr-landscaping .pricing-card--verdant .pricing-card-head > span { color: #1c7a4a; }
+.ofr-landscaping .pricing-card--verdant li svg { color: #1c8a52; }
+
+/* ══ Lead tracking ═══════════════════════════════════════════
+   Copy left, dashboard right — the same split the terms section uses. */
+.ofr-landscaping .leadtrack-section { display: grid; grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); gap: 50px; align-items: center; padding-top: 46px; padding-bottom: 54px; }
+/* One measure for the whole column so the heading, lede and list share an edge. */
+.ofr-landscaping .leadtrack-copy { max-width: 520px; }
+.ofr-landscaping .leadtrack-copy h2 { margin: 16px 0 18px; font-size: clamp(34px, 3.3vw, 48px); line-height: 1.14; letter-spacing: -.05em; }
+.ofr-landscaping .leadtrack-copy > p { margin: 0 0 24px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.ofr-landscaping .leadtrack-points { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
+.ofr-landscaping .leadtrack-points li { display: flex; align-items: center; gap: 11px; padding: 13px 0; border-bottom: 1px solid var(--line); color: #46536a; font-size: 14.5px; font-weight: 700; }
+.ofr-landscaping .leadtrack-points svg { flex: 0 0 auto; width: 19px; height: 19px; padding: 3px; border-radius: 50%; background: #e9f8ef; color: #1c8a52; }
+
+.ofr-landscaping .leadtrack-panel { padding: 16px; display: grid; gap: 14px; border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 18px 46px rgba(28,64,123,.08); }
+.ofr-landscaping .leadtrack-statrow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ofr-landscaping .leadtrack-stat { padding: 12px 13px; border: 1px solid var(--line); border-radius: 14px; background: #f8fbff; }
+.ofr-landscaping .leadtrack-stat > span { display: block; color: #7b889d; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+.ofr-landscaping .leadtrack-stat > strong { display: block; margin-top: 5px; color: var(--ink); font-size: 22px; letter-spacing: -.04em; }
+.ofr-landscaping .leadtrack-stat > small { display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; color: #1c8a52; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.ofr-landscaping .leadtrack-stat > small svg { flex: 0 0 auto; width: 12px; }
+.ofr-landscaping .leadtrack-stat--accent { border-color: color-mix(in srgb, var(--blue) 30%, transparent); background: color-mix(in srgb, var(--blue) 8%, #fff); }
+
+.ofr-landscaping .leadtrack-board { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 16px; background: #fff; overflow: hidden; }
+.ofr-landscaping .leadtrack-board > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--line); }
+.ofr-landscaping .leadtrack-tabs { display: flex; gap: 5px; }
+.ofr-landscaping .leadtrack-tabs > * { padding: 5px 10px; border-radius: 99px; color: #6b7891; font-size: 11.5px; font-weight: 800; font-style: normal; }
+.ofr-landscaping .leadtrack-tabs > b { background: var(--ink); color: #fff; }
+.ofr-landscaping .leadtrack-live { display: inline-flex; align-items: center; gap: 6px; color: #1c8a52; font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.ofr-landscaping .leadtrack-live::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #1c8a52; animation: leadtrack-pulse 1.8s ease-in-out infinite; }
+
+.ofr-landscaping .leadtrack-head, .ofr-landscaping .leadtrack-row { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 10px 14px; }
+.ofr-landscaping .leadtrack-head { background: #f8fbff; border-bottom: 1px solid var(--line); color: #8b97ab; font-size: 10px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.ofr-landscaping .leadtrack-row { border-bottom: 1px solid rgba(17,26,39,.06); }
+.ofr-landscaping .leadtrack-row:last-child { border-bottom: 0; }
+.ofr-landscaping .leadtrack-row b { display: block; min-width: 0; color: var(--ink); font-size: 13px; font-weight: 900; }
+.ofr-landscaping .leadtrack-row b small { display: block; margin-top: 2px; color: #7b889d; font-size: 11px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-landscaping .leadtrack-row > span { min-width: 0; color: #46536a; font-size: 12.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ofr-landscaping .leadtrack-pill { justify-self: end; padding: 4px 9px; border-radius: 99px; font-size: 10.5px; font-weight: 900; white-space: nowrap; }
+.ofr-landscaping .leadtrack-pill--new { background: #e6f0ff; color: #1a4fbf; }
+.ofr-landscaping .leadtrack-pill--contacted { background: #fff3dc; color: #8a5800; }
+.ofr-landscaping .leadtrack-pill--quoted { background: #efe8ff; color: #5b34c4; }
+.ofr-landscaping .leadtrack-pill--won { background: #e3f6ea; color: #16714a; }
+.ofr-landscaping .leadtrack-caption { margin: 0; color: #8b97ab; font-size: 11.5px; font-weight: 700; text-align: center; }
+
+@keyframes leadtrack-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+
+@media (max-width: 1050px) {
+  .ofr-landscaping .leadtrack-section { grid-template-columns: 1fr; gap: 34px; }
+  .ofr-landscaping .leadtrack-copy > p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .ofr-landscaping .leadtrack-panel { padding: 12px; border-radius: 20px; }
+  .ofr-landscaping .leadtrack-statrow { grid-template-columns: 1fr 1fr; }
+  .ofr-landscaping .leadtrack-statrow > :last-child { grid-column: 1 / -1; }
+  .ofr-landscaping .leadtrack-head > span:nth-child(2), .ofr-landscaping .leadtrack-row > span:not(.leadtrack-pill) { display: none; }
+  .ofr-landscaping .leadtrack-head, .ofr-landscaping .leadtrack-row { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ofr-landscaping .leadtrack-live::before { animation: none; }
+}

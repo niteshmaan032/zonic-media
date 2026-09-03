@@ -84,22 +84,19 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/seo-services-for-car-towing";
 
 export const metadata: Metadata = {
-  title: "SEO for Towing & Roadside Assistance Companies",
+  title: { absolute: "Towing SEO Company | SEO for Towing & Roadside Companies" },
   description:
-    "SEO for towing companies that wins the map pack — rank for 'tow truck near me' and turn stranded drivers into dispatched calls. Free audit.",
+    "Towing SEO company for tow truck and roadside assistance businesses: emergency-search Map Pack rankings, Google Business Profile.",
   keywords: [
-    "SEO for towing companies",
-    "towing company SEO",
-    "local SEO for tow trucks",
-    "tow truck near me",
-    "emergency towing",
-    "roadside assistance",
-    "24 hour towing",
-    "cheap towing near me",
-    "Google Business Profile for towing",
+    "towing seo",
+    "seo for towing companies",
+    "towing company seo",
+    "tow truck seo",
+    "roadside assistance seo",
+    "towing services near me",
+    "towing company marketing",
+    "how to advertise a towing business",
     "towing lead generation",
-    "tow truck company SEO",
-    "Google Maps ranking for towing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -229,6 +226,11 @@ const TowingSeoFaqs = [
     question: "Why Choose Zonic Media over Another Towing SEO Company?",
     answer:
       "We specialize in local, call-driven home and roadside services like towing, and everything is done in-house by the team you actually talk to. You get a dedicated strategist, monthly reporting tied to calls and dispatched jobs, and work that is built to compound month after month — not churn.",
+  },
+  {
+    question: "Why does the Google Map Pack matter more than the website for towing companies?",
+    answer:
+      "Because a stranded driver searches from a phone and calls straight from the map result without opening a website. The profile's category, hours, review recency and the distance to the searcher decide who gets the call. Zonic Media optimizes the profile first, adds service-area coverage for every highway corridor and town you serve, and tracks calls from the profile so you can see the searches that dispatch trucks.",
   },
 ];
 

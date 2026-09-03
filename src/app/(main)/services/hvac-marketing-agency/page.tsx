@@ -26,20 +26,20 @@ import {
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
 
 export const metadata: Metadata = {
-  title: "HVAC Marketing Agency for Contractors",
+  title: { absolute: "HVAC Marketing Agency USA | Local SEO, Google Ads & Leads" },
   description:
-    "HVAC marketing agency for HVAC contractors. Google Business Profile, Google Maps ranking, ads, maintenance memberships, websites, and reviews. Free audit.",
+    "HVAC marketing agency for contractors across the USA: Map Pack rankings, Google Business Profile, Google Ads, maintenance memberships and reviews. Free audit.",
   keywords: [
-    "HVAC marketing agency",
-    "marketing for HVAC contractors",
-    "HVAC SEO services",
-    "HVAC lead generation",
-    "local SEO for HVAC companies",
-    "Google Maps ranking for HVAC contractors",
-    "Google Business Profile for HVAC companies",
-    "Google Ads for HVAC companies",
-    "HVAC maintenance membership marketing",
-    "HVAC website design",
+    "hvac marketing agency",
+    "hvac marketing agency usa",
+    "hvac marketing agency near me",
+    "best hvac marketing companies",
+    "hvac advertising agency",
+    "hvac digital marketing agency",
+    "hvac marketing ideas",
+    "marketing ideas for hvac companies",
+    "hvac local marketing services",
+    "hvac seo",
   ],
   alternates: { canonical: "/services/hvac-marketing-agency" },
 };
@@ -221,12 +221,17 @@ const faqs = [
     q: "What states do you serve?",
     a: "We work with HVAC contractors nationally. The states with our deepest presence and dedicated marketing pages are Florida, Texas, California, Arizona, Illinois, Georgia, and North Carolina. Each state has unique HVAC market dynamics — 115°F summers in Phoenix, year-round cooling and hurricane recovery in Florida, polar vortex furnace emergencies in Illinois — and the marketing strategy adapts to those dynamics. We also serve HVAC contractors in other states; the seven listed are simply the ones with dedicated landing pages.",
   },
+  {
+    q: "What makes an HVAC marketing agency different from a general marketing agency?",
+    a:
+      "Seasonality and emergency intent. HVAC demand spikes with the first heat wave and the first freeze, and most of it is a homeowner searching from a phone for whoever can come today. An HVAC-specialized agency builds the Map Pack and Local Services Ads presence that captures emergency calls, prepares seasonal campaigns before the spike, and markets maintenance memberships to smooth the off-season. Zonic Media runs that playbook with state-specific programs for the largest HVAC markets.",
+  },
 ];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  url: "https://zonicllc.com/services/hvac-marketing-agency",
+  url: "https://www.zonicllc.com/services/hvac-marketing-agency",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,
@@ -242,7 +247,7 @@ const localBusinessJsonLd = buildLocalBusinessJsonLd({
 const serviceJsonLd = buildServiceJsonLd({
   name: "HVAC Marketing Agency",
   description:
-    "HVAC marketing agency for HVAC contractors. Google Business Profile, Google Maps ranking, ads, maintenance memberships, websites, and reviews. Free audit.",
+    "HVAC marketing agency for contractors across the USA: Map Pack rankings, Google Business Profile, Google Ads, maintenance memberships and reviews. Free audit.",
   pageUrl: "/services/hvac-marketing-agency",
   serviceType: "HVAC Marketing",
   areaServed: "United States",

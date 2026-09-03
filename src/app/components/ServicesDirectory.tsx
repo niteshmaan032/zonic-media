@@ -24,6 +24,7 @@ const GROUPS: DirGroup[] = [
     heading: "Core Services",
     links: [
       { href: "/services/seo-services", label: "SEO Services" },
+      { href: "/services/ai-seo-services", label: "AI SEO (AEO & GEO)" },
       { href: "/services/web-design", label: "Web Design & Development" },
       { href: "/services/google-ads", label: "Google Ads Management" },
       { href: "/services/local-seo-for-home-services", label: "Local SEO for Home Services" },

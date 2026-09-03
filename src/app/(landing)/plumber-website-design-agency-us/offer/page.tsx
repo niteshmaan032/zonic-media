@@ -107,24 +107,26 @@ const EXTRA_SERVICES = [
 ];
 
 export const metadata: Metadata = {
-  title: "Free Website for Plumbing Companies",
+  title: { absolute: "Free Plumbing Website for Plumbing Companies | Zonic Media" },
   description:
-    "Start a qualifying Zonic plumbing marketing plan and get a conversion-focused plumbing website with no upfront development fee.",
+    "Free plumbing website, no upfront development fee, when you start a qualifying Zonic marketing plan. Emergency-call layouts and city pages that book jobs.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
+    "free plumber website",
     "free plumbing website",
+    "plumbing website design",
+    "plumbing company website",
     "free website for plumbers",
-    "free plumbing website offer",
-    "plumbing website no upfront cost",
-    "free website for plumbing companies",
-    "plumbing lead generation website offer",
+    "plumbing marketing plan",
+    "plumber web design agency",
+    "plumbing websites that book jobs",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Free Website for Plumbing Companies | Zonic Media",
     description:
-      "Start a qualifying Zonic plumbing marketing plan and get a conversion-focused plumbing website with no upfront development fee.",
+      "Free plumbing website, no upfront development fee, when you start a qualifying Zonic marketing plan. Emergency-call layouts and city pages that book jobs.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -420,6 +422,110 @@ export default function PlumbingOfferPage() {
           </div>
         </section>
 
+        {/* ───────────── Lead tracking ───────────── */}
+        <section id="lead-tracking" className="section leadtrack-section">
+          <div className="leadtrack-copy">
+            <span className="section-kicker">Lead tracking system</span>
+            <h2>Every plumbing lead in one place.</h2>
+            <p>
+              Calls, forms and chats arrive in one dashboard with the source
+              attached, so you can see which plumbing jobs your marketing produced
+              instead of guessing where the phone calls came from.
+            </p>
+            <ul className="leadtrack-points">
+              <li>
+                <Icon name="check" /> Every call, form and chat captured
+              </li>
+              <li>
+                <Icon name="check" /> The source recorded against each lead
+              </li>
+              <li>
+                <Icon name="check" /> Status tracked from new to won
+              </li>
+            </ul>
+            <a className="section-button" href="#contact">
+              <span>See The Tracking Setup</span>
+              <i>
+                <Icon name="arrow-up-right" />
+              </i>
+            </a>
+          </div>
+
+          <div className="leadtrack-panel">
+            <div className="leadtrack-statrow">
+              <div className="leadtrack-stat leadtrack-stat--accent">
+                <span>Leads</span>
+                <strong>128</strong>
+                <small>
+                  <Icon name="arrow-up-right" /> 24%
+                </small>
+              </div>
+              <div className="leadtrack-stat">
+                <span>Avg response</span>
+                <strong>3m 12s</strong>
+              </div>
+              <div className="leadtrack-stat">
+                <span>Booked</span>
+                <strong>41</strong>
+              </div>
+            </div>
+
+            <div className="leadtrack-board">
+              <header>
+                <div className="leadtrack-tabs">
+                  <b>All</b>
+                  <i>New</i>
+                  <i>Won</i>
+                </div>
+                <span className="leadtrack-live">Live</span>
+              </header>
+              <div className="leadtrack-head" aria-hidden="true">
+                <span>Lead</span>
+                <span>Source</span>
+                <span>Status</span>
+              </div>
+            <div className="leadtrack-row">
+              <b>
+                Marcus D.
+                <small>Emergency Plumbing</small>
+              </b>
+              <span>Google Ads</span>
+              <span className="leadtrack-pill leadtrack-pill--new">New</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Priya S.
+                <small>Drain Cleaning</small>
+              </b>
+              <span>Google Business Profile</span>
+              <span className="leadtrack-pill leadtrack-pill--contacted">Contacted</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Dana R.
+                <small>Water Heaters</small>
+              </b>
+              <span>Organic search</span>
+              <span className="leadtrack-pill leadtrack-pill--quoted">Quoted</span>
+            </div>
+            <div className="leadtrack-row">
+              <b>
+                Elena V.
+                <small>Sewer Lines</small>
+              </b>
+              <span>Call extension</span>
+              <span className="leadtrack-pill leadtrack-pill--won">Won</span>
+            </div>
+            </div>
+
+            <p className="leadtrack-caption">
+              Example dashboard. Yours is set up with your own services and lead
+              sources during onboarding.
+            </p>
+          </div>
+        </section>
+
+
         {/* ───────────── Services ───────────── */}
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
@@ -593,13 +699,17 @@ export default function PlumbingOfferPage() {
                 <li>
                   <Icon name="check" /> Plumbing website included
                 </li>
-              </ul>
+              
+                <li>
+                  <Icon name="check" /> Lead tracking system
+                </li>
+</ul>
               <a href="#contact">
                 Choose Growth <Icon name="arrow-up-right" />
               </a>
             </article>
 
-            <article className="pricing-card">
+            <article className="pricing-card pricing-card--verdant">
               <div className="pricing-card-head">
                 <span>03</span>
                 <small>MARKET EXPANSION</small>
@@ -987,7 +1097,7 @@ export default function PlumbingOfferPage() {
           </small>
           <p>
             Zonic Media LLC · 8 The Green, STE B, Dover, DE 19901 ·{" "}
-            <a href="https://zonicllc.com">zonicllc.com</a>
+            <a href="https://www.zonicllc.com">zonicllc.com</a>
           </p>
           <span>
             © 2026 Zonic Media LLC ·{" "}
@@ -998,6 +1108,8 @@ export default function PlumbingOfferPage() {
           </span>
         </div>
       </footer>
+
+      <GhlChatWidget />
 
       <OfferPopupModal
         idPrefix="pwd"
@@ -1017,8 +1129,6 @@ export default function PlumbingOfferPage() {
           "Mix of the above",
         ]}
       />
-
-      <GhlChatWidget />
     </div>
   );
 }

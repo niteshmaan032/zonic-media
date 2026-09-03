@@ -109,6 +109,11 @@ const GmbVerifiFaqs = [
     answer:
       "Zonic Media has verified and restored 1500+ Google Business Profile listings with a 95% success rate and a 48-hour average resolution time. The team handles every failure type — postcard, video, phone, email, verification loops, and revoked verifications — and starts with a free audit so you know the exact path before paying anything. Independent client reviews are published on Trustpilot and Clutch.",
   },
+  {
+    question: "Why does Google Business Profile video verification keep failing in 2026?",
+    answer:
+      "Video is now Google's default verification method, and most failures come from the recording itself: it does not show the street signage, the business name on permanent signage, the interior workspace, or proof of control such as unlocking the door or handling tools and inventory. Service-area businesses often fail because they film a home office without showing branded vehicles or equipment. We tell you exactly what to film for your business type, review the clip before you submit it, and escalate through support when Google's automated review rejects a valid video.",
+  },
 ];
 
 const GmbVeriFormHead = {
@@ -125,26 +130,20 @@ const GmbVeriFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "GMB Verification Help — Video & Instant Verification Fixes",
-  },
+  title: { absolute: "Google Business Profile Verification Help | Get Verified" },
   description:
-    "Failed video verification? Postcard never arrived? We get Google Business Profiles verified when the standard process fails. Talk to a specialist today.",
+    "Google Business Profile verification help for failed video, postcard, phone and email verification.",
   keywords: [
-    "Google Business Profile verification help",
-    "GMB verification",
-    "GBP verification",
-    "verify Google Business Profile",
-    "video verification failed",
-    "GBP verification loop",
-    "postcard verification failed",
-    "Google Business Profile not verified",
-    "business profile verification service",
-    "GMB verification service",
-    "Google Business Profile verification stuck",
-    "service area business verification",
-    "get verified on Google Maps",
-    "best GMB verification service",
+    "google business profile verification help",
+    "google business profile verification support",
+    "google business profile verification video",
+    "google business profile verification issues",
+    "google business verification help",
+    "verify business profile google",
+    "google business profile get verified",
+    "how long does google my business verification take",
+    "google business profile verification process",
+    "gmb verification help",
   ],
   alternates: { canonical: "/services/gmb-verification-help" },
   openGraph: {
@@ -289,7 +288,7 @@ function page() {
                 src="/images/gmb-reinst/trust-img-1.svg"
                 width={20}
                 height={20}
-                alt="google logo"
+                alt="Google logo"
               ></Image>{" "}
               Trusted Google Specialists
             </p>
@@ -299,7 +298,7 @@ function page() {
                 src="/images/gmb-reinst/trust-img-3.svg"
                 width={20}
                 height={20}
-                alt="rating star"
+                alt="Five-star rating icon"
               ></Image>{" "}
               5 Client Satisfaction Rating
             </p>
@@ -308,7 +307,7 @@ function page() {
                 src="/images/gmb-reinst/trust-img-4.svg"
                 width={20}
                 height={20}
-                alt="verified batch"
+                alt="Verified Google Business Profile badge"
               ></Image>{" "}
               Verified Business Profile Listing
             </p>
@@ -317,7 +316,7 @@ function page() {
                 src="/images/gmb-reinst/trust-img-2.svg"
                 width={20}
                 height={20}
-                alt="shield logo"
+                alt="Trust and security shield icon"
               ></Image>{" "}
               1500+ Listings Successfully Restored
             </p>
@@ -644,7 +643,7 @@ function page() {
                     src="/images/gmb-reinst/gmb-choose-1.svg"
                     width={30}
                     height={30}
-                    alt="group"
+                    alt="Business owners whose Google Business Profile was verified by Zonic Media"
                   ></Image>
                 </p>
 
@@ -664,7 +663,7 @@ function page() {
                     src="/images/gmb-reinst/gmb-choose-2.svg"
                     width={30}
                     height={30}
-                    alt="group"
+                    alt="Business owners whose Google Business Profile was verified by Zonic Media"
                   ></Image>
                 </p>
 
@@ -688,7 +687,7 @@ function page() {
                     src="/images/gmb-reinst/gmb-choose-3.svg"
                     width={30}
                     height={30}
-                    alt="group"
+                    alt="Business owners whose Google Business Profile was verified by Zonic Media"
                   ></Image>
                 </p>
 
@@ -708,7 +707,7 @@ function page() {
                     src="/images/gmb-reinst/gmb-choose-4.svg"
                     width={30}
                     height={30}
-                    alt="group"
+                    alt="Business owners whose Google Business Profile was verified by Zonic Media"
                   ></Image>
                 </p>
 
@@ -1004,7 +1003,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  "url": "https://zonicllc.com/services/gmb-verification-help",
+                  "url": "https://www.zonicllc.com/services/gmb-verification-help",
                   mainEntity: GmbVerifiFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

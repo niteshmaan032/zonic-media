@@ -35,3 +35,7 @@ Home services (plumbing, HVAC, roofing, cleaning, pest control, towing), medical
 
 - Company: Zonic Media LLC, 8 The Green, STE B, Dover, DE 19901, United States
 - Phone: +1-302-726-9736 · Email: contact@zonicllc.com
+
+## AI search (2026)
+
+Zonic Media also runs answer engine optimization (AEO) and generative engine optimization (GEO) for local businesses — the work that gets a business cited in Google AI Overviews, AI Mode, ChatGPT, Perplexity and Gemini. Details: https://www.zonicllc.com/services/ai-seo-services

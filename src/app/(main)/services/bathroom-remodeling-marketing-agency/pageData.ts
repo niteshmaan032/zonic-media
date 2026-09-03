@@ -2,20 +2,18 @@ import { buildIndustryMarketingPage } from "@/data/industryMarketing/template";
 
 export const bathroomRemodelingMarketing = buildIndustryMarketingPage({
   slug: "bathroom-remodeling-marketing-agency",
-  title: "Bathroom Remodeling Marketing Agency | SEO & Ads | Zonic Media",
+  title: "Bathroom Remodeling Marketing Agency | SEO, Ads & Leads",
   description:
-    "Bathroom remodeling marketing agency for US remodelers. Local SEO, Google Map Pack ranking, Google Ads & exclusive bath remodel leads. Free audit.",
+    "Bathroom remodeling marketing agency: Google Business Profile, local SEO, Google Ads and galleries that turn remodel research into design consultations.",
   keywords: [
     "bathroom remodeling marketing agency",
-    "bathroom remodeler marketing",
-    "marketing for bathroom remodelers",
+    "home remodeling marketing agency",
     "bathroom remodeling leads",
-    "bath remodel lead generation",
-    "bathroom remodeling SEO",
-    "local SEO for bathroom remodelers",
-    "Google Ads for bathroom remodelers",
-    "walk in shower marketing",
-    "bathroom renovation marketing",
+    "remodeling contractor marketing",
+    "bathroom remodeling seo",
+    "bathroom remodeling google ads",
+    "remodeler marketing agency",
+    "home improvement marketing agency",
   ],
 
   eyebrow: "Bathroom Remodeling Marketing Agency",
