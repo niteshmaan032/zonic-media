@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my interior painting pages",
     kicker: "INTERIOR PAINTING",
     siteHeading: "Interior Painting—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/interior-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my exterior painting pages",
     kicker: "EXTERIOR PAINTING",
     siteHeading: "Exterior Painting—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/exterior-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my cabinet painting pages",
     kicker: "CABINET PAINTING",
     siteHeading: "Cabinet Painting—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/cabinet-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial painting pages",
     kicker: "COMMERCIAL PAINTING",
     siteHeading: "Commercial Painting—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/commercial-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my deck & fence staining pages",
     kicker: "DECK & FENCE STAINING",
     siteHeading: "Deck & Fence Staining—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/deck-amp-fence-staining.webp",
     photoAlt: "Painting Contractor service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my color consultation pages",
     kicker: "COLOR CONSULTATION",
     siteHeading: "Color Consultation—done right.",
-    photo: "/images/free-website/free-painting-contractor/hero.webp",
+    photo: "/images/free-website/free-painting-contractor/color-consultation.webp",
     photoAlt: "Painting Contractor service image",
   },
 ];

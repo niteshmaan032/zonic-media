@@ -94,6 +94,12 @@ export const metadata: Metadata = {
     "hvac seo keywords",
     "local seo for hvac",
     "hvac seo near me",
+    "seo company for hvac",
+    "hvac search engine optimization",
+    "hvac internet marketing",
+    "google business profile for hvac",
+    "ai search optimization for hvac",
+    "hvac seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -227,7 +233,7 @@ const HvacSeoFaqs = [
   {
     question: "How much does HVAC SEO cost in 2026?",
     answer:
-      "HVAC SEO for a single-location contractor typically runs $750 to $2,500 a month in the US, more in large metros with several established competitors. It should include Google Business Profile management, a review program, seasonal content before the summer and winter spikes, city pages for the service area, and reporting in calls and booked jobs. Zonic Media quotes a flat monthly fee after a free audit of your current Map Pack coverage.",
+      "HVAC SEO for a single-location contractor typically runs $750 to $2,500 a month in the US, more in large metros with several established competitors. It should include Google Business Profile management, a review program, seasonal content before the summer and winter spikes, city pages for the service area, and reporting in calls and booked jobs. Zonic Media quotes a flat monthly fee after a free audit of your current Map Pack coverage. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

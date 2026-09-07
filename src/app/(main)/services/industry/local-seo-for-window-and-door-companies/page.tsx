@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "impact windows seo",
     "window company marketing",
     "local seo for contractors",
+    "window and door companies seo services",
+    "window and door companies seo agency",
+    "seo company for window and door companies",
+    "window and door companies search engine optimization",
+    "window and door companies internet marketing",
+    "google business profile for window and door companies",
+    "ai search optimization for window and door companies",
+    "window and door companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -189,7 +197,7 @@ const WindowDoorSeoFaqs = [
   {
     question: "What searches should a window and door company rank for?",
     answer:
-      "Replacement windows plus your city, window installation near me, specific product terms such as impact windows, vinyl windows or entry doors, and cost questions like window replacement cost. Pages for each product line and a page for each city you serve, backed by a Google Business Profile in the Window Installation Service category, capture those searches. Zonic Media builds that structure and tracks estimate requests by product.",
+      "Replacement windows plus your city, window installation near me, specific product terms such as impact windows, vinyl windows or entry doors, and cost questions like window replacement cost. Pages for each product line and a page for each city you serve, backed by a Google Business Profile in the Window Installation Service category, capture those searches. Zonic Media builds that structure and tracks estimate requests by product. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

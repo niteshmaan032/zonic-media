@@ -90,6 +90,11 @@ export const metadata: Metadata = {
     "best seo keywords for real estate agents",
     "real estate seo 2026",
     "seo for realtors",
+    "seo company for real estate",
+    "real estate search engine optimization",
+    "real estate internet marketing",
+    "google business profile for real estate",
+    "ai search optimization for real estate",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -223,7 +228,7 @@ const RealEstateSeoFaqs = [
   {
     question: "What are the best SEO keywords for real estate agents in 2026?",
     answer:
-      "The keywords that win are neighborhood and intent based, not generic: homes for sale in a specific neighborhood, best realtor in a town, sell my house fast in a city, and first-time buyer questions for your market. Generic terms like real estate agent are dominated by portals. Zonic Media maps the neighborhoods and price points you actually sell in, builds a page for each, and pairs them with a practitioner Google Business Profile so both the Map Pack and organic results show you.",
+      "The keywords that win are neighborhood and intent based, not generic: homes for sale in a specific neighborhood, best realtor in a town, sell my house fast in a city, and first-time buyer questions for your market. Generic terms like real estate agent are dominated by portals. Zonic Media maps the neighborhoods and price points you actually sell in, builds a page for each, and pairs them with a practitioner Google Business Profile so both the Map Pack and organic results show you. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

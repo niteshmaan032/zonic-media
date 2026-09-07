@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my full kitchen remodels pages",
     kicker: "FULL KITCHEN REMODELS",
     siteHeading: "Full Kitchen Remodels—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/full-kitchen-remodels.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my custom cabinetry pages",
     kicker: "CUSTOM CABINETRY",
     siteHeading: "Custom Cabinetry—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/custom-cabinetry.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my countertops pages",
     kicker: "COUNTERTOPS",
     siteHeading: "Countertops—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/countertops.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my kitchen islands pages",
     kicker: "KITCHEN ISLANDS",
     siteHeading: "Kitchen Islands—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/kitchen-islands.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my lighting & layout pages",
     kicker: "LIGHTING & LAYOUT",
     siteHeading: "Lighting & Layout—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/lighting-amp-layout.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my design-build pages",
     kicker: "DESIGN-BUILD",
     siteHeading: "Design-Build—done right.",
-    photo: "/images/free-website/free-kitchen-remodeling/hero.webp",
+    photo: "/images/free-website/free-kitchen-remodeling/design-build.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
 ];

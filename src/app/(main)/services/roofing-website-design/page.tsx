@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "roofing company website design",
     "roofing website design ideas",
     "roofing website template",
+    "roofing web design company",
+    "roofing website developer",
+    "website for roofing business",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

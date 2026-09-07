@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my local moving pages",
     kicker: "LOCAL MOVING",
     siteHeading: "Local Moving—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/local-moving.webp",
     photoAlt: "Moving Company service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my long-distance moving pages",
     kicker: "LONG-DISTANCE MOVING",
     siteHeading: "Long-Distance Moving—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/long-distance-moving.webp",
     photoAlt: "Moving Company service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial moving pages",
     kicker: "COMMERCIAL MOVING",
     siteHeading: "Commercial Moving—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/commercial-moving.webp",
     photoAlt: "Moving Company service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my packing services pages",
     kicker: "PACKING SERVICES",
     siteHeading: "Packing Services—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/packing-services.webp",
     photoAlt: "Moving Company service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my storage pages",
     kicker: "STORAGE",
     siteHeading: "Storage—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/storage.webp",
     photoAlt: "Moving Company service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my specialty moving pages",
     kicker: "SPECIALTY MOVING",
     siteHeading: "Specialty Moving—done right.",
-    photo: "/images/free-website/free-moving-company/hero.webp",
+    photo: "/images/free-website/free-moving-company/specialty-moving.webp",
     photoAlt: "Moving Company service image",
   },
 ];

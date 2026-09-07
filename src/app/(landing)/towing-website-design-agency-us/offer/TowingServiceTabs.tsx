@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my emergency towing pages",
     kicker: "EMERGENCY TOWING",
     siteHeading: "Emergency Towing—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/emergency-towing.webp",
     photoAlt: "Towing service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my roadside assistance pages",
     kicker: "ROADSIDE ASSISTANCE",
     siteHeading: "Roadside Assistance—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/roadside-assistance.webp",
     photoAlt: "Towing service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my accident recovery pages",
     kicker: "ACCIDENT RECOVERY",
     siteHeading: "Accident Recovery—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/accident-recovery.webp",
     photoAlt: "Towing service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my flatbed towing pages",
     kicker: "FLATBED TOWING",
     siteHeading: "Flatbed Towing—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/flatbed-towing.webp",
     photoAlt: "Towing service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my heavy-duty towing pages",
     kicker: "HEAVY-DUTY TOWING",
     siteHeading: "Heavy-Duty Towing—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/heavy-duty-towing.webp",
     photoAlt: "Towing service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my fleet accounts pages",
     kicker: "FLEET ACCOUNTS",
     siteHeading: "Fleet Accounts—done right.",
-    photo: "/images/free-website/free-towing/hero.webp",
+    photo: "/images/free-website/free-towing/fleet-accounts.webp",
     photoAlt: "Towing service image",
   },
 ];

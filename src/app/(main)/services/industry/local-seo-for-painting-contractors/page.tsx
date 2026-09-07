@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "seo for construction companies",
     "painting company marketing",
     "local seo for contractors",
+    "painting contractors seo services",
+    "painting contractors seo agency",
+    "seo company for painting contractors",
+    "painting contractors search engine optimization",
+    "painting contractors internet marketing",
+    "google business profile for painting contractors",
+    "ai search optimization for painting contractors",
+    "painting contractors seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const PaintingSeoFaqs = [
   {
     question: "How do painting contractors stand out in a crowded Google Map Pack?",
     answer:
-      "With reviews that name the town and the job, photos of finished rooms and exteriors added to the profile every week, a primary category of Painter with the right secondary categories, and service pages for interior, exterior, cabinet and commercial painting. Painters with the most recent reviews and photos usually win. Zonic Media runs the review and photo program and tracks calls from the profile.",
+      "With reviews that name the town and the job, photos of finished rooms and exteriors added to the profile every week, a primary category of Painter with the right secondary categories, and service pages for interior, exterior, cabinet and commercial painting. Painters with the most recent reviews and photos usually win. Zonic Media runs the review and photo program and tracks calls from the profile. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

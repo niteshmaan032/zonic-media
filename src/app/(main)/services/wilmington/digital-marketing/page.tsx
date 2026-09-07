@@ -47,6 +47,11 @@ export const metadata: Metadata = {
     "google ads wilmington de",
     "local seo wilmington",
     "digital marketing agency near me",
+    "internet marketing wilmington de",
+    "online marketing wilmington",
+    "marketing company wilmington de",
+    "advertising agency wilmington de",
+    "wilmington de seo company",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "construction website design services",
     "website builder for contractors",
     "best general contracting website",
+    "general contractor web design company",
+    "general contractor website developer",
+    "website for general contractor business",
+    "general contractor web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 import Icon, { type IconName } from "./Icon";
 
@@ -17,6 +18,9 @@ type Niche = {
   miniName: string;
   kicker: string;
   siteHeading: string;
+  /** Pulled from that niche's own offer lander so both pages show one image. */
+  photo: string;
+  photoAlt: string;
 };
 
 const NICHES: Niche[] = [
@@ -37,6 +41,8 @@ const NICHES: Niche[] = [
     miniName: "Roofing",
     kicker: "LOCAL ROOFING EXPERTS",
     siteHeading: "A stronger roof starts here.",
+    photo: "/images/free-website/free-roof/roof-repair.webp",
+    photoAlt: "Roof repair work on a residential roof",
   },
   {
     id: "plumbing",
@@ -55,6 +61,8 @@ const NICHES: Niche[] = [
     miniName: "Plumbing",
     kicker: "24/7 PLUMBING RESPONSE",
     siteHeading: "Fast help for every leak.",
+    photo: "/images/free-website/free-plumbing/emergency-plumbing.webp",
+    photoAlt: "Plumber handling an emergency plumbing call",
   },
   {
     id: "hvac",
@@ -73,6 +81,8 @@ const NICHES: Niche[] = [
     miniName: "HVAC",
     kicker: "HEATING & COOLING",
     siteHeading: "Comfort you can count on.",
+    photo: "/images/free-website/free-hvac/ac-repair.webp",
+    photoAlt: "Technician servicing an air conditioning unit",
   },
   {
     id: "cleaning",
@@ -91,6 +101,8 @@ const NICHES: Niche[] = [
     miniName: "Commercial",
     kicker: "COMMERCIAL CLEANING",
     siteHeading: "A cleaner workplace, every day.",
+    photo: "/images/free-website/free-cleaning-company/hero.webp",
+    photoAlt: "Commercial cleaning team at work",
   },
   {
     id: "garage",
@@ -109,6 +121,8 @@ const NICHES: Niche[] = [
     miniName: "Garage",
     kicker: "GARAGE DOOR PROS",
     siteHeading: "Open the door to better service.",
+    photo: "/images/free-website/free-garage-door/emergency-repair.webp",
+    photoAlt: "Technician repairing a garage door",
   },
   {
     id: "landscaping",
@@ -127,6 +141,8 @@ const NICHES: Niche[] = [
     miniName: "Landscaping",
     kicker: "LANDSCAPE DESIGN",
     siteHeading: "Outdoor spaces made remarkable.",
+    photo: "/images/free-website/free-landscaping/landscape-design.webp",
+    photoAlt: "Designed landscaping in a residential yard",
   },
 ];
 
@@ -236,13 +252,16 @@ export default function IndustryTabs() {
                       ★★★★★ <small>Trusted by local customers</small>
                     </div>
                   </div>
-                  <div className="niche-photo">
-                    <div className="niche-photo-mark">
-                      <Icon name={niche.icon} />
-                    </div>
-                    <span>PROJECT IMAGE</span>
-                    <i className="niche-shape niche-shape--one" />
-                    <i className="niche-shape niche-shape--two" />
+                  <div className="niche-photo fwd-photo">
+                    <Image
+                      src={niche.photo}
+                      alt={niche.photoAlt}
+                      fill
+                      sizes="(max-width: 760px) 45vw, 30vw"
+                    />
+                    <span>
+                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                    </span>
                   </div>
                 </div>
               </div>
@@ -256,9 +275,10 @@ export default function IndustryTabs() {
                   </div>
                   <span>{niche.kicker}</span>
                   <h5>{niche.siteHeading}</h5>
-                  <div className="niche-mobile-image">
-                    <Icon name={niche.icon} />
-                  </div>
+                  <div
+                    className="niche-mobile-image fwd-mobile-image"
+                    style={{ backgroundImage: `url(${niche.photo})` }}
+                  />
                   <div className="niche-mobile-button">Request service</div>
                 </div>
               </div>

@@ -105,6 +105,14 @@ export const metadata: Metadata = {
     "local seo services for plumbers",
     "ai seo for plumbers",
     "plumbing seo",
+    "plumber seo services",
+    "plumber seo agency",
+    "seo company for plumber",
+    "plumber search engine optimization",
+    "plumber internet marketing",
+    "google business profile for plumber",
+    "ai search optimization for plumber",
+    "plumber seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -238,7 +246,7 @@ const PlumberSeoFaqs = [
   {
     question: "What are the most valuable SEO keywords for plumbers?",
     answer:
-      "Emergency and service-specific terms in each city you serve: emergency plumber near me, water heater replacement in a city, drain cleaning, sewer line repair, and leak detection. Generic terms like plumber convert poorly compared with the job-specific searches. Zonic Media maps the services and towns that produce your best jobs, builds a page for each, and tracks calls by keyword so you can see which searches pay.",
+      "Emergency and service-specific terms in each city you serve: emergency plumber near me, water heater replacement in a city, drain cleaning, sewer line repair, and leak detection. Generic terms like plumber convert poorly compared with the job-specific searches. Zonic Media maps the services and towns that produce your best jobs, builds a page for each, and tracks calls by keyword so you can see which searches pay. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

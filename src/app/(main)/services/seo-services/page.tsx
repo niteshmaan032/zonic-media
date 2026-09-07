@@ -29,10 +29,14 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/seo-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO Services for Small Business | Affordable SEO Company USA" },
+  title: { absolute: "SEO Services & SEO Company USA | Local, Technical & AI SEO" },
   description:
-    "Affordable SEO services for small businesses from a US SEO company: technical SEO, local SEO, Google Business Profile, content and links.",
+    "SEO services from a US SEO company: technical SEO, local SEO, Google Business Profile, AI search optimization, content and links, reported in calls and revenue.",
   keywords: [
+    "seo services",
+    "seo company",
+    "seo agency",
+    "ai seo services",
     "seo services for small business",
     "affordable seo services for small businesses",
     "best seo companies for small business",
@@ -44,6 +48,12 @@ export const metadata: Metadata = {
     "seo services packages for small business",
     "seo services near me",
     "seo company near me",
+    "seo firm",
+    "seo marketing company",
+    "search engine optimization company",
+    "seo company usa",
+    "search engine optimization services near me",
+    "seo agency usa",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -55,7 +65,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "SEO Services for Small Business | Affordable SEO Company USA",
+    title: "SEO Services & SEO Company USA | Local, Technical & AI SEO",
     description:
       "Full-stack SEO services for small and local businesses — local SEO, GBP, on-page, content and links, reported in calls and revenue.",
     url: PAGE_PATH,
@@ -353,18 +363,18 @@ const data: TseoLandingData = {
         one on the same street. We are headquartered in Dover, Delaware and
         run campaigns in all 50 states, with dedicated market pages for{" "}
         <Link href="/services/delaware/seo" className="tseo-inline-link">
-          Delaware
+          Delaware SEO company
         </Link>
         ,{" "}
         <Link
           href="/services/philadelphia/local-seo"
           className="tseo-inline-link"
         >
-          Philadelphia
+          Philadelphia SEO company
         </Link>{" "}
         and{" "}
         <Link href="/services/nyc/local-seo" className="tseo-inline-link">
-          New York City
+          NYC local SEO
         </Link>
         .
       </>,

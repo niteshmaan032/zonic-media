@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the HVAC website really free?",
     answer:
-      "The upfront HVAC website design and development fee — $2,000 for a standard build — is waived when your company starts an eligible recurring marketing plan at $895/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "The upfront HVAC website design and development fee — $2,000 for a standard build — is waived when your company starts an eligible recurring marketing plan at $197/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
   },
   {
     question: "Which HVAC marketing plans qualify?",

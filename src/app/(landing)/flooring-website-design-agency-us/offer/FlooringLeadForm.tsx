@@ -47,10 +47,10 @@ const SERVICES = [
 ];
 
 const BUDGET_OPTIONS = [
-  { value: "under-895", label: "Under $895 — not ready yet" },
-  { value: "895-1500", label: "$895 – $1,500" },
-  { value: "1500-3000", label: "$1,500 – $3,000" },
-  { value: "3000-plus", label: "$3,000+" },
+  { value: "under-197", label: "Under $197 — not ready yet" },
+  { value: "197-750", label: "$197 – $750" },
+  { value: "750-1500", label: "$750 – $1,500" },
+  { value: "1500-plus", label: "$1,500+" },
 ];
 
 export default function FlooringLeadForm() {
@@ -408,7 +408,7 @@ export default function FlooringLeadForm() {
 
       <p className="form-note">
         Submitting starts a conversation, not a contract. The free build
-        requires a qualifying plan at $895/month on a 6-month term.
+        requires a qualifying plan at $197/month on a 6-month term.
       </p>
 
       <FormLegalLinks />

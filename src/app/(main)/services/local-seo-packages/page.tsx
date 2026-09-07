@@ -6,7 +6,7 @@
  * Targets "local seo packages" (4,400/mo), "local seo package" (1,900/mo),
  * "affordable local seo services" (2,900/mo).
  *
- * Tier prices are the team-drafted $750/$1350/$2000 numbers (from the
+ * Tier prices are the team-drafted $197/$750/$1,500 numbers (from the
  * commented-out pricing block in local-seo-for-home-services), shown as
  * "starting at" with the audit-based quote as the source of truth.
  */
@@ -33,9 +33,9 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/local-seo-packages";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Packages & Pricing | Plans from $750/mo" },
+  title: { absolute: "Local SEO Packages & Pricing | Plans from $197/mo" },
   description:
-    "Local SEO packages with transparent pricing: Starter, Growth and Dominate plans from $750 a month with fixed monthly deliverables. Quoted after a free audit.",
+    "Local SEO packages with transparent pricing: Starter, Growth and Dominate plans from $197 a month with fixed monthly deliverables. Quoted after a free audit.",
   keywords: [
     "local seo packages",
     "local seo packages pricing",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Packages & Pricing | Plans from $750/mo",
+    title: "Local SEO Packages & Pricing | Plans from $197/mo",
     description:
       "Three local SEO packages with concrete monthly deliverables. Flat-scope pricing quoted after a free audit.",
     url: PAGE_PATH,
@@ -93,6 +93,15 @@ const serviceJsonLd = {
     "@type": "BusinessAudience",
     name: "Small businesses, multi-location brands and franchises",
   },
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "USD",
+    lowPrice: "197",
+    highPrice: "1500",
+    offerCount: 3,
+    description:
+      "Starter, Growth and Dominate local SEO packages, starting at $197, $750 and $1,500 per month. Flat scope, month to month, quoted after a free audit.",
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Local SEO Packages",
@@ -117,7 +126,7 @@ const PackagesFaqs = [
   {
     question: "What does a local SEO package cost?",
     answer:
-      "Starter engagements begin around $750 per month; Growth and Dominate scale with competition and location count. Every price is a flat monthly quote issued after a free audit — the audit tells us how contested your market is, and the quote you receive is the price you pay. No surprise invoices, no hourly true-ups.",
+      "Starter engagements begin around $197 per month; Growth and Dominate scale with competition and location count. Every price is a flat monthly quote issued after a free audit — the audit tells us how contested your market is, and the quote you receive is the price you pay. No surprise invoices, no hourly true-ups.",
   },
   {
     question: "Are cheap local SEO packages worth it?",
@@ -224,7 +233,7 @@ const data: TseoLandingData = {
       },
       {
         icon: <FiClock aria-hidden="true" />,
-        num: "$750+",
+        num: "$197+",
         label: "Starter engagements begin per month",
       },
       {
@@ -344,7 +353,7 @@ const data: TseoLandingData = {
         num: "01",
         kicker: "Local Foundation",
         name: "Starter",
-        price: "$750",
+        price: "$197",
         priceNote: "/ month, starting at",
         subtitle:
           "For single-location businesses in lighter markets — get the local foundation right.",
@@ -362,7 +371,7 @@ const data: TseoLandingData = {
         num: "02",
         kicker: "Compounding Growth",
         name: "Growth",
-        price: "$1,350",
+        price: "$750",
         priceNote: "/ month, starting at",
         subtitle:
           "Everything in Starter plus the monthly work that builds rankings you keep.",
@@ -381,7 +390,7 @@ const data: TseoLandingData = {
         num: "03",
         kicker: "Market Expansion",
         name: "Dominate",
-        price: "$2,000",
+        price: "$1,500",
         priceNote: "/ month, starting at",
         subtitle:
           "For multi-location brands and crowded metros like Wilmington, Philly or NYC.",

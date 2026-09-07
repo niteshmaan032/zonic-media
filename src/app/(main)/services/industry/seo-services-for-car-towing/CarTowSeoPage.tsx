@@ -495,8 +495,8 @@ export default function CarTowSeoPage() {
             <Row>
               <Col lg={9} className="car-tow-hero-copy">
                 <h1>
-                  Car Towing SEO Services Built to Turn Urgent Searches into
-                  More Direct Calls.
+                  Towing and Roadside Assistance SEO Services Built to Turn Urgent
+                  Searches into More Direct Calls.
                 </h1>
                 <p className="car-tow-hero-sub-head">
                   Local SEO for tow truck companies, emergency towing services,

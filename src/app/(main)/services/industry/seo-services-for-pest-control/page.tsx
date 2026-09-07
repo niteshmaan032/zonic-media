@@ -98,6 +98,12 @@ export const metadata: Metadata = {
     "seo for pest control companies",
     "pest control marketing",
     "online marketing for pest control services",
+    "seo company for pest control",
+    "pest control search engine optimization",
+    "pest control internet marketing",
+    "google business profile for pest control",
+    "ai search optimization for pest control",
+    "pest control seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -231,7 +237,7 @@ const PestSeoFaqs = [
   {
     question: "How should pest control SEO be structured for different pests?",
     answer:
-      "Every pest is a separate search with separate seasonality. Termite, bed bug, rodent, mosquito and wildlife pages each need their own content, price ranges and treatment explanation, and the Google Business Profile services list should mirror them. Seasonal content published before the spring and fall spikes captures the demand early. Zonic Media builds pest control SEO on that structure and tracks calls by pest and by city.",
+      "Every pest is a separate search with separate seasonality. Termite, bed bug, rodent, mosquito and wildlife pages each need their own content, price ranges and treatment explanation, and the Google Business Profile services list should mirror them. Seasonal content published before the spring and fall spikes captures the demand early. Zonic Media builds pest control SEO on that structure and tracks calls by pest and by city. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

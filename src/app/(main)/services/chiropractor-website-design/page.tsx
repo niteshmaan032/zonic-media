@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     "chiropractic clinic website",
     "chiropractor website examples",
     "chiropractic marketing website",
+    "chiropractor web design company",
+    "chiropractor website developer",
+    "website for chiropractor business",
+    "chiropractor web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

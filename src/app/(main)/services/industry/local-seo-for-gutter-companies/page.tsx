@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "gutter companies near me",
     "gutter company marketing",
     "local seo for contractors",
+    "gutter companies seo services",
+    "gutter companies seo agency",
+    "seo company for gutter companies",
+    "gutter companies search engine optimization",
+    "gutter companies internet marketing",
+    "google business profile for gutter companies",
+    "ai search optimization for gutter companies",
+    "gutter companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const GutterSeoFaqs = [
   {
     question: "Which gutter searches drive the most estimate requests?",
     answer:
-      "Seamless gutters plus your city, gutter installation near me, gutter guards with the brand names you carry, and gutter cleaning in the fall. Each needs its own page, and the Google Business Profile services list should mirror them. Because most gutter jobs come from homeowners comparing two or three estimates, recent reviews with the town named decide who gets the call. Zonic Media builds those pages and runs the review program.",
+      "Seamless gutters plus your city, gutter installation near me, gutter guards with the brand names you carry, and gutter cleaning in the fall. Each needs its own page, and the Google Business Profile services list should mirror them. Because most gutter jobs come from homeowners comparing two or three estimates, recent reviews with the town named decide who gets the call. Zonic Media builds those pages and runs the review program. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

@@ -61,10 +61,21 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: { absolute: "Digital Marketing Agency for Small Business | Zonic Media" },
+  title: { absolute: "Digital Marketing Agency | SEO, AI SEO, Web Design & Ads" },
   description:
-    "Affordable digital marketing agency for small businesses in the USA: local SEO, Google Business Profile, web design and Google Ads. 5.0 on Clutch. Free audit.",
+    "Full-service digital marketing agency and SEO company in the USA: local SEO, AI search optimization, Google Business Profile, web design and Google Ads.",
   keywords: [
+    "digital marketing agency",
+    "marketing agency",
+    "seo agency",
+    "seo company",
+    "digital marketing company",
+    "digital marketing services",
+    "web design company",
+    "google ads agency",
+    "ai marketing agency",
+    "full service digital marketing agency",
+    "digital marketing firm",
     "digital marketing agency for small business",
     "affordable digital marketing agency for small business",
     "best digital marketing company for small business",
@@ -77,6 +88,18 @@ export const metadata: Metadata = {
     "google ads management for small business",
     "how much do digital marketing agencies charge",
     "ai seo agency",
+    "internet marketing agency",
+    "online marketing agency",
+    "internet marketing company",
+    "marketing company for small business",
+    "small business marketing agency",
+    "marketing firm for small business",
+    "advertising agency for small business",
+    "local marketing agency",
+    "lead generation agency",
+    "google marketing agency",
+    "online advertising agency",
+    "digital marketing company usa",
   ],
   alternates: {
     canonical: "/",
@@ -90,7 +113,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Digital Marketing Agency for Small Business | Zonic Media",
+    title: "Digital Marketing Agency | SEO, AI SEO, Web Design & Ads",
     description:
       "Local SEO, Google Business Profile, website design, graphic & logo design, and PPC ads for small and mid-size US businesses.",
     url: "/",
@@ -640,7 +663,7 @@ const faqsLeft: Faq[] = [
   {
     q: "How much do digital marketing agencies charge small businesses in 2026?",
     a:
-      "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $750 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
+      "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $197 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
   },
 ];
 
@@ -1017,20 +1040,20 @@ export default async function Home() {
             <div className="hm-hero-inner">
               <span className="hm-hero-badge">
                 <span className="hm-ping" aria-hidden="true" />
-                Built for small &amp; mid-size US businesses
+                Built for US businesses of every size
               </span>
               <h1 className="hm-hero-h1">
                 Digital Marketing Agency for{" "}
                 <span className="hm-hl">
-                  Small and Mid&#8209;Size
+                  SEO, AI Search, Web Design
                   <svg viewBox="0 0 300 20" aria-hidden="true">
                     <path d="M4 14 C 70 5, 230 3, 296 11" />
                   </svg>
                 </span>{" "}
-                Businesses.
+                and Google Ads.
               </h1>
               <p className="hm-hero-sub">
-                The digital marketing agency near you when it counts — in the
+                The digital marketing and internet marketing agency near you when it counts — in the
                 Map Pack, in search, and in the AI answers customers now trust.
                 Local SEO, Google Business Profile, website design, graphic
                 &amp; logo design, and PPC ads from one team.

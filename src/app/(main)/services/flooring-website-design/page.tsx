@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "flooring store website design",
     "hardwood flooring website design",
     "flooring installation website",
+    "flooring web design company",
+    "flooring website developer",
+    "website for flooring business",
+    "flooring web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "windows and doors company",
     "impact windows website design",
     "window company web design",
+    "window and door web design company",
+    "window and door website developer",
+    "website for window and door business",
+    "window and door web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

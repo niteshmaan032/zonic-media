@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free Lead-Generation Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $895 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $197 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -686,7 +686,7 @@ export default function FreeWebsiteDesignServicePage() {
               <h2>Pick the plan. The website comes with it.</h2>
             </div>
             <p>
-              Any plan at $895/month or above on a 6-month term includes the
+              Any plan at $197/month or above on a 6-month term includes the
               full lead-generation website build at no development fee.
             </p>
           </div>
@@ -699,7 +699,7 @@ export default function FreeWebsiteDesignServicePage() {
               </div>
               <h3>Local Foundation</h3>
               <div className="plan-price">
-                $895 <span>/ month</span>
+                $197 <span>/ month</span>
               </div>
               <p>
                 Build a strong local presence and a website foundation that
@@ -735,7 +735,7 @@ export default function FreeWebsiteDesignServicePage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $1,495 <span>/ month</span>
+                $750 <span>/ month</span>
               </div>
               <p>
                 Combine local visibility with paid search, landing-page
@@ -774,7 +774,7 @@ export default function FreeWebsiteDesignServicePage() {
               </div>
               <h3>Full Market</h3>
               <div className="plan-price">
-                $2,495 <span>/ month</span>
+                $1,500 <span>/ month</span>
               </div>
               <p>
                 Expand across services and locations with a broader organic and
@@ -928,7 +928,7 @@ export default function FreeWebsiteDesignServicePage() {
               <span>
                 <strong>What qualifies you</strong>
                 <small>
-                  Any Zonic marketing plan at $895/month or above — Local
+                  Any Zonic marketing plan at $197/month or above — Local
                   Foundation, Growth, or Full Market — on a six-month minimum
                   term. Advertising spend is billed separately by the platform.
                 {" "}
@@ -1166,7 +1166,7 @@ export default function FreeWebsiteDesignServicePage() {
             <span>Website Launch Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>
-              With a qualifying marketing plan at $895/month or above on a
+              With a qualifying marketing plan at $197/month or above on a
               six-month term.
             </p>
             <a href="#free-design-form">
@@ -1200,7 +1200,7 @@ export default function FreeWebsiteDesignServicePage() {
           <small>
             <strong>OFFER TERMS.</strong> Website development fee, valued at
             $2,000, is waived for new clients who start a qualifying Zonic
-            Media marketing plan at $895 per month or above on a six-month
+            Media marketing plan at $197 per month or above on a six-month
             minimum term. Client owns and registers the domain from the start
             of the engagement. Zonic Media hosts and maintains the website
             during the term; full ownership of the website and hosting

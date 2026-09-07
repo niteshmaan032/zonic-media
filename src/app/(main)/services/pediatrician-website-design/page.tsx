@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     "doctor website design",
     "pediatric websites for parents",
     "healthcare website design",
+    "pediatrician web design company",
+    "pediatrician website developer",
+    "website for pediatrician business",
+    "pediatrician web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

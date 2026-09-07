@@ -43,6 +43,11 @@ export const metadata: Metadata = {
     "is seo worth it for small business",
     "local seo cost",
     "how much does seo cost for a small business",
+    "local seo marketing company",
+    "local search engine marketing company",
+    "local marketing company",
+    "small business marketing agency near me",
+    "local business marketing agency",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -164,7 +169,7 @@ const SmallBizFaqs = [
   {
     question: "What is the average cost of local SEO for a small business in 2026?",
     answer:
-      "Credible local SEO for a single-location business runs from about $500 to $2,000 a month in the US, with the low end covering profile management and reviews and the high end adding content, links and multi-city coverage. Zonic Media's packages start at $750 a month with fixed monthly deliverables, and every plan is quoted after a free audit so the price reflects your market and competition rather than a rate card.",
+      "Credible local SEO for a single-location business runs from about $500 to $2,000 a month in the US, with the low end covering profile management and reviews and the high end adding content, links and multi-city coverage. Zonic Media's packages start at $197 a month with fixed monthly deliverables, and every plan is quoted after a free audit so the price reflects your market and competition rather than a rate card.",
   },
 ];
 

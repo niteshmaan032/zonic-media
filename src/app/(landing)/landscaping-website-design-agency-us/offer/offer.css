@@ -168,7 +168,9 @@ body.ofr-landscaping-menu-is-open {
 .ofr-landscaping .eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
 .ofr-landscaping .eyebrow__pulse { width: 8px; height: 8px; border-radius: 50%; background: #35c879; box-shadow: 0 0 0 5px rgba(53, 200, 121, .13); }
 
-.ofr-landscaping h1 { margin: 22px 0 20px; max-width: 680px; font-size: clamp(46px, 4.55vw, 74px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
+.ofr-landscaping h1 { margin: 22px 0 20px; max-width: 680px; /* "Landscaping Website" is long enough to wrap at the shared 4.55vw, which pushed the
+     hero heading past its three designed lines. Sized to hold three. */
+  font-size: clamp(41px, 4.06vw, 62px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
 .ofr-landscaping .headline-accent { display: block; color: var(--blue); position: relative; }
 .ofr-landscaping .headline-accent svg { display: block; width: 176px; height: 14px; margin: 10px 0 0 6px; fill: none; stroke: var(--yellow); stroke-width: 8; stroke-linecap: round; }
 .ofr-landscaping .hero-lede { max-width: 620px; margin: 24px 0 0; font-size: 18px; line-height: 1.72; color: var(--muted); }
@@ -301,7 +303,7 @@ body.ofr-landscaping-menu-is-open {
 .ofr-landscaping .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .ofr-landscaping .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
 .ofr-landscaping .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
-.ofr-landscaping .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.ofr-landscaping .process-grid .process-card--featured { background: #f97315; color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(194,65,12,.25); }
 .ofr-landscaping .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
 .ofr-landscaping .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
 .ofr-landscaping .process-card--featured .step-number { color: rgba(255,255,255,.16); }

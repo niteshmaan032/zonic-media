@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "remodeling contractor website design",
     "bathroom remodeling experts online",
     "best bathroom remodeling company design",
+    "bathroom remodeling web design company",
+    "bathroom remodeling website developer",
+    "website for bathroom remodeling business",
+    "bathroom remodeling web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

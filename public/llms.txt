@@ -1,11 +1,10 @@
 # Zonic Media
 
-> Last updated: 2026-09-03
-
-> Zonic Media (Zonic Media LLC) is a US digital marketing agency for small and mid-size businesses, headquartered in Dover, Delaware, that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 700+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
+> Zonic Media (Zonic Media LLC) is a full-service US digital marketing agency and SEO company, headquartered in Dover, Delaware, working with businesses of every size, that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 700+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
 
 ## About
 
+- Last updated: 2026-09-07
 - Company: Zonic Media LLC
 - Location: 8 The Green, STE B, Dover, DE 19901, United States
 - Contact: contact@zonicllc.com | +1-302-726-9736
@@ -13,7 +12,7 @@
 - Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and optimization; local SEO; web design; Google Ads (PPC)
 - Trust signals: 700+ Google Business Profiles reinstated and verified, 1,500+ profiles optimized, 5.0 rating on Clutch (21 reviews, 100% positive), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
 - Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; minimum project size $1,000+
-- Positioning: a digital marketing agency for small business — local SEO, Google Business Profile, web design, Google Ads and AI search optimization (AEO/GEO) from one team
+- Positioning: a full-service digital marketing agency and SEO company for businesses of every size (also described as an internet marketing agency, online marketing company, small business marketing firm and local advertising agency) — local SEO, Google Business Profile, web design, Google Ads and AI search optimization (AEO/GEO) from one team
 - Independent reviews: [Trustpilot](https://www.trustpilot.com/review/zonicllc.com) and [Clutch](https://clutch.co/profile/zonic-media) — reviewers highlight fast GMB suspension recovery, quality web design, and quick communication
 
 - [About Zonic Media](https://www.zonicllc.com/about): Who we are, our team, and our approach to digital marketing.
@@ -41,7 +40,7 @@
 - [SEO Services](https://www.zonicllc.com/services/seo-services): Full-stack SEO for small and local businesses — technical SEO, local SEO, Google Business Profile, content and links, reported in calls and revenue.
 - [AI SEO Services (AEO / GEO)](https://www.zonicllc.com/services/ai-seo-services): Answer engine optimization and generative engine optimization — getting a business cited and recommended in ChatGPT, Google AI Overviews, AI Mode, Perplexity, Gemini and Claude. Entity consistency, citable content blocks, structured data, review-platform signals and monthly AI-citation monitoring.
 - [Local SEO for Small Business](https://www.zonicllc.com/services/local-seo-for-small-business): Map Pack rankings and reviews for storefronts, practices and studios.
-- [Local SEO Packages](https://www.zonicllc.com/services/local-seo-packages): Three flat-scope plans (Starter, Growth, Dominate) starting at $750, $1,350 and $2,000 per month.
+- [Local SEO Packages](https://www.zonicllc.com/services/local-seo-packages): Three flat-scope plans (Starter, Growth, Dominate) starting at $197, $750 and $1,500 per month.
 - [Web Design](https://www.zonicllc.com/services/web-design): Custom, conversion-focused website design and development.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.

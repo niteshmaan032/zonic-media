@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "kitchen remodel company near me",
     "kitchen remodeling marketing",
     "local seo for contractors",
+    "kitchen remodelers seo services",
+    "kitchen remodelers seo agency",
+    "seo company for kitchen remodelers",
+    "kitchen remodelers search engine optimization",
+    "kitchen remodelers internet marketing",
+    "google business profile for kitchen remodelers",
+    "ai search optimization for kitchen remodelers",
+    "kitchen remodelers seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const KitchenSeoFaqs = [
   {
     question: "How long before kitchen remodel searches send consultations from SEO?",
     answer:
-      "Profile and review improvements move the Map Pack within 4 to 8 weeks. The cost guides and project pages that capture planning-stage searches take 3 to 6 months to rank, but they keep producing consultations for years because homeowners research kitchens long before they buy. Zonic Media reports both tracks monthly and tracks consultations back to the page that produced them.",
+      "Profile and review improvements move the Map Pack within 4 to 8 weeks. The cost guides and project pages that capture planning-stage searches take 3 to 6 months to rank, but they keep producing consultations for years because homeowners research kitchens long before they buy. Zonic Media reports both tracks monthly and tracks consultations back to the page that produced them. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

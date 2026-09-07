@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my hardwood flooring pages",
     kicker: "HARDWOOD FLOORING",
     siteHeading: "Hardwood Flooring—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/hardwood-flooring.webp",
     photoAlt: "Flooring service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my luxury vinyl pages",
     kicker: "LUXURY VINYL",
     siteHeading: "Luxury Vinyl—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/luxury-vinyl.webp",
     photoAlt: "Flooring service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my tile flooring pages",
     kicker: "TILE FLOORING",
     siteHeading: "Tile Flooring—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/tile-flooring.webp",
     photoAlt: "Flooring service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my carpet installation pages",
     kicker: "CARPET INSTALLATION",
     siteHeading: "Carpet Installation—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/carpet-installation.webp",
     photoAlt: "Flooring service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my floor refinishing pages",
     kicker: "FLOOR REFINISHING",
     siteHeading: "Floor Refinishing—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/floor-refinishing.webp",
     photoAlt: "Flooring service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial flooring pages",
     kicker: "COMMERCIAL FLOORING",
     siteHeading: "Commercial Flooring—done right.",
-    photo: "/images/free-website/free-flooring/hero.webp",
+    photo: "/images/free-website/free-flooring/commercial-flooring.webp",
     photoAlt: "Flooring service image",
   },
 ];

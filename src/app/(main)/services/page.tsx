@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 
 import Footer from "@/app/components/Footer";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
-// import ServicesDirectory from "@/app/components/ServicesDirectory";
 import ServiceSiteMockup from "@/app/components/ServiceSiteMockup";
 import GrowthConsole from "@/app/components/services/GrowthConsole";
 import SpeedGauges from "@/app/components/services/SpeedGauges";
@@ -71,10 +70,15 @@ import {
 const SITE_URL = "https://www.zonicllc.com";
 
 export const metadata: Metadata = {
-  title: { absolute: "Digital Marketing Services for Small Business | Zonic Media" },
+  title: { absolute: "Digital Marketing Services | SEO, Local SEO, Web Design, Ads" },
   description:
-    "Digital marketing services for small businesses: local SEO, Google Business Profile, GBP reinstatement, web design, Google Ads.",
+    "Digital marketing services for businesses of every size: SEO, local SEO, Google Business Profile, AI search, web design and Google Ads from one US team.",
   keywords: [
+    "digital marketing services",
+    "marketing agency",
+    "seo services",
+    "web design company",
+    "google ads agency",
     "digital marketing services for small business",
     "digital marketing services near me",
     "internet marketing services for small businesses",
@@ -86,6 +90,13 @@ export const metadata: Metadata = {
     "google business profile optimization",
     "ai seo services",
     "digital marketing cost for small business",
+    "internet marketing services",
+    "online marketing services",
+    "marketing services for small business",
+    "online advertising services",
+    "lead generation services",
+    "local marketing services",
+    "search engine marketing services",
   ],
   alternates: { canonical: "/services" },
   openGraph: {
@@ -105,9 +116,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Services for Small Business | Zonic Media",
+    title: "Digital Marketing Services | SEO, Local SEO, Web Design, Ads",
     description:
-      "Digital marketing services for small businesses: local SEO, Google Business Profile, GBP reinstatement, web design, Google Ads.",
+      "Digital marketing services for businesses of every size: SEO, local SEO, Google Business Profile, AI search, web design and Google Ads from one US team.",
   },
 };
 
@@ -747,8 +758,8 @@ export default function ServicesPage() {
                 <span className="svc-hl">Booked Jobs</span>
               </h1>
               <p className="svc-hero-sub">
-                Zonic Media runs the digital marketing services a local or
-                mid-size business actually needs: a website built to convert,
+                Zonic Media runs the digital marketing, internet marketing and online
+                advertising services a local or mid-size business actually needs: a website built to convert,
                 local SEO and Google Business Profile work that wins the Map
                 Pack, and Google Ads that pay for themselves. One team, one
                 plan, one report at the end of the month.
@@ -1212,8 +1223,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* <ServicesDirectory /> */}
 
       <GhlChatWidget />
       <Footer />

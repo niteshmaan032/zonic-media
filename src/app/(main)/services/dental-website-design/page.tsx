@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     "dental office website design",
     "dental clinic website design",
     "dental website examples",
+    "dental web design company",
+    "dental website developer",
+    "website for dental business",
+    "dental web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

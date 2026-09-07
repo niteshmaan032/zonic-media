@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my landscape design pages",
     kicker: "LANDSCAPE DESIGN",
     siteHeading: "Landscape Design—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/landscape-design.webp",
     photoAlt: "Landscaping service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my lawn care pages",
     kicker: "LAWN CARE",
     siteHeading: "Lawn Care—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/lawn-care.webp",
     photoAlt: "Landscaping service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my hardscaping pages",
     kicker: "HARDSCAPING",
     siteHeading: "Hardscaping—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/hardscaping.webp",
     photoAlt: "Landscaping service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my irrigation pages",
     kicker: "IRRIGATION",
     siteHeading: "Irrigation—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/irrigation.webp",
     photoAlt: "Landscaping service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my outdoor lighting pages",
     kicker: "OUTDOOR LIGHTING",
     siteHeading: "Outdoor Lighting—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/outdoor-lighting.webp",
     photoAlt: "Landscaping service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my seasonal cleanups pages",
     kicker: "SEASONAL CLEANUPS",
     siteHeading: "Seasonal Cleanups—done right.",
-    photo: "/images/free-website/free-landscaping/hero.webp",
+    photo: "/images/free-website/free-landscaping/seasonal-cleanups.webp",
     photoAlt: "Landscaping service image",
   },
 ];

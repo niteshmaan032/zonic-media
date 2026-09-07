@@ -48,7 +48,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Verification",
   description:
-    "Zonic Media resolves every type of Google Business Profile verification failure — postcards that never arrive, rejected video verification, verification loops, revoked verifications, and service-area business (SAB) verification. 1500+ listings verified and restored with a 95% success rate and 48-hour average resolution time. Verified client reviews on Trustpilot and Clutch.",
+    "GMB verification service for failed video, postcard and instant verification: get your Google Business Profile verified fast, even without a postcard.",
   url: "https://www.zonicllc.com/services/gmb-verification-help",
   provider: {
     "@type": "Organization",
@@ -130,7 +130,7 @@ const GmbVeriFormHead = {
 };
 
 export const metadata: Metadata = {
-  title: { absolute: "Google Business Profile Verification Help | Get Verified" },
+  title: { absolute: "GMB Verification Service | Instant, Video & Postcard Fixes" },
   description:
     "Google Business Profile verification help for failed video, postcard, phone and email verification.",
   keywords: [
@@ -191,14 +191,12 @@ function page() {
             </div>
 
             <h1 className="gmb-reinst-main-heading">
-              Google Business Profile Verification Help That Gets Your Listing
+              GMB Verification Service That Gets Your Google Business Profile
               Verified
             </h1>
 
             <p className="gmb-reinst-descrp">
-              Zonic Media helps businesses resolve all types of Google Business
-              Profile verification failures - postcard not arriving, video
-              verification rejected, phone or email options unavailable. Our
+              Zonic Media&apos;s GMB verification service resolves every type of Google Business Profile verification failure: postcard not arriving, video verification rejected, the instant verification method not offered, phone or email options unavailable. Our
               specialists have deep platform expertise and know exactly how to
               get your profile verified and live on Google Maps fast — then link
               it to a conversion-ready{" "}
@@ -464,7 +462,7 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Get Verified in 4 Clear Steps
+                GMB Instant Verification, Video or Postcard: Get Verified in 4 Clear Steps
               </h2>
               <p className="gmb-reinst-descrp">
                 Verifying your Google Business Profile can feel confusing
@@ -751,7 +749,7 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Simple, Transparent Packages
+                GMB Verification Service Packages: Simple and Transparent
               </h2>
             </div>
 

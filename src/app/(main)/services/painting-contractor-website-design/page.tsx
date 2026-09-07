@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "painting and decorating contractors website",
     "commercial painting website design",
     "painting company web design",
+    "painting contractor web design company",
+    "painting contractor website developer",
+    "website for painting contractor business",
+    "painting contractor web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

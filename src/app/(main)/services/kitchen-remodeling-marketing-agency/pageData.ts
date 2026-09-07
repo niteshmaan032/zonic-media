@@ -14,6 +14,10 @@ export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
     "remodeling contractor marketing",
     "design build marketing agency",
     "home improvement marketing agency",
+    "kitchen remodeling marketing company",
+    "kitchen remodeling advertising agency",
+    "kitchen remodeling internet marketing",
+    "kitchen remodeling lead generation",
   ],
 
   eyebrow: "Kitchen Remodeling Marketing Agency",
@@ -134,7 +138,7 @@ export const kitchenRemodelingMarketing = buildIndustryMarketingPage({
     "Remodeling Website Design & Development",
   ],
   costAnswer:
-    "Most kitchen remodeling marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most kitchen remodeling marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A kitchen remodeling marketing agency helps remodelers get found online and turn local searches — kitchen remodel, cabinet refacing, countertop installation, kitchen designer near me — into booked design consultations. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

@@ -162,7 +162,7 @@ export const SPECIALTIES: PlumbSpecialty[] = [
 export const PRICE_CARDS: PlumbPriceCard[] = [
   {
     tier: "Foundation",
-    amount: "$750",
+    amount: "$197",
     period: "per month · billed monthly",
     features: [
       "Google Business Profile rebuild + monthly management",
@@ -178,7 +178,7 @@ export const PRICE_CARDS: PlumbPriceCard[] = [
   },
   {
     tier: "Growth",
-    amount: "$1,350",
+    amount: "$750",
     period: "per month · billed monthly",
     features: [
       "Everything in Foundation",
@@ -195,7 +195,7 @@ export const PRICE_CARDS: PlumbPriceCard[] = [
   },
   {
     tier: "Authority",
-    amount: "$2,000",
+    amount: "$1,500",
     period: "per month · billed monthly",
     features: [
       "Everything in Growth",
@@ -224,7 +224,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Phoenix · Tucson · Mesa · Scottsdale",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -343,7 +343,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free Arizona audit before any commitment",
         "Active across all Arizona metros — Phoenix, Tucson, Mesa, Scottsdale and beyond",
       ],
@@ -361,7 +361,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Los Angeles · San Francisco Bay Area · San Diego · Sacramento",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -480,7 +480,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free California audit before any commitment",
         "Active across all California metros — Los Angeles, San Francisco Bay Area, San Diego, Sacramento and beyond",
       ],
@@ -498,7 +498,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Miami · Tampa · Orlando · Jacksonville",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -617,7 +617,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free Florida audit before any commitment",
         "Active across all Florida metros — Miami, Tampa, Orlando, Jacksonville and beyond",
       ],
@@ -635,7 +635,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Atlanta · Augusta · Savannah · Columbus",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -754,7 +754,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free Georgia audit before any commitment",
         "Active across all Georgia metros — Atlanta, Augusta, Savannah, Columbus and beyond",
       ],
@@ -772,7 +772,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Chicago · Aurora · Naperville · Rockford",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -891,7 +891,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free Illinois audit before any commitment",
         "Active across all Illinois metros — Chicago, Aurora, Naperville, Rockford and beyond",
       ],
@@ -909,7 +909,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Charlotte · Raleigh · Greensboro · Durham",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -1028,7 +1028,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free North Carolina audit before any commitment",
         "Active across all North Carolina metros — Charlotte, Raleigh, Greensboro, Durham and beyond",
       ],
@@ -1046,7 +1046,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       "Houston · Dallas · Austin · San Antonio",
       "GBP Optimization · Reinstatement · Verification",
       "500+ Local Businesses Ranked",
-      "Starting at $750/mo · Month-to-Month",
+      "Starting at $197/mo · Month-to-Month",
     ],
     hero: {
       eyebrow:
@@ -1164,7 +1164,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       checks: [
         "No long-term contract — month to month",
         "GBP reinstatement included if suspension happens",
-        "Starting at $750/mo · No setup fee",
+        "Starting at $197/mo · No setup fee",
         "Free Texas audit before any commitment",
         "Active across all Texas metros — Houston, Dallas, Austin, San Antonio and beyond",
       ],

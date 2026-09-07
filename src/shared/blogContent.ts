@@ -110,5 +110,15 @@ export function pickRelatedPosts<T extends { slug: string; blogTitle: string }>(
  * non-www link in the Sept 2026 crawl).
  */
 export function canonicalizeHostLinks(html: string) {
-  return html.replace(/https?:\/\/zonicllc\.com(?=[\/"'?#\s])/gi, "https://www.zonicllc.com");
+  return (
+    html
+      .replace(/https?:\/\/zonicllc\.com(?=[\/"'?#\s])/gi, "https://www.zonicllc.com")
+      // CMS copy occasionally saves phone links as href="tel; (302) 726-9736",
+      // which browsers resolve to /blog/tel;… and crawlers report as 404s
+      // (Semrush, Sept 2026). Normalise any tel-ish href to a real tel: URI.
+      .replace(
+        /href="tel[:;]?\s*\+?1?\s*\(?(\d{3})\)?[\s.-]*(\d{3})[\s.-]*(\d{4})"/gi,
+        'href="tel:+1$1$2$3"',
+      )
+  );
 }

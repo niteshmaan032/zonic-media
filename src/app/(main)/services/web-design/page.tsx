@@ -54,10 +54,15 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: { absolute: "Web Design Services for Small Business | Affordable & Custom" },
+  title: { absolute: "Web Design Company & Agency | Custom Website Design Services" },
   description:
-    "Affordable custom web design services for small businesses: fast, mobile-first websites built to rank in Google and convert visitors into calls.",
+    "Web design company and agency building custom, mobile-first websites that rank in Google and convert visitors into calls, for businesses of every size.",
   keywords: [
+    "web design company",
+    "web design agency",
+    "website design services",
+    "custom website design",
+    "web design services",
     "web design services for small business",
     "affordable web design services for small businesses",
     "best web design company for small business",
@@ -80,7 +85,7 @@ export const metadata: Metadata = {
     ],
     title: "Web Design Services for Small Business | Zonic Media",
     description:
-      "Affordable custom web design services for small businesses: fast, mobile-first websites built to rank in Google and convert visitors into calls.",
+      "Web design company and agency building custom, mobile-first websites that rank in Google and convert visitors into calls, for businesses of every size.",
     url: "/services/web-design",
     type: "website",
   },

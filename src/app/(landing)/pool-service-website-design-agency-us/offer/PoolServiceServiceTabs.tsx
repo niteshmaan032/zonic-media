@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my weekly pool service pages",
     kicker: "WEEKLY POOL SERVICE",
     siteHeading: "Weekly Pool Service—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/weekly-pool-service.webp",
     photoAlt: "Pool Service service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my pool repair pages",
     kicker: "POOL REPAIR",
     siteHeading: "Pool Repair—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/pool-repair.webp",
     photoAlt: "Pool Service service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my equipment upgrades pages",
     kicker: "EQUIPMENT UPGRADES",
     siteHeading: "Equipment Upgrades—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/equipment-upgrades.webp",
     photoAlt: "Pool Service service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my pool openings pages",
     kicker: "POOL OPENINGS",
     siteHeading: "Pool Openings—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/pool-openings.webp",
     photoAlt: "Pool Service service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my remodel & resurface pages",
     kicker: "REMODEL & RESURFACE",
     siteHeading: "Remodel & Resurface—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/remodel-amp-resurface.webp",
     photoAlt: "Pool Service service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial pools pages",
     kicker: "COMMERCIAL POOLS",
     siteHeading: "Commercial Pools—done right.",
-    photo: "/images/free-website/free-pool-service/hero.webp",
+    photo: "/images/free-website/free-pool-service/commercial-pools.webp",
     photoAlt: "Pool Service service image",
   },
 ];

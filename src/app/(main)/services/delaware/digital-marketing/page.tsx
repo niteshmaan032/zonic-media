@@ -73,6 +73,14 @@ export const metadata: Metadata = {
     "seo company delaware",
     "delaware web design",
     "digital marketing agency near me",
+    "digital marketing company dover",
+    "internet marketing delaware",
+    "advertising agency delaware",
+    "advertising experts delaware",
+    "online marketing delaware",
+    "marketing company dover de",
+    "delaware marketing agency",
+    "delaware advertising agencies",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -585,8 +593,9 @@ function Page() {
                     <Link href="/" className="deldg-inline-link">
                       digital marketing agency
                     </Link>{" "}
-                    helping Delaware businesses turn search, ads, and content
-                    into booked calls. Local SEO, Google Ads, social, email, and
+                    and internet marketing company, the advertising experts Delaware
+                    businesses call to turn search, ads, and content into booked
+                    calls. Local SEO, Google Ads, social, email, and
                     conversion-first websites — run by one in-house team and
                     reported against leads and revenue instead of impressions.
                   </p>
@@ -1193,7 +1202,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">The Difference</p>
                 <h2 className="deldg-h2">
-                  Zonic Media Vs. A Typical Marketing Agency
+                  Zonic Media Vs. A Typical Delaware Advertising Agency
                 </h2>
                 <p className="deldg-lead">
                   Same monthly invoice, very different month. Here is what
@@ -1287,7 +1296,7 @@ function Page() {
               <div className="deldg-sec-head-center">
                 <p className="deldg-eyebrow">Why Zonic Media</p>
                 <h2 className="deldg-h2">
-                  A Delaware Growth Partner, Not a Monthly Invoice
+                  A Dover Digital Marketing Company Built to Be a Growth Partner, Not a Monthly Invoice
                 </h2>
                 <p className="deldg-lead">
                   Rankings and impressions are the output. Strategy, execution,

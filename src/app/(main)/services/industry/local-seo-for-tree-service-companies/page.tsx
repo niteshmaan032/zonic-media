@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "local tree service marketing",
     "tree service companies near me",
     "local seo for contractors",
+    "tree service companies seo services",
+    "tree service companies seo agency",
+    "seo company for tree service companies",
+    "tree service companies search engine optimization",
+    "tree service companies internet marketing",
+    "google business profile for tree service companies",
+    "ai search optimization for tree service companies",
+    "tree service companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const TreeSeoFaqs = [
   {
     question: "How does a tree service company capture storm-season searches?",
     answer:
-      "By having the emergency removal page and Google Business Profile ready before the storm. Profiles with 24-hour availability, recent reviews and storm-damage photos rank first when searches spike, and a page for emergency tree removal in each city captures the organic traffic. Zonic Media prepares that coverage ahead of the season and tracks calls during and after storms.",
+      "By having the emergency removal page and Google Business Profile ready before the storm. Profiles with 24-hour availability, recent reviews and storm-damage photos rank first when searches spike, and a page for emergency tree removal in each city captures the organic traffic. Zonic Media prepares that coverage ahead of the season and tracks calls during and after storms. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

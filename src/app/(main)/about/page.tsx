@@ -70,7 +70,7 @@ import {
 export const metadata: Metadata = {
   title: { absolute: "About Zonic Media | Digital Marketing Agency in Dover, DE" },
   description:
-    "Zonic Media is a Dover, Delaware digital marketing agency serving small businesses across the USA: local SEO, Google Business Profile recovery.",
+    "Zonic Media is a Dover, Delaware digital marketing agency serving businesses across the USA: local SEO, Google Business Profile, web design and Google Ads.",
   keywords: [
     "about zonic media",
     "digital marketing agency delaware",
@@ -80,6 +80,14 @@ export const metadata: Metadata = {
     "local seo agency dover de",
     "google business profile agency",
     "web design and seo agency usa",
+    "internet marketing agency delaware",
+    "online marketing company",
+    "small business marketing company",
+    "marketing firm dover de",
+    "advertising agency dover de",
+    "digital marketing agency",
+    "marketing agency",
+    "seo company delaware",
   ],
   alternates: {
     canonical: "/about",
@@ -460,8 +468,7 @@ export default function AboutPage() {
                   Goals
                 </h1>
                 <p className="abt-hero-sub">
-                  Zonic Media is a Dover, Delaware agency that helps small and
-                  mid-size US businesses get found on Google and turn nearby
+                  Zonic Media is a Dover, Delaware digital marketing and internet marketing agency that helps small and mid-size US businesses get found on Google and turn nearby
                   searches into booked work — Local SEO, Google Business Profile
                   management,{" "}
                   <Link href="/services/web-design" className="abt-inline-link">

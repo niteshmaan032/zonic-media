@@ -95,7 +95,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <p class="answer-lead">A septic marketing agency helps septic companies get found online and turn local searches — septic tank pumping, cleaning, installation, inspections, and drain field repair — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so owners can focus on the work while leads come in.</p>
 <div class="answer-facts">
 <div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>
-<div class="afact"><span class="ak">Typical cost</span><span class="av">Most septic marketing retainers range from $550 to $1,700 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>
+<div class="afact"><span class="ak">Typical cost</span><span class="av">Most septic marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>
 <div class="afact"><span class="ak">How long results take</span><span class="av">Google Ads can generate qualified septic leads within the first weeks. Local SEO and Google Map Pack ranking typically build over three to six months.</span></div>
 <div class="afact"><span class="ak">The market</span><span class="av">Roughly 21% of US homes — about 26 million households — run on septic systems, and every tank needs pumping every three to five years. The septic companies that stay visible win that repeat cycle.</span></div>
 <div class="afact"><span class="ak">Who it's for</span><span class="av">Septic pumping, installation, inspection, and repair companies in the United States that want more calls, booked jobs, and exclusive leads — not shared marketplace lists. See all the <a class="ima-inline-link" href="/industries">industries we serve</a>.</span></div>
@@ -153,7 +153,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <div class="price-grid">
 <div class="price">
 <div class="pname">Foundation</div>
-<div class="amt">$550<span>/mo</span></div>
+<div class="amt">$197<span>/mo</span></div>
 <p class="pdesc">Get found locally and start turning septic searches into calls.</p>
 <ul>
 <li>${CHECK_SVG} Google Business Profile optimization</li>
@@ -169,7 +169,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <div class="price feat">
 <div class="tag">Most popular</div>
 <div class="pname">Growth</div>
-<div class="amt">$1,250<span>/mo</span></div>
+<div class="amt">$750<span>/mo</span></div>
 <p class="pdesc">Rank higher and add paid leads to fill your pumping schedule.</p>
 <ul>
 <li>${CHECK_SVG} Everything in Foundation</li>
@@ -186,7 +186,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 </div>
 <div class="price">
 <div class="pname">Authority</div>
-<div class="amt">$1,700<span>/mo</span></div>
+<div class="amt">$1,500<span>/mo</span></div>
 <p class="pdesc">Dominate your service area across every channel that matters.</p>
 <ul>
 <li>${CHECK_SVG} Everything in Growth</li>
@@ -289,7 +289,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
       description:
         "Septic marketing agency for US septic companies. Local SEO, Google Map Pack ranking, Google Ads & exclusive leads for pumping, repairs & installs. Free audit.",
       telephone: "+1-302-726-9736",
-      priceRange: "$550–$1700/mo",
+      priceRange: "$197–$1500/mo",
       areaServed: "United States",
       address: {
         "@type": "PostalAddress",
@@ -328,7 +328,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
           name: "How much does septic marketing cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Most septic marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+            text: "Most septic marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
           },
         },
         {

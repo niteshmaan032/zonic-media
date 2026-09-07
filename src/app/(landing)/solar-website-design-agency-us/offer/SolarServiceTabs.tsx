@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my residential solar pages",
     kicker: "RESIDENTIAL SOLAR",
     siteHeading: "Residential Solar—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/residential-solar.webp",
     photoAlt: "Solar service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial solar pages",
     kicker: "COMMERCIAL SOLAR",
     siteHeading: "Commercial Solar—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/commercial-solar.webp",
     photoAlt: "Solar service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my battery storage pages",
     kicker: "BATTERY STORAGE",
     siteHeading: "Battery Storage—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/battery-storage.webp",
     photoAlt: "Solar service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my solar repair pages",
     kicker: "SOLAR REPAIR",
     siteHeading: "Solar Repair—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/solar-repair.webp",
     photoAlt: "Solar service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my ev charging pages",
     kicker: "EV CHARGING",
     siteHeading: "EV Charging—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/ev-charging.webp",
     photoAlt: "Solar service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my financing options pages",
     kicker: "FINANCING OPTIONS",
     siteHeading: "Financing Options—done right.",
-    photo: "/images/free-website/free-solar/hero.webp",
+    photo: "/images/free-website/free-solar/financing-options.webp",
     photoAlt: "Solar service image",
   },
 ];

@@ -84,7 +84,7 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/seo-services-for-car-towing";
 
 export const metadata: Metadata = {
-  title: { absolute: "Towing SEO Company | SEO for Towing & Roadside Companies" },
+  title: { absolute: "Towing SEO Company | SEO for Roadside Assistance & Towing" },
   description:
     "Towing SEO company for tow truck and roadside assistance businesses: emergency-search Map Pack rankings, Google Business Profile.",
   keywords: [
@@ -97,6 +97,17 @@ export const metadata: Metadata = {
     "towing company marketing",
     "how to advertise a towing business",
     "towing lead generation",
+    "seo for roadside assistance",
+    "tow truck seo services",
+    "local seo for towing companies",
+    "towing seo services",
+    "towing seo agency",
+    "seo company for towing",
+    "towing search engine optimization",
+    "towing internet marketing",
+    "google business profile for towing",
+    "ai search optimization for towing",
+    "towing seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -230,7 +241,7 @@ const TowingSeoFaqs = [
   {
     question: "Why does the Google Map Pack matter more than the website for towing companies?",
     answer:
-      "Because a stranded driver searches from a phone and calls straight from the map result without opening a website. The profile's category, hours, review recency and the distance to the searcher decide who gets the call. Zonic Media optimizes the profile first, adds service-area coverage for every highway corridor and town you serve, and tracks calls from the profile so you can see the searches that dispatch trucks.",
+      "Because a stranded driver searches from a phone and calls straight from the map result without opening a website. The profile's category, hours, review recency and the distance to the searcher decide who gets the call. Zonic Media optimizes the profile first, adds service-area coverage for every highway corridor and town you serve, and tracks calls from the profile so you can see the searches that dispatch trucks. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -489,7 +500,7 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">SEO for Towing Companies</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for Towing That{" "}
+                    Local SEO for Towing and Roadside Assistance That{" "}
                     <span className="tseo-hl">Wins More Calls</span>
                   </h1>
                   <p className="tseo-hero-sub">

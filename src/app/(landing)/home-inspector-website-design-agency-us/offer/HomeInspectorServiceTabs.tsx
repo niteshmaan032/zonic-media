@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my buyer inspections pages",
     kicker: "BUYER INSPECTIONS",
     siteHeading: "Buyer Inspections—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/buyer-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my pre-listing inspections pages",
     kicker: "PRE-LISTING INSPECTIONS",
     siteHeading: "Pre-Listing Inspections—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/pre-listing-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my new construction pages",
     kicker: "NEW CONSTRUCTION",
     siteHeading: "New Construction—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/new-construction.webp",
     photoAlt: "Home Inspector service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my radon testing pages",
     kicker: "RADON TESTING",
     siteHeading: "Radon Testing—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/radon-testing.webp",
     photoAlt: "Home Inspector service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my sewer scope pages",
     kicker: "SEWER SCOPE",
     siteHeading: "Sewer Scope—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/sewer-scope.webp",
     photoAlt: "Home Inspector service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial inspections pages",
     kicker: "COMMERCIAL INSPECTIONS",
     siteHeading: "Commercial Inspections—done right.",
-    photo: "/images/free-website/free-home-inspector/hero.webp",
+    photo: "/images/free-website/free-home-inspector/commercial-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
 ];

@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the professional website really free?",
     answer:
-      "The upfront bathroom remodeling website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $895/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "The upfront bathroom remodeling website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $197/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
   },
   {
     question: "Which marketing plans qualify?",

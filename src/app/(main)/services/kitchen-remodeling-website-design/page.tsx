@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "kitchen remodeling designers near me",
     "design build kitchen website",
     "kitchen remodel design and build",
+    "kitchen remodeling web design company",
+    "kitchen remodeling website developer",
+    "website for kitchen remodeling business",
+    "kitchen remodeling web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

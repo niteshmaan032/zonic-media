@@ -72,6 +72,10 @@ export const metadata: Metadata = {
     "seo company philadelphia",
     "ppc agency philadelphia",
     "philadelphia web design",
+    "internet marketing philadelphia",
+    "online marketing philadelphia",
+    "marketing company philadelphia",
+    "advertising agency philadelphia small business",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "bathroom remodel companies near me",
     "bathroom remodeling marketing",
     "local seo for contractors",
+    "bathroom remodelers seo services",
+    "bathroom remodelers seo agency",
+    "seo company for bathroom remodelers",
+    "bathroom remodelers search engine optimization",
+    "bathroom remodelers internet marketing",
+    "google business profile for bathroom remodelers",
+    "ai search optimization for bathroom remodelers",
+    "bathroom remodelers seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const BathSeoFaqs = [
   {
     question: "What content ranks a bathroom remodeler in local search?",
     answer:
-      "Cost guides for your market, because bathroom remodel cost is the most searched question; project pages with before-and-after photos, the town, and the budget range; and a Google Business Profile with services and photos updated after every job. Reviews that describe the project and the crew add relevance. Zonic Media builds that content around your market and tracks consultation requests from each page.",
+      "Cost guides for your market, because bathroom remodel cost is the most searched question; project pages with before-and-after photos, the town, and the budget range; and a Google Business Profile with services and photos updated after every job. Reviews that describe the project and the crew add relevance. Zonic Media builds that content around your market and tracks consultation requests from each page. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

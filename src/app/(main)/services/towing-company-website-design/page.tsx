@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     "how to advertise a towing business",
     "towing company marketing",
     "towing seo",
+    "towing company web design company",
+    "towing company website developer",
+    "website for towing company business",
+    "towing company web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

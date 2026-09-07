@@ -14,6 +14,10 @@ export const bathroomRemodelingMarketing = buildIndustryMarketingPage({
     "bathroom remodeling google ads",
     "remodeler marketing agency",
     "home improvement marketing agency",
+    "bathroom remodeling marketing company",
+    "bathroom remodeling advertising agency",
+    "bathroom remodeling internet marketing",
+    "bathroom remodeling lead generation",
   ],
 
   eyebrow: "Bathroom Remodeling Marketing Agency",
@@ -134,7 +138,7 @@ export const bathroomRemodelingMarketing = buildIndustryMarketingPage({
     "Remodeling Website Design & Development",
   ],
   costAnswer:
-    "Most bathroom remodeling marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most bathroom remodeling marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A bathroom remodeling marketing agency helps remodelers get found online and turn local searches — bathroom remodel, walk-in shower, tub-to-shower conversion, accessible bath — into booked in-home estimates. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

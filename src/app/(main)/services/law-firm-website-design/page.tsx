@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     "law firm web design",
     "attorney website design",
     "law firm website design examples",
+    "law firm web design company",
+    "law firm website developer",
+    "website for law firm business",
+    "law firm web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

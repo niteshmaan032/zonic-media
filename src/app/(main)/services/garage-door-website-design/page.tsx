@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     "garage door installation website",
     "garage door company software",
     "garage door website services",
+    "garage door web design company",
+    "garage door website developer",
+    "website for garage door business",
+    "garage door web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

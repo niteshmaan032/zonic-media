@@ -89,6 +89,14 @@ export const metadata: Metadata = {
     "law firm seo providers",
     "seo company for attorneys near me",
     "lawyer seo",
+    "law firms seo services",
+    "law firms seo agency",
+    "seo company for law firms",
+    "law firms search engine optimization",
+    "law firms internet marketing",
+    "google business profile for law firms",
+    "ai search optimization for law firms",
+    "law firms seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -222,7 +230,7 @@ const LawSeoFaqs = [
   {
     question: "Why is local SEO the best investment for a small law firm in 2026?",
     answer:
-      "Because legal keywords are among the most expensive to advertise, often $50 or more per click, while the Google Map Pack shows three firms for free on every local legal search. A verified profile in the right practice category, reviews that mention the case type, and practice-area pages for your city capture that traffic at a fraction of paid cost. Zonic Media builds law firm SEO around those signals with bar-compliant content and intake tracking.",
+      "Because legal keywords are among the most expensive to advertise, often $50 or more per click, while the Google Map Pack shows three firms for free on every local legal search. A verified profile in the right practice category, reviews that mention the case type, and practice-area pages for your city capture that traffic at a fraction of paid cost. Zonic Media builds law firm SEO around those signals with bar-compliant content and intake tracking. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -860,7 +868,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything Your Law Firm Rankings Need, in One System
+                    Local SEO Services for Law Firms: Everything Your Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">

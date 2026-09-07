@@ -101,6 +101,12 @@ export const metadata: Metadata = {
     "chiropractic local seo",
     "seo for chiropractors",
     "chiropractic marketing",
+    "seo company for chiropractor",
+    "chiropractor search engine optimization",
+    "chiropractor internet marketing",
+    "google business profile for chiropractor",
+    "ai search optimization for chiropractor",
+    "chiropractor seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -234,7 +240,7 @@ const ChiroSeoFaqs = [
   {
     question: "How do chiropractic practices rank for condition searches like back pain or sciatica?",
     answer:
-      "By giving each condition its own page that explains symptoms, how chiropractic care treats it, what a first visit looks like, and pricing or insurance details, then linking those pages from your Google Business Profile services list. Reviews that mention the condition treated reinforce the relevance. Zonic Media builds the condition pages around the searches in your city and tracks new-patient bookings by page.",
+      "By giving each condition its own page that explains symptoms, how chiropractic care treats it, what a first visit looks like, and pricing or insurance details, then linking those pages from your Google Business Profile services list. Reviews that mention the condition treated reinforce the relevance. Zonic Media builds the condition pages around the searches in your city and tracks new-patient bookings by page. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -494,7 +500,7 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Chiropractor SEO Company</p>
                   <h1 className="tseo-hero-h1">
-                    Chiropractor SEO That{" "}
+                    Chiropractor SEO Company That{" "}
                     <span className="tseo-hl">Books Patients</span>
                   </h1>
                   <p className="tseo-hero-sub">

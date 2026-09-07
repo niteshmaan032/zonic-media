@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     "landscaping marketing",
     "landscaping company seo services",
     "local seo for contractors",
+    "landscaping companies seo services",
+    "landscaping companies seo agency",
+    "seo company for landscaping companies",
+    "landscaping companies search engine optimization",
+    "landscaping companies internet marketing",
+    "google business profile for landscaping companies",
+    "ai search optimization for landscaping companies",
+    "landscaping companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -178,7 +186,7 @@ const LandscapingSeoFaqs = [
   {
     question: "When should a landscaping company publish seasonal content for SEO?",
     answer:
-      "Six to eight weeks before the season starts, because Google needs time to index and rank the pages before the searches spike. Spring cleanup and lawn care plans should be live by late February, fall cleanup and leaf removal by early September, and snow removal by October where it applies. Zonic Media schedules the seasonal pages and profile posts on that calendar and tracks the bookings each season produces.",
+      "Six to eight weeks before the season starts, because Google needs time to index and rank the pages before the searches spike. Spring cleanup and lawn care plans should be live by late February, fall cleanup and leaf removal by early September, and snow removal by October where it applies. Zonic Media schedules the seasonal pages and profile posts on that calendar and tracks the bookings each season produces. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -440,7 +448,7 @@ function Page() {
                     Local SEO for Landscaping Companies
                   </p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for Landscaping That{" "}
+                    Landscaping SEO Company: Local SEO That{" "}
                     <span className="tseo-hl">Books Jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">

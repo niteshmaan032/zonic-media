@@ -14,6 +14,10 @@ export const gutterMarketing = buildIndustryMarketingPage({
     "gutter cleaning marketing",
     "gutter company google ads",
     "gutter contractor advertising",
+    "gutter marketing company",
+    "gutter advertising agency",
+    "gutter internet marketing",
+    "gutter lead generation",
   ],
 
   eyebrow: "Gutter Marketing Agency",
@@ -132,7 +136,7 @@ export const gutterMarketing = buildIndustryMarketingPage({
     "Gutter Company Website Design & Development",
   ],
   costAnswer:
-    "Most gutter marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most gutter marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A gutter marketing agency helps gutter companies get found online and turn local searches — seamless gutter installation, gutter guards, gutter cleaning, gutter repair — into booked estimates and installs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

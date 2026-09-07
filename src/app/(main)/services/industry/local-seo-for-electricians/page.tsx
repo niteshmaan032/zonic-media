@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "electrical contractor seo",
     "electrician marketing",
     "local seo for contractors",
+    "electricians seo services",
+    "electricians seo agency",
+    "seo company for electricians",
+    "electricians search engine optimization",
+    "electricians internet marketing",
+    "google business profile for electricians",
+    "ai search optimization for electricians",
+    "electricians seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const ElectricianSeoFaqs = [
   {
     question: "What are the fastest-growing search terms for electricians in 2026?",
     answer:
-      "EV charger installation, panel upgrades, whole-home generator installation and smart-home wiring have grown fastest, alongside the evergreen emergency electrician searches. Each deserves a dedicated page with pricing ranges and permit details, and the Google Business Profile services list should include them. Zonic Media builds those pages around the searches in your city and tracks which services generate calls.",
+      "EV charger installation, panel upgrades, whole-home generator installation and smart-home wiring have grown fastest, alongside the evergreen emergency electrician searches. Each deserves a dedicated page with pricing ranges and permit details, and the Google Business Profile services list should include them. Zonic Media builds those pages around the searches in your city and tracks which services generate calls. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -823,7 +831,7 @@ function Page() {
                 <div>
                   <p className="tseo-eyebrow">What&apos;s Included</p>
                   <h2 className="tseo-h2">
-                    Everything Your Electrician Rankings Need, in One System
+                    Electrician SEO Services: Everything Your Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="tseo-link-arrow">

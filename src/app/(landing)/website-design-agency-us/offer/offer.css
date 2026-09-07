@@ -925,3 +925,18 @@ body.fwd-menu-is-open {
 /* The title-cased hero pair is the widest CTA row on the page; trimming the
    side padding and icon gap keeps both buttons on one line in the copy column. */
 .fwd-page .hero-actions .button { gap: 14px; padding-left: 18px; }
+
+
+/* ══ Industry tab photos ═════════════════════════════════════
+   Each tab shows the same photo as that niche's own offer lander, so the two
+   pages stay in step. Mirrors the .industry-photo treatment used there. */
+.fwd-page .fwd-photo { display: block; }
+.fwd-page .fwd-photo::after { z-index: 2; inset: 12px; }
+.fwd-page .fwd-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.fwd-page .fwd-photo > span { left: 18px; right: auto; bottom: 18px; display: flex; align-items: center; gap: 5px; padding: 6px 8px; border-radius: 7px; background: rgba(17, 26, 39, .82); color: white; letter-spacing: .08em; }
+.fwd-page .fwd-photo > span svg { width: 10px; height: 10px; color: var(--yellow); }
+.fwd-page .fwd-mobile-image { background-position: center; background-size: cover; }
+
+@media (max-width: 760px) {
+  .fwd-page .fwd-photo > span { left: 10px; bottom: 10px; padding: 5px 6px; }
+}

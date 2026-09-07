@@ -66,7 +66,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
       "Local SEO for plumbers that produces emergency calls: Map Pack signals, 24-hour profile setup, emergency pages and reviews that win the phone call.",
   },
   "how-to-turn-google-map-pack-views-into-phone-calls": {
-    title: "How to Turn Google Map Pack Views Into Phone Calls",
+    title: "Turn Google Map Pack Views Into Phone Calls: 7 Fixes",
     description:
       "Your Google Business Profile gets views but few calls? The profile, review, photo and hours fixes that turn Map Pack impressions into phone calls.",
   },
@@ -146,7 +146,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
       "How long Google Business Profile reinstatement takes in 2026 by suspension type: typical timelines, what causes delays, and when to escalate.",
   },
   "how-to-get-more-local-business-leads-from-google-in-2026": {
-    title: "How to Get More Local Business Leads From Google in 2026",
+    title: "How to Get More Local Business Leads From Google (2026)",
     description:
       "How to get more local business leads from Google in 2026: Map Pack, Local Services Ads, AI Overviews and website fixes, ranked by cost and speed.",
   },

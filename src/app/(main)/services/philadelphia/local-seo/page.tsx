@@ -56,9 +56,9 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/local-seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Best SEO Company in Philadelphia | Philly SEO Services" },
+  title: { absolute: "Philadelphia SEO Company | SEO Services & Local SEO Agency" },
   description:
-    "Philadelphia SEO company for local businesses: search engine optimization, Google Business Profile and Map Pack rankings that turn Philly searches into calls.",
+    "Philadelphia SEO company and local SEO agency: SEO services, Google Business Profile and Map Pack rankings that turn Philly searches into calls. Free audit.",
   keywords: [
     "seo company philadelphia",
     "best seo company in philadelphia",
@@ -580,9 +580,7 @@ function Page() {
                     <span className="phl-hl">Map Pack</span>
                   </h1>
                   <p className="phl-hero-sub">
-                    Zonic Media is a Philadelphia SEO company for businesses
-                    that need calls, not charts. Our search engine optimization
-                    work in Philadelphia covers the whole ranking system —
+                    Zonic Media is a Philadelphia SEO company and local SEO agency for businesses that need calls, not charts. Our SEO services in Philadelphia cover the whole ranking system —
                     Google Business Profile, on-page SEO, citations, reviews,
                     and neighbourhood pages — so when somebody in Philly
                     searches, the business they call is yours.
@@ -803,7 +801,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Everything Your Local Rankings Need, in One System
+                    Philadelphia SEO Services: Everything Your Local Rankings Need, in One System
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -833,7 +831,7 @@ function Page() {
               <div className="phl-band-content">
                 <p className="phl-eyebrow">The Map Pack Is The Market</p>
                 <h2 className="phl-h2">
-                  We Put You in the Top Three — And Keep You There
+                  Local SEO in Philadelphia That Puts You in the Top Three — And Keeps You There
                 </h2>
                 <p className="phl-lead">
                   The map pack takes the majority of clicks and nearly all of
@@ -1235,7 +1233,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A Local SEO Partner, Not a Monthly Invoice
+                  A Philly SEO Agency That Acts Like a Partner, Not a Monthly Invoice
                 </h2>
                 <p className="phl-lead">
                   Rankings are the output. The inputs are strategy, execution,

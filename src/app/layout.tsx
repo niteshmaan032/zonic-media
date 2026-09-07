@@ -63,6 +63,9 @@ const knowsAboutTopics = [
   "Answer engine optimization (AEO)",
   "Generative engine optimization (GEO)",
   "Digital marketing for small business",
+  "Internet marketing and online advertising",
+  "Lead generation for local businesses",
+  "Search engine marketing (SEO and PPC)",
 ];
 
 const organizationJsonLd = {
@@ -73,7 +76,7 @@ const organizationJsonLd = {
   legalName: "Zonic Media LLC",
   alternateName: ["Zonic Media LLC", "Zonic LLC", "zonicllc.com"],
   description:
-    "Digital marketing agency for small and mid-size businesses: local SEO, Google Business Profile reinstatement and optimization, web design, Google Ads and AI search optimization (AEO/GEO). Headquartered in Dover, Delaware; serving clients across the United States.",
+    "Full-service digital marketing agency and SEO company (internet marketing, online advertising and lead generation) for businesses of every size: local SEO, Google Business Profile reinstatement and optimization, web design, Google Ads and AI search optimization (AEO/GEO). Headquartered in Dover, Delaware; serving clients across the United States.",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -108,7 +111,7 @@ const localBusinessJsonLd = {
   "@id": `${SITE_URL}/#local-business`,
   name: "Zonic Media",
   description:
-    "Digital marketing agency delivering web design, SEO, Google Ads, and growth solutions for businesses worldwide.",
+    "Full-service digital marketing agency and SEO company delivering local SEO, AI search optimization, web design, Google Ads and growth solutions for businesses of every size.",
   url: SITE_URL,
   telephone: "+13027269736",
   email: "contact@zonicllc.com",

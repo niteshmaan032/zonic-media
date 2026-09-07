@@ -14,6 +14,9 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
     "best advertising for tree service",
     "tree service advertising ideas",
     "tree service seo",
+    "tree service advertising agency",
+    "tree service internet marketing",
+    "tree service lead generation",
   ],
 
   eyebrow: "Tree Service Marketing Agency",
@@ -132,7 +135,7 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
     "Tree Service Website Design & Development",
   ],
   costAnswer:
-    "Most tree service marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most tree service marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A tree service marketing agency helps tree companies get found online and turn local searches — tree removal near me, tree trimming, emergency tree service, stump grinding — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

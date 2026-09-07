@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "pool service marketing",
     "pool maintenance seo",
     "local seo for service businesses",
+    "pool service companies seo services",
+    "pool service companies seo agency",
+    "seo company for pool service companies",
+    "pool service companies search engine optimization",
+    "pool service companies internet marketing",
+    "google business profile for pool service companies",
+    "ai search optimization for pool service companies",
+    "pool service companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const PoolSeoFaqs = [
   {
     question: "What does local SEO look like for a pool service company?",
     answer:
-      "Neighborhood-level coverage, because pool routes are dense and homeowners search pool cleaning near me from a specific subdivision. A Google Business Profile with the Pool Cleaning Service category, service-area pages for each neighborhood or city, a weekly-service page with pricing, repair pages for pumps, heaters and leaks, and reviews that mention the neighborhood. Zonic Media builds that coverage and tracks new weekly accounts by area.",
+      "Neighborhood-level coverage, because pool routes are dense and homeowners search pool cleaning near me from a specific subdivision. A Google Business Profile with the Pool Cleaning Service category, service-area pages for each neighborhood or city, a weekly-service page with pricing, repair pages for pumps, heaters and leaks, and reviews that mention the neighborhood. Zonic Media builds that coverage and tracks new weekly accounts by area. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

@@ -246,7 +246,7 @@ function contentHtml(c: IndustryMarketingConfig) {
 
   const facts = [
     `<div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>`,
-    `<div class="afact"><span class="ak">Typical cost</span><span class="av">Most ${c.industry} marketing retainers range from $550 to $1,700 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>`,
+    `<div class="afact"><span class="ak">Typical cost</span><span class="av">Most ${c.industry} marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>`,
     `<div class="afact"><span class="ak">How long results take</span><span class="av">Google Ads can generate qualified ${c.industry} leads within the first weeks. Local SEO and Google Map Pack ranking typically build over three to six months.</span></div>`,
     c.marketFact
       ? `<div class="afact"><span class="ak">${c.marketFact.label}</span><span class="av">${c.marketFact.value}</span></div>`
@@ -327,7 +327,7 @@ ${MAP_VIZ_HTML}
 <div class="price-grid">
 <div class="price">
 <div class="pname">Foundation</div>
-<div class="amt">$550<span>/mo</span></div>
+<div class="amt">$197<span>/mo</span></div>
 <p class="pdesc">${c.foundationDesc}</p>
 <ul>
 <li>${CHECK_SVG} Google Business Profile optimization</li>
@@ -343,7 +343,7 @@ ${MAP_VIZ_HTML}
 <div class="price feat">
 <div class="tag">Most popular</div>
 <div class="pname">Growth</div>
-<div class="amt">$1,250<span>/mo</span></div>
+<div class="amt">$750<span>/mo</span></div>
 <p class="pdesc">${c.growthDesc}</p>
 <ul>
 <li>${CHECK_SVG} Everything in Foundation</li>
@@ -360,7 +360,7 @@ ${MAP_VIZ_HTML}
 </div>
 <div class="price">
 <div class="pname">Authority</div>
-<div class="amt">$1,700<span>/mo</span></div>
+<div class="amt">$1,500<span>/mo</span></div>
 <p class="pdesc">${c.authorityDesc}</p>
 <ul>
 <li>${CHECK_SVG} Everything in Growth</li>
@@ -461,7 +461,7 @@ function schemas(c: IndustryMarketingConfig) {
       url,
       description: c.description,
       telephone: "+1-302-726-9736",
-      priceRange: "$550–$1700/mo",
+      priceRange: "$197–$1500/mo",
       areaServed: "United States",
       address: {
         "@type": "PostalAddress",

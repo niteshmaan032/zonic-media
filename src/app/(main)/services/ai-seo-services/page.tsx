@@ -39,9 +39,9 @@ import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/ai-seo-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI SEO Agency | AEO & Generative Engine Optimization (GEO)" },
+  title: { absolute: "AI SEO Agency & AI SEO Services | GEO & AEO Optimization" },
   description:
-    "AI SEO agency for small businesses: answer engine optimization (AEO) and generative engine optimization (GEO) to get cited in ChatGPT.",
+    "AI SEO agency and AI SEO services: generative engine optimization (GEO) and answer engine optimization (AEO) to get cited in ChatGPT, AI Overviews and AI Mode.",
   keywords: [
     "ai seo agency",
     "ai seo services",
@@ -57,6 +57,11 @@ export const metadata: Metadata = {
     "llm optimization services",
     "ai search optimization",
     "traditional seo vs ai seo",
+    "geo seo marketing agency",
+    "ai search marketing agency",
+    "chatgpt marketing agency",
+    "ai overviews seo services",
+    "llm seo agency",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -68,7 +73,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "AI SEO Agency | AEO & Generative Engine Optimization (GEO)",
+    title: "AI SEO Agency & AI SEO Services | GEO & AEO Optimization",
     description:
       "Answer engine optimization (AEO) and generative engine optimization (GEO) that get your business cited in ChatGPT, Google AI Overviews, AI Mode and Perplexity.",
     url: PAGE_PATH,
@@ -384,18 +389,18 @@ const data: TseoLandingData = {
         Headquartered in Dover, Delaware and working with businesses in every
         state, we pair the AI layer with market pages for{" "}
         <Link href="/services/delaware/seo" className="tseo-inline-link">
-          Delaware
+          Delaware SEO company
         </Link>
         ,{" "}
         <Link
           href="/services/philadelphia/local-seo"
           className="tseo-inline-link"
         >
-          Philadelphia
+          Philadelphia SEO company
         </Link>{" "}
         and{" "}
         <Link href="/services/nyc/local-seo" className="tseo-inline-link">
-          New York City
+          NYC local SEO
         </Link>
         . If a profile is suspended, our{" "}
         <Link

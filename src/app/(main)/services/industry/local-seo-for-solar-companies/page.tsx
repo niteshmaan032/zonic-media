@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "solar marketing",
     "solar lead generation",
     "local seo for contractors",
+    "solar companies seo services",
+    "solar companies seo agency",
+    "seo company for solar companies",
+    "solar companies search engine optimization",
+    "solar companies internet marketing",
+    "google business profile for solar companies",
+    "ai search optimization for solar companies",
+    "solar companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const SolarSeoFaqs = [
   {
     question: "What solar content ranks and converts in 2026?",
     answer:
-      "Content that answers the money questions for your state: current federal and state incentives, net metering rules, payback periods by home size, financing options and battery storage costs. Those searches happen months before a homeowner requests quotes, and the company that answered them is the one they call. Zonic Media writes and updates that content for your market, pairs it with a Google Business Profile in the Solar Energy Company category, and tracks consultations by page.",
+      "Content that answers the money questions for your state: current federal and state incentives, net metering rules, payback periods by home size, financing options and battery storage costs. Those searches happen months before a homeowner requests quotes, and the company that answered them is the one they call. Zonic Media writes and updates that content for your market, pairs it with a Google Business Profile in the Solar Energy Company category, and tracks consultations by page. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

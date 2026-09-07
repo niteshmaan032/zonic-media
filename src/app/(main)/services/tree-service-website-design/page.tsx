@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "tree service marketing agency",
     "tree service advertising ideas",
     "tree service companies",
+    "tree service web design company",
+    "tree service website developer",
+    "website for tree service business",
+    "tree service web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

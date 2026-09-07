@@ -89,6 +89,14 @@ export const metadata: Metadata = {
     "seo for roofing contractors",
     "roofing seo",
     "best local seo companies",
+    "roofing companies seo services",
+    "roofing companies seo agency",
+    "seo company for roofing companies",
+    "roofing companies search engine optimization",
+    "roofing companies internet marketing",
+    "google business profile for roofing companies",
+    "ai search optimization for roofing companies",
+    "roofing companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -222,7 +230,7 @@ const RoofingSeoFaqs = [
   {
     question: "How fast can a roofing company rank in the Google Map Pack?",
     answer:
-      "Profile-driven gains usually show within 4 to 8 weeks: correcting the primary category, adding service descriptions, growing reviews with the town named, and posting job photos with locations. Competitive metro rankings for roof replacement and storm damage take 3 to 6 months of city pages and links. Zonic Media tracks rankings on a grid across your service area so you can see the coverage expand month by month.",
+      "Profile-driven gains usually show within 4 to 8 weeks: correcting the primary category, adding service descriptions, growing reviews with the town named, and posting job photos with locations. Competitive metro rankings for roof replacement and storm damage take 3 to 6 months of city pages and links. Zonic Media tracks rankings on a grid across your service area so you can see the coverage expand month by month. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

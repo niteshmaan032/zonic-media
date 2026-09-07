@@ -14,6 +14,10 @@ export const windowAndDoorMarketing = buildIndustryMarketingPage({
     "window and door leads",
     "window company seo",
     "window replacement google ads",
+    "window and door marketing company",
+    "window and door advertising agency",
+    "window and door internet marketing",
+    "window and door lead generation",
   ],
 
   eyebrow: "Window & Door Marketing Agency",
@@ -132,7 +136,7 @@ export const windowAndDoorMarketing = buildIndustryMarketingPage({
     "Window Company Website Design & Development",
   ],
   costAnswer:
-    "Most window and door marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most window and door marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A window and door marketing agency helps replacement companies get found online and turn local searches — window replacement near me, patio door installation, entry door replacement — into booked in-home estimates. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

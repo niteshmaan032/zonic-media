@@ -79,9 +79,9 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/industry/pediatricians";
 
 export const metadata: Metadata = {
-  title: { absolute: "Pediatric SEO & Marketing | Practice SEO That Books Families" },
+  title: { absolute: "Pediatrician SEO Company | Pediatric Practice Marketing" },
   description:
-    "Pediatric SEO and marketing for practices and clinics: Google Business Profile, provider pages, insurance content and reviews that help parents book you.",
+    "Pediatrician SEO company for practices and clinics: Google Business Profile, provider pages, insurance content and reviews that help parents find and book you.",
   keywords: [
     "pediatric seo",
     "pediatrician seo",
@@ -92,6 +92,14 @@ export const metadata: Metadata = {
     "pediatric clinic marketing",
     "seo for doctors",
     "pediatric practice google business profile",
+    "pediatricians seo services",
+    "pediatricians seo agency",
+    "seo company for pediatricians",
+    "pediatricians search engine optimization",
+    "pediatricians internet marketing",
+    "google business profile for pediatricians",
+    "ai search optimization for pediatricians",
+    "pediatricians seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -225,7 +233,7 @@ const PediatricSeoFaqs = [
   {
     question: "How do parents choose a pediatrician online, and what does that mean for SEO?",
     answer:
-      "Parents search for a pediatrician near them who accepts their insurance, then read reviews and check whether the practice handles newborns, same-day sick visits and after-hours calls. That means the Google Business Profile must be verified with the right categories, the site needs insurance and provider pages, and reviews should mention the things parents care about. Zonic Media builds pediatric SEO around those decisions and tracks new-family registrations.",
+      "Parents search for a pediatrician near them who accepts their insurance, then read reviews and check whether the practice handles newborns, same-day sick visits and after-hours calls. That means the Google Business Profile must be verified with the right categories, the site needs insurance and provider pages, and reviews should mention the things parents care about. Zonic Media builds pediatric SEO around those decisions and tracks new-family registrations. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 
@@ -484,7 +492,7 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Pediatrician SEO & Marketing</p>
                   <h1 className="tseo-hero-h1">
-                    Pediatrician SEO That{" "}
+                    Pediatrician SEO Company That{" "}
                     <span className="tseo-hl">Fills Your Schedule</span>
                   </h1>
                   <p className="tseo-hero-sub">

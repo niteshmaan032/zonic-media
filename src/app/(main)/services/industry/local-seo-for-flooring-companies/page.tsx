@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "seo for flooring installers",
     "flooring marketing",
     "local seo for contractors",
+    "flooring companies seo services",
+    "flooring companies seo agency",
+    "seo company for flooring companies",
+    "flooring companies search engine optimization",
+    "flooring companies internet marketing",
+    "google business profile for flooring companies",
+    "ai search optimization for flooring companies",
+    "flooring companies seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const FlooringSeoFaqs = [
   {
     question: "Should flooring SEO target products or installation services?",
     answer:
-      "Both. Homeowners search product terms first, such as luxury vinyl plank, hardwood or tile flooring, then search for installers near them. Product pages with photos and price ranges capture the first stage; installation and refinishing service pages plus city pages capture the second. The Google Business Profile should list both products and services. Zonic Media builds flooring SEO across both stages and tracks measure requests by page.",
+      "Both. Homeowners search product terms first, such as luxury vinyl plank, hardwood or tile flooring, then search for installers near them. Product pages with photos and price ranges capture the first stage; installation and refinishing service pages plus city pages capture the second. The Google Business Profile should list both products and services. Zonic Media builds flooring SEO across both stages and tracks measure requests by page. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

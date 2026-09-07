@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     "real estate web design agency",
     "real estate agent websites examples",
     "idx website design",
+    "real estate agent web design company",
+    "real estate agent website developer",
+    "website for real estate agent business",
+    "real estate agent web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

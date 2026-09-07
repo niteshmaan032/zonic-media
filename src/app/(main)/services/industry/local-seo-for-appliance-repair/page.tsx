@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     "appliance repair service company",
     "appliance repair leads",
     "local seo for service businesses",
+    "appliance repair seo services",
+    "appliance repair seo agency",
+    "seo company for appliance repair",
+    "appliance repair search engine optimization",
+    "appliance repair internet marketing",
+    "google business profile for appliance repair",
+    "ai search optimization for appliance repair",
+    "appliance repair seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -178,7 +186,7 @@ const ApplianceSeoFaqs = [
   {
     question: "Should an appliance repair company build pages for every brand it services?",
     answer:
-      "Yes, for the major brands. Homeowners search the brand and the appliance, such as Whirlpool washer repair or LG refrigerator repair, so a page for each brand and each appliance type captures searches a generic services page never will. Add a city page for every service area and keep the Google Business Profile services list matching. Zonic Media builds that structure and tracks calls by brand and appliance.",
+      "Yes, for the major brands. Homeowners search the brand and the appliance, such as Whirlpool washer repair or LG refrigerator repair, so a page for each brand and each appliance type captures searches a generic services page never will. Add a city page for every service area and keep the Google Business Profile services list matching. Zonic Media builds that structure and tracks calls by brand and appliance. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

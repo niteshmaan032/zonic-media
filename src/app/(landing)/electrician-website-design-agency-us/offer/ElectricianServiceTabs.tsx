@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my emergency electrical pages",
     kicker: "EMERGENCY ELECTRICAL",
     siteHeading: "Emergency Electrical—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/emergency-electrical.webp",
     photoAlt: "Electrician service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my panel upgrades pages",
     kicker: "PANEL UPGRADES",
     siteHeading: "Panel Upgrades—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/panel-upgrades.webp",
     photoAlt: "Electrician service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my ev chargers pages",
     kicker: "EV CHARGERS",
     siteHeading: "EV Chargers—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/ev-chargers.webp",
     photoAlt: "Electrician service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my whole-home rewiring pages",
     kicker: "WHOLE-HOME REWIRING",
     siteHeading: "Whole-Home Rewiring—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/whole-home-rewiring.webp",
     photoAlt: "Electrician service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my lighting installation pages",
     kicker: "LIGHTING INSTALLATION",
     siteHeading: "Lighting Installation—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/lighting-installation.webp",
     photoAlt: "Electrician service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial electrical pages",
     kicker: "COMMERCIAL ELECTRICAL",
     siteHeading: "Commercial Electrical—done right.",
-    photo: "/images/free-website/free-electrician/hero.webp",
+    photo: "/images/free-website/free-electrician/commercial-electrical.webp",
     photoAlt: "Electrician service image",
   },
 ];

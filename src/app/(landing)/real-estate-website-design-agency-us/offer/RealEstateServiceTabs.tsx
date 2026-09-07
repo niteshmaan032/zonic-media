@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my buy a home pages",
     kicker: "BUY A HOME",
     siteHeading: "Buy a Home—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/buy-a-home.webp",
     photoAlt: "Real Estate service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my sell a home pages",
     kicker: "SELL A HOME",
     siteHeading: "Sell a Home—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/sell-a-home.webp",
     photoAlt: "Real Estate service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my luxury listings pages",
     kicker: "LUXURY LISTINGS",
     siteHeading: "Luxury Listings—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/luxury-listings.webp",
     photoAlt: "Real Estate service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my relocation pages",
     kicker: "RELOCATION",
     siteHeading: "Relocation—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/relocation.webp",
     photoAlt: "Real Estate service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my new construction pages",
     kicker: "NEW CONSTRUCTION",
     siteHeading: "New Construction—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/new-construction.webp",
     photoAlt: "Real Estate service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my home valuation pages",
     kicker: "HOME VALUATION",
     siteHeading: "Home Valuation—done right.",
-    photo: "/images/free-website/free-real-estate/hero.webp",
+    photo: "/images/free-website/free-real-estate/home-valuation.webp",
     photoAlt: "Real Estate service image",
   },
 ];

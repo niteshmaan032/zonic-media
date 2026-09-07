@@ -33,10 +33,12 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 --------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
-  title: { absolute: "Google Business Profile Optimization Service | Local SEO" },
+  title: { absolute: "GMB Optimization Service | Google Business Profile Local SEO" },
   description:
     "Google Business Profile optimization service and local SEO that maps your Map Pack rankings street by street: categories, reviews, citations and posts.",
   keywords: [
+    "gmb optimization service",
+    "local seo agency",
     "google business profile optimization service",
     "google business profile optimization services",
     "google my business optimization service",
@@ -48,6 +50,11 @@ export const metadata: Metadata = {
     "google maps ranking",
     "map pack seo",
     "geo grid rank tracking",
+    "google maps marketing company",
+    "google business profile marketing agency",
+    "google my business marketing agency",
+    "map marketing company",
+    "google business marketing company",
   ],
   alternates: { canonical: "/local-seo-google-business-optimization" },
   openGraph: {

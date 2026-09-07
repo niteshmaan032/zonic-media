@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free Moving Company Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $895 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $197 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -620,7 +620,7 @@ export default function MovingCompanyOfferPage() {
               <span className="section-kicker">Qualifying plans</span>
               <h2>Pick the growth plan. Your Moving Company website comes with it.</h2>
             </div>
-            <p>Any plan at $895/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
+            <p>Any plan at $197/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
 
           <div className="pricing-grid">
@@ -631,7 +631,7 @@ export default function MovingCompanyOfferPage() {
               </div>
               <h3>Local Foundation</h3>
               <div className="plan-price">
-                $895 <span>/ month</span>
+                $197 <span>/ month</span>
               </div>
               <p>Build a strong local presence and a website foundation that supports discovery.</p>
               <ul>
@@ -664,7 +664,7 @@ export default function MovingCompanyOfferPage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $1,495 <span>/ month</span>
+                $750 <span>/ month</span>
               </div>
               <p>Combine local visibility with paid search, landing-page improvements, and lead tracking.</p>
               <ul>
@@ -700,7 +700,7 @@ export default function MovingCompanyOfferPage() {
               </div>
               <h3>Full Market</h3>
               <div className="plan-price">
-                $2,495 <span>/ month</span>
+                $1,500 <span>/ month</span>
               </div>
               <p>Expand across services and locations with a broader organic and paid growth program.</p>
               <ul>
@@ -826,7 +826,7 @@ export default function MovingCompanyOfferPage() {
               <span>
                 <strong>What qualifies you</strong>
                 <small>
-                  Any Zonic marketing plan at $895/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $197/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/web-design" className="offer-inlink">
                     our full website design service
                   </Link>
@@ -1030,7 +1030,7 @@ export default function MovingCompanyOfferPage() {
           <div className="footer-offer">
             <span>Moving Company Website Launch Offer</span>
             <strong>$0 upfront development fee</strong>
-            <p>With a qualifying marketing plan at $895/month or above on a six-month term.</p>
+            <p>With a qualifying marketing plan at $197/month or above on a six-month term.</p>
             <a href="#ofr-moving-company-offer-form">
               Get my moving company website <Icon name="arrow-right" />
             </a>
@@ -1062,7 +1062,7 @@ export default function MovingCompanyOfferPage() {
           <small>
             <strong>OFFER TERMS.</strong> Moving Company website development fee, valued at $2,000, is
             waived for new clients who start a qualifying Zonic Media marketing
-            plan at $895 per month or above on a six-month minimum term. Client
+            plan at $197 per month or above on a six-month minimum term. Client
             owns and registers the domain from the start of the engagement.
             Zonic Media hosts and maintains the website during the term; full
             ownership of the website and hosting transfers to the client on

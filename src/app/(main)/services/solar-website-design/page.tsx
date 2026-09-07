@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "solar energy website design",
     "solar contractor websites design",
     "solar website design ideas",
+    "solar web design company",
+    "solar website developer",
+    "website for solar business",
+    "solar web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

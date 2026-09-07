@@ -14,6 +14,9 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
     "appliance repair advertising",
     "marketing for appliance repair companies",
     "appliance repair company marketing",
+    "appliance repair marketing company",
+    "appliance repair advertising agency",
+    "appliance repair internet marketing",
   ],
 
   eyebrow: "Appliance Repair Marketing Agency",
@@ -131,7 +134,7 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
     "Appliance Repair Website Design & Development",
   ],
   costAnswer:
-    "Most appliance repair marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most appliance repair marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "An appliance repair marketing agency helps repair companies get found online and turn urgent searches — refrigerator repair near me, washer repair, dishwasher not draining, brand-specific service — into booked service calls. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     "pest control website template",
     "create a pest control website",
     "online marketing for pest control services",
+    "pest control web design company",
+    "pest control website developer",
+    "website for pest control business",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

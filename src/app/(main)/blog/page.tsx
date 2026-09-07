@@ -140,21 +140,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               excerpt: blog.excerpt,
             }))}
           />
-
-          {/* The grid above paginates client-side (6 per page), so crawlers
-              only saw the first six posts and 28 guides had zero internal
-              links (Sept 2026 crawl). This server-rendered index links every
-              published post. */}
-          <nav className="bp-all-posts" aria-label="All articles">
-            <h2 className="bp-all-posts-heading">All articles</h2>
-            <ul className="bp-all-posts-list">
-              {blogs.map((blog) => (
-                <li key={blog.id}>
-                  <Link href={`/blog/${blog.slug}`}>{blog.blogTitle}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
         </div>
       </div>
 

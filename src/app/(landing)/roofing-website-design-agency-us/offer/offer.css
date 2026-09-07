@@ -300,7 +300,7 @@ body.rwd-menu-is-open {
 .rwd-page .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .rwd-page .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
 .rwd-page .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
-.rwd-page .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.rwd-page .process-grid .process-card--featured { background: #f97315; color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(194,65,12,.25); }
 .rwd-page .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
 .rwd-page .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
 .rwd-page .process-card--featured .step-number { color: rgba(255,255,255,.16); }

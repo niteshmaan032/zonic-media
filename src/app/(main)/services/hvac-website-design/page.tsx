@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     "air conditioning website design",
     "hvac website examples",
     "hvac website design ideas",
+    "hvac website developer",
+    "website for hvac business",
+    "hvac web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

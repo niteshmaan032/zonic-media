@@ -223,7 +223,7 @@ const data: PhlLandingData = {
   },
   about: {
     eyebrow: "The Delaware Opportunity",
-    h2Start: "Three Counties, Three Different Markets.",
+    h2Start: "New Castle, Kent and Sussex County: Three Different Markets.",
     h2Highlight: "One SEO Plan Doesn't Fit All.",
     leads: [
       <>

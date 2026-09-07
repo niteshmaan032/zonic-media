@@ -46,6 +46,11 @@ export const metadata: Metadata = {
     "digital advertising agency nyc",
     "seo agency new york",
     "google ads agency nyc",
+    "internet marketing nyc",
+    "online marketing company nyc",
+    "marketing company nyc",
+    "advertising agency nyc small business",
+    "digital marketing companies in new york",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

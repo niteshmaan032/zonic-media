@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "gutter company near me",
     "gutter installation companies",
     "gutter contractor website",
+    "gutter company web design company",
+    "gutter company website developer",
+    "website for gutter company business",
+    "gutter company web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

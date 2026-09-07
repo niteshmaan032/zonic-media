@@ -85,6 +85,14 @@ export const metadata: Metadata = {
     "local seo for cleaning companies",
     "maid service seo",
     "cleaning company local seo",
+    "residential cleaning seo services",
+    "residential cleaning seo agency",
+    "seo company for residential cleaning",
+    "residential cleaning search engine optimization",
+    "residential cleaning internet marketing",
+    "google business profile for residential cleaning",
+    "ai search optimization for residential cleaning",
+    "residential cleaning seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -218,7 +226,7 @@ const CleaningSeoFaqs = [
   {
     question: "What local SEO signals matter most for a house cleaning company?",
     answer:
-      "Review recency and volume on Google, because homeowners choose cleaners on trust; a service-area page for every neighborhood you cover; clear pricing content, since price is the first question; and consistent name, address and phone across directories. Zonic Media runs a review program, builds the neighborhood pages and tracks online bookings so you can see which areas produce recurring accounts.",
+      "Review recency and volume on Google, because homeowners choose cleaners on trust; a service-area page for every neighborhood you cover; clear pricing content, since price is the first question; and consistent name, address and phone across directories. Zonic Media runs a review program, builds the neighborhood pages and tracks online bookings so you can see which areas produce recurring accounts. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

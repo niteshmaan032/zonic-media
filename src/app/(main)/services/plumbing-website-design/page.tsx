@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     "plumbing web design services cost",
     "website builder for plumbing business",
     "plumber website design",
+    "plumbing web design company",
+    "plumbing website developer",
+    "website for plumbing business",
+    "plumbing web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

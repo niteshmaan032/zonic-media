@@ -99,6 +99,16 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/services/local-seo-packages">
+                      Local SEO Packages
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/philadelphia/local-seo">
+                      Philadelphia SEO Company
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/services/white-label-services">
                       White-Label Services
                     </Link>

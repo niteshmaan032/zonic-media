@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     "google ad grants management",
     "nonprofit seo services",
     "nonprofit website design",
+    "non profit marketing company",
+    "non profit advertising agency",
+    "non profit internet marketing",
+    "non profit lead generation",
+    "marketing company for non profit businesses",
   ],
   alternates: { canonical: "/services/non-profit-marketing-agency" },
 };

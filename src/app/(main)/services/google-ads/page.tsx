@@ -54,10 +54,14 @@ function BtnArrow() {
 }
 
 export const metadata: Metadata = {
-  title: { absolute: "Google Ads Management Services | Affordable PPC Agency USA" },
+  title: { absolute: "Google Ads Agency & PPC Management Services | Zonic Media" },
   description:
-    "Google Ads management services for small businesses: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
+    "Google Ads agency and PPC management services: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
   keywords: [
+    "google ads agency",
+    "ppc agency",
+    "google ads management",
+    "ppc management services",
     "google ads management services",
     "google ads management services usa",
     "affordable google ads management services",
@@ -68,6 +72,12 @@ export const metadata: Metadata = {
     "ppc management for small business",
     "local services ads management",
     "google ads management services near me",
+    "google advertising agency",
+    "google marketing agency",
+    "online advertising agency",
+    "pay per click management company",
+    "paid search agency",
+    "lead generation agency",
   ],
   alternates: { canonical: "/services/google-ads" },
   openGraph: {
@@ -81,7 +91,7 @@ export const metadata: Metadata = {
     ],
     title: "Google Ads Management Services | PPC Agency | Zonic Media",
     description:
-      "Google Ads management services for small businesses: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
+      "Google Ads agency and PPC management services: search, Local Services Ads and remarketing run by certified specialists, priced on your ad spend.",
     url: "/services/google-ads",
     type: "website",
   },

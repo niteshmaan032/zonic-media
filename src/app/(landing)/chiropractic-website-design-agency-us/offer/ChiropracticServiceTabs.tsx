@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my back pain care pages",
     kicker: "BACK PAIN CARE",
     siteHeading: "Back Pain Care—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/back-pain-care.webp",
     photoAlt: "Chiropractic service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my neck pain care pages",
     kicker: "NECK PAIN CARE",
     siteHeading: "Neck Pain Care—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/neck-pain-care.webp",
     photoAlt: "Chiropractic service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my sports injuries pages",
     kicker: "SPORTS INJURIES",
     siteHeading: "Sports Injuries—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/sports-injuries.webp",
     photoAlt: "Chiropractic service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my auto accident care pages",
     kicker: "AUTO ACCIDENT CARE",
     siteHeading: "Auto Accident Care—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/auto-accident-care.webp",
     photoAlt: "Chiropractic service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my wellness care pages",
     kicker: "WELLNESS CARE",
     siteHeading: "Wellness Care—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/wellness-care.webp",
     photoAlt: "Chiropractic service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my new patient visits pages",
     kicker: "NEW PATIENT VISITS",
     siteHeading: "New Patient Visits—done right.",
-    photo: "/images/free-website/free-chiropractic/hero.webp",
+    photo: "/images/free-website/free-chiropractic/new-patient-visits.webp",
     photoAlt: "Chiropractic service image",
   },
 ];

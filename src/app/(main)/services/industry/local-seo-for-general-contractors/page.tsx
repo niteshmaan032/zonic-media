@@ -53,6 +53,14 @@ export const metadata: Metadata = {
     "seo program for contractors",
     "local seo for construction companies",
     "general contractor services near me",
+    "general contractors seo services",
+    "general contractors seo agency",
+    "seo company for general contractors",
+    "general contractors search engine optimization",
+    "general contractors internet marketing",
+    "google business profile for general contractors",
+    "ai search optimization for general contractors",
+    "general contractors seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -186,7 +194,7 @@ const ContractorSeoFaqs = [
   {
     question: "Which Google Business Profile category should a general contractor use?",
     answer:
-      "General Contractor as the primary category, with secondary categories for the work you actually want, such as Remodeler, Custom Home Builder or Construction Company. The wrong primary category is the most common reason contractors rank for jobs they do not want. Zonic Media audits the categories against the competitors in your Map Pack, sets the services list to match, and tracks which categories produce estimate requests.",
+      "General Contractor as the primary category, with secondary categories for the work you actually want, such as Remodeler, Custom Home Builder or Construction Company. The wrong primary category is the most common reason contractors rank for jobs they do not want. Zonic Media audits the categories against the competitors in your Map Pack, sets the services list to match, and tracks which categories produce estimate requests. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

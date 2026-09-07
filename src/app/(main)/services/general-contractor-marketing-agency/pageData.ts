@@ -14,6 +14,10 @@ export const generalContractorMarketing = buildIndustryMarketingPage({
     "construction marketing agency",
     "contractor seo",
     "contractor lead generation",
+    "general contractor marketing company",
+    "general contractor advertising agency",
+    "general contractor internet marketing",
+    "general contractor lead generation",
   ],
 
   eyebrow: "General Contractor Marketing Agency",
@@ -132,7 +136,7 @@ export const generalContractorMarketing = buildIndustryMarketingPage({
     "Contractor Website Design & Development",
   ],
   costAnswer:
-    "Most general contractor marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most general contractor marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A general contractor marketing agency helps contractors get found online and turn local searches — general contractor near me, home addition, whole-home remodel, ADU builder — into booked consultations and signed projects. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

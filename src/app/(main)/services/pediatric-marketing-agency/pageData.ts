@@ -14,6 +14,10 @@ export const pediatricMarketing = buildIndustryMarketingPage({
     "healthcare marketing agency",
     "pediatric seo",
     "medical practice marketing",
+    "pediatric marketing company",
+    "pediatric advertising agency",
+    "pediatric internet marketing",
+    "pediatric lead generation",
   ],
 
   eyebrow: "Pediatric Marketing Agency",
@@ -132,7 +136,7 @@ export const pediatricMarketing = buildIndustryMarketingPage({
     "Pediatric Website Design & Development",
   ],
   costAnswer:
-    "Most pediatric marketing retainers range from $550 to $1,700 per month depending on the channels and competition. At Zonic Media, plans start at $550/mo (Foundation), $1,250/mo (Growth), and $1,700/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most pediatric marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A pediatric marketing agency helps pediatricians get found online and turn local searches into booked new-patient appointments. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, review generation, lead capture, backlinks and local citations, and website design into one managed system.",
 });

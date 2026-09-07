@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     "website for cleaning business",
     "cleaning services website design",
     "commercial cleaning marketing",
+    "commercial cleaning web design company",
+    "commercial cleaning website developer",
+    "website for commercial cleaning business",
+    "commercial cleaning web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

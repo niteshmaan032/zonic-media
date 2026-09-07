@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free HVAC Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $895 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $197 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -636,7 +636,7 @@ export default function HvacOfferPage() {
               <span className="section-kicker">Qualifying HVAC plans</span>
               <h2>Pick the HVAC growth plan. The website comes with it.</h2>
             </div>
-            <p>Any qualifying plan at $895/month or above on a 6-month term includes the full HVAC lead-generation website build at no development fee.</p>
+            <p>Any qualifying plan at $197/month or above on a 6-month term includes the full HVAC lead-generation website build at no development fee.</p>
           </div>
 
           <div className="pricing-grid">
@@ -647,7 +647,7 @@ export default function HvacOfferPage() {
               </div>
               <h3>Local Foundation</h3>
               <div className="plan-price">
-                $895 <span>/ month</span>
+                $197 <span>/ month</span>
               </div>
               <p>Build a stronger local HVAC presence and the website foundation required to support discovery.</p>
               <ul>
@@ -680,7 +680,7 @@ export default function HvacOfferPage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $1,495 <span>/ month</span>
+                $750 <span>/ month</span>
               </div>
               <p>Combine local HVAC visibility with paid search, service-page improvements, and estimate tracking.</p>
               <ul>
@@ -716,7 +716,7 @@ export default function HvacOfferPage() {
               </div>
               <h3>Full Market</h3>
               <div className="plan-price">
-                $2,495 <span>/ month</span>
+                $1,500 <span>/ month</span>
               </div>
               <p>Expand HVAC visibility across profitable services and locations with a broader organic and paid program.</p>
               <ul>
@@ -846,7 +846,7 @@ export default function HvacOfferPage() {
               <Icon name="check" />
               <span>
                 <strong>What qualifies you</strong>
-                <small>Any Zonic HVAC marketing plan at $895/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform.{" "}
+                <small>Any Zonic HVAC marketing plan at $197/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform.{" "}
                   Also available with our{" "}
                   <Link href="/services/hvac-marketing-agency" className="offer-inlink">
                     HVAC marketing agency service
@@ -1051,7 +1051,7 @@ export default function HvacOfferPage() {
           <div className="footer-offer">
             <span>HVAC Website Launch Offer</span>
             <strong>$0 upfront development fee</strong>
-            <p>With a qualifying HVAC marketing plan at $895/month or above on a six-month term.</p>
+            <p>With a qualifying HVAC marketing plan at $197/month or above on a six-month term.</p>
             <a href="#hwd-offer-form">
               Get my HVAC website <Icon name="arrow-right" />
             </a>
@@ -1083,7 +1083,7 @@ export default function HvacOfferPage() {
           <small>
             <strong>OFFER TERMS.</strong> HVAC website development fee, valued at $2,000, is
             waived for new clients who start a qualifying Zonic Media marketing
-            plan at $895 per month or above on a six-month minimum term. Client
+            plan at $197 per month or above on a six-month minimum term. Client
             owns and registers the domain from the start of the engagement.
             Zonic Media hosts and maintains the website during the term; full
             ownership of the website and hosting transfers to the client on

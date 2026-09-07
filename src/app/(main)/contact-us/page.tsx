@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     "free seo audit",
     "free google business profile audit",
     "zonic media phone number",
+    "internet marketing agency contact",
+    "marketing company near me",
+    "advertising agency near me",
+    "online marketing agency usa",
   ],
   alternates: {
     canonical: "/contact-us",

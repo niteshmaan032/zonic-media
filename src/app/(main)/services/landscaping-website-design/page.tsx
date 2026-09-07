@@ -43,6 +43,10 @@ export const metadata: Metadata = {
     "landscaper web design company",
     "landscaping website design ideas",
     "gardening website design",
+    "landscaping web design company",
+    "landscaping website developer",
+    "website for landscaping business",
+    "landscaping web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

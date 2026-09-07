@@ -97,6 +97,13 @@ export const metadata: Metadata = {
     "dental seo marketing company near me",
     "top dental seo companies",
     "seo for dentists",
+    "dental seo agency",
+    "seo company for dental",
+    "dental search engine optimization",
+    "dental internet marketing",
+    "google business profile for dental",
+    "ai search optimization for dental",
+    "dental seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -230,7 +237,7 @@ const DentalSeoFaqs = [
   {
     question: "How much does dental SEO cost and what should it include?",
     answer:
-      "Dental SEO in the US typically runs $1,000 to $3,500 a month for a single practice, more in competitive metros or for multi-location groups. It should include Google Business Profile management, treatment and insurance pages, a review program, technical fixes on the site, and monthly reporting in new-patient calls and bookings rather than rankings alone. Zonic Media quotes a flat monthly fee after a free audit of your practice's current visibility.",
+      "Dental SEO in the US typically runs $1,000 to $3,500 a month for a single practice, more in competitive metros or for multi-location groups. It should include Google Business Profile management, treatment and insurance pages, a review program, technical fixes on the site, and monthly reporting in new-patient calls and bookings rather than rankings alone. Zonic Media quotes a flat monthly fee after a free audit of your practice's current visibility. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

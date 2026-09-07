@@ -799,7 +799,7 @@ function page() {
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">STARTER PLAN</div>
                   <p className="local-seo-home-price">
-                    $750 <span>/ month</span>
+                    $197 <span>/ month</span>
                   </p>
                   <p className="local-seo-home-price-subtitle">
                     Best for small businesses targeting one service area.
@@ -828,7 +828,7 @@ function page() {
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">GROWTH PLAN</div>
                   <p className="local-seo-home-price">
-                    $1350 <span>/ month</span>
+                    $750 <span>/ month</span>
                   </p>
                   <p className="local-seo-home-price-subtitle">
                     Best for growing companies ready for more calls and booked
@@ -860,7 +860,7 @@ function page() {
                     DOMINATE PLAN
                   </div>
                   <p className="local-seo-home-price">
-                    $2000 <span>/ month</span>
+                    $1,500 <span>/ month</span>
                   </p>
                   <p className="local-seo-home-price-subtitle">
                     Best for competitive markets and multi-location growth.

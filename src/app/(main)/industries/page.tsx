@@ -7,10 +7,11 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
-  title: { absolute: "Industries We Serve | Marketing Agency for Contractors" },
+  title: { absolute: "Industries We Serve | Home Services & Contractor Marketing" },
   description:
     "Industry-specific marketing for contractors, healthcare, legal, real estate and cleaning businesses: local SEO, websites and Google Ads built for each trade.",
   keywords: [
+    "home services marketing agency",
     "marketing agency for contractors",
     "marketing agency for small business",
     "industry specific marketing agency",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Industries We Serve | Marketing Agency for Contractors",
+    title: "Industries We Serve | Home Services & Contractor Marketing",
     description:
       "One specialist team, a dedicated playbook for every niche. See how Zonic Media grows roofers, HVAC, plumbing, dental, legal, real estate and more.",
     url: "/industries",

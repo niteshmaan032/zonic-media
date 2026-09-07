@@ -89,6 +89,14 @@ export const metadata: Metadata = {
     "commercial cleaning services near me",
     "commercial cleaning marketing",
     "local seo for cleaning companies",
+    "commercial cleaning seo services",
+    "commercial cleaning seo agency",
+    "seo company for commercial cleaning",
+    "commercial cleaning search engine optimization",
+    "commercial cleaning internet marketing",
+    "google business profile for commercial cleaning",
+    "ai search optimization for commercial cleaning",
+    "commercial cleaning seo 2026",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -222,7 +230,7 @@ const CommercialSeoFaqs = [
   {
     question: "How does SEO for commercial cleaning differ from SEO for house cleaning?",
     answer:
-      "Commercial cleaning buyers are facility managers searching for office cleaning, medical cleaning or janitorial services in a business district, and they compare on certifications, insurance and references rather than instant prices. SEO should target those industry and district searches with dedicated pages and case studies, and the Google Business Profile should use commercial categories. Zonic Media builds commercial cleaning SEO around that buyer and tracks proposal requests.",
+      "Commercial cleaning buyers are facility managers searching for office cleaning, medical cleaning or janitorial services in a business district, and they compare on certifications, insurance and references rather than instant prices. SEO should target those industry and district searches with dedicated pages and case studies, and the Google Business Profile should use commercial categories. Zonic Media builds commercial cleaning SEO around that buyer and tracks proposal requests. In 2026 the same signals decide whether Google's AI Overviews and AI Mode recommend you, so every fix compounds.",
   },
 ];
 

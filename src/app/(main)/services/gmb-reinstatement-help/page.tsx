@@ -41,7 +41,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Reinstatement",
   description:
-    "Zonic Media's GMB reinstatement service recovers suspended, disabled, and pending-verification Google Business Profiles for US businesses. Free suspension audit, custom appeal within 24–48 hours, average reinstatement in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee. 700+ profiles reinstated and verified, rated 5.0 out of 5 across 21 verified client reviews on Clutch.",
+    "GBP reinstatement service: GMB reinstatement experts recover suspended and disabled Google Business Profiles in 5 to 7 days. 700+ reinstated. No Fix, No Charge.",
   url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
   provider: {
     "@type": "Organization",
@@ -122,7 +122,7 @@ const GmbResinstFaqs = [
   {
     question: "What makes Zonic Media one of the best GMB reinstatement services?",
     answer:
-      "Zonic Media has reinstated and verified 700+ Google Business Profiles with a 4.9 average client rating and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
+      "Zonic Media has reinstated and verified 700+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
   },
   {
     question: "Where can I read verified reviews of Zonic Media's reinstatement service?",
@@ -137,7 +137,7 @@ const GmbResinstFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Google Business Profile Reinstatement Service | GMB Experts" },
+  title: { absolute: "GBP Reinstatement Service | GMB Reinstatement Experts" },
   description:
     "Google Business Profile suspended? Our reinstatement experts recover suspended and disabled listings in 5 to 7 days. 700+ profiles reinstated.",
   keywords: [
@@ -206,9 +206,9 @@ function page() {
             </span>
 
             <h1>
-              Suspended Google Business Profile?{" "}
+              Suspended Google Business Profile? Our GBP Reinstatement Service Gets You{" "}
               <span className="accent">
-                Get Reinstated Fast.
+                Reinstated Fast.
                 <svg viewBox="0 0 300 20" aria-hidden="true">
                   <path d="M4 14 C 70 5, 230 3, 296 11" />
                 </svg>

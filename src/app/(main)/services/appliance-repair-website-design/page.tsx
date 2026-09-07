@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "appliance repair website builder",
     "appliance repair marketing",
     "appliance repair seo",
+    "appliance repair web design company",
+    "appliance repair website developer",
+    "website for appliance repair business",
+    "appliance repair web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

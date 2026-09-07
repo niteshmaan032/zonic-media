@@ -586,14 +586,13 @@ function Page() {
                     Search Engine Marketing in Philadelphia
                   </p>
                   <h1 className="phl-h1">
-                    Own the Whole{" "}
+                    Philadelphia SEM Agency: Own the Whole{" "}
                     <span className="phl-hl">Search Results Page</span>
                   </h1>
                   <p className="phl-hero-sub">
                     Most Philadelphia businesses buy SEO from one vendor and ads
                     from another, then wonder why neither can prove what it
-                    produced. We run paid and organic search as a single
-                    strategy — one keyword map, one budget decision, one report
+                    produced. Our search engine marketing services run paid and organic search as a single strategy — one keyword map, one budget decision, one report
                     — so the two compound instead of competing.
                   </p>
 
@@ -810,7 +809,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Both Halves of Search, Run by One Team
+                    Search Engine Marketing Services: Both Halves of Search, Run by One Team
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">

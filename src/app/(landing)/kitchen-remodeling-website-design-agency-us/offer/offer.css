@@ -168,7 +168,9 @@ body.ofr-kitchen-remodeling-menu-is-open {
 .ofr-kitchen-remodeling .eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
 .ofr-kitchen-remodeling .eyebrow__pulse { width: 8px; height: 8px; border-radius: 50%; background: #35c879; box-shadow: 0 0 0 5px rgba(53, 200, 121, .13); }
 
-.ofr-kitchen-remodeling h1 { margin: 22px 0 20px; max-width: 680px; font-size: clamp(46px, 4.55vw, 74px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
+.ofr-kitchen-remodeling h1 { margin: 22px 0 20px; max-width: 680px; /* "Kitchen Remodeling Website" is long enough to wrap at the shared 4.55vw, which pushed the
+     hero heading past its three designed lines. Sized to hold three. */
+  font-size: clamp(30px, 3.0vw, 46px); line-height: 1; letter-spacing: -.055em; font-weight: 850; }
 .ofr-kitchen-remodeling .headline-accent { display: block; color: var(--blue); position: relative; }
 .ofr-kitchen-remodeling .headline-accent svg { display: block; width: 176px; height: 14px; margin: 10px 0 0 6px; fill: none; stroke: var(--yellow); stroke-width: 8; stroke-linecap: round; }
 .ofr-kitchen-remodeling .hero-lede { max-width: 620px; margin: 24px 0 0; font-size: 18px; line-height: 1.72; color: var(--muted); }
@@ -191,7 +193,9 @@ body.ofr-kitchen-remodeling-menu-is-open {
 .ofr-kitchen-remodeling .proof-item--purple .proof-icon { background: #f2edff; color: #7a4fd8; }
 .ofr-kitchen-remodeling .proof-item--mobile { display: none; }
 .ofr-kitchen-remodeling .proof-item > span:last-child { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.ofr-kitchen-remodeling .proof-item strong { font-size: 15px; line-height: 1.3; letter-spacing: -.01em; white-space: nowrap; }
+.ofr-kitchen-remodeling .proof-item strong { font-size: 15px; line-height: 1.3; letter-spacing: -.01em; white-space: normal; }
+/* This industry name is long enough that a nowrap label ran into the next
+   stat; it wraps instead. */
 .ofr-kitchen-remodeling .proof-item small { color: #6e7c92; font-size: 13px; line-height: 1.45; }
 
 .ofr-kitchen-remodeling .hero-trust-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin: 26px 0 4px; }
@@ -301,7 +305,7 @@ body.ofr-kitchen-remodeling-menu-is-open {
 .ofr-kitchen-remodeling .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .ofr-kitchen-remodeling .process-grid article { position: relative; min-height: 360px; padding: 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: rgba(255,255,255,.72); box-shadow: 0 15px 42px rgba(30,67,126,.07); }
 .ofr-kitchen-remodeling .process-grid article::after { content: ""; position: absolute; width: 170px; height: 170px; right: -75px; bottom: -75px; border-radius: 50%; border: 1px dashed rgba(33,103,245,.16); }
-.ofr-kitchen-remodeling .process-grid .process-card--featured { background: var(--blue); color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(33,103,245,.25); }
+.ofr-kitchen-remodeling .process-grid .process-card--featured { background: #f97315; color: white; transform: translateY(-14px); box-shadow: 0 26px 55px rgba(194,65,12,.25); }
 .ofr-kitchen-remodeling .process-card--featured::after { border-color: rgba(255,255,255,.22) !important; }
 .ofr-kitchen-remodeling .step-number { position: absolute; right: 26px; top: 22px; color: rgba(7,21,47,.11); font-size: 60px; font-weight: 900; letter-spacing: -.08em; }
 .ofr-kitchen-remodeling .process-card--featured .step-number { color: rgba(255,255,255,.16); }

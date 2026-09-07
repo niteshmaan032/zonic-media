@@ -34,7 +34,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my emergency repair pages",
     kicker: "EMERGENCY REPAIR",
     siteHeading: "Emergency Repair—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/emergency-repair.webp",
     photoAlt: "Garage Door service image",
   },
   {
@@ -51,7 +51,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my broken springs pages",
     kicker: "BROKEN SPRINGS",
     siteHeading: "Broken Springs—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/broken-springs.webp",
     photoAlt: "Garage Door service image",
   },
   {
@@ -68,7 +68,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my opener repair pages",
     kicker: "OPENER REPAIR",
     siteHeading: "Opener Repair—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/opener-repair.webp",
     photoAlt: "Garage Door service image",
   },
   {
@@ -85,7 +85,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my new door installation pages",
     kicker: "NEW DOOR INSTALLATION",
     siteHeading: "New Door Installation—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/new-door-installation.webp",
     photoAlt: "Garage Door service image",
   },
   {
@@ -102,7 +102,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my commercial doors pages",
     kicker: "COMMERCIAL DOORS",
     siteHeading: "Commercial Doors—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/commercial-doors.webp",
     photoAlt: "Garage Door service image",
   },
   {
@@ -119,7 +119,7 @@ const SERVICES: ServicePath[] = [
     ctaLabel: "Build my preventive maintenance pages",
     kicker: "PREVENTIVE MAINTENANCE",
     siteHeading: "Preventive Maintenance—done right.",
-    photo: "/images/free-website/free-garage-door/hero.webp",
+    photo: "/images/free-website/free-garage-door/preventive-maintenance.webp",
     photoAlt: "Garage Door service image",
   },
 ];

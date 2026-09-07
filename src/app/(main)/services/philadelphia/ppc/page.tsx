@@ -61,7 +61,7 @@ import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/philadelphia/ppc";
 
 export const metadata: Metadata = {
-  title: { absolute: "PPC Agency Philadelphia | Google Ads Management Company" },
+  title: { absolute: "PPC Management Philadelphia | Google Ads & PPC Agency" },
   description:
     "Philadelphia PPC agency managing Google Ads, Local Services Ads and remarketing for local businesses: certified specialists, flat fees.",
   keywords: [
@@ -74,6 +74,11 @@ export const metadata: Metadata = {
     "ppc marketing agency",
     "philadelphia google ads agency",
     "local services ads philadelphia",
+    "ppc management philadelphia",
+    "ppc marketing philadelphia",
+    "pay per click management philadelphia",
+    "philadelphia ppc company",
+    "ppc services philadelphia",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
@@ -570,13 +575,12 @@ function Page() {
                 <div className="phl-hero-copy">
                   <p className="phl-eyebrow">PPC Agency in Philadelphia</p>
                   <h1 className="phl-h1">
-                    Google Ads That Buy{" "}
+                    Philadelphia PPC Management: Google Ads That Buy{" "}
                     <span className="phl-hl">Leads, Not Clicks</span>
                   </h1>
                   <p className="phl-hero-sub">
                     Most Philadelphia Google Ads accounts waste a third of their
-                    budget on traffic that was never going to convert. We
-                    restructure the account, cut the queries draining it, point
+                    budget on traffic that was never going to convert. Our PPC management and PPC marketing team restructures the account, cut the queries draining it, point
                     every campaign at a page built to convert — and bill your
                     spend straight from Google with zero markup.
                   </p>
@@ -802,7 +806,7 @@ function Page() {
                 <div>
                   <p className="phl-eyebrow">What&apos;s Included</p>
                   <h2 className="phl-h2">
-                    Everything a Paid Search Account Needs, Worked Weekly
+                    PPC Management in Philadelphia: Everything a Paid Search Account Needs, Worked Weekly
                   </h2>
                 </div>
                 <Link href="/services" className="phl-link-arrow">
@@ -1230,7 +1234,7 @@ function Page() {
               <div className="phl-sec-head-center">
                 <p className="phl-eyebrow">Why Zonic Media</p>
                 <h2 className="phl-h2">
-                  A PPC Partner, Not a Percentage of Your Spend
+                  A Philadelphia PPC Marketing Partner, Not a Percentage of Your Spend
                 </h2>
                 <p className="phl-lead">
                   Clicks are the output. Structure, discipline, and honest

@@ -41,6 +41,10 @@ export const metadata: Metadata = {
     "electrical services website design",
     "electrical contractor website marketing",
     "electrician web design",
+    "electrical web design company",
+    "electrical website developer",
+    "website for electrical business",
+    "electrical web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {

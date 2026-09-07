@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "pool company website",
     "pool maintenance website design",
     "pool cleaning website builder",
+    "pool service web design company",
+    "pool service website developer",
+    "website for pool service business",
+    "pool service web design services",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
