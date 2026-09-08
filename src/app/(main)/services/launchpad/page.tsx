@@ -1,4 +1,5 @@
 import "@/app/style/launchpad.css";
+import dynamic from "next/dynamic";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
 import Image from "next/image";
@@ -8,7 +9,6 @@ import { Col, Row } from "react-bootstrap";
 import { FaArrowTrendUp, FaCheck, FaCircleExclamation } from "react-icons/fa6";
 import { PiBagSimple } from "react-icons/pi";
 import { IoRocket } from "react-icons/io5";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import RelatedServices from "@/app/components/RelatedServices";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -16,6 +16,10 @@ import LeadContactForm from "@/app/components/LeadContactForm";
 import GhlChatWidget from "@/app/components/GhlChatWidget";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { buildBreadcrumbJsonLd, buildServiceJsonLd } from "@/shared/seoSchemas";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },

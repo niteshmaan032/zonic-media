@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,6 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import FormLegalLinks from "@/app/components/FormLegalLinks";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import "@/app/style/carTow.css";
@@ -52,18 +52,22 @@ import {
 import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
 
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
+
 /* ─── IMAGE PATHS ─── */
 const imgs = {
-  hero: "/images/law-seo/ChatGPT Image May 13, 2026, 06_14_24 PM.png",
+  hero: "/images/law-seo/law-seo-hero.png",
   maps: "/images/contact-section.jpg",
-  img1: "/images/law-seo/ChatGPT Image May 11, 2026, 12_04_02 PM.png",
-  img2: "/images/law-seo/ChatGPT Image May 11, 2026, 12_22_52 PM.png",
-  img3: "/images/law-seo/ChatGPT Image May 11, 2026, 12_24_33 PM.png",
-  img4: "/images/law-seo/ChatGPT Image May 11, 2026, 12_26_21 PM.png",
-  img5: "/images/law-seo/ChatGPT Image May 11, 2026, 12_31_37 PM.png",
-  img6: "/images/law-seo/ChatGPT Image May 11, 2026, 12_36_03 PM.png",
-  img7: "/images/law-seo/ChatGPT Image May 11, 2026, 12_44_27 PM.png",
-  img8: "/images/law-seo/ChatGPT Image May 11, 2026, 12_46_23 PM.png",
+  img1: "/images/law-seo/law-seo-image-1.png",
+  img2: "/images/law-seo/law-seo-image-2.png",
+  img3: "/images/law-seo/law-seo-image-3.png",
+  img4: "/images/law-seo/law-seo-image-4.png",
+  img5: "/images/law-seo/law-seo-image-5.png",
+  img6: "/images/law-seo/law-seo-image-6.png",
+  img7: "/images/law-seo/law-seo-image-7.png",
+  img8: "/images/law-seo/law-seo-image-8.png",
   contact: "/images/contact-section.jpg",
 };
 

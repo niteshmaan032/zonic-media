@@ -1,5 +1,6 @@
 ﻿import "@/app/style/gmb-service-pages.css";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
@@ -26,8 +27,11 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
 import { BsQuestionCircleFill } from "react-icons/bs";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },

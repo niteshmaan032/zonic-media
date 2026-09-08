@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ClutchWidget from "@/app/components/ClutchWidget";
+import dynamic from "next/dynamic";
 import Footer from "@/app/components/Footer";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
@@ -36,6 +36,10 @@ import { LuBadgeCheck, LuMapPinned, LuTimerReset } from "react-icons/lu";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineLocationOn } from "react-icons/md";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 const imagePaths = [
   "/images/cartow-seo/ChatGPT%20Image%20May%202,%202026,%2012_01_28%20PM.png",

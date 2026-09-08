@@ -1,10 +1,14 @@
 import "@/app/style/indust.css";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Metadata } from "next";
 import Footer from "@/app/components/Footer";
-import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
 
 export const metadata: Metadata = {
   title: { absolute: "Industries We Serve | Home Services & Contractor Marketing" },

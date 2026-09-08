@@ -323,6 +323,11 @@ const nextConfig: NextConfig = {
       // Reinstatement-timeline blog consolidation — 4 posts split one query
       // set; how-long-does-google-business-profile-reinstatement-take-in-2026
       // is the surviving guide.
+      // Old WordPress date archives (/blog/2025/10/15 etc.) still get crawled
+      // and show up in GSC as noindex/404 rows. Send them to the blog index.
+      { source: "/blog/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})", destination: "/blog", permanent: true },
+      { source: "/blog/:year(\\d{4})/:month(\\d{2})", destination: "/blog", permanent: true },
+
       // Blog slug merges live in src/data/blogRedirects.json so the sitemap
       // can exclude the same slugs (they were still listed there while
       // returning 308s — Sept 2026 crawl). The last entry merges the

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -9,7 +10,6 @@ import "@/app/style/hvacExtra.css";
 import HvacLeadForm from "@/app/components/HvacLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import RelatedServices from "@/app/components/RelatedServices";
 import {
@@ -24,6 +24,10 @@ import {
   buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 import { SERVICES, SPECIALTIES, PRICE_CARDS } from "./stateContent";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 export const metadata: Metadata = {
   title: { absolute: "HVAC Marketing Agency USA | Local SEO, Google Ads & Leads" },

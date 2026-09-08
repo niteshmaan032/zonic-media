@@ -3,13 +3,11 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import "./home.css";
 import Footer from "@/app/components/Footer";
-import ClutchWidget from "@/app/components/ClutchWidget";
-import Blogs from "@/app/components/Blogs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import {
   FiArrowRight,
   FiArrowUpRight,
@@ -59,6 +57,13 @@ function BtnArrow() {
     </span>
   );
 }
+
+// Below-the-fold widgets are code-split so their JavaScript (Swiper, the Clutch
+// embed, the lead form) loads after the hero has painted. They still render on the
+// server, so the markup and links Google sees are unchanged (Sept 2026 CWV work).
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
+const Blogs = dynamic(() => import("@/app/components/Blogs"));
+const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
 
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing Agency | SEO, AI SEO, Web Design & Ads" },

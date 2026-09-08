@@ -3588,3 +3588,23 @@
     transition-duration: 0.001s !important;
   }
 }
+
+
+/* ── Below-the-fold sections skip layout/paint until scrolled near (CWV, Sept 2026).
+   Purely a rendering hint: nothing looks different, the browser just defers work
+   for content that is not on screen yet. Hero stays eager because it holds the LCP. */
+.hm-page .hm-about,
+.hm-page .hm-services,
+.hm-page .hm-testi,
+.hm-page .hm-gbp,
+.hm-page .hm-launch,
+.hm-page .hm-process,
+.hm-page .hm-compare,
+.hm-page .hm-track,
+.hm-page .hm-audit,
+.hm-page .hm-faq,
+.hm-page .hm-contact,
+.hm-page .hm-banner {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import "@/app/style/homeInspAgency.css";
@@ -8,7 +9,6 @@ import "@/app/style/hvacExtra.css";
 import HvacLeadForm from "@/app/components/HvacLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import StateSiblingLinks from "@/app/components/StateSiblingLinks";
@@ -23,6 +23,10 @@ import {
   BASE_TRUST,
   SERVICES,
   PRICE_CARDS, STATE_CONTENT } from "./stateContent";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 export default function StatePage({ state }: { state: StateContent }) {
   const stateName = state.name;

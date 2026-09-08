@@ -1,9 +1,9 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 
 import Footer from "@/app/components/Footer";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
 import WinsBoard from "@/app/components/about/WinsBoard";
@@ -31,6 +31,10 @@ import {
   FiUsers,
   FiZap,
 } from "react-icons/fi";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 /* ---------------------------------------------------------------------------
    POSITIONING — read this before editing the copy.

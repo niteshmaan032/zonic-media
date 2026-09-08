@@ -183,11 +183,15 @@ function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      height="85"
-                      width="85"
-                      alt="company widget"
-                      src="https://businessfirms.co/images/bfirms-certified.png"
+                    {/* Local 6.7 KB WebP instead of the 828 KB PNG hot-linked from
+                        businessfirms.co, which every page downloaded before the
+                        hero painted (Sept 2026 CWV work). Lazy-loaded below the fold. */}
+                    <Image
+                      width={85}
+                      height={85}
+                      loading="lazy"
+                      alt="BusinessFirms certified digital marketing company badge"
+                      src="/images/badges/businessfirms-certified.webp"
                     />
                   </a>
                 </div>

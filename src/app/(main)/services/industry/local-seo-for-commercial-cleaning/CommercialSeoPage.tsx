@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,6 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LeadContactForm from "@/app/components/LeadContactForm";
 import RecaptchaCheckbox from "@/app/components/RecaptchaCheckbox";
 import FormLegalLinks from "@/app/components/FormLegalLinks";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 import "@/app/style/carTow.css";
@@ -56,18 +56,22 @@ import {
 import { FiPhoneCall, FiArrowUpRight } from "react-icons/fi";
 import { MdOutlineLocationOn, MdSchool } from "react-icons/md";
 
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
+
 /* ─── IMAGE PATHS ─── */
 const imgs = {
-  hero: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_58_29 PM.png",
-  img1: "/images/commercial-seo/ChatGPT Image May 12, 2026, 11_54_58 AM.png",
-  img2: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_14_12 PM.png",
-  img3: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_27_37 PM.png",
-  img4: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_34_45 PM.png",
-  img5: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_36_45 PM.png",
-  img6: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_38_26 PM (2).png",
-  img7: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_39_26 PM.png",
-  img8: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_56_37 PM.png",
-  img9: "/images/commercial-seo/ChatGPT Image May 12, 2026, 12_58_29 PM.png",
+  hero: "/images/commercial-seo/commercial-seo-hero.png",
+  img1: "/images/commercial-seo/commercial-seo-image-1.png",
+  img2: "/images/commercial-seo/commercial-seo-image-2.png",
+  img3: "/images/commercial-seo/commercial-seo-image-3.png",
+  img4: "/images/commercial-seo/commercial-seo-image-4.png",
+  img5: "/images/commercial-seo/commercial-seo-image-5.png",
+  img6: "/images/commercial-seo/commercial-seo-image-6.png",
+  img7: "/images/commercial-seo/commercial-seo-image-7.png",
+  img8: "/images/commercial-seo/commercial-seo-image-8.png",
+  img9: "/images/commercial-seo/commercial-seo-hero.png",
   contact: "/images/contact-section.jpg",
 };
 

@@ -21,13 +21,12 @@
  */
 
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import "@/app/style/philadelphia/philaLanding.css";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
 import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
@@ -57,6 +56,11 @@ import {
   FiZap,
 } from "react-icons/fi";
 import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
+const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
 
 const PAGE_PATH = "/services/philadelphia/ppc";
 

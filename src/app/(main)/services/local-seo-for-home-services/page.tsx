@@ -1,8 +1,7 @@
-import ClutchWidget from "@/app/components/ClutchWidget";
 import Footer from "@/app/components/Footer";
+import dynamic from "next/dynamic";
 import RelatedServices from "@/app/components/RelatedServices";
 import GmbFaqs from "@/app/components/GmbFaqs";
-import ServiceLeadForm from "@/app/components/ServiceLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HomeSeoMarquee from "@/app/components/HomeSeoMarquee";
 import SharedLottiePlayer from "@/app/components/SharedLottiePlayer";
@@ -30,6 +29,11 @@ import {
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoCall, IoCallSharp } from "react-icons/io5";
 import { MdLocationOn } from "react-icons/md";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
+const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
 
 const SeoHomeFaqs = [
   {

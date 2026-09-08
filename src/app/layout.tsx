@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import "@/app/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/style/service-lead-form.css";
@@ -10,7 +11,12 @@ import Script from "next/script";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
 import AnalyticsProvider from "@/app/components/AnalyticsProvider";
-import SiteFloatingWidgets from "@/app/components/SiteFloatingWidgets";
+
+// Floating call/WhatsApp widgets are code-split so their JavaScript loads after
+// the page has painted (Sept 2026 CWV work). Markup is still server-rendered.
+const SiteFloatingWidgets = dynamic(
+  () => import("@/app/components/SiteFloatingWidgets")
+);
 
 const neueHaas = localFont({
   src: [
@@ -185,23 +191,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://widget.clutch.co" />
         <link rel="dns-prefetch" href="https://widget.clutch.co" />
 
-        {/* Manrope + Inter are self-hosted (see style/google-fonts.css) so the
-            first paint never waits on fonts.googleapis.com. Preload only the
-            latin variable files — the ones every page actually renders with. */}
-        <link
-          rel="preload"
-          href="/fonts/google/xn7gYHE41ni1AdIRggexSg.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/google/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* Manrope + Inter are self-hosted (see style/google-fonts.css) and are
+            only used by the lead form at the bottom of each page, so they are
+            not preloaded: the browser fetches them after first paint instead of
+            ahead of the hero text (Sept 2026 CWV work). */}
 
         <script
           id="organization-schema"

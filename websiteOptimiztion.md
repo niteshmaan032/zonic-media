@@ -380,3 +380,105 @@ Verified: `tsc` clean, `next build` exit 0 (173 pages) after each pass.
 - Organization schema + ProfessionalService description + llms.txt positioning: "full-service digital marketing agency and SEO company … for businesses of every size".
 - 26 industry local-SEO pages: keywords gained `google business profile for {industry}`, `ai search optimization for {industry}`, `{industry} seo 2026`; the Sept-3 FAQ answer on each now ends with the 2026 AI Overviews / AI Mode signal.
 - Every other page was re-checked against the 3 Sept and 7 Sept plans (titles ≤ 60, descriptions ≤ 160, live-query keywords present); no further changes needed.
+
+---
+
+# Addendum — 8 September 2026: the four changes from the SEO expert's sheet
+
+Requested by the user after the sheet review ("just make these 4 changes and then give me the new report"). No new sections, no style changes, nothing committed (user commits).
+
+## 1. Navigation heading hierarchy (Semrush "poor heading hierarchy", 85 pages)
+- Cause: the mobile menu's three `Accordion.Header` elements rendered as `<h2>` above every page's H1.
+- Fix: `src/app/components/Navbar.tsx` — the three headers render `as="div"`. FAQ accordions already used H3.
+- Verified: crawl of all 194 sitemap URLs on the local build → 0 navigation H2s, exactly one H1 per page.
+
+## 2. Core Web Vitals / mobile LCP
+Trace of the homepage under mobile throttling showed what the hero was waiting on. Fixes:
+- `src/app/components/Footer.tsx`: the 828 KB PNG badge hot-linked from businessfirms.co (1258×1395 squeezed into 85×85) → local 6.7 KB WebP `public/images/badges/businessfirms-certified.webp` via next/image, lazy-loaded, descriptive alt.
+- `src/app/layout.tsx`: removed the two `<link rel="preload">` for Inter and Manrope (75 KB). They are only used by `service-lead-form.css`, i.e. the form at the bottom of pages. They still load after first paint.
+- `src/app/components/Navbar.tsx`: mobile menu contents (`mob-tab-nav-menus`) mount only while `mobileOpen` is true. Desktop mega-menu unchanged → 104 service links per page remain in the HTML.
+- `src/app/(main)/home.css`: `content-visibility: auto; contain-intrinsic-size: auto 900px` on the 12 below-the-fold `.hm-page` sections (hero excluded).
+- `next/dynamic` code-splitting for ClutchWidget, ServiceLeadForm, Blogs (Swiper) on the homepage; ClutchWidget/ServiceLeadForm on 50 bespoke page files; SiteFloatingWidgets in the root layout. Server-rendered markup unchanged (checked in the built HTML).
+
+Measurements (Lighthouse 12 mobile, local `next start`, median of 3 runs; "real throttling" = `--throttling-method=devtools`):
+
+| Homepage | Before | After |
+|---|---|---|
+| Real throttling LCP | 2.74 s | 2.20 s |
+| Real throttling perf score | 91 | 92 (95 one build earlier) |
+| Real throttling main-thread | 4.6 s | 2.3 s |
+| Simulated (PSI model) LCP | 4.45 s | 3.99 s |
+| Simulated perf score | 83 | 86 |
+| DOM elements | 2,748 | 2,356 |
+
+- Philadelphia local SEO page, widget split alone: simulated LCP 4.8 s → 4.1 s (real throttling flat at ~2.5 s, 2 runs).
+- Note: the earlier single "before" run of 3.0 s simulated LCP was a lucky run; the 3-run median baseline is 4.45 s. Lighthouse's simulated LCP for a text hero is driven by the bytes requested before first paint (HTML 99 KB gz, CSS 76 KB gz incl. Bootstrap 32 KB, ~290 KB gz first-party JS, 3 Neue Haas fonts). Under 2.5 s in the PSI model would need Bootstrap/react-bootstrap replaced and the 120 inline nav icons (40 unique, 70 KB) turned into a sprite — design work, not done.
+
+## 3. Sitemap lastmod
+- `node scripts/generate-sitemap-lastmod.mjs` → `src/data/sitemapLastmod.generated.json` regenerated (155 routes; `/services/ai-seo-services` now 2026-09-07).
+
+## 4. Housekeeping
+- `next.config.ts`: `/blog/:year/:month` and `/blog/:year/:month/:day` → 301 to `/blog`.
+- 25 "ChatGPT Image …" files renamed to `<dir>-hero.png` / `<dir>-image-N.png` in `public/images/{chiro-digital,law-seo,residential-seo,commercial-seo}`; references updated in ChiroDigitalPage, LawSeoPage, ResidentialSeoPage, CommercialSeoPage; law-firm `img2` 404 fixed; unreferenced leftovers renamed `*-extra-N.png`.
+- Readability on 11 pages: skipped on purpose (scores are driven by the technical terms the pages rank for; sentences are already short).
+
+## After deploy (user-owned)
+- Commit + push; GSC request indexing for `/` and `/services/philadelphia/local-seo`; Semrush Site Audit re-run (heading issue 85 → 0); GSC Core Web Vitals report + PSI field data after ~4 weeks.
+- Report artifact: https://claude.ai/code/artifact/0e1c4e0f-ab7c-4699-8a8f-c39a0dba3e2f
+
+---
+
+# Chat log — 8 September 2026 (expert sheet review → 308 → the four changes)
+
+## 1. User: review the SEO expert's sheet, report only, no changes
+> "my seo expert has shared me a sheet with some of the changes can u go through the sheet and checkout are they required to do or not … go through all the tabs and do not do any changes just give me a report like are they required to do or not"
+
+Sheet: `docs.google.com/spreadsheets/d/1zSsrPNoXjwddFdqQ-ZWNzAy3Vgifw-1c` (20 tabs, exported and read as xlsx). Every claim was checked against a live crawl of the 194 sitemap URLs, the code, and Lighthouse. Report artifact: https://claude.ai/code/artifact/a7931bda-5732-485f-a1d0-19969a7ab795
+
+| Tab | Sheet asks | Verdict |
+|---|---|---|
+| Page Speed / CWV (two tabs disagree: mobile 63 vs 96) | Raise PageSpeed scores | **Required** — mobile perf 83, LCP 4.1 s vs 2.5 s target |
+| Content optimization (97 rows) | 85 pages "poor heading hierarchy", 11 "low readability" | **Required for the 85** (one cause: mobile nav accordion renders 3 H2s before the H1) · optional for the 11 |
+| Multiple H1 tags | Launchpad 2 H1s, home-services 5 | Done, live — one H1 on every URL |
+| Sitemap | Add lastmod / realistic changefreq | Done, live — 193/194 carry lastmod; only the new AI SEO page lacked one |
+| Incorrect pages in sitemap (29 rows, May) | Non-www URLs listed | Done, live — sitemap is all www |
+| 404 pages | 301 two old service URLs | Done, live — both 308 already |
+| Broken internal links (`/blog/tel;(302)…`) | Redirect them | Done in code — malformed tel link normalised at render |
+| Duplicate H1 = title (2 posts) | Append "\| Zonic Media" | Done in code — distinct titles |
+| llms.txt format | Fix notice | Done in code — single blockquote |
+| Title too long (1 + 21 rows) | Use the sheet's replacements | Done, live (all ≤ 60) · **do not paste the sheet's replacements** (they read "Zonic Media \| … \| Zonic Media") |
+| Duplicate meta descriptions (Privacy/Terms) | Unique | Done, live |
+| Images without alt (6 blog images) | Add alt | Done in code — fallback alt at render |
+| Broken internal images (3 homepage) | Fix | Done, live · renaming "ChatGPT Image…" files optional |
+| GSC "Discovered, not indexed" (9 non-www) | Make everything www | User action — apex 307 from another Vercel account |
+| Excluded by noindex (`/blog/2025/10/15`, `/blog/2025/10/30`) | Redirect to /blog | Optional |
+| Blocked by robots.txt (`/coming-soon`) | Optimise or redirect | Not required — placeholder, blocked on purpose |
+| GSC "Page with redirect" (4) / "Crawled, not indexed" | Validate / request indexing | User action after deploy |
+| Schema: Organization, WebSite, LocalBusiness, BreadcrumbList, Service+OfferCatalog, SiteNavigationElement, FAQPage/Article | "Not present" | Done, live — all emitted (188 pages carry FAQPage, 1,296 Q&A pairs) |
+| Schema: HowTo | "High priority" | Not required — Google dropped HowTo rich results in Sept 2023 |
+| "13 structured data items invalid" (July) | Fix | Done, live — no invalid JSON-LD on 194 URLs |
+
+Summary given: only two items genuinely required (nav H2s, CWV/LCP); the rest already done, user-owned, or not worth doing.
+
+## 2. User: 308 is done, what code changes now?
+> "i have done 308 redirection to www one -- now just tell me what changes should be done in code now first tell me"
+
+Verified live: `curl -I https://zonicllc.com/` → `HTTP/2 308` to www, deep paths too. Answer: four code items — (1) nav accordion H2 → div, (2) Core Web Vitals / mobile LCP work (target LCP < 2.5 s, score > 90), (3) sitemap lastmod for the new AI SEO page, (4) optional housekeeping: `/blog/2025/*` archive redirect, rename the "ChatGPT Image…" files, readability on 11 pages. Plus two non-code steps after deploy: Validate Fix and request indexing in GSC.
+
+## 3. User: make those four changes and give the new report
+> "see i already have optimized my website okk so just make these 4 changes and than give me the new report"
+
+Executed as documented in "Addendum — 8 September 2026" above. Highlights of the conversation while doing it:
+- First Lighthouse pass after the nav + `content-visibility` change looked *worse* (LCP 3.0 s → 4.4 s). Investigation showed the 3.0 s "before" was a single lucky run; three-run medians put the baseline at 4.45 s simulated / 2.74 s real throttling. Lesson recorded: never compare single Lighthouse runs.
+- The trace exposed the real LCP blockers nobody's sheet mentioned: the 828 KB businessfirms.co PNG in the footer on every page, and Inter/Manrope preloads used only by the bottom lead form.
+- Final: real-throttling LCP 2.74 → 2.20 s (score 91 → 92), simulated 4.45 → 3.99 s (83 → 86), DOM 2,748 → 2,356. Crawl of 194 URLs: 0 issues.
+- Readability rewrite on 11 pages deliberately skipped; Bootstrap/react-bootstrap removal and a nav icon sprite identified as the remaining lever for the PSI score, not done (design change).
+- Report updated in place: https://claude.ai/code/artifact/0e1c4e0f-ab7c-4699-8a8f-c39a0dba3e2f (section "8 September").
+
+## 4. User: save the chat
+> "save the chat in website optimize md file"
+
+This section.
+
+## Files touched today (uncommitted, user commits)
+`src/app/components/Navbar.tsx`, `src/app/components/Footer.tsx`, `src/app/layout.tsx`, `src/app/(main)/page.tsx`, `src/app/(main)/home.css`, `next.config.ts`, `src/data/sitemapLastmod.generated.json`, `public/images/badges/businessfirms-certified.webp`, 50 page files under `src/app/(main)/**` (dynamic imports for ClutchWidget / ServiceLeadForm), `ChiroDigitalPage.tsx` / `LawSeoPage.tsx` / `ResidentialSeoPage.tsx` / `CommercialSeoPage.tsx` (image refs), 25 renamed files in `public/images/{chiro-digital,law-seo,residential-seo,commercial-seo}`.

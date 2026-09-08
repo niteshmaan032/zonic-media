@@ -1,4 +1,5 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -8,13 +9,16 @@ import "@/app/style/gbpRealEstate.css";
 import GbpRealEstateLeadForm from "@/app/components/GbpRealEstateLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
   buildLocalBusinessJsonLd,
   buildServiceJsonLd,
 } from "@/shared/seoSchemas";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 const PAGE_PATH =
   "/services/google-business-profile-services-real-estate-agents";

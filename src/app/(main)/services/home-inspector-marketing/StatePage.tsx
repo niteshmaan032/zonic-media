@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +9,6 @@ import "@/app/style/homeInspState.css";
 import HomeInspectorLeadForm from "@/app/components/HomeInspectorLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
-import ClutchWidget from "@/app/components/ClutchWidget";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
@@ -25,6 +25,10 @@ import {
   STATE_CONTENT,
 } from "./stateContent";
 import StateSiblingLinks from "@/app/components/StateSiblingLinks";
+
+// Code-split so the widget JavaScript loads after the hero has painted; the
+// server still renders its markup, so nothing changes for users or Google.
+const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 
 const trustItems = [
   { num: "500+", label: "Businesses Ranked" },
