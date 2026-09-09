@@ -240,7 +240,7 @@ export default function TseoLanding({ data }: { data: TseoLandingData }) {
                     <a
                       href="https://clutch.co/profile/zonic-media?badge=11431"
                       target="_blank"
-                      rel="nofollow noopener noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <Image
                         className="tseo-hero-badge"

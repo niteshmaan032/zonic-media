@@ -569,3 +569,86 @@ GSC actions: validation started on Discovered (9 Sept), new validation on Page w
 Done in GSC on 9 Sept (via browser): validation started on "Discovered – currently not indexed" (21) and a new validation on "Page with redirect" (27 pending); "Request indexing" accepted ("added to a priority crawl queue") for /services/gmb-reinstatement-help (by user), /services/google-ads (inspection said "URL is unknown to Google"!), /services/web-design, /services/philadelphia/digital-marketing, /services/industry/seo-services-for-plumber. Later the same day: Validate fix also started on robots.txt, noindex and crawled-not-indexed rows (needed a 14 s wait after page load before the click registered). Request indexing for local-seo-services-for-hvac, seo-services-for-pest-control, local-seo-for-roofing-companies, dental-seo-services, local-seo-for-window-and-door-companies, local-seo-services-for-residential-cleaning, chiropractic/dental/general-contractor marketing-agency (spread over 2 days, ~10/day quota).
 Update (same afternoon): user asked for all requests today. Indexing requested and confirmed ("added to a priority crawl queue") for the remaining nine as well: local-seo-services-for-hvac, seo-services-for-pest-control, local-seo-for-roofing-companies, dental-seo-services (inspection: "URL is unknown to Google"), local-seo-for-window-and-door-companies, local-seo-services-for-residential-cleaning, chiropractic-marketing-agency, dental-marketing-agency, general-contractor-marketing-agency. Total today: 14 URLs (5 earlier + 9 now); one "Quota exceeded" dialog appeared only on an accidental repeat request, new URLs kept being accepted. Still user-owned: Validate fix on robots/noindex/crawled rows; commit + deploy; re-inspect the reinstatement page on 16 Sept.
 Update: "Validate fix" now started (9 Sept) on the remaining three rows too — Blocked by robots.txt (2), Excluded by noindex (1), Crawled – currently not indexed (13). Every row in the Page indexing report is now either validating or already running (404s since 19 Aug). Nothing left for the user in GSC today except commit + deploy and the 16 Sept re-check.
+
+---
+
+# 9 September 2026 (evening): deploy check, indexing status, duplicate-canonical validation, 1,500+ figure
+
+## 1. User: are the last changes pushed live?
+Verified: working tree clean, local `main` = `origin/main`. Commits: `e751800` (8 Sep 14:46 — nav/footer/CWV), `5fb7b65` (9 Sep 13:48 — blog contextual links to the reinstatement page, 700+→900+ across 33 files, llms files), `a5d2aec` (9 Sep 15:07 — 13 industry-page links off `/services/gmb-optimization`, plus this doc). Live fetch of www.zonicllc.com confirmed every item: homepage/reinstatement page 13× "900+" and 0× "700+", nav renders 0 `<h2>`, footer badge served as .webp (0 png), step-by-step GBP post carries the two contextual anchors ("GBP reinstatement process", "Google Business Profile reinstatement support"), 0 `tel;` hrefs, chiropractic marketing-agency page 0 links to the old GMB-optimization URL and 3 to `/local-seo-google-business-optimization`, llms.txt says 900+. Production deployment therefore = HEAD.
+
+## 2. User: are the indexing fixes done?
+**Site side (all verified live, Googlebot UA):**
+- All 21 "Discovered – currently not indexed" URLs + all 21 offer landers: 200, `index, follow`, self-canonical, in sitemap, no X-Robots-Tag.
+- Old URLs: apex root / http root / apex deep paths → single 308 to www; `/services/gmb-optimization` → 308 → `/local-seo-google-business-optimization`; `/home-inspector-marketing-agency/{california,texas}` → 308 → `/services/home-inspector-marketing/…`; `/blog/2025/10/{15,30}` → 308 → `/blog`; `/services/industry/car-towing` → 308 → `…/seo-services-for-car-towing`; `/company` → 308 → `/about`; `/company/our-partners/` → home; old WordPress reinstatement URL → 308 → `/services/gmb-reinstatement-help`. `/thank-you` = 200 but disallowed in robots (intentional).
+- `/legal/terms-conditions`: 200, index,follow, in sitemap; robots.txt only disallows /coming-soon, /admindashboard, /404, /thank-you, /api/.
+- Crawl of all 194 sitemap pages: 0 noindex, 0 links to apex or http URLs, 0 links to any URL from the GSC report, canonical mismatch only on the root (canonical without trailing slash — harmless). 190 distinct internal paths; only 4 still hit a redirect (not in the GSC report):
+  - `/blog/your-gbp-reinstatement-was-denied-what-to-do-next` and `/blog/after-gbp-reinstatement-request` (linked from posts gbp-reinstatement-denied-next-steps, gbp-reinstatement-for-roofing-contractors), `/blog/what-happens-after-you-submit-a-gbp-reinstatement-request` (linked from 5 reinstatement posts) — CMS post bodies, not code; all 308 via blogRedirects.json.
+  - `/services/industry/pest-control` (308 → `…/seo-services-for-pest-control`) — code: `services/home-inspector-marketing/page.tsx:1073` and `StatePage.tsx:726` (6 live pages). Not fixed yet (user to decide; page freeze until 7 Oct).
+**Google side (GSC domain property `sc-domain:zonicllc.com`, read 9 Sep evening):** last update still 4 Sep; Indexed 180 / Not indexed 111. Validation: Not found 404 (46) Started since 19 Aug; Page with redirect (27) Started; Discovered (21) Started; Crawled (13) Started; Blocked by robots (2) Started; noindex (1) Started; Duplicate, Google chose different canonical (1) was **Not started** → see §3. Validation normally takes 1–4 weeks; nothing will move in the counts before then.
+Note: the Google account signed into Chrome has access only to the domain property, not the `https://www.zonicllc.com/` URL-prefix property ("you don't have access"). The domain property covers everything.
+
+## 3. User: "fix this one and start it also" (duplicate-canonical row)
+Affected URL = `https://www.zonicllc.com/home-inspector-marketing-agency/california` (first detected 18 Oct 2025). Already fixed in code (308 to `/services/home-inspector-marketing/california`, no internal links to the old URL), so no code change. Clicked **Validate fix** in GSC → "Validation started · 9/9/26". Every row of the Page indexing report is now validating.
+
+## 4. User: "make the number 1500+ everywhere" (profiles optimized)
+The "Google Business Profiles optimized" statistic (deliberately left at 700+ on 9 Sep morning) changed to **1,500+** (site number style with comma, matching about page, services page, llms.txt): `src/app/(main)/industries/page.tsx` stats ticker; solar and septic `pageData.ts` (ticker, trustbar, body stat); `src/data/industryMarketing/template.ts` (same three spots); `src/data/industryMarketingPages.generated.json` (13 pages × ticker, trustbar, body stat). 0 "700+" strings remain in src/public; `tsc` clean; JSON valid. Site is now consistent: 900+ reinstated/verified, 1,500+ optimized. **Uncommitted — user commits + deploys.**
+
+## Open after this session
+- Commit + deploy the 1,500+ change (5 files).
+- Optional: repoint the `/services/industry/pest-control` link (2 code files) and the 3 old blog slugs (CMS) so no internal link hits a redirect.
+- 16 Sep: re-inspect `/services/gmb-reinstatement-help` in GSC. ~23 Sep: check the Page indexing report for first validation results. Rerun Semrush Site Audit (its crawl is still 5 Sep).
+
+---
+
+# 9 September 2026 (late): Semrush Site Audit issues — verified against live, then items 1–4 fixed
+
+User shared a screenshot of Site Audit (campaign 30675049) showing 2 errors, 2 warnings, 5 notices, asked which are fixed on live and which still need work, then: "ok do only 1, 2, 3, 4". All data pulled via the Semrush MCP: snapshot `6a9c2009360b06655cb5c3fa` (finished 5 Sept 2026, **pre-deploy**; health 95%, 212 pages crawled). Nothing clears in Semrush until the campaign is rerun.
+
+## Status of the 9 issues (live check 9 Sept evening, post-deploy crawl of all 194 sitemap pages)
+| # | Issue (5 Sept) | Live today | Verdict |
+|---|---|---|---|
+| 1 | 2 pages 4XX (`/blog/tel;(302) 726-9736`, `/blog/tel; (302) 726-9736`) | 0 `tel;` hrefs, 906 `tel:+13027269736` | Fixed 7 Sept (render-time normaliser) — needs recrawl |
+| 2 | 2 broken internal links (same two, from gbp-reinstatement-denied-next-steps and how-to-get-more-local-business-leads…) | gone | Fixed — needs recrawl |
+| 3 | 134 pages low text-HTML ratio (Semrush threshold ≤10%; reinstatement page 0.09, chiro 0.08) | still 134 of 194 under 10% (my measure 8.9% / 7.9%) | **Not fixed**. Cause per page: nav 108 KB, inline SVG 77–117 KB, Next.js RSC payload 37–58% of HTML. Without the SVG the ratios would be 22–29%. Lever = nav icon sprite + deferred mega-menu panels (design change). Not requested. |
+| 4 | 2 pages duplicate H1/title (how-to-turn-google-map-pack-views…, how-to-get-more-local-business-leads…) | titles differ from H1 (commit af49346, 7 Sept) | Fixed — needs recrawl |
+| 5 | 166 nofollow external links (all `clutch.co/profile/zonic-media?badge=11431`) | 208 links on 165 pages, from our own `rel="nofollow noopener noreferrer"` | Fixed now (item 4 below) |
+| 6 | 85 pages "require content optimization" (AI Search check: poor heading hierarchy / long paragraphs / low readability; errorType 1) | unchanged | **Not fixed** — copy editing page by page; left for after the 7 Oct freeze. Not requested. |
+| 7 | 53 URLs permanent redirect | 15 links left: `/services/industry/pest-control` ×6 (home-inspector pages) + 3 retired blog slugs ×9 | Fixed now (item 2 below) |
+| 8 | 5 pages with only one incoming internal link | those 5 posts had **0** inbound from sitemap pages; overall 9 posts with 0, 4 with 1 (blog index links only 6 of 39; related block never reached older posts) | Fixed now (item 1 below) |
+| 9 | llms.txt formatting issues (errorType 3) | About section held 10 non-link bullets; free-text lines under 3 H2s; no `---` rules | Fixed now (item 3 below) |
+
+Root cause found for 7 and 8: the four merged posts in `src/data/blogRedirects.json` (how-long-gbp-reinstatement-takes, what-happens-after-you-submit-a-gbp-reinstatement-request, after-gbp-reinstatement-request, your-gbp-reinstatement-was-denied-what-to-do-next) are **still published in the CMS**, so the blog index (43 posts vs 39 in the sitemap), the "Related guides" block and the "Recent Posts" sidebar kept linking to them. The old-slug links Semrush saw came from the related block, not from article bodies.
+
+## Changes made (uncommitted — user commits + deploys)
+1. **Blog internal links** — `src/backend/lib/blogs.ts`: `getPublishedBlogsUncached` now queries `slug: { $nin: retired }` (retired = keys of blogRedirects.json), so retired posts never reach the homepage cards, blog index, related/recent blocks or sitemap. `src/shared/blogContent.ts`: `pickRelatedPosts` adds a "coverage ring" — the posts published immediately before and after the current one are always linked (4–6 related links per post). `src/app/(main)/blog/page.tsx`: server-rendered "All guides" list of every post under the card grid (the grid paginates client-side, 6 per page, so only 6 posts had a crawlable link from /blog); styles appended to `src/app/style/BlogPage.css` (`.bp-index*`). Simulation with the live 39-post list: before = 9 posts with 0 inbound / 4 with 1 (matches Semrush); after = every post ≥3 inbound (index + 2 ring + scored).
+2. **Redirect links** — `home-inspector-marketing/page.tsx` + `StatePage.tsx`: `/services/industry/pest-control` → `/services/industry/seo-services-for-pest-control`. `blogContent.ts`: new `rewriteRetiredBlogLinks(html)` rewrites `href="/blog/<old-slug>"` (also absolute www/apex forms, trailing slash/query/hash kept) from blogRedirects.json; applied in `blog/[slug]/page.tsx` after `canonicalizeHostLinks`. Plus the retired-post exclusion above.
+3. **llms.txt** — `public/llms.txt` restructured to the llmstxt.org format: the 10 About facts moved above the first H2 as paragraphs (Last updated → 2026-09-09); "About" now holds only its 2 links; the three intro sentences under Industry Website Design / Industry Marketing Agencies / State Pages dropped; "State Pages" split into `## HVAC Marketing by State`, `## Plumbing Marketing by State`, `## Home Inspector Marketing by State`. Result: 1 H1, 1 blockquote, 13 H2, 139 link items, 0 non-link content after the first H2. `public/llms-full.txt` rebuilt with `node scripts/build-llms-full.mjs`.
+4. **Nofollow** — `rel="nofollow noopener noreferrer"` → `rel="noopener noreferrer"` on the Clutch profile link in 39 files (Footer, HeroTrustBadges, IndustryMarketingPage, PhlLocationLanding, TseoLanding, homepage, reinstatement page, Delaware DM, travel/tourism, 4 Philadelphia pages, 27 industry SEO pages). 0 `nofollow` left in src.
+
+## Verification
+`tsc` clean; `next build` clean (173 static pages); local `next start` checks: /blog = 39 distinct post links + "All guides" index, 0 retired slugs; five posts (denied-next-steps, step-by-step, roofing guide, deceptive-content, keyword-stuffing) = 5–6 related links, 0 retired slugs, 0 `tel;`, 0 nofollow; old slug `/blog/after-gbp-reinstatement-request` still 308s; home-inspector pages 0 old pest-control links; homepage/reinstatement/chiro/Philly pages 0 nofollow with Clutch links intact; llms.txt 200; sitemap (after its 5-minute ISR window) = 194 URLs incl. 39 posts, 0 retired slugs — identical to live. Note: in this sandbox the DB is unreachable at *build* time (DNS SRV), so the build-time sitemap prerender is empty locally until ISR regenerates it; irrelevant on Vercel.
+
+## Still open (not requested)
+- Item 5 text-HTML ratio (134 pages) — nav sprite / deferred mega menu.
+- Item 6 content optimization (85 pages) — copy editing after 7 Oct.
+- After deploy: rerun the Semrush Site Audit campaign; expect errors 2→0, warnings 136→134, notices: nofollow 166→0, redirects 53→0, one-incoming-link 5→0, llms.txt 1→0.
+
+## 9 Sept (late) — correction: three "merged" posts were real articles wrongly redirected since 27 Aug
+User asked whether the four retired posts are still in the blog admin. They are (all four still `published`). Comparing titles, excerpts and dates on the live /blog payload showed only one true duplicate:
+| Retired slug | Its title (date) | Redirected to | Same article? |
+|---|---|---|---|
+| your-gbp-reinstatement-was-denied-what-to-do-next | Your GBP Reinstatement Was Denied: What to Do Next (14 Jul) | gbp-reinstatement-denied-next-steps — same title + opening (15 Jul) | Yes |
+| after-gbp-reinstatement-request | What Happens After You Submit a GBP Reinstatement Request? (13 Jul) | how-long-does-google-business-profile-reinstatement-take-in-2026 | **No** |
+| what-happens-after-you-submit-a-gbp-reinstatement-request | How to Write a GBP Reinstatement Appeal That Google Reviewers Approve (7 Jul) | same | **No** |
+| how-long-gbp-reinstatement-takes | How Long Does Google Business Profile Reinstatement Take in 2026? (8 Jul) | same | **No** |
+The redirect target's slug reads "how long…" but its H1/body are "What Documents Does Google Actually Accept for GBP Reinstatement in 2026?" (3,400 words). The three redirects were added on 27 Aug (commit f0fabe4) by slug similarity and moved into blogRedirects.json on 3 Sept; on 7 Sept the title override in `blogSeoOverrides.ts` gave the documents post the title "How Long Does Google Business Profile Reinstatement Take?". Net effect since 27 Aug: three reinstatement articles unreachable (308 → an unrelated post) and the documents post carrying a wrong title — in the cluster that holds most of the site's impressions. The earlier note above calling them "four merged posts" was wrong.
+
+**Fix applied (user: "do it", no deleting):**
+- `src/data/blogRedirects.json` → only `your-gbp-reinstatement-was-denied-what-to-do-next → gbp-reinstatement-denied-next-steps` remains. Because next.config redirects, the sitemap exclusion, the public-list `$nin` filter and `rewriteRetiredBlogLinks` all read this file, the three posts come back everywhere automatically.
+- `src/shared/blogSeoOverrides.ts`: documents post → title "What Documents Does Google Accept for GBP Reinstatement?" (56) + matching description; the "how long" title/description moved to `how-long-gbp-reinstatement-takes`; new overrides for `after-gbp-reinstatement-request` ("What Happens After You Submit a GBP Reinstatement Request?", 58) and `what-happens-after-you-submit-a-gbp-reinstatement-request` ("How to Write a GBP Reinstatement Appeal That Gets Approved", 58). All descriptions 141–150 chars.
+- Nothing unpublished or deleted; the old "denied" copy keeps forwarding.
+
+**Verified (local production build, run outside the sandbox because its DNS blocks the Atlas SRV lookup):** the three restored URLs = 200, index/follow, self-canonical, new titles; documents post title now matches its H1; denied old slug still 308; /blog = 42 distinct post links incl. the three; prerendered sitemap = 42 posts, no denied slug; "Related guides" on the step-by-step post now links the restored appeal post directly.
+
+**After deploy (user):** GSC → URL inspection → Request indexing for `/blog/how-long-gbp-reinstatement-takes`, `/blog/after-gbp-reinstatement-request`, `/blog/what-happens-after-you-submit-a-gbp-reinstatement-request`; optional later CMS tidy-up: give the appeal post a slug that matches its title (with a redirect from the current one).

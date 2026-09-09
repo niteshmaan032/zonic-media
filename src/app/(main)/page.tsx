@@ -1069,7 +1069,7 @@ export default async function Home() {
                 <a
                   href="https://clutch.co/profile/zonic-media?badge=11431"
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     width={90}

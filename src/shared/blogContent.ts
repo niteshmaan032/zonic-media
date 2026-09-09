@@ -1,3 +1,5 @@
+import blogRedirectsJson from "@/data/blogRedirects.json";
+
 export const FAQ_MARKER_REGEX = /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/i;
 export const FAQ_MARKER_REGEX_GLOBAL =
   /<div[^>]*\bdata-faqs-marker\b[^>]*><\/div>/gi;
@@ -81,9 +83,11 @@ function titleTerms(title: string) {
 
 /**
  * Pick the posts most related to the current one by shared title terms
- * (server-side, no DB fields needed). Ties fall back to recency. Used to give
- * every post a crawlable "Related guides" block — 28 posts had zero internal
- * links before this (Sept 2026 crawl).
+ * (server-side, no DB fields needed). Ties fall back to recency. On top of the
+ * scored picks, the posts published immediately before and after the current
+ * one are always included (a "coverage ring"), so every post is linked from at
+ * least two other posts however unusual its title. Scored picks alone left
+ * nine posts with no inbound link from any sitemap page (Sept 2026 crawl).
  */
 export function pickRelatedPosts<T extends { slug: string; blogTitle: string }>(
   current: { slug: string; blogTitle: string },
@@ -91,7 +95,7 @@ export function pickRelatedPosts<T extends { slug: string; blogTitle: string }>(
   limit = 4,
 ): T[] {
   const base = titleTerms(current.blogTitle);
-  return candidates
+  const picked = candidates
     .filter((post) => post.slug !== current.slug)
     .map((post, index) => {
       const terms = titleTerms(post.blogTitle);
@@ -102,6 +106,40 @@ export function pickRelatedPosts<T extends { slug: string; blogTitle: string }>(
     .sort((a, b) => b.score - a.score || a.index - b.index)
     .slice(0, limit)
     .map((entry) => entry.post);
+
+  const position = candidates.findIndex((post) => post.slug === current.slug);
+  if (position !== -1 && candidates.length > 1) {
+    const total = candidates.length;
+    for (const offset of [1, -1]) {
+      const neighbour = candidates[(position + offset + total) % total];
+      if (
+        neighbour.slug !== current.slug &&
+        !picked.some((post) => post.slug === neighbour.slug)
+      ) {
+        picked.push(neighbour);
+      }
+    }
+  }
+
+  return picked;
+}
+
+const RETIRED_BLOG_SLUGS: Record<string, string> = blogRedirectsJson;
+
+/**
+ * Old post slugs that were merged into other posts live in
+ * src/data/blogRedirects.json (next.config serves them as 308s). Article
+ * bodies can still link the old slug; rewrite those links at render so
+ * crawlers never hit the redirect.
+ */
+export function rewriteRetiredBlogLinks(html: string) {
+  return html.replace(
+    /href="((?:https?:\/\/(?:www\.)?zonicllc\.com)?\/blog\/)([^"\/?#]+)(\/?(?:[?#][^"]*)?)"/gi,
+    (match, prefix: string, slug: string, rest: string) => {
+      const target = RETIRED_BLOG_SLUGS[slug];
+      return target ? `href="${prefix}${target}${rest}"` : match;
+    },
+  );
 }
 
 const REINSTATEMENT_SERVICE_PATH = "/services/gmb-reinstatement-help";

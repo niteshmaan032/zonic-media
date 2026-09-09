@@ -2,6 +2,7 @@ import { ObjectId, type Collection } from "mongodb";
 import { revalidatePath, revalidateTag, unstable_cache } from "next/cache";
 import { z } from "zod";
 import { getMongoDb } from "./mongodb";
+import blogRedirects from "@/data/blogRedirects.json";
 
 export const BLOG_COLLECTION = "blogs";
 export const BLOG_STATUSES = ["draft", "published"] as const;
@@ -14,6 +15,12 @@ export const FEATURED_IMAGE_TYPES = [
 export const FEATURED_IMAGE_REQUIRED_WIDTH = 1200;
 export const FEATURED_IMAGE_REQUIRED_HEIGHT = 675;
 export const PUBLIC_BLOG_CACHE_TAG = "public-blogs";
+
+// Posts merged into other posts keep their old slug in blogRedirects.json
+// (next.config serves them as 308s). They must never reach public lists:
+// the blog index, related and recent blocks were linking to them, which
+// crawlers report as internal links to redirects (Semrush, Sept 2026).
+const RETIRED_BLOG_SLUGS = Object.keys(blogRedirects);
 export const PUBLIC_BLOG_REVALIDATE_SECONDS = 300;
 
 export type BlogStatus = (typeof BLOG_STATUSES)[number];
@@ -438,7 +445,7 @@ async function getPublishedBlogsUncached(limit?: number) {
   await ensureBlogIndexes();
   const blogs = await getBlogsCollection();
   const query = blogs
-    .find({ status: "published" })
+    .find({ status: "published", slug: { $nin: RETIRED_BLOG_SLUGS } })
     .sort({ publishDate: -1, createdAt: -1 });
 
   if (limit && limit > 0) {

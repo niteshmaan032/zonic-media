@@ -140,10 +140,27 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
     description:
       "How to rank in the Google Map Pack in 2026: categories, reviews, photos, citations, website signals.",
   },
+  // Slug says "how long" but the H1 and body are the documents guide; the
+  // "how long" copy below belongs to how-long-gbp-reinstatement-takes.
   "how-long-does-google-business-profile-reinstatement-take-in-2026": {
+    title: "What Documents Does Google Accept for GBP Reinstatement?",
+    description:
+      "Which documents Google accepts for Google Business Profile reinstatement in 2026, what gets rejected, and how to prepare the evidence for your appeal.",
+  },
+  "how-long-gbp-reinstatement-takes": {
     title: "How Long Does Google Business Profile Reinstatement Take?",
     description:
       "How long Google Business Profile reinstatement takes in 2026 by suspension type: typical timelines, what causes delays, and when to escalate.",
+  },
+  "after-gbp-reinstatement-request": {
+    title: "What Happens After You Submit a GBP Reinstatement Request?",
+    description:
+      "What happens after you submit a Google Business Profile reinstatement request: the review stages, typical wait times, and what to do while you wait.",
+  },
+  "what-happens-after-you-submit-a-gbp-reinstatement-request": {
+    title: "How to Write a GBP Reinstatement Appeal That Gets Approved",
+    description:
+      "How to write a GBP reinstatement appeal Google reviewers approve: what to include, which evidence to attach, and the mistakes that get appeals denied.",
   },
   "how-to-get-more-local-business-leads-from-google-in-2026": {
     title: "How to Get More Local Business Leads From Google (2026)",

@@ -1070,7 +1070,7 @@ function Page() {
                   <Link href="/services/industry/dental-seo-services">
                     Dental Practices
                   </Link>
-                  <Link href="/services/industry/pest-control">
+                  <Link href="/services/industry/seo-services-for-pest-control">
                     Pest Control
                   </Link>
                   <Link href="/services/industry/real-estate-seo-services">

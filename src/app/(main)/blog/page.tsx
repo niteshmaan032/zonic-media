@@ -140,6 +140,22 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               excerpt: blog.excerpt,
             }))}
           />
+
+          {/* Server-rendered index of every post. The card grid above
+              paginates client-side (6 per page), so without this list only
+              the first six posts had a crawlable link from /blog. */}
+          <section className="bp-index" aria-labelledby="bp-index-heading">
+            <h2 id="bp-index-heading" className="bp-index-heading">
+              All guides
+            </h2>
+            <ul className="bp-index-list">
+              {blogs.map((blog) => (
+                <li key={blog.id}>
+                  <Link href={`/blog/${blog.slug}`}>{blog.blogTitle}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </div>
 
