@@ -153,7 +153,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
       "How long Google Business Profile reinstatement takes in 2026 by suspension type: typical timelines, what causes delays, and when to escalate.",
   },
   "after-gbp-reinstatement-request": {
-    title: "What Happens After You Submit a GBP Reinstatement Request?",
+    title: "GBP Reinstatement Request Submitted: What Happens Next?",
     description:
       "What happens after you submit a Google Business Profile reinstatement request: the review stages, typical wait times, and what to do while you wait.",
   },
