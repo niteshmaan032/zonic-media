@@ -27,7 +27,7 @@ Home services (plumbing, HVAC, roofing, cleaning, pest control, towing), medical
 ## Why businesses choose Zonic Media
 
 - Full-stack: local SEO + GBP reinstatement/verification/optimization + web design + PPC under one roof
-- 700+ Google Business Profiles reinstated and verified; 1500+ optimized
+- 900+ Google Business Profiles reinstated and verified; 1500+ optimized
 - Free audit before any engagement; transparent flat pricing
 - Verified reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 

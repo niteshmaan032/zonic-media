@@ -10,7 +10,7 @@ export default function BlogMidArticleCta() {
     <aside className="bp-mid-cta" aria-label="Reinstatement service">
       <p className="bp-mid-cta-kicker">Profile suspended right now?</p>
       <p className="bp-mid-cta-text">
-        We recover suspended Google Business Profiles for a living — 700+
+        We recover suspended Google Business Profiles for a living — 900+
         reinstatements handled. Get a free case review before you file another
         appeal on your own.
       </p>

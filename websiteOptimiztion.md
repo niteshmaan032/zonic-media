@@ -482,3 +482,67 @@ This section.
 
 ## Files touched today (uncommitted, user commits)
 `src/app/components/Navbar.tsx`, `src/app/components/Footer.tsx`, `src/app/layout.tsx`, `src/app/(main)/page.tsx`, `src/app/(main)/home.css`, `next.config.ts`, `src/data/sitemapLastmod.generated.json`, `public/images/badges/businessfirms-certified.webp`, 50 page files under `src/app/(main)/**` (dynamic imports for ClutchWidget / ServiceLeadForm), `ChiroDigitalPage.tsx` / `LawSeoPage.tsx` / `ResidentialSeoPage.tsx` / `CommercialSeoPage.tsx` (image refs), 25 renamed files in `public/images/{chiro-digital,law-seo,residential-seo,commercial-seo}`.
+
+---
+
+# Check-up — 9 September 2026 (read-only; no website changes)
+
+User asked: organic traffic declined (Semrush), are the "negative impact" keywords on the site, why AI visibility is 29, why GSC average position is 30, low generative-AI impressions, should we wait. Report artifact: (see chat) — "Zonic Media September Check-up".
+
+## What the data says
+- **GSC 28d vs previous 28d:** clicks 125 vs 115 (+9%), impressions 129K vs 79.9K (+61%), CTR 0.1% flat, position 30.6 vs 28.6. Daily: ~600–1,000 impressions/day at pos 39–46 in early June → ~2,500/day at pos 24–27 late July → 4,500–6,400/day at pos 31–35 in early Sept. Clicks flat at 3–6/day the whole time. Semrush "organic traffic 129, −8.5%" is a model, not visits.
+- **US:** 115,251 impressions / 47 clicks (0.04%). India 1,028 / 36. "zonic media" brand = 31 of 125 clicks. Philly SEO page 15,966 impr / 3 clicks (page 3).
+- **Declined keywords (Semrush PT Sep 3→9):** all 33 verified present on their landing pages (words; most exact phrases in the title). Biggest drops sit on pages edited 7 Sept: real estate seo company 1→lost (page still #1 for "real estate seo services" and "seo services for real estate agents"), ppc management philadelphia 1→37, advertising experts delaware 3→38, digital marketing company dover 2→18. 20 improved (local seo philadelphia 30→1, pest control marketing agency 30→1, philadelphia search marketing 4→1). Net visibility 6.5%→8.4%. 25 head terms (local seo services 27.1K, local seo company 18.1K, internet marketing agency 8.1K, ai seo agency 4.4K, hvac marketing agency 2.9K) not ranking at all.
+- **SERP competition:** "philadelphia seo company" (1.3K, KD 37) page 1 = 4 lists/directories (Directive, Semrush Agency Partners, Built In, Clutch) + Thrive, Green Lane, Coalition, SEO Locale (AS 61, 1.3K ref domains). "real estate seo company" (1.3K, KD 31): 5 of 10 are lists. Zonic AS 8.
+- **Backlinks (biggest finding):** since **24 Aug 2026** 33 domains link with anchor "high quality dofollow backlinks da 50 pa 40 premium pbn network service <look-alike domain> … buy backlinks online cheap" — 20 look-alike variants (zonicc.online, zoniccmedia.com, zonic.services, zonic.work, zonicc.world, zoniicc.site, zonnicmedia.com …) ≈ 650 links, still growing (38 found today). Since 2 May: "fiverr backlinks/PBN links helped my {zonicc.work}…" anchors. 83% of ref domains AS 0–10, 10% Moldova, network graph "Dangerous". Timeline: spam update 18–21 Aug → links 24 Aug → drop 27 Aug. Unknown whether bought (Fiverr) or negative SEO — user must answer. Recommended: Backlink Audit + disavow (not done).
+- **AI visibility:** Domain Overview 29 = index score; AI Visibility toolkit = **0/100 "Low"** vs Seer, Coalition, Directive, DMi. 8 mentions / 27 citations / 20 cited pages in 6 months; one mention is a ChatGPT answer about "Piro fingerboard wheels". GSC **Generative AI features** report: 7,820 impressions in 3 months, 2.9K last 28d (US 2,317), rising since June; top pages towing 776, real estate 426, Philly 418, home 350. Semrush AI Search Health 83%; robots.txt allows all AI bots. On-page side done; missing = directories/listings/press/mentions.
+- **Indexing:** 180 indexed / 111 not: 46 legacy apex 404s (now 308, validation started 19 Aug), 27 "page with redirect" (validation failed while apex was 307 — revalidate), 21 discovered-not-indexed (offer landers, chiropractic/dental/general-contractor marketing-agency pages, 2 posts — all linked from 133+ pages and in sitemap; crawl priority), 13 crawled-not-indexed (mostly _next static files).
+- **Site Audit (5 Sept crawl, pre-deploy):** health 95%, 4 errors, 136 warnings; open items are the nav H2s, llms.txt format, CWV — all changed 8 Sept; rerun needed.
+- **Deploy timeline:** 3 Sep 22:02 IST (rebuild), 7 Sep 21:28 (second pass), 8 Sep 14:46 (CWV/nav). GSC data ends 6 Sep.
+
+## Advice given
+Freeze pages until 7 Oct; meanwhile (off-site): answer the link-buying question → Backlink Audit + disavow; fix 22 listings; get onto DesignRush/UpCity/GoodFirms/Semrush Agency lists and Delaware/Philly lists; GSC validate-fix on redirects + request indexing for the 3 marketing-agency pages and /services/ai-seo-services; rerun Site Audit; set up Prompt Tracking with 20 agency prompts. "Rank top worldwide" is not realistic at AS 8 — Philadelphia/Delaware/industry terms (KD 30–40) are the winnable set.
+
+---
+
+# 9 September 2026 (afternoon): GMB reinstatement page fix + Semrush 4xx errors
+
+User: "okk go fix it" (the reinstatement page), then "after this i got these issues in semrush … fix them also" (2 pages 4XX + 2 broken internal links: `/blog/tel; (302) 726-9736`).
+
+## Diagnosis (read-only, before the fix)
+- `/services/gmb-reinstatement-help`: GSC 28d = 29 impressions / 0 clicks (90d: 99 / 0), only brand/sitelink queries; Semrush: not in Google top 100 for any US keyword. Page has 4,340 words, 13 FAQs, Service + ProfessionalService schema, 134 internal links, 5 ref domains.
+- All "reinstat" demand (1,330 impressions / 90d: gbp reinstatement 905, gmb reinstatement 315, gbp reinstatement service 29) lands on the blog post `the-exact-step-by-step-gbp-reinstatement-process-google-doesnt-publish` (1,195 impr, 1 click, ~pos 14) and five other posts. The posts linked to the service page only via sidebar/footer.
+- SERP "gbp reinstatement": 110/mo, KD 10; page 1 includes papayasearch and greenthumblocal with AS 0 → winnable.
+- Old URL `zonicllc.com/service/google-my-business/gmb-suspension-reinstatement/` already 308s to the service page (no lost history).
+
+## Change made (code, uncommitted)
+- `src/shared/blogContent.ts`: new `linkReinstatementService(html)` — at render, turns the first reinstatement/suspension phrase in the opening paragraphs (first 6) and the last one in the closing paragraphs (last 4) into a link to `/services/gmb-reinstatement-help`. Existing words only; skips headings, text already inside `<a>`, paragraphs already linking to the page; max 2 links per post; idempotent; posts that never mention the topic are untouched. Phrase regex covers "GBP/GMB/Google Business Profile reinstatement|suspension (service|appeal|process|support…)", "reinstatement appeal/process/support", "be/get reinstated", "reinstate(d|ing)".
+- `src/app/(main)/blog/[slug]/page.tsx`: applied in the render chain before `splitOnFaqMarker`.
+- Tested against 24 live posts: 20 of 22 suspension/reinstatement posts gain 1–2 contextual links, 2 unrelated posts gain 0, no nested anchors, no heading links; `tsc` clean; `next build` ok; local render confirmed (e.g. anchors "GBP reinstatement process" + "Google Business Profile reinstatement support" on the step-by-step post).
+- Service page title ("GBP Reinstatement Service | GMB Reinstatement Experts") and H1 deliberately left alone — they already carry the query phrasing and have been changed twice since 27 Aug.
+
+## Semrush 4XX / broken internal links
+- Both are `href="tel; (302) 726-9736"` from the CMS body of two posts (gbp-reinstatement-denied-next-steps, how-to-get-more-local-business-leads-from-google-in-2026). The render-time normaliser in `canonicalizeHostLinks` (7 Sept) already fixes them: live pages emit `tel:+13027269736` ×4 and no `tel;` hrefs. Semrush's crawl is dated 5 Sept (pre-deploy) → needs a campaign rerun; no further code change.
+
+## After deploy (user)
+- Commit + deploy; then GSC URL inspection → Request indexing for `/services/gmb-reinstatement-help` and the step-by-step post; Semrush Site Audit rerun.
+- Expectation given to user: service page into top 10 for the reinstatement group in 3–6 weeks, top 5 by November; ~300–400 US searches/month in the group → 20–40 clicks/month at pos 3–5, high intent. If Google still prefers the post after 6 weeks, fold the post into the service page.
+
+## 9 Sept — why gmbgorilla.com outranks Zonic for "gmb reinstatement agency" / "gmb optimization" (read-only)
+| | gmbgorilla.com | zonicllc.com |
+|---|---|---|
+| Authority Score / ref. domains | 28 / 704 (74% under AS 10, but 15 domains AS 41–50, 2 at 91–100) | 8 / 169 (83% under AS 10, spam anchors) |
+| Top-linked asset | /local-seo-audit/ free tool: 172 ref domains | homepage 47 (mostly spam) |
+| US organic keywords / traffic | 1,900 / 1.5K est. | 1,300 / 129 est. |
+| AI visibility (Semrush) | 30, 17 mentions; top cited sources gmbgorilla.com 15, reddit.com 6, merchynt.com 2 | 29 index / 0 toolkit, 8 mentions |
+| Site focus | one topic: 19 pages + 82 posts all about Google Business Profile (setup, optimization, management, reinstatement, reviews, posts, white-label) | 190+ pages across SEO, web design, ads, 30 industries, states, cities; GBP is one cluster |
+| Reinstatement page | 1,996 words, H1 "Get Your Suspended GBP Reinstated — Fast", two priced offers on the page ($200 review / $500 service), "99% success rate", "900+ reinstatements", "1 business day", bulk option, 6 FAQ, G2 widget | 4,340 words, 13 FAQ, $400/$500/$750, "700+ profiles", "5–7 days", Trustindex/Trustpilot/Clutch widgets |
+| Optimization page | 8,033 words, H1 "Google Business Profile Optimization Services Done Right", 6 price points, reviews; ranks #1 "gmb optimization service", #2 "gmb optimization", #3 "google my business optimization" | H1 "You Rank #1 Outside Your Own Front Door." (no keyword); 7 impressions in 90 days for "gmb optimization" queries, pos 66 |
+- "gmb reinstatement agency": Semrush volume 0 (no SERP data); GSC shows 1 impression for Zonic in 90 days. Reinstatement demand is "gbp reinstatement" 110/mo, "gbp reinstatement service" 40, "reinstate google business profile" 30 — gmbgorilla holds #1 / #6 / #2.
+- AI Overview for "gmb optimization" (Semrush snapshot 9 Sept) cites: Google support, a LinkedIn top-content page, bullseyeinternet.com, two YouTube videos — not gmbgorilla, not Zonic. Page-1 organic: Reddit thread #1, gmbgorilla #2, Google #3, gmboptimizers, LinkedIn, Milestone, YouTube, BrightLocal, GMB Crush, Merchynt.
+- Conclusion given: they win on (1) topical focus and depth (100 GBP pages), (2) 700 ref domains earned by a free audit tool, (3) priced, decision-ready service pages, (4) Reddit/merchynt mentions feeding AI answers. Zonic's GMB optimization H1 has no keyword — flagged for after the 7 Oct freeze (or as a one-page exception).
+
+## 9 Sept — track-record figure updated: 700+ → 900+ (user request; first asked for 1,000+, then changed to 900+)
+- 53 occurrences (incl. two split-markup stats `700<span>+</span>` on the reinstatement page and homepage) of "700+ profiles reinstated / recovered / verified", "more than 700 …", "700+ reinstatements/recoveries/suspensions handled", "700+ GBPs reinstated", "Behind 700+ Local Business Comebacks" changed to **900+** (site number style, matching "1,500+") across: homepage (FAQ answer + schema, hero badge, stats, H2), reinstatement page (title-area badge, meta/OG/schema descriptions, body copy), white-label, NYC local-SEO + digital-marketing, Wilmington, SEO services, local-seo-packages, real-estate GBP page, solar/septic/towing pageData FAQs, industryMarketingPages.generated.json FAQs, BlogMidArticleCta, llms.txt, llms-full.txt, llms/gmb-reinstatement.md, llms/local-seo.md.
+- Deliberately untouched: the separate "700+ Google Business Profiles optimized" ticker on the industry marketing-agency pages (template.ts, generated JSON, solar/septic pageData) — a different statistic. Note for the user: llms.txt says "1,500+ profiles optimized" while that ticker says 700+; pick one.
+- Meta description on the reinstatement page = 144 chars (ok); `tsc` clean; generated JSON still valid.

@@ -137,7 +137,7 @@ const NycDmFaqs = [
   {
     question: "Can you fix a suspended Google Business Profile in NYC?",
     answer:
-      "Yes — GBP reinstatement is our flagship service, with 700+ recoveries handled. NYC profiles face the country's heaviest enforcement, and recovery plus compliance hardening is often the first step of our NYC engagements.",
+      "Yes — GBP reinstatement is our flagship service, with 900+ recoveries handled. NYC profiles face the country's heaviest enforcement, and recovery plus compliance hardening is often the first step of our NYC engagements.",
   },
   {
     question: "Do you need to be based in NYC to do this well?",

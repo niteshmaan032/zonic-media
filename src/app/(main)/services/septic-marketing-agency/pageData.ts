@@ -231,7 +231,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <details class="faq" name="ima-faq" open><summary>How fast can a septic company get more calls?<span class="x"></span></summary><div class="a">Google Ads can bring qualified calls within the first weeks of launch. Local SEO and Map Pack ranking build over three to six months and lower your long-term cost per booked job.</div></details>
 <details class="faq" name="ima-faq"><summary>Can you bring back repeat pumping customers?<span class="x"></span></summary><div class="a">Yes. Septic tanks need pumping every three to five years, so we set up review follow-ups, email and SMS reminders, and retargeting that keep your name in front of past customers until it&#x27;s time to book again.</div></details>
 <details class="faq" name="ima-faq"><summary>Are the septic leads exclusive?<span class="x"></span></summary><div class="a">Yes. We never share or resell leads. Everything from your ads, website, and profile comes only to your company, not shared with competitors.</div></details>
-<details class="faq" name="ima-faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 700+ profiles for local businesses.</div></details>
+<details class="faq" name="ima-faq"><summary>Do you handle Google Business Profile suspensions?<span class="x"></span></summary><div class="a">Yes. We optimize your profile to rank and manage reinstatement if it&#x27;s suspended — we&#x27;ve recovered 900+ profiles for local businesses.</div></details>
 <details class="faq" name="ima-faq"><summary>Do you also work with plumbing and excavation companies?<span class="x"></span></summary><div class="a">Yes. Many septic contractors also run plumbing or excavation crews. We market those services too — including a dedicated <a class="ima-inline-link" href="/services/plumbing-marketing-agency">plumbing marketing</a> program — so one team covers everything you offer.</div></details>
 <details class="faq" name="ima-faq"><summary>Do you require long-term contracts?<span class="x"></span></summary><div class="a">No. We don't lock you into long-term contracts. We earn the relationship month to month by delivering results — most septic clients stay because the leads keep coming, not because they're tied to us.</div></details>
 <details class="faq" name="ima-faq"><summary>Do you only work with businesses in Delaware?<span class="x"></span></summary><div class="a">No. We're based in Dover, Delaware with deep roots in the Mid-Atlantic, but we serve septic companies across the United States. Our work is remote-first, so your location is never a barrier.</div></details>
@@ -360,7 +360,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
           name: "Do you handle Google Business Profile suspensions?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. We optimize your profile to rank and manage reinstatement if it's suspended — we've recovered 700+ profiles for local businesses.",
+            text: "Yes. We optimize your profile to rank and manage reinstatement if it's suspended — we've recovered 900+ profiles for local businesses.",
           },
         },
         {

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 const trustItems = [
-  { num: "700+", label: "GBP profiles reinstated" },
+  { num: "900+", label: "GBP profiles reinstated" },
   { num: "5.0", label: "Rating on Clutch (21 reviews)" },
   { num: "100%", label: "White-label & unbranded" },
 ];
@@ -70,7 +70,7 @@ const stripItems = [
 const resellServices = [
   {
     h: "Google Business Reinstatement",
-    p: "Recover your clients' suspended Google Business Profiles fast. 700+ profiles reinstated and verified, with a no-fix, no-charge approach on the reinstatement fee.",
+    p: "Recover your clients' suspended Google Business Profiles fast. 900+ profiles reinstated and verified, with a no-fix, no-charge approach on the reinstatement fee.",
     tag: "Avg. 5–7 day resolution",
   },
   {
@@ -107,7 +107,7 @@ const whyCards = [
   },
   {
     h: "Proven Fulfillment",
-    p: "700+ GBP reinstatements, 5.0 on Clutch across 21 reviews, and a 48-hour response standard. You resell a track record, not a promise.",
+    p: "900+ GBP reinstatements, 5.0 on Clutch across 21 reviews, and a 48-hour response standard. You resell a track record, not a promise.",
   },
   {
     h: "Partner Discounts",
@@ -478,7 +478,7 @@ export default function Page() {
                     , for example, is a specialized skill most agencies
                     can&apos;t justify staffing for, yet clients with suspended
                     profiles need it urgently. Partnering lets you offer that
-                    expertise on demand, with a track record of 700+
+                    expertise on demand, with a track record of 900+
                     reinstatements behind it, without becoming a reinstatement
                     expert yourself.
                   </p>

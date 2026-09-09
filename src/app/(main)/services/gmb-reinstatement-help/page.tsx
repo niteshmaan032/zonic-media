@@ -41,7 +41,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Reinstatement",
   description:
-    "GBP reinstatement service: GMB reinstatement experts recover suspended and disabled Google Business Profiles in 5 to 7 days. 700+ reinstated. No Fix, No Charge.",
+    "GBP reinstatement service: GMB reinstatement experts recover suspended and disabled Google Business Profiles in 5 to 7 days. 900+ reinstated. No Fix, No Charge.",
   url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
   provider: {
     "@type": "Organization",
@@ -122,7 +122,7 @@ const GmbResinstFaqs = [
   {
     question: "What makes Zonic Media one of the best GMB reinstatement services?",
     answer:
-      "Zonic Media has reinstated and verified 700+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
+      "Zonic Media has reinstated and verified 900+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
   },
   {
     question: "Where can I read verified reviews of Zonic Media's reinstatement service?",
@@ -139,7 +139,7 @@ const GmbResinstFaqs = [
 export const metadata: Metadata = {
   title: { absolute: "GBP Reinstatement Service | GMB Reinstatement Experts" },
   description:
-    "Google Business Profile suspended? Our reinstatement experts recover suspended and disabled listings in 5 to 7 days. 700+ profiles reinstated.",
+    "Google Business Profile suspended? Our reinstatement experts recover suspended and disabled listings in 5 to 7 days. 900+ profiles reinstated.",
   keywords: [
     "google business profile reinstatement service",
     "google business profile reinstatement",
@@ -165,7 +165,7 @@ export const metadata: Metadata = {
     ],
     title: "Google Business Profile Reinstatement Service | GMB Experts",
     description:
-      "Recover your suspended Google Business Profile in 5–7 business days. Free suspension audit, 700+ profiles reinstated, No Fix, No Charge.",
+      "Recover your suspended Google Business Profile in 5–7 business days. Free suspension audit, 900+ profiles reinstated, No Fix, No Charge.",
     url: "/services/gmb-reinstatement-help",
     type: "website",
   },
@@ -296,7 +296,7 @@ function page() {
                 <span className="stars">★★★★★</span> <b>4.9</b> client satisfaction
               </span>
               <span>
-                <b>700+</b> profiles reinstated &amp; verified
+                <b>900+</b> profiles reinstated &amp; verified
               </span>
             </div>
 
@@ -364,7 +364,7 @@ function page() {
                     local SEO
                   </Link>{" "}
                   and Google Business Profile reinstatement, and have reinstated
-                  and verified more than 700 business profiles. Many of these
+                  and verified more than 900 business profiles. Many of these
                   cases involve profiles that were never fully{" "}
                   <Link href="/services/gmb-verification-help" className="gmb-inline-link">
                     verified on Google Maps
@@ -423,7 +423,7 @@ function page() {
           <section className="gmb-panel">
             <div className="trustbar-grid">
               <div className="stat">
-                <div className="num">700<span>+</span></div>
+                <div className="num">900<span>+</span></div>
                 <div className="cap">Profiles reinstated &amp; verified</div>
               </div>
               <div className="stat">

@@ -68,13 +68,13 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
 const tickerItems = [
   "Free Real Estate GBP Audit",
   "Suspended? 7–21 Day Reinstatement Timeline",
-  "700+ GBPs Reinstated · 5.0 Stars on Clutch",
+  "900+ GBPs Reinstated · 5.0 Stars on Clutch",
   "FL · TX · CA · NY · AZ",
   "GBP · Verification · Local SEO · Real Estate Web Design",
 ];
 
 const trustItems = [
-  { num: "700+", label: "GBPs Reinstated & Verified" },
+  { num: "900+", label: "GBPs Reinstated & Verified" },
   { num: "5.0 ★", label: "Clutch Rating · 21 Reviews" },
   { num: "7–21", label: "Days Typical Reinstatement" },
   { num: "5", label: "Active states · FL · TX · CA · NY · AZ" },
@@ -340,7 +340,7 @@ const faqs = [
   },
   {
     q: "How long does GBP reinstatement take for real estate agents?",
-    a: "Most reinstatements resolve within seven to twenty-one days from the date the appeal is filed with complete documentation. Simple cases — name guideline violations or category misconfigurations — often resolve within seven to ten days. Complex cases involving multi-agent brokerage address confusion, home-based SAB issues, or repeated suspensions can take three to five weeks. We've reinstated 700-plus profiles across home services and real estate, and the appeal documentation matters more than the appeal itself.",
+    a: "Most reinstatements resolve within seven to twenty-one days from the date the appeal is filed with complete documentation. Simple cases — name guideline violations or category misconfigurations — often resolve within seven to ten days. Complex cases involving multi-agent brokerage address confusion, home-based SAB issues, or repeated suspensions can take three to five weeks. We've reinstated 900-plus profiles across home services and real estate, and the appeal documentation matters more than the appeal itself.",
   },
   {
     q: "Should individual agents have their own profile or use the brokerage's?",
@@ -494,7 +494,7 @@ function Page() {
                   rate of any local service category. Multi-agent brokerage
                   addresses look like duplicate spam. Keyword-stuffed names get
                   flagged. Home-based agents trigger SAB confusion. We&apos;ve
-                  reinstated 700-plus profiles,{" "}
+                  reinstated 900-plus profiles,{" "}
                   <Link
                     href="/services/gmb-verification-help"
                     className="gre-inline-link"
@@ -613,7 +613,7 @@ function Page() {
                   <span className="hia-accent">Real Estate.</span>
                 </h2>
                 <p className="hia-sec-sub">
-                  After reinstating 700-plus profiles, the same six patterns show
+                  After reinstating 900-plus profiles, the same six patterns show
                   up disproportionately often. Each has a specific reinstatement
                   playbook — and the trigger on your suspension notice probably
                   doesn&apos;t match the actual underlying cause, which is why
@@ -965,7 +965,7 @@ function Page() {
             <ul className="hia-final-check">
               <li>Suspended? Reinstatement timeline 7–21 days</li>
               <li>Active and at risk? Risk audit + remediation plan</li>
-              <li>700+ profiles reinstated · 5.0 stars on Clutch</li>
+              <li>900+ profiles reinstated · 5.0 stars on Clutch</li>
               <li>Active across FL · TX · CA · NY · AZ and nationally</li>
               <li>Free audit before any commitment</li>
             </ul>

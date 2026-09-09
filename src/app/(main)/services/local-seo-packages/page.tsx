@@ -426,7 +426,7 @@ const data: TseoLandingData = {
         >
           Google Business Profile reinstatement
         </Link>{" "}
-        team gets you back on the map fast — 700+ recoveries handled.
+        team gets you back on the map fast — 900+ recoveries handled.
       </>,
     ],
     cta: "Get Your Tier Recommendation",

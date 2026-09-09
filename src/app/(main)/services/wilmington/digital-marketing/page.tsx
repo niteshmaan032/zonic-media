@@ -138,7 +138,7 @@ const WilmFaqs = [
   {
     question: "My Google Business Profile is suspended. Can you help?",
     answer:
-      "Yes — GBP reinstatement is our flagship service, with 700+ recoveries handled. If your Wilmington profile is down, that is the first thing to fix; no amount of website SEO replaces a live listing.",
+      "Yes — GBP reinstatement is our flagship service, with 900+ recoveries handled. If your Wilmington profile is down, that is the first thing to fix; no amount of website SEO replaces a live listing.",
   },
   {
     question: "What does a Wilmington business need to rank in the Google Map Pack?",

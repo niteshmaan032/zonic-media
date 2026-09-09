@@ -165,7 +165,7 @@ const SeoServicesFaqs = [
   {
     question: "Can you handle a suspended Google Business Profile?",
     answer:
-      "Yes — GBP reinstatement is one of our flagship services, with 700+ suspensions handled. If your profile is down, that is the first thing to fix; no amount of website SEO replaces a live profile.",
+      "Yes — GBP reinstatement is one of our flagship services, with 900+ suspensions handled. If your profile is down, that is the first thing to fix; no amount of website SEO replaces a live profile.",
   },
   {
     question: "What makes Zonic Media different from other SEO agencies?",

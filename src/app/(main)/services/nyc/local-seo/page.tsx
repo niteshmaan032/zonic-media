@@ -134,7 +134,7 @@ const NycSeoFaqs = [
   {
     question: "My NYC Google Business Profile was suspended. Can you help?",
     answer:
-      "Yes — GBP reinstatement is our flagship service, with 700+ recoveries handled. NYC profiles live under the heaviest enforcement in the country because dense markets breed spam and Google's filters sweep up legitimate businesses too. Recovery plus compliance hardening is often where our NYC engagements start.",
+      "Yes — GBP reinstatement is our flagship service, with 900+ recoveries handled. NYC profiles live under the heaviest enforcement in the country because dense markets breed spam and Google's filters sweep up legitimate businesses too. Recovery plus compliance hardening is often where our NYC engagements start.",
   },
   {
     question: "Do you need to be based in NYC to do this well?",
@@ -206,7 +206,7 @@ const data: PhlLandingData = {
       },
       {
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        num: "700+",
+        num: "900+",
         label: "GBP suspensions recovered",
       },
     ],
@@ -514,7 +514,7 @@ const data: PhlLandingData = {
       {
         icon: <FiZap aria-hidden="true" />,
         title: "Built for NYC Enforcement",
-        desc: "New York profiles get suspended more than anywhere in the country. With 700+ reinstatements handled, we harden your profile against the sweeps — and recover it fast if one hits.",
+        desc: "New York profiles get suspended more than anywhere in the country. With 900+ reinstatements handled, we harden your profile against the sweeps — and recover it fast if one hits.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,

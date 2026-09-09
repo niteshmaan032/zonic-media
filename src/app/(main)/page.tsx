@@ -218,7 +218,7 @@ const faqJsonLd = {
       name: "Can you really get a suspended Google Business Profile reinstated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Profile reinstatement is one of our core specialties. We have helped reinstate more than 700 Google Business Profiles by diagnosing the suspension cause, fixing the underlying policy issues, and managing the appeal process. No agency can promise Google's decision, but we know the process and the common failure points.",
+        text: "Yes. Profile reinstatement is one of our core specialties. We have helped reinstate more than 900 Google Business Profiles by diagnosing the suspension cause, fixing the underlying policy issues, and managing the appeal process. No agency can promise Google's decision, but we know the process and the common failure points.",
       },
     },
     {
@@ -473,7 +473,7 @@ const homeServices: HomeService[] = [
         generate reviews, and reinstate it if it&apos;s suspended. We&apos;ve
         recovered and{" "}
         <Link href="/services/gmb-verification-help" className="hm-inline-link">
-          verified 700+ profiles
+          verified 900+ profiles
         </Link>{" "}
         for businesses like yours.
       </>
@@ -634,7 +634,7 @@ const faqsLeft: Faq[] = [
     a: (
       <>
         Reinstatement is one of our core specialties — we&apos;ve helped
-        recover 700+ profiles by diagnosing the suspension cause, fixing the
+        recover 900+ profiles by diagnosing the suspension cause, fixing the
         underlying policy issues, and managing the appeal. No agency can
         promise Google&apos;s decision, but we know the process and the common
         failure points cold.
@@ -920,7 +920,7 @@ function GbpConsole() {
     >
       <span className="hm-gc-chip">
         <FiAward aria-hidden="true" />
-        700+ profiles recovered
+        900+ profiles recovered
       </span>
 
       <div className="hm-gc-card">
@@ -1118,7 +1118,7 @@ export default async function Home() {
                   <b>4.9</b> client rating
                 </span>
                 <span>
-                  <b>700+</b> Google Business Profiles reinstated &amp; verified
+                  <b>900+</b> Google Business Profiles reinstated &amp; verified
                 </span>
                 <span>
                   <b>No</b> long-term contracts
@@ -1167,7 +1167,7 @@ export default async function Home() {
               <div>
                 <span className="hm-eyebrow">About Zonic Media</span>
                 <h2 className="hm-h2">
-                  The Growth Team Behind 700+ Local Business Comebacks
+                  The Growth Team Behind 900+ Local Business Comebacks
                 </h2>
                 <p className="hm-lead">
                   Zonic Media is a digital marketing agency built for the way
@@ -1218,7 +1218,7 @@ export default async function Home() {
               <div className="hm-about-stats">
                 <div className="hm-stat">
                   <p className="hm-stat-num">
-                    700<span>+</span>
+                    900<span>+</span>
                   </p>
                   <p className="hm-stat-cap">
                     Google Business Profiles reinstated &amp; verified
@@ -1861,7 +1861,7 @@ export default async function Home() {
           </span>
           <span className="hm-banner-chip hm-banner-chip--c" aria-hidden="true">
             <FiShield />
-            700+ profiles recovered
+            900+ profiles recovered
           </span>
           <span className="hm-banner-chip hm-banner-chip--d" aria-hidden="true">
             <FiZap />

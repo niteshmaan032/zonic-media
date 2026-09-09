@@ -14,6 +14,7 @@ import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import {
   canonicalizeHostLinks,
   ensureImageAlts,
+  linkReinstatementService,
   pickRelatedPosts,
   splitAfterFirstSection,
   splitOnFaqMarker,
@@ -159,7 +160,9 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { before: contentBefore, after: contentAfter, hasMarker } =
     splitOnFaqMarker(
-      canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+      linkReinstatementService(
+        canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+      ),
     );
   const hasFaqs = blog.faqs.length > 0;
 
