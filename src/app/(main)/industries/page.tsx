@@ -913,7 +913,7 @@ function Page() {
               </div>
               <div className="st">
                 <div className="n">
-                  700<span>+</span>
+                  1,500<span>+</span>
                 </div>
                 <div className="c">Google Business Profiles optimized</div>
               </div>
