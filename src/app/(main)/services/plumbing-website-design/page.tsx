@@ -1012,7 +1012,7 @@ function Page() {
                   and what happens to your current rankings. If your question
                   is not here, or you need{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="pw-inline-link"
                   >
                     suspended profile reinstatement

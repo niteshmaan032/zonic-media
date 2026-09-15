@@ -345,7 +345,7 @@ const data: PhlLandingData = {
         listing ever gets suspended in NYC&apos;s enforcement-heavy market,
         our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="phl-inline-link"
         >
           Google Business Profile reinstatement
@@ -675,7 +675,7 @@ const data: PhlLandingData = {
         cta: "See the full program",
       },
       {
-        href: "/services/gmb-reinstatement-help",
+        href: "/services/gbp-reinstatement-service",
         icon: <FiBarChart2 aria-hidden="true" />,
         title: "Profile Reinstatement",
         desc: "Suspended listing? We file the appeal with the right evidence and get you back on the map.",

@@ -470,7 +470,7 @@ export default function Page() {
                   <p>
                     Niche capabilities are where this matters most.{" "}
                     <Link
-                      href="/services/gmb-reinstatement-help"
+                      href="/services/gbp-reinstatement-service"
                       className="wl-inline-link"
                     >
                       Google Business Profile reinstatement
@@ -597,7 +597,7 @@ export default function Page() {
               <div className="wl-footer-links">
                 <div className="wl-footer-col">
                   <h5>White-Label</h5>
-                  <Link href="/services/gmb-reinstatement-help">
+                  <Link href="/services/gbp-reinstatement-service">
                     GBP Reinstatement
                   </Link>
                   <Link href="/local-seo-google-business-optimization">GBP Management</Link>

@@ -62,7 +62,7 @@ export const windowAndDoorMarketing = buildIndustryMarketingPage({
   directoriesLabel: "home improvement directories",
 
   answerLead:
-    'A window and door marketing agency helps replacement companies get found online and turn local searches — window replacement near me, patio door installation, entry door replacement — into booked in-home estimates. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so you can install while leads keep arriving.',
+    'A window and door marketing agency helps replacement companies get found online and turn local searches — window replacement near me, patio door installation, entry door replacement — into booked in-home estimates. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so you can install while leads keep arriving.',
   marketFact: {
     label: "What changed for 2026",
     value:

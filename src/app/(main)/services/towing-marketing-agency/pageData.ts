@@ -95,7 +95,7 @@ export const towingMarketing = buildIndustryMarketingPage({
     },
     {
       q: "Our Google Business Profile keeps getting suspended. Can you help?",
-      a: 'Yes. Towing is one of the most heavily policed categories on Google, mostly because of service-area and address rules. We handle <a class="ima-inline-link" href="/services/gmb-reinstatement-help">Google Business Profile reinstatement</a> and rebuild the listing so it stays compliant — we have recovered 900+ profiles for local businesses.',
+      a: 'Yes. Towing is one of the most heavily policed categories on Google, mostly because of service-area and address rules. We handle <a class="ima-inline-link" href="/services/gbp-reinstatement-service">Google Business Profile reinstatement</a> and rebuild the listing so it stays compliant — we have recovered 900+ profiles for local businesses.',
       schemaA:
         "Yes. Towing is one of the most heavily policed categories on Google, mostly because of service-area and address rules. We handle Google Business Profile reinstatement and rebuild the listing so it stays compliant — we have recovered 900+ profiles for local businesses.",
     },

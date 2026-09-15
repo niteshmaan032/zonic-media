@@ -923,7 +923,7 @@ function Page() {
                   and what a lead actually cost. If a listing ever gets
                   suspended, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="deldg-inline-link"
                   >
                     Google Business Profile reinstatement

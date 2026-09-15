@@ -795,7 +795,7 @@ function Page() {
                     The pattern is consistent: in the first ninety days, the
                     Google Business Profile work — including{" "}
                     <Link
-                      href="/services/gmb-reinstatement-help"
+                      href="/services/gbp-reinstatement-service"
                       className="hia-inline-link"
                     >
                       reinstating any suspended profile
@@ -1048,7 +1048,7 @@ function Page() {
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>
-                  <Link href="/services/gmb-reinstatement-help">
+                  <Link href="/services/gbp-reinstatement-service">
                     Google Business Profile
                   </Link>
                   <Link href="/services">Google Ads Management</Link>

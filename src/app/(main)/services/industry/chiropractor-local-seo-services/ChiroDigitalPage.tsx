@@ -702,7 +702,7 @@ export default function ChiroDigitalPage() {
                   and implementing a review generation process, the clinic began
                   appearing more often in map results for high-intent searches. Had
                   the profile ever been suspended, our{" "}
-                  <Link href="/services/gmb-reinstatement-help" className="chiro-inline-link">GBP reinstatement service</Link>{" "}
+                  <Link href="/services/gbp-reinstatement-service" className="chiro-inline-link">GBP reinstatement service</Link>{" "}
                   would have been the first step to recover a suspended Google
                   Business Profile before any ranking work.
                   The result was not just more traffic — it was more calls, more

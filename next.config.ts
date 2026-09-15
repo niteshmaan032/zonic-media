@@ -98,8 +98,13 @@ const nextConfig: NextConfig = {
 
       // Service URL changes
       {
+        source: "/services/gmb-reinstatement-help",
+        destination: "/services/gbp-reinstatement-service",
+        permanent: true,
+      },
+      {
         source: "/service/google-my-business/gmb-suspension-reinstatement",
-        destination: "/services/gmb-reinstatement-help",
+        destination: "/services/gbp-reinstatement-service",
         permanent: true,
       },
       {
@@ -152,7 +157,7 @@ const nextConfig: NextConfig = {
       // Blog redirects
       {
         source: "/blog/google-business-profile-suspension-guidelines-2025",
-        destination: "/services/gmb-reinstatement-help",
+        destination: "/services/gbp-reinstatement-service",
         permanent: true,
       },
       {
@@ -311,7 +316,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/gmb-reinstatement-service-agency",
-        destination: "/services/gmb-reinstatement-help",
+        destination: "/services/gbp-reinstatement-service",
         permanent: true,
       },
       {
@@ -346,7 +351,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/services/google-my-business",
-        destination: "/services/gmb-reinstatement-help",
+        destination: "/services/gbp-reinstatement-service",
         permanent: true,
       },
       {

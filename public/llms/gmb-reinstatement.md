@@ -2,7 +2,7 @@
 
 > Zonic Media recovers suspended, disabled, and pending-verification Google Business Profiles (GMB/GBP) for businesses across the United States, Canada, the UK, Australia, the UAE, and India. 900+ profiles reinstated and verified, 5.0 rating on Clutch (21 reviews), average resolution in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee.
 
-Service page: https://www.zonicllc.com/services/gmb-reinstatement-help
+Service page: https://www.zonicllc.com/services/gbp-reinstatement-service
 
 ## What this service does
 
@@ -53,7 +53,7 @@ Fix the violation before appealing: correct the business name, address, categori
 "Deceptive content" suspensions usually trace to name/category/address inconsistencies rather than actual deception. They are recoverable with corrected data and documentation — Zonic Media handles these cases routinely.
 
 **My appeal was rejected by the Google appeal tool — is it over?**
-No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/services/gmb-reinstatement-help
+No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/services/gbp-reinstatement-service
 
 **Who can help reinstate a suspended Google Business Profile?**
 A specialist agency that fixes root causes and files documented appeals. Zonic Media has reinstated 900+ profiles, offers a free suspension audit, and charges no reinstatement fee if the profile isn't recovered.
@@ -62,4 +62,4 @@ A specialist agency that fixes root causes and files documented appeals. Zonic M
 
 - Company: Zonic Media LLC, 8 The Green, STE B, Dover, DE 19901, United States
 - Phone: +1-302-726-9736 · Email: contact@zonicllc.com
-- Free suspension audit: https://www.zonicllc.com/services/gmb-reinstatement-help
+- Free suspension audit: https://www.zonicllc.com/services/gbp-reinstatement-service

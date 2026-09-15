@@ -59,7 +59,7 @@ const services = [
     label: "Google My Business (GMB)",
     image: "/images/header-gmb.webp",
     alt: "google my business",
-    link: "/services/gmb-reinstatement-help",
+    link: "/services/gbp-reinstatement-service",
   },
   {
     id: "web",
@@ -95,7 +95,7 @@ const gmbServiceLinks = [
   {
     id: "gmb-reinstatement-help",
     label: "GMB Reinstatement",
-    link: "/services/gmb-reinstatement-help",
+    link: "/services/gbp-reinstatement-service",
   },
   {
     id: "gmb-verification-help",
@@ -1545,7 +1545,7 @@ function Navbar() {
                     />
                   </li>
                   <li>
-                    <Link href="/services/gmb-reinstatement-help">
+                    <Link href="/services/gbp-reinstatement-service">
                       GMB Reinstatement
                     </Link>
                   </li>
@@ -1909,7 +1909,7 @@ function Navbar() {
               </Accordion>
             </li>
             <li>
-              <Link href="/services/gmb-reinstatement-help">
+              <Link href="/services/gbp-reinstatement-service">
                 GMB Reinstatement
               </Link>
             </li>

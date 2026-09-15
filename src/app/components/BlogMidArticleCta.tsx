@@ -15,7 +15,7 @@ export default function BlogMidArticleCta() {
         appeal on your own.
       </p>
       <div className="bp-mid-cta-actions">
-        <Link href="/services/gmb-reinstatement-help" className="bp-mid-cta-btn">
+        <Link href="/services/gbp-reinstatement-service" className="bp-mid-cta-btn">
           Get My Profile Back
         </Link>
         <a href="tel:+13027269736" className="bp-mid-cta-phone">

@@ -61,7 +61,7 @@ export const applianceRepairMarketing = buildIndustryMarketingPage({
   directoriesLabel: "home service directories",
 
   answerLead:
-    'An appliance repair marketing agency helps repair companies get found online and turn urgent searches — refrigerator repair near me, washer repair, dishwasher not draining, brand-specific service — into booked service calls. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so your techs stay busy without you working the phones.',
+    'An appliance repair marketing agency helps repair companies get found online and turn urgent searches — refrigerator repair near me, washer repair, dishwasher not draining, brand-specific service — into booked service calls. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so your techs stay busy without you working the phones.',
   marketFact: {
     label: "Where the volume actually is",
     value:

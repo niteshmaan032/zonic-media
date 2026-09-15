@@ -68,7 +68,7 @@ function Footer() {
                   </li>
 
                   <li>
-                    <Link href="/services/gmb-reinstatement-help">
+                    <Link href="/services/gbp-reinstatement-service">
                       GMB Reinstatement
                     </Link>
                   </li>

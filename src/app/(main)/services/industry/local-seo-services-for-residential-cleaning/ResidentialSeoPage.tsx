@@ -992,7 +992,7 @@ export default function ResidentialSeoPage() {
                 </Link>{" "}
                 or recover a{" "}
                 <Link
-                  href="/services/gmb-reinstatement-help"
+                  href="/services/gbp-reinstatement-service"
                   className="rseo-inline-link"
                 >
                   suspended Google Business Profile

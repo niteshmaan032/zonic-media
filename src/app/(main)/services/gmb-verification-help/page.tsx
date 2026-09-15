@@ -942,7 +942,7 @@ function page() {
                   </h3>
                   <p>
                     If your profile is suspended rather than unverified, our{" "}
-                    <Link href="/services/gmb-reinstatement-help" className="gmb-inline-link">
+                    <Link href="/services/gbp-reinstatement-service" className="gmb-inline-link">
                       suspended Google Business Profile recovery
                     </Link>{" "}
                     steps in — and if we can&apos;t get your listing reinstated,

@@ -541,7 +541,7 @@ const GrowCards = [
     cta: "See PPC",
   },
   {
-    href: "/services/gmb-reinstatement-help",
+    href: "/services/gbp-reinstatement-service",
     icon: <FiBarChart2 aria-hidden="true" />,
     title: "Profile Reinstatement",
     desc: "Suspended listing? We file the appeal with the right evidence and get you back on the map.",
@@ -860,7 +860,7 @@ function Page() {
                   prove customers rate you. If a listing ever gets suspended,
                   our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="phl-inline-link"
                   >
                     Google Business Profile reinstatement

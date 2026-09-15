@@ -92,7 +92,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <div class="answer-main">
 <span class="eyebrow">The short answer</span>
 <h2>What Does a Septic Marketing Agency Do?</h2>
-<p class="answer-lead">A septic marketing agency helps septic companies get found online and turn local searches — septic tank pumping, cleaning, installation, inspections, and drain field repair — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so owners can focus on the work while leads come in.</p>
+<p class="answer-lead">A septic marketing agency helps septic companies get found online and turn local searches — septic tank pumping, cleaning, installation, inspections, and drain field repair — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so owners can focus on the work while leads come in.</p>
 <div class="answer-facts">
 <div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>
 <div class="afact"><span class="ak">Typical cost</span><span class="av">Most septic marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>
@@ -259,7 +259,7 @@ export const septicMarketingPage: IndustryMarketingPageData = {
 <div><h4>Services</h4><ul>
 <li><a href="https://www.zonicllc.com/services/local-seo-for-home-services">Local SEO</a></li>
 <li><a href="https://www.zonicllc.com/services/google-ads">Google Ads (PPC)</a></li>
-<li><a href="https://www.zonicllc.com/services/gmb-reinstatement-help">Google My Business</a></li>
+<li><a href="https://www.zonicllc.com/services/gbp-reinstatement-service">Google My Business</a></li>
 <li><a href="https://www.zonicllc.com/services/web-design">Web Design</a></li>
 </ul></div>
 <div><h4>Company</h4><ul>

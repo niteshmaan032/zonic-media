@@ -60,7 +60,7 @@ export const flooringMarketing = buildIndustryMarketingPage({
   directoriesLabel: "home improvement directories",
 
   answerLead:
-    'A flooring marketing agency helps flooring companies get found online and turn local searches — flooring installation near me, luxury vinyl plank, hardwood refinishing, carpet installers — into showroom visits and booked in-home measures. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so you can sell floors while leads keep arriving.',
+    'A flooring marketing agency helps flooring companies get found online and turn local searches — flooring installation near me, luxury vinyl plank, hardwood refinishing, carpet installers — into showroom visits and booked in-home measures. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so you can sell floors while leads keep arriving.',
   marketFact: {
     label: "Why product pages beat service pages",
     value:

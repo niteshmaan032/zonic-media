@@ -1180,7 +1180,7 @@ export default function CarTowSeoPage() {
                 leaving behind. If a listing has been taken down, we can also
                 help you{" "}
                 <Link
-                  href="/services/gmb-reinstatement-help"
+                  href="/services/gbp-reinstatement-service"
                   className="cartow-inline-link"
                 >
                   reinstate a suspended Google Business Profile

@@ -142,7 +142,7 @@ export function rewriteRetiredBlogLinks(html: string) {
   );
 }
 
-const REINSTATEMENT_SERVICE_PATH = "/services/gmb-reinstatement-help";
+const REINSTATEMENT_SERVICE_PATH = "/services/gbp-reinstatement-service";
 
 // Phrases the reinstatement posts already use. Alternatives are ordered so the
 // earliest, longest phrase wins ("GBP reinstatement process" before a bare
@@ -252,6 +252,9 @@ export function canonicalizeHostLinks(html: string) {
   return (
     html
       .replace(/https?:\/\/zonicllc\.com(?=[\/"'?#\s])/gi, "https://www.zonicllc.com")
+      // The reinstatement service moved on 15 Sept 2026 (stuck "discovered" URL).
+      // CMS bodies may still link the old path; rewrite so crawlers skip the 308.
+      .replace(/\/services\/gmb-reinstatement-help(?=[\/"'?#\s]|$)/gi, "/services/gbp-reinstatement-service")
       // CMS copy occasionally saves phone links as href="tel; (302) 726-9736",
       // which browsers resolve to /blog/tel;… and crawlers report as 404s
       // (Semrush, Sept 2026). Normalise any tel-ish href to a real tel: URI.

@@ -352,7 +352,7 @@ const data: PhlLandingData = {
         research, content, technical work and reporting. Nothing is
         outsourced, and if a listing ever gets suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="phl-inline-link"
         >
           Google Business Profile reinstatement

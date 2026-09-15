@@ -136,7 +136,7 @@ const siteNavigationItems = [
   { name: "Home", url: SITE_URL },
   { name: "Services", url: `${SITE_URL}/services` },
   { name: "Local SEO", url: `${SITE_URL}/services/local-seo-for-home-services` },
-  { name: "GMB Reinstatement", url: `${SITE_URL}/services/gmb-reinstatement-help` },
+  { name: "GMB Reinstatement", url: `${SITE_URL}/services/gbp-reinstatement-service` },
   { name: "Launchpad", url: `${SITE_URL}/services/launchpad` },
   { name: "About Us", url: `${SITE_URL}/about` },
   { name: "Contact Us", url: `${SITE_URL}/contact-us` },
@@ -478,7 +478,7 @@ const homeServices: HomeService[] = [
         for businesses like yours.
       </>
     ),
-    href: "/services/gmb-reinstatement-help",
+    href: "/services/gbp-reinstatement-service",
     cta: "Explore GBP Services",
   },
   {
@@ -1328,7 +1328,7 @@ export default async function Home() {
                 <p className="hm-lead">
                   A{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="hm-inline-link"
                   >
                     suspended Google Business Profile
@@ -1388,7 +1388,7 @@ export default async function Home() {
                   </div>
                 </div>
                 <div className="hm-gbp-ctas">
-                  <Link href="/services/gmb-reinstatement-help" className="buttons">
+                  <Link href="/services/gbp-reinstatement-service" className="buttons">
                     Get reinstatement help
                     <BtnArrow />
                   </Link>

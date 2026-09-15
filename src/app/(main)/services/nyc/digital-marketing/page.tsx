@@ -277,7 +277,7 @@ const data: PhlLandingData = {
           <>
             Optimization, reviews, posts, and Q&amp;A — plus{" "}
             <Link
-              href="/services/gmb-reinstatement-help"
+              href="/services/gbp-reinstatement-service"
               className="phl-inline-link"
             >
               suspension recovery
@@ -668,7 +668,7 @@ const data: PhlLandingData = {
         cta: "See Google Ads",
       },
       {
-        href: "/services/gmb-reinstatement-help",
+        href: "/services/gbp-reinstatement-service",
         icon: <FiBarChart2 aria-hidden="true" />,
         title: "Profile Reinstatement",
         desc: "Suspended listing? The first thing to fix in NYC's enforcement-heavy market.",

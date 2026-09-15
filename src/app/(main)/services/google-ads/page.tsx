@@ -283,7 +283,7 @@ const gaFeatures: GaFeature[] = [
         visible if your organic listing goes dark — for example, while we
         handle a{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="ga-inline-link"
         >
           suspended Google Business Profile

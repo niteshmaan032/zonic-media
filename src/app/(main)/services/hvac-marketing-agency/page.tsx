@@ -726,7 +726,7 @@ function Page() {
                   between tiers any month. Ad spend is separate from the
                   management fee. No setup fees, no twelve-month lockups, and{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="hvac-inline-link"
                   >
                     Google Business Profile reinstatement

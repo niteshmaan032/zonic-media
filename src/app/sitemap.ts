@@ -35,7 +35,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // Services
   { url: `${BASE_URL}/services/web-design`,                   changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/services/gmb-reinstatement-help`,       changeFrequency: "weekly",  priority: 0.9 },
+  { url: `${BASE_URL}/services/gbp-reinstatement-service`,       changeFrequency: "weekly",  priority: 0.9 },
   { url: `${BASE_URL}/services/gmb-verification-help`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/google-ads`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-for-home-services`,  changeFrequency: "monthly", priority: 0.8 },

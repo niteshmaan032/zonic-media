@@ -678,7 +678,7 @@ export default function AboutPage() {
               </Link>
               . Need a listing back on Maps quickly? That&apos;s our most
               requested job —{" "}
-              <Link href="/services/gmb-reinstatement-help" className="abt-inline-link">
+              <Link href="/services/gbp-reinstatement-service" className="abt-inline-link">
                 GMB reinstatement help
               </Link>{" "}
               covers how we handle it.

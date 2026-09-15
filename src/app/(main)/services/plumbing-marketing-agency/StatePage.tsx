@@ -392,7 +392,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   is separate from the management fee. No setup fees, no
                   twelve-month lockups, and{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="pmb-inline-link"
                   >
                     Google Business Profile reinstatement

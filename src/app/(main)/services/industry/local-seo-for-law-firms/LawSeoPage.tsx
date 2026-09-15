@@ -769,7 +769,7 @@ export default function LawSeoPage() {
               </Link>{" "}
               or recover a{" "}
               <Link
-                href="/services/gmb-reinstatement-help"
+                href="/services/gbp-reinstatement-service"
                 className="law-inline-link"
               >
                 suspended Google Business Profile

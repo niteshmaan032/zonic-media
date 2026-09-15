@@ -60,7 +60,7 @@ export const poolServiceMarketing = buildIndustryMarketingPage({
   directoriesLabel: "home service directories",
 
   answerLead:
-    'A pool service marketing agency helps pool companies get found online and turn local searches — pool service near me, pool cleaning, green pool cleanup, pool pump repair — into recurring maintenance accounts and booked repairs. It combines <a class="ima-inline-link" href="/services/local-seo-for-home-services">local SEO</a>, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so you can run routes while leads keep arriving.',
+    'A pool service marketing agency helps pool companies get found online and turn local searches — pool service near me, pool cleaning, green pool cleanup, pool pump repair — into recurring maintenance accounts and booked repairs. It combines <a class="ima-inline-link" href="/services/local-seo-for-home-services">local SEO</a>, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so you can run routes while leads keep arriving.',
   marketFact: {
     label: "Why route density is the real KPI",
     value:

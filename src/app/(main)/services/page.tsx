@@ -53,7 +53,7 @@ import {
      web design           → /services/web-design
      local SEO            → /services/local-seo-for-home-services
      GBP optimization     → /local-seo-google-business-optimization
-     GBP reinstatement    → /services/gmb-reinstatement-help
+     GBP reinstatement    → /services/gbp-reinstatement-service
      GBP verification     → /services/gmb-verification-help
      Map Pack ranking     → /local-seo-google-business-optimization
      Google Ads / PPC     → /services/google-ads
@@ -308,7 +308,7 @@ const blocks: Block[] = [
     body: (
       <>
         A suspension takes the phone off the hook overnight. Our team handles{" "}
-        <Link href="/services/gmb-reinstatement-help" className="svc-inline-link">
+        <Link href="/services/gbp-reinstatement-service" className="svc-inline-link">
           suspended profile reinstatement
         </Link>{" "}
         and{" "}

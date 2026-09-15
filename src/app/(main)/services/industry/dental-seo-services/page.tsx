@@ -41,7 +41,7 @@
  *
  * OLD data arrays also included: DentalFormHead, DentalProcessSteps (6),
  * DentalChoosePoints (4), DentalServices (8). Old internal hrefs:
- * /local-seo-google-business-optimization, /services/gmb-reinstatement-help,
+ * /local-seo-google-business-optimization, /services/gbp-reinstatement-service,
  * /services/gmb-verification-help, /services/local-seo-for-home-services,
  * /services/google-ads, /services, /services/dental-website-design.
  *
@@ -916,7 +916,7 @@ function Page() {
                   flow of reviews and local content proves patients love your
                   practice. And if a listing ever gets suspended, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="tseo-inline-link"
                   >
                     Google Business Profile reinstatement

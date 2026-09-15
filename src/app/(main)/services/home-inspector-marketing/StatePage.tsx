@@ -510,7 +510,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   who hired us to fix their booking pipeline left these. Many
                   came to us needing to{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="hia-inline-link"
                   >
                     recover a suspended Google Business Profile
@@ -702,7 +702,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>
-                  <Link href="/services/gmb-reinstatement-help">
+                  <Link href="/services/gbp-reinstatement-service">
                     Google Business Profile
                   </Link>
                   <Link href="/services/google-ads">Google Ads Management</Link>

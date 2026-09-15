@@ -1014,7 +1014,7 @@ function Page() {
                     what happens to your current rankings. If your question is not here,
                     or your profile is suspended and you need{" "}
                     <Link
-                      href="/services/gmb-reinstatement-help"
+                      href="/services/gbp-reinstatement-service"
                       className="hiw-inline-link"
                     >
                       GBP reinstatement help

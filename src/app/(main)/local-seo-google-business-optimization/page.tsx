@@ -712,7 +712,7 @@ function Page() {
                 <p className="lp-body">
                   A suspended listing is off the map entirely. Our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="lp-link"
                   >
                     GMB reinstatement service
@@ -728,7 +728,7 @@ function Page() {
                   If Google has already turned down an appeal, that&apos;s a
                   different job —{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="lp-link"
                   >
                     the escalation desk
@@ -1002,12 +1002,12 @@ function Page() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/gmb-reinstatement-help">
+                <Link href="/services/gbp-reinstatement-service">
                   GMB reinstatement service
                 </Link>
               </li>
               <li>
-                <Link href="/services/gmb-reinstatement-help">
+                <Link href="/services/gbp-reinstatement-service">
                   Rejected appeal help
                 </Link>
               </li>

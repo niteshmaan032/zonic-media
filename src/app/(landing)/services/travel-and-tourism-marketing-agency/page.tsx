@@ -225,7 +225,7 @@ const ServiceCards = [
           Google Business Profile optimization
         </Link>{" "}
         to rank and generate reviews, and when a profile is suspended, we help{" "}
-        <Link href="/services/gmb-reinstatement-help" className="tt-inline-link">
+        <Link href="/services/gbp-reinstatement-service" className="tt-inline-link">
           reinstate suspended profiles
         </Link>
         . We&apos;ve recovered 500+ profiles for businesses like yours.

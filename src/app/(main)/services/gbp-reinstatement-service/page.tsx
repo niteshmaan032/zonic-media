@@ -20,18 +20,18 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "GMB Reinstatement Help", url: "/services/gmb-reinstatement-help" },
+  { name: "GMB Reinstatement Help", url: "/services/gbp-reinstatement-service" },
 ]);
 
 const localBusinessJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: "/services/gmb-reinstatement-help",
+  pageUrl: "/services/gbp-reinstatement-service",
   areaServed: { type: "Country", name: "United States" },
 });
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://www.zonicllc.com/services/gmb-reinstatement-help#service",
+  "@id": "https://www.zonicllc.com/services/gbp-reinstatement-service#service",
   name: "GMB Reinstatement Service",
   alternateName: [
     "Google Business Profile Reinstatement Service",
@@ -42,7 +42,7 @@ const serviceJsonLd = {
   serviceType: "Google Business Profile Reinstatement",
   description:
     "GBP reinstatement service: GMB reinstatement experts recover suspended and disabled Google Business Profiles in 5 to 7 days. 900+ reinstated. No Fix, No Charge.",
-  url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
+  url: "https://www.zonicllc.com/services/gbp-reinstatement-service",
   provider: {
     "@type": "Organization",
     "@id": "https://www.zonicllc.com/#organization",
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     "google business profile reinstatement help",
     "gmb reinstatement agency",
   ],
-  alternates: { canonical: "/services/gmb-reinstatement-help" },
+  alternates: { canonical: "/services/gbp-reinstatement-service" },
   openGraph: {
     images: [
       {
@@ -166,7 +166,7 @@ export const metadata: Metadata = {
     title: "Google Business Profile Reinstatement Service | GMB Experts",
     description:
       "Recover your suspended Google Business Profile in 5–7 business days. Free suspension audit, 900+ profiles reinstated, No Fix, No Charge.",
-    url: "/services/gmb-reinstatement-help",
+    url: "/services/gbp-reinstatement-service",
     type: "website",
   },
   twitter: {
@@ -918,7 +918,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  url: "https://www.zonicllc.com/services/gmb-reinstatement-help",
+                  url: "https://www.zonicllc.com/services/gbp-reinstatement-service",
                   mainEntity: GmbResinstFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,
@@ -989,7 +989,7 @@ function page() {
       </section>
     </div>
 
-    <RelatedServices current="/services/gmb-reinstatement-help" />
+    <RelatedServices current="/services/gbp-reinstatement-service" />
     <Footer />
     </>
   );

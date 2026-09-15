@@ -277,7 +277,7 @@ const data: PhlLandingData = {
           <>
             Optimization, reviews, posts and Q&amp;A — plus{" "}
             <Link
-              href="/services/gmb-reinstatement-help"
+              href="/services/gbp-reinstatement-service"
               className="phl-inline-link"
             >
               suspension recovery
@@ -352,7 +352,7 @@ const data: PhlLandingData = {
         steady reviews plus local content prove customers rate you. If a
         listing ever gets suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="phl-inline-link"
         >
           Google Business Profile reinstatement

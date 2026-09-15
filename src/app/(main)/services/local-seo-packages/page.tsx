@@ -421,7 +421,7 @@ const data: TseoLandingData = {
         We work the signals Google actually rewards: proximity, relevance,
         and prominence. And if a listing ever gets suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="tseo-inline-link"
         >
           Google Business Profile reinstatement

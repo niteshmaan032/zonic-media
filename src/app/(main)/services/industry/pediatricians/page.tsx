@@ -915,7 +915,7 @@ function Page() {
                   of reviews and local content proves families love working with
                   you. And if a listing ever gets suspended, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="tseo-inline-link"
                   >
                     Google Business Profile reinstatement

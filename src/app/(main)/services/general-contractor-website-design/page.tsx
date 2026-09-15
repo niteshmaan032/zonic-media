@@ -1016,7 +1016,7 @@ function Page() {
                     happens to your current rankings. If your question is not here,
                     or you need to{" "}
                     <Link
-                      href="/services/gmb-reinstatement-help"
+                      href="/services/gbp-reinstatement-service"
                       className="hiw-inline-link"
                     >
                       recover a suspended Google Business Profile

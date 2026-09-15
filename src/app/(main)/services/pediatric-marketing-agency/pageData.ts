@@ -62,7 +62,7 @@ export const pediatricMarketing = buildIndustryMarketingPage({
   directoriesLabel: "healthcare directories",
 
   answerLead:
-    'A pediatric marketing agency helps pediatricians get found online and turn local searches into booked new-patient appointments. It combines <a class="ima-inline-link" href="/services/local-seo-for-home-services">local SEO</a>, Google Business Profile and Map Pack optimization, Google Ads, social media, review generation, lead capture, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so your team can focus on patients while new families keep arriving.',
+    'A pediatric marketing agency helps pediatricians get found online and turn local searches into booked new-patient appointments. It combines <a class="ima-inline-link" href="/services/local-seo-for-home-services">local SEO</a>, Google Business Profile and Map Pack optimization, Google Ads, social media, review generation, lead capture, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so your team can focus on patients while new families keep arriving.',
   marketFact: {
     label: "Why one new family matters so much",
     value:

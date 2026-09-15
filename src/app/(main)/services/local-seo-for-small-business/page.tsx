@@ -365,7 +365,7 @@ const data: TseoLandingData = {
         a steady flow of reviews proves customers rate you. And if a listing
         ever gets suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="tseo-inline-link"
         >
           Google Business Profile reinstatement

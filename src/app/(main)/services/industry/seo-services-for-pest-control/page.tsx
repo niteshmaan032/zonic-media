@@ -44,7 +44,7 @@
  *
  * Old internal links: /services/pest-control-marketing-agency, /services/local-seo-for-home-services,
  * /local-seo-google-business-optimization, /services/web-design, /services/google-ads,
- * /services/gmb-verification-help, /services/gmb-reinstatement-help.
+ * /services/gmb-verification-help, /services/gbp-reinstatement-service.
  *
  * (Full previous hero/process/map/why/services/results/contact JSX preserved in
  *  git history. Replaced wholesale by the template layout below.)
@@ -921,7 +921,7 @@ function Page() {
                   steady flow of reviews and local content proves homeowners love
                   working with you. And if a listing ever gets suspended, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="tseo-inline-link"
                   >
                     Google Business Profile reinstatement

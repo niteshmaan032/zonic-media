@@ -31,7 +31,7 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "GMB Reinstatement Help", url: "/services/gmb-reinstatement-help" },
+  { name: "GMB Reinstatement Help", url: "/services/gbp-reinstatement-service" },
 ]);
 
 const GmbResinstFaqs = [
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   title: "GBP Suspension Recovery Experts",
   description:
     "Need help with a suspended Google Business Profile? Our experts handle reinstatement, compliance fixes, and fast recovery support.",
-  alternates: { canonical: "/services/gmb-reinstatement-help" },
+  alternates: { canonical: "/services/gbp-reinstatement-service" },
 };
 
 function page() {
@@ -917,7 +917,7 @@ function page() {
                 __html: JSON.stringify({
                   "@context": "https://schema.org",
                   "@type": "FAQPage",
-                  "url": "https://zonicllc.com/services/gmb-reinstatement-help",
+                  "url": "https://zonicllc.com/services/gbp-reinstatement-service",
                   mainEntity: GmbResinstFaqs.map((faq) => ({
                     "@type": "Question",
                     name: faq.question,

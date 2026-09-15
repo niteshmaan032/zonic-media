@@ -1046,7 +1046,7 @@ function page() {
                   common questions about rankings, leads, timelines, and results
                   — and if your listing is offline, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="lsh-inline-link"
                   >
                     suspended Google Business Profile reinstatement

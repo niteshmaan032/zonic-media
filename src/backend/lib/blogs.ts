@@ -419,6 +419,17 @@ export function sanitizeBlogHtml(html: string) {
     });
 }
 
+// The reinstatement service page moved on 15 Sept 2026 (stuck "discovered" URL).
+// CMS bodies still carry the old path; rewrite it wherever post HTML is served
+// (home cards, blog index, post pages) so crawlers never hit the 308.
+const MOVED_SERVICE_PATHS: Array<[RegExp, string]> = [
+  [/\/services\/gmb-reinstatement-help(?=[\/"'?#\s]|$)/gi, "/services/gbp-reinstatement-service"],
+];
+
+function rewriteMovedServiceLinks(html: string) {
+  return MOVED_SERVICE_PATHS.reduce((out, [re, to]) => out.replace(re, to), html);
+}
+
 function toPublicBlog(blog: BlogDocument): PublicBlog {
   const plainText = stripBlogHtml(blog.descriptionHtml);
 
@@ -432,7 +443,7 @@ function toPublicBlog(blog: BlogDocument): PublicBlog {
     publishDate: blog.publishDate,
     authorName: blog.authorName,
     featuredImageUrl: blog.featuredImageUrl,
-    descriptionHtml: sanitizeBlogHtml(blog.descriptionHtml),
+    descriptionHtml: rewriteMovedServiceLinks(sanitizeBlogHtml(blog.descriptionHtml)),
     faqs: blog.faqs ?? [],
     excerpt:
       plainText.length > 150 ? `${plainText.slice(0, 147).trim()}...` : plainText,

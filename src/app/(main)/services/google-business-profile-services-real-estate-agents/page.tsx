@@ -486,7 +486,7 @@ function Page() {
                 <p className="hia-hero-sub">
                   Real estate has the highest{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="gre-inline-link"
                   >
                     Google Business Profile suspension

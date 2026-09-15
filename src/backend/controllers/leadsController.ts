@@ -21,8 +21,8 @@ const OWNER_LEAD_CC_EMAILS = [
 ];
 
 const GMB_REINSTATEMENT_TEMPLATE_PAGES = new Set([
-  "/services/gmb-reinstatement-help",
-  "/services/gmb-reinstatement-help",
+  "/services/gbp-reinstatement-service",
+  "/services/gmb-reinstatement-help", // old path, still in cached pages/forms
 ]);
 
 const GMB_OPTIMIZATION_TEMPLATE_PAGES = new Set([

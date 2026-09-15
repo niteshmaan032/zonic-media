@@ -383,7 +383,7 @@ const data: TseoLandingData = {
         search behavior is precisely the thing we optimize every day. And if a
         listing ever gets suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="tseo-inline-link"
         >
           Google Business Profile reinstatement

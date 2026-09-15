@@ -61,7 +61,7 @@ export const treeServiceMarketing = buildIndustryMarketingPage({
   directoriesLabel: "home service directories",
 
   answerLead:
-    'A tree service marketing agency helps tree companies get found online and turn local searches — tree removal near me, tree trimming, emergency tree service, stump grinding — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so your crews stay booked without anyone chasing leads.',
+    'A tree service marketing agency helps tree companies get found online and turn local searches — tree removal near me, tree trimming, emergency tree service, stump grinding — into booked jobs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so your crews stay booked without anyone chasing leads.',
   marketFact: {
     label: "Why trust signals close tree jobs",
     value:

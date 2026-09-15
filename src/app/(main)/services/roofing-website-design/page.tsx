@@ -1010,7 +1010,7 @@ function Page() {
                   what happens to your current rankings. If your question is not here,
                   or Google has suspended your listing and you need{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="rw-inline-link"
                   >
                     GMB reinstatement service

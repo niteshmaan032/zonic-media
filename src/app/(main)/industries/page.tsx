@@ -625,7 +625,7 @@ const included = [
     body: (
       <>
         Setup, optimization, and{" "}
-        <Link href="/services/gmb-reinstatement-help" className="ind-inline-link">
+        <Link href="/services/gbp-reinstatement-service" className="ind-inline-link">
           profile reinstatement
         </Link>{" "}
         so your profile earns calls, directions, and trust in your area.

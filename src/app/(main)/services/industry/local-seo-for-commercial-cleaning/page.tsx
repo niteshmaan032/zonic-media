@@ -38,7 +38,7 @@
  *
  * (Old FAQ/data arrays and the full prior JSX lived in ./CommercialSeoPage.tsx.
  *  Salvaged internal links: /services/web-design, /local-seo-google-business-optimization,
- *  /services/google-ads, /services/gmb-reinstatement-help. Full prior JSX in
+ *  /services/google-ads, /services/gbp-reinstatement-service. Full prior JSX in
  *  git history at commit 60fb83f.)
  */
 
@@ -918,7 +918,7 @@ function Page() {
                   facility managers love working with you. And if a listing ever
                   gets suspended, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="tseo-inline-link"
                   >
                     Google Business Profile reinstatement

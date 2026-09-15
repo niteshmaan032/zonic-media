@@ -404,7 +404,7 @@ const data: TseoLandingData = {
         </Link>
         . If a profile is suspended, our{" "}
         <Link
-          href="/services/gmb-reinstatement-help"
+          href="/services/gbp-reinstatement-service"
           className="tseo-inline-link"
         >
           GBP reinstatement

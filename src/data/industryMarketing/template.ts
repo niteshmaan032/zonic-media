@@ -427,7 +427,7 @@ function footerHtml(c: IndustryMarketingConfig) {
 <div><h4>Services</h4><ul>
 <li><a href="${SITE}/services/local-seo-for-home-services">Local SEO</a></li>
 <li><a href="${SITE}/services/google-ads">Google Ads (PPC)</a></li>
-<li><a href="${SITE}/services/gmb-reinstatement-help">Google My Business</a></li>
+<li><a href="${SITE}/services/gbp-reinstatement-service">Google My Business</a></li>
 <li><a href="${SITE}/services/web-design">Web Design</a></li>
 </ul></div>
 <div><h4>Company</h4><ul>

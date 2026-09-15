@@ -860,7 +860,7 @@ function Page() {
                   every month as rankings and costs move. And if a suspension
                   ever knocks your listing out of the map results, our{" "}
                   <Link
-                    href="/services/gmb-reinstatement-help"
+                    href="/services/gbp-reinstatement-service"
                     className="phl-inline-link"
                   >
                     Google Business Profile reinstatement help

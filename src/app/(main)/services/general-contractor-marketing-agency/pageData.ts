@@ -62,7 +62,7 @@ export const generalContractorMarketing = buildIndustryMarketingPage({
   directoriesLabel: "construction and remodeling directories",
 
   answerLead:
-    'A general contractor marketing agency helps contractors get found online and turn local searches — general contractor near me, home addition, whole-home remodel, ADU builder — into booked consultations and signed projects. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gmb-reinstatement-help">recovering a suspended Google Business Profile</a> — so you can run jobs while the pipeline fills itself.',
+    'A general contractor marketing agency helps contractors get found online and turn local searches — general contractor near me, home addition, whole-home remodel, ADU builder — into booked consultations and signed projects. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so you can run jobs while the pipeline fills itself.',
   marketFact: {
     label: "What changed for GCs",
     value:
