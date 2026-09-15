@@ -457,13 +457,14 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for Electricians</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for Electricians That{" "}
+                    SEO for Electricians That{" "}
                     <span className="tseo-hl">Books More Jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">local and home-service businesses</Link> climb
-                    into the Google map pack and grow. Zonic Media builds the
-                    full local ranking system for electricians — Google Business
+                    into the Google map pack and grow. Zonic Media is an electrician
+                    SEO company that builds the full local ranking system for
+                    electricians and electrical contractors — Google Business
                     Profile, citations, reviews, and service-area content — so
                     when homeowners search &ldquo;electrician near me,&rdquo;
                     they find you first.

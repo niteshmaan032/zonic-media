@@ -179,12 +179,14 @@ const data: PhlLandingData = {
     h1Highlight: "Actually in Delaware",
     sub: (
       <>
-        Zonic Media is an SEO service company headquartered on the Dover Green
-        — not an out-of-state agency with a Delaware landing page. We run
-        local SEO, Google Business Profile optimization and content programs
-        for Delaware businesses from Wilmington and Newark down to Lewes and
-        Rehoboth Beach, and we report results in calls and booked jobs, not
-        just rankings.
+        Zonic Media is the Delaware SEO company headquartered at 8 The Green,
+        Dover — not an out-of-state agency with a Delaware landing page. As of
+        September 2026 we have ranked 50+ local businesses in the map pack,
+        optimized 1,500+ Google Business Profiles, and hold a 5.0 rating on
+        Clutch from 21 reviews. We run local SEO, Google Business Profile
+        optimization and content programs for Delaware businesses from
+        Wilmington and Newark down to Lewes and Rehoboth Beach, and we report
+        results in calls and booked jobs, not just rankings.
       </>
     ),
     media: {

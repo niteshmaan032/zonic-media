@@ -345,7 +345,8 @@ function Page() {
                 <p className="hia-hero-sub">
                   When the AC dies on a 95°F afternoon or the furnace quits at
                   5°F, customers don&apos;t research — they search and they
-                  call. We help HVAC contractors win those calls through{" "}
+                  call. As an HVAC marketing agency, we help HVAC contractors
+                  win those calls through{" "}
                   <Link
                     href="/local-seo-google-business-optimization"
                     className="hvac-inline-link"

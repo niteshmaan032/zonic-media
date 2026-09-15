@@ -1058,10 +1058,15 @@ export default async function Home() {
                 and Google Ads.
               </h1>
               <p className="hm-hero-sub">
-                The digital marketing and internet marketing agency near you when it counts — in the
-                Map Pack, in search, and in the AI answers customers now trust.
-                Local SEO, Google Business Profile, website design, graphic
-                &amp; logo design, and PPC ads from one team.
+                Zonic Media is a digital marketing and internet marketing agency
+                in Dover, Delaware, serving businesses across the United States
+                with local SEO, Google Business Profile management, AI search
+                optimization, website design, graphic &amp; logo design, and PPC
+                ads from one team. As of September 2026 we have reinstated and
+                verified 900+ Google Business Profiles, optimized 1,500+, and
+                hold a 5.0 rating on Clutch from 21 reviews — so you show up
+                where it counts: in the Map Pack, in search, and in the AI
+                answers customers now trust.
               </p>
               <div className="hm-hero-badges">
                 {/* Self-hosted Clutch badge — the live iframe embed sits

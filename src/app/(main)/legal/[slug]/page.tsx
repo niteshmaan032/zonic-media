@@ -25,7 +25,7 @@ const LEGAL_META_DESCRIPTIONS: Record<string, string> = {
   "terms-conditions":
     "Review Zonic Media LLC's Terms & Conditions — the rules, service terms, disclaimers, and conditions for using our website and services.",
   "refund-policy":
-    "Read Zonic Media LLC's Refund Policy to understand when refunds apply to our services, including our No Fix, No Charge commitment on GBP reinstatement fees.",
+    "Read Zonic Media LLC's Refund Policy to see when refunds apply to our services, including our No Fix, No Charge commitment on GBP reinstatement fees.",
 };
 
 export async function generateMetadata({

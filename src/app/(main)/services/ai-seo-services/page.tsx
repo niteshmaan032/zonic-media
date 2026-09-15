@@ -39,12 +39,14 @@ import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
 const PAGE_PATH = "/services/ai-seo-services";
 
 export const metadata: Metadata = {
-  title: { absolute: "AI SEO Agency & AI SEO Services | GEO & AEO Optimization" },
+  title: { absolute: "AI SEO Agency | AI Search Optimization, GEO & AEO Services" },
   description:
     "AI SEO agency and AI SEO services: generative engine optimization (GEO) and answer engine optimization (AEO) to get cited in ChatGPT, AI Overviews and AI Mode.",
   keywords: [
     "ai seo agency",
     "ai seo services",
+    "ai seo company",
+    "ai search optimization services",
     "answer engine optimization services",
     "answer engine optimization agency",
     "generative engine optimization services",
@@ -73,7 +75,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "AI SEO Agency & AI SEO Services | GEO & AEO Optimization",
+    title: "AI SEO Agency | AI Search Optimization, GEO & AEO Services",
     description:
       "Answer engine optimization (AEO) and generative engine optimization (GEO) that get your business cited in ChatGPT, Google AI Overviews, AI Mode and Perplexity.",
     url: PAGE_PATH,
@@ -161,12 +163,12 @@ const serviceJsonLd = {
 
 const AiSeoFaqs = [
   {
-    question: "What is AI SEO?",
+    question: "What are AI SEO services and AI search optimization services?",
     answer:
-      "AI SEO is the work of making a business visible inside AI-generated answers — Google AI Overviews and AI Mode, ChatGPT, Perplexity, Gemini and Claude — rather than only in the classic list of blue links. It combines answer engine optimization (AEO), which structures pages so an engine can lift a direct answer from them, and generative engine optimization (GEO), which builds the consistent entity signals, third-party mentions and reviews that make an AI model confident enough to recommend you by name.",
+      "AI SEO services — also called AI search optimization services — are the work of making a business visible inside AI-generated answers — Google AI Overviews and AI Mode, ChatGPT, Perplexity, Gemini and Claude — rather than only in the classic list of blue links. It combines answer engine optimization (AEO), which structures pages so an engine can lift a direct answer from them, and generative engine optimization (GEO), which builds the consistent entity signals, third-party mentions and reviews that make an AI model confident enough to recommend you by name.",
   },
   {
-    question: "What is the difference between AEO and GEO?",
+    question: "What is the difference between answer engine optimization (AEO) and generative engine optimization (GEO) services?",
     answer:
       "Answer engine optimization (AEO) is on-page: clear questions, self-contained answers in the first lines of a section, structured data and clean crawl access so an engine can quote you. Generative engine optimization (GEO) is off-page and entity-level: your name, address, services, pricing and reviews saying the same thing on Google Business Profile, Clutch, Trustpilot, directories and your own site, so a model treats you as a known, trustworthy entity. You need both — AEO without GEO gets quoted but not recommended; GEO without AEO gets recommended with someone else's description.",
   },
@@ -220,7 +222,8 @@ const data: TseoLandingData = {
     h1Highlight: "AI Answers",
     sub: (
       <>
-        Zonic Media is a US AI SEO agency for small and mid-size businesses.
+        Zonic Media is a US AI SEO agency and AI SEO company offering AI
+        search optimization services for small and mid-size businesses.
         We run answer engine optimization (AEO) and generative engine
         optimization (GEO) on top of our{" "}
         <Link href="/services/seo-services" className="tseo-inline-link">
@@ -320,7 +323,7 @@ const data: TseoLandingData = {
   },
   services: {
     eyebrow: "What's Included",
-    h2: "Answer Engine & Generative Engine Optimization, Run as One Program",
+    h2: "AI Search Optimization Services: Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO), Run as One Program",
     cards: [
       {
         icon: <RiSearchLine aria-hidden="true" />,

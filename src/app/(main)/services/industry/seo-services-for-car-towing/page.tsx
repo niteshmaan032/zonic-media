@@ -508,12 +508,15 @@ function Page() {
                     <span className="tseo-hl">Wins More Calls</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> climb
-                    into the Google map pack and grow. Zonic Media builds the
-                    full local ranking system for towing companies — Google
-                    Business Profile, citations, reviews, and service-area
-                    content — so when a stranded driver searches &ldquo;tow
-                    truck near me,&rdquo; they call you first.
+                    Zonic Media provides towing SEO and local SEO for tow truck
+                    companies and roadside assistance businesses: Google
+                    Business Profile optimization, citations, reviews, and
+                    service-area pages that put you in the map pack for
+                    &ldquo;tow truck near me.&rdquo; As of September 2026 we
+                    have moved 50+ local and <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">home-service businesses</Link> into
+                    the Google map pack and optimized 1,500+ Google Business
+                    Profiles — so when a stranded driver searches, they call
+                    you first.
                   </p>
                   <div className="tseo-hero-badges" aria-label="Partner badges">
                     {/* Self-hosted Clutch badge — the live iframe embed is

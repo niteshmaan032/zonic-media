@@ -596,12 +596,15 @@ function Page() {
                     Zonic Media is a Dover-based{" "}
                     <Link href="/" className="deldg-inline-link">
                       digital marketing agency
-                    </Link>{" "}
-                    and internet marketing company, the advertising experts Delaware
-                    businesses call to turn search, ads, and content into booked
-                    calls. Local SEO, Google Ads, social, email, and
-                    conversion-first websites — run by one in-house team and
-                    reported against leads and revenue instead of impressions.
+                    </Link>
+                    , internet marketing company, and the advertising experts
+                    Delaware businesses call, from Wilmington and Newark to Lewes
+                    and Rehoboth Beach. As of September 2026 we hold a 5.0 rating
+                    on Clutch from 21 verified reviews and have optimized 1,500+
+                    Google Business Profiles. Local SEO, Google Ads, social,
+                    email, and conversion-first websites — run by one in-house
+                    team and reported against leads and revenue instead of
+                    impressions.
                   </p>
 
                   <div

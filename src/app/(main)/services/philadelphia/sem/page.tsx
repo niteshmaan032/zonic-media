@@ -67,10 +67,11 @@ const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm")
 const PAGE_PATH = "/services/philadelphia/sem";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEM Agency Philadelphia | Search Engine Marketing" },
+  title: { absolute: "SEM Agency Philadelphia | Search Engine Marketing Services" },
   description:
     "Philadelphia search engine marketing agency running SEO and Google Ads as one strategy: budget split by return, whole-page ownership for your money keywords.",
   keywords: [
+    "sem agency",
     "sem agency philadelphia",
     "search engine marketing philadelphia",
     "philadelphia sem services",
@@ -91,7 +92,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "SEM Agency Philadelphia | Search Engine Marketing | Zonic Media",
+    title: "SEM Agency Philadelphia | Search Engine Marketing Services",
     description:
       "Philadelphia search engine marketing agency running paid and organic search as one strategy — shared keyword intelligence and whole-SERP ownership.",
     url: PAGE_PATH,
@@ -594,10 +595,12 @@ function Page() {
                     <span className="phl-hl">Search Results Page</span>
                   </h1>
                   <p className="phl-hero-sub">
-                    Most Philadelphia businesses buy SEO from one vendor and ads
-                    from another, then wonder why neither can prove what it
-                    produced. Our search engine marketing services run paid and organic search as a single strategy — one keyword map, one budget decision, one report
-                    — so the two compound instead of competing.
+                    Zonic Media is an SEM agency in Philadelphia: one search
+                    engine marketing team running paid and organic search as a
+                    single strategy — one keyword map, one budget decision, one
+                    report — so the two compound instead of competing. Most
+                    businesses buy SEO from one vendor and ads from another,
+                    then wonder why neither can prove what it produced.
                   </p>
 
                   <div className="phl-hero-badges" aria-label="Partner badges">

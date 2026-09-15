@@ -411,20 +411,20 @@ function Page() {
                 <p className="dw-eyebrow">Dental Website Design</p>
                 <h1 className="dw-hero-h1">
                   Dental Website Design{" "}
-                  <span className="dw-h1-img" aria-hidden="true">
+                  <span className="dw-h1-img">
                     <Image
                       src="/images/dental-web/hero-title-img-1.webp"
-                      alt=""
+                      alt="Smiling cartoon teeth with a toothbrush"
                       fill
                       sizes="120px"
                     />
                   </span>{" "}
                   That Turns Visitors into{" "}
                   <span className="dw-hl">Booked Patients</span>{" "}
-                  <span className="dw-h1-img" aria-hidden="true">
+                  <span className="dw-h1-img">
                     <Image
                       src="/images/dental-web/hero-title-img-2.webp"
-                      alt=""
+                      alt="Smiling patient in a dental chair"
                       fill
                       sizes="120px"
                     />

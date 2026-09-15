@@ -120,9 +120,9 @@ const GmbResinstFaqs = [
       "Yes. We regularly support agencies and multi-location brands managing many Google Business Profiles. Contact us for agency and bulk reinstatement options.",
   },
   {
-    question: "What makes Zonic Media one of the best GMB reinstatement services?",
+    question: "Which companies help with Google Business reinstatement, and why choose Zonic Media?",
     answer:
-      "Zonic Media has reinstated and verified 900+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
+      "Several companies help with Google Business Profile reinstatement; what separates them is success rate, turnaround, and whether you pay when the appeal fails. Zonic Media has reinstated and verified 900+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
   },
   {
     question: "Where can I read verified reviews of Zonic Media's reinstatement service?",
@@ -220,7 +220,10 @@ function page() {
               Google Maps and lose calls every hour. Zonic Media&apos;s GMB
               reinstatement service diagnoses the real cause, fixes the
               compliance issues, and manages your reinstatement appeal with
-              Google to recover your listing, rankings, and leads — fast.
+              Google to recover your listing, rankings, and leads — fast. 900+
+              profiles reinstated, a typical 5–7 business day turnaround, a free
+              suspension audit first, and No Fix, No Charge on the reinstatement
+              fee.
             </p>
 
             <div className="hero-badges">

@@ -195,7 +195,7 @@ const PhilaSeoFaqs = [
       "Regular SEO chases national or informational rankings. Local SEO targets the searches that happen with buying intent nearby — 'plumber near me', 'best dentist Fishtown', 'emergency locksmith Center City' — and the map pack those searches produce. The ranking signals are different too: proximity, Google Business Profile completeness, citation consistency, and review velocity matter far more than raw backlink volume.",
   },
   {
-    question: "What's included in your Philadelphia local SEO service?",
+    question: "What's included when you hire Zonic Media as your Philadelphia SEO company?",
     answer:
       "Every campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your service and neighbourhood pages, local content, and a monthly report showing rankings, calls, and direction requests — not vanity metrics. Nothing is outsourced and you own every account we touch.",
   },
@@ -584,10 +584,14 @@ function Page() {
                     <span className="phl-hl">Map Pack</span>
                   </h1>
                   <p className="phl-hero-sub">
-                    Zonic Media is a Philadelphia SEO company and local SEO agency for businesses that need calls, not charts. Our SEO services in Philadelphia cover the whole ranking system —
-                    Google Business Profile, on-page SEO, citations, reviews,
-                    and neighbourhood pages — so when somebody in Philly
-                    searches, the business they call is yours.
+                    Looking for the best SEO company in Philadelphia for a local
+                    business? Zonic Media is a Philadelphia SEO company and local
+                    SEO agency rated 5.0 on Clutch from 21 verified reviews, with
+                    900+ Google Business Profiles reinstated and optimized. Our
+                    SEO services in Philadelphia cover the whole ranking system —
+                    Google Business Profile, on-page SEO, citations, reviews, and
+                    neighbourhood pages from Fishtown to the Main Line — so when
+                    somebody in Philly searches, the business they call is yours.
                   </p>
 
                   <div className="phl-hero-badges" aria-label="Partner badges">
@@ -1093,8 +1097,10 @@ function Page() {
                   What Happens When Local SEO is Done Properly
                 </h2>
                 <p className="phl-lead">
-                  Different neighbourhoods, different categories — the same
-                  system, executed month after month.
+                  Different neighbourhoods — South Philly, Center City, Fishtown,
+                  Manayunk, University City, Northeast Philly and the Main Line
+                  suburbs — and different categories, the same system, executed
+                  month after month.
                 </p>
               </div>
 

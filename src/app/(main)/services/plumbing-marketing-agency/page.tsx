@@ -344,8 +344,8 @@ function Page() {
                 </h1>
                 <p className="hia-hero-sub">
                   The customer whose pipe is bursting at 11 PM does not
-                  research. They search and they call. We help plumbing
-                  contractors win those calls — through{" "}
+                  research. They search and they call. As a plumbing marketing
+                  agency, we help plumbing contractors win those calls — through{" "}
                   <Link
                     href="/local-seo-google-business-optimization"
                     className="pmb-inline-link"

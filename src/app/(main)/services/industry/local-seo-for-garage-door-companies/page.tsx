@@ -462,12 +462,14 @@ function Page() {
                     <span className="tseo-hl">Books Jobs</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and home-service businesses climb
-                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media builds the
-                    full local ranking system for garage door companies — Google
-                    Business Profile, citations, reviews, and service-area
-                    content — so when homeowners search &ldquo;garage door repair
-                    near me,&rdquo; they find you first.
+                    Zonic Media provides local SEO for garage door companies:
+                    Google Business Profile optimization, citations, reviews,
+                    and service-area pages that put you in the map pack for
+                    &ldquo;garage door repair near me.&rdquo; As of September
+                    2026 we have moved 50+ local and home-service businesses
+                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and optimized 1,500+
+                    Google Business Profiles — so when homeowners search, they
+                    find you first.
                   </p>
                   <div className="tseo-hero-badges" aria-label="Partner badges">
                     {/* Self-hosted Clutch badge — the live iframe embed is

@@ -465,9 +465,9 @@ function Page() {
             <span className="lp-eyebrow on-dark">Local SEO services</span>
 
             <h1 className="lp-h1">
-              You Rank #1 Outside Your Own Front Door.{" "}
+              Google Business Profile Optimization Service:{" "}
               <span className="lp-accent">
-                Three Miles Away, You Don&apos;t Exist.
+                Rank #1 Outside Your Front Door — and Three Miles Away.
               </span>
             </h1>
 

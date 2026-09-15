@@ -492,16 +492,18 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Real Estate SEO Services</p>
                   <h1 className="tseo-hero-h1">
-                    Real Estate SEO Experts That{" "}
-                    <span className="tseo-hl">Win More Leads</span>
+                    Real Estate SEO Company That{" "}
+                    <span className="tseo-hl">Wins More Leads</span>
                   </h1>
                   <p className="tseo-hero-sub">
-                    We&apos;ve helped 50+ local and lead-driven businesses climb
-                    into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and grow. Zonic Media is a real estate SEO
-                    company and agency building the full ranking system for
-                    agents, teams, and brokerages — Google Business Profile, citations, reviews, and
-                    neighborhood content — so when buyers and sellers search
-                    &ldquo;realtor near me,&rdquo; they find you first.
+                    Zonic Media is a real estate SEO company and agency for
+                    agents, teams, and brokerages: Google Business Profile,
+                    citations, reviews, and neighborhood content that rank you
+                    for &ldquo;realtor near me&rdquo; and &ldquo;homes for sale
+                    in&rdquo; your neighborhoods. As of September 2026 we have
+                    moved 50+ local and lead-driven businesses into <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">the Google map pack</Link> and
+                    optimized 1,500+ Google Business Profiles — so when buyers
+                    and sellers search, they find you first.
                   </p>
                   <div className="tseo-hero-badges" aria-label="Partner badges">
                     {/* Self-hosted Clutch badge — the live iframe embed is

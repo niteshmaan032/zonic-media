@@ -83,6 +83,7 @@ export const metadata: Metadata = {
   description:
     "Law firm SEO company for solo and small firms: local SEO, Google Business Profile, practice-area pages and reviews that turn legal searches into signed cases.",
   keywords: [
+    "law firm seo company",
     "local seo for law firms",
     "seo for law firms",
     "law firm seo services",
@@ -494,13 +495,14 @@ function Page() {
                 <div className="tseo-hero-copy">
                   <p className="tseo-eyebrow">Local SEO for Law Firms</p>
                   <h1 className="tseo-hero-h1">
-                    Local SEO for Law Firms That{" "}
+                    Law Firm SEO Company That{" "}
                     <span className="tseo-hl">Wins Clients</span>
                   </h1>
                   <p className="tseo-hero-sub">
                     We&apos;ve helped 50+ local and service businesses climb into
-                    the <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">Google map pack</Link> and grow. Zonic Media builds the full
-                    local ranking system for law firms — Google Business Profile,
+                    the <Link href="/services/local-seo-for-home-services" className="tseo-inline-link">Google map pack</Link> and grow. Zonic Media is a law firm SEO
+                    company that builds the full local ranking system for solo
+                    and small firms — Google Business Profile,
                     citations, reviews, and practice-area content — so when
                     someone searches &ldquo;personal injury lawyer near me,&rdquo;
                     they find your firm first.

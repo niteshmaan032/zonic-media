@@ -1748,7 +1748,7 @@ export default function CommercialSeoPage() {
                   <h3>Our Office</h3>
                 </div>
                 <a href={SITE_CONTACT.mapHref} target="_blank" rel="noreferrer">
-                  8 The Green, STE B Dover, Kent, DE 19901
+                  8 The Green, STE B Dover, DE 19901
                   <br />
                   United States
                 </a>
