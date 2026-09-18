@@ -1061,12 +1061,9 @@ export default async function Home() {
                 Zonic Media is a digital marketing and internet marketing agency
                 in Dover, Delaware, serving businesses across the United States
                 with local SEO, Google Business Profile management, AI search
-                optimization, website design, graphic &amp; logo design, and PPC
-                ads from one team. As of September 2026 we have reinstated and
-                verified 900+ Google Business Profiles, optimized 1,500+, and
-                hold a 5.0 rating on Clutch from 21 reviews — so you show up
-                where it counts: in the Map Pack, in search, and in the AI
-                answers customers now trust.
+                optimization, website design and Google Ads. As of September
+                2026: 900+ Google Business Profiles reinstated and verified,
+                1,500+ optimized, and a 5.0 Clutch rating from 21 reviews.
               </p>
               <div className="hm-hero-badges">
                 {/* Self-hosted Clutch badge — the live iframe embed sits

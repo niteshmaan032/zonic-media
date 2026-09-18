@@ -81,6 +81,32 @@ const states = [
   { name: "California", slug: "california" },
   { name: "North Carolina", slug: "north-carolina" },
   { name: "Georgia", slug: "georgia" },
+  { name: "Ohio", slug: "ohio" },
+  { name: "Illinois", slug: "illinois" },
+  { name: "Colorado", slug: "colorado" },
+  { name: "Michigan", slug: "michigan" },
+  { name: "Pennsylvania", slug: "pennsylvania" },
+  { name: "New York", slug: "new-york" },
+  { name: "Tennessee", slug: "tennessee" },
+  { name: "Virginia", slug: "virginia" },
+  { name: "Maryland", slug: "maryland" },
+  { name: "New Jersey", slug: "new-jersey" },
+  { name: "Washington", slug: "washington" },
+  { name: "Arizona", slug: "arizona" },
+  { name: "Indiana", slug: "indiana" },
+  { name: "Alabama", slug: "alabama" },
+  { name: "Missouri", slug: "missouri" },
+  { name: "Oklahoma", slug: "oklahoma" },
+  { name: "Oregon", slug: "oregon" },
+  { name: "Wisconsin", slug: "wisconsin" },
+  { name: "South Carolina", slug: "south-carolina" },
+  { name: "Minnesota", slug: "minnesota" },
+  { name: "Massachusetts", slug: "massachusetts" },
+  { name: "Louisiana", slug: "louisiana" },
+  { name: "Kentucky", slug: "kentucky" },
+  { name: "Nevada", slug: "nevada" },
+  { name: "Utah", slug: "utah" },
+  { name: "Arkansas", slug: "arkansas" },
 ];
 
 const problemCards = [
@@ -544,7 +570,7 @@ function Page() {
                 <div className="hia-sec-label">Where We Work</div>
                 <h2 className="hia-sec-h2">
                   Home Inspectors We Help Grow Across{" "}
-                  <span className="hia-accent">5 States.</span>
+                  <span className="hia-accent">31 States.</span>
                 </h2>
                 <p className="hia-sec-sub">
                   Zonic Media helps{" "}
@@ -554,7 +580,8 @@ function Page() {
                   >
                     home inspectors in Texas
                   </Link>
-                  , Florida, California, North Carolina, and Georgia — with
+                  , Florida, California, Ohio, Illinois, New York, and 25 more states
+                  — with
                   dedicated{" "}
                   <Link
                     href="/services/local-seo-for-home-services"

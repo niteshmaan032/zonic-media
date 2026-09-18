@@ -2077,6 +2077,9 @@
   }
   .gmb-reinst-page .gmb-main-wrapper {
     flex-direction: column;
+    /* flex-start (desktop) would size the stacked column to its widest
+       unbreakable child, pushing the page past the viewport on small phones */
+    align-items: stretch;
   }
   .gmb-reinst-page .gmb-band {
     padding: 28px;
@@ -2124,6 +2127,26 @@
   }
   .gmb-reinst-page .gmb-map-bars {
     height: 44px;
+  }
+  /* Map-pack console on narrow phones: tighter card + rows, and let the
+     rows shrink with the card instead of holding their min-content width
+     (they were poking past the card edge at 320px). */
+  .gmb-reinst-page .gmb-map {
+    padding: 14px;
+  }
+  .gmb-reinst-page .gmb-map-pack {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .gmb-reinst-page .gmb-map-row {
+    gap: 10px;
+    padding: 12px 10px;
+  }
+  .gmb-reinst-page .gmb-map-rank {
+    width: 16px;
+  }
+  .gmb-reinst-page .gmb-map-search {
+    white-space: nowrap;
+    overflow: hidden;
   }
   /* Flatten the white content boxes on mobile — no padding, border or
      background, so the content runs full width within the 16px gutter. */

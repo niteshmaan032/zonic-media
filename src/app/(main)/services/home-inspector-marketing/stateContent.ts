@@ -1,3 +1,5 @@
+import { EXPANSION_STATES } from "./states";
+
 export type StateCityCard = {
   h: string;
   p: string;
@@ -10,6 +12,13 @@ export type StateContent = {
   slug: string;
   metaTitle: string;
   metaDescription: string;
+  /** Meta keywords for the route; falls back to the program defaults. */
+  keywords?: string[];
+  /**
+   * One state-specific sentence per service card (same order as
+   * buildStateServices), appended to the shared paragraph.
+   */
+  serviceAngles?: string[];
 
   ticker: string[];
 
@@ -61,6 +70,7 @@ export type StateContent = {
 };
 
 export const STATE_CONTENT: Record<string, StateContent> = {
+  ...EXPANSION_STATES,
   georgia: {
     name: "Georgia",
     slug: "georgia",
@@ -1113,8 +1123,11 @@ export type StatePriceCard = {
   badge?: string;
 };
 
-export function buildStateServices(stateName: string): StateService[] {
-  return [
+export function buildStateServices(
+  stateName: string,
+  angles: string[] = [],
+): StateService[] {
+  const services: StateService[] = [
     {
       num: "01 · LOCAL SEO",
       h: `Rank for "Home Inspector Near Me" in Every ${stateName} Town You Serve.`,
@@ -1188,6 +1201,10 @@ export function buildStateServices(stateName: string): StateService[] {
       ],
     },
   ];
+
+  return services.map((service, i) =>
+    angles[i] ? { ...service, p: `${service.p} ${angles[i]}` } : service,
+  );
 }
 
 export function buildStatePriceCards(stateName: string): StatePriceCard[] {

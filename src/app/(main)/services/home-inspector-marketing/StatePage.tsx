@@ -78,7 +78,9 @@ function fillTemplate(text: string, values: string[]): ReactNode {
 
 export default function StatePage({ state }: { state: StateContent }) {
   const stateName = state.name;
-  const services = buildStateServices(stateName);
+  // "an Ohio", "an Illinois" — but "a Utah" (consonant sound).
+  const article = /^[AEIO]/.test(stateName) ? "an" : "a";
+  const services = buildStateServices(stateName, state.serviceAngles);
   const priceCards = buildStatePriceCards(stateName);
 
   const pageUrl = `https://www.zonicllc.com/services/home-inspector-marketing/${state.slug}`;
@@ -287,7 +289,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                   Complete Digital Marketing Stack
                 </div>
                 <h2 className="hia-sec-h2">
-                  Everything a {stateName} Home Inspection Company Needs to{" "}
+                  Everything {article} {stateName} Home Inspection Company Needs to{" "}
                   <span className="hia-accent">Grow Online.</span>
                 </h2>
                 <p className="hia-sec-sub">
@@ -474,7 +476,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                     href="#hia-audit"
                     className="hia-btn hia-btn-primary"
                   >
-                    Match Me to a {stateName} City Plan →
+                    Match Me to {article} {stateName} City Plan →
                   </HashScrollLink>
                 </div>
                 <div className="his-city-grid">
@@ -482,9 +484,15 @@ export default function StatePage({ state }: { state: StateContent }) {
                     <div className="his-city-card" key={i}>
                       <h4>{c.h}</h4>
                       <p>{c.p}</p>
-                      <Link href={c.link} className="his-city-link">
-                        {c.linkLabel} →
-                      </Link>
+                      {c.link.length > 1 && c.link.startsWith("#") ? (
+                        <HashScrollLink href={c.link} className="his-city-link">
+                          {c.linkLabel} →
+                        </HashScrollLink>
+                      ) : (
+                        <Link href={c.link} className="his-city-link">
+                          {c.linkLabel} →
+                        </Link>
+                      )}
                     </div>
                   ))}
                 </div>
