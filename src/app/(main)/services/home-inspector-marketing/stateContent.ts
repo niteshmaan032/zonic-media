@@ -7,6 +7,47 @@ export type StateCityCard = {
   linkLabel: string;
 };
 
+export type StateTemplateCopy = {
+  services: {
+    eyebrow: string;
+    headlinePre: string;
+    accent: string;
+    lede: string;
+    cta: string;
+    cards: StateService[];
+  };
+  channels: {
+    eyebrow: string;
+    headlinePre: string;
+    accent: string;
+    lede: string;
+    rows: ChannelTableRow[];
+  };
+  process: {
+    eyebrow: string;
+    headlinePre: string;
+    accent: string;
+    steps: { h: string; p: string }[];
+  };
+  results: { eyebrow: string; cta: string };
+  citiesCta: string;
+  reviews: {
+    eyebrow: string;
+    headlinePre: string;
+    accent: string;
+    lede: string;
+    cta: string;
+  };
+  pricing: { eyebrow: string; cards: StatePriceCard[] };
+  faq: { headlinePre: string; accent: string; lede: string };
+  final: {
+    eyebrow: string;
+    headlinePre: string;
+    checklist: string[];
+    cta: string;
+  };
+};
+
 export type StateContent = {
   name: string;
   slug: string;
@@ -15,10 +56,11 @@ export type StateContent = {
   /** Meta keywords for the route; falls back to the program defaults. */
   keywords?: string[];
   /**
-   * One state-specific sentence per service card (same order as
-   * buildStateServices), appended to the shared paragraph.
+   * State-written copy for the blocks the original five pages share
+   * (services, channel table, process, reviews, pricing, FAQ intro, final
+   * CTA). Ledes may contain markdown links: [anchor](/path).
    */
-  serviceAngles?: string[];
+  template?: StateTemplateCopy;
 
   ticker: string[];
 
@@ -1123,11 +1165,8 @@ export type StatePriceCard = {
   badge?: string;
 };
 
-export function buildStateServices(
-  stateName: string,
-  angles: string[] = [],
-): StateService[] {
-  const services: StateService[] = [
+export function buildStateServices(stateName: string): StateService[] {
+  return [
     {
       num: "01 · LOCAL SEO",
       h: `Rank for "Home Inspector Near Me" in Every ${stateName} Town You Serve.`,
@@ -1201,10 +1240,6 @@ export function buildStateServices(
       ],
     },
   ];
-
-  return services.map((service, i) =>
-    angles[i] ? { ...service, p: `${service.p} ${angles[i]}` } : service,
-  );
 }
 
 export function buildStatePriceCards(stateName: string): StatePriceCard[] {
@@ -1317,3 +1352,82 @@ export const CHANNEL_TABLE: ChannelTableRow[] = [
     fit: "Inspectors competing on reputation and referrals, not just clicks.",
   },
 ];
+
+/**
+ * The copy the original five state pages share. Pages that ship their own
+ * `template` never see this.
+ */
+export function buildDefaultTemplate(stateName: string): StateTemplateCopy {
+  // "an Ohio", "an Illinois" — but "a Utah" (consonant sound).
+  const article = /^[AEIO]/.test(stateName) ? "an" : "a";
+
+  return {
+    services: {
+      eyebrow: "Complete Digital Marketing Stack",
+      headlinePre: `Everything ${article} ${stateName} Home Inspection Company Needs to`,
+      accent: "Grow Online.",
+      lede: `We are not a “just SEO” shop or a “just Google Ads” shop. Our [home inspector marketing](/services/home-inspector-marketing) program builds the whole funnel for ${stateName} home inspectors, from the way you appear on Google Maps through [Google Business Profile optimization](/local-seo-google-business-optimization) to the way your website converts a visitor into a booked inspection.`,
+      cta: "Audit My Full Funnel",
+      cards: buildStateServices(stateName),
+    },
+    channels: {
+      eyebrow: "Channel Mix at a Glance",
+      headlinePre: "What Each Marketing Channel Does — And",
+      accent: "How Fast It Pays Back.",
+      lede: `Use this grid as a planning guide. [Google Ads management](/services/google-ads) and a polished Google Business Profile buy you bookings this month. [Local SEO for home services](/services/local-seo-for-home-services) and social compound across the year. The strongest ${stateName} home inspector marketing plans blend both timelines so the calendar never goes cold.`,
+      rows: CHANNEL_TABLE,
+    },
+    process: {
+      eyebrow: "How We Work With You",
+      headlinePre: "A Clean Three-Step Start. Then We",
+      accent: "Get to Work.",
+      steps: [
+        {
+          h: "The Free Audit",
+          p: `You fill out the form. Within five business days you get a written report covering your GBP, your local rankings across ${stateName}, your website, your reviews, your citations, and the gaps a competitor in your market is exploiting. No call required to receive the report.`,
+        },
+        {
+          h: "The Strategy Call",
+          p: `If the audit makes sense, we get on a thirty-minute call. You bring your booking goals, your ${stateName} service area, your busy season, and your current marketing spend. We walk through which plan fits and where the first wins will come from.`,
+        },
+        {
+          h: "Launch & Reporting",
+          p: "Within fourteen days of signing, your campaigns are live and your GBP is rebuilt. You get a monthly performance report you can actually read — not a vanity dashboard — covering calls, form fills, ranking movement, and revenue attribution.",
+        },
+      ],
+    },
+    results: {
+      eyebrow: "Real Outcomes, Not Vanity Metrics",
+      cta: `Get My ${stateName} Growth Plan`,
+    },
+    citiesCta: `Match Me to ${article} ${stateName} City Plan`,
+    reviews: {
+      eyebrow: "Trusted by Clients Nationwide",
+      headlinePre: "What Inspectors and Other Service Businesses",
+      accent: "Say About Working with Us.",
+      lede: "Verified reviews from Clutch — the independent platform agencies can't edit, filter, or fake. The same operators who hired us to fix their booking pipeline left these. Many came to us needing to [recover a suspended Google Business Profile](/services/gbp-reinstatement-service) or rebuild a slow, dated site into a [conversion-focused website](/services/web-design) before the reviews ever started rolling in.",
+      cta: "Become the Next Win",
+    },
+    pricing: {
+      eyebrow: "Transparent Pricing, Month to Month",
+      cards: buildStatePriceCards(stateName),
+    },
+    faq: {
+      headlinePre: "Everything You Wanted to Ask Before That",
+      accent: "Strategy Call.",
+      lede: "If you don't see your question below — whether it's about paid ads, review systems, or how to [verify a new Google Business Profile](/services/gmb-verification-help) — just include it in the audit form and we will answer it in the written report. You can also browse the full menu of [digital marketing services](/services) we run for local service businesses.",
+    },
+    final: {
+      eyebrow: "Start With the Free Audit",
+      headlinePre: "Get a Marketing Audit Built For",
+      checklist: [
+        "No long-term contracts — every plan month to month",
+        "Audit delivered as a PDF, not a high-pressure sales meeting",
+        "Strategy call only if you decide it's worth your time",
+        `Plans built for solo and multi-inspector ${stateName} firms`,
+        `Specializing in home inspection marketing across ${stateName} and nationwide`,
+      ],
+      cta: "Submit My Free Audit",
+    },
+  };
+}

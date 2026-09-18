@@ -17,21 +17,279 @@ const content: StateContent = {
     "home inspector lansing mi",
     "home inspector marketing",
     "seo for home inspectors",
+    "home inspector lead generation michigan",
+    "ai seo for home inspectors",
   ],
-  serviceAngles: [
-    "Michigan sites do best with pages for well and septic evaluations, radon, sewer scopes, and mold, plus county-level pages for Oakland, Macomb, Wayne, Kent, and Washtenaw rather than one \"Metro Detroit\" catch-all.",
-    "Metro Detroit is dozens of separate cities, so we set service areas and post content township by township — Troy, Novi, Livonia, Sterling Heights — instead of treating the region as one place.",
-    "Michigan ads follow the thaw: budgets rise from March into early summer, a separate Up North campaign runs for cottage season, and winter spend drops to a maintenance level.",
-    "Wet basements, ice-dam damage, failing septic fields, and lakefront seawalls make Michigan-specific video that buyers from out of the area find genuinely useful.",
-    "Since Michigan issues no state license, the website leads with your certifications, insurance, and sample report, and states clearly which counties you cover and whether you travel north.",
-    "We ask customers to mention the city and the kind of property — a Royal Oak bungalow, a Torch Lake cottage — which helps you appear for both.",
-  ],
+  template: {
+    services: {
+      eyebrow: "A Full Season's Marketing, Both Peninsulas",
+      headlinePre: "What It Takes to Keep a Michigan Inspection Calendar Full",
+      accent: "From Thaw to First Snow.",
+      lede: "The selling season here is short, so each channel has to be ready before it opens. Our [home inspector marketing service](/services/home-inspector-marketing) does the groundwork in winter — [Google Business Profile optimization](/local-seo-google-business-optimization) township by township, county and specialty pages, review systems — and adds [AI search visibility](/services/ai-seo-services) for the downstate and out-of-state buyers researching Michigan property from afar.",
+      cta: "Get My Michigan Funnel Checked",
+      cards: [
+        {
+          num: "01 · HOME INSPECTION LOCAL SEO",
+          h: "County-Level Home Inspection Local SEO, Not a \"Metro Detroit\" Catch-All.",
+          p: "Searchers in Michigan think in counties and townships, and so does Google. Home inspection local SEO for a Michigan firm means distinct pages for Oakland, Macomb, Wayne, Kent and Washtenaw — and for the cities inside them — instead of one page that claims the whole southeast corner. Well and septic evaluations, radon, sewer scopes and mold each get their own page, because rural and lakefront buyers search those services separately from the inspection itself. We fix inconsistent listings left over from an old address or phone number and build links from Michigan agents, lenders and title companies.",
+          items: [
+            "County and city pages for Oakland, Macomb, Wayne, Kent, Washtenaw and beyond",
+            "Separate well, septic, radon, sewer scope and mold pages",
+            "Listing repair on Angi, Yelp, InterNACHI, BBB and HomeAdvisor",
+            "Name, address and phone consistency audit",
+            "Links from Michigan agents, lenders and title companies"
+          ]
+        },
+        {
+          num: "02 · GOOGLE BUSINESS PROFILE",
+          h: "Township by Township: A Google Profile for the Way Michigan Is Laid Out.",
+          p: "Troy, Novi, Livonia and Sterling Heights sit minutes apart and return four different sets of map results. We set your service areas accordingly and publish content for each, so the profile is relevant in the places you want work and not only the one where your mail arrives. Categories expand beyond home inspector to the well, septic and radon services you offer. Photos are geo-tagged from real inspections — a Royal Oak bungalow, a Holland new build, a cottage near Gaylord. Posts go up weekly and follow the Michigan year, and buyer questions are seeded, answered and kept current.",
+          items: [
+            "Service areas set by township and city across your counties",
+            "Added categories for well, septic, radon and mold services",
+            "Geo-tagged photos from real Michigan inspections",
+            "Weekly posts that follow thaw, summer and freeze",
+            "Seeded Q&A and timely review replies"
+          ]
+        },
+        {
+          num: "03 · PAID ADS · GOOGLE ADS & PPC",
+          h: "Ad Budgets That Rise With the Thaw and Head North for Cottage Season.",
+          p: "Spending the same amount in February as in May is how Michigan inspectors waste money. As your paid ads agency, we raise Google Search and call-only budgets from March into early summer, run a separate Up North campaign when cottage buyers start looking around Traverse City and Petoskey, and drop to maintenance level once the snow flies. Well, septic and radon terms are often cheap because few competitors bid on them. Campaigns are targeted by zip code, stripped of training-course and salary searches, and tracked through to calls, forms and bookings, with a monthly summary of bids and budget. Meta advertising comes with the Authority plan.",
+          items: [
+            "Seasonal budget pacing matched to Michigan's market",
+            "A separate Up North campaign for cottage and lake-home buyers",
+            "Low-competition well, septic and radon keyword groups",
+            "Zip-code targeting, negative keywords and full conversion tracking",
+            "Monthly bid and budget summary; Meta ads on the Authority plan"
+          ]
+        },
+        {
+          num: "04 · SOCIAL MEDIA MARKETING",
+          h: "Show Buyers What a Michigan Winter Does to a House.",
+          p: "Ice-dam staining on a bedroom ceiling, a sump pit that cannot keep up in April, a septic field gone soft, a seawall leaning into an inland lake — Michigan gives inspectors footage that buyers from Chicago or Ohio find eye-opening. We turn your findings into short video, write posts that prepare first-time buyers in Lansing or Kalamazoo for what an inspection involves, and maintain a LinkedIn presence for the agents who handle lake and cottage property. Instagram and Facebook run on a weekly calendar. Reels and Shorts are formatted to reach people nearby.",
+          items: [
+            "Short video from basement, roof, septic and waterfront findings",
+            "Buyer education for first-timers in Michigan's mid-size cities",
+            "LinkedIn content for agents, including lake-property specialists",
+            "Weekly Instagram and Facebook posting",
+            "Reels and Shorts built for local reach"
+          ]
+        },
+        {
+          num: "05 · WEBSITE DESIGN & SEO",
+          h: "A Website That Answers \"Are You Certified, and Do You Come This Far North?\"",
+          p: "Michigan issues no license, so the site has to lead with what you do hold: certification, insurance and a sample report. Right beside them goes a plain statement of the counties you cover and whether you travel north of Clare — the first thing a cottage buyer wants to know. Booking runs through ISN, Spectora or HomeGauge, a calculator quotes by size and add-ons such as well and septic, and each specialty has its own page. Pages open in under two seconds on a phone with one bar of signal, and schema markup lays out services and coverage for search engines.",
+          items: [
+            "Certification, insurance and sample report at the top",
+            "Clear county coverage, including northern Michigan travel",
+            "Booking through ISN, Spectora or HomeGauge, plus a quote calculator",
+            "Sub-2-second mobile load and complete schema markup",
+            "Dedicated pages for well, septic, radon, sewer scope and mold"
+          ]
+        },
+        {
+          num: "06 · REVIEWS & REPUTATION",
+          h: "Reviews That Mention the City and the Kind of Property.",
+          p: "A review that says \"inspected our Royal Oak bungalow\" helps you in Royal Oak. One that says \"drove up to our Torch Lake cottage\" helps you with every second-home buyer who searches that area. After each job an automated text and email asks for feedback and suggests mentioning both details. We monitor Google, Yelp, Angi, BBB, Nextdoor and Facebook and write careful replies to the occasional angry seller. In a state with no license lookup, a deep and current review profile is the most persuasive credential you can show.",
+          items: [
+            "Text and email review requests sent automatically",
+            "Prompts for the city and the property type",
+            "Michigan review monitoring on Google, Yelp, Angi, BBB, Nextdoor and Facebook",
+            "Considered responses to negative reviews",
+            "Review-building targets for each county you serve"
+          ]
+        },
+        {
+          num: "07 · AEO + GEO · AI SEARCH",
+          h: "When a Chicago Buyer Asks AI About a Cottage Inspection in Michigan.",
+          p: "Second-home buyers often start by asking an assistant what a well and septic inspection involves and who does them near Charlevoix or Houghton Lake. Answer engine optimization (AEO) and generative engine optimization (GEO) are how your company ends up in that reply. With no state license for a model to reference, it leans on certifications, reviews and specifics. We audit your presence in ChatGPT, Gemini, Perplexity and Google's AI Overviews, publish direct answers on well, septic, radon and sewer topics, add schema, and keep your business details identical across sources. AI mentions are reported monthly.",
+          items: [
+            "AI visibility audit across the major assistants",
+            "Answer-first pages on wells, septic, radon and sewer lines in Michigan",
+            "Schema for FAQs, services, reviews and business facts",
+            "Matching entity and citation data everywhere models look",
+            "Monthly report of AI mentions by region and service"
+          ]
+        },
+        {
+          num: "08 · LEAD GENERATION",
+          h: "Home Inspection Lead Generation for Three Michigans.",
+          p: "Metro Detroit's three counties, the Grand Rapids lakeshore and Up North behave like different states, and home inspection lead generation has to treat them that way. Each region gets landing pages in its own voice: speed and availability in Oakland and Macomb, new-construction and relocation in Ottawa and Kent, well and septic expertise for cottage country — where those evaluations bring in leads general ads never reach. Every call and form is tracked to its source. No lead is shared or sold on. Your monthly report lists cost per lead and cost per booked inspection for each region.",
+          items: [
+            "Leads delivered only to you — never resold",
+            "Regional landing pages for Metro Detroit, West Michigan and Up North",
+            "Call tracking and form attribution by source for Oakland, Macomb, Wayne and Kent",
+            "Quote and scheduling flows that work on a phone in a Royal Oak driveway",
+            "Monthly cost per lead and per booked inspection, by region"
+          ]
+        }
+      ]
+    },
+    channels: {
+      eyebrow: "Michigan Season Planner",
+      headlinePre: "When to Start Each Channel So It's Working by",
+      accent: "the Spring Market.",
+      lede: "Count backward from March. [Google Ads, managed week to week](/services/google-ads), can be switched on days before the rush, but [local SEO for home service providers](/services/local-seo-for-home-services) published in December is what ranks when listings return. Michigan home inspector marketing is mostly a matter of timing.",
+      rows: [
+        {
+          channel: "Google Business Profile",
+          tag: "Township map pack",
+          delivers: "Map-result calls from the specific Michigan cities and townships you set as service areas.",
+          timeline: "30–60 days",
+          fit: "Inspectors visible in their home city but nowhere else in the county."
+        },
+        {
+          channel: "Local SEO",
+          tag: "County and specialty pages",
+          delivers: "Organic rankings for inspection, well, septic and radon searches in your counties — best started in winter.",
+          timeline: "90–180 days",
+          fit: "Firms that want spring leads without spring-level ad spend."
+        },
+        {
+          channel: "AI Search (AEO + GEO)",
+          tag: "Michigan AI answers",
+          delivers: "Inclusion when downstate or out-of-state buyers ask an assistant about Michigan inspections.",
+          timeline: "3–6 months",
+          fit: "Certified inspectors serving cottage country whose buyers research from hundreds of miles away."
+        },
+        {
+          channel: "Google Ads",
+          tag: "Seasonal search ads",
+          delivers: "Booked jobs during the March-to-summer surge and the Up North cottage season.",
+          timeline: "1–10 days",
+          fit: "Anyone with open days in the only months that really pay."
+        },
+        {
+          channel: "Conversion Website",
+          tag: "Coverage-clear website",
+          delivers: "A site that states certifications and counties served, with booking that works on weak signal.",
+          timeline: "Day one of launch",
+          fit: "Inspectors fielding calls that begin with \"do you even come out this far?\""
+        },
+        {
+          channel: "Reviews & Reputation",
+          tag: "Review depth",
+          delivers: "Regular reviews naming the city and the type of property.",
+          timeline: "First 14 days",
+          fit: "Companies relying on reputation in a state with no license lookup."
+        },
+        {
+          channel: "Social Media",
+          tag: "Seasonal content",
+          delivers: "Video and posts on ice dams, sumps, septic and shoreline issues, shared by local agents.",
+          timeline: "60–90 days",
+          fit: "Inspectors who want to stay visible through the quiet winter months."
+        }
+      ]
+    },
+    process: {
+      eyebrow: "Starting Before the Spring Rush",
+      headlinePre: "About Forty-Five Minutes From You.",
+      accent: "The Rest Is on Us.",
+      steps: [
+        {
+          h: "First, a Written Look at Your Michigan Presence",
+          p: "Complete the form and list your counties. No later than five business days afterward you will have a written report on your Google Business Profile, your rankings in those counties, your website, reviews and citations, and the places rival inspectors have pulled ahead. It comes without a phone call attached."
+        },
+        {
+          h: "Then a Short Call, Only If It Helps",
+          p: "Inspectors who want to go further book thirty minutes with us. We talk through your goals for the season, the territory you will cover, how hard winter hits your revenue and what you currently spend, and we match you to a plan and a first set of targets."
+        },
+        {
+          h: "Launch in Fourteen Days, Report Every Month",
+          p: "Inside two weeks of signing, the rebuilt profile and the campaigns are live. Monthly reporting follows — calls, form fills, ranking movement by county, and revenue tied back to the channel that earned it — written so you can read it between inspections."
+        }
+      ]
+    },
+    results: {
+      eyebrow: "One Michigan Season, Step by Step",
+      cta: "Plan My Michigan Season"
+    },
+    citiesCta: "Pick the Plan for My Michigan Region",
+    reviews: {
+      eyebrow: "Clutch-Verified, Rated 5.0",
+      headlinePre: "No License Lookup in Michigan, So Reputation Matters.",
+      accent: "Here Is Ours.",
+      lede: "We hold ourselves to the standard we set for clients: public, verified reviews. On Clutch — where an agency cannot filter what appears — inspectors and other service businesses nationwide have rated our work 5.0. Plenty of them arrived with an urgent problem, such as needing a [Google Business Profile reinstated](/services/gbp-reinstatement-service), or with an old site that called for a [conversion-focused redesign](/services/web-design).",
+      cta: "Make My Firm the Next Success"
+    },
+    pricing: {
+      eyebrow: "Michigan Plans You Can Scale With the Season",
+      cards: [
+        {
+          tier: "Foundation",
+          amount: "$197",
+          period: "monthly, billed month by month",
+          features: [
+            "Google Business Profile: full rebuild and monthly upkeep",
+            "Foundational local SEO with service-area pages for up to 5 Michigan cities",
+            "Citation cleanup spanning 40+ directories",
+            "Audit and repair of NAP inconsistencies",
+            "On-page SEO across your main inspection pages",
+            "A Michigan performance report every month",
+            "Support by email, with a reply in 24 hours"
+          ],
+          cta: "Get Started on Foundation"
+        },
+        {
+          tier: "Growth",
+          amount: "$750",
+          period: "monthly, billed month by month",
+          featured: true,
+          badge: "Most Popular",
+          features: [
+            "The full Foundation plan for your Michigan counties",
+            "Google Ads managed for you, from full build to weekly bid adjustments",
+            "Review requests automated after every inspection",
+            "Review monitoring and response — Google, Yelp, Angi, BBB",
+            "Service-area pages for as many as 12 Michigan cities",
+            "A founder strategy call once a quarter, ahead of each Michigan season",
+            "Priority help by email and text"
+          ],
+          cta: "Step My Michigan Firm Up to Growth"
+        },
+        {
+          tier: "Authority",
+          amount: "$1,500",
+          period: "monthly, billed month by month",
+          features: [
+            "The full Growth plan, Metro Detroit to Traverse City",
+            "Social media handled on Instagram, Facebook and LinkedIn",
+            "4 short-form videos every month from Michigan basements, wells and crawlspaces",
+            "Meta Ads managed for you",
+            "Website conversion audit followed by ongoing optimization",
+            "As many Michigan cities and townships as you need",
+            "A founder strategy call once a month on your Michigan counties"
+          ],
+          cta: "Commit to Authority"
+        }
+      ]
+    },
+    faq: {
+      headlinePre: "Michigan Inspectors' Most Common Questions,",
+      accent: "Answered Plainly.",
+      lede: "Have one we skipped? It might concern winter budgets, Up North coverage, or [help verifying a Google Business Profile](/services/gmb-verification-help). Note it on the audit form and you will get a written answer with your report. We also list [all of our digital marketing services](/services) if you need something beyond inspection marketing."
+    },
+    final: {
+      eyebrow: "Before the Season Starts",
+      headlinePre: "Order the Free Marketing Audit Written for",
+      checklist: [
+        "No long contracts — go month to month and scale down in winter",
+        "You receive a written PDF, not an invitation to a sales meeting",
+        "A strategy call is offered, never required",
+        "Plans for the solo inspector and the multi-inspector firm",
+        "Home inspection marketing specialists for Michigan and markets nationwide"
+      ],
+      cta: "Send Me the Michigan Audit"
+    }
+  },
   ticker: [
     "Free Michigan Home Inspector Marketing Audit",
-    "500+ Local Businesses Ranked",
-    "Month-to-Month, No Contracts",
-    "Local SEO · Google Ads · GBP · Social · Websites",
-    "5.0 Rated on Clutch",
+    "500+ Local Businesses Ranked and Counting",
+    "No Contracts: Pause or Scale Month to Month",
+    "Local SEO · Google Ads · GBP · Social Media · Websites",
+    "Rated 5.0 on Clutch — Look Us Up, Michigan",
     "Metro Detroit · Grand Rapids · Ann Arbor · Lansing · Up North",
   ],
   hero: {
@@ -103,17 +361,17 @@ const content: StateContent = {
       },
       {
         big: "90–180",
-        h: "Days to Sustained Local Rankings",
+        h: "Days to Sustained Michigan Rankings",
         p: "Start in winter and the pages are working by the spring market.",
       },
       {
         big: "14",
-        h: "Days From Signing to Launch",
+        h: "Days From Signing to a Michigan Launch",
         p: "Profile rebuilt, tracking in place, and campaigns live within two weeks.",
       },
       {
         big: "0",
-        h: "Long-Term Contracts",
+        h: "Long-Term Contracts in Michigan",
         p: "Month to month on every plan, so you can scale down when the snow flies.",
       },
     ],

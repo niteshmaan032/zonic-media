@@ -19,12 +19,15 @@ import {
 
 import {
   StateContent,
-  buildStateServices,
-  buildStatePriceCards,
-  CHANNEL_TABLE,
+  buildDefaultTemplate,
   STATE_CONTENT,
 } from "./stateContent";
 import StateSiblingLinks from "@/app/components/StateSiblingLinks";
+import {
+  CalendarFillChart,
+  MapPackClimb,
+  ProofCounters,
+} from "@/app/components/StateResultVisuals";
 
 // Code-split so the widget JavaScript loads after the hero has painted; the
 // server still renders its markup, so nothing changes for users or Google.
@@ -35,27 +38,6 @@ const trustItems = [
   { num: "4.9/5", label: "Client Satisfaction" },
   { num: "95%", label: "Growth Success Rate" },
   { num: "$197", label: "Plans Start At" },
-];
-
-const processSteps = [
-  {
-    n: "1",
-    h: "The Free Audit",
-    pTemplate:
-      "You fill out the form. Within five business days you get a written report covering your GBP, your local rankings across {state}, your website, your reviews, your citations, and the gaps a competitor in your market is exploiting. No call required to receive the report.",
-  },
-  {
-    n: "2",
-    h: "The Strategy Call",
-    pTemplate:
-      "If the audit makes sense, we get on a thirty-minute call. You bring your booking goals, your {state} service area, your busy season, and your current marketing spend. We walk through which plan fits and where the first wins will come from.",
-  },
-  {
-    n: "3",
-    h: "Launch & Reporting",
-    pTemplate:
-      "Within fourteen days of signing, your campaigns are live and your GBP is rebuilt. You get a monthly performance report you can actually read — not a vanity dashboard — covering calls, form fills, ranking movement, and revenue attribution.",
-  },
 ];
 
 function fillTemplate(text: string, values: string[]): ReactNode {
@@ -76,12 +58,36 @@ function fillTemplate(text: string, values: string[]): ReactNode {
   return <>{parts}</>;
 }
 
+/** Renders [anchor](/path) markdown links inside a copy string. */
+function renderRich(text: string): ReactNode {
+  const parts: ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    parts.push(
+      <Link key={`l-${match.index}`} href={match[2]} className="hia-inline-link">
+        {match[1]}
+      </Link>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return <>{parts}</>;
+}
+
 export default function StatePage({ state }: { state: StateContent }) {
   const stateName = state.name;
-  // "an Ohio", "an Illinois" — but "a Utah" (consonant sound).
-  const article = /^[AEIO]/.test(stateName) ? "an" : "a";
-  const services = buildStateServices(stateName, state.serviceAngles);
-  const priceCards = buildStatePriceCards(stateName);
+  const copy = state.template ?? buildDefaultTemplate(stateName);
+  const services = copy.services.cards;
+  const priceCards = copy.pricing.cards;
+  const channelTable = copy.channels.rows;
+  // Animated visuals ship with the state-written pages only.
+  const showVisuals = Boolean(state.template);
+  const leadCity = state.cities.cards[0]?.h.split(/[,&(—]/)[0].trim() ?? stateName;
 
   const pageUrl = `https://www.zonicllc.com/services/home-inspector-marketing/${state.slug}`;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -117,10 +123,9 @@ export default function StatePage({ state }: { state: StateContent }) {
     areaServed: stateName,
   });
 
-  const processStepsLocal = processSteps.map((s) => ({
-    n: s.n,
-    h: s.h,
-    p: s.pTemplate.replace(/\{state\}/g, stateName),
+  const processStepsLocal = copy.process.steps.map((step, i) => ({
+    n: String(i + 1),
+    ...step,
   }));
 
   return (
@@ -280,44 +285,27 @@ export default function StatePage({ state }: { state: StateContent }) {
                 </div>
               </section>
 
+              {showVisuals && (
+                <MapPackClimb stateName={stateName} city={leadCity} />
+              )}
+
               {/* SERVICES */}
               <section
                 className="hia-section hia-services-sec"
                 id="hia-services"
               >
-                <div className="hia-sec-label">
-                  Complete Digital Marketing Stack
-                </div>
+                <div className="hia-sec-label">{copy.services.eyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  Everything {article} {stateName} Home Inspection Company Needs to{" "}
-                  <span className="hia-accent">Grow Online.</span>
+                  {copy.services.headlinePre}{" "}
+                  <span className="hia-accent">{copy.services.accent}</span>
                 </h2>
-                <p className="hia-sec-sub">
-                  We are not a &ldquo;just SEO&rdquo; shop or a &ldquo;just
-                  Google Ads&rdquo; shop. Our{" "}
-                  <Link
-                    href="/services/home-inspector-marketing"
-                    className="hia-inline-link"
-                  >
-                    home inspector marketing
-                  </Link>{" "}
-                  program builds the whole funnel for {stateName} home
-                  inspectors, from the way you appear on Google Maps through{" "}
-                  <Link
-                    href="/local-seo-google-business-optimization"
-                    className="hia-inline-link"
-                  >
-                    Google Business Profile optimization
-                  </Link>{" "}
-                  to the way your website converts a visitor into a booked
-                  inspection.
-                </p>
+                <p className="hia-sec-sub">{renderRich(copy.services.lede)}</p>
                 <div className="hia-section-cta">
                   <HashScrollLink
                     href="#hia-audit-top"
                     className="hia-btn hia-btn-primary"
                   >
-                    Audit My Full Funnel →
+                    {copy.services.cta} →
                   </HashScrollLink>
                 </div>
                 <div className="hia-svc-grid">
@@ -338,28 +326,12 @@ export default function StatePage({ state }: { state: StateContent }) {
 
               {/* CHANNEL MIX TABLE */}
               <section className="hia-section" id="hia-channels">
-                <div className="hia-sec-label">Channel Mix at a Glance</div>
+                <div className="hia-sec-label">{copy.channels.eyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  What Each Marketing Channel Does — And{" "}
-                  <span className="hia-accent">How Fast It Pays Back.</span>
+                  {copy.channels.headlinePre}{" "}
+                  <span className="hia-accent">{copy.channels.accent}</span>
                 </h2>
-                <p className="hia-sec-sub">
-                  Use this grid as a planning guide.{" "}
-                  <Link href="/services/google-ads" className="hia-inline-link">
-                    Google Ads management
-                  </Link>{" "}
-                  and a polished Google Business Profile buy you bookings this
-                  month.{" "}
-                  <Link
-                    href="/services/local-seo-for-home-services"
-                    className="hia-inline-link"
-                  >
-                    Local SEO for home services
-                  </Link>{" "}
-                  and social compound across the year. The strongest{" "}
-                  {stateName} home inspector marketing plans blend both
-                  timelines so the calendar never goes cold.
-                </p>
+                <p className="hia-sec-sub">{renderRich(copy.channels.lede)}</p>
                 <div className="hia-channel-table-wrap">
                   <table className="hia-channel-table">
                     <caption className="hia-sr-only">
@@ -375,7 +347,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                       </tr>
                     </thead>
                     <tbody>
-                      {CHANNEL_TABLE.map((row, i) => (
+                      {channelTable.map((row, i) => (
                         <tr key={i}>
                           <td data-label="Channel">
                             <div className="hia-ct-name">{row.channel}</div>
@@ -393,12 +365,14 @@ export default function StatePage({ state }: { state: StateContent }) {
                 </div>
               </section>
 
+              {showVisuals && <CalendarFillChart stateName={stateName} />}
+
               {/* PROCESS */}
               <section className="hia-section">
-                <div className="hia-sec-label">How We Work With You</div>
+                <div className="hia-sec-label">{copy.process.eyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  A Clean Three-Step Start. Then We{" "}
-                  <span className="hia-accent">Get to Work.</span>
+                  {copy.process.headlinePre}{" "}
+                  <span className="hia-accent">{copy.process.accent}</span>
                 </h2>
                 <p className="hia-sec-sub">{state.processLede}</p>
                 <div className="hia-section-cta">
@@ -429,9 +403,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 className="hia-section hia-results-sec"
                 id="hia-results"
               >
-                <div className="hia-sec-label">
-                  Real Outcomes, Not Vanity Metrics
-                </div>
+                <div className="hia-sec-label">{copy.results.eyebrow}</div>
                 <h2 className="hia-sec-h2">
                   {state.results.headlinePre}{" "}
                   <span className="hia-accent">{state.results.accent}</span>
@@ -458,10 +430,12 @@ export default function StatePage({ state }: { state: StateContent }) {
                     href="#hia-audit"
                     className="hia-btn hia-btn-primary"
                   >
-                    Get My {stateName} Growth Plan →
+                    {copy.results.cta} →
                   </HashScrollLink>
                 </div>
               </section>
+
+              {showVisuals && <ProofCounters stateName={stateName} />}
 
               {/* CITIES */}
               <section className="hia-section" id="hia-cities">
@@ -476,7 +450,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                     href="#hia-audit"
                     className="hia-btn hia-btn-primary"
                   >
-                    Match Me to {article} {stateName} City Plan →
+                    {copy.citiesCta} →
                   </HashScrollLink>
                 </div>
                 <div className="his-city-grid">
@@ -503,38 +477,18 @@ export default function StatePage({ state }: { state: StateContent }) {
                 className="hia-section hia-reviews-sec"
                 id="hia-reviews"
               >
-                <div className="hia-sec-label">
-                  Trusted by Clients Nationwide
-                </div>
+                <div className="hia-sec-label">{copy.reviews.eyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  What Inspectors and Other Service Businesses{" "}
-                  <span className="hia-accent">
-                    Say About Working with Us.
-                  </span>
+                  {copy.reviews.headlinePre}{" "}
+                  <span className="hia-accent">{copy.reviews.accent}</span>
                 </h2>
-                <p className="hia-sec-sub">
-                  Verified reviews from Clutch — the independent platform
-                  agencies can&apos;t edit, filter, or fake. The same operators
-                  who hired us to fix their booking pipeline left these. Many
-                  came to us needing to{" "}
-                  <Link
-                    href="/services/gbp-reinstatement-service"
-                    className="hia-inline-link"
-                  >
-                    recover a suspended Google Business Profile
-                  </Link>{" "}
-                  or rebuild a slow, dated site into a{" "}
-                  <Link href="/services/web-design" className="hia-inline-link">
-                    conversion-focused website
-                  </Link>{" "}
-                  before the reviews ever started rolling in.
-                </p>
+                <p className="hia-sec-sub">{renderRich(copy.reviews.lede)}</p>
                 <div className="hia-section-cta">
                   <HashScrollLink
                     href="#hia-audit"
                     className="hia-btn hia-btn-primary"
                   >
-                    Become the Next Win →
+                    {copy.reviews.cta} →
                   </HashScrollLink>
                 </div>
                 <div className="hia-reviews-wrap">
@@ -552,9 +506,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 className="hia-section hia-pricing-sec"
                 id="hia-pricing"
               >
-                <div className="hia-sec-label">
-                  Transparent Pricing, Month to Month
-                </div>
+                <div className="hia-sec-label">{copy.pricing.eyebrow}</div>
                 <h2 className="hia-sec-h2">
                   {state.pricingHeadlinePre}{" "}
                   <span className="hia-accent">{state.pricingAccent}</span>
@@ -593,25 +545,10 @@ export default function StatePage({ state }: { state: StateContent }) {
               <section className="hia-section" id="hia-faq">
                 <div className="hia-sec-label">{state.faqEyebrow}</div>
                 <h2 className="hia-sec-h2">
-                  Everything You Wanted to Ask Before That{" "}
-                  <span className="hia-accent">Strategy Call.</span>
+                  {copy.faq.headlinePre}{" "}
+                  <span className="hia-accent">{copy.faq.accent}</span>
                 </h2>
-                <p className="hia-sec-sub">
-                  If you don&apos;t see your question below — whether it&apos;s
-                  about paid ads, review systems, or how to{" "}
-                  <Link
-                    href="/services/gmb-verification-help"
-                    className="hia-inline-link"
-                  >
-                    verify a new Google Business Profile
-                  </Link>{" "}
-                  — just include it in the audit form and we will answer it in
-                  the written report. You can also browse the full menu of{" "}
-                  <Link href="/services" className="hia-inline-link">
-                    digital marketing services
-                  </Link>{" "}
-                  we run for local service businesses.
-                </p>
+                <p className="hia-sec-sub">{renderRich(copy.faq.lede)}</p>
                 <HiaFaqAccordion items={state.faqs} defaultOpen={0} />
               </section>
 
@@ -640,28 +577,17 @@ export default function StatePage({ state }: { state: StateContent }) {
         <section className="hia-final-cta">
           <div className="hia-fc-inner">
             <div className="hia-eyebrow hia-eyebrow-light">
-              Start With the Free Audit
+              {copy.final.eyebrow}
             </div>
             <h2>
-              Get a Marketing Audit Built For{" "}
+              {copy.final.headlinePre}{" "}
               <span className="hia-accent">{state.final.accent}</span>
             </h2>
             <p className="hia-fc-lede">{state.final.lede}</p>
             <ul className="hia-final-check">
-              <li>No long-term contracts — every plan month to month</li>
-              <li>
-                Audit delivered as a PDF, not a high-pressure sales meeting
-              </li>
-              <li>
-                Strategy call only if you decide it&apos;s worth your time
-              </li>
-              <li>
-                Plans built for solo and multi-inspector {stateName} firms
-              </li>
-              <li>
-                Specializing in home inspection marketing across {stateName} and
-                nationwide
-              </li>
+              {copy.final.checklist.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
             <div className="hia-fc-actions">
               <Link
@@ -671,7 +597,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 Call {SITE_CONTACT.phoneDisplay}
               </Link>
               <HashScrollLink href="#hia-audit" className="hia-fc-form">
-                Submit My Free Audit →
+                {copy.final.cta} →
               </HashScrollLink>
             </div>
           </div>

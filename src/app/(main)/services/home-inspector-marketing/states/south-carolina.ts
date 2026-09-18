@@ -17,22 +17,15 @@ const content: StateContent = {
     "home inspection cost south carolina",
     "home inspector marketing",
     "seo for home inspectors",
+    "home inspector lead generation south carolina",
+    "ai seo for home inspectors",
   ],
-  serviceAngles: [
-    "South Carolina builds lean heavily on new construction: pre-drywall, final walkthrough, and 11-month warranty inspection pages for the subdivisions going up around Summerville, Fort Mill, Greer, and Conway.",
-    "We list crawlspace, moisture, and new-construction services on the profile and set separate coverage for the Lowcountry, Midlands, Upstate, and Grand Strand, since no single service area spans all four.",
-    "Coastal ad groups for Charleston and Myrtle Beach run on bigger budgets than Columbia or Florence, and we schedule extra spend for early spring when South Carolina listings jump.",
-    "Crawlspace humidity, failed vapor barriers, and builder shortcuts caught before drywall are the clips South Carolina agents and relocating buyers share most.",
-    "Your home inspector website should speak to buyers who are not in the state yet, with remote-friendly booking, sample reports, and a clear note on coordinating the CL-100 wood infestation report with a licensed pest company.",
-    "We prompt reviewers to mention the community by name, so Nexton, Carolina Forest, and Lake Wylie show up in your reviews the way buyers type them.",
-  ],
-
   ticker: [
     "Free South Carolina Home Inspector Marketing Audit",
-    "500+ Local Businesses Ranked",
-    "Month-to-Month, No Contracts",
-    "Local SEO · Google Ads · GBP · Social · Websites",
-    "5.0 Rated on Clutch",
+    "500+ Local Businesses Ranked, Now Serving SC",
+    "Month to Month · Zero Contracts",
+    "Google Ads · Local SEO · GBP · Sites · Social for SC",
+    "5.0 Clutch Rating, Palmetto-Ready Team",
     "Lowcountry · Midlands · Upstate · Grand Strand",
   ],
 
@@ -103,17 +96,17 @@ const content: StateContent = {
     stats: [
       {
         big: "14",
-        h: "Days From Signing to Launch",
+        h: "Days From Signing to a Live SC Campaign",
         p: "Profile rebuilt and campaigns running within two weeks of starting.",
       },
       {
         big: "90–180",
-        h: "Days to Sustained Local Rankings",
+        h: "Days to Lasting Lowcountry and Upstate Rankings",
         p: "Midlands and Pee Dee towns rank sooner. Charleston and Greenville take longer.",
       },
       {
         big: "5",
-        h: "Business Days to Your Written Audit",
+        h: "Business Days to Your South Carolina Audit",
         p: "A report you can read on your own time, with no call required.",
       },
       {
@@ -126,7 +119,7 @@ const content: StateContent = {
 
   cities: {
     eyebrow: "South Carolina Cities We Serve",
-    headlinePre: "Market-by-market plans across",
+    headlinePre: "One plan per market across",
     accent: "the Palmetto State.",
     lede: "South Carolina's growth is spread across several distinct regions rather than one dominant metro. Here is where we do most of our work in the state and what stands out in each market.",
     cards: [
@@ -146,7 +139,7 @@ const content: StateContent = {
         h: "Columbia",
         p: "State government, the university, and Fort Jackson keep moves steady all year. Lexington and Irmo are strong suburban targets.",
         link: "#hia-audit",
-        linkLabel: "Get a Columbia marketing audit",
+        linkLabel: "Get a Columbia, SC marketing audit",
       },
       {
         h: "Myrtle Beach",
@@ -182,7 +175,7 @@ const content: StateContent = {
   },
 
   pricingHeadlinePre: "Straightforward monthly plans for South Carolina inspectors,",
-  pricingAccent: "whatever your size.",
+  pricingAccent: "whether you are a solo Lowcountry inspector or an Upstate team.",
   pricingLede:
     "Choose a plan based on how many regions you cover and how fast you want to grow, then change it whenever you like. Nothing is billed up front beyond the month, and ad spend goes directly to Google and Meta. In South Carolina we typically suggest $800 to $1,800 a month to start, with the coast at the higher end.",
 
@@ -210,7 +203,7 @@ const content: StateContent = {
     },
     {
       q: "What does it cost?",
-      a: "Foundation is $197 a month, Growth is $750, and Authority is $1,500. Foundation covers profile management and core local SEO. Growth adds Google Ads management and automated review requests. Authority adds social media, short-form video, and Meta Ads. Ad spend is billed by Google and Meta directly. Most South Carolina inspectors begin with $800 to $1,800 a month in ads depending on region.",
+      a: "Foundation is $197 a month, Growth is $750, and Authority is $1,500. Foundation covers profile management and core local SEO. Growth brings in managed Google Ads along with an automated review request system. Authority adds social media, short-form video, and Meta Ads. Ad spend is billed by Google and Meta directly. Most South Carolina inspectors begin with $800 to $1,800 a month in ads depending on region.",
     },
     {
       q: "Is there a long-term commitment?",
@@ -225,6 +218,271 @@ const content: StateContent = {
       a: "A written report in five business days covering your Google Business Profile, map rankings in the South Carolina towns you serve, site speed and booking flow, review strength versus local competitors, directory accuracy, and any live ad accounts. It is free and you do not have to get on a call to receive it.",
     },
   ],
+
+  template: {
+    services: {
+      eyebrow: "The Palmetto State Marketing Stack",
+      headlinePre: "How South Carolina inspection companies get chosen by buyers",
+      accent: "who have never met them.",
+      lede: "Someone relocating to Mount Pleasant or Simpsonville judges you entirely by what a phone screen shows. That is why [home inspector marketing for South Carolina firms](/services/home-inspector-marketing) has to work as one connected system: [a Google Business Profile tuned for the local map](/local-seo-google-business-optimization), pages and ads that match what newcomers type, and [visibility inside AI-generated answers](/services/ai-seo-services) for the buyers who ask an assistant before they ask Google.",
+      cta: "Check My South Carolina Visibility",
+      cards: [
+        {
+          num: "01 · HOME INSPECTION LOCAL SEO",
+          h: "Own the Searches for Every New Community Going Up Near You.",
+          p: "South Carolina adds subdivisions faster than most inspectors add web pages. Our home inspection local SEO work starts with new construction: pre-drywall, final walkthrough and 11-month warranty pages tied to the communities rising around Summerville, Fort Mill, Greer and Conway. Resale is covered with town pages for each region you serve, plus pages on crawlspace moisture and the wood infestation report process that buyers research on their own. We correct your directory listings, align your business details everywhere, and pursue links from the agents, lenders and closing attorneys in your county.",
+          items: [
+            "Phase-inspection and 11-month warranty pages for new-build communities",
+            "Town pages across the Lowcountry, Midlands, Upstate or Grand Strand",
+            "Palmetto State listings cleaned up on Angi, Yelp, InterNACHI, BBB and HomeAdvisor",
+            "Name, address and phone audit across the major directories",
+            "Local links from South Carolina agents, lenders and closing attorneys",
+          ],
+        },
+        {
+          num: "02 · GOOGLE BUSINESS PROFILE",
+          h: "A Profile That Reassures a Buyer Reading It From Ohio.",
+          p: "An out-of-state buyer wants three things from your profile: proof you are licensed by the Residential Builders Commission, recent reviews, and evidence you work in the town they are moving to. We add the license details, list crawlspace, moisture and new-construction services, and set coverage for the region you truly serve, because no single service area stretches from Beaufort to Oconee. Photos are geo-tagged from real jobs in named communities, weekly posts follow the spring listing surge and hurricane season, and the Q&A section answers what relocating buyers ask most.",
+          items: [
+            "License details and service list visible to remote buyers",
+            "Categories covering crawlspace, moisture and new-construction work",
+            "Geo-tagged photos from Nexton, Carolina Forest and similar communities",
+            "Weekly Google Posts tied to spring listings and storm season",
+            "Seeded Q&A, accurate service areas and review replies",
+          ],
+        },
+        {
+          num: "03 · PAID ADS · GOOGLE ADS & PPC",
+          h: "Reach Relocating Buyers the Week Their Contract Is Signed.",
+          p: "A buyer in another state, under contract on a Bluffton new build, will book within days, which makes search ads unusually productive here. Working as your paid ads agency, we build campaigns by region: Charleston and Myrtle Beach ad groups carry larger budgets than Columbia or Florence, with added spend in early spring when South Carolina listings climb. Ads target by zip code, exclude job and licensing searches, and include call-only formats. When a storm threatens the coast we pause affected areas. The Authority plan adds Meta ads aimed at buyers and at agents.",
+          items: [
+            "Region-by-region Google Search and call-only campaigns",
+            "Negative keywords that remove licensing, salary and DIY traffic",
+            "Zip-level targeting from the coast to the Upstate",
+            "Tracking for calls, forms and online bookings",
+            "Monthly bid and budget reporting, plus Meta ads on Authority",
+          ],
+        },
+        {
+          num: "04 · SOCIAL MEDIA MARKETING",
+          h: "Let Buyers See a South Carolina Crawlspace Before They Own One.",
+          p: "Many people moving here have never lived over a vented crawlspace. Short clips of humidity damage, a failed vapor barrier, or a framing shortcut caught before drywall teach them why the inspection matters, and those are the videos South Carolina agents share with clients. We cut your findings into short-form video, write simple explainers for first-time and first-time-in-the-South buyers, and keep you visible on LinkedIn to agents in Charleston, Greenville and Columbia. It is home inspector advertising that earns attention by being useful to someone making a long-distance decision.",
+          items: [
+            "Short-form video from crawlspace and new-build findings",
+            "Explainers for buyers new to the South Carolina climate",
+            "LinkedIn presence aimed at agents in your region",
+            "Weekly Instagram and Facebook posting calendar built around the South Carolina selling season",
+            "Reels and YouTube Shorts optimized for local reach",
+          ],
+        },
+        {
+          num: "05 · WEBSITE DESIGN & SEO",
+          h: "A Website That Closes the Booking From Eight Hundred Miles Away.",
+          p: "Your home inspector website has to do the job a handshake used to do. For South Carolina we build in remote-friendly booking, sample reports a buyer can open on a phone, and a plain note explaining that the CL-100 wood infestation report comes from a licensed pest company and that you can coordinate the visit. Pages load in under two seconds on mobile, an instant quote tool prices by square footage and foundation type, and every add-on has its own page. Schema markup tells Google which towns, services and reviews belong to you.",
+          items: [
+            "Online booking through ISN, Spectora or HomeGauge, ready for buyers still living out of state",
+            "Quote calculator by home size, age and foundation type",
+            "Sample reports and remote-attendance details for distant buyers",
+            "Sub-2-second mobile load times with full schema markup",
+            "Add-on pages, including how the CL-100 report is coordinated",
+          ],
+        },
+        {
+          num: "06 · REVIEWS & REPUTATION",
+          h: "Reviews That Mention Nexton, Carolina Forest and Lake Wylie by Name.",
+          p: "With nobody local to ask, a relocating buyer leans on star rating, review count and how recent the last review is. We automate a text and email request after each inspection and prompt the client to name the community, so your reviews contain the same place names buyers type into Google. New reviews on Google, Yelp, Angi, BBB, Nextdoor and Facebook are monitored, and we draft measured replies when a seller or builder objects to a finding. A profile that gains reviews every week outruns competitors who ask only when they remember.",
+          items: [
+            "Automated SMS and email review requests after each South Carolina inspection",
+            "Templates that prompt for the community or subdivision",
+            "Review monitoring for your South Carolina markets on Google, Yelp, Angi, BBB, Nextdoor and Facebook",
+            "Drafted responses to critical reviews",
+            "Weekly review pace measured against local competitors",
+          ],
+        },
+        {
+          num: "07 · AEO + GEO · AI SEARCH",
+          h: "Be the Licensed Name an Assistant Gives a Buyer Who Hasn't Arrived Yet.",
+          p: "Retirees and remote workers often ask ChatGPT, Gemini, Perplexity or Google's AI Overviews who to trust for a Charleston or Greenville inspection months before the move. Answer engine optimization (AEO) and generative engine optimization (GEO) give those tools something to verify: your license, your towns, your services and your reviews, stated the same way everywhere. We audit what the assistants currently say about you, publish answer-first pages on crawlspaces, flood zones, new-build phases and the CL-100 process, add schema, and report AI mentions each month.",
+          items: [
+            "AI visibility audit: how ChatGPT, Gemini, Perplexity and AI Overviews describe your South Carolina company",
+            "Answer-first content on crawlspaces, flood zones and phase inspections",
+            "FAQPage, LocalBusiness, Service and Review schema tied to your South Carolina license and service area",
+            "Matching entity and citation details across data sources",
+            "Monthly AI mention tracking for your South Carolina towns",
+          ],
+        },
+        {
+          num: "08 · LEAD GENERATION",
+          h: "A Second Source of Bookings Beside Your Agent Referrals.",
+          p: "Home inspector lead generation in South Carolina runs on two streams. New construction supplies pre-drywall and 11-month warranty inquiries in the Upstate, Fort Mill and the Lowcountry, while the coast brings second-home and condo buyers in Myrtle Beach and Hilton Head. Each stream gets its own landing pages, tracked numbers and mobile booking flow. The leads belong to you alone and are never sold on. Monthly reporting shows cost per lead and cost per booked inspection by channel, which is the number you need before hiring a second inspector.",
+          items: [
+            "Exclusive leads, never shared or resold",
+            "Call tracking and form attribution for every source",
+            "Landing pages for pre-drywall, warranty, resale and coastal condo inspections",
+            "Quote and booking flows built for the phones of relocating Carolina buyers",
+            "Monthly cost per lead and per booked inspection, split by Charleston, Greenville, Columbia and the coast",
+          ],
+        },
+      ],
+    },
+    channels: {
+      eyebrow: "Coast to Upstate Channel Guide",
+      headlinePre: "What each channel does for a South Carolina inspector, and",
+      accent: "when the Carolina calls start coming in.",
+      lede: "Relocation demand is ready to book, so the quick channels matter more here than usual. [Google Ads run by a specialist team](/services/google-ads) and a rebuilt profile bring calls in the first weeks. [Local SEO designed for home service businesses](/services/local-seo-for-home-services), reviews and AI visibility then build the rankings that make South Carolina home inspector marketing cheaper every quarter.",
+      rows: [
+        {
+          channel: "Google Business Profile",
+          tag: "Remote-buyer trust",
+          delivers: "Calls from relocating buyers who compare licensed inspectors on the map for the town they are moving to.",
+          timeline: "30–60 days",
+          fit: "Inspectors with strong work but a thin or outdated profile.",
+        },
+        {
+          channel: "Local SEO",
+          tag: "Subdivision pages",
+          delivers: "Rankings for town, subdivision, new-construction and crawlspace searches in your region.",
+          timeline: "90–180 days",
+          fit: "Companies missing the new-build demand around them.",
+        },
+        {
+          channel: "AI Search (AEO + GEO)",
+          tag: "Pre-move research",
+          delivers: "Mentions when future residents ask AI tools who inspects homes in Charleston, Greenville or the Grand Strand.",
+          timeline: "3–6 months",
+          fit: "Established firms that AI assistants currently overlook.",
+        },
+        {
+          channel: "Google Ads",
+          tag: "Due-diligence buyers",
+          delivers: "Bookings from out-of-state buyers who need an inspector within days.",
+          timeline: "1–10 days",
+          fit: "Inspectors adding capacity or entering a new South Carolina region.",
+        },
+        {
+          channel: "Conversion Website",
+          tag: "Long-distance booking",
+          delivers: "Scheduling, sample reports and pricing that let a distant buyer commit without a phone call.",
+          timeline: "Day one of launch",
+          fit: "Sites that still assume the client lives nearby.",
+        },
+        {
+          channel: "Reviews & Reputation",
+          tag: "Deciding factor",
+          delivers: "Fresh weekly reviews naming the communities relocating buyers search.",
+          timeline: "First 14 days",
+          fit: "Profiles with few or stale reviews.",
+        },
+        {
+          channel: "Social Media",
+          tag: "Climate education",
+          delivers: "Crawlspace and pre-drywall clips that local agents forward to incoming clients.",
+          timeline: "60–90 days",
+          fit: "Inspectors building a name with agents in a new area.",
+        },
+      ],
+    },
+    process: {
+      eyebrow: "How We Start in South Carolina",
+      headlinePre: "A short path from free report to live campaigns,",
+      accent: "built around inspection days.",
+      steps: [
+        {
+          h: "The Written Audit",
+          p: "Complete the form and, within five business days, you receive a report on your Google Business Profile, map rankings in the South Carolina towns you serve, your website, reviews, directory listings, and the openings local competitors have left. No call is needed to receive it.",
+        },
+        {
+          h: "One Optional Conversation",
+          p: "If the findings make sense, we spend thirty minutes on your booking targets, which region or regions you cover, how spring and storm season affect your schedule, and your present marketing budget. We then recommend the plan that fits.",
+        },
+        {
+          h: "Launch and Monthly Reports",
+          p: "Campaigns go live and the profile is rebuilt within fourteen days of signing. Each month afterward you get a clear report of calls, form submissions, ranking movement, and the revenue each channel produced.",
+        },
+      ],
+    },
+    results: {
+      eyebrow: "The Honest Order of Events",
+      cta: "Plan My South Carolina Growth",
+    },
+    citiesCta: "Show Me My Region's Plan",
+    reviews: {
+      eyebrow: "Clutch Reviews, Read From Carolina",
+      headlinePre: "Your buyers decide by reviews. Hold us to",
+      accent: "the same standard.",
+      lede: "Zonic Media carries a 5.0 rating on Clutch, and every review below is verified by that platform. The clients are home inspectors and other local service companies across the United States, so they are not all from South Carolina. A number of them started with [help reinstating a suspended Google Business Profile](/services/gbp-reinstatement-service) or [a new website designed to convert visitors](/services/web-design) before moving to ongoing marketing.",
+      cta: "Get My South Carolina Audit",
+    },
+    pricing: {
+      eyebrow: "Monthly Plans for Palmetto State Inspectors",
+      cards: [
+        {
+          tier: "Foundation",
+          amount: "$197",
+          period: "a month · billed monthly, Upstate to the coast",
+          features: [
+            "Google Business Profile rebuilt in full for your South Carolina market and managed every month",
+            "Local SEO foundation: service-area pages for up to 5 South Carolina towns",
+            "Citation cleanup on 40+ directories",
+            "NAP consistency audit with fixes for every South Carolina listing",
+            "On-page SEO for your primary South Carolina inspection service pages",
+            "Performance report each month, broken out by South Carolina market",
+            "Email support, with a reply to your South Carolina firm inside 24 hours",
+          ],
+          cta: "Start My South Carolina Foundation",
+        },
+        {
+          tier: "Growth",
+          amount: "$750",
+          period: "a month · billed monthly, no SC term commitment",
+          featured: true,
+          badge: "Most Popular",
+          features: [
+            "Everything the South Carolina Foundation plan covers",
+            "Google Ads management for South Carolina metros, from full build to weekly bid management",
+            "Automated review request system for every South Carolina inspection you close out",
+            "Monitoring and responses for your South Carolina reviews on Google, Yelp, Angi and BBB",
+            "Service-area pages for up to 12 South Carolina towns",
+            "Strategy call with the founder every quarter to plan your next South Carolina market",
+            "Priority email and SMS support for South Carolina clients",
+          ],
+          cta: "Grow in South Carolina",
+        },
+        {
+          tier: "Authority",
+          amount: "$1,500",
+          period: "a month · billed monthly, statewide coverage",
+          features: [
+            "Everything the South Carolina Growth plan covers",
+            "Managed social media on Instagram, Facebook and LinkedIn for South Carolina agents and buyers",
+            "4 short-form videos per month from your South Carolina inspection sites",
+            "Meta Ads management aimed at Charleston, Greenville and Grand Strand buyers and agents",
+            "Website conversion audit and continuing optimization for out-of-state buyers booking from afar",
+            "Unlimited South Carolina towns in your service-area build",
+            "Strategy call with the founder every month",
+          ],
+          cta: "Own South Carolina With Authority",
+        },
+      ],
+    },
+    faq: {
+      headlinePre: "Questions South Carolina inspectors raise",
+      accent: "before they pick up the phone.",
+      lede: "If yours is not listed, write it on the audit form and we will address it in the report, including topics like coastal ad budgets or [verifying a Google Business Profile for a new company](/services/gmb-verification-help). You can also see [the complete list of marketing services we provide](/services).",
+    },
+    final: {
+      eyebrow: "No-Cost Audit for South Carolina Firms",
+      headlinePre: "See Your Business the Way a Relocating Buyer Does: An Audit for",
+      checklist: [
+        "No long-term contracts — every South Carolina plan runs month to month",
+        "Findings come as a written PDF you read alone, not in a sales meeting",
+        "The strategy call is optional — South Carolina inspectors book it only if they want it",
+        "Plans suited to one-person companies and multi-inspector South Carolina firms",
+        "Specialists in home inspection marketing, in South Carolina and nationwide",
+      ],
+      cta: "Request My South Carolina Audit",
+    },
+  },
 
   final: {
     accent: "South Carolina Home Inspectors.",
