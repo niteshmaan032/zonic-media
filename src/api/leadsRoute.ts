@@ -14,6 +14,8 @@ const ALLOWED_SERVICES = new Set([
   "Home Inspector Marketing",
   "Nonprofit Marketing",
   "Travel & Tourism Marketing",
+  "HVAC Marketing",
+  "Plumbing Marketing",
 ]);
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
