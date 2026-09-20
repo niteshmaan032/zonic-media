@@ -9,6 +9,7 @@ import HomeInspectorLeadForm from "@/app/components/HomeInspectorLeadForm";
 import HiaFaqAccordion from "@/app/components/HiaFaqAccordion";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import HeroTrustBadges from "@/app/components/HeroTrustBadges";
+import StateSiblingLinks from "@/app/components/StateSiblingLinks";
 import {
   GrowthCurveVisual,
   LeadEngineVisual,
@@ -565,54 +566,6 @@ function Page() {
                 </div>
               </section>
 
-              {/* STATES SERVED */}
-              <section className="hia-section hia-states">
-                <div className="hia-sec-label">Where We Work</div>
-                <h2 className="hia-sec-h2">
-                  Home Inspectors We Help Grow Across{" "}
-                  <span className="hia-accent">31 States.</span>
-                </h2>
-                <p className="hia-sec-sub">
-                  Zonic Media helps{" "}
-                  <Link
-                    href="/services/home-inspector-marketing/texas"
-                    className="hia-inline-link"
-                  >
-                    home inspectors in Texas
-                  </Link>
-                  , Florida, California, Ohio, Illinois, New York, and 25 more states
-                  — with
-                  dedicated{" "}
-                  <Link
-                    href="/services/local-seo-for-home-services"
-                    className="hia-inline-link"
-                  >
-                    local SEO
-                  </Link>{" "}
-                  playbooks for each market.
-                </p>
-                <div className="hia-section-cta">
-                  <HashScrollLink
-                    href="#hia-audit-top"
-                    className="hia-btn hia-btn-primary"
-                  >
-                    Check My Coverage →
-                  </HashScrollLink>
-                </div>
-                <div className="hia-states-grid">
-                  {states.map((state) => (
-                    <Link
-                      key={state.slug}
-                      href={`/services/home-inspector-marketing/${state.slug}`}
-                      className="hia-state-chip"
-                    >
-                      <span className="hia-state-pin" aria-hidden="true" />
-                      <span className="hia-state-name">{state.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
               {/* PROBLEM */}
               <section className="hia-section" id="hia-problem">
                 <div className="hia-sec-label">Why Home Inspectors Stop Growing</div>
@@ -1052,6 +1005,18 @@ function Page() {
             </div>
           </div>
         </section>
+
+        {/* State links live above the footer, same as on the state pages */}
+        <StateSiblingLinks
+          basePath="/services/home-inspector-marketing"
+          programLabel="Home inspector marketing"
+          title="Home inspector marketing by state"
+          states={Object.fromEntries(
+            states.map((state) => [state.slug, { name: state.name }]),
+          )}
+          currentSlug=""
+          showHubLink={false}
+        />
 
         {/* FOOTER */}
         <footer className="hia-footer">

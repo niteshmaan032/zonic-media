@@ -9,6 +9,10 @@ type Props = {
   states: Record<string, { name: string }>;
   /** Slug of the page being rendered (excluded from the list) */
   currentSlug: string;
+  /** Heading override — the hub uses "… by state" instead of "… in other states" */
+  title?: string;
+  /** The hub itself has no use for an "All states" link back to itself */
+  showHubLink?: boolean;
 };
 
 /**
@@ -22,6 +26,8 @@ export default function StateSiblingLinks({
   programLabel,
   states,
   currentSlug,
+  title,
+  showHubLink = true,
 }: Props) {
   const siblings = Object.entries(states)
     .filter(([slug]) => slug !== currentSlug)
@@ -29,21 +35,23 @@ export default function StateSiblingLinks({
 
   if (siblings.length === 0) return null;
 
+  const heading = title ?? `${programLabel} in other states`;
+
   return (
-    <nav className="hia-states-nav" aria-label={`${programLabel} in other states`}>
+    <nav className="hia-states-nav" aria-label={heading}>
       <div className="hia-states-nav-inner">
-        <p className="hia-states-nav-title">
-          {programLabel} in other states
-        </p>
+        <p className="hia-states-nav-title">{heading}</p>
         <ul className="hia-states-nav-list">
           {siblings.map(([slug, { name }]) => (
             <li key={slug}>
               <Link href={`${basePath}/${slug}`}>{name}</Link>
             </li>
           ))}
-          <li className="hia-states-nav-hub">
-            <Link href={basePath}>All states</Link>
-          </li>
+          {showHubLink && (
+            <li className="hia-states-nav-hub">
+              <Link href={basePath}>All states</Link>
+            </li>
+          )}
         </ul>
       </div>
     </nav>
