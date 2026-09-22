@@ -149,7 +149,7 @@ export default function ServiceLeadForm({
           {badge}
         </span>
       )}
-      {title && <h3 className="slf-title">{title}</h3>}
+      {title && <div className="slf-title">{title}</div>}
       {subtitle && <p className="slf-sub">{subtitle}</p>}
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>

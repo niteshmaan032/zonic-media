@@ -302,7 +302,7 @@ export default function TseoLanding({ data }: { data: TseoLandingData }) {
                   <div className="tseo-hero-dash-wrap">
                     <div className="tseo-hero-dash" aria-hidden="true">
                       <div className="tseo-dash-head">
-                        <h3>{hero.dash.title}</h3>
+                        <div className="tseo-dash-title">{hero.dash.title}</div>
                       </div>
                       <div className="tseo-ba-toggle-row">
                         <span className="tseo-ba-toggle">

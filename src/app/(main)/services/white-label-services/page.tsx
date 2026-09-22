@@ -596,7 +596,7 @@ export default function Page() {
               </div>
               <div className="wl-footer-links">
                 <div className="wl-footer-col">
-                  <h5>White-Label</h5>
+                  <div className="wl-footer-title">White-Label</div>
                   <Link href="/services/gbp-reinstatement-service">
                     GBP Reinstatement
                   </Link>
@@ -607,14 +607,14 @@ export default function Page() {
                   <Link href="/services/web-design">WordPress Web Design</Link>
                 </div>
                 <div className="wl-footer-col">
-                  <h5>Company</h5>
+                  <div className="wl-footer-title">Company</div>
                   <Link href="/about">About Us</Link>
                   <Link href="/blog">Blog</Link>
                   <Link href="/contact-us">Contact</Link>
                   <Link href="/services">All Services</Link>
                 </div>
                 <div className="wl-footer-col">
-                  <h5>Contact</h5>
+                  <div className="wl-footer-title">Contact</div>
                   <Link href={SITE_CONTACT.phoneHref}>
                     {SITE_CONTACT.phoneDisplay}
                   </Link>

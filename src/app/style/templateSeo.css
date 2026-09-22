@@ -347,7 +347,8 @@
   margin-bottom: 20px;
 }
 
-.tseo-page .tseo-dash-head h3 {
+.tseo-page .tseo-dash-head .tseo-dash-title {
+  line-height: 1.2;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -3096,4 +3097,8 @@
   .tseo-page .tseo-price-card > p {
     min-height: auto;
   }
+}
+
+@media (max-width: 767.98px) {
+  .tseo-page .tseo-dash-head .tseo-dash-title { line-height: 1.34; }
 }

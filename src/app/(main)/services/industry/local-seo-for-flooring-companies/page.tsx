@@ -544,7 +544,7 @@ function Page() {
                   <div className="tseo-hero-dash-wrap">
                   <div className="tseo-hero-dash" aria-hidden="true">
                     <div className="tseo-dash-head">
-                      <h3>Flooring Local SEO Performance</h3>
+                      <div className="tseo-dash-title">Flooring Local SEO Performance</div>
                     </div>
                     <div className="tseo-ba-toggle-row">
                       <span className="tseo-ba-toggle">

@@ -109,7 +109,7 @@ export default function LeadContactForm({
 
   return (
     <div className="lead-form-wrapper">
-      <h3 className="lead-form-title">{leadFormTitle}</h3>
+      <div className="lead-form-title">{leadFormTitle}</div>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="mb-2">

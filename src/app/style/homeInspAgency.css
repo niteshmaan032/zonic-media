@@ -599,7 +599,7 @@ body:has(.hia-page) .floating-phone-link {
   transform: translateX(3px);
   box-shadow: var(--shadow-md);
 }
-.hia-problem-card h4 {
+.hia-problem-card h3 {
   font-size: 19px;
   font-weight: 500;
   margin: 0 0 10px;
@@ -818,7 +818,7 @@ body:has(.hia-page) .floating-phone-link {
   min-width: 110px;
   letter-spacing: -0.035em;
 }
-.hia-stat-desc h4 {
+.hia-stat-desc h3 {
   font-size: 17.5px;
   margin: 0 0 6px;
   font-weight: 500;
@@ -861,7 +861,7 @@ body:has(.hia-page) .floating-phone-link {
   background: var(--hia-white);
   box-shadow: var(--shadow-md);
 }
-.hia-industry-card h4 {
+.hia-industry-card h3 {
   font-size: 18px;
   margin: 6px 0 10px;
   font-weight: 500;
@@ -1277,7 +1277,7 @@ body:has(.hia-page) .floating-phone-link {
   margin-bottom: 18px;
   padding-top: 6px;
 }
-.hia-form-head h3 {
+.hia-form-head .hia-form-title {
   font-size: 24px;
   margin: 0 0 10px;
   font-weight: 500;
@@ -1700,7 +1700,8 @@ body:has(.hia-page) .floating-phone-link {
   gap: 56px;
   flex-wrap: wrap;
 }
-.hia-footer-col h5 {
+.hia-footer-col .hia-footer-title {
+  line-height: 1.2;
   color: var(--orange);
   font-size: 12.5px;
   letter-spacing: 0.12em;
@@ -1840,10 +1841,10 @@ body:has(.hia-page) .floating-phone-link {
   .hia-sec-h2 { line-height: 1.35; }
   .hia-svc-card h3 { line-height: 1.42; }
   .hia-process-step h3 { line-height: 1.42; }
-  .hia-form-head h3 { line-height: 1.42; }
-  .hia-problem-card h4 { line-height: 1.5; }
-  .hia-industry-card h4 { line-height: 1.5; }
-  .hia-stat-desc h4 { line-height: 1.5; }
+  .hia-form-head .hia-form-title { line-height: 1.42; }
+  .hia-problem-card h3 { line-height: 1.5 !important; }
+  .hia-industry-card h3 { line-height: 1.5 !important; }
+  .hia-stat-desc h3 { line-height: 1.5 !important; }
   .hia-final-cta h2 { line-height: 1.32; }
   .hia-faq-q { line-height: 1.45; }
   .hia-trust-row {
@@ -1954,10 +1955,10 @@ body:has(.hia-page) .floating-phone-link {
   .hia-sec-h2 { line-height: 1.38; }
   .hia-svc-card h3 { line-height: 1.45; }
   .hia-process-step h3 { line-height: 1.45; }
-  .hia-form-head h3 { line-height: 1.45; }
-  .hia-problem-card h4 { line-height: 1.55; }
-  .hia-industry-card h4 { line-height: 1.55; }
-  .hia-stat-desc h4 { line-height: 1.55; }
+  .hia-form-head .hia-form-title { line-height: 1.45; }
+  .hia-problem-card h3 { line-height: 1.55 !important; }
+  .hia-industry-card h3 { line-height: 1.55 !important; }
+  .hia-stat-desc h3 { line-height: 1.55 !important; }
   .hia-final-cta h2 { line-height: 1.32; }
   .hia-faq-q { line-height: 1.5; }
   .hia-svc-card {
@@ -2052,4 +2053,19 @@ body:has(.hia-page) .floating-phone-link {
   background: #0b1220;
   border-color: #0b1220;
   color: #fff;
+}
+
+/* Heading-hierarchy fix (22 Sept 2026): hero form titles are no longer <h3>,
+   card titles moved from <h4> to <h3>. These keep the exact line-heights the
+   old tags had under the global mobile rule (body h1-h3 = 1.34 !important). */
+@media (max-width: 767.98px) {
+  .hia-form-head .hia-form-title { line-height: 1.34; }
+  .hia-problem-card h3 { line-height: 1.5 !important; }
+  .hia-industry-card h3 { line-height: 1.5 !important; }
+  .hia-stat-desc h3 { line-height: 1.5 !important; }
+}
+@media (max-width: 575.98px) {
+  .hia-problem-card h3 { line-height: 1.55 !important; }
+  .hia-industry-card h3 { line-height: 1.55 !important; }
+  .hia-stat-desc h3 { line-height: 1.55 !important; }
 }

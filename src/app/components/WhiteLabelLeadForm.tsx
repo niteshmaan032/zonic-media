@@ -171,7 +171,7 @@ export default function WhiteLabelLeadForm() {
       <div className="wl-form-stamp">Partner</div>
 
       <div className="wl-form-head">
-        <h3>Become a White-Label Partner</h3>
+        <div className="wl-form-title">Become a White-Label Partner</div>
         <p>
           Tell us about your agency and the services you&apos;d like to resell.
           We&apos;ll follow up with partner details and your reseller rates.

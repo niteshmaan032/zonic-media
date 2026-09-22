@@ -681,7 +681,8 @@ body:has(.wl-page) .floating-phone-link {
   margin-bottom: 18px;
   padding-top: 7px;
 }
-.wl-form-head h3 {
+.wl-form-head .wl-form-title {
+  letter-spacing: -0.02em;
   font-size: 22px;
   margin: 0 0 7px;
   font-weight: 500;
@@ -1025,7 +1026,9 @@ body:has(.wl-page) .floating-phone-link {
   gap: 56px;
   flex-wrap: wrap;
 }
-.wl-footer-col h5 {
+.wl-footer-col .wl-footer-title {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: #ffffff;
   font-size: 14px;
   margin-bottom: 14px;
@@ -1164,4 +1167,8 @@ body:has(.wl-page) .floating-phone-link {
   .htb-clutch { width: 74px; height: 74px; }
   .htb-yelp-img { height: 66px; width: 66px; }
   .htb-trustpilot-img { width: 96px; }
+}
+
+@media (max-width: 767.98px) {
+  .wl-form-head .wl-form-title { line-height: 1.34; }
 }

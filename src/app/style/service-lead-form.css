@@ -264,3 +264,7 @@
     gap: 0;
   }
 }
+
+@media (max-width: 767.98px) {
+  .slf .slf-title { line-height: 1.34; }
+}

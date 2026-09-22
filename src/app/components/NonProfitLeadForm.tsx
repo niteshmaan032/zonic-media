@@ -180,7 +180,7 @@ export default function NonProfitLeadForm() {
       <div className="hia-form-stamp">Free Consult</div>
 
       <div className="hia-form-head">
-        <h3>Book a Free Consultation</h3>
+        <div className="hia-form-title">Book a Free Consultation</div>
         <p>
           Tell us about your mission and your next fundraising goal. We&apos;ll
           reply with a straightforward plan and a transparent quote.

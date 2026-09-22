@@ -180,7 +180,7 @@ export default function HomeInspectorLeadForm() {
       <div className="hia-form-stamp">Free Audit</div>
 
       <div className="hia-form-head">
-        <h3>Get Your Marketing Audit</h3>
+        <div className="hia-form-title">Get Your Marketing Audit</div>
         <p>
           Five-page written report. Delivered within five business days. No
           sales call required to receive it.

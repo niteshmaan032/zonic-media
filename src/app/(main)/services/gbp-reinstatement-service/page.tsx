@@ -565,7 +565,7 @@ function page() {
               <div className="proc-card">
                 <div className="proc-num">01</div>
                 <div className="when">Same day</div>
-                <h4>Free Suspension Audit</h4>
+                <h3>Free Suspension Audit</h3>
                 <p>
                   We review your profile, pinpoint the likely suspension reason,
                   and assess your reinstatement options — at no cost and no
@@ -575,7 +575,7 @@ function page() {
               <div className="proc-card">
                 <div className="proc-num">02</div>
                 <div className="when">24–48 hours</div>
-                <h4>Custom Reinstatement Strategy</h4>
+                <h3>Custom Reinstatement Strategy</h3>
                 <p>
                   Our specialists build a tailored appeal with the documentation,
                   language, and evidence Google&apos;s review process responds to.
@@ -584,7 +584,7 @@ function page() {
               <div className="proc-card">
                 <div className="proc-num">03</div>
                 <div className="when">3–7 days</div>
-                <h4>Appeal &amp; Follow-up</h4>
+                <h3>Appeal &amp; Follow-up</h3>
                 <p>
                   We submit the appeal and actively follow up with Google,
                   adjusting as needed until your case reaches a resolution.
@@ -593,7 +593,7 @@ function page() {
               <div className="proc-card">
                 <div className="proc-num">04</div>
                 <div className="when">Post-reinstatement</div>
-                <h4>Optimize &amp; Protect</h4>
+                <h3>Optimize &amp; Protect</h3>
                 <p>
                   Once you&apos;re live, we optimize categories, keywords, photos,
                   and posts — and harden the profile so the issue is less likely to
@@ -633,7 +633,7 @@ function page() {
                     <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
                   </svg>
                 </div>
-                <h4>Categories &amp; Services</h4>
+                <h3>Categories &amp; Services</h3>
                 <p>
                   Correct primary and secondary categories plus a complete service
                   list so you show up for the right searches.
@@ -646,7 +646,7 @@ function page() {
                     <path d="m21 21-4.3-4.3" />
                   </svg>
                 </div>
-                <h4>Keyword Optimization</h4>
+                <h3>Keyword Optimization</h3>
                 <p>
                   A compliant, keyword-aware business description and services that
                   align with how customers actually search.
@@ -660,7 +660,7 @@ function page() {
                     <path d="m21 15-5-5L5 21" />
                   </svg>
                 </div>
-                <h4>Photos &amp; Media</h4>
+                <h3>Photos &amp; Media</h3>
                 <p>
                   A clean photo and media overhaul — real images that build
                   credibility and lift engagement on your listing.
@@ -672,7 +672,7 @@ function page() {
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                   </svg>
                 </div>
-                <h4>Google Posts &amp; Q&amp;A</h4>
+                <h3>Google Posts &amp; Q&amp;A</h3>
                 <p>
                   Ongoing posts and seeded Q&amp;A that keep your profile active —
                   a signal Google and customers both reward.
@@ -684,7 +684,7 @@ function page() {
                     <path d="M12 2 15 9l7 .5-5.5 4.5 2 7L12 17l-6.5 4 2-7L2 9.5 9 9z" />
                   </svg>
                 </div>
-                <h4>Reviews &amp; Reputation</h4>
+                <h3>Reviews &amp; Reputation</h3>
                 <p>
                   A simple system to earn recent, believable reviews — the trust
                   signal that wins the next customer.
@@ -697,7 +697,7 @@ function page() {
                     <path d="m9 12 2 2 4-4" />
                   </svg>
                 </div>
-                <h4>Compliance Monitoring</h4>
+                <h3>Compliance Monitoring</h3>
                 <p>
                   30 days of monitoring to catch risky edits early and keep your
                   profile stable, healthy, and suspension-free.

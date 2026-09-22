@@ -190,7 +190,7 @@ export default function GbpRealEstateLeadForm() {
       <div className="hia-form-stamp">Free Audit</div>
 
       <div className="hia-form-head">
-        <h3>Real Estate GBP Audit</h3>
+        <div className="hia-form-title">Real Estate GBP Audit</div>
         <p>
           Five-page audit of your profile status, suspension risk, and a written
           reinstatement plan if suspended. Delivered within five business days.

@@ -627,7 +627,7 @@ function Page() {
                 <div className="hia-problem-grid">
                   {problemCards.map((c, i) => (
                     <div className="hia-problem-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}
@@ -801,7 +801,7 @@ function Page() {
                     <div className="hia-stat-row" key={i}>
                       <div className="hia-stat-big">{s.big}</div>
                       <div className="hia-stat-desc">
-                        <h4>{s.h}</h4>
+                        <h3>{s.h}</h3>
                         <p>{s.p}</p>
                       </div>
                     </div>
@@ -840,7 +840,7 @@ function Page() {
                 <div className="hia-industry-grid">
                   {industryCards.map((c, i) => (
                     <div className="hia-industry-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}
@@ -1036,7 +1036,7 @@ function Page() {
               </div>
               <div className="hia-footer-links">
                 <div className="hia-footer-col">
-                  <h5>Services</h5>
+                  <div className="hia-footer-title">Services</div>
                   <Link href="/services/local-seo-for-home-services">
                     Local SEO
                   </Link>
@@ -1049,7 +1049,7 @@ function Page() {
                   <Link href="/services">Review Management</Link>
                 </div>
                 <div className="hia-footer-col">
-                  <h5>Industries</h5>
+                  <div className="hia-footer-title">Industries</div>
                   <Link href="/services/home-inspector-marketing">
                     Home Inspectors
                   </Link>
@@ -1070,7 +1070,7 @@ function Page() {
                   </Link>
                 </div>
                 <div className="hia-footer-col">
-                  <h5>Contact</h5>
+                  <div className="hia-footer-title">Contact</div>
                   <Link href={SITE_CONTACT.phoneHref}>
                     {SITE_CONTACT.phoneDisplay}
                   </Link>

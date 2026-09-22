@@ -52,7 +52,7 @@
   border-color: var(--orange);
   transform: translateY(-2px);
 }
-.hia-page .his-city-card h4 {
+.hia-page .his-city-card h3 {
   font-size: 19px;
   font-weight: 500;
   color: var(--navy);
@@ -381,4 +381,8 @@
   .hia-page .his-curve-legend li {
     transition: none;
   }
+}
+
+@media (max-width: 767.98px) {
+  .hia-page .his-city-card h3 { line-height: 1.35 !important; }
 }

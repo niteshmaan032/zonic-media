@@ -15,6 +15,7 @@ import {
   canonicalizeHostLinks,
   ensureImageAlts,
   linkReinstatementService,
+  normalizeHeadingLevels,
   pickRelatedPosts,
   rewriteRetiredBlogLinks,
   splitAfterFirstSection,
@@ -161,9 +162,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { before: contentBefore, after: contentAfter, hasMarker } =
     splitOnFaqMarker(
-      linkReinstatementService(
-        rewriteRetiredBlogLinks(
-          canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+      normalizeHeadingLevels(
+        linkReinstatementService(
+          rewriteRetiredBlogLinks(
+            canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+          ),
         ),
       ),
     );

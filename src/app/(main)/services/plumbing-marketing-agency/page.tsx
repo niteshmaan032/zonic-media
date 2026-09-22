@@ -432,7 +432,7 @@ function Page() {
                 <div className="hia-problem-grid">
                   {problemCards.map((c, i) => (
                     <div className="hia-problem-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}
@@ -541,7 +541,7 @@ function Page() {
                       <span className="pmb-spec-icon" aria-hidden="true">
                         {s.icon}
                       </span>
-                      <h4>{s.h}</h4>
+                      <h3>{s.h}</h3>
                       <p>{s.p}</p>
                     </div>
                   ))}
@@ -578,7 +578,7 @@ function Page() {
                     <div className="hia-stat-row" key={i}>
                       <div className="hia-stat-big">{s.big}</div>
                       <div className="hia-stat-desc">
-                        <h4>{s.h}</h4>
+                        <h3>{s.h}</h3>
                         <p>{s.p}</p>
                       </div>
                     </div>
@@ -639,7 +639,7 @@ function Page() {
                       href={`/services/plumbing-marketing-agency/${s.slug}`}
                       className="hia-industry-card"
                     >
-                      <h4>{s.name}</h4>
+                      <h3>{s.name}</h3>
                       <p>{s.blurb}</p>
                       <span className="his-city-link">
                         {s.name} Plumbing Marketing →

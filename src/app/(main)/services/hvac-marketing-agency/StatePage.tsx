@@ -203,7 +203,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 <div className="hia-problem-grid">
                   {state.problem.cards.map((c, i) => (
                     <div className="hia-problem-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}
@@ -315,7 +315,7 @@ export default function StatePage({ state }: { state: StateContent }) {
                 <div className="hia-industry-grid">
                   {state.cities.cards.map((c, i) => (
                     <div className="hia-industry-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}

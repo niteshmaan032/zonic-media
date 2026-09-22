@@ -132,6 +132,25 @@ const RETIRED_BLOG_SLUGS: Record<string, string> = blogRedirectsJson;
  * bodies can still link the old slug; rewrite those links at render so
  * crawlers never hit the redirect.
  */
+/**
+ * CMS bodies sometimes jump heading levels (H1 on the page, then an H3 in the
+ * article). Search tools flag that as a broken outline. This lowers any heading
+ * that skips a level to the next valid one (H3 after the page H1 becomes H2);
+ * text, attributes and order are untouched.
+ */
+export function normalizeHeadingLevels(html: string) {
+  let prev = 1; // the page <h1> precedes the article body
+  return html.replace(
+    /<h([2-6])\b([^>]*)>([\s\S]*?)<\/h\1>/gi,
+    (match, lvlStr: string, attrs: string, inner: string) => {
+      const lvl = Number(lvlStr);
+      const next = lvl > prev + 1 ? prev + 1 : lvl;
+      prev = next;
+      return next === lvl ? match : `<h${next}${attrs}>${inner}</h${next}>`;
+    },
+  );
+}
+
 export function rewriteRetiredBlogLinks(html: string) {
   return html.replace(
     /href="((?:https?:\/\/(?:www\.)?zonicllc\.com)?\/blog\/)([^"\/?#]+)(\/?(?:[?#][^"]*)?)"/gi,

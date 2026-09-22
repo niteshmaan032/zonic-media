@@ -186,7 +186,7 @@ export default function IndustryMarketingLeadForm({
       ) : null}
 
       <div className="ima-form-head">
-        <h3>{title}</h3>
+        <div className="ima-form-title">{title}</div>
         <p>{subtitle}</p>
       </div>
 

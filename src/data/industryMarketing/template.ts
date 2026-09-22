@@ -424,19 +424,19 @@ function footerHtml(c: IndustryMarketingConfig) {
 <a class="brand" href="${SITE}"><span class="dot"></span>Zonic Media</a>
 <p>Results-driven digital marketing agency in Dover, Delaware providing local SEO, Google Business Profile optimization, Google Ads, web design, and lead generation for ${c.businesses} across the United States.</p>
 </div>
-<div><h4>Services</h4><ul>
+<div><div class="ima-footer-title">Services</div><ul>
 <li><a href="${SITE}/services/local-seo-for-home-services">Local SEO</a></li>
 <li><a href="${SITE}/services/google-ads">Google Ads (PPC)</a></li>
 <li><a href="${SITE}/services/gbp-reinstatement-service">Google My Business</a></li>
 <li><a href="${SITE}/services/web-design">Web Design</a></li>
 </ul></div>
-<div><h4>Company</h4><ul>
+<div><div class="ima-footer-title">Company</div><ul>
 <li><a href="${SITE}/about">About Us</a></li>
 <li><a href="${SITE}/blog">Blog</a></li>
 <li><a href="${SITE}/contact-us">Contact Us</a></li>
 <li><a href="${SITE}/services">All Industries</a></li>
 </ul></div>
-<div><h4>Get in Touch</h4><ul>
+<div><div class="ima-footer-title">Get in Touch</div><ul>
 <li><a href="${PHONE_HREF}">${PHONE_DISPLAY}</a></li>
 <li><a href="mailto:contact@zonicllc.com">contact@zonicllc.com</a></li>
 <li>8 The Green, STE B<br>Dover, DE 19901</li>

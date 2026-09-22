@@ -1346,7 +1346,7 @@ export default async function Home() {
                       <FiSearch />
                     </span>
                     <div>
-                      <h4>Diagnose the Cause</h4>
+                      <h3>Diagnose the Cause</h3>
                       <p>
                         We pinpoint the exact policy that triggered the
                         suspension before anything is filed.
@@ -1358,7 +1358,7 @@ export default async function Home() {
                       <FiFileText />
                     </span>
                     <div>
-                      <h4>Build the Appeal</h4>
+                      <h3>Build the Appeal</h3>
                       <p>
                         Documentation and evidence packaged the way Google
                         wants it.
@@ -1370,7 +1370,7 @@ export default async function Home() {
                       <FiShield />
                     </span>
                     <div>
-                      <h4>Protect It After</h4>
+                      <h3>Protect It After</h3>
                       <p>
                         We harden the profile so it doesn&apos;t get flagged
                         again.
@@ -1382,7 +1382,7 @@ export default async function Home() {
                       <FiTrendingUp />
                     </span>
                     <div>
-                      <h4>Rank It Higher</h4>
+                      <h3>Rank It Higher</h3>
                       <p>
                         Once it&apos;s back, we optimize it for the Map Pack.
                       </p>

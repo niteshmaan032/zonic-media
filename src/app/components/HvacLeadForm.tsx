@@ -180,7 +180,7 @@ export default function HvacLeadForm() {
       <div className="hia-form-stamp">Free Audit</div>
 
       <div className="hia-form-head">
-        <h3>Free HVAC Marketing Audit</h3>
+        <div className="hia-form-title">Free HVAC Marketing Audit</div>
         <p>
           Five-page report. Current map pack position, GBP health, website
           audit, and a competitive gap analysis. Delivered in five business

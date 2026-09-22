@@ -420,6 +420,7 @@ body p {
 }
 
 .lead-form-wrapper .lead-form-title {
+  line-height: 1.2;
   font-weight: 500;
   font-size: 24px;
   text-align: center;
@@ -795,4 +796,9 @@ body p {
    (see SiteFloatingWidgets.tsx). Hidden everywhere else. */
 body:not(.ghl-page) chat-widget {
   display: none !important;
+}
+
+/* .lead-form-title is no longer an <h3>; keep the mobile line-height it had. */
+@media (max-width: 767.98px) {
+  .lead-form-wrapper .lead-form-title { line-height: 1.34; }
 }

@@ -335,7 +335,7 @@ function WdSiteBuilder() {
         </div>
         <div className="wd-cv-body">
           <aside className="wd-cv-layers">
-            <h5>Layers</h5>
+            <div className="wd-cv-layers-title">Layers</div>
             {layers.map((layer, i) => (
               <span
                 className="wd-cv-layer"
@@ -687,7 +687,7 @@ function Page() {
                       <FiZap />
                     </span>
                     <div>
-                      <h4>Speed Budgeted In</h4>
+                      <h3>Speed Budgeted In</h3>
                       <p>
                         Page speed is planned during the build, not patched
                         after launch.
@@ -699,7 +699,7 @@ function Page() {
                       <FiSearch />
                     </span>
                     <div>
-                      <h4>SEO Structure First</h4>
+                      <h3>SEO Structure First</h3>
                       <p>
                         Technical SEO, schema, and tracking wired in from day
                         one.
@@ -711,7 +711,7 @@ function Page() {
                       <FiTrendingUp />
                     </span>
                     <div>
-                      <h4>Layouts That Convert</h4>
+                      <h3>Layouts That Convert</h3>
                       <p>
                         Built around call, quote, and booking intent — not just
                         looks.
@@ -723,7 +723,7 @@ function Page() {
                       <FiActivity />
                     </span>
                     <div>
-                      <h4>Tracking Included</h4>
+                      <h3>Tracking Included</h3>
                       <p>
                         Calls and forms measured, so you know what the site
                         earns.

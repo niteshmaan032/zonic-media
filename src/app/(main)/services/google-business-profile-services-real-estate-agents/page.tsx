@@ -598,7 +598,7 @@ function Page() {
                 <div className="hia-problem-grid">
                   {problemCards.map((c, i) => (
                     <div className="hia-problem-card" key={i}>
-                      <h4>{c.h}</h4>
+                      <h3>{c.h}</h3>
                       <p>{c.p}</p>
                     </div>
                   ))}
@@ -1005,7 +1005,7 @@ function Page() {
               </div>
               <div className="hia-footer-links">
                 <div className="hia-footer-col">
-                  <h5>Real Estate Services</h5>
+                  <div className="hia-footer-title">Real Estate Services</div>
                   <HashScrollLink href="#gre-services">
                     GBP Reinstatement
                   </HashScrollLink>
@@ -1021,7 +1021,7 @@ function Page() {
                   </HashScrollLink>
                 </div>
                 <div className="hia-footer-col">
-                  <h5>States</h5>
+                  <div className="hia-footer-title">States</div>
                   <HashScrollLink href="#gre-states">Florida</HashScrollLink>
                   <HashScrollLink href="#gre-states">Texas</HashScrollLink>
                   <HashScrollLink href="#gre-states">California</HashScrollLink>
@@ -1029,7 +1029,7 @@ function Page() {
                   <HashScrollLink href="#gre-states">Arizona</HashScrollLink>
                 </div>
                 <div className="hia-footer-col">
-                  <h5>Contact</h5>
+                  <div className="hia-footer-title">Contact</div>
                   <Link href={SITE_CONTACT.phoneHref}>
                     {SITE_CONTACT.phoneDisplay}
                   </Link>
