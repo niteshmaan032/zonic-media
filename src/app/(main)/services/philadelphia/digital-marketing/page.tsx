@@ -15,8 +15,7 @@
  * imported for the hero badges, and the wrapper sets position/ratio/radius.
  * The previous build's photos are still in /public/images/philadelphia.
  *
- * LEADS: submits as "Local SEO" + "Pay Per Click (PPC)", both on the
- * ALLOWED_SERVICES whitelist in src/api/leadsRoute.ts.
+ * LEADS: the form has no service picker, so leads carry no service.
  */
 
 import type { Metadata } from "next";

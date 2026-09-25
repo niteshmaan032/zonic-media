@@ -17,8 +17,6 @@ type GmbAuditFormValues = {
   message: string;
 };
 
-const DEFAULT_SERVICE = "Google My Business (GMB)";
-
 const PROFILE_STATUS_OPTIONS = [
   "Suspended",
   "Disabled",
@@ -74,8 +72,9 @@ export default function GmbAuditForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.businessName,
-          message: `Business Name: ${data.businessName}. Profile Status: ${data.profileStatus}. Issue: ${data.message}`,
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
+          details: [{ label: "Profile Status", value: data.profileStatus }],
           smsConsent,
           recaptchaToken,
         }),

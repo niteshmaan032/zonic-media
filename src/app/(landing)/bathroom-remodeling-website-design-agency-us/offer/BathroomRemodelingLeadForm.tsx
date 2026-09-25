@@ -33,8 +33,6 @@ type FormValues = {
   budget: string;
 };
 
-const DEFAULT_SERVICE = "Web Design";
-
 /** Bathroom Remodeling revenue lines — the answer routes the follow-up conversation. */
 const SERVICES = [
   "Shower Remodels",
@@ -144,12 +142,11 @@ export default function BathroomRemodelingLeadForm() {
         BUDGET_OPTIONS.find((option) => option.value === data.budget)?.label ||
         data.budget;
 
-      const messageParts = [
-        `Remodeling company: ${data.company}`,
-        `Primary service: ${data.primaryService}`,
-        `Current website: ${data.website || "none provided"}`,
-        `Service area: ${data.serviceArea}`,
-        `Monthly marketing budget: ${budgetLabel}`,
+      const details = [
+        { label: "Primary Service", value: data.primaryService },
+        { label: "Current Website", value: data.website },
+        { label: "Service Area", value: data.serviceArea },
+        { label: "Monthly Marketing Budget", value: budgetLabel },
       ];
 
       const response = await fetch("/api/leads", {
@@ -163,8 +160,9 @@ export default function BathroomRemodelingLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.company,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details,
           smsConsent,
           recaptchaToken,
         }),

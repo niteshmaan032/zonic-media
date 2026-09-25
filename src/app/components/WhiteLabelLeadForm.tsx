@@ -28,12 +28,6 @@ type FormValues = {
   message: string;
 };
 
-// /api/leads only accepts services from a fixed whitelist (see
-// src/api/leadsRoute.ts); "Local SEO" is the closest allowed match for the
-// white-label fulfillment stack. The specific services the partner wants ride
-// along in the message so nothing is lost.
-const DEFAULT_SERVICE = "Local SEO";
-
 export default function WhiteLabelLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
@@ -114,11 +108,6 @@ export default function WhiteLabelLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Agency: ${data.agency}`,
-        `Services of interest: ${data.message || "Not specified"}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -130,8 +119,8 @@ export default function WhiteLabelLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.agency,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
           smsConsent,
           recaptchaToken,
         }),

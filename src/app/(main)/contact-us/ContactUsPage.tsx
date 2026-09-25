@@ -12,8 +12,7 @@
  * chunk URL; new prefix, nothing cached can match.
  *
  * LEADS: the form submits whichever service the visitor picks from
- * CONTACT_SERVICE_OPTIONS — every value below is on the ALLOWED_SERVICES
- * whitelist in src/api/leadsRoute.ts.
+ * CONTACT_SERVICE_OPTIONS.
  */
 
 import "@/app/style/contactPage.css";

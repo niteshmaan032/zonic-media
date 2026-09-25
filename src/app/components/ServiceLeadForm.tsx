@@ -33,13 +33,12 @@ type ServiceLeadFormProps = {
   /** Show the Business Name field. */
   showBusinessName?: boolean;
   /**
-   * When provided, renders a multi-select of these services (visitor must pick
-   * at least one). Each value must be on the API's allowed-services list.
+   * When provided, renders a select of these services (visitor must pick one).
    */
   serviceOptions?: string[];
   /**
-   * Services submitted with the lead when `serviceOptions` is not used. Must be
-   * on the API's allowed-services list.
+   * @deprecated Ignored. Leads only carry a service the visitor picked from
+   * `serviceOptions`; forms without a picker submit no service.
    */
   defaultServices?: string[];
 };
@@ -55,7 +54,6 @@ export default function ServiceLeadForm({
   messagePlaceholder = "Tell us a little about what you need",
   showBusinessName = true,
   serviceOptions,
-  defaultServices = ["Local SEO"],
 }: ServiceLeadFormProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -91,7 +89,7 @@ export default function ServiceLeadForm({
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const services = serviceOptions ? [data.service] : defaultServices;
+      const services = serviceOptions && data.service ? [data.service] : [];
 
       const response = await fetch("/api/leads", {
         method: "POST",

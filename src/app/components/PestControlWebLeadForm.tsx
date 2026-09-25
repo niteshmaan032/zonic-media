@@ -32,8 +32,6 @@ type FormValues = {
   message: string;
 };
 
-const DEFAULT_SERVICE = "Web Design";
-
 export default function PestControlWebLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
@@ -122,12 +120,6 @@ export default function PestControlWebLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Pest Control Company: ${data.company}`,
-        `City: ${data.city}`,
-        `Message: ${data.message}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -139,8 +131,9 @@ export default function PestControlWebLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.company,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
+          details: [{ label: "City You Serve", value: data.city.trim() }],
           smsConsent,
           recaptchaToken,
         }),

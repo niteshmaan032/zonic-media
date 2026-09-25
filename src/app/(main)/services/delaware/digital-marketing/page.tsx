@@ -11,8 +11,7 @@
  * /public/images/delaware. Each source ratio matches its wrapper so the full
  * composition stays sharp and intact instead of relying on an aggressive crop.
  *
- * LEADS: form submits as service "Local SEO" + "Pay Per Click (PPC)" — both are
- * on the ALLOWED_SERVICES whitelist in src/api/leadsRoute.ts. Because this page
+ * LEADS: the form has no service picker, so leads carry no service. Because this page
  * now has an opt-in form, it was removed from GHL_PAGES in SiteFloatingWidgets
  * (GHL rejects its widget on pages with another opt-in source) — the site's own
  * ChatBot renders here instead.

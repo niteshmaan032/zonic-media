@@ -1,22 +1,16 @@
 import { createLead, type LeadPayload } from "@/backend/controllers/leadsController";
+import type { LeadDetail } from "@/backend/lib/leadEmailTemplates";
 import { saveContactFormLead } from "@/backend/lib/chat";
 import { verifyRecaptchaToken } from "@/backend/lib/recaptcha";
 import { RECAPTCHA_ACTION } from "@/shared/recaptcha";
 
-const ALLOWED_SERVICES = new Set([
-  "Web Design",
-  "UI/UX Design",
-  "Pay Per Click (PPC)",
-  "Branding",
-  "Google My Business (GMB)",
-  "Web Development",
-  "Local SEO",
-  "Home Inspector Marketing",
-  "Nonprofit Marketing",
-  "Travel & Tourism Marketing",
-  "HVAC Marketing",
-  "Plumbing Marketing",
-]);
+// Services are only sent when the visitor picked them from a service field,
+// so any short, clean label is accepted rather than a fixed allow-list.
+const MAX_SERVICES = 10;
+const MAX_SERVICE_LENGTH = 100;
+const MAX_DETAILS = 20;
+const MAX_DETAIL_LABEL_LENGTH = 80;
+const MAX_DETAIL_VALUE_LENGTH = 1000;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const CONTACT_REGEX = /^[0-9]{7,15}$/;
@@ -35,10 +29,32 @@ const normalizeServices = (value: unknown): string[] => {
 
   const normalized = value
     .filter((item): item is string => typeof item === "string")
-    .map((item) => item.trim())
-    .filter((item) => ALLOWED_SERVICES.has(item));
+    .map((item) => sanitizeText(item))
+    .filter((item) => isLengthValid(item, 1, MAX_SERVICE_LENGTH));
 
-  return Array.from(new Set(normalized));
+  return Array.from(new Set(normalized)).slice(0, MAX_SERVICES);
+};
+
+// The visitor's answers to a form's extra fields ({ label, value }). Blank
+// answers are dropped so emails only show what was actually entered.
+const normalizeDetails = (value: unknown): LeadDetail[] => {
+  if (!Array.isArray(value)) return [];
+
+  return value
+    .filter(
+      (item): item is { label: unknown; value: unknown } =>
+        !!item && typeof item === "object",
+    )
+    .map((item) => ({
+      label: typeof item.label === "string" ? sanitizeText(item.label) : "",
+      value: typeof item.value === "string" ? sanitizeText(item.value) : "",
+    }))
+    .filter(
+      (item) =>
+        isLengthValid(item.label, 1, MAX_DETAIL_LABEL_LENGTH) &&
+        isLengthValid(item.value, 1, MAX_DETAIL_VALUE_LENGTH),
+    )
+    .slice(0, MAX_DETAILS);
 };
 
 const normalizeSmsConsent = (value: unknown) =>
@@ -69,6 +85,7 @@ export const leadsRoute = async (
     typeof body.businessName === "string" ? sanitizeText(body.businessName) : "";
   const message = typeof body.message === "string" ? sanitizeText(body.message) : "";
   const services = normalizeServices(body.services);
+  const details = normalizeDetails(body.details);
   const smsConsent = normalizeSmsConsent(body.smsConsent);
   const recaptchaToken =
     typeof body.recaptchaToken === "string" ? body.recaptchaToken.trim() : "";
@@ -80,8 +97,7 @@ export const leadsRoute = async (
     !EMAIL_REGEX.test(email) ||
     !CONTACT_REGEX.test(contact) ||
     (isGmbReinstatementForm && !isLengthValid(businessName, 2, 100)) ||
-    !isLengthValid(message, 5, 2000) ||
-    services.length === 0
+    !isLengthValid(message, 0, 2000)
   ) {
     return {
       status: 400,
@@ -119,6 +135,7 @@ export const leadsRoute = async (
     businessName,
     message,
     services,
+    details,
     smsConsent,
   };
 
@@ -131,7 +148,12 @@ export const leadsRoute = async (
       email,
       contact,
       businessName,
-      message,
+      message: [
+        ...details.map((detail) => `${detail.label}: ${detail.value}`),
+        message,
+      ]
+        .filter(Boolean)
+        .join("\n"),
       services,
       smsConsent,
       formType,

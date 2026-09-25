@@ -565,8 +565,7 @@ export function buildIndustryMarketingPage(
           "you@business.com",
           c.formBusinessPlaceholder,
         ],
-        // These five must stay in sync with GOAL_TO_SERVICE in
-        // IndustryMarketingLeadForm — /api/leads rejects unmapped services.
+        // The visitor's pick is sent to /api/leads as a "Primary Goal" detail.
         serviceOptions: [
           "More calls & booked jobs",
           "Rank in Google Map Pack",

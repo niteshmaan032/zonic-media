@@ -32,8 +32,6 @@ type FormValues = {
   message: string;
 };
 
-const DEFAULT_SERVICE = "Nonprofit Marketing";
-
 export default function NonProfitLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
@@ -122,12 +120,6 @@ export default function NonProfitLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Organization: ${data.organization}`,
-        `City / Region: ${data.city}`,
-        `Message: ${data.message}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -139,8 +131,9 @@ export default function NonProfitLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.organization,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
+          details: [{ label: "City / Region", value: data.city.trim() }],
           smsConsent,
           recaptchaToken,
         }),

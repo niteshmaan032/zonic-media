@@ -36,8 +36,6 @@ type FormValues = {
   budget: string;
 };
 
-const DEFAULT_SERVICE = "Web Design";
-
 const BUSINESS_TYPES = [
   "HVAC",
   "Roofing",
@@ -163,12 +161,11 @@ export default function FreeDesignLeadForm() {
         BUDGET_OPTIONS.find((option) => option.value === data.budget)?.label ||
         data.budget;
 
-      const messageParts = [
-        `Business: ${data.company}`,
-        `Business type: ${data.businessType}`,
-        `Current website: ${data.website || "none provided"}`,
-        `Service area: ${data.serviceArea}`,
-        `Monthly marketing budget: ${budgetLabel}`,
+      const details = [
+        { label: "Business Type", value: data.businessType },
+        { label: "Current Website", value: data.website },
+        { label: "Service Area", value: data.serviceArea },
+        { label: "Monthly Marketing Budget", value: budgetLabel },
       ];
 
       const response = await fetch("/api/leads", {
@@ -182,8 +179,9 @@ export default function FreeDesignLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.company,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details,
           smsConsent,
           recaptchaToken,
         }),

@@ -19,8 +19,6 @@ type AppealFormValues = {
   rejectionText: string;
 };
 
-const DEFAULT_SERVICE = "Google My Business (GMB)";
-
 const CASE_STAGE_OPTIONS = [
   "Appeal rejected once",
   "Appeal rejected two or more times",
@@ -73,17 +71,6 @@ export default function GbpAppealLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Business Name: ${data.businessName}`,
-        `Case Stage: ${data.caseStage}`,
-        `Locations Affected: ${data.locations}`,
-      ];
-      if (data.rejectionText.trim()) {
-        messageParts.push(
-          `Google's Rejection Message: ${data.rejectionText.trim()}`,
-        );
-      }
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -95,8 +82,12 @@ export default function GbpAppealLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.businessName,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: data.rejectionText.trim(),
+          services: [],
+          details: [
+            { label: "Case Status", value: data.caseStage },
+            { label: "Locations Affected", value: data.locations },
+          ],
           smsConsent,
           recaptchaToken,
         }),

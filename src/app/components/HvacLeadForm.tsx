@@ -32,8 +32,6 @@ type FormValues = {
   message: string;
 };
 
-const DEFAULT_SERVICE = "HVAC Marketing";
-
 export default function HvacLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
@@ -122,12 +120,6 @@ export default function HvacLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `HVAC Company: ${data.company}`,
-        `Service Area / City: ${data.city}`,
-        `Message: ${data.message}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -139,8 +131,9 @@ export default function HvacLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.company,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
+          details: [{ label: "Service Area / City", value: data.city.trim() }],
           smsConsent,
           recaptchaToken,
         }),

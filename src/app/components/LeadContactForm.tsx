@@ -24,8 +24,6 @@ type LeadContactFormProps = {
   submitButtonText?: string;
 };
 
-const DEFAULT_SERVICE = "Google My Business (GMB)";
-
 export default function LeadContactForm({
   leadFormTitle = "Get Your Free GMB Suspension Audit",
   submitButtonText = "Get Case Review",
@@ -76,8 +74,8 @@ export default function LeadContactForm({
           email: data.email,
           contact: data.contact,
           businessName: data.businessName,
-          message: `Business Name: ${data.businessName}. Issue: ${data.message}`,
-          services: [DEFAULT_SERVICE],
+          message: data.message.trim(),
+          services: [],
           smsConsent,
           recaptchaToken,
         }),

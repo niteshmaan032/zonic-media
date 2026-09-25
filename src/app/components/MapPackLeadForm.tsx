@@ -18,8 +18,6 @@ type MapPackFormValues = {
   currentPosition: string;
 };
 
-const DEFAULT_SERVICE = "Local SEO";
-
 /* The branded thank-you template for this page is selected in
    leadsController by sourcePage AND formType === "gmb-reinstatement"
    (see GMB_OPTIMIZATION_TEMPLATE_PAGES) — don't change the formType here
@@ -70,12 +68,6 @@ export default function MapPackLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Business Name: ${data.businessName}`,
-        `Service Area: ${data.serviceArea}`,
-        `Current Map Pack Position: ${data.currentPosition}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -87,8 +79,12 @@ export default function MapPackLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.businessName,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details: [
+            { label: "Service Area", value: data.serviceArea.trim() },
+            { label: "Current Map Pack Position", value: data.currentPosition },
+          ],
           smsConsent,
           recaptchaToken,
         }),

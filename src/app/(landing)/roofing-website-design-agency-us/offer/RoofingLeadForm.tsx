@@ -33,8 +33,6 @@ type FormValues = {
   budget: string;
 };
 
-const DEFAULT_SERVICE = "Web Design";
-
 /** Roofing revenue lines — the answer routes the follow-up conversation. */
 const ROOFING_SERVICES = [
   "Roof Repair",
@@ -151,12 +149,11 @@ export default function RoofingLeadForm() {
         BUDGET_OPTIONS.find((option) => option.value === data.budget)?.label ||
         data.budget;
 
-      const messageParts = [
-        `Roofing company: ${data.company}`,
-        `Primary roofing service: ${data.primaryService}`,
-        `Current website: ${data.website || "none provided"}`,
-        `Roofing service area: ${data.serviceArea}`,
-        `Monthly marketing budget: ${budgetLabel}`,
+      const details = [
+        { label: "Primary Roofing Service", value: data.primaryService },
+        { label: "Current Website", value: data.website },
+        { label: "Service Area", value: data.serviceArea },
+        { label: "Monthly Marketing Budget", value: budgetLabel },
       ];
 
       const response = await fetch("/api/leads", {
@@ -170,8 +167,9 @@ export default function RoofingLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.company,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details,
           smsConsent,
           recaptchaToken,
         }),

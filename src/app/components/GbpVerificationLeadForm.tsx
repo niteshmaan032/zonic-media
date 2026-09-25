@@ -58,8 +58,6 @@ const INDUSTRY_OPTIONS = [
   "Other",
 ];
 
-const DEFAULT_SERVICE = "Google My Business (GMB)";
-
 export default function GbpVerificationLeadForm() {
   const router = useRouter();
   const pathname = usePathname();
@@ -148,14 +146,6 @@ export default function GbpVerificationLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Business Name: ${data.businessName}`,
-        `What's Happening: ${data.whatsHappening}`,
-      ];
-      if (data.industry) {
-        messageParts.push(`Industry: ${data.industry}`);
-      }
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -167,8 +157,12 @@ export default function GbpVerificationLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.businessName,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details: [
+            { label: "What's Happening", value: data.whatsHappening },
+            { label: "Industry", value: data.industry },
+          ],
           smsConsent,
           recaptchaToken,
         }),

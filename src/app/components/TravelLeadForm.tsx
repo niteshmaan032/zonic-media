@@ -32,8 +32,6 @@ type FormValues = {
   details: string;
 };
 
-const DEFAULT_SERVICE = "Travel & Tourism Marketing";
-
 type TravelLeadFormProps = {
   /** Anchor id — must stay unique when the form appears twice on a page. */
   id?: string;
@@ -141,10 +139,9 @@ export default function TravelLeadForm({
           fullName: data.fullName,
           email: data.email,
           contact: data.contact,
-          message: data.details.trim()
-            ? `Travel brand: ${data.message}. Message: ${data.details.trim()}`
-            : `Travel brand: ${data.message}`,
-          services: [DEFAULT_SERVICE],
+          message: data.details.trim(),
+          services: [],
+          details: [{ label: "Travel Brand", value: data.message.trim() }],
           smsConsent,
           recaptchaToken,
         }),

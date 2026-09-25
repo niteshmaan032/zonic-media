@@ -32,9 +32,6 @@ type FormValues = {
   contact: string;
 };
 
-// Must be an allowed service on the API (see src/api/leadsRoute.ts).
-const DEFAULT_SERVICE = "Google My Business (GMB)";
-
 const GBP_STATUS_OPTIONS = [
   "Active and ranking well",
   "Active but low ranking",
@@ -132,12 +129,6 @@ export default function GbpRealEstateLeadForm() {
         throw new Error("reCAPTCHA is not ready yet. Please try again.");
       }
 
-      const messageParts = [
-        `Brokerage / Agent: ${data.brokerage}`,
-        `Primary metro: ${data.metro}`,
-        `Current GBP status: ${data.gbpStatus}`,
-      ];
-
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -149,8 +140,12 @@ export default function GbpRealEstateLeadForm() {
           email: data.email,
           contact: data.contact,
           businessName: data.brokerage,
-          message: messageParts.join(". "),
-          services: [DEFAULT_SERVICE],
+          message: "",
+          services: [],
+          details: [
+            { label: "Primary Metro", value: data.metro.trim() },
+            { label: "Current GBP Status", value: data.gbpStatus },
+          ],
           smsConsent,
           recaptchaToken,
         }),
