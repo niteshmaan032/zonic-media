@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Script from "next/script";
+import {
+  OPENAI_ADS_SDK_SRC,
+  openaiAdsBootstrapSnippet,
+} from "@/shared/openaiAdsPixel";
 
 const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
@@ -102,6 +106,20 @@ export default function AnalyticsProvider() {
           style={{ display: "none", visibility: "hidden" }}
         />
       </noscript>
+
+      {/* OpenAI (ChatGPT) Ads measurement pixel — site-wide base tag, same
+          real-domain gating and lazy loading as the Google tag above. The
+          lead conversion itself fires on /thank-you. */}
+      <Script
+        id="openai-ads-pixel-init"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{ __html: openaiAdsBootstrapSnippet }}
+      />
+      <Script
+        id="openai-ads-pixel-sdk"
+        src={OPENAI_ADS_SDK_SRC}
+        strategy="lazyOnload"
+      />
     </>
   );
 }

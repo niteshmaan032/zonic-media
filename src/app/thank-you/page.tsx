@@ -13,6 +13,10 @@ import { FaLinkedin } from "react-icons/fa6";
 import { GoHomeFill } from "react-icons/go";
 import { RiInstagramFill } from "react-icons/ri";
 import { SITE_PATHS, SITE_SOCIAL_LINKS } from "@/shared/siteConfig";
+import {
+  OPENAI_ADS_LEAD_EVENT,
+  openaiAdsBootstrapSnippet,
+} from "@/shared/openaiAdsPixel";
 
 // const THANK_YOU_ACCESS_KEY = "thank_you_access_allowed_at";
 const THANK_YOU_RENDER_KEY = "thank_you_page_render_allowed";
@@ -94,6 +98,18 @@ function Page() {
                 send_to: 'AW-17618392446/lhzyCOW75LAbEP6qjdFB'
               });
             }
+          `,
+        }}
+      />
+      {/* OpenAI (ChatGPT) Ads lead conversion. The bootstrap line lets this
+          queue safely even if the site-wide pixel SDK hasn't loaded yet. */}
+      <Script
+        id="openai-ads-thank-you-conversion"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            ${openaiAdsBootstrapSnippet}
+            oaiq("measure", "${OPENAI_ADS_LEAD_EVENT}", { type: "customer_action" });
           `,
         }}
       />
