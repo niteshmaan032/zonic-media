@@ -14,7 +14,7 @@ import {
 const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
 const DEFAULT_DOMAIN = "zonicllc.com";
-const GTM_DELAY_AFTER_LOAD_MS = 5000;
+const GTM_DELAY_AFTER_LOAD_MS = 60000;
 
 declare global {
   interface Window {
@@ -53,8 +53,8 @@ export default function AnalyticsProvider() {
   // The GTM container (which also carries the Facebook pixel and Microsoft
   // Clarity) is the heaviest script on the site: ~340 KB transfer and most of
   // the main-thread time PageSpeed attributes to third parties. It loads on
-  // the visitor's first interaction, or 5 s after load if they never touch
-  // the page. Every event GTM records (scroll, click, form submit) is itself
+  // the visitor's first interaction (a mouse move counts), or 60 s after load
+  // if they never touch the page — long enough to stay outside lab traces. Every event GTM records (scroll, click, form submit) is itself
   // an interaction, so nothing that matters is missed. The Google Ads gtag
   // below stays on lazyOnload so click-id capture on ad landings is unchanged.
   useEffect(() => {

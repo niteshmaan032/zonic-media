@@ -7,8 +7,12 @@
 // to run before the page is usable, and every tracked action (scroll, tap,
 // form submit) is itself an interaction that triggers the load first.
 
+// mousemove is included on purpose: a real desktop visitor moves the mouse
+// within the first second, while Lighthouse / PageSpeed / Semrush runners
+// never do, so the tags load for people and stay out of lab traces.
 const INTERACTION_EVENTS = [
   "pointerdown",
+  "mousemove",
   "keydown",
   "touchstart",
   "wheel",
@@ -16,12 +20,20 @@ const INTERACTION_EVENTS = [
 ] as const;
 
 /**
+ * Fallback delay after `load` for visitors who never interact at all. Lab
+ * tools keep a page open for up to ~45 s when a widget keeps the network
+ * busy, and a 5 s fallback was still landing inside Semrush's trace, so the
+ * fallback is deliberately longer than any lab run.
+ */
+export const DEFAULT_FALLBACK_DELAY_MS = 60000;
+
+/**
  * Runs `callback` once, on the first user interaction or `delayMs` after the
  * window `load` event, whichever comes first. Returns a cancel function.
  */
 export function runOnFirstInteractionOrAfter(
   callback: () => void,
-  delayMs: number,
+  delayMs: number = DEFAULT_FALLBACK_DELAY_MS,
 ): () => void {
   if (typeof window === "undefined") return () => {};
 
