@@ -26,6 +26,27 @@ type ClutchWidgetProps = {
   expandIframe?: boolean;
 };
 
+const CLUTCH_SCRIPT_ID = "clutch-widget-script";
+const CLUTCH_SCRIPT_SRC = "https://widget.clutch.co/static/js/widget.js";
+
+/**
+ * Inject Clutch's widget.js once, on demand. Until Sept 2026 the script was
+ * in the root layout with strategy="lazyOnload", so every page (including the
+ * 128 that never render a Clutch widget) downloaded ~165 KB of script plus
+ * Clutch's Roboto font on load. Now the first widget that scrolls near the
+ * viewport requests it; nothing about the rendered widget changes.
+ */
+function ensureClutchScript(): void {
+  if (typeof document === "undefined") return;
+  if (document.getElementById(CLUTCH_SCRIPT_ID)) return;
+
+  const script = document.createElement("script");
+  script.id = CLUTCH_SCRIPT_ID;
+  script.src = CLUTCH_SCRIPT_SRC;
+  script.async = true;
+  document.body.appendChild(script);
+}
+
 let clutchInitScheduled = false;
 
 function scheduleClutchInit(): void {
@@ -71,6 +92,31 @@ export default function ClutchWidget({
       Boolean(widget.querySelector("iframe"))
     );
   };
+
+  useEffect(() => {
+    const widget = widgetRef.current;
+
+    if (!widget) return;
+
+    // Fetch widget.js when this widget comes within ~600px of the viewport.
+    // Browsers without IntersectionObserver just load it immediately.
+    if (typeof IntersectionObserver === "undefined") {
+      ensureClutchScript();
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            ensureClutchScript();
+            io.disconnect();
+          }
+        },
+        { rootMargin: "600px 0px" },
+      );
+      io.observe(widget);
+
+      return () => io.disconnect();
+    }
+  }, []);
 
   useEffect(() => {
     const widget = widgetRef.current;

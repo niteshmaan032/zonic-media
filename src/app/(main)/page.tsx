@@ -665,14 +665,14 @@ const faqsLeft: Faq[] = [
       </>
     ),
   },
+];
+
+const faqsRight: Faq[] = [
   {
     q: "How much do digital marketing agencies charge small businesses in 2026?",
     a:
       "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $197 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
   },
-];
-
-const faqsRight: Faq[] = [
   {
     q: "Can you help my business show up in AI search results?",
     a: (
@@ -1017,7 +1017,18 @@ function GbpConsole() {
 /* ─────────────────────────────────────────────────────────────── page ───── */
 
 export default async function Home() {
-  const blogs = await getPublishedBlogs(6);
+  // Keep only the fields the blog cards render. Passing the full PublicBlog
+  // objects (with descriptionHtml) put six complete articles into the
+  // homepage payload.
+  const blogs = (await getPublishedBlogs(6)).map((blog) => ({
+    id: blog.id,
+    slug: blog.slug,
+    blogTitle: blog.blogTitle,
+    authorName: blog.authorName,
+    publishDate: blog.publishDate,
+    featuredImageUrl: blog.featuredImageUrl,
+    excerpt: blog.excerpt,
+  }));
 
   return (
     <>

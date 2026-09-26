@@ -82,7 +82,7 @@ type IndustryIcon = "auto" | "chiro" | "clean" | "dental" | "electric"
   | "garage" | "landscape" | "law" | "moving" | "painting" | "pest"
   | "realestate" | "roofing" | "septic" | "solar" | "inspection" | "plumbing" | "hvac"
   | "nonprofit" | "towing" | "pediatric" | "bathroom" | "kitchen" | "contractor"
-  | "flooring" | "windows" | "appliance" | "pool" | "gutter" | "tree";
+  | "flooring" | "windows" | "appliance" | "pool" | "gutter" | "tree" | "cannabis";
 
 function Icon({ name }: { name: IndustryIcon }) {
   const common = {
@@ -179,6 +179,15 @@ function Icon({ name }: { name: IndustryIcon }) {
         <svg {...common}>
           <path d="m3 12 9-8 9 8" />
           <path d="M5 10v10h14V10" />
+        </svg>
+      );
+    case "cannabis":
+      return (
+        <svg {...common}>
+          <path d="M12 21v-6" />
+          <path d="M12 15c-1.5-3-1.5-7 0-11 1.5 4 1.5 8 0 11z" />
+          <path d="M12 15c-3-.5-5.5-2.5-7-6 3.5.5 6 2.5 7 6zM12 15c3-.5 5.5-2.5 7-6-3.5.5-6 2.5-7 6z" />
+          <path d="M12 15c-2.5.5-5 0-7-1.5M12 15c2.5.5 5 0 7-1.5" />
         </svg>
       );
     case "septic":
@@ -449,6 +458,15 @@ const INDUSTRIES: Industry[] = [
     tagline:
       "Book pump-outs, drain field repairs, and full system installs from local search.",
     icon: "septic",
+  },
+  {
+    id: "cannabis",
+    name: "Cannabis Dispensaries",
+    href: "/services/cannabis-marketing-agency",
+    anchor: "Cannabis marketing",
+    tagline:
+      "Win 'dispensary near me' searches and turn menu views into repeat orders.",
+    icon: "cannabis",
   },
   {
     id: "solar",

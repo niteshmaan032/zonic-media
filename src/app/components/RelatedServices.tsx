@@ -72,6 +72,11 @@ const VERTICALS: { match: string[]; links: RelLink[] }[] = [
     { href: "/services/gutter-marketing-agency", label: "Gutter Marketing Agency" },
     { href: "/services/gutter-company-website-design", label: "Gutter Company Website Design" },
   ]},
+  { match: ["cannabis"], links: [
+    { href: "/services/industry/local-seo-for-cannabis-dispensaries", label: "Local SEO for Cannabis Dispensaries" },
+    { href: "/services/cannabis-marketing-agency", label: "Cannabis Marketing Agency" },
+    { href: "/services/ai-seo-services", label: "AI SEO (AEO & GEO)" },
+  ]},
   { match: ["solar"], links: [
     { href: "/services/industry/local-seo-for-solar-companies", label: "Local SEO for Solar Companies" },
     { href: "/services/solar-marketing-agency", label: "Solar Marketing Agency" },
@@ -172,8 +177,11 @@ export default function RelatedServices({ current }: { current: string }) {
   const vertical = VERTICALS.find((v) =>
     v.match.some((m) => current.includes(m)),
   );
+  // Dedupe by href: a vertical may repeat a core link, and duplicate React
+  // keys break the list.
+  const seen = new Set<string>([current]);
   const links = [...(vertical ? vertical.links : []), ...CORE_LINKS].filter(
-    (link) => link.href !== current,
+    (link) => !seen.has(link.href) && seen.add(link.href),
   );
 
   return (

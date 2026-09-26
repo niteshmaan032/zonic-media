@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import "@/app/globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// Trimmed Bootstrap (42 KB instead of 227 KB): only the selectors the public
+// pages use — see scripts/build-bootstrap-trimmed.mjs. The admin area imports
+// the full bootstrap.min.css in its own layout. (Sept 2026 CWV work.)
+import "@/app/style/bootstrap.trimmed.css";
 import "@/app/style/service-lead-form.css";
 import "@/app/style/google-fonts.css";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import Script from "next/script";
+import GhlExternalTracking from "@/app/components/GhlExternalTracking";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
 import AnalyticsProvider from "@/app/components/AnalyticsProvider";
@@ -188,8 +191,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://widget.clutch.co" />
-        <link rel="dns-prefetch" href="https://widget.clutch.co" />
 
         {/* Manrope + Inter are self-hosted (see style/google-fonts.css) and are
             only used by the lead form at the bottom of each page, so they are
@@ -220,29 +221,18 @@ export default function RootLayout({
           }}
         />
 
-        {/* lazyOnload: the Clutch review widget renders below the fold, so its
-            script doesn't need to compete with page startup on mobile. */}
-        <Script
-          id="clutch-widget-script"
-          src="https://widget.clutch.co/static/js/widget.js"
-          strategy="lazyOnload"
-        />
+        {/* Clutch's widget.js is no longer loaded here. ClutchWidget.tsx
+            injects it on demand when a widget scrolls near the viewport
+            (Sept 2026 CWV work), so pages without the widget never fetch it. */}
 
-        {/* GHL external form tracking — loaded site-wide so every custom lead
-            form submission is captured into the GoHighLevel dashboard.
-            lazyOnload is safe: it only needs to be present before a visitor
-            submits a form, never during the first paint. */}
-        <Script
-          id="ghl-external-tracking"
-          src="https://forms.zonicllc.com/js/external-tracking.js"
-          data-tracking-id="tk_f66384f994224b0091e870b5f6cf3e88"
-          strategy="lazyOnload"
-        />
+        {/* GHL external form tracking is loaded by <GhlExternalTracking />
+            in <body> on the first interaction (or 5 s after load). */}
       </head>
 
       <body className={neueHaas.className}>
         {/* ✅ Analytics only on real domain */}
         <AnalyticsProvider />
+        <GhlExternalTracking />
 
         <Loader />
         <SmoothScroll>{children}</SmoothScroll>

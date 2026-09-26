@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaStore } from "react-icons/fa6";
-import { FaBroom, FaTooth, FaUserDoctor } from "react-icons/fa6";
+import { FaBroom, FaCannabis, FaTooth, FaUserDoctor } from "react-icons/fa6";
 import { IoDesktopOutline } from "react-icons/io5";
 import { LuPlaneTakeoff } from "react-icons/lu";
 import { MdArrowOutward } from "react-icons/md";
@@ -119,6 +119,7 @@ const NICHE_GROUP_ORDER = [
   "Cleaning Services",
   "Health & Medical",
   "Professional Services",
+  "Cannabis & Retail",
   "Auto & Transport",
 ] as const;
 
@@ -413,6 +414,17 @@ const seoServiceLinks: NicheLink[] = [
     link: "/services/industry/real-estate-seo-services",
     icon: <MdOutlineRealEstateAgent />,
     group: "Professional Services",
+  },
+
+  // Cannabis & Retail
+  {
+    id: "local-seo-for-cannabis-dispensaries",
+    title: "Local SEO for Dispensaries",
+    description:
+      "Rank for 'dispensary near me' and turn Maps searches into menu visits and orders.",
+    link: "/services/industry/local-seo-for-cannabis-dispensaries",
+    icon: <FaCannabis />,
+    group: "Cannabis & Retail",
   },
 
   // Auto & Transport
@@ -931,6 +943,17 @@ const industryLinks: NicheLink[] = [
     link: "/services/non-profit-marketing-agency",
     icon: <MdOutlineVolunteerActivism />,
     group: "Professional Services",
+  },
+
+  // Cannabis & Retail
+  {
+    id: "cannabis-marketing-agency",
+    title: "Cannabis Marketing",
+    description:
+      "Compliant SEO, menu listings, SMS and loyalty marketing for dispensaries and brands.",
+    link: "/services/cannabis-marketing-agency",
+    icon: <FaCannabis />,
+    group: "Cannabis & Retail",
   },
 
   // Auto & Transport

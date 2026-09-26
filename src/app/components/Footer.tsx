@@ -90,34 +90,6 @@ function Footer() {
                       Local SEO
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/services/seo-services">SEO Services</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/ai-seo-services">
-                      AI SEO (AEO &amp; GEO)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/local-seo-packages">
-                      Local SEO Packages
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/philadelphia/local-seo">
-                      Philadelphia SEO Company
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/white-label-services">
-                      White-Label Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/travel-and-tourism-marketing-agency">
-                      Travel &amp; Tourism Marketing
-                    </Link>
-                  </li>
                 </ul>
 
                 <ul>

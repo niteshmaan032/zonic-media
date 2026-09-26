@@ -58,15 +58,20 @@ export default function BlogListingGrid({ posts }: Props) {
   return (
     <>
       <div ref={gridRef} className="bp-listing-grid">
-        {visiblePosts.map((blog) => (
+        {visiblePosts.map((blog, index) => (
           <article key={blog.id} className="blog-card bp-listing-card">
             <div className="blog-card-image-wrap">
+              {/* The first row is above the fold: the first card is the page's
+                  LCP image (preloaded), the next two skip lazy-loading. Later
+                  cards stay lazy. Lighthouse flagged the LCP image as lazy. */}
               <Image
                 src={blog.featuredImageUrl}
                 alt={blog.blogTitle}
                 fill
                 sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 style={{ objectFit: "cover" }}
+                priority={page === 1 && index === 0}
+                loading={page === 1 && index < 3 ? "eager" : undefined}
               />
             </div>
 

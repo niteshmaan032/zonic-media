@@ -88,6 +88,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/roofing-marketing-agency`,             changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/septic-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/solar-marketing-agency`,               changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/cannabis-marketing-agency`,            changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/towing-marketing-agency`,              changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/pediatric-marketing-agency`,           changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/bathroom-remodeling-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
@@ -224,6 +225,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/industry/local-seo-for-gutter-companies`,          changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/industry/local-seo-for-tree-service-companies`,    changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/industry/local-seo-for-solar-companies`,           changeFrequency: "monthly", priority: 0.7 },
+  { url: `${BASE_URL}/services/industry/local-seo-for-cannabis-dispensaries`,     changeFrequency: "monthly", priority: 0.7 },
 
   // Legal
   { url: `${BASE_URL}/legal/privacy-policy`,   changeFrequency: "yearly", priority: 0.3 },

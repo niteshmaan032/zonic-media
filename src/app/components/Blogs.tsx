@@ -18,8 +18,21 @@ import "swiper/css";
 import { SITE_PATHS } from "@/shared/siteConfig";
 import type { PublicBlog } from "@/backend/lib/blogs";
 
+/** The card only needs these fields; the homepage maps posts down to this
+ *  shape so the full article bodies are not serialised into the page. */
+export type BlogCardData = Pick<
+  PublicBlog,
+  | "id"
+  | "slug"
+  | "blogTitle"
+  | "authorName"
+  | "publishDate"
+  | "featuredImageUrl"
+  | "excerpt"
+>;
+
 type BlogsProps = {
-  blogs: PublicBlog[];
+  blogs: BlogCardData[];
 };
 
 function BtnArrow() {

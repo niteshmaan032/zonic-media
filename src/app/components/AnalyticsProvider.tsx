@@ -3,6 +3,10 @@
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import {
+  injectScriptOnce,
+  runOnFirstInteractionOrAfter,
+} from "@/shared/deferUntilInteraction";
+import {
   OPENAI_ADS_SDK_SRC,
   openaiAdsBootstrapSnippet,
 } from "@/shared/openaiAdsPixel";
@@ -10,6 +14,13 @@ import {
 const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
 const DEFAULT_DOMAIN = "zonicllc.com";
+const GTM_DELAY_AFTER_LOAD_MS = 5000;
+
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+  }
+}
 
 function getConfiguredDomain() {
   const configuredAppUrl = process.env.NEXT_PUBLIC_APP_URL?.trim();
@@ -38,6 +49,26 @@ export default function AnalyticsProvider() {
       hostname === primaryDomain || hostname.endsWith(`.${primaryDomain}`),
     );
   }, []);
+
+  // The GTM container (which also carries the Facebook pixel and Microsoft
+  // Clarity) is the heaviest script on the site: ~340 KB transfer and most of
+  // the main-thread time PageSpeed attributes to third parties. It loads on
+  // the visitor's first interaction, or 5 s after load if they never touch
+  // the page. Every event GTM records (scroll, click, form submit) is itself
+  // an interaction, so nothing that matters is missed. The Google Ads gtag
+  // below stays on lazyOnload so click-id capture on ad landings is unchanged.
+  useEffect(() => {
+    if (!isMainDomain) return;
+
+    return runOnFirstInteractionOrAfter(() => {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+      injectScriptOnce(
+        "gtm-script",
+        `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`,
+      );
+    }, GTM_DELAY_AFTER_LOAD_MS);
+  }, [isMainDomain]);
 
   if (!isMainDomain) return null;
 
@@ -81,22 +112,8 @@ export default function AnalyticsProvider() {
         }}
       />
 
-      <Script
-        id="gtm-script"
-        strategy="lazyOnload"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;
-            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `,
-        }}
-      />
+      {/* GTM container: injected by the effect above (first interaction or
+          5 s after load). The <noscript> fallback below is unchanged. */}
 
       <noscript>
         <iframe

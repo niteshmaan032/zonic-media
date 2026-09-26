@@ -14,6 +14,7 @@ import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import {
   canonicalizeHostLinks,
   ensureImageAlts,
+  optimizeCloudinaryImages,
   linkReinstatementService,
   normalizeHeadingLevels,
   pickRelatedPosts,
@@ -165,7 +166,9 @@ export default async function BlogPostPage({ params }: Props) {
       normalizeHeadingLevels(
         linkReinstatementService(
           rewriteRetiredBlogLinks(
-            canonicalizeHostLinks(ensureImageAlts(blog.descriptionHtml, blog.blogTitle)),
+            canonicalizeHostLinks(optimizeCloudinaryImages(
+              ensureImageAlts(blog.descriptionHtml, blog.blogTitle),
+            )),
           ),
         ),
       ),

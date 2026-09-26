@@ -162,7 +162,50 @@ export type IndustryMarketingConfig = {
   costAnswer: string;
   /** Answer text for the "What does a … marketing agency do?" schema question. */
   answerSchema: string;
+
+  /**
+   * Paid-channel wording. Defaults to Google Ads / Meta; verticals whose ads
+   * Google and Meta refuse (cannabis) swap in the channels they can buy.
+   */
+  paid?: Partial<PaidChannelCopy>;
 };
+
+export type PaidChannelCopy = {
+  /** Hero pill label. */
+  pill: string;
+  /** "What it includes" fact value. */
+  includesFact: string;
+  /** Social Media card copy. */
+  socialBlurb: string;
+  /** Service card title. */
+  cardTitle: string;
+  /** Growth-plan line item. */
+  growthItem: string;
+  /** Authority-plan paid social line item. */
+  authorityItem: string;
+  /** "How long results take" fact value. */
+  speedFact: string;
+  /** Lead-form goal option. */
+  formOption: string;
+  /** Channel name in the animated visuals ("from a … click", chart legend). */
+  visualLabel: string;
+};
+
+function paidCopy(c: IndustryMarketingConfig): PaidChannelCopy {
+  return {
+    pill: "Google Ads / PPC",
+    includesFact:
+      "Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.",
+    socialBlurb: `Consistent, on-brand content and paid social that keeps your ${c.business} visible and credible where local ${c.customers} scroll.`,
+    cardTitle: "Google Ads / PPC",
+    growthItem: "Google Ads / PPC management",
+    authorityItem: "Paid social campaigns (Meta)",
+    speedFact: `Google Ads can generate qualified ${c.industry} leads within the first weeks. Local SEO and Google Map Pack ranking typically build over three to six months.`,
+    formOption: "Google Ads / PPC leads",
+    visualLabel: "Google Ads",
+    ...c.paid,
+  };
+}
 
 function stripTags(html: string) {
   return html
@@ -216,12 +259,13 @@ const MAP_VIZ_HTML = `<div class="mapviz">
 </div>`;
 
 function heroHtml(c: IndustryMarketingConfig) {
+  const paid = paidCopy(c);
   return `<span class="eyebrow">${c.eyebrow}</span>
 <h1>The <span class="hl">${c.keyword}</span> ${c.h1Tail}</h1>
 <p class="hero-lead">${c.heroLead}</p>
 <div class="hero-pills">
 <span class="pill">${CHECK_SVG} Local SEO &amp; Map Pack</span>
-<span class="pill">${CHECK_SVG} Google Ads / PPC</span>
+<span class="pill">${CHECK_SVG} ${paid.pill}</span>
 <span class="pill">${CHECK_SVG} Social Media</span>
 <span class="pill">${CHECK_SVG} Lead Generation</span>
 <span class="pill">${CHECK_SVG} Backlinks &amp; Citations</span>
@@ -237,6 +281,7 @@ function heroHtml(c: IndustryMarketingConfig) {
 }
 
 function contentHtml(c: IndustryMarketingConfig) {
+  const paid = paidCopy(c);
   const problems = c.problems
     .map(
       (p) =>
@@ -245,9 +290,9 @@ function contentHtml(c: IndustryMarketingConfig) {
     .join("\n");
 
   const facts = [
-    `<div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>`,
+    `<div class="afact"><span class="ak">What it includes</span><span class="av">${paid.includesFact}</span></div>`,
     `<div class="afact"><span class="ak">Typical cost</span><span class="av">Most ${c.industry} marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>`,
-    `<div class="afact"><span class="ak">How long results take</span><span class="av">Google Ads can generate qualified ${c.industry} leads within the first weeks. Local SEO and Google Map Pack ranking typically build over three to six months.</span></div>`,
+    `<div class="afact"><span class="ak">How long results take</span><span class="av">${paid.speedFact}</span></div>`,
     c.marketFact
       ? `<div class="afact"><span class="ak">${c.marketFact.label}</span><span class="av">${c.marketFact.value}</span></div>`
       : "",
@@ -282,8 +327,8 @@ ${problems}
 <div class="svc-grid">
 <div class="svc"><div class="ic">${SVC_ICONS.seo}</div><h3>Local SEO</h3><p>${c.localSeoBlurb}</p></div>
 <div class="svc"><div class="ic">${SVC_ICONS.map}</div><h3>Google Map Pack Ranking</h3><p>Google Business Profile optimization, geo-grid tracking, and review systems to land your business in the top-3 local results ${c.customers} actually click.</p></div>
-<div class="svc"><div class="ic">${SVC_ICONS.ads}</div><h3>Google Ads / PPC</h3><p>${c.adsBlurb}</p></div>
-<div class="svc"><div class="ic">${SVC_ICONS.social}</div><h3>Social Media Marketing</h3><p>Consistent, on-brand content and paid social that keeps your ${c.business} visible and credible where local ${c.customers} scroll.</p></div>
+<div class="svc"><div class="ic">${SVC_ICONS.ads}</div><h3>${paid.cardTitle}</h3><p>${c.adsBlurb}</p></div>
+<div class="svc"><div class="ic">${SVC_ICONS.social}</div><h3>Social Media Marketing</h3><p>${paid.socialBlurb}</p></div>
 <div class="svc"><div class="ic">${SVC_ICONS.leads}</div><h3>Lead Generation</h3><p>Conversion-built landing pages, call tracking, and lead capture so the traffic we earn turns into booked, trackable work — never shared lists.</p></div>
 <div class="svc"><div class="ic">${SVC_ICONS.links}</div><h3>Backlinks &amp; Local Citations</h3><p>Authority-building links plus accurate, consistent citations across the directories and ${c.directoriesLabel ?? `${c.industry} platforms`} Google checks to rank you.</p></div>
 <div class="svc"><div class="ic">${SVC_ICONS.web}</div><h3>Website Design &amp; Development</h3><p>Custom WordPress <a class="ima-inline-link" href="${c.webDesignHref}">website design</a> built for ${c.businesses} — fast, mobile-first, and SEO-ready from day one to turn visits into ${c.jobsNoun}. From $900.</p></div>
@@ -347,7 +392,7 @@ ${MAP_VIZ_HTML}
 <p class="pdesc">${c.growthDesc}</p>
 <ul>
 <li>${CHECK_SVG} Everything in Foundation</li>
-<li>${CHECK_SVG} Google Ads / PPC management</li>
+<li>${CHECK_SVG} ${paid.growthItem}</li>
 <li>${CHECK_SVG} Geo-grid Map Pack rank tracking</li>
 <li>${CHECK_SVG} Backlink &amp; authority building</li>
 <li>${CHECK_SVG} Conversion landing pages</li>
@@ -366,7 +411,7 @@ ${MAP_VIZ_HTML}
 <li>${CHECK_SVG} Everything in Growth</li>
 <li>${CHECK_SVG} Multi-location / wider service area</li>
 <li>${CHECK_SVG} Aggressive content &amp; link program</li>
-<li>${CHECK_SVG} Paid social campaigns (Meta)</li>
+<li>${CHECK_SVG} ${paid.authorityItem}</li>
 <li>${CHECK_SVG} Advanced conversion-rate optimization</li>
 <li>${CHECK_SVG} Email &amp; review-reactivation funnels</li>
 <li>${CHECK_SVG} Dedicated account manager</li>
@@ -523,6 +568,7 @@ export function buildIndustryMarketingPage(
   c: IndustryMarketingConfig,
 ): IndustryMarketingBundle {
   const run = ticker(c.specialists);
+  const paid = paidCopy(c);
 
   return {
     page: {
@@ -535,6 +581,7 @@ export function buildIndustryMarketingPage(
         business: c.business,
         jobsNoun: c.jobsNoun,
         mapQuery: c.mapQuery,
+        paidChannel: paid.visualLabel,
       },
       tickerHtml: `${run}\n${run}`,
       /* Headings here are assembled from lowercase config values
@@ -569,7 +616,7 @@ export function buildIndustryMarketingPage(
         serviceOptions: [
           "More calls & booked jobs",
           "Rank in Google Map Pack",
-          "Google Ads / PPC leads",
+          paid.formOption,
           "New website",
           "Everything — full marketing",
         ],

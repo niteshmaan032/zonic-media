@@ -55,6 +55,11 @@ const INDUSTRY_MARKETING_TEMPLATES: Record<
     adj: "auto repair",
     biz: "auto repair shop",
   },
+  "cannabis-marketing-agency": {
+    label: "Cannabis Marketing",
+    adj: "cannabis",
+    biz: "dispensary",
+  },
   "chiropractic-marketing-agency": {
     label: "Chiropractic Marketing",
     adj: "chiropractic",

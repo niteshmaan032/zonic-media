@@ -55,6 +55,28 @@ export function splitOnFaqMarker(html: string) {
  * one post in the Sept 2026 crawl). Give those a descriptive fallback built
  * from the post title so every image is accessible and indexable.
  */
+/**
+ * CMS article bodies embed Cloudinary images as the uploaded original (usually
+ * PNG screenshots of 100–130 KB each). Adding Cloudinary's `f_auto,q_auto`
+ * delivery transformation serves the same image as AVIF/WebP at automatic
+ * quality (PageSpeed "Improve image delivery" flagged 800 ms on posts), and
+ * `loading="lazy"` keeps body images out of the initial load — the featured
+ * image above them is the LCP and is handled by next/image. URLs that already
+ * carry a transformation segment are left untouched.
+ */
+export function optimizeCloudinaryImages(html: string) {
+  return html.replace(/<img\b([^>]*)>/gi, (tag, attrs: string) => {
+    let next = attrs.replace(
+      /\bsrc=(["'])(https:\/\/res\.cloudinary\.com\/[^"']+\/image\/upload\/)(v\d+\/[^"']+)\1/i,
+      (_m, quote: string, prefix: string, rest: string) =>
+        `src=${quote}${prefix}f_auto,q_auto/${rest}${quote}`,
+    );
+    if (!/\bloading\s*=/.test(next)) next += ' loading="lazy"';
+    if (!/\bdecoding\s*=/.test(next)) next += ' decoding="async"';
+    return `<img${next}>`;
+  });
+}
+
 export function ensureImageAlts(html: string, fallbackAlt: string) {
   const safeAlt = fallbackAlt.replace(/"/g, "&quot;");
   return html.replace(/<img\b([^>]*)>/gi, (tag, attrs: string) => {

@@ -28,6 +28,8 @@ export type IndustryVisualCopy = {
   jobsNoun: string;
   /** Query shown in the search bar, e.g. "tow truck near me". */
   mapQuery: string;
+  /** Paid channel named in the lead feed and chart legend. Defaults to "Google Ads". */
+  paidChannel?: string;
 };
 
 /** Fallback copy derived from a slug like "dental-marketing-agency" for the
@@ -208,7 +210,7 @@ export function LeadEngineVisual({ copy }: { copy: IndustryVisualCopy }) {
           </span>
           <span>
             <b>Job booked</b>
-            <small>from a Google Ads click</small>
+            <small>from a {copy.paidChannel ?? "Google Ads"} click</small>
           </span>
         </span>
       </div>
@@ -227,7 +229,7 @@ export function GrowthCurveVisual({ copy }: { copy: IndustryVisualCopy }) {
     <div
       className="imv imv-growth"
       role="img"
-      aria-label={`Growth chart: ${copy.industry} calls and leads per month climbing steadily over eight months as local SEO, Google Ads, and your Google profile compound.`}
+      aria-label={`Growth chart: ${copy.industry} calls and leads per month climbing steadily over eight months as local SEO, ${copy.paidChannel ?? "Google Ads"}, and your Google profile compound.`}
     >
       <div className="imv-head" aria-hidden="true">
         <span className="imv-chip">
@@ -261,7 +263,7 @@ export function GrowthCurveVisual({ copy }: { copy: IndustryVisualCopy }) {
         </span>
         <span>
           <i className="imv-dot--gold" />
-          Google Ads
+          {copy.paidChannel ?? "Google Ads"}
         </span>
         <span>
           <i className="imv-dot--green" />

@@ -1,3 +1,31 @@
+
+/* Weight-specific fallback metrics for Neue Haas Display Medium (500) and
+   Bold (600). next/font/local generates a single Arial-based fallback sized to
+   the first (Roman, 400) file — size-adjust 93.53%. Medium and Bold glyphs are
+   about 4% and 7% wider, so headings set in those weights re-wrapped when the
+   real font swapped in (Lighthouse: CLS 0.127 on the homepage hero, cause
+   "web font loaded"). Same family name as the generated fallback, so the
+   browser's font-weight matching picks the right metrics per weight. Values
+   computed from the woff2 files with fontkit (26 Sep 2026). */
+@font-face {
+  font-family: "neueHaas Fallback";
+  font-weight: 500;
+  src: local("Arial");
+  size-adjust: 97.17%;
+  ascent-override: 84.18%;
+  descent-override: 18.73%;
+  line-gap-override: 20.58%;
+}
+@font-face {
+  font-family: "neueHaas Fallback";
+  font-weight: 600;
+  src: local("Arial");
+  size-adjust: 100.44%;
+  ascent-override: 81.44%;
+  descent-override: 18.12%;
+  line-gap-override: 19.91%;
+}
+
 * {
   padding: 0;
   margin: 0;
