@@ -335,7 +335,12 @@ const data: PhlLandingData = {
         <Link href="/services/nyc/digital-marketing" className="phl-inline-link">
           NYC digital marketing
         </Link>{" "}
-        covering the paid side when you want the whole results page.
+        covering the paid side when you want the whole results page. Outside
+        New York, the same playbook runs as our national{" "}
+        <Link href="/services/seo-services" className="phl-inline-link">
+          local SEO services
+        </Link>
+        .
       </>,
       <>
         We work the signals Google actually rewards — proximity, relevance,

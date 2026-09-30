@@ -328,14 +328,6 @@ export const solarMarketingPage: IndustryMarketingPageData = {
         },
         {
           "@type": "Question",
-          name: "How much does solar marketing cost?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Most solar marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "How fast can a solar company get more leads?",
           acceptedAnswer: {
             "@type": "Answer",

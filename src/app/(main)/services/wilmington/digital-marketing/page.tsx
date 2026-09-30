@@ -37,10 +37,9 @@ const PAGE_PATH = "/services/wilmington/digital-marketing";
 export const metadata: Metadata = {
   title: { absolute: "Digital Marketing Agency in Wilmington, DE | Zonic Media" },
   description:
-    "Wilmington, Delaware digital marketing agency: local SEO, Google Business Profile, Google Ads and web design for Wilmington and New Castle County businesses.",
+    "Digital marketing agency in Wilmington, DE: local SEO, Google Business Profile, Google Ads and web design for Wilmington and New Castle County businesses.",
   keywords: [
     "digital marketing agency wilmington de",
-    "marketing agency in delaware",
     "seo company wilmington delaware",
     "wilmington marketing agency",
     "wilmington de web design",
@@ -661,7 +660,7 @@ const data: PhlLandingData = {
           href="/services/delaware/digital-marketing"
           className="phl-inline-link"
         >
-          Delaware digital marketing
+          digital marketing agency in Delaware
         </Link>{" "}
         page, or go channel-deep below.
       </>

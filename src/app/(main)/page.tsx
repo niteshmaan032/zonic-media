@@ -207,7 +207,7 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What kind of businesses does Zonic Media work with?",
+      name: "What kind of businesses do you work with?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We work with US local and service-based businesses: roofers, HVAC, plumbers, electricians, pest control, dental practices, real estate, cleaning companies, towing, and other local service providers. Our focus is helping these businesses get found on Google and turn nearby searches into phone calls.",

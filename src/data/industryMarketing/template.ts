@@ -527,11 +527,10 @@ function schemas(c: IndustryMarketingConfig) {
           name: `What does a ${c.industry} marketing agency do?`,
           acceptedAnswer: { "@type": "Answer", text: c.answerSchema },
         },
-        {
-          "@type": "Question",
-          name: `How much does ${c.industry} marketing cost?`,
-          acceptedAnswer: { "@type": "Answer", text: c.costAnswer },
-        },
+        // The "How much does … marketing cost?" question was removed on
+        // 29 Sep 2026: it existed only in the schema, never on the page, and
+        // Google requires FAQ markup to match visible content. costAnswer
+        // stays in the config, unused.
         ...c.faqs.map((f) => ({
           "@type": "Question",
           name: f.q,

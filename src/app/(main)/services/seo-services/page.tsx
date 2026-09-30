@@ -193,7 +193,7 @@ const faqJsonLd = {
 const data: TseoLandingData = {
   hero: {
     eyebrow: "SEO Services",
-    h1Start: "SEO Services That Turn Rankings Into",
+    h1Start: "SEO and Local SEO Services That Turn Rankings Into",
     h1Highlight: "Revenue",
     sub: (
       <>

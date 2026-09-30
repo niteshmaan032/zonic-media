@@ -301,7 +301,7 @@ const data: PhlLandingData = {
   },
   band: {
     eyebrow: "SEO + Web Design, One Team",
-    h2: "A Delaware SEO and Web Design Agency in One",
+    h2: "Website and SEO, Built as One System",
     leads: [
       <>
         The agencies at the top of Delaware&apos;s search results all treat
@@ -617,12 +617,12 @@ const data: PhlLandingData = {
     h2: "The Site is the Foundation. Here is What Builds On It.",
     lead: (
       <>
-        A launched site is step one — the{" "}
+        A launched site is step one — our{" "}
         <Link
           href="/services/delaware/digital-marketing"
           className="phl-inline-link"
         >
-          Delaware marketing engine
+          digital marketing agency in Delaware
         </Link>{" "}
         turns it into a lead source.
       </>
