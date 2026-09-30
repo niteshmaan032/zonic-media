@@ -93,6 +93,13 @@ function formatBlogDate(value: string) {
   }).format(date);
 }
 
+const SUSPENSION_TOPIC_RE =
+  /suspen|reinstat|appeal|deceptive|verif|unauthorized|lose their google|disappeared from google/i;
+
+function isSuspensionTopic(text: string) {
+  return SUSPENSION_TOPIC_RE.test(text);
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const [blog, publishedBlogs] = await Promise.all([
@@ -179,8 +186,12 @@ export default async function BlogPostPage({ params }: Props) {
   const {
     intro: introHtml,
     rest: restHtml,
-    hasSplit: hasMidCta,
+    hasSplit,
   } = splitAfterFirstSection(contentBefore);
+  // The reinstatement CTA only belongs on suspension/reinstatement posts
+  // (30 Sep 2026 — it was showing on local SEO posts such as the Zillow one).
+  // On other posts the article renders unsplit, exactly as before.
+  const hasMidCta = hasSplit && isSuspensionTopic(`${blog.blogTitle} ${slug}`);
 
   const faqJsonLd = hasFaqs
     ? {
@@ -252,9 +263,9 @@ export default async function BlogPostPage({ params }: Props) {
                   className="bp-content"
                   dangerouslySetInnerHTML={{ __html: introHtml }}
                 />
-                {hasMidCta ? (
+                {hasSplit ? (
                   <>
-                    <BlogMidArticleCta />
+                    {hasMidCta ? <BlogMidArticleCta /> : null}
                     <div
                       className="bp-content"
                       dangerouslySetInnerHTML={{ __html: restHtml }}
