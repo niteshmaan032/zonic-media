@@ -203,10 +203,8 @@ export const buildOwnerLeadEmail = (
   submittedAt: Date = new Date(),
 ) => {
   const fields = getSubmittedFields(data);
-  const pageLabel =
-    (data.pageUrl || "").replace(/^https?:\/\/(www\.)?/i, "").split(/[?#]/)[0] ||
-    data.sourcePage ||
-    "";
+  // Full URL, query string included, so ad parameters (utm_*, gclid) stay visible.
+  const pageLabel = data.pageUrl?.trim() || data.sourcePage || "";
   const formLabel = data.formType ? humanizeFormType(data.formType) : "";
   const subjectContext = data.businessName?.trim() || formLabel;
   const subject = `New Lead: ${data.fullName}${subjectContext ? ` - ${subjectContext}` : ""}`;
