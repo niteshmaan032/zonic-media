@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Script from "next/script";
+import { usePathname } from "next/navigation";
+import { isAdminPath } from "@/shared/adminPaths";
 import {
   injectScriptOnce,
   runOnFirstInteractionOrAfter,
@@ -15,6 +17,9 @@ const TRACKING_ID = "AW-17618392446";
 const GTM_ID = "GTM-TSLH7NKW";
 const DEFAULT_DOMAIN = "zonicllc.com";
 const GTM_DELAY_AFTER_LOAD_MS = 60000;
+/** The lead confirmation page: GTM/GA4 must record it before the visitor
+ *  leaves (it redirects home after 60 s), so no interaction deferral here. */
+const LEAD_CONFIRMATION_PATH = "/thank-you";
 
 declare global {
   interface Window {
@@ -40,6 +45,9 @@ const primaryDomain = getConfiguredDomain();
 const linkerDomains = [primaryDomain, `www.${primaryDomain}`];
 
 export default function AnalyticsProvider() {
+  const pathname = usePathname();
+  const onAdminRoute = isAdminPath(pathname);
+  const onLeadConfirmation = pathname === LEAD_CONFIRMATION_PATH;
   const [isMainDomain, setIsMainDomain] = useState(false);
 
   useEffect(() => {
@@ -58,19 +66,27 @@ export default function AnalyticsProvider() {
   // an interaction, so nothing that matters is missed. The Google Ads gtag
   // below stays on lazyOnload so click-id capture on ad landings is unchanged.
   useEffect(() => {
-    if (!isMainDomain) return;
+    if (!isMainDomain || onAdminRoute) return;
 
-    return runOnFirstInteractionOrAfter(() => {
+    const loadGtm = () => {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
       injectScriptOnce(
         "gtm-script",
         `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`,
       );
-    }, GTM_DELAY_AFTER_LOAD_MS);
-  }, [isMainDomain]);
+    };
 
-  if (!isMainDomain) return null;
+    if (onLeadConfirmation) {
+      loadGtm();
+      return;
+    }
+
+    return runOnFirstInteractionOrAfter(loadGtm, GTM_DELAY_AFTER_LOAD_MS);
+  }, [isMainDomain, onAdminRoute, onLeadConfirmation]);
+
+  // Owner-only routes: no marketing tags at all (see shared/adminPaths.ts).
+  if (!isMainDomain || onAdminRoute) return null;
 
   return (
     <>

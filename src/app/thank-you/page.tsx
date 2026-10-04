@@ -88,16 +88,23 @@ function Page() {
 
   return (
     <>
+      {/* Google Ads lead conversion. The Google tag itself loads lazyOnload,
+          so `gtag` is usually not defined yet when this runs. Pushing the
+          call straight onto dataLayer queues it; gtag.js replays the queue
+          when it loads. (The old `typeof gtag === 'function'` guard silently
+          skipped the conversion — fixed Oct 2026.) */}
       <Script
         id="google-ads-thank-you-conversion"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            if (typeof gtag === 'function') {
-              gtag('event', 'conversion', {
+            window.dataLayer = window.dataLayer || [];
+            (function(){
+              function gtagQueue(){ window.dataLayer.push(arguments); }
+              gtagQueue('event', 'conversion', {
                 send_to: 'AW-17618392446/lhzyCOW75LAbEP6qjdFB'
               });
-            }
+            })();
           `,
         }}
       />

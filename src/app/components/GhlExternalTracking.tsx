@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { isAdminPath } from "@/shared/adminPaths";
 import {
   injectScriptOnce,
   runOnFirstInteractionOrAfter,
@@ -20,13 +22,17 @@ const DELAY_AFTER_LOAD_MS = 60000;
  * PageSpeed on every page.
  */
 export default function GhlExternalTracking() {
+  const pathname = usePathname();
+  const onAdminRoute = isAdminPath(pathname);
+
   useEffect(() => {
+    if (onAdminRoute) return;
     return runOnFirstInteractionOrAfter(() => {
       injectScriptOnce("ghl-external-tracking", GHL_TRACKING_SRC, {
         "data-tracking-id": GHL_TRACKING_ID,
       });
     }, DELAY_AFTER_LOAD_MS);
-  }, []);
+  }, [onAdminRoute]);
 
   return null;
 }
