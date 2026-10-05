@@ -926,3 +926,24 @@ Report: artifact "Zonic Recovery Plan". No code changed.
 - `public/llms/*.md` (6 files): Google reviews link added beside Trustpilot/Clutch.
 - `public/llms-full.txt` rebuilt with `node scripts/build-llms-full.mjs` (43.9 KB).
 - Not done, by design: no aggregateRating markup (self-serving, ineligible), no page text changes. Trustpilot 4.3 explained to user as TrustScore mechanics (starts at 3.5, recency-weighted); fix = ~2 reviews/month.
+
+## 5 October 2026 — keyword cannibalization check (GSC, US, 28 days; read-only)
+
+Checked 30 top queries page-by-page. Clean (one page per query): sem agency, local seo packages, pest control/plumbing/electrician marketing agency, philadelphia seo company, real estate seo company, tree service seo, local seo for electricians, electrician seo services, web design delaware, search engine marketing agency.
+Overlaps found:
+- "local seo services": NYC 243@18.6 vs Philadelphia 111@16.9 (Delaware SEO 5, home-services 2). "local seo company": NYC 149@26.5 vs Philly 87@17.5. "local seo near me": Philly 79@18.7 vs NYC 62@6.8. "seo company near me": Philly 83@6.9 (+ NYC 1, Delaware 2). "seo agency near me": Philly 131@24.7. → generic/near-me terms split between the two city pages; Google picks by searcher location, so this is natural, not harmful. No action.
+- "delaware seo": delaware/seo 125@20.5 vs delaware/digital-marketing 45@57.8. "digital marketing agency delaware": delaware/digital-marketing 65@18.2 vs wilmington/digital-marketing 37@57.8. → mild; the right page wins each time. Watch, no action during freeze.
+- "hvac marketing consultant": hvac-marketing-agency 338@54.3 plus Illinois/Florida state pages at 75–84. → state pages leaking onto the national term; minor.
+- "pest control marketing agency": marketing-agency page 375@28.2 vs pest-control-website-design 54@3.7 (sitelink-type impressions). Fine.
+- **Reinstatement (real issue, intent-driven):** the flagship /services/gbp-reinstatement-service had only 18 US impressions in 28 days (indexed, last crawl 2 Oct). "gbp reinstatement" 105@14 and 83@17 go to two blog posts; "google business profile reinstatement" 16@54.5 and "gmb reinstatement" 5@27 go to the step-by-step post. Google treats these as informational and ranks the posts. The service page only shows for "gbp reinstatement service(s)" (8–10). Two posts overlap each other: /blog/after-gbp-reinstatement-request and /blog/what-happens-after-you-submit-a-gbp-reinstatement-request (whose title is actually "How to Write a GBP Reinstatement Appeal"; slug ≠ title).
+- Non-www oddity: GSC reports 418–554 impressions on https://zonicllc.com/services/local-seo-for-home-services ("digital marketing" 554@3.9). URL inspection: "Page with redirect", not indexed, last crawl 28 Sep, referred from www and from the typosquat zoniccmedia.com. Reporting artifact; nothing to fix.
+- Semrush competitive-positioning map question: hovering your own domain shows keywords = common (1,842 both) because overlap with yourself is everything; competitors show their own totals and the overlap with you. Normal.
+
+## 5 October 2026 — reinstatement service page: title + FAQ schema (uncommitted, user deploys, then ONE indexing request)
+
+Why: /services/gbp-reinstatement-service had 18 US impressions in 28 days. URL changed 15 Sep from /services/gmb-reinstatement-help (308 redirect in place); the old URL only ever had ~10 brand-sitelink impressions/week, so the page has never ranked. Semrush shows it in the top 100 for 1 keyword. SERP for "google business profile reinstatement" (140/mo, KD 34) includes two competitor service pages with 0–2 referring domains (gmbgorilla #4, activatedigitalmedia #10), so the page can rank. Commercial targets: "google business profile reinstatement service" 70/mo KD 16, "companies that help with google business reinstatement services" 70/mo KD 14, "google reinstatement" 50, "gmb reinstatement service" 20.
+Changes (page text unchanged, verified by diffing rendered main text):
+- Title: "GBP Reinstatement Service | GMB Reinstatement Experts" → "Google Business Profile Reinstatement Service (GBP/GMB) | Zonic Media". Meta description now leads with the full phrase + 5–7 days, 900+, free audit, No Fix No Charge.
+- FAQPage JSON-LD added for the 13 visible "Common questions" (built from the same GmbResinstFaqs array; no schema-only entries).
+- tsc clean, next build OK; rendered page has 4 schema blocks (Breadcrumb, Service, ProfessionalService, FAQPage), 13 Q&A.
+Next: user deploys → requests indexing once → 3–5 external links to this exact URL (Clutch, Semrush agency profile, YouTube descriptions, PR answers) → readings 13 & 20 Oct. After 28 Oct: merge/re-slug the overlapping posts /blog/after-gbp-reinstatement-request and /blog/what-happens-after-you-submit-a-gbp-reinstatement-request (title is "How to Write a GBP Reinstatement Appeal").

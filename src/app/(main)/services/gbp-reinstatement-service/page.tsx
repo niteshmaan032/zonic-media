@@ -136,10 +136,25 @@ const GmbResinstFaqs = [
   },
 ];
 
+// FAQPage markup for the 13 questions rendered in the "Common questions"
+// section below (visible text only — same answers, no schema-only entries).
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: GmbResinstFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export const metadata: Metadata = {
-  title: { absolute: "GBP Reinstatement Service | GMB Reinstatement Experts" },
+  title: {
+    absolute:
+      "Google Business Profile Reinstatement Service (GBP/GMB) | Zonic Media",
+  },
   description:
-    "Google Business Profile suspended? Our reinstatement experts recover suspended and disabled listings in 5 to 7 days. 900+ profiles reinstated.",
+    "Google Business Profile reinstatement service: we recover suspended and disabled GBP/GMB listings in 5 to 7 business days. 900+ profiles reinstated. Free suspension audit, No Fix, No Charge.",
   keywords: [
     "google business profile reinstatement service",
     "google business profile reinstatement",
@@ -192,6 +207,10 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
 
