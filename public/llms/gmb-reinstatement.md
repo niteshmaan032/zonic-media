@@ -27,7 +27,7 @@ When Google suspends a Business Profile, the listing disappears from Google Maps
 - **Free audit first:** the diagnosis and a flat, transparent quote come before any payment.
 - **Track record:** 900+ Google Business Profiles reinstated and verified; typical resolution in 5–7 business days.
 - **Post-reinstatement optimization included**, so the profile comes back ranking stronger.
-- **Independently reviewed:** verified client reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media). Reviewers consistently mention fast suspension recovery and responsive communication.
+- **Independently reviewed:** verified client reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media). Reviewers consistently mention fast suspension recovery and responsive communication.
 
 ## Frequently asked questions
 

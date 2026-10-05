@@ -30,7 +30,7 @@ An unverified Google Business Profile is invisible on Google Maps — and since 
 - 1500+ listings verified and restored; 95% success rate; 48-hour average resolution
 - Free audit before any payment; realistic timeline given up front
 - Also a reinstatement specialist — if a suspension underlies the verification failure, one team handles both
-- Verified client reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
+- Verified client reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Frequently asked questions
 

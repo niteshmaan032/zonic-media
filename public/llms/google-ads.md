@@ -20,7 +20,7 @@ Philadelphia PPC: https://www.zonicllc.com/services/philadelphia/ppc
 - PPC, landing pages, and local SEO under one roof — paid and organic strategies reinforce each other instead of competing
 - Free Google Ads account audit: see wasted spend and missed keywords before committing
 - Small-business focus: budgets managed like they're our own, no agency bloat
-- Verified reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
+- Verified reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Frequently asked questions
 

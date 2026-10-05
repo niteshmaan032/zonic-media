@@ -28,7 +28,7 @@ Google's AI Overviews now appear above the Local Pack for queries like "best plu
 - Strategy tailored per industry: restaurants, medical, legal, home services, retail, and more
 - Multi-location, bulk, and white-label options for agencies
 - Compliance-safe: as a reinstatement and verification specialist, Zonic Media optimizes without triggering Google policy issues
-- Verified reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
+- Verified reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Frequently asked questions
 

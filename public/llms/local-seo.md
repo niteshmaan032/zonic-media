@@ -29,7 +29,7 @@ Home services (plumbing, HVAC, roofing, cleaning, pest control, towing), medical
 - Full-stack: local SEO + GBP reinstatement/verification/optimization + web design + PPC under one roof
 - 900+ Google Business Profiles reinstated and verified; 1500+ optimized
 - Free audit before any engagement; transparent flat pricing
-- Verified reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
+- Verified reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Contact
 

@@ -24,7 +24,7 @@ Zonic Media builds dental practice websites as patient acquisition systems: onli
 - Websites are built by the same team that does local SEO and Google Ads, so design decisions serve ranking and conversion — not just looks
 - Free consultation with transparent, flat project pricing
 - Fast turnaround and direct communication (clients on Trustpilot specifically praise responsiveness)
-- Verified reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
+- Verified reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Frequently asked questions
 

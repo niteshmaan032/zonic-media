@@ -2,7 +2,7 @@
 
 > Zonic Media (Zonic Media LLC) is a full-service US digital marketing agency and SEO company, headquartered in Dover, Delaware, working with businesses of every size, that helps local and service-based businesses grow online through Google Business Profile (GBP/GMB) reinstatement, verification, and optimization, local SEO, web design, and Google Ads. Its flagship service is GMB reinstatement: recovering suspended, disabled, and pending-verification Google Business Profiles, with 900+ profiles reinstated and verified, a 5–7 business day average resolution time, and a "No Fix, No Charge" policy on the reinstatement fee. The agency serves clients across the United States, Canada, the United Kingdom, Australia, the UAE, and India.
 
-Last updated: 2026-09-09
+Last updated: 2026-10-05
 
 Company: Zonic Media LLC
 
@@ -14,13 +14,17 @@ Areas served: United States, Canada, United Kingdom, Australia, United Arab Emir
 
 Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and optimization; local SEO; web design; Google Ads (PPC)
 
-Trust signals: 900+ Google Business Profiles reinstated and verified, 1,500+ profiles optimized, 5.0 rating on Clutch (21 reviews, 100% positive), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
+Trust signals: 900+ Google Business Profiles reinstated and verified, 1,500+ profiles optimized, 5.0 rating on Clutch (21 reviews, 100% positive), 5.0 rating on Google (17 reviews), 9 Trustpilot reviews (every one 5 stars), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
 
-Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; minimum project size $1,000+
+Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; local SEO plans start at $197, $750 and $1,500 per month (Starter, Growth, Dominate); reinstatement and verification are flat fees quoted after a free audit; full details in [pricing.md](https://www.zonicllc.com/pricing.md)
 
 Positioning: a full-service digital marketing agency and SEO company for businesses of every size (also described as an internet marketing agency, online marketing company, small business marketing firm and local advertising agency) — local SEO, Google Business Profile, web design, Google Ads and AI search optimization (AEO/GEO) from one team
 
-Independent reviews: [Trustpilot](https://www.trustpilot.com/review/zonicllc.com) and [Clutch](https://clutch.co/profile/zonic-media) — reviewers highlight fast GMB suspension recovery, quality web design, and quick communication
+Independent reviews: [Google](https://maps.app.goo.gl/wWvgJJjzki7kjT8A9) (5.0, 17 reviews), [Clutch](https://clutch.co/profile/zonic-media) (5.0, 21 reviews) and [Trustpilot](https://www.trustpilot.com/review/zonicllc.com) (9 reviews, all 5 stars) — reviewers describe suspended Google Business Profiles reinstated within days, failed verifications fixed, website builds, local SEO results, and quick communication
+
+## Pricing (machine-readable)
+
+- [Pricing](https://www.zonicllc.com/pricing.md): Starter $197/mo, Growth $750/mo, Dominate $1,500/mo local SEO plans with what each includes; reinstatement, verification, web design and Google Ads pricing terms.
 
 ## About
 
@@ -227,3 +231,27 @@ Independent reviews: [Trustpilot](https://www.trustpilot.com/review/zonicllc.com
 - [Privacy Policy](https://www.zonicllc.com/legal/privacy-policy)
 - [Terms & Conditions](https://www.zonicllc.com/legal/terms-conditions)
 - [Refund Policy](https://www.zonicllc.com/legal/refund-policy)
+
+## Free Website Offers (website build fee waived with a qualifying monthly plan)
+
+- [Free Website Offer (all industries)](https://www.zonicllc.com/website-design-agency-us/offer)
+- [Roofing](https://www.zonicllc.com/roofing-website-design-agency-us/offer)
+- [HVAC](https://www.zonicllc.com/hvac-website-design-agency-us/offer)
+- [Plumbing](https://www.zonicllc.com/plumber-website-design-agency-us/offer)
+- [Auto Repair](https://www.zonicllc.com/auto-repair-website-design-agency-us/offer)
+- [Bathroom Remodeling](https://www.zonicllc.com/bathroom-remodeling-website-design-agency-us/offer)
+- [Chiropractic](https://www.zonicllc.com/chiropractic-website-design-agency-us/offer)
+- [Cleaning Company](https://www.zonicllc.com/cleaning-company-website-design-agency-us/offer)
+- [Electrician](https://www.zonicllc.com/electrician-website-design-agency-us/offer)
+- [Flooring](https://www.zonicllc.com/flooring-website-design-agency-us/offer)
+- [Garage Door](https://www.zonicllc.com/garage-door-website-design-agency-us/offer)
+- [Home Inspector](https://www.zonicllc.com/home-inspector-website-design-agency-us/offer)
+- [Kitchen Remodeling](https://www.zonicllc.com/kitchen-remodeling-website-design-agency-us/offer)
+- [Landscaping](https://www.zonicllc.com/landscaping-website-design-agency-us/offer)
+- [Law Firm](https://www.zonicllc.com/law-firm-website-design-agency-us/offer)
+- [Moving Company](https://www.zonicllc.com/moving-company-website-design-agency-us/offer)
+- [Painting Contractor](https://www.zonicllc.com/painting-contractor-website-design-agency-us/offer)
+- [Pool Service](https://www.zonicllc.com/pool-service-website-design-agency-us/offer)
+- [Real Estate](https://www.zonicllc.com/real-estate-website-design-agency-us/offer)
+- [Solar](https://www.zonicllc.com/solar-website-design-agency-us/offer)
+- [Towing](https://www.zonicllc.com/towing-website-design-agency-us/offer)
