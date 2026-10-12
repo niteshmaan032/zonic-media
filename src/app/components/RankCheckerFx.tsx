@@ -168,3 +168,39 @@ export function KeywordScanDemo({ patterns }: { patterns: KeywordPattern[] }) {
     </div>
   );
 }
+
+/* ------------------------------------------------------------ lead-gen widget */
+
+/** Mounts the Local Marketing Reports (BrightLocal) lead-gen widget.
+    Its loader finds itself through `document.currentScript` and draws the
+    widget iframe right before itself, so the <script> has to be inserted
+    into this container from code — a <script> tag in JSX never runs. */
+export function LeadGenWidget({ src, widgetId }: { src: string; widgetId: string }) {
+  const hostRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const host = hostRef.current;
+    if (!host) return;
+
+    // Deferred a tick so React's dev double-mount cancels the first insert
+    // instead of leaving an orphaned loader behind.
+    const timer = window.setTimeout(() => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = src;
+      script.setAttribute("data-widget-id", widgetId);
+      host.appendChild(script);
+    }, 0);
+
+    return () => {
+      window.clearTimeout(timer);
+      host.replaceChildren();
+      // The business-name dropdown is attached to <body>; drop it with us.
+      document
+        .querySelectorAll("iframe.PlacesListIframe")
+        .forEach((frame) => frame.remove());
+    };
+  }, [src, widgetId]);
+
+  return <div ref={hostRef} className="grc-leadgen" />;
+}

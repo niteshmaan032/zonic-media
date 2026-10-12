@@ -31,6 +31,7 @@ import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import {
   AnimOnView,
   KeywordScanDemo,
+  LeadGenWidget,
   type KeywordPattern,
 } from "@/app/components/RankCheckerFx";
 import { SITE_CONTACT } from "@/shared/siteConfig";
@@ -50,12 +51,13 @@ import { SITE_URL, buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
    The ranking-factors block here is the short version from the design file;
    link UP to the hub for the full treatment.
 
-   THE SCAN is a myservice.report widget. Its embed key only accepts the
-   parent origin https://www.zonicllc.com (checked against
-   /embed-keys/validate-by-embed-id), so it prints "This embed is
-   unavailable" on localhost, Vercel previews and the bare apex domain.
-   Widget defaults: 7×7 grid, 10 km radius; it asks for a Google Maps URL,
-   a keyword and an email address. Copy below describes exactly that.
+   THE WIDGET (since 12 Oct 2026) is the Local Marketing Reports
+   (BrightLocal) lead-gen widget c6bf81ed…: the visitor types a business
+   name, picks it from Google's suggestions and requests a free local SEO
+   report (search rankings, listings, reviews, on-site SEO, social). It is
+   mounted by LeadGenWidget. Copy about the widget must describe that —
+   the geo-grid sections below are general education, not the widget's
+   output. The old myservice.report iframe is commented out in the hero.
 
    DESIGN: colours and type come from the hero of the supplied design file
    (zonic-google-business-rank-checker.html): Manrope 800 headings, Inter
@@ -69,7 +71,7 @@ const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 const TITLE = "Google Maps Rank Checker | Free Google Business Rank Tool";
 const DESCRIPTION =
-  "Free Google Maps rank checker. See where your Google Business Profile ranks in the Map Pack across your whole service area. Run your free scan now.";
+  "Free Google Business rank checker and local SEO report. See how your Google Business Profile ranks, plus your listings, reviews and on-site SEO.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
@@ -92,7 +94,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Google Business Rank Checker: Check Your Google Maps Ranking",
     description:
-      "Run a free scan and see where your business shows up on Google Maps across your whole service area, plus how to read the results.",
+      "Get a free local SEO report on your Google Business Profile, from search rankings to listings and reviews, plus how to read your Google Maps ranking.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -108,7 +110,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Google Business Rank Checker: Check Your Google Maps Ranking",
     description:
-      "You might be #1 at your front door and nowhere five miles out. Run a free scan of your service area.",
+      "You might be #1 at your front door and nowhere five miles out. Get a free local SEO report and see where you stand.",
   },
 };
 
@@ -439,15 +441,15 @@ const levers = ["Category", "Service pages", "Reviews", "Local links"];
 const faqs = [
   {
     q: "Is this Google Maps rank checker free?",
-    a: "Yes. There’s no charge and no contract. The scan asks for your Google Maps link, one keyword and an email address, then shows your results.",
+    a: "Yes. There’s no charge and no contract. Type your business name into the tool at the top of this page, pick your listing from the suggestions and request your free report.",
   },
   {
-    q: "How many points does the scan check?",
-    a: "By default it searches from 49 points on a 7 × 7 grid spread across 10 km around your business, so you see your rank in every direction rather than at one spot.",
+    q: "What does the free report cover?",
+    a: "Your local search rankings, plus how your business shows up across local listings, reviews, on-site SEO and social media, so you can see where you stand before deciding what to fix.",
   },
   {
     q: "How do I check my Google Maps ranking?",
-    a: "Copy your business’s link from Google Maps, paste it into the scan at the top of this page with the keyword a customer would type (the service, not your business name), and run it. Read where the green stops first, then the averages, and check again with the same keyword in about 30 days.",
+    a: "Start with the free report at the top of this page: type your business name, choose your listing and request it. To see how your ranking changes across your area, check the keywords a customer would type (the service, not your business name) from several points around you, read where the green stops first, then the averages, and check again with the same keywords in about 30 days.",
   },
   {
     q: "Why does my ranking look different when I search on my own phone?",
@@ -512,11 +514,11 @@ const jsonLd = [
     alternateName: [
       "Google Maps Rank Checker",
       "GMB Rank Checker",
-      "Local Search Quick Scan",
+      "Free Local SEO Report",
     ],
     url: PAGE_URL,
     description:
-      "A free online tool that checks where a Google Business Profile ranks in Google Maps and the local Map Pack from 49 points on a 7 × 7 grid across a business's service area.",
+      "A free online tool that produces a local SEO report for a Google Business Profile, covering local search rankings, listings, reviews, on-site SEO and social media.",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Any",
     browserRequirements: "Requires JavaScript and a modern web browser",
@@ -747,6 +749,9 @@ export default function GoogleMapsRankCheckerPage() {
                 </div>
               </div>
 
+              {/* Previous widget (myservice.report "Local Search Quick Scan"),
+                  replaced 12 Oct 2026 — its scans failed on the provider's
+                  side ("Scan failed. Please try again."). Kept for reference:
               <LenisIframeGuard className="grc-hx__frame">
                 <iframe
                   src="https://scan.myservice.report/?widgetId=70aa6aa5a37de1e22f7656f2"
@@ -755,6 +760,13 @@ export default function GoogleMapsRankCheckerPage() {
                   style={{ border: "none" }}
                   title="Local Search Quick Scan"
                   referrerPolicy="strict-origin-when-cross-origin"
+                />
+              </LenisIframeGuard>
+              */}
+              <LenisIframeGuard className="grc-hx__frame">
+                <LeadGenWidget
+                  src="https://www.local-marketing-reports.com/m/assets-v2/lead-gen/js/external/widget-builder.js"
+                  widgetId="c6bf81ed34cc47ccb0f432b81e9e4aea8bc7dd0a"
                 />
               </LenisIframeGuard>
             </div>
@@ -960,10 +972,10 @@ export default function GoogleMapsRankCheckerPage() {
               center
             >
               <p className="grc-copy">
-                Instead of one search, the checker lays a 7 × 7 grid over your
-                service area and runs your keyword from every point, the way a
-                customer standing there would. Each dot is your position from
-                that spot.
+                Instead of one search, a geo-grid rank check lays a 7 × 7 grid
+                over your service area and runs your keyword from every point,
+                the way a customer standing there would. Each dot is your
+                position from that spot.
               </p>
             </SectionHead>
 
@@ -1082,7 +1094,7 @@ export default function GoogleMapsRankCheckerPage() {
             <SectionHead
               kicker="Choosing keywords"
               id="grc-kw-h"
-              title="Which Keywords to Run Through the Checker"
+              title="Which Keywords to Check Your Ranking For"
               center
             >
               <p className="grc-copy">
@@ -1475,8 +1487,8 @@ export default function GoogleMapsRankCheckerPage() {
                   <Link href="/services/local-seo-for-small-business">
                     local SEO for small business
                   </Link>{" "}
-                  clients and how we report progress, which is why we put the
-                  same scan on this page for free. Trades can see how that work
+                  clients and how we report progress, which is why we put a free
+                  local SEO report on this page. Trades can see how that work
                   runs on our{" "}
                   <Link href="/services/local-seo-for-home-services">
                     local SEO for home services
@@ -1616,13 +1628,13 @@ export default function GoogleMapsRankCheckerPage() {
                 Found Where Your Green Stops? We Can Move It.
               </h2>
               <p className="grc-copy">
-                Send us your scan and we’ll tell you, on a free call, which of
+                Send us your report and we’ll tell you, on a free call, which of
                 the patterns you’re in and which levers we’d pull first, in
                 order.
               </p>
               <ul className="grc-final__list">
                 <li>
-                  <FiCheck aria-hidden="true" /> A walk-through of your scan,
+                  <FiCheck aria-hidden="true" /> A walk-through of your report,
                   point by point
                 </li>
                 <li>
@@ -1640,7 +1652,7 @@ export default function GoogleMapsRankCheckerPage() {
               <ol className="grc-final__steps">
                 <li>
                   <b>1</b>
-                  <span>Run the free scan above</span>
+                  <span>Get the free report above</span>
                 </li>
                 <li>
                   <b>2</b>

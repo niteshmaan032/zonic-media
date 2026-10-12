@@ -610,9 +610,13 @@
 .grc .grc-hx__frame iframe {
   display: block;
   width: 100%;
-  height: 640px;
   border: none;
   background: #fff;
+}
+/* Lead-gen widget host. The widget sets its own iframe height once it
+   loads; the min-height only stops the hero collapsing while it does. */
+.grc .grc-leadgen {
+  min-height: 420px;
 }
 /* --------------------------------------------- stat bar under the hero
    From the design file; side spacing follows the navbar insets.       */
@@ -696,7 +700,7 @@
   .grc .grc-hx__traffic { gap: 4px; }
   .grc .grc-hx__traffic i { width: 8px; height: 8px; }
   .grc .grc-hx__live { padding: 6px 8px; font-size: 9px; }
-  .grc .grc-hx__frame iframe { height: 600px; }
+  .grc .grc-leadgen { min-height: 380px; }
   .grc .grc-stats__row { grid-template-columns: minmax(0, 1fr); }
   .grc .grc-stats__row li {
     min-height: auto;
@@ -706,9 +710,7 @@
   }
   .grc .grc-stats__row li:last-child { border-bottom: 0; }
 }
-@media (max-width: 430px) {
-  .grc .grc-hx__frame iframe { height: 580px; }
-}
+
 
 /* ============================================== DISTANCE · Maps demo */
 .grc .grc-dist {
