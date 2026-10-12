@@ -28,8 +28,8 @@ import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
    Always link UP to /local-seo-google-business-optimization using the head term as anchor
    text so it consolidates on the hub instead of splitting across two URLs.
 
-   TYPE + CHROME come from gbpLanding.css (.gbp-lp) — shared with the other two
-   GBP landing pages. Don't reintroduce local font/heading rules here.
+   CHROME + base type come from gbpLanding.css (.gbp-lp); localOpt.css re-themes
+   it to the /services/gbp-reinstatement-service palette and type scale.
 --------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
@@ -461,8 +461,8 @@ function Page() {
         {/* ========================= LEFT: CONTENT ========================= */}
         <div className="lp-col">
           {/* ------------------------------ HERO ------------------------------ */}
-          <section className="lp-panel-dark">
-            <span className="lp-eyebrow on-dark">Local SEO services</span>
+          <section className="lo-hero">
+            <span className="lp-eyebrow">Local SEO services</span>
 
             <h1 className="lp-h1">
               Google Business Profile Optimization Service:{" "}
@@ -488,7 +488,7 @@ function Page() {
                 Get a free grid scan
                 <ArrowIcon />
               </HashScrollLink>
-              <a href={SITE_CONTACT.phoneHref} className="lp-btn lp-btn-on-dark">
+              <a href={SITE_CONTACT.phoneHref} className="lp-btn lp-btn-ghost">
                 <PhoneIcon />
                 {SITE_CONTACT.phoneDisplay}
               </a>

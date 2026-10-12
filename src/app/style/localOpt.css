@@ -1,26 +1,418 @@
 /* =====================================================================
-   /local-seo-google-business-optimization — signature components only.
+   /local-seo-google-business-optimization
 
-   Chrome, type scale, panels, pricing, FAQ, form and footer all come from
-   gbpLanding.css (.gbp-lp). This file holds only what is unique to the
-   "Map Pack ranking" page:
+   Two layers, both scoped under .gbp-lp.lo-page (one class heavier than
+   gbpLanding.css, so they win regardless of stylesheet order):
 
-     · the geo-grid  (a 5×5 rank map — the page's signature)
-     · the ranking-factor weight bars
-     · the lever list
+     1. THEME — re-skins the gbpLanding.css chrome with the palette and type
+        scale of /services/gbp-reinstatement-service (gmb-reinstatement.css):
+        electric blue #2567e8 for everything interactive, brand gold #fdc115
+        for highlights and dark-band CTAs, deep navy ink, headings at weight
+        500 only, and the blue-gradient + dot-grid treatment for dark bands.
+        The light hero sits on the same top-of-page blue wash.
+     2. SIGNATURE components unique to this page: the geo-grid, the
+        ranking-factor weight bars and the lever list.
 
-   Scoped under .lo-page. Previous dark theme kept in localOpt.css.bak
+   gbpLanding.css itself is untouched.
    ===================================================================== */
 
-/* ------------------------------------------- SIGNATURE: the geo-grid ---- */
+/* =============================================================== THEME */
+
+/* ---------------------------------------------------------------- tokens */
+.gbp-lp.lo-page {
+  /* reinstatement palette */
+  --ink: #0c1526;
+  --deep: #16233d;
+  --blue: #2567e8;
+  --blue-dark: #1c4fc4;
+  --blue-soft: #eaf0fe;
+  --gold: #fdc115;
+  --gold-dark: #d9a303;
+  --gold-soft: #fff6db;
+  --text: #47546e;
+  --muted: #7a869e;
+  --line: #e3e9f7;
+  --bg-soft: #f5f8fd;
+  --red: #ea4334;
+  --red-soft: #fdecea;
+  --green: #34a852;
+  --green-soft: #e7f6ec;
+  --on-dark: #d4e1fb;
+  --on-dark-2: #a9bce0;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --brand-band: radial-gradient(50% 80% at 85% 10%, rgba(253, 193, 21, 0.16) 0%, transparent 60%),
+    radial-gradient(40% 70% at 10% 90%, rgba(37, 103, 232, 0.35) 0%, transparent 65%),
+    linear-gradient(150deg, #123a8f 0%, var(--blue-dark) 45%, var(--blue) 100%);
+
+  /* gbpLanding.css foundation tokens, re-pointed at the palette above so
+     every shared rule (nav, buttons, pricing, FAQ, form, footer, sticky bar)
+     picks it up without being restated here. */
+  --orange: var(--blue);
+  --orange-dark: var(--blue-dark);
+  --orange-soft: var(--blue-soft);
+  --yellow: var(--gold);
+  --navy: var(--ink);
+  --navy-2: var(--deep);
+  --text-soft: var(--muted);
+  --red-dark: #cf3b2d;
+  --green-dark: #1e7a3f;
+
+  /* blue wash behind the top of the page, as on the reinstatement page */
+  background:
+    linear-gradient(
+        180deg,
+        rgba(37, 103, 232, 0.1) 0%,
+        rgba(37, 103, 232, 0.045) 46%,
+        rgba(37, 103, 232, 0) 88%
+      )
+      top / 100% 900px no-repeat,
+    #fff;
+}
+
+/* ------------------------------------------------------------ typography */
+.gbp-lp.lo-page .lp-h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+}
+.gbp-lp.lo-page .lp-h2 {
+  font-size: clamp(24px, 3.2vw, 34px);
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+}
+.gbp-lp.lo-page .lp-h3 {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 9px;
+}
+.gbp-lp.lo-page .lp-h4 {
+  font-size: 16.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 7px;
+}
+.gbp-lp.lo-page .lp-lead {
+  font-size: 16.5px;
+  line-height: 1.72;
+}
+.gbp-lp.lo-page .lp-card .lp-body,
+.gbp-lp.lo-page .lp-card-soft .lp-body {
+  font-size: 14px;
+}
+
+/* eyebrow above the heading, heading spaced like .sec-head */
+.gbp-lp.lo-page .lp-head {
+  margin-bottom: 26px;
+}
+.gbp-lp.lo-page .lp-head .lp-eyebrow {
+  margin-bottom: 0;
+}
+.gbp-lp.lo-page .lp-head .lp-h2 {
+  margin: 14px 0 12px;
+}
+
+.gbp-lp.lo-page .lp-eyebrow::before {
+  background: var(--gold);
+}
+.gbp-lp.lo-page .lp-eyebrow.on-dark {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffe9a3;
+}
+
+.gbp-lp.lo-page .lp-accent {
+  color: var(--blue);
+}
+
+.gbp-lp.lo-page .lp-link {
+  color: var(--blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 103, 232, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+.gbp-lp.lo-page .lp-link:hover {
+  text-decoration-color: var(--blue);
+}
+
+/* --------------------------------------------------------------- buttons */
+.gbp-lp.lo-page .lp-btn {
+  gap: 9px;
+  padding: 14px 26px;
+}
+.gbp-lp.lo-page .lp-btn:hover {
+  transform: translateY(-2px);
+}
+.gbp-lp.lo-page .lp-btn-ghost {
+  border: 1.5px solid var(--line);
+}
+.gbp-lp.lo-page .lp-btn-ghost:hover {
+  background: transparent;
+  border-color: var(--blue);
+  color: var(--blue-dark);
+}
+/* on the blue bands the primary CTA goes gold */
+.gbp-lp.lo-page .lp-final .lp-btn:not(.lp-btn-white) {
+  background: var(--gold);
+  color: var(--ink);
+}
+.gbp-lp.lo-page .lp-final .lp-btn:not(.lp-btn-white):hover {
+  filter: brightness(1.05);
+}
+
+/* ---------------------------------------------------------------- ticker */
+.gbp-lp.lo-page .lp-ticker {
+  background: var(--brand-band);
+  color: var(--on-dark);
+  border-bottom: 0;
+}
+.gbp-lp.lo-page .lp-ticker-track span::before {
+  background: var(--gold);
+}
+
+/* ---------------------------------------------------------- alert strip */
+.gbp-lp.lo-page .lp-alert {
+  background: var(--blue-soft);
+  border-color: rgba(37, 103, 232, 0.18);
+  color: var(--deep);
+}
+.gbp-lp.lo-page .lp-alert svg {
+  color: var(--blue);
+}
+.gbp-lp.lo-page .lp-alert strong {
+  color: var(--ink);
+}
+.gbp-lp.lo-page .lp-alert-cta {
+  color: var(--blue-dark);
+}
+
+/* ------------------------------------------------- dark band → blue band */
+.gbp-lp.lo-page .lp-panel-dark,
+.gbp-lp.lo-page .lp-final {
+  background: var(--brand-band);
+  color: var(--on-dark);
+}
+.gbp-lp.lo-page .lp-panel-dark::before,
+.gbp-lp.lo-page .lp-final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px) 0 0 / 26px 26px;
+  -webkit-mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  pointer-events: none;
+}
+.gbp-lp.lo-page .lp-panel-dark .lp-lead,
+.gbp-lp.lo-page .lp-panel-dark .lp-body,
+.gbp-lp.lo-page .lp-final-inner .lp-lead {
+  color: var(--on-dark);
+}
+.gbp-lp.lo-page .lp-panel-dark .lp-link {
+  color: #ffe9a3;
+  text-decoration-color: rgba(255, 233, 163, 0.45);
+}
+.gbp-lp.lo-page .lp-panel-dark .lp-link:hover {
+  text-decoration-color: #ffe9a3;
+}
+
+/* final CTA band type */
+.gbp-lp.lo-page .lp-final {
+  padding: 84px 24px;
+}
+.gbp-lp.lo-page .lp-final-inner .lp-h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
+  margin: 14px 0 16px;
+}
+.gbp-lp.lo-page .lp-final-inner .lp-lead {
+  margin-bottom: 30px;
+}
+.gbp-lp.lo-page .lp-final-sub {
+  margin-top: 24px;
+  font-size: 13.5px;
+  color: #c3d4f8;
+}
+.gbp-lp.lo-page .lp-final-sub svg {
+  color: var(--gold);
+}
+
+/* ------------------------------------------------------------ stats band */
+.gbp-lp.lo-page .lp-stat-num {
+  font-size: clamp(24px, 3.2vw, 36px);
+}
+.gbp-lp.lo-page .lp-stat-cap {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-top: 8px;
+}
+
+/* ----------------------------------------------------------------- cards */
+.gbp-lp.lo-page .lp-card {
+  padding: 24px;
+}
+.gbp-lp.lo-page .lp-card:hover {
+  transform: translateY(-4px);
+}
+.gbp-lp.lo-page .lp-ic {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+}
+.gbp-lp.lo-page .lp-ic-red {
+  background: var(--red-soft);
+  color: var(--red-dark);
+}
+
+/* --------------------------------------------------------------- pricing */
+.gbp-lp.lo-page .lp-pc.is-featured {
+  border: 1.5px solid var(--blue);
+  box-shadow: 0 0 0 1px rgba(37, 103, 232, 0.18), 0 10px 30px -16px rgba(37, 103, 232, 0.35);
+}
+.gbp-lp.lo-page .lp-pc-badge {
+  box-shadow: 0 4px 12px -2px rgba(37, 103, 232, 0.4);
+}
+.gbp-lp.lo-page .lp-pc-btn:hover {
+  border-color: var(--blue);
+}
+.gbp-lp.lo-page .lp-pc-feats li::before {
+  background: var(--green-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e7a3f' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")
+    center / 10px 10px no-repeat;
+}
+
+/* ------------------------------------------------------------------- faq */
+.gbp-lp.lo-page .lp-faq-q {
+  padding: 20px 22px;
+  font-size: 16px;
+}
+.gbp-lp.lo-page .lp-faq-a {
+  padding: 0 22px 20px;
+}
+
+/* ------------------------------------------------------------- lead form */
+.gbp-lp.lo-page .lp-form {
+  border: 1.5px solid var(--blue);
+  padding: 30px 28px;
+  box-shadow: 0 0 0 1px rgba(37, 103, 232, 0.18), 0 10px 30px -16px rgba(37, 103, 232, 0.35);
+}
+.gbp-lp.lo-page .lp-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.gbp-lp.lo-page .lp-form-stamp {
+  top: -14px;
+  right: 22px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px -2px rgba(37, 103, 232, 0.4);
+}
+.gbp-lp.lo-page .lp-form .lp-form-title {
+  line-height: 1.28;
+}
+.gbp-lp.lo-page .lp-form-sub {
+  font-size: 13.5px;
+  margin-bottom: 18px;
+}
+.gbp-lp.lo-page .lp-fg label {
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.gbp-lp.lo-page .lp-form input:not([type="checkbox"]),
+.gbp-lp.lo-page .lp-form select,
+.gbp-lp.lo-page .lp-form textarea {
+  border-width: 1.5px;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.gbp-lp.lo-page .lp-form input:focus,
+.gbp-lp.lo-page .lp-form select:focus,
+.gbp-lp.lo-page .lp-form textarea:focus {
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.1);
+}
+.gbp-lp.lo-page .lp-form-submit {
+  border-radius: 10px;
+}
+.gbp-lp.lo-page .lp-ft-i {
+  background: var(--green-soft);
+  border-color: rgba(52, 168, 82, 0.28);
+}
+
+/* ---------------------------------------------------------- a11y focus */
+.gbp-lp.lo-page a:focus-visible,
+.gbp-lp.lo-page button:focus-visible,
+.gbp-lp.lo-page summary:focus-visible,
+.gbp-lp.lo-page input:focus-visible,
+.gbp-lp.lo-page select:focus-visible,
+.gbp-lp.lo-page textarea:focus-visible {
+  outline-color: rgba(37, 103, 232, 0.45);
+}
+
+/* ================================================================ HERO */
+/* No card of its own — like the reinstatement hero, the copy sits straight
+   on the page's blue wash. */
+.gbp-lp.lo-page .lo-hero {
+  position: relative;
+  padding: 8px 36px 6px;
+}
+/* the hero eyebrow is the reinstatement page's status pill */
+.gbp-lp.lo-page .lo-hero .lp-eyebrow {
+  gap: 9px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  color: var(--deep);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+.gbp-lp.lo-page .lo-hero .lp-eyebrow::before {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  animation: lo-ping 2s infinite;
+}
+@keyframes lo-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 168, 82, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(52, 168, 82, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 168, 82, 0);
+  }
+}
+.gbp-lp.lo-page .lo-hero .lp-lead {
+  font-size: clamp(16px, 1.5vw, 17.5px);
+}
+
+/* ======================================================= SIGNATURE ===== */
+
+/* ------------------------------------------------------------- geo-grid */
 .lo-page .lo-geo {
   margin-top: 30px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
   gap: 26px;
   align-items: center;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #fff;
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 26px;
 }
@@ -36,35 +428,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--mono);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   border: 1px solid transparent;
 }
 .lo-page .lo-cell.is-top {
-  background: rgba(22, 163, 74, 0.22);
-  border-color: rgba(22, 163, 74, 0.5);
-  color: #6ee7a8;
+  background: var(--green-soft);
+  border-color: rgba(52, 168, 82, 0.32);
+  color: #1e7a3f;
 }
 .lo-page .lo-cell.is-mid {
-  background: rgba(245, 197, 24, 0.16);
-  border-color: rgba(245, 197, 24, 0.34);
-  color: #fcd34d;
+  background: var(--gold-soft);
+  border-color: rgba(253, 193, 21, 0.5);
+  color: #9a7300;
 }
 .lo-page .lo-cell.is-low {
-  background: rgba(239, 68, 68, 0.14);
-  border-color: rgba(239, 68, 68, 0.3);
-  color: #fca5a5;
+  background: var(--red-soft);
+  border-color: rgba(234, 67, 52, 0.26);
+  color: #b3261e;
 }
 .lo-page .lo-cell.is-pin {
-  background: #fff;
-  border-color: #fff;
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 4px 12px -2px rgba(37, 103, 232, 0.4);
 }
 .lo-page .lo-cell.is-pin svg {
   width: 18px;
   height: 18px;
-  color: var(--orange);
+  color: #fff;
 }
 .lo-page .lo-geo-side {
   display: flex;
@@ -72,11 +464,11 @@
   gap: 14px;
 }
 .lo-page .lo-geo-title {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #94a3b8;
+  color: var(--blue-dark);
 }
 .lo-page .lo-geo-legend {
   display: grid;
@@ -87,7 +479,7 @@
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: #cbd5e1;
+  color: var(--deep);
 }
 .lo-page .lo-geo-legend i {
   width: 13px;
@@ -96,19 +488,19 @@
   flex-shrink: 0;
 }
 .lo-page .lo-geo-legend .k-top {
-  background: rgba(22, 163, 74, 0.5);
+  background: var(--green);
 }
 .lo-page .lo-geo-legend .k-mid {
-  background: rgba(245, 197, 24, 0.45);
+  background: var(--gold);
 }
 .lo-page .lo-geo-legend .k-low {
-  background: rgba(239, 68, 68, 0.45);
+  background: var(--red);
 }
 .lo-page .lo-geo-note {
   font-size: 13.5px;
   line-height: 1.65;
-  color: #94a3b8;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-top: 1px solid var(--line);
   padding-top: 14px;
 }
 
@@ -121,7 +513,7 @@
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 26px;
+  padding: 24px;
 }
 .lo-page .lo-factor-top {
   display: flex;
@@ -131,40 +523,40 @@
   margin-bottom: 12px;
 }
 .lo-page .lo-factor-lever {
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 .lo-page .lo-factor.is-fixed .lo-factor-lever {
-  color: var(--text-soft);
+  color: var(--muted);
 }
 .lo-page .lo-factor.is-partial .lo-factor-lever {
-  color: #b45309;
+  color: var(--gold-dark);
 }
 .lo-page .lo-factor.is-open .lo-factor-lever {
-  color: var(--green-dark);
+  color: #1e7a3f;
 }
 .lo-page .lo-factor-bar {
   height: 8px;
-  border-radius: 100px;
-  background: var(--line-soft);
+  border-radius: 999px;
+  background: var(--bg-soft);
   overflow: hidden;
   margin-bottom: 16px;
 }
 .lo-page .lo-factor-fill {
   height: 100%;
-  border-radius: 100px;
+  border-radius: 999px;
 }
 .lo-page .lo-factor.is-fixed .lo-factor-fill {
-  background: #cbd5e1;
+  background: #d2d9e6;
 }
 .lo-page .lo-factor.is-partial .lo-factor-fill {
-  background: var(--yellow);
+  background: linear-gradient(90deg, var(--blue), var(--gold));
 }
 .lo-page .lo-factor.is-open .lo-factor-fill {
-  background: var(--green);
+  background: linear-gradient(90deg, var(--green), #6fd08c);
 }
 
 /* ---------------------------------------------------------- lever list -- */
@@ -179,7 +571,7 @@
   align-items: start;
   background: var(--bg-soft);
   border: 1px solid var(--line);
-  border-left: 3px solid var(--orange);
+  border-left: 3px solid var(--blue);
   border-radius: var(--radius);
   padding: 20px 22px;
 }
@@ -187,14 +579,14 @@
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: var(--orange-soft);
-  color: var(--orange-dark);
+  background: var(--blue-soft);
+  color: var(--blue-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--mono);
   font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 /* ------------------------------------------------------------- reviews --- */
@@ -212,7 +604,30 @@
   }
 }
 
+@media (max-width: 991.98px) {
+  .gbp-lp.lo-page .lo-hero {
+    padding: 4px 30px 4px;
+  }
+}
+
 @media (max-width: 575.98px) {
+  /* hero lines up with the flattened panels inside the gutter */
+  .gbp-lp.lo-page .lo-hero {
+    padding: 0;
+  }
+  .gbp-lp.lo-page .lo-hero .lp-h1 {
+    font-size: clamp(27px, 8.2vw, 34px);
+  }
+  .gbp-lp.lo-page .lo-hero .lp-eyebrow {
+    font-size: 12.5px;
+    padding: 7px 12px;
+  }
+  .gbp-lp.lo-page .lp-final {
+    padding: 56px 18px;
+  }
+  .gbp-lp.lo-page .lp-form {
+    padding: 20px 18px;
+  }
   .lo-page .lo-geo {
     padding: 20px;
   }

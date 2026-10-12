@@ -1,944 +1,955 @@
 /* =====================================================================
-   Shared styles for the original GMB service-page layout.
-   Used by /services/gmb-optimization and /services/gmb-verification-help.
-   This is the ORIGINAL gmb-reinstatement.css (the .gmb-reinst-* classes),
-   moved here when the GMB Reinstatement page was redesigned with its own
-   scoped stylesheet. Do not merge with the new gmb-reinstatement.css.
+   /services/gmb-verification-help
+
+   Palette + typography follow /services/gbp-reinstatement-service
+   (gmb-reinstatement.css): the site's Neue Haas face, headings at weight
+   500 only, electric blue #2567e8 for everything interactive, brand gold
+   #fdc115 for highlights and the CTAs on the blue bands, deep navy ink on a
+   white base. Sections are line-bordered panels; the hero sits on the same
+   top-of-page blue wash; dark bands use the blue gradient + dot grid.
+
+   The markup still carries the original .gmb-reinst-* class names.
+   EVERYTHING is scoped under .gmb-verify-page — LeadContactForm and GmbFaqs
+   are shared with other pages, and unscoped rules here would leak site-wide
+   after a client-side navigation.
    ===================================================================== */
 
-:root {
-  --gmb-reinstatement-bg: #eff6ff;
-  --gmb-color-1: #c6fdbd;
-  --gmb-color-2: #ddecff;
-  --gmb-color-3: #fff0c6;
-  --gmb-color-4: #007aff;
-  --gmb-color-5: #ffe2e7;
-  --gmb-color-6: #ff2147;
-  --gmb-color-7: #d7e8ff;
-  --gmb-color-8: #0068c5;
-  --gmb-color-9: #dbfdd7;
-  --gmb-color-10: #21b700;
-  --gmb-color-11: #ffe4e4;
-  --gmb-color-12: #fff6da;
-  --gmb-color-13: #bcebff;
-  --gmb-color-14: #bbbbff;
-  --gmb-color-15: #ffdd8a;
-  --gmb-color-16: #c2e3ff;
-  --gmb-color-17: #e9c2ff;
+.gmb-verify-page {
+  --ink: #0c1526;
+  --deep: #16233d;
+  --blue: #2567e8;
+  --blue-dark: #1c4fc4;
+  --blue-soft: #eaf0fe;
+  --gold: #fdc115;
+  --gold-dark: #d9a303;
+  --gold-soft: #fff6db;
+  --text: #47546e;
+  --muted: #7a869e;
+  --line: #e3e9f7;
+  --bg-soft: #f5f8fd;
+  --red: #ea4334;
+  --red-soft: #fdecea;
+  --green: #34a852;
+  --green-soft: #e7f6ec;
+  --on-dark: #d4e1fb;
+  --radius: 14px;
+  --radius-lg: 22px;
+  /* side gaps mirror the site header (.navbar-wrapper) */
+  --inset: 100px;
+  --brand-band: radial-gradient(50% 80% at 85% 10%, rgba(253, 193, 21, 0.16) 0%, transparent 60%),
+    radial-gradient(40% 70% at 10% 90%, rgba(37, 103, 232, 0.35) 0%, transparent 65%),
+    linear-gradient(150deg, #123a8f 0%, var(--blue-dark) 45%, var(--blue) 100%);
+  --dot-grid: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px) 0 0 / 26px 26px;
+
+  color: var(--ink);
+  line-height: 1.7;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
-.gmb-reinst-content-wrapper .buttons {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
+.gmb-verify-page h1,
+.gmb-verify-page h2,
+.gmb-verify-page h3,
+.gmb-verify-page h4 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  margin: 0;
+  color: var(--ink);
 }
 
 /* In-body contextual internal links */
-.gmb-reinst-content-wrapper .gmb-inline-link {
-  color: var(--gmb-color-4);
+.gmb-verify-page .gmb-inline-link {
+  color: var(--blue);
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 2px;
-  font-weight: 600;
+  text-decoration-color: rgba(37, 103, 232, 0.35);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+.gmb-verify-page .gmb-inline-link:hover {
+  text-decoration-color: var(--blue);
 }
 
-.gmb-reinst-main-wrapper {
-  padding: 120px 100px 100px 100px;
-  background-color: var(--gmb-reinstatement-bg);
-  display: flex;
-  justify-content: space-between;
-}
-
-.gmb-reinst-content-wrapper {
-  flex-basis: 55%;
-  min-width: 0;
-  width: 100%;
-}
-
-.label-head {
-  padding: 14px 20px;
-  width: fit-content;
-  border-radius: 50px;
-  display: flex;
+/* ---------- Buttons (global .buttons pill, re-coloured) ---------- */
+.gmb-verify-page .buttons {
   gap: 10px;
-  font-weight: 500;
+  padding: 14px 18px 14px 26px;
+  border: 0;
+  background: var(--blue);
+  color: #fff;
   font-size: 15px;
-}
-
-/*--gmb-reinst-sec-1--*/
-
-.gmb-reinst-sec-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding-bottom: 60px;
-  border-bottom: 2px solid var(--stroke);
-}
-
-.gmb-reinst-sec-1-label-head {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.gmb-reinst-sec-1-label-head .label-head:nth-child(1) {
-  background-color: var(--gmb-color-1);
-}
-
-.gmb-reinst-sec-1-label-head .label-head:nth-child(2) {
-  background-color: var(--gmb-color-2);
-}
-
-.gmb-reinst-main-heading {
-  font-size: 48px;
-  line-height: 60px;
-}
-
-.gmb-reinst-sec-heading {
-  font-size: 36px;
-  line-height: 50px;
-}
-
-.gmb-reinst-descrp {
-  font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
-  width: 85%;
+  transition: transform 0.18s ease, background 0.18s ease, filter 0.18s ease;
+}
+.gmb-verify-page .buttons:hover {
+  background: var(--blue-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.gmb-verify-page .buttons > svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+.gmb-verify-page .buttons__icon-wrapper {
+  background: #fff;
+  color: var(--blue);
 }
 
-.gmb-reinst-sec-1-box {
-  padding: 20px;
-  background-color: var(--gmb-color-3);
-  border: 2px solid var(--gmb-color-15);
-  border-radius: 10px;
+/* on the blue bands: first CTA gold, second white (reinstatement idiom) */
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(1),
+.gmb-verify-page .gmb-reinst-banner-3-ctas .buttons:nth-child(1),
+.gmb-verify-page .gmb-reinst-price-banner .buttons {
+  background: var(--gold);
+  color: var(--ink);
+}
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(1):hover,
+.gmb-verify-page .gmb-reinst-banner-3-ctas .buttons:nth-child(1):hover,
+.gmb-verify-page .gmb-reinst-price-banner .buttons:hover {
+  background: var(--gold);
+  color: var(--ink);
+  filter: brightness(1.05);
+}
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(1) .buttons__icon-wrapper,
+.gmb-verify-page .gmb-reinst-banner-3-ctas .buttons:nth-child(1) .buttons__icon-wrapper,
+.gmb-verify-page .gmb-reinst-price-banner .buttons__icon-wrapper {
+  background: var(--ink);
+  color: var(--gold);
+}
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(2),
+.gmb-verify-page .gmb-reinst-banner-3-ctas .buttons:nth-child(2) {
+  background: #fff;
+  color: var(--ink);
+}
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(2) .buttons__icon-wrapper,
+.gmb-verify-page .gmb-reinst-banner-3-ctas .buttons:nth-child(2) .buttons__icon-wrapper {
+  background: var(--blue);
+  color: #fff;
 }
 
-.gmb-reinst-sec-1-box p:nth-child(1) {
-  display: flex;
+/* ---------- Eyebrow (pill, matching the reinstatement page) ---------- */
+.gmb-verify-page .label-head {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  line-height: normal;
-  margin-bottom: 8px;
+  width: fit-content;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.gmb-verify-page .label-head svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  color: var(--gold-dark);
 }
 
-.gmb-reinst-sec-1-box p {
+/* ---------- Two-column layout (content left, sticky form right) ---------- */
+.gmb-verify-page .gmb-reinst-main-wrapper {
+  padding: 120px var(--inset) 60px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  position: relative;
+}
+/* blue wash fading downward behind the hero and the top of the form */
+.gmb-verify-page .gmb-reinst-main-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 680px;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 103, 232, 0.1) 0%,
+    rgba(37, 103, 232, 0.045) 46%,
+    rgba(37, 103, 232, 0) 88%
+  );
+  pointer-events: none;
+}
+.gmb-verify-page .gmb-reinst-content-wrapper {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  z-index: 1;
+}
+.gmb-verify-page .gmb-reinst-contact-form {
+  flex: 0 0 40%;
+  position: sticky;
+  top: 24px;
+  z-index: 1;
+}
+
+/* ---------- Panels: every section becomes a card in the column ---------- */
+.gmb-verify-page .gmb-reinst-common-sec {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+}
+.gmb-verify-page .gmb-reinst-common-sec-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+.gmb-verify-page .gmb-reinst-sec-heading {
+  font-size: clamp(24px, 3.2vw, 34px);
+  letter-spacing: -0.02em;
+  line-height: 1.24;
+  margin: 14px 0 12px;
+}
+.gmb-verify-page .gmb-reinst-descrp {
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.72;
+  color: var(--text);
+}
+
+/* ---------- HERO ----------
+   No card of its own — the copy sits straight on the blue wash. */
+.gmb-verify-page .gmb-reinst-sec-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 34px 14px;
+}
+.gmb-verify-page .gmb-reinst-sec-1-label-head {
+  display: flex;
+}
+/* hero eyebrow = the reinstatement page's status pill */
+.gmb-verify-page .gmb-reinst-sec-1-label-head .label-head {
+  gap: 9px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--line);
+  color: var(--deep);
+  font-size: 13px;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+.gmb-verify-page .gmb-reinst-sec-1-label-head .label-head span {
+  display: inline-flex;
+}
+.gmb-verify-page .gmb-reinst-sec-1-label-head .label-head svg {
+  width: 14px;
+  height: 14px;
+  color: var(--blue);
+}
+.gmb-verify-page .gmb-reinst-main-heading {
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.gmb-verify-page .gmb-reinst-sec-1 > .gmb-reinst-descrp {
+  font-size: clamp(16px, 1.5vw, 17.5px);
 }
 
-.gmb-reinst-sec-1 .buttons {
-  margin: 16px 0px;
+/* trust badges — same sizes as the reinstatement hero */
+.gmb-verify-page .hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.gmb-verify-page .hero-badge-widget {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gmb-verify-page .hero-trust-badge {
+  display: block;
+  width: auto;
+  height: 51px;
+  border: 0;
+  object-fit: contain;
 }
 
-.gmb-reinst-sec-1-stats {
+/* "Need immediate help? Call now" note */
+.gmb-verify-page .gmb-reinst-sec-1-box {
+  padding: 18px 20px;
+  background: var(--gold-soft);
+  border: 1px solid rgba(253, 193, 21, 0.45);
+  border-radius: var(--radius);
+}
+.gmb-verify-page .gmb-reinst-sec-1-box p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--deep);
+}
+.gmb-verify-page .gmb-reinst-sec-1-box p:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.gmb-verify-page .gmb-reinst-sec-1-box p:nth-child(1) span {
+  display: inline-flex;
+  color: var(--gold-dark);
+}
+.gmb-verify-page .gmb-reinst-sec-1-box p:nth-child(1) svg {
+  width: 15px;
+  height: 15px;
+}
+.gmb-verify-page .gmb-reinst-sec-1-box a {
+  color: var(--blue-dark);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(28, 79, 196, 0.35);
+  text-underline-offset: 3px;
+}
+
+.gmb-verify-page .gmb-reinst-sec-1 .buttons {
+  margin: 4px 0;
+}
+
+.gmb-verify-page .gmb-reinst-sec-1-stats {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
 }
-
-.gmb-reinst-sec-1-stats p {
+.gmb-verify-page .gmb-reinst-sec-1-stats p {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
-  color: var(--color2);
+  line-height: 1.55;
+  color: var(--text);
+}
+.gmb-verify-page .gmb-reinst-sec-1-stats p span {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--ink);
 }
 
-.gmb-reinst-sec-1-stats p span {
-  font-size: 32px;
+/* ---------- Trust strip ---------- */
+.gmb-verify-page .gmb-reinst-sec-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px 34px;
+}
+.gmb-verify-page .gmb-reinst-sec-2 p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--deep);
+}
+.gmb-verify-page .gmb-reinst-sec-2 p img {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  border-radius: 11px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+/* ---------- Card grids ---------- */
+.gmb-verify-page .gmb-reinst-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.gmb-verify-page .gmb-reinst-card-wrapper {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.gmb-verify-page .gmb-reinst-card-wrapper:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+.gmb-verify-page .gmb-reinst-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+.gmb-verify-page .gmb-reinst-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.gmb-verify-page .gmb-reinst-card-heading {
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 9px;
+}
+.gmb-verify-page .gmb-reinst-card-descrp {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
   color: var(--text);
 }
 
-/*--gmb-reinst-sec-2--*/
-.gmb-reinst-sec-2 {
-  padding: 60px 0px;
-  border-bottom: 2px solid var(--stroke);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+/* why profiles fail — red icon tiles */
+.gmb-verify-page .gmb-reinst-sec-3 .gmb-reinst-card-icon {
+  background: var(--red-soft);
+  color: #cf3b2d;
 }
 
-.gmb-reinst-sec-2 p {
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 18px;
-  text-wrap: nowrap;
+/* how it works — step cards, like the reinstatement process cards */
+.gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-wrapper {
+  background: var(--bg-soft);
+}
+.gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-wrapper:hover {
+  transform: none;
+  border-color: var(--line);
+}
+.gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+.gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-heading {
+  font-size: 16.5px;
+}
+.gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-descrp {
+  font-size: 13.5px;
 }
 
-/*--gmb-reinst-common-section--*/
-.gmb-reinst-common-sec {
-  padding: 40px 0px;
-  border-bottom: 2px solid var(--stroke);
+/* why choose — full-colour icon images on a neutral tile */
+.gmb-verify-page .gmb-reinst-sec-5 .gmb-reinst-card-icon {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+.gmb-verify-page .gmb-reinst-sec-5 .gmb-reinst-card-icon img {
+  width: 26px;
+  height: 26px;
 }
 
-.gmb-reinst-common-sec-head {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 24px;
-}
-
-.gmb-reinst-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.gmb-reinst-card-wrapper {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.gmb-reinst-card-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.gmb-reinst-card-heading {
-  font-size: 20px;
-}
-
-.gmb-reinst-card-descrp {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-/*--gmb-reinst-section-3--*/
-
-.gmb-reinst-sec-3 .label-head {
-  background-color: var(--gmb-color-5);
-  color: var(--gmb-color-6);
-}
-
-.gmb-reinst-sec-3 .gmb-reinst-card-icon {
-  background-color: var(--gmb-color-5);
-  color: var(--gmb-color-6);
-}
-
-.gmb-reinst-sec-3-img-cont {
+/* ---------- Illustrations + video ---------- */
+.gmb-verify-page .gmb-reinst-sec-3-img-cont,
+.gmb-verify-page .gmb-reinst-sec-4-img-cont {
   position: relative;
+  width: 100%;
+  margin-top: 26px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.gmb-verify-page .gmb-reinst-sec-3-img-cont {
   min-height: 180px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 30px;
 }
-
-/*--gmb-reinst-section-4--*/
-
-.gmb-reinst-sec-4 .label-head {
-  background-color: var(--gmb-color-7);
-  color: var(--gmb-color-8);
-}
-
-.gmb-reinst-sec-4 .gmb-reinst-card-icon {
-  background-color: var(--gmb-color-7);
-  color: var(--gmb-color-8);
-  font-weight: 500;
-}
-
-.gmb-reinst-google-reviews {
-  margin-top: 30px;
-}
-
-.gmb-reinst-sec-4-cta-banner {
-  background-color: var(--gmb-color-7);
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 30px;
-}
-
-.gmb-reinst-sec-4-cta-banner h2 {
-  font-size: 32px;
-  line-height: 42px;
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.gmb-reinst-sec-4-banner-ctas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.gmb-reinst-sec-4-banner-ctas .buttons:nth-child(1) {
-  background-color: var(--gmb-color-10);
-  border-color: inherit;
-}
-
-.gmb-reinst-sec-4-banner-ctas .buttons:nth-child(2) {
-  background-color: var(--gmb-color-4);
-  border-color: inherit;
-}
-
-.gmb-reinst-sec-4-img-cont {
-  position: relative;
+.gmb-verify-page .gmb-reinst-sec-4-img-cont {
   min-height: 280px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 30px;
 }
-.gmb-reinst-sec-4-img-cont img {
+.gmb-verify-page .gmb-reinst-sec-4-img-cont img {
   scale: 1.2;
 }
-
-/*--gmb-reinst-section-5--*/
-
-.gmb-reinst-sec-5 .label-head {
-  background-color: var(--gmb-color-9);
-  color: var(--gmb-color-10);
-}
-
-.gmb-reinst-sec-5 .gmb-reinst-card-icon {
-  background-color: var(--gmb-color-9);
-  color: var(--gmb-color-10);
-}
-
-.gmb-reinst-sec-5-card-icon-1 {
-  background-color: var(--gmb-color-11) !important;
-}
-
-.gmb-reinst-sec-5-card-icon-2,
-.gmb-reinst-sec-5-card-icon-3 {
-  background-color: var(--gmb-color-12) !important;
-}
-
-.gmb-reinst-sec-5-card-icon-4 {
-  background-color: var(--gmb-color-13) !important;
-}
-
-.gmb-reinst-video {
-  margin-top: 30px;
+.gmb-verify-page .gmb-reinst-video {
+  margin-top: 26px;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--text);
+  border-radius: var(--radius-lg);
+  background: var(--ink);
 }
-
-.gmb-reinst-video iframe {
+.gmb-verify-page .gmb-reinst-video iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-.gmb-reinst-profile-slider {
-  margin-top: 30px;
-  width: 100%;
-  min-width: 0;
-}
-
-.gmb-reinst-profile-swiper-wrapper {
-  margin-top: 30px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.gmb-reinst-slide-card {
-  background-color: var(--white);
-  border-radius: 18px;
-  padding: 14px;
-  width: 100%;
-}
-
-.gmb-reinst-slide-image {
+/* ---------- Blue bands (mid CTA, pricing banner, final banner) ---------- */
+.gmb-verify-page .gmb-reinst-sec-4-cta-banner,
+.gmb-verify-page .gmb-reinst-price-banner,
+.gmb-verify-page .gmb-reinst-banner-3 {
+  background: var(--brand-band);
+  color: #fff;
   position: relative;
-  width: 100%;
-  aspect-ratio: 18 / 10;
-  border-radius: 14px;
   overflow: hidden;
 }
-
-.gmb-reinst-slide-image img {
-  object-fit: cover;
+.gmb-verify-page .gmb-reinst-sec-4-cta-banner::before,
+.gmb-verify-page .gmb-reinst-price-banner::before,
+.gmb-verify-page .gmb-reinst-banner-3::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--dot-grid);
+  -webkit-mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  mask-image: radial-gradient(70% 90% at 50% 50%, #000 0%, transparent 85%);
+  pointer-events: none;
+}
+.gmb-verify-page .gmb-reinst-sec-4-cta-banner > *,
+.gmb-verify-page .gmb-reinst-price-banner > *,
+.gmb-verify-page .gmb-reinst-banner-3 > * {
+  position: relative;
 }
 
-.gmbReinstSwiper .swiper-wrapper {
-  padding-bottom: 60px;
+.gmb-verify-page .gmb-reinst-sec-4-cta-banner {
+  margin-top: 26px;
+  padding: 40px 34px;
+  border-radius: var(--radius-lg);
+}
+.gmb-verify-page .gmb-reinst-sec-4-cta-banner h2 {
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.gmb-verify-page .gmb-reinst-sec-4-banner-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-.gmbReinstSwiper {
-  width: 100%;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.gmbReinstSwiper .swiper-slide {
-  width: 100%;
-}
-
-.gmbReinstSwiper > .swiper-pagination > span {
-  height: 16px;
-  width: 16px;
-  background-color: var(--gmb-color-4);
-}
-
-/*--gmb-reinst-section-6--*/
-.gmb-reinst-sec-6 .label-head {
-  background-color: var(--gmb-color-14);
-}
-
-.gmb-reinst-price-card-wrapper {
-  border: 2px solid var(--stroke);
-  border-radius: 10px;
-  padding: 30px;
+/* ---------- Packages ---------- */
+.gmb-verify-page .gmb-reinst-price-card-wrapper {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
   min-height: 410px;
 }
-
-.gmb-reinst-price-card-wrapper .gmb-reinst-card-icon {
-  background-color: var(--gmb-color-14);
-  font-weight: 500;
-  height: 45px;
-  width: 45px;
-  font-size: 18px;
+/* the middle package is the one labelled "Most Popular" */
+.gmb-verify-page .gmb-reinst-price-card-wrapper:nth-child(2) {
+  border: 1.5px solid var(--blue);
+  box-shadow: 0 0 0 1px rgba(37, 103, 232, 0.18), 0 10px 30px -16px rgba(37, 103, 232, 0.35);
 }
-
-.gmb-reinst-price-heading {
-  font-size: 22px;
-  margin: 12px 0px;
+.gmb-verify-page .gmb-reinst-price-card-wrapper .gmb-reinst-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  letter-spacing: 0.02em;
 }
-
-.gmb-reinst-price-card-wrapper .gmb-reinst-descrp {
-  font-size: 18px;
-  line-height: 28px;
+.gmb-verify-page .gmb-reinst-price-heading {
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin: 0 0 6px;
 }
-
-.gmb-reinst-price-list {
-  padding: 0;
+.gmb-verify-page .gmb-reinst-price-card-wrapper .gmb-reinst-descrp {
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.gmb-verify-page .gmb-reinst-price-list {
   list-style: none;
-  margin-top: 20px;
+  margin: 18px 0 0;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
-
-.gmb-reinst-price-list li {
-  font-weight: 500;
-  font-size: 16px;
+.gmb-verify-page .gmb-reinst-price-list li {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--deep);
 }
-
-.gmb-reinst-price-list li svg {
+.gmb-verify-page .gmb-reinst-price-list li svg {
   flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  color: var(--blue);
 }
-
-.gmb-reinst-price-banner {
-  background-color: var(--gmb-color-14);
+/* doubled class: must beat the white .gmb-reinst-price-card-wrapper above */
+.gmb-verify-page .gmb-reinst-price-card-wrapper.gmb-reinst-price-banner {
+  background: var(--brand-band);
+  border: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
-  gap: 20px;
-  border-color: var(--gmb-color-14);
-}
-
-.gmb-reinst-price-banner-heading {
-  font-size: 26px;
-  line-height: 34px;
-  font-weight: 600;
-}
-
-/*--gmb-reinst-section-7--*/
-
-.gmb-reinst-sec-7 .label-head {
-  background-color: var(--gmb-color-15);
-}
-
-.gmb-reinst-testimonial-wrapper {
-  width: 100%;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.gmb-reinst-testimonial-wrapper > .gmb-reinst-testi-content {
-  display: none;
-}
-
-.gmb-reinst-testi-content {
-  background-color: var(--white);
-  padding: 40px;
-  border-radius: 10px;
-  width: 100%;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.gmb-reinst-review {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 32px;
-  margin-bottom: 22px;
-}
-
-.gmb-reinst-test-author {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.gmb-reinst-test-author svg {
-  font-size: 42px;
-  color: var(--gmb-color-15);
-}
-
-.gmb-reinst-author-name {
-  font-weight: 500;
-  font-size: 18px;
-  font-style: italic;
-}
-
-.gmb-reinst-author-name span {
-  font-size: 16px;
-  font-style: normal;
-  color: var(--color2);
-  font-style: italic;
-}
-
-.gmbReinstReviewSwiper {
-  width: 100%;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.gmbReinstReviewSwiper .swiper-wrapper {
-  padding-bottom: 60px;
-}
-
-.gmbReinstReviewSwiper .swiper-slide {
-  width: 100%;
-}
-
-.gmbReinstReviewSwiper > .swiper-pagination > span {
-  height: 16px;
-  width: 16px;
-  background-color: var(--gmb-color-15);
-}
-
-/*--gmb-reinst-section-8--*/
-
-.gmb-reinst-sec-8 .label-head {
-  background-color: var(--gmb-color-16);
-}
-
-.gmb-reinst-sec-8-content ul {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
   gap: 22px;
 }
+.gmb-verify-page .gmb-reinst-price-banner-heading {
+  font-size: clamp(22px, 2.4vw, 26px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: #fff;
+}
 
-.gmb-reinst-sec-8-content ul h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+/* ---------- Reviews ---------- */
+.gmb-verify-page .gmb-reinst-testimonial-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* ---------- Guarantee pillars ---------- */
+.gmb-verify-page .gmb-reinst-sec-8-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+.gmb-verify-page .gmb-reinst-sec-8-content li {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 26px;
+}
+.gmb-verify-page .gmb-reinst-sec-8-content h3 {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 600;
+  gap: 12px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 10px;
 }
-
-.gmb-reinst-sec-8-content ul h3 svg {
+.gmb-verify-page .gmb-reinst-sec-8-content h3 svg {
   flex-shrink: 0;
-  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  padding: 9px;
+  border-radius: 10px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+}
+.gmb-verify-page .gmb-reinst-sec-8-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text);
 }
 
-.gmb-reinst-sec-8-content ul p {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  width: 80%;
-}
-
-/*--gmb-reinst-section-9--*/
-.gmb-reinst-sec-9 {
-  border: none;
+/* ---------- FAQ (shared GmbFaqs / react-bootstrap accordion) ---------- */
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
   padding-bottom: 0;
+  overflow: hidden;
+}
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-header {
+  margin: 0;
+}
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-button,
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-button:not(.collapsed) {
+  gap: 18px;
+  padding: 20px 22px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  box-shadow: none;
+  border-radius: 0;
+}
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-button::after {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  border-radius: 8px;
+  background: var(--bg-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232567e8' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E")
+    center / 16px 16px no-repeat;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-button:not(.collapsed)::after {
+  background: var(--blue)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E")
+    center / 16px 16px no-repeat;
+  transform: rotate(45deg);
+}
+.gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-body {
+  padding: 0 22px 20px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text);
 }
 
-.gmb-reinst-sec-9 .label-head {
-  background-color: var(--gmb-color-17);
+/* ---------- Lead form (shared LeadContactForm, reinstatement styling) ---------- */
+.gmb-verify-page .lead-form-wrapper {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid var(--blue);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  box-shadow: 0 0 0 1px rgba(37, 103, 232, 0.18), 0 10px 30px -16px rgba(37, 103, 232, 0.35);
+}
+.gmb-verify-page .lead-form-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+.gmb-verify-page .lead-form-wrapper .lead-form-title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.28;
+  text-align: left;
+  color: var(--ink);
+  margin: 2px 0 18px;
+}
+.gmb-verify-page .lead-form-wrapper .form-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.gmb-verify-page .lead-form-wrapper .form-control {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--bg-soft);
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
+}
+.gmb-verify-page .lead-form-wrapper .form-control::placeholder {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+.gmb-verify-page .lead-form-wrapper .form-control:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(37, 103, 232, 0.1);
+}
+.gmb-verify-page .lead-form-wrapper .form-control[aria-invalid="true"] {
+  border-color: var(--red);
+}
+.gmb-verify-page .lead-form-wrapper .lead-confidential-box {
+  background: var(--green-soft);
+  border: 1px solid rgba(52, 168, 82, 0.28);
+  border-radius: 10px;
+  color: #1e7a3f;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 12px;
+}
+.gmb-verify-page .lead-form-wrapper .lead-confidential-box svg {
+  color: var(--green);
+}
+.gmb-verify-page .lead-form-wrapper .lead-submit-btn {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.gmb-verify-page .lead-form-wrapper .lead-submit-btn:hover:not(:disabled) {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+.gmb-verify-page .lead-form-wrapper .sms-consent-checkbox a {
+  color: var(--blue);
+  font-weight: 500;
+}
+.gmb-verify-page .lead-form-wrapper .sms-consent-checkbox input {
+  accent-color: var(--blue);
+}
+.gmb-verify-page .lead-form-wrapper .consent-legal-links a {
+  color: var(--blue-dark);
 }
 
-.gmb-reinst-faqs-wrapper .global-faqs-accordion .accordion-item {
-  background-color: transparent;
-}
-
-.gmb-reinst-contact-form {
-  flex-basis: 40%;
-  position: sticky;
-  top: 32px;
-  height: 100%;
-}
-
-.gmb-reinst-banner-3 {
-  background-image: url("/images/bg-3.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  padding: 80px 20px;
+/* ---------- Final banner (full width, above the footer) ---------- */
+.gmb-verify-page .gmb-reinst-banner-3 {
+  padding: 84px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-}
-
-.gmb-reisnt-banner-3-heading {
-  font-size: 42px;
-  font-weight: 500;
-}
-
-.gmb-reisnt-banner-3-descrp {
-  font-weight: 500;
-  width: 40%;
   text-align: center;
-  font-size: 20px;
-  line-height: 28px;
+  gap: 16px;
 }
-
-.gmb-reinst-banner-3-ctas {
+.gmb-verify-page .gmb-reisnt-banner-3-heading {
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #fff;
+  max-width: 820px;
+}
+.gmb-verify-page .gmb-reisnt-banner-3-descrp {
+  max-width: 620px;
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.72;
+  color: var(--on-dark);
+}
+.gmb-verify-page .gmb-reinst-banner-3-ctas {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 14px;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
-.gmb-reinst-banner-3-ctas .buttons:nth-child(1) {
-  background-color: var(--secondary);
-  border-color: var(--secondary);
+/* ===================== RESPONSIVE ===================== */
+/* Side gaps mirror the site header (.navbar-wrapper) at every breakpoint. */
+
+@media (min-width: 1199.99px) and (max-width: 1399.98px) {
+  .gmb-verify-page {
+    --inset: 40px;
+  }
+  .gmb-verify-page .gmb-reinst-price-card-wrapper {
+    padding: 22px;
+  }
 }
 
-.gmb-reinst-banner-3-ctas .buttons:nth-child(2) {
-  background-color: var(--white);
-  border-color: var(--white);
-  color: var(--text);
-  font-weight: 500;
+@media (min-width: 991.99px) and (max-width: 1199.98px) {
+  .gmb-verify-page {
+    --inset: 30px;
+  }
+  .gmb-verify-page .gmb-reinst-contact-form {
+    flex-basis: 42%;
+  }
 }
 
-/*--Responsive--*/
-
-/*--mobile and Tab--*/
-
+/* Tablet & below — single column */
 @media (max-width: 991.98px) {
-  .gmb-reinst-content-wrapper {
-    flex-basis: 100%;
+  .gmb-verify-page {
+    --inset: 40px;
   }
-
-  .label-head {
-    padding: 10px 16px;
-    border-radius: 50px;
-    gap: 8px;
-  }
-
-  /*--gmb-reinst-sec-1--*/
-
-  .gmb-reinst-sec-1 {
-    gap: 20px;
-    padding-bottom: 40px;
-  }
-
-  .gmb-reinst-sec-1-label-head {
+  .gmb-verify-page .gmb-reinst-main-wrapper {
     flex-direction: column;
-    gap: 10px;
-    align-items: start;
-  }
-
-  .gmb-reinst-main-heading {
-    font-size: 42px;
-    line-height: 48px;
-  }
-
-  .gmb-reinst-sec-heading {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
-  .gmb-reinst-descrp {
-    font-size: 18px;
-    line-height: 26px;
-    width: 100%;
-  }
-
-  .gmb-reinst-sec-1-box {
-    padding: 16px;
-  }
-
-  .gmb-reinst-sec-1-box p:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .gmb-reinst-sec-1 .buttons {
-    margin: 10px 0px;
-  }
-
-  .gmb-reinst-sec-1-stats {
-    display: flex;
-    gap: 30px;
-    display: none;
-  }
-
-  .gmb-reinst-sec-1-stats p {
-    align-items: start;
-  }
-
-  .gmb-reinst-sec-1-stats p span {
-    font-size: 32px;
-    color: var(--text);
-  }
-
-  /*--gmb-reinst-sec-2--*/
-  .gmb-reinst-sec-2 {
-    padding: 40px 0px;
-    grid-template-columns: repeat(1, 1fr);
+    align-items: stretch;
     gap: 26px;
   }
-
-  .gmb-reinst-sec-2 p {
-    text-wrap: wrap;
+  .gmb-verify-page .gmb-reinst-contact-form {
+    position: static;
+    flex-basis: auto;
+    width: 100%;
   }
-
-  /*--gmb-reinst-common-section--*/
-
-  .gmb-reinst-common-sec-head {
-    gap: 20px;
+  .gmb-verify-page .gmb-reinst-common-sec {
+    padding: 28px;
   }
-
-  .gmb-reinst-cards {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 16px;
-  }
-
-  .gmb-reinst-card-wrapper {
-    padding: 10px 0px;
-  }
-
-  .gmb-reinst-card-heading {
-    font-size: 22px;
-  }
-
-  .gmb-reinst-card-descrp {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  /*--gmb-reinst-section-4--*/
-
-  .gmb-reinst-sec-4-cta-banner {
-    padding: 20px;
-    margin-top: 20px;
-  }
-
-  .gmb-reinst-sec-4-cta-banner h2 {
-    font-size: 28px;
-    line-height: 38px;
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-
-  .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(1) {
-    font-weight: 500;
-  }
-
-  .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(2) {
+  .gmb-verify-page .gmb-reinst-sec-1-stats {
     display: none;
   }
-
-  /*--gmb-reinst-section-5--*/
-
-  .gmb-reinst-video {
-    margin-top: 20px;
+  .gmb-verify-page .gmb-reinst-sec-2 {
+    grid-template-columns: 1fr;
+    padding: 24px 28px;
   }
-
-  .gmb-reinst-profile-slider {
-    margin-top: 20px;
+  .gmb-verify-page .gmb-reinst-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-
-  .gmb-reinst-profile-swiper-wrapper {
-    margin-top: 20px;
-  }
-
-  /*--gmb-reinst-section-6--*/
-
-  .gmb-reinst-price-card-wrapper {
-    padding: 20px;
+  .gmb-verify-page .gmb-reinst-price-card-wrapper {
+    padding: 22px;
     min-height: auto;
   }
-
-  .gmb-reinst-price-card-wrapper .gmb-reinst-card-icon {
-    height: 35px;
-    width: 35px;
-    font-size: 15px;
+  .gmb-verify-page .gmb-reinst-sec-4-cta-banner {
+    padding: 28px 22px;
   }
-
-  .gmb-reinst-price-heading {
-    font-size: 24px;
-    margin: 20px 0px;
+  .gmb-verify-page .gmb-reinst-sec-4-banner-ctas .buttons:nth-child(2) {
+    display: none;
   }
-
-  /*--gmb-reinst-section-7--*/
-
-  .gmb-reinst-testi-content {
-    padding: 20px;
-    width: 100%;
-    min-height: auto;
-    gap: 20px;
-  }
-
-  .gmb-reinst-review {
-    font-size: 18px;
-    line-height: 28px;
-  }
-  .gmb-reinst-author-name {
-    font-weight: 500;
-    font-size: 18px;
-    font-style: italic;
-  }
-
-  /*--gmb-reinst-section-8--*/
-
-  .gmb-reinst-sec-8-content ul p {
-    width: 100%;
-  }
-
-  /*--gmb-reinst-section-9--*/
-  .gmb-reinst-sec-9 {
-    border: none;
-    padding-bottom: 0;
-  }
-
-  .gmb-reinst-sec-9 .label-head {
-    background-color: var(--gmb-color-17);
-  }
-
-  .gmb-reinst-faqs-wrapper .global-faqs-accordion .accordion-item {
-    background-color: transparent;
-  }
-
-  .gmb-reinst-contact-form {
-    flex-basis: 100%;
-    position: relative;
-    top: 0;
-    height: 100%;
-  }
-
-  .gmb-reinst-banner-3 {
-    background-image: none;
-    background-color: var(--gmb-color-3);
-    padding: 40px 20px;
-    gap: 14px;
-  }
-
-  .gmb-reisnt-banner-3-heading {
-    font-size: 42px;
-    text-align: center;
-  }
-
-  .gmb-reisnt-banner-3-descrp {
-    width: 100%;
-    text-align: center;
-  }
-
-  .gmb-reinst-banner-3-ctas {
+  .gmb-verify-page .gmb-reinst-banner-3-ctas {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
   }
 }
 
-/*--mobile--*/
 @media (max-width: 575.98px) {
-  .gmb-reinst-main-wrapper {
-    padding: 100px 20px 40px 20px;
-    flex-direction: column;
-    gap: 40px;
+  .gmb-verify-page {
+    --inset: 16px;
   }
-
-  /*--gmb-reinst-section-3--*/
-
-  .gmb-reinst-sec-3-img-cont {
-    position: relative;
+  .gmb-verify-page .gmb-reinst-main-wrapper {
+    /* clears the fixed mobile navbar (~61px) with breathing room */
+    padding: 96px var(--inset) 40px;
+    gap: 18px;
+  }
+  .gmb-verify-page .gmb-reinst-content-wrapper {
+    gap: 18px;
+  }
+  /* hero lines up with the flattened panels inside the 16px gutter */
+  .gmb-verify-page .gmb-reinst-sec-1 {
+    padding: 0 0 6px;
+  }
+  .gmb-verify-page .gmb-reinst-main-heading {
+    font-size: clamp(27px, 8.2vw, 34px);
+  }
+  .gmb-verify-page .gmb-reinst-sec-1-label-head .label-head {
+    font-size: 12.5px;
+    padding: 7px 12px;
+  }
+  /* flatten the white panels so copy runs full width in the gutter */
+  .gmb-verify-page .gmb-reinst-common-sec,
+  .gmb-verify-page .gmb-reinst-sec-2 {
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+  .gmb-verify-page .gmb-reinst-sec-3-img-cont {
     min-height: 100px;
-    overflow: hidden;
-    margin-top: 26px;
   }
-
-  .gmb-reinst-sec-4-img-cont {
+  .gmb-verify-page .gmb-reinst-sec-4-img-cont {
     min-height: 180px;
-    border-radius: 10px;
-    margin-top: 20px;
+  }
+  .gmb-verify-page .lead-form-wrapper {
+    padding: 22px 18px;
+  }
+  .gmb-verify-page .gmb-reinst-banner-3 {
+    padding: 56px 18px;
   }
 }
 
-/*--Tab--*/
-
-@media (min-width: 575.99px) and (max-width: 991.98px) {
-  .gmb-reinst-main-wrapper {
-    padding: 120px 40px 40px 40px;
-    flex-direction: column;
-    gap: 40px;
+@media (prefers-reduced-motion: reduce) {
+  .gmb-verify-page *,
+  .gmb-verify-page *::before,
+  .gmb-verify-page *::after {
+    animation: none !important;
+    transition: none !important;
   }
-
-  /*--gmb-reinst-section-3--*/
-
-  .gmb-reinst-sec-3-img-cont {
-    position: relative;
-    min-height: 180px;
-    overflow: hidden;
-    margin-top: 26px;
-  }
-
-  .gmb-reinst-sec-4-img-cont {
-    min-height: 180px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-}
-
-/*--Medium Desktop--*/
-
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-  .gmb-reinst-main-wrapper {
-    padding: 100px 30px 40px 30px;
-  }
-}
-
-/*--Large Desktop--*/
-
-@media (min-width: 1199.98px) and (max-width: 1399.98px) {
-  .gmb-reinst-main-wrapper {
-    padding: 100px 40px 40px 40px;
-  }
-
-  .gmb-reinst-price-card-wrapper {
-    padding: 20px;
-  }
-}
-
-/*--Extra Large Desktop--*/
-
-@media (min-width: 1366.98px) and (max-width: 1512.98px) {
 }

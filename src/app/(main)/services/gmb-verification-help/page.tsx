@@ -179,6 +179,7 @@ function page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
+      <div className="gmb-verify-page">
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">
         {/*gmb-content-wrapper left-content*/}
@@ -209,6 +210,46 @@ function page() {
               </Link>{" "}
               that turns clicks into customers.
             </p>
+
+            {/* Same badge row as /services/gbp-reinstatement-service. Clutch
+                is self-hosted — the live iframe embed is behind a Cloudflare
+                challenge and breaks randomly. */}
+            <div className="hero-badges">
+              <a
+                href="https://clutch.co/profile/zonic-media?badge=11431"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="hero-badge-widget"
+                  width={90}
+                  height={90}
+                  src="/images/clutch-top-company-2026.png"
+                  alt="Top Clutch Digital Marketing Company Delaware 2026"
+                  style={{ objectFit: "contain" }}
+                />
+              </a>
+              <Image
+                className="hero-badge-widget"
+                width={90}
+                height={90}
+                src="/images/Partner.png"
+                alt="Yelp Advertising Partner"
+              />
+              <a
+                href="https://www.trustpilot.com/review/zonicllc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="hero-trust-badge"
+                  width={121}
+                  height={56}
+                  src="/images/trust-black.png"
+                  alt="Zonic Media reviews on Trustpilot"
+                />
+              </a>
+            </div>
 
             <div className="gmb-reinst-sec-1-box">
               <p>
@@ -1100,6 +1141,7 @@ function page() {
             </span>
           </HashScrollLink>
         </div>
+      </div>
       </div>
 
       <RelatedServices current="/services/gmb-verification-help" />
