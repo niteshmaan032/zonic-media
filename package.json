@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "snapshot": "node scripts/text-snapshot.mjs",
+    "facts:lint": "node scripts/check-brand-facts.mjs",
+    "links:crawl": "node scripts/crawl-inbound-links.mjs"
   },
   "dependencies": {
     "@ably/chat": "^1.3.1",

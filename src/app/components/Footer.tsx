@@ -83,6 +83,11 @@ function Footer() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/google-maps-business-ranking-tool-online">
+                      Google Maps Rank Checker
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/services/google-ads">Pay Per Click (PPC)</Link>
                   </li>
                   <li>

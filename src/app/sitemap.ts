@@ -103,6 +103,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
 
   // Landing pages
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/google-maps-business-ranking-tool-online`,      changeFrequency: "monthly", priority: 0.8 },
 
   // Free-website offer landers
   { url: `${BASE_URL}/website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },

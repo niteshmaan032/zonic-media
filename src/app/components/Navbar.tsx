@@ -39,7 +39,12 @@ import {
   MdOutlineVolunteerActivism,
   MdRoofing,
 } from "react-icons/md";
-import { RiLineChartLine, RiMapPinLine, RiSearchLine } from "react-icons/ri";
+import {
+  RiLineChartLine,
+  RiMapPinLine,
+  RiRadarLine,
+  RiSearchLine,
+} from "react-icons/ri";
 import { SiGoogleads } from "react-icons/si";
 import { useContext, useEffect, useRef, useState } from "react";
 import {
@@ -89,6 +94,13 @@ const services = [
     alt: "travel and tourism marketing",
     link: "/services/travel-and-tourism-marketing-agency",
   },
+  {
+    id: "maps-rank-checker",
+    label: "Google Maps Rank Checker",
+    image: "/images/header-seo.webp",
+    alt: "google maps rank checker",
+    link: "/google-maps-business-ranking-tool-online",
+  },
 ];
 
 const gmbServiceLinks = [
@@ -106,6 +118,11 @@ const gmbServiceLinks = [
     id: "gmb-optimization",
     label: "GMB Optimization",
     link: "/local-seo-google-business-optimization",
+  },
+  {
+    id: "gmb-rank-checker",
+    label: "GMB Rank Checker",
+    link: "/google-maps-business-ranking-tool-online",
   },
 ];
 
@@ -1505,6 +1522,22 @@ function Navbar() {
                             <span>
                               Direct-booking growth for hotels, tour operators,
                               and destinations.
+                            </span>
+                          </span>
+                        </Link>
+
+                        <Link
+                          href="/google-maps-business-ranking-tool-online"
+                          className="services-core-card"
+                        >
+                          <span className="services-core-icon">
+                            <RiRadarLine />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>Google Maps Rank Checker</strong>
+                            <span>
+                              Free scan of where your business ranks on Google
+                              Maps across your service area.
                             </span>
                           </span>
                         </Link>
