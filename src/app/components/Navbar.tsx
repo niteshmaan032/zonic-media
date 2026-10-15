@@ -1731,7 +1731,7 @@ function Navbar() {
                           <span className="services-core-content">
                             <strong>
                               <Link
-                                href="/services/dallas-fort-worth-marketing-agency"
+                                href="/services/dallas-fort-worth/digital-marketing-agency"
                                 className="services-core-title-link"
                               >
                                 Digital Marketing Agency in Dallas–Fort Worth
@@ -1740,6 +1740,15 @@ function Navbar() {
                             <span>
                               Google Business Profiles, local SEO, websites and
                               Google Ads for businesses across the Metroplex.
+                            </span>
+
+                            <span className="services-core-tags">
+                              <Link
+                                href="/services/dallas-fort-worth/web-design-agency"
+                                className="services-core-tag"
+                              >
+                                Dallas–Fort Worth Web Design
+                              </Link>
                             </span>
                           </span>
                         </div>
@@ -2086,10 +2095,18 @@ function Navbar() {
                       </li>
                       <li>
                         <Link
-                          href="/services/dallas-fort-worth-marketing-agency"
+                          href="/services/dallas-fort-worth/digital-marketing-agency"
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Digital Marketing Agency in Dallas–Fort Worth
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/dallas-fort-worth/web-design-agency"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Dallas–Fort Worth Web Design
                         </Link>
                       </li>
                     </ul>

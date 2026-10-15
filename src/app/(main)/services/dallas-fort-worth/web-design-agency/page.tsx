@@ -6,47 +6,53 @@ import type { CSSProperties, ReactNode } from "react";
 import {
   FiArrowRight,
   FiArrowUpRight,
-  FiAward,
   FiCheck,
   FiLayout,
   FiMail,
-  FiMapPin,
-  FiMessageCircle,
+  FiMonitor,
+  FiPenTool,
   FiPhone,
   FiPlus,
-  FiShield,
+  FiRefreshCw,
+  FiShoppingCart,
   FiStar,
   FiTarget,
   FiTrendingUp,
+  FiZap,
 } from "react-icons/fi";
 import {
-  SiApple,
-  SiFacebook,
   SiGoogle,
+  SiGoogleads,
+  SiGoogleanalytics,
   SiGooglemaps,
-  SiInstagram,
-  SiOpenai,
-  SiWaze,
-  SiYelp,
+  SiGooglesearchconsole,
+  SiGoogletagmanager,
+  SiShopify,
+  SiWordpress,
 } from "react-icons/si";
 
 import "@/app/style/dfwMarketing.css";
+import "@/app/style/dfwWebDesign.css";
 
 import Footer from "@/app/components/Footer";
 import {
   AvatarPh,
   CityPagesPanel,
-  CoverageGrid,
+  GoogleRatingBadge,
   HandArrow,
   InlineChat,
   InlinePin,
-  JourneyPhone,
-  MapPackPanel,
   Ph,
   RatingBadge,
-  ReportPanel,
   Sparks,
 } from "@/app/components/DfwMarketingVisuals";
+import {
+  CityPagesMap,
+  LeadPanel,
+  SiteBuild,
+  SpeedPanel,
+  WebJourneyPhone,
+} from "@/app/components/DfwWebVisuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
@@ -56,81 +62,87 @@ const ServiceLeadForm = dynamic(
 );
 
 /* ---------------------------------------------------------------------------
-   DALLAS–FORT WORTH MARKETING AGENCY — design draft v3, 14 Oct 2026.
+   DALLAS–FORT WORTH WEB DESIGN AGENCY — built 15 Oct 2026.
 
-   LAYOUT follows the two "Retro" reference designs the user supplied:
-   grey page with big white rounded cards, headings set on white highlight
-   strips, a staggered bento of stat cards under a centred hero, a services
-   card slider with arrows, alternating feature rows with UI panels and a
-   floating colour chip, a numbered list with colour image panels, an
-   app-icon hub, reviews, news cards, an FAQ card and a gradient CTA band.
+   Same layout and stylesheet as the sibling DFW digital marketing page
+   (/services/dallas-fort-worth/digital-marketing-agency); every heading,
+   paragraph and UI demo is rewritten for web design. Web-design UI pieces
+   live in DfwWebVisuals.tsx and dfwWebDesign.css.
 
-   TYPE AND COLOUR stay on the home page system (user's instruction): the
-   inherited site font (Neue Haas), weight 500 headings, ink #0c1526, blue
-   #2567e8, gold #fdc115, plus the home green/red for accents.
+   STATUS: launched 15 Oct 2026 once the photos were in: indexable, in
+   src/app/sitemap.ts, in the navbar Locations dropdown under Dallas–Fort
+   Worth, and linked from the DFW marketing hub and /services/web-design.
 
-   STATUS: launched 15 Oct 2026 at the user's request, ahead of the growth
-   plan's 28 Oct freeze (docs/growth-plan-2026-10.md): indexable, in
-   src/app/sitemap.ts, linked from the navbar Locations menu.
+   PHOTOS: section photography lives under /public/images/dfw/web/ and is
+   passed to the shared <Ph> component so the existing crop treatment stays
+   consistent across the page.
 
-   PHOTOS: every photo slot is a <Ph> skeleton; the label names the shot and
-   the ratio the crop. Save real photos under /public/images/dfw/.
-
-   HONESTY: Zonic has no Texas office; the about copy and the first FAQ say
-   so. Stats come from the home page (900+, 1,500+, 5.0 from 21, 20+).
+   FACTS come from the existing /services/web-design page and the home
+   page: 120+ websites shipped, 2–6 week builds, WordPress / Shopify /
+   custom builds, flat project quote after a free call, on-page SEO + Core
+   Web Vitals + lead forms in every build, 5.0 on Clutch from 21 reviews,
+   20+ niches. Never claim a Dallas office or address.
 --------------------------------------------------------------------------- */
 
-const PAGE_PATH = "/services/dallas-fort-worth-marketing-agency";
+const PAGE_PATH = "/services/dallas-fort-worth/web-design-agency";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 
 /* Keywords (Semrush US, 15 Oct 2026):
-     digital marketing agency dallas 1,600 (KD 39) · dallas digital marketing
-     agency 1,300 (41) · marketing agency dallas 880 (58) · digital marketing
-     dallas 720 (33) · fort worth digital marketing agency 480 (43) ·
-     marketing agency fort worth 480 (59) · local seo dallas 480 (9) ·
-     marketing companies in dallas 320 (22) · digital marketing agency dfw 110.
-   No other zonicllc.com URL ranks for a Dallas/Fort Worth marketing term,
-   so this page owns the cluster. Dallas SEO-company and web-design terms
-   (2,400 each) are separate intents for future dedicated pages. */
-const TITLE = "Digital Marketing Agency Dallas–Fort Worth | Zonic Media";
+     dallas web design 2,400 (KD 25) · website design dallas 1,900 (25) ·
+     web design dallas 1,900 (30) · dallas website design 1,300 (21) ·
+     fort worth web design 1,300 (19) · dallas web design company 1,000 (34)
+     · web design company dallas 1,000 (33) · web development dallas 880
+     (19) · web design agency dallas 720 (31) · web design fort worth 720
+     (15) · web design plano 590 (7) · web design frisco 590 (7) · website
+     design fort worth 590 (20) · dallas website development 480 (35) ·
+     web design frisco tx 390 (10) · website design plano tx 260 (7) ·
+     web design denton tx 170 (14). SERP (15 Oct): agency homepages plus
+     Yelp, Wix-partner and "top agencies" lists. */
+const TITLE = "Dallas Web Design & Fort Worth Website Design | Zonic Media";
 const DESCRIPTION =
-  "Dallas–Fort Worth digital marketing agency for local businesses: Google Business Profile, local SEO, web design and Google Ads. Free audit, no contracts.";
+  "Dallas web design agency building fast, mobile-first websites that turn Dallas–Fort Worth visitors into calls. Free strategy call and a flat project quote.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: PAGE_PATH },
   keywords: [
-    "digital marketing agency dallas",
-    "dallas digital marketing agency",
-    "marketing agency dallas",
-    "digital marketing dallas",
-    "fort worth digital marketing agency",
-    "marketing agency fort worth",
-    "dfw marketing agency",
-    "local seo dallas",
-    "local seo fort worth",
-    "marketing companies in dallas",
+    "dallas web design",
+    "web design dallas",
+    "website design dallas",
+    "dallas website design",
+    "dallas web design company",
+    "web design agency dallas",
+    "fort worth web design",
+    "web design fort worth",
+    "website design fort worth",
+    "web design plano",
+    "web design frisco",
+    "website design plano tx",
+    "web design frisco tx",
+    "web development dallas",
+    "dallas website development",
+    "dfw web design",
   ],
   openGraph: {
-    title: "Dallas–Fort Worth Digital Marketing Agency | Zonic Media",
+    title: "Dallas–Fort Worth Web Design Agency | Zonic Media",
     description: DESCRIPTION,
     url: PAGE_PATH,
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Zonic Media: digital marketing for Dallas–Fort Worth businesses",
+        url: "/images/dfw/web/dfw-team-review.png",
+        width: 1672,
+        height: 941,
+        alt: "Zonic Media team reviewing a new homepage design for a Dallas–Fort Worth business",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dallas–Fort Worth Digital Marketing Agency | Zonic Media",
+    title: "Dallas–Fort Worth Web Design Agency | Zonic Media",
     description:
-      "Google Business Profile, local SEO, web design and Google Ads for DFW businesses. Free audit, no long-term contract.",
+      "Fast, mobile-first websites for DFW businesses, built to turn visitors into calls. Free strategy call and a flat project quote.",
   },
 };
 
@@ -138,133 +150,132 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: FiMapPin,
+    icon: FiPenTool,
     tone: "blue",
-    title: "Google Business Profile management",
-    body: "Your Google Business Profile decides whether you show up in the Map Pack. We keep it accurate, active and matched to the searches DFW customers make.",
+    title: "Custom web design & development",
+    body: "A website designed and developed for your business and your Dallas–Fort Worth customers, not a template with your logo dropped in.",
     points: [
-      "Categories and services matched to what you sell",
-      "Weekly posts and fresh photos",
-      "Review requests, with replies written for you",
+      "Custom design built around your brand",
+      "Copy written for how DFW customers search",
+      "One clear call to action on every page",
     ],
-    href: "/local-seo-google-business-optimization",
-    link: "Profile optimization",
+    href: "/services/web-design",
+    link: "Custom website design",
   },
   {
-    icon: FiShield,
+    icon: FiRefreshCw,
     tone: "red",
-    title: "Profile reinstatement & verification",
-    body: "Suspended, stuck in verification or lost to a duplicate listing? Reinstatement is our most requested service, with 900+ profiles reinstated and verified.",
+    title: "Website redesign",
+    body: "Outdated site losing calls? We rebuild it to be faster, clearer and easier to contact, while protecting the Google rankings you already have.",
     points: [
-      "The cause of the suspension found before we appeal",
-      "Evidence prepared for Google’s review",
-      "Help with video and postcard verification",
+      "Old URLs redirected to the new pages",
+      "Content and photos refreshed",
+      "Faster pages and a clearer structure",
     ],
-    href: "/services/gbp-reinstatement-service",
-    link: "Reinstatement service",
+    href: "/services/web-design",
+    link: "Website redesign",
   },
   {
     icon: FiLayout,
     tone: "gold",
-    title: "Website design for local businesses",
-    body: "Fast, mobile-first websites with a page for each city and service you want to rank for, built to turn visits into calls.",
+    title: "WordPress websites",
+    body: "Fully responsive WordPress websites you can update yourself, optimized for speed, SEO and easy content management.",
     points: [
-      "City and service pages for the suburbs you serve",
-      "Click-to-call and quote forms on every page",
-      "Core Web Vitals passed at launch",
+      "Easy-to-edit pages and posts",
+      "Responsive on phones, tablets and desktops",
+      "SEO structure set up from day one",
     ],
     href: "/services/web-design",
-    link: "Website design",
+    link: "WordPress web design",
   },
   {
-    icon: FiTrendingUp,
+    icon: FiShoppingCart,
     tone: "green",
-    title: "Local SEO across the metro",
-    note: "From $197/mo",
-    body: "Local SEO in Dallas, Fort Worth, Plano and Frisco: listings, local links and content that carry your rankings past your own ZIP code.",
+    title: "Shopify e-commerce stores",
+    body: "Conversion-focused Shopify stores with optimized product pages and a smooth, secure checkout for DFW retailers and brands.",
     points: [
-      "Listings cleaned up on the directories Google checks",
-      "Links from DFW sites and local partners",
-      "Rankings tracked by city every month",
+      "Product and collection pages that sell",
+      "Secure, simple checkout",
+      "Mobile-first store design",
     ],
-    href: "/services/local-seo-packages",
-    link: "Local SEO packages",
+    href: "/services/web-design",
+    link: "Shopify store design",
   },
   {
     icon: FiTarget,
     tone: "ink",
-    title: "Google Ads & Local Services Ads",
-    body: "Ads that reach the parts of DFW your profile can’t yet, targeted by ZIP code and scheduled for the hours someone can answer the phone.",
+    title: "Landing pages for Google Ads",
+    body: "Focused landing pages for your Google Ads and Local Services campaigns, so every paid click has one clear next step.",
     points: [
-      "ZIP-code and radius targeting",
-      "Call tracking on every campaign",
-      "Budgets raised after storms and freezes",
+      "One page per offer or service",
+      "Fast-loading, single-goal layouts",
+      "Conversion tracking connected",
     ],
     href: "/services/google-ads",
     link: "Google Ads management",
   },
   {
-    icon: FiMessageCircle,
+    icon: FiTrendingUp,
     tone: "soft",
-    title: "AI search optimization",
-    body: "More customers now ask ChatGPT or Google’s AI who to call. We make your business clear enough for AI tools to name you and link to you.",
+    title: "Websites with local SEO",
+    note: "SEO from $197/mo",
+    body: "Launch your new site with local SEO so it ranks across Dallas, Fort Worth, Plano and Frisco, not just looks good.",
     points: [
-      "Service pages written to be quoted",
-      "Matching business details across the web",
-      "Structured data on every page",
+      "Linked to your Google Business Profile",
+      "City pages built to rank",
+      "Rankings tracked by city every month",
     ],
-    href: "/services/ai-seo-services",
-    link: "AI search optimization",
+    href: "/services/local-seo-packages",
+    link: "Local SEO packages",
   },
 ];
 
 const features = [
   {
-    label: "Google Maps",
-    title: "Show Up in the Map Pack Where You Want Work",
-    body: "Dallas and Fort Worth are about 30 miles apart, and Google weighs that distance when it picks the top three. We build your profile’s relevance and reviews so you hold the Map Pack close to home and push the edge further out.",
+    label: "Conversion",
+    title: "Websites Built to Turn Visitors Into Calls",
+    body: "A beautiful website that doesn’t make the phone ring is just a brochure. Every page we design gives a Dallas–Fort Worth customer one clear next step, with your reviews, services and service area right where they decide.",
     points: [
-      { t: "The right categories", d: "Primary and secondary categories matched to the searches you want." },
-      { t: "Service area set", d: "The DFW cities you serve, listed on your profile." },
-      { t: "A steady flow of reviews", d: "Requests after every job, with replies written for you." },
-      { t: "Weekly activity", d: "Posts, photos and offers that keep the profile current." },
-    ],
-    href: "/local-seo-google-business-optimization",
-    link: "Google Business Profile optimization",
-    panel: <MapPackPanel />,
-  },
-  {
-    label: "Websites",
-    title: "A Page for Every City You Serve",
-    body: "A Dallas page won’t rank in Frisco. Each city you want work from gets its own page, written for that area, with click-to-call and a quote form, and Core Web Vitals passed at launch.",
-    points: [
-      { t: "City pages", d: "A page for each suburb you serve, written for that area." },
-      { t: "Built to convert", d: "Click-to-call, quote forms and reviews on every page." },
-      { t: "Fast on phones", d: "Core Web Vitals passed at launch." },
-      { t: "Ready for search", d: "On-page SEO and structured data included in every build." },
+      { t: "Click-to-call everywhere", d: "A tap-to-call button on every page, especially on phones." },
+      { t: "Short quote forms", d: "Three or four fields, not twelve, so more people finish them." },
+      { t: "Trust up front", d: "Reviews, badges and real photos where customers look first." },
+      { t: "Every lead counted", d: "Call and form tracking connected at launch." },
     ],
     href: "/services/web-design",
-    link: "Website design",
-    panel: <CityPagesPanel />,
+    link: "Website design services",
+    panel: <LeadPanel />,
   },
   {
-    label: "Reporting",
-    title: "Know Which Calls Came From Where",
-    body: "Call and form tracking go in during the first month, so your monthly report shows calls, forms and rankings by city, and which part of the plan brought them in.",
+    label: "Speed",
+    title: "Fast on Every Phone in the Metroplex",
+    body: "Most DFW customers find a local business on their phone, often from a job site or the car. We plan page speed into the build, size every image and keep the code lean, so your site passes Google’s Core Web Vitals at launch.",
     points: [
-      { t: "Call tracking", d: "Every call logged with the source that produced it." },
-      { t: "Form tracking", d: "Quote requests counted alongside calls." },
-      { t: "Rankings by city", d: "Where you show up from cities across DFW." },
-      { t: "A plain-English summary", d: "What changed, what it brought in and what’s next." },
+      { t: "Mobile-first layouts", d: "Designed for the phone first, then scaled up to desktop." },
+      { t: "Core Web Vitals passed", d: "Checked before launch on every build." },
+      { t: "Optimized images", d: "Compressed and sized for each screen." },
+      { t: "Lean, clean code", d: "No bloated themes slowing your pages down." },
     ],
-    href: "#dfw-contact",
-    link: "Start with a free audit",
-    panel: <ReportPanel />,
+    href: "/services/launchpad",
+    link: "New business? See LaunchPad",
+    panel: <SpeedPanel />,
+  },
+  {
+    label: "SEO built in",
+    title: "Built to Rank in Every DFW Suburb",
+    body: "One “service area” page won’t rank in Frisco and Fort Worth at the same time. We build a page for each city and service you want work from, with on-page SEO and structured data, so your new website is ready to rank across Dallas–Fort Worth.",
+    points: [
+      { t: "City and service pages", d: "A dedicated page for each suburb you serve." },
+      { t: "On-page SEO included", d: "Titles, headings and copy matched to real searches." },
+      { t: "Structured data", d: "Schema on every page so Google understands your business." },
+      { t: "Ready for local SEO", d: "Connected to your Google Business Profile at launch." },
+    ],
+    href: "/services/local-seo-packages",
+    link: "Pair your site with local SEO",
+    panel: <CityPagesPanel />,
   },
 ];
 
-/* Hand-placed "+" marks for the hero background (% of the hero box),
-   kept to the edges and the band above the headline. */
+/* Hand-placed "+" marks for the hero background (% of the hero box). */
 const heroMarks: [number, number][] = [
   [5, 15], [12, 31], [4, 47], [15, 57], [8, 70],
   [95, 13], [88, 27], [96, 42], [85, 55], [92, 68],
@@ -273,73 +284,73 @@ const heroMarks: [number, number][] = [
 
 const journey = [
   {
-    t: "They search",
-    d: "“Plumber near me” from a kitchen in Plano. We make sure your profile and pages match the words they type.",
+    t: "They find your site",
+    d: "A Plano homeowner searches for a roofer and taps your result, because your page title matches exactly what they typed.",
   },
   {
-    t: "They find you",
-    d: "Your business in the top three on Google Maps, thanks to the right categories, reviews and service area.",
+    t: "It loads fast and looks right",
+    d: "Your homepage opens in a blink on their phone, with your services, reviews and service area right up front.",
   },
   {
-    t: "They call",
-    d: "One tap from your profile or website. Click-to-call and call tracking go on everything.",
+    t: "They ask for a quote",
+    d: "One tap on Call now or a short form. No hunting for a phone number and no twelve-field forms.",
   },
   {
-    t: "They book",
-    d: "The job lands on your calendar, and your monthly report shows which search brought it in.",
+    t: "You get the lead",
+    d: "The request comes straight to you, and tracking shows which page and search brought it in.",
   },
 ];
 
 const steps = [
   {
-    when: "Week 1",
-    title: "A Free Metro Visibility Audit",
-    body: "Your Google profile, website and rankings checked from cities across DFW, the competitors who outrank you, and a plan with a flat quote.",
+    when: "Day 1",
+    title: "A Free Strategy Call",
+    body: "We learn your services, your best customers and the DFW cities you want work from, review your current site, and send a flat project quote.",
     href: "#dfw-contact",
     tone: "blue",
-    photo: "Free local SEO audit report for a Dallas–Fort Worth business, open on a laptop",
-    src: "/images/dfw/audit-report.png",
+    photo: "Web designer and Dallas–Fort Worth business owner reviewing a website strategy together",
+    src: "/images/dfw/web/dfw-strategy-call.png",
+  },
+  {
+    when: "Weeks 1–2",
+    title: "Sitemap, Wireframes and Copy",
+    body: "We plan every page, sketch the layout and write copy around what your customers search for, and you approve it all before design starts.",
+    href: "/services/web-design",
+    tone: "gold",
+    photo: "Website wireframes and sitemap sketches beside a laptop",
+    src: "/images/dfw/web/dfw-wireframes.png",
   },
   {
     when: "Weeks 2–4",
-    title: "Fix the Foundation",
-    body: "Categories, services and service area on your profile, matching business details everywhere, and call tracking so every lead is counted.",
-    href: "/local-seo-google-business-optimization",
-    tone: "gold",
-    photo: "Google Business Profile being optimized on a phone",
-    src: "/images/dfw/profile-phone.png",
-  },
-  {
-    when: "Month 2",
-    title: "Build Reach Into the Suburbs",
-    body: "Pages for the areas you want work from, review requests that mention the job and the town, and links from local sites.",
-    href: "/services/local-seo-packages",
+    title: "Design and Build",
+    body: "Your site is designed for your brand, built mobile-first and tuned for speed, with click-to-call, quote forms and on-page SEO on every page.",
+    href: "/services/launchpad",
     tone: "green",
-    photo: "New city service page for a Plano, TX business shown on a phone",
-    src: "/images/dfw/city-page-phone.png",
+    photo: "Designer building a responsive website across a laptop and phone",
+    src: "/images/dfw/web/dfw-responsive-build.png",
   },
   {
-    when: "Month 3 on",
-    title: "Grow, and Report on Calls",
-    body: "Ads where Maps can’t reach yet, and a monthly report on calls, forms and where you rank in each city.",
-    href: "/services/google-ads",
+    when: "Launch",
+    title: "Test, Launch and Track",
+    body: "We test on phones, tablets and desktops, launch, then connect analytics and call tracking so you can see the leads your new site brings in.",
+    href: "/services/local-seo-packages",
     tone: "red",
-    photo: "Zonic strategist walking a DFW client through a monthly marketing report",
-    src: "/images/dfw/report-conversation.png",
+    photo: "New business website checked across desktop, tablet and phone before launch",
+    src: "/images/dfw/web/dfw-launch-qa.png",
   },
 ];
 
 const hubLeft = [
+  { icon: SiWordpress, name: "WordPress", tone: "wordpress" },
+  { icon: SiShopify, name: "Shopify", tone: "shopify" },
   { icon: SiGoogle, name: "Google Search", tone: "google" },
-  { icon: SiGooglemaps, name: "Google Maps", tone: "maps" },
-  { icon: SiApple, name: "Apple Maps", tone: "apple" },
-  { icon: SiYelp, name: "Yelp", tone: "yelp" },
+  { icon: SiGooglemaps, name: "Google Business Profile", tone: "maps" },
 ];
 const hubRight = [
-  { icon: SiOpenai, name: "ChatGPT", tone: "openai" },
-  { icon: SiFacebook, name: "Facebook", tone: "facebook" },
-  { icon: SiWaze, name: "Waze", tone: "waze" },
-  { icon: SiInstagram, name: "Instagram", tone: "instagram" },
+  { icon: SiGoogleanalytics, name: "Google Analytics", tone: "analytics" },
+  { icon: SiGooglesearchconsole, name: "Google Search Console", tone: "searchconsole" },
+  { icon: SiGoogleads, name: "Google Ads", tone: "googleads" },
+  { icon: SiGoogletagmanager, name: "Google Tag Manager", tone: "tagmanager" },
 ];
 
 const counties = [
@@ -376,46 +387,67 @@ const mapPins = [
 const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
   [
     {
-      q: "Do you have an office in Dallas or Fort Worth?",
-      a: "No. Zonic Media is based in Dover, Delaware, and works with businesses across the US, including the Dallas–Fort Worth area. Calls happen on video, and everything we manage (your Google profile, website, rankings and ads) is online, so being in Texas doesn’t change the work.",
-    },
-    {
-      q: "Can my business rank in both Dallas and Fort Worth?",
-      a: "In the web results, yes: a strong page for each city can rank in both. The Google Maps Map Pack is harder, because Google weighs the distance between the searcher and your address, and the two downtowns are about 30 miles apart. Most businesses hold the Map Pack near their address, then use city pages and Google Ads to reach the other side of the metro.",
-    },
-    {
-      q: "How much does a digital marketing agency in Dallas cost?",
-      a: "Most agencies charge small businesses somewhere between $1,000 and $5,000 a month, depending on the channels. Our local SEO plans are $197, $750 and $1,500 a month, Google Ads management is priced on ad spend, and websites are a one-time project fee. Every engagement starts with a free audit and a flat quote.",
-    },
-    {
-      q: "How long does it take to see results?",
-      a: "Fixes to your Google Business Profile can move rankings within a few weeks. Ranking in the competitive parts of the metro usually takes three to six months of steady work. Google Ads can bring in calls in the first week.",
-    },
-    {
-      q: "Which parts of DFW do you cover?",
-      a: "All of it: Dallas, Tarrant, Collin and Denton counties and the counties around them, including Rockwall, Ellis, Johnson, Kaufman, Parker, Hunt and Wise. We plan around the cities you want work from, not just the one on your address.",
-    },
-    {
-      q: "My Google Business Profile is suspended. Can you help?",
-      a: "Yes. Reinstatement is our most requested service, and we’ve reinstated and verified more than 900 profiles. A suspended profile has to be fixed before any ranking work will matter.",
+      q: "How much does it cost to design a website in Dallas?",
+      a: "Most custom small-business websites from US agencies cost $2,500 to $10,000, depending on page count, custom design and integrations. Zonic Media quotes a flat project fee after a free strategy call, and every build includes on-page SEO, Core Web Vitals optimization and lead forms. For service businesses we can also bundle a website with no upfront fee into a qualifying marketing plan.",
       link: {
-        href: "/services/gbp-reinstatement-service",
-        label: "Google Business Profile reinstatement",
+        href: "/website-design-agency-us/offer",
+        label: "See our free website offer",
       },
     },
     {
-      q: "Do you offer local SEO in Dallas and Fort Worth?",
-      a: "Yes. Local SEO is the core of most of our DFW plans: Google Business Profile optimization, consistent listings, links from local sites and a page for each city you serve. We check your rankings from cities across the Metroplex every month, and plans are $197, $750 or $1,500 a month.",
-      link: { href: "/services/local-seo-packages", label: "See our local SEO packages" },
+      q: "What affects the cost of a website?",
+      a: "The biggest factors are the number of pages, custom design versus a template, e-commerce or booking features, integrations with the tools you already use, and whether you need copy written for you. A few well-planned pages for each service and city usually beat a large site that nobody updates.",
     },
     {
-      q: "How do I show up in Google’s AI answers in Dallas?",
-      a: "AI answers lean on the same signals as local SEO: a complete Google Business Profile, steady reviews that mention the job and the town, and clear service pages with matching business details everywhere. We set those up and check which AI answers mention you.",
+      q: "How long does it take to build a website?",
+      a: "Most websites take 2 to 6 weeks from kickoff to launch, depending on the number of pages, any custom features and how quickly content is approved.",
+    },
+    {
+      q: "Do you build WordPress or Shopify websites?",
+      a: "Both. We build fully responsive WordPress websites for service businesses, Shopify stores for e-commerce, and custom web development when a project needs it. We recommend the platform that fits your goals on the strategy call.",
+    },
+    {
+      q: "Will my new website be mobile-friendly and fast?",
+      a: "Yes. Every website is designed mobile-first and built to pass Google’s Core Web Vitals at launch, because most Dallas–Fort Worth customers find local businesses on their phones.",
+    },
+    {
+      q: "Can I update the website myself after launch?",
+      a: "Yes. WordPress and Shopify sites come with an easy editor, so you can change text, photos, offers and blog posts yourself without touching code.",
+    },
+    {
+      q: "Is SEO included with my website?",
+      a: "On-page SEO is included in every build: page titles, headings, structured data and a page for each city and service you serve. To keep climbing in Google after launch, pair your site with a local SEO plan, from $197 a month.",
+      link: { href: "/services/local-seo-packages", label: "Local SEO packages" },
+    },
+    {
+      q: "Will my new website show up in Google’s AI answers?",
+      a: "No one can guarantee it, but we build for it: clear service pages that answer real questions, structured data on every page, FAQ sections and the same business details everywhere. That is the structure AI Overviews and assistants like ChatGPT draw on when they recommend a local business.",
       link: { href: "/services/ai-seo-services", label: "AI search optimization" },
     },
     {
-      q: "Do I have to sign a long-term contract?",
-      a: "No. There are no long-term contracts. Plans run month to month after a free audit and a flat quote.",
+      q: "Can you redesign my existing website?",
+      a: "Yes. We rebuild outdated websites to be faster, clearer and easier to contact, and we redirect your old URLs to the new pages to protect the rankings you already have.",
+    },
+    {
+      q: "Do you design websites for businesses in Fort Worth, Plano and Frisco?",
+      a: "Yes. We design websites for businesses across the whole Dallas–Fort Worth metro, including Fort Worth, Arlington, Plano, Frisco, McKinney, Irving and Denton, and we can build a dedicated page for each city you serve.",
+    },
+    {
+      q: "What industries do you design websites for?",
+      a: "Mostly local service businesses: roofers, HVAC and plumbing companies, home inspectors, cleaners, landscapers, dentists, law firms and real estate agents, across 20+ niches in all.",
+      link: { href: "/industries", label: "See every industry we work with" },
+    },
+    {
+      q: "How do you work with Dallas–Fort Worth businesses?",
+      a: "You get one dedicated team from strategy call to launch. Calls happen on video at times that suit Central Time, and you review and approve each stage (sitemap, design and the finished site) before we move on.",
+    },
+    {
+      q: "Can you also manage my Google Business Profile and ads?",
+      a: "Yes. Many DFW clients pair a new website with Google Business Profile management, local SEO or Google Ads, so the site has customers coming in from day one.",
+      link: {
+        href: "/services/dallas-fort-worth/digital-marketing-agency",
+        label: "Our Dallas–Fort Worth digital marketing services",
+      },
     },
   ];
 
@@ -424,7 +456,11 @@ const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   { name: "Services", url: "/services" },
-  { name: "Dallas–Fort Worth Marketing Agency", url: PAGE_PATH },
+  {
+    name: "Dallas–Fort Worth",
+    url: "/services/dallas-fort-worth/digital-marketing-agency",
+  },
+  { name: "Web Design", url: PAGE_PATH },
 ]);
 
 const servedCities = [
@@ -470,8 +506,11 @@ const jsonLd = [
     breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/images/dfw/team-campaign.png`,
-      caption: "Zonic Media team planning a Dallas–Fort Worth marketing campaign",
+      url: `${SITE_URL}/images/dfw/web/dfw-team-review.png`,
+      width: 1672,
+      height: 941,
+      caption:
+        "Zonic Media team reviewing a new homepage design for a Dallas–Fort Worth business",
     },
   },
   // A Service with areaServed, not a LocalBusiness: there is no Texas
@@ -480,26 +519,36 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${PAGE_URL}#service`,
-    name: "Digital marketing for Dallas–Fort Worth businesses",
+    name: "Web design for Dallas–Fort Worth businesses",
     alternateName: [
-      "Dallas digital marketing agency",
-      "Fort Worth digital marketing agency",
-      "DFW marketing agency",
+      "Dallas web design",
+      "Fort Worth web design",
+      "DFW website design",
     ],
     serviceType: [
-      "Digital marketing agency",
-      "Local SEO",
-      "Google Business Profile management",
-      "Website design",
-      "Google Ads management",
-      "AI search optimization",
+      "Web design",
+      "Website redesign",
+      "WordPress web design",
+      "Shopify e-commerce design",
+      "Landing page design",
     ],
     url: PAGE_URL,
     description: DESCRIPTION,
+    image: `${SITE_URL}/images/dfw/web/dfw-team-review.png`,
     provider: { "@id": `${SITE_URL}/#organization` },
     audience: {
       "@type": "BusinessAudience",
-      audienceType: "Local service businesses in Dallas–Fort Worth",
+      audienceType: "Local businesses in Dallas–Fort Worth",
+    },
+    // The only published price: the strategy call is free (as on
+    // /services/web-design). Builds are quoted flat after it.
+    offers: {
+      "@type": "Offer",
+      name: "Free website strategy call",
+      price: "0",
+      priceCurrency: "USD",
+      description:
+        "Free strategy call covering your goals, site structure and a flat project quote.",
     },
     areaServed: [
       ...servedCities.map((name) => ({
@@ -512,11 +561,11 @@ const jsonLd = [
       })),
       { "@type": "AdministrativeArea", name: "Dallas–Fort Worth metroplex" },
     ],
-    // Every service links to its own page; only local SEO carries a price
-    // because the site publishes one (plans from $197 a month).
+    // Prices aren't published for builds (flat quote after a free call),
+    // so only the local SEO add-on carries one.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Digital marketing services for DFW businesses",
+      name: "Web design services for DFW businesses",
       itemListElement: services.map((service) => ({
         "@type": "Offer",
         itemOffered: {
@@ -554,7 +603,6 @@ const jsonLd = [
 
 /* -------------------------------------------------------------- fragments */
 
-/** Heading set on white highlight strips, one per line (reference style). */
 function Strip({
   as: Tag = "h2",
   id,
@@ -575,7 +623,7 @@ function Strip({
 
 /* ------------------------------------------------------------------ page */
 
-export default function DallasFortWorthMarketingPage() {
+export default function DallasFortWorthWebDesignPage() {
   return (
     <>
       <script
@@ -593,15 +641,16 @@ export default function DallasFortWorthMarketingPage() {
           </span>
           <div className="dfw-wrap">
             <Strip as="h1" id="dfw-h1" className="dfw-hero__title">
-              Dallas–Fort Worth <InlinePin /> Marketing{" "}
+              Dallas–Fort Worth <InlinePin /> Web Design{" "}
               <br className="dfw-hero__br" />
               Agency for Local Businesses
             </Strip>
             <p className="dfw-hero__sub">
-              Zonic Media is a digital marketing agency for Dallas–Fort Worth
-              businesses. We run Google Business Profiles, websites, local SEO
-              and Google Ads so customers find you from Frisco to Mansfield,
-              not only near your address. Every plan starts with a free audit.
+              Zonic Media is the Dallas web design agency that builds fast,
+              great-looking websites for Dallas–Fort Worth businesses. Every
+              site is designed to turn visitors into calls and quote requests,
+              built mobile-first, and ready to rank on Google from Frisco to
+              Mansfield.
             </p>
             <div className="dfw-hero__logos">
               <a
@@ -638,10 +687,11 @@ export default function DallasFortWorthMarketingPage() {
                 alt="Yelp Advertising Partner"
                 priority
               />
+              <GoogleRatingBadge href={SITE_CONTACT.mapHref} />
             </div>
             <div className="dfw-hero__ctas">
               <a href="#dfw-contact" className="dfw-pill">
-                Get a Free DFW Audit
+                Book a Free Strategy Call
               </a>
               <a
                 href={SITE_CONTACT.phoneHref}
@@ -664,17 +714,17 @@ export default function DallasFortWorthMarketingPage() {
                 </span>
               </span>
               <div>
-                <p>Google Business Profiles reinstated and verified</p>
-                <b>900+</b>
+                <p>Websites shipped for local businesses</p>
+                <b>120+</b>
               </div>
             </div>
 
             <div className="dfw-bento__card dfw-bento__card--lime">
               <span className="dfw-bento__icon" aria-hidden="true">
-                <FiAward />
+                <FiZap />
               </span>
-              <b>1,500+</b>
-              <p>Profiles optimized</p>
+              <b>2–6</b>
+              <p>Weeks from kickoff to launch for most sites</p>
             </div>
 
             <div className="dfw-bento__card dfw-bento__card--gold">
@@ -694,8 +744,8 @@ export default function DallasFortWorthMarketingPage() {
 
             <div className="dfw-bento__card dfw-bento__card--ink">
               <b>20+</b>
-              <p>Local service niches we market</p>
-              <ul className="dfw-tags" aria-label="Niches we market">
+              <p>Industries we design websites for</p>
+              <ul className="dfw-tags" aria-label="Industries we design for">
                 <li className="dfw-tag dfw-tag--gold">Roofing</li>
                 <li className="dfw-tag dfw-tag--white">HVAC</li>
                 <li className="dfw-tag dfw-tag--green">Plumbing</li>
@@ -704,7 +754,7 @@ export default function DallasFortWorthMarketingPage() {
                 <li className="dfw-tag dfw-tag--white">Pest control</li>
                 <li className="dfw-tag dfw-tag--gold">Landscaping</li>
                 <li className="dfw-tag dfw-tag--green">Dental</li>
-                <li className="dfw-tag dfw-tag--white">Solar</li>
+                <li className="dfw-tag dfw-tag--white">Law firms</li>
                 <li className="dfw-tag dfw-tag--more">+ more</li>
               </ul>
             </div>
@@ -717,26 +767,27 @@ export default function DallasFortWorthMarketingPage() {
             <div className="dfw-about__top">
               <div className="dfw-about__head">
                 <Strip id="dfw-about-h">
-                  Built Around How{" "}
+                  Websites That Win{" "}
                   <br />
-                  DFW Customers Search.
+                  DFW Customers.
                 </Strip>
                 <HandArrow className="dfw-about__arrow" />
               </div>
               <div className="dfw-about__copy">
-                <p className="dfw-label">About Zonic in Dallas–Fort Worth</p>
+                <p className="dfw-label">Web design in Dallas–Fort Worth</p>
                 <p>
-                  Google shows customers in Plano, Arlington and Fort Worth
-                  different businesses for the same search, because it ranks
-                  the Map Pack partly by distance. We plan every DFW account
-                  around the cities you actually want work from, then use the
-                  right tool for each one.
+                  We design websites that work as hard as you do. Fast,
+                  great-looking and easy to use on a phone, every site we
+                  build gives Dallas–Fort Worth customers one clear reason to
+                  call you, with your services, reviews and service area right
+                  where they decide.
                 </p>
                 <p>
-                  We’re a Dover, Delaware team, not a Dallas office, and we’ve
-                  reinstated and verified 900+ Google Business Profiles for
-                  businesses across the US. Calls happen on video, at times
-                  that suit Central Time.
+                  With 120+ websites shipped for local businesses, we know
+                  what turns a visitor into a lead. You get one dedicated web
+                  design and development team from strategy call to launch, a
+                  flat project quote, and a website you’ll be proud to send
+                  customers to.
                 </p>
                 <Link href="/about" className="dfw-pill dfw-pill--outline">
                   More About Us
@@ -748,16 +799,16 @@ export default function DallasFortWorthMarketingPage() {
               <RatingBadge />
               <div className="dfw-about__photo dfw-about__photo--narrow">
                 <Ph
-                  src="/images/dfw/strategist-profile.png"
-                  label="Zonic Media strategist reviewing a Dallas client’s Google Business Profile"
+                  label="Designer reviewing a website layout on a large monitor"
                   ratio="3:4"
+                  src="/images/dfw/web/dfw-designer-review.png"
                 />
               </div>
               <div className="dfw-about__photo dfw-about__photo--wide">
                 <Ph
-                  src="/images/dfw/team-campaign.png"
-                  label="Zonic Media team planning a Dallas–Fort Worth marketing campaign"
+                  label="Team reviewing a new homepage design on a laptop and a phone"
                   ratio="16:9"
+                  src="/images/dfw/web/dfw-team-review.png"
                 />
               </div>
             </div>
@@ -769,18 +820,18 @@ export default function DallasFortWorthMarketingPage() {
           <div className="dfw-wrap">
             <div className="dfw-row-head">
               <Strip id="dfw-svc-h">
-                Digital Marketing Services{" "}
+                Dallas Web Design Services{" "}
                 <br />
                 for DFW Businesses
               </Strip>
               <div className="dfw-svc-head">
                 <p>
-                  Six services, one team and one monthly report. Most DFW
-                  businesses start with their Google profile and website, then
-                  add local SEO and ads to reach the rest of the metro.
+                  Six ways we help Dallas–Fort Worth businesses look great
+                  online and win more work. Every build includes on-page SEO,
+                  Core Web Vitals optimization and lead forms.
                 </p>
                 <a href="#dfw-contact" className="dfw-pill">
-                  Get a Free DFW Audit
+                  Book a Free Strategy Call
                 </a>
               </div>
             </div>
@@ -824,11 +875,11 @@ export default function DallasFortWorthMarketingPage() {
           <div className="dfw-wrap">
             <div className="dfw-center-head">
               <h2 id="dfw-feat-h" className="dfw-h2">
-                How We Get You Found Across the Metroplex
+                How Our Websites Win Work Across the Metroplex
               </h2>
               <p>
-                Three pieces of work that move the phone for most Dallas–Fort
-                Worth businesses.
+                Three things every Zonic website does for a Dallas–Fort Worth
+                business.
               </p>
             </div>
 
@@ -871,14 +922,14 @@ export default function DallasFortWorthMarketingPage() {
             <div className="dfw-journey__card">
               <div className="dfw-journey__text">
                 <Strip id="dfw-journey-h">
-                  From a Google Search{" "}
+                  From First Click{" "}
                   <br />
-                  to a Booked Job
+                  to a New Lead
                 </Strip>
                 <p className="dfw-journey__lead">
-                  Every part of the plan exists to move a customer one step
-                  closer to calling you. Here’s the path a DFW customer takes,
-                  and what we do at each step.
+                  A great website removes every reason not to contact you.
+                  Here’s the path a DFW customer takes on a site we build, and
+                  what we design for at each step.
                 </p>
                 <ol className="dfw-journey__steps">
                   {journey.map((step, i) => (
@@ -898,7 +949,7 @@ export default function DallasFortWorthMarketingPage() {
                 </ol>
               </div>
               <div className="dfw-journey__stage">
-                <JourneyPhone />
+                <WebJourneyPhone />
               </div>
             </div>
           </div>
@@ -908,11 +959,9 @@ export default function DallasFortWorthMarketingPage() {
         <section className="dfw-sec dfw-works" aria-labelledby="dfw-steps-h">
           <div className="dfw-wrap">
             <div className="dfw-row-head">
-              <Strip id="dfw-steps-h">
-                Your First 90 Days
-              </Strip>
+              <Strip id="dfw-steps-h">Our Web Design Process in 4 Steps</Strip>
               <a href="#dfw-contact" className="dfw-pill">
-                Book Your Free Audit
+                Book a Free Strategy Call
               </a>
             </div>
 
@@ -920,7 +969,9 @@ export default function DallasFortWorthMarketingPage() {
               {steps.map((step, i) => (
                 <li key={step.title} className="dfw-step">
                   <div className="dfw-step__card">
-                    <span className="dfw-step__num">
+                    <span
+                      className={`dfw-step__num dfw-step__num--${step.tone}`}
+                    >
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="dfw-step__text">
@@ -938,7 +989,7 @@ export default function DallasFortWorthMarketingPage() {
                   </div>
                   <div className={`dfw-step__media dfw-tone-bg--${step.tone}`}>
                     <div className="dfw-step__photo">
-                      <Ph src={step.src} label={step.photo} ratio="4:3" />
+                      <Ph label={step.photo} ratio="4:3" src={step.src} />
                     </div>
                   </div>
                 </li>
@@ -947,52 +998,51 @@ export default function DallasFortWorthMarketingPage() {
           </div>
         </section>
 
-        {/* ======================================================== COVERAGE */}
+        {/* =========================================================== BUILD */}
         <section className="dfw-sec dfw-coverage" aria-labelledby="dfw-cov-h">
           <div className="dfw-wrap">
             <div className="dfw-coverage__card">
               <div className="dfw-coverage__visual">
-                <CoverageGrid />
+                <SiteBuild />
               </div>
               <div className="dfw-coverage__text">
                 <Strip id="dfw-cov-h">
-                  Watch Your Map Pack{" "}
+                  Watch Your New Website{" "}
                   <br />
-                  Coverage Spread
+                  Come Together
                 </Strip>
                 <p className="dfw-coverage__lead">
-                  Google ranks you differently in every part of the metro. We
-                  check where you show up from points across your whole service
-                  area, not just your front door. As your profile, pages and
-                  reviews improve, the green spreads out from your address
-                  into the suburbs you want work from.
+                  Every build moves through the same stages: a wireframe you
+                  approve, a design made for your brand, then a fast, tested
+                  website that goes live with tracking connected. You see each
+                  stage and sign off before we move on, so there are no
+                  surprises at launch.
                 </p>
                 <ul className="dfw-coverage__points">
                   <li>
                     <FiCheck aria-hidden="true" />
-                    Rankings checked from across DFW every month
+                    Wireframe and copy approved before design
                   </li>
                   <li>
                     <FiCheck aria-hidden="true" />
-                    Shown city by city in your monthly report
+                    Designed and built mobile-first
                   </li>
                   <li>
                     <FiCheck aria-hidden="true" />
-                    Used to decide where we build pages next
+                    Tested on phones, tablets and desktops before launch
                   </li>
                 </ul>
                 <Link
-                  href="/google-maps-business-ranking-tool-online"
+                  href="/website-design-agency-us/offer"
                   className="dfw-pill dfw-pill--white dfw-pill--arrow"
                 >
-                  Check Your Google Maps Ranking Free
+                  See Our Free Website Offer
                   <span className="dfw-pill__circ" aria-hidden="true">
                     <FiArrowUpRight />
                   </span>
                 </Link>
                 <p className="dfw-coverage__note">
-                  Illustration of how coverage typically spreads. Real results
-                  vary by business and market.
+                  Illustration of our build process. Timelines vary by project.
                 </p>
               </div>
             </div>
@@ -1004,16 +1054,17 @@ export default function DallasFortWorthMarketingPage() {
           <div className="dfw-wrap">
             <div className="dfw-center-head">
               <h2 id="dfw-hub-h" className="dfw-h2">
-                Found Everywhere DFW Customers Look
+                Built to Work With the Tools That Matter
               </h2>
               <p>
-                We keep your name, address, phone and hours identical on the
-                platforms Google cross-checks and the AI tools people now ask.
+                We build on WordPress or Shopify and connect your website to
+                Google Analytics, Search Console, your Google Business Profile
+                and ad tracking, so every visit, call and form is counted.
               </p>
             </div>
 
             <div className="dfw-hub__map">
-              <ul className="dfw-hub__side" aria-label="Search and map platforms">
+              <ul className="dfw-hub__side" aria-label="Platforms we build on">
                 {hubLeft.map((item) => (
                   <li key={item.name} className={`dfw-app dfw-app--${item.tone}`}>
                     <item.icon aria-hidden="true" />
@@ -1023,12 +1074,12 @@ export default function DallasFortWorthMarketingPage() {
               </ul>
               <div className="dfw-hub__core">
                 <span className="dfw-hub__ring">
-                  <FiMapPin aria-hidden="true" />
+                  <FiMonitor aria-hidden="true" />
                 </span>
-                <b>Your business</b>
-                <span>one set of details, everywhere</span>
+                <b>Your website</b>
+                <span>connected from day one</span>
               </div>
-              <ul className="dfw-hub__side" aria-label="Social and AI platforms">
+              <ul className="dfw-hub__side" aria-label="Tracking and analytics tools">
                 {hubRight.map((item) => (
                   <li key={item.name} className={`dfw-app dfw-app--${item.tone}`}>
                     <item.icon aria-hidden="true" />
@@ -1045,9 +1096,9 @@ export default function DallasFortWorthMarketingPage() {
           <div className="dfw-wrap">
             <div className="dfw-row-head dfw-row-head--top">
               <Strip id="dfw-love-h">
-                900+ Profiles{" "}
+                120+ Websites{" "}
                 <br />
-                Back on Google
+                Shipped and Counting
               </Strip>
               <div className="dfw-love__aside">
                 <span className="dfw-avas dfw-avas--lg">
@@ -1058,8 +1109,8 @@ export default function DallasFortWorthMarketingPage() {
                 </span>
                 <Sparks className="dfw-love__sparks" />
                 <p>
-                  Client satisfaction says more than we can. Verified reviews
-                  from Zonic Media clients across the US, collected by Clutch.
+                  Our clients say it better than we can. Verified reviews from
+                  Zonic Media clients across the US, collected by Clutch.
                 </p>
               </div>
             </div>
@@ -1105,9 +1156,7 @@ export default function DallasFortWorthMarketingPage() {
                   alt="Zonic Media rated 5 stars on Trustpilot"
                 />
               </a>
-              <p>
-                <b>5.0</b> on Clutch from 21 reviews
-              </p>
+              <GoogleRatingBadge href={SITE_CONTACT.mapHref} />
             </div>
           </div>
         </section>
@@ -1115,59 +1164,57 @@ export default function DallasFortWorthMarketingPage() {
         {/* ============================================================ AREA */}
         <section className="dfw-sec dfw-area-sec" aria-labelledby="dfw-area-h">
           <div className="dfw-wrap">
-            <div className="dfw-area">
-              <div className="dfw-area__text">
+            <div className="dfw-area dfw-area--split">
+              <div className="dfw-area__head">
                 <Strip id="dfw-area-h">
-                  Where We Work in{" "}
+                  Web Design Across{" "}
                   <br />
                   Dallas–Fort Worth
                 </Strip>
                 <p className="dfw-area__lead">
-                  All eleven counties of the Dallas–Fort Worth metro, from
-                  Denton to Waxahachie and Weatherford to Rockwall. The
-                  Metroplex added about 123,000 residents between mid-2024 and
-                  mid-2025, and Celina, Princeton, Melissa and Anna were among
-                  the fastest-growing cities in the US, so we build plans
-                  around the suburbs where your next customers are moving.
+                  We design websites for businesses in all eleven counties of
+                  the Dallas–Fort Worth metro, from Denton to Waxahachie and
+                  Weatherford to Rockwall. The Metroplex added about 123,000
+                  residents between mid-2024 and mid-2025, so we build pages
+                  for the suburbs where your next customers are moving in.
                 </p>
+              </div>
+              <div className="dfw-area__text">
                 <div className="dfw-area__counties">
-                  {counties.map((county) => (
+                  {counties.map((county, i) => (
                     <div key={county.name}>
-                      <h3>{county.name}</h3>
-                      <p>{county.cities}</p>
+                      <h3>
+                        <span className="dfw-area__num" aria-hidden="true">
+                          {i + 1}
+                        </span>
+                        {county.name}
+                      </h3>
+                      <ul className="dfw-area__cities">
+                        {county.cities.split(", ").map((city) => (
+                          <li key={city}>{city}</li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>
                 <p className="dfw-area__more">
                   Also Rockwall, Ellis, Johnson, Kaufman, Parker, Hunt and Wise
-                  counties. Texas pages for{" "}
-                  <Link href="/services/hvac-marketing-agency/texas">HVAC</Link>,{" "}
-                  <Link href="/services/plumbing-marketing-agency/texas">
-                    plumbing
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="/services/home-inspector-marketing/texas">
-                    home inspectors
+                  counties. Website pages for{" "}
+                  <Link href="/services/roofing-website-design">roofers</Link>,{" "}
+                  <Link href="/services/hvac-website-design">
+                    HVAC companies
                   </Link>
+                  ,{" "}
+                  <Link href="/services/plumbing-website-design">plumbers</Link>
+                  ,{" "}
+                  <Link href="/services/dental-website-design">dentists</Link>{" "}
+                  and{" "}
+                  <Link href="/services/law-firm-website-design">law firms</Link>
                   .
                 </p>
               </div>
               <div className="dfw-area__map">
-                <Ph
-                  src="/images/dfw/dfw-coverage-map.png"
-                  label="Map of the Dallas–Fort Worth service area across Dallas, Tarrant, Collin and Denton counties"
-                  ratio="1:1"
-                />
-                {mapPins.map((pin) => (
-                  <span
-                    key={pin.name}
-                    className="dfw-area__pin"
-                    style={{ left: `${pin.x}%`, top: `${pin.y}%` }}
-                    aria-hidden="true"
-                  >
-                    {pin.name}
-                  </span>
-                ))}
+                <CityPagesMap pins={mapPins} />
               </div>
             </div>
           </div>
@@ -1177,7 +1224,7 @@ export default function DallasFortWorthMarketingPage() {
         <section className="dfw-sec dfw-faq-sec" aria-labelledby="dfw-faq-h">
           <div className="dfw-wrap">
             <h2 id="dfw-faq-h" className="dfw-h2 dfw-faq__title">
-              Dallas–Fort Worth Marketing Questions
+              Dallas–Fort Worth Web Design Questions
             </h2>
             <div className="dfw-faq">
               {faqs.map((item) => (
@@ -1220,12 +1267,12 @@ export default function DallasFortWorthMarketingPage() {
               <h2 id="dfw-contact-h" className="dfw-contact__title">
                 Want to Talk <InlineChat /> About{" "}
                 <br />
-                Your DFW Marketing?
+                Your New Website?
               </h2>
               <p className="dfw-contact__sub">
-                Tell us where in the metro you want more work. We’ll check
-                your Google profile, website and rankings and send back a plan
-                with a flat quote.
+                Tell us about your business and the cities you serve. We’ll
+                review your current site, share a design direction and send
+                back a flat project quote.
               </p>
               <div className="dfw-contact__links">
                 <a href={SITE_CONTACT.phoneHref} className="dfw-pill">
@@ -1242,12 +1289,12 @@ export default function DallasFortWorthMarketingPage() {
               </div>
               <div className="dfw-contact__form">
                 <ServiceLeadForm
-                  formType="dfw-marketing"
-                  title="Request Your Free DFW Audit"
+                  formType="dfw-web-design"
+                  title="Book Your Free Website Strategy Call"
                   subtitle="Takes about a minute. No commitment required."
-                  submitText="Request My Free Audit"
-                  messageLabel="Which cities do you want work from?"
-                  messagePlaceholder="For example: Plano, Frisco and McKinney"
+                  submitText="Book My Free Strategy Call"
+                  messageLabel="What should your new website do for you?"
+                  messagePlaceholder="For example: more quote requests from Plano and Frisco"
                 />
               </div>
             </div>
@@ -1258,12 +1305,12 @@ export default function DallasFortWorthMarketingPage() {
         <section className="dfw-band" aria-labelledby="dfw-band-h">
           <div className="dfw-wrap dfw-band__inner">
             <h2 id="dfw-band-h">
-              Get Found Across the <span>Whole Metroplex.</span>
+              Get a Website That <span>Wins Work Across DFW.</span>
             </h2>
             <div className="dfw-band__side">
               <p>
-                Start with a free audit and a flat quote, with no contract to
-                lock you in.
+                Start with a free strategy call and a flat project quote, with
+                no surprises along the way.
               </p>
               <Link href={SITE_CONTACT.bookCallHref} className="dfw-pill dfw-pill--blue">
                 Book a Free Strategy Call

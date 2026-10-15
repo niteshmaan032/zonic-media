@@ -97,6 +97,12 @@ const nextConfig: NextConfig = {
       },
 
       // Service URL changes
+      // DFW page moved 15 Oct 2026; the old URL was already indexed in GSC.
+      {
+        source: "/services/dallas-fort-worth-marketing-agency",
+        destination: "/services/dallas-fort-worth/digital-marketing-agency",
+        permanent: true,
+      },
       {
         source: "/services/gmb-reinstatement-help",
         destination: "/services/gbp-reinstatement-service",

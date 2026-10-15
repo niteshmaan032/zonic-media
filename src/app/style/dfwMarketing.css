@@ -1,6 +1,6 @@
 /* =====================================================================
    DALLAS–FORT WORTH MARKETING AGENCY  —  .dfw   (design v3)
-   /services/dallas-fort-worth-marketing-agency
+   /services/dallas-fort-worth/digital-marketing-agency
    ---------------------------------------------------------------------
    Layout after the user's two "Retro" reference designs: grey page, big
    white rounded cards, headings on white highlight strips, ink pill
@@ -119,12 +119,11 @@
   letter-spacing: -0.03em;
   line-height: 1.12;
 }
+/* Plain headings: the white highlight strips were removed at the user's
+   request (15 Oct 2026). */
 .dfw .dfw-strip > span {
-  padding: 0.01em 0.24em 0.07em;
-  border-radius: 0.22em;
-  background: #fff;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  padding: 0;
+  background: none;
 }
 
 .dfw .dfw-h2 {
@@ -398,16 +397,10 @@
   opacity: 0.3;
 }
 
-/* The headline strips are white on a near-white wash; a hairline keeps
-   their shape. */
-.dfw .dfw-hero__title > span {
-  box-shadow: 0 0 0 1px #e1e8fa, 0 12px 30px -18px rgba(49, 87, 245, 0.25);
-}
 
-/* Line height opens a gap between the two white strips. */
 .dfw .dfw-hero__title {
   font-size: clamp(38px, 5vw, 76px);
-  line-height: 1.26;
+  line-height: 1.12;
 }
 
 /* Icons that sit inside a headline, scaled to the type. */
@@ -466,6 +459,59 @@
 }
 .dfw .dfw-hero__logos .dfw-hero__logo-wide {
   height: 56px;
+}
+
+/* Google rating badge, sized to sit with the Clutch / Trustpilot / Yelp
+   badges. */
+.dfw .dfw-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.dfw .dfw-google:hover {
+  border-color: #c9d6ee;
+  transform: translateY(-2px);
+}
+.dfw .dfw-google__g {
+  flex: none;
+  width: 38px;
+  height: 38px;
+}
+.dfw .dfw-google__text {
+  display: grid;
+  gap: 1px;
+}
+.dfw .dfw-google__score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dfw .dfw-google__score b {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+}
+.dfw .dfw-google__stars {
+  display: flex;
+  gap: 2px;
+}
+.dfw .dfw-google__stars svg {
+  width: 15px;
+  height: 15px;
+  color: #fbbc05;
+  fill: #fbbc05;
+}
+.dfw .dfw-google small {
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 500;
 }
 
 .dfw .dfw-hero__ctas {
@@ -1243,10 +1289,7 @@
 .dfw .dfw-coverage__card .dfw-strip {
   font-size: clamp(30px, 3.3vw, 50px);
 }
-/* On the white journey card the strips take the page grey. */
-.dfw .dfw-journey__card .dfw-strip > span {
-  background: var(--bg);
-}
+
 .dfw .dfw-journey__lead {
   max-width: 54ch;
   margin: 22px 0 26px;
@@ -1672,6 +1715,10 @@
   background: var(--ink);
   color: #fff;
 }
+/* White heading on the dark coverage card. */
+.dfw .dfw-coverage__card .dfw-strip {
+  color: #fff;
+}
 .dfw .dfw-coverage__lead {
   max-width: 56ch;
   margin: 24px 0 22px;
@@ -1867,10 +1914,20 @@
   border-radius: var(--r-xl);
   background: #fff;
 }
+/* Step numbers in a light circle, tinted to match each step's photo panel. */
 .dfw .dfw-step__num {
-  font-size: 22px;
-  font-weight: 500;
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 600;
 }
+.dfw .dfw-step__num--blue { background: #e3ecfd; color: var(--blue-dark); }
+.dfw .dfw-step__num--gold { background: #fff3cc; color: #8a6400; }
+.dfw .dfw-step__num--green { background: #ddf3e3; color: #1f7a3a; }
+.dfw .dfw-step__num--red { background: #fde4e1; color: #b8352a; }
 .dfw .dfw-step__text h3 {
   max-width: 14ch;
   font-size: clamp(28px, 3vw, 46px);
@@ -2104,10 +2161,7 @@
   border-radius: var(--r-xl);
   background: #fff;
 }
-/* Strips need contrast on a white card. */
-.dfw .dfw-area .dfw-strip > span {
-  background: var(--bg);
-}
+
 .dfw .dfw-area .dfw-strip {
   font-size: clamp(32px, 3.8vw, 56px);
 }
@@ -2126,13 +2180,36 @@
   border-top: 1px solid var(--line);
 }
 .dfw .dfw-area__counties h3 {
-  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
   font-size: 18px;
 }
-.dfw .dfw-area__counties p {
+.dfw .dfw-area__num {
+  display: grid;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+/* Cities in two plain columns under the numbered county name, lined up
+   with the county text. */
+.dfw .dfw-area__cities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 14px;
+  padding-left: 38px;
+}
+.dfw .dfw-area__cities li {
   color: var(--text);
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 14.5px;
+  line-height: 1.5;
 }
 .dfw .dfw-area__more {
   margin-top: 26px;
@@ -2182,6 +2259,42 @@
   background: var(--red);
   box-sizing: content-box;
   content: "";
+}
+
+/* Split variant (DFW marketing page): heading and intro share a top row,
+   then the county list and the map sit side by side, tops aligned and the
+   map stretched to the list's height. */
+.dfw .dfw-area--split {
+  align-items: stretch;
+  gap: 32px 56px;
+}
+.dfw .dfw-area--split .dfw-area__head {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 20px 56px;
+  align-items: end;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.dfw .dfw-area--split .dfw-area__lead {
+  margin-top: 0;
+}
+.dfw .dfw-area--split .dfw-area__counties {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+.dfw .dfw-area--split .dfw-area__map {
+  aspect-ratio: auto;
+  min-height: 420px;
+}
+@media (max-width: 991.98px) {
+  .dfw .dfw-area--split .dfw-area__head { grid-template-columns: minmax(0, 1fr); }
+  .dfw .dfw-area--split .dfw-area__map { aspect-ratio: 1; min-height: 0; }
+}
+@media (max-width: 575.98px) {
+  .dfw .dfw-area--split .dfw-area__head { padding-bottom: 24px; }
 }
 
 /* ==================================================================== FAQ */
@@ -2422,7 +2535,7 @@
   /* globals.css forces line-height 1.34 !important on h1–h3 under 768px;
      strips need tight lines so they touch, as in the reference. */
   .dfw .dfw-strip { line-height: 1.16 !important; }
-  .dfw .dfw-hero__title { line-height: 1.3 !important; }
+  .dfw .dfw-hero__title { line-height: 1.16 !important; }
   .dfw .dfw-hero { padding-top: 120px; }
   .dfw .dfw-love__aside { max-width: none; }
   .dfw .dfw-sparks { display: none; }
@@ -2489,6 +2602,7 @@
   .dfw .dfw-feature__points { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .dfw .dfw-contact__links .dfw-pill { width: 100%; }
   .dfw .dfw-step__card { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 32px 26px 28px; position: relative; }
+  .dfw .dfw-step__num { width: 52px; height: 52px; font-size: 17px; }
   .dfw .dfw-step__go { position: absolute; top: 24px; right: 22px; width: 56px; height: 56px; font-size: 20px; }
   .dfw .dfw-step__text > p:last-child { margin-top: 18px; font-size: 16px; }
   .dfw .dfw-step__media { min-height: 220px; }
