@@ -1723,6 +1723,26 @@ function Navbar() {
                             </span>
                           </span>
                         </div>
+
+                        <div className="services-core-card services-core-card--with-tags">
+                          <span className="services-core-icon">
+                            <MdOutlineLocationOn />
+                          </span>
+                          <span className="services-core-content">
+                            <strong>
+                              <Link
+                                href="/services/dallas-fort-worth-marketing-agency"
+                                className="services-core-title-link"
+                              >
+                                Digital Marketing Agency in Dallas–Fort Worth
+                              </Link>
+                            </strong>
+                            <span>
+                              Google Business Profiles, local SEO, websites and
+                              Google Ads for businesses across the Metroplex.
+                            </span>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -2062,6 +2082,14 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           NYC Local SEO
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/dallas-fort-worth-marketing-agency"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Digital Marketing Agency in Dallas–Fort Worth
                         </Link>
                       </li>
                     </ul>

@@ -506,9 +506,14 @@ const jsonLd = [
     mainEntity: { "@id": `${PAGE_URL}#tool` },
     breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
   },
+  // Described as a Service, not a WebApplication/SoftwareApplication:
+  // Google's software-app rich result requires aggregateRating or review,
+  // and the tool has no genuine user ratings. Semrush flagged the missing
+  // field as an error (14 Oct 2026). Service carries the same facts with no
+  // rating requirement. Never add an invented aggregateRating here.
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "Service",
     "@id": `${PAGE_URL}#tool`,
     name: "Google Business Rank Checker",
     alternateName: [
@@ -516,15 +521,14 @@ const jsonLd = [
       "GMB Rank Checker",
       "Free Local SEO Report",
     ],
+    serviceType: "Free Google Business Profile rank check and local SEO report",
     url: PAGE_URL,
     description:
       "A free online tool that produces a local SEO report for a Google Business Profile, covering local search rankings, listings, reviews, on-site SEO and social media.",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Any",
-    browserRequirements: "Requires JavaScript and a modern web browser",
     isAccessibleForFree: true,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: "United States",
   },
   { ...breadcrumbJsonLd, "@id": `${PAGE_URL}#breadcrumb` },
   {
