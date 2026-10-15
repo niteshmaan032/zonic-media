@@ -909,9 +909,7 @@ export default function DallasFortWorthMarketingPage() {
           <div className="dfw-wrap">
             <div className="dfw-row-head">
               <Strip id="dfw-steps-h">
-                Your First{" "}
-                <br />
-                90 Days
+                Your First 90 Days
               </Strip>
               <a href="#dfw-contact" className="dfw-pill">
                 Book Your Free Audit

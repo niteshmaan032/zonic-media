@@ -2511,6 +2511,50 @@
   .dfw .dfw-band .dfw-pill { width: 100%; }
 }
 
+/* Phone fixes (15 Oct 2026). Placed last so they win over the earlier
+   phone rules. */
+@media (max-width: 575.98px) {
+  /* About: one photo (the team shot) with the rotating badge on it. */
+  .dfw .dfw-about__photo--narrow { display: none; }
+  .dfw .dfw-about__photos { margin-top: 84px; }
+  .dfw .dfw-about__photo--wide { height: 280px; }
+
+  /* Journey, coverage and contact cards run edge to edge. */
+  .dfw .dfw-journey .dfw-wrap,
+  .dfw .dfw-coverage .dfw-wrap,
+  .dfw .dfw-contact .dfw-wrap { padding: 0; }
+
+  /* Hub: the ring on top, then two tidy rows of four icons. */
+  .dfw .dfw-hub__map {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .dfw .dfw-hub__core { margin-bottom: 12px; }
+  .dfw .dfw-hub__ring {
+    width: 132px;
+    height: 132px;
+    font-size: 44px;
+    box-shadow: 0 0 0 10px #fff, 0 0 0 11.5px var(--blue-soft);
+  }
+  .dfw .dfw-hub__core b { margin-top: 20px; font-size: 21px; }
+  .dfw .dfw-hub__side {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: 0 12px;
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .dfw .dfw-hub__side::before { display: none; }
+  .dfw .dfw-hub__side li:nth-child(n) { grid-area: auto; }
+  .dfw .dfw-app {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    font-size: 28px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dfw *,
   .dfw *::before,
