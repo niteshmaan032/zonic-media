@@ -136,7 +136,7 @@ export const flooringMarketing = buildIndustryMarketingPage({
     "Flooring Website Design & Development",
   ],
   costAnswer:
-    "Most flooring marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most flooring marketing retainers range from $297 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $297/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A flooring marketing agency helps flooring companies get found online and turn local searches — flooring installation near me, luxury vinyl plank, hardwood refinishing, carpet installers — into showroom visits and booked in-home measures. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

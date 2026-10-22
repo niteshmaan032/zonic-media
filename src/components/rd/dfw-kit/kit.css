@@ -1,0 +1,117 @@
+/*
+ * DFW kit (redesign component library, started 19 Oct 2026).
+ *
+ * Design tokens and root element rules for pages built from
+ * src/components/rd/dfw-kit. Everything else is short `tw:` utilities on the
+ * components. Values match the Dallas–Fort Worth reference pages
+ * (/services/dallas-fort-worth/*) so new pages in the family look the same
+ * while shipping far lighter HTML than the one-to-one converted pages.
+ *
+ * Root rules use :where() so any utility wins over them, and they stay
+ * unlayered so they beat the unlayered Bootstrap / globals element rules
+ * (same approach as dfwWeb.base.css).
+ */
+
+.dk-root {
+  --bg: #eef1f6;
+  --ink: #0c1526;
+  --ink-2: #1d2a44;
+  --blue: #2567e8;
+  --blue-dark: #1c4fc4;
+  --blue-soft: #eaf0fe;
+  --gold: #fdc115;
+  --gold-soft: #fff6db;
+  --green: #34a852;
+  --green-soft: #e7f6ec;
+  --red: #ea4334;
+  --text: #47546e;
+  --muted: #7a869e;
+  --line: #e3e9f2;
+  --panel: #f1f4f9;
+  --inset: 100px;
+  --sec-y: 36px;
+  --r-xl: 40px;
+  --lift: 0 26px 50px -26px rgba(12, 21, 38, 0.3);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 1199.98px) {
+  .dk-root { --inset: 30px; --sec-y: 32px; --r-xl: 32px; }
+}
+@media (max-width: 991.98px) {
+  .dk-root { --inset: 40px; --sec-y: 30px; }
+}
+@media (max-width: 575.98px) {
+  .dk-root { --inset: 20px; --sec-y: 26px; --r-xl: 24px; }
+}
+
+:where(.dk-root) *,
+:where(.dk-root) *::before,
+:where(.dk-root) *::after { box-sizing: border-box; }
+
+:where(.dk-root) :is(h1, h2, h3, h4) {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+:where(.dk-root) :is(p, dl, dd, figure) { margin: 0; }
+:where(.dk-root) :is(ul, ol) { margin: 0; padding: 0; list-style: none; }
+:where(.dk-root) a { color: inherit; text-decoration: none; }
+:where(.dk-root) b { font-weight: 500; }
+
+.dk-root :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.dk-root a[href^="tel:"] { white-space: nowrap; }
+
+/* FAQ disclosure marker (no utility for the -webkit pseudo element). */
+.dk-root summary { list-style: none; }
+.dk-root summary::-webkit-details-marker { display: none; }
+
+/* ServiceLeadForm skin, same as the reference pages. */
+.dk-root .slf {
+  --slf-orange: var(--blue);
+  --slf-orange-dark: var(--blue-dark);
+  --slf-orange-tint: rgba(37, 103, 232, 0.08);
+}
+.dk-root .slf.slf--card { border-color: var(--line); border-radius: 28px; box-shadow: none; }
+.dk-root .slf .lead-consent-toggle { color: var(--blue-dark); }
+
+/* ---------------------------------------------------------------- motion */
+
+@keyframes dk-shimmer { 55%, 100% { transform: translateX(100%); } }
+@keyframes dk-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6%); } }
+@keyframes dk-spin { to { transform: rotate(360deg); } }
+@keyframes dk-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* 4-step loops (12s, 3s per step): list highlight + phone screens. */
+@keyframes dk-step-on {
+  0%, 1% { background: transparent; }
+  4%, 23% { background: var(--blue-soft); }
+  26%, 100% { background: transparent; }
+}
+@keyframes dk-num-on {
+  0%, 1% { border-color: var(--line); background: #fff; color: var(--blue-dark); }
+  4%, 23% { border-color: var(--blue); background: var(--blue); color: #fff; }
+  26%, 100% { border-color: var(--line); background: #fff; color: var(--blue-dark); }
+}
+@keyframes dk-screen {
+  0% { opacity: 0; transform: translateY(10px); }
+  3%, 23% { opacity: 1; transform: none; }
+  26%, 100% { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes dk-tap {
+  0%, 9% { opacity: 0; transform: scale(0.2); }
+  12% { opacity: 1; transform: scale(0.6); }
+  19%, 100% { opacity: 0; transform: scale(1.7); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(.dk-root) *,
+  :where(.dk-root) *::before,
+  :where(.dk-root) *::after { animation: none !important; transition: none !important; }
+}

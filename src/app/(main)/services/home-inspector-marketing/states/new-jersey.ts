@@ -201,7 +201,7 @@ const content: StateContent = {
     },
     {
       q: "What are your monthly fees for New Jersey inspectors?",
-      a: "There are three plans: Foundation at $197 per month, Growth at $750 per month and Authority at $1,500 per month. Foundation handles your Google Business Profile and core local SEO; Growth adds Google Ads management and automated review requests; Authority adds social media, short-form video and Meta Ads. Every plan is month to month with no setup fee.",
+      a: "There are three plans: Foundation at $297 per month, Growth at $750 per month and Authority at $1,500 per month. Foundation handles your Google Business Profile and core local SEO; Growth adds Google Ads management and automated review requests; Authority adds social media, short-form video and Meta Ads. Every plan is month to month with no setup fee.",
     },
     {
       q: "What does the free audit cover for a New Jersey inspection company?",
@@ -411,7 +411,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · month-to-month billing",
           features: [
             "Google Business Profile fully rebuilt for your towns, with monthly management",

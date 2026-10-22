@@ -1,0 +1,40 @@
+/* Keyframes for LocalSeoVisuals.tsx (/services/dallas-fort-worth/local-seo-agency,
+   19 Oct 2026). Tokens come from the DFW kit (.dk-root). */
+
+/* GBP profile: strength bar fills while six checks tick on (8s). */
+@keyframes ls-fill { 0%, 6% { width: 22%; } 56%, 92% { width: 100%; } 100% { width: 22%; } }
+@keyframes ls-tick-1 { 0%, 8% { background: var(--panel); color: transparent; } 11%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-tick-2 { 0%, 16% { background: var(--panel); color: transparent; } 19%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-tick-3 { 0%, 24% { background: var(--panel); color: transparent; } 27%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-tick-4 { 0%, 32% { background: var(--panel); color: transparent; } 35%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-tick-5 { 0%, 40% { background: var(--panel); color: transparent; } 43%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-tick-6 { 0%, 48% { background: var(--panel); color: transparent; } 51%, 92% { background: var(--green); color: #fff; } 100% { background: var(--panel); color: transparent; } }
+@keyframes ls-done { 0%, 54% { opacity: 0; } 58%, 92% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Reviews: request → new review → owner reply (9s). */
+@keyframes ls-pop-a { 0%, 14% { opacity: 0; transform: translateY(10px) scale(0.97); } 22%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes ls-pop-b { 0%, 44% { opacity: 0; transform: translateY(10px) scale(0.97); } 52%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* Tabs that take turns (3 tabs; duration set per use). */
+@keyframes ls-tab {
+  0%, 1% { background: transparent; color: var(--muted); }
+  3%, 31% { background: var(--ink); color: #fff; }
+  34%, 100% { background: transparent; color: var(--muted); }
+}
+
+/* AI answer: typing dots, then the answer, once per tab (4s). */
+@keyframes ls-dots { 0%, 28% { opacity: 1; } 32%, 100% { opacity: 0; } }
+@keyframes ls-answer { 0%, 30% { opacity: 0; transform: translateY(6px); } 38%, 94% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes ls-blink { 50% { opacity: 0.25; } }
+
+/* Maps phone: the query types itself on the first screen (12s loop). */
+@keyframes ls-type { 0%, 2% { width: 0; } 14%, 100% { width: 18ch; } }
+
+/* Rank board: each city's marker steps through three months (9s).
+   Positions and colours come from per-row custom properties. */
+@keyframes ls-rank {
+  0%, 30% { left: var(--a); background: var(--ca); }
+  36%, 63% { left: var(--b); background: var(--cb); }
+  69%, 96% { left: var(--c); background: var(--cc); }
+  100% { left: var(--a); background: var(--ca); }
+}

@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · billed monthly, no contract",
           features: [
             "Google Business Profile rebuilt in full for your Wisconsin market and managed monthly",
@@ -472,7 +472,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing in Wisconsin cost?",
-      a: "There are three: Foundation at $197, Growth at $750, and Authority at $1,500 per month. Foundation handles your Google Business Profile and local SEO basics. Growth adds Google Ads management and review automation. Authority adds social media, video, and Meta Ads. Advertising budgets are separate, and in Wisconsin $700 to $1,500 a month covers most service areas.",
+      a: "There are three: Foundation at $297, Growth at $750, and Authority at $1,500 per month. Foundation handles your Google Business Profile and local SEO basics. Growth adds Google Ads management and review automation. Authority adds social media, video, and Meta Ads. Advertising budgets are separate, and in Wisconsin $700 to $1,500 a month covers most service areas.",
     },
     {
       q: "What does the free Wisconsin marketing audit include?",

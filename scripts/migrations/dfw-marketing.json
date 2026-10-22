@@ -1,0 +1,6 @@
+{
+  "note": "Boosts found with scripts/style-diff.mjs: rules from different sections that hit the same element, where the later rule in dfwMarketing.css won.",
+  "boost": [
+    "dfw-logos|&_b|font-weight"
+  ]
+}

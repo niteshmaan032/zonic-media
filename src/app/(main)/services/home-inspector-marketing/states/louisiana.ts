@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · billed monthly to your Louisiana firm",
           features: [
             "Your Louisiana Google Business Profile rebuilt in full, then managed every month",
@@ -460,7 +460,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Louisiana?",
-      a: "Management is $197, $750, or $1,500 per month depending on the plan, with no contract and no setup fee. Ad spend is paid separately to Google and Meta. Because click prices in Louisiana are moderate, we usually recommend starting between $600 and $1,500 per month in ads, toward the higher end for New Orleans and Baton Rouge.",
+      a: "Management is $297, $750, or $1,500 per month depending on the plan, with no contract and no setup fee. Ad spend is paid separately to Google and Meta. Because click prices in Louisiana are moderate, we usually recommend starting between $600 and $1,500 per month in ads, toward the higher end for New Orleans and Baton Rouge.",
     },
     {
       q: "I cover both New Orleans and the Northshore. Can one profile rank on both sides of the lake?",

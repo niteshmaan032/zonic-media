@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · billed month to month",
           features: [
             "Full Google Business Profile rebuild plus monthly management",
@@ -466,7 +466,7 @@ const content: StateContent = {
     },
     {
       q: "How much do your Washington State marketing plans cost?",
-      a: "Foundation is $197 per month, Growth is $750 per month and Authority is $1,500 per month. Foundation covers Google Business Profile management and core local SEO, Growth adds Google Ads and a review generation system, and Authority adds social media, video and Meta Ads. There are no contracts or setup fees, and ad spend is billed separately by the platforms.",
+      a: "Foundation is $297 per month, Growth is $750 per month and Authority is $1,500 per month. Foundation covers Google Business Profile management and core local SEO, Growth adds Google Ads and a review generation system, and Authority adds social media, video and Meta Ads. There are no contracts or setup fees, and ad spend is billed separately by the platforms.",
     },
     {
       q: "What is in the free audit?",

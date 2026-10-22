@@ -10,7 +10,7 @@ export const cannabisMarketing = buildIndustryMarketingPage({
   slug: "cannabis-marketing-agency",
   title: "Cannabis Marketing Agency | Dispensary SEO, SMS & Leads",
   description:
-    "Cannabis marketing agency for licensed dispensaries: local SEO, Map Pack, menu SEO, compliant 21+ ads, SMS and loyalty. Month-to-month from $197.",
+    "Cannabis marketing agency for licensed dispensaries: local SEO, Map Pack, menu SEO, compliant 21+ ads, SMS and loyalty. Month-to-month from $297.",
   keywords: [
     "cannabis marketing agency",
     "dispensary marketing agency",
@@ -154,7 +154,7 @@ export const cannabisMarketing = buildIndustryMarketingPage({
     "Cannabis Website Design & Development",
   ],
   costAnswer:
-    "Most cannabis marketing agencies charge $1,500 to $8,000 per month. At Zonic Media, plans are $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority), and custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts. Paid media spend on programmatic networks or menu platforms is billed separately.",
+    "Most cannabis marketing agencies charge $1,500 to $8,000 per month. At Zonic Media, plans are $297/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority), and custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts. Paid media spend on programmatic networks or menu platforms is billed separately.",
   answerSchema:
     "A cannabis marketing agency helps licensed dispensaries and cannabis brands win customers without breaking platform policies or state advertising law. Because Google Ads and Meta prohibit THC ads, the work centers on local SEO, Google Business Profile and Map Pack rankings, SEO-friendly menus, Weedmaps and Leafly listings, compliant 21+ programmatic ads, and SMS, email, and loyalty programs.",
 

@@ -5,7 +5,7 @@ Last updated: 2026-10-05
 All prices in US dollars. Plans are month-to-month after the initial scope; no long-term contract. Prices are "starting at" — the final quote depends on the number of locations and the market.
 
 ## Starter local SEO plan
-- Price: $197 per month, starting at
+- Price: $297 per month, starting at
 - Who it is for: For single-location businesses in lighter markets — get the local foundation right.
 - Includes:
   - Google Business Profile optimization

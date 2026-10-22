@@ -1749,6 +1749,12 @@ function Navbar() {
                               >
                                 Dallas–Fort Worth Web Design
                               </Link>
+                              <Link
+                                href="/services/dallas-fort-worth/local-seo-agency"
+                                className="services-core-tag"
+                              >
+                                Dallas–Fort Worth Local SEO
+                              </Link>
                             </span>
                           </span>
                         </div>
@@ -2107,6 +2113,14 @@ function Navbar() {
                           onClick={() => handleToggleMobileMenu(false)}
                         >
                           Dallas–Fort Worth Web Design
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/dallas-fort-worth/local-seo-agency"
+                          onClick={() => handleToggleMobileMenu(false)}
+                        >
+                          Dallas–Fort Worth Local SEO
                         </Link>
                       </li>
                     </ul>

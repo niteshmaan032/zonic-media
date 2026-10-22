@@ -2669,6 +2669,39 @@
   }
 }
 
+/* Readable body copy (17 Oct 2026): every paragraph on the DFW pages is
+   18px at all widths; card lists and point descriptions step up to match.
+   Placed last so it wins over the earlier desktop and phone sizes.
+   Headings, labels, captions and UI mock-ups are unchanged. */
+.dfw .dfw-hero__sub,
+.dfw .dfw-about__copy p:not(.dfw-label),
+.dfw .dfw-svc-head p,
+.dfw .dfw-svc-card > p,
+.dfw .dfw-center-head p,
+.dfw .dfw-feature__body,
+.dfw .dfw-journey__lead,
+.dfw .dfw-journey__steps p,
+.dfw .dfw-step__text > p:last-child,
+.dfw .dfw-coverage__lead,
+.dfw .dfw-love__aside p,
+.dfw .dfw-area__lead,
+.dfw .dfw-area__more,
+.dfw .dfw-faq__item p,
+.dfw .dfw-contact__sub,
+.dfw .dfw-band__side p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+.dfw .dfw-svc-card__list li,
+.dfw .dfw-feature__points span,
+.dfw .dfw-coverage__points li,
+.dfw .dfw-area__cities li {
+  font-size: 16.5px;
+}
+.dfw .dfw-feature__points b {
+  font-size: 18px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dfw *,
   .dfw *::before,

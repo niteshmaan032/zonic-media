@@ -200,7 +200,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing in Alabama cost?",
-      a: "Foundation is $197 per month, Growth is $750 per month, and Authority is $1,500 per month, with no setup fees. Ad spend is separate and paid directly to the platforms. Because Alabama clicks are relatively inexpensive, a starting ad budget of $700 to $1,800 per month is usually enough, scaled to how many metros you cover.",
+      a: "Foundation is $297 per month, Growth is $750 per month, and Authority is $1,500 per month, with no setup fees. Ad spend is separate and paid directly to the platforms. Because Alabama clicks are relatively inexpensive, a starting ad budget of $700 to $1,800 per month is usually enough, scaled to how many metros you cover.",
     },
     {
       q: "Google suspended my Alabama inspection company's Business Profile. Can you get it reinstated?",
@@ -414,7 +414,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "each month · Alabama firms billed month to month",
           features: [
             "Full Google Business Profile rebuild plus ongoing monthly management",

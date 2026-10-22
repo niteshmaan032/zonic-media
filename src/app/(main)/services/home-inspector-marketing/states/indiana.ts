@@ -107,7 +107,7 @@ const content: StateContent = {
         p: "A plain-English report on your profile, rankings, website, reviews, and citations.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Starting Plan for Indiana Firms",
         p: "Foundation plan for GBP and local SEO. Month to month, no setup fee.",
       },
@@ -202,7 +202,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing cost in Indiana?",
-      a: "Plans are $197 per month for Foundation, $750 per month for Growth, and $1,500 per month for Authority, all month to month with no setup fee. Advertising spend is separate and paid directly to the platforms. Indiana click costs are moderate, so we usually suggest starting between $800 and $2,000 per month in ad budget depending on how many counties you cover.",
+      a: "Plans are $297 per month for Foundation, $750 per month for Growth, and $1,500 per month for Authority, all month to month with no setup fee. Advertising spend is separate and paid directly to the platforms. Indiana click costs are moderate, so we usually suggest starting between $800 and $2,000 per month in ad budget depending on how many counties you cover.",
     },
     {
       q: "What does the free Indiana home inspector marketing audit include?",
@@ -416,7 +416,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · Indiana firms billed monthly",
           features: [
             "Google Business Profile rebuilt, then managed every month",

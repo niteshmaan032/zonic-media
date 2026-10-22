@@ -134,7 +134,7 @@ export const poolServiceMarketing = buildIndustryMarketingPage({
     "Pool Service Website Design & Development",
   ],
   costAnswer:
-    "Most pool service marketing retainers range from $197 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $197/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
+    "Most pool service marketing retainers range from $297 to $1,500 per month depending on the channels and competition. At Zonic Media, plans start at $297/mo (Foundation), $750/mo (Growth), and $1,500/mo (Authority). Custom WordPress websites start at $900. All plans are month-to-month with no long-term contracts.",
   answerSchema:
     "A pool service marketing agency helps pool companies get found online and turn local searches — pool service near me, pool cleaning, green pool cleanup, pool pump repair — into recurring maintenance accounts and booked repairs. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media marketing, lead generation, backlinks and local citations, and website design into one managed system.",
 });

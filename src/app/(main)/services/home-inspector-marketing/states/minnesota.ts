@@ -200,7 +200,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing in Minnesota cost?",
-      a: "Plans are $197, $750, and $1,500 per month. Foundation covers your Google Business Profile and local SEO groundwork. Growth adds Google Ads management and automated review requests. Authority adds social media, video, and Meta Ads. Ad spend is paid separately to the platforms, and Twin Cities inspectors usually begin between $900 and $2,000 a month.",
+      a: "Plans are $297, $750, and $1,500 per month. Foundation covers your Google Business Profile and local SEO groundwork. Growth adds Google Ads management and automated review requests. Authority adds social media, video, and Meta Ads. Ad spend is paid separately to the platforms, and Twin Cities inspectors usually begin between $900 and $2,000 a month.",
     },
     {
       q: "Do I need to commit for a year?",
@@ -419,7 +419,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · billed monthly, Minnesota firms",
           features: [
             "Google Business Profile rebuilt in full around your credentials, then managed monthly",

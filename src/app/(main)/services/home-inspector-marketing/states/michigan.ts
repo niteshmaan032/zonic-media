@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "monthly, billed month by month",
           features: [
             "Google Business Profile: full rebuild and monthly upkeep",
@@ -448,7 +448,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Michigan?",
-      a: "Plans are $197, $750, and $1,500 per month, month to month, with no setup fee. Ad spend is separate. We typically suggest $800 to $2,000 per month to start in Metro Detroit and Ann Arbor, and $600 to $1,200 in Grand Rapids, Lansing, Kalamazoo, or northern Michigan.",
+      a: "Plans are $297, $750, and $1,500 per month, month to month, with no setup fee. Ad spend is separate. We typically suggest $800 to $2,000 per month to start in Metro Detroit and Ann Arbor, and $600 to $1,200 in Grand Rapids, Lansing, Kalamazoo, or northern Michigan.",
     },
     {
       q: "Can you help me get more well and septic inspection work?",

@@ -73,7 +73,7 @@ const trustItems = [
   { num: "500+", label: "Businesses Ranked" },
   { num: "4.9/5", label: "Client Satisfaction" },
   { num: "95%", label: "Growth Success Rate" },
-  { num: "$197", label: "Plans Start At" },
+  { num: "$297", label: "Plans Start At" },
 ];
 
 const states = [
@@ -334,7 +334,7 @@ const industryCards = [
 const priceCards = [
   {
     tier: "Foundation",
-    amount: "$197",
+    amount: "$297",
     period: "per month · billed monthly",
     features: [
       "Google Business Profile optimization (full rebuild + monthly management)",
@@ -406,7 +406,7 @@ const faqs = [
   },
   {
     q: "How much does home inspector marketing cost?",
-    a: "Our plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems on top of SEO, and $1,500 per month for established firms who want the full digital marketing stack including social media, content, and website conversion work. Ad spend is separate and goes directly to Google and Meta.",
+    a: "Our plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems on top of SEO, and $1,500 per month for established firms who want the full digital marketing stack including social media, content, and website conversion work. Ad spend is separate and goes directly to Google and Meta.",
   },
   {
     q: "Can you fix my Google Business Profile if it's been suspended?",

@@ -43,3 +43,6 @@ next-env.d.ts
 # generated audit reports (keep text-snapshots tracked for freeze diffs)
 reports/links/
 reports/brand-facts-lint.json
+reports/visual/
+reports/style/
+reports/migrate-*.json

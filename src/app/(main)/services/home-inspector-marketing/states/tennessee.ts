@@ -218,7 +218,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "monthly · billed each month, Volunteer State coverage",
           features: [
             "Google Business Profile optimization for your Tennessee market: complete rebuild and monthly upkeep",
@@ -463,7 +463,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing cost in Tennessee?",
-      a: "Management plans run $197, $750, or $1,500 per month with no contract and no setup fee. The first tier handles Google Business Profile and local SEO basics, the second adds Google Ads and review automation, and the third adds social media, video, and Meta Ads. For home inspector advertising spend, which goes straight to the platforms, we usually suggest $800 to $2,000 per month in the Nashville area and $600 to $1,200 in smaller Tennessee markets.",
+      a: "Management plans run $297, $750, or $1,500 per month with no contract and no setup fee. The first tier handles Google Business Profile and local SEO basics, the second adds Google Ads and review automation, and the third adds social media, video, and Meta Ads. For home inspector advertising spend, which goes straight to the platforms, we usually suggest $800 to $2,000 per month in the Nashville area and $600 to $1,200 in smaller Tennessee markets.",
     },
     {
       q: "Can you help with Memphis investors and Smoky Mountain cabin buyers?",

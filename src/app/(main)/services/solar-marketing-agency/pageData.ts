@@ -97,7 +97,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <p class="answer-lead">A solar marketing agency helps solar companies get found online and turn local searches — solar panel installation, battery storage, solar repair, and financing questions — into booked consultations. It combines local SEO, Google Business Profile and Map Pack optimization, Google Ads, social media, lead generation, backlinks and citations, and website design into one managed system — and when a listing goes dark, <a class="ima-inline-link" href="/services/gbp-reinstatement-service">recovering a suspended Google Business Profile</a> — so owners can focus on installs while leads come in.</p>
 <div class="answer-facts">
 <div class="afact"><span class="ak">What it includes</span><span class="av">Local SEO, Google Business Profile &amp; Map Pack optimization, Google Ads / PPC, social media marketing, lead generation, backlinks &amp; local citations, and website design.</span></div>
-<div class="afact"><span class="ak">Typical cost</span><span class="av">Most solar marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>
+<div class="afact"><span class="ak">Typical cost</span><span class="av">Most solar marketing retainers range from $297 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>
 <div class="afact"><span class="ak">How long results take</span><span class="av">Google Ads can generate qualified solar leads within the first weeks. Local SEO and Google Map Pack ranking typically build over three to six months.</span></div>
 <div class="afact"><span class="ak">The 2026 shift</span><span class="av">The 30% federal residential tax credit ended December 31, 2025 for homeowner-purchased systems, while leases and PPAs keep incentives through 2027. Buyers now research harder — &quot;is solar still worth it&quot; — and the installers that explain financing, payback, and battery storage clearly, and show up first with local proof, win them.</span></div>
 <div class="afact"><span class="ak">Who it's for</span><span class="av">Residential and commercial solar installers, battery storage providers, and solar repair companies in the United States that want more consultations and exclusive leads — not shared marketplace lists. See all the <a class="ima-inline-link" href="/industries">industries we serve</a>.</span></div>
@@ -155,7 +155,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
 <div class="price-grid">
 <div class="price">
 <div class="pname">Foundation</div>
-<div class="amt">$197<span>/mo</span></div>
+<div class="amt">$297<span>/mo</span></div>
 <p class="pdesc">Get found locally and start turning solar searches into consultations.</p>
 <ul>
 <li>${CHECK_SVG} Google Business Profile optimization</li>
@@ -291,7 +291,7 @@ export const solarMarketingPage: IndustryMarketingPageData = {
       description:
         "Solar marketing agency for US installers. Local SEO, Google Map Pack ranking, Google Ads & exclusive solar leads for installs & battery storage. Free audit.",
       telephone: "+1-302-726-9736",
-      priceRange: "$197–$1500/mo",
+      priceRange: "$297–$1500/mo",
       areaServed: "United States",
       address: {
         "@type": "PostalAddress",

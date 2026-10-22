@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month, billed monthly",
           features: [
             "Full Google Business Profile rebuild for your Ohio service area, then monthly management",
@@ -440,7 +440,7 @@ const content: StateContent = {
   faqs: [
     {
       q: "How much does home inspector marketing cost in Ohio?",
-      a: "Plans are $197, $750, and $1,500 per month. The $197 Foundation plan covers Google Business Profile management and local SEO basics, the $750 Growth plan adds Google Ads management and a review system, and the $1,500 Authority plan adds social media, video, and Meta Ads. Ad spend is separate. For most Ohio markets we suggest starting between $800 and $2,000 per month in ad budget — toward the low end in Toledo, Canton, or Youngstown and the high end in Columbus.",
+      a: "Plans are $297, $750, and $1,500 per month. The $297 Foundation plan covers Google Business Profile management and local SEO basics, the $750 Growth plan adds Google Ads management and a review system, and the $1,500 Authority plan adds social media, video, and Meta Ads. Ad spend is separate. For most Ohio markets we suggest starting between $800 and $2,000 per month in ad budget — toward the low end in Toledo, Canton, or Youngstown and the high end in Columbus.",
     },
     {
       q: "Does being a licensed home inspector in Ohio help me rank on Google?",

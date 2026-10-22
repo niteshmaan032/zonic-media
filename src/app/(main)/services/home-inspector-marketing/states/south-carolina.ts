@@ -203,7 +203,7 @@ const content: StateContent = {
     },
     {
       q: "What does it cost?",
-      a: "Foundation is $197 a month, Growth is $750, and Authority is $1,500. Foundation covers profile management and core local SEO. Growth brings in managed Google Ads along with an automated review request system. Authority adds social media, short-form video, and Meta Ads. Ad spend is billed by Google and Meta directly. Most South Carolina inspectors begin with $800 to $1,800 a month in ads depending on region.",
+      a: "Foundation is $297 a month, Growth is $750, and Authority is $1,500. Foundation covers profile management and core local SEO. Growth brings in managed Google Ads along with an automated review request system. Authority adds social media, short-form video, and Meta Ads. Ad spend is billed by Google and Meta directly. Most South Carolina inspectors begin with $800 to $1,800 a month in ads depending on region.",
     },
     {
       q: "Is there a long-term commitment?",
@@ -418,7 +418,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · billed monthly, Upstate to the coast",
           features: [
             "Google Business Profile rebuilt in full for your South Carolina market and managed every month",

@@ -201,7 +201,7 @@ const content: StateContent = {
     },
     {
       q: "What does Arkansas home inspector marketing cost?",
-      a: "We charge $197, $750 or $1,500 a month depending on the plan, with no setup fee and no term to sign. Ad spend is separate. Arkansas clicks are relatively cheap, so we generally recommend starting with $600 to $1,500 a month in ad budget depending on whether you cover one town or a multi-county region.",
+      a: "We charge $297, $750 or $1,500 a month depending on the plan, with no setup fee and no term to sign. Ad spend is separate. Arkansas clicks are relatively cheap, so we generally recommend starting with $600 to $1,500 a month in ad budget depending on whether you cover one town or a multi-county region.",
     },
     {
       q: "What does the free Arkansas home inspector marketing audit cover?",
@@ -411,7 +411,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · Arkansas firms billed monthly",
           features: [
             "Your Arkansas Google Business Profile rebuilt from scratch, then managed monthly",

@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · billed monthly, cancel anytime",
           features: [
             "Google Business Profile fully rebuilt, then managed every month",
@@ -370,7 +370,7 @@ const content: StateContent = {
         p: "95 counties and 38 independent cities, each its own search result — coverage has to be built jurisdiction by jurisdiction.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Starting Plan for Virginia Inspectors",
         p: "Google Business Profile management and core local SEO, month to month, with no setup fee.",
       },
@@ -464,7 +464,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing in Virginia cost?",
-      a: "There are three monthly plans — $197, $750, and $1,500 — with no setup fee and no contract. The first covers Google Business Profile management and foundational local SEO, the second adds Google Ads management and automated review requests, and the third adds social media, video, and Meta Ads. Ad spend is paid directly to the platforms. We usually suggest $1,200 to $2,500 per month for Northern Virginia and $700 to $1,500 for Hampton Roads, Richmond, and smaller markets.",
+      a: "There are three monthly plans — $297, $750, and $1,500 — with no setup fee and no contract. The first covers Google Business Profile management and foundational local SEO, the second adds Google Ads management and automated review requests, and the third adds social media, video, and Meta Ads. Ad spend is paid directly to the platforms. We usually suggest $1,200 to $2,500 per month for Northern Virginia and $700 to $1,500 for Hampton Roads, Richmond, and smaller markets.",
     },
     {
       q: "Google suspended my Virginia inspection company's Business Profile. Can you get it back?",

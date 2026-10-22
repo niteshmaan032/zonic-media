@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "each month, billed monthly",
           features: [
             "Complete Google Business Profile rebuild plus ongoing monthly management",
@@ -448,7 +448,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Colorado?",
-      a: "Plans are $197, $750, and $1,500 per month with no contract and no setup fee. Ad budgets are separate. For Denver, Boulder, and Colorado Springs we generally suggest starting at $1,000 to $2,500 per month; for Northern Colorado, Pueblo, or Grand Junction, $700 to $1,200 is usually enough to test the market.",
+      a: "Plans are $297, $750, and $1,500 per month with no contract and no setup fee. Ad budgets are separate. For Denver, Boulder, and Colorado Springs we generally suggest starting at $1,000 to $2,500 per month; for Northern Colorado, Pueblo, or Grand Junction, $700 to $1,200 is usually enough to test the market.",
     },
     {
       q: "How quickly will I see results?",

@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month, billed month by month",
           features: [
             "Google Business Profile rebuilt in full for your New York service area and managed every month",
@@ -460,7 +460,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing in New York cost?",
-      a: "Our plans are $197, $750, and $1,500 per month, month to month, with no setup fee. The entry plan covers Google Business Profile management and core local SEO; the middle plan adds Google Ads and an automated review system; the top plan adds social media, short-form video, and Meta Ads. Advertising budget is separate. Downstate click costs run high, so we generally suggest $1,200 to $2,500 per month there and $700 to $1,500 for upstate metros.",
+      a: "Our plans are $297, $750, and $1,500 per month, month to month, with no setup fee. The entry plan covers Google Business Profile management and core local SEO; the middle plan adds Google Ads and an automated review system; the top plan adds social media, short-form video, and Meta Ads. Advertising budget is separate. Downstate click costs run high, so we generally suggest $1,200 to $2,500 per month there and $700 to $1,500 for upstate metros.",
     },
     {
       q: "Should I list inspection prices on my website?",

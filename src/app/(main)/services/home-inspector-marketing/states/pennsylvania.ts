@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · billed monthly, Commonwealth-wide",
           features: [
             "Full Google Business Profile rebuild for your Pennsylvania counties, then monthly management",
@@ -460,7 +460,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Pennsylvania?",
-      a: "Plans are $197, $750, and $1,500 per month, all month to month with no setup fee. Foundation covers Google Business Profile and core local SEO, Growth adds Google Ads management and a review system, and Authority adds social media, video, and Meta Ads. Ad spend is separate and paid directly to the platforms; for most Pennsylvania markets we suggest starting between $800 and $2,000 per month, with the Philadelphia suburbs at the higher end.",
+      a: "Plans are $297, $750, and $1,500 per month, all month to month with no setup fee. Foundation covers Google Business Profile and core local SEO, Growth adds Google Ads management and a review system, and Authority adds social media, video, and Meta Ads. Ad spend is separate and paid directly to the platforms; for most Pennsylvania markets we suggest starting between $800 and $2,000 per month, with the Philadelphia suburbs at the higher end.",
     },
     {
       q: "What does a home inspection cost in PA, and should I publish my prices?",

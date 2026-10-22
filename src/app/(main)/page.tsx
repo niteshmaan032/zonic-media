@@ -671,7 +671,7 @@ const faqsRight: Faq[] = [
   {
     q: "How much do digital marketing agencies charge small businesses in 2026?",
     a:
-      "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $197 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
+      "Most US agencies charge small businesses between $1,000 and $5,000 a month depending on the channels involved. At Zonic Media a single-location local SEO program starts at $297 a month, Google Ads management is priced on ad spend, and web design is a one-time project fee. Every engagement starts with a free audit and a flat quote, and there are no long-term contracts.",
   },
   {
     q: "Can you help my business show up in AI search results?",

@@ -106,7 +106,7 @@ const content: StateContent = {
         p: "Arizona's requirement ensures competitors are qualified, so marketing becomes the deciding factor.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Entry Plan for Arizona Inspectors",
         p: "Month to month, no setup fee, with ad spend paid directly to Google and Meta.",
       },
@@ -200,7 +200,7 @@ const content: StateContent = {
     },
     {
       q: "What do Zonic Media's plans cost for Arizona inspectors?",
-      a: "Pricing is $197 per month for Foundation, $750 per month for Growth and $1,500 per month for Authority. Foundation manages your Google Business Profile and core local SEO; Growth adds Google Ads management and automated review requests; Authority adds social media, short-form video and Meta Ads. All plans are month to month with no setup fee, and ad spend is separate.",
+      a: "Pricing is $297 per month for Foundation, $750 per month for Growth and $1,500 per month for Authority. Foundation manages your Google Business Profile and core local SEO; Growth adds Google Ads management and automated review requests; Authority adds social media, short-form video and Meta Ads. All plans are month to month with no setup fee, and ad spend is separate.",
     },
     {
       q: "What does the free Arizona audit include?",
@@ -410,7 +410,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month, billed monthly",
           features: [
             "Full Google Business Profile rebuild and monthly management",

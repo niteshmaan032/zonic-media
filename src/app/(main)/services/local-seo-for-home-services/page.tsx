@@ -803,7 +803,7 @@ function page() {
                 <div className="local-seo-home-pricing-card">
                   <div className="local-seo-home-price-badge">STARTER PLAN</div>
                   <p className="local-seo-home-price">
-                    $197 <span>/ month</span>
+                    $297 <span>/ month</span>
                   </p>
                   <p className="local-seo-home-price-subtitle">
                     Best for small businesses targeting one service area.

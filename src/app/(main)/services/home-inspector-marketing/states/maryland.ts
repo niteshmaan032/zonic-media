@@ -110,7 +110,7 @@ const content: StateContent = {
       {
         big: "$0",
         h: "Setup Fees or Contracts",
-        p: "Every plan is month to month, starting at $197, with ad spend paid directly to the platforms.",
+        p: "Every plan is month to month, starting at $297, with ad spend paid directly to the platforms.",
       },
     ],
   },
@@ -203,7 +203,7 @@ const content: StateContent = {
     },
     {
       q: "What do your Maryland home inspector marketing plans cost?",
-      a: "Plans are $197 per month for Foundation, $750 per month for Growth and $1,500 per month for Authority. The entry tier handles your Google Business Profile and county-level local SEO, the middle tier brings in managed Google Ads and automated review requests, and the top tier layers on social media, short-form video and Meta Ads. All three are month to month with no setup fee, and ad spend is separate.",
+      a: "Plans are $297 per month for Foundation, $750 per month for Growth and $1,500 per month for Authority. The entry tier handles your Google Business Profile and county-level local SEO, the middle tier brings in managed Google Ads and automated review requests, and the top tier layers on social media, short-form video and Meta Ads. All three are month to month with no setup fee, and ad spend is separate.",
     },
     {
       q: "What will the free audit tell me about my Maryland inspection business?",
@@ -413,7 +413,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "monthly · billed each month, Maryland firms",
           features: [
             "Complete Google Business Profile rebuild plus monthly management",

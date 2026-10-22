@@ -110,7 +110,7 @@ const content: StateContent = {
         p: "Campaigns live and the Google Business Profile rebuilt within two weeks.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Entry Plan for Oregon Inspectors",
         p: "Foundation plan, billed month to month with no setup fee.",
       },
@@ -199,7 +199,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Oregon?",
-      a: "Plans are $197, $750, and $1,500 a month. Foundation covers Google Business Profile management and local SEO basics. Growth adds Google Ads management and an automated review system. Authority adds social media, video, and Meta Ads. Ad spend is separate. A Portland-area inspector typically starts with $1,000 to $2,000 a month in ad budget, and inspectors in Bend, Salem, or Southern Oregon can start lower.",
+      a: "Plans are $297, $750, and $1,500 a month. Foundation covers Google Business Profile management and local SEO basics. Growth adds Google Ads management and an automated review system. Authority adds social media, video, and Meta Ads. Ad spend is separate. A Portland-area inspector typically starts with $1,000 to $2,000 a month in ad budget, and inspectors in Bend, Salem, or Southern Oregon can start lower.",
     },
     {
       q: "Is the Oregon market too seasonal for year-round marketing?",
@@ -418,7 +418,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · billed monthly to Oregon firms",
           features: [
             "Full Google Business Profile rebuild around your Oregon towns, then monthly management",

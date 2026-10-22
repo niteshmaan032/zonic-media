@@ -106,7 +106,7 @@ const content: StateContent = {
         p: "Campaigns live and your profile rebuilt within two weeks, whether you cover Clark County or Washoe County.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Starting Plan for Nevada Inspectors",
         p: "Foundation plan pricing, billed month to month with no setup fee and no term commitment.",
       },
@@ -197,7 +197,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing cost in Nevada?",
-      a: "Nevada inspectors choose between Foundation at $197 a month, Growth at $750 and Authority at $1,500, each billed month to month and with no setup fee. Ad spend is separate. For the Las Vegas Valley we usually suggest starting between $1,000 and $2,500 a month in ad budget because clicks are expensive there; Reno-Sparks, Carson City and Pahrump can start lower, often around $600 to $1,200.",
+      a: "Nevada inspectors choose between Foundation at $297 a month, Growth at $750 and Authority at $1,500, each billed month to month and with no setup fee. Ad spend is separate. For the Las Vegas Valley we usually suggest starting between $1,000 and $2,500 a month in ad budget because clicks are expensive there; Reno-Sparks, Carson City and Pahrump can start lower, often around $600 to $1,200.",
     },
     {
       q: "Do Nevada inspectors have to sign a long-term contract?",
@@ -411,7 +411,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "each month · billed monthly, no Nevada contract",
           features: [
             "Full Google Business Profile rebuild for your valley, then monthly management",

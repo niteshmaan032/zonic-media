@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · billed monthly to Massachusetts firms",
           features: [
             "A full rebuild of your Massachusetts Google Business Profile, then monthly management",
@@ -466,7 +466,7 @@ const content: StateContent = {
     },
     {
       q: "How much does home inspector marketing cost in Massachusetts?",
-      a: "Massachusetts inspectors choose from $197, $750, or $1,500 a month, with no setup fee and the freedom to stop any month. Foundation covers Google Business Profile and local SEO basics, Growth adds Google Ads management and a review system, and Authority adds social media and ongoing website work. Ad spend is separate; for Massachusetts we usually suggest $1,200 to $2,500 per month, since Greater Boston clicks cost more than most of the country.",
+      a: "Massachusetts inspectors choose from $297, $750, or $1,500 a month, with no setup fee and the freedom to stop any month. Foundation covers Google Business Profile and local SEO basics, Growth adds Google Ads management and a review system, and Authority adds social media and ongoing website work. Ad spend is separate; for Massachusetts we usually suggest $1,200 to $2,500 per month, since Greater Boston clicks cost more than most of the country.",
     },
     {
       q: "What does the free Massachusetts marketing audit cover?",

@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "per month · invoiced monthly",
           features: [
             "Your Illinois Google Business Profile fully rebuilt, then managed month after month",
@@ -370,7 +370,7 @@ const content: StateContent = {
         p: "Profile rebuilt and campaigns live within two weeks of starting.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Where Illinois Plans Start",
         p: "Month to month, with no setup fee and no annual contract.",
       },
@@ -444,7 +444,7 @@ const content: StateContent = {
     },
     {
       q: "What does home inspector marketing cost in Illinois?",
-      a: "Our plans are $197, $750, and $1,500 per month, all month to month. Your Illinois ad budget sits outside our fee and is billed to you by Google and Meta. In the Chicago metro we usually recommend a starting ad budget of $1,000 to $2,500 per month because clicks are expensive; downstate markets such as Peoria, Rockford, or Springfield can start closer to $600 to $1,000.",
+      a: "Our plans are $297, $750, and $1,500 per month, all month to month. Your Illinois ad budget sits outside our fee and is billed to you by Google and Meta. In the Chicago metro we usually recommend a starting ad budget of $1,000 to $2,500 per month because clicks are expensive; downstate markets such as Peoria, Rockford, or Springfield can start closer to $600 to $1,000.",
     },
     {
       q: "Should I display my IDFPR license number in my marketing?",

@@ -7,6 +7,9 @@ import "@/app/globals.css";
 import "@/app/style/bootstrap.trimmed.css";
 import "@/app/style/service-lead-form.css";
 import "@/app/style/google-fonts.css";
+// Redesign (Oct 2026): prefixed `tw:` utilities, no global reset, scans only
+// src/components/rd — cannot affect un-migrated pages. See style/tailwind.css.
+import "@/app/style/tailwind.css";
 import localFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";

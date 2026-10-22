@@ -201,7 +201,7 @@ const content: StateContent = {
     },
     {
       q: "What does it cost to work with Zonic Media in Utah?",
-      a: "Foundation is $197 a month, Growth is $750 a month and Authority is $1,500 a month, all billed monthly with no setup fee or contract. Ad spend is separate; for Wasatch Front campaigns we typically recommend starting between $800 and $2,000 a month, and less for Cache Valley or southern Utah outside St. George.",
+      a: "Foundation is $297 a month, Growth is $750 a month and Authority is $1,500 a month, all billed monthly with no setup fee or contract. Ad spend is separate; for Wasatch Front campaigns we typically recommend starting between $800 and $2,000 a month, and less for Cache Valley or southern Utah outside St. George.",
     },
     {
       q: "What will the free audit tell me about my Utah market?",
@@ -411,7 +411,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "each month · billed monthly",
           features: [
             "Google Business Profile: complete rebuild and monthly management",

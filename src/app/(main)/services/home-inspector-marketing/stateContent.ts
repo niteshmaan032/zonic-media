@@ -301,7 +301,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How much does home inspector marketing cost in Georgia?",
-        a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Georgia markets depending on the size of your service area.",
+        a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Georgia markets depending on the size of your service area.",
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
@@ -506,7 +506,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How much does home inspector marketing cost in Texas?",
-        a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Texas markets depending on the size of your service area.",
+        a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Texas markets depending on the size of your service area.",
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
@@ -712,7 +712,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How much does home inspector marketing cost in Florida?",
-        a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Florida markets depending on the size of your service area.",
+        a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for Florida markets depending on the size of your service area.",
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
@@ -921,7 +921,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How much does home inspector marketing cost in California?",
-        a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for California markets depending on the size of your service area.",
+        a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for California markets depending on the size of your service area.",
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
@@ -1127,7 +1127,7 @@ export const STATE_CONTENT: Record<string, StateContent> = {
       },
       {
         q: "How much does home inspector marketing cost in North Carolina?",
-        a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for North Carolina markets depending on the size of your service area.",
+        a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage inspectors who need paid ads and review systems, and $1,500 per month for established firms who want the full digital marketing stack. Ad spend is separate and goes directly to Google and Meta. We typically recommend a starting ad budget of $1,000 to $2,500 per month for North Carolina markets depending on the size of your service area.",
       },
       {
         q: "Can you fix my Google Business Profile if it's been suspended?",
@@ -1246,7 +1246,7 @@ export function buildStatePriceCards(stateName: string): StatePriceCard[] {
   return [
     {
       tier: "Foundation",
-      amount: "$197",
+      amount: "$297",
       period: "per month · billed monthly",
       features: [
         "Google Business Profile optimization (full rebuild + monthly management)",

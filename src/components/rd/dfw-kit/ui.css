@@ -1,0 +1,73 @@
+/*
+ * Mini-UI loops for the Dallas–Fort Worth pages (about + process sections),
+ * 19 Oct 2026. Used by src/components/rd/dfw-kit/ui.tsx and the per-page UI
+ * files. Every element's resting style is its finished state, so with
+ * reduced motion (each page root switches animations off) the UI still
+ * reads correctly. Staggering is done with animation-delay.
+ */
+
+/* Bars that fill to --w / rise to --h, hold, then reset (loop set per use). */
+@keyframes ui-grow { 0%, 6% { width: 0; } 38%, 90% { width: var(--w); } 100% { width: 0; } }
+@keyframes ui-rise { 0%, 6% { height: 0; } 38%, 90% { height: var(--h); } 100% { height: 0; } }
+
+/* Item appears, holds, leaves. */
+@keyframes ui-in {
+  0%, 8% { opacity: 0; transform: translateY(8px); }
+  16%, 90% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Check circle and toggle switch turning on. */
+@keyframes ui-tick {
+  0%, 8% { background: var(--panel); color: transparent; }
+  14%, 90% { background: var(--green); color: #fff; }
+  100% { background: var(--panel); color: transparent; }
+}
+@keyframes ui-switch { 0%, 8% { background: #d5dce7; } 14%, 90% { background: var(--green); } 100% { background: #d5dce7; } }
+@keyframes ui-knob { 0%, 8% { transform: translateX(0); } 14%, 90% { transform: translateX(14px); } 100% { transform: translateX(0); } }
+
+/* Two stacked labels swap once per loop ("Drafting" → "Published"). */
+@keyframes ui-swap-a { 0%, 42% { opacity: 1; } 48%, 94% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes ui-swap-b { 0%, 42% { opacity: 0; } 48%, 94% { opacity: 1; } 100% { opacity: 0; } }
+
+/* SVG strokes drawn with pathLength="1"; --g is the gauge's resting gap. */
+@keyframes ui-draw { 0%, 6% { stroke-dashoffset: 1; } 50%, 90% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 1; } }
+@keyframes ui-gauge { 0%, 6% { stroke-dashoffset: 1; } 50%, 90% { stroke-dashoffset: var(--g); } 100% { stroke-dashoffset: 1; } }
+
+/* Late reveal (badges that land after the work is done). */
+@keyframes ui-late { 0%, 46% { opacity: 0; transform: scale(0.92); } 54%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* Three items taking turns. */
+@keyframes ui-cycle {
+  0%, 2% { opacity: 0; transform: translateY(6px); }
+  5%, 30% { opacity: 1; transform: none; }
+  33%, 100% { opacity: 0; transform: translateY(-4px); }
+}
+
+/* Map grid points: red → amber → green as reach spreads. */
+@keyframes ui-dot {
+  0%, 12% { background: #e2574c; }
+  30%, 46% { background: #f0b429; }
+  60%, 92% { background: var(--green); }
+  100% { background: #e2574c; }
+}
+
+@keyframes ui-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(52, 168, 82, 0.5); }
+  70%, 100% { box-shadow: 0 0 0 8px rgba(52, 168, 82, 0); }
+}
+
+/* A choice gets picked (calendar slot). */
+@keyframes ui-pick {
+  0%, 20% { background: var(--panel); color: var(--ink); }
+  26%, 90% { background: var(--blue); color: #fff; }
+  100% { background: var(--panel); color: var(--ink); }
+}
+
+/* Before/after slider: the "before" layer's clip and the handle move together. */
+@keyframes ui-wipe {
+  0%, 10% { clip-path: inset(0 22% 0 0); }
+  45%, 60% { clip-path: inset(0 78% 0 0); }
+  95%, 100% { clip-path: inset(0 22% 0 0); }
+}
+@keyframes ui-wipe-x { 0%, 10% { left: 78%; } 45%, 60% { left: 22%; } 95%, 100% { left: 78%; } }

@@ -37,7 +37,7 @@ const trustItems = [
   { num: "500+", label: "Businesses Ranked" },
   { num: "4.9/5", label: "Client Satisfaction" },
   { num: "95%", label: "Growth Success Rate" },
-  { num: "$197", label: "Plans Start At" },
+  { num: "$297", label: "Plans Start At" },
 ];
 
 function fillTemplate(text: string, values: string[]): ReactNode {

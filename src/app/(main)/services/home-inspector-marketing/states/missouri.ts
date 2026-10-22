@@ -201,7 +201,7 @@ const content: StateContent = {
     },
     {
       q: "What does marketing for home inspectors cost in Missouri?",
-      a: "Our plans are $197, $750, and $1,500 per month for Foundation, Growth, and Authority, each month to month with no setup fee. Ad spend is separate and goes directly to the platforms. For Missouri we typically suggest $800 to $2,000 per month in starting ad budget, toward the higher end for St. Louis or Kansas City and lower for Springfield, Columbia, or Joplin.",
+      a: "Our plans are $297, $750, and $1,500 per month for Foundation, Growth, and Authority, each month to month with no setup fee. Ad spend is separate and goes directly to the platforms. For Missouri we typically suggest $800 to $2,000 per month in starting ad budget, toward the higher end for St. Louis or Kansas City and lower for Springfield, Columbia, or Joplin.",
     },
     {
       q: "What will the free Missouri home inspector marketing audit tell me?",
@@ -415,7 +415,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "each month · no annual agreement",
           features: [
             "Google Business Profile optimization for your Missouri firm: complete rebuild and monthly upkeep",

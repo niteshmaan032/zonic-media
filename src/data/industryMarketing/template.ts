@@ -291,7 +291,7 @@ function contentHtml(c: IndustryMarketingConfig) {
 
   const facts = [
     `<div class="afact"><span class="ak">What it includes</span><span class="av">${paid.includesFact}</span></div>`,
-    `<div class="afact"><span class="ak">Typical cost</span><span class="av">Most ${c.industry} marketing retainers range from $197 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>`,
+    `<div class="afact"><span class="ak">Typical cost</span><span class="av">Most ${c.industry} marketing retainers range from $297 to $1,500 per month. Custom WordPress websites start at $900. Zonic Media works month-to-month with no long-term contracts.</span></div>`,
     `<div class="afact"><span class="ak">How long results take</span><span class="av">${paid.speedFact}</span></div>`,
     c.marketFact
       ? `<div class="afact"><span class="ak">${c.marketFact.label}</span><span class="av">${c.marketFact.value}</span></div>`
@@ -372,7 +372,7 @@ ${MAP_VIZ_HTML}
 <div class="price-grid">
 <div class="price">
 <div class="pname">Foundation</div>
-<div class="amt">$197<span>/mo</span></div>
+<div class="amt">$297<span>/mo</span></div>
 <p class="pdesc">${c.foundationDesc}</p>
 <ul>
 <li>${CHECK_SVG} Google Business Profile optimization</li>
@@ -506,7 +506,7 @@ function schemas(c: IndustryMarketingConfig) {
       url,
       description: c.description,
       telephone: "+1-302-726-9736",
-      priceRange: "$197–$1500/mo",
+      priceRange: "$297–$1500/mo",
       areaServed: "United States",
       address: {
         "@type": "PostalAddress",

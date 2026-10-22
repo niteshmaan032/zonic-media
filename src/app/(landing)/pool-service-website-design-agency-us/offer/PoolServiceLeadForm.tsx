@@ -45,8 +45,8 @@ const SERVICES = [
 ];
 
 const BUDGET_OPTIONS = [
-  { value: "under-197", label: "Under $197 — not ready yet" },
-  { value: "197-750", label: "$197 – $750" },
+  { value: "under-297", label: "Under $297 — not ready yet" },
+  { value: "297-750", label: "$297 – $750" },
   { value: "750-1500", label: "$750 – $1,500" },
   { value: "1500-plus", label: "$1,500+" },
 ];
@@ -406,7 +406,7 @@ export default function PoolServiceLeadForm() {
 
       <p className="form-note">
         Submitting starts a conversation, not a contract. The free build
-        requires a qualifying plan at $197/month on a 6-month term.
+        requires a qualifying plan at $297/month on a 6-month term.
       </p>
 
       <FormLegalLinks />

@@ -16,7 +16,7 @@ Core focus: Google Business Profile (GMB/GBP) reinstatement, verification, and o
 
 Trust signals: 900+ Google Business Profiles reinstated and verified, 1,500+ profiles optimized, 5.0 rating on Clutch (21 reviews, 100% positive), 5.0 rating on Google (17 reviews), 9 Trustpilot reviews (every one 5 stars), average reinstatement resolution in 5–7 business days, free suspension audit, No Fix, No Charge reinstatement fee policy
 
-Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; local SEO plans start at $197, $750 and $1,500 per month (Starter, Growth, Dominate); reinstatement and verification are flat fees quoted after a free audit; full details in [pricing.md](https://www.zonicllc.com/pricing.md)
+Founded and led from Dover, Delaware; all work done in-house (no outsourcing); month-to-month engagements after the initial scope; local SEO plans start at $297, $750 and $1,500 per month (Starter, Growth, Dominate); reinstatement and verification are flat fees quoted after a free audit; full details in [pricing.md](https://www.zonicllc.com/pricing.md)
 
 Positioning: a full-service digital marketing agency and SEO company for businesses of every size (also described as an internet marketing agency, online marketing company, small business marketing firm and local advertising agency) — local SEO, Google Business Profile, web design, Google Ads and AI search optimization (AEO/GEO) from one team
 
@@ -24,7 +24,7 @@ Independent reviews: [Google](https://maps.app.goo.gl/wWvgJJjzki7kjT8A9) (5.0, 1
 
 ## Pricing (machine-readable)
 
-- [Pricing](https://www.zonicllc.com/pricing.md): Starter $197/mo, Growth $750/mo, Dominate $1,500/mo local SEO plans with what each includes; reinstatement, verification, web design and Google Ads pricing terms.
+- [Pricing](https://www.zonicllc.com/pricing.md): Starter $297/mo, Growth $750/mo, Dominate $1,500/mo local SEO plans with what each includes; reinstatement, verification, web design and Google Ads pricing terms.
 
 ## About
 
@@ -53,7 +53,7 @@ Independent reviews: [Google](https://maps.app.goo.gl/wWvgJJjzki7kjT8A9) (5.0, 1
 - [SEO Services](https://www.zonicllc.com/services/seo-services): Full-stack SEO for small and local businesses — technical SEO, local SEO, Google Business Profile, content and links, reported in calls and revenue.
 - [AI SEO Services (AEO / GEO)](https://www.zonicllc.com/services/ai-seo-services): Answer engine optimization and generative engine optimization — getting a business cited and recommended in ChatGPT, Google AI Overviews, AI Mode, Perplexity, Gemini and Claude. Entity consistency, citable content blocks, structured data, review-platform signals and monthly AI-citation monitoring.
 - [Local SEO for Small Business](https://www.zonicllc.com/services/local-seo-for-small-business): Map Pack rankings and reviews for storefronts, practices and studios.
-- [Local SEO Packages](https://www.zonicllc.com/services/local-seo-packages): Three flat-scope plans (Starter, Growth, Dominate) starting at $197, $750 and $1,500 per month.
+- [Local SEO Packages](https://www.zonicllc.com/services/local-seo-packages): Three flat-scope plans (Starter, Growth, Dominate) starting at $297, $750 and $1,500 per month.
 - [Web Design](https://www.zonicllc.com/services/web-design): Custom, conversion-focused website design and development.
 - [Google Ads (PPC)](https://www.zonicllc.com/services/google-ads): Paid search campaign management and lead generation.
 - [Local SEO for Home Services](https://www.zonicllc.com/services/local-seo-for-home-services): Local search optimization for home-service businesses.

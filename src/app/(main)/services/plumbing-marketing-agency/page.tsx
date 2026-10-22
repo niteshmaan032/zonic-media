@@ -74,7 +74,7 @@ const tickerItems = [
   "Google Maps · Google Ads · Website · Reviews · GBP",
   "500+ Local Businesses Ranked · 50+ Plumbers Served",
   "FL · TX · CA · AZ · IL · GA · NC",
-  "Starting at $197/mo · Month-to-Month",
+  "Starting at $297/mo · Month-to-Month",
 ];
 
 const trustItems = [
@@ -223,7 +223,7 @@ const faqs = [
   },
   {
     q: "What does this cost?",
-    a: "Plans start at $197 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage plumbing companies needing paid ads, review automation, and website rebuild support, and $1,500 per month for established firms wanting the full marketing stack including social, content, and multi-state expansion. Ad spend is separate. Every plan is month-to-month with no setup fee.",
+    a: "Plans start at $297 per month for foundational local SEO and Google Business Profile work, $750 per month for growth-stage plumbing companies needing paid ads, review automation, and website rebuild support, and $1,500 per month for established firms wanting the full marketing stack including social, content, and multi-state expansion. Ad spend is separate. Every plan is month-to-month with no setup fee.",
   },
   {
     q: "Do you handle Google Business Profile suspensions?",
@@ -830,7 +830,7 @@ function Page() {
             <ul className="hia-final-check">
               <li>No long-term contract — every plan month-to-month</li>
               <li>GBP reinstatement included on every plan</li>
-              <li>Starting at $197/mo · No setup fee</li>
+              <li>Starting at $297/mo · No setup fee</li>
               <li>Free audit before any commitment</li>
               <li>Active across FL · TX · CA · AZ · IL · GA · NC and nationally</li>
             </ul>

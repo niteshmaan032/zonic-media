@@ -1,0 +1,69 @@
+/*
+ * Tailwind for the redesign (approved 17 Oct 2026, docs/growth-plan-2026-10.md §6b).
+ *
+ * Safe-by-construction while the old CSS still ships:
+ *  - prefix(tw): every utility is written `tw:flex`, so it can never collide
+ *    with existing class names (`container`, `grid`, `table`, `collapse`…).
+ *  - No Preflight: only theme + utilities are imported, so Tailwind's global
+ *    reset never touches un-migrated pages. Redesigned pages get a scoped
+ *    reset under `.rd` instead.
+ *  - source(none): Tailwind scans only the redesigned components listed below,
+ *    not the 180 existing pages.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(tw);
+/* Utilities are emitted UNLAYERED on purpose: Bootstrap and globals.css are
+   unlayered, and unlayered CSS beats any @layer regardless of specificity.
+   Converted page rules must keep beating them, as the old page CSS did. */
+@import "tailwindcss/utilities.css" source(none);
+
+@source "../../components/rd";
+/* Pages converted to Tailwind (one line per migrated page). */
+@source "../../app/(main)/services/dallas-fort-worth/digital-marketing-agency/page.tsx";
+@source "../../app/(main)/services/dallas-fort-worth/web-design-agency/page.tsx";
+/* Pages built from the component library (src/components/rd/dfw-kit). */
+@source "../../app/(main)/services/dallas-fort-worth/local-seo-agency/page.tsx";
+
+/* Design tokens (from the Dallas–Fort Worth pages, reduced). The site's one
+   typeface is Neue Haas Display, set on <body> in src/app/layout.tsx, so
+   Tailwind's font token simply inherits it. */
+@theme {
+  /* Bootstrap-aligned breakpoints so converted pages keep their exact
+     responsive steps: tw:max-bsxl: == @media (width < 1200px). */
+  --breakpoint-bssm: 576px;
+  --breakpoint-bsmd: 768px;
+  --breakpoint-bslg: 992px;
+  --breakpoint-bsxl: 1200px;
+  --breakpoint-bs2xl: 1400px;
+
+  --font-sans: inherit;
+
+  --color-ink: #0f172a;
+  --color-ink-soft: #334155;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-surface: #ffffff;
+  --color-canvas: #f1f3f7;
+  --color-brand: #fdc115;
+  --color-brand-ink: #1b1b1b;
+  --color-blue: #2563eb;
+  --color-blue-soft: #e8efff;
+  --color-lime: #d9f99d;
+  --color-green: #16a34a;
+  --color-red: #dc2626;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.06), 0 8px 24px rgb(15 23 42 / 0.06);
+  --shadow-pop: 0 12px 40px rgb(15 23 42 / 0.12);
+}
+
+/* Scoped reset for redesigned pages only. */
+@layer base {
+  .rd, .rd *, .rd ::before, .rd ::after { box-sizing: border-box; }
+  .rd :where(h1, h2, h3, h4, p, ul, ol, figure) { margin: 0; }
+  .rd :where(img, svg, video) { display: block; max-width: 100%; height: auto; }
+}

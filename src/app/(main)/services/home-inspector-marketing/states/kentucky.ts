@@ -219,7 +219,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "monthly · Kentucky firms billed each month",
           features: [
             "Complete Google Business Profile rebuild and ongoing monthly management",
@@ -371,7 +371,7 @@ const content: StateContent = {
         p: "The usual window for profile and paid search changes to produce direct inquiries.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Where Kentucky Plans Begin",
         p: "Month to month, no setup fee. Ad spend, if any, is paid directly to Google.",
       },
@@ -453,7 +453,7 @@ const content: StateContent = {
     },
     {
       q: "Is home inspection marketing worth it in a small Kentucky town?",
-      a: "Usually more than in a big city, because so few inspectors do it. SEO for home inspectors is least crowded exactly where Kentucky is most rural. In many Kentucky counties the top map results are incomplete listings with a handful of reviews. A fully built profile, a few county-seat pages, and a simple review request habit are often enough to lead those results, and the Foundation plan at $197 per month is designed for exactly that situation.",
+      a: "Usually more than in a big city, because so few inspectors do it. SEO for home inspectors is least crowded exactly where Kentucky is most rural. In many Kentucky counties the top map results are incomplete listings with a handful of reviews. A fully built profile, a few county-seat pages, and a simple review request habit are often enough to lead those results, and the Foundation plan at $297 per month is designed for exactly that situation.",
     },
     {
       q: "How quickly does home inspector marketing in Kentucky produce calls?",
@@ -461,7 +461,7 @@ const content: StateContent = {
     },
     {
       q: "What will I pay for home inspector marketing in Kentucky?",
-      a: "Plans run $197, $750, or $1,500 per month with no contract and no setup cost. If your plan includes Google Ads, the ad budget is separate and paid to Google. For Kentucky we generally suggest $600 to $1,500 per month in ad spend; Louisville and Lexington sit at the upper end, smaller markets need far less.",
+      a: "Plans run $297, $750, or $1,500 per month with no contract and no setup cost. If your plan includes Google Ads, the ad budget is separate and paid to Google. For Kentucky we generally suggest $600 to $1,500 per month in ad spend; Louisville and Lexington sit at the upper end, smaller markets need far less.",
     },
     {
       q: "Can you target military families moving to Fort Knox or Fort Campbell?",

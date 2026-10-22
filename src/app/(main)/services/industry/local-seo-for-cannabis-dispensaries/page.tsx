@@ -199,7 +199,7 @@ const CannabisSeoFaqs = [
   {
     question: "How Much Does Dispensary SEO Cost?",
     answer:
-      "Specialist cannabis SEO agencies commonly charge $1,500 to $5,000 a month for a single location. Zonic Media's plans are $197, $750 and $1,500 a month, all month-to-month with no long-term contracts. After a free audit we recommend the plan that fits your market and number of locations, at a flat monthly price.",
+      "Specialist cannabis SEO agencies commonly charge $1,500 to $5,000 a month for a single location. Zonic Media's plans are $297, $750 and $1,500 a month, all month-to-month with no long-term contracts. After a free audit we recommend the plan that fits your market and number of locations, at a flat monthly price.",
   },
   {
     question: "Can You Get My Dispensary Recommended in ChatGPT and AI Overviews?",
@@ -381,7 +381,7 @@ const CompareUs = [
   "Menu SEO audit and a plan to put your menu on your own domain",
   "Reporting tied to calls, direction requests, and menu clicks",
   "A dedicated strategist who knows your state's rules",
-  "Month-to-month from $197. We keep you with results, not paperwork.",
+  "Month-to-month from $297. We keep you with results, not paperwork.",
 ];
 
 const WhyCards = [

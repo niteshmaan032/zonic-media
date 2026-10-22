@@ -107,7 +107,7 @@ const content: StateContent = {
         p: "Profile rebuild and ad campaigns go live within two weeks of signing.",
       },
       {
-        big: "$197",
+        big: "$297",
         h: "Starting Plan for Oklahoma Inspectors",
         p: "Foundation tier, month to month, with no setup fee.",
       },
@@ -201,7 +201,7 @@ const content: StateContent = {
     },
     {
       q: "What does marketing for home inspectors cost in Oklahoma?",
-      a: "Foundation is $197 per month, Growth is $750, and Authority is $1,500, all month to month with no setup fee. Ad spend is separate. Oklahoma has some of the lowest click costs we see for inspection keywords, so a starting budget of $600 to $1,500 per month typically covers one metro well.",
+      a: "Foundation is $297 per month, Growth is $750, and Authority is $1,500, all month to month with no setup fee. Ad spend is separate. Oklahoma has some of the lowest click costs we see for inspection keywords, so a starting budget of $600 to $1,500 per month typically covers one metro well.",
     },
     {
       q: "Buyers search \"home inspection cost Oklahoma.\" How should my website handle that?",
@@ -415,7 +415,7 @@ const content: StateContent = {
       cards: [
         {
           tier: "Foundation",
-          amount: "$197",
+          amount: "$297",
           period: "a month · billed monthly, cancel anytime",
           features: [
             "Google Business Profile rebuilt in full for your Oklahoma service area and managed monthly",
