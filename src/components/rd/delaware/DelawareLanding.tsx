@@ -248,7 +248,7 @@ export function DelawareLanding({
 
   return (
     <>
-      <main className="dk-root">
+      <main className="dk-root loc-page">
         {/* ============================================================ HERO */}
         <section
           className="tw:relative tw:isolate tw:overflow-clip tw:[background:radial-gradient(circle_at_16%_12%,rgba(49,87,245,0.07),transparent_26%),radial-gradient(circle_at_88%_6%,rgba(110,80,247,0.065),transparent_22%),linear-gradient(180deg,#fdfdff_0%,#f9fbff_60%,#fff_100%)] tw:pt-36 tw:pb-(--sec-y) tw:text-center tw:max-bsmd:pt-[120px]"
@@ -1475,8 +1475,8 @@ export function DelawareLanding({
         {/* The /home2 closing banner (owner, 22 Oct: same ending as /home2),
             carrying the page's own free-audit heading, text and checklist. */}
         <Section labelledBy="de-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(60%_80%_at_100%_0%,rgba(59,130,246,0.85),transparent_60%),radial-gradient(55%_70%_at_75%_100%,rgba(244,143,203,0.95),transparent_65%),linear-gradient(105deg,#1b10e8_0%,#3d22f0_32%,#8a4cf0_62%,#d47fe0_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-white tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(60%_80%_at_100%_0%,rgba(59,130,246,0.85),transparent_60%),radial-gradient(55%_70%_at_75%_100%,rgba(244,143,203,0.95),transparent_65%),linear-gradient(105deg,#1b10e8_0%,#3d22f0_32%,#8a4cf0_62%,#d47fe0_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-white tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.22] tw:mix-blend-overlay"
                 style={{ backgroundImage: GRAIN }}
@@ -1484,7 +1484,7 @@ export function DelawareLanding({
               />
               <BannerLoops
                 id="de-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="de-loop-r"

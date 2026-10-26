@@ -129,7 +129,7 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
     <>
       {/* ind-hcap: heading scale + split-head rules (industry.css), same as
           the industry pages (owner, 25 Oct 2026). */}
-      <main className="dk-root ind-hcap">
+      <main className="dk-root ind-hcap loc-page">
         {/* ============================================================ HERO */}
         <section
           className={cx(

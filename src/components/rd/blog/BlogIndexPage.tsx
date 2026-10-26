@@ -208,8 +208,8 @@ export function BlogIndexPage({
         {/* Light gradient (changed 24 Oct): aqua → sky → lavender with a
             peach glow, ink text. */}
         <Section labelledBy="bl-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(253,186,116,0.45),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(153,246,228,0.8),transparent_65%),linear-gradient(105deg,#ccfbf1_0%,#e0f2fe_45%,#ede9fe_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(253,186,116,0.45),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(153,246,228,0.8),transparent_65%),linear-gradient(105deg,#ccfbf1_0%,#e0f2fe_45%,#ede9fe_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.12] tw:mix-blend-multiply"
                 style={{ backgroundImage: GRAIN }}
@@ -217,7 +217,7 @@ export function BlogIndexPage({
               />
               <BannerLoops
                 id="bl-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="bl-loop-r"

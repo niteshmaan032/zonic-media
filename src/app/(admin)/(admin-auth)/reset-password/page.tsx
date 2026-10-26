@@ -120,7 +120,7 @@ function ResetPasswordForm() {
     <div className="admin-auth-wrapper container">
       <div className="admin-auth-img">
         <Image
-          src="/images/reset.png"
+          src="/images/reset.webp"
           alt="resetpassword"
           width={900}
           height={900}

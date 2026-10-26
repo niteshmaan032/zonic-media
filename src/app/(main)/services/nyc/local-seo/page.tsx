@@ -224,7 +224,7 @@ const data: DelawareData = {
     h1Highlight: "Ranking New York Businesses on Google Maps",
     sub: "We put New York businesses in the Map Pack with a complete Google profile, spam competitors reported, steady reviews and neighborhood pages that rank from Astoria and the Upper West Side to Park Slope. Every result is tracked by ZIP code.",
     media: {
-      src: "/images/geo/nyc-local-seo/nyc-local-seo-storefront-owner.jpg",
+      src: "/images/geo/nyc-local-seo/nyc-local-seo-storefront-owner.webp",
       alt: "New York storefront owner checking local search visibility on a phone",
     },
     floatA: { strong: "", text: "" },
@@ -282,11 +282,11 @@ const data: DelawareData = {
     ],
     checks: [],
     collageA: {
-      src: "/images/geo/nyc-local-seo/nyc-near-me-mobile-search.jpg",
+      src: "/images/geo/nyc-local-seo/nyc-near-me-mobile-search.webp",
       alt: "Near me mobile search used on a New York neighborhood street",
     },
     collageB: {
-      src: "/images/geo/nyc-local-seo/nyc-map-pack-rankings-dashboard.jpg",
+      src: "/images/geo/nyc-local-seo/nyc-map-pack-rankings-dashboard.webp",
       alt: "Neighborhood Map Pack rankings dashboard for New York City",
     },
     badgeText: "Local SEO NYC • Zonic Media •",

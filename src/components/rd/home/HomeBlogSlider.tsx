@@ -30,7 +30,7 @@ export type BlogSlide = {
 function formatDate(value: string) {
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
-  return new Intl.DateTimeFormat("en", { month: "long", day: "numeric", year: "numeric" }).format(date);
+  return new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric" }).format(date);
 }
 
 const NAV =
@@ -59,21 +59,21 @@ function BlogCard({ blog }: { blog: BlogSlide }) {
       <div className="tw:flex tw:grow tw:flex-col tw:px-3 tw:pt-4 tw:pb-2">
         {/* Author and date (the date moved off the photo: blog images carry
             their own headline at the top, so a chip there covered it). */}
-        <span className="tw:flex tw:flex-wrap tw:items-center tw:gap-x-3 tw:gap-y-1 tw:text-[13.5px] tw:font-medium tw:text-(--ink-2)">
-          <span className="tw:flex tw:items-center tw:gap-1.5">
-            <span className="tw:grid tw:size-7 tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[13px] tw:text-(--blue)" aria-hidden="true">
+        <span className="tw:flex tw:min-w-0 tw:flex-nowrap tw:items-center tw:gap-x-3 tw:text-[13.5px] tw:font-medium tw:whitespace-nowrap tw:text-(--ink-2) tw:max-bssm:gap-x-2 tw:max-bssm:text-[13px]">
+          <span className="tw:flex tw:min-w-0 tw:items-center tw:gap-1.5">
+            <span className="tw:grid tw:size-7 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[13px] tw:text-(--blue) tw:max-bssm:size-6" aria-hidden="true">
               <FiUser />
             </span>
-            {blog.authorName}
+            <span className="tw:truncate">{blog.authorName}</span>
           </span>
-          <span className="tw:flex tw:items-center tw:gap-1.5">
-            <span className="tw:grid tw:size-7 tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[13px] tw:text-[#8a6400]" aria-hidden="true">
+          <span className="tw:flex tw:flex-none tw:items-center tw:gap-1.5">
+            <span className="tw:grid tw:size-7 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[13px] tw:text-[#8a6400] tw:max-bssm:size-6" aria-hidden="true">
               <FiCalendar />
             </span>
             {formatDate(blog.publishDate)}
           </span>
         </span>
-        <h3 className="tw:mt-2.5 tw:text-[20px] tw:leading-[1.25] tw:tracking-[-0.02em] tw:text-balance">
+        <h3 className="tw:mt-2.5 tw:line-clamp-2 tw:text-[20px] tw:leading-[1.25] tw:tracking-[-0.02em] tw:text-balance tw:max-bssm:text-[18px]">
           {/* Stretched link: the whole card opens the post. */}
           <Link
             href={href}
@@ -111,13 +111,13 @@ export function HomeBlogSlider({ blogs }: { blogs: BlogSlide[] }) {
           </Strip>
         </div>
         <div className="tw:flex tw:items-center tw:gap-3">
-          <button type="button" className={NAV} aria-label="Previous blog" disabled={edges.start} onClick={() => swiper?.slidePrev()}>
+          <button type="button" className={`${NAV} tw:max-bsmd:hidden`} aria-label="Previous blog" disabled={edges.start} onClick={() => swiper?.slidePrev()}>
             <FiArrowLeft aria-hidden="true" />
           </button>
-          <button type="button" className={NAV} aria-label="Next blog" disabled={edges.end} onClick={() => swiper?.slideNext()}>
+          <button type="button" className={`${NAV} tw:max-bsmd:hidden`} aria-label="Next blog" disabled={edges.end} onClick={() => swiper?.slideNext()}>
             <FiArrowRight aria-hidden="true" />
           </button>
-          <Pill href="/blog" arrow className="tw:ml-2 tw:max-bssm:ml-0">
+          <Pill href="/blog" arrow className="tw:ml-2 tw:max-bsmd:ml-0">
             View All
           </Pill>
         </div>
@@ -144,6 +144,15 @@ export function HomeBlogSlider({ blogs }: { blogs: BlogSlide[] }) {
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* Phones and tablets: arrows sit under the cards (owner, 27 Oct). */}
+      <div className="tw:mt-5 tw:flex tw:items-center tw:justify-center tw:gap-3 tw:bsmd:hidden">
+        <button type="button" className={NAV} aria-label="Previous blog" disabled={edges.start} onClick={() => swiper?.slidePrev()}>
+          <FiArrowLeft aria-hidden="true" />
+        </button>
+        <button type="button" className={NAV} aria-label="Next blog" disabled={edges.end} onClick={() => swiper?.slideNext()}>
+          <FiArrowRight aria-hidden="true" />
+        </button>
+      </div>
     </>
   );
 }

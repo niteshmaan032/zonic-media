@@ -34,7 +34,7 @@ export default function HeroTrustBadges({
       </a>
       <span className="htb-yelp">
         <Image
-          src="/images/Partner.png"
+          src="/images/Partner.webp"
           width={72}
           height={72}
           alt="Yelp Advertising Partner"

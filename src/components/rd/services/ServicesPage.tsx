@@ -612,7 +612,7 @@ export function ServicesPage() {
                 <Ph
                   label="Zonic Media designers reviewing a client website on a laptop and phone"
                   ratio="16:9"
-                  src="/images/dfw/web/dfw-team-review.png"
+                  src="/images/dfw/web/dfw-team-review.webp"
                   position="50% 45%"
                 />
               </div>
@@ -1084,8 +1084,8 @@ export function ServicesPage() {
         {/* Light gradient (the owner prefers light banners): mint → sky →
             lavender, with ink text. */}
         <Section labelledBy="sv-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(196,181,253,0.75),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(134,239,172,0.6),transparent_65%),linear-gradient(105deg,#d1fae5_0%,#cffafe_38%,#dbeafe_70%,#e9e5ff_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(196,181,253,0.75),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(134,239,172,0.6),transparent_65%),linear-gradient(105deg,#d1fae5_0%,#cffafe_38%,#dbeafe_70%,#e9e5ff_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.12] tw:mix-blend-multiply"
                 style={{ backgroundImage: GRAIN }}
@@ -1093,7 +1093,7 @@ export function ServicesPage() {
               />
               <BannerLoops
                 id="sv-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="sv-loop-r"

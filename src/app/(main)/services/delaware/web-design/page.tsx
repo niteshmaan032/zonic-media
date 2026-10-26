@@ -204,7 +204,7 @@ const data: DelawareData = {
     h1Highlight: "Building Custom, SEO-Ready Websites",
     sub: "From our office in Dover, Zonic Media designs and builds custom sites for Delaware companies. Each site is fast on phones, structured for search and built around one goal: turning visitors from Wilmington to Rehoboth Beach into calls and quote requests.",
     media: {
-      src: "/images/geo/delaware-web-design/delaware-web-design-studio.jpg",
+      src: "/images/geo/delaware-web-design/delaware-web-design-studio.webp",
       alt: "Web designer building a Delaware service business website in a sunlit studio",
     },
     floatA: { strong: "Core Web Vitals", text: "tested before every launch" },
@@ -264,11 +264,11 @@ const data: DelawareData = {
     ],
     checks: [],
     collageA: {
-      src: "/images/geo/delaware-web-design/responsive-web-design-devices.jpg",
+      src: "/images/geo/delaware-web-design/responsive-web-design-devices.webp",
       alt: "Designer testing a responsive website on laptop, tablet, and phone",
     },
     collageB: {
-      src: "/images/geo/delaware-web-design/website-wireframe-planning.jpg",
+      src: "/images/geo/delaware-web-design/website-wireframe-planning.webp",
       alt: "Website planning session with paper wireframes and a laptop",
     },
     badgeText: "Delaware Web Design • Zonic Media •",
@@ -443,7 +443,7 @@ const data: DelawareData = {
   results: { eyebrow: "", h2: "", cards: [] },
   showcase: {
     image: {
-      src: "/images/geo/delaware-web-design/delaware-website-portfolio-team.jpg",
+      src: "/images/geo/delaware-web-design/delaware-website-portfolio-team.webp",
       alt: "Web design team reviewing local business websites and printed page concepts",
     },
     floats: [
@@ -689,7 +689,7 @@ const extras: DelawareExtras = {
     "/services/delaware/seo",
   ],
   phoneImage: {
-    src: "/images/geo/delaware-web-design/delaware-web-design-studio.jpg",
+    src: "/images/geo/delaware-web-design/delaware-web-design-studio.webp",
     alt: "",
   },
 };

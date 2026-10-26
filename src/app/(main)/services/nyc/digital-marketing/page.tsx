@@ -224,7 +224,7 @@ const data: DelawareData = {
     h1Highlight: "Bringing New York Businesses More Calls",
     sub: "Zonic Media plans your Google Maps rankings, search ads, social posts and website together for New York businesses. Each channel targets the boroughs you serve, with one digital marketing consultant as your contact and results reported in calls and jobs.",
     media: {
-      src: "/images/geo/nyc-digital-marketing/nyc-digital-marketing-strategy.jpg",
+      src: "/images/geo/nyc-digital-marketing/nyc-digital-marketing-strategy.webp",
       alt: "New York business owner and strategist reviewing a digital marketing plan",
     },
     floatA: { strong: "", text: "" },
@@ -283,11 +283,11 @@ const data: DelawareData = {
     ],
     checks: [],
     collageA: {
-      src: "/images/geo/nyc-digital-marketing/nyc-storefront-marketing-consultation.jpg",
+      src: "/images/geo/nyc-digital-marketing/nyc-storefront-marketing-consultation.webp",
       alt: "Marketing consultant meeting an independent shop owner in New York City",
     },
     collageB: {
-      src: "/images/geo/nyc-digital-marketing/nyc-multichannel-marketing-dashboard.jpg",
+      src: "/images/geo/nyc-digital-marketing/nyc-multichannel-marketing-dashboard.webp",
       alt: "Multichannel local marketing performance dashboard on a laptop",
     },
     badgeText: "Digital Marketing Agency NYC • Zonic Media •",

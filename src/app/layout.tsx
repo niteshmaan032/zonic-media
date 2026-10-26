@@ -16,6 +16,7 @@ import { Analytics } from "@vercel/analytics/next";
 import GhlExternalTracking from "@/app/components/GhlExternalTracking";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
+import { AnimationGate } from "@/components/rd/AnimationGate";
 import AnalyticsProvider from "@/app/components/AnalyticsProvider";
 
 // Floating call/WhatsApp widgets are code-split so their JavaScript loads after
@@ -239,6 +240,7 @@ export default function RootLayout({
 
         <Loader />
         <SmoothScroll>{children}</SmoothScroll>
+        <AnimationGate />
         {/* The GoHighLevel (LeadConnector) chat widget is injected per-page
             inside SiteFloatingWidgets — only on pages without a phone/SMS
             opt-in form — so it passes GHL's compliance review. Loading it

@@ -91,10 +91,11 @@ export function AvatarPh({
 }) {
   return (
     <span
-      className="tw:-ml-3 tw:block tw:rounded-full tw:border-3 tw:first:ml-0"
+      // Phones cap the avatar at 44px (owner, 27 Oct 2026: testimonial
+      // avatars looked too big on mobile); smaller UI avatars are unchanged.
+      className="tw:-ml-3 tw:block tw:size-(--ava) tw:rounded-full tw:border-3 tw:first:ml-0 tw:max-bssm:-ml-2.5 tw:max-bssm:size-[min(var(--ava),44px)] tw:max-bssm:first:ml-0"
       style={{
-        width: size,
-        height: size,
+        ["--ava" as string]: `${size}px`,
         borderColor: ring,
         background: `radial-gradient(circle at 50% 40%, rgba(255,255,255,0.85) 0 19%, transparent 20%), radial-gradient(ellipse 46% 34% at 50% 100%, rgba(255,255,255,0.85) 0 98%, transparent 100%), ${AVA_TONE[tone]}`,
       }}
@@ -344,7 +345,7 @@ export function TrustLogos({
         className={img}
         width={84}
         height={84}
-        src="/images/Partner.png"
+        src="/images/Partner.webp"
         alt="Yelp Advertising Partner"
         priority={hero}
       />

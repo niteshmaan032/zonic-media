@@ -5,6 +5,7 @@ import {
   FiAward,
   FiBarChart2,
   FiCheck,
+  FiChevronDown,
   FiColumns,
   FiHome,
   FiMinus,
@@ -52,7 +53,7 @@ function CellView({ cell, dark }: { cell: Cell; dark?: boolean }) {
         )}
       />
     );
-  return <span className="tw:text-[14px] tw:font-medium">{cell}</span>;
+  return <span className="tw:text-[14px] tw:font-medium tw:max-bssm:text-[12.5px]">{cell}</span>;
 }
 
 /** The plan comparison table; prices follow the billing toggle. */
@@ -60,15 +61,80 @@ function CompareTable({
   billing,
   labelledBy,
   className,
+  stickyTop = 0,
 }: {
   billing: Billing;
   labelledBy: string;
   className?: string;
+  /** Where the phone layout's plan header sticks (below the site header on /pricing). */
+  stickyTop?: number;
 }) {
   return (
+    <>
+    {/* Phones: the plans sit side by side under each deliverable, so the
+        whole comparison is readable without sideways scrolling (owner,
+        27 Oct 2026). Same rows and cells as the table. */}
     <div
       className={cx(
-        "tw:overflow-x-auto tw:rounded-[28px] tw:border tw:border-(--line) tw:bg-white",
+        "tw:overflow-clip tw:rounded-[22px] tw:border tw:border-(--line) tw:bg-white tw:bsmd:hidden",
+        className,
+      )}
+      role="group"
+      aria-labelledby={labelledBy}
+    >
+      <div
+        className="tw:sticky tw:z-1 tw:grid tw:grid-cols-3 tw:border-b tw:border-(--line) tw:bg-white"
+        style={{ top: stickyTop }}
+      >
+        {PLANS.map((plan) => (
+          <div
+            key={plan.id}
+            className={cx(
+              "tw:px-1.5 tw:py-3 tw:text-center",
+              plan.featured ? "tw:bg-(--ink) tw:text-white" : "",
+            )}
+          >
+            <b className={cx("tw:block tw:text-[14.5px]", plan.featured && "tw:text-white")}>
+              {plan.name}
+            </b>
+            <span
+              className={cx(
+                "tw:text-[12.5px] tw:font-medium",
+                plan.featured ? "tw:text-(--gold)" : "tw:text-(--muted)",
+              )}
+            >
+              {usd(plan.price[billing])}/mo
+            </span>
+          </div>
+        ))}
+      </div>
+      <ul>
+        {COMPARE.map((row) => (
+          <li key={row.label} className="tw:border-b tw:border-(--line) tw:last:border-b-0">
+            <p className="tw:bg-(--panel) tw:px-4 tw:py-2 tw:text-[13px] tw:font-semibold tw:text-(--ink-2)">
+              {row.label}
+            </p>
+            <div className="tw:grid tw:grid-cols-3">
+              {row.cells.map((cell, i) => (
+                <div
+                  key={i}
+                  className={cx(
+                    "tw:flex tw:items-center tw:justify-center tw:px-1.5 tw:py-2.5 tw:text-center tw:text-[12.5px]/[1.35]",
+                    PLANS[i].featured ? "tw:bg-(--ink)/[0.035]" : "",
+                  )}
+                >
+                  <span className="tw:sr-only">{PLANS[i].name}: </span>
+                  <CellView cell={cell} />
+                </div>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div
+      className={cx(
+        "tw:overflow-x-auto tw:rounded-[28px] tw:border tw:border-(--line) tw:bg-white tw:max-bsmd:hidden",
         className,
       )}
     >
@@ -139,6 +205,7 @@ function CompareTable({
         </tbody>
       </table>
     </div>
+    </>
   );
 }
 
@@ -158,6 +225,9 @@ export function PricingPlans({
 }) {
   const [billing, setBilling] = useState<Billing>("annual");
   const [open, setOpen] = useState(false);
+  // Phones show each plan's first 5 features; "View all" opens the rest
+  // (owner, 27 Oct 2026, to keep the cards short on mobile).
+  const [more, setMore] = useState<Record<string, boolean>>({});
   const dialogRef = useRef<HTMLDialogElement>(null);
   // Keep the page from scrolling behind the open pop-up.
   useEffect(() => {
@@ -347,13 +417,14 @@ export function PricingPlans({
                     {plan.includesFrom}
                   </p>
                 ) : null}
-                <ul className="tw:grid tw:gap-2.5">
-                  {plan.features.map((f) => (
+                <ul className="tw:grid tw:gap-2.5" id={`plan-${plan.id}-features`}>
+                  {plan.features.map((f, i) => (
                     <li
                       key={f}
                       className={cx(
                         "tw:flex tw:items-start tw:gap-2.5 tw:text-[15px]/[1.45]",
                         dark ? "tw:text-white/90" : "tw:text-(--ink-2)",
+                        i >= 5 && !more[plan.id] && "tw:max-bsmd:hidden",
                       )}
                     >
                       <FiCheck
@@ -369,6 +440,31 @@ export function PricingPlans({
                     </li>
                   ))}
                 </ul>
+                {plan.features.length > 5 ? (
+                  <button
+                    type="button"
+                    aria-expanded={Boolean(more[plan.id])}
+                    aria-controls={`plan-${plan.id}-features`}
+                    onClick={() =>
+                      setMore((m) => ({ ...m, [plan.id]: !m[plan.id] }))
+                    }
+                    className={cx(
+                      "tw:mt-4 tw:inline-flex tw:cursor-pointer tw:items-center tw:gap-1.5 tw:border-0 tw:bg-transparent tw:p-0 tw:text-[14.5px] tw:font-semibold tw:underline tw:underline-offset-4 tw:bsmd:hidden",
+                      dark ? "tw:text-(--gold)" : "tw:text-(--blue)",
+                    )}
+                  >
+                    {more[plan.id]
+                      ? "Show fewer features"
+                      : `View all ${plan.features.length} features`}
+                    <FiChevronDown
+                      aria-hidden="true"
+                      className={cx(
+                        "tw:transition-transform",
+                        more[plan.id] && "tw:rotate-180",
+                      )}
+                    />
+                  </button>
+                ) : null}
               </div>
 
               <div
@@ -431,13 +527,11 @@ export function PricingPlans({
           <p className="tw:mt-3 tw:text-center tw:text-[16.5px] tw:text-(--text)">
             {compareLead}
           </p>
-          <p className="tw:mt-2 tw:hidden tw:text-center tw:text-[13px] tw:text-(--muted) tw:max-bsmd:block">
-            Swipe the table to see every plan.
-          </p>
           <CompareTable
             billing={billing}
             labelledBy={compareId}
             className="tw:mt-8"
+            stickyTop={84}
           />
         </div>
       ) : (
@@ -450,18 +544,20 @@ export function PricingPlans({
             // A click on the dialog box itself (not its content) is the backdrop.
             if (e.target === e.currentTarget) dialogRef.current?.close();
           }}
-          className="tw:m-auto tw:max-h-[90vh] tw:w-[min(1120px,calc(100vw-32px))] tw:max-w-none tw:overflow-y-auto tw:rounded-[32px] tw:border-0 tw:bg-(--bg) tw:p-0 tw:text-(--ink) tw:backdrop:bg-[rgba(12,21,38,0.62)] tw:max-bssm:rounded-[24px]"
+          // Phones and tablets: full screen (owner, 27 Oct 2026). The title
+          // bar stays put and only the comparison scrolls under it.
+          className="tw:m-auto tw:max-h-[90vh] tw:w-[min(1120px,calc(100vw-32px))] tw:max-w-none tw:overflow-y-auto tw:rounded-[32px] tw:border-0 tw:bg-(--bg) tw:p-0 tw:text-(--ink) tw:backdrop:bg-[rgba(12,21,38,0.62)] tw:max-bsmd:m-0 tw:max-bsmd:h-dvh tw:max-bsmd:max-h-none tw:max-bsmd:w-screen tw:max-bsmd:overflow-hidden tw:max-bsmd:rounded-none"
         >
-          <div className="tw:px-8 tw:pt-7 tw:pb-8 tw:max-bssm:px-4 tw:max-bssm:pt-5 tw:max-bssm:pb-5">
-            <div className="tw:flex tw:items-start tw:justify-between tw:gap-4">
+          <div className="tw:px-8 tw:pt-7 tw:pb-8 tw:max-bsmd:flex tw:max-bsmd:h-full tw:max-bsmd:min-h-0 tw:max-bsmd:flex-col tw:max-bsmd:p-0">
+            <div className="tw:flex tw:items-start tw:justify-between tw:gap-4 tw:max-bsmd:flex-none tw:max-bsmd:items-center tw:max-bsmd:border-b tw:max-bsmd:border-(--line) tw:max-bsmd:bg-white tw:max-bsmd:px-4 tw:max-bsmd:pt-[calc(env(safe-area-inset-top,0px)+12px)] tw:max-bsmd:pb-3">
               <div>
                 <h2
                   id={compareId}
-                  className="tw:text-[clamp(24px,2.6vw,36px)] tw:leading-[1.1] tw:tracking-[-0.03em]"
+                  className="tw:text-[clamp(24px,2.6vw,36px)] tw:leading-[1.1] tw:tracking-[-0.03em] tw:max-bsmd:text-[21px]"
                 >
                   {compareTitle}
                 </h2>
-                <p className="tw:mt-2 tw:text-[15.5px] tw:text-(--text)">
+                <p className="tw:mt-2 tw:text-[15.5px] tw:text-(--text) tw:max-bsmd:mt-1 tw:max-bsmd:text-[13.5px]">
                   {compareLead}
                 </p>
               </div>
@@ -474,18 +570,19 @@ export function PricingPlans({
                 <FiX aria-hidden="true" />
               </button>
             </div>
-            <div className="tw:mt-5 tw:flex tw:flex-wrap tw:items-center tw:gap-3">
-              {toggle}
-              <span className="tw:text-[13px] tw:text-(--muted) tw:max-bsmd:w-full">
-                Prices shown per month.
-                <span className="tw:hidden tw:max-bsmd:inline"> Swipe the table to see every plan.</span>
-              </span>
+            <div className="tw:max-bsmd:min-h-0 tw:max-bsmd:flex-1 tw:max-bsmd:overflow-y-auto tw:max-bsmd:overscroll-contain tw:max-bsmd:px-4 tw:max-bsmd:pt-4 tw:max-bsmd:pb-[calc(env(safe-area-inset-bottom,0px)+20px)]">
+              <div className="tw:mt-5 tw:flex tw:flex-wrap tw:items-center tw:gap-3 tw:max-bsmd:mt-0">
+                {toggle}
+                <span className="tw:text-[13px] tw:text-(--muted) tw:max-bsmd:w-full">
+                  Prices shown per month.
+                </span>
+              </div>
+              <CompareTable
+                billing={billing}
+                labelledBy={compareId}
+                className="tw:mt-5"
+              />
             </div>
-            <CompareTable
-              billing={billing}
-              labelledBy={compareId}
-              className="tw:mt-5"
-            />
           </div>
         </dialog>
       )}

@@ -151,7 +151,7 @@ const DESCRIPTION =
   "Dallas local SEO company for DFW businesses: Google Business Profile, reviews, listings and suburb pages that win the Map Pack in Dallas, Fort Worth and beyond.";
 
 const OG_IMAGE = {
-  url: "/images/dfw/audit-report.png",
+  url: "/images/dfw/audit-report.webp",
   width: 1448,
   height: 1086,
   alt: "Free local SEO audit report for a Dallas–Fort Worth business",
@@ -784,7 +784,7 @@ export default function DallasFortWorthLocalSeoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="dk-root">
+      <main className="dk-root loc-page">
         {/* ============================================================ HERO */}
         <section
           className="tw:relative tw:isolate tw:overflow-clip tw:bg-[radial-gradient(circle_at_16%_12%,rgba(49,87,245,0.07),transparent_26%),radial-gradient(circle_at_88%_6%,rgba(110,80,247,0.065),transparent_22%),linear-gradient(180deg,#fdfdff_0%,#f9fbff_60%,#fff_100%)] tw:pt-36 tw:pb-(--sec-y) tw:text-center tw:max-bsmd:pt-[120px]"
@@ -985,7 +985,7 @@ export default function DallasFortWorthLocalSeoPage() {
                 <Ph
                   label="Dallas–Fort Worth local SEO: metro map with Map Pack pins, a local pack visibility chart and the Dallas skyline"
                   ratio="16:9"
-                  src="/images/dfw/seo/dfw-local-seo-visibility.jpg"
+                  src="/images/dfw/seo/dfw-local-seo-visibility.webp"
                 />
               </div>
             </div>

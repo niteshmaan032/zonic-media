@@ -59,14 +59,15 @@ export function TrustPoints({ className }: { className?: string }) {
   return (
     <ul
       className={cx(
-        "tw:flex tw:flex-wrap tw:justify-center tw:gap-x-8 tw:gap-y-4",
+        "tw:flex tw:flex-wrap tw:justify-center tw:gap-x-8 tw:gap-y-4 tw:max-bssm:grid tw:max-bssm:grid-cols-3 tw:max-bssm:items-center tw:max-bssm:gap-x-3",
         className,
       )}
     >
       {TRUST.map((item) => (
         <li
           key={item.t}
-          className="tw:flex tw:items-center tw:gap-3 tw:text-left"
+          // Phones: icon on top, text centred (owner, 27 Oct 2026).
+          className="tw:flex tw:items-center tw:gap-3 tw:text-left tw:max-bssm:flex-col tw:max-bssm:items-center tw:max-bssm:gap-2 tw:max-bssm:text-center"
         >
           <span
             className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-white tw:text-[18px] tw:text-(--blue)"
@@ -74,8 +75,8 @@ export function TrustPoints({ className }: { className?: string }) {
           >
             {item.icon}
           </span>
-          <span className="tw:text-[13.5px]/[1.35] tw:text-(--text)">
-            <b className="tw:block tw:text-[15px] tw:text-(--ink)">{item.t}</b>
+          <span className="tw:text-[13.5px]/[1.35] tw:text-(--text) tw:max-bssm:text-[12.5px]/[1.35]">
+            <b className="tw:block tw:text-[15px] tw:text-(--ink) tw:max-bssm:text-[13.5px]">{item.t}</b>
             {item.d}
           </span>
         </li>
@@ -110,11 +111,12 @@ export function AddOnsGrid({
       <p className="tw:mt-3 tw:text-center tw:text-[16.5px] tw:text-(--text)">
         {lead}
       </p>
-      <ul className="tw:mt-8 tw:grid tw:grid-cols-6 tw:gap-4 tw:max-bsxl:grid-cols-3 tw:max-bssm:grid-cols-2 tw:max-bssm:gap-3">
+      {/* Phones and tablets: one swipeable row (owner, 27 Oct 2026). */}
+      <ul className="tw:mt-8 tw:grid tw:grid-cols-6 tw:gap-4 tw:max-bsxl:grid-cols-3 tw:max-bsmd:-mx-(--inset) tw:max-bsmd:flex tw:max-bsmd:snap-x tw:max-bsmd:snap-mandatory tw:max-bsmd:gap-3 tw:max-bsmd:overflow-x-auto tw:max-bsmd:scroll-px-(--inset) tw:max-bsmd:px-(--inset) tw:max-bsmd:pb-2 tw:[scrollbar-width:none] tw:[&::-webkit-scrollbar]:hidden">
         {ADD_ONS.map((a) => (
           <li
             key={a.name}
-            className="tw:flex tw:flex-col tw:items-center tw:rounded-[24px] tw:bg-white tw:px-4 tw:py-6 tw:text-center tw:max-bssm:px-3 tw:max-bssm:py-5"
+            className="tw:flex tw:flex-col tw:items-center tw:rounded-[24px] tw:bg-white tw:px-4 tw:py-6 tw:text-center tw:max-bsmd:w-[44%] tw:max-bsmd:flex-none tw:max-bsmd:snap-start tw:max-bssm:w-[62%] tw:max-bssm:px-3 tw:max-bssm:py-5"
           >
             <span
               className="tw:grid tw:size-12 tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[20px] tw:text-(--blue)"

@@ -84,7 +84,7 @@ export default function AdminEmailVerification() {
     <div className="admin-auth-wrapper container">
       <div className="admin-auth-img">
         <Image
-          src="/images/email.png"
+          src="/images/email.webp"
           alt="password"
           width={900}
           height={900}

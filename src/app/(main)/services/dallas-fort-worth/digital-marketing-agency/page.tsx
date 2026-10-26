@@ -471,7 +471,7 @@ const jsonLd = [
     breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/images/dfw/team-campaign.png`,
+      url: `${SITE_URL}/images/dfw/team-campaign.webp`,
       caption: "Zonic Media team planning a Dallas–Fort Worth marketing campaign",
     },
   },
@@ -584,7 +584,7 @@ export default function DallasFortWorthMarketingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="dm-root tw:[--bg:#eef1f6] tw:[--ink:#0c1526] tw:[&&]:[--ink-2:#1d2a44] tw:[--blue:#2567e8] tw:[&&]:[--blue-dark:#1c4fc4] tw:[&&]:[--blue-soft:#eaf0fe] tw:[--gold:#fdc115] tw:[&&]:[--gold-dark:#b98a00] tw:[&&]:[--gold-soft:#fff6db] tw:[--green:#34a852] tw:[&&]:[--green-soft:#e7f6ec] tw:[--red:#ea4334] tw:[--text:#47546e] tw:[--muted:#7a869e] tw:[--line:#e3e9f2] tw:[--panel:#f1f4f9] tw:[--inset:100px] tw:[--sec-y:36px] tw:[--r-xl:40px] tw:[--lift:0_26px_50px_-26px_rgba(12,_21,_38,_0.3)] tw:[background:var(--bg)] tw:[color:var(--ink)] tw:[line-height:1.6] tw:[overflow-x:clip] tw:[-webkit-font-smoothing:antialiased] tw:[box-sizing:border-box] tw:max-bsxl:[--inset:30px] tw:max-bsxl:[--sec-y:32px] tw:max-bsxl:[--r-xl:32px] tw:max-bslg:[--inset:40px] tw:max-bslg:[--sec-y:30px] tw:max-bssm:[--inset:20px] tw:max-bssm:[--sec-y:26px] tw:max-bssm:[--r-xl:24px]">
+      <main className="dm-root loc-page tw:[--bg:#eef1f6] tw:[--ink:#0c1526] tw:[&&]:[--ink-2:#1d2a44] tw:[--blue:#2567e8] tw:[&&]:[--blue-dark:#1c4fc4] tw:[&&]:[--blue-soft:#eaf0fe] tw:[--gold:#fdc115] tw:[&&]:[--gold-dark:#b98a00] tw:[&&]:[--gold-soft:#fff6db] tw:[--green:#34a852] tw:[&&]:[--green-soft:#e7f6ec] tw:[--red:#ea4334] tw:[--text:#47546e] tw:[--muted:#7a869e] tw:[--line:#e3e9f2] tw:[--panel:#f1f4f9] tw:[--inset:100px] tw:[--sec-y:36px] tw:[--r-xl:40px] tw:[--lift:0_26px_50px_-26px_rgba(12,_21,_38,_0.3)] tw:[background:var(--bg)] tw:[color:var(--ink)] tw:[line-height:1.6] tw:[overflow-x:clip] tw:[-webkit-font-smoothing:antialiased] tw:[box-sizing:border-box] tw:max-bsxl:[--inset:30px] tw:max-bsxl:[--sec-y:32px] tw:max-bsxl:[--r-xl:32px] tw:max-bslg:[--inset:40px] tw:max-bslg:[--sec-y:30px] tw:max-bssm:[--inset:20px] tw:max-bssm:[--sec-y:26px] tw:max-bssm:[--r-xl:24px]">
         {/* ============================================================ HERO */}
         <section className="dm-hero tw:[position:relative] tw:[isolation:isolate] tw:[overflow:clip] tw:[padding:144px_0_var(--sec-y)] tw:[background:radial-gradient(circle_at_16%_12%,_rgba(49,_87,_245,_0.07),_transparent_26%),_radial-gradient(circle_at_88%_6%,_rgba(110,_80,_247,_0.065),_transparent_22%),_linear-gradient(180deg,_#fdfdff_0%,_#f9fbff_60%,_#fff_100%)] tw:[text-align:center] tw:[&::before]:[position:absolute] tw:[&::before]:[z-index:-1] tw:[&::before]:[width:450px] tw:[&::before]:[height:450px] tw:[&::before]:[border-radius:50%] tw:[&::before]:[filter:blur(70px)] tw:[&::before]:[opacity:0.09] tw:[&::before]:[pointer-events:none] tw:[&::before]:[content:''] tw:[&::after]:[position:absolute] tw:[&::after]:[z-index:-1] tw:[&::after]:[width:450px] tw:[&::after]:[height:450px] tw:[&::after]:[border-radius:50%] tw:[&::after]:[filter:blur(70px)] tw:[&::after]:[opacity:0.09] tw:[&::after]:[pointer-events:none] tw:[&::after]:[content:''] tw:[&::before]:[top:250px] tw:[&::before]:[left:-200px] tw:[&::before]:[background:#5070ff] tw:[&::after]:[top:440px] tw:[&::after]:[right:-220px] tw:[&::after]:[background:#875cff] tw:max-bsmd:[padding-top:120px]" aria-labelledby="dfw-h1">
           <span className="dm-hero-marks tw:[position:absolute] tw:[inset:0] tw:[z-index:-1] tw:[pointer-events:none] tw:[&_i]:[position:absolute] tw:[&_i]:[width:14px] tw:[&_i]:[height:14px] tw:[&_i]:[opacity:0.4] tw:[&_i::before]:[position:absolute] tw:[&_i::before]:[top:50%] tw:[&_i::before]:[left:50%] tw:[&_i::before]:[width:100%] tw:[&_i::before]:[height:1.5px] tw:[&_i::before]:[border-radius:1px] tw:[&_i::before]:[background:#3157f5] tw:[&_i::before]:[transform:translate(-50%,_-50%)] tw:[&_i::before]:[content:''] tw:[&_i::after]:[position:absolute] tw:[&_i::after]:[top:50%] tw:[&_i::after]:[left:50%] tw:[&_i::after]:[width:100%] tw:[&_i::after]:[height:1.5px] tw:[&_i::after]:[border-radius:1px] tw:[&_i::after]:[background:#3157f5] tw:[&_i::after]:[content:''] tw:[&_i::after]:[transform:translate(-50%,_-50%)_rotate(90deg)] tw:[&_i:nth-child(odd)]:[width:10px] tw:[&_i:nth-child(odd)]:[height:10px] tw:[&_i:nth-child(odd)]:[opacity:0.3] tw:max-bssm:[display:none]" aria-hidden="true">
@@ -637,7 +637,7 @@ export default function DallasFortWorthMarketingPage() {
               <Image
                 width={84}
                 height={84}
-                src="/images/Partner.png"
+                src="/images/Partner.webp"
                 alt="Yelp Advertising Partner"
                 priority
               />
@@ -756,7 +756,7 @@ export default function DallasFortWorthMarketingPage() {
               </div>
               <div className="dm-about-photo dm-about-photo--wide tw:[position:relative] tw:[height:460px] tw:[border-radius:var(--r-xl)] tw:[overflow:hidden] tw:max-bsxl:[height:420px] tw:max-bssm:[height:280px]">
                 <Ph
-                  src="/images/dfw/team-campaign.png"
+                  src="/images/dfw/team-campaign.webp"
                   label="Zonic Media team planning a Dallas–Fort Worth marketing campaign"
                   ratio="16:9"
                 />
@@ -1081,7 +1081,7 @@ export default function DallasFortWorthMarketingPage() {
               <Image
                 width={70}
                 height={70}
-                src="/images/Partner.png"
+                src="/images/Partner.webp"
                 alt="Yelp Advertising Partner"
               />
               <a

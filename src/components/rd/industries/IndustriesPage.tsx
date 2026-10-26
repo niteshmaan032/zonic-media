@@ -508,7 +508,7 @@ export function IndustriesPage() {
                 <Ph
                   label="Zonic Media strategist walking a business owner through their marketing results"
                   ratio="16:9"
-                  src="/images/dfw/report-conversation.png"
+                  src="/images/dfw/report-conversation.webp"
                   position="50% 35%"
                 />
               </div>
@@ -1032,8 +1032,8 @@ export function IndustriesPage() {
         {/* Light gradient (the owner prefers light banners): peach → butter →
             mint, with ink text. */}
         <Section labelledBy="in-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(187,247,208,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(254,215,170,0.85),transparent_65%),linear-gradient(105deg,#ffedd5_0%,#fef3c7_40%,#fef9c3_62%,#dcfce7_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(187,247,208,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(254,215,170,0.85),transparent_65%),linear-gradient(105deg,#ffedd5_0%,#fef3c7_40%,#fef9c3_62%,#dcfce7_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.12] tw:mix-blend-multiply"
                 style={{ backgroundImage: GRAIN }}
@@ -1041,7 +1041,7 @@ export function IndustriesPage() {
               />
               <BannerLoops
                 id="in-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="in-loop-r"

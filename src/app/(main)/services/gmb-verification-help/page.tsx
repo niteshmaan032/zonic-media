@@ -233,7 +233,7 @@ function page() {
                 className="hero-badge-widget"
                 width={90}
                 height={90}
-                src="/images/Partner.png"
+                src="/images/Partner.webp"
                 alt="Yelp Advertising Partner"
               />
               <a
@@ -492,7 +492,7 @@ function page() {
 
             <div className="gmb-reinst-sec-3-img-cont">
               <Image
-                src="/images/gmb-verify-1.png"
+                src="/images/gmb-verify-1.webp"
                 fill
                 alt="Google Business Profile verification process illustration"
               ></Image>

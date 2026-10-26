@@ -69,19 +69,19 @@ export function BlogCard({
         </span>
       </div>
       <div className="tw:flex tw:grow tw:flex-col tw:px-3 tw:pt-4 tw:pb-2">
-        <span className="tw:flex tw:flex-wrap tw:items-center tw:gap-x-3 tw:gap-y-1 tw:text-[13.5px] tw:font-medium tw:text-(--ink-2)">
-          <span className="tw:flex tw:items-center tw:gap-1.5">
+        <span className="tw:flex tw:min-w-0 tw:flex-nowrap tw:items-center tw:gap-x-3 tw:text-[13.5px] tw:font-medium tw:whitespace-nowrap tw:text-(--ink-2) tw:max-bssm:gap-x-2 tw:max-bssm:text-[13px]">
+          <span className="tw:flex tw:min-w-0 tw:items-center tw:gap-1.5">
             <span
-              className="tw:grid tw:size-7 tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[13px] tw:text-(--blue)"
+              className="tw:grid tw:size-7 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[13px] tw:text-(--blue) tw:max-bssm:size-6"
               aria-hidden="true"
             >
               <FiUser />
             </span>
-            {post.authorName}
+            <span className="tw:truncate">{post.authorName}</span>
           </span>
-          <span className="tw:flex tw:items-center tw:gap-1.5">
+          <span className="tw:flex tw:flex-none tw:items-center tw:gap-1.5">
             <span
-              className="tw:grid tw:size-7 tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[13px] tw:text-[#8a6400]"
+              className="tw:grid tw:size-7 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[13px] tw:text-[#8a6400] tw:max-bssm:size-6"
               aria-hidden="true"
             >
               <FiCalendar />
@@ -89,7 +89,7 @@ export function BlogCard({
             {formatShortDate(post.publishDate)}
           </span>
         </span>
-        <h3 className="tw:mt-2.5 tw:text-[20px] tw:leading-[1.25] tw:tracking-[-0.02em] tw:text-balance">
+        <h3 className="tw:mt-2.5 tw:line-clamp-2 tw:text-[20px] tw:leading-[1.25] tw:tracking-[-0.02em] tw:text-balance tw:max-bssm:text-[18px]">
           {/* Stretched link: the whole card opens the post. */}
           <Link
             href={`${BLOG_BASE}/${post.slug}`}

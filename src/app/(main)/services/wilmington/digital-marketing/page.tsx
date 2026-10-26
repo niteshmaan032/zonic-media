@@ -204,7 +204,7 @@ const data: DelawareData = {
     h1Highlight: "Growing New Castle County Businesses",
     sub: "Zonic Media helps Wilmington businesses win local search with SEO, Google Business Profile work, Google Ads and websites. We are a Delaware company based in Dover, planning your marketing suburb by suburb, from downtown to Newark, Hockessin and Middletown.",
     media: {
-      src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-owner.jpg",
+      src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-owner.webp",
       alt: "Wilmington business owner using a phone along the Christina Riverfront",
     },
     floatA: { strong: "Delaware HQ", text: "in Dover, DE" },
@@ -265,11 +265,11 @@ const data: DelawareData = {
     ],
     checks: [],
     collageA: {
-      src: "/images/geo/wilmington-digital-marketing/wilmington-market-street-storefront.jpg",
+      src: "/images/geo/wilmington-digital-marketing/wilmington-market-street-storefront.webp",
       alt: "Independent storefront opening for the day on Market Street in Wilmington",
     },
     collageB: {
-      src: "/images/geo/wilmington-digital-marketing/wilmington-rankings-dashboard.jpg",
+      src: "/images/geo/wilmington-digital-marketing/wilmington-rankings-dashboard.webp",
       alt: "Wilmington local rankings and campaign performance dashboard",
     },
     badgeText: "Wilmington Delaware Marketing • Zonic Media •",
@@ -423,7 +423,7 @@ const data: DelawareData = {
   results: { eyebrow: "", h2: "", cards: [] },
   showcase: {
     image: {
-      src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-district.jpg",
+      src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-district.webp",
       alt: "Businesses, cyclists, and pedestrians along the Wilmington Riverfront",
     },
     floats: [
@@ -556,7 +556,7 @@ const extras: DelawareExtras = {
   // Owner's Wilmington banner (23 Oct); top-left anchor keeps the whole
   // "Wilmington Digital Marketing Agency" heading in frame on phones too.
   aboutPhoto: {
-    src: "/images/geo/wilmington-digital-marketing/wilmington-digital-marketing-agency.jpg",
+    src: "/images/geo/wilmington-digital-marketing/wilmington-digital-marketing-agency.webp",
     alt: "Wilmington digital marketing agency banner over the Christina Riverfront at dusk, with SEO, PPC, social media, content marketing and web design icons",
     position: "0% 0%",
   },

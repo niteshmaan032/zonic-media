@@ -242,7 +242,7 @@ function page() {
                 className="hero-badge-widget"
                 width={90}
                 height={90}
-                src="/images/Partner.png"
+                src="/images/Partner.webp"
                 alt="Yelp Advertising Partner"
               />
               <a

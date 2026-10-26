@@ -1951,3 +1951,14 @@ Report: https://claude.ai/artifact/Mzta5sA4zF238r9rhzS8sY
     - Old admin chat components, `live-chat.css`, the old `LiveChatRoom.jsx` and `chatbot.css` were removed.
   - **Team inboxes:** `src/backend/lib/ownerMail.ts` now holds the CC list and the SMTP transport for both lead emails and chat alerts. **rachel@zonicllc.com added** (owner).
   - **Checks:** tsc clean, production build passes, widget screenshots at 1440/390.
+
+## 27 October 2026 — mobile fixes (owner list)
+- Flicker on scroll: pages ran 70–110 looping UI animations at once (many on width/height/background), so phones repainted constantly. New `src/components/rd/AnimationGate.tsx` (mounted in app/layout.tsx) pauses animations in off-screen sections; layout passes while scrolling dropped 255 → 10 (home) and 105 → 8 (Delaware SEO). Rounded clipping cards get `isolation: isolate` on ≤991px (Safari repaint flicker).
+- Headings: globals.css forced `line-height: 1.34 !important` on h1–h3 under 768px; redesigned pages (.dk-root/.dm-root/.dw-root) now use 1.08 (h1) / 1.15 (h2). Location pages (`.loc-page` on DelawareLanding, LocationTemplate, HVAC Florida, all DFW pages) get smaller H1/H2 on phones.
+- Blog: cards keep author + date on one line and titles at 2 lines (HomeBlogSlider, BlogGrid); slider arrows sit under the cards on phones/tablets (HomeBlogSlider, RelatedSlider). Post page: smaller H1 (≈3 lines max), meta on one line, tables fit the screen on ≤767px for every post (prose.css overrides the editor's inline widths).
+- Closing gradient banner (13 pages): side spacing on phones, less padding (desktop 64px, phones 40/56px).
+- Testimonial avatars capped at 44px on phones (AvatarPh).
+- Pricing: trust points icon-on-top and centred on phones; add-ons are a swipe row on ≤767px; comparison has a stacked phone layout (plans side by side under each deliverable, sticky plan header).
+- Images: 34 large PNG/JPGs used by the site converted to WebP (19.8 MB → 4.2 MB), code points to the .webp files; originals kept until the R9 clean-up.
+- Checks: tsc clean, build OK, 253 pages at 390px with 0 sideways overflow.
+- 27 Oct (later, owner): plan cards show the first 5 features on phones/tablets with a "View all N features" toggle (rest stays in the HTML); blog tables back to sideways scrolling on phones (fit-to-width removed); plan comparison opens full screen on ≤767px (fixed title bar, comparison scrolls); pricing trust points vertically centred on phones; phone H1 line-height 1.16 on redesigned pages.

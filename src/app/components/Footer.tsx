@@ -60,7 +60,7 @@ function Footer() {
         className="footer-yelp-badge mt-4"
         width={85}
         height={85}
-        src="/images/Partner.png"
+        src="/images/Partner.webp"
         alt="Yelp Advertising Partner"
       />
       <a

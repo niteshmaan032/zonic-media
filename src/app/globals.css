@@ -57,6 +57,36 @@ body p {
   }
 }
 
+/* Redesigned pages (27 Oct 2026, owner: "reduce the line height of hero
+   headings in mobile"): the 1.34 rule above made big headings look loose,
+   so their H1/H2s keep tight lines on phones. */
+@media (max-width: 767.98px) {
+  .dk-root h1,
+  .dm-root h1,
+  .dw-root h1 {
+    line-height: 1.16 !important;
+  }
+
+  .dk-root h2,
+  .dm-root h2,
+  .dw-root h2 {
+    line-height: 1.15 !important;
+  }
+}
+
+/* Location pages (cities, states, Dallas–Fort Worth): smaller headings on
+   phones (owner, 27 Oct 2026). Long place names made them the biggest
+   headings on the site. */
+@media (max-width: 575.98px) {
+  .loc-page h1 {
+    font-size: clamp(30px, 8.6vw, 35px) !important;
+  }
+
+  .loc-page h2 {
+    font-size: clamp(26px, 7.2vw, 29px) !important;
+  }
+}
+
 .margin-box {
   margin-bottom: 70px;
 }
@@ -829,4 +859,25 @@ body:not(.ghl-page) chat-widget {
 /* .lead-form-title is no longer an <h3>; keep the mobile line-height it had. */
 @media (max-width: 767.98px) {
   .lead-form-wrapper .lead-form-title { line-height: 1.34; }
+}
+
+
+/* Off-screen sections pause their looping animations (AnimationGate.tsx,
+   27 Oct 2026) so phones only animate what is on screen. */
+main section[data-offscreen] *,
+main section[data-offscreen] *::before,
+main section[data-offscreen] *::after {
+  animation-play-state: paused !important;
+}
+
+/* Phones and tablets: rounded cards that clip moving content get their own
+   stacking context. Safari otherwise repaints them on scroll, which shows
+   as sections flickering. */
+@media (max-width: 991.98px) {
+  .dk-root [class*="overflow-hidden"][class*="rounded"],
+  .dk-root [class*="overflow-clip"][class*="rounded"],
+  .dm-root [class*="overflow-hidden"][class*="rounded"],
+  .dw-root [class*="overflow-hidden"][class*="rounded"] {
+    isolation: isolate;
+  }
 }

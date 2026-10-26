@@ -241,7 +241,7 @@ export default function PhlLocationLanding({ data }: { data: PhlLandingData }) {
                       className="phl-hero-badge"
                       width={74}
                       height={74}
-                      src="/images/Partner.png"
+                      src="/images/Partner.webp"
                       alt="Yelp Advertising Partner"
                     />
                     <a

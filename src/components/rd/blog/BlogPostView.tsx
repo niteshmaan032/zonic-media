@@ -30,7 +30,7 @@ import { GoogleG, InlinePin } from "@/components/rd/dfw-kit/visuals";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { type BlogCardPost } from "./BlogGrid";
 import { RelatedSlider } from "./RelatedSlider";
-import { BLOG_BASE, formatBlogDate, formatShortDate } from "./blogBits";
+import { BLOG_BASE, formatShortDate } from "./blogBits";
 
 /* ---------------------------------------------------------------------------
    BLOG POST — redesign draft (24 Oct 2026), /blog-2/[slug] (noindex).
@@ -177,41 +177,41 @@ export function BlogPostView({
                     </li>
                   </ol>
                 </nav>
-                <Strip
-                  as="h1"
+                {/* Smaller than the page heroes so long titles stay within
+                    about three lines (owner, 27 Oct 2026). */}
+                <h1
                   id="bp-h1"
-                  size="heroWide"
-                  className="tw:mt-5 tw:text-pretty tw:bssm:text-[clamp(36px,3.9vw,60px)]"
+                  className="tw:mt-5 tw:text-[clamp(30px,3.1vw,46px)] tw:leading-[1.12] tw:tracking-[-0.03em] tw:text-pretty tw:max-bssm:text-[clamp(24px,6.6vw,28px)] tw:max-bssm:leading-[1.18]"
                 >
                   {blog.blogTitle}
-                </Strip>
-                <ul className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:gap-x-6 tw:gap-y-3 tw:text-[15px] tw:text-(--ink-2)">
-                  <li className="tw:flex tw:items-center tw:gap-2">
+                </h1>
+                <ul className="tw:mt-7 tw:flex tw:min-w-0 tw:flex-nowrap tw:items-center tw:gap-x-6 tw:text-[15px] tw:whitespace-nowrap tw:text-(--ink-2) tw:max-bssm:mt-5 tw:max-bssm:gap-x-3 tw:max-bssm:text-[13px]">
+                  <li className="tw:flex tw:flex-none tw:items-center tw:gap-2 tw:max-bssm:gap-1.5">
                     <span
-                      className="tw:grid tw:size-8 tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[14px] tw:text-[#8a6400]"
+                      className="tw:grid tw:size-8 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--gold-soft) tw:text-[14px] tw:text-[#8a6400] tw:max-bssm:size-6 tw:max-bssm:text-[12px]"
                       aria-hidden="true"
                     >
                       <FiCalendar />
                     </span>
-                    {formatBlogDate(blog.publishDate)}
+                    {formatShortDate(blog.publishDate)}
                   </li>
-                  <li className="tw:flex tw:items-center tw:gap-2">
+                  <li className="tw:flex tw:flex-none tw:items-center tw:gap-2 tw:max-bssm:gap-1.5">
                     <span
-                      className="tw:grid tw:size-8 tw:place-items-center tw:rounded-full tw:bg-(--green-soft) tw:text-[14px] tw:text-[#1f7a3a]"
+                      className="tw:grid tw:size-8 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--green-soft) tw:text-[14px] tw:text-[#1f7a3a] tw:max-bssm:size-6 tw:max-bssm:text-[12px]"
                       aria-hidden="true"
                     >
                       <FiClock />
                     </span>
                     {minutes} min read
                   </li>
-                  <li className="tw:flex tw:items-center tw:gap-2">
+                  <li className="tw:flex tw:min-w-0 tw:items-center tw:gap-2 tw:max-bssm:gap-1.5">
                     <span
-                      className="tw:grid tw:size-8 tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[14px] tw:text-(--blue)"
+                      className="tw:grid tw:size-8 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[14px] tw:text-(--blue) tw:max-bssm:size-6 tw:max-bssm:text-[12px]"
                       aria-hidden="true"
                     >
                       <FiUser />
                     </span>
-                    {blog.authorName}
+                    <span className="tw:truncate">{blog.authorName}</span>
                   </li>
                 </ul>
               </div>
@@ -422,8 +422,8 @@ export function BlogPostView({
 
         {/* ========================================================== BANNER */}
         <Section labelledBy="bp-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(186,230,253,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(221,214,254,0.85),transparent_65%),linear-gradient(105deg,#ede9fe_0%,#e0f2fe_45%,#ecfccb_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(186,230,253,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(221,214,254,0.85),transparent_65%),linear-gradient(105deg,#ede9fe_0%,#e0f2fe_45%,#ecfccb_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.12] tw:mix-blend-multiply"
                 style={{ backgroundImage: GRAIN }}
@@ -431,7 +431,7 @@ export function BlogPostView({
               />
               <BannerLoops
                 id="bp-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="bp-loop-r"

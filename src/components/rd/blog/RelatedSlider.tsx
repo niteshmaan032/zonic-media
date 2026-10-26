@@ -31,7 +31,7 @@ export function RelatedSlider({ posts }: { posts: BlogCardPost[] }) {
         <div className="tw:flex tw:items-center tw:gap-3">
           <button
             type="button"
-            className={NAV}
+            className={`${NAV} tw:max-bsmd:hidden`}
             aria-label="Previous guides"
             disabled={edges.start}
             onClick={() => swiper?.slidePrev()}
@@ -40,7 +40,7 @@ export function RelatedSlider({ posts }: { posts: BlogCardPost[] }) {
           </button>
           <button
             type="button"
-            className={NAV}
+            className={`${NAV} tw:max-bsmd:hidden`}
             aria-label="Next guides"
             disabled={edges.end}
             onClick={() => swiper?.slideNext()}
@@ -78,6 +78,27 @@ export function RelatedSlider({ posts }: { posts: BlogCardPost[] }) {
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* Phones and tablets: arrows under the cards (owner, 27 Oct). */}
+      <div className="tw:mt-5 tw:flex tw:items-center tw:justify-center tw:gap-3 tw:bsmd:hidden">
+        <button
+          type="button"
+          className={NAV}
+          aria-label="Previous guides"
+          disabled={edges.start}
+          onClick={() => swiper?.slidePrev()}
+        >
+          <FiArrowLeft aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          className={NAV}
+          aria-label="Next guides"
+          disabled={edges.end}
+          onClick={() => swiper?.slideNext()}
+        >
+          <FiArrowRight aria-hidden="true" />
+        </button>
+      </div>
     </>
   );
 }

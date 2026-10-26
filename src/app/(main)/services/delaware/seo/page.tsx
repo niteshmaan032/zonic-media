@@ -205,7 +205,7 @@ const data: DelawareData = {
     h1Highlight: "Built to Rank You on Google and Maps",
     sub: "Zonic Media is a Delaware SEO company with its office in Dover. We use local SEO, technical fixes, content and Google Business Profile work to lift you in search and Maps, so customers in Wilmington, Dover and Lewes find you first.",
     media: {
-      src: "/images/geo/delaware-seo/delaware-seo-strategy.jpg",
+      src: "/images/geo/delaware-seo/delaware-seo-strategy.webp",
       alt: "Delaware business owner reviewing local SEO rankings with a strategist near Dover Green",
     },
     floatA: { strong: "8 The Green, Dover", text: "our Delaware office" },
@@ -268,11 +268,11 @@ const data: DelawareData = {
     ],
     checks: [],
     collageA: {
-      src: "/images/geo/delaware-seo/delaware-main-street-storefront.jpg",
+      src: "/images/geo/delaware-seo/delaware-main-street-storefront.webp",
       alt: "Independent storefront on a tree-lined Delaware main street",
     },
     collageB: {
-      src: "/images/geo/delaware-seo/delaware-local-rankings-dashboard.jpg",
+      src: "/images/geo/delaware-seo/delaware-local-rankings-dashboard.webp",
       alt: "Local search map rankings and visibility dashboard on a laptop",
     },
     badgeText: "Delaware SEO Company • Zonic Media •",
@@ -455,7 +455,7 @@ const data: DelawareData = {
   // Profile-phone stats: goals and growth cues, no invented results.
   showcase: {
     image: {
-      src: "/images/geo/delaware-seo/delaware-main-street-businesses.jpg",
+      src: "/images/geo/delaware-seo/delaware-main-street-businesses.webp",
       alt: "Local shops and customers along a Delaware commercial main street",
     },
     floats: [
@@ -692,7 +692,7 @@ const extras: DelawareExtras = {
   },
   // Owner's photo (22 Oct); crop keeps the wall sign in frame.
   aboutPhoto: {
-    src: "/images/delaware/delaware-digital-marketing-team.jpg",
+    src: "/images/delaware/delaware-digital-marketing-team.webp",
     alt: "Zonic Media's Delaware SEO team reviewing search rankings and organic traffic results together in the office",
     position: "50% 18%",
   },
@@ -804,7 +804,7 @@ const extras: DelawareExtras = {
   // The storefront photo reads as a Business Profile cover on the phone;
   // the wide street photo fills the about box.
   phoneImage: {
-    src: "/images/geo/delaware-seo/delaware-main-street-storefront.jpg",
+    src: "/images/geo/delaware-seo/delaware-main-street-storefront.webp",
     alt: "",
   },
 };

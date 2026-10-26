@@ -506,7 +506,7 @@ export function WebDesignPage() {
                   Tablets and phones show the whole 4:3 image. */}
               <div className="tw:relative tw:h-[460px] tw:overflow-hidden tw:rounded-(--r-xl) tw:bg-(--panel) tw:max-bsxl:h-[420px] tw:max-bslg:aspect-[1448/1086] tw:max-bslg:h-auto tw:max-bslg:w-full tw:max-bslg:max-w-[560px] tw:max-bslg:justify-self-center">
                 <Image
-                  src="/images/webdesign/website-design-services.jpg"
+                  src="/images/webdesign/website-design-services.webp"
                   alt="Website design services: a homepage designed on a desktop and taken from wireframe to design to a responsive mobile layout"
                   fill
                   sizes="(max-width: 991px) 560px, 62vw"
@@ -1053,8 +1053,8 @@ export function WebDesignPage() {
         {/* Light gradient (the owner prefers light banners): rose → peach →
             lilac → sky, with ink text. */}
         <Section labelledBy="wd-close-h">
-          <Wrap flushOnPhone>
-            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(186,230,253,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(254,205,211,0.85),transparent_65%),linear-gradient(105deg,#ffe4e6_0%,#ffedd5_36%,#f3e8ff_68%,#e0f2fe_100%)] tw:px-10 tw:pt-[88px] tw:pb-[84px] tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-5 tw:max-bssm:pt-16 tw:max-bssm:pb-28">
+          <Wrap>
+            <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[44px] tw:[background:radial-gradient(55%_80%_at_100%_0%,rgba(186,230,253,0.85),transparent_62%),radial-gradient(50%_70%_at_0%_100%,rgba(254,205,211,0.85),transparent_65%),linear-gradient(105deg,#ffe4e6_0%,#ffedd5_36%,#f3e8ff_68%,#e0f2fe_100%)] tw:px-10 tw:pt-16 tw:pb-16 tw:text-center tw:text-(--ink) tw:max-bssm:rounded-[28px] tw:max-bssm:px-4 tw:max-bssm:pt-10 tw:max-bssm:pb-14">
               <span
                 className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:opacity-[0.12] tw:mix-blend-multiply"
                 style={{ backgroundImage: GRAIN }}
@@ -1062,7 +1062,7 @@ export function WebDesignPage() {
               />
               <BannerLoops
                 id="wd-loop-l"
-                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[120px]"
+                className="tw:absolute tw:-bottom-6 tw:-left-6 tw:-z-1 tw:w-[clamp(180px,24vw,340px)] tw:max-bssm:w-[84px]"
               />
               <BannerLoops
                 id="wd-loop-r"
