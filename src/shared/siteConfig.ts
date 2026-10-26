@@ -29,7 +29,7 @@ export const SITE_SOCIAL_LINKS = [
   },
   {
     label: "Facebook",
-    href: "https://www.facebook.com/zonicmediallc/?rdid=KDHW5CqF87EH3bDP",
+    href: "https://www.facebook.com/zonicmediallc/",
   },
   {
     label: "Instagram",

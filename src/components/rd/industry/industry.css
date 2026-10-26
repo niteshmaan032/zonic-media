@@ -54,15 +54,11 @@
 }
 
 /* Hero H1 larger than the template default (owner, 25 Oct 2026, home
-   inspector test: +2px, then "just increase the heading size"). The section caps above stay at the old H1 minus 2px. */
+   inspector test: +2px, then "just increase the heading size"). The section caps above stay at the old H1 minus 2px.
+   Phones use the shared Strip hero size (owner, 26 Oct 2026). */
 @media (min-width: 576px) {
   .ind-hcap :is(#ind-h1, #loc-h1, #hv-h1, #fl-h1) {
     font-size: clamp(40px, calc(4.3vw + 2px), 66px);
-  }
-}
-@media (max-width: 575.98px) {
-  .ind-hcap :is(#ind-h1, #loc-h1, #hv-h1, #fl-h1) {
-    font-size: clamp(34px, calc(9vw + 2px), 40px);
   }
 }
 

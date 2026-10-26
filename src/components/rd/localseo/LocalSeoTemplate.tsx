@@ -174,7 +174,7 @@ export function LocalSeoTemplate({ c }: { c: LocalSeoContent }) {
                   as="h1"
                   id="seo-h1"
                   size="heroWide"
-                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bssm:text-[clamp(30px,8vw,34px)] tw:max-bslg:mx-auto tw:max-bslg:text-center"
+                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bslg:mx-auto tw:max-bslg:text-center"
                 >
                   {c.hero.h1Lead}{" "}
                   <H1Badge

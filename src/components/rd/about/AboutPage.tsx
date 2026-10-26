@@ -381,6 +381,7 @@ export function AboutPage() {
                 <Strip
                   as="h1"
                   id="ab-h1"
+                  size="hero"
                   className="tw:text-balance tw:bssm:text-[clamp(40px,4.7vw,72px)]"
                 >
                   The Marketing Agency for Small and{" "}

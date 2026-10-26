@@ -390,6 +390,7 @@ export function IndustriesPage() {
                 <Strip
                   as="h1"
                   id="in-h1"
+                  size="hero"
                   className="tw:text-balance tw:bssm:text-[clamp(34px,3.8vw,60px)]"
                 >
                   Home Services Marketing Agency for Contractors and Local

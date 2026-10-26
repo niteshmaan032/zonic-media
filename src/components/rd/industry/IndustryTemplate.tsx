@@ -148,7 +148,7 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
                     as="h1"
                     id="ind-h1"
                     size="heroWide"
-                    className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bssm:text-[clamp(30px,8vw,34px)]"
+                    className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)]"
                   >
                     {c.hero.h1Lead}{" "}
                     <H1Badge

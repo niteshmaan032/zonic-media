@@ -593,7 +593,7 @@ export default function DallasFortWorthMarketingPage() {
             ))}
           </span>
           <div className="dm-wrap tw:[width:100%] tw:[padding:0_var(--inset)] tw:max-bssm:[.dm-journey_&]:[padding:0] tw:max-bssm:[.dm-coverage_&]:[padding:0] tw:max-bssm:[.dm-contact_&]:[padding:0]">
-            <Strip as="h1" id="dfw-h1" className="dm-hero-title tw:min-bssm:[&.dm-hero-title]:[font-size:clamp(38px,_5vw,_76px)] tw:min-bsmd:[&.dm-hero-title]:[line-height:1.12] tw:max-bsmd:[&.dm-hero-title]:[line-height:1.16]!">
+            <Strip as="h1" id="dfw-h1" className="dm-hero-title tw:min-bssm:[&.dm-hero-title]:[font-size:clamp(38px,_5vw,_76px)] tw:max-bssm:[&.dm-hero-title]:[font-size:clamp(36px,_10.25vw,_44px)] tw:min-bsmd:[&.dm-hero-title]:[line-height:1.12] tw:max-bsmd:[&.dm-hero-title]:[line-height:1.16]!">
               Dallas–Fort Worth <InlinePin /> Digital Marketing{" "}
               <br className="dm-hero-br tw:max-bssm:[display:none]" />
               Agency for Local Businesses

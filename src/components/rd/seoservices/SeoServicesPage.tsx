@@ -164,7 +164,7 @@ export function SeoServicesPage() {
                   as="h1"
                   id="seo-h1"
                   size="heroWide"
-                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bssm:text-[clamp(30px,8vw,34px)]"
+                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)]"
                 >
                   {HERO.h1Lead}{" "}
                   <H1Badge

@@ -143,6 +143,10 @@ export const PER_PAGE = 6;
 
 /** Page numbers to show: first, last, current ±1, with gaps as null. */
 export function pageList(page: number, pages: number): (number | null)[] {
+  // Up to 12 pages, link every page number: with "1 2 3 … 11" the middle
+  // pages were only reachable page by page, which left 34 guides more than
+  // 3 clicks from the home page (Semrush crawl-depth notice, 26 Oct 2026).
+  if (pages <= 12) return Array.from({ length: pages }, (_, i) => i + 1);
   const keep = new Set([1, pages, page - 1, page, page + 1]);
   const out: (number | null)[] = [];
   for (let n = 1; n <= pages; n++) {

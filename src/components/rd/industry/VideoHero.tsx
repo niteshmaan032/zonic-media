@@ -62,7 +62,7 @@ export function VideoHero({
             as="h1"
             id="ind-h1"
             size="heroWide"
-            className="tw:text-balance tw:text-white tw:[text-shadow:0_2px_24px_rgba(0,0,0,0.35)] tw:bssm:text-[clamp(34px,3.5vw,54px)] tw:max-bssm:text-[clamp(30px,8vw,34px)]"
+            className="tw:text-balance tw:text-white tw:[text-shadow:0_2px_24px_rgba(0,0,0,0.35)] tw:bssm:text-[clamp(34px,3.5vw,54px)]"
           >
             {c.hero.h1Lead}{" "}
             <H1Badge

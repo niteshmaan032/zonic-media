@@ -80,7 +80,8 @@ function H1Text({ h1, noWrap }: { h1: string; noWrap?: string }) {
   return (
     <>
       {before}
-      <span className="tw:whitespace-nowrap">{noWrap}</span>
+      {/* Wraps on phones, where the larger H1 cannot fit the phrase. */}
+      <span className="tw:bssm:whitespace-nowrap">{noWrap}</span>
       {after}
     </>
   );
@@ -149,7 +150,7 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
                   as="h1"
                   id="loc-h1"
                   size="heroWide"
-                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bssm:text-[clamp(30px,8vw,34px)]"
+                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)]"
                 >
                   <H1Text h1={c.hero.h1} noWrap={c.hero.h1NoWrap} />
                 </Strip>

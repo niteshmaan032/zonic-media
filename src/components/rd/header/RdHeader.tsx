@@ -624,7 +624,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
             width={132}
             height={50}
             alt="Zonic Media logo"
-            className="tw:h-10 tw:w-auto"
+            className="tw:h-9 tw:w-auto tw:max-bssm:h-7"
           />
         </Link>
         <button
@@ -813,7 +813,7 @@ export function RdHeader() {
             width={132}
             height={50}
             alt="Zonic Media logo"
-            className="tw:h-9 tw:w-auto"
+            className="tw:h-9 tw:w-auto tw:max-bssm:h-7"
             priority
           />
         </Link>

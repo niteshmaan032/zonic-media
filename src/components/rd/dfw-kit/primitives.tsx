@@ -70,10 +70,14 @@ export function Wrap({
 
 /* -------------------------------------------------------------- headings */
 
+/* Hero H1s share one larger phone size: 40px on a 390px phone (owner,
+   26 Oct 2026, "increase the size of hero section headings in mobile"). */
+const HERO_PHONE = "tw:max-bssm:text-[clamp(36px,10.25vw,44px)]";
+
 const STRIP = {
-  hero: "tw:text-[clamp(38px,5vw,76px)] tw:max-bssm:text-[clamp(30px,8.6vw,40px)]",
+  hero: `tw:text-[clamp(38px,5vw,76px)] ${HERO_PHONE}`,
   /** Long H1s that should sit on two lines across the full width (/home2). */
-  heroWide: "tw:text-[clamp(34px,4.4vw,64px)] tw:max-bssm:text-[clamp(30px,8.6vw,40px)]",
+  heroWide: `tw:text-[clamp(34px,4.4vw,64px)] ${HERO_PHONE}`,
   section: "tw:text-[clamp(34px,4.6vw,62px)] tw:max-bssm:text-[clamp(30px,8.6vw,40px)]",
   card: "tw:text-[clamp(30px,3.3vw,50px)] tw:max-bssm:text-[clamp(30px,8.6vw,40px)]",
 };

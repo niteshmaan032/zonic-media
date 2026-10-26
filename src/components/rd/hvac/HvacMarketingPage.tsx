@@ -319,7 +319,7 @@ export function HvacMarketingPage() {
                   as="h1"
                   id="hv-h1"
                   size="heroWide"
-                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)] tw:max-bssm:text-[clamp(30px,8vw,34px)]"
+                  className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)]"
                 >
                   HVAC <InlineThermostat /> Marketing Agency for
                   Contractors Who Want More Calls &amp; Booked Jobs

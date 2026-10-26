@@ -57,12 +57,23 @@ export async function generateMetadata({
   const page = pageOf(params?.page);
   const canonical =
     params?.topic || page === 1 ? "/blog" : `/blog?page=${page}`;
+  // Pages 2+ are their own canonical URLs, so each needs its own title and
+  // description (Semrush flagged ?page=2…11 as duplicates of /blog, 26 Oct).
+  const paged = !params?.topic && page > 1;
+  const title = paged
+    ? `Local SEO Blog (Page ${page}): GBP, Maps & AI Guides | Zonic`
+    : "Local SEO Blog: GBP, Google Maps & AI Search Guides | Zonic";
+  const description = paged
+    ? `Page ${page} of the Zonic Media local SEO blog: more guides on Google Business Profile suspensions, Google Maps rankings, reviews and AI search.`
+    : (BASE_METADATA.description as string);
   return {
     ...BASE_METADATA,
+    title: { absolute: title },
+    description,
     alternates: { canonical },
     openGraph: {
-      title: "Local SEO Blog: GBP, Google Maps & AI Search Guides | Zonic",
-      description: BASE_METADATA.description ?? undefined,
+      title,
+      description,
       url: canonical,
       type: "website",
       siteName: "Zonic Media",
