@@ -953,3 +953,29 @@
     transition: none !important;
   }
 }
+
+/* ---------- 26 Oct 2026 (owner): closing banner as an inset rounded card,
+   sticky form clear of the floating site header ---------- */
+.gmb-verify-page .gmb-reinst-banner-3 {
+  margin: 0 100px 28px;
+  border-radius: 40px;
+}
+.gmb-verify-page .gmb-reinst-contact-form {
+  top: 112px;
+}
+@media (max-width: 1199.98px) {
+  .gmb-verify-page .gmb-reinst-banner-3 {
+    margin: 0 30px 24px;
+  }
+}
+@media (max-width: 991.98px) {
+  .gmb-verify-page .gmb-reinst-banner-3 {
+    margin: 0 40px 24px;
+  }
+}
+@media (max-width: 575.98px) {
+  .gmb-verify-page .gmb-reinst-banner-3 {
+    margin: 0 20px 20px;
+    border-radius: 28px;
+  }
+}
