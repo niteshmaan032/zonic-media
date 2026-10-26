@@ -7,6 +7,7 @@
    ============================================================ */
 
 /* Hide the site-wide navbar on this page — the page ships its own header */
+body:has(.wl-page) .rh-root,
 body:has(.wl-page) .navbar-wrapper,
 body:has(.wl-page) .navbar-wrapper.show {
   display: none !important;

@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "hardwood-flooring",
     label: "Hardwood Flooring",
     icon: "layers",
-    heading: "Turn hardwood flooring searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Rank for hardwood flooring installs in every town you serve.",
+    body: "A hardwood flooring page that covers species, finishes and solid vs engineered boards, with install photos and a fast way to request a measure.",
     bullets: [
-      "Clear hardwood flooring value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Species and finish options with photos",
+      "Solid vs engineered hardwood explained",
+      "Measure request on every screen",
     ],
-    ctaLabel: "Build my hardwood flooring pages",
+    ctaLabel: "Build my hardwood flooring page",
     kicker: "HARDWOOD FLOORING",
-    siteHeading: "Hardwood Flooring—done right.",
+    siteHeading: "Warm hardwood, laid with care.",
     photo: "/images/free-website/free-flooring/hardwood-flooring.webp",
     photoAlt: "Flooring service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "luxury-vinyl",
     label: "Luxury Vinyl",
     icon: "target",
-    heading: "Turn luxury vinyl searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win luxury vinyl plank jobs from local searches.",
+    body: "A luxury vinyl page that explains waterproof cores, wear layers and room-by-room uses, so shoppers see why LVP fits kitchens, baths and basements.",
     bullets: [
-      "Clear luxury vinyl value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Waterproof LVP and LVT options listed",
+      "Wear layer and room use made simple",
+      "Quote form sized for quick replies",
     ],
-    ctaLabel: "Build my luxury vinyl pages",
+    ctaLabel: "Build my luxury vinyl page",
     kicker: "LUXURY VINYL",
-    siteHeading: "Luxury Vinyl—done right.",
+    siteHeading: "Waterproof floors for real life.",
     photo: "/images/free-website/free-flooring/luxury-vinyl.webp",
     photoAlt: "Flooring service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "tile-flooring",
     label: "Tile Flooring",
     icon: "users",
-    heading: "Turn tile flooring searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show tile skill with layouts buyers can picture at home.",
+    body: "A tile flooring page with porcelain, ceramic and stone installs, pattern ideas and prep details that show buyers the work under the tile is done right.",
     bullets: [
-      "Clear tile flooring value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Porcelain, ceramic and stone galleries",
+      "Pattern and layout ideas by room",
+      "Subfloor prep explained in plain words",
     ],
-    ctaLabel: "Build my tile flooring pages",
+    ctaLabel: "Build my tile flooring page",
     kicker: "TILE FLOORING",
-    siteHeading: "Tile Flooring—done right.",
+    siteHeading: "Tile floors, laid true.",
     photo: "/images/free-website/free-flooring/tile-flooring.webp",
     photoAlt: "Flooring service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "carpet-installation",
     label: "Carpet Installation",
     icon: "clipboard",
-    heading: "Turn carpet installation searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Bring in carpet installs for bedrooms, stairs and rentals.",
+    body: "A carpet installation page that covers styles, padding and stair work, plus quick scheduling for landlords and owners who need rooms ready fast.",
     bullets: [
-      "Clear carpet installation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Carpet styles and padding options",
+      "Stairs, bedrooms and rental units",
+      "Easy quote form by room count",
     ],
-    ctaLabel: "Build my carpet installation pages",
+    ctaLabel: "Build my carpet installation page",
     kicker: "CARPET INSTALLATION",
-    siteHeading: "Carpet Installation—done right.",
+    siteHeading: "Soft floors, fitted clean.",
     photo: "/images/free-website/free-flooring/carpet-installation.webp",
     photoAlt: "Flooring service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "floor-refinishing",
     label: "Floor Refinishing",
     icon: "pin",
-    heading: "Turn floor refinishing searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn sand-and-refinish searches into booked jobs.",
+    body: "A floor refinishing page with before-and-after photos, dust control notes and finish choices, built for owners who want old hardwood looking new again.",
     bullets: [
-      "Clear floor refinishing value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Before-and-after refinish photos",
+      "Stain and finish choices shown",
+      "Clear steps for the days of work",
     ],
-    ctaLabel: "Build my floor refinishing pages",
+    ctaLabel: "Build my floor refinishing page",
     kicker: "FLOOR REFINISHING",
-    siteHeading: "Floor Refinishing—done right.",
+    siteHeading: "Old floors, new again.",
     photo: "/images/free-website/free-flooring/floor-refinishing.webp",
     photoAlt: "Flooring service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-flooring",
     label: "Commercial Flooring",
     icon: "building",
-    heading: "Turn commercial flooring searches into qualified enquiries.",
-    body: "A focused flooring website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give facility managers a flooring page built for bids.",
+    body: "A commercial flooring page for offices, retail and multifamily, showing project types, scheduling around business hours and a direct way to request a bid.",
     bullets: [
-      "Clear commercial flooring value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Office, retail and multifamily projects",
+      "After-hours install scheduling noted",
+      "Bid request form for larger jobs",
     ],
-    ctaLabel: "Build my commercial flooring pages",
+    ctaLabel: "Build my commercial flooring page",
     kicker: "COMMERCIAL FLOORING",
-    siteHeading: "Commercial Flooring—done right.",
+    siteHeading: "Floors for busy spaces.",
     photo: "/images/free-website/free-flooring/commercial-flooring.webp",
     photoAlt: "Flooring service image",
   },
@@ -161,7 +161,7 @@ export default function FlooringServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Flooring website path
+                <Icon name={service.icon} /> Flooring website product page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function FlooringServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Quality floors, careful installs and a measure booked at a time that suits you.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book a measure</b>
+                      <b>Shop floors</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Chosen by local homeowners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function FlooringServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> MEASURE · SUPPLY · INSTALL
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function FlooringServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book a measure</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to book measures</strong>
+                  <small>From floor search to quote</small>
                 </span>
               </div>
             </div>

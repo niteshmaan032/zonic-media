@@ -5,6 +5,8 @@ import {
   getAdminFromAuthToken,
 } from "@/backend/lib/adminAuth";
 import {
+  acceptConversation,
+  agentNameFromEmail,
   getConversationById,
   getConversationsCollection,
   markAdminRead,
@@ -15,6 +17,7 @@ import { getLiveMessageChannelName, LIVE_MESSAGE_EVENT } from "@/shared/chatReal
 import type { ConversationStatus } from "@/shared/chatTypes";
 
 const ADMIN_CLOSE_SENDER_ID = "system:admin-close";
+const AGENT_JOINED_SENDER_ID = "system:agent-joined";
 const ADMIN_CLOSE_MESSAGE =
   "Your chat session has been closed by our team. Thank you for connecting with Zonic Media — we appreciate your time and will be in touch with you very soon!";
 
@@ -35,6 +38,34 @@ const VALID_STATUSES = new Set<ConversationStatus>([
   "inactive",
   "closed",
 ]);
+
+// GET — one conversation (the email's "Open chat" deep link selects it).
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const token = request.cookies.get(ADMIN_AUTH_COOKIE)?.value;
+    if (!token) return unauthorized();
+    const admin = await getAdminFromAuthToken(token);
+    if (!admin) return unauthorized();
+    const { id } = await params;
+    const conv = await getConversationById(id);
+    if (!conv) {
+      return NextResponse.json(
+        { success: false, message: "Conversation not found." },
+        { status: 404 }
+      );
+    }
+    return NextResponse.json({ success: true, conversation: toSafeConversation(conv) });
+  } catch (err) {
+    console.error("[admin/chat/conversations/[id] GET]", err);
+    return NextResponse.json(
+      { success: false, message: "Failed to load conversation." },
+      { status: 500 }
+    );
+  }
+}
 
 export async function PATCH(
   request: NextRequest,
@@ -66,6 +97,70 @@ export async function PATCH(
         { success: false, message: "Invalid body." },
         { status: 400 }
       );
+    }
+
+    // ── Accept: the agent takes the waiting visitor (26 Oct 2026) ─────────
+    if (body.action === "accept") {
+      const adminId = admin._id.toHexString();
+      const agentName = agentNameFromEmail(admin.email);
+      const accepted = await acceptConversation(conversationId, adminId, agentName);
+      if (!accepted) {
+        const current = await getConversationById(conversationId);
+        return NextResponse.json(
+          {
+            success: false,
+            code: "not_waiting",
+            message:
+              current?.status === "active"
+                ? `Already accepted by ${current.assignedAdminName ?? "another agent"}.`
+                : "This chat is no longer waiting.",
+            conversation: current ? toSafeConversation(current) : null,
+          },
+          { status: 409 }
+        );
+      }
+
+      const joinedText = `You're now connected with ${agentName} from Zonic Media.`;
+      try {
+        const saved = await saveMessage({
+          conversationId,
+          roomName: accepted.roomName,
+          senderType: "system",
+          senderId: AGENT_JOINED_SENDER_ID,
+          senderName: "Zonic Team",
+          text: joinedText,
+        });
+        const apiKey = process.env.ABLY_API_KEY;
+        if (apiKey) {
+          const rest = new Ably.Rest({ key: apiKey });
+          await rest.channels
+            .get(getLiveMessageChannelName(accepted.roomName))
+            .publish(LIVE_MESSAGE_EVENT, {
+              text: joinedText,
+              metadata: {
+                mongoId: saved._id,
+                conversationId,
+                senderType: "system",
+                senderId: AGENT_JOINED_SENDER_ID,
+                senderName: "Zonic Team",
+                agentJoined: "true",
+                agentName,
+              },
+              headers: {},
+            });
+          // Let every open dashboard drop it from "Waiting".
+          await rest.channels
+            .get("zonic-admin-notifications")
+            .publish("conversation_accepted", { conversationId, agentName });
+        }
+      } catch (joinErr) {
+        console.error("[admin/chat/conversations/[id] accept] notify failed:", joinErr);
+      }
+
+      return NextResponse.json({
+        success: true,
+        conversation: toSafeConversation(accepted),
+      });
     }
 
     const collection = await getConversationsCollection();

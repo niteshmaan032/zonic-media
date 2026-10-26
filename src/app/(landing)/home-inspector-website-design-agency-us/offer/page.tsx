@@ -71,46 +71,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
-  { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "layout", label: "Inspector-first layouts" },
+  { icon: "smartphone", label: "Mobile scheduling" },
+  { icon: "mail", label: "Booking request forms" },
+  { icon: "phone", label: "Click-to-call for agents" },
+  { icon: "search", label: "Inspection local SEO" },
+  { icon: "chart", label: "Booking source tracking" },
+  { icon: "layers", label: "Inspection service pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Booking source tracking" },
+  { icon: "layers", label: "Inspection service pages" },
+  { icon: "pin", label: "County coverage pages" },
+  { icon: "gauge", label: "Fast mobile pages" },
+  { icon: "code", label: "Inspector schema markup" },
+  { icon: "target", label: "Sample report CTAs" },
+  { icon: "users", label: "Agent referral routing" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Home Inspector Website for Inspectors | Zonic Media" },
+  title: { absolute: "Free Home Inspector Website Design | Zonic Media" },
   description:
-    "Free home inspector website, no upfront development fee, when you start a qualifying Zonic marketing plan. Online scheduling and inspection pages built in.",
+    "Free home inspector website design with online booking, a sample report and agent pages. No build fee when you start a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free home inspector website",
     "home inspector website design",
-    "home inspection website",
-    "free website for home inspectors",
     "home inspector web design",
-    "home inspector marketing plan",
-    "home inspector pro website",
+    "home inspection website design",
+    "best website builder for home inspectors",
     "home inspection company website",
+    "free website for home inspectors",
+    "home inspector marketing plan",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Home Inspector Website Offer | Zonic Media",
+    title: "Free Home Inspector Website Design | Zonic Media",
     description:
-      "Free home inspector website, no upfront development fee, when you start a qualifying Zonic marketing plan. Online scheduling and inspection pages built in.",
+      "Free home inspector website design with online booking, a sample report and agent pages. No build fee when you start a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function HomeInspectorOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for home inspectors</span>
+              <span>Free home inspector website design</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,19 +171,19 @@ export default function HomeInspectorOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your home inspection company with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic marketing plan and we build your home inspection website with no development fee, with online booking, sample reports and agent pages that fill your calendar.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my free website</span>
+                <span>Claim my free inspector website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See inspector website features</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -205,8 +205,8 @@ export default function HomeInspectorOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Home Inspector lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Online booking</strong>
+                  <small>Built for calls and schedules</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -214,8 +214,8 @@ export default function HomeInspectorOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Referral-ready growth</strong>
-                  <small>Website + inspection marketing</small>
+                  <strong>Referral-ready</strong>
+                  <small>Site + inspection marketing</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -223,7 +223,7 @@ export default function HomeInspectorOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
+                  <strong>No vague promises</strong>
                   <small>Scope agreed in writing</small>
                 </span>
               </div>
@@ -253,7 +253,7 @@ export default function HomeInspectorOfferPage() {
                 </div>
                 <div className="address-bar">homeinspectorpros.com</div>
                 <div className="browser-live">
-                  <span /> LIVE CONCEPT
+                  <span /> INSPECTOR CONCEPT
                 </div>
               </div>
 
@@ -267,25 +267,25 @@ export default function HomeInspectorOfferPage() {
                   />
                 </span>
                 <div className="mini-nav">
-                  <span>Services</span>
-                  <span>Work</span>
-                  <span>About</span>
+                  <span>Inspections</span>
+                  <span>Sample Report</span>
+                  <span>For Agents</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Book inspection</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">HOME INSPECTOR WEBSITE</div>
-                  <h2>More calls. More booked inspections.</h2>
-                  <p>A professional home inspector website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">CERTIFIED HOME INSPECTORS</div>
+                  <h2>Know the home before you buy.</h2>
+                  <p>Buyer, pre-listing, radon and sewer scope inspections with clear, photo-rich reports.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Book inspection</span>
+                    <span>View sample report</span>
                   </div>
                   <div className="canvas-trust">
-                    <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
-                    Mobile optimized
+                    <Icon name="check" /> Certified &amp; insured <Icon name="check" />{" "}
+                    Online booking
                   </div>
                 </div>
                 <div className="visual-stack industry-visual-stack">
@@ -296,7 +296,7 @@ export default function HomeInspectorOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">INSPECTED RIGHT</div>
                 </div>
               </div>
 
@@ -320,11 +320,11 @@ export default function HomeInspectorOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">HOME INSPECTOR SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">HOME INSPECTIONS</span>
+                <h3>Book your inspection online.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
-                  Claim website <Icon name="arrow-up-right" />
+                  Schedule now <Icon name="arrow-up-right" />
                 </div>
               </div>
             </div>
@@ -334,8 +334,8 @@ export default function HomeInspectorOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for home inspector leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Made for booked inspections</strong>
+                <small>Bookings, agents and tracking</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function HomeInspectorOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the home inspector website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">Getting your inspection site live</span>
+            <h2>Home inspector website design with no upfront fee.</h2>
+            <p>We pair your inspection website with marketing that reaches buyers and agents the moment an offer is accepted and an inspection needs booking.</p>
           </div>
 
           <div className="process-grid">
@@ -366,39 +366,35 @@ export default function HomeInspectorOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your inspection service mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Learn your inspection market</h3>
+              <p>We look at your inspection types, counties, agent relationships, current site, lead sources and the bookings you want more of.</p>
+              <small>Inspection strategy call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Pick an inspector marketing plan</h3>
+              <p>Your plan can pair Google Ads and local SEO with Google Business Profile management, call tracking and booking improvements.</p>
+              <small>Ongoing inspection leads</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
-              <p>
-                Zonic creates the agreed home inspector lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
-                <Link href="/services/home-inspector-marketing" className="offer-inlink">
+              <h3>We build your inspector site</h3>
+              <p>We build the agreed home inspection website in 2–3 weeks with the upfront development fee waived under your marketing plan. Built to the same standard as <Link href="/services/home-inspector-marketing" className="offer-inlink">
                   our home inspector website design service
-                </Link>
-                .
-              </p>
-              <small>Website fee waived</small>
+                </Link>.</p>
+              <small>Inspector build fee waived</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my home inspector company</span>
+              <span>See if my inspection company qualifies</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -409,26 +405,19 @@ export default function HomeInspectorOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every home inspector lead in one place.</h2>
-            <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which home inspector jobs your marketing produced
-              instead of guessing where the phone calls came from.
-            </p>
+            <span className="section-kicker">Inspection booking tracking</span>
+            <h2>See which agents and searches book your inspections.</h2>
+            <p>Calls, booking forms and chats land in one dashboard with the source attached, so you know which bookings came from agent referrals, Google Maps or paid search.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
-              </li>
+                <Icon name="check" /> Every booking request logged</li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
-              </li>
+                <Icon name="check" /> Agent, Maps or ad source recorded</li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
-              </li>
+                <Icon name="check" /> Status from booked to report delivered</li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Show me booking tracking</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -514,30 +503,28 @@ export default function HomeInspectorOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Home Inspector website service paths</span>
-              <h2>One home inspector website. A clear path for every profitable inspection service.</h2>
+              <span className="section-kicker">Inspection services buyers book</span>
+              <h2>A clear booking path for every inspection you offer.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Pick an inspection type to see how we shape the message, proof and booking steps for buyers, sellers and the agents who refer them.</p>
           </div>
 
           <HomeInspectorServiceTabs />
 
           <div className="niche-banner">
             <div className="niche-banner-copy">
-              <span className="section-kicker section-kicker--dark">
-                Beyond these six
-              </span>
-              <h3>We build for every home inspector service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <span className="section-kicker section-kicker--dark">Add-on inspection services</span>
+              <h3>Every inspection and add-on you offer, covered.</h3>
+              <p>These are examples. If buyers or agents near you search for an inspection service, we can build the page that gets it booked.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every home inspector service</span>
+              <span className="niche-banner-more">+ any inspection service</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my home inspector website</span>
+              <span>Get my inspector website</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -548,9 +535,9 @@ export default function HomeInspectorOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a home inspector website handed over and forgotten.</h2>
-            <p>Your home inspector website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">Built for inspection businesses</span>
+            <h2>Home inspection website design that agents trust.</h2>
+            <p>Your inspection website is built into a connected marketing system, with the structure, tracking and booking tools that keep your calendar full.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,15 +565,11 @@ export default function HomeInspectorOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
-                <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
-                  <Link href="/services/local-seo-for-home-services" className="offer-inlink">
+                <small>INSPECTION SITE 01</small>
+                <h3>Service and county pages</h3>
+                <p>Inspection pages, service-area pages, on-page SEO and schema markup help Google match your company to local inspection searches. The same structure behind our <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
-                  </Link>
-                  .
-                </p>
+                  </Link>.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -595,9 +578,9 @@ export default function HomeInspectorOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>INSPECTION SITE 02</small>
+                <h3>Bookings tied to their source</h3>
+                <p>Booking forms, click-to-call, GA4, Tag Manager, conversion tracking and CRM routing link your marketing to real scheduled inspections.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +588,7 @@ export default function HomeInspectorOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my home inspector website</span>
+              <span>Claim my free inspector website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +600,8 @@ export default function HomeInspectorOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Home Inspector website comes with it.</h2>
+              <span className="section-kicker">Inspector marketing plans</span>
+              <h2>Each inspector plan comes with the website build.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -741,13 +724,11 @@ export default function HomeInspectorOfferPage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
-            </span>
-            <h2>The website is the foundation. Marketing creates demand for home inspectors.</h2>
-            <p>Your plan is selected around your home inspector market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <span className="section-kicker section-kicker--dark">Marketing for home inspectors</span>
+            <h2>Agents refer. Buyers search. Your site has to win both.</h2>
+            <p>We build your plan around your inspection market. It can mix paid search, local SEO, Google Business Profile growth, call tracking and ongoing page improvements.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my home inspector company</span>
+              <span>Plan my inspection marketing</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,44 +737,33 @@ export default function HomeInspectorOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
-              <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
-                <Link href="/services/google-ads" className="offer-inlink">
+              <h3>Inspection search ads</h3>
+              <p>Show up for home inspection, radon testing and sewer scope searches with targeted ads and tracked bookings. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
-              <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
-                <Link
+              <h3>Local SEO for inspectors</h3>
+              <p>Rank in Google Maps across the counties you cover, with reviews that buyers and agents check first. Backed by <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
                 >
                   Google Business Profile optimization
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>Booking page improvements</h3>
+              <p>We review calls, booking forms and page behavior, then improve the pages that should book more inspections.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
-              </span>
+                <b>$0</b> inspector website build fee</span>
               <span>
-                <b>1</b> connected growth system
-              </span>
+                <b>1</b> team for site and marketing</span>
               <span>
-                <b>100%</b> clear written scope
-              </span>
+                <b>100%</b> of terms written down</span>
             </article>
           </div>
         </section>
@@ -801,13 +771,11 @@ export default function HomeInspectorOfferPage() {
         {/* ───────────── Terms ───────────── */}
         <section className="section terms-section">
           <div className="terms-main">
-            <span className="section-kicker">
-              Clear qualification. Clear terms.
-            </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront home inspector website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <span className="section-kicker">Inspector offer terms</span>
+            <h2>What inspectors get, and what the plan requires.</h2>
+            <p>The website build fee is waived for new clients who start a qualifying recurring marketing plan. Your proposal repeats every term below before you sign.</p>
             <a className="section-button" href="#contact">
-              <span>See if my home inspector company qualifies</span>
+              <span>Check my inspection company</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,39 +785,31 @@ export default function HomeInspectorOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>The home inspector website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
+                <strong>Waived at signup</strong>
+                <small>The home inspector website development fee, valued at $2,000. Your monthly plan is billed at its full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
-                <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
-                  <Link href="/services/home-inspector-marketing" className="offer-inlink">
+                <strong>Plan requirement</strong>
+                <small>Any Zonic marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. Ad spend is billed separately by the platform. Also available with <Link href="/services/home-inspector-marketing" className="offer-inlink">
                     our home inspector website design service
-                  </Link>
-                  .
-                </small>
+                  </Link>.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
+                <strong>Domain and site ownership</strong>
                 <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
-                <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
-                </small>
+                <strong>Leaving before month six</strong>
+                <small>You keep your domain and any content you supplied. The website does not transfer, because the build fee was waived against the full six-month engagement.</small>
               </span>
             </div>
           </div>
@@ -859,8 +819,8 @@ export default function HomeInspectorOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Why inspectors bundle</span>
+              <h2>Agents, buyers and Google see one consistent inspection brand.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +835,8 @@ export default function HomeInspectorOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One inspection lead system</strong>
+                <small>Site · Maps · bookings</small>
               </p>
             </div>
           </div>
@@ -884,34 +844,34 @@ export default function HomeInspectorOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your website, ads, Google profile and tracking all speak to the same buyers, sellers and agents in your counties.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>One inspection strategy</strong>
+                  <small>Built for your counties</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>With no build invoice, more of your budget can go to campaigns that keep your inspection calendar full.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Budget for bookings</strong>
+                  <small>No build cost upfront</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, booking forms, ads and Maps actions are tracked together, so changes focus on inspections that get booked.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Bookings you can trace</strong>
+                  <small>Live from launch</small>
                 </div>
               </footer>
             </article>
@@ -919,7 +879,7 @@ export default function HomeInspectorOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my home inspector lead system</span>
+              <span>Build my inspection lead system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -930,11 +890,11 @@ export default function HomeInspectorOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Inspector FAQs</span>
+            <h2>Your home inspector web design questions.</h2>
+            <p>What inspectors ask most about the free website, website builders, agent pages and the terms.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my home inspector market</span>
+              <span>Ask about my inspection market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -950,21 +910,16 @@ export default function HomeInspectorOfferPage() {
           <div className="cta-orbit cta-orbit--two" />
 
           <div className="cta-content">
-            <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
-            </span>
-            <h2>Claim your professional home inspector website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your home inspection company, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <span className="section-kicker section-kicker--dark">Inspector website launch</span>
+            <h2>Give agents and buyers a site that books inspections.</h2>
+            <p>Fill in the short form. We review your inspection company, current website, service area and goals before recommending a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional home inspector lead-generation website
-              </span>
+                <Icon name="check" /> Inspector website with online booking</span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
-              </span>
+                <Icon name="check" /> Plan matched to your counties</span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
-              </span>
+                <Icon name="check" /> Terms spelled out before you start</span>
             </div>
 
             <div className="cta-direct">
@@ -1000,7 +955,7 @@ export default function HomeInspectorOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Home Inspector lead-generation websites connected to the marketing services that grow home inspectors.</p>
+            <p>Home inspector websites paired with the marketing that fills inspection calendars.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +983,7 @@ export default function HomeInspectorOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Home Inspector Website Launch Offer</span>
+            <span>Free Inspector Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-home-inspector-offer-form">

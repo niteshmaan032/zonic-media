@@ -1,34 +1,34 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the HVAC website really free?",
+    question: "Does the free HVAC website cost anything upfront?",
     answer:
-      "The upfront HVAC website design and development fee — $2,000 for a standard build — is waived when your company starts an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "No. The $2,000 HVAC website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal lists the page count, features and revision rounds before any work begins.",
   },
   {
-    question: "Which HVAC marketing plans qualify?",
+    question: "What is in your HVAC marketing packages?",
     answer:
-      "Qualifying services may include HVAC Google Ads management, Local SEO, Google Business Profile management, seasonal campaigns, or a combined HVAC growth plan. Zonic confirms eligibility after reviewing your services, territory, and lead goals.",
+      "Our three qualifying packages, Local Foundation, Growth and Full Market, can include HVAC Google Ads, local SEO, Google Business Profile management, seasonal campaigns and call tracking. Each includes the website build.",
   },
   {
-    question: "What is included in the HVAC website?",
+    question: "Can an HVAC website bring in free HVAC leads?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, AC and heating service pages, emergency pathways, service-area pages, booking forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes, over time. Calls from Google Maps, your Google Business Profile and organic search have no cost per click. The site is built to rank for your services and cities, and we track which leads came in free.",
   },
   {
-    question: "Can Zonic replace our existing HVAC website?",
+    question: "What does a good HVAC marketing website need?",
     answer:
-      "Yes. This offer works for HVAC companies with no website, an outdated site, or a website that is not generating enough service calls and estimate requests. We recommend the right replacement or rebuild approach after reviewing the current site.",
+      "Clear AC, heating and heat pump pages, emergency call buttons, maintenance plan sign-up, financing details, city pages, reviews, booking forms, fast mobile pages, tracking and lead routing. If you already have a site, we can rebuild or replace it.",
   },
   {
-    question: "Do you build seasonal and service-area pages too?",
+    question: "Do you build service-area and seasonal pages?",
     answer:
-      "Yes. The standard build covers a homepage plus ten pages and up to five city pages, which is where AC repair, heating, maintenance, and your priority service areas usually live. Additional city or service pages can be added under the expanded city-page program on the Full Market plan.",
+      "Yes. The standard build covers a homepage plus ten pages and up to five city pages, which usually holds AC repair, heating, maintenance and your main service areas. More city or service pages can be added through the expanded city-page program on the Full Market plan.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What is the minimum term, and what if we cancel?",
     answer:
-      "Yes. The qualifying plan runs on a six-month minimum term, and that’s what the waived $2,000 build fee is set against. We host the site during those six months; ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website doesn’t transfer. Your written proposal restates all of this before you sign anything.",
+      "The qualifying plan runs on a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site for those six months, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and your content, but the website does not transfer. Your written proposal restates this before you sign.",
   },
 ];
 

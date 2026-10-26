@@ -12,7 +12,8 @@ type ScrollToFormLinkProps = {
  * sticky column on desktop, an inline block on mobile) and only one is shown
  * per breakpoint, so we pick the one that's actually laid out (offsetParent is
  * null for display:none elements). A small offset keeps it clear of the fixed
- * navbar.
+ * navbar. The href is a real fragment (#free-audit, on the mobile form) so
+ * crawlers and no-JS visitors get a working link instead of "#".
  */
 export default function ScrollToFormLink({
   className,
@@ -35,7 +36,7 @@ export default function ScrollToFormLink({
   };
 
   return (
-    <a href="#" className={className} onClick={handleClick}>
+    <a href="#free-audit" className={className} onClick={handleClick}>
       {children}
     </a>
   );

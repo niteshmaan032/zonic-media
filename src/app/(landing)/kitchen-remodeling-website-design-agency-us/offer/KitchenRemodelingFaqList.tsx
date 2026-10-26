@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "What does the kitchen website cost me upfront?",
     answer:
-      "The upfront kitchen remodeling website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Nothing upfront for the build. The kitchen remodeling website design and development fee, $2,000 for a standard build, is waived once you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, functionality and revision limits before work begins.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Which plans make a kitchen remodeler eligible?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after looking at your goals and your kitchen remodel market.",
   },
   {
-    question: "What is included in the kitchen remodeling website?",
+    question: "Can the site show our kitchens and financing?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes, within the agreed scope. That can include a conversion-focused homepage, service pages, a kitchen gallery, a financing page if you offer it, lead forms, click-to-call, mobile optimization, SEO foundations, tracking and lead routing. Exact pages are confirmed in your proposal.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Is the offer open if we already have a kitchen site?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. It is open to companies with no website, an outdated one, or a site that is not producing enough enquiries. Zonic will advise whether a full replacement or a rebuild makes more sense.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What commitment does a kitchen remodeler sign up for?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "A qualifying marketing plan on a six-month minimum term. Because the website fee is waived inside that engagement, the written agreement lists hosting, revisions, cancellation and website ownership terms before you approve anything.",
   },
 ];
 

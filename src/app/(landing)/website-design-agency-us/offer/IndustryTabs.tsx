@@ -30,12 +30,12 @@ const NICHES: Niche[] = [
     icon: "home",
     accent: "#f05a36",
     soft: "#fff0ea",
-    heading: "Turn urgent roof searches into inspection calls.",
-    body: "A trust-first roofing website built around storm damage, repair, replacement, financing, and the service areas where you want to rank.",
+    heading: "Earn trust before the ladder goes up.",
+    body: "Storm, repair and replacement pages, warranty proof and an inspection request form, laid out for homeowners comparing roofers in your area.",
     bullets: [
-      "Emergency-ready calls to action",
-      "Service and location page structure",
-      "Reviews, licenses, and warranty proof",
+      "Inspection request on every page",
+      "City pages for each service area",
+      "Warranty, license and review proof",
     ],
     domain: "roofingcompany.com",
     miniName: "Roofing",
@@ -50,12 +50,12 @@ const NICHES: Niche[] = [
     icon: "droplets",
     accent: "#1677ff",
     soft: "#eaf4ff",
-    heading: "Make it easy to call when every minute matters.",
-    body: "A fast, mobile-first plumbing website that puts emergency service, common repairs, transparent reassurance, and direct booking in the right order.",
+    heading: "Put your number where a panicked homeowner looks.",
+    body: "A quick-loading plumbing site that leads with emergency help, then drains, water heaters and repairs, with booking one tap away on mobile.",
     bullets: [
-      "One-tap emergency calling",
-      "Problem-focused service navigation",
-      "Clear availability and coverage",
+      "Sticky call button on mobile",
+      "Problem-first service menu",
+      "Hours and coverage shown clearly",
     ],
     domain: "plumbingcompany.com",
     miniName: "Plumbing",
@@ -70,12 +70,12 @@ const NICHES: Niche[] = [
     icon: "wind",
     accent: "#04a88a",
     soft: "#e8fbf7",
-    heading: "Build year-round demand for comfort services.",
-    body: "A conversion-focused HVAC experience for repairs, replacements, maintenance plans, indoor air quality, and seasonal service campaigns.",
+    heading: "Keep the schedule full in mild months.",
+    body: "An HVAC site that covers repair, replacement, tune-ups and air quality, and gives maintenance plans and financing their own clear pages.",
     bullets: [
-      "Heating and cooling pathways",
-      "Maintenance plan promotion",
-      "Financing and rebate visibility",
+      "Cooling and heating service pages",
+      "Maintenance plan sign-up path",
+      "Financing and rebate details",
     ],
     domain: "hvaccompany.com",
     miniName: "HVAC",
@@ -90,12 +90,12 @@ const NICHES: Niche[] = [
     icon: "sparkles",
     accent: "#8b5cf6",
     soft: "#f2edff",
-    heading: "Present a polished company before the walkthrough.",
-    body: "A professional commercial cleaning site that explains facility types, service standards, scheduling, quality control, and quote requests without clutter.",
+    heading: "Look contract-ready before the walkthrough.",
+    body: "A clean, professional site for commercial cleaning that explains facility types, schedules, quality checks and how to request a walkthrough.",
     bullets: [
-      "Facility-specific service paths",
-      "Quality and safety credentials",
-      "Simple walkthrough requests",
+      "Pages for each facility type",
+      "Insurance and quality standards",
+      "Short walkthrough request form",
     ],
     domain: "cleaningcompany.com",
     miniName: "Commercial",
@@ -110,12 +110,12 @@ const NICHES: Niche[] = [
     icon: "door",
     accent: "#e99b10",
     soft: "#fff7df",
-    heading: "Win repair calls and showcase higher-value installs.",
-    body: "A local garage door website that balances urgent repairs with new doors, openers, maintenance, galleries, and service-area visibility.",
+    heading: "Win the broken-spring call and the new-door sale.",
+    body: "A garage door site that puts repair calls first, then shows doors, openers and maintenance with galleries and service-area pages.",
     bullets: [
-      "Repair-first mobile actions",
+      "Repair calls first on mobile",
       "Door and opener galleries",
-      "Local service-area signals",
+      "Service-area pages for each city",
     ],
     domain: "garagecompany.com",
     miniName: "Garage",
@@ -130,12 +130,12 @@ const NICHES: Niche[] = [
     icon: "leaf",
     accent: "#46a338",
     soft: "#edf8e8",
-    heading: "Let finished projects sell the next transformation.",
-    body: "A visual landscaping website that gives outdoor projects room to shine while guiding visitors toward design, installation, maintenance, and estimates.",
+    heading: "Let your best yards do the selling.",
+    body: "A visual landscaping site where finished projects lead, with clear paths to design, installation, maintenance plans and estimate requests.",
     bullets: [
-      "Project-led visual storytelling",
+      "Before-and-after project galleries",
       "Residential and commercial paths",
-      "Seasonal service promotion",
+      "Seasonal service promotions",
     ],
     domain: "landscapingcompany.com",
     miniName: "Landscaping",
@@ -286,8 +286,8 @@ export default function IndustryTabs() {
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built for local search</strong>
+                  <small>From first visit to booked job</small>
                 </span>
               </div>
             </div>

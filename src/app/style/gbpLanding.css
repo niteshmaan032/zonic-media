@@ -22,6 +22,7 @@
    ===================================================================== */
 
 /* Hide the site chrome — these pages ship their own header and footer. */
+body:has(.gbp-lp) .rh-root,
 body:has(.gbp-lp) .navbar-wrapper,
 body:has(.gbp-lp) .navbar-wrapper.show,
 body:has(.gbp-lp) .zoni-trigger,

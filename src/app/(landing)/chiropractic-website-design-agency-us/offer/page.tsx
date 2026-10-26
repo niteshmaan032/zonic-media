@@ -71,46 +71,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
-  { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "layout", label: "Calm clinic design" },
+  { icon: "smartphone", label: "Phone-friendly booking" },
+  { icon: "mail", label: "New patient forms" },
+  { icon: "phone", label: "Tap-to-call front desk" },
+  { icon: "search", label: "Condition page SEO" },
+  { icon: "chart", label: "Booked visit tracking" },
+  { icon: "layers", label: "Care service pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Booked visit tracking" },
+  { icon: "layers", label: "Care service pages" },
+  { icon: "pin", label: "Calm clinic design" },
+  { icon: "gauge", label: "Phone-friendly booking" },
+  { icon: "code", label: "New patient forms" },
+  { icon: "target", label: "Tap-to-call front desk" },
+  { icon: "users", label: "Condition page SEO" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Chiropractic Website for Chiropractors | Zonic Media" },
+  title: { absolute: "Free Chiropractic Website | Chiropractor Web Design | Zonic" },
   description:
-    "Free chiropractic practice website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+    "Free chiropractic website with new patient booking, condition pages and insurance details. Development fee waived on a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free chiropractic website",
     "chiropractic website design",
-    "chiropractor website",
+    "chiropractor website design",
+    "chiropractic marketing websites",
     "free website for chiropractors",
     "chiropractic web design",
-    "chiropractic marketing plan",
-    "chiropractor website examples",
-    "chiropractic practice website",
+    "chiropractor website",
+    "chiropractic marketing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Chiropractic Website Offer | Zonic Media",
+    title: "Free Website for Chiropractors | Zonic Media",
     description:
-      "Free chiropractic practice website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+      "Free chiropractic website with new patient booking, condition pages and insurance details. Development fee waived on a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function ChiropracticOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for chiropractic clinics</span>
+              <span>Free website offer for chiropractors and clinics</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,19 +171,19 @@ export default function ChiropracticOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your chiropractic clinic with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build your chiropractic website with new patient booking, condition pages and clear insurance details. The upfront development fee is waived.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my free website</span>
+                <span>Claim my clinic website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See the clinic site build</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -196,8 +196,8 @@ export default function ChiropracticOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
-                  <small>Development fee waived</small>
+                  <strong>No clinic build fee</strong>
+                  <small>Website build waived</small>
                 </span>
               </div>
               <div className="proof-item proof-item--yellow">
@@ -205,8 +205,8 @@ export default function ChiropracticOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Chiropractic lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>New-patient pages</strong>
+                  <small>Built for first-visit bookings</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -223,8 +223,8 @@ export default function ChiropracticOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Clinic terms in writing</strong>
+                  <small>Agreed before we start</small>
                 </span>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function ChiropracticOfferPage() {
               </span>
               <span>
                 <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <small>With a qualifying clinic plan</small>
               </span>
             </div>
 
@@ -267,21 +267,21 @@ export default function ChiropracticOfferPage() {
                   />
                 </span>
                 <div className="mini-nav">
-                  <span>Services</span>
-                  <span>Work</span>
-                  <span>About</span>
+                  <span>Conditions</span>
+                  <span>First Visit</span>
+                  <span>Insurance</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Book a visit</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">CHIROPRACTIC WEBSITE</div>
-                  <h2>More patients. More care-plan starts.</h2>
-                  <p>A professional chiropractic website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">CHIROPRACTIC CLINIC</div>
+                  <h2>Care that starts with listening.</h2>
+                  <p>A chiropractic website that explains your care and makes the first visit easy to book.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Book first visit</span>
+                    <span>Conditions we see</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -296,7 +296,7 @@ export default function ChiropracticOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">NEW PATIENTS WELCOME</div>
                 </div>
               </div>
 
@@ -320,8 +320,8 @@ export default function ChiropracticOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">CHIROPRACTIC SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">NEW PATIENTS</span>
+                <h3>Book your first visit in a few taps.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -334,8 +334,8 @@ export default function ChiropracticOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for chiropractic leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Built for new patients</strong>
+                <small>Booking, calls and tracking</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function ChiropracticOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the chiropractic website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">Your clinic website in three steps</span>
+            <h2>Your clinic site, from kickoff to launch.</h2>
+            <p>Zonic builds chiropractic marketing websites and pairs them with ongoing marketing, so people near your clinic find you and book a first visit.</p>
           </div>
 
           <div className="process-grid">
@@ -366,39 +366,39 @@ export default function ChiropracticOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your care pathway mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Share your clinic goals</h3>
+              <p>We review your care services, patient mix, location, current website and the channels most likely to bring new patients through the door.</p>
+              <small>Clinic review call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Pick your clinic plan</h3>
+              <p>Your plan can combine Google Ads, Local SEO, Google Business Profile care, booking tracking and conversion work.</p>
+              <small>Monthly clinic marketing</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
+              <h3>We build your clinic site</h3>
               <p>
-                Zonic creates the agreed chiropractic lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                Zonic builds the agreed chiropractic website, with booking on key pages and the build fee waived. Made to the same standard as{" "}
                 <Link href="/services/web-design" className="offer-inlink">
                   our full website design service
                 </Link>
                 .
               </p>
-              <small>Website fee waived</small>
+              <small>Build cost waived</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my chiropractic company</span>
+              <span>Check my clinic</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -409,26 +409,24 @@ export default function ChiropracticOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every chiropractic lead in one place.</h2>
+            <span className="section-kicker">New patient tracking</span>
+            <h2>New patient calls and bookings, all in one view.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which chiropractic jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, booking requests and chats arrive in one dashboard with the source attached, so you can see which visits came from ads, Google Maps or search instead of guessing.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Every call and booking request captured
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Source noted on each new patient lead
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> Status from enquiry to first visit
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>View The Booking Dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -514,10 +512,10 @@ export default function ChiropracticOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Chiropractic website service paths</span>
-              <h2>One chiropractic website. A clear path for every profitable care pathway.</h2>
+              <span className="section-kicker">Chiropractic care pages</span>
+              <h2>Back pain, neck pain, sports care: a page for each reason people book.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>People search by what hurts and what they need. Pick a tab to see how each page explains your care, sets expectations and leads to booking.</p>
           </div>
 
           <ChiropracticServiceTabs />
@@ -525,19 +523,19 @@ export default function ChiropracticOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                Beyond these six services
               </span>
-              <h3>We build for every chiropractic service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>Headaches, sciatica, prenatal care and more.</h3>
+              <p>The tabs are a sample. Any care service patients search for can get its own page.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every chiropractic service</span>
+              <span className="niche-banner-more">+ every service your clinic offers</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my chiropractic website</span>
+              <span>Get my care service pages</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -548,9 +546,9 @@ export default function ChiropracticOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a chiropractic website handed over and forgotten.</h2>
-            <p>Your chiropractic website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">What your clinic website includes</span>
+            <h2>Booking, care pages and tracking, built into one clinic site.</h2>
+            <p>Your chiropractic website runs inside your marketing, with care pages, booking tracking and insurance details working together to bring in new patients month after month.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,10 +576,10 @@ export default function ChiropracticOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
+                <small>CLINIC SITE 01</small>
+                <h3>Found by nearby patients</h3>
                 <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
+                  Care pages, location pages, on-page SEO and schema help Google connect your clinic to chiropractor searches nearby. Built with the same method as our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -595,9 +593,9 @@ export default function ChiropracticOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>CLINIC SITE 02</small>
+                <h3>Bookings you can measure</h3>
+                <p>Booking forms, click-to-call, GA4, Tag Manager and call tracking show which campaigns bring new patients in.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +603,7 @@ export default function ChiropracticOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my chiropractic website</span>
+              <span>Claim my clinic website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +615,8 @@ export default function ChiropracticOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Chiropractic website comes with it.</h2>
+              <span className="section-kicker">Clinic plans with the website</span>
+              <h2>Pick the plan that fits your clinic. The site is included.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -742,12 +740,12 @@ export default function ChiropracticOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
+              The chiropractic marketing plan
             </span>
-            <h2>The website is the foundation. Marketing creates demand for chiropractic practices.</h2>
-            <p>Your plan is selected around your chiropractic market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <h2>Help nearby patients find your clinic, then book with ease.</h2>
+            <p>Your plan is built around your clinic and local area. It can combine paid search, local visibility, Business Profile growth, booking tracking and steady conversion tests.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my chiropractic company</span>
+              <span>Check my clinic’s market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,9 +754,9 @@ export default function ChiropracticOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
+              <h3>Google Ads for clinics</h3>
               <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
+                Reach people searching for a chiropractor near them, with careful ad copy and tracked bookings. Read about our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -767,9 +765,9 @@ export default function ChiropracticOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
+              <h3>Local SEO + Maps for clinics</h3>
               <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
+                Grow visibility in chiropractor near me searches, with a Business Profile, photos and reviews that help patients choose. Linked to our{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -781,18 +779,18 @@ export default function ChiropracticOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>More first visits booked</h3>
+              <p>Call and form tracking, booking-page tests and simple reports turn more site visits into first appointments.</p>
             </article>
             <article className="dark-stat">
               <span>
                 <b>$0</b> upfront development fee
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> patient-ready website
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> terms agreed in writing
               </span>
             </article>
           </div>
@@ -802,12 +800,12 @@ export default function ChiropracticOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              Clinic offer terms
             </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront chiropractic website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>How the free chiropractic website works.</h2>
+            <p>Zonic waives the upfront chiropractic website design and development fee when your clinic starts a qualifying monthly marketing plan. All terms are in writing before you agree.</p>
             <a className="section-button" href="#contact">
-              <span>See if my chiropractic company qualifies</span>
+              <span>See if my clinic qualifies</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,16 +815,16 @@ export default function ChiropracticOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
+                <strong>Fee waived for clinics</strong>
                 <small>The chiropractic website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>Plans that count</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth, or Full Market) on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/web-design" className="offer-inlink">
                     our full website design service
                   </Link>
@@ -837,14 +835,14 @@ export default function ChiropracticOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
+                <strong>Owning your site</strong>
                 <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>Stopping early</strong>
                 <small>
                   You keep your domain and any content you supplied. The website
                   does not transfer, because the build fee was waived against
@@ -859,8 +857,8 @@ export default function ChiropracticOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Clinic site + marketing</span>
+              <h2>Website plus marketing: better together for clinics.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +873,8 @@ export default function ChiropracticOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One clinic system</strong>
+                <small>Site · search · bookings</small>
               </p>
             </div>
           </div>
@@ -884,34 +882,34 @@ export default function ChiropracticOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your clinic website, ads, map listing and tracking all speak to the same local patients, instead of being handled as separate projects.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>One clinic strategy</strong>
+                  <small>Built around your area</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>No upfront website bill means your budget goes toward reaching new patients, not paying off a build.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>A lighter start</strong>
+                  <small>Clinic build fee waived</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, bookings, ads and map actions are measured together, so each change aims at more booked first visits.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Visits you can trace</strong>
+                  <small>Tracking ready from launch</small>
                 </div>
               </footer>
             </article>
@@ -919,7 +917,7 @@ export default function ChiropracticOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my chiropractic lead system</span>
+              <span>Build my patient booking system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -930,11 +928,11 @@ export default function ChiropracticOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Chiropractic website FAQs</span>
+            <h2>Your clinic’s questions about the free site.</h2>
+            <p>Answers for clinic owners on eligibility, website scope and the monthly marketing plan behind the offer.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my chiropractic market</span>
+              <span>Ask about my clinic’s area</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -951,19 +949,19 @@ export default function ChiropracticOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
+              Free Chiropractic Website Offer
             </span>
-            <h2>Claim your professional chiropractic website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your chiropractic clinic, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <h2>Claim a chiropractic website made for new patient bookings.</h2>
+            <p>Fill in the short form. Zonic reviews your clinic, care services, current website and goals before recommending a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional chiropractic lead-generation website
+                <Icon name="check" /> Booking-ready chiropractic website
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
+                <Icon name="check" /> Plan matched to your clinic and area
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Scope and terms set before you commit
               </span>
             </div>
 
@@ -1000,7 +998,7 @@ export default function ChiropracticOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Chiropractic lead-generation websites connected to the marketing services that grow chiropractic practices.</p>
+            <p>Chiropractic websites built for new patient booking and local clinic marketing.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +1026,7 @@ export default function ChiropracticOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Chiropractic Website Launch Offer</span>
+            <span>Chiropractic Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-chiropractic-offer-form">

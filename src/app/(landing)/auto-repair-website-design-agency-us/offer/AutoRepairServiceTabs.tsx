@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "vehicle-diagnostics",
     label: "Vehicle Diagnostics",
     icon: "car",
-    heading: "Turn vehicle diagnostics searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn check engine light searches into booked diagnostics.",
+    body: "Drivers with a warning light want to know what happens next. This page explains your diagnostic process in plain words and gets them booked fast.",
     bullets: [
-      "Clear vehicle diagnostics value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Plain-language diagnostic steps",
+      "Warning light and symptom sections",
+      "Booking and call tracking",
     ],
-    ctaLabel: "Build my vehicle diagnostics pages",
+    ctaLabel: "Build my diagnostics page",
     kicker: "VEHICLE DIAGNOSTICS",
-    siteHeading: "Vehicle Diagnostics—done right.",
+    siteHeading: "Check engine light on? Let’s find out why.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Vehicle diagnostics at an auto repair shop",
   },
   {
     id: "brake-repair",
     label: "Brake Repair",
     icon: "target",
-    heading: "Turn brake repair searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win brake repair searches from drivers who need it now.",
+    body: "Squealing or grinding brakes create urgency. This page covers symptoms, pads, rotors and inspections, with a call button and booking form close by.",
     bullets: [
-      "Clear brake repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Symptom-led brake content",
+      "Pads, rotors and fluid sections",
+      "Call and booking buttons",
     ],
-    ctaLabel: "Build my brake repair pages",
+    ctaLabel: "Build my brake repair page",
     kicker: "BRAKE REPAIR",
-    siteHeading: "Brake Repair—done right.",
+    siteHeading: "Brake repair you can count on.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Brake repair service",
   },
   {
     id: "engine-repair",
     label: "Engine Repair",
     icon: "layers",
-    heading: "Turn engine repair searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give engine repair buyers the confidence to choose your shop.",
+    body: "Engine work is a big decision. This page explains your process, warranty terms and how estimates work, so drivers trust you before they call.",
     bullets: [
-      "Clear engine repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Repair process explained",
+      "Warranty and estimate details",
+      "Estimate request form",
     ],
-    ctaLabel: "Build my engine repair pages",
+    ctaLabel: "Build my engine repair page",
     kicker: "ENGINE REPAIR",
-    siteHeading: "Engine Repair—done right.",
+    siteHeading: "Engine repair, explained up front.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Engine repair service",
   },
   {
     id: "oil-maintenance",
     label: "Oil & Maintenance",
     icon: "clipboard",
-    heading: "Turn oil & maintenance searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn routine maintenance into repeat visits to your bays.",
+    body: "Oil changes and scheduled service bring drivers back again and again. This page makes booking simple and reminds them what their car needs next.",
     bullets: [
-      "Clear oil & maintenance value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Maintenance schedule content",
+      "Quick booking for routine service",
+      "Return-visit prompts",
     ],
-    ctaLabel: "Build my oil & maintenance pages",
+    ctaLabel: "Build my maintenance page",
     kicker: "OIL & MAINTENANCE",
-    siteHeading: "Oil & Maintenance—done right.",
+    siteHeading: "Routine service made easy.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Oil change and maintenance service",
   },
   {
     id: "tires-alignment",
     label: "Tires & Alignment",
     icon: "users",
-    heading: "Turn tires & alignment searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Capture tire and alignment searches from drivers nearby.",
+    body: "Tire wear, pulling and vibration send drivers to search. This page covers tires, rotation and alignment with a quick way to book a time.",
     bullets: [
-      "Clear tires & alignment value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Tire, rotation and alignment sections",
+      "Symptom checks drivers recognize",
+      "Fast booking form",
     ],
-    ctaLabel: "Build my tires & alignment pages",
+    ctaLabel: "Build my tires and alignment page",
     kicker: "TIRES & ALIGNMENT",
-    siteHeading: "Tires & Alignment—done right.",
+    siteHeading: "Smooth rides start with the right tires.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Tire and alignment service",
   },
   {
     id: "fleet-service",
     label: "Fleet Service",
     icon: "building",
-    heading: "Turn fleet service searches into qualified enquiries.",
-    body: "A focused auto repair website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn local fleets into steady repair accounts.",
+    body: "Fleet managers want reliable uptime and simple billing. This page explains fleet maintenance, priority scheduling and accounts, with a business enquiry form.",
     bullets: [
-      "Clear fleet service value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Fleet maintenance overview",
+      "Priority scheduling details",
+      "Business enquiry form",
     ],
-    ctaLabel: "Build my fleet service pages",
+    ctaLabel: "Build my fleet service page",
     kicker: "FLEET SERVICE",
-    siteHeading: "Fleet Service—done right.",
+    siteHeading: "Fleet service that keeps vehicles moving.",
     photo: "/images/free-website/free-auto-repair/hero.webp",
-    photoAlt: "Auto Repair service image",
+    photoAlt: "Fleet vehicle maintenance",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function AutoRepairServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Auto Repair website path
+                <Icon name={service.icon} /> Auto shop page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function AutoRepairServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
-                    <span>About</span>
+                    <span>Repairs</span>
+                    <span>Our Shop</span>
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Book service
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function AutoRepairServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Clear diagnosis. Straight answers. An easy way to book the repair.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book service</b>
+                      <b>All repairs</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local drivers</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function AutoRepairServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> TRUSTED LOCAL SHOP
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function AutoRepairServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book service</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to book repairs</strong>
+                  <small>Clear path from search to booking</small>
                 </span>
               </div>
             </div>

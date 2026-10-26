@@ -1,5 +1,8 @@
-import nodemailer from "nodemailer";
-import { SITE_CONTACT } from "@/shared/siteConfig";
+import {
+  getMailConfig,
+  getOwnerLeadCcEmails,
+  getTransporter,
+} from "@/backend/lib/ownerMail";
 import {
   buildOwnerLeadEmail,
   buildThankYouEmail,
@@ -24,12 +27,6 @@ export type LeadPayload = {
   details?: LeadDetail[];
   smsConsent?: boolean;
 };
-
-const OWNER_LEAD_CC_EMAILS = [
-  "man2k19ish@gmail.com",
-  "samrunads@gmail.com",
-  "josef@zonicllc.com",
-];
 
 const GMB_REINSTATEMENT_TEMPLATE_PAGES = new Set([
   "/services/gbp-reinstatement-service",
@@ -131,57 +128,6 @@ const INDUSTRY_MARKETING_TEMPLATES: Record<
     biz: "solar company",
   },
 };
-
-const getTransporter = () => {
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT ?? "465");
-  const secure = process.env.SMTP_SECURE !== "false";
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-  const connectionTimeout = Number(
-    process.env.SMTP_CONNECTION_TIMEOUT_MS ?? "15000",
-  );
-  const greetingTimeout = Number(
-    process.env.SMTP_GREETING_TIMEOUT_MS ?? "10000",
-  );
-  const socketTimeout = Number(process.env.SMTP_SOCKET_TIMEOUT_MS ?? "20000");
-
-  if (!host || !user || !pass) {
-    throw new Error("SMTP env variables are not configured.");
-  }
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    connectionTimeout,
-    greetingTimeout,
-    socketTimeout,
-    auth: {
-      user,
-      pass,
-    },
-  });
-};
-
-const getMailConfig = () => {
-  const from = process.env.MAIL_FROM ?? process.env.SMTP_USER;
-  const ownerEmail = process.env.MAIL_TO_OWNER ?? SITE_CONTACT.email;
-
-  if (!from) {
-    throw new Error("MAIL_FROM or SMTP_USER must be configured.");
-  }
-
-  return { from, ownerEmail };
-};
-
-const getOwnerLeadCcEmails = (ownerEmail: string) =>
-  OWNER_LEAD_CC_EMAILS.filter(
-    (email, index, emails) =>
-      email.toLowerCase() !== ownerEmail.toLowerCase() &&
-      emails.findIndex((item) => item.toLowerCase() === email.toLowerCase()) ===
-        index,
-  );
 
 export const sendOwnerLeadEmail = async (payload: LeadPayload) => {
   const transporter = getTransporter();

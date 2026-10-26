@@ -14,14 +14,68 @@ export const APP_TONE = {
   gemini: "tw:bg-[linear-gradient(135deg,#4e82ee,#a26bf4)] tw:text-white",
   facebook: "tw:bg-[#1877f2] tw:text-white",
   waze: "tw:bg-[#33ccff] tw:text-(--ink)",
-  instagram: "tw:bg-[linear-gradient(45deg,#f9ce34,#ee2a7b_55%,#6228d7)] tw:text-white",
+  instagram:
+    "tw:bg-[linear-gradient(45deg,#f9ce34,#ee2a7b_55%,#6228d7)] tw:text-white",
   perplexity: "tw:bg-[#20808d] tw:text-white",
+  // Directory tones (Delaware SEO draft, 22 Oct 2026).
+  bing: "tw:bg-[#008373] tw:text-white",
+  houzz: "tw:bg-[#4dbc15] tw:text-white",
+  thumbtack: "tw:bg-[#009fd9] tw:text-white",
+  tripadvisor: "tw:bg-[#34e0a1] tw:text-(--ink)",
+  // Web stack and lead channels (Delaware web design / Wilmington drafts).
+  wordpress: "tw:bg-[#21759b] tw:text-white",
+  shopify: "tw:bg-[#95bf47] tw:text-white",
+  woocommerce: "tw:bg-[#7f54b3] tw:text-white",
+  nextjs: "tw:bg-(--ink) tw:text-white",
+  analytics: "tw:bg-[#e37400] tw:text-white",
+  searchconsole: "tw:bg-[#458cf5] tw:text-white",
+  tagmanager: "tw:bg-[#246fdb] tw:text-white",
+  calendly: "tw:bg-[#006bff] tw:text-white",
+  googleads: "tw:bg-[#fbbc04] tw:text-(--ink)",
+  calls: "tw:bg-[#16a34a] tw:text-white",
+  texts: "tw:bg-[#0ea5e9] tw:text-white",
+  forms: "tw:bg-[#7c3aed] tw:text-white",
+  directions: "tw:bg-[#ea580c] tw:text-white",
+  // Social, search and ad-format tones (Philadelphia drafts).
+  tiktok: "tw:bg-[#111111] tw:text-white",
+  linkedin: "tw:bg-[#0a66c2] tw:text-white",
+  youtube: "tw:bg-[#ff0000] tw:text-white",
+  pinterest: "tw:bg-[#e60023] tw:text-white",
+  mailchimp: "tw:bg-[#ffe01b] tw:text-(--ink)",
+  threads: "tw:bg-[#333333] tw:text-white",
+  duckduckgo: "tw:bg-[#de5833] tw:text-white",
+  meta: "tw:bg-[#0866ff] tw:text-white",
+  rose: "tw:bg-[#e11d48] tw:text-white",
+  amber: "tw:bg-[#d97706] tw:text-white",
+  indigo: "tw:bg-[#4f46e5] tw:text-white",
+  emerald: "tw:bg-[#059669] tw:text-white",
+  assistant: "tw:bg-white tw:text-[#4285f4] tw:ring-1 tw:ring-(--line)",
+  alexa: "tw:bg-[#00caff] tw:text-(--ink)",
+  stripe: "tw:bg-[#635bff] tw:text-white",
+  square: "tw:bg-(--ink) tw:text-white",
+  paypal: "tw:bg-[#003087] tw:text-white",
+  hubspot: "tw:bg-[#ff7a59] tw:text-white",
+  zapier: "tw:bg-[#ff4f00] tw:text-white",
+  trustpilot: "tw:bg-[#00b67a] tw:text-white",
+  clutch: "tw:bg-[#17313b] tw:text-white",
+  zillow: "tw:bg-[#006aff] tw:text-white",
+  nextdoor: "tw:bg-[#8ed500] tw:text-(--ink)",
+  homeadvisor: "tw:bg-[#f68315] tw:text-white",
+  chrome: "tw:bg-white tw:text-[#4285f4] tw:ring-1 tw:ring-(--line)",
+  safari: "tw:bg-[#006cff] tw:text-white",
+  firefox: "tw:bg-[#ff7139] tw:text-white",
+  edge: "tw:bg-[#0c59a4] tw:text-white",
+  android: "tw:bg-[#3ddc84] tw:text-(--ink)",
+  samsung: "tw:bg-[#1428a0] tw:text-white",
+  windows: "tw:bg-[#00a4ef] tw:text-white",
 };
 
 export type HubApp = {
   icon: ComponentType<{ "aria-hidden"?: boolean | "true" }>;
   name: string;
   tone: keyof typeof APP_TONE;
+  /** Optional profile link: the tile opens it in a new tab. */
+  href?: string;
 };
 
 const SIDE =
@@ -35,8 +89,24 @@ function Side({ apps, label }: { apps: HubApp[]; label: string }) {
     <ul className={SIDE} aria-label={label}>
       {apps.map((app) => (
         <li key={app.name} className={cx(TILE, APP_TONE[app.tone])}>
-          <app.icon aria-hidden="true" />
-          <span className="tw:sr-only">{app.name}</span>
+          {app.href ? (
+            <a
+              href={app.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tw:grid tw:size-full tw:place-items-center tw:rounded-[inherit] tw:focus-visible:outline-3 tw:focus-visible:outline-offset-3 tw:focus-visible:outline-(--blue)"
+            >
+              <app.icon aria-hidden="true" />
+              <span className="tw:sr-only">
+                {app.name} (opens in a new tab)
+              </span>
+            </a>
+          ) : (
+            <>
+              <app.icon aria-hidden="true" />
+              <span className="tw:sr-only">{app.name}</span>
+            </>
+          )}
         </li>
       ))}
     </ul>
@@ -70,7 +140,9 @@ export function PlatformHub({
         >
           {icon}
         </span>
-        <b className="tw:mt-[30px] tw:text-2xl tw:max-bssm:mt-5 tw:max-bssm:text-[21px]">{title}</b>
+        <b className="tw:mt-[30px] tw:text-2xl tw:max-bssm:mt-5 tw:max-bssm:text-[21px]">
+          {title}
+        </b>
         <span className="tw:text-[15px] tw:text-(--muted)">{sub}</span>
       </div>
       <Side apps={right} label={rightLabel} />

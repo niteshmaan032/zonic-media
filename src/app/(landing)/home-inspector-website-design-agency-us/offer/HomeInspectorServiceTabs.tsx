@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "buyer-inspections",
     label: "Buyer Inspections",
     icon: "search",
-    heading: "Turn buyer inspections searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Get booked the day an offer is accepted.",
+    body: "A buyer inspection page that explains what you check, shows a sample report and lets buyers or their agent pick a time online in a few taps.",
     bullets: [
-      "Clear buyer inspections value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "What the inspection covers",
+      "Downloadable sample report",
+      "Online scheduling with time slots",
     ],
-    ctaLabel: "Build my buyer inspections pages",
+    ctaLabel: "Build my buyer inspection pages",
     kicker: "BUYER INSPECTIONS",
-    siteHeading: "Buyer Inspections—done right.",
+    siteHeading: "Buy with your eyes open.",
     photo: "/images/free-website/free-home-inspector/buyer-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "pre-listing-inspections",
     label: "Pre-Listing Inspections",
     icon: "target",
-    heading: "Turn pre-listing inspections searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Help sellers find problems before buyers do.",
+    body: "Pre-listing pages that show sellers and listing agents how an early inspection can smooth the sale, with repair planning tips and a simple booking form.",
     bullets: [
-      "Clear pre-listing inspections value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Seller benefit explainers",
+      "Listing agent booking path",
+      "Repair planning guidance",
     ],
-    ctaLabel: "Build my pre-listing inspections pages",
+    ctaLabel: "Build my pre-listing pages",
     kicker: "PRE-LISTING INSPECTIONS",
-    siteHeading: "Pre-Listing Inspections—done right.",
+    siteHeading: "Sell with fewer surprises.",
     photo: "/images/free-website/free-home-inspector/pre-listing-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "new-construction",
     label: "New Construction",
     icon: "home",
-    heading: "Turn new construction searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Reach new-home buyers before the final walkthrough.",
+    body: "New construction pages that explain phase inspections, final walkthroughs and builder warranty checks, with booking timed to each stage of the build.",
     bullets: [
-      "Clear new construction value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Phase inspection explainers",
+      "Warranty inspection reminders",
+      "Stage-based booking form",
     ],
     ctaLabel: "Build my new construction pages",
     kicker: "NEW CONSTRUCTION",
-    siteHeading: "New Construction—done right.",
+    siteHeading: "New home, checked at every stage.",
     photo: "/images/free-website/free-home-inspector/new-construction.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "radon-testing",
     label: "Radon Testing",
     icon: "wrench",
-    heading: "Turn radon testing searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Add radon testing to more inspection bookings.",
+    body: "Radon pages that explain testing, timelines and results in plain words, so buyers add the test when they book their home inspection online.",
     bullets: [
-      "Clear radon testing value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Radon risk explainers",
+      "Add-on at booking",
+      "Results and next steps guide",
     ],
     ctaLabel: "Build my radon testing pages",
     kicker: "RADON TESTING",
-    siteHeading: "Radon Testing—done right.",
+    siteHeading: "Know your radon levels.",
     photo: "/images/free-website/free-home-inspector/radon-testing.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "sewer-scope",
     label: "Sewer Scope",
     icon: "layers",
-    heading: "Turn sewer scope searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell the sewer scope buyers did not expect.",
+    body: "Sewer scope pages with camera footage examples and clear reasons to check older lines, plus an easy add-on to the main inspection.",
     bullets: [
-      "Clear sewer scope value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Camera footage examples",
+      "Older home risk explainers",
+      "One-click add-on booking",
     ],
     ctaLabel: "Build my sewer scope pages",
     kicker: "SEWER SCOPE",
-    siteHeading: "Sewer Scope—done right.",
+    siteHeading: "See inside the sewer line.",
     photo: "/images/free-website/free-home-inspector/sewer-scope.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-inspections",
     label: "Commercial Inspections",
     icon: "building",
-    heading: "Turn commercial inspections searches into qualified enquiries.",
-    body: "A focused home inspector website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win commercial property inspections from investors.",
+    body: "A commercial inspection path covering property types, report scope, turnaround times and credentials for investors, lenders, brokers and buyers.",
     bullets: [
-      "Clear commercial inspections value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Property type pages",
+      "Report scope and timelines",
+      "Commercial quote request form",
     ],
-    ctaLabel: "Build my commercial inspections pages",
+    ctaLabel: "Build my commercial inspection pages",
     kicker: "COMMERCIAL INSPECTIONS",
-    siteHeading: "Commercial Inspections—done right.",
+    siteHeading: "Due diligence you can rely on.",
     photo: "/images/free-website/free-home-inspector/commercial-inspections.webp",
     photoAlt: "Home Inspector service image",
   },
@@ -161,7 +161,7 @@ export default function HomeInspectorServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Home Inspector website path
+                <Icon name={service.icon} /> Inspection booking path
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -203,7 +203,7 @@ export default function HomeInspectorServiceTabs() {
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Book inspection
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,15 @@ export default function HomeInspectorServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Certified local inspectors. Clear photo reports. Easy
+                      online booking.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book inspection</b>
+                      <b>View sample report</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local buyers and agents</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -249,15 +249,15 @@ export default function HomeInspectorServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book inspection</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made to fill your inspection calendar</strong>
+                  <small>From an agent referral to a booked slot</small>
                 </span>
               </div>
             </div>

@@ -75,46 +75,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
+  { icon: "layout", label: "Custom brand design" },
+  { icon: "smartphone", label: "Mobile-first layout" },
+  { icon: "mail", label: "Contact forms" },
   { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
+  { icon: "search", label: "Local SEO setup" },
+  { icon: "chart", label: "Lead source tracking" },
   { icon: "layers", label: "Service pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
+  { icon: "chart", label: "Lead source tracking" },
   { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "GBP integration" },
-  { icon: "gauge", label: "Speed optimization" },
-  { icon: "code", label: "Schema setup" },
-  { icon: "target", label: "Clear CTAs" },
+  { icon: "pin", label: "Google profile link-up" },
+  { icon: "gauge", label: "Page speed work" },
+  { icon: "code", label: "Schema markup" },
+  { icon: "target", label: "Quote buttons" },
   { icon: "users", label: "CRM lead routing" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Website for Small Business | No Upfront Design Fee" },
+  title: { absolute: "Free Website for Small Business, No Build Fee | Zonic" },
   description:
-    "Get a free professional website for your small business, built with no upfront development fee when you start a qualifying Zonic marketing plan.",
+    "Get a free website for your small business with no upfront design fee when you start a qualifying Zonic marketing plan. Built for local search and leads.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
     "free website for small business",
     "free website design for small business",
-    "best free website for small business",
-    "free website for small business owners",
+    "free small business website",
     "free professional website",
+    "free website for small business owners",
     "small business website no upfront cost",
+    "free business website with marketing",
     "website design agency usa",
-    "free website offer",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Get a Free Professional Website | Zonic Media",
+    title: "Free Website for Small Business, No Build Fee | Zonic",
     description:
-      "Get a free professional website for your small business, built with no upfront development fee when you start a qualifying Zonic marketing plan.",
+      "Get a free website for your small business with no upfront design fee when you start a qualifying Zonic marketing plan. Built for local search and leads.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -158,7 +158,7 @@ export default function FreeWebsiteDesignServicePage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Zonic Website Launch Offer</span>
+              <span>Free website for small business owners</span>
               <Icon name="sparkles" />
             </div>
 
@@ -173,11 +173,7 @@ export default function FreeWebsiteDesignServicePage() {
               </span>
             </h1>
 
-            <p className="hero-lede">
-              Start a qualifying Zonic Media marketing plan and we&rsquo;ll
-              build your professional, conversion-focused website with no
-              upfront development fee.
-            </p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build your professional small business website with no upfront development fee.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
@@ -189,7 +185,7 @@ export default function FreeWebsiteDesignServicePage() {
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what&rsquo;s included</span>
+                <span>See what the site includes</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -211,8 +207,8 @@ export default function FreeWebsiteDesignServicePage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Lead-generation site</strong>
-                  <small>Built to drive enquiries</small>
+                  <strong>Lead-ready website</strong>
+                  <small>Made to bring in enquiries</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -220,8 +216,8 @@ export default function FreeWebsiteDesignServicePage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Growth connected</strong>
-                  <small>Website + marketing plan</small>
+                  <strong>Marketing attached</strong>
+                  <small>Website + growth plan</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -229,8 +225,8 @@ export default function FreeWebsiteDesignServicePage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Straight terms</strong>
+                  <small>Everything in writing</small>
                 </span>
               </div>
             </div>
@@ -351,8 +347,8 @@ export default function FreeWebsiteDesignServicePage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built to generate leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Made for local customers</strong>
+                <small>Calls, forms and tracking set up</small>
               </span>
             </div>
           </div>
@@ -372,14 +368,9 @@ export default function FreeWebsiteDesignServicePage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">
-              One offer. One connected growth system.
-            </span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>
-              Zonic combines the site your business needs with the recurring
-              marketing required to put it in front of qualified prospects.
-            </p>
+            <span className="section-kicker">Three steps to your new site</span>
+            <h2>Skip the design invoice and start with a working website.</h2>
+            <p>We pair your small business website with marketing that brings customers in, so your budget goes to growth, not a design bill.</p>
           </div>
 
           <div className="process-grid">
@@ -388,49 +379,35 @@ export default function FreeWebsiteDesignServicePage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>
-                We review your industry, locations, current website, lead
-                sources, and the marketing channels most likely to create
-                demand.
-              </p>
-              <small>Qualification call</small>
+              <h3>Share your business goals</h3>
+              <p>We look at your industry, service area, current website, lead sources and where your customers come from today.</p>
+              <small>Discovery call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>
-                Your plan may combine Google Ads, Local SEO, Google Business
-                Profile management, tracking, and conversion optimization.
-              </p>
-              <small>Recurring growth service</small>
+              <h3>Choose your marketing plan</h3>
+              <p>Pick Google Ads, local SEO, Google Business Profile management, tracking, or a mix that suits your budget.</p>
+              <small>Recurring marketing service</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
-              <p>
-                Zonic creates the agreed lead-generation website with the
-                upfront development fee waived under your marketing engagement.
-              {" "}
-                Same build standard as our{" "}
-                <Link href="/services/web-design" className="offer-inlink">
+              <h3>Get your website built</h3>
+              <p>We build the agreed website in 2–3 weeks with the upfront development fee waived under your marketing plan. Built to the same standard as our <Link href="/services/web-design" className="offer-inlink">
                   website design services
-                </Link>
-                .
-              </p>
-              <small>Website fee waived</small>
+                </Link>.</p>
+              <small>No design invoice</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my eligibility</span>
+              <span>See if my business qualifies</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -441,26 +418,19 @@ export default function FreeWebsiteDesignServicePage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every lead in one place.</h2>
-            <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which jobs your marketing produced
-              instead of guessing where the phone calls came from.
-            </p>
+            <span className="section-kicker">Know where customers come from</span>
+            <h2>Every call and form, tied to its source.</h2>
+            <p>Phone calls, web forms and chats land in one dashboard with the source attached, so you can see which ads, searches and listings bring in paying customers.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
-              </li>
+                <Icon name="check" /> Calls, forms and chats logged automatically</li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
-              </li>
+                <Icon name="check" /> Ad, search or listing source on every lead</li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
-              </li>
+                <Icon name="check" /> Pipeline view from first contact to sale</li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Show me the dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -546,30 +516,19 @@ export default function FreeWebsiteDesignServicePage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">
-                Industry-specific launch offers
-              </span>
-              <h2>Your free website should match how your customers search.</h2>
+              <span className="section-kicker">Built for how your customers search</span>
+              <h2>A small business website shaped around your industry.</h2>
             </div>
-            <p>
-              Choose an industry to see how Zonic adapts the website message,
-              service paths, trust signals, and enquiry flow while connecting it
-              to a qualifying marketing plan.
-            </p>
+            <p>Pick an industry below to see how we adjust the headline, services, trust signals and contact path for the people who buy from that kind of business.</p>
           </div>
 
           <IndustryTabs />
 
           <div className="niche-banner">
             <div className="niche-banner-copy">
-              <span className="section-kicker section-kicker--dark">
-                Beyond these six
-              </span>
-              <h3>We build for every local niche.</h3>
-              <p>
-                The tabs are just a sample — if customers search for your
-                service, we can build for it.
-              </p>
+              <span className="section-kicker section-kicker--dark">More industries we serve</span>
+              <h3>Not listed? We still build for you.</h3>
+              <p>We work across 20+ industries. If customers search for what you sell, we can build for it.</p>
             </div>
             <div className="niche-banner-tags">
               {[
@@ -585,10 +544,10 @@ export default function FreeWebsiteDesignServicePage() {
               ].map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
-              <span className="niche-banner-more">+ every other niche</span>
+              <span className="niche-banner-more">+ your industry</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my free website</span>
+              <span>Get my business website</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -599,15 +558,9 @@ export default function FreeWebsiteDesignServicePage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">
-              Your lead-generation website includes
-            </span>
-            <h2>More than a basic website handed over and forgotten.</h2>
-            <p>
-              The website is built as part of your marketing system, with the
-              essential structure, tracking, and conversion tools needed to
-              support recurring growth.
-            </p>
+            <span className="section-kicker">Inside your free business website</span>
+            <h2>Everything a local business site needs to win customers.</h2>
+            <p>Your website launches with the structure, speed and tracking a small business needs to show up in search and turn visitors into calls.</p>
           </div>
 
           <div className="icon-cloud">
@@ -635,19 +588,11 @@ export default function FreeWebsiteDesignServicePage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
-                <p>
-                  Service pages, location pathways, on-page SEO, and schema
-                  where appropriate help search engines understand your
-                  business.
-                {" "}
-                  The same structure behind our{" "}
-                  <Link href="/services/local-seo-for-home-services" className="offer-inlink">
+                <small>BUSINESS SITE 01</small>
+                <h3>Pages Google can understand</h3>
+                <p>Clear service pages, location pages, on-page SEO and schema markup help search engines match your business to local searches. The same approach behind our <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO for home services
-                  </Link>
-                  .
-                </p>
+                  </Link>.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -656,13 +601,9 @@ export default function FreeWebsiteDesignServicePage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>
-                  Lead forms, click-to-call, GA4, Tag Manager, conversion
-                  tracking, and CRM routing connect marketing activity to real
-                  enquiries.
-                </p>
+                <small>BUSINESS SITE 02</small>
+                <h3>Leads you can measure</h3>
+                <p>Contact forms, click-to-call, GA4, Tag Manager and CRM routing show which marketing turns into real customer enquiries.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -670,7 +611,7 @@ export default function FreeWebsiteDesignServicePage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my free website</span>
+              <span>Start my free website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -682,8 +623,8 @@ export default function FreeWebsiteDesignServicePage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the plan. The website comes with it.</h2>
+              <span className="section-kicker">Plans that include the website</span>
+              <h2>Every qualifying plan includes your new business website.</h2>
             </div>
             <p>
               Any plan at $297/month or above on a 6-month term includes the
@@ -819,17 +760,11 @@ export default function FreeWebsiteDesignServicePage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
-            </span>
-            <h2>The website is the foundation. Marketing creates the demand.</h2>
-            <p>
-              Your plan is selected around your market and may combine paid
-              search, local visibility, Google Business Profile growth,
-              tracking, and ongoing conversion improvements.
-            </p>
+            <span className="section-kicker section-kicker--dark">What your marketing plan covers</span>
+            <h2>A website gets you online. Marketing gets you customers.</h2>
+            <p>We match your plan to your market and goals. It can mix paid search, local SEO, Google Business Profile work, call tracking and ongoing site improvements.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my eligibility</span>
+              <span>Talk through my plan</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -838,57 +773,35 @@ export default function FreeWebsiteDesignServicePage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
-              <p>
-                Capture high-intent searches with targeted campaigns, focused
-                landing experiences, and measurable lead actions.
-              {" "}
-                See our{" "}
-                <Link href="/services/google-ads" className="offer-inlink">
+              <h3>Search ads that bring buyers</h3>
+              <p>Show up when people search for what you sell, with focused landing pages and tracked enquiries. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
-              <p>
-                Build visibility across services and locations while improving
-                the business signals customers see in local results.
-              {" "}
-                Backed by our{" "}
-                <Link href="/services/local-seo-for-home-services" className="offer-inlink">
+              <h3>Local SEO and Maps visibility</h3>
+              <p>Rank higher in Google Maps with a sharper profile and a steady flow of reviews. Backed by our <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                   local SEO for home services
-                </Link>{" "}
-                and{" "}
-                <Link
+                </Link> and <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
                 >
                   Google Business Profile optimization
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>
-                Use call and form tracking, landing-page improvements, and
-                reporting to turn more visits into qualified enquiries.
-              </p>
+              <h3>Monthly conversion work</h3>
+              <p>We review calls, forms and page behavior each month and improve the pages that should bring in more enquiries.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
-              </span>
+                <b>$0</b> website build fee</span>
               <span>
-                <b>1</b> connected growth system
-              </span>
+                <b>1</b> point of contact for it all</span>
               <span>
-                <b>100%</b> clear written scope
-              </span>
+                <b>100%</b> of the offer in writing</span>
             </article>
           </div>
         </section>
@@ -896,17 +809,11 @@ export default function FreeWebsiteDesignServicePage() {
         {/* ───────────── Terms ───────────── */}
         <section className="section terms-section">
           <div className="terms-main">
-            <span className="section-kicker">
-              Clear qualification. Clear terms.
-            </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>
-              Zonic waives the upfront website design and development fee when
-              an eligible business starts a qualifying recurring marketing
-              engagement. Nothing is left vague before you agree.
-            </p>
+            <span className="section-kicker">The fine print, in plain English</span>
+            <h2>No hidden catch: how the free business website works.</h2>
+            <p>The build fee is waived when a new client starts a qualifying recurring marketing plan. Each term below is also written into your proposal before you sign.</p>
             <a className="section-button" href="#contact">
-              <span>See if my business qualifies</span>
+              <span>Check my business</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -916,51 +823,31 @@ export default function FreeWebsiteDesignServicePage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>
-                  The website development fee, valued at $2,000. Your monthly
-                  plan is billed at full rate and is not discounted.
-                </small>
+                <strong>The fee we waive</strong>
+                <small>The website development fee, valued at $2,000. Your monthly marketing plan is billed at its full rate, with no discount.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
-                <small>
-                  Any Zonic marketing plan at $297/month or above — Local
-                  Foundation, Growth, or Full Market — on a six-month minimum
-                  term. Advertising spend is billed separately by the platform.
-                {" "}
-                  Also available with our{" "}
-                  <Link href="/services/launchpad" className="offer-inlink">
+                <strong>Who qualifies</strong>
+                <small>New clients who start any Zonic marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. Ad spend is billed separately by the platform. Also available with our <Link href="/services/launchpad" className="offer-inlink">
                     Launchpad package
-                  </Link>
-                  .
-                </small>
+                  </Link>.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>
-                  Your domain is registered in your business&rsquo;s name from
-                  day one. We host and maintain the site during the term; full
-                  ownership of the website and hosting transfers to you at the
-                  completion of month six.
-                </small>
+                <strong>Owning your website</strong>
+                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term, and full ownership of the website and hosting passes to you when month six is complete.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
-                <small>
-                  You keep your domain and any content you supplied. The
-                  website does not transfer, because the build fee was waived
-                  against the full six-month engagement.
-                </small>
+                <strong>If you stop early</strong>
+                <small>You keep your domain and any content you supplied. The website itself does not transfer, since the build fee was waived against the full six-month engagement.</small>
               </span>
             </div>
           </div>
@@ -970,8 +857,8 @@ export default function FreeWebsiteDesignServicePage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Why bundling works for small businesses</span>
+              <h2>One partner for your website and your marketing.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -986,8 +873,8 @@ export default function FreeWebsiteDesignServicePage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>Site, search and tracking</strong>
+                <small>Handled by one team</small>
               </p>
             </div>
           </div>
@@ -995,45 +882,34 @@ export default function FreeWebsiteDesignServicePage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>
-                Your website, ads, local visibility, and tracking are planned
-                around the same audience instead of being handled as unrelated
-                projects.
-              </p>
+              <p>Your website, ads, Google profile and tracking are planned around the same customers, so no channel works against another.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>No mixed messages</strong>
+                  <small>One plan for your market</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>
-                The upfront website investment is removed, giving the marketing
-                plan a stronger foundation without adding a separate development
-                bill.
-              </p>
+              <p>Skipping the upfront build bill frees cash for the marketing that brings customers in from the first month.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Cash kept in the business</strong>
+                  <small>Design invoice removed</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>
-                Calls, forms, campaigns, and local search actions are measured
-                together so ongoing improvements can focus on qualified leads.
-              </p>
+              <p>Calls, forms, ads and local search are tracked in one place, so every change is based on what customers actually do.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Decisions backed by data</strong>
+                  <small>Tracking connected at launch</small>
                 </div>
               </footer>
             </article>
@@ -1041,7 +917,7 @@ export default function FreeWebsiteDesignServicePage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my growth system</span>
+              <span>Start my small business plan</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -1052,15 +928,11 @@ export default function FreeWebsiteDesignServicePage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>
-              These are the details business owners should know about
-              eligibility, website scope, and the qualifying marketing
-              engagement.
-            </p>
+            <span className="section-kicker">Small business website questions</span>
+            <h2>Answers for owners weighing a free website.</h2>
+            <p>What owners ask most about the free build, qualifying plans, site scope and month six.</p>
             <a className="section-button" href="#contact">
-              <span>Ask us directly</span>
+              <span>Ask our team</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -1076,27 +948,16 @@ export default function FreeWebsiteDesignServicePage() {
           <div className="cta-orbit cta-orbit--two" />
 
           <div className="cta-content">
-            <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
-            </span>
-            <h2>
-              Claim your professional website with no upfront development fee.
-            </h2>
-            <p>
-              Complete the short eligibility form. Zonic will review your
-              industry, website needs, and growth goals before recommending a
-              qualifying marketing plan.
-            </p>
+            <span className="section-kicker section-kicker--dark">Free Small Business Website Offer</span>
+            <h2>Claim your free small business website today.</h2>
+            <p>Fill in the short form. We review your business, current website and growth goals, then recommend the qualifying marketing plan that fits.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional lead-generation website
-              </span>
+                <Icon name="check" /> Professional small business website</span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
-              </span>
+                <Icon name="check" /> Marketing plan sized to your goals</span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
-              </span>
+                <Icon name="check" /> Clear scope before any commitment</span>
             </div>
 
             <div className="cta-direct">
@@ -1132,10 +993,7 @@ export default function FreeWebsiteDesignServicePage() {
             >
               Zonic Media
             </a>
-            <p>
-              Lead-generation websites connected to the marketing services that
-              grow local businesses.
-            </p>
+            <p>Free small business websites paired with the local marketing that brings in customers.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1163,7 +1021,7 @@ export default function FreeWebsiteDesignServicePage() {
           </div>
 
           <div className="footer-offer">
-            <span>Website Launch Offer</span>
+            <span>Small Business Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>
               With a qualifying marketing plan at $297/month or above on a

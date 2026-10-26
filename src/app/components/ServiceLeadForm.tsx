@@ -37,6 +37,11 @@ type ServiceLeadFormProps = {
    */
   serviceOptions?: string[];
   /**
+   * Put the service select in the same row as Email (only when there is no
+   * Business Name field). Opt-in; the default layout is unchanged.
+   */
+  serviceBesideEmail?: boolean;
+  /**
    * @deprecated Ignored. Leads only carry a service the visitor picked from
    * `serviceOptions`; forms without a picker submit no service.
    */
@@ -54,7 +59,11 @@ export default function ServiceLeadForm({
   messagePlaceholder = "Tell us a little about what you need",
   showBusinessName = true,
   serviceOptions,
+  serviceBesideEmail = false,
 }: ServiceLeadFormProps) {
+  const serviceInRow = Boolean(
+    serviceBesideEmail && serviceOptions && !showBusinessName,
+  );
   const router = useRouter();
   const pathname = usePathname();
   const [submitError, setSubmitError] = useState("");
@@ -135,6 +144,36 @@ export default function ServiceLeadForm({
       );
     }
   };
+
+  // Service select: in its own block by default, or beside Email when
+  // serviceBesideEmail is set (and there is no Business Name field).
+  const serviceField = serviceOptions ? (
+    <>
+      <label className="slf-label" htmlFor="slf-service">
+        What can we help with?
+      </label>
+      <select
+        id="slf-service"
+        defaultValue=""
+        aria-invalid={errors.service ? "true" : "false"}
+        {...register("service", {
+          required: "Please select a service.",
+        })}
+      >
+        <option value="" disabled>
+          Select a service
+        </option>
+        {serviceOptions.map((service) => (
+          <option key={service} value={service}>
+            {service}
+          </option>
+        ))}
+      </select>
+      {errors.service && (
+        <p className="slf-error">{errors.service.message}</p>
+      )}
+    </>
+  ) : null;
 
   return (
     <div className={`slf${card ? " slf--card" : ""}`}>
@@ -220,6 +259,8 @@ export default function ServiceLeadForm({
             {errors.email && <p className="slf-error">{errors.email.message}</p>}
           </div>
 
+          {serviceInRow && <div className="slf-col">{serviceField}</div>}
+
           {showBusinessName && (
             <div className="slf-col">
               <label className="slf-label" htmlFor="slf-biz">
@@ -244,33 +285,7 @@ export default function ServiceLeadForm({
           )}
         </div>
 
-        {serviceOptions && (
-          <>
-            <label className="slf-label" htmlFor="slf-service">
-              What can we help with?
-            </label>
-            <select
-              id="slf-service"
-              defaultValue=""
-              aria-invalid={errors.service ? "true" : "false"}
-              {...register("service", {
-                required: "Please select a service.",
-              })}
-            >
-              <option value="" disabled>
-                Select a service
-              </option>
-              {serviceOptions.map((service) => (
-                <option key={service} value={service}>
-                  {service}
-                </option>
-              ))}
-            </select>
-            {errors.service && (
-              <p className="slf-error">{errors.service.message}</p>
-            )}
-          </>
-        )}
+        {!serviceInRow && serviceField}
 
         <label className="slf-label" htmlFor="slf-message">
           {messageLabel}

@@ -34,6 +34,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/blog`,       changeFrequency: "weekly",  priority: 0.8 },
 
   // Services
+  { url: `${BASE_URL}/pricing`,                                 changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/web-design`,                   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/gbp-reinstatement-service`,       changeFrequency: "weekly",  priority: 0.9 },
   { url: `${BASE_URL}/services/gmb-verification-help`,        changeFrequency: "monthly", priority: 0.8 },
@@ -195,9 +196,11 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/services/wilmington/digital-marketing`,   changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/nyc/local-seo`,                  changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/nyc/digital-marketing`,          changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/nyc/web-design`,                 changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/philadelphia/digital-marketing`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/dallas-fort-worth/digital-marketing-agency`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/dallas-fort-worth/web-design-agency`,        changeFrequency: "monthly", priority: 0.8 },
+  { url: `${BASE_URL}/services/dallas-fort-worth/local-seo-agency`,         changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/philadelphia/local-seo`,         changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/philadelphia/sem`,               changeFrequency: "monthly", priority: 0.7 },
   { url: `${BASE_URL}/services/philadelphia/ppc`,               changeFrequency: "monthly", priority: 0.7 },

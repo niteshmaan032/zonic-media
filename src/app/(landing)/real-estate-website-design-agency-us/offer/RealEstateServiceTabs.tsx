@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "buy-a-home",
     label: "Buy a Home",
     icon: "wrench",
-    heading: "Turn buy a home searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give home buyers a search experience that ends in a call.",
+    body: "Buyers want listings, neighborhoods and an agent who knows the area. This page pairs IDX-ready search with a simple showing request and your story.",
     bullets: [
-      "Clear buy a home value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "IDX-ready listing search",
+      "Neighborhood highlights",
+      "Showing request form",
     ],
-    ctaLabel: "Build my buy a home pages",
+    ctaLabel: "Build my buyer pages",
     kicker: "BUY A HOME",
-    siteHeading: "Buy a Home—done right.",
+    siteHeading: "Find the home that fits your life.",
     photo: "/images/free-website/free-real-estate/buy-a-home.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "Home buying with a local agent",
   },
   {
     id: "sell-a-home",
     label: "Sell a Home",
     icon: "target",
-    heading: "Turn sell a home searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn what’s my home worth searches into listing appointments.",
+    body: "Sellers start with a value question. This page offers a home value request, explains your selling process and invites a listing conversation.",
     bullets: [
-      "Clear sell a home value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Home value request form",
+      "Selling process steps",
+      "Listing appointment booking",
     ],
-    ctaLabel: "Build my sell a home pages",
+    ctaLabel: "Build my seller pages",
     kicker: "SELL A HOME",
-    siteHeading: "Sell a Home—done right.",
+    siteHeading: "Thinking of selling? Start with your home’s value.",
     photo: "/images/free-website/free-real-estate/sell-a-home.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "Home selling service",
   },
   {
     id: "luxury-listings",
     label: "Luxury Listings",
     icon: "home",
-    heading: "Turn luxury listings searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Present high-end listings with the polish they deserve.",
+    body: "Luxury buyers and sellers judge presentation first. This page gives listings large photos, clean layouts and a private enquiry path for serious clients.",
     bullets: [
-      "Clear luxury listings value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Large photo galleries",
+      "Clean, premium layouts",
+      "Private enquiry form",
     ],
-    ctaLabel: "Build my luxury listings pages",
+    ctaLabel: "Build my luxury listing pages",
     kicker: "LUXURY LISTINGS",
-    siteHeading: "Luxury Listings—done right.",
+    siteHeading: "Luxury homes, presented beautifully.",
     photo: "/images/free-website/free-real-estate/luxury-listings.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "Luxury home listing",
   },
   {
     id: "relocation",
     label: "Relocation",
     icon: "truck",
-    heading: "Turn relocation searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win relocation clients with honest local insight.",
+    body: "People moving to your area need schools, commutes and neighborhoods explained. This page answers those questions and offers a quick call with you.",
     bullets: [
-      "Clear relocation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Area and commute guides",
+      "Neighborhood comparisons",
+      "Relocation call request",
     ],
     ctaLabel: "Build my relocation pages",
     kicker: "RELOCATION",
-    siteHeading: "Relocation—done right.",
+    siteHeading: "Moving here? Get to know the area.",
     photo: "/images/free-website/free-real-estate/relocation.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "Relocation to a new area",
   },
   {
     id: "new-construction",
     label: "New Construction",
     icon: "layers",
-    heading: "Turn new construction searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Help buyers understand new construction before they visit a model home.",
+    body: "New builds raise questions about lots, timelines and representation. This page explains how you help buyers through the process and invites a call.",
     bullets: [
-      "Clear new construction value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "New community overviews",
+      "Build process explained",
+      "Buyer representation info",
     ],
     ctaLabel: "Build my new construction pages",
     kicker: "NEW CONSTRUCTION",
-    siteHeading: "New Construction—done right.",
+    siteHeading: "Buying new? Have an agent on your side.",
     photo: "/images/free-website/free-real-estate/new-construction.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "New construction homes",
   },
   {
     id: "home-valuation",
     label: "Home Valuation",
     icon: "users",
-    heading: "Turn home valuation searches into qualified enquiries.",
-    body: "A focused real estate website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Make your home value form the start of a seller relationship.",
+    body: "A valuation request is a seller raising their hand. This page keeps the form short, explains how you price homes and routes the lead to you fast.",
     bullets: [
-      "Clear home valuation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Short valuation form",
+      "How pricing works, in plain words",
+      "Fast follow-up routing",
     ],
-    ctaLabel: "Build my home valuation pages",
+    ctaLabel: "Build my home valuation page",
     kicker: "HOME VALUATION",
-    siteHeading: "Home Valuation—done right.",
+    siteHeading: "Get a clear value for your home.",
     photo: "/images/free-website/free-real-estate/home-valuation.webp",
-    photoAlt: "Real Estate service image",
+    photoAlt: "Home valuation request",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function RealEstateServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Real Estate website path
+                <Icon name={service.icon} /> Agent page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function RealEstateServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
+                    <span>Listings</span>
+                    <span>Sell</span>
                     <span>About</span>
-                    <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Home value
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function RealEstateServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Local knowledge. Clear advice. A simple next step for buyers and sellers.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Search homes</b>
+                      <b>Home value</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local buyers and sellers</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function RealEstateServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> LICENSED · LOCAL · RESPONSIVE
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function RealEstateServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Search homes</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built for real leads</strong>
+                  <small>Clear path from search to conversation</small>
                 </span>
               </div>
             </div>

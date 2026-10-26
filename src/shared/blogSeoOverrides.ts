@@ -15,6 +15,18 @@ export type BlogSeoOverride = {
 };
 
 export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
+  // 27 Oct 2026: title differed from nothing but the H1 (Semrush "duplicate
+  // content in h1 and title"); same keywords, distinct wording.
+  "google-ads-cost-philadelphia": {
+    title: "Google Ads Cost in Philadelphia (2026): Budget by Industry",
+    description:
+      "What Google Ads costs in Philadelphia by industry, how to set a starting budget and what a PPC agency adds on top. Use it to plan your next ad campaign.",
+  },
+  "local-seo-for-real-estate-agents": {
+    title: "Local SEO for Real Estate Agents: Rank on Google Maps (2026)",
+    description:
+      "Learn how real estate agents can improve Google Maps visibility through accurate GBP setup, reviews, local pages, practitioner rules, and local SEO.",
+  },
   "how-google-decides-who-ranks-locally-the-3-core-factors-explained": {
     title: "How Google Ranks Local Businesses: The 3 Core Factors",
     description:
@@ -118,7 +130,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   "gbp-reinstatement-denied-next-steps": {
     title: "Google Business Profile Reinstatement Denied? Next Steps",
     description:
-      "Google Business Profile reinstatement denied? Why Google rejects appeals, what to fix before the next one.",
+      "Google Business Profile reinstatement denied? Why Google rejects appeals, what to fix before you appeal again, and when a new profile is the wrong move.",
   },
   "how-to-use-the-google-business-profile-video-verification-to-get-reins": {
     title: "Google Business Profile Video Verification: How to Pass It",
@@ -138,7 +150,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   "how-to-rank-in-the-google-maps-pack-in-2026-the-complete-guide": {
     title: "How to Rank in the Google Map Pack in 2026: Complete Guide",
     description:
-      "How to rank in the Google Map Pack in 2026: categories, reviews, photos, citations, website signals.",
+      "How to rank in the Google Map Pack in 2026: the categories, reviews, photos, citations and website signals that move a local business into the top three.",
   },
   // Slug says "how long" but the H1 and body are the documents guide; the
   // "how long" copy below belongs to how-long-gbp-reinstatement-takes.

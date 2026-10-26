@@ -1,54 +1,74 @@
 /*
- * DELAWARE WEB DESIGN — geo page under the Delaware silo, built on the shared
- * location landing system (PhlLocationLanding / philaLanding.css) so it
- * renders identically to the other location pages. Aug 2026 SEO plan,
- * Content Gaps tab: captures ~1,200/mo of geo-scoped web design terms.
+ * REDESIGN DRAFT (22 Oct 2026) of /services/delaware/web-design, in the Dallas–Fort Worth
+ * layout (src/components/rd/delaware/DelawareLanding.tsx). Copy re-optimized
+ * on 24 Oct 2026 (docs/content-optimization-brief.md): fresh wording, no text
+ * shared with the live page or the sibling drafts, verified numbers only, no
+ * price estimates; build time 2–3 weeks (owner, 25 Oct 2026). Noindex; canonical and schema URLs point at the live page so the
+ * file can replace it as-is.
+ *
+ * DELAWARE WEB DESIGN — geo page under the Delaware silo. Aug 2026 SEO plan,
+ * Content Gaps tab: captures geo-scoped web design terms.
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhlLocationLanding, {
-  type PhlLandingData,
-} from "@/app/components/PhlLocationLanding";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import { FaStar } from "react-icons/fa";
 import {
   FiBarChart2,
-  FiClock,
-  FiCode,
-  FiFileText,
   FiLayout,
-  FiMapPin,
-  FiPhoneCall,
+  FiRefreshCw,
   FiSearch,
+  FiShoppingCart,
   FiSmartphone,
+  FiStar,
   FiTrendingUp,
   FiZap,
 } from "react-icons/fi";
-import { MdOutlineVerifiedUser } from "react-icons/md";
-import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+import { RiSearchLine } from "react-icons/ri";
+import {
+  SiCalendly,
+  SiGoogleanalytics,
+  SiGooglesearchconsole,
+  SiGoogletagmanager,
+  SiNextdotjs,
+  SiShopify,
+  SiWoocommerce,
+  SiWordpress,
+} from "react-icons/si";
 
 const PAGE_PATH = "/services/delaware/web-design";
 
 export const metadata: Metadata = {
-  title: { absolute: "Web Design Company in Delaware | Custom Websites" },
+  title: {
+    absolute: "Web Design Delaware | Custom Website Design in Dover, DE",
+  },
   description:
-    "Delaware web design company in Dover: custom, SEO-ready websites for businesses in New Castle County, Dover and Sussex County, built to rank and convert.",
+    "Delaware web design company in Dover: custom, SEO-ready websites for New Castle, Kent and Sussex County businesses, built fast, mobile-first and to convert.",
   keywords: [
     "web design delaware",
+    "delaware web design",
     "website design delaware",
     "web design company delaware",
-    "custom web design packages in delaware",
+    "custom website design delaware",
+    "custom website design new castle county",
+    "website development company new castle county",
+    "delaware seo and web design agency",
     "web design dover de",
     "web design wilmington de",
-    "delaware website designer",
-    "web design near me",
+    "website developer delaware",
+    "web development delaware",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -58,9 +78,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Web Design Company in Delaware | Custom Websites",
+    title: "Web Design Delaware | Custom Website Design in Dover, DE",
     description:
-      "Custom website design and development in Delaware — fast, SEO-ready sites built by a Dover-based agency.",
+      "Custom website design and development for Delaware businesses: fast, SEO-ready sites from a Dover-based agency.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -72,11 +92,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Delaware Web Design", url: PAGE_PATH },
 ]);
 
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "State", name: "Delaware" },
-});
-
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -85,7 +100,7 @@ const serviceJsonLd = {
   serviceType: "Web Design",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Custom website design and development for Delaware businesses — conversion-focused, SEO-ready and Core Web Vitals compliant, from a Dover-headquartered agency.",
+    "Custom website design and development for Delaware businesses: conversion-focused, SEO-ready and tested against Core Web Vitals, from a Dover-based agency.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -100,41 +115,43 @@ const serviceJsonLd = {
   },
 };
 
+/* FAQ (24 Oct 2026): questions owners search before hiring a web designer;
+   no market price ranges and no week counts. */
 const DelWebFaqs = [
   {
-    question: "How much does a website cost in Delaware?",
+    question: "What does a custom website cost in Delaware?",
     answer:
-      "A custom small-business website typically runs a few thousand dollars as a fixed-price project; brochure refreshes cost less, and builds with booking or e-commerce cost more. You get an exact quote after a free scoping call — and the price does not move once agreed. No hourly meters.",
+      "Every build gets one fixed price after a free scoping call, based on the number of pages, features such as booking or online sales, and how much copy you need. The quote holds once agreed, with no hourly billing. Brand-new businesses can also compare our LaunchPad packages, which have published prices.",
   },
   {
-    question: "Do you build SEO into the website or is that separate?",
+    question: "Is SEO included in your web design?",
     answer:
-      "Built in. Keyword-mapped page structure, clean headings, structured data, fast load times and internal linking ship with every build — that is the point of hiring a combined Delaware SEO and web design agency. Ongoing rankings work (content, links, reviews) is an optional monthly program on top.",
+      "Yes. Keyword-mapped pages, clean headings, schema, fast load times and internal links come with every build; that is the reason to hire one Delaware SEO and web design agency for both. Ongoing ranking work such as content, links and reviews is an optional monthly plan on top.",
   },
   {
-    question: "Can you redesign my existing site without losing my rankings?",
+    question: "Could a redesign cost me my Google rankings?",
     answer:
-      "Yes — rank-safe redesigns are a specialty. We map every existing URL, preserve or 301 each one, and carry over the content that earns your current rankings before anything is switched off. Most businesses pay twice: once for a designer, then again for an SEO agency to undo the designer's structure. We remove that second bill.",
+      "Not if the move is mapped out first. Before anything goes live we list every existing URL, keep or redirect every one, and move over the pages behind your current rankings. Many redesigns skip this step and lose traffic for months; we treat it as part of the build.",
   },
   {
-    question: "Which parts of Delaware do you build for?",
+    question: "Do you design websites across all of Delaware?",
     answer:
-      "The whole state: Wilmington, Newark, Middletown, Dover, Smyrna, Milford, Lewes, Rehoboth Beach and Seaford — plus Delaware companies serving markets over the line in Maryland, Pennsylvania and Delaware County, PA (different market from the state of Delaware, same team).",
+      "Yes, statewide. We build for businesses in Wilmington, Newark and Middletown, in Dover, Smyrna and Milford, and in Lewes, Rehoboth Beach and Seaford, as well as Delaware firms selling into Maryland and Pennsylvania. Most of the work runs remotely, and you are welcome to meet us at our Dover office.",
   },
   {
-    question: "How long does a Delaware website project take?",
+    question: "How quickly can my Delaware website go live?",
     answer:
-      "A typical service-business site ships in 4–8 weeks from kickoff, depending on content readiness and scope. Larger builds with booking, portals or e-commerce run longer. The scoping call gives you a real timeline before you commit.",
+      "A Delaware service-business website usually launches 2 to 3 weeks after kickoff. Page count, features and content readiness set the exact pace, and your quote includes a dated schedule, so you know the launch date before you commit.",
   },
   {
-    question: "Do I own the website when it's done?",
+    question: "Who owns the website after launch?",
     answer:
-      "Completely. Domain, hosting, code, content, analytics — everything is in your accounts from day one, and every build includes training so your team can edit content without calling us for every comma.",
+      "You do, completely. Domain, hosting, code, content and analytics are registered to you from the start, and we train your team to update pages themselves, without waiting on us.",
   },
   {
-    question: "How much does a business website cost in Delaware?",
+    question: "Can a new website come bundled with a marketing plan?",
     answer:
-      "Delaware businesses typically pay $2,500 to $8,000 for a custom site from a local agency, with e-commerce and larger service sites costing more. Zonic Media quotes a flat fee after a free consultation, includes local SEO setup for your Delaware service area, and offers a no-upfront-fee website for service businesses that pair it with a qualifying marketing plan.",
+      "Yes. Service businesses that sign up for a qualifying monthly marketing plan can get a new website with no upfront build fee. We confirm whether you qualify during your free review, along with exactly what the site and the plan include.",
   },
 ];
 
@@ -149,86 +166,103 @@ const delWebFaqJsonLd = {
   })),
 };
 
-const data: PhlLandingData = {
+/* ---------------------------------------------------------------------------
+   CONTENT (24 Oct 2026 re-optimization). Live URL's ranking terms (Semrush
+   US resource_organic, 24 Oct): website development company in new castle
+   county #11 (140) · wilmington de website design seo company #13 (90) ·
+   custom website design new castle county #14 (140) · delaware seo and web
+   design agency #16 (140) · custom website development & optimization
+   services in delaware #16 (140) · custom website designers in new castle
+   county #17 (140) · web design dover #26 (140) · web design delaware #28
+   (320) · website developer delaware #28 (110) · web development delaware
+   #33 (110) · delaware web design #34 (320). 22 Oct volumes: web design
+   delaware 390 (KD 11) · delaware web design 320 · website design delaware
+   170. phrase_these was out of API units on 24 Oct.
+--------------------------------------------------------------------------- */
+
+const hubLeft: HubApp[] = [
+  { icon: SiWordpress, name: "WordPress", tone: "wordpress" },
+  { icon: SiShopify, name: "Shopify", tone: "shopify" },
+  { icon: SiWoocommerce, name: "WooCommerce", tone: "woocommerce" },
+  { icon: SiNextdotjs, name: "Custom builds (Next.js)", tone: "nextjs" },
+];
+const hubRight: HubApp[] = [
+  { icon: SiGoogleanalytics, name: "Google Analytics", tone: "analytics" },
+  {
+    icon: SiGooglesearchconsole,
+    name: "Google Search Console",
+    tone: "searchconsole",
+  },
+  { icon: SiGoogletagmanager, name: "Google Tag Manager", tone: "tagmanager" },
+  { icon: SiCalendly, name: "Online booking", tone: "calendly" },
+];
+
+const data: DelawareData = {
   hero: {
-    eyebrow: "Web Design Company in Delaware",
-    h1Start: "Delaware Websites Built to",
-    h1Highlight: "Rank and Convert",
-    h1End: "From Day One",
-    sub: (
-      <>
-        Zonic Media builds custom websites for Delaware businesses from our
-        Dover headquarters — conversion-focused design, fast load times, and
-        an SEO-ready structure from the first commit. Whether you need custom
-        website design in New Castle County, a rebuild for a Dover trade
-        business, or a booking site for a Sussex County beach-market company,
-        the site ships ready to rank, not just ready to look at.
-      </>
-    ),
+    eyebrow: "",
+    h1Start: "Delaware Web Design Company",
+    h1Highlight: "Building Custom, SEO-Ready Websites",
+    sub: "From our office in Dover, Zonic Media designs and builds custom sites for Delaware companies. Each site is fast on phones, structured for search and built around one goal: turning visitors from Wilmington to Rehoboth Beach into calls and quote requests.",
     media: {
       src: "/images/geo/delaware-web-design/delaware-web-design-studio.jpg",
       alt: "Web designer building a Delaware service business website in a sunlit studio",
     },
-    floatA: {
-      strong: "Core Web Vitals",
-      text: "passed at launch, every build",
-    },
-    floatB: { strong: "SEO built in", text: "not bolted on later" },
+    floatA: { strong: "Core Web Vitals", text: "tested before every launch" },
+    floatB: { strong: "SEO built in", text: "from the first page" },
     stats: [
       {
+        icon: <FiZap aria-hidden="true" />,
+        num: "Fast",
+        label: "Pages that load quickly on any phone",
+      },
+      // Not shown: the template's Google rating card takes this slot.
+      {
+        icon: <FiStar aria-hidden="true" />,
+        num: "5.0",
+        label: "Our rating on Google",
+      },
+      {
         icon: <FiTrendingUp aria-hidden="true" />,
-        num: "100+",
-        label: "Sites designed & launched",
+        num: "More quotes",
+        label: "From pages that ask for the job",
       },
       {
-        icon: <FaStar aria-hidden="true" />,
-        num: "4.9/5",
-        label: "Average client rating on Clutch",
-      },
-      {
-        icon: <FiClock aria-hidden="true" />,
-        num: "4–8 wks",
-        label: "Typical project timeline",
-      },
-      {
-        icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        num: "100%",
-        label: "You own everything we build",
+        icon: <FiSearch aria-hidden="true" />,
+        num: "SEO",
+        label: "Built in from the first page",
       },
     ],
-    proof: "by the Delaware businesses we build for",
-    cta: "Get Your Free Website Review",
+    proof: "",
+    cta: "Request a Free Website Review",
   },
   about: {
-    eyebrow: "Why Delaware Builds Are Different",
-    h2Start: "New Castle County Competes With Philadelphia.",
-    h2Highlight: "Your Website Has To.",
+    eyebrow: "Website design in Delaware",
+    h2Start: "Custom Website Design for",
+    h2Highlight: "Delaware Businesses.",
     leads: [
       <>
-        New Castle County businesses compete against the Philadelphia metro,
-        and a slow template site loses that fight before it starts. Our
-        custom website design services in Delaware start from your
-        customer&apos;s search: what they type, what convinces them, and what
-        makes them call. Design, copy and structure all serve that path.
+        Visitors decide in seconds whether to stay, and in New Castle County you
+        are also up against Philadelphia firms for the same clicks. We plan each
+        page around how your customers search and choose, so it answers their
+        question and makes calling you easy.
       </>,
       <>
-        Most businesses pay twice — once for a designer, then again for an
-        SEO agency to undo the designer&apos;s structure. As a combined{" "}
+        Because our{" "}
         <Link href="/services/delaware/seo" className="phl-inline-link">
           Delaware SEO
         </Link>{" "}
-        and web design agency we build the search foundation into the site
-        itself: keyword-mapped pages, clean heading structure, structured
-        data, internal links and Core Web Vitals — so the site starts earning
-        rankings the week it launches.
+        and web design teams work as one agency, keyword-mapped pages, clean
+        structure and schema ship with every build. After launch,{" "}
+        <Link
+          href="/services/delaware/digital-marketing"
+          className="phl-inline-link"
+        >
+          Delaware digital marketing
+        </Link>{" "}
+        keeps the leads coming.
       </>,
     ],
-    checks: [
-      "Custom design, no resold templates",
-      "SEO architecture built in",
-      "Core Web Vitals passed",
-      "You own every asset",
-    ],
+    checks: [],
     collageA: {
       src: "/images/geo/delaware-web-design/responsive-web-design-devices.jpg",
       alt: "Designer testing a responsive website on laptop, tablet, and phone",
@@ -240,433 +274,424 @@ const data: PhlLandingData = {
     badgeText: "Delaware Web Design • Zonic Media •",
   },
   services: {
-    eyebrow: "What We Build",
-    h2: "Website Development Across the State, One Standard",
+    eyebrow: "",
+    h2: "Website Design and Development in Delaware",
+    lead: "Our custom website design services in Delaware cover new sites, redesigns and online stores for local businesses, each quoted as a fixed project with search built in from page one.",
     cards: [
       {
         tone: "blue",
         icon: <FiLayout aria-hidden="true" />,
-        title: "Business Websites & Rebuilds",
-        desc: (
-          <>
-            Business sites, landing pages and full rebuilds — the same craft
-            behind our{" "}
-            <Link href="/services/web-design" className="phl-inline-link">
-              web design service
-            </Link>
-            , scoped for Delaware markets from Wilmington to the beaches.
-          </>
-        ),
+        title: "Custom Websites for Local Businesses",
+        desc: "Designed around your services and buyers, from a focused five-page site to a full service-area build.",
+        points: [
+          "Your brand, not a template",
+          "A page per service and town",
+          "One clear next step per page",
+        ],
+        href: "/services/web-design",
+        link: "See our web design service",
       },
       {
         tone: "gold",
-        icon: <FiSmartphone aria-hidden="true" />,
-        title: "Mobile-First, Conversion-First",
-        desc: "Layouts that convert on the devices your customers actually use, with the call button where a thumb lands and forms short enough to finish.",
+        icon: <FiRefreshCw aria-hidden="true" />,
+        title: "Website Redesigns Without Ranking Loss",
+        desc: "Refresh a dated site without losing the search traffic it has earned. Every URL is mapped and redirected before launch.",
+        points: [
+          "Old URLs mapped and redirected",
+          "Ranking content carried over",
+          "Faster, clearer layouts",
+        ],
+        href: "#de-contact",
+        link: "Ask for a redesign quote",
       },
       {
         tone: "blue",
+        icon: <FiSmartphone aria-hidden="true" />,
+        title: "Layouts Designed for Phones",
+        desc: "Most local customers meet you on a phone, so we design the small screen first and then scale up to desktop.",
+        points: [
+          "Big, thumb-friendly buttons",
+          "Tap-to-call in the header",
+          "Forms that are quick to finish",
+        ],
+        href: "/services/launchpad",
+        link: "Starting out? See LaunchPad",
+      },
+      {
+        tone: "gold",
         icon: <FiZap aria-hidden="true" />,
-        title: "Speed & Core Web Vitals",
-        desc: "Fast hosting setup with image, font and script optimization. Every build passes Core Web Vitals at launch — because rankings die on slow sites.",
+        title: "Fast Load Times and Core Web Vitals",
+        desc: "Quick pages rank higher and convert more, so every build is tuned for speed and tested against Core Web Vitals.",
+        points: [
+          "Compressed images, lean code",
+          "Mobile PageSpeed tested",
+          "Hosting tuned for speed",
+        ],
+        href: "#de-contact",
+        link: "Request a speed check",
+      },
+      {
+        tone: "blue",
+        icon: <FiShoppingCart aria-hidden="true" />,
+        title: "Online Booking and Stores",
+        desc: "Booking, quote requests, client portals and Shopify or WooCommerce stores, built around the way you sell.",
+        points: [
+          "Booking and quote forms",
+          "Shopify and WooCommerce",
+          "Secure checkout setup",
+        ],
+        href: "#de-contact",
+        link: "Talk about your store",
       },
       {
         tone: "gold",
         icon: <FiSearch aria-hidden="true" />,
-        title: "SEO-Ready Architecture",
-        desc: (
-          <>
-            Keyword-mapped page structure, schema, and internal links from
-            the first commit — pair the build with{" "}
-            <Link href="/services/delaware/seo" className="phl-inline-link">
-              Delaware SEO
-            </Link>{" "}
-            and the site becomes a lead source, not a brochure.
-          </>
-        ),
-      },
-      {
-        tone: "blue",
-        icon: <FiCode aria-hidden="true" />,
-        title: "Booking, Portals & E-Commerce",
-        desc: "Booking flows, client portals and stores when the business needs more than pages — built on the same fast, ownable foundation.",
-      },
-      {
-        tone: "gold",
-        icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Training & Handover",
-        desc: "Accessible, AA-contrast design your team can keep using: every build includes training so you can edit content without calling us for every comma.",
+        title: "SEO Built Into Every Page",
+        desc: "Keyword-mapped URLs, headings, schema and internal linking in place at launch, ready for a local SEO plan.",
+        points: [
+          "Keyword-mapped structure",
+          "Schema and FAQ markup",
+          "Ready for monthly SEO",
+        ],
+        href: "/services/delaware/seo",
+        link: "Delaware SEO services",
       },
     ],
   },
   band: {
-    eyebrow: "SEO + Web Design, One Team",
-    h2: "Website and SEO, Built as One System",
+    eyebrow: "",
+    h2: "Your Website and SEO, Planned Together",
     leads: [
       <>
-        The agencies at the top of Delaware&apos;s search results all treat
-        the website and the SEO as a single system. So do we. The build ships
-        with the search foundation inside it, and the optional monthly
-        program — content, links, reviews — compounds from there. One agency,
-        one strategy, from{" "}
+        Delaware&apos;s best-ranking sites treat design and search as one job.
+        Yours launches with the search groundwork in place, and an optional
+        monthly SEO plan builds on it, from{" "}
         <Link
           href="/services/wilmington/digital-marketing"
           className="phl-inline-link"
         >
-          Wilmington and New Castle County
+          Wilmington
         </Link>{" "}
-        to the Sussex beaches.
+        to the Sussex shore.
       </>,
       <>
-        If your current site is the bottleneck, the free review will show it
-        with numbers — speed, structure, conversion blockers — and exactly
-        what a rebuild would change. No obligation, and the teardown is yours
-        to keep either way.
+        Unsure whether your current site is the problem? The free review scores
+        its speed, structure and lost-lead points and shows what a rebuild would
+        fix.
       </>,
     ],
-    cta: "Get Your Free Site Teardown",
+    cta: "Review My Current Site",
     console: {
-      title: "Site Performance Console",
-      tag: "Typical launch",
+      title: "Sample launch report",
+      tag: "Sample site",
       metrics: [
-        { strong: "95+", label: "PageSpeed score" },
-        { strong: "<2s", label: "Mobile load time" },
-        { strong: "+63%", label: "Form conversions" },
+        { strong: "Passed", label: "Core Web Vitals" },
+        { strong: "Mapped", label: "Keywords per page" },
+        { strong: "Live", label: "Call and form tracking" },
       ],
       barsLabel: "Build quality signals",
       bars: [
         { label: "Core Web Vitals", val: 96, tone: "blue" },
         { label: "Mobile usability", val: 98, tone: "gold" },
-        { label: "SEO architecture", val: 94, tone: "blue" },
-        { label: "Accessibility (AA)", val: 92, tone: "gold" },
+        { label: "SEO structure", val: 94, tone: "blue" },
+        { label: "Accessibility", val: 92, tone: "gold" },
       ],
       pills: [
-        { icon: "pin", text: "Built in Dover, DE" },
-        { icon: "star", text: "5.0 on Clutch" },
-        { icon: "pin", text: "Statewide clients" },
+        { icon: "pin", text: "Designed in Dover" },
+        { icon: "star", text: "5.0 Google rating" },
+        { icon: "pin", text: "All three counties" },
       ],
     },
   },
   process: {
-    eyebrow: "How It Works",
-    h2: "From Scoping Call to Launch in Four Steps",
+    eyebrow: "",
+    h2: "Your Website Build, Start to Launch",
+    // Stage names instead of week counts (build time is unresolved sitewide).
     steps: [
       {
-        tag: "Week 1",
-        title: "Free Website & SEO Review",
-        desc: "Send us your current site and we return a teardown — speed, structure, conversion blockers and what a rebuild would change — with a fixed-price quote.",
+        tag: "Kickoff",
+        title: "Free Site Review and Quote",
+        desc: "We test your current site's speed, structure and conversion gaps, then send a fixed quote and a launch date.",
       },
       {
-        tag: "Weeks 2–3",
-        title: "Design & Content Mapping",
-        desc: "Wireframes and design direction built around your customer's search path, with every page keyword-mapped before a pixel is polished.",
+        tag: "Planning",
+        title: "Sitemap, Wireframes and Page Copy",
+        desc: "Each page is planned around what Delaware customers search, with wireframes and copy you sign off before design begins.",
       },
       {
-        tag: "Weeks 4–7",
-        title: "Build, Optimize, Test",
-        desc: "Development on a fast, ownable stack; images, fonts and scripts optimized; Core Web Vitals and accessibility checked before you ever see a staging link.",
-        chips: ["Fast stack", "Schema built in", "AA contrast"],
+        tag: "Build",
+        title: "Design, Development and Testing",
+        desc: "We design and build mobile-first, tune every page for speed and test on phones, tablets and desktops.",
+        chips: ["Lean code", "Schema added", "Accessible colors"],
       },
       {
-        tag: "Launch +",
-        title: "Rank-Safe Launch & Training",
-        desc: "Every old URL preserved or 301'd, analytics wired, and your team trained. Optional monthly SEO takes it from launched to ranking.",
-        chips: ["301 map", "Analytics wired", "Team training"],
+        tag: "Launch",
+        title: "Go Live, Redirect and Hand Over",
+        desc: "Old URLs redirected, analytics connected and your team trained to edit, so the new site holds its rankings and keeps growing.",
+        chips: ["Redirect map", "Analytics on", "Editor training"],
       },
     ],
-    visualTitle: "What a typical Delaware build scores at launch",
+    visualTitle: "Example launch scores",
     visualBars: [
       { label: "PageSpeed (mobile)", val: 95 },
       { label: "Core Web Vitals", val: 96 },
       { label: "SEO readiness", val: 94 },
     ],
-    ctaPrimary: "Start With the Review",
+    ctaPrimary: "Request a Free Website Review",
   },
-  results: {
-    eyebrow: "Real Results",
-    h2: "What Happens When the Site Stops Being the Bottleneck",
-    lead: "Different counties, different industries — the same build standard, applied every time.",
-    cards: [
-      {
-        icon: <FiPhoneCall aria-hidden="true" />,
-        industry: "Trade business · Kent County",
-        metric: "+63%",
-        label: "Form conversions after rebuild",
-        desc: (
-          <>
-            Same traffic, same rankings — a faster, conversion-first rebuild
-            turned the visits the business already had into calls, before the{" "}
-            <Link href="/services/delaware/seo" className="phl-inline-link">
-              SEO program
-            </Link>{" "}
-            multiplied the traffic itself.
-          </>
-        ),
-      },
-      {
-        icon: <RiSearchLine aria-hidden="true" />,
-        industry: "Professional practice · Wilmington",
-        metric: "95+",
-        label: "Mobile PageSpeed at launch",
-        desc: "From a 40-something template score to a 95+ custom build — and the rankings the practice had been paying an SEO vendor to chase followed the speed.",
-      },
-      {
-        icon: <FiMapPin aria-hidden="true" />,
-        industry: "Beach-market business · Sussex County",
-        metric: "2×",
-        label: "Bookings in the first season",
-        desc: "A booking flow built for the summer surge, launched ahead of the season — with the seasonal content strategy to match.",
-      },
-    ],
-  },
+  // Kept for the type; the white band shows the feature rows instead.
+  results: { eyebrow: "", h2: "", cards: [] },
   showcase: {
     image: {
       src: "/images/geo/delaware-web-design/delaware-website-portfolio-team.jpg",
       alt: "Web design team reviewing local business websites and printed page concepts",
     },
     floats: [
-      { num: "95+", label: "Average launch PageSpeed" },
-      { num: "4–8", label: "Weeks from kickoff to launch" },
-      { num: "100%", label: "Client-owned assets" },
+      { num: "Fast", label: "Mobile load times" },
+      { num: "SEO", label: "Built into every page" },
+      { num: "Yours", label: "Domain, code and content" },
     ],
   },
   compare: {
-    h2: "Zonic vs. a Typical Web Design Shop",
-    lead: "The difference is what happens after the design looks good — because a website's job is to rank and convert, not sit pretty.",
-    themTitle: "Typical Design Shop",
-    themSub: "Why most new sites never earn their cost back",
+    h2: "Picking a Web Design Company in Delaware",
+    lead: "What's different when your designers also know how search works.",
+    themTitle: "The Template-First Studio",
+    themSub: "Why many new sites never pay off",
     them: [
-      "Template resold at custom prices",
-      "Design first, search structure never",
-      "Slow page loads that bleed rankings and ads budget",
-      "Launches that break every old URL",
-      "You call the shop for every content change",
+      "Templates sold as custom work",
+      "Looks first, search structure never",
+      "Slow pages that cost rankings and ad spend",
+      "Launches that break old URLs",
+      "A support ticket for every small edit",
     ],
-    usTitle: "Web Design with Zonic Media",
-    usSub: "Built to rank, built to convert, built to hand over",
+    usTitle: "Websites by Zonic Media",
+    usSub: "Designed to rank, convert and belong to you",
     us: [
-      "Custom design around your customer's search path",
-      "Keyword-mapped pages and schema from the first commit",
-      "Core Web Vitals passed at launch, verified",
-      "Rank-safe launches — every URL preserved or 301'd",
-      "Training included; your team edits without us",
+      "Custom design shaped by how buyers search",
+      "Keyword-mapped pages and schema at launch",
+      "Core Web Vitals tested before go-live",
+      "Every old URL kept or redirected",
+      "Training so your team can make edits",
     ],
-    scoreTitle: "Build Scorecard",
-    scoreSub: "A typical rebuild, before vs. after",
+    scoreTitle: "Sample Rebuild Scorecard",
+    scoreSub: "Illustrative scores before and after a rebuild",
     scoreRows: [
-      { label: "Mobile PageSpeed", before: 43, after: 95 },
-      { label: "Core Web Vitals", before: 31, after: 96 },
-      { label: "SEO readiness", before: 38, after: 94 },
-      { label: "Form conversion rate", before: 35, after: 78 },
+      { label: "Mobile PageSpeed", before: 45, after: 94 },
+      { label: "Core Web Vitals", before: 35, after: 95 },
+      { label: "SEO readiness", before: 40, after: 92 },
+      { label: "Form conversion", before: 30, after: 75 },
     ],
   },
   why: {
-    h2: "A Build Partner, Not a Handoff and an Invoice",
-    lead: "The design is the output. The inputs are strategy, structure, and accountability — and that is what you are actually buying.",
+    h2: "Custom WordPress Website Design, Brief to Launch Day",
+    lead: "Design is what people see. What you're paying for is the plan underneath and a site that keeps earning after launch.",
     cards: [
       {
         icon: <RiSearchLine aria-hidden="true" />,
-        title: "Search is in the Blueprint",
-        desc: (
-          <>
-            We are an SEO company that builds websites, not a design shop that
-            mentions SEO. Everything the{" "}
-            <Link href="/" className="phl-inline-link">
-              Zonic Media
-            </Link>{" "}
-            team knows about rankings goes into the architecture.
-          </>
-        ),
+        title: "SEO Shapes the Sitemap",
+        desc: "Search planning comes first: every URL, heading and page maps to what Delaware buyers type.",
       },
       {
         icon: <FiZap aria-hidden="true" />,
-        title: "Fixed Price, Real Timeline",
-        desc: "Quoted after a free scoping call, the price does not move once agreed. A typical service-business site ships in 4–8 weeks, and you know the date before you commit.",
+        title: "A Fixed Quote, Agreed Up Front",
+        desc: "Quoted after a free call. The price holds, and your launch date is set before work begins.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,
-        title: "You Own Everything",
-        desc: "Domain, hosting, code, content, analytics — in your accounts from day one. If we ever part ways, you lose nothing but our company.",
+        title: "Domain, Code and Content Are Yours",
+        desc: "Domain, hosting, code and content live in your accounts, and training is included.",
       },
     ],
     banner: {
-      eyebrow: "Free Website & SEO Review",
-      h3: "See What a Delaware Build Would Change",
-      p: "Send us your current site and we will return a teardown — speed, structure, conversion blockers — with a fixed-price quote for the rebuild. Free, and yours to keep either way.",
+      eyebrow: "",
+      h3: "Find Out What a New Website Would Fix",
+      p: "Send your current site and get back a clear report on its speed, structure and lost leads, plus a fixed quote for a rebuild. No obligation.",
       checks: [
-        "Speed & Core Web Vitals scores",
-        "Structure & SEO gaps",
-        "Conversion blockers found",
-        "Fixed-price rebuild quote",
+        "Mobile speed results",
+        "SEO and structure gaps",
+        "Where leads are lost",
+        "A fixed rebuild quote",
       ],
-      cta: "Claim Your Free Review",
+      cta: "Send Me My Site Report",
       audit: {
         title: "Site Health Score",
-        tag: "Typical launch",
+        tag: "Example",
         score: "95",
         grade: "Excellent",
-        gradeDesc:
-          "Where our Delaware builds land at launch — before the monthly SEO program compounds it further",
+        gradeDesc: "Sample launch scorecard",
         rows: [
           { label: "Core Web Vitals", flag: "Passed" },
           { label: "Mobile usability", flag: "A+ grade" },
-          { label: "SEO architecture", flag: "Keyword-mapped" },
+          { label: "SEO structure", flag: "Keyword-mapped" },
         ],
       },
     },
   },
-  marquee: [
-    "Delaware Web Design",
-    "Wilmington",
-    "Newark",
-    "Dover",
-    "Middletown",
-    "Milford",
-    "Lewes",
-    "Rehoboth Beach",
-    "SEO-Ready Builds",
-  ],
+  marquee: [],
+  // Kept for the type; the platform hub takes the hub slot. Chips feed the
+  // hero card.
   engine: {
-    eyebrow: "Everything Working Together",
-    h2: "Six Build Signals, One Converting Website",
-    lead: (
-      <>
-        A website that earns its cost back is not one decision, it is six
-        working at once. Skip any of them and the leads notice. We build all
-        six into every Delaware project — and when the site is live, our{" "}
-        <Link href="/services/delaware/seo" className="phl-inline-link">
-          Delaware SEO program
-        </Link>{" "}
-        turns it into a compounding lead source.
-      </>
-    ),
-    coreStrong: "Your Delaware website",
-    coreSub: "Fast · ranking · converting",
-    coreCta: "Get Your Free Review",
-    nodes: [
-      {
-        icon: <FiLayout aria-hidden="true" />,
-        title: "Custom Design",
-        outcome: "Trust at a glance",
-        tone: "blue",
-        left: "50%",
-        top: "7%",
-      },
-      {
-        icon: <FiZap aria-hidden="true" />,
-        title: "Speed",
-        outcome: "Vitals passed",
-        tone: "gold",
-        left: "82%",
-        top: "28.5%",
-      },
-      {
-        icon: <FiSearch aria-hidden="true" />,
-        title: "SEO Structure",
-        outcome: "Ready to rank",
-        tone: "blue",
-        left: "82%",
-        top: "71.5%",
-      },
-      {
-        icon: <FiSmartphone aria-hidden="true" />,
-        title: "Mobile-First",
-        outcome: "Converts on phones",
-        tone: "gold",
-        left: "50%",
-        top: "93%",
-      },
-      {
-        icon: <FiFileText aria-hidden="true" />,
-        title: "Content",
-        outcome: "Answers that sell",
-        tone: "blue",
-        left: "18%",
-        top: "71.5%",
-      },
-      {
-        icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Analytics",
-        outcome: "Proof from day one",
-        tone: "gold",
-        left: "18%",
-        top: "28.5%",
-      },
-    ],
-    chipsLabel: "Building Delaware websites for",
+    eyebrow: "",
+    h2: "",
+    lead: null,
+    coreStrong: "",
+    coreSub: "",
+    coreCta: "",
+    nodes: [],
+    chipsLabel: "Industries we build websites for",
     chips: [
-      "Home Services",
-      "Healthcare & Dental",
-      "Legal & Financial",
-      "Restaurants & Cafés",
-      "Salons & Wellness",
-      "Auto & Repair",
-      "Retail Storefronts",
-      "Trades & Contractors",
+      "Builders & Trades",
+      "Medical Practices",
+      "Professional Services",
+      "Cafés & Restaurants",
+      "Boutiques",
+      "Auto Services",
+      "Wellness Studios",
+      "Nonprofits",
     ],
   },
   faqs: {
-    eyebrow: "FAQs",
-    h2: "Straight Answers About Web Design in Delaware",
-    lead: "Pricing, timelines, ownership, and what a rank-safe redesign actually involves. If your question is not here, send it through the form — a strategist answers, not a sales script.",
-    cta: "Ask About Your Project",
+    eyebrow: "",
+    h2: "Web Design Questions From Delaware Owners",
+    lead: "Cost, timing, ownership and keeping your rankings.",
+    cta: "",
     items: DelWebFaqs,
   },
-  grow: {
-    eyebrow: "Pair It With",
-    h2: "The Site is the Foundation. Here is What Builds On It.",
-    lead: (
-      <>
-        A launched site is step one — our{" "}
-        <Link
-          href="/services/delaware/digital-marketing"
-          className="phl-inline-link"
-        >
-          digital marketing agency in Delaware
-        </Link>{" "}
-        turns it into a lead source.
-      </>
-    ),
-    cards: [
-      {
-        href: "/services/delaware/seo",
-        icon: <FiSearch aria-hidden="true" />,
-        title: "SEO Company in Delaware",
-        desc: "The rankings program that turns your new site into a lead source.",
-        cta: "See Delaware SEO",
-      },
-      {
-        href: "/services/wilmington/digital-marketing",
-        icon: <FiMapPin aria-hidden="true" />,
-        title: "Wilmington Digital Marketing",
-        desc: "City-level marketing for New Castle County's biggest market.",
-        cta: "See Wilmington",
-      },
-      {
-        href: "/services/web-design",
-        icon: <FiLayout aria-hidden="true" />,
-        title: "Web Design & Development",
-        desc: "Our full web design service — process, stack and portfolio.",
-        cta: "See the full service",
-      },
-    ],
-  },
+  grow: { eyebrow: "", h2: "", lead: null, cards: [] },
   form: {
-    eyebrow: "Get Started",
-    h2: "Claim Your Free Website & SEO Review",
-    lead: "Send us your current site (or your plans for a new one) and we will return a teardown with a fixed-price quote — speed, structure, conversion blockers, and what a Delaware build would change.",
+    eyebrow: "",
+    h2: "Request a Delaware Website Review",
+    lead: "Tell us about your project and we'll review your current site and send a fixed quote.",
     formType: "delaware-web-design",
     badge: "Free Review",
-    title: "Get Your Free Website Review",
+    title: "Your website review",
     subtitle:
-      "No contracts, no pressure — just a clear picture of what your site does well and what a rebuild would change.",
+      "Share your current site or your idea and we'll tell you what works, what slows you down and what a new build would fix.",
     submitText: "Send My Free Review",
-    messageLabel: "Tell us about your project",
+    messageLabel: "What should the new site do?",
     messagePlaceholder:
-      "Your business, your current website (if any), and what the new site needs to do",
+      "Your business, your current website (if any) and the goals for the new one",
     defaultServices: ["Web Design"],
   },
   relatedCurrent: PAGE_PATH,
+};
+
+const extras: DelawareExtras = {
+  kind: "web",
+  pricing: {
+    title: "Plans to Grow Your Site After Launch",
+    lead: "After launch, these monthly plans keep your new site climbing in search and producing leads.",
+    compareTitle: "Post-Launch Plans Compared",
+    compareLead: "What each plan adds once your site is live.",
+    addOnsTitle: "Website Extras and Add-Ons",
+    addOnsLead:
+      "Extra pages, migrations and new builds, priced before we start.",
+    customTitle: "Want the build and the marketing in one quote?",
+    customText:
+      "Tell us about your project and we'll price the site and the plan together.",
+  },
+  aboutTitle: ["Custom Website", "Design for Delaware", "Businesses."],
+  aboutCard: {
+    kicker: "Designed in Dover, DE",
+    title: "What each build includes",
+    points: [
+      "Custom design, never a resold template",
+      "Keyword-mapped pages with schema",
+      "Speed tested on real phones",
+      "Training so your team can edit",
+    ],
+    foot: "8 The Green, STE B, Dover, DE 19901",
+  },
+  // Own pillar colours (owner: a different set on every page).
+  pillars: ["#be185d", "#ecfccb", "#ede9fe", "#0c4a6e"],
+  features: {
+    h2: "Three Things Every Delaware Website Needs",
+    lead: "Phone-first design, fast load times and pages that ask for the job: the core of every site we build.",
+    items: [
+      {
+        label: "Design",
+        title: "Built for the Small Screen First",
+        body: "Most customers look you up on a phone, usually on the move. We lay out each page for small screens first, then scale up, so services, reviews and your number stay one tap away.",
+        points: [
+          {
+            t: "Phone-first layouts",
+            d: "Designed small, then scaled to desktop.",
+          },
+          {
+            t: "Sticky call button",
+            d: "Your number stays visible as they scroll.",
+          },
+          { t: "Easy reading", d: "Clear type and spacing on any screen." },
+          {
+            t: "Device testing",
+            d: "Checked on iPhone, Android, tablet and desktop.",
+          },
+        ],
+        href: "/services/web-design",
+        link: "Explore web design",
+        ui: "devices",
+      },
+      {
+        label: "Speed",
+        title: "Speed That Keeps Visitors Around",
+        body: "Slow pages lose visitors and rankings. We keep code lean, compress every image and test each page against Core Web Vitals before launch, so the site feels instant on a phone.",
+        points: [
+          { t: "Lean code", d: "No bloated themes or heavy page builders." },
+          { t: "Sized images", d: "Compressed for every screen." },
+          { t: "Mobile vitals", d: "Tested on phones before going live." },
+          { t: "Quick hosting", d: "Configured for speed and security." },
+        ],
+        href: "#de-contact",
+        link: "Get a free speed test",
+        ui: "lighthouse",
+      },
+      {
+        label: "Conversion",
+        title: "Every Page Asks for the Next Step",
+        body: "A page that never asks for the work wastes its traffic. Each page gets one clear action, a short form and tracking, so you can see which pages produce leads.",
+        points: [
+          { t: "Clear action", d: "Call, quote or book on every page." },
+          { t: "Quick forms", d: "Name, number and the job." },
+          { t: "Proof up front", d: "Reviews and badges where people decide." },
+          { t: "Leads tracked", d: "Calls and forms counted from day one." },
+        ],
+        href: "/services/launchpad",
+        link: "LaunchPad for new businesses",
+        ui: "leadform",
+      },
+    ],
+  },
+  platforms: {
+    h2: "Built on Platforms You Own, Wired for Tracking",
+    lead: "We build on WordPress, Shopify or custom code that belongs to you, then connect analytics, Search Console and booking before launch, so you can see the site working from day one.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Build platforms",
+    rightLabel: "Connected at launch",
+    centerIcon: <FiLayout aria-hidden="true" />,
+    centerTitle: "Your website",
+    centerSub: "owned and edited by you",
+  },
+  phone: "site",
+  darkUi: "build",
+  scoreStyle: "tiles",
+  noGrow: true,
+  reviewsTitle: "Kind Words From Clients",
+  contact: {
+    before: "Let’s Build",
+    after: "a Website That Brings Leads",
+    lead: "Send your current site or just the idea. We'll reply with a free review, a fixed quote and a realistic launch date.",
+  },
+  stepLinks: [
+    "#de-contact",
+    "/services/web-design",
+    "/services/launchpad",
+    "/services/delaware/seo",
+  ],
+  phoneImage: {
+    src: "/images/geo/delaware-web-design/delaware-web-design-studio.jpg",
+    alt: "",
+  },
 };
 
 function Page() {
@@ -678,19 +703,13 @@ function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(delWebFaqJsonLd) }}
       />
-      <PhlLocationLanding data={data} />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

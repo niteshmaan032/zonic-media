@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "back-pain-care",
     label: "Back Pain Care",
     icon: "heart",
-    heading: "Turn back pain care searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Help people with back pain see how your care works.",
+    body: "Back pain searches are personal. This page explains your approach, what a first visit involves and how to book, without promising specific results.",
     bullets: [
-      "Clear back pain care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "First-visit steps explained",
+      "Care approach in plain words",
+      "Booking and call tracking",
     ],
-    ctaLabel: "Build my back pain care pages",
+    ctaLabel: "Build my back pain page",
     kicker: "BACK PAIN CARE",
-    siteHeading: "Back Pain Care—done right.",
+    siteHeading: "Back pain? Let’s talk about your options.",
     photo: "/images/free-website/free-chiropractic/back-pain-care.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "Chiropractic care for back pain",
   },
   {
     id: "neck-pain-care",
     label: "Neck Pain Care",
     icon: "target",
-    heading: "Turn neck pain care searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn neck pain and stiffness searches into booked visits.",
+    body: "Desk work, sleep and stress send people searching. This page covers common neck concerns, your exam process and a simple path to book.",
     bullets: [
-      "Clear neck pain care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Common neck concerns covered",
+      "Exam and care process",
+      "Simple booking form",
     ],
-    ctaLabel: "Build my neck pain care pages",
+    ctaLabel: "Build my neck pain page",
     kicker: "NECK PAIN CARE",
-    siteHeading: "Neck Pain Care—done right.",
+    siteHeading: "Neck stiffness? Start with an exam.",
     photo: "/images/free-website/free-chiropractic/neck-pain-care.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "Chiropractic care for neck pain",
   },
   {
     id: "sports-injuries",
     label: "Sports Injuries",
     icon: "wrench",
-    heading: "Turn sports injuries searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Reach active patients looking for sports injury care.",
+    body: "Athletes want a provider who understands training and recovery. This page explains your sports care, who you work with and how to book.",
     bullets: [
-      "Clear sports injuries value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Sport and activity sections",
+      "Care and recovery approach",
+      "Fast booking for active patients",
     ],
-    ctaLabel: "Build my sports injuries pages",
+    ctaLabel: "Build my sports injury page",
     kicker: "SPORTS INJURIES",
-    siteHeading: "Sports Injuries—done right.",
+    siteHeading: "Care built around your training.",
     photo: "/images/free-website/free-chiropractic/sports-injuries.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "Chiropractic care for sports injuries",
   },
   {
     id: "auto-accident-care",
     label: "Auto Accident Care",
     icon: "zap",
-    heading: "Turn auto accident care searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Guide people after a car accident toward an evaluation.",
+    body: "After a crash, people have questions about care, paperwork and insurance. This page explains your process and the documents to bring, with booking close by.",
     bullets: [
-      "Clear auto accident care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Evaluation process explained",
+      "Insurance and paperwork info",
+      "Priority booking path",
     ],
-    ctaLabel: "Build my auto accident care pages",
+    ctaLabel: "Build my auto accident page",
     kicker: "AUTO ACCIDENT CARE",
-    siteHeading: "Auto Accident Care—done right.",
+    siteHeading: "In a car accident? Book an evaluation.",
     photo: "/images/free-website/free-chiropractic/auto-accident-care.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "Chiropractic evaluation after a car accident",
   },
   {
     id: "wellness-care",
     label: "Wellness Care",
     icon: "layers",
-    heading: "Turn wellness care searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Keep current patients coming back for wellness care.",
+    body: "Wellness and maintenance visits build a steady schedule. This page explains ongoing care options and makes rebooking simple for returning patients.",
     bullets: [
-      "Clear wellness care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Wellness care options",
+      "Return-visit booking",
+      "Care plan details, if offered",
     ],
-    ctaLabel: "Build my wellness care pages",
+    ctaLabel: "Build my wellness care page",
     kicker: "WELLNESS CARE",
-    siteHeading: "Wellness Care—done right.",
+    siteHeading: "Ongoing care that fits your routine.",
     photo: "/images/free-website/free-chiropractic/wellness-care.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "Chiropractic wellness care",
   },
   {
     id: "new-patient-visits",
     label: "New Patient Visits",
     icon: "home",
-    heading: "Turn new patient visits searches into qualified enquiries.",
-    body: "A focused chiropractic website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Make the first visit easy to understand and book.",
+    body: "New patients want to know what happens, how long it takes and whether insurance applies. This page answers that and offers online intake before they arrive.",
     bullets: [
-      "Clear new patient visits value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "What to expect on visit one",
+      "Insurance and payment details",
+      "Online intake forms",
     ],
-    ctaLabel: "Build my new patient visits pages",
+    ctaLabel: "Build my new patient page",
     kicker: "NEW PATIENT VISITS",
-    siteHeading: "New Patient Visits—done right.",
+    siteHeading: "New here? Here’s what to expect.",
     photo: "/images/free-website/free-chiropractic/new-patient-visits.webp",
-    photoAlt: "Chiropractic service image",
+    photoAlt: "New patient chiropractic visit",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function ChiropracticServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Chiropractic website path
+                <Icon name={service.icon} /> Clinic page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function ChiropracticServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
-                    <span>About</span>
-                    <span>Reviews</span>
+                    <span>Conditions</span>
+                    <span>First Visit</span>
+                    <span>Insurance</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Book a visit
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function ChiropracticServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Friendly team. Clear explanations. An easy way to book your first visit.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book first visit</b>
+                      <b>Our care</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local patients</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function ChiropracticServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> LICENSED · LOCAL · NEW PATIENTS
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function ChiropracticServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book first visit</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to book visits</strong>
+                  <small>Clear path from search to first visit</small>
                 </span>
               </div>
             </div>

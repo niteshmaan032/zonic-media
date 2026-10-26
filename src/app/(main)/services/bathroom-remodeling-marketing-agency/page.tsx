@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
+import { IndustryTemplate } from "@/components/rd/industry/IndustryTemplate";
+import { CONTENT } from "@/components/rd/industry/content/bathroom-remodeling-marketing-agency";
+import { IndustrySchema, draftMetadata } from "@/components/rd/industry/route";
 
-import IndustryMarketingPage from "@/app/components/IndustryMarketingPage";
-import { bathroomRemodelingMarketing } from "./pageData";
-import "@/app/style/industryMarketingPages.css";
+export const metadata = draftMetadata(CONTENT);
 
-export const metadata: Metadata = bathroomRemodelingMarketing.metadata;
-
-export default function BathroomRemodelingMarketingAgencyPage() {
-  return <IndustryMarketingPage page={bathroomRemodelingMarketing.page} />;
+export default function Page() {
+  return (
+    <>
+      <IndustrySchema c={CONTENT} />
+      <IndustryTemplate c={CONTENT} />
+    </>
+  );
 }

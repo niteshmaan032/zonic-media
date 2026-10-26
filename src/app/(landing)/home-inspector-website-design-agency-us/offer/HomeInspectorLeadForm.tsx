@@ -206,11 +206,8 @@ export default function HomeInspectorLeadForm() {
         <span>
           <Icon name="mail" /> Free home inspector website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
-        <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
-        </p>
+        <h3>Let’s Review Your Inspection Business.</h3>
+        <p>Tell us about your inspection types, counties and goals. Sending this form is not a contract.</p>
       </div>
 
       <div className="form-grid">

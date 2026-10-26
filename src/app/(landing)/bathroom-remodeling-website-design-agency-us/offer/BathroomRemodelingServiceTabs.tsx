@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "shower-remodels",
     label: "Shower Remodels",
     icon: "layout",
-    heading: "Turn shower remodels searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win the walk-in shower jobs homeowners search for.",
+    body: "A shower remodel page with real finished photos, tile and glass options, and a simple consult form, so homeowners can picture the result before they call.",
     bullets: [
-      "Clear shower remodels value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Walk-in, curbless and tile shower photos",
+      "Glass, niche and fixture options explained",
+      "Consult form and tap-to-call on mobile",
     ],
-    ctaLabel: "Build my shower remodels pages",
+    ctaLabel: "Plan my shower remodel page",
     kicker: "SHOWER REMODELS",
-    siteHeading: "Shower Remodels—done right.",
+    siteHeading: "Walk-in showers, built right.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "tub-conversions",
     label: "Tub Conversions",
     icon: "wrench",
-    heading: "Turn tub conversions searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Catch homeowners ready to swap the tub for a shower.",
+    body: "A tub-to-shower conversion page that covers timelines, safety features and before-and-after photos, written for owners who want an easier daily routine.",
     bullets: [
-      "Clear tub conversions value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Tub-to-shower before-and-after photos",
+      "Timeline and what install day looks like",
+      "Short quote form that works on a phone",
     ],
-    ctaLabel: "Build my tub conversions pages",
+    ctaLabel: "Plan my tub conversion page",
     kicker: "TUB CONVERSIONS",
-    siteHeading: "Tub Conversions—done right.",
+    siteHeading: "Swap the tub. Keep the space.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "full-bathroom-remodels",
     label: "Full Bathroom Remodels",
     icon: "target",
-    heading: "Turn full bathroom remodels searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell the full gut remodel with a clear plan and real photos.",
+    body: "A full remodel page that walks through design, demo, build and final walkthrough, so high-budget prospects trust your process before the first visit.",
     bullets: [
-      "Clear full bathroom remodels value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Step-by-step remodel process section",
+      "Project gallery sorted by bathroom style",
+      "Financing and warranty details if offered",
     ],
-    ctaLabel: "Build my full bathroom remodels pages",
+    ctaLabel: "Plan my full remodel page",
     kicker: "FULL BATHROOM REMODELS",
-    siteHeading: "Full Bathroom Remodels—done right.",
+    siteHeading: "The whole bathroom, redone.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "accessible-bathrooms",
     label: "Accessible Bathrooms",
     icon: "layers",
-    heading: "Turn accessible bathrooms searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Reach families planning a safer, accessible bathroom.",
+    body: "An accessible bathroom page for curbless showers, grab bars and wider entries, written in plain words for older owners and the family helping them.",
     bullets: [
-      "Clear accessible bathrooms value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Curbless shower and grab bar examples",
+      "Aging-in-place questions answered simply",
+      "Large tap targets and easy-read layout",
     ],
-    ctaLabel: "Build my accessible bathrooms pages",
+    ctaLabel: "Plan my accessible bath page",
     kicker: "ACCESSIBLE BATHROOMS",
-    siteHeading: "Accessible Bathrooms—done right.",
+    siteHeading: "Safer baths for every age.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "vanities-tile",
     label: "Vanities & Tile",
     icon: "users",
-    heading: "Turn vanities & tile searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn smaller vanity and tile jobs into steady work.",
+    body: "A vanity and tile page that shows material options, finished floors and walls, and makes a quick update as easy to request as a full remodel.",
     bullets: [
-      "Clear vanities & tile value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Vanity, tile floor and wall photo sets",
+      "Material and finish choices laid out",
+      "Fast request form for smaller projects",
     ],
-    ctaLabel: "Build my vanities & tile pages",
+    ctaLabel: "Plan my vanity and tile page",
     kicker: "VANITIES & TILE",
-    siteHeading: "Vanities & Tile—done right.",
+    siteHeading: "New vanity. Fresh tile.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "design-consultation",
     label: "Design Consultation",
     icon: "clipboard",
-    heading: "Turn design consultation searches into qualified enquiries.",
-    body: "A focused bathroom remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Make booking a design consult the easy next step.",
+    body: "A design consultation page that explains what happens at the visit, what to have ready and what comes after, so more visitors book instead of browsing.",
     bullets: [
-      "Clear design consultation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "What happens at the consult, step by step",
+      "Booking form with preferred visit times",
+      "Gallery links to spark design ideas",
     ],
-    ctaLabel: "Build my design consultation pages",
+    ctaLabel: "Plan my design consult page",
     kicker: "DESIGN CONSULTATION",
-    siteHeading: "Design Consultation—done right.",
+    siteHeading: "Start with a design consult.",
     photo: "/images/free-website/free-bathroom-remodeling/hero.webp",
     photoAlt: "Bathroom Remodeling service image",
   },
@@ -161,7 +161,7 @@ export default function BathroomRemodelingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Bathroom Remodeling website path
+                <Icon name={service.icon} /> Bathroom remodeling page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function BathroomRemodelingServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Tidy job sites. Clear timelines. A finished bathroom you will love to use every day.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book a consult</b>
+                      <b>See remodels</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Rated by local homeowners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function BathroomRemodelingServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> DESIGN · DEMO · INSTALL
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function BathroomRemodelingServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book a consult</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to book consults</strong>
+                  <small>From remodel search to consult</small>
                 </span>
               </div>
             </div>

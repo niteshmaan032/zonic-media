@@ -1,0 +1,48 @@
+/*
+ * Redesigned site header (23 Oct 2026, /home2 only for now).
+ *
+ * The header sits outside the page's <main className="dk-root">, so it gets
+ * the kit's design tokens on its own root (no background, unlike .dk-root).
+ * Insets match the kit, so the bar lines up with every section edge.
+ */
+
+.rh-root {
+  --ink: #0c1526;
+  --ink-2: #1d2a44;
+  --blue: #2567e8;
+  --blue-dark: #1c4fc4;
+  --blue-soft: #eaf0fe;
+  --gold: #fdc115;
+  --gold-soft: #fff6db;
+  --green: #34a852;
+  --green-soft: #e7f6ec;
+  --red: #ea4334;
+  --text: #47546e;
+  --muted: #7a869e;
+  --line: #e3e9f2;
+  --panel: #f1f4f9;
+  --inset: 100px;
+  --lift: 0 26px 50px -26px rgba(12, 21, 38, 0.3);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 1199.98px) {
+  .rh-root { --inset: 30px; }
+}
+@media (max-width: 991.98px) {
+  .rh-root { --inset: 40px; }
+}
+@media (max-width: 575.98px) {
+  .rh-root { --inset: 20px; }
+}
+
+:where(.rh-root) *,
+:where(.rh-root) *::before,
+:where(.rh-root) *::after { box-sizing: border-box; }
+:where(.rh-root) :is(p, h2, h3) { margin: 0; }
+:where(.rh-root) :is(ul, ol) { margin: 0; padding: 0; list-style: none; }
+:where(.rh-root) a { color: inherit; text-decoration: none; }
+:where(.rh-root) button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+.rh-root :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }

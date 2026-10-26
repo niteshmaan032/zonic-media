@@ -1,0 +1,195 @@
+/*
+ * Industry pages: section headings never larger than the hero H1
+ * (owner, 25 Oct 2026; tested on home inspector, rolled out to every
+ * industry page). With `.ind-hcap` on <main>, every section heading in one
+ * of the three large kit sizes is capped at the H1 size minus 2px, at every
+ * width. `min()` keeps headings that were already smaller as they are.
+ *
+ * The H1 is clamp(36px, 3.85vw, 56px), or clamp(30px, 8vw, 34px) on phones
+ * (IndustryTemplate).
+ *
+ * The same rules cover the state pages (LocationTemplate, loc-* ids) and
+ * the two custom HVAC pages (hv-*, fl-* ids), owner 25 Oct 2026. Roles:
+ *   H1     #ind-h1 #loc-h1 #hv-h1 #fl-h1
+ *   svc    #ind-svc-h #loc-svc-h #hv-svc-h #fl-svc-h
+ *   steps  #ind-steps-h #hv-steps-h
+ *   places #ind-loc-h #loc-reg-h #hv-states-h #fl-reg-h
+ *   rev    #ind-rev-h #hv-love-h
+ * plus the SEO services draft (seo-* ids; its split hero keeps the
+ * template H1 size, so it is not in the H1 role).
+ * Unlayered rules beat the Tailwind utility layer, so no !important.
+ */
+
+.ind-hcap :is(h2, h3)[class*="4.6vw,62px"] {
+  font-size: min(
+    clamp(34px, 4.6vw, 62px),
+    clamp(34px, calc(3.85vw - 2px), 54px)
+  );
+}
+.ind-hcap :is(h2, h3)[class*="4vw,58px"] {
+  font-size: min(clamp(32px, 4vw, 58px), clamp(34px, calc(3.85vw - 2px), 54px));
+}
+.ind-hcap :is(h2, h3)[class*="4.4vw,64px"] {
+  font-size: min(
+    clamp(34px, 4.4vw, 64px),
+    clamp(34px, calc(3.85vw - 2px), 54px)
+  );
+}
+
+@media (max-width: 575.98px) {
+  /* Every kit heading size shares this phone clamp. */
+  .ind-hcap :is(h2, h3)[class*="8.6vw,40px"] {
+    font-size: min(
+      clamp(30px, 8.6vw, 40px),
+      clamp(28px, calc(8vw - 2px), 32px)
+    );
+  }
+  .ind-hcap :is(h2, h3)[class*="4vw,58px"] {
+    font-size: min(32px, clamp(28px, calc(8vw - 2px), 32px));
+  }
+  /* The closing banner size has no phone clamp of its own (34px floor). */
+  .ind-hcap :is(h2, h3)[class*="4.4vw,64px"] {
+    font-size: clamp(28px, calc(8vw - 2px), 32px);
+  }
+}
+
+/* Hero H1 larger than the template default (owner, 25 Oct 2026, home
+   inspector test: +2px, then "just increase the heading size"). The section caps above stay at the old H1 minus 2px. */
+@media (min-width: 576px) {
+  .ind-hcap :is(#ind-h1, #loc-h1, #hv-h1, #fl-h1) {
+    font-size: clamp(40px, calc(4.3vw + 2px), 66px);
+  }
+}
+@media (max-width: 575.98px) {
+  .ind-hcap :is(#ind-h1, #loc-h1, #hv-h1, #fl-h1) {
+    font-size: clamp(34px, calc(9vw + 2px), 40px);
+  }
+}
+
+/* Split section heads (heading left, lead or avatars right): a clear gap
+   between the two columns now that the headings are smaller and run wider
+   (owner, 25 Oct 2026, home inspector test). The heading column shrinks to
+   make room. */
+.ind-hcap
+  div:has(
+    > div
+      > :is(
+        #ind-svc-h,
+        #loc-svc-h,
+        #hv-svc-h,
+        #fl-svc-h,
+        #seo-svc-h,
+        #ind-steps-h,
+        #hv-steps-h,
+        #seo-steps-h,
+        #seo-res-h,
+        #ind-loc-h,
+        #loc-reg-h,
+        #hv-states-h,
+        #fl-reg-h,
+        #seo-city-h,
+        #ind-rev-h,
+        #hv-love-h,
+        #seo-rev-h
+      )
+  ) {
+  column-gap: clamp(40px, 3.4vw, 56px);
+}
+.ind-hcap
+  div:has(
+    > :is(
+      #ind-svc-h,
+      #loc-svc-h,
+      #hv-svc-h,
+      #fl-svc-h,
+      #seo-svc-h,
+      #ind-steps-h,
+      #hv-steps-h,
+      #seo-steps-h,
+      #seo-res-h,
+      #ind-loc-h,
+      #loc-reg-h,
+      #hv-states-h,
+      #fl-reg-h,
+      #seo-city-h,
+      #ind-rev-h,
+      #hv-love-h,
+      #seo-rev-h
+    )
+  ) {
+  /* Smaller basis so the wider gap doesn't push the right column under
+     the heading at laptop widths. */
+  flex-basis: 500px;
+}
+
+/* Services head (owner, 25 Oct): the heading stays on two lines (set
+   breaks via TitleLines where needed) at its natural width; the lead
+   column narrows and the gap grows with the screen instead. Below ~1250px
+   the lead drops under the heading, as before. */
+.ind-hcap
+  div:has(
+    > div > :is(#ind-svc-h, #loc-svc-h, #hv-svc-h, #fl-svc-h, #seo-svc-h)
+  ) {
+  column-gap: clamp(64px, calc(25vw - 250px), 128px);
+}
+.ind-hcap
+  div:has(> :is(#ind-svc-h, #loc-svc-h, #hv-svc-h, #fl-svc-h, #seo-svc-h)) {
+  /* Grows into the room left by the gap and the 340px lead, up to 760px,
+     so the head stays side by side at laptop widths. */
+  flex: 1 1 560px;
+  max-width: 760px;
+}
+.ind-hcap
+  div:has(> div > :is(#ind-svc-h, #loc-svc-h, #hv-svc-h, #fl-svc-h, #seo-svc-h))
+  > :last-child {
+  flex: 0 1 340px;
+  max-width: 340px;
+}
+
+/* Top-aligned split heads (owner, 25 Oct): the right column (lead +
+   button) is kept about as tall as the 2-line heading, so the space down
+   to the cards matches on both sides. Short leads plus a tighter button
+   gap do it. */
+.ind-hcap
+  div:has(
+    > div
+      > :is(
+        #ind-svc-h,
+        #loc-svc-h,
+        #hv-svc-h,
+        #fl-svc-h,
+        #seo-svc-h,
+        #ind-steps-h,
+        #hv-steps-h,
+        #seo-steps-h,
+        #seo-res-h
+      )
+  )
+  > :last-child {
+  padding-top: 0;
+}
+.ind-hcap
+  div:has(
+    > div
+      > :is(
+        #ind-svc-h,
+        #loc-svc-h,
+        #hv-svc-h,
+        #fl-svc-h,
+        #seo-svc-h,
+        #ind-steps-h,
+        #hv-steps-h,
+        #seo-steps-h,
+        #seo-res-h
+      )
+  )
+  > :last-child
+  > div {
+  margin-top: 16px;
+}
+
+/* Floating hero cards are narrower than the old bento: smaller titles so
+   two lines plus the sub line fit every card (no clipped text). */
+.ind-float b {
+  font-size: clamp(19px, 1.45vw, 23px);
+}

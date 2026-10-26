@@ -159,6 +159,71 @@ Stop adding pages; make the existing ones true, specific and trusted. Build auth
 
 ---
 
+## 6b. Redesign programme (added 17 Oct 2026, user request)
+
+> Runs in a separate chat from 17 Oct 2026. Handoff and current state: `docs/redesign-handoff.md`.
+
+### Context
+> **Update 17 Oct 2026 (owner):** the whole website uses **one typeface, Neue Haas Display** (the existing self-hosted face in `src/app/fonts/neue-haas-display`). Not applied sitewide yet; it happens in step R1 when the owner says go. Satoshi is out of the plan and removed from the project. Tailwind is used only for newly built/redesigned components, never for one-to-one conversion of old pages.
+
+People tell the owner the site looks AI-generated and templated. The owner wants a full visual redesign on the Dallas–Fort Worth layout (`/services/dallas-fort-worth/*`, `style/dfwMarketing.css`), one typeface (Neue Haas Display, already self-hosted), Tailwind CSS, and an end to "same page, niche name swapped" — **without losing impressions, rankings or keywords**. Rules set by the owner: go slow, page family by page family; never break a layout by forcing long content into a fixed box; if a paragraph does not fit, add to it or trim filler words, never remove keywords or meaningful content. Pages not redesigned still get the new font and base styles.
+
+### Honest framing (goes in the plan as written)
+- Layout, font and CSS changes do not move rankings; Google ranks words, links and structure. They fix perception and conversions. Position 30 → 15 still depends on authority (§5).
+- Tailwind does not make the site fast by itself. Speed comes from deleting the 3.2 MB of forked CSS (49 global files + 21 offer.css + 7 web-design forks). That deletion happens once, in the final clean-up phase (R9), after every family has been redesigned and judged — not during the redesign.
+- De-templating means rewriting the shared boilerplate on ~100 pages. That *is* a content change, so it follows the content rules below, not the layout rules.
+
+### Non-negotiable SEO guards (every redesign deploy)
+1. **Text snapshot** (`scripts/text-snapshot.mjs`, exists): for layout-only deploys the diff must be empty. For de-templating deploys the diff is reviewed line by line.
+2. **Keyword-preservation check** (new `scripts/keyword-guard.mjs`): for each changed page, pull its top 25 GSC queries (last 90 d) and assert every query's terms still appear in title, H1/H2s or body; H1, H2s, title, meta description, FAQ questions, URL, canonical and internal-link anchors unchanged unless explicitly approved. Fails the deploy otherwise.
+3. **Word count never decreases** on a page with impressions (trims allowed only if additions elsewhere keep the total ≥ before).
+4. **No hidden content**: no fixed heights, `line-clamp`, `overflow:hidden` truncation or "read more" collapses on body copy; layouts flex to content (that is the "don't force content into the box" rule in code).
+5. **Visual + vitals**: Playwright snapshots (`scripts/visual-snap.mjs`) at 390/768/1440 px for every page in the family; Lighthouse mobile ≥ 80, CLS < 0.1; images WebP ≤ 200 KB.
+6. **One family per deploy, judged after 14 days**: rollback if family impressions fall > 20% vs the prior 14 days *after* adjusting for the sitewide trend, or any page loses a top-20 keyword it held. Vercel instant rollback; because old CSS, fonts and components are never deleted during the redesign (R9 rule), rollback is always one revert away.
+7. **Priority (owner decision 17 Oct): the redesign is the top engineering priority.** Layout-only deploys (text diff empty, keyword-guard green) are allowed during the text freeze, because Google ranks words, headings and links, which do not change. Text changes still wait for 28 Oct. Layout-only families are judged after **7 days** (not 14); de-templating content steps keep the 14-day watch. A family's layout is never deployed in the same week as its title/meta changes, so cause and effect stay readable.
+
+### Technical setup (R0 — 18–22 Oct, invisible)
+- **Tailwind v4** via `@tailwindcss/postcss` + new `postcss.config.mjs`; entry `src/app/style/tailwind.css` imported in `src/app/layout.tsx` **after** Bootstrap/global CSS.
+- **Collision-safe**: existing markup already uses names Tailwind also generates (`container` ~835 matches, `grid`, `table`, `sticky`, `hidden`, `block`, `inline`), and Bootstrap's `.collapse` drives the navbar. So: `@import "tailwindcss" prefix(tw)` (classes written `tw:flex`), **no Preflight** (import `tailwindcss/theme` + `tailwindcss/utilities` only, plus a scoped reset under `.rd` for redesigned pages), and `source(none)` + `@source "../components/rd"` / `@source "../app/(main)/**/rd-*.tsx"` so Tailwind only scans redesigned code. Bootstrap is removed per family as pages leave it; admin keeps full Bootstrap.
+- **Design tokens** in `@theme` (taken from the DFW pages, reduced): ≤ 24 colours, spacing 4–96, radius 6/12/999, 2 shadows, type scale. Same tokens exported as CSS variables so un-migrated pages can use them.
+- **Neue Haas Display everywhere**: already loaded with `next/font/local` in `src/app/layout.tsx` (400 Roman, 500 Medium, 600 Bold) with tuned fallback metrics in `globals.css`, so no new font loading is needed. R1 removes the places that override it: Inter and Manrope in `style/google-fonts.css` and component CSS such as `service-lead-form.css` (they stop being applied; the files are deleted only in the final clean-up). The heaviest weight available is 600; there is no Black.
+- **Component library** `src/components/rd/` (Hero, ProofRow, StatTiles, ServiceCards, ProcessSteps, FAQ, CTA band, EvidenceBlock, Testimonial, ComparisonTable, MapPackVisual, Gallery, PricingTable), each with 2–3 visual variants; built and unit-rendered but not yet used on live pages.
+- Tooling: `keyword-guard.mjs`, `visual-snap.mjs`, and a GSC export helper for the guard (manual CSV until the API script in WS7 exists).
+
+### Rollout — prioritised (layout-only families watched 7 days; content steps 14 days)
+| Step | When | Scope | Content rule |
+|---|---|---|---|
+| R1 Font + base | When the owner says go (not yet) | One typeface sitewide: **Neue Haas Display**; Inter/Manrope overrides stop being applied (files stay until clean-up); token colours/spacing via existing CSS variables; **no layout change** | No text change. Visual check all 187 routes for overflow/line breaks; fix CSS, never text. |
+| R2 Pilot | 24–27 Oct | 20 offer landers + 2 DFW pages | Layout only; proves components, Tailwind, speed. |
+| R3 Homepage + GBP pages | 3 Nov | Home, reinstatement, verification, GBP optimization, contact, about — what visitors see first (the complaint is about the interface) | Layout only; text diff empty. Reinstatement page has almost no rankings to lose. |
+| R4 Website-design family | 10 Nov | 26 pages | Layout only. |
+| R5 Marketing-agency family | 17 Nov | 28 pages (JSON + pageData → one config component) | Layout only. |
+| R6 Industry local-SEO | 24 Nov–1 Dec | 25 pages | Layout only. |
+| R7 Cities, states, blog, rest | 8–15 Dec | 12 city, 44 state, blog template, services/industries hubs, packages | Layout only; Philadelphia/real-estate/NYC last in the batch. |
+| R8 De-templating | Jan–Mar, trade by trade | Rewrite shared boilerplate per trade | Content rules below; 14-day watch per trade. |
+
+Whole-site new interface by mid-December; content de-templating follows. If any family trips a rollback threshold, the schedule pauses until the cause is understood.
+
+**Owner rule (17 Oct): nothing old is deleted during the redesign.** Each family is redesigned, adjusted and judged first; its old CSS files, Bootstrap usage, fonts (Neue Haas, Inter, Manrope), images, components and page code stay in the repo, unused but available, until the final clean-up phase below. Old pages simply stop importing them.
+
+### R9 — Final clean-up (after R8, once every family has passed its watch)
+- One dedicated phase at the very end: delete unused CSS files (`src/app/style/*.css`, 21 `offer.css`, web-design forks), `bootstrap.trimmed.css` and Bootstrap/react-bootstrap if no page imports them (admin keeps its own), old fonts (`src/app/fonts/neue-haas-display`, `public/fonts/google`, `style/google-fonts.css`), orphan components, unused images, the retired JSON importer, stale scripts and docs.
+- Method: build a list of candidates from imports and the rendered build (the same method used for the Sept unused-image cleanup: exact paths, comment-stripped import graph, rendered check), review it with the owner, delete in small batches, run tsc + build + text snapshot + visual check after each batch.
+- Only then are the speed gains from removing old CSS measured (Lighthouse before/after).
+
+### De-templating rules (R8)
+- Same section *system*, different page: each trade picks a different composition of components (order, variant, visuals) from the library, real images or trade-specific illustrations, and an **EvidenceBlock** with real figures (owner supplies). No two trades share the same section order and imagery.
+- Rewrite only paragraphs that the similarity script (`scripts/content-similarity.mjs`) flags as shared/noun-swapped; keep every heading, FAQ question and keyword phrase; new text must be **longer or equal**, trade-specific (licensing, seasonality, job types, real cases), facts only from `brandFacts.ts`.
+- Target: shared copy < 40% per page. Zero-impression pages first; pages with impressions one trade at a time, 14-day watch, keyword-guard must pass.
+
+### Owner inputs needed
+Real office/team/founder photos and client screenshots (or approval to use illustrations instead of AI photos); evidence figures per trade; sign-off per family before deploy.
+
+### Verification (per deploy)
+`npx tsc --noEmit` → `next build` → `npm run snapshot` (diff empty for layout steps) → `node scripts/keyword-guard.mjs <family>` → `node scripts/visual-snap.mjs <family>` → Lighthouse mobile on 3 pages (≥80, CLS<0.1) → deploy → URL-inspect 2 pages → GSC family reading on day 7 and day 14 → keep or roll back.
+
+---
+
 ## 7. Measurement & decision calendar
 - Weekly (Mon): GSC US clicks/impressions/position per page + re-crawl status; Semrush PT movers; log in `websiteOptimiztion.md`.
 - Monthly: GA4 organic sessions (admin excluded), `lead_thank_you` by landing page/channel; Semrush AS + referring domains AS>20; AI toolkit mentions.

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Reviews and reputation management</title>
+  <desc id="desc">A flat illustration of review stars, replies and reputation activity.</desc>
+  <rect width="800" height="1000" rx="34" fill="#eef2f3"/>
+  <rect x="60" y="72" width="680" height="830" rx="28" fill="#fffdf9" stroke="#18304a" stroke-width="8"/>
+  <text x="104" y="145" fill="#18304a" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="2">REVIEWS</text>
+  <rect x="104" y="178" width="592" height="92" rx="18" fill="#e8eef4"/>
+  <text x="132" y="218" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="700">REPUTATION HEALTH</text>
+  <text x="132" y="250" fill="#18304a" font-family="Arial,sans-serif" font-size="24" font-weight="700">5.0</text>
+  <g fill="#e6bd64"><path d="m222 230 9 18 20 3-15 14 4 20-18-9-18 9 4-20-15-14 20-3Z"/><path d="m272 230 9 18 20 3-15 14 4 20-18-9-18 9 4-20-15-14 20-3Z"/><path d="m322 230 9 18 20 3-15 14 4 20-18-9-18 9 4-20-15-14 20-3Z"/><path d="m372 230 9 18 20 3-15 14 4 20-18-9-18 9 4-20-15-14 20-3Z"/><path d="m422 230 9 18 20 3-15 14 4 20-18-9-18 9 4-20-15-14 20-3Z"/></g>
+  <g fill="#18304a" font-family="Arial,sans-serif" font-size="16"><text x="548" y="218">NEW REVIEWS</text><text x="548" y="250" font-size="25" font-weight="700">+24</text></g>
+  <rect x="104" y="304" width="592" height="152" rx="18" fill="#f4f0e8" stroke="#c8d2d7" stroke-width="3"/>
+  <circle cx="148" cy="348" r="22" fill="#c8d2d7"/><g fill="#e6bd64"><path d="m190 337 6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2Z"/><path d="m225 337 6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2Z"/><path d="m260 337 6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2Z"/><path d="m295 337 6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2Z"/><path d="m330 337 6 12 13 2-10 9 3 13-12-6-12 6 3-13-10-9 13-2Z"/></g><rect x="190" y="386" width="400" height="12" rx="6" fill="#aab9c2"/><rect x="190" y="412" width="310" height="12" rx="6" fill="#c8d2d7"/>
+  <path d="M462 442h156a17 17 0 0 1 17 17v93a17 17 0 0 1-17 17h-92l-27 27v-27h-37a17 17 0 0 1-17-17v-93a17 17 0 0 1 17-17Z" fill="#dce9ef" stroke="#18304a" stroke-width="5"/>
+  <text x="492" y="485" fill="#18304a" font-family="Arial,sans-serif" font-size="17" font-weight="700">REPLY POSTED</text><rect x="492" y="507" width="110" height="10" rx="5" fill="#6fae9d"/><rect x="492" y="531" width="82" height="10" rx="5" fill="#aab9c2"/>
+  <rect x="104" y="510" width="318" height="300" rx="18" fill="#18304a"/>
+  <text x="136" y="566" fill="#fffdf9" font-family="Arial,sans-serif" font-size="20" font-weight="700">REVIEW FLOW</text>
+  <path d="M160 652h205" stroke="#6fae9d" stroke-width="9"/><circle cx="160" cy="652" r="18" fill="#6fae9d"/><circle cx="262" cy="652" r="18" fill="#e6bd64"/><circle cx="365" cy="652" r="18" fill="#df6f5f"/>
+  <path d="M160 652v-40M262 652v-84M365 652v-130" stroke="#fffdf9" stroke-width="5" opacity=".8"/><g fill="#fffdf9" font-family="Arial,sans-serif" font-size="14"><text x="133" y="720">REQUEST</text><text x="236" y="720">REVIEW</text><text x="346" y="720">REPLY</text></g>
+  <rect x="462" y="654" width="234" height="156" rx="18" fill="#e8eef4"/><text x="492" y="698" fill="#18304a" font-family="Arial,sans-serif" font-size="16" font-weight="700">RECENT SIGNALS</text><rect x="492" y="723" width="164" height="10" rx="5" fill="#6fae9d"/><rect x="492" y="749" width="132" height="10" rx="5" fill="#aab9c2"/>
+</svg>

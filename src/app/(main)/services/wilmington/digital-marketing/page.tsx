@@ -1,58 +1,69 @@
 /*
- * WILMINGTON DE DIGITAL MARKETING — city page under the Delaware silo, built
- * on the shared location landing system (PhlLocationLanding /
- * philaLanding.css) so it renders identically to the other location pages.
+ * REDESIGN DRAFT (22 Oct 2026) of /services/wilmington/digital-marketing, in the Dallas–Fort Worth
+ * layout (src/components/rd/delaware/DelawareLanding.tsx). Copy re-optimized
+ * on 24 Oct 2026 (docs/content-optimization-brief.md): fresh wording, no text
+ * shared with the live page or the sibling drafts, verified numbers only.
+ * Noindex; canonical and schema URLs point at the live page so the file can
+ * replace it as-is.
+ *
+ * WILMINGTON DE DIGITAL MARKETING — city page under the Delaware silo.
  * Aug 2026 SEO plan, Content Gaps tab.
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhlLocationLanding, {
-  type PhlLandingData,
-} from "@/app/components/PhlLocationLanding";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import { FaStar } from "react-icons/fa";
 import {
   FiBarChart2,
-  FiClock,
+  FiCalendar,
   FiFileText,
   FiLayout,
   FiMapPin,
+  FiMessageSquare,
+  FiNavigation,
   FiPhoneCall,
-  FiSearch,
   FiStar,
   FiTarget,
-  FiTrendingUp,
   FiZap,
 } from "react-icons/fi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
-import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+import { RiLineChartLine } from "react-icons/ri";
+import { SiGoogle, SiGoogleads, SiGooglemaps, SiWaze } from "react-icons/si";
 
 const PAGE_PATH = "/services/wilmington/digital-marketing";
 
 export const metadata: Metadata = {
-  title: { absolute: "Digital Marketing Agency in Wilmington, DE | Zonic Media" },
+  title: {
+    absolute: "Digital Marketing Agency in Wilmington, DE | Wilmington SEO",
+  },
   description:
-    "Digital marketing agency in Wilmington, DE: local SEO, Google Business Profile, Google Ads and web design for Wilmington and New Castle County businesses.",
+    "Wilmington, DE digital marketing agency for search engine optimization, Google Maps, Google Ads and web design across New Castle County.",
   keywords: [
     "digital marketing agency wilmington de",
-    "seo company wilmington delaware",
+    "wilmington digital marketing agency",
+    "wilmington seo",
+    "search engine optimization wilmington de",
+    "wilmington search engine marketing",
+    "wilmington internet marketing",
     "wilmington marketing agency",
-    "wilmington de web design",
+    "seo services new castle county",
+    "digital marketing services new castle county",
+    "digital marketing agency in new castle county",
+    "seo company wilmington delaware",
     "google ads wilmington de",
-    "local seo wilmington",
-    "digital marketing agency near me",
-    "internet marketing wilmington de",
-    "online marketing wilmington",
-    "marketing company wilmington de",
     "advertising agency wilmington de",
-    "wilmington de seo company",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -62,9 +73,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Digital Marketing Agency in Wilmington, DE | Zonic Media",
+    title: "Digital Marketing Agency in Wilmington, DE | Wilmington SEO",
     description:
-      "Digital marketing and SEO for Wilmington, Delaware businesses — local SEO, GBP, Google Ads and web design. Free audit.",
+      "SEO, Google Maps, Google Ads and websites for Wilmington, Delaware businesses, from a Delaware agency. Free audit.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -76,11 +87,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Wilmington Digital Marketing", url: PAGE_PATH },
 ]);
 
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "City", name: "Wilmington" },
-});
-
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -89,7 +95,7 @@ const serviceJsonLd = {
   serviceType: "Digital Marketing",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Local SEO, Google Business Profile optimization, Google Ads and web design for Wilmington, Delaware businesses — from a Dover-headquartered Delaware agency.",
+    "Search engine optimization, Google Business Profile management, Google Ads and web design for Wilmington, Delaware businesses, from a Dover-based Delaware agency.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -108,41 +114,48 @@ const serviceJsonLd = {
   },
 };
 
+/* FAQ (24 Oct 2026): what Wilmington owners ask before hiring; answers lead
+   with the answer, published plan prices only. */
 const WilmFaqs = [
   {
-    question: "Do you work with Wilmington businesses if your office is in Dover?",
+    question: "Can a Dover-based agency market a Wilmington business?",
     answer:
-      "Yes — Wilmington is 45 minutes up Route 13 from our Dover office and a core market for us. Strategy calls run over video or in person, and the campaign work is location-independent. What matters for your rankings is our Delaware footprint, which transfers fully to Wilmington campaigns.",
+      "Yes. Wilmington is a short drive up Route 1 from our Dover office and one of our main markets. Strategy calls run on video or face to face, and the day-to-day work can happen from anywhere. What helps your rankings is a genuine Delaware footprint, and ours carries straight into Wilmington campaigns.",
   },
   {
-    question: "How competitive is SEO in Wilmington compared to the rest of Delaware?",
+    question: "Is SEO harder in Wilmington than in the rest of Delaware?",
     answer:
-      "Noticeably more. Wilmington draws Philadelphia-metro agencies and national franchises across the state line, so head terms take longer and content has to be stronger than in Kent or Sussex County. We usually sequence quick Map Pack wins first, then build toward the harder organic terms.",
+      "Usually, yes. Regional firms and national brands compete hard for Wilmington searches, so broad terms need more time and stronger content than in Kent or Sussex. We chase early Map Pack gains first, then work up to the harder organic phrases.",
   },
   {
-    question: "Can you run both SEO and Google Ads for a Wilmington business?",
+    question: "What is search engine marketing for a Wilmington business?",
     answer:
-      "Yes, and they work best together: Ads buys leads now and produces the search-term data that sharpens SEO targeting; SEO steadily lowers your blended cost per lead as rankings arrive. At Wilmington's click prices, that transition matters.",
+      "It covers everything that earns you visibility on Google: SEO for organic and Maps rankings, plus paid search such as Google Ads and Local Services Ads. For Wilmington businesses we usually run both, so ads bring calls now while rankings build underneath.",
   },
   {
-    question: "What does digital marketing cost in Wilmington?",
+    question: "Should a Wilmington business run SEO and Google Ads together?",
     answer:
-      "Local SEO programs for single-location Wilmington businesses start at a few hundred dollars a month; combined SEO + Ads programs scale with ad budget and competition. Every quote is flat-scope after a free audit — no percentage-of-spend and no long-term contracts.",
+      "In most cases. Ads bring leads now and reveal which searches convert, which sharpens your SEO targeting. As rankings arrive, organic traffic lowers your blended cost per lead. With Wilmington click prices, moving from paid toward organic over time makes a real difference.",
   },
   {
-    question: "Which Wilmington-area suburbs do you cover?",
+    question: "What do your Wilmington marketing plans cost?",
     answer:
-      "The whole New Castle County footprint: Newark, Bear, Pike Creek, Hockessin, Greenville, Claymont, Middletown and the Brandywine Valley — plus campaigns for Wilmington businesses serving the Philadelphia and Maryland border markets.",
+      "You can choose a $297, $750 or $1,500 monthly plan, all month to month, and ad spend stays separate with 0% markup. Which plan fits depends on your services, your suburbs and how much competition you face. We recommend one after a free audit, with no percentage-of-spend fees.",
   },
   {
-    question: "My Google Business Profile is suspended. Can you help?",
+    question: "Which towns around Wilmington do you cover?",
     answer:
-      "Yes — GBP reinstatement is our flagship service, with 900+ recoveries handled. If your Wilmington profile is down, that is the first thing to fix; no amount of website SEO replaces a live listing.",
+      "All of New Castle County, including Hockessin, Greenville, Pike Creek, Newark, Bear, New Castle, Claymont, Middletown and towns across the Brandywine Valley. We also help Wilmington companies whose customers live across the Pennsylvania and Maryland lines.",
   },
   {
-    question: "What does a Wilmington business need to rank in the Google Map Pack?",
+    question: "Can you fix a suspended Google Business Profile in Wilmington?",
     answer:
-      "Wilmington's Map Pack is decided by proximity to the searcher, so a downtown business competes block by block. The levers you control are the primary category, review count and recency, photos, and citations that consistently list the Wilmington address. Zonic Media tracks rankings on a grid across Wilmington, Newark and the surrounding suburbs so you can see exactly where you win and where you need coverage.",
+      "Yes. Reinstatement is our flagship service, and we have brought back 900+ suspended profiles. If your Wilmington listing is down, fix it first, because no amount of website SEO makes up for a missing Maps listing.",
+  },
+  {
+    question: "How does a Wilmington business get into the Google Map Pack?",
+    answer:
+      "Start with what you control: the right primary category, a complete profile, steady recent reviews, real photos and citations that show your address the same way everywhere. Distance to the searcher counts too, which means downtown businesses compete street by street. We map your rank on a grid covering Wilmington, Newark and the suburbs so you can see where you lead.",
   },
 ];
 
@@ -157,87 +170,100 @@ const wilmFaqJsonLd = {
   })),
 };
 
-const data: PhlLandingData = {
+/* ---------------------------------------------------------------------------
+   CONTENT (24 Oct 2026 re-optimization). Live URL's ranking terms (Semrush
+   US resource_organic, 24 Oct): seo services new castle county #14 (140) ·
+   search engine optimization wilmington de #31 (320) · website development
+   company in new castle county #31 (140) · digital marketing agency in new
+   castle county #34 (110) · digital marketing services new castle county #35
+   (110) · franchise marketing agency wilmington de #39 (170) · wilmington seo
+   #45 (390) · wilmington search engine marketing #48 (260) · wilmington
+   internet marketing #51 (110) · wilmington marketing #54 (140). 22 Oct
+   volumes: wilmington seo 390 (KD 12) · search engine optimization
+   wilmington de 390 (7) · wilmington marketing agency 210 (54).
+   phrase_these was out of API units on 24 Oct.
+--------------------------------------------------------------------------- */
+
+const hubLeft: HubApp[] = [
+  { icon: SiGoogle, name: "Google Search", tone: "google" },
+  { icon: SiGooglemaps, name: "Google Maps", tone: "maps" },
+  { icon: SiWaze, name: "Waze", tone: "waze" },
+  { icon: SiGoogleads, name: "Google Ads", tone: "googleads" },
+];
+const hubRight: HubApp[] = [
+  { icon: FiPhoneCall, name: "Phone calls", tone: "calls" },
+  { icon: FiMessageSquare, name: "Text messages", tone: "texts" },
+  { icon: FiFileText, name: "Website forms", tone: "forms" },
+  { icon: FiNavigation, name: "Direction requests", tone: "directions" },
+];
+
+const data: DelawareData = {
   hero: {
-    eyebrow: "Digital Marketing Agency in Wilmington, DE",
-    h1Start: "Wilmington Digital Marketing That",
-    h1Highlight: "Wins Delaware's Toughest Market",
-    sub: (
-      <>
-        Wilmington is Delaware&apos;s most competitive market — the search
-        results for any New Castle County service are crowded with
-        Philadelphia agencies and national franchises. Zonic Media is a
-        Wilmington marketing agency choice with an actual Delaware
-        headquarters: local SEO, Google Business Profile, Google Ads, and web
-        design, an hour up Route 13 from our Dover office.
-      </>
-    ),
+    eyebrow: "",
+    h1Start: "Wilmington Digital Marketing Agency",
+    h1Highlight: "Growing New Castle County Businesses",
+    sub: "Zonic Media helps Wilmington businesses win local search with SEO, Google Business Profile work, Google Ads and websites. We are a Delaware company based in Dover, planning your marketing suburb by suburb, from downtown to Newark, Hockessin and Middletown.",
     media: {
       src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-owner.jpg",
       alt: "Wilmington business owner using a phone along the Christina Riverfront",
     },
-    floatA: {
-      strong: "Delaware HQ",
-      text: "45 minutes from Wilmington",
-    },
-    floatB: { strong: "+32 reviews", text: "earned this quarter" },
+    floatA: { strong: "Delaware HQ", text: "in Dover, DE" },
+    floatB: { strong: "5.0 on Google", text: "client rating" },
     stats: [
       {
-        icon: <FiTrendingUp aria-hidden="true" />,
-        num: "50+",
-        label: "Local businesses ranked",
+        icon: <FiMapPin aria-hidden="true" />,
+        num: "Top 3",
+        label: "Map Pack goal from downtown to the suburbs",
+      },
+      // Not shown: the template's Google rating card takes this slot.
+      {
+        icon: <FiStar aria-hidden="true" />,
+        num: "5.0",
+        label: "Our rating on Google",
       },
       {
-        icon: <FaStar aria-hidden="true" />,
-        num: "4.9/5",
-        label: "Average client rating on Clutch",
+        icon: <FiPhoneCall aria-hidden="true" />,
+        num: "More calls",
+        label: "From Wilmington search, Maps and ads",
       },
       {
-        icon: <FiClock aria-hidden="true" />,
-        num: "60–90",
-        label: "Days to measurable movement",
-      },
-      {
-        icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        num: "100%",
-        label: "In-house — nothing outsourced",
+        icon: <FiCalendar aria-hidden="true" />,
+        num: "Booked",
+        label: "More jobs across New Castle County",
       },
     ],
-    proof: "by the Delaware businesses we grow",
-    cta: "Get Your Free Wilmington Audit",
+    proof: "",
+    cta: "Claim a Free Wilmington Audit",
   },
   about: {
-    eyebrow: "The Wilmington Opportunity",
-    h2Start: "The Biggest Market in Delaware.",
-    h2Highlight: "The Most Contested, Too.",
+    eyebrow: "Wilmington marketing",
+    h2Start: "Search Engine Marketing Built",
+    h2Highlight: "for Wilmington, DE.",
     leads: [
       <>
-        Search engine optimization in Wilmington DE means beating two kinds of
-        competitors at once: local firms that have held rankings for years,
-        and Philadelphia-metro companies spilling across the state line. Add
-        the I-95 corridor&apos;s commuter traffic and the corporate density
-        downtown, and the demand in front of a Wilmington business is far
-        larger than the city&apos;s size suggests.
+        Search results for New Castle County services are packed with big
+        regional firms and national brands. Add I-95 commuters, a busy downtown
+        and the Riverfront, and Wilmington searches outrun the city&apos;s size.
+        We plan for that suburb by suburb.
       </>,
       <>
-        Anyone can put &ldquo;Wilmington&rdquo; in a page title. We are a
-        registered Delaware company at 8 The Green in Dover — you can check
-        the address, the Clutch reviews and the Delaware client list before
-        you ever get on a call. That local accountability matters when most
-        agencies in the results are selling Delaware from three states away.
-        See the statewide picture on our{" "}
+        We are a registered Delaware business on The Green in Dover, so you can
+        check our address and reviews before you call. See how this fits our
+        statewide{" "}
         <Link href="/services/delaware/seo" className="phl-inline-link">
           Delaware SEO
         </Link>{" "}
-        page.
+        and{" "}
+        <Link
+          href="/services/delaware/digital-marketing"
+          className="phl-inline-link"
+        >
+          Delaware digital marketing
+        </Link>{" "}
+        plans.
       </>,
     ],
-    checks: [
-      "Hyper-local Wilmington signals",
-      "Profile fully optimized",
-      "New Castle County citations",
-      "Reviews growing weekly",
-    ],
+    checks: [],
     collageA: {
       src: "/images/geo/wilmington-digital-marketing/wilmington-market-street-storefront.jpg",
       alt: "Independent storefront opening for the day on Market Street in Wilmington",
@@ -249,462 +275,405 @@ const data: PhlLandingData = {
     badgeText: "Wilmington Delaware Marketing • Zonic Media •",
   },
   services: {
-    eyebrow: "What We Do",
-    h2: "Every Channel a Wilmington Business Needs, Under One Roof",
+    eyebrow: "",
+    h2: "Digital Marketing Services in New Castle County",
+    lead: "Six services, one in-house team and one monthly report, aimed at the Wilmington suburbs and services that earn you the most.",
     cards: [
       {
         tone: "blue",
         icon: <FiMapPin aria-hidden="true" />,
-        title: "Wilmington Local SEO",
-        desc: (
-          <>
-            Hyper-local Google Business Profile signals, Wilmington-specific
-            service pages, and citations that anchor you to New Castle County
-            — built on the same system as our{" "}
-            <Link href="/services/delaware/seo" className="phl-inline-link">
-              Delaware SEO program
-            </Link>
-            .
-          </>
-        ),
+        title: "Wilmington SEO Services",
+        desc: "Search engine optimization for Wilmington: service pages, local content and citations that lift you downtown and across the suburbs.",
+        points: [
+          "A page for each suburb",
+          "New Castle County citations",
+          "Rank tracking by suburb",
+        ],
+        href: "/services/delaware/seo",
+        link: "Our Delaware SEO program",
       },
       {
         tone: "gold",
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Google Business Profile",
-        desc: (
-          <>
-            Optimization, reviews, posts and Q&amp;A — plus{" "}
-            <Link
-              href="/services/gbp-reinstatement-service"
-              className="phl-inline-link"
-            >
-              suspension recovery
-            </Link>{" "}
-            when a listing goes down.
-          </>
-        ),
+        title: "Google Maps Profile Management",
+        desc: "Your Map Pack listing fully completed and kept active, with quick recovery if Google ever suspends it.",
+        points: [
+          "Categories, services and photos",
+          "Posts and Q&A kept current",
+          "Suspension recovery included",
+        ],
+        href: "/services/gbp-reinstatement-service",
+        link: "Suspended? Get reinstated",
       },
       {
         tone: "blue",
         icon: <FiTarget aria-hidden="true" />,
-        title: "Google Ads & Local Services Ads",
-        desc: (
-          <>
-            Pay-per-click scoped to Wilmington and its suburbs — Newark, Bear,
-            Pike Creek, Hockessin, the Brandywine Valley — with weekly
-            waste-cutting. See how we run{" "}
-            <Link href="/services/google-ads" className="phl-inline-link">
-              Google Ads
-            </Link>
-            .
-          </>
-        ),
+        title: "Wilmington PPC and Local Services Ads",
+        desc: "Pay-per-click and Local Services Ads aimed at Wilmington and its suburbs, with waste trimmed every week.",
+        points: [
+          "Ads by suburb and service",
+          "Google Guaranteed badge setup",
+          "Weekly search-term reviews",
+        ],
+        href: "/services/google-ads",
+        link: "How we manage Google Ads",
       },
       {
         tone: "gold",
         icon: <FiLayout aria-hidden="true" />,
-        title: "Web Design That Converts",
-        desc: (
-          <>
-            Fast, mobile-first{" "}
-            <Link
-              href="/services/delaware/web-design"
-              className="phl-inline-link"
-            >
-              Delaware web design
-            </Link>{" "}
-            — pages that load quickly, pass Core Web Vitals, and turn
-            Wilmington traffic into calls.
-          </>
-        ),
+        title: "Websites for Wilmington Buyers",
+        desc: "Quick, phone-friendly pages built to turn Wilmington visitors into booked calls.",
+        points: [
+          "Designed for phones first",
+          "Tap-to-call on each page",
+          "Pages per service and suburb",
+        ],
+        href: "/services/delaware/web-design",
+        link: "See Delaware web design",
       },
       {
         tone: "blue",
-        icon: <FiFileText aria-hidden="true" />,
-        title: "Content & Local Authority",
-        desc: "Wilmington and New Castle County content that ranks, answers real customer questions, and earns citations in the AI answers customers now trust.",
+        icon: <FiStar aria-hidden="true" />,
+        title: "Review and Reputation Growth",
+        desc: "More genuine reviews from local customers, and thoughtful replies that persuade the next person comparing options.",
+        points: [
+          "Text and email requests",
+          "Every review answered",
+          "Monthly review report",
+        ],
+        href: "#de-contact",
+        link: "Ask about reviews",
       },
       {
         tone: "gold",
         icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Tracking & Monthly Reporting",
-        desc: "Rankings, calls, direction requests, and form fills in one plain-English report. You always know what we did, what moved, and what is next.",
+        title: "Call Tracking and Reports",
+        desc: "Calls, forms and direction requests traced to the search behind them, in one plain monthly report.",
+        points: [
+          "Tracked phone numbers",
+          "Form and chat tracking",
+          "Results by suburb",
+        ],
+        href: "/services/local-seo-packages",
+        link: "See local SEO packages",
       },
     ],
   },
   band: {
-    eyebrow: "The Map Pack Is The Market",
-    h2: "We Put You in Wilmington's Top Three — And Keep You There",
+    eyebrow: "",
+    h2: "Reach Wilmington's Map Pack Top Three",
     leads: [
       <>
-        The Map Pack takes the majority of clicks and nearly all of the phone
-        calls, and Wilmington&apos;s is the most contested in the state.
-        Every campaign is built around one goal: earning the top spots for
-        the services and neighborhoods that pay you best, then defending them
-        month after month.
+        The Map Pack collects most local clicks and calls, and Wilmington&apos;s
+        is the busiest in the state. We target the top three in the suburbs and
+        services that pay you best.
       </>,
       <>
-        We work the signals Google actually rewards — proximity, relevance,
-        and prominence. A fully built-out profile tells Google exactly what
-        you do, consistent citations confirm you are who you say you are, and
-        steady reviews plus local content prove customers rate you. If a
-        listing ever gets suspended, our{" "}
-        <Link
-          href="/services/gbp-reinstatement-service"
-          className="phl-inline-link"
-        >
-          Google Business Profile reinstatement
-        </Link>{" "}
-        team gets you back on the map fast.
+        Proximity, relevance and prominence decide who appears there. We work on
+        all three with a complete profile, consistent citations and a steady
+        flow of reviews.
       </>,
     ],
-    cta: "See Where You Rank Today",
+    cta: "See My Wilmington Rankings",
     console: {
-      title: "Wilmington Visibility Console",
-      tag: "After 6 months",
+      title: "Wilmington Map Pack",
+      tag: "Illustration",
       metrics: [
-        { strong: "241", label: "Calls from profile" },
-        { strong: "#1", label: "Map pack rank" },
-        { strong: "+77%", label: "Direction requests" },
+        { strong: "Top 3", label: "Map Pack goal" },
+        { strong: "Calls", label: "Tracked by suburb" },
+        { strong: "Reviews", label: "Requested weekly" },
       ],
-      barsLabel: "Ranking signal strength",
-      bars: [
-        { label: "Map pack visibility", val: 89, tone: "blue" },
-        { label: "Profile completeness", val: 96, tone: "gold" },
-        { label: "Citation accuracy", val: 94, tone: "blue" },
-        { label: "Review velocity", val: 76, tone: "gold" },
-      ],
-      pills: [
-        { icon: "pin", text: "Downtown · top 3" },
-        { icon: "pin", text: "Pike Creek · #1" },
-        { icon: "star", text: "4.9 · 165 reviews" },
-      ],
+      barsLabel: "",
+      bars: [],
+      pills: [],
     },
   },
   process: {
-    eyebrow: "How It Works",
-    h2: "From Invisible to Unavoidable in Four Steps",
+    eyebrow: "",
+    h2: "Your First Three Months in Wilmington",
     steps: [
       {
         tag: "Week 1",
-        title: "Free Wilmington Market Audit",
-        desc: "We map your rankings against Wilmington competitors, review your Google Business Profile, and show you where the calls you are missing are going instead.",
+        title: "Free Map Pack and Market Review",
+        desc: "We see who holds the Map Pack in your suburbs, check your profile and site, and return a flat-rate plan.",
       },
       {
         tag: "Weeks 2–4",
-        title: "Strategy & Foundation Fixes",
-        desc: "A keyword-mapped plan for your services and suburbs, then the foundation work: profile optimization, citation cleanup, and on-page fixes.",
+        title: "Profiles, Pages and Tracking Fixed",
+        desc: "Profile rebuilt, citations cleaned, suburb pages planned and call tracking running before any ads launch.",
       },
       {
-        tag: "Every month",
-        title: "Build Authority Every Month",
-        desc: "Local content, links, review growth, and profile activity — the compounding signals that beat the out-of-state agencies at their own game.",
-        chips: ["Local content", "Review growth", "Profile activity"],
+        tag: "Month 2",
+        title: "Ads and Suburb Content Go Live",
+        desc: "Local Services Ads and search ads start producing calls while suburb pages and reviews lift your rankings.",
+        chips: ["LSAs live", "New suburb pages", "Review asks"],
       },
       {
-        tag: "Ongoing",
-        title: "Report, Refine, Expand",
-        desc: "Monthly reporting tied to calls and direction requests. As rankings lock in, we expand from downtown Wilmington out through the suburbs.",
-        chips: ["Plain-English report", "New suburbs", "New services"],
+        tag: "Month 3 on",
+        title: "Grow Into New Suburbs",
+        desc: "A monthly report by suburb, then new areas and services once your core terms hold steady.",
+        chips: ["Report by suburb", "Added areas", "Added services"],
       },
     ],
-    visualTitle: "Where Wilmington clients typically land after 90 days",
-    visualBars: [
-      { label: "Profile strength", val: 92 },
-      { label: "Citation accuracy", val: 94 },
-      { label: "Review velocity", val: 76 },
-    ],
-    ctaPrimary: "Start Ranking Today",
+    visualTitle: "",
+    visualBars: [],
+    ctaPrimary: "Claim a Free Wilmington Audit",
   },
-  results: {
-    eyebrow: "Real Results",
-    h2: "What Happens When Wilmington Marketing is Done Properly",
-    lead: "Different neighborhoods, different categories — the same system, executed month after month.",
-    cards: [
-      {
-        icon: <FiPhoneCall aria-hidden="true" />,
-        industry: "Home services · New Castle County",
-        metric: "+192%",
-        label: "Calls from the map pack",
-        desc: (
-          <>
-            From page-two invisibility to top-three positions across the
-            suburbs the business covers — the same system as our{" "}
-            <Link
-              href="/services/local-seo-for-home-services"
-              className="phl-inline-link"
-            >
-              local SEO for home services program
-            </Link>
-            .
-          </>
-        ),
-      },
-      {
-        icon: <RiSearchLine aria-hidden="true" />,
-        industry: "Professional practice · Downtown",
-        metric: "Top 3",
-        label: "Map pack for every core term",
-        desc: "A profile rebuild, citation cleanup, and steady review growth moved the practice into the top three against Philadelphia-metro competition.",
-      },
-      {
-        icon: <FiMapPin aria-hidden="true" />,
-        industry: "Service business · Suburbs",
-        metric: "5×",
-        label: "Suburbs ranking top three",
-        desc: "Suburb-level pages and profile tuning took a single-location business to top-three visibility from Newark to Hockessin.",
-      },
-    ],
-  },
+  // Kept for the type; the white band shows the feature rows instead.
+  results: { eyebrow: "", h2: "", cards: [] },
   showcase: {
     image: {
       src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-district.jpg",
       alt: "Businesses, cyclists, and pedestrians along the Wilmington Riverfront",
     },
     floats: [
-      { num: "165", label: "Average reviews earned" },
-      { num: "#1", label: "Map pack across 5 NCC suburbs" },
-      { num: "+77%", label: "Direction requests" },
+      { num: "Top 3", label: "Map Pack goal by suburb" },
+      { num: "↑ Calls", label: "From Maps and search" },
+      { num: "↑ Reviews", label: "Requested after each job" },
     ],
   },
   compare: {
-    h2: "Zonic vs. a Typical Wilmington Marketing Agency",
-    lead: "Local growth for local businesses is all we do, and it shows. Here is what working with a Delaware team looks like.",
-    themTitle: "Out-of-State Agency",
-    themSub: "Why most Wilmington campaigns quietly stall",
+    h2: "Comparing Marketing Agencies in Wilmington, DE",
+    lead: "Here's what changes when your agency answers to you in Delaware.",
+    themTitle: "Out-of-Area Agency",
+    themSub: "Why so many Wilmington campaigns stall",
     them: [
-      "Sells 'Wilmington' from a Philadelphia or national office",
-      "One citywide push ignoring suburb-level economics",
-      "Reports full of impressions, empty of phone calls",
-      "Offshore link packages and duplicate citations",
-      "12-month contracts before you see a single lead",
+      "Sells Wilmington from somewhere else",
+      "A single citywide push that skips the suburbs",
+      "Reports that never mention calls",
+      "Ad spend wasted on clicks outside your area",
+      "Contracts that outlive the results",
     ],
-    usTitle: "Marketing with Zonic Media",
-    usSub: "Built to compound, reported like a P&L",
+    usTitle: "Zonic Media in Wilmington",
+    usSub: "Answerable in Delaware",
     us: [
-      "A verifiable Delaware headquarters and client list",
-      "Suburb-by-suburb targeting from Newark to Claymont",
-      "Reporting tied to calls, direction requests, and forms",
-      "Hand-built Delaware citations and local links",
-      "Month-to-month — we keep you with results, not paperwork",
+      "A Delaware office you can visit",
+      "Targeting by suburb, Newark to Claymont",
+      "Each call and form traced to its source",
+      "Ads shown only where you work",
+      "No long contract, just results",
     ],
-    scoreTitle: "Local Visibility Scorecard",
-    scoreSub: "A typical Wilmington client's first six months",
+    scoreTitle: "Sample Wilmington Scorecard",
+    scoreSub: "Example scores, first audit versus goal",
     scoreRows: [
-      { label: "Profile strength", before: 33, after: 92 },
-      { label: "Citation accuracy", before: 40, after: 94 },
-      { label: "Review velocity", before: 20, after: 76 },
-      { label: "Map pack visibility", before: 16, after: 85 },
+      { label: "Map Pack reach", before: 18, after: 80 },
+      { label: "Listing accuracy", before: 42, after: 95 },
+      { label: "Review pace", before: 22, after: 72 },
+      { label: "Profile completeness", before: 35, after: 94 },
     ],
   },
   why: {
-    h2: "A Wilmington Growth Partner, Not a Monthly Invoice",
-    lead: "Leads are the output. The inputs are strategy, execution, and accountability — and that is what you are actually buying.",
+    h2: "A Delaware Team Wilmington Can Hold to Account",
+    lead: "Plenty of agencies that show up for Wilmington searches sell the city from out of state. You can see exactly where we are.",
     cards: [
       {
-        icon: <RiSearchLine aria-hidden="true" />,
-        title: "Local is the whole practice",
-        desc: (
-          <>
-            Local rankings, local calls, and booked jobs for local businesses
-            is what the{" "}
-            <Link href="/" className="phl-inline-link">
-              Zonic Media
-            </Link>{" "}
-            team does every day — in our own state first.
-          </>
-        ),
+        icon: <FiMapPin aria-hidden="true" />,
+        title: "Headquartered in Delaware",
+        desc: "Our office is on The Green in Dover, a short drive down Route 1 from downtown Wilmington.",
       },
       {
         icon: <FiZap aria-hidden="true" />,
-        title: "Built for Wilmington Economics",
-        desc: "Wilmington clicks are not cheap. Tight geo-targeting, intent-matched landing pages, and weekly waste-cutting keep cost per lead honest in the state's most contested market.",
+        title: "Spend Aimed at Profit",
+        desc: "Wilmington clicks are pricey, so we steer budget toward your best jobs and cut waste every week.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,
-        title: "Transparent to a Fault",
-        desc: "You own every account and asset. You see every change in the monthly report. If a number dips you hear it from us first, with the fix already moving.",
+        title: "Open Accounts and Data",
+        desc: "Your accounts, your data and a monthly report listing every call and where it came from.",
       },
     ],
     banner: {
-      eyebrow: "Free Wilmington Market Audit",
-      h3: "See Exactly How We'll Grow Your Wilmington Visibility",
-      p: "We map your rankings, your profile, and your competitors across New Castle County — and send back a prioritized, flat-priced plan. Free, and yours to keep either way.",
+      eyebrow: "",
+      h3: "Get Your Wilmington Growth Plan",
+      p: "We check your rankings, profile and competitors across New Castle County, then send a ranked plan at a fixed monthly rate. Free, with no obligation.",
       checks: [
-        "Your Map Pack growth plan",
-        "Suburb-level competitive map",
-        "Citation opportunities mapped",
-        "Review growth roadmap",
+        "Map Pack plan by suburb",
+        "Competitors by area",
+        "Listing gaps",
+        "Review plan",
       ],
-      cta: "Claim Your Free Audit",
+      cta: "Get My Free Wilmington Plan",
       audit: {
-        title: "Local Visibility Score",
-        tag: "After 6 months",
-        score: "89",
-        grade: "Excellent",
-        gradeDesc:
-          "Where our Wilmington campaigns typically land after six months of compounding work",
-        rows: [
-          { label: "Google Business Profile", flag: "A+ grade" },
-          { label: "Citations & listings", flag: "100% accurate" },
-          { label: "Review velocity", flag: "Ahead of top 3" },
-        ],
+        title: "",
+        tag: "",
+        score: "62",
+        grade: "",
+        gradeDesc: "",
+        rows: [],
       },
     },
   },
-  marquee: [
-    "Wilmington Digital Marketing",
-    "Local SEO",
-    "Google Ads",
-    "Web Design",
-    "Newark",
-    "Pike Creek",
-    "Hockessin",
-    "Brandywine Valley",
-  ],
+  marquee: [],
+  // Kept for the type; the platform hub takes the hub slot. Chips feed the
+  // hero card.
   engine: {
-    eyebrow: "Everything Working Together",
-    h2: "Six Signals, One Ranking Engine",
-    lead: (
-      <>
-        Local rankings are not one lever, they are six working at once. Skip
-        any of them and the Map Pack notices. We run all six every month,
-        from downtown Wilmington out through Newark, Bear, Pike Creek and the
-        Brandywine Valley — and when you need calls before the rankings land,{" "}
-        <Link href="/services/google-ads" className="phl-inline-link">
-          Google Ads campaigns
-        </Link>{" "}
-        fill the gap.
-      </>
-    ),
-    coreStrong: "Your Wilmington listing",
-    coreSub: "Top three · every suburb you serve",
-    coreCta: "Get Your Free Audit",
-    nodes: [
-      {
-        icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Business Profile",
-        outcome: "Google trusts it",
-        tone: "blue",
-        left: "50%",
-        top: "7%",
-      },
-      {
-        icon: <FiSearch aria-hidden="true" />,
-        title: "Keyword Research",
-        outcome: "Right targets",
-        tone: "gold",
-        left: "82%",
-        top: "28.5%",
-      },
-      {
-        icon: <FiTarget aria-hidden="true" />,
-        title: "Google Ads",
-        outcome: "Leads now",
-        tone: "blue",
-        left: "82%",
-        top: "71.5%",
-      },
-      {
-        icon: <FiStar aria-hidden="true" />,
-        title: "Review Growth",
-        outcome: "Chosen first",
-        tone: "gold",
-        left: "50%",
-        top: "93%",
-      },
-      {
-        icon: <FiFileText aria-hidden="true" />,
-        title: "Local Pages",
-        outcome: "Rank per suburb",
-        tone: "blue",
-        left: "18%",
-        top: "71.5%",
-      },
-      {
-        icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Tracking",
-        outcome: "Proof monthly",
-        tone: "gold",
-        left: "18%",
-        top: "28.5%",
-      },
-    ],
-    chipsLabel: "Growing Wilmington businesses in",
+    eyebrow: "",
+    h2: "",
+    lead: null,
+    coreStrong: "",
+    coreSub: "",
+    coreCta: "",
+    nodes: [],
+    chipsLabel: "Industries we market in Wilmington",
     chips: [
+      "Law & Finance",
       "Home Services",
-      "Healthcare & Dental",
-      "Legal & Financial",
-      "Restaurants & Cafés",
-      "Salons & Wellness",
-      "Auto & Repair",
-      "Retail Storefronts",
-      "Trades & Contractors",
+      "Medical Offices",
+      "Restaurants & Bars",
+      "Salons & Spas",
+      "Auto Repair",
+      "Retail Shops",
+      "Contractors",
     ],
   },
   faqs: {
-    eyebrow: "FAQs",
-    h2: "Straight Answers About Marketing in Wilmington",
-    lead: "Pricing, timelines, suburbs, and what actually moves rankings in New Castle County. If your question is not here, send it through the form — a strategist answers, not a sales script.",
-    cta: "Ask About Your Suburb",
+    eyebrow: "",
+    h2: "Wilmington Marketing Questions, Answered",
+    lead: "Pricing, coverage and how fast rankings move.",
+    cta: "",
     items: WilmFaqs,
   },
-  grow: {
-    eyebrow: "More Delaware Coverage",
-    h2: "Wilmington is One Market. Here is the Rest of the State.",
-    lead: (
-      <>
-        See the statewide program on our{" "}
-        <Link
-          href="/services/delaware/digital-marketing"
-          className="phl-inline-link"
-        >
-          digital marketing agency in Delaware
-        </Link>{" "}
-        page, or go channel-deep below.
-      </>
-    ),
-    cards: [
-      {
-        href: "/services/delaware/seo",
-        icon: <FiSearch aria-hidden="true" />,
-        title: "SEO Company in Delaware",
-        desc: "The statewide SEO program — Wilmington, Dover, Newark and Sussex County.",
-        cta: "See Delaware SEO",
-      },
-      {
-        href: "/services/delaware/web-design",
-        icon: <FiLayout aria-hidden="true" />,
-        title: "Delaware Web Design",
-        desc: "Custom, SEO-ready sites for New Castle, Kent and Sussex County businesses.",
-        cta: "See web design",
-      },
-      {
-        href: "/services/google-ads",
-        icon: <FiTarget aria-hidden="true" />,
-        title: "Google Ads Management",
-        desc: "Paid search that pays for itself, tracked to calls.",
-        cta: "See Google Ads",
-      },
-    ],
-  },
+  grow: { eyebrow: "", h2: "", lead: null, cards: [] },
   form: {
-    eyebrow: "Get Started",
-    h2: "Claim Your Free Wilmington Market Audit",
-    lead: "Tell us about your business and we will map your rankings against Wilmington competitors, review your Google Business Profile, and send back a prioritized, flat-priced plan — no obligation.",
+    eyebrow: "",
+    h2: "Request a Wilmington Market Review",
+    lead: "Tell us about your business and we'll send a market review and a plan at one flat price.",
     formType: "wilmington-digital-marketing",
     badge: "Free Audit",
-    title: "Get Your Free Wilmington Audit",
+    title: "Request your Wilmington audit",
     subtitle:
-      "No contracts, no pressure — just a clear picture of where you rank today and what it takes to win New Castle County.",
+      "Share a few details and we'll show where you rank across Wilmington and what it takes to move up.",
     submitText: "Send My Free Audit",
-    messageLabel: "Tell us about your business",
-    messagePlaceholder:
-      "Your services, the Wilmington-area suburbs you cover, and what you'd like to improve",
+    messageLabel: "What would you like to improve?",
+    messagePlaceholder: "Your services, the suburbs you serve and your goals",
     defaultServices: ["Local SEO"],
   },
   relatedCurrent: PAGE_PATH,
+};
+
+const extras: DelawareExtras = {
+  kind: "wilmington",
+  // Owner's Wilmington banner (23 Oct); top-left anchor keeps the whole
+  // "Wilmington Digital Marketing Agency" heading in frame on phones too.
+  aboutPhoto: {
+    src: "/images/geo/wilmington-digital-marketing/wilmington-digital-marketing-agency.jpg",
+    alt: "Wilmington digital marketing agency banner over the Christina Riverfront at dusk, with SEO, PPC, social media, content marketing and web design icons",
+    position: "0% 0%",
+  },
+  pricing: {
+    title: "Marketing Plans for Wilmington Businesses",
+    lead: "Plans sized for New Castle County competition, from Map Pack basics to full SEO, ads and social.",
+    compareTitle: "Wilmington Plans at a Glance",
+    compareLead: "Every deliverable from Foundation up to Authority.",
+    addOnsTitle: "Extras for Wilmington Campaigns",
+    addOnsLead: "More suburbs, landing pages and campaigns when you're ready.",
+    customTitle: "Serving several suburbs?",
+    customText: "We'll build a plan around each area you cover.",
+  },
+  // Targets "wilmington search engine marketing" / "search engine
+  // optimization wilmington de".
+  aboutTitle: ["Search Engine", "Marketing Built for", "Wilmington, DE."],
+  aboutCard: {
+    kicker: "Serving New Castle County",
+    title: "Wilmington and nearby towns",
+    points: [
+      "Downtown, the Riverfront and Trolley Square",
+      "Newark, Bear and Pike Creek",
+      "Hockessin, Greenville and the Brandywine Valley",
+      "Claymont, New Castle and Middletown",
+    ],
+    foot: "Delaware HQ: 8 The Green, STE B, Dover",
+  },
+  // Own pillar colours (owner: a different set on every page).
+  pillars: ["#0e7490", "#ffe4e6", "#e2e8f0", "#4c1d95"],
+  features: {
+    h2: "Local SEO Services in Wilmington, DE That Win Search",
+    lead: (
+      <>
+        Suburb targeting, paid search and reviews work together across New
+        Castle County. Run a trade business? See{" "}
+        <Link href="/services/local-seo-for-home-services">
+          local SEO for home services
+        </Link>
+        .
+      </>
+    ),
+    items: [
+      {
+        label: "Suburbs",
+        title: "Rankings in Each Suburb You Serve",
+        body: "A downtown address alone won't put you on the map in Hockessin or Bear. We add suburb pages, local citations and profile signals for each area, then check your rank from each one.",
+        points: [
+          { t: "Suburb pages", d: "A landing page for each area." },
+          { t: "County citations", d: "Listings tied to New Castle County." },
+          { t: "Wider reach", d: "New suburbs added month by month." },
+          { t: "Suburb tracking", d: "Rank checked from every area." },
+        ],
+        href: "/services/delaware/seo",
+        link: "Delaware SEO program",
+        ui: "suburbs",
+      },
+      {
+        label: "Paid search",
+        title: "Google Ads and LSAs That Make the Phone Ring",
+        body: "Local Services Ads put a Google Guaranteed badge at the very top, and search ads cover the terms you don't rank for yet. We run both by suburb and trim wasted spend weekly.",
+        points: [
+          {
+            t: "Google Guaranteed",
+            d: "Local Services Ads set up and managed.",
+          },
+          { t: "Suburb budgets", d: "Spend aimed where the best jobs are." },
+          { t: "Pay per lead", d: "LSAs charge for leads, not clicks." },
+          { t: "Direct billing", d: "Google bills your ad spend to you." },
+        ],
+        href: "/services/google-ads",
+        link: "Google Ads management",
+        ui: "lsa",
+      },
+      {
+        label: "Reviews",
+        title: "Reviews That Tip the Decision",
+        body: "Wilmington customers compare several businesses before they call. A steady stream of recent, genuine reviews with real replies is often what wins the choice for you.",
+        points: [
+          { t: "Steady asks", d: "Requests after every finished job." },
+          { t: "Real replies", d: "Each review answered by name." },
+          { t: "Fresh reviews", d: "New ones coming in every month." },
+          { t: "Rating alerts", d: "Drops flagged quickly." },
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Business Profile optimization",
+        ui: "reviews",
+      },
+    ],
+  },
+  platforms: {
+    h2: "Every Call, Text and Visit Tracked",
+    lead: "People in Wilmington find you on Google, Maps or Waze, then call, text, fill in a form or stop by. We track each of those actions, so your report ties every customer to the search that sent them.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Where customers find you",
+    rightLabel: "How they get in touch",
+    centerIcon: <FiBarChart2 aria-hidden="true" />,
+    centerTitle: "One monthly report",
+    centerSub: "each lead tied to its search",
+  },
+  // Monthly report: matches the accountability points beside it (owner, 23 Oct).
+  phone: "report",
+  darkUi: "mappack",
+  scoreStyle: "rings",
+  noGrow: true,
+  reviewsTitle: "What Business Owners Tell Us",
+  contact: {
+    before: "Let’s Get Wilmington",
+    after: "Calling You First",
+    lead: "Name your services and the suburbs you want more work from. We'll send a free market audit and a fixed-rate plan.",
+  },
+  stepLinks: [
+    "#de-contact",
+    "/local-seo-google-business-optimization",
+    "/services/google-ads",
+    "/services/local-seo-packages",
+  ],
 };
 
 function Page() {
@@ -716,19 +685,13 @@ function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(wilmFaqJsonLd) }}
       />
-      <PhlLocationLanding data={data} />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

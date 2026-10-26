@@ -15,7 +15,6 @@ import {
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
@@ -184,7 +183,7 @@ const faqs = [
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
-  { name: "White-Label Services for Agencies", url: "/white-label-services" },
+  { name: "White-Label Services for Agencies", url: "/services/white-label-services" },
 ]);
 
 const faqSchema = {
@@ -197,11 +196,6 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.a },
   })),
 };
-
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: "/services/white-label-services",
-  areaServed: { type: "Country", name: "United States" },
-});
 
 const serviceJsonLd = buildServiceJsonLd({
   name: "White-Label Digital Marketing Services for Agencies",
@@ -229,13 +223,6 @@ export default function Page() {
         id="wl-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        id="wl-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessJsonLd),
-        }}
       />
 
       <div id="wl-top" className="wl-page">

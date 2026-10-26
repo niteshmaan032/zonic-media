@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the home inspector website free?",
     answer:
-      "The upfront home inspector website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes. The $2,000 home inspector website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "What is the best website builder for home inspectors?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Builders made for inspectors give you templates, but you still write, design and market the site yourself. We handle the home inspector website design, booking setup and tracking, then run the marketing that sends buyers and agents to it.",
   },
   {
-    question: "What is included in the home inspector website?",
+    question: "What should a home inspection website include?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Good home inspection website design puts booking first. Ours can include online scheduling, a sample report, pages for each inspection and add-on, an agent page, certifications, service-area pages, reviews, tracking and lead routing.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Can you replace my current inspection website?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer suits inspectors with no website, an outdated site, or a site that is not producing enough bookings. We review your current site first, then recommend a rebuild or a full replacement.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "How long is the term, and can I cancel?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "The qualifying plan runs on a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer.",
   },
 ];
 

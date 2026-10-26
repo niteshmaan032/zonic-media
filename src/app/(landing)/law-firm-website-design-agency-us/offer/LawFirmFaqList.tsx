@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the law-firm website really free?",
+    question: "What does ’free’ mean for our law firm website?",
     answer:
-      "The upfront law firm website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "It means the upfront law firm website design and development fee, valued at $2,000 for a standard build, is waived when your firm starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work begins.",
   },
   {
-    question: "Which legal marketing plans qualify?",
+    question: "Which plans make our firm eligible?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, legal content strategy, or a combined law-firm growth plan. Zonic confirms eligibility after reviewing your practice areas, market, and intake goals.",
+      "Qualifying plans can include Google Ads management, Local SEO, Google Business Profile management, legal content or a combined growth plan. Zonic confirms eligibility after reviewing your practice areas, markets and intake goals.",
   },
   {
-    question: "What is included in the law-firm website?",
+    question: "What pages come with the law firm website?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, attorney profiles, practice-area and market pages, consultation forms, click-to-call actions, mobile optimization, SEO foundations, intake tracking, and lead routing.",
+      "The agreed scope can include a homepage, attorney bios, practice-area and county pages, consultation forms, click-to-call, mobile layout, SEO basics, intake tracking and lead routing. Your firm reviews all copy against your state’s advertising rules before launch.",
   },
   {
-    question: "Can Zonic replace our existing law-firm website?",
+    question: "Can Zonic rebuild our current law firm website?",
     answer:
-      "Yes. This offer works for firms with no website, an outdated site, or a website that is not generating enough qualified consultation requests. We recommend the right replacement or rebuild approach after reviewing the current site.",
+      "Yes. The offer works for firms with no website, an outdated site, or one that brings in too few qualified consultation requests. Zonic reviews your current site and recommends a rebuild or replacement.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "How do the commitment and cancellation terms work?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "Because the website fee is waived as part of a recurring marketing engagement, your written agreement explains the minimum term, hosting, revisions, cancellation and website ownership before you approve the project.",
   },
 ];
 

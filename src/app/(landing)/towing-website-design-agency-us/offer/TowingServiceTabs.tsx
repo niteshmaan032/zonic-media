@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "emergency-towing",
     label: "Emergency Towing",
     icon: "zap",
-    heading: "Turn emergency towing searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Answer emergency tow searches with one big call button.",
+    body: "When a car breaks down, drivers want a number, not a menu. This page shows your hours, your area and a call button on every screen.",
     bullets: [
-      "Clear emergency towing value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "24/7 call button above the fold",
+      "Towns and highways you cover",
+      "Call and form tracking",
     ],
-    ctaLabel: "Build my emergency towing pages",
+    ctaLabel: "Build my emergency towing page",
     kicker: "EMERGENCY TOWING",
-    siteHeading: "Emergency Towing—done right.",
+    siteHeading: "Broken down? Help is one call away.",
     photo: "/images/free-website/free-towing/emergency-towing.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Emergency towing service",
   },
   {
     id: "roadside-assistance",
     label: "Roadside Assistance",
     icon: "target",
-    heading: "Turn roadside assistance searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn jump start and lockout searches into roadside calls.",
+    body: "Jump starts, flat tires, fuel delivery and lockouts each get clear copy, so drivers see you handle the small jobs too and call you first.",
     bullets: [
-      "Clear roadside assistance value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Jump, tire, fuel and lockout sections",
+      "Quick form for non-urgent help",
+      "Mobile-first layout for roadside use",
     ],
-    ctaLabel: "Build my roadside assistance pages",
+    ctaLabel: "Build my roadside assistance page",
     kicker: "ROADSIDE ASSISTANCE",
-    siteHeading: "Roadside Assistance—done right.",
+    siteHeading: "Flat tire or dead battery? We come to you.",
     photo: "/images/free-website/free-towing/roadside-assistance.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Roadside assistance service",
   },
   {
     id: "accident-recovery",
     label: "Accident Recovery",
     icon: "layers",
-    heading: "Turn accident recovery searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give accident recovery searches a calm, clear next step.",
+    body: "After a crash, people need reassurance and a fast answer. This page explains recovery, storage and insurance paperwork in plain words, with a call button close by.",
     bullets: [
-      "Clear accident recovery value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Plain-language recovery steps",
+      "Storage and insurance info",
+      "Call button near every section",
     ],
-    ctaLabel: "Build my accident recovery pages",
+    ctaLabel: "Build my accident recovery page",
     kicker: "ACCIDENT RECOVERY",
-    siteHeading: "Accident Recovery—done right.",
+    siteHeading: "Accident recovery handled with care.",
     photo: "/images/free-website/free-towing/accident-recovery.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Accident recovery towing",
   },
   {
     id: "flatbed-towing",
     label: "Flatbed Towing",
     icon: "truck",
-    heading: "Turn flatbed towing searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win flatbed requests from owners of cars that need extra care.",
+    body: "Owners of low, classic, AWD and luxury cars search for flatbed towing on purpose. This page shows your equipment and why a flatbed protects their vehicle.",
     bullets: [
-      "Clear flatbed towing value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Flatbed equipment photos",
+      "Vehicle types you carry",
+      "Quote request for planned moves",
     ],
-    ctaLabel: "Build my flatbed towing pages",
+    ctaLabel: "Build my flatbed towing page",
     kicker: "FLATBED TOWING",
-    siteHeading: "Flatbed Towing—done right.",
+    siteHeading: "Flatbed towing that protects your car.",
     photo: "/images/free-website/free-towing/flatbed-towing.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Flatbed towing service",
   },
   {
     id: "heavy-duty-towing",
     label: "Heavy-Duty Towing",
     icon: "users",
-    heading: "Turn heavy-duty towing searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show trucking and equipment owners you can handle heavy recovery.",
+    body: "Semi, bus and equipment owners judge a tow company on capability. This page lays out your heavy wreckers and recovery work so the right calls reach you.",
     bullets: [
-      "Clear heavy-duty towing value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Heavy wrecker and recovery details",
+      "Commercial vehicle types listed",
+      "Direct line for fleet managers",
     ],
-    ctaLabel: "Build my heavy-duty towing pages",
+    ctaLabel: "Build my heavy-duty towing page",
     kicker: "HEAVY-DUTY TOWING",
-    siteHeading: "Heavy-Duty Towing—done right.",
+    siteHeading: "Heavy-duty towing for trucks and equipment.",
     photo: "/images/free-website/free-towing/heavy-duty-towing.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Heavy-duty towing service",
   },
   {
     id: "fleet-accounts",
     label: "Fleet Accounts",
     icon: "building",
-    heading: "Turn fleet accounts searches into qualified enquiries.",
-    body: "A focused towing website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn fleet managers into steady monthly towing accounts.",
+    body: "Dealers, rental lots, property managers and fleets want a reliable partner, not a one-off tow. This page explains accounts, billing and response so they reach out.",
     bullets: [
-      "Clear fleet accounts value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Account and billing overview",
+      "Private property and impound info",
+      "Business enquiry form",
     ],
-    ctaLabel: "Build my fleet accounts pages",
+    ctaLabel: "Build my fleet accounts page",
     kicker: "FLEET ACCOUNTS",
-    siteHeading: "Fleet Accounts—done right.",
+    siteHeading: "Towing accounts for fleets and lots.",
     photo: "/images/free-website/free-towing/fleet-accounts.webp",
-    photoAlt: "Towing service image",
+    photoAlt: "Fleet towing account service",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function TowingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Towing website path
+                <Icon name={service.icon} /> Towing page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function TowingServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
-                    <span>About</span>
+                    <span>Tows</span>
+                    <span>Coverage</span>
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Call dispatch
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function TowingServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Fast dispatch. Upfront communication. A truck on the way when you need one.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Call now</b>
+                      <b>Our services</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted on local roads</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function TowingServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> 24/7 · LICENSED · INSURED
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function TowingServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Call now</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built for the call</strong>
+                  <small>Clear path from search to dispatch</small>
                 </span>
               </div>
             </div>

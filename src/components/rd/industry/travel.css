@@ -1,0 +1,110 @@
+/* Travel growth UIs (26 Oct 2026): looping motion inside the cards only,
+   no scroll reveals (owner rule). Reduced motion: the finished frame. */
+
+/* AI planner: dots type, then the plan lines appear (8s loop) */
+.tt-ui-dots {
+  animation: tt-ui-dots 8s ease-out infinite;
+}
+@keyframes tt-ui-dots {
+  0%,
+  12% {
+    opacity: 1;
+  }
+  15%,
+  100% {
+    opacity: 0;
+  }
+}
+.tt-ui-dot {
+  animation: tt-ui-dot 0.9s ease-in-out infinite;
+}
+@keyframes tt-ui-dot {
+  50% {
+    translate: 0 -3px;
+    opacity: 0.4;
+  }
+}
+.tt-ui-line {
+  animation: tt-ui-line 8s ease-out infinite;
+}
+@keyframes tt-ui-line {
+  0%,
+  6% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  12%,
+  92% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Highlighted pick: a soft ring pulse (4s loop) */
+.tt-ui-pick {
+  animation: tt-ui-pick 4s ease-in-out infinite;
+}
+@keyframes tt-ui-pick {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(12, 21, 38, 0.07);
+  }
+}
+
+/* Book button press, then a confirmation toast (6s loop) */
+.tt-ui-press {
+  animation: tt-ui-press 6s ease-out infinite;
+}
+@keyframes tt-ui-press {
+  0%,
+  22%,
+  30%,
+  100% {
+    scale: 1;
+  }
+  26% {
+    scale: 0.94;
+  }
+}
+.tt-ui-toast {
+  opacity: 0;
+  animation: tt-ui-toast 6s ease-out infinite;
+}
+@keyframes tt-ui-toast {
+  0%,
+  32% {
+    opacity: 0;
+    translate: 0 -12px;
+  }
+  40%,
+  86% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  94%,
+  100% {
+    opacity: 0;
+    translate: 0 -12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tt-ui-dots,
+  .tt-ui-dot,
+  .tt-ui-line,
+  .tt-ui-pick,
+  .tt-ui-press,
+  .tt-ui-toast {
+    animation: none !important;
+  }
+  .tt-ui-dots,
+  .tt-ui-toast {
+    opacity: 0;
+  }
+}

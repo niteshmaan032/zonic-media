@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "full-kitchen-remodels",
     label: "Full Kitchen Remodels",
     icon: "layout",
-    heading: "Turn full kitchen remodels searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win the full kitchen remodels with the biggest budgets.",
+    body: "A full kitchen remodel page that shows finished rooms, explains your design-to-install process and gives serious buyers a clear way to book a consultation.",
     bullets: [
-      "Clear full kitchen remodels value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Finished kitchen gallery by style",
+      "Design, build and install timeline",
+      "Consult form with a project budget field",
     ],
-    ctaLabel: "Build my full kitchen remodels pages",
+    ctaLabel: "Map my full kitchen remodel page",
     kicker: "FULL KITCHEN REMODELS",
-    siteHeading: "Full Kitchen Remodels—done right.",
+    siteHeading: "Kitchens built around you.",
     photo: "/images/free-website/free-kitchen-remodeling/full-kitchen-remodels.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "custom-cabinetry",
     label: "Custom Cabinetry",
     icon: "wrench",
-    heading: "Turn custom cabinetry searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show cabinet work in the detail buyers zoom in on.",
+    body: "A custom cabinetry page with close-up photos of doors, finishes and storage ideas, written for homeowners comparing custom, semi-custom and refacing options.",
     bullets: [
-      "Clear custom cabinetry value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Door style and finish photo sets",
+      "Custom vs semi-custom vs refacing guide",
+      "Showroom or in-home visit request",
     ],
-    ctaLabel: "Build my custom cabinetry pages",
+    ctaLabel: "Map my custom cabinetry page",
     kicker: "CUSTOM CABINETRY",
-    siteHeading: "Custom Cabinetry—done right.",
+    siteHeading: "Cabinets made to fit.",
     photo: "/images/free-website/free-kitchen-remodeling/custom-cabinetry.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "countertops",
     label: "Countertops",
     icon: "target",
-    heading: "Turn countertops searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Capture countertop searches by stone and surface.",
+    body: "A countertop page that compares quartz, granite and other surfaces, shows real installs and invites a measure or quote request from any phone.",
     bullets: [
-      "Clear countertops value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Quartz, granite and solid surface sections",
+      "Installed counter photos, close up",
+      "Measure and quote request form",
     ],
-    ctaLabel: "Build my countertops pages",
+    ctaLabel: "Map my countertop page",
     kicker: "COUNTERTOPS",
-    siteHeading: "Countertops—done right.",
+    siteHeading: "Counters that set the tone.",
     photo: "/images/free-website/free-kitchen-remodeling/countertops.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "kitchen-islands",
     label: "Kitchen Islands",
     icon: "layers",
-    heading: "Turn kitchen islands searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn island ideas into booked kitchen design visits.",
+    body: "A kitchen island page with layouts for seating, storage and prep space, helping homeowners picture the island that fits their room and their budget.",
     bullets: [
-      "Clear kitchen islands value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Island layouts with seating and storage",
+      "Plumbing and power options explained",
+      "Idea gallery linked to a consult form",
     ],
-    ctaLabel: "Build my kitchen islands pages",
+    ctaLabel: "Map my kitchen island page",
     kicker: "KITCHEN ISLANDS",
-    siteHeading: "Kitchen Islands—done right.",
+    siteHeading: "The island your kitchen needs.",
     photo: "/images/free-website/free-kitchen-remodeling/kitchen-islands.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "lighting-layout",
     label: "Lighting & Layout",
     icon: "zap",
-    heading: "Turn lighting & layout searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Answer layout and lighting questions before the visit.",
+    body: "A layout and lighting page that explains work triangles, open plans and layered lighting, so homeowners arrive at the consult already trusting your advice.",
     bullets: [
-      "Clear lighting & layout value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Before-and-after layout changes",
+      "Layered lighting ideas with photos",
+      "Simple guide to moving walls or plumbing",
     ],
-    ctaLabel: "Build my lighting & layout pages",
+    ctaLabel: "Map my layout and lighting page",
     kicker: "LIGHTING & LAYOUT",
-    siteHeading: "Lighting & Layout—done right.",
+    siteHeading: "Better flow. Better light.",
     photo: "/images/free-website/free-kitchen-remodeling/lighting-amp-layout.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "design-build",
     label: "Design-Build",
     icon: "users",
-    heading: "Turn design-build searches into qualified enquiries.",
-    body: "A focused kitchen remodeling website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell one team for design and build, start to finish.",
+    body: "A design-build page that shows how one team handles drawings, selections, permits and construction, which suits buyers who want a single point of contact.",
     bullets: [
-      "Clear design-build value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Design-build process in clear stages",
+      "Selections and permit help explained",
+      "One contact from concept to handover",
     ],
-    ctaLabel: "Build my design-build pages",
+    ctaLabel: "Map my design-build page",
     kicker: "DESIGN-BUILD",
-    siteHeading: "Design-Build—done right.",
+    siteHeading: "One team. Design to build.",
     photo: "/images/free-website/free-kitchen-remodeling/design-build.webp",
     photoAlt: "Kitchen Remodeling service image",
   },
@@ -161,7 +161,7 @@ export default function KitchenRemodelingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Kitchen Remodeling website path
+                <Icon name={service.icon} /> Kitchen website service page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function KitchenRemodelingServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Thoughtful design, clean installs and a kitchen built around the way your family cooks.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Plan my kitchen</b>
+                      <b>Browse kitchens</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Reviewed by local homeowners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function KitchenRemodelingServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> DESIGN · BUILD · FINISH
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function KitchenRemodelingServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Plan my kitchen</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made for design visits</strong>
+                  <small>From idea board to consult</small>
                 </span>
               </div>
             </div>

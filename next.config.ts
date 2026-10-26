@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
   // memoization payoff matters) but skip it in `next dev` so page compiles are
   // fast. Dev/prod behavior stays identical — the compiler only adds memoization.
   reactCompiler: process.env.NODE_ENV === "production",
+  // Inline the page CSS into the HTML instead of ~10 render-blocking
+  // stylesheet requests (mobile FCP/LCP waited on them, SEO checkup 27 Oct).
+  experimental: {
+    inlineCss: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -36,6 +41,13 @@ const nextConfig: NextConfig = {
 
   async headers() {
     return [
+      // Next.js code chunks were piling up in Search Console's "Crawled -
+      // currently not indexed" report (678 files, Oct 2026). Google still
+      // fetches them to render pages; this only keeps them out of the index.
+      {
+        source: "/_next/static/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
       {
         source: "/:path*",
         headers: [
@@ -86,6 +98,31 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         has: [{ type: "host", value: "zonicllc.com" }],
         destination: "https://www.zonicllc.com/:path*",
+        permanent: true,
+      },
+
+      // Old or guessed URLs that still get visits (Semrush "orphaned pages"
+      // from Google Analytics, SEO checkup 27 Oct 2026). All returned 404.
+      ...[
+        ["/about-us", "/about"],
+        ["/about_us", "/about"],
+        ["/aboutus", "/about"],
+        ["/team", "/about"],
+        ["/our-team", "/about"],
+        ["/meet-the-team", "/about"],
+        ["/career", "/about"],
+        ["/careers", "/about"],
+        ["/services/digital-marketing", "/services"],
+        ["/services/ppc-management", "/services/google-ads"],
+        ["/services/philadelphia/google-ads", "/services/philadelphia/ppc"],
+        ["/services/philadelphia/g-ads", "/services/philadelphia/ppc"],
+        ["/gmb/reinstatement", "/services/gbp-reinstatement-service"],
+        ["/pest-control-marketing", "/services/pest-control-marketing-agency"],
+      ].map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Old WordPress-style blog pagination -> the real ?page= URLs.
+      {
+        source: "/blog/page/:n(\\d+)",
+        destination: "/blog?page=:n",
         permanent: true,
       },
 

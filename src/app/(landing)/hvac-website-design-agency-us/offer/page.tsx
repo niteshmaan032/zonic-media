@@ -75,23 +75,23 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "HVAC-first design" },
-  { icon: "smartphone", label: "Mobile optimization" },
+  { icon: "layout", label: "HVAC-first layouts" },
+  { icon: "smartphone", label: "Mobile booking flow" },
   { icon: "clipboard", label: "Service request forms" },
-  { icon: "phone", label: "Emergency click-to-call" },
-  { icon: "search", label: "Local SEO foundation" },
+  { icon: "phone", label: "No-cool call buttons" },
+  { icon: "search", label: "HVAC local SEO base" },
   { icon: "chart", label: "Service call tracking" },
-  { icon: "layers", label: "HVAC service pages" },
+  { icon: "layers", label: "AC and heating pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
   { icon: "chart", label: "Service call tracking" },
-  { icon: "layers", label: "HVAC service pages" },
-  { icon: "pin", label: "Service-area signals" },
-  { icon: "gauge", label: "Speed optimization" },
-  { icon: "code", label: "Schema setup" },
-  { icon: "target", label: "Booking CTAs" },
-  { icon: "users", label: "HVAC lead routing" },
+  { icon: "layers", label: "AC and heating pages" },
+  { icon: "pin", label: "Service-area pages" },
+  { icon: "gauge", label: "Speed tuning" },
+  { icon: "code", label: "HVAC schema markup" },
+  { icon: "target", label: "Tune-up booking buttons" },
+  { icon: "users", label: "Tech lead routing" },
 ] as const;
 
 const EXTRA_SERVICES = [
@@ -107,26 +107,26 @@ const EXTRA_SERVICES = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Free HVAC Website for HVAC Companies | Zonic Media" },
+  title: { absolute: "Free HVAC Website + HVAC Marketing Packages | Zonic" },
   description:
-    "Free HVAC website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+    "Get a free HVAC website with our HVAC marketing packages. No build fee on a qualifying plan, with AC repair, furnace and maintenance pages that book calls.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
     "free hvac website",
-    "free hvac website templates",
+    "hvac marketing packages",
+    "hvac marketing website",
+    "hvac digital marketing websites",
     "hvac website design",
-    "hvac company website",
+    "free hvac leads",
+    "free hvac advertising",
     "free website for hvac companies",
-    "hvac marketing plan",
-    "best hvac company websites",
-    "hvac web design agency",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Website for HVAC Companies | Zonic Media",
+    title: "Free HVAC Website + HVAC Marketing Packages | Zonic",
     description:
-      "Free HVAC website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+      "Get a free HVAC website with our HVAC marketing packages. No build fee on a qualifying plan, with AC repair, furnace and maintenance pages that book calls.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -170,7 +170,7 @@ export default function HvacOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for HVAC companies</span>
+              <span>Free HVAC website with HVAC marketing packages</span>
               <Icon name="sparkles" />
             </div>
 
@@ -187,19 +187,19 @@ export default function HvacOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic HVAC marketing plan and we’ll build a professional website designed to generate service calls, installation estimates, maintenance sign-ups, and booked HVAC jobs — with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic HVAC marketing plan and we build your HVAC marketing website with no development fee, made to book AC repairs, furnace calls, seasonal tune-ups and maintenance plan sign-ups all year.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my HVAC website</span>
+                <span>Claim my free HVAC website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See the HVAC features</span>
+                <span>See HVAC website features</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -221,8 +221,8 @@ export default function HvacOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>HVAC lead system</strong>
-                  <small>Built for calls and bookings</small>
+                  <strong>Service call booking</strong>
+                  <small>Calls, forms and tune-ups</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -230,8 +230,8 @@ export default function HvacOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Season-ready growth</strong>
-                  <small>Website + HVAC marketing</small>
+                  <strong>Ready for every season</strong>
+                  <small>Site + HVAC marketing</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -239,8 +239,8 @@ export default function HvacOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Scope in writing</strong>
+                  <small>Agreed before we start</small>
                 </span>
               </div>
             </div>
@@ -350,8 +350,8 @@ export default function HvacOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for HVAC leads</strong>
-                <small>Calls, bookings, and tracking included</small>
+                <strong>Made for HVAC service calls</strong>
+                <small>Bookings, plans and tracking</small>
               </span>
             </div>
           </div>
@@ -371,9 +371,9 @@ export default function HvacOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One HVAC offer. One connected lead system.</span>
-            <h2>Remove the website cost holding your HVAC growth back.</h2>
-            <p>Zonic combines the HVAC website your company needs with the recurring marketing required to reach homeowners before they call another comfort contractor.</p>
+            <span className="section-kicker">How the HVAC website offer works</span>
+            <h2>HVAC marketing packages that include the website build.</h2>
+            <p>We bundle your HVAC marketing website with campaigns that keep it busy, so homeowners find you when the AC quits or the furnace fails.</p>
           </div>
 
           <div className="process-grid">
@@ -382,39 +382,35 @@ export default function HvacOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Map your HVAC market</h3>
-              <p>We review your HVAC services, target cities, seasonal demand, current lead sources, and the jobs you want more of.</p>
-              <small>HVAC growth call</small>
+              <h3>Review your HVAC market</h3>
+              <p>We look at your services, cities, peak seasons, current lead sources and the HVAC calls you want more of.</p>
+              <small>HVAC strategy call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine HVAC Google Ads, Local SEO, Google Business Profile growth, seasonal campaigns, tracking, and conversion optimization.</p>
-              <small>Recurring lead generation</small>
+              <h3>Choose from HVAC marketing packages</h3>
+              <p>Pick a plan that can combine HVAC Google Ads, local SEO, Google Business Profile work, seasonal campaigns, call tracking and page improvements.</p>
+              <small>Year-round lead flow</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build the HVAC site</h3>
-              <p>Zonic creates the agreed HVAC lead-generation website with the upfront development fee waived under your marketing engagement.{" "}
-                Same build standard as our{" "}
-                <Link href="/services/hvac-website-design" className="offer-inlink">
+              <h3>Launch your HVAC website</h3>
+              <p>We build the agreed HVAC website in 2–3 weeks with the upfront development fee waived under your plan. Built to the same standard as our <Link href="/services/hvac-website-design" className="offer-inlink">
                   HVAC website design service
-                </Link>
-                .
-              </p>
-              <small>Website fee waived</small>
+                </Link>.</p>
+              <small>HVAC build fee waived</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my HVAC company</span>
+              <span>See if my HVAC company qualifies</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -425,26 +421,19 @@ export default function HvacOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every hvac lead in one place.</h2>
-            <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which hvac jobs your marketing produced
-              instead of guessing where the phone calls came from.
-            </p>
+            <span className="section-kicker">HVAC call tracking</span>
+            <h2>Know which channel booked each HVAC call.</h2>
+            <p>Service calls, booking forms and chats land in one dashboard with their source, so you can tell paid leads apart from the free HVAC leads that arrive through Maps and organic search.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
-              </li>
+                <Icon name="check" /> No-cool and no-heat calls logged</li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
-              </li>
+                <Icon name="check" /> Paid or organic source on every lead</li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
-              </li>
+                <Icon name="check" /> Status from booked call to sold system</li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Show me HVAC tracking</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -530,30 +519,28 @@ export default function HvacOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Built around HVAC search intent</span>
-              <h2>One HVAC website. A clear path for every profitable service.</h2>
+              <span className="section-kicker">Heating and cooling service paths</span>
+              <h2>A booking path for every heating and cooling call.</h2>
             </div>
-            <p>Choose an HVAC service to see how Zonic structures the message, proof, calls to action, and booking flow around what homeowners need in that moment.</p>
+            <p>Pick an HVAC service to see how we shape the message, proof and booking steps for a homeowner who is too hot, too cold or planning an upgrade.</p>
           </div>
 
           <HvacServiceTabs />
 
           <div className="niche-banner">
             <div className="niche-banner-copy">
-              <span className="section-kicker section-kicker--dark">
-                Beyond these six
-              </span>
-              <h3>We build for every HVAC service.</h3>
-              <p>The tabs are a sample — if homeowners search for it, we can build the page that wins the call.</p>
+              <span className="section-kicker section-kicker--dark">Plus every comfort service</span>
+              <h3>Ductless, zoning, air handlers and more.</h3>
+              <p>The tabs show six. If homeowners near you search for an HVAC service, we can build the page that books the call.</p>
             </div>
             <div className="niche-banner-tags">
               {EXTRA_SERVICES.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
-              <span className="niche-banner-more">+ every HVAC service</span>
+              <span className="niche-banner-more">+ any HVAC service</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my HVAC website</span>
+              <span>Get my HVAC website</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -564,9 +551,9 @@ export default function HvacOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your HVAC lead-generation website includes</span>
-            <h2>More than an HVAC website handed over and forgotten.</h2>
-            <p>Your site becomes part of the same system as your ads, local visibility, seasonal campaigns, call tracking, and service follow-up.</p>
+            <span className="section-kicker">Inside your HVAC marketing website</span>
+            <h2>What sets our HVAC digital marketing websites apart.</h2>
+            <p>Your site works with your ads, Google profile, seasonal campaigns, call tracking and service follow-up instead of sitting on its own.</p>
           </div>
 
           <div className="icon-cloud">
@@ -594,15 +581,11 @@ export default function HvacOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>HVAC SYSTEM 01</small>
-                <h3>Service and city authority</h3>
-                <p>AC repair, heating, heat pumps, air quality, maintenance, and location pathways help search engines and homeowners understand exactly where your company fits.{" "}
-                  The same structure behind our{" "}
-                  <Link href="/services/industry/local-seo-services-for-hvac" className="offer-inlink">
+                <small>HVAC SITE CORE 01</small>
+                <h3>Service and city pages that rank</h3>
+                <p>AC repair, heating, heat pump, air quality, maintenance and city pages show Google and homeowners what you fix and where you work. The same structure behind our <Link href="/services/industry/local-seo-services-for-hvac" className="offer-inlink">
                     local SEO services for HVAC
-                  </Link>
-                  .
-                </p>
+                  </Link>.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -611,9 +594,9 @@ export default function HvacOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>HVAC SYSTEM 02</small>
-                <h3>Trackable booking flow</h3>
-                <p>Service forms, click-to-call, call tracking, conversion events, and CRM routing connect HVAC campaigns to real booking and estimate requests.</p>
+                <small>HVAC SITE CORE 02</small>
+                <h3>Bookings tied to campaigns</h3>
+                <p>Service forms, click-to-call, call tracking, conversion events and CRM routing link each HVAC campaign to real booked calls and estimates.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -621,7 +604,7 @@ export default function HvacOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my HVAC website</span>
+              <span>Claim my free HVAC website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -633,8 +616,8 @@ export default function HvacOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying HVAC plans</span>
-              <h2>Pick the HVAC growth plan. The website comes with it.</h2>
+              <span className="section-kicker">HVAC marketing packages</span>
+              <h2>Each HVAC marketing package comes with the website build.</h2>
             </div>
             <p>Any qualifying plan at $297/month or above on a 6-month term includes the full HVAC lead-generation website build at no development fee.</p>
           </div>
@@ -758,13 +741,11 @@ export default function HvacOfferPage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">
-              The qualifying HVAC marketing plan
-            </span>
-            <h2>The website is the comfort hub. Marketing keeps the lead pipeline moving.</h2>
-            <p>Your plan is selected around your HVAC territory and may combine paid search, local visibility, Google Business Profile growth, seasonal campaigns, tracking, and ongoing conversion improvements.</p>
+            <span className="section-kicker section-kicker--dark">What the HVAC plan covers</span>
+            <h2>Paid ads, free listings and one HVAC site, working together.</h2>
+            <p>We shape your plan around your HVAC territory. It can mix paid search, local SEO, Google Business Profile growth, seasonal campaigns, call tracking and ongoing page improvements.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my HVAC company</span>
+              <span>Plan my HVAC marketing</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -773,48 +754,35 @@ export default function HvacOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>HVAC Google Ads</h3>
-              <p>Capture urgent AC repair, heating, replacement, maintenance, and installation searches with service-led campaigns and trackable booking actions.{" "}
-                See our{" "}
-                <Link href="/services/google-ads" className="offer-inlink">
+              <h3>Google Ads for HVAC</h3>
+              <p>Reach homeowners searching for AC repair, furnace repair, system replacement and tune-ups with service-led ads and tracked bookings. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local HVAC SEO + GBP</h3>
-              <p>Build visibility across HVAC services and target cities while strengthening the proof homeowners see in local results.{" "}
-                Backed by our{" "}
-                <Link href="/services/industry/local-seo-services-for-hvac" className="offer-inlink">
+              <h3>Free HVAC advertising on Maps</h3>
+              <p>Your Google profile is free HVAC advertising. We sharpen it and lift your local rankings in each city you serve. Backed by our <Link href="/services/industry/local-seo-services-for-hvac" className="offer-inlink">
                   local SEO services for HVAC
-                </Link>{" "}
-                and{" "}
-                <Link
+                </Link> and <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
                 >
                   Google Business Profile optimization
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>03</strong>
-              <h3>Seasonal demand campaigns</h3>
-              <p>Launch fast, location-focused campaigns during heat waves and cold snaps while tracking every service call and booking request.</p>
+              <h3>Heat wave and cold snap campaigns</h3>
+              <p>When temperatures spike or drop, location-based campaigns go live fast and every service call they bring is tracked.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
-              </span>
+                <b>$0</b> HVAC build fee</span>
               <span>
-                <b>1</b> connected growth system
-              </span>
+                <b>1</b> plan for site and ads</span>
               <span>
-                <b>100%</b> clear written scope
-              </span>
+                <b>100%</b> of terms agreed in writing</span>
             </article>
           </div>
         </section>
@@ -822,13 +790,11 @@ export default function HvacOfferPage() {
         {/* ───────────── Terms ───────────── */}
         <section className="section terms-section">
           <div className="terms-main">
-            <span className="section-kicker">
-              Clear qualification. Clear terms.
-            </span>
-            <h2>What &ldquo;free HVAC website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront HVAC website design and development fee when an eligible contractor starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <span className="section-kicker">Free HVAC website terms</span>
+            <h2>The free HVAC website, explained line by line.</h2>
+            <p>We waive the HVAC website build fee when a new client starts a qualifying recurring marketing plan. Each term below also appears in your written proposal.</p>
             <a className="section-button" href="#contact">
-              <span>See if my HVAC company qualifies</span>
+              <span>Check my HVAC company</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -838,39 +804,31 @@ export default function HvacOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>The HVAC website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
+                <strong>Fee waived</strong>
+                <small>The HVAC website development fee, valued at $2,000. Your monthly plan is billed at the full rate, with no discount.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
-                <small>Any Zonic HVAC marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform.{" "}
-                  Also available with our{" "}
-                  <Link href="/services/hvac-marketing-agency" className="offer-inlink">
+                <strong>Qualifying plans</strong>
+                <small>Any Zonic HVAC marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. The ad platform bills ad spend separately. Also available with our <Link href="/services/hvac-marketing-agency" className="offer-inlink">
                     HVAC marketing agency service
-                  </Link>
-                  .
-                </small>
+                  </Link>.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>Your domain is registered in your HVAC company’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
+                <strong>Who owns it</strong>
+                <small>Your domain is registered in your HVAC company’s name from day one. We host and maintain the site during the term, and full ownership of the website and hosting moves to you once month six is complete.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
-                <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
-                </small>
+                <strong>Cancelling early</strong>
+                <small>You keep your domain and any content you supplied. The website itself does not transfer, since the build fee was waived against the full six-month engagement.</small>
               </span>
             </div>
           </div>
@@ -880,8 +838,8 @@ export default function HvacOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">HVAC website + recurring growth</span>
-              <h2>Why the combined offer is stronger for HVAC contractors.</h2>
+              <span className="section-kicker">Why HVAC companies bundle</span>
+              <h2>Why your HVAC site and marketing belong in one plan.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -897,7 +855,7 @@ export default function HvacOfferPage() {
               </div>
               <p>
                 <strong>One HVAC lead system</strong>
-                <small>Website · visibility · tracking</small>
+                <small>Website · Maps · call tracking</small>
               </p>
             </div>
           </div>
@@ -905,34 +863,34 @@ export default function HvacOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your HVAC website, ads, GBP visibility, seasonal campaigns, and tracking are planned around the same homeowners and service territory.</p>
+              <p>Your HVAC website, ads, Google profile, seasonal campaigns and tracking aim at the same homeowners and the same service area.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One HVAC strategy</strong>
-                  <small>Built around your territory</small>
+                  <strong>One HVAC playbook</strong>
+                  <small>Built for your service area</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving your HVAC campaigns a conversion-ready foundation without a separate development bill.</p>
+              <p>With no build invoice, more of your budget goes into campaigns that keep techs busy in the shoulder seasons.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>More budget for calls</strong>
+                  <small>No upfront HVAC site cost</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Service calls, booking forms, paid campaigns, and local search actions are measured together so improvements focus on real HVAC opportunities.</p>
+              <p>Service calls, booking forms, ads and Maps actions are measured together, so each change targets real HVAC revenue.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable HVAC growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>HVAC growth you can measure</strong>
+                  <small>Tracking from day one</small>
                 </div>
               </footer>
             </article>
@@ -951,9 +909,9 @@ export default function HvacOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">HVAC website FAQs</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details HVAC contractors should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">HVAC website questions</span>
+            <h2>HVAC owners ask, we answer.</h2>
+            <p>Straight answers on the free HVAC website, our HVAC marketing packages, free HVAC leads and the six-month term.</p>
             <a className="section-button" href="#contact">
               <span>Ask about my HVAC market</span>
               <i>
@@ -971,21 +929,16 @@ export default function HvacOfferPage() {
           <div className="cta-orbit cta-orbit--two" />
 
           <div className="cta-content">
-            <span className="section-kicker section-kicker--dark">
-              Zonic HVAC Website Launch Offer
-            </span>
-            <h2>Claim your professional HVAC website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your services, target territory, current website, and lead goals before recommending a qualifying HVAC marketing plan.</p>
+            <span className="section-kicker section-kicker--dark">HVAC website launch</span>
+            <h2>Get your HVAC website live before the next heat wave.</h2>
+            <p>Fill in the short form. We review your HVAC services, territory, current website and lead goals, then recommend the HVAC marketing package that fits.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> HVAC lead-generation website
-              </span>
+                <Icon name="check" /> HVAC website built for service calls</span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your territory
-              </span>
+                <Icon name="check" /> Package matched to your service area</span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
-              </span>
+                <Icon name="check" /> Written scope before you commit</span>
             </div>
 
             <div className="cta-direct">
@@ -1021,7 +974,7 @@ export default function HvacOfferPage() {
             >
               Zonic Media
             </a>
-            <p>HVAC lead-generation websites connected to the marketing services that grow HVAC companies.</p>
+            <p>HVAC marketing websites paired with campaigns that keep service calls coming every season.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1049,7 +1002,7 @@ export default function HvacOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>HVAC Website Launch Offer</span>
+            <span>Free HVAC Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying HVAC marketing plan at $297/month or above on a six-month term.</p>
             <a href="#hwd-offer-form">

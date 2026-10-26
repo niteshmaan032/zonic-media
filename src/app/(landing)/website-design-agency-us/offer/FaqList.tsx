@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the small business website actually free?",
     answer:
-      "The upfront design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes, the build is. The $2,000 design and development fee is waived when you start a qualifying recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work starts.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "What kinds of businesses can claim the free website?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Local and service businesses across the 20+ industries we work in. Qualifying plans include Google Ads management, local SEO, Google Business Profile management or a combined plan. We confirm eligibility after reviewing your goals and market.",
   },
   {
-    question: "What is included in the website?",
+    question: "What pages and features does the website include?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "The standard build is a homepage plus ten pages and up to five city pages, with two rounds of design revisions. It covers service pages, contact forms, click-to-call, mobile layouts, SEO basics, tracking and lead routing.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "How is this different from a free website builder?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "A free builder hands you a template and leaves the rest to you. We design and build the site, connect tracking and run the marketing that sends customers to it. Existing site? We can rebuild it.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What happens if I cancel before six months?",
     answer:
-      "Yes. The qualifying plan runs on a six-month minimum term, and that's what the waived $2,000 build fee is set against. We host the site during those six months; ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website doesn't transfer. Your written proposal restates all of this before you sign anything.",
+      "The qualifying plan has a six-month minimum term, which the waived $2,000 build fee is set against. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and your content, but the website does not transfer. Your proposal states all of this before you sign anything.",
   },
 ];
 

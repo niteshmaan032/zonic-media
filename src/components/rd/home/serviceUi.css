@@ -1,0 +1,166 @@
+/*
+ * Service-card UI loops for /home2 (ServiceUi.tsx), 19 Oct 2026.
+ * One 6s loop per card; stagger with animation-delay. Every element's
+ * resting style is its finished state, so with reduced motion (the page root
+ * switches animations off) each UI still reads correctly.
+ */
+
+@keyframes sv-in {
+  0%, 4% { opacity: 0; transform: translateY(8px); }
+  12%, 90% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+@keyframes sv-pop {
+  0%, 4% { opacity: 0; transform: scale(0.85); }
+  12%, 90% { opacity: 1; transform: none; }
+  100% { opacity: 0; transform: scale(0.95); }
+}
+@keyframes sv-grow { 0%, 6% { width: 0; } 40%, 92% { width: var(--w); } 100% { width: 0; } }
+@keyframes sv-rise { 0%, 6% { height: 0; } 40%, 92% { height: var(--h); } 100% { height: 0; } }
+@keyframes sv-draw { 0%, 6% { stroke-dashoffset: 1; } 45%, 92% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 1; } }
+@keyframes sv-ring { 0%, 8% { stroke-dashoffset: 1; } 50%, 92% { stroke-dashoffset: var(--g); } 100% { stroke-dashoffset: 1; } }
+@keyframes sv-fill { 0%, 40% { fill-opacity: 0; } 55%, 92% { fill-opacity: 1; } 100% { fill-opacity: 0; } }
+@keyframes sv-type { 0%, 4% { max-width: 0; } 30%, 92% { max-width: 260px; } 100% { max-width: 0; } }
+@keyframes sv-stream { 0%, 6% { width: 0; } 20%, 92% { width: var(--w); } 100% { width: 0; } }
+@keyframes sv-caret { 50% { border-color: transparent; } }
+
+/* Map Pack: your listing climbs from #3 to #1 (rows 44px apart). */
+@keyframes sv-rank-you { 0%, 16% { top: 88px; } 32%, 88% { top: 0; } 96%, 100% { top: 88px; } }
+@keyframes sv-rank-a { 0%, 16% { top: 0; } 32%, 88% { top: 44px; } 96%, 100% { top: 0; } }
+@keyframes sv-rank-b { 0%, 16% { top: 44px; } 32%, 88% { top: 88px; } 96%, 100% { top: 44px; } }
+@keyframes sv-you-hl {
+  0%, 22% { background: #fff; border-color: var(--line); }
+  32%, 88% { background: var(--blue-soft); border-color: #bcd2fb; }
+  96%, 100% { background: #fff; border-color: var(--line); }
+}
+/* Bounce on top of the pin's own translate(-50%, -100%) offset. */
+@keyframes sv-bounce { 0%, 100% { transform: none; } 50% { transform: translateY(-22%); } }
+@keyframes sv-ping {
+  0% { opacity: 0.8; transform: translate(-50%, -50%) scale(0.4); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(2.4); }
+}
+
+/* Four tabs taking turns (1.5s each). */
+@keyframes sv-tab {
+  0%, 1% { background: transparent; color: var(--muted); }
+  3%, 23% { background: var(--ink); color: #fff; }
+  25%, 100% { background: transparent; color: var(--muted); }
+}
+
+/* Two states swapping once per loop (first → second at ~35%). */
+@keyframes sv-swap-a { 0%, 30% { opacity: 1; } 36%, 94% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes sv-swap-b { 0%, 30% { opacity: 0; } 36%, 94% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Cursor (positioned inside the button it clicks) travels from --x1/--y1
+   to --x2/--y2 (left/top, so % values are relative to that button), clicks,
+   waits, returns. */
+@keyframes sv-cursor {
+  0%, 10% { left: var(--x1); top: var(--y1); transform: none; }
+  38%, 44% { left: var(--x2); top: var(--y2); transform: none; }
+  47% { left: var(--x2); top: var(--y2); transform: scale(0.82); }
+  50%, 90% { left: var(--x2); top: var(--y2); transform: none; }
+  100% { left: var(--x1); top: var(--y1); transform: none; }
+}
+@keyframes sv-click {
+  0%, 44% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+  48% { opacity: 1; transform: translate(-50%, -50%) scale(0.8); }
+  62%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.9); }
+}
+@keyframes sv-frame-on {
+  0%, 50% { box-shadow: 0 0 0 0 transparent; }
+  56%, 92% { box-shadow: 0 0 0 2px var(--blue); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Wireframe → finished design, and the phone version sliding in. */
+@keyframes sv-wire { 0%, 18% { opacity: 1; } 30%, 92% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes sv-design { 0%, 18% { opacity: 0; } 30%, 92% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sv-slide {
+  0%, 36% { opacity: 0; transform: translateX(24px) rotate(4deg); }
+  46%, 92% { opacity: 1; transform: rotate(4deg); }
+  100% { opacity: 0; transform: translateX(24px) rotate(4deg); }
+}
+
+/* UI/UX inspector (v2): the selection hops header → card → button (2s each)
+   and the properties panel shows the matching third. Resting = button. */
+@keyframes sv-sel {
+  0%, 28% { top: 10px; height: 22px; }
+  33%, 61% { top: 42px; height: 70px; }
+  66%, 95% { top: 192px; height: 26px; }
+  100% { top: 10px; height: 22px; }
+}
+@keyframes sv-third-1 { 0%, 28% { opacity: 1; } 31%, 97% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes sv-third-2 { 0%, 30% { opacity: 0; } 33%, 61% { opacity: 1; } 64%, 100% { opacity: 0; } }
+@keyframes sv-third-3 { 0%, 63% { opacity: 0; } 66%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+/* Launchpad step progress (LaunchpadShowcase.tsx): one step = 4s. */
+@keyframes lp-progress { from { width: 0; } to { width: 100%; } }
+
+/* Web design v3 / UI-UX v3 (22 Oct 2026). */
+@keyframes sv-tick {
+  0%, 6% { background: var(--panel); color: transparent; }
+  12%, 92% { background: var(--green); color: #fff; }
+  100% { background: var(--panel); color: transparent; }
+}
+/* Late reveal inside one 6s loop (no delay needed): booked / live states. */
+@keyframes sv-late {
+  0%, 74% { opacity: 0; transform: scale(0.9); }
+  80%, 96% { opacity: 1; transform: none; }
+  100% { opacity: 0; }
+}
+/* Dashed connector flowing left → right. */
+@keyframes sv-flow { to { stroke-dashoffset: -12; } }
+
+/* UI/UX v3 timeline (8s, tabs 2s each): wireframes during Research +
+   Wireframe, finished screens from UI design, taps + Booked in Prototype. */
+@keyframes sv-ux-wire { 0%, 44% { opacity: 1; } 52%, 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes sv-ux-design { 0%, 44% { opacity: 0; } 52%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sv-ux-booked { 0%, 86% { opacity: 0; transform: scale(0.9); } 89%, 97% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* ===== v4 (22 Oct 2026): Web Design "design to launch board" and UI/UX
+   "design tool canvas". One 8s loop each; every stage has its own
+   keyframes (no animation-delay), so nothing wraps into the next loop. */
+
+/* Board pieces appearing in order, all cleared at the loop end. */
+@keyframes wd-s1 { 0%, 4% { opacity: 0; transform: scale(0.9); } 8%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes wd-s2 { 0%, 11% { opacity: 0; transform: translateY(4px); } 15%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes wd-s3 { 0%, 18% { opacity: 0; transform: translateY(4px); } 22%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes wd-s4 { 0%, 26% { opacity: 0; transform: translateY(6px); } 30%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes wd-s5 { 0%, 33% { opacity: 0; transform: translateY(6px); } 37%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes wd-s6 { 0%, 40% { opacity: 0; transform: translateY(6px); } 44%, 95% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+/* Cursor: waits, travels to Publish, clicks at ~62%, rests, returns. */
+@keyframes wd-cursor {
+  0%, 46% { left: var(--x1); top: var(--y1); transform: none; }
+  58%, 60% { left: var(--x2); top: var(--y2); transform: none; }
+  62% { left: var(--x2); top: var(--y2); transform: scale(0.82); }
+  64%, 92% { left: var(--x2); top: var(--y2); transform: none; }
+  100% { left: var(--x1); top: var(--y1); transform: none; }
+}
+@keyframes wd-press {
+  0%, 60% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+  63% { opacity: 1; transform: translate(-50%, -50%) scale(0.8); }
+  75%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+}
+/* Status: Designing → Live right after the click. */
+@keyframes wd-before { 0%, 63% { opacity: 1; } 66%, 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes wd-after { 0%, 63% { opacity: 0; } 66%, 96% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Canvas: designer cursor path (percent of the canvas). */
+@keyframes cv-cursor {
+  0%, 8% { left: 86%; top: 6%; transform: none; }
+  26%, 30% { left: 27%; top: 78%; transform: none; }
+  32% { left: 27%; top: 78%; transform: scale(0.82); }
+  34%, 50% { left: 27%; top: 78%; transform: none; }
+  64%, 90% { left: 66%; top: 18%; transform: none; }
+  100% { left: 86%; top: 6%; transform: none; }
+}
+/* Book button gets selected (blue outline) on the click. */
+@keyframes cv-select { 0%, 31% { box-shadow: 0 0 0 0 transparent; } 33%, 96% { box-shadow: 0 0 0 2px #0d99ff; } 100% { box-shadow: 0 0 0 0 transparent; } }
+@keyframes cv-layer { 0%, 31% { background: transparent; color: var(--ink-2); } 33%, 96% { background: #dcefff; color: #0b6fc2; } 100% { background: transparent; color: var(--ink-2); } }
+/* Prototype link drawn from Home to Booking after the selection. */
+@keyframes cv-link { 0%, 36% { stroke-dashoffset: 1; } 52%, 96% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 1; } }
+/* Comment pin: appears, then gets resolved. */
+@keyframes cv-pin { 0%, 62% { opacity: 0; transform: scale(0.8); } 66%, 96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes cv-note { 0%, 79% { opacity: 1; } 82%, 100% { opacity: 0; } }
+@keyframes cv-done { 0%, 79% { opacity: 0; } 82%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes cv-head { 0%, 50% { opacity: 0; } 53%, 96% { opacity: 1; } 100% { opacity: 0; } }

@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "office-cleaning",
     label: "Office Cleaning",
     icon: "building",
-    heading: "Turn office cleaning searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn office cleaning searches into walkthrough requests.",
+    body: "Office managers want a cleaner they never have to chase. This page shows schedules, checklists and how you work after hours, with a walkthrough form.",
     bullets: [
-      "Clear office cleaning value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Nightly and weekly schedule options",
+      "Cleaning checklist highlights",
+      "Walkthrough request form",
     ],
-    ctaLabel: "Build my office cleaning pages",
+    ctaLabel: "Build my office cleaning page",
     kicker: "OFFICE CLEANING",
-    siteHeading: "Office Cleaning—done right.",
+    siteHeading: "A cleaner office, every morning.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Office cleaning service",
   },
   {
     id: "janitorial-services",
     label: "Janitorial Services",
     icon: "wrench",
-    heading: "Turn janitorial services searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show facility buyers you can run janitorial work for the long term.",
+    body: "Janitorial contracts are about consistency. This page explains staffing, supervision, supplies and reporting, so buyers trust you with a recurring contract.",
     bullets: [
-      "Clear janitorial services value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Staffing and supervision details",
+      "Supplies and restocking info",
+      "Contract enquiry path",
     ],
-    ctaLabel: "Build my janitorial services pages",
+    ctaLabel: "Build my janitorial page",
     kicker: "JANITORIAL SERVICES",
-    siteHeading: "Janitorial Services—done right.",
+    siteHeading: "Janitorial service you can rely on.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Janitorial services",
   },
   {
     id: "medical-facilities",
     label: "Medical Facilities",
     icon: "target",
-    heading: "Turn medical facilities searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Speak to clinic managers about cleaning standards first.",
+    body: "Medical offices care about infection control and careful crews. This page explains your protocols, training and products in plain words, with a direct quote path.",
     bullets: [
-      "Clear medical facilities value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Protocol and training sections",
+      "Products and disinfection info",
+      "Direct quote request",
     ],
-    ctaLabel: "Build my medical facilities pages",
+    ctaLabel: "Build my medical cleaning page",
     kicker: "MEDICAL FACILITIES",
-    siteHeading: "Medical Facilities—done right.",
+    siteHeading: "Clinic cleaning with care and detail.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Medical facility cleaning",
   },
   {
     id: "retail-hospitality",
     label: "Retail & Hospitality",
     icon: "layers",
-    heading: "Turn retail & hospitality searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win retail and hospitality accounts that care about first impressions.",
+    body: "Stores, hotels and restaurants need spaces that look right before doors open. This page covers schedules, high-traffic areas and flexible service windows.",
     bullets: [
-      "Clear retail & hospitality value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Before-open and after-close schedules",
+      "High-traffic area focus",
+      "Multi-location enquiry form",
     ],
-    ctaLabel: "Build my retail & hospitality pages",
+    ctaLabel: "Build my retail cleaning page",
     kicker: "RETAIL & HOSPITALITY",
-    siteHeading: "Retail & Hospitality—done right.",
+    siteHeading: "Spaces guests notice for the right reasons.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Retail and hospitality cleaning",
   },
   {
     id: "deep-cleaning",
     label: "Deep Cleaning",
     icon: "sparkles",
-    heading: "Turn deep cleaning searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell deep cleans as a project, not just an add-on.",
+    body: "Deep cleans often come before a move-in, an inspection or a reopening. This page explains what is included and makes it easy to request a date.",
     bullets: [
-      "Clear deep cleaning value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "What a deep clean covers",
+      "Move-in and reopening use cases",
+      "Date request form",
     ],
-    ctaLabel: "Build my deep cleaning pages",
+    ctaLabel: "Build my deep cleaning page",
     kicker: "DEEP CLEANING",
-    siteHeading: "Deep Cleaning—done right.",
+    siteHeading: "Deep cleaning, top to bottom.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Deep cleaning service",
   },
   {
     id: "floor-care",
     label: "Floor Care",
     icon: "users",
-    heading: "Turn floor care searches into qualified enquiries.",
-    body: "A focused cleaning company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn floor care searches into scheduled service visits.",
+    body: "Strip and wax, carpet care and tile cleaning are planned jobs. This page shows your floor types, methods and schedules, with a quote request close by.",
     bullets: [
-      "Clear floor care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Floor types and methods",
+      "Scheduled care options",
+      "Quote request button",
     ],
-    ctaLabel: "Build my floor care pages",
+    ctaLabel: "Build my floor care page",
     kicker: "FLOOR CARE",
-    siteHeading: "Floor Care—done right.",
+    siteHeading: "Floors that look new again.",
     photo: "/images/free-website/free-cleaning-company/hero.webp",
-    photoAlt: "Cleaning Company service image",
+    photoAlt: "Commercial floor care",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function CleaningCompanyServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Cleaning Company website path
+                <Icon name={service.icon} /> Cleaning page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -199,11 +199,11 @@ export default function CleaningCompanyServiceTabs() {
                   </span>
                   <div className="niche-mini-links">
                     <span>Services</span>
-                    <span>About</span>
+                    <span>Industries</span>
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Free walkthrough
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function CleaningCompanyServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Reliable crews. Clear checklists. A simple way to book a walkthrough.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book a walkthrough</b>
+                      <b>Our services</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local businesses</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function CleaningCompanyServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> INSURED · TRAINED · LOCAL
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function CleaningCompanyServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book a walkthrough</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to win bids</strong>
+                  <small>Clear path from search to walkthrough</small>
                 </span>
               </div>
             </div>

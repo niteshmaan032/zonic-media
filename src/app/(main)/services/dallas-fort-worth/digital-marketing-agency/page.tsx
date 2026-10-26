@@ -36,6 +36,7 @@ import "@/components/rd/dfw-marketing/dfwMarketing.base.css";
 import "@/components/rd/dfw-kit/ui.css";
 
 import Footer from "@/app/components/Footer";
+import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import {
   AvatarPh,
   CityPagesPanel,
@@ -56,7 +57,6 @@ import { TeamCard, marketingStepUi } from "@/components/rd/dfw-marketing/Marketi
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
-const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
 const ServiceLeadForm = dynamic(
   () => import("@/app/components/ServiceLeadForm"),
 );
@@ -196,8 +196,8 @@ const services = [
       "Links from DFW sites and local partners",
       "Rankings tracked by city every month",
     ],
-    href: "/services/local-seo-packages",
-    link: "Local SEO packages",
+    href: "/services/dallas-fort-worth/local-seo-agency",
+    link: "Dallas–Fort Worth local SEO",
   },
   {
     icon: FiTarget,
@@ -594,7 +594,7 @@ export default function DallasFortWorthMarketingPage() {
           </span>
           <div className="dm-wrap tw:[width:100%] tw:[padding:0_var(--inset)] tw:max-bssm:[.dm-journey_&]:[padding:0] tw:max-bssm:[.dm-coverage_&]:[padding:0] tw:max-bssm:[.dm-contact_&]:[padding:0]">
             <Strip as="h1" id="dfw-h1" className="dm-hero-title tw:min-bssm:[&.dm-hero-title]:[font-size:clamp(38px,_5vw,_76px)] tw:min-bsmd:[&.dm-hero-title]:[line-height:1.12] tw:max-bsmd:[&.dm-hero-title]:[line-height:1.16]!">
-              Dallas–Fort Worth <InlinePin /> Marketing{" "}
+              Dallas–Fort Worth <InlinePin /> Digital Marketing{" "}
               <br className="dm-hero-br tw:max-bssm:[display:none]" />
               Agency for Local Businesses
             </Strip>
@@ -692,7 +692,7 @@ export default function DallasFortWorthMarketingPage() {
                     <FiStar key={n} />
                   ))}
                 </span>
-                <p>Rated on Clutch from 21 verified client reviews</p>
+                <p>Average rating from our Google reviews</p>
               </div>
             </div>
 
@@ -1047,11 +1047,7 @@ export default function DallasFortWorthMarketingPage() {
         <section className="dm-sec dm-love tw:[padding:var(--sec-y)_0]" aria-labelledby="dfw-love-h">
           <div className="dm-wrap tw:[width:100%] tw:[padding:0_var(--inset)] tw:max-bssm:[.dm-journey_&]:[padding:0] tw:max-bssm:[.dm-coverage_&]:[padding:0] tw:max-bssm:[.dm-contact_&]:[padding:0]">
             <div className="dm-row-head dm-row-head--top tw:[display:flex] tw:[flex-wrap:wrap] tw:[justify-content:space-between] tw:[gap:24px] tw:[margin-bottom:36px] tw:[align-items:flex-start] tw:max-bssm:[margin-bottom:36px]">
-              <Strip id="dfw-love-h">
-                900+ Profiles{" "}
-                <br />
-                Back on Google
-              </Strip>
+              <Strip id="dfw-love-h">Rated 5.0 on Google</Strip>
               <div className="dm-love-aside tw:[position:relative] tw:[max-width:470px] tw:[padding-top:8px] tw:[&_p]:[margin-top:22px] tw:[&_p]:[color:var(--ink-2)] tw:[&_p]:[font-size:18px] tw:[&_p]:[line-height:1.65] tw:max-bsmd:[max-width:none]">
                 <span className="dm-avas dm-avas--lg tw:[display:flex] tw:[align-items:center] tw:[&>:first-child]:[margin-left:0]">
                   <AvatarPh tone="a" />
@@ -1060,20 +1056,13 @@ export default function DallasFortWorthMarketingPage() {
                   <AvatarPh tone="d" />
                 </span>
                 <Sparks className="dm-love-sparks" />
-                <p>
-                  Client satisfaction says more than we can. Verified reviews
-                  from Zonic Media clients across the US, collected by Clutch.
-                </p>
               </div>
             </div>
 
-            <div className="dm-love-card tw:[min-height:420px] tw:[padding:18px] tw:[border-radius:var(--r-xl)] tw:[background:#fff] tw:max-bssm:[padding:14px]">
-              <ClutchWidget
-                widgetType="12"
-                height="375"
-                primaryColor="#2567e8"
-                reviews="448872,448007,448005,447416,446728,446721,446714,446262,441531,442062,445226,445524"
-              />
+            <div className="dm-love-card tw:[min-height:360px] tw:[display:flex] tw:[flex-direction:column] tw:[justify-content:center] tw:[padding:28px_24px] tw:[border-radius:var(--r-xl)] tw:[background:#fff] tw:max-bssm:[padding:14px]">
+              {/* Google reviews (owner, 22 Oct 2026): same Trustindex widget as /home2;
+                  the guard strips the review schema it injects. */}
+              <LenisIframeGuard widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c" />
             </div>
 
             <div className="dm-logos tw:[display:flex] tw:[flex-wrap:wrap] tw:[align-items:center] tw:[justify-content:center] tw:[gap:24px_52px] tw:[margin-top:32px] tw:[&_img]:[display:block] tw:[&_img]:[width:auto] tw:[&_img]:[height:66px] tw:[&_img]:[object-fit:contain] tw:[&_p]:[color:var(--text)] tw:[&_p]:[font-size:15.5px] tw:[&_b]:[color:var(--ink)] tw:[&_b]:[font-size:22px] tw:[&&_b]:[font-weight:500] tw:max-bssm:[gap:20px_28px] tw:max-bssm:[&_img]:[height:54px]">
@@ -1126,12 +1115,8 @@ export default function DallasFortWorthMarketingPage() {
                 <p className="dm-area-lead tw:[max-width:54ch] tw:[margin-top:26px] tw:[color:var(--ink-2)] tw:[.dm-area--split_&]:[margin-top:0] tw:[font-size:18px] tw:[line-height:1.65]">
                   Grow your business anywhere in the Dallas–Fort Worth metro.
                   We bring in calls, booked jobs and steady leads across all
-                  eleven counties, from Denton to Waxahachie and Weatherford to
-                  Rockwall. The Metroplex added about 123,000 residents between
-                  mid-2024 and mid-2025, and Celina, Princeton, Melissa and Anna
-                  were among the fastest-growing cities in the US, so we put
-                  you in front of new customers as they move in and turn their
-                  searches into leads.
+                  eleven counties, from Denton to Waxahachie, including
+                  fast-growing towns like Celina and Princeton.
                 </p>
               </div>
               <div className="dm-area-text">

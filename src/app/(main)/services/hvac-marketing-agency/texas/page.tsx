@@ -1,27 +1,14 @@
-import type { Metadata } from "next";
-import StatePage from "../StatePage";
-import { STATE_CONTENT } from "../stateContent";
+import { LocationTemplate } from "@/components/rd/industry/LocationTemplate";
+import { CONTENT } from "@/components/rd/industry/content/hvac-marketing-agency/texas";
+import { LocationSchema, draftMetadata } from "@/components/rd/industry/route";
 
-const state = STATE_CONTENT.texas;
+export const metadata = draftMetadata(CONTENT);
 
-export const metadata: Metadata = {
-  title: { absolute: state.metaTitle },
-  description: state.metaDescription,
-  keywords: [
-    "hvac marketing agency texas",
-    "hvac company in texas",
-    "commercial hvac companies in texas",
-    "hvac marketing companies near me",
-    "marketing for hvac companies",
-    "hvac digital marketing agency",
-    "hvac local marketing services",
-    "hvac seo houston",
-  ],
-  alternates: {
-    canonical: `/services/hvac-marketing-agency/${state.slug}`,
-  },
-};
-
-export default function TexasHvacPage() {
-  return <StatePage state={state} />;
+export default function Page() {
+  return (
+    <>
+      <LocationSchema c={CONTENT} />
+      <LocationTemplate c={CONTENT} />
+    </>
+  );
 }

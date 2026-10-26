@@ -27,6 +27,11 @@ type LocalBusinessOptions = {
   areaServed?: string | { type: "State" | "Country" | "City"; name: string };
 };
 
+/**
+ * Not used since 27 Oct 2026: the root layout already outputs the business as
+ * #local-business on every page, and a second page-level copy made Google see
+ * two businesses. Kept until the final clean-up; don't add new callers.
+ */
 export function buildLocalBusinessJsonLd({
   pageUrl,
   type = "ProfessionalService",

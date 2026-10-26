@@ -71,46 +71,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
-  { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "layout", label: "Agent-branded design" },
+  { icon: "smartphone", label: "Mobile listing search" },
+  { icon: "mail", label: "Home value forms" },
+  { icon: "phone", label: "Tap-to-call agent" },
+  { icon: "search", label: "Neighborhood SEO" },
+  { icon: "chart", label: "Buyer + seller tracking" },
+  { icon: "layers", label: "Community pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Buyer + seller tracking" },
+  { icon: "layers", label: "Community pages" },
+  { icon: "pin", label: "Agent-branded design" },
+  { icon: "gauge", label: "Mobile listing search" },
+  { icon: "code", label: "Home value forms" },
+  { icon: "target", label: "Tap-to-call agent" },
+  { icon: "users", label: "Neighborhood SEO" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Real Estate Website for Agents & Brokers | Zonic Media" },
+  title: { absolute: "Free Real Estate Website | Realtor Website Design | Zonic" },
   description:
-    "Free real estate agent website, no upfront development fee, when you start a qualifying Zonic marketing plan. IDX search and home-value lead capture built in.",
+    "Free real estate agent website with IDX-ready listing pages, home value forms and neighborhood guides. Build fee waived on a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free real estate website",
     "real estate agent website design",
-    "real estate website design",
-    "free website for real estate agents",
     "realtor website design",
-    "real estate marketing plan",
-    "idx website",
-    "real estate agent websites",
+    "free website for real estate agents",
+    "real estate website design",
+    "idx website for realtors",
+    "home valuation website",
+    "real estate lead generation website",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Real Estate Website Offer | Zonic Media",
+    title: "Free Website for Real Estate Agents | Zonic Media",
     description:
-      "Free real estate agent website, no upfront development fee, when you start a qualifying Zonic marketing plan. IDX search and home-value lead capture built in.",
+      "Free real estate agent website with IDX-ready listing pages, home value forms and neighborhood guides. Build fee waived on a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function RealEstateOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for real estate agents</span>
+              <span>Free website offer for real estate agents and teams</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,19 +171,19 @@ export default function RealEstateOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your real estate business with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build your real estate website with IDX-ready listing pages, home value forms and neighborhood guides. The upfront development fee is waived.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my free website</span>
+                <span>Claim my agent website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See the agent site build</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -196,8 +196,8 @@ export default function RealEstateOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
-                  <small>Development fee waived</small>
+                  <strong>No setup invoice</strong>
+                  <small>Website build fee waived</small>
                 </span>
               </div>
               <div className="proof-item proof-item--yellow">
@@ -205,8 +205,8 @@ export default function RealEstateOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Real Estate lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Buyer + seller paths</strong>
+                  <small>Built for both lead types</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -223,8 +223,8 @@ export default function RealEstateOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Terms in plain words</strong>
+                  <small>Scope signed off first</small>
                 </span>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function RealEstateOfferPage() {
               </span>
               <span>
                 <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <small>On a qualifying agent plan</small>
               </span>
             </div>
 
@@ -267,21 +267,21 @@ export default function RealEstateOfferPage() {
                   />
                 </span>
                 <div className="mini-nav">
-                  <span>Services</span>
-                  <span>Work</span>
-                  <span>About</span>
+                  <span>Search Homes</span>
+                  <span>Sell</span>
+                  <span>Neighborhoods</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Home value</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">REAL ESTATE WEBSITE</div>
-                  <h2>More conversations. More signed clients.</h2>
-                  <p>A professional real estate website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">LOCAL REAL ESTATE</div>
+                  <h2>Your next move starts here.</h2>
+                  <p>A real estate website that turns home searches and valuation requests into conversations.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Search homes</span>
+                    <span>What’s my home worth?</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -296,7 +296,7 @@ export default function RealEstateOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">YOUR LOCAL AGENT</div>
                 </div>
               </div>
 
@@ -320,8 +320,8 @@ export default function RealEstateOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">REAL ESTATE SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">HOME VALUE</span>
+                <h3>What’s your home worth today?</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -334,8 +334,8 @@ export default function RealEstateOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for real estate leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Built for buyer and seller leads</strong>
+                <small>Forms, calls and tracking ready</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function RealEstateOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the real estate website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">Your agent website in three steps</span>
+            <h2>How your real estate website comes to life.</h2>
+            <p>Zonic pairs your real estate website with ongoing marketing, so buyers and sellers in your farm areas find you before they pick an agent.</p>
           </div>
 
           <div className="process-grid">
@@ -366,39 +366,39 @@ export default function RealEstateOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your client pathway mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Map your farm areas</h3>
+              <p>We review your buyer and seller mix, farm areas, brokerage rules, current website and the channels most likely to start real conversations.</p>
+              <small>Farm area call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Choose an agent growth plan</h3>
+              <p>Your plan can combine Google Ads, Local SEO, Google Business Profile care, lead tracking and conversion work.</p>
+              <small>Monthly agent marketing</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
+              <h3>We build your agent site</h3>
               <p>
-                Zonic creates the agreed real estate lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                Zonic builds the agreed real estate website, with valuation and contact forms on key pages and the build fee waived. Same build standard as{" "}
                 <Link href="/services/real-estate-agent-website-design" className="offer-inlink">
                   our real estate website design service
                 </Link>
                 .
               </p>
-              <small>Website fee waived</small>
+              <small>No website fee</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my real estate company</span>
+              <span>Check my market</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -409,26 +409,24 @@ export default function RealEstateOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every real estate lead in one place.</h2>
+            <span className="section-kicker">Buyer and seller lead tracking</span>
+            <h2>Know which listings and pages start conversations.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which real estate jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, valuation requests and chats arrive in one dashboard with the source attached, so you can see which buyer and seller leads came from ads, Maps or search.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Every call, form and showing request logged
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Source tied to each buyer or seller
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> Status from first contact to closing
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Open The Lead Dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -514,10 +512,10 @@ export default function RealEstateOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Real Estate website service paths</span>
-              <h2>One real estate website. A clear path for every profitable client pathway.</h2>
+              <span className="section-kicker">Real estate website pages</span>
+              <h2>Buyers, sellers and relocators each get a clear path to you.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Buyers browse, sellers ask what their home is worth, and relocators want local insight. Pick a tab to see each path beside a live mockup.</p>
           </div>
 
           <RealEstateServiceTabs />
@@ -525,19 +523,19 @@ export default function RealEstateOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                More than six paths
               </span>
-              <h3>We build for every real estate service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>Condos, first-time buyers, investors and more.</h3>
+              <p>The tabs are a sample. Any buyer or seller need in your market can get its own page.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every real estate service</span>
+              <span className="niche-banner-more">+ every client path you serve</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my real estate website</span>
+              <span>Get my real estate pages</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -548,9 +546,9 @@ export default function RealEstateOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a real estate website handed over and forgotten.</h2>
-            <p>Your real estate website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">Inside your real estate website</span>
+            <h2>A real estate website that keeps working between listings.</h2>
+            <p>Your real estate website sits inside your marketing, with neighborhood pages, valuation forms and lead tracking that keep buyer and seller conversations coming.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,10 +576,10 @@ export default function RealEstateOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
+                <small>AGENT SITE 01</small>
+                <h3>Neighborhood pages that get found</h3>
                 <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
+                  Neighborhood pages, community guides, on-page SEO and schema help Google connect you with home searches in your farm areas. Built on the groundwork of our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -595,9 +593,9 @@ export default function RealEstateOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>AGENT SITE 02</small>
+                <h3>Leads tied to their source</h3>
+                <p>Valuation forms, showing requests, click-to-call, GA4 and CRM routing link every buyer and seller lead to the campaign that sent it.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +603,7 @@ export default function RealEstateOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my real estate website</span>
+              <span>Claim my agent website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +615,8 @@ export default function RealEstateOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Real Estate website comes with it.</h2>
+              <span className="section-kicker">Agent plans, website included</span>
+              <h2>Real estate plans with your new website inside.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -742,12 +740,12 @@ export default function RealEstateOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
+              The real estate marketing plan
             </span>
-            <h2>The website is the foundation. Marketing creates demand for agents and brokerages.</h2>
-            <p>Your plan is selected around your real estate market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <h2>Your website builds the brand. Marketing brings buyers and sellers.</h2>
+            <p>Your plan is built around your farm areas. It can combine paid search, local visibility, Business Profile growth, lead tracking and steady conversion tests.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my real estate company</span>
+              <span>Check my farm area</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,9 +754,9 @@ export default function RealEstateOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
+              <h3>Google Ads for agents</h3>
               <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
+                Reach local buyers and sellers with focused ads and tracked valuation and showing requests. Learn about our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -767,9 +765,9 @@ export default function RealEstateOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
+              <h3>Local SEO + agent profile</h3>
               <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
+                Grow visibility for realtor searches in your farm areas, with a Business Profile and reviews that help clients choose you. Built on our{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -781,18 +779,18 @@ export default function RealEstateOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>More booked consultations</h3>
+              <p>Form and call tracking, valuation-page tests and simple reports turn more site visits into listing and buyer appointments.</p>
             </article>
             <article className="dark-stat">
               <span>
                 <b>$0</b> upfront development fee
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> buyer and seller system
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> scope set in writing
               </span>
             </article>
           </div>
@@ -802,12 +800,12 @@ export default function RealEstateOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              Agent offer terms
             </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront real estate website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>The free real estate website, explained up front.</h2>
+            <p>Zonic waives the upfront real estate website design and development fee when you start a qualifying monthly marketing plan. Every term is in writing before you agree.</p>
             <a className="section-button" href="#contact">
-              <span>See if my real estate company qualifies</span>
+              <span>See if I qualify</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,16 +815,16 @@ export default function RealEstateOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
+                <strong>The waived build fee</strong>
                 <small>The real estate website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>What qualifies</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth, or Full Market) on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/real-estate-agent-website-design" className="offer-inlink">
                     our real estate website design service
                   </Link>
@@ -837,14 +835,14 @@ export default function RealEstateOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
+                <strong>What the agent keeps</strong>
                 <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>Leaving early</strong>
                 <small>
                   You keep your domain and any content you supplied. The website
                   does not transfer, because the build fee was waived against
@@ -859,8 +857,8 @@ export default function RealEstateOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Agent site + marketing</span>
+              <h2>Built for agents who would rather sell than manage vendors.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +873,8 @@ export default function RealEstateOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One agent system</strong>
+                <small>Site · listings · tracking</small>
               </p>
             </div>
           </div>
@@ -884,34 +882,34 @@ export default function RealEstateOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your real estate website, ads, Business Profile and tracking all reach the same buyers and sellers in your farm areas, not as separate projects.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>One agent strategy</strong>
+                  <small>Built around your farm areas</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>With no website bill up front, more of your budget goes into reaching buyers and sellers between closings.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Smaller first step</strong>
+                  <small>Agent build fee waived</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, valuation forms, ads and map actions are tracked together, so changes aim at more real conversations.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Leads you can trace</strong>
+                  <small>Leads tracked from launch</small>
                 </div>
               </footer>
             </article>
@@ -919,7 +917,7 @@ export default function RealEstateOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my real estate lead system</span>
+              <span>Build my agent lead system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -930,11 +928,11 @@ export default function RealEstateOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Real estate website FAQs</span>
+            <h2>Common questions from agents and teams.</h2>
+            <p>Answers for agents and small teams on eligibility, website scope and the monthly marketing plan.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my real estate market</span>
+              <span>Ask about my market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -951,19 +949,19 @@ export default function RealEstateOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
+              Free Real Estate Website Offer
             </span>
-            <h2>Claim your professional real estate website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your real estate business, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <h2>Get a real estate website for buyer and seller leads, build fee waived.</h2>
+            <p>Fill in the short form. Zonic reviews your farm areas, client mix, current website and goals before recommending a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional real estate lead-generation website
+                <Icon name="check" /> Lead-ready real estate website
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
+                <Icon name="check" /> Plan matched to your farm areas
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Scope and terms clear before you start
               </span>
             </div>
 
@@ -1000,7 +998,7 @@ export default function RealEstateOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Real Estate lead-generation websites connected to the marketing services that grow agents and brokerages.</p>
+            <p>Real estate agent websites built for listing search, home value requests and the marketing that starts conversations.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +1026,7 @@ export default function RealEstateOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Real Estate Website Launch Offer</span>
+            <span>Agent Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-real-estate-offer-form">

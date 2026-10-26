@@ -53,6 +53,13 @@ export async function generateMetadata({
     alternates: {
       canonical: `/legal/${slug}`,
     },
+    openGraph: {
+      title: `${pageData.title} | Zonic Media`,
+      url: `/legal/${slug}`,
+      type: "website",
+      siteName: "Zonic Media",
+      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Zonic Media" }],
+    },
   };
 }
 

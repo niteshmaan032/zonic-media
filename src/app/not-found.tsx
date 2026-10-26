@@ -1,4 +1,4 @@
-import Navbar from "@/app/components/Navbar";
+import { RdHeader } from "@/components/rd/header/RdHeader";
 import Footer from "@/app/components/Footer";
 import Link from "next/link";
 import "@/app/style/notFound.css";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
-      <Navbar />
+      <RdHeader />
       <main className="not-found-page">
         <div className="not-found-inner">
           <span className="not-found-code">404</span>

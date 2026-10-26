@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "local-moving",
     label: "Local Moving",
     icon: "truck",
-    heading: "Turn local moving searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn local moving searches into booked move dates.",
+    body: "Local movers win on speed and trust. This page shows your crews, the neighborhoods you serve and a short quote form people can finish on a phone.",
     bullets: [
-      "Clear local moving value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Cities and neighborhoods served",
+      "Short mobile quote form",
+      "Call and form tracking",
     ],
-    ctaLabel: "Build my local moving pages",
+    ctaLabel: "Build my local moving page",
     kicker: "LOCAL MOVING",
-    siteHeading: "Local Moving—done right.",
+    siteHeading: "Local moves, handled with care.",
     photo: "/images/free-website/free-moving-company/local-moving.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Local moving service",
   },
   {
     id: "long-distance-moving",
     label: "Long-Distance Moving",
     icon: "target",
-    heading: "Turn long-distance moving searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give long-distance customers the detail they need to trust you.",
+    body: "Long-distance customers compare more and book earlier. This page explains routes, timelines and how estimates work, then asks for move dates and home size.",
     bullets: [
-      "Clear long-distance moving value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Route and timeline details",
+      "How estimates work, in plain words",
+      "Move date and size quote form",
     ],
-    ctaLabel: "Build my long-distance moving pages",
+    ctaLabel: "Build my long-distance moving page",
     kicker: "LONG-DISTANCE MOVING",
-    siteHeading: "Long-Distance Moving—done right.",
+    siteHeading: "Moving across state lines? Let’s plan it.",
     photo: "/images/free-website/free-moving-company/long-distance-moving.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Long-distance moving service",
   },
   {
     id: "commercial-moving",
     label: "Commercial Moving",
     icon: "building",
-    heading: "Turn commercial moving searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win office and commercial moves with a planning-first page.",
+    body: "Office managers need a mover who can work after hours and keep downtime low. This page shows your process, equipment and a direct request path.",
     bullets: [
-      "Clear commercial moving value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "After-hours and weekend move info",
+      "Step-by-step move plan",
+      "Business quote request",
     ],
-    ctaLabel: "Build my commercial moving pages",
+    ctaLabel: "Build my commercial moving page",
     kicker: "COMMERCIAL MOVING",
-    siteHeading: "Commercial Moving—done right.",
+    siteHeading: "Office moves with less downtime.",
     photo: "/images/free-website/free-moving-company/commercial-moving.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Commercial moving service",
   },
   {
     id: "packing-services",
     label: "Packing Services",
     icon: "layers",
-    heading: "Turn packing services searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell packing as its own service, not an afterthought.",
+    body: "Many customers want full or partial packing but do not know to ask. This page explains options and materials so they can add packing to the quote.",
     bullets: [
-      "Clear packing services value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Full and partial packing options",
+      "Materials and fragile items info",
+      "Add-to-quote prompts",
     ],
-    ctaLabel: "Build my packing services pages",
+    ctaLabel: "Build my packing services page",
     kicker: "PACKING SERVICES",
-    siteHeading: "Packing Services—done right.",
+    siteHeading: "Packing done right, box by box.",
     photo: "/images/free-website/free-moving-company/packing-services.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Packing service for a move",
   },
   {
     id: "storage",
     label: "Storage",
     icon: "users",
-    heading: "Turn storage searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Capture storage searches from people between homes.",
+    body: "When move-out and move-in dates do not line up, people search for storage. This page covers short and long-term options and links them to your moves.",
     bullets: [
-      "Clear storage value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Short and long-term storage options",
+      "Move plus storage pathway",
+      "Storage enquiry form",
     ],
-    ctaLabel: "Build my storage pages",
+    ctaLabel: "Build my storage page",
     kicker: "STORAGE",
-    siteHeading: "Storage—done right.",
+    siteHeading: "Storage for every gap between moves.",
     photo: "/images/free-website/free-moving-company/storage.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Moving and storage service",
   },
   {
     id: "specialty-moving",
     label: "Specialty Moving",
     icon: "clipboard",
-    heading: "Turn specialty moving searches into qualified enquiries.",
-    body: "A focused moving company website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show you can handle the pianos, safes and fine art.",
+    body: "Specialty moves need proof of skill and the right gear. This page lists the items you move, how you protect them and how to request a custom quote.",
     bullets: [
-      "Clear specialty moving value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Specialty items you move",
+      "Protection and equipment details",
+      "Custom quote request",
     ],
-    ctaLabel: "Build my specialty moving pages",
+    ctaLabel: "Build my specialty moving page",
     kicker: "SPECIALTY MOVING",
-    siteHeading: "Specialty Moving—done right.",
+    siteHeading: "Specialty items, moved with extra care.",
     photo: "/images/free-website/free-moving-company/specialty-moving.webp",
-    photoAlt: "Moving Company service image",
+    photoAlt: "Specialty item moving service",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function MovingCompanyServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Moving Company website path
+                <Icon name={service.icon} /> Moving page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function MovingCompanyServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
-                    <span>About</span>
+                    <span>Moves</span>
+                    <span>Storage</span>
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Free quote
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function MovingCompanyServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Careful crews. Clear quotes. An easy way to lock in your moving date.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Get a quote</b>
+                      <b>Move types</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local families</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function MovingCompanyServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> LICENSED · INSURED · CAREFUL
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function MovingCompanyServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Get a quote</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to book moves</strong>
+                  <small>Clear path from search to quote</small>
                 </span>
               </div>
             </div>

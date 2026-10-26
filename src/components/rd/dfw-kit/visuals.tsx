@@ -18,6 +18,7 @@ export function Ph({
   dark,
   light,
   captionTop,
+  position,
 }: {
   label: string;
   ratio: string;
@@ -27,6 +28,8 @@ export function Ph({
   light?: boolean;
   /** Caption at the top, for slots whose bottom edge is cropped. */
   captionTop?: boolean;
+  /** CSS object-position for the photo crop (default centre). */
+  position?: string;
 }) {
   if (src) {
     return (
@@ -37,6 +40,7 @@ export function Ph({
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="tw:object-cover"
+          style={position ? { objectPosition: position } : undefined}
         />
       </div>
     );
@@ -293,10 +297,13 @@ export function TrustLogos({
   mapHref,
   size = "hero",
   className,
+  onDark = false,
 }: {
   mapHref: string;
   size?: "hero" | "row";
   className?: string;
+  /** White Trustpilot wordmark for dark backgrounds (travel video hero). */
+  onDark?: boolean;
 }) {
   const hero = size === "hero";
   const img = hero
@@ -328,7 +335,7 @@ export function TrustLogos({
           className={wide}
           width={128}
           height={60}
-          src="/images/trust-black.png"
+          src={onDark ? "/images/trust-white.png" : "/images/trust-black.png"}
           alt="Zonic Media rated 5 stars on Trustpilot"
           priority={hero}
         />

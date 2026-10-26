@@ -24,12 +24,12 @@ const SERVICES: PlumbingService[] = [
     id: "emergency",
     label: "Emergency Plumbing",
     icon: "zap",
-    heading: "Turn urgent plumbing problems into booked calls.",
-    body: "A fast, reassuring emergency path that helps property owners understand what to do, see your availability, and contact your team without searching for the next step.",
+    heading: "Answer the burst-pipe search before the water spreads.",
+    body: "An emergency plumbing page that tells a stressed owner what to do right now, shows you answer at any hour and keeps the call button front and center.",
     bullets: [
-      "Emergency click-to-call actions",
-      "Problem and symptom pathways",
-      "Fast service-request form",
+      "Sticky tap-to-call on mobile",
+      "Shut-off tips while they wait",
+      "Hours and response area shown",
     ],
     ctaLabel: "Build my emergency plumbing pages",
     kicker: "24/7 PLUMBING HELP",
@@ -41,12 +41,12 @@ const SERVICES: PlumbingService[] = [
     id: "drains",
     label: "Drain Cleaning",
     icon: "droplets",
-    heading: "Make a blocked drain feel solved before you arrive.",
-    body: "Explain causes, camera inspection, jetting, and lasting fixes so a frustrated property owner books the visit instead of comparing three more plumbers.",
+    heading: "Turn a backed-up drain into a booked visit.",
+    body: "Drain cleaning pages that explain clogs, hydro jetting and camera inspections in plain terms, with booking options next to every fix.",
     bullets: [
-      "Symptom-led drain pathways",
-      "Camera and jetting explainers",
-      "Booking CTAs beside key concerns",
+      "Clog and backup explainers",
+      "Camera inspection details",
+      "Booking beside every service",
     ],
     ctaLabel: "Build my drain cleaning pages",
     kicker: "DRAIN CLEANING",
@@ -58,12 +58,12 @@ const SERVICES: PlumbingService[] = [
     id: "water-heaters",
     label: "Water Heaters",
     icon: "flame",
-    heading: "Help a cold-shower search turn into a replacement quote.",
-    body: "Compare tank and tankless options, capacity, efficiency, warranties, and financing so the decision feels straightforward and the estimate button stays close.",
+    heading: "Turn a cold shower into a water heater quote.",
+    body: "Compare tank and tankless options, repair or replace advice, warranties and financing, with quote buttons where owners make the call.",
     bullets: [
-      "Tank and tankless comparison",
-      "Efficiency and warranty proof",
-      "Estimate and financing actions",
+      "Tank vs tankless guides",
+      "Repair or replace advice",
+      "Financing and warranty details",
     ],
     ctaLabel: "Build my water heater pages",
     kicker: "WATER HEATER EXPERTS",
@@ -75,12 +75,12 @@ const SERVICES: PlumbingService[] = [
     id: "sewer-lines",
     label: "Sewer Lines",
     icon: "layers",
-    heading: "Make a high-value sewer job easier to say yes to.",
-    body: "Walk owners through inspection, repair, trenchless replacement, timelines, and cost drivers so a daunting project ends in a qualified estimate request.",
+    heading: "Make a big sewer repair easier to approve.",
+    body: "Sewer line pages that show camera findings, trenchless and dig options, timelines and financing, so owners feel ready to say yes.",
     bullets: [
-      "Inspection and diagnosis paths",
-      "Trenchless option education",
-      "Qualified estimate requests",
+      "Camera inspection walkthroughs",
+      "Trenchless repair explainers",
+      "Payment options explained early",
     ],
     ctaLabel: "Build my sewer line pages",
     kicker: "SEWER LINE SERVICE",
@@ -92,12 +92,12 @@ const SERVICES: PlumbingService[] = [
     id: "leak-detection",
     label: "Leak Detection",
     icon: "search",
-    heading: "Catch the leak search before the damage bill grows.",
-    body: "Turn stains, damp spots, running meters, and pressure loss into a clear route toward a non-invasive leak assessment.",
+    heading: "Reach the owner who just found a wet ceiling.",
+    body: "Leak detection pages that explain slab, wall and hidden leaks, show your detection tools and get a visit booked before damage grows.",
     bullets: [
-      "Symptom and warning-sign paths",
-      "Non-invasive method explainers",
-      "Assessment request actions",
+      "Hidden leak warning signs",
+      "Detection method explainers",
+      "Fast visit request form",
     ],
     ctaLabel: "Build my leak detection pages",
     kicker: "LEAK DETECTION",
@@ -109,12 +109,12 @@ const SERVICES: PlumbingService[] = [
     id: "commercial",
     label: "Commercial Plumbing",
     icon: "building",
-    heading: "Give property managers a direct route to your team.",
-    body: "Present commercial capacity, scheduled maintenance, backflow, grease lines, response times, and account support in a concise B2B experience.",
+    heading: "Give building managers a plumber they can call direct.",
+    body: "A commercial plumbing path covering maintenance contracts, backflow testing, drain programs and response times for property managers.",
     bullets: [
-      "System-specific service pages",
-      "Maintenance and emergency paths",
-      "Commercial enquiry qualification",
+      "Maintenance contract pages",
+      "Backflow and code compliance",
+      "Commercial job request form",
     ],
     ctaLabel: "Build my commercial plumbing pages",
     kicker: "COMMERCIAL PLUMBING",
@@ -161,7 +161,7 @@ export default function PlumbingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Plumbing website path
+                <Icon name={service.icon} /> Plumbing call path
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -253,8 +253,8 @@ export default function PlumbingServiceTabs() {
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Built to win plumbing calls</strong>
-                  <small>From local search to booked service</small>
+                  <strong>Made to book plumbing jobs</strong>
+                  <small>From a local search to a dispatched truck</small>
                 </span>
               </div>
             </div>

@@ -136,7 +136,7 @@ const GmbVeriFormHead = {
 export const metadata: Metadata = {
   title: { absolute: "GMB Verification Service | Instant, Video & Postcard Fixes" },
   description:
-    "Google Business Profile verification help for failed video, postcard, phone and email verification.",
+    "GMB verification service for failed Google Business Profile video, postcard, phone and instant verification. We find the cause and get you verified.",
   keywords: [
     "google business profile verification help",
     "google business profile verification support",

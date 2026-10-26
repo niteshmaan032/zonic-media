@@ -71,46 +71,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
-  { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "layout", label: "Shop-branded design" },
+  { icon: "smartphone", label: "Mobile booking" },
+  { icon: "mail", label: "Appointment requests" },
+  { icon: "phone", label: "Call-the-shop button" },
+  { icon: "search", label: "Repair service SEO" },
+  { icon: "chart", label: "Repair order tracking" },
+  { icon: "layers", label: "Service menu pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Repair order tracking" },
+  { icon: "layers", label: "Service menu pages" },
+  { icon: "pin", label: "Shop-branded design" },
+  { icon: "gauge", label: "Mobile booking" },
+  { icon: "code", label: "Appointment requests" },
+  { icon: "target", label: "Call-the-shop button" },
+  { icon: "users", label: "Repair service SEO" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Auto Repair Website for Auto Shops | Zonic Media" },
+  title: { absolute: "Free Auto Repair Website | Auto Shop Web Design | Zonic" },
   description:
-    "Free auto repair shop website, no upfront development fee, when you start a qualifying Zonic marketing plan. Online booking and service pages that fill bays.",
+    "Free auto repair shop website with appointment requests, service menus and click-to-call. Development fee waived on a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free auto repair website",
     "auto repair website design",
     "auto repair shop website",
+    "mechanic website design",
     "free website for auto repair shop",
     "auto shop web design",
-    "auto repair marketing plan",
-    "mechanic website design",
-    "auto repair websites",
+    "car repair website",
+    "auto repair marketing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Auto Repair Website Offer | Zonic Media",
+    title: "Free Website for Auto Repair Shops | Zonic Media",
     description:
-      "Free auto repair shop website, no upfront development fee, when you start a qualifying Zonic marketing plan. Online booking and service pages that fill bays.",
+      "Free auto repair shop website with appointment requests, service menus and click-to-call. Development fee waived on a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function AutoRepairOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for auto repair shops</span>
+              <span>Free website offer for auto repair shops and mechanics</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,19 +171,19 @@ export default function AutoRepairOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your auto repair shop with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build your auto repair shop website with appointment requests, service pages and a call button drivers can tap. No upfront development fee.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my free website</span>
+                <span>Claim my auto shop website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See the shop site build</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -196,8 +196,8 @@ export default function AutoRepairOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
-                  <small>Development fee waived</small>
+                  <strong>Shop site fee waived</strong>
+                  <small>No upfront website bill</small>
                 </span>
               </div>
               <div className="proof-item proof-item--yellow">
@@ -205,8 +205,8 @@ export default function AutoRepairOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Auto Repair lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Appointment-ready pages</strong>
+                  <small>Built for calls and bay bookings</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -214,7 +214,7 @@ export default function AutoRepairOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Bay-ready growth</strong>
+                  <strong>Bay-filling growth</strong>
                   <small>Website + auto marketing</small>
                 </span>
               </div>
@@ -223,8 +223,8 @@ export default function AutoRepairOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Shop scope in writing</strong>
+                  <small>Agreed before we build</small>
                 </span>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function AutoRepairOfferPage() {
               </span>
               <span>
                 <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <small>With a qualifying shop plan</small>
               </span>
             </div>
 
@@ -267,21 +267,21 @@ export default function AutoRepairOfferPage() {
                   />
                 </span>
                 <div className="mini-nav">
-                  <span>Services</span>
-                  <span>Work</span>
-                  <span>About</span>
+                  <span>Repairs</span>
+                  <span>Our Shop</span>
+                  <span>Reviews</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Book service</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">AUTO REPAIR WEBSITE</div>
-                  <h2>More calls. More repair orders.</h2>
-                  <p>A professional auto repair website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">AUTO REPAIR SHOP</div>
+                  <h2>Repairs done right. Booking made easy.</h2>
+                  <p>An auto repair website that turns check engine searches into booked appointments.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Book an appointment</span>
+                    <span>See repairs</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -296,7 +296,7 @@ export default function AutoRepairOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">YOUR SHOP, YOUR BAYS</div>
                 </div>
               </div>
 
@@ -320,8 +320,8 @@ export default function AutoRepairOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">AUTO REPAIR SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">BOOK SERVICE</span>
+                <h3>From warning light to booked bay.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -334,8 +334,8 @@ export default function AutoRepairOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for auto repair leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Built for repair orders</strong>
+                <small>Bookings, calls and tracking</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function AutoRepairOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the auto repair website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">Your auto shop website in three steps</span>
+            <h2>How your auto shop gets its new website.</h2>
+            <p>Zonic pairs your auto repair shop website with ongoing marketing, so drivers near you with a warning light or a service due find your shop first.</p>
           </div>
 
           <div className="process-grid">
@@ -366,39 +366,39 @@ export default function AutoRepairOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your repair service mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Walk us through your shop</h3>
+              <p>We review your repair mix, bay capacity, service area, current website and the channels most likely to bring in profitable repair orders.</p>
+              <small>Shop review call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Pick your shop’s plan</h3>
+              <p>Your plan can mix Google Ads, Local SEO, Google Business Profile care, call tracking and booking improvements.</p>
+              <small>Monthly shop marketing</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
+              <h3>We build the shop site</h3>
               <p>
-                Zonic creates the agreed auto repair lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                Zonic builds the agreed auto repair website, with appointment requests on key pages and the build fee waived. Same quality bar as{" "}
                 <Link href="/services/web-design" className="offer-inlink">
                   our full website design service
                 </Link>
                 .
               </p>
-              <small>Website fee waived</small>
+              <small>No shop build invoice</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my auto repair company</span>
+              <span>Check my auto shop</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -409,26 +409,24 @@ export default function AutoRepairOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every auto repair lead in one place.</h2>
+            <span className="section-kicker">Repair order tracking</span>
+            <h2>Know which repairs your marketing booked.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which auto repair jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, appointment requests and chats land in one dashboard with the source attached, so you see which brake jobs, diagnostics and services came from ads, Maps or search.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Every call and booking request logged
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Lead source shown on each repair job
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> Status from new request to finished job
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Preview The Shop Dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -514,10 +512,10 @@ export default function AutoRepairOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Auto Repair website service paths</span>
-              <h2>One auto repair website. A clear path for every profitable repair service.</h2>
+              <span className="section-kicker">Auto repair service pages</span>
+              <h2>Brakes, diagnostics, engines: a page for each job your bays want.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Drivers search by symptom and by service. Pick a tab to see how each page explains the repair, shows trust signals and leads to a booking.</p>
           </div>
 
           <AutoRepairServiceTabs />
@@ -525,19 +523,19 @@ export default function AutoRepairOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                Past these six repairs
               </span>
-              <h3>We build for every auto repair service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>A/C, transmission, electrical and more.</h3>
+              <p>These tabs are a sample. Any repair drivers search for in your area can get its own page.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every auto repair service</span>
+              <span className="niche-banner-more">+ every repair your bays handle</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my auto repair website</span>
+              <span>Get my repair service pages</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -548,9 +546,9 @@ export default function AutoRepairOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a auto repair website handed over and forgotten.</h2>
-            <p>Your auto repair website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">Built into your shop website</span>
+            <h2>An auto repair website that keeps booking after launch.</h2>
+            <p>Your auto repair website is part of a full marketing system, with service pages, booking tracking and trust signals that keep repair orders coming in.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,10 +576,10 @@ export default function AutoRepairOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
+                <small>SHOP SITE 01</small>
+                <h3>Found for nearby repair searches</h3>
                 <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
+                  Repair pages, nearby-area pages, on-page SEO and schema help Google match your shop to drivers searching close by. It uses the same groundwork as our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -595,9 +593,9 @@ export default function AutoRepairOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>SHOP SITE 02</small>
+                <h3>Bookings traced to source</h3>
+                <p>Appointment forms, click-to-call, GA4, Tag Manager and call tracking show which campaigns put cars in your bays.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +603,7 @@ export default function AutoRepairOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my auto repair website</span>
+              <span>Claim my auto shop website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +615,8 @@ export default function AutoRepairOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Auto Repair website comes with it.</h2>
+              <span className="section-kicker">Auto shop plans, website included</span>
+              <h2>Choose your shop’s plan. The new website comes with it.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -742,12 +740,12 @@ export default function AutoRepairOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
+              The auto repair marketing plan
             </span>
-            <h2>The website is the foundation. Marketing creates demand for auto repair shops.</h2>
-            <p>Your plan is selected around your auto repair market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <h2>Keep your bays full with search, Maps and ads behind the site.</h2>
+            <p>Your plan is built around your shop and nearby drivers. It can combine paid search, local visibility, Google Business Profile growth, booking tracking and steady conversion tests.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my auto repair company</span>
+              <span>Check my shop’s market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,9 +754,9 @@ export default function AutoRepairOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
+              <h3>Google Ads for repairs</h3>
               <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
+                Reach drivers searching for brakes or a mechanic nearby, with tracked ads and booking pages. Read about our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -767,9 +765,9 @@ export default function AutoRepairOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
+              <h3>Maps visibility + GBP</h3>
               <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
+                Show up for mechanic searches around your shop, with a profile, photos and reviews that help drivers choose you. Backed by our{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -781,18 +779,18 @@ export default function AutoRepairOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>More booked repairs</h3>
+              <p>Call and form tracking, booking-page tests and plain reports turn more shop website visits into repair orders.</p>
             </article>
             <article className="dark-stat">
               <span>
                 <b>$0</b> upfront development fee
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> shop-ready website
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> scope in writing
               </span>
             </article>
           </div>
@@ -802,12 +800,12 @@ export default function AutoRepairOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              Auto shop offer terms
             </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront auto repair website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>The free auto shop website, line by line.</h2>
+            <p>Zonic waives the upfront auto repair website design and development fee when your shop starts a qualifying monthly marketing plan. Every term is set out before you agree.</p>
             <a className="section-button" href="#contact">
-              <span>See if my auto repair company qualifies</span>
+              <span>See if my auto shop qualifies</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,16 +815,16 @@ export default function AutoRepairOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
+                <strong>The shop fee we waive</strong>
                 <small>The auto repair website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>How your shop qualifies</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth, or Full Market) on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/web-design" className="offer-inlink">
                     our full website design service
                   </Link>
@@ -837,14 +835,14 @@ export default function AutoRepairOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
+                <strong>Site ownership</strong>
                 <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>If your shop cancels early</strong>
                 <small>
                   You keep your domain and any content you supplied. The website
                   does not transfer, because the build fee was waived against
@@ -859,8 +857,8 @@ export default function AutoRepairOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Shop site + steady marketing</span>
+              <h2>A shop website and marketing that work as one team.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +873,8 @@ export default function AutoRepairOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One shop system</strong>
+                <small>Site · Maps · bookings</small>
               </p>
             </div>
           </div>
@@ -884,34 +882,34 @@ export default function AutoRepairOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your shop website, ads, map listing and tracking all aim at the same local drivers, not handled as separate jobs by separate vendors.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>One shop strategy</strong>
+                  <small>Built around your bays</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>No website invoice up front, so your budget goes toward getting cars booked instead of paying off a build.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Less cash needed up front</strong>
+                  <small>No shop build bill</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, bookings, ads and map actions are tracked together, so each update aims at more repair orders.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Repairs you can trace</strong>
+                  <small>Tracking ready at launch</small>
                 </div>
               </footer>
             </article>
@@ -919,7 +917,7 @@ export default function AutoRepairOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my auto repair lead system</span>
+              <span>Build my shop booking system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -930,11 +928,11 @@ export default function AutoRepairOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Auto repair website FAQs</span>
+            <h2>What shop owners ask before signing up.</h2>
+            <p>Straight answers for auto shop owners on eligibility, website scope and the monthly marketing plan behind the offer.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my auto repair market</span>
+              <span>Ask about my shop’s area</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -951,19 +949,19 @@ export default function AutoRepairOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
+              Free Auto Repair Website Offer
             </span>
-            <h2>Claim your professional auto repair website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your auto repair shop, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <h2>Put a booking-ready website behind your shop for $0 upfront.</h2>
+            <p>Fill in the short form. Zonic reviews your shop, services, current website and goals, then recommends a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional auto repair lead-generation website
+                <Icon name="check" /> Booking-ready auto repair website
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
+                <Icon name="check" /> Marketing matched to your shop
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Scope and terms agreed before you start
               </span>
             </div>
 
@@ -1000,7 +998,7 @@ export default function AutoRepairOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Auto Repair lead-generation websites connected to the marketing services that grow auto repair shops.</p>
+            <p>Auto repair shop websites built around booked appointments and the marketing that fills your bays.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +1026,7 @@ export default function AutoRepairOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Auto Repair Website Launch Offer</span>
+            <span>Free Auto Shop Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-auto-repair-offer-form">

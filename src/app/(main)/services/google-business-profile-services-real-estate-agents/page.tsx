@@ -12,7 +12,6 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   buildServiceJsonLd,
 } from "@/shared/seoSchemas";
 
@@ -324,7 +323,7 @@ const processSteps = [
   {
     n: "2",
     h: "Reinstatement or Verification",
-    p: "If suspended: documentation prep, appeal filing, and escalation support — typical timeline 7–21 days. If not yet verified: verification managed with state licensing documentation. If active but at risk: name remediation, category restructure, and address reconfiguration to prevent future suspension.",
+    p: "If suspended: documentation prep, appeal filing, and escalation support — typically 5 to 7 business days. If not yet verified: verification managed with state licensing documentation. If active but at risk: name remediation, category restructure, and address reconfiguration to prevent future suspension.",
   },
   {
     n: "3",
@@ -340,7 +339,7 @@ const faqs = [
   },
   {
     q: "How long does GBP reinstatement take for real estate agents?",
-    a: "Most reinstatements resolve within seven to twenty-one days from the date the appeal is filed with complete documentation. Simple cases — name guideline violations or category misconfigurations — often resolve within seven to ten days. Complex cases involving multi-agent brokerage address confusion, home-based SAB issues, or repeated suspensions can take three to five weeks. We've reinstated 900-plus profiles across home services and real estate, and the appeal documentation matters more than the appeal itself.",
+    a: "Most reinstatements resolve in 5 to 7 business days from the date the appeal is filed with complete documentation. Simple cases — name guideline violations or category misconfigurations — are usually the quickest. Complex cases involving multi-agent brokerage address confusion, home-based SAB issues, or repeated suspensions can take three to five weeks. We've reinstated 900-plus profiles across home services and real estate, and the appeal documentation matters more than the appeal itself.",
   },
   {
     q: "Should individual agents have their own profile or use the brokerage's?",
@@ -380,11 +379,6 @@ const faqSchema = {
   })),
 };
 
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "Country", name: "United States" },
-});
-
 const serviceJsonLd = buildServiceJsonLd({
   name: "Google Business Profile Services for Real Estate Agents",
   description:
@@ -411,13 +405,6 @@ function Page() {
         id="gre-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        id="gre-localbusiness-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessJsonLd),
-        }}
       />
 
       <div id="hia-top" className="hia-page">
@@ -963,7 +950,7 @@ function Page() {
               Delivered within five business days. No sales call required.
             </p>
             <ul className="hia-final-check">
-              <li>Suspended? Reinstatement timeline 7–21 days</li>
+              <li>Suspended? Reinstatement in 5–7 business days on average</li>
               <li>Active and at risk? Risk audit + remediation plan</li>
               <li>900+ profiles reinstated · 5.0 stars on Clutch</li>
               <li>Active across FL · TX · CA · NY · AZ and nationally</li>

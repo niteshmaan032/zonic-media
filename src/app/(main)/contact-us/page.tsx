@@ -1,5 +1,15 @@
+/*
+ * CONTACT US — redesign draft (24 Oct 2026). Markup lives in
+ * src/components/rd/contact/. Title, description, keywords and Open Graph
+ * re-optimized 24 Oct for "contact a digital marketing agency" intent
+ * (Semrush US; the live URL has no ranking data). Canonical, breadcrumb and
+ * ContactPage JSON-LD as live, plus FAQPage JSON-LD for the FAQ. Noindex
+ * until the owner approves the swap.
+ */
+
 import type { Metadata } from "next";
-import ContactUsPage from "./ContactUsPage";
+import { ContactPage } from "@/components/rd/contact/ContactPage";
+import { CONTACT_FAQS } from "@/components/rd/contact/content";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 const contactBreadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -14,31 +24,42 @@ const contactPageJsonLd = {
   name: "Contact Zonic Media",
   url: "https://www.zonicllc.com/contact-us",
   description:
-    "Contact Zonic Media for local SEO, Google Business Profile reinstatement and optimization, web design, and Google Ads services.",
+    "Contact Zonic Media, a digital marketing agency in Dover, Delaware, for a free local SEO audit, Google Business Profile help, website design, Google Ads and AI search optimization.",
   about: { "@id": "https://www.zonicllc.com/#organization" },
   inLanguage: "en-US",
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: CONTACT_FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export const metadata: Metadata = {
-  title: { absolute: "Contact Zonic Media | Digital Marketing Agency USA" },
+  title: {
+    absolute: "Contact Zonic Media | Digital Marketing Agency & Free Audit",
+  },
   description:
-    "Contact Zonic Media, a US digital marketing agency in Dover, Delaware. Call +1 302-726-9736 or send your website for a free local SEO audit.",
+    "Contact Zonic Media, a US digital marketing agency in Dover, DE. Call (302) 726-9736 or request a free local SEO audit. We reply within one business day.",
   keywords: [
+    "contact digital marketing agency",
     "digital marketing agency contact",
     "contact zonic media",
-    "digital marketing agency usa contact",
-    "digital marketing agency near me",
-    "free seo audit",
-    "free google business profile audit",
     "zonic media phone number",
-    "internet marketing agency contact",
-    "marketing company near me",
-    "advertising agency near me",
-    "online marketing agency usa",
+    "free local seo audit",
+    "free seo audit",
+    "free marketing consultation",
+    "digital marketing consultation",
+    "hire a digital marketing agency",
+    "digital marketing agency near me",
+    "local seo agency near me",
   ],
-  alternates: {
-    canonical: "/contact-us",
-  },
+  alternates: { canonical: "/contact-us" },
+  // Redesign draft: out of the index until it replaces /contact-us.
   openGraph: {
     images: [
       {
@@ -48,14 +69,14 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Contact Us | Digital Marketing Agency | Zonic Media",
+    title: "Contact Our Digital Marketing Agency | Zonic Media",
     description:
-      "Contact Zonic Media, a US digital marketing agency in Dover, Delaware. Call +1 302-726-9736 or send your website for a free local SEO audit.",
+      "Call, email or message Zonic Media for a free local SEO audit of your Google Business Profile, Maps rankings and website. Replies within one business day.",
     url: "/contact-us",
   },
 };
 
-function Page() {
+export default function Page() {
   return (
     <>
       <script
@@ -68,13 +89,14 @@ function Page() {
       <script
         id="contact-page-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(contactPageJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }}
       />
-      <ContactUsPage />
+      <script
+        id="contact-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <ContactPage />
     </>
   );
 }
-
-export default Page;

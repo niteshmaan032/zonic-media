@@ -1,0 +1,122 @@
+/* Local SEO dropdown pages — hero UI animations (26 Oct 2026). */
+
+/* ---------------------------------------------------------------------------
+   Niche hero UIs (owner, 26 Oct 2026: clean, interactive, one design per
+   niche, no before/after). Small one-shot transitions when a tab changes,
+   plus ambient loops (smoke). Not scroll reveals. */
+
+.lseo-badge {
+  animation: lseo-badge 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+@keyframes lseo-badge {
+  from {
+    opacity: 0;
+    scale: 0.85;
+  }
+}
+.lseo-fade {
+  animation: lseo-fade 0.4s ease-out both;
+}
+@keyframes lseo-fade {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}
+.lseo-grow {
+  transform-origin: bottom;
+  animation: lseo-grow 0.6s cubic-bezier(0.3, 1.2, 0.5, 1) both;
+}
+@keyframes lseo-grow {
+  from {
+    scale: 1 0.1;
+  }
+}
+.lseo-progress {
+  width: 0;
+  animation-name: lseo-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes lseo-progress {
+  to {
+    width: calc(100% - 24px);
+  }
+}
+.lseo-rise {
+  animation: lseo-rise 0.5s cubic-bezier(0.3, 1.2, 0.5, 1) 0.15s both;
+}
+@keyframes lseo-rise {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+}
+.lseo-slide {
+  animation: lseo-slide 0.45s ease-out both;
+}
+@keyframes lseo-slide {
+  from {
+    opacity: 0;
+    translate: 18px 0;
+  }
+}
+.lseo-fillx {
+  transform-origin: left;
+  animation: lseo-fillx 0.7s cubic-bezier(0.3, 1, 0.5, 1) both;
+}
+@keyframes lseo-fillx {
+  from {
+    scale: 0 1;
+  }
+}
+.lseo-mark {
+  animation: lseo-mark 0.6s ease-out 0.3s both;
+}
+@keyframes lseo-mark {
+  from {
+    background: transparent;
+  }
+}
+.lseo-drawonce {
+  stroke-dasharray: 520;
+  animation: lseo-drawonce 1.1s ease-out both;
+}
+@keyframes lseo-drawonce {
+  from {
+    stroke-dashoffset: 520;
+  }
+}
+/* Pulse ring around a pin or live dot (shared keyframes above). */
+.lseo-ring {
+  animation: lseo-ring 1.8s ease-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .lseo-badge,
+  .lseo-fade,
+  .lseo-grow,
+  .lseo-fillx,
+  .lseo-mark,
+  .lseo-drawonce,
+  .lseo-rise,
+  .lseo-slide,
+  .lseo-ring,
+  .lseo-progress {
+    animation: none !important;
+  }
+  .lseo-ring,
+  .lseo-progress {
+    display: none;
+  }
+}
+
+@keyframes lseo-ring {
+  0% {
+    opacity: 0.55;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.9;
+  }
+}

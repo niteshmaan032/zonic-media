@@ -225,8 +225,8 @@ export default function FreeDesignLeadForm() {
         <span>
           <Icon name="mail" /> Free website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
-        <p>A short form to start the conversation. Submitting is not a contract.</p>
+        <h3>Start Your Free Website Request.</h3>
+        <p>A short form to review your market and goals. It is not a contract.</p>
       </div>
 
       <div className="form-grid">

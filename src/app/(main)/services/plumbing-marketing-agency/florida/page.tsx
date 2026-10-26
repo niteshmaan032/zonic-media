@@ -1,27 +1,14 @@
-import type { Metadata } from "next";
-import StatePage from "../StatePage";
-import { STATE_CONTENT } from "../stateContent";
+import { LocationTemplate } from "@/components/rd/industry/LocationTemplate";
+import { CONTENT } from "@/components/rd/industry/content/plumbing-marketing-agency/florida";
+import { LocationSchema, draftMetadata } from "@/components/rd/industry/route";
 
-const state = STATE_CONTENT.florida;
+export const metadata = draftMetadata(CONTENT);
 
-export const metadata: Metadata = {
-  title: { absolute: state.metaTitle },
-  description: state.metaDescription,
-  keywords: [
-    "plumbing marketing agency florida",
-    "plumbing services in florida",
-    "plumbing companies orlando florida",
-    "plumbing marketing near me",
-    "marketing for plumbing company online",
-    "marketing for plumbing contractors",
-    "plumber marketing company",
-    "plumbing seo tampa",
-  ],
-  alternates: {
-    canonical: `/services/plumbing-marketing-agency/${state.slug}`,
-  },
-};
-
-export default function FloridaPlumbingPage() {
-  return <StatePage state={state} />;
+export default function Page() {
+  return (
+    <>
+      <LocationSchema c={CONTENT} />
+      <LocationTemplate c={CONTENT} />
+    </>
+  );
 }

@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "emergency-repair",
     label: "Emergency Repair",
     icon: "zap",
-    heading: "Turn emergency repair searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Be the first call when a garage door won’t move.",
+    body: "An emergency repair page with your phone number up top, the hours you answer and clear safety steps, written for owners stuck with a car inside.",
     bullets: [
-      "Clear emergency repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Phone number fixed at the top",
+      "Your real dispatch hours stated clearly",
+      "Safety tips while they wait",
     ],
-    ctaLabel: "Build my emergency repair pages",
+    ctaLabel: "Build my emergency repair page",
     kicker: "EMERGENCY REPAIR",
-    siteHeading: "Emergency Repair—done right.",
+    siteHeading: "Door stuck? Help is close.",
     photo: "/images/free-website/free-garage-door/emergency-repair.webp",
     photoAlt: "Garage Door service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "broken-springs",
     label: "Broken Springs",
     icon: "wrench",
-    heading: "Turn broken springs searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Own the broken spring searches in your service area.",
+    body: "A broken spring page that explains torsion and extension springs, warns against DIY risk and makes same-day booking easy if you offer it.",
     bullets: [
-      "Clear broken springs value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Torsion vs extension springs explained",
+      "Clear DIY safety warning",
+      "Same-day request if you provide it",
     ],
-    ctaLabel: "Build my broken springs pages",
+    ctaLabel: "Build my spring repair page",
     kicker: "BROKEN SPRINGS",
-    siteHeading: "Broken Springs—done right.",
+    siteHeading: "Snapped spring? Call us.",
     photo: "/images/free-website/free-garage-door/broken-springs.webp",
     photoAlt: "Garage Door service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "opener-repair",
     label: "Opener Repair",
     icon: "door",
-    heading: "Turn opener repair searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win opener repair and replacement jobs by brand.",
+    body: "An opener page listing the brands you service, common faults like remotes and sensors, and when a repair makes more sense than a new opener.",
     bullets: [
-      "Clear opener repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Brands you service listed clearly",
+      "Remote, sensor and motor issues",
+      "Repair or replace guidance",
     ],
-    ctaLabel: "Build my opener repair pages",
+    ctaLabel: "Build my opener repair page",
     kicker: "OPENER REPAIR",
-    siteHeading: "Opener Repair—done right.",
+    siteHeading: "Openers fixed or replaced.",
     photo: "/images/free-website/free-garage-door/opener-repair.webp",
     photoAlt: "Garage Door service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "new-door-installation",
     label: "New Door Installation",
     icon: "target",
-    heading: "Turn new door installation searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn new door shoppers into booked install quotes.",
+    body: "A new door page with style galleries, insulation and material options, and a quote form that asks size and style so you can price the job fast.",
     bullets: [
-      "Clear new door installation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Door style gallery by material",
+      "Insulation and window options",
+      "Install quote form with door size",
     ],
-    ctaLabel: "Build my new door installation pages",
+    ctaLabel: "Build my door installation page",
     kicker: "NEW DOOR INSTALLATION",
-    siteHeading: "New Door Installation—done right.",
+    siteHeading: "A new door, new curb appeal.",
     photo: "/images/free-website/free-garage-door/new-door-installation.webp",
     photoAlt: "Garage Door service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-doors",
     label: "Commercial Doors",
     icon: "building",
-    heading: "Turn commercial doors searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Reach property managers who need commercial door service.",
+    body: "A commercial door page for roll-up, sectional and dock doors, with service contracts, after-hours repair and a direct request path for managers.",
     bullets: [
-      "Clear commercial doors value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Roll-up, sectional and dock doors",
+      "Service contracts and after-hours help",
+      "Request form for facility managers",
     ],
-    ctaLabel: "Build my commercial doors pages",
+    ctaLabel: "Build my commercial doors page",
     kicker: "COMMERCIAL DOORS",
-    siteHeading: "Commercial Doors—done right.",
+    siteHeading: "Doors that keep work moving.",
     photo: "/images/free-website/free-garage-door/commercial-doors.webp",
     photoAlt: "Garage Door service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "preventive-maintenance",
     label: "Preventive Maintenance",
     icon: "clipboard",
-    heading: "Turn preventive maintenance searches into qualified enquiries.",
-    body: "A focused garage door website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell tune-ups that stop breakdowns before they start.",
+    body: "A maintenance page that lists what each tune-up covers, from springs and rollers to balance and safety tests, with an easy way to book a visit.",
     bullets: [
-      "Clear preventive maintenance value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Tune-up checklist, point by point",
+      "Safety and balance tests explained",
+      "Simple tune-up booking form",
     ],
-    ctaLabel: "Build my preventive maintenance pages",
+    ctaLabel: "Build my maintenance page",
     kicker: "PREVENTIVE MAINTENANCE",
-    siteHeading: "Preventive Maintenance—done right.",
+    siteHeading: "Tune it up. Skip the breakdown.",
     photo: "/images/free-website/free-garage-door/preventive-maintenance.webp",
     photoAlt: "Garage Door service image",
   },
@@ -161,7 +161,7 @@ export default function GarageDoorServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Garage Door website path
+                <Icon name={service.icon} /> Garage door service page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function GarageDoorServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Local techs, clear quotes and safe repairs, often the same day you call us for help.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Call now</b>
+                      <b>Our services</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Reviewed by local owners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function GarageDoorServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> SPRINGS · OPENERS · DOORS
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function GarageDoorServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Call now</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built for repair calls</strong>
+                  <small>From search to booked repair</small>
                 </span>
               </div>
             </div>

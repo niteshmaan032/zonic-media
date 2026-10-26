@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">City and service pages</title>
+  <desc id="desc">A flat illustration of a local website page architecture connected to service locations.</desc>
+  <rect width="800" height="1000" rx="34" fill="#eef2f3"/>
+  <rect x="62" y="62" width="676" height="858" rx="28" fill="#fffdf9" stroke="#18304a" stroke-width="8"/>
+  <text x="106" y="142" fill="#18304a" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="1.5">CITY + SERVICE PAGES</text>
+  <rect x="106" y="178" width="588" height="266" rx="20" fill="#e8eef4" stroke="#c8d2d7" stroke-width="3"/>
+  <rect x="336" y="214" width="128" height="52" rx="12" fill="#2f6fed"/><text x="356" y="247" fill="#fffdf9" font-family="Arial,sans-serif" font-size="17" font-weight="700">SERVICES</text>
+  <path d="M400 266v42M400 308H222v47M400 308h178v47M222 402v-47M400 402v-47M578 402v-47" fill="none" stroke="#18304a" stroke-width="5"/>
+  <g fill="#fffdf9" stroke="#18304a" stroke-width="4"><rect x="150" y="355" width="145" height="55" rx="12"/><rect x="328" y="355" width="145" height="55" rx="12"/><rect x="505" y="355" width="145" height="55" rx="12"/></g>
+  <g fill="#18304a" font-family="Arial,sans-serif" font-size="15" font-weight="700"><text x="184" y="389">PLUMBING</text><text x="360" y="389">HVAC</text><text x="548" y="389">ROOFING</text></g>
+  <rect x="106" y="482" width="588" height="368" rx="20" fill="#dce9ef"/>
+  <path d="M125 690c118-86 202-45 273-113s142-44 271-121M125 573c106 47 183 8 273 64s171 25 271-14M255 495c26 115 46 245 22 340M500 490c-8 114 27 214 13 345" fill="none" stroke="#fffdf9" stroke-width="13" opacity=".9"/>
+  <g fill="#2f6fed" stroke="#fffdf9" stroke-width="7"><path d="M190 602c0-21 16-38 37-38s37 17 37 38c0 30-37 65-37 65s-37-35-37-65Z"/><circle cx="227" cy="602" r="11" fill="#fffdf9" stroke="none"/><path d="M472 722c0-21 16-38 37-38s37 17 37 38c0 30-37 65-37 65s-37-35-37-65Z"/><circle cx="509" cy="722" r="11" fill="#fffdf9" stroke="none"/></g>
+  <g fill="#18304a" font-family="Arial,sans-serif" font-size="17" font-weight="700"><text x="140" y="526">SERVICE AREAS</text><text x="140" y="812">LOCAL LANDING PAGES</text></g>
+</svg>

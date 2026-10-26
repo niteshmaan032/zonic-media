@@ -206,11 +206,8 @@ export default function SolarLeadForm() {
         <span>
           <Icon name="mail" /> Free solar website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
-        <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
-        </p>
+        <h3>Is Your Solar Company a Fit?</h3>
+        <p>Tell us about your installs, service area and goals. Sending this form is not a contract.</p>
       </div>
 
       <div className="form-grid">

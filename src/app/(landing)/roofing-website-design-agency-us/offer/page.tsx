@@ -75,11 +75,11 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Roofing-first design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "clipboard", label: "Inspection forms" },
-  { icon: "phone", label: "Emergency click-to-call" },
-  { icon: "search", label: "Local SEO foundation" },
+  { icon: "layout", label: "Roofer-built layouts" },
+  { icon: "smartphone", label: "Mobile estimate flow" },
+  { icon: "clipboard", label: "Free inspection forms" },
+  { icon: "phone", label: "Leak-call buttons" },
+  { icon: "search", label: "Roofing local SEO base" },
   { icon: "chart", label: "Storm lead tracking" },
   { icon: "layers", label: "Roof service pages" },
 ] as const;
@@ -87,11 +87,11 @@ const CAPABILITY_ROW_ONE = [
 const CAPABILITY_ROW_TWO = [
   { icon: "chart", label: "Storm lead tracking" },
   { icon: "layers", label: "Roof service pages" },
-  { icon: "pin", label: "Service-area signals" },
-  { icon: "gauge", label: "Speed optimization" },
-  { icon: "code", label: "Schema setup" },
-  { icon: "target", label: "Estimate CTAs" },
-  { icon: "users", label: "Roofing lead routing" },
+  { icon: "pin", label: "City roofing pages" },
+  { icon: "gauge", label: "Fast page loads" },
+  { icon: "code", label: "Roofer schema markup" },
+  { icon: "target", label: "Estimate buttons" },
+  { icon: "users", label: "Crew lead routing" },
 ] as const;
 
 const EXTRA_SERVICES = [
@@ -107,26 +107,26 @@ const EXTRA_SERVICES = [
 ];
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Roofing Website for Roofing Companies | Zonic Media" },
+  title: { absolute: "Free Roofing Website Design for Roofers | Zonic Media" },
   description:
-    "Free roofing website, no upfront development fee, when you start a qualifying Zonic marketing plan. Quote flows, storm pages and galleries that book jobs.",
+    "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Inspection booking, storm damage pages and project galleries.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
     "free roofing website",
-    "free roofing website templates",
     "roofing website design",
-    "roofing company website",
     "free website for roofing companies",
+    "roofing company website",
+    "roofer website",
+    "roofing contractor website",
+    "storm damage roofing website",
     "roofing marketing plan",
-    "roofing web design agency",
-    "roofing websites that book jobs",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Website for Roofing Companies | Zonic Media",
+    title: "Free Roofing Website Design for Roofers | Zonic Media",
     description:
-      "Free roofing website, no upfront development fee, when you start a qualifying Zonic marketing plan. Quote flows, storm pages and galleries that book jobs.",
+      "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Inspection booking, storm damage pages and project galleries.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -170,7 +170,7 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for roofing companies</span>
+              <span>Free roofing website for roofing contractors</span>
               <Icon name="sparkles" />
             </div>
 
@@ -187,24 +187,19 @@ export default function FreeRoofingWebsiteOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">
-              Start a qualifying Zonic roofing marketing plan and we&rsquo;ll
-              build a professional website designed to generate inspection
-              calls, estimate requests, and booked roofing jobs — with no
-              upfront development fee.
-            </p>
+            <p className="hero-lede">Start a qualifying Zonic roofing marketing plan and we build your roofing company website with no development fee, ready with inspection booking, storm damage pages and project galleries that turn local searches into signed roof jobs.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my roofing website</span>
+                <span>Claim my free roofing website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See the roofing features</span>
+                <span>See what roofers get</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -226,8 +221,8 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Roofing lead system</strong>
-                  <small>Built for calls and estimates</small>
+                  <strong>Inspection booking</strong>
+                  <small>Calls and estimate forms</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -235,8 +230,8 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Storm-ready growth</strong>
-                  <small>Website + roofing marketing</small>
+                  <strong>Storm season ready</strong>
+                  <small>Site + roofing campaigns</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -244,8 +239,8 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Written scope</strong>
+                  <small>Terms agreed up front</small>
                 </span>
               </div>
             </div>
@@ -358,8 +353,8 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for roofing leads</strong>
-                <small>Calls, estimates, and tracking included</small>
+                <strong>Made for roofing leads</strong>
+                <small>Inspections, estimates and tracking</small>
               </span>
             </div>
           </div>
@@ -379,15 +374,9 @@ export default function FreeRoofingWebsiteOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">
-              One roofing offer. One connected lead system.
-            </span>
-            <h2>Remove the website cost holding your roofing growth back.</h2>
-            <p>
-              Zonic combines the roofing website your company needs with the
-              recurring marketing required to reach homeowners before they
-              choose another contractor.
-            </p>
+            <span className="section-kicker">From first call to finished roofing site</span>
+            <h2>Spend on roofing leads, not on a website invoice.</h2>
+            <p>We pair your roofing website with the marketing that reaches homeowners while they choose a roofer, so the site earns from launch day.</p>
           </div>
 
           <div className="process-grid">
@@ -396,50 +385,35 @@ export default function FreeRoofingWebsiteOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Map your roofing market</h3>
-              <p>
-                We review your roofing services, target cities, seasonality,
-                current lead sources, and the jobs you want more of.
-              </p>
-              <small>Roofing growth call</small>
+              <h3>Walk us through your territory</h3>
+              <p>We look at your roof services, cities, storm seasons, current lead sources and the jobs you want more of.</p>
+              <small>Roofing strategy call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>
-                Your plan may combine roofing Google Ads, Local SEO, Google
-                Business Profile growth, storm campaigns, tracking, and
-                conversion optimization.
-              </p>
-              <small>Recurring lead generation</small>
+              <h3>Pick a roofing marketing plan</h3>
+              <p>Your plan can combine roofing Google Ads, local SEO, Google Business Profile work, storm campaigns, call tracking and page improvements.</p>
+              <small>Ongoing roofing leads</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build the roofing site</h3>
-              <p>
-                Zonic creates the agreed roofing lead-generation website with
-                the upfront development fee waived under your marketing
-                engagement.
-              {" "}
-                Same build standard as our{" "}
-                <Link href="/services/roofing-website-design" className="offer-inlink">
+              <h3>We build your roofing site</h3>
+              <p>Our team builds the agreed roofing website in 2–3 weeks with the development fee waived. Built to the same standard as our <Link href="/services/roofing-website-design" className="offer-inlink">
                   roofing website design service
-                </Link>
-                .
-              </p>
-              <small>Website fee waived</small>
+                </Link>.</p>
+              <small>Roof site at no build fee</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my roofing company</span>
+              <span>See if my roofing company qualifies</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -450,26 +424,19 @@ export default function FreeRoofingWebsiteOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every roofing lead in one place.</h2>
-            <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which roofing jobs your marketing produced
-              instead of guessing where the phone calls came from.
-            </p>
+            <span className="section-kicker">Roofing lead tracking</span>
+            <h2>See which roof jobs came from which channel.</h2>
+            <p>Inspection calls, estimate forms and chats land in one dashboard with the source attached, so you know whether a replacement came from ads, Google Maps or a storm campaign.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
-              </li>
+                <Icon name="check" /> Inspection calls and forms logged</li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
-              </li>
+                <Icon name="check" /> Ad, Maps or storm source on each lead</li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
-              </li>
+                <Icon name="check" /> Status from inspection to signed job</li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Show me roofing tracking</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -555,41 +522,28 @@ export default function FreeRoofingWebsiteOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">
-                Built around roofing search intent
-              </span>
-              <h2>
-                One roofing website. A clear path for every profitable service.
-              </h2>
+              <span className="section-kicker">Roof problems, mapped to pages</span>
+              <h2>A page for every roof problem a homeowner searches.</h2>
             </div>
-            <p>
-              Choose a roofing service to see how Zonic structures the message,
-              proof, calls to action, and estimate flow around what homeowners
-              need in that moment.
-            </p>
+            <p>Pick a roofing service to see how we shape the message, proof and estimate path for a homeowner facing a leak, a storm or an old roof.</p>
           </div>
 
           <RoofingServiceTabs />
 
           <div className="niche-banner">
             <div className="niche-banner-copy">
-              <span className="section-kicker section-kicker--dark">
-                Beyond these six
-              </span>
-              <h3>We build for every roofing service.</h3>
-              <p>
-                The tabs are a sample — if homeowners search for it, we can
-                build the page that wins the call.
-              </p>
+              <span className="section-kicker section-kicker--dark">Other roof work we cover</span>
+              <h3>Metal, tile, flat roofs and more.</h3>
+              <p>These six are a sample. If homeowners near you search for a roofing service, we can build the page that earns the call.</p>
             </div>
             <div className="niche-banner-tags">
               {EXTRA_SERVICES.map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
-              <span className="niche-banner-more">+ every roofing service</span>
+              <span className="niche-banner-more">+ any roofing service</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my roofing website</span>
+              <span>Get my roofing website</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -600,15 +554,9 @@ export default function FreeRoofingWebsiteOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">
-              Your roofing lead-generation website includes
-            </span>
-            <h2>More than a roofing website handed over and forgotten.</h2>
-            <p>
-              Your site becomes part of the same system as your ads, local
-              visibility, storm campaigns, call tracking, and estimate
-              follow-up.
-            </p>
+            <span className="section-kicker">What your roofing website includes</span>
+            <h2>A roofing website that keeps working long after launch.</h2>
+            <p>Your site runs alongside your ads, Google Business Profile, storm campaigns, call tracking and estimate follow-up as one connected system.</p>
           </div>
 
           <div className="icon-cloud">
@@ -636,19 +584,11 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>ROOFING SYSTEM 01</small>
-                <h3>Service and city authority</h3>
-                <p>
-                  Roof repair, replacement, material, storm damage, and location
-                  pathways help search engines and homeowners understand exactly
-                  where your company fits.
-                {" "}
-                  The same structure behind our{" "}
-                  <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
+                <small>ROOF SITE LAYER 01</small>
+                <h3>Roof service and city pages</h3>
+                <p>Repair, replacement, material, storm damage and city pages show Google and homeowners exactly what you do and where. The same structure behind our <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
                     local SEO for roofing companies
-                  </Link>
-                  .
-                </p>
+                  </Link>.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -657,13 +597,9 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>ROOFING SYSTEM 02</small>
-                <h3>Trackable estimate flow</h3>
-                <p>
-                  Inspection forms, click-to-call, call tracking, conversion
-                  events, and CRM routing connect roofing campaigns to real
-                  estimate requests.
-                </p>
+                <small>ROOF SITE LAYER 02</small>
+                <h3>Estimate requests you can trace</h3>
+                <p>Inspection forms, click-to-call, call tracking, conversion events and CRM routing tie each roofing campaign to real estimate requests.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -671,7 +607,7 @@ export default function FreeRoofingWebsiteOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my roofing website</span>
+              <span>Claim my free roofing website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -683,8 +619,8 @@ export default function FreeRoofingWebsiteOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying roofing plans</span>
-              <h2>Pick the roofing growth plan. The website comes with it.</h2>
+              <span className="section-kicker">Roofing plans that include the site</span>
+              <h2>Your roofing website is built into every plan below.</h2>
             </div>
             <p>
               Any qualifying plan at $297/month or above on a 6-month term
@@ -821,20 +757,11 @@ export default function FreeRoofingWebsiteOfferPage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">
-              The qualifying roofing marketing plan
-            </span>
-            <h2>
-              The website is the roof deck. Marketing builds the lead pipeline.
-            </h2>
-            <p>
-              Your plan is selected around your roofing territory and may
-              combine paid search, local visibility, Google Business Profile
-              growth, storm-response campaigns, tracking, and ongoing conversion
-              improvements.
-            </p>
+            <span className="section-kicker section-kicker--dark">Behind every booked inspection</span>
+            <h2>A roofing site gets found when marketing runs behind it.</h2>
+            <p>We build your plan around your roofing territory. It can mix paid search, local SEO, Google Business Profile growth, storm response campaigns, call tracking and ongoing page improvements.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my roofing company</span>
+              <span>Plan my roofing marketing</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -843,58 +770,35 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Roofing Google Ads</h3>
-              <p>
-                Capture urgent repair, replacement, inspection, and storm
-                searches with service-led campaigns and trackable estimate
-                actions.
-              {" "}
-                See our{" "}
-                <Link href="/services/google-ads" className="offer-inlink">
+              <h3>Roof repair search ads</h3>
+              <p>Reach homeowners searching for roof repair, replacement and inspections with service-led ads and tracked estimate requests. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local roofing SEO + GBP</h3>
-              <p>
-                Build visibility across roofing services and target cities while
-                strengthening the proof homeowners see in local results.
-              {" "}
-                Backed by our{" "}
-                <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
+              <h3>Maps rankings in your roofing cities</h3>
+              <p>Climb local results in the cities you serve and show homeowners the reviews and project photos that build trust. Backed by our <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
                   local SEO for roofing companies
-                </Link>{" "}
-                and{" "}
-                <Link
+                </Link> and <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
                 >
                   Google Business Profile optimization
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>03</strong>
-              <h3>Storm-response campaigns</h3>
-              <p>
-                Launch fast, location-focused campaigns after hail, wind, and
-                heavy rain while tracking every call and inspection request.
-              </p>
+              <h3>Storm response campaigns</h3>
+              <p>After hail, wind or heavy rain, launch location-based campaigns fast and track every inspection call they bring in.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
-              </span>
+                <b>$0</b> roofing build fee</span>
               <span>
-                <b>1</b> connected growth system
-              </span>
+                <b>1</b> plan for site and marketing</span>
               <span>
-                <b>100%</b> clear written scope
-              </span>
+                <b>100%</b> of the scope in writing</span>
             </article>
           </div>
         </section>
@@ -902,17 +806,11 @@ export default function FreeRoofingWebsiteOfferPage() {
         {/* ───────────── Terms ───────────── */}
         <section className="section terms-section">
           <div className="terms-main">
-            <span className="section-kicker">
-              Clear qualification. Clear terms.
-            </span>
-            <h2>What &ldquo;free roofing website&rdquo; means in this offer.</h2>
-            <p>
-              Zonic waives the upfront roofing website design and development
-              fee when an eligible contractor starts a qualifying recurring
-              marketing engagement. Nothing is left vague before you agree.
-            </p>
+            <span className="section-kicker">The roofing offer, spelled out</span>
+            <h2>What roofers should know before claiming the free site.</h2>
+            <p>We waive the roofing website build fee when a new client starts a qualifying recurring marketing plan. Every detail below is agreed in writing before you sign.</p>
             <a className="section-button" href="#contact">
-              <span>See if my roofing company qualifies</span>
+              <span>Check my roofing company</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -922,52 +820,31 @@ export default function FreeRoofingWebsiteOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>
-                  The roofing website development fee, valued at $2,000. Your
-                  monthly plan is billed at full rate and is not discounted.
-                </small>
+                <strong>What we waive</strong>
+                <small>The roofing website development fee, valued at $2,000. Your monthly plan is billed at its full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
-                <small>
-                  Any Zonic roofing marketing plan at $297/month or above —
-                  Local Foundation, Growth, or Full Market — on a six-month
-                  minimum term. Advertising spend is billed separately by the
-                  platform.
-                {" "}
-                  Also available with our{" "}
-                  <Link href="/services/web-design" className="offer-inlink">
+                <strong>Plans that qualify</strong>
+                <small>Any Zonic roofing marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. Ad spend is billed separately by the platform. Also available with our <Link href="/services/web-design" className="offer-inlink">
                     full website design service
-                  </Link>
-                  .
-                </small>
+                  </Link>.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>
-                  Your domain is registered in your roofing company&rsquo;s name
-                  from day one. We host and maintain the site during the term;
-                  full ownership of the website and hosting transfers to you at
-                  the completion of month six.
-                </small>
+                <strong>Who owns the site</strong>
+                <small>Your domain is registered in your roofing company’s name from day one. We host and maintain the site during the term, and full ownership of the website and hosting transfers to you when month six is complete.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
-                <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
-                </small>
+                <strong>Early cancellation</strong>
+                <small>You keep your domain and any content you supplied. The website does not transfer, because the build fee was waived against the full six-month engagement.</small>
               </span>
             </div>
           </div>
@@ -977,10 +854,8 @@ export default function FreeRoofingWebsiteOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">
-                Roofing website + recurring growth
-              </span>
-              <h2>Why the combined offer is stronger for roofers.</h2>
+              <span className="section-kicker">Why roofers bundle site and marketing</span>
+              <h2>Why roofers get more from the site and marketing together.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -996,7 +871,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               </div>
               <p>
                 <strong>One roofing lead system</strong>
-                <small>Website · visibility · tracking</small>
+                <small>Site · Maps · storm tracking</small>
               </p>
             </div>
           </div>
@@ -1004,46 +879,34 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>
-                Your roofing website, ads, GBP visibility, storm campaigns, and
-                tracking are planned around the same homeowners and service
-                territory.
-              </p>
+              <p>Your roofing website, ads, Google profile, storm campaigns and tracking all target the same homeowners and the same service area.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One roofing strategy</strong>
+                  <strong>One roofing game plan</strong>
                   <small>Built around your territory</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>
-                The upfront website investment is removed, giving your roofing
-                campaigns a conversion-ready foundation without a separate
-                development bill.
-              </p>
+              <p>No upfront build bill means more budget for the campaigns that fill your inspection calendar from the first month.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>More budget for leads</strong>
+                  <small>No separate build bill</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>
-                Inspection calls, estimate forms, paid campaigns, and local
-                search actions are measured together so improvements focus on
-                real roofing opportunities.
-              </p>
+              <p>Inspection calls, estimate forms, ads and Maps actions are measured together, so each change focuses on the jobs that pay.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable roofing growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Roofing results you can see</strong>
+                  <small>Tracking live at launch</small>
                 </div>
               </footer>
             </article>
@@ -1062,13 +925,9 @@ export default function FreeRoofingWebsiteOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Roofing website FAQs</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>
-              These are the details roofing contractors should know about
-              eligibility, website scope, and the qualifying marketing
-              engagement.
-            </p>
+            <span className="section-kicker">Roofer FAQs</span>
+            <h2>Roofing contractor questions, answered.</h2>
+            <p>What roofers ask most about the free roofing website, storm damage pages, qualifying plans and the six-month term.</p>
             <a className="section-button" href="#contact">
               <span>Ask about my roofing market</span>
               <i>
@@ -1086,28 +945,16 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="cta-orbit cta-orbit--two" />
 
           <div className="cta-content">
-            <span className="section-kicker section-kicker--dark">
-              Zonic Roofing Website Launch Offer
-            </span>
-            <h2>
-              Claim your professional roofing website with no upfront
-              development fee.
-            </h2>
-            <p>
-              Complete the short eligibility form. Zonic will review your
-              services, target territory, current website, and lead goals before
-              recommending a qualifying roofing marketing plan.
-            </p>
+            <span className="section-kicker section-kicker--dark">Roofing website launch</span>
+            <h2>Put a new roofing website to work before storm season.</h2>
+            <p>Fill in the short form. We review your roofing services, territory, current website and lead goals, then recommend a qualifying roofing marketing plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Roofing lead-generation website
-              </span>
+                <Icon name="check" /> Roofing website built for inspections</span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your territory
-              </span>
+                <Icon name="check" /> Plan matched to your storm territory</span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
-              </span>
+                <Icon name="check" /> Scope and terms in writing first</span>
             </div>
 
             <div className="cta-direct">
@@ -1143,10 +990,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             >
               Zonic Media
             </a>
-            <p>
-              Roofing lead-generation websites connected to the marketing
-              services that grow roofing companies.
-            </p>
+            <p>Roofing company websites paired with the marketing that books inspections and roof jobs.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1174,7 +1018,7 @@ export default function FreeRoofingWebsiteOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Roofing Website Launch Offer</span>
+            <span>Free Roofing Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>
               With a qualifying roofing marketing plan at $297/month or above on

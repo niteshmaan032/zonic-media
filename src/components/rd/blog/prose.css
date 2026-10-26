@@ -1,0 +1,238 @@
+/*
+ * Blog article body (redesign draft, 24 Oct 2026). Post bodies are CMS HTML,
+ * so they can't carry utility classes; these rules style that HTML inside
+ * .rd-prose using the kit tokens (dfw-kit/kit.css). Scoped, so nothing
+ * outside the article is touched.
+ */
+
+.rd-prose {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.8;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Block spacing as bottom margins (one rule, low specificity, so the
+   heading rules below can still set their own space above). */
+.rd-prose :where(p, ul, ol, blockquote, figure, pre, hr, img, table, .bp-table-wrap) {
+  margin: 0 0 1.15em;
+}
+
+.rd-prose > :last-child {
+  margin-bottom: 0;
+}
+
+.rd-prose h2 {
+  margin: 1.9em 0 0.6em;
+  color: var(--ink);
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 120px;
+}
+
+.rd-prose h3 {
+  margin: 1.6em 0 0.5em;
+  color: var(--ink);
+  font-size: clamp(21px, 1.9vw, 25px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 120px;
+}
+
+.rd-prose h4 {
+  margin: 1.4em 0 0.45em;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.rd-prose > h2:first-child,
+.rd-prose > h3:first-child {
+  margin-top: 0;
+}
+
+/* Paragraphs inside list items and table cells stay tight. */
+.rd-prose li > p,
+.rd-prose td > p,
+.rd-prose th > p,
+.rd-prose blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+.rd-prose a {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--blue) 35%, transparent);
+  text-underline-offset: 3px;
+}
+
+.rd-prose a:hover {
+  text-decoration-color: var(--blue);
+}
+
+.rd-prose strong,
+.rd-prose b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rd-prose ul,
+.rd-prose ol {
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6em;
+}
+
+.rd-prose ul > li,
+.rd-prose ol > li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.rd-prose ul > li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.rd-prose ol {
+  counter-reset: rdp;
+}
+
+.rd-prose ol > li {
+  counter-increment: rdp;
+}
+
+.rd-prose ol > li::before {
+  content: counter(rdp);
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.rd-prose li > ul,
+.rd-prose li > ol {
+  margin: 0.6em 0 0;
+}
+
+.rd-prose blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px 26px;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 18px 18px 0;
+  background: var(--blue-soft);
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.rd-prose blockquote p {
+  margin-bottom: 0.6em;
+}
+
+.rd-prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.rd-prose figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.rd-prose figcaption {
+  margin-top: 0.6em;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.rd-prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.rd-prose code {
+  padding: 0.1em 0.4em;
+  border-radius: 6px;
+  background: var(--panel);
+  font-size: 0.9em;
+}
+
+/* Tables: the content pipeline wraps each one in .bp-table-wrap. */
+.rd-prose .bp-table-wrap,
+.rd-prose > table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rd-prose table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+
+.rd-prose th,
+.rd-prose td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.rd-prose th,
+.rd-prose tr:first-child > td {
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.rd-prose tr:last-child > td {
+  border-bottom: 0;
+}
+
+.rd-prose td p {
+  margin: 0;
+}
+
+@media (max-width: 575.98px) {
+  .rd-prose {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .rd-prose blockquote {
+    padding: 16px 18px;
+  }
+}

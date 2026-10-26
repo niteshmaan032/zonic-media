@@ -62,59 +62,59 @@ const faqJsonLd = {
 };
 
 const MARQUEE_ITEMS = [
-  "Personal Injury leads leads",
-  "Family Law leads leads",
-  "Criminal Defense leads leads",
-  "Immigration leads leads",
-  "Estate Planning leads leads",
-  "Business Law leads leads",
-  "Employment Law leads leads",
-  "Real Estate Law leads leads",
-  "Civil Litigation leads leads",
-  "Probate leads leads",
+  "Personal Injury leads",
+  "Family Law leads",
+  "Criminal Defense leads",
+  "Immigration leads",
+  "Estate Planning leads",
+  "Business Law leads",
+  "Employment Law leads",
+  "Real Estate Law leads",
+  "Civil Litigation leads",
+  "Probate leads",
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Law-firm-first design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Consultation request forms" },
-  { icon: "phone", label: "Click-to-call intake" },
-  { icon: "search", label: "Local SEO foundation" },
-  { icon: "chart", label: "Consultation tracking" },
-  { icon: "layers", label: "Practice-area pages" },
+  { icon: "layout", label: "Credible firm design" },
+  { icon: "smartphone", label: "Mobile consult flow" },
+  { icon: "mail", label: "Consultation forms" },
+  { icon: "phone", label: "Tap-to-call intake" },
+  { icon: "search", label: "Practice-area SEO" },
+  { icon: "chart", label: "Intake source tracking" },
+  { icon: "layers", label: "Attorney bio pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Consultation tracking" },
-  { icon: "layers", label: "Practice-area pages" },
-  { icon: "pin", label: "Law-firm-first design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Consultation request forms" },
-  { icon: "target", label: "Click-to-call intake" },
-  { icon: "users", label: "Local SEO foundation" },
+  { icon: "chart", label: "Intake source tracking" },
+  { icon: "layers", label: "Attorney bio pages" },
+  { icon: "pin", label: "Credible firm design" },
+  { icon: "gauge", label: "Mobile consult flow" },
+  { icon: "code", label: "Consultation forms" },
+  { icon: "target", label: "Tap-to-call intake" },
+  { icon: "users", label: "Practice-area SEO" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Law Firm Website for Attorneys | Zonic Media" },
+  title: { absolute: "Free Law Firm Website | Attorney Website Design | Zonic" },
   description:
-    "Free law firm website, no upfront development fee, when you start a qualifying Zonic marketing plan. Practice-area pages, attorney bios and intake built in.",
+    "Free law firm website with practice-area pages, attorney bios and consultation intake. Development fee waived when you start a qualifying Zonic marketing plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free law firm website",
     "law firm website design",
     "attorney website design",
+    "lawyer website design",
     "free website for law firms",
     "law firm web design",
-    "law firm marketing plan",
-    "lawyer website design",
-    "law firm websites",
+    "practice area pages",
+    "law firm marketing",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Website for Law Firms | Zonic Media",
+    title: "Free Law Firm Website for Attorneys | Zonic Media",
     description:
-      "Free law firm website, no upfront development fee, when you start a qualifying Zonic marketing plan. Practice-area pages, attorney bios and intake built in.",
+      "Free law firm website with practice-area pages, attorney bios and consultation intake. Development fee waived when you start a qualifying Zonic marketing plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -158,7 +158,7 @@ export default function LawFirmOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for law firms</span>
+              <span>Free website offer for law firms and attorneys</span>
               <Icon name="sparkles" />
             </div>
 
@@ -175,19 +175,19 @@ export default function LawFirmOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic legal marketing plan and we’ll build a professional website designed to attract qualified enquiries, strengthen trust, and turn high-intent searches into consultation requests—with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic legal marketing plan and we build your law firm website with practice-area pages, attorney bios and a clear consultation path. The upfront development fee is waived.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my law firm website</span>
+                <span>Claim my firm’s website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See the law firm site build</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -200,7 +200,7 @@ export default function LawFirmOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
+                  <strong>No firm build fee</strong>
                   <small>Development fee waived</small>
                 </span>
               </div>
@@ -209,8 +209,8 @@ export default function LawFirmOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Law Firm lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Consultation-first pages</strong>
+                  <small>Built for intake calls</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -218,7 +218,7 @@ export default function LawFirmOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Case-ready growth</strong>
+                  <strong>Practice-area growth</strong>
                   <small>Website + legal marketing</small>
                 </span>
               </div>
@@ -227,8 +227,8 @@ export default function LawFirmOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Your approval first</strong>
+                  <small>Copy reviewed by your firm</small>
                 </span>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function LawFirmOfferPage() {
               </span>
               <span>
                 <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <small>With a qualifying legal plan</small>
               </span>
             </div>
 
@@ -273,19 +273,19 @@ export default function LawFirmOfferPage() {
                 <div className="mini-nav">
                   <span>Practice Areas</span>
                   <span>Attorneys</span>
-                  <span>Results</span>
+                  <span>Contact</span>
                 </div>
-                <div className="mini-button">Request consultation</div>
+                <div className="mini-button">Request a consultation</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">TRUSTED LEGAL COUNSEL</div>
-                  <h2>Clear guidance when the stakes are high.</h2>
-                  <p>Focused legal representation, direct communication, and practical next steps from an experienced local firm.</p>
+                  <div className="skeleton-label">YOUR LOCAL LAW FIRM</div>
+                  <h2>Talk to an attorney about your next step.</h2>
+                  <p>A law firm website that explains your practice areas plainly and makes booking a consultation simple.</p>
                   <div className="canvas-actions">
                     <span>Request consultation</span>
-                    <span>View practice areas</span>
+                    <span>Practice areas</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -300,7 +300,7 @@ export default function LawFirmOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">COUNSEL YOU CAN TRUST</div>
+                  <div className="visual-chip">PRACTICE AREAS FIRST</div>
                 </div>
               </div>
 
@@ -324,8 +324,8 @@ export default function LawFirmOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">LEGAL SERVICES</span>
-                <h3>Clear counsel starts with one conversation.</h3>
+                <span className="phone-kicker">BOOK A CONSULTATION</span>
+                <h3>Your first conversation, one tap away.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -338,8 +338,8 @@ export default function LawFirmOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for law firm leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Built for consultation requests</strong>
+                <small>Intake forms, calls and tracking</small>
               </span>
             </div>
           </div>
@@ -359,9 +359,9 @@ export default function LawFirmOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One law-firm offer. One connected intake system.</span>
-            <h2>Remove the website cost holding your firm’s growth back.</h2>
-            <p>Zonic combines the credible website your firm needs with the recurring marketing required to reach prospective clients before they contact another attorney.</p>
+            <span className="section-kicker">Your law firm website in three steps</span>
+            <h2>How your firm’s new website comes together.</h2>
+            <p>Zonic pairs a credible law firm website with ongoing legal marketing, so people searching for help in your practice areas can find and contact your firm.</p>
           </div>
 
           <div className="process-grid">
@@ -370,39 +370,39 @@ export default function LawFirmOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Map your legal market</h3>
-              <p>We review your practice areas, target markets, ideal matters, current lead sources, and the consultations your firm wants more of.</p>
-              <small>Law-firm growth call</small>
+              <h3>Map your practice areas</h3>
+              <p>We review your practice areas, target counties, the matters you want more of, your current website and where consultations come from today.</p>
+              <small>Firm strategy call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine legal Google Ads, Local SEO, Google Business Profile growth, content strategy, intake tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Choose a legal marketing plan</h3>
+              <p>Your plan can combine Google Ads, Local SEO, Google Business Profile care, legal content and intake tracking.</p>
+              <small>Monthly legal marketing</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build the law-firm site</h3>
+              <h3>We build the firm’s site</h3>
               <p>
-                Zonic creates the agreed law-firm lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                Zonic builds the agreed law firm website, with your team reviewing every page before launch and the build fee waived. Same standard as{" "}
                 <Link href="/services/web-design" className="offer-inlink">
                   our full website design service
                 </Link>
                 .
               </p>
-              <small>Website fee waived</small>
+              <small>Firm build fee waived</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my law firm company</span>
+              <span>Check my law firm</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -413,26 +413,24 @@ export default function LawFirmOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every law firm lead in one place.</h2>
+            <span className="section-kicker">Consultation tracking</span>
+            <h2>See where every consultation request starts.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which law firm jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, consultation forms and chats arrive in one dashboard with the source attached, so you can see which practice areas and campaigns bring enquiries, without guessing.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Every call and consultation form logged
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Source recorded for each enquiry
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> Status tracked through your intake steps
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>See The Intake Dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -518,10 +516,10 @@ export default function LawFirmOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Built around legal search intent</span>
-              <h2>One law-firm website. A clear path for every priority practice area.</h2>
+              <span className="section-kicker">Practice-area pages</span>
+              <h2>Personal injury to estate planning: one page per practice area.</h2>
             </div>
-            <p>Choose a practice area to see how Zonic structures the message, trust signals, calls to action, and consultation flow around what a prospective client needs in that moment.</p>
+            <p>People search by legal problem, not by firm name. Pick a practice area to see how each page explains the matter in plain words and leads to a consultation.</p>
           </div>
 
           <LawFirmServiceTabs />
@@ -529,19 +527,19 @@ export default function LawFirmOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                Beyond these six areas
               </span>
-              <h3>We build for every law firm service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>Employment, probate, real estate law and more.</h3>
+              <p>These tabs are a sample. Any practice area your firm handles can get its own page and intake path.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every law firm service</span>
+              <span className="niche-banner-more">+ every practice area you handle</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my law firm website</span>
+              <span>Get my practice-area pages</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -552,9 +550,9 @@ export default function LawFirmOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your law-firm lead-generation website includes</span>
-            <h2>More than a law-firm website handed over and forgotten.</h2>
-            <p>Your site becomes part of the same system as your ads, local visibility, legal content, intake tracking, and consultation follow-up.</p>
+            <span className="section-kicker">Inside your law firm website</span>
+            <h2>A law firm website built to earn consultations.</h2>
+            <p>Your law firm website runs inside your legal marketing, with practice-area pages, attorney bios, intake tracking and clear consultation paths working together.</p>
           </div>
 
           <div className="icon-cloud">
@@ -582,10 +580,10 @@ export default function LawFirmOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>LEGAL SYSTEM 01</small>
-                <h3>Practice and market authority</h3>
+                <small>FIRM SITE 01</small>
+                <h3>Practice areas Google can read</h3>
                 <p>
-                  Practice-area, attorney, case-type, and market pathways help search engines and prospective clients understand exactly where your firm can help. The same structure behind our{" "}
+                  Practice-area pages, attorney bios, county pages, on-page SEO and schema help search engines and people see what your firm handles. The same structure behind our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -599,9 +597,9 @@ export default function LawFirmOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>LEGAL SYSTEM 02</small>
-                <h3>Trackable intake flow</h3>
-                <p>Consultation forms, click-to-call, call tracking, conversion events, and CRM routing connect legal campaigns to real enquiries and intake opportunities.</p>
+                <small>FIRM SITE 02</small>
+                <h3>Intake you can measure</h3>
+                <p>Consultation forms, click-to-call, call tracking, conversion events and CRM routing link legal campaigns to real enquiries.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -609,7 +607,7 @@ export default function LawFirmOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my law firm website</span>
+              <span>Claim my firm’s website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -621,8 +619,8 @@ export default function LawFirmOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying legal marketing plans</span>
-              <h2>Pick the law-firm growth plan. The website comes with it.</h2>
+              <span className="section-kicker">Plans for law firms</span>
+              <h2>Law firm marketing plans that include the website.</h2>
             </div>
             <p>Any qualifying plan at $297/month or above on a 6-month term includes the full law-firm lead-generation website build at no development fee.</p>
           </div>
@@ -746,12 +744,12 @@ export default function LawFirmOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying legal marketing plan
+              The legal marketing plan
             </span>
-            <h2>The website is the trust hub. Marketing keeps qualified enquiries moving.</h2>
-            <p>Your plan is selected around your practice areas and markets and may combine paid search, local visibility, Google Business Profile growth, legal content, intake tracking, and ongoing conversion improvements.</p>
+            <h2>The website earns trust. Marketing brings the right enquiries.</h2>
+            <p>Your plan is built around your practice areas and counties. It can combine paid search, local visibility, Business Profile growth, legal content, intake tracking and steady conversion work.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my law firm company</span>
+              <span>Check my firm’s market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -760,9 +758,9 @@ export default function LawFirmOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Legal Google Ads</h3>
+              <h3>Google Ads for law firms</h3>
               <p>
-                Capture high-intent practice-area searches with focused campaigns, compliant messaging, and trackable consultation actions. See our{" "}
+                Reach people searching for help in your practice areas, with careful ad copy and tracked consultation requests. See our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -771,9 +769,9 @@ export default function LawFirmOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local legal SEO + GBP</h3>
+              <h3>Local SEO + GBP for firms</h3>
               <p>
-                Build visibility across practice areas and target markets while strengthening the credibility prospective clients see in local results. Backed by{" "}
+                Build visibility in the counties you serve, with a Business Profile that shows who you are and where you practice. Backed by{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -785,18 +783,18 @@ export default function LawFirmOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Intake conversion strategy</h3>
-              <p>Improve consultation forms, click-to-call paths, response tracking, and follow-up signals while measuring each qualified enquiry.</p>
+              <h3>Intake conversion work</h3>
+              <p>Clearer consultation forms, call paths and response tracking help more site visitors become qualified enquiries.</p>
             </article>
             <article className="dark-stat">
               <span>
                 <b>$0</b> upfront development fee
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> intake-ready firm website
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> copy approved by your firm
               </span>
             </article>
           </div>
@@ -806,12 +804,12 @@ export default function LawFirmOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              Law firm offer terms
             </span>
-            <h2>What &ldquo;free law-firm website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront law-firm website design and development fee when an eligible firm starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>Free law firm website terms, set out plainly.</h2>
+            <p>Zonic waives the upfront law firm website design and development fee when your firm starts a qualifying monthly marketing plan. Every term is in writing before you agree.</p>
             <a className="section-button" href="#contact">
-              <span>See if my law firm company qualifies</span>
+              <span>See if my firm qualifies</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -821,16 +819,16 @@ export default function LawFirmOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
+                <strong>Waived for your firm</strong>
                 <small>The law firm website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>Plans that qualify a firm</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth, or Full Market) on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/web-design" className="offer-inlink">
                     our full website design service
                   </Link>
@@ -841,14 +839,14 @@ export default function LawFirmOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
+                <strong>Who owns the firm’s site</strong>
                 <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>If the firm cancels early</strong>
                 <small>
                   You keep your domain and any content you supplied. The website
                   does not transfer, because the build fee was waived against
@@ -863,8 +861,8 @@ export default function LawFirmOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Law-firm website + recurring growth</span>
-              <h2>Why the combined offer is stronger for law firms.</h2>
+              <span className="section-kicker">Firm website + legal marketing</span>
+              <h2>Why firms run the website and marketing as one.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -879,8 +877,8 @@ export default function LawFirmOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One legal intake system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One intake system</strong>
+                <small>Site · visibility · intake</small>
               </p>
             </div>
           </div>
@@ -888,34 +886,34 @@ export default function LawFirmOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your law-firm website, ads, GBP visibility, legal content, and intake tracking are planned around the same prospective clients and target markets.</p>
+              <p>Your law firm website, ads, Business Profile, legal content and intake tracking speak to the same prospective clients in the same markets.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One law-firm strategy</strong>
-                  <small>Built around your target market</small>
+                  <strong>One firm strategy</strong>
+                  <small>Built around your practice</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving your legal campaigns a conversion-ready foundation without a separate development bill.</p>
+              <p>The upfront build fee is removed, so your legal marketing starts on a ready website without a separate development bill.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>A lighter start for the firm</strong>
+                  <small>No separate build bill</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, consultation forms, paid campaigns, and local search actions are measured together so improvements focus on qualified legal enquiries.</p>
+              <p>Calls, consultation forms, campaigns and local search actions are measured together, so changes focus on qualified enquiries.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable law-firm growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Enquiries you can trace</strong>
+                  <small>Intake tracked from launch</small>
                 </div>
               </footer>
             </article>
@@ -923,7 +921,7 @@ export default function LawFirmOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my law firm lead system</span>
+              <span>Build my firm’s intake system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -934,11 +932,11 @@ export default function LawFirmOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Law-firm website FAQs</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details law firms should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Law firm website FAQs</span>
+            <h2>Questions firms raise before they sign.</h2>
+            <p>Answers for managing partners and solo attorneys on eligibility, website scope and the monthly marketing plan.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my law firm market</span>
+              <span>Ask about my firm’s market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -955,19 +953,19 @@ export default function LawFirmOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Law Firm Website Launch Offer
+              Free Law Firm Website Offer
             </span>
-            <h2>Claim your professional law-firm website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your practice areas, target markets, current website, and intake goals before recommending a qualifying legal marketing plan.</p>
+            <h2>Request your law firm website with the development fee waived.</h2>
+            <p>Fill in the short form. Zonic reviews your practice areas, markets, current website and intake goals before recommending a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Law-firm lead-generation website
+                <Icon name="check" /> Consultation-ready law firm website
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your practice and market
+                <Icon name="check" /> Plan matched to your practice areas
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Scope and terms clear before you commit
               </span>
             </div>
 
@@ -1004,7 +1002,7 @@ export default function LawFirmOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Law-firm websites connected to the marketing and intake systems that help firms earn qualified consultations.</p>
+            <p>Law firm websites built around practice-area pages, clear intake and the marketing that brings qualified enquiries.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1032,7 +1030,7 @@ export default function LawFirmOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Law Firm Website Launch Offer</span>
+            <span>Law Firm Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-law-firm-offer-form">

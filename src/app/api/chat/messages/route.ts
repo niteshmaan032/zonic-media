@@ -68,7 +68,17 @@ export async function GET(request: NextRequest) {
     const before = beforeTs ? new Date(beforeTs) : undefined;
     const messages = await getMessages(conversationId, limit, before);
 
-    return NextResponse.json({ success: true, messages });
+    // Conversation state rides along so the visitor widget can tell whether
+    // an agent has accepted yet (polling fallback for the Ably signal).
+    return NextResponse.json({
+      success: true,
+      messages,
+      conversation: {
+        status: conv.status,
+        agentName: conv.assignedAdminName ?? null,
+        acceptedAt: conv.acceptedAt?.toISOString() ?? null,
+      },
+    });
   } catch (err) {
     console.error("[chat/messages GET]", err);
     return NextResponse.json(
@@ -186,6 +196,13 @@ export async function POST(request: NextRequest) {
     if (conv.status === "closed") {
       return NextResponse.json(
         { success: false, message: "Conversation is closed." },
+        { status: 409 }
+      );
+    }
+    // Agents reply only after pressing "Accept" (26 Oct 2026).
+    if (senderType === "admin" && conv.status === "waiting_agent") {
+      return NextResponse.json(
+        { success: false, message: "Accept the chat before replying." },
         { status: 409 }
       );
     }

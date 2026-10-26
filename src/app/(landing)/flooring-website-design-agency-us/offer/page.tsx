@@ -71,29 +71,29 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
+  { icon: "layout", label: "Flooring product pages" },
+  { icon: "smartphone", label: "Mobile layout" },
+  { icon: "mail", label: "Measure request form" },
   { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "search", label: "Flooring SEO setup" },
+  { icon: "chart", label: "Lead tracking" },
+  { icon: "layers", label: "Showroom page" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Call tracking" },
+  { icon: "layers", label: "Install gallery" },
+  { icon: "pin", label: "Floor type guides" },
+  { icon: "gauge", label: "Fast loading" },
+  { icon: "code", label: "Quote forms" },
+  { icon: "target", label: "Tap-to-call" },
+  { icon: "users", label: "Service area pages" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Flooring Website for Flooring Companies | Zonic Media" },
+  title: { absolute: "Free Flooring Website Design for Flooring Contractors" },
   description:
-    "Free flooring company website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+    "Get a free flooring website for your flooring company or store, with product pages, in-home measure requests and showroom info. $0 upfront on a qualifying plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
@@ -108,9 +108,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Flooring Website Offer | Zonic Media",
+    title: "Free Flooring Website Design for Flooring Contractors | Zonic Media",
     description:
-      "Free flooring company website, no upfront development fee, when you start a qualifying Zonic marketing plan. Built to rank and book jobs.",
+      "Get a free flooring website for your flooring company or store, with product pages, in-home measure requests and showroom info. $0 upfront on a qualifying plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function FlooringOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for flooring companies</span>
+              <span>Free website for flooring companies and stores</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,7 +171,7 @@ export default function FlooringOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your flooring company with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build your flooring company website, with product pages and in-home measure requests, at no upfront development fee.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
@@ -196,7 +196,7 @@ export default function FlooringOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
+                  <strong>$0 website build</strong>
                   <small>Development fee waived</small>
                 </span>
               </div>
@@ -205,8 +205,8 @@ export default function FlooringOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Flooring lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Measure request flow</strong>
+                  <small>Calls, quotes and visits</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -214,8 +214,8 @@ export default function FlooringOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Showroom-ready growth</strong>
-                  <small>Website + flooring marketing</small>
+                  <strong>Product-led growth</strong>
+                  <small>Flooring website + marketing</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -223,8 +223,8 @@ export default function FlooringOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Terms you can read</strong>
+                  <small>Scope set in writing</small>
                 </span>
               </div>
             </div>
@@ -239,8 +239,8 @@ export default function FlooringOfferPage() {
                 <Icon name="sparkles" />
               </span>
               <span>
-                <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <strong>$0 to build your flooring website</strong>
+                <small>Paired with a qualifying plan</small>
               </span>
             </div>
 
@@ -271,17 +271,17 @@ export default function FlooringOfferPage() {
                   <span>Work</span>
                   <span>About</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Get a measure</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">FLOORING WEBSITE</div>
-                  <h2>More measures. More flooring projects.</h2>
-                  <p>A professional flooring website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">FLOORING COMPANY WEBSITE</div>
+                  <h2>New floors start with a measure.</h2>
+                  <p>A flooring website that walks shoppers from product ideas to a booked in-home measure in your area.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Book a measure</span>
+                    <span>Shop floors</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -296,7 +296,7 @@ export default function FlooringOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">FRESH INSTALL</div>
                 </div>
               </div>
 
@@ -320,8 +320,8 @@ export default function FlooringOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">FLOORING SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">FLOORING WEBSITE</span>
+                <h3>Pick the floor. Book the measure.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -334,8 +334,8 @@ export default function FlooringOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for flooring leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Made for measure requests</strong>
+                <small>Forms, calls and tracking set</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function FlooringOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the flooring website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">Three steps to your flooring website</span>
+            <h2>Your next flooring website is on us, with a qualifying plan.</h2>
+            <p>Flooring shoppers compare products, prices and installers online first. We build a flooring website that answers those questions and back it with local marketing.</p>
           </div>
 
           <div className="process-grid">
@@ -366,33 +366,33 @@ export default function FlooringOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your flooring service mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Tell us what floors you sell</h3>
+              <p>We review your product lines, install crews, showroom, service area, current website and where your measure requests come from now.</p>
+              <small>Intro call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Choose the flooring growth plan</h3>
+              <p>Your plan can include Google Ads, Local SEO, Google Business Profile management, tracking and conversion work aimed at local floor buyers.</p>
+              <small>Monthly marketing</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
+              <h3>Your flooring site goes live</h3>
               <p>
-                Zonic creates the agreed flooring lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                We build the agreed flooring website with the upfront development fee waived under your marketing plan. It matches the build quality of{" "}
                 <Link href="/services/flooring-website-design" className="offer-inlink">
                   our flooring website design service
                 </Link>
                 .
               </p>
-              <small>Website fee waived</small>
+              <small>Fee waived</small>
             </article>
           </div>
 
@@ -409,26 +409,24 @@ export default function FlooringOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every flooring lead in one place.</h2>
+            <span className="section-kicker">Measure and quote tracking</span>
+            <h2>Every flooring quote and measure, tracked.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which flooring jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, quote forms and chats reach one dashboard with the source attached, so you can see whether the hardwood job came from an ad, your map listing or your flooring website.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Each call, quote form and chat stored
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Source attached to every floor job
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> Status from measure to installed
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>See the flooring lead board</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -470,7 +468,7 @@ export default function FlooringOfferPage() {
               </div>
             <div className="leadtrack-row">
               <b>
-                Marcus D.
+                Jason L.
                 <small>Hardwood Flooring</small>
               </b>
               <span>Google Ads</span>
@@ -478,7 +476,7 @@ export default function FlooringOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Priya S.
+                Mia R.
                 <small>Luxury Vinyl</small>
               </b>
               <span>Google Business Profile</span>
@@ -486,7 +484,7 @@ export default function FlooringOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Dana R.
+                Tom F.
                 <small>Tile Flooring</small>
               </b>
               <span>Organic search</span>
@@ -494,7 +492,7 @@ export default function FlooringOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Elena V.
+                Ava S.
                 <small>Carpet Installation</small>
               </b>
               <span>Call extension</span>
@@ -514,10 +512,10 @@ export default function FlooringOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Flooring website service paths</span>
-              <h2>One flooring website. A clear path for every profitable flooring service.</h2>
+              <span className="section-kicker">Flooring website product pages</span>
+              <h2>Hardwood buyers and LVP shoppers search differently. Each gets its own page.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Choose a floor type to see the copy on the left and the flooring website mockup on the right. Each page answers what buyers ask about cost, wear and install.</p>
           </div>
 
           <FlooringServiceTabs />
@@ -525,16 +523,16 @@ export default function FlooringOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                Every floor you install
               </span>
-              <h3>We build for every flooring service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>Laminate, stairs and epoxy can rank too.</h3>
+              <p>The tabs show six floor types. If shoppers search for a flooring product you offer, we can build that page.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every flooring service</span>
+              <span className="niche-banner-more">+ every flooring product you sell</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
               <span>Claim my flooring website</span>
@@ -548,9 +546,9 @@ export default function FlooringOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a flooring website handed over and forgotten.</h2>
-            <p>Your flooring website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">Flooring website features</span>
+            <h2>A flooring website that sells floors while your crews install them.</h2>
+            <p>Your flooring website is built into your marketing plan, with product pages, local search structure and tracking that keep quote and measure requests coming.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,10 +576,10 @@ export default function FlooringOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
+                <small>FLOORING SITE 01</small>
+                <h3>Product pages that rank</h3>
                 <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
+                  Floor type pages, town pages, on-page SEO and schema where it fits help Google match your flooring business to local searches. The same structure behind our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -595,9 +593,9 @@ export default function FlooringOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>FLOORING SITE 02</small>
+                <h3>Quotes tied to sources</h3>
+                <p>Quote forms, click-to-call, GA4, Tag Manager, conversion tracking and CRM routing link each flooring enquiry to the channel that sent it.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +603,7 @@ export default function FlooringOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my flooring website</span>
+              <span>Get my flooring website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +615,8 @@ export default function FlooringOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Flooring website comes with it.</h2>
+              <span className="section-kicker">Qualifying flooring plans</span>
+              <h2>Your flooring website comes with any plan below.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -742,12 +740,12 @@ export default function FlooringOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
+              The marketing side of the offer
             </span>
-            <h2>The website is the foundation. Marketing creates demand for flooring companies.</h2>
-            <p>Your plan is selected around your flooring market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <h2>A flooring website needs shoppers. The plan sends local floor buyers your way.</h2>
+            <p>We fit the plan to your flooring market. It can mix paid search, local visibility, Google Business Profile growth, tracking and steady conversion work.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my flooring company</span>
+              <span>Review my flooring market</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,9 +754,9 @@ export default function FlooringOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
+              <h3>Ads for floor buyers</h3>
               <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
+                Show up for searches like hardwood installers or LVP near me, with ads that land on the matching flooring page. See our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -767,9 +765,9 @@ export default function FlooringOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
+              <h3>Local map visibility</h3>
               <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
+                Rank in local results for the towns you install in, with a profile that shows your showroom and finished floors. Backed by{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -781,18 +779,18 @@ export default function FlooringOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>More measures booked</h3>
+              <p>Call and form tracking, page updates and clear reporting help turn more flooring website visits into booked measures.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
+                <b>$0</b> fee to build the website
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> board for every floor lead
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> of the scope in writing
               </span>
             </article>
           </div>
@@ -802,10 +800,10 @@ export default function FlooringOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              How the free flooring website works
             </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront flooring website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>Free flooring website terms, in plain English.</h2>
+            <p>Zonic waives the upfront design and development fee for your flooring website when an eligible flooring company starts a qualifying recurring marketing plan. Each term is agreed in writing.</p>
             <a className="section-button" href="#contact">
               <span>See if my flooring company qualifies</span>
               <i>
@@ -817,16 +815,16 @@ export default function FlooringOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>The flooring website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
+                <strong>What is waived</strong>
+                <small>The flooring website development fee, valued at $2,000. Your monthly plan is billed at its full rate and is not reduced.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>Who qualifies</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/flooring-website-design" className="offer-inlink">
                     our flooring website design service
                   </Link>
@@ -837,18 +835,16 @@ export default function FlooringOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
+                <strong>Website ownership</strong>
+                <small>Your domain is registered in your business’s name from day one. We host and maintain the flooring website during the term, and full ownership of the site and hosting transfers to you at the end of month six.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>Early cancellation</strong>
                 <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
+                  You keep your domain and any content you supplied. The flooring website does not transfer, because the build fee was waived against the full six-month engagement.
                 </small>
               </span>
             </div>
@@ -859,8 +855,8 @@ export default function FlooringOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Flooring website + marketing</span>
+              <h2>Why flooring firms pair site and marketing.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +871,8 @@ export default function FlooringOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One flooring system</strong>
+                <small>Website · maps · tracking</small>
               </p>
             </div>
           </div>
@@ -884,34 +880,34 @@ export default function FlooringOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your flooring website, ads and map listing are planned for the same floor buyer, from first search to booked measure, not run as unrelated jobs.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>Single plan</strong>
+                  <small>Built for your area</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>With the build fee waived, your budget goes into reaching people shopping for new floors, without a separate website development bill.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
+                  <strong>Easy to start</strong>
                   <small>Development fee waived</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, quotes, campaigns and map actions are measured together, so ongoing work focuses on the channels that bring installed jobs.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Growth you can see</strong>
+                  <small>Tracking set at launch</small>
                 </div>
               </footer>
             </article>
@@ -930,9 +926,9 @@ export default function FlooringOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Flooring website FAQ</span>
+            <h2>The flooring questions we hear most.</h2>
+            <p>What flooring contractors and stores ask about eligibility, flooring website scope and the qualifying marketing plan.</p>
             <a className="section-button" href="#contact">
               <span>Ask about my flooring market</span>
               <i>
@@ -951,19 +947,19 @@ export default function FlooringOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
+              Claim the flooring website
             </span>
-            <h2>Claim your professional flooring website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your flooring company, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <h2>Book more measures from a new flooring website, with no upfront development fee.</h2>
+            <p>Fill in the short form. We review your flooring company, current website, product lines, service area and goals, then recommend a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional flooring lead-generation website
+                <Icon name="check" /> Flooring website with product and measure pages
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
+                <Icon name="check" /> Marketing plan matched to your market
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Scope and terms clear before you commit
               </span>
             </div>
 
@@ -1000,7 +996,7 @@ export default function FlooringOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Flooring lead-generation websites connected to the marketing services that grow flooring companies.</p>
+            <p>Flooring websites for contractors and stores, connected to the marketing that brings in measure and quote requests.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +1024,7 @@ export default function FlooringOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Flooring Website Launch Offer</span>
+            <span>Free Flooring Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-flooring-offer-form">

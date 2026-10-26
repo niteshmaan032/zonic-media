@@ -1,59 +1,75 @@
 /*
- * DELAWARE SEO — the #1 content gap in the Aug 2026 SEO plan, built on the
- * shared location landing system (PhlLocationLanding / philaLanding.css — a
- * port of the approved Delaware layout) so it renders identically to
- * /services/delaware/digital-marketing and the Philadelphia pages.
+ * REDESIGN DRAFT (22 Oct 2026) of /services/delaware/seo, in the Dallas–Fort Worth
+ * layout (src/components/rd/delaware/DelawareLanding.tsx). Copy re-optimized
+ * on 24 Oct 2026 (docs/content-optimization-brief.md): fresh wording, no text
+ * shared with the live page or the sibling drafts, verified numbers only.
+ * Noindex; canonical and schema URLs point at the live page so the file can
+ * replace it as-is.
  *
- * Primary keyword "seo company delaware" (590/mo); highest competitor-traffic
- * term "seo service company delaware" (164/mo captured). Every top-5
- * competitor ranks an exact-match Delaware-SEO URL.
+ * DELAWARE SEO — the #1 content gap in the Aug 2026 SEO plan. Primary keyword
+ * "seo company delaware"; every top-5 competitor ranks an exact-match
+ * Delaware-SEO URL.
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhlLocationLanding, {
-  type PhlLandingData,
-} from "@/app/components/PhlLocationLanding";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import { FaStar } from "react-icons/fa";
 import {
   FiBarChart2,
-  FiClock,
   FiFileText,
   FiLayout,
   FiLink2,
   FiMapPin,
-  FiPhoneCall,
   FiSearch,
   FiStar,
   FiTrendingUp,
   FiZap,
 } from "react-icons/fi";
+import { FaMicrosoft } from "react-icons/fa";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+import {
+  SiApple,
+  SiGoogle,
+  SiGooglemaps,
+  SiHouzz,
+  SiThumbtack,
+  SiTripadvisor,
+  SiYelp,
+} from "react-icons/si";
 
 const PAGE_PATH = "/services/delaware/seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "SEO Company in Delaware | Affordable SEO Services, Dover DE" },
+  title: { absolute: "SEO Company in Delaware | SEO Services in Dover, DE" },
   description:
-    "Delaware SEO company headquartered in Dover: affordable local SEO, Google Business Profile and content programs for businesses in Wilmington, Dover.",
+    "Delaware SEO company in Dover. Local SEO, Google Business Profile, technical SEO and content that help businesses in Wilmington, Dover and Lewes rank higher.",
   keywords: [
+    "seo company in delaware",
     "seo company delaware",
+    "delaware seo company",
+    "delaware seo",
+    "seo delaware",
     "seo services delaware",
-    "affordable seo company in delaware",
-    "best seo company in delaware",
     "seo service company delaware",
-    "seo services delaware county",
-    "local seo company delaware",
-    "seo company dover de",
-    "seo company wilmington de",
+    "seo company dover",
+    "seo dover de",
+    "seo expert delaware",
+    "seo company wilmington delaware",
+    "seo lewes de",
+    "local seo delaware",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -63,9 +79,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "SEO Company in Delaware | Affordable SEO Services, Dover DE",
+    title: "SEO Company in Delaware | SEO Services in Dover, DE",
     description:
-      "Delaware SEO service company headquartered in Dover. Local SEO, GBP and content programs for businesses across the state. Free audit.",
+      "Dover-based SEO company for Delaware businesses: local SEO, Google Business Profile, technical fixes and content. Free audit.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -77,11 +93,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Delaware SEO", url: PAGE_PATH },
 ]);
 
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "State", name: "Delaware" },
-});
-
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -90,7 +101,7 @@ const serviceJsonLd = {
   serviceType: "Search Engine Optimization",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Local SEO, Google Business Profile optimization and content marketing for Delaware businesses, from a Dover-headquartered SEO company serving Wilmington, Newark, Dover, and Sussex County.",
+    "Local SEO, Google Business Profile optimization, technical SEO and content for Delaware businesses, from a Dover-based SEO company serving Wilmington, Newark, Dover and Sussex County.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -113,51 +124,53 @@ const serviceJsonLd = {
   },
 };
 
+/* FAQ (24 Oct 2026): questions owners search before hiring an SEO company;
+   answers lead with the answer, published plan prices only. */
 const DelSeoFaqs = [
   {
-    question: "How much does SEO cost in Delaware?",
+    question: "How much do your Delaware SEO plans cost?",
     answer:
-      "Most Delaware small businesses invest between a few hundred and a few thousand dollars per month depending on competition and scope — Wilmington and New Castle County cost more to win than Kent or Sussex County. We quote a flat monthly price after a free audit, so you know the exact cost before committing, with no long-term lock-in.",
+      "Our SEO plans are priced at $297, $750 and $1,500 a month, all month to month. The right one depends on how many locations you have and how hard your towns are to win; Wilmington terms usually take more work than Kent or Sussex. You get a recommendation and a fixed monthly price after a free audit.",
   },
   {
-    question: "How long does SEO take to work for a Delaware business?",
+    question: "How long does local SEO take in Delaware?",
     answer:
-      "Google Business Profile improvements often move Map Pack visibility within 4–8 weeks. Organic rankings for competitive terms like 'seo company delaware' or Wilmington service keywords typically take 3–6 months of consistent work. We set milestone expectations in the audit and report against them monthly.",
+      "Business Profile fixes usually show up in the Map Pack first. Organic rankings for tougher terms, such as Wilmington service keywords, take months of steady work. We set milestones in your audit and report against them every month, so you always know how far along you are and what comes next.",
   },
   {
-    question: "Do you only work with businesses in Dover?",
+    question: "Do you offer SEO in Dover, Wilmington and Lewes?",
     answer:
-      "No — we work across all three counties: Wilmington, Newark and New Castle County; Dover, Smyrna and Kent County; and Lewes, Rehoboth, Seaford, Millsboro and the rest of Sussex County. We also run campaigns for Delaware businesses serving the Philadelphia and Maryland border markets.",
+      "Yes. We cover the whole state: Wilmington, Newark and the rest of New Castle County; Dover, Smyrna, Milford and Kent County; and Lewes, Rehoboth Beach, Seaford, Millsboro and Sussex County. We also help Delaware businesses that sell into nearby Maryland and Pennsylvania.",
   },
   {
-    question: "What makes Zonic different from other SEO companies in Delaware?",
+    question: "What sets your SEO company apart from others in Delaware?",
     answer:
-      "Three things: we are physically headquartered at 8 The Green in Dover with a verifiable Delaware footprint; we specialise in Google Business Profile work — 1,500+ profiles optimized, including suspension recovery most agencies cannot handle; and we report on calls and booked jobs, not just keyword positions.",
+      "Three things. We are an SEO company Delaware owners can visit, with an office on The Green in Dover. We specialize in Google Business Profiles, with 1,500+ optimized and 900+ suspended profiles reinstated. And our reports focus on calls and booked work rather than keyword positions alone.",
   },
   {
-    question: "Can you combine SEO with a website redesign?",
+    question: "Can SEO be built into a new website?",
     answer:
-      "Yes — and it is usually cheaper together. As a combined Delaware SEO and web design agency, we build the new site on an SEO-ready architecture from day one, so you avoid paying twice: once for a design and again for an agency to fix its search problems. See our Delaware web design service for the build side.",
+      "Yes, and doing both at once costs less. When we build your site, target keywords, tidy page structure and schema are part of the plan from day one, so you never pay a second time to fix search problems after launch. Our Delaware web design team handles the build.",
   },
   {
-    question: "Do you offer one-time SEO projects or only monthly plans?",
+    question: "Do you sell one-time SEO projects?",
     answer:
-      "Both. Technical cleanups, migrations and Google Business Profile rescues can run as fixed-price projects. Ongoing rankings work — content, links, reviews — is monthly, because that is how search actually compounds. Our local SEO packages page shows what each tier includes.",
+      "Yes. Technical cleanups, site migrations and suspended-profile rescues work well as fixed-scope projects. Ongoing ranking work, meaning content, links and reviews, runs monthly because search rewards steady effort. Our local SEO packages page lists what each plan covers.",
   },
   {
-    question: "Does seasonal beach traffic change SEO strategy in Sussex County?",
+    question: "How do beach-season searches affect SEO in Sussex County?",
     answer:
-      "Significantly. Lewes, Rehoboth and the coastal towns see search demand swing with the season, so we front-load content and profile work ahead of the summer surge and shift targeting toward year-round resident services in the off-season. It is one of the clearest examples of why a Delaware-based team outperforms a national rate card.",
+      "A lot. Searches in Lewes, Rehoboth Beach and the coastal towns climb in summer, so we publish content and update profiles before the season starts, keep holiday hours accurate on Google, and shift focus to year-round resident services once the crowds leave. That is the seasonal SEO Lewes businesses need.",
   },
   {
-    question: "Do you guarantee first-page rankings in Delaware?",
+    question: "Can an SEO company guarantee first-page rankings?",
     answer:
-      "Our track record speaks for itself — most Delaware clients reach top-three Map Pack positions for their core terms. Because Google's results change daily, no honest agency promises a fixed position; we guarantee what we control: full transparency. You see exactly where you rank, what improved, and what we did each month.",
+      "No honest one can. Google changes results daily and no agency controls them. What we guarantee is what we control: the work in your plan, full access to your accounts and a monthly report that shows your rankings, what moved and the work behind it.",
   },
   {
-    question: "How do I choose the best SEO company in Delaware?",
+    question: "How do I pick the best SEO company in Delaware?",
     answer:
-      "Ask for three things: local proof, meaning Delaware clients you can call; monthly reports that show calls and leads, not just rankings; and a plan built for your town, because Wilmington, Dover and the beach towns have very different competition. Zonic Media is physically in Dover, publishes its Clutch reviews, and quotes a flat monthly price after a free audit of your current rankings.",
+      "Look for three things: Delaware clients and reviews you can check, reports built on calls and leads rather than rankings alone, and a plan written for your towns. We are based in Dover, show our 5.0 Google rating openly and price every plan after a free audit.",
   },
 ];
 
@@ -172,91 +185,88 @@ const delSeoFaqJsonLd = {
   })),
 };
 
-const data: PhlLandingData = {
+/* ---------------------------------------------------------------------------
+   CONTENT (24 Oct 2026 re-optimization). Live URL's ranking terms (Semrush
+   US resource_organic, 24 Oct; UK place-name matches ignored): seo company
+   dover #14 (320) · seo company in delaware #15 (480) · delaware seo company
+   #24 (390) · seo company delaware #26 (480) · seo delaware #27 (320) ·
+   delaware seo #37 (390) · seo company wilmington delaware #46 (170).
+   22 Oct volumes: seo company delaware 590 (KD 16) · delaware seo 480 ·
+   seo service company delaware 480 · seo services delaware 210 · seo expert
+   delaware 170. phrase_these was out of API units on 24 Oct. "wilmington
+   seo" belongs to the Wilmington page, so it is only linked from here.
+--------------------------------------------------------------------------- */
+
+const data: DelawareData = {
   hero: {
-    eyebrow: "SEO Company in Delaware",
-    h1Start: "The Delaware SEO Company That's",
-    h1Highlight: "Actually in Delaware",
-    sub: (
-      <>
-        Zonic Media is the Delaware SEO company headquartered at 8 The Green,
-        Dover — not an out-of-state agency with a Delaware landing page. As of
-        September 2026 we have ranked 50+ local businesses in the map pack,
-        optimized 1,500+ Google Business Profiles, and hold a 5.0 rating on
-        Clutch from 21 reviews. We run local SEO, Google Business Profile
-        optimization and content programs for Delaware businesses from
-        Wilmington and Newark down to Lewes and Rehoboth Beach, and we report
-        results in calls and booked jobs, not just rankings.
-      </>
-    ),
+    // No kicker: the keyword leads the H1.
+    eyebrow: "",
+    h1Start: "SEO Company in Delaware",
+    h1Highlight: "Built to Rank You on Google and Maps",
+    sub: "Zonic Media is a Delaware SEO company with its office in Dover. We use local SEO, technical fixes, content and Google Business Profile work to lift you in search and Maps, so customers in Wilmington, Dover and Lewes find you first.",
     media: {
       src: "/images/geo/delaware-seo/delaware-seo-strategy.jpg",
       alt: "Delaware business owner reviewing local SEO rankings with a strategist near Dover Green",
     },
-    floatA: {
-      strong: "8 The Green, Dover",
-      text: "a registered Delaware company",
-    },
-    floatB: { strong: "Top Clutch DE", text: "digital marketing company 2026" },
+    floatA: { strong: "8 The Green, Dover", text: "our Delaware office" },
+    floatB: { strong: "5.0 on Google", text: "from client reviews" },
     stats: [
       {
         icon: <FiTrendingUp aria-hidden="true" />,
-        num: "50+",
-        label: "Local businesses ranked",
+        num: "Page 1",
+        label: "Rankings for the searches your buyers use",
+      },
+      // Not shown: the template's Google rating card takes this slot.
+      {
+        icon: <FiStar aria-hidden="true" />,
+        num: "5.0",
+        label: "Our rating on Google",
       },
       {
-        icon: <FaStar aria-hidden="true" />,
-        num: "4.9/5",
-        label: "Average client rating on Clutch",
-      },
-      {
-        icon: <FiClock aria-hidden="true" />,
-        num: "60–90",
-        label: "Days to measurable movement",
+        icon: <FiMapPin aria-hidden="true" />,
+        num: "Top 3",
+        label: "Map Pack target, town by town",
       },
       {
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        num: "1,500+",
-        label: "Google profiles optimized",
+        num: "Found",
+        label: "Before competitors in local searches",
       },
     ],
-    proof: "by the Delaware businesses we rank",
-    cta: "Get Your Free Delaware SEO Audit",
+    proof: "",
+    cta: "Start With a Free SEO Audit",
   },
   about: {
-    eyebrow: "The Delaware Opportunity",
-    h2Start: "New Castle, Kent and Sussex County: Three Different Markets.",
-    h2Highlight: "One SEO Plan Doesn't Fit All.",
+    eyebrow: "Local SEO for Delaware",
+    h2Start: "Delaware SEO Planned",
+    h2Highlight: "Around Each County.",
     leads: [
       <>
-        In New Castle County we compete for high-volume Wilmington and Newark
-        terms against Philadelphia-metro agencies spilling across the state
-        line. In Kent County we win service-area searches around Dover. In
-        Sussex County — Lewes, Rehoboth, Seaford, Millsboro — seasonal and
-        tourism-driven search patterns change what we target and when. Our
-        SEO services in Delaware are scoped county by county, because that is
-        how the demand actually behaves.
+        Searches change from one end of the state to the other.{" "}
+        <Link
+          href="/services/wilmington/digital-marketing"
+          className="phl-inline-link"
+        >
+          Wilmington
+        </Link>{" "}
+        buyers compare city and suburban firms, Kent County runs on service-area
+        searches around Dover, and Sussex demand rises and falls with beach
+        season. Your SEO plan should follow those patterns.
       </>,
       <>
-        And because we are based here, the local signals Google weighs — a
-        real Delaware address, Delaware reviews, Delaware citations — are
-        already working in your favor the day you hire us. Pair it with the
-        full{" "}
+        Our Dover office gives Google the local proof it looks for: a real
+        Delaware address, Delaware reviews and Delaware citations. Need ads and
+        social as well? Our{" "}
         <Link
           href="/services/delaware/digital-marketing"
           className="phl-inline-link"
         >
-          Delaware digital marketing program
+          Delaware digital marketing
         </Link>{" "}
-        when you want ads and content in the same plan.
+        plans add them.
       </>,
     ],
-    checks: [
-      "County-scoped keyword strategy",
-      "Profile fully optimized",
-      "Delaware citations built",
-      "Reviews growing weekly",
-    ],
+    checks: [],
     collageA: {
       src: "/images/geo/delaware-seo/delaware-main-street-storefront.jpg",
       alt: "Independent storefront on a tree-lined Delaware main street",
@@ -268,341 +278,302 @@ const data: PhlLandingData = {
     badgeText: "Delaware SEO Company • Zonic Media •",
   },
   services: {
-    eyebrow: "What's Included",
-    h2: "SEO Services in Delaware, Built Around Local Intent",
+    eyebrow: "",
+    h2: "SEO Services in Delaware That Win Local Searches",
+    lead: "Everything that lifts a Delaware business in Google search and Maps, delivered in one monthly plan with a report written in plain English.",
     cards: [
       {
         tone: "blue",
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Google Business Profile Optimization",
-        desc: (
-          <>
-            Most searches that matter to a Delaware business carry local
-            intent — &ldquo;near me&rdquo;, a town name, a service plus a
-            county. We optimize your profile and website together with the
-            same system behind our{" "}
-            <Link
-              href="/local-seo-google-business-optimization"
-              className="phl-inline-link"
-            >
-              GBP optimization service
-            </Link>
-            , so you show up in the Map Pack and organic results for the same
-            search.
-          </>
-        ),
+        title: "Business Profile Setup and Care",
+        desc: "Your profile decides your Map Pack position. We complete every field, choose the right categories and keep posts, photos and Q&A current.",
+        points: [
+          "Primary and extra categories",
+          "Weekly posts and fresh photos",
+          "Fast help if it's suspended",
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Profile optimization service",
       },
       {
         tone: "gold",
         icon: <FiSearch aria-hidden="true" />,
-        title: "Delaware Keyword & Competitor Research",
-        desc: "We map what your customers actually type — town by town, from Wilmington to Seaford — and audit who currently owns those results, then build the plan that takes those positions off them.",
-      },
-      {
-        tone: "blue",
-        icon: <FiLink2 aria-hidden="true" />,
-        title: "Citations & Local Link Building",
-        desc: "Consistent name, address, and phone across every directory Google cross-checks, plus links from real Delaware sources — local press, chambers, and business organizations that anchor you to the state.",
-      },
-      {
-        tone: "gold",
-        icon: <FiStar aria-hidden="true" />,
-        title: "Review Growth & Reputation",
-        desc: "A steady stream of real reviews from Delaware customers, with responses that show Google — and the next person comparing three businesses — that somebody is home.",
+        title: "Keyword and Competitor Mapping",
+        desc: "We find what Delaware customers type in each town, see who holds those results today and plan how you overtake them.",
+        points: [
+          "Search terms by town",
+          "Competitor gaps in your county",
+          "One target keyword per page",
+        ],
+        href: "#de-contact",
+        link: "Ask for a keyword review",
       },
       {
         tone: "blue",
         icon: <FiLayout aria-hidden="true" />,
-        title: "SEO + Web Design, One Team",
-        desc: (
-          <>
-            Rankings die on slow, dated websites. As a combined Delaware SEO
-            and{" "}
-            <Link
-              href="/services/delaware/web-design"
-              className="phl-inline-link"
-            >
-              web design agency
-            </Link>
-            , we fix both sides: conversion-focused pages that pass Core Web
-            Vitals, built on an architecture search engines can rank.
-          </>
-        ),
+        title: "Technical and On-Page Fixes",
+        desc: "Fast, crawlable pages with sharp titles, clear headings and schema, so Google understands each service and town you cover.",
+        points: [
+          "Titles, headings and links",
+          "Mobile speed and Core Web Vitals",
+          "Schema on service pages",
+        ],
+        href: "/services/delaware/web-design",
+        link: "Need a new site? Web design",
+      },
+      {
+        tone: "gold",
+        icon: <FiLink2 aria-hidden="true" />,
+        title: "Local Citations and Links",
+        desc: "The same name, address and phone on every directory Google checks, plus mentions from real Delaware sites.",
+        points: [
+          "Duplicate listings removed",
+          "Map and directory listings claimed",
+          "Chamber and local press links",
+        ],
+        href: "/services/seo-services",
+        link: "Our SEO services",
+      },
+      {
+        tone: "blue",
+        icon: <FiStar aria-hidden="true" />,
+        title: "Steady Google Review Growth",
+        desc: "A steady flow of genuine reviews from Delaware customers, plus replies that show the next buyer you care.",
+        points: [
+          "Requests after every job",
+          "Replies in your voice",
+          "Review count tracked monthly",
+        ],
+        href: "#de-contact",
+        link: "Ask about review growth",
       },
       {
         tone: "gold",
         icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Tracking & Monthly Reporting",
-        desc: "Rankings, calls, direction requests, and form fills in one plain-English report. You always know what we did, what moved, and what is next.",
+        title: "Clear Monthly SEO Reports",
+        desc: "Rankings by town, calls, direction requests and form fills each month, plus the next steps, in plain English.",
+        points: [
+          "Rank tracking by town",
+          "Calls and forms from search",
+          "Next steps agreed in writing",
+        ],
+        href: "/services/local-seo-packages",
+        link: "Compare local SEO packages",
       },
     ],
   },
   band: {
-    eyebrow: "Local Signals Win Local Rankings",
-    h2: "Why Delaware Businesses Pick a Local SEO Expert",
+    eyebrow: "",
+    h2: "What a Delaware SEO Expert Does Differently",
     leads: [
       <>
-        National agencies treat Delaware as a checkbox. A local SEO expert
-        knows that &ldquo;seo lewes&rdquo; and &ldquo;seo company wilmington
-        delaware&rdquo; are different battles, that the Dover Green is an
-        address customers recognize, and that reviews from Delaware customers
-        move the needle more than anything a link farm can sell you. That
-        judgment is what you are actually buying.
+        Out-of-state firms often treat Delaware as one market. A local SEO
+        expert knows that ranking in Lewes and ranking in Wilmington are
+        separate jobs, and that reviews from real Delaware customers carry
+        weight a bought link never will.
       </>,
       <>
-        Our SEO professionals in Delaware run the whole engagement in-house —
-        research, content, technical work and reporting. Nothing is
-        outsourced, and if a listing ever gets suspended, our{" "}
+        All work stays in-house. Want calls while rankings build? We pair SEO
+        with{" "}
+        <Link href="/services/google-ads" className="phl-inline-link">
+          Google Ads
+        </Link>
+        , and if your listing is ever suspended, our{" "}
         <Link
           href="/services/gbp-reinstatement-service"
           className="phl-inline-link"
         >
-          Google Business Profile reinstatement
+          Business Profile reinstatement
         </Link>{" "}
-        team gets you back on the map fast.
+        team restores it.
       </>,
     ],
-    cta: "See Where You Rank Today",
+    cta: "Check My Delaware Rankings",
     console: {
-      title: "Delaware Visibility Console",
-      tag: "After 6 months",
+      title: "Local Visibility Dashboard",
+      tag: "Example view",
       metrics: [
-        { strong: "268", label: "Calls from profile" },
-        { strong: "#1", label: "Map pack rank" },
-        { strong: "+81%", label: "Direction requests" },
+        { strong: "Top 3", label: "Map Pack goal" },
+        { strong: "Weekly", label: "Profile updates" },
+        { strong: "Monthly", label: "Call report" },
       ],
       barsLabel: "Ranking signal strength",
       bars: [
-        { label: "Map pack visibility", val: 91, tone: "blue" },
-        { label: "Profile completeness", val: 97, tone: "gold" },
-        { label: "Citation accuracy", val: 95, tone: "blue" },
-        { label: "Review velocity", val: 79, tone: "gold" },
+        { label: "Map pack visibility", val: 84, tone: "blue" },
+        { label: "Profile completeness", val: 95, tone: "gold" },
+        { label: "Citation accuracy", val: 92, tone: "blue" },
+        { label: "Review velocity", val: 74, tone: "gold" },
       ],
       pills: [
-        { icon: "pin", text: "Wilmington · top 3" },
-        { icon: "pin", text: "Dover · #1" },
-        { icon: "star", text: "4.9 · 187 reviews" },
+        { icon: "pin", text: "Dover · top 3" },
+        { icon: "pin", text: "Lewes · top 3" },
+        { icon: "star", text: "5.0 on Google" },
       ],
     },
   },
   process: {
-    eyebrow: "How It Works",
-    h2: "From Invisible to Unavoidable in Four Steps",
+    eyebrow: "",
+    h2: "Our Path From Audit to the Map Pack",
     steps: [
       {
         tag: "Week 1",
-        title: "Free Delaware SEO Audit",
-        desc: "We review your rankings, your Google Business Profile and your competitors across Delaware, then send a prioritized plan — whether or not you hire us.",
+        title: "Free Ranking and Profile Audit",
+        desc: "We check your rankings, Business Profile, website and top local competitors, then send a ranked list of fixes that's yours to keep.",
       },
       {
         tag: "Weeks 2–4",
-        title: "Strategy & Foundation Fixes",
-        desc: "A county-scoped keyword plan for your services and towns, then the foundation work: profile optimization, citation cleanup, and on-page fixes.",
+        title: "Groundwork: Profile, Listings, Pages",
+        desc: "County keyword map, full profile build-out, listing cleanup and on-page fixes, so each later month builds on firm footing.",
       },
       {
         tag: "Every month",
-        title: "Build Authority Every Month",
-        desc: "Delaware content, local links, review growth, and profile activity — the compounding signals that move you up the Map Pack and keep you there.",
-        chips: ["Delaware content", "Review growth", "Profile activity"],
+        title: "Monthly Authority Building",
+        desc: "Fresh content, local links, reviews and profile activity every month: the signals that push your listing higher on Maps and keep it there.",
+        chips: ["New local pages", "More reviews", "Profile posts"],
       },
       {
         tag: "Ongoing",
-        title: "Report, Refine, Expand",
-        desc: "Monthly reporting tied to calls and direction requests, not vanity metrics. As rankings lock in, we expand to more services and more towns.",
-        chips: ["Plain-English report", "New towns", "New services"],
+        title: "Report, Then Widen Your Reach",
+        desc: "A monthly report on calls and direction requests, then new services and towns once your main terms are secure.",
+        chips: ["Monthly call report", "More towns", "More services"],
       },
     ],
-    visualTitle: "Where Delaware clients typically land after 90 days",
+    visualTitle: "Example 90-day signal check",
     visualBars: [
-      { label: "Profile strength", val: 93 },
-      { label: "Citation accuracy", val: 96 },
-      { label: "Review velocity", val: 79 },
+      { label: "Profile strength", val: 88 },
+      { label: "Citation accuracy", val: 90 },
+      { label: "Review velocity", val: 70 },
     ],
-    ctaPrimary: "Start Ranking Today",
+    ctaPrimary: "Start With a Free SEO Audit",
   },
+  // Kept for the type; the white band shows the feature rows instead.
   results: {
-    eyebrow: "Real Results",
-    h2: "What Happens When Delaware SEO is Done Properly",
-    lead: "Different counties, different categories — the same system, executed month after month.",
-    cards: [
-      {
-        icon: <FiPhoneCall aria-hidden="true" />,
-        industry: "Home services · Kent County",
-        metric: "+205%",
-        label: "Calls from the map pack",
-        desc: (
-          <>
-            From page-two invisibility to top-three positions for &lsquo;near
-            me&rsquo; searches across the whole service area — the same system
-            as our{" "}
-            <Link
-              href="/services/local-seo-for-home-services"
-              className="phl-inline-link"
-            >
-              local SEO for home services program
-            </Link>
-            .
-          </>
-        ),
-      },
-      {
-        icon: <RiSearchLine aria-hidden="true" />,
-        industry: "Professional practice · Wilmington",
-        metric: "Top 3",
-        label: "Map pack for every core term",
-        desc: "A profile rebuild, citation cleanup, and steady review growth moved the practice into the top three in New Castle County's most contested category.",
-      },
-      {
-        icon: <FiMapPin aria-hidden="true" />,
-        industry: "Service business · Sussex County",
-        metric: "4×",
-        label: "Towns ranking top three",
-        desc: "Seasonal targeting and town-level pages took a single-town business to top-three visibility across the beach corridor before the summer surge.",
-      },
-    ],
+    eyebrow: "",
+    h2: "",
+    cards: [],
   },
+  // Profile-phone stats: goals and growth cues, no invented results.
   showcase: {
     image: {
       src: "/images/geo/delaware-seo/delaware-main-street-businesses.jpg",
       alt: "Local shops and customers along a Delaware commercial main street",
     },
     floats: [
-      { num: "187", label: "Average reviews earned" },
-      { num: "#1", label: "Map pack across 8 Delaware towns" },
-      { num: "+81%", label: "Direction requests" },
+      { num: "Top 3", label: "Map Pack target in each town" },
+      { num: "↑ Calls", label: "From your Business Profile" },
+      { num: "↑ Visits", label: "Direction requests to your door" },
     ],
   },
   compare: {
-    h2: "Zonic vs. a Typical Delaware SEO Company",
-    lead: "Local SEO for local businesses is all we do, and it shows. Here is what working with a dedicated Delaware team looks like.",
-    themTitle: "Out-of-State SEO Agency",
-    themSub: "Why most 'Delaware' campaigns quietly stall",
+    h2: "How to Compare SEO Companies in Delaware",
+    lead: "Here is what changes when your SEO team is based in the state.",
+    themTitle: "The Remote Rate-Card Agency",
+    themSub: "Why many 'Delaware' campaigns stall",
     them: [
-      "A Delaware landing page, a rate card, and no local footprint",
-      "One statewide campaign ignoring the three-county reality",
-      "Reports full of impressions, empty of phone calls",
-      "Offshore link packages and duplicate citations",
-      "12-month contracts before you see a single lead",
+      "A Delaware page but no Delaware presence",
+      "One campaign stretched over three counties",
+      "Reports with impressions and no calls",
+      "Bulk links and duplicate listings",
+      "Year-long contracts before any leads",
     ],
-    usTitle: "SEO with Zonic Media",
-    usSub: "Built to compound, reported like a P&L",
+    usTitle: "Zonic Media's Delaware SEO",
+    usSub: "Run from Dover, reported in calls",
     us: [
-      "Headquartered on the Dover Green — verify the address yourself",
-      "County-scoped strategy from Wilmington to the beaches",
-      "Reporting tied to calls, direction requests, and forms",
-      "Hand-built Delaware citations and local links that compound",
-      "Month-to-month — we keep you with results, not paperwork",
+      "An office on The Green in Dover",
+      "County-level plans, Wilmington to the beaches",
+      "Reports on calls, directions and forms",
+      "Hand-built citations and local links",
+      "Month to month, earned by results",
     ],
-    scoreTitle: "Local Visibility Scorecard",
-    scoreSub: "A typical Delaware client's first six months",
+    scoreTitle: "Sample Visibility Scorecard",
+    scoreSub: "Illustrative audit scores, before and after",
     scoreRows: [
-      { label: "Profile strength", before: 34, after: 93 },
-      { label: "Citation accuracy", before: 42, after: 96 },
-      { label: "Review velocity", before: 22, after: 79 },
-      { label: "Map pack visibility", before: 19, after: 88 },
+      { label: "Profile strength", before: 30, after: 90 },
+      { label: "Citation accuracy", before: 45, after: 92 },
+      { label: "Review velocity", before: 25, after: 74 },
+      { label: "Map pack visibility", before: 20, after: 84 },
     ],
   },
   why: {
-    h2: "A Delaware SEO Partner, Not a Monthly Invoice",
-    lead: "Rankings are the output. The inputs are strategy, execution, and accountability — and that is what you are actually buying.",
+    h2: "An SEO Company in Delaware You Can Visit",
+    lead: "Rankings follow the work. You get the plan, the work itself and full visibility into both.",
     cards: [
       {
         icon: <RiSearchLine aria-hidden="true" />,
-        title: "Local is the whole practice",
-        desc: (
-          <>
-            We are not a generalist agency dabbling in maps. Local rankings,
-            local calls, and booked jobs for local businesses is what the{" "}
-            <Link href="/" className="phl-inline-link">
-              Zonic Media
-            </Link>{" "}
-            team does every day — from our own state first.
-          </>
-        ),
+        title: "Local Search Is Our Specialty",
+        desc: "We focus on Maps, local search and the calls they bring, starting with businesses in our home state.",
       },
       {
         icon: <FiZap aria-hidden="true" />,
-        title: "Affordable, Audit-Priced Packages",
+        title: "Published Plans, No Lock-In",
         desc: (
           <>
-            No percentage-of-spend pricing and no 12-month lock-in. Every
-            engagement starts with a free audit and a flat quote — see our{" "}
+            Month-to-month plans, no percentage-of-spend fees and no 12-month
+            commitment. Compare our{" "}
             <Link
               href="/services/local-seo-packages"
               className="phl-inline-link"
             >
               local SEO packages
-            </Link>{" "}
-            for what each tier includes.
+            </Link>
+            .
           </>
         ),
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,
-        title: "Transparent to a Fault",
-        desc: "You own every account and asset. You see every change in the monthly report. If a number dips you hear it from us first, with the fix already moving.",
+        title: "Every Change on the Record",
+        desc: "Every account is yours, every change shows up in your report, and you hear about any drop from us first.",
       },
     ],
     banner: {
-      eyebrow: "Free Delaware SEO Audit",
-      h3: "See Exactly How We'll Grow Your Delaware Rankings",
-      p: "We map your profile, citations, reviews, and rankings against the competitors in your county — and show you the clear path to the top three for the searches that matter. Free, and yours to keep either way.",
+      eyebrow: "",
+      h3: "Get a Clear Plan to Climb Delaware Search Results",
+      p: "We compare your profile, listings, reviews and rankings with the top businesses in your county and map the quickest route into the top three. Free, and the plan is yours to keep.",
       checks: [
-        "Your Map Pack growth plan",
-        "Profile wins ready to unlock",
-        "Citation opportunities mapped",
-        "Review growth roadmap",
+        "Map Pack plan by town",
+        "Profile fixes to make",
+        "Listing gaps found",
+        "Review growth plan",
       ],
-      cta: "Claim Your Free Audit",
+      cta: "Send Me My SEO Plan",
       audit: {
         title: "Local Visibility Score",
-        tag: "After 6 months",
-        score: "92",
-        grade: "Excellent",
-        gradeDesc:
-          "Where our Delaware SEO campaigns typically land after six months of compounding work",
+        tag: "Example",
+        score: "64",
+        grade: "Needs work",
+        gradeDesc: "A sample of the score your free audit includes",
         rows: [
-          { label: "Google Business Profile", flag: "A+ grade" },
-          { label: "Citations & listings", flag: "100% accurate" },
-          { label: "Review velocity", flag: "Ahead of top 3" },
+          { label: "Business Profile", flag: "Fields missing" },
+          { label: "Citations", flag: "Mismatches found" },
+          { label: "Reviews", flag: "Behind the top 3" },
         ],
       },
     },
   },
-  marquee: [
-    "Delaware SEO",
-    "Wilmington",
-    "Newark",
-    "Dover",
-    "Middletown",
-    "Lewes",
-    "Rehoboth Beach",
-    "Seaford",
-    "Google Business Profile",
-  ],
+  marquee: [],
+  // Hidden on this page: the platform hub takes the hub slot; its chips
+  // feed the hero card.
   engine: {
-    eyebrow: "Everything Working Together",
-    h2: "Six Signals, One Ranking Engine",
+    eyebrow: "",
+    h2: "Six Ranking Signals Worked Every Month",
     lead: (
       <>
-        Local rankings are not one lever, they are six working at once. Skip
-        any of them and the Map Pack notices. We run all six every month,
-        from New Castle County down through Kent and Sussex — and when you
-        need calls before the rankings land, our{" "}
+        Rankings come from several signals working together, and our{" "}
         <Link href="/services/google-ads" className="phl-inline-link">
-          Google Ads campaigns
+          Google Ads management
         </Link>{" "}
-        fill the gap.
+        brings calls while they build.
       </>
     ),
     coreStrong: "Your Delaware listing",
     coreSub: "Top three · every town you serve",
-    coreCta: "Get Your Free Audit",
+    coreCta: "Start With a Free SEO Audit",
     nodes: [
       {
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
         title: "Business Profile",
-        outcome: "Google trusts it",
+        outcome: "Trusted by Google",
         tone: "blue",
         left: "50%",
         top: "7%",
@@ -618,7 +589,7 @@ const data: PhlLandingData = {
       {
         icon: <FiLink2 aria-hidden="true" />,
         title: "Citations",
-        outcome: "Consistent NAP",
+        outcome: "Matching details",
         tone: "blue",
         left: "82%",
         top: "71.5%",
@@ -626,7 +597,7 @@ const data: PhlLandingData = {
       {
         icon: <FiStar aria-hidden="true" />,
         title: "Review Growth",
-        outcome: "Chosen first",
+        outcome: "Picked first",
         tone: "gold",
         left: "50%",
         top: "93%",
@@ -634,7 +605,7 @@ const data: PhlLandingData = {
       {
         icon: <FiFileText aria-hidden="true" />,
         title: "Local Pages",
-        outcome: "Rank per town",
+        outcome: "Ranks per town",
         tone: "blue",
         left: "18%",
         top: "71.5%",
@@ -642,86 +613,200 @@ const data: PhlLandingData = {
       {
         icon: <RiLineChartLine aria-hidden="true" />,
         title: "Tracking",
-        outcome: "Proof monthly",
+        outcome: "Monthly proof",
         tone: "gold",
         left: "18%",
         top: "28.5%",
       },
     ],
-    chipsLabel: "Ranking Delaware businesses in",
+    chipsLabel: "Industries we rank in Delaware",
     chips: [
-      "Home Services",
-      "Healthcare & Dental",
-      "Legal & Financial",
-      "Restaurants & Cafés",
-      "Salons & Wellness",
-      "Auto & Repair",
-      "Retail Storefronts",
-      "Trades & Contractors",
+      "Contractors",
+      "Dentists & Clinics",
+      "Law Offices",
+      "Restaurants",
+      "Auto Shops",
+      "Salons & Spas",
+      "Real Estate",
+      "Retail Stores",
     ],
   },
   faqs: {
-    eyebrow: "FAQs",
-    h2: "Straight Answers About SEO in Delaware",
-    lead: "Pricing, timelines, county strategy, and what actually moves rankings in Delaware. If your question is not here, send it through the form — a strategist answers, not a sales script.",
+    eyebrow: "",
+    h2: "What Delaware Owners Ask About SEO",
+    lead: "Plans, timelines and what actually lifts rankings here.",
     cta: "Ask About Your Town",
     items: DelSeoFaqs,
   },
+  // Hidden on this page (owner removed the "grow further" block on the
+  // marketing draft); its links now sit in the about copy and service cards.
   grow: {
-    eyebrow: "Grow Further",
-    h2: "Rankings are Step One. Here is What Multiplies Them.",
-    lead: (
-      <>
-        SEO is one channel inside a bigger system — see the full{" "}
-        <Link
-          href="/services/delaware/digital-marketing"
-          className="phl-inline-link"
-        >
-          Delaware marketing engine
-        </Link>{" "}
-        if you want every channel working together.
-      </>
-    ),
-    cards: [
-      {
-        href: "/services/delaware/web-design",
-        icon: <FiLayout aria-hidden="true" />,
-        title: "Delaware Web Design",
-        desc: "Custom, SEO-ready websites for New Castle, Kent and Sussex County businesses.",
-        cta: "See Delaware web design",
-      },
-      {
-        href: "/services/wilmington/digital-marketing",
-        icon: <FiMapPin aria-hidden="true" />,
-        title: "Wilmington Digital Marketing",
-        desc: "City-level SEO and marketing for Delaware's biggest market.",
-        cta: "See Wilmington",
-      },
-      {
-        href: "/services/local-seo-packages",
-        icon: <FiBarChart2 aria-hidden="true" />,
-        title: "Local SEO Packages",
-        desc: "What each plan includes and how audit-based pricing is scoped.",
-        cta: "See the packages",
-      },
-    ],
+    eyebrow: "",
+    h2: "",
+    lead: null,
+    cards: [],
   },
   form: {
-    eyebrow: "Get Started",
-    h2: "Claim Your Free Delaware SEO Audit",
-    lead: "Tell us about your business and we will send a full visibility audit — rankings, profile, citations, reviews — plus a flat-price growth plan for your county, whether or not you hire us.",
+    eyebrow: "",
+    h2: "Request a Delaware SEO Audit",
+    lead: "Tell us about your business and we'll send a visibility audit and a fixed monthly quote for your county.",
     formType: "delaware-seo",
-    badge: "Free Audit",
-    title: "Get Your Free Delaware SEO Audit",
+    badge: "Free SEO Audit",
+    title: "Your Delaware SEO audit",
     subtitle:
-      "No contracts, no pressure — just a clear picture of where you rank today and what it takes to win your county.",
+      "Tell us where you want to rank. We'll show where you stand today and what it takes to reach the top three in your county.",
     submitText: "Send My Free Audit",
-    messageLabel: "Tell us about your business",
-    messagePlaceholder:
-      "Your services, the Delaware towns you cover, and what you'd like to improve",
+    messageLabel: "Which towns do you want to rank in?",
+    messagePlaceholder: "Your services, target towns and current website",
     defaultServices: ["Local SEO"],
   },
   relatedCurrent: PAGE_PATH,
+};
+
+const hubLeft: HubApp[] = [
+  { icon: SiGoogle, name: "Google Business Profile", tone: "google" },
+  { icon: SiGooglemaps, name: "Google Maps", tone: "maps" },
+  { icon: SiApple, name: "Apple Business Connect", tone: "apple" },
+  { icon: FaMicrosoft, name: "Bing Places", tone: "bing" },
+];
+const hubRight: HubApp[] = [
+  { icon: SiYelp, name: "Yelp", tone: "yelp" },
+  { icon: SiHouzz, name: "Houzz", tone: "houzz" },
+  { icon: SiThumbtack, name: "Thumbtack", tone: "thumbtack" },
+  { icon: SiTripadvisor, name: "Tripadvisor", tone: "tripadvisor" },
+];
+
+const extras: DelawareExtras = {
+  kind: "seo",
+  pricing: {
+    title: "SEO Plans and Pricing for Delaware",
+    lead: "Month-to-month SEO plans for Delaware businesses, from Business Profile basics to multi-location growth.",
+    compareTitle: "SEO Plans, Line by Line",
+    compareLead: "Ranking work, reports and support for each plan.",
+    addOnsTitle: "Add More Towns or Technical Work",
+    addOnsLead:
+      "Extra landing pages, locations and technical fixes, added when you need them.",
+    customTitle: "Need rankings in several counties?",
+    customText:
+      "We'll scope a plan around each town and location you want to win.",
+  },
+  // Owner's photo (22 Oct); crop keeps the wall sign in frame.
+  aboutPhoto: {
+    src: "/images/delaware/delaware-digital-marketing-team.jpg",
+    alt: "Zonic Media's Delaware SEO team reviewing search rankings and organic traffic results together in the office",
+    position: "50% 18%",
+  },
+  // Own pillar colours (owner: a different set on every page).
+  pillars: ["#c2410c", "#dbeafe", "#fef3c7", "#14532d"],
+  scoreStyle: "columns",
+  // "Found everywhere" hub design with this page's content: the directories
+  // Google cross-checks.
+  platforms: {
+    h2: "Accurate Listings on Every Directory Google Reads",
+    lead: "Before Google trusts your profile, it compares your details across maps, directories and review sites. We claim and match each listing, giving your Delaware rankings a solid base.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Maps and search",
+    rightLabel: "Directories and reviews",
+    centerIcon: <FiLink2 aria-hidden="true" />,
+    centerTitle: "Your listing",
+    centerSub: "identical on every directory",
+  },
+  aboutTitle: ["Delaware SEO", "Planned Around", "Each County."],
+  aboutCard: {
+    kicker: "SEO from our Dover office",
+    title: "A plan for each county",
+    points: [
+      "New Castle: Wilmington, Newark and suburbs",
+      "Kent: Dover, Smyrna and Milford searches",
+      "Sussex: Lewes and the beach towns",
+      "Reports on calls, not just rankings",
+    ],
+    foot: "8 The Green, STE B, Dover, DE 19901",
+  },
+  features: {
+    h2: "How Our Delaware SEO Company Earns Rankings",
+    lead: (
+      <>
+        Keywords, technical health and local trust signals: the three parts of
+        every ranking we build. For contractors, see our{" "}
+        <Link href="/services/local-seo-for-home-services">
+          home service SEO program
+        </Link>
+        .
+      </>
+    ),
+    items: [
+      {
+        label: "Keywords & content",
+        title: "Target the Searches Buyers Make",
+        body: "The wrong keywords waste months. We choose the terms Delaware customers use when they're ready to hire, then give each service and town its own page so Google can match you to those searches.",
+        points: [
+          {
+            t: "Ready-to-hire terms",
+            d: "Searches made right before someone calls.",
+          },
+          { t: "Service pages", d: "A page per service, written to rank." },
+          {
+            t: "Town pages",
+            d: "Dover, Wilmington, Lewes and your other towns.",
+          },
+          { t: "Monthly tracking", d: "Each target term checked every month." },
+        ],
+        href: "/services/seo-services",
+        link: "See our SEO services",
+        ui: "keywords",
+      },
+      {
+        label: "Technical SEO",
+        title: "Technical SEO That Clears the Way",
+        body: "Slow pages, broken links and missing schema hold good businesses back. We fix the technical side first, so pages load fast on phones and Google reads exactly what you offer.",
+        points: [
+          { t: "Faster pages", d: "Core Web Vitals met on mobile." },
+          { t: "Tidy structure", d: "Clear URLs and internal linking." },
+          { t: "Schema markup", d: "Business, service and FAQ data." },
+          { t: "Error fixes", d: "Broken links and redirect chains repaired." },
+        ],
+        href: "/services/delaware/web-design",
+        link: "Delaware web design",
+        ui: "crawl",
+      },
+      {
+        label: "Citations & reviews",
+        title: "Local Signals Google Trusts",
+        body: "Google favors businesses whose details match everywhere and whose reviews keep coming. We clean up your listings across the web and keep genuine Delaware reviews flowing in.",
+        points: [
+          { t: "Matching NAP", d: "Identical details on major directories." },
+          { t: "Duplicates gone", d: "Old and incorrect listings cleaned up." },
+          { t: "Local mentions", d: "Links from Delaware sites and groups." },
+          { t: "Review flow", d: "Requests and replies handled for you." },
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Google Business Profile optimization",
+        ui: "citations",
+      },
+    ],
+  },
+  contact: {
+    before: "Ready to Rank",
+    after: "Higher Across Delaware?",
+    lead: "Send us your business name and target towns. We'll audit your rankings, profile, listings and reviews for free and quote one fixed monthly price.",
+  },
+  stepLinks: [
+    "#de-contact",
+    "/local-seo-google-business-optimization",
+    "/services/local-seo-packages",
+    "#de-contact",
+  ],
+  noGrow: true,
+  // No service named in the heading (owner, 22 Oct).
+  reviewsTitle: "Straight From Our Clients",
+  // The storefront photo reads as a Business Profile cover on the phone;
+  // the wide street photo fills the about box.
+  phoneImage: {
+    src: "/images/geo/delaware-seo/delaware-main-street-storefront.jpg",
+    alt: "",
+  },
 };
 
 function Page() {
@@ -733,19 +818,13 @@ function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(delSeoFaqJsonLd) }}
       />
-      <PhlLocationLanding data={data} />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

@@ -24,12 +24,12 @@ const SERVICES: RoofingService[] = [
     id: "repair",
     label: "Roof Repair",
     icon: "wrench",
-    heading: "Turn urgent leak searches into inspection calls.",
-    body: "A repair pathway that moves homeowners from a visible problem to a fast, reassuring inspection request without making them hunt for the next step.",
+    heading: "Catch leak searches while the ceiling still drips.",
+    body: "A roof repair page that tells a worried homeowner what to do next, shows you can come out fast and keeps the inspection request in view.",
     bullets: [
-      "Emergency click-to-call actions",
-      "Leak and damage problem paths",
-      "Fast inspection request form",
+      "Leak and damage symptom guides",
+      "Tap-to-call on every screen",
+      "Short inspection request form",
     ],
     ctaLabel: "Build my roof repair pages",
     kicker: "LOCAL ROOF REPAIR",
@@ -41,12 +41,12 @@ const SERVICES: RoofingService[] = [
     id: "replacement",
     label: "Replacement",
     icon: "home",
-    heading: "Make a high-value replacement feel easier to choose.",
-    body: "Guide homeowners through materials, warranties, financing, timelines, and proof so they can request an estimate with confidence.",
+    heading: "Help homeowners say yes to a full roof replacement.",
+    body: "Walk buyers through materials, warranties, financing and timelines, with project photos and reviews close to every estimate button.",
     bullets: [
-      "Material and warranty education",
-      "Financing visibility",
-      "Project gallery and social proof",
+      "Material and warranty guides",
+      "Financing options shown early",
+      "Project photos and reviews",
     ],
     ctaLabel: "Build my roof replacement pages",
     kicker: "ROOF REPLACEMENT",
@@ -58,12 +58,12 @@ const SERVICES: RoofingService[] = [
     id: "storm",
     label: "Storm Damage",
     icon: "wind",
-    heading: "Be ready when hail and wind create sudden demand.",
-    body: "A storm-focused experience built for urgent local traffic, damage inspections, insurance-ready documentation, and fast campaign launches.",
+    heading: "Be the roofer they find once the hail stops.",
+    body: "Storm damage pages for sudden local demand, with inspection booking, insurance claim help and tracking ready before the next storm.",
     bullets: [
-      "Storm-specific landing paths",
-      "Inspection and insurance guidance",
-      "Campaign-ready tracking",
+      "Storm damage landing pages",
+      "Insurance claim walkthroughs",
+      "Campaign-ready call tracking",
     ],
     ctaLabel: "Build my storm damage pages",
     kicker: "STORM RESPONSE TEAM",
@@ -75,12 +75,12 @@ const SERVICES: RoofingService[] = [
     id: "shingle",
     label: "Shingle Roofing",
     icon: "layers",
-    heading: "Help homeowners compare shingles without losing the lead.",
-    body: "Show architectural shingle options, colors, performance, warranties, and installation quality while keeping estimate actions visible.",
+    heading: "Let homeowners pick shingles and still book the estimate.",
+    body: "Show shingle styles, colors, performance and warranties side by side, with estimate buttons placed where homeowners make each choice.",
     bullets: [
-      "Product and color pathways",
-      "Manufacturer trust signals",
-      "Estimate CTAs beside key decisions",
+      "Style and color showcases",
+      "Manufacturer warranty details",
+      "Estimate buttons beside each choice",
     ],
     ctaLabel: "Build my shingle roofing pages",
     kicker: "SHINGLE ROOFING",
@@ -92,12 +92,12 @@ const SERVICES: RoofingService[] = [
     id: "commercial",
     label: "Commercial",
     icon: "building",
-    heading: "Give property managers a direct route to your team.",
-    body: "Present commercial systems, maintenance, repairs, inspections, safety standards, and service capacity in a concise B2B flow.",
+    heading: "Win the flat-roof work property managers need done.",
+    body: "A clear commercial path covering membrane systems, maintenance programs, inspections, safety standards and crew capacity for building owners.",
     bullets: [
-      "System-specific service pages",
-      "Maintenance and inspection paths",
-      "Commercial enquiry qualification",
+      "Pages for each roof system",
+      "Maintenance program details",
+      "Commercial bid request form",
     ],
     ctaLabel: "Build my commercial roofing pages",
     kicker: "COMMERCIAL ROOFING",
@@ -109,10 +109,10 @@ const SERVICES: RoofingService[] = [
     id: "gutter-siding",
     label: "Gutters + Siding",
     icon: "droplets",
-    heading: "Sell the work that comes attached to the roof.",
-    body: "Gutters, guards, fascia, and siding are the add-ons homeowners already need — given their own pathway, they lift the value of every roofing job.",
+    heading: "Add gutters and siding to every roof estimate.",
+    body: "Gutters, guards, fascia and siding get their own pages, so homeowners can bundle exterior work with the roof and raise the value of each job.",
     bullets: [
-      "Attach-on service pathways",
+      "Add-on service pages",
       "Bundled estimate requests",
       "Exterior project galleries",
     ],
@@ -161,7 +161,7 @@ export default function RoofingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Roofing website path
+                <Icon name={service.icon} /> Roofing page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -256,8 +256,8 @@ export default function RoofingServiceTabs() {
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Built to win roofing work</strong>
-                  <small>From local search to inspection request</small>
+                  <strong>Made to book roof inspections</strong>
+                  <small>From a local search to a signed job</small>
                 </span>
               </div>
             </div>

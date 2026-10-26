@@ -1,91 +1,74 @@
 /*
- * DELAWARE DIGITAL MARKETING — rebuilt Aug 2026 on a component layout inspired
- * by /services/industry/local-seo-services-for-hvac (structure) and
- * /services/pest-control-website-design (section rhythm), but with its own
- * design language. Palette is the two-colour brand set: electric blue #2567e8
- * as the primary and gold #fdc115 as the accent. Gold stays off white
- * backgrounds for text (it fails contrast there) — see the note at the top of
- * delDigital.css for how the two are divided.
- *
- * IMAGES: four original documentary-style photos live in
- * /public/images/delaware. Each source ratio matches its wrapper so the full
- * composition stays sharp and intact instead of relying on an aggressive crop.
- *
- * LEADS: the form has no service picker, so leads carry no service. Because this page
- * now has an opt-in form, it was removed from GHL_PAGES in SiteFloatingWidgets
- * (GHL rejects its widget on pages with another opt-in source) — the site's own
- * ChatBot renders here instead.
+ * REDESIGN DRAFT (22 Oct 2026) of /services/delaware/digital-marketing, in
+ * the Dallas–Fort Worth layout (src/components/rd/delaware/DelawareLanding
+ * .tsx). Copy re-optimized on 24 Oct 2026 (docs/content-optimization-brief.md):
+ * fresh wording, no text shared with the live page or the sibling drafts,
+ * verified numbers only. Noindex; canonical and schema URLs point at the live
+ * page so the file can replace it as-is.
  */
 
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import "@/app/style/delware/delDigital.css";
-import Footer from "@/app/components/Footer";
-import RelatedServices from "@/app/components/RelatedServices";
-import GmbFaqs from "@/app/components/GmbFaqs";
-import HashScrollLink from "@/app/components/HashScrollLink";
-import LocalRankTracker, {
-  type LocalRankRow,
-} from "@/app/components/LocalRankTracker";
-import { SITE_CONTACT } from "@/shared/siteConfig";
+import Link from "next/link";
+import type { LocalRankRow } from "@/app/components/LocalRankTracker";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import Image from "next/image";
-import Link from "next/link";
-import { FaStar } from "react-icons/fa";
-import { FaCircleCheck } from "react-icons/fa6";
 import {
-  FiArrowUpRight,
   FiBarChart2,
-  FiClock,
   FiLayout,
-  FiMail,
   FiMapPin,
-  FiMessageCircle,
-  FiPhoneCall,
   FiSend,
+  FiStar,
   FiTarget,
   FiTrendingUp,
   FiUsers,
-  FiX,
   FiZap,
 } from "react-icons/fi";
-import { MdOutlineVerifiedUser } from "react-icons/md";
-import { RiLineChartLine, RiRobot2Line, RiSearchLine } from "react-icons/ri";
-
-// Code-split so the widget JavaScript loads after the hero has painted; the
-// server still renders its markup, so nothing changes for users or Google.
-const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
-const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
+import { RiRobot2Line } from "react-icons/ri";
+import {
+  SiApple,
+  SiFacebook,
+  SiGoogle,
+  SiGooglegemini,
+  SiGooglemaps,
+  SiInstagram,
+  SiOpenai,
+  SiYelp,
+} from "react-icons/si";
 
 const PAGE_PATH = "/services/delaware/digital-marketing";
 
 export const metadata: Metadata = {
-  title: { absolute: "Digital Marketing Agency in Delaware | Dover & Wilmington" },
+  title: {
+    absolute: "Digital Marketing Agency in Delaware | Zonic Media, Dover DE",
+  },
   description:
-    "Digital marketing agency in Delaware serving Dover, Wilmington, Newark and Sussex County: local SEO, Google Business Profile, Google Ads and web design.",
+    "Delaware digital marketing agency based in Dover. Local SEO, Google Ads, social media and web design for businesses in New Castle, Kent and Sussex County.",
   keywords: [
-    "digital marketing agency delaware",
     "digital marketing agency in delaware",
-    "digital marketing agency dover de",
-    "digital marketing agency wilmington de",
-    "marketing agency in delaware",
-    "seo company delaware",
-    "delaware web design",
-    "digital marketing agency near me",
-    "digital marketing company dover",
-    "internet marketing delaware",
-    "advertising agency delaware",
-    "advertising experts delaware",
-    "online marketing delaware",
-    "marketing company dover de",
+    "digital marketing agency delaware",
+    "digital marketing delaware",
+    "delaware digital marketing agency",
+    "marketing agency delaware",
     "delaware marketing agency",
-    "delaware advertising agencies",
+    "full service marketing agency delaware",
+    "advertising agencies in delaware",
+    "social media marketing delaware",
+    "seo website marketing agency in delaware",
+    "digital marketing services new castle county",
+    "digital marketing agency in new castle county",
+    "digital marketing agency in sussex county",
+    "digital marketing agency dover de",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -97,7 +80,7 @@ export const metadata: Metadata = {
     ],
     title: "Digital Marketing Agency in Delaware | Zonic Media",
     description:
-      "Delaware digital marketing agency in Dover. Local SEO, Google Ads, social, content, and conversion-focused web design — reported against calls and booked revenue.",
+      "Dover-based digital marketing agency for Delaware businesses: local SEO, Google Ads, social media, AI search and websites, reported in calls and leads.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -109,13 +92,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Delaware Digital Marketing", url: PAGE_PATH },
 ]);
 
-// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "State", name: "Delaware" },
-});
-
-
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -124,7 +100,7 @@ const serviceJsonLd = {
   serviceType: "Digital Marketing",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Full-service digital marketing for Delaware businesses — local SEO and Google Business Profile optimization, Google Ads management, social media, email, content and AI search visibility, and conversion-focused web design, all measured against calls and booked revenue.",
+    "Full-service digital marketing for Delaware businesses: local SEO and Google Business Profile work, Google Ads, social media, email, AI search visibility and conversion-focused websites, reported in calls and leads.",
   provider: {
     "@type": "Organization",
     "@id": "https://www.zonicllc.com/#organization",
@@ -179,7 +155,10 @@ const serviceJsonLd = {
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Email & Lifecycle Marketing" },
+        itemOffered: {
+          "@type": "Service",
+          name: "Email & Lifecycle Marketing",
+        },
       },
       {
         "@type": "Offer",
@@ -192,51 +171,50 @@ const serviceJsonLd = {
   },
 };
 
+/* FAQ (24 Oct 2026): questions built from what Delaware owners search
+   before hiring an agency; answers lead with the answer, no estimates. */
 const DelDigitalFaqs = [
   {
-    question: "What does a digital marketing agency do for a small business?",
+    question: "What does a digital marketing agency in Delaware do?",
     answer:
-      "It owns the work that brings customers to you and turns them into inquiries: getting you found in Google Search, Maps, and AI answers, running paid campaigns that pay for themselves, building content and social presence that earns trust, and fixing the pages where visitors currently leave. For most Delaware businesses the honest job description is simpler than that — more qualified calls and form fills every month, and a clear report showing where they came from.",
+      "It brings customers to your business and turns them into calls and form fills. For a Delaware company that means ranking on Google Search and Maps, showing up in AI answers, running paid ads that earn their keep and fixing the pages where visitors drop off, with a monthly report that shows where each lead came from.",
   },
   {
-    question: "How much does digital marketing cost in Delaware?",
+    question: "How much do your digital marketing plans cost?",
     answer:
-      "It depends on how many channels you run and how competitive your category is. A single-channel local SEO engagement sits well below a full-funnel program with paid search, content, and web work behind it. After a free audit we quote one flat monthly price with the scope written out — no hourly billing, no surprise line items, and no long-term contract. Ad spend is always yours, paid directly to Google, and never marked up.",
+      "Plans run $297, $750 or $1,500 a month, month to month with no long-term contract. Which fits best comes down to the channels you need and how competitive your towns are. Ad spend is separate and paid by you straight to Google or Meta, with 0% markup. Your free audit tells you which plan makes sense.",
   },
   {
-    question: "How long before digital marketing starts working?",
+    question: "How soon will I see results from digital marketing?",
     answer:
-      "Paid search can produce qualified calls in the first two to three weeks once tracking and landing pages are right. SEO and content work on a longer curve — most Delaware clients see measurable movement in rankings and profile actions within 60 to 90 days, with lead volume compounding from there. We run both together so you get near-term flow while the organic side builds, and the first monthly report shows the trajectory either way.",
+      "Google Ads can start producing calls soon after launch, once tracking and landing pages are ready. Local SEO and content build month by month as your profile, pages and reviews gain strength. Running both lets you book work now while the organic side grows, and your monthly report shows the trend either way.",
   },
   {
-    question: "Is SEO or Google Ads better for a Delaware business?",
+    question: "Should a Delaware business invest in SEO or Google Ads first?",
     answer:
-      "They solve different problems, and in a market the size of Delaware they work best together. Ads buy you the top of the results page today and are ideal for testing which services and messages actually convert. SEO and Google Business Profile work earn the map pack and organic positions that keep producing after you stop paying per click. We usually start paid to learn fast, then shift budget toward organic as rankings take hold.",
+      "Most do best with both. Ads buy visibility today and reveal which services and messages sell. Ranking work on your site and Business Profile earns map and organic spots that keep bringing calls without a cost per click. We often lead with ads to learn quickly, then lean on organic as rankings climb.",
   },
   {
-    question: "Do you work with businesses outside Delaware?",
+    question:
+      "Do you work with businesses in Sussex County and New Castle County?",
     answer:
-      "Yes. We are based in Dover and know New Castle, Kent, and Sussex counties well, but the same team runs campaigns across the Mid-Atlantic and nationwide — including our Philadelphia clients right across the state line. Everything happens remotely: audits, strategy calls, reporting, and the monthly work itself.",
+      "Yes. From our Dover office we market businesses in all three counties, from Wilmington, Newark and Middletown to Smyrna, Milford, Lewes, Rehoboth Beach and Seaford. We also work with companies across the Mid-Atlantic, including Philadelphia. Audits, strategy calls and reporting all work remotely, or you can drop by our Dover office.",
   },
   {
-    question: "How do I choose the right digital marketing agency?",
+    question: "How do I choose the right marketing agency in Delaware?",
     answer:
-      "Ask three questions. Who actually does the work — the person on the call, or an offshore team you will never meet? What does the monthly report measure — calls and booked jobs, or impressions and rankings nobody buys from? And what happens if you want to leave — do you own your ad accounts, website, and Google Business Profile? We answer those with in-house execution, lead-level reporting, and full account ownership from day one.",
+      "Ask who does the work, what the report measures and what happens if you leave. You want in-house people you can talk to, reports built on calls and booked jobs rather than impressions, and ad accounts, website and Business Profile kept in your name. We answer all three in writing before you sign.",
   },
   {
-    question: "Do you optimize for AI search and Google AI Overviews?",
+    question:
+      "Can you get my business recommended by ChatGPT and Google AI Overviews?",
     answer:
-      "Yes, and it is now a standard part of every engagement rather than an upsell. A growing share of searches end in an AI-generated answer instead of a click, so we structure your pages, schema, entity signals, and reviews so your business is the source those answers cite. The same work that earns AI citations also strengthens conventional rankings, so there is no trade-off.",
+      "We can make it far more likely. AI answers draw on clear pages, structured data, consistent business details and recent reviews, so we build all four into every plan. No one can promise a mention, because AI tools pick their own sources, but the same work also lifts your regular Google rankings.",
   },
   {
-    question: "What do I actually get in the monthly report?",
+    question: "What will my monthly marketing report include?",
     answer:
-      "Calls, form fills, and chat conversations with the channel each one came from; rankings and Google Business Profile actions; ad spend against cost per lead; and a plain-English summary of what we did, what moved, and what is next. No jargon dashboard you have to interpret. If a number drops, you hear it from us first, with the fix already underway.",
-  },
-  {
-    question: "Which digital marketing channels work best for Delaware businesses in 2026?",
-    answer:
-      "Delaware is a small state with dense competition in Wilmington and New Castle County and long-tail demand along the beaches and Route 1 corridor. For most businesses the winning mix is Google Business Profile and local SEO for the town-level searches, Google Ads to capture Philadelphia and Maryland commuters, and a fast website that converts mobile traffic. Zonic Media is headquartered in Dover and runs that program for businesses statewide.",
+      "Every call, form and chat with the channel it came from, your Google rankings and profile views, what you spent on ads and what each lead cost, plus a short summary of what we did, what changed and what comes next. If a number drops, we tell you first and explain the fix.",
   },
 ];
 
@@ -254,203 +232,213 @@ const delDigitalFaqJsonLd = {
   })),
 };
 
+/* ---------------------------------------------------------------------------
+   CONTENT (24 Oct 2026 re-optimization). Live URL's ranking terms (Semrush
+   US resource_organic, 24 Oct): digital marketing delaware #6 (140) ·
+   digital marketing services new castle county #5 (110) · digital marketing
+   agency in sussex county #8 (140) · seo website marketing agency in
+   delaware #14 (140) · digital marketing agency in new castle county #14
+   (110) · digital marketing agency in delaware #15 (170) · delaware digital
+   marketing agency #17 (90) · delaware marketing agency #21 (110) ·
+   marketing agency delaware #23 (210) · advertising agencies in delaware #23
+   (90) · full service marketing agency delaware #31 (110) · social media
+   marketing delaware #51 (110). phrase_these was out of API units, so the
+   22 Oct volumes above stand. Hero tiles are growth outcomes, no figures.
+--------------------------------------------------------------------------- */
+
 const HeroStats = [
   {
+    icon: <FiMapPin aria-hidden="true" />,
+    num: "Top 3",
+    label: "Google Maps spot we target in each town you serve",
+  },
+  // Not shown: the template's Google rating card takes this slot.
+  {
+    icon: <FiStar aria-hidden="true" />,
+    num: "5.0",
+    label: "Our rating on Google",
+  },
+  {
     icon: <FiTrendingUp aria-hidden="true" />,
-    num: "50+",
-    label: "Businesses grown across the US",
+    num: "More leads",
+    label: "From search, ads, social and email",
   },
   {
-    icon: <FaStar aria-hidden="true" />,
-    num: "4.9/5",
-    label: "Average client rating on Clutch",
+    icon: <RiRobot2Line aria-hidden="true" />,
+    num: "AI",
+    label: "Named in ChatGPT and AI Overviews",
   },
-  {
-    icon: <FiClock aria-hidden="true" />,
-    num: "60–90",
-    label: "Days to measurable movement",
-  },
-  {
-    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    num: "100%",
-    label: "In-house — nothing outsourced",
-  },
-];
-
-const AboutChecks = [
-  "Local SEO & map pack",
-  "Paid search that converts",
-  "AI search visibility",
-  "Tracked to booked revenue",
 ];
 
 const ServiceCards = [
   {
-    tone: "blue",
+    tone: "blue" as const,
     icon: <FiMapPin aria-hidden="true" />,
-    title: "Local SEO & Google Business Profile",
-    desc: (
-      <>
-        The map pack is where Delaware buying decisions get made. We optimize
-        every profile field, category, photo, and post — the same system behind
-        our{" "}
-        <Link href="/local-seo-google-business-optimization" className="deldg-inline-link">
-          Google Business Profile optimization
-        </Link>{" "}
-        — then build the citations and reviews that hold the position.
-      </>
-    ),
+    title: "Local SEO for Delaware Map Searches",
+    desc: "Rank in the map pack when people nearby search for your service. We tune your Business Profile, fix listings and grow reviews.",
+    points: [
+      "Business Profile fully built out",
+      "Listings matched across directories",
+      "Review requests after every job",
+    ],
+    href: "/services/delaware/seo",
+    link: "See Delaware SEO",
   },
   {
-    tone: "gold",
+    tone: "gold" as const,
     icon: <FiTarget aria-hidden="true" />,
-    title: "Google Ads & Paid Search",
-    desc: (
-      <>
-        High-intent campaigns that stop paying for tire-kickers. Tight match
-        types, negative keyword discipline, and landing pages built to convert —
-        see how we run{" "}
-        <Link href="/services/google-ads" className="deldg-inline-link">
-          Google Ads management
-        </Link>
-        . Your spend goes straight to Google, never marked up.
-      </>
-    ),
+    title: "Pay-Per-Click and Google Ads",
+    desc: "Search ads that put you at the top of Google from launch week, aimed at your towns and services, with every call tracked.",
+    points: [
+      "Campaigns per service and town",
+      "Weekly search-term cleanup",
+      "0% markup on your ad spend",
+    ],
+    href: "/services/google-ads",
+    link: "How we run Google Ads",
   },
   {
-    tone: "blue",
+    tone: "blue" as const,
     icon: <FiUsers aria-hidden="true" />,
-    title: "Social Media Marketing",
-    desc: "Organic and paid social that does a real job: staying visible between purchases, proving you exist to people comparing options, and feeding retargeting audiences that make every other channel cheaper.",
+    title: "Facebook and Instagram Marketing",
+    desc: "Posts, ads and retargeting that keep your business in front of local customers between searches and bring past visitors back.",
+    points: [
+      "Weekly posts from your real work",
+      "Retargeting for site visitors",
+      "Paid social aimed by town",
+    ],
+    href: "#de-contact",
+    link: "Talk to us about social",
   },
   {
-    tone: "gold",
+    tone: "gold" as const,
     icon: <RiRobot2Line aria-hidden="true" />,
-    title: "Content & AI Search Visibility",
-    desc: "Pages and articles written around what Delaware customers actually ask, structured with the schema and entity signals that get your business cited in AI Overviews and assistant answers — not just ranked in blue links.",
+    title: "AI Search and ChatGPT Visibility",
+    desc: "Pages, schema and reviews shaped so ChatGPT, Gemini and Google AI Overviews can find your business and recommend it.",
+    points: [
+      "Answer-first service pages",
+      "Schema on every page",
+      "Matching facts across the web",
+    ],
+    href: "/services/ai-seo-services",
+    link: "See AI SEO services",
   },
   {
-    tone: "blue",
+    tone: "blue" as const,
     icon: <FiSend aria-hidden="true" />,
-    title: "Email & Lifecycle Marketing",
-    desc: "The cheapest revenue you own. Automated follow-up for unclosed quotes, seasonal campaigns to your existing list, and win-back sequences that turn one-time jobs into repeat customers.",
+    title: "Email and Follow-Up Campaigns",
+    desc: "Reminders for open quotes, seasonal offers for past customers and win-back emails, so leads you already paid for turn into sales.",
+    points: [
+      "Automatic quote reminders",
+      "Seasonal offers to past buyers",
+      "Review asks after each sale",
+    ],
+    href: "#de-contact",
+    link: "Plan an email program",
   },
   {
-    tone: "gold",
+    tone: "gold" as const,
     icon: <FiLayout aria-hidden="true" />,
-    title: "Conversion-Focused Web Design",
-    desc: (
-      <>
-        Traffic is wasted on a page that does not ask for the call. We rebuild
-        the pages that matter with fast load times, obvious next steps, and
-        tracking on every action —{" "}
-        <Link href="/services/web-design" className="deldg-inline-link">
-          web design built to convert
-        </Link>
-        .
-      </>
-    ),
+    title: "Websites Built to Convert",
+    desc: "Fast, mobile-first sites with a page for every service and town, plus click-to-call and short forms that turn visits into leads.",
+    points: [
+      "Click-to-call on every screen",
+      "Core Web Vitals checked at launch",
+      "SEO and schema built in",
+    ],
+    href: "/services/delaware/web-design",
+    link: "See Delaware web design",
   },
 ];
 
+// Hidden on this page (the local SEO dark card takes the band slot); no
+// figures, so nothing unverified ships if the band is switched back on.
 const ChannelBars = [
-  { label: "Organic search", val: 88, tone: "blue" },
-  { label: "Google Maps", val: 94, tone: "gold" },
-  { label: "Paid search", val: 71, tone: "blue" },
-  { label: "Social & referral", val: 46, tone: "gold" },
+  { label: "Organic search", val: 70, tone: "blue" },
+  { label: "Google Maps", val: 80, tone: "gold" },
+  { label: "Paid search", val: 60, tone: "blue" },
+  { label: "Social & referral", val: 40, tone: "gold" },
 ];
 
-const ResultCards = [
-  {
-    icon: <FiPhoneCall aria-hidden="true" />,
-    industry: "Home services · New Castle County",
-    metric: "+212%",
-    label: "Calls from local search",
-    desc: "A rebuilt Google Business Profile, citation cleanup, and city pages took a Wilmington-area contractor from page two to the top three across every service area.",
-  },
-  {
-    icon: <RiSearchLine aria-hidden="true" />,
-    industry: "Professional services · Dover",
-    metric: "3.4×",
-    label: "Qualified inquiries per month",
-    desc: "Paid search proved which services actually convert, then content and on-page work moved those same terms into organic positions that keep producing.",
-  },
-  {
-    icon: <RiLineChartLine aria-hidden="true" />,
-    industry: "Retail & hospitality · Sussex County",
-    metric: "−38%",
-    label: "Cost per lead in six months",
-    desc: "Wasted spend cut, seasonal beach-market demand mapped properly, and landing pages rewritten around the one action that mattered.",
-  },
-];
-
+// Sample rows for the rank-tracker illustration (labelled as a sample).
 const RankRows: LocalRankRow[] = [
-  { city: "Wilmington", keyword: "digital marketing agency", rank: "#1", change: "6" },
-  { city: "Dover", keyword: "seo company near me", rank: "#1", change: "4" },
-  { city: "Newark", keyword: "google ads management", rank: "#2", change: "9" },
-  { city: "Middletown", keyword: "web design company", rank: "#3", change: "2" },
-  { city: "Bear", keyword: "local seo services", rank: "#2", change: "5" },
-  { city: "Rehoboth Beach", keyword: "marketing agency", rank: "#3", change: "7" },
+  {
+    city: "Dover",
+    keyword: "marketing agency near me",
+    rank: "#1",
+    change: "5",
+  },
+  {
+    city: "Wilmington",
+    keyword: "digital marketing agency",
+    rank: "#2",
+    change: "7",
+  },
+  { city: "Newark", keyword: "google ads agency", rank: "#3", change: "8" },
+  { city: "Middletown", keyword: "website design", rank: "#2", change: "3" },
+  { city: "Milford", keyword: "local seo company", rank: "#1", change: "4" },
+  { city: "Lewes", keyword: "social media marketing", rank: "#3", change: "6" },
 ];
 
 const RankStats = [
-  { label: "Cities tracked", value: "6" },
-  { label: "Keywords tracked", value: "34" },
+  { label: "Towns tracked", value: "6" },
+  { label: "Keywords tracked", value: "30" },
   { label: "Average position", value: "2.0" },
 ];
 
 const CompareThem = [
-  "A junior account manager juggling 80 logos",
-  "Reports full of impressions, empty of phone calls",
-  "Ad spend marked up and hidden inside a retainer",
-  "Work quietly offshored the week after you sign",
-  "12-month contracts before you see a single lead",
+  "A junior rep handling dozens of accounts",
+  "Reports full of clicks, with no calls in them",
+  "Ad spend marked up inside the retainer",
+  "Work handed to outside contractors",
+  "A 12-month contract before any results",
 ];
 
 const CompareUs = [
-  "A dedicated strategist who knows the Delaware market",
-  "Reporting tied to calls, forms, and booked revenue",
-  "Your ad spend paid straight to Google, never marked up",
-  "Everything executed in-house by the team on your calls",
-  "Month-to-month — we keep you with results, not paperwork",
+  "A strategist who knows Delaware towns",
+  "Reports built on calls, forms and sales",
+  "0% markup: you pay Google and Meta directly",
+  "All work done in-house by the people you meet",
+  "Month to month, kept by results",
 ];
 
+// Illustrative values for the sample scorecard (labelled as such).
 const ScoreRows = [
-  { label: "Local visibility", before: 31, after: 91 },
-  { label: "Lead volume", before: 26, after: 84 },
-  { label: "Cost per lead", before: 38, after: 88 },
-  { label: "Conversion rate", before: 22, after: 76 },
+  { label: "Maps visibility", before: 28, after: 82 },
+  { label: "Monthly leads", before: 30, after: 78 },
+  { label: "Lead cost control", before: 35, after: 80 },
+  { label: "Site conversion", before: 25, after: 70 },
 ];
 
 const WhyCards = [
   {
     icon: <FiMapPin aria-hidden="true" />,
-    title: "We are actually here",
-    desc: "Our office is on The Green in Dover. We know how differently a New Castle County trade business and a Sussex County seasonal brand have to be marketed, because we work with both.",
+    title: "Based on The Green in Dover",
+    desc: "A Delaware company with a real office, marketing businesses in New Castle, Kent and Sussex County.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
-    title: "Fast, Compounding Execution",
-    desc: "Foundation fixes ship in the first weeks, not the first quarter. Every month of work stacks on the last, so month twelve is worth far more than month one.",
+    title: "Quick Wins, Then Compounding Growth",
+    desc: "Fixes go live in the first weeks, and each month of work stacks on the one before.",
   },
   {
     icon: <FiBarChart2 aria-hidden="true" />,
-    title: "Measured against revenue",
-    desc: "You own every account and asset. Every lead is attributed to a channel. If a number dips you hear it from us first, with the fix already moving.",
+    title: "Reported in Calls and Leads",
+    desc: "Every lead is traced to its channel, every account is in your name, and you hear about any dip from us first.",
   },
 ];
 
 const BannerChecks = [
-  "Your Delaware visibility gap, mapped",
-  "Wasted ad spend identified",
-  "Competitor positions benchmarked",
-  "A 90-day growth plan you keep",
+  "Visibility gaps by town",
+  "Ad spend waste flagged",
+  "Local competitors compared",
+  "A 90-day plan to keep",
 ];
 
 const AuditRows = [
-  { label: "Search & map visibility", flag: "Top 3 target" },
-  { label: "Paid efficiency", flag: "Spend audited" },
-  { label: "Conversion readiness", flag: "Page-by-page" },
+  { label: "Search and Maps", flag: "Gaps mapped" },
+  { label: "Ad account", flag: "Waste flagged" },
+  { label: "Website", flag: "Checked page by page" },
 ];
 
 const MarqueeItems = [
@@ -479,7 +467,7 @@ const EngineNodes = [
   {
     icon: <FiTarget aria-hidden="true" />,
     title: "Google Ads",
-    outcome: "Demand on tap",
+    outcome: "Calls on demand",
     tone: "gold",
     left: "82%",
     top: "28.5%",
@@ -487,7 +475,7 @@ const EngineNodes = [
   {
     icon: <FiLayout aria-hidden="true" />,
     title: "Web & CRO",
-    outcome: "Traffic converts",
+    outcome: "Visits convert",
     tone: "blue",
     left: "82%",
     top: "71.5%",
@@ -495,7 +483,7 @@ const EngineNodes = [
   {
     icon: <FiSend aria-hidden="true" />,
     title: "Email & Lifecycle",
-    outcome: "Repeat revenue",
+    outcome: "Repeat sales",
     tone: "gold",
     left: "50%",
     top: "93%",
@@ -503,7 +491,7 @@ const EngineNodes = [
   {
     icon: <RiRobot2Line aria-hidden="true" />,
     title: "Content & AI Search",
-    outcome: "Cited in answers",
+    outcome: "Named in answers",
     tone: "blue",
     left: "18%",
     top: "71.5%",
@@ -511,20 +499,21 @@ const EngineNodes = [
   {
     icon: <FiUsers aria-hidden="true" />,
     title: "Social Media",
-    outcome: "Top of mind",
+    outcome: "Remembered",
     tone: "gold",
     left: "18%",
     top: "28.5%",
   },
 ];
 
+// First five show on the hero card; own order so no run matches a sibling.
 const IndustryChips = [
-  "Home Services",
-  "Healthcare & Dental",
-  "Legal & Financial",
+  "Contractors & Trades",
+  "Medical & Dental",
+  "Law Firms",
   "Real Estate",
-  "Retail & Hospitality",
-  "Construction & Trades",
+  "Hospitality",
+  "Retail",
   "B2B & Manufacturing",
   "Nonprofits",
 ];
@@ -534,24 +523,447 @@ const GrowCards = [
     href: "/services/google-ads",
     icon: <FiTarget aria-hidden="true" />,
     title: "Google Ads Management",
-    desc: "Buy the top of the results page while your organic rankings build underneath it.",
+    desc: "Top-of-page visibility while your organic rankings build.",
     cta: "See Google Ads",
   },
   {
     href: "/services/web-design",
     icon: <FiLayout aria-hidden="true" />,
     title: "Web Design & Development",
-    desc: "A site built to convert the traffic every other channel is working to send you.",
+    desc: "A site that converts the visits every other channel sends.",
     cta: "See web design",
   },
   {
     href: "/services/philadelphia/digital-marketing",
     icon: <FiMapPin aria-hidden="true" />,
     title: "Digital Marketing in Philadelphia",
-    desc: "Same team, same system, right across the state line for the Philadelphia metro.",
+    desc: "The same team and system for the Philadelphia metro.",
     cta: "See Philadelphia",
   },
 ];
+
+const hubLeft: HubApp[] = [
+  { icon: SiGoogle, name: "Google Search", tone: "google" },
+  { icon: SiGooglemaps, name: "Google Maps", tone: "maps" },
+  { icon: SiApple, name: "Apple Maps", tone: "apple" },
+  { icon: SiYelp, name: "Yelp", tone: "yelp" },
+];
+const hubRight: HubApp[] = [
+  { icon: SiOpenai, name: "ChatGPT", tone: "openai" },
+  { icon: SiGooglegemini, name: "Gemini", tone: "gemini" },
+  { icon: SiFacebook, name: "Facebook", tone: "facebook" },
+  { icon: SiInstagram, name: "Instagram", tone: "instagram" },
+];
+
+type Tone = "blue" | "gold";
+
+const data: DelawareData = {
+  hero: {
+    // No kicker: the keyword leads the H1 (owner, 22 Oct).
+    eyebrow: "",
+    h1Start: "Digital Marketing Agency in Delaware",
+    h1Highlight: "That Turns Searches Into Customers",
+    sub: "Zonic Media is a Delaware digital marketing agency on The Green in Dover. We combine local SEO, Google Ads, social media and websites into one plan that puts your business in front of buyers from New Castle County to Sussex County.",
+    media: {
+      src: "/images/delaware/delaware-digital-marketing-hero.webp",
+      alt: "Zonic Media strategists reviewing a campaign plan with a Delaware small-business owner",
+    },
+    floatA: { strong: "Top 3 on Google Maps", text: "the goal in every town" },
+    floatB: { strong: "5.0 on Google", text: "from our own client reviews" },
+    stats: HeroStats,
+    proof: "",
+    cta: "Book a Free Marketing Audit",
+  },
+  about: {
+    eyebrow: "Marketing for Delaware businesses",
+    h2Start: "Your SEO, Website & Marketing",
+    h2Highlight: "Agency in Delaware.",
+    leads: [
+      <>
+        Most Delaware buyers choose a business in minutes: a quick search, a
+        scan of the map pack and a call to whoever looks most trusted. Our job
+        is to make that call yours, in Wilmington, Newark, Dover and the beach
+        towns alike.
+      </>,
+      <>
+        One in-house team runs your{" "}
+        <Link href="/services/delaware/seo" className="deldg-inline-link">
+          local SEO
+        </Link>
+        , Google Ads, social media and{" "}
+        <Link href="/services/web-design" className="deldg-inline-link">
+          website design
+        </Link>{" "}
+        on a single month-to-month plan. Each month you see which channel
+        produced every call and form.
+      </>,
+    ],
+    checks: [],
+    collageA: {
+      src: "/images/delaware/delaware-digital-agency-workstation.webp",
+      alt: "Digital marketing agency workstation displaying campaign growth analytics",
+    },
+    collageB: {
+      src: "/images/delaware/delaware-campaign-dashboard.webp",
+      alt: "Campaign performance dashboard with lead and search data on a laptop",
+    },
+    badgeText: "Delaware Digital Marketing • Zonic Media •",
+  },
+  services: {
+    eyebrow: "",
+    h2: "Full-Service Digital Marketing for Delaware Businesses",
+    lead: "Six services, one plan and one monthly report. Each is built to bring Delaware customers to your phone, inbox or front door.",
+    cards: ServiceCards,
+  },
+  // Kept for the type; the dark card shows the local SEO block instead.
+  band: {
+    eyebrow: "",
+    h2: "Every Channel Pulling Toward One Goal",
+    leads: [],
+    cta: "Get My Free Audit",
+    console: {
+      title: "Delaware Growth Console",
+      tag: "Example view",
+      metrics: [
+        { strong: "Calls", label: "Tracked by source" },
+        { strong: "Forms", label: "Tracked by page" },
+        { strong: "Top 3", label: "Maps goal" },
+      ],
+      barsLabel: "Visibility by channel",
+      bars: ChannelBars.map((bar) => ({ ...bar, tone: bar.tone as Tone })),
+      pills: [
+        { icon: "pin", text: "Dover" },
+        { icon: "pin", text: "Wilmington" },
+        { icon: "star", text: "5.0 on Google" },
+      ],
+    },
+  },
+  process: {
+    eyebrow: "",
+    h2: "How a Delaware Campaign Comes Together",
+    steps: [
+      {
+        tag: "Week 1",
+        title: "Free Audit and Flat Quote",
+        desc: "We review your Google profile, website, ads and rankings across Delaware, check who is winning your calls and send a plan at one flat price.",
+      },
+      {
+        tag: "Weeks 2–4",
+        title: "Tracking and Groundwork",
+        desc: "Call and form tracking goes in, your profile and listings get cleaned up, and the pages meant to win leads are rewritten first.",
+      },
+      {
+        tag: "Month 2",
+        title: "Ads, Local SEO and Social Go Live",
+        desc: "Google Ads start bringing calls right away while local SEO, reviews and social posts build demand that lasts.",
+      },
+      {
+        tag: "Month 3 on",
+        title: "Monthly Report, Then Scale",
+        desc: "A plain-English report on calls, forms and cost per lead each month, with budget shifted to whatever brings the best customers.",
+      },
+    ],
+    visualTitle: "Example: your 90-day progress view",
+    visualBars: [
+      { label: "Maps visibility", val: 72 },
+      { label: "Tracked leads", val: 64 },
+      { label: "Site conversion", val: 58 },
+    ],
+    ctaPrimary: "Book a Free Marketing Audit",
+  },
+  // Kept for the type; the white band shows the feature rows instead.
+  results: {
+    eyebrow: "",
+    h2: "",
+    cards: [],
+  },
+  compare: {
+    h2: "Choosing Among Advertising Agencies in Delaware",
+    lead: "The invoice may look similar. The month you get does not. Here is what changes with a local, in-house team.",
+    themTitle: "The Usual Agency Setup",
+    themSub: "Why so many campaigns stall",
+    them: CompareThem,
+    usTitle: "Your Campaign With Zonic Media",
+    usSub: "Built to grow, reported in leads",
+    us: CompareUs,
+    scoreTitle: "Sample Campaign Scorecard",
+    scoreSub: "Illustrative scores before and after the work",
+    scoreRows: ScoreRows,
+  },
+  why: {
+    h2: "A Marketing Agency in Delaware That Answers for Results",
+    lead: "Clicks and rankings are only the means. You hire us for a plan, the work behind it and people who own the outcome.",
+    cards: WhyCards,
+    banner: {
+      eyebrow: "",
+      h3: "Find Out What's Holding Your Delaware Business Back",
+      p: "We review your search visibility, ad spend, website and local competitors, then send a 90-day plan. It's free, and the plan is yours whether or not you hire us.",
+      checks: BannerChecks,
+      cta: "Request My Free Audit",
+      audit: {
+        title: "Marketing Health Check",
+        tag: "Example report",
+        score: "58",
+        grade: "Room to grow",
+        gradeDesc: "An example of the scorecard your free audit includes",
+        rows: AuditRows,
+      },
+    },
+  },
+  marquee: MarqueeItems,
+  // Hidden on this page: the platform hub takes the hub slot; its chips
+  // feed the hero card.
+  engine: {
+    eyebrow: "",
+    h2: "Six Channels Feeding One Plan",
+    lead: (
+      <>
+        Each service feeds the next, from Wilmington to the Sussex shore and for
+        our{" "}
+        <Link
+          href="/services/philadelphia/digital-marketing"
+          className="deldg-inline-link"
+        >
+          Philadelphia digital marketing
+        </Link>{" "}
+        clients.
+      </>
+    ),
+    coreStrong: "Your Delaware business",
+    coreSub: "One team · one plan · one report",
+    coreCta: "Book a Free Marketing Audit",
+    nodes: EngineNodes.map((node) => ({ ...node, tone: node.tone as Tone })),
+    chipsLabel: "Industries we market in Delaware",
+    chips: IndustryChips,
+  },
+  faqs: {
+    eyebrow: "",
+    h2: "Your Questions About Marketing in Delaware",
+    lead: "Costs, timelines, channels and what each monthly report shows.",
+    cta: "Ask About Your Market",
+    items: DelDigitalFaqs,
+  },
+  // Hidden on this page: the platform hub takes its place (owner, 22 Oct).
+  grow: {
+    eyebrow: "",
+    h2: "More Ways to Grow From Here",
+    lead: null,
+    cards: GrowCards,
+  },
+  form: {
+    eyebrow: "",
+    h2: "Request a Delaware Marketing Audit",
+    lead: "Tell us about your business and we'll send an audit plus a plan at one flat monthly price.",
+    formType: "delaware-digital-marketing",
+    badge: "Free Audit",
+    title: "Get your Delaware marketing audit",
+    subtitle:
+      "Tell us a little about your business. We'll show where you stand online and what it will take to win more local customers.",
+    submitText: "Send My Free Audit",
+    messageLabel: "What would you like to grow?",
+    messagePlaceholder: "Your services, the towns you cover and your goals",
+    defaultServices: ["Local SEO", "Pay Per Click (PPC)"],
+  },
+  relatedCurrent: PAGE_PATH,
+};
+
+const extras: DelawareExtras = {
+  kind: "marketing",
+  pricing: {
+    title: "Monthly Marketing Plans for Delaware Businesses",
+    lead: "Choose the mix of local SEO, Google Ads and social that suits your business now, and add channels as you grow.",
+    compareTitle: "Delaware Plans Side by Side",
+    compareLead: "See what each plan delivers every month.",
+    addOnsTitle: "Extras for Growing Delaware Campaigns",
+    addOnsLead:
+      "Add towns, landing pages or ad campaigns whenever you need them.",
+    customTitle: "Want a plan shaped around your towns?",
+    customText:
+      "Share your services and service area, and we'll build a plan to match.",
+  },
+  aboutPhoto: {
+    src: "/images/delaware/delaware-digital-marketing-team.jpg",
+    alt: "Zonic Media's Delaware digital marketing team planning SEO, social media, web design and ad campaigns, with the Wilmington riverfront behind them",
+    // Keep the "Delaware Digital Marketing Agency" wall sign in frame.
+    position: "50% 18%",
+  },
+  // Carries "seo website marketing agency in delaware" (live #14), which the
+  // removed "SEO + Web Design" banner used to hold.
+  aboutTitle: ["Your SEO, Website", "& Marketing Agency", "in Delaware."],
+  aboutCard: {
+    kicker: "Headquartered in Dover, DE",
+    title: "Marketing all three counties",
+    points: [
+      // Wilmington link kept here after the "SEO + Web Design" banner was
+      // removed (owner, 23 Oct).
+      <>
+        New Castle County:{" "}
+        <Link
+          href="/services/wilmington/digital-marketing"
+          className="tw:underline tw:underline-offset-[3px]"
+        >
+          Wilmington
+        </Link>
+        , Newark, Middletown, Bear
+      </>,
+      "Kent County: Dover, Smyrna, Milford, Camden",
+      "Sussex County: Lewes, Rehoboth Beach, Georgetown, Seaford",
+      // Philadelphia links: digital marketing (kept from the engine section)
+      // and local SEO (carried by the live page).
+      <>
+        Across the state line:{" "}
+        <Link
+          href="/services/philadelphia/digital-marketing"
+          className="tw:underline tw:underline-offset-[3px]"
+        >
+          Philadelphia marketing
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/services/philadelphia/local-seo"
+          className="tw:underline tw:underline-offset-[3px]"
+        >
+          local SEO
+        </Link>
+      </>,
+    ],
+    foot: "8 The Green, STE B, Dover, DE 19901",
+  },
+  features: {
+    h2: "Three Ways We Grow Delaware Businesses Online",
+    lead: "Maps, paid search and AI answers: where more and more Delaware customers find the businesses they hire.",
+    items: [
+      {
+        label: "Google Maps",
+        title: "Top Three on Maps, Town by Town",
+        body: "Dover, Newark and Rehoboth Beach each show their own top three on Google Maps, and those three take most of the calls. We build your profile, listings and reviews so you appear there in the towns that pay best.",
+        points: [
+          {
+            t: "Complete profile",
+            d: "Categories, services, hours and photos set for real searches.",
+          },
+          {
+            t: "Clean listings",
+            d: "One business name, address and number across all directories.",
+          },
+          {
+            t: "Fresh reviews",
+            d: "Requests sent after each job, replies written for you.",
+          },
+          {
+            t: "Town pages",
+            d: "A landing page for each Delaware town you target.",
+          },
+        ],
+        href: "/services/delaware/seo",
+        link: "Explore Delaware SEO",
+        ui: "towns",
+      },
+      {
+        label: "Google Ads",
+        title: "Paid Search That Rings While SEO Grows",
+        body: "Google Ads place you above the organic results from launch week. We aim spend at the towns and services with the best margins, block wasted searches and send each click to a page built to convert.",
+        points: [
+          { t: "Town targeting", d: "Ads run only where you take work." },
+          {
+            t: "Waste cut weekly",
+            d: "Search terms and bids reviewed every week.",
+          },
+          {
+            t: "Landing pages",
+            d: "One focused page per offer, with tap-to-call.",
+          },
+          { t: "Zero markup", d: "You pay Google directly for every click." },
+        ],
+        href: "/services/google-ads",
+        link: "See Google Ads management",
+        ui: "ads",
+      },
+      {
+        label: "AI search",
+        title: "Recommended When Customers Ask AI",
+        body: "More Delaware buyers now ask ChatGPT, Gemini or Google’s AI Overviews who to hire. We make your pages, reviews and business facts clear and consistent, so AI tools can trust your business and name it.",
+        points: [
+          {
+            t: "Answer-ready pages",
+            d: "Service pages that answer real questions.",
+          },
+          {
+            t: "Structured data",
+            d: "Schema that AI tools and Google can read.",
+          },
+          {
+            t: "One set of facts",
+            d: "Same details on your site, profile and listings.",
+          },
+          { t: "Recent reviews", d: "The proof AI answers lean on." },
+        ],
+        href: "/services/ai-seo-services",
+        link: "Learn about AI SEO",
+        ui: "ai",
+      },
+    ],
+  },
+  rank: {
+    scope: "Delaware towns · past month",
+    rows: RankRows,
+    summaryPercent: 82,
+    summaryLabel: "Share of tracked terms in the top three",
+    stats: RankStats,
+    footnote:
+      "Sample tracker view. Real rankings depend on your category, competition and distance from each town.",
+  },
+  localSeo: {
+    eyebrow: "",
+    h2: "Track Your Google Maps Rank Across Delaware",
+    body: (
+      <>
+        Map results shift with the searcher&apos;s location, so you can lead in
+        Dover and barely show in Wilmington. We track your position town by
+        town, widen your reach each month and restore suspended listings through
+        our{" "}
+        <Link
+          href="/services/gbp-reinstatement-service"
+          className="deldg-inline-link"
+        >
+          Business Profile reinstatement
+        </Link>{" "}
+        service.
+      </>
+    ),
+    points: [
+      "Rank checks from towns in every county",
+      "New town pages where you want work",
+      "Town-by-town progress each month",
+    ],
+    cta: {
+      href: "/google-maps-business-ranking-tool-online",
+      label: "Try Our Free Maps Rank Checker",
+    },
+  },
+  platforms: {
+    h2: "Seen on Every Platform Delaware Customers Use",
+    lead: "Google is the start, not the finish. We keep your details right and your profiles active on maps, review sites, social apps and AI assistants, so customers get the same story wherever they check.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Maps and reviews",
+    rightLabel: "AI and social",
+    centerTitle: "Your business",
+    centerSub: "accurate on every platform",
+  },
+  reviewsTitle: "Reviews From the Owners We Work With",
+  contact: {
+    before: "Ready for",
+    after: "More Delaware Customers?",
+    lead: "Tell us what you offer and where you want more customers. We'll reply with a free review of your search, ads and website, plus a plan at one flat monthly price.",
+  },
+  stepLinks: [
+    "#de-contact",
+    "/local-seo-google-business-optimization",
+    "/services/google-ads",
+    "#de-contact",
+  ],
+};
 
 function Page() {
   return (
@@ -559,12 +971,6 @@ function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
       />
       <script
         type="application/ld+json"
@@ -576,1079 +982,7 @@ function Page() {
           __html: JSON.stringify(delDigitalFaqJsonLd),
         }}
       />
-
-      <div className="deldg-page">
-        <main>
-          {/* 1. Hero */}
-          <section className="deldg-hero">
-            <div className="deldg-container">
-              <div className="deldg-hero-grid">
-                <div className="deldg-hero-copy">
-                  <p className="deldg-eyebrow">
-                    Digital Marketing Agency in Delaware
-                  </p>
-                  <h1 className="deldg-h1">
-                    Digital Marketing in Delaware That{" "}
-                    <span className="deldg-hl">Drives More Qualified Leads</span>
-                  </h1>
-                  <p className="deldg-hero-sub">
-                    Zonic Media is a Dover-based{" "}
-                    <Link href="/" className="deldg-inline-link">
-                      digital marketing agency
-                    </Link>
-                    , internet marketing company, and the advertising experts
-                    Delaware businesses call, from Wilmington and Newark to Lewes
-                    and Rehoboth Beach. As of September 2026 we hold a 5.0 rating
-                    on Clutch from 21 verified reviews and have optimized 1,500+
-                    Google Business Profiles. Local SEO, Google Ads, social,
-                    email, and conversion-first websites — run by one in-house
-                    team and reported against leads and revenue instead of
-                    impressions.
-                  </p>
-
-                  <div
-                    className="deldg-hero-badges"
-                    aria-label="Partner badges"
-                  >
-                    {/* Self-hosted Clutch badge — the live iframe embed sits
-                        behind a Cloudflare challenge and breaks randomly. */}
-                    <a
-                      href="https://clutch.co/profile/zonic-media?badge=11431"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="deldg-hero-badge"
-                        width={74}
-                        height={74}
-                        src="/images/clutch-top-company-2026.png"
-                        alt="Top Clutch Digital Marketing Company Delaware 2026"
-                      />
-                    </a>
-                    <Image
-                      className="deldg-hero-badge"
-                      width={74}
-                      height={74}
-                      src="/images/Partner.png"
-                      alt="Yelp Advertising Partner"
-                    />
-                    <a
-                      href="https://www.trustpilot.com/review/zonicllc.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="deldg-hero-badge-trustpilot"
-                        width={104}
-                        height={50}
-                        src="/images/trust-black.png"
-                        alt="Zonic Media reviews on Trustpilot"
-                      />
-                    </a>
-                  </div>
-
-                  <div className="deldg-hero-ctas">
-                    <HashScrollLink
-                      href="#deldg-form"
-                      className="deldg-btn"
-                      offset={120}
-                    >
-                      Get Your Free Delaware Marketing Audit
-                      <span className="deldg-btn-circ">
-                        <FiArrowUpRight aria-hidden="true" />
-                      </span>
-                    </HashScrollLink>
-                    <a
-                      href={SITE_CONTACT.phoneHref}
-                      className="deldg-btn-ghost"
-                    >
-                      <FiPhoneCall aria-hidden="true" />
-                      Call {SITE_CONTACT.phoneDisplay}
-                    </a>
-                  </div>
-
-                  <div className="deldg-hero-proof">
-                    <span className="deldg-stars" aria-hidden="true">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                    </span>
-                    <p>
-                      <strong>Rated 4.9/5</strong> by the businesses we grow
-                    </p>
-                  </div>
-                </div>
-
-                <div className="deldg-hero-visual">
-                  <div className="deldg-hero-media">
-                    <Image
-                      src="/images/delaware/delaware-digital-marketing-hero.webp"
-                      alt="Zonic Media strategists reviewing a campaign plan with a Delaware small-business owner"
-                      fill
-                      preload
-                      unoptimized
-                      sizes="(max-width: 991px) 460px, 44vw"
-                    />
-                  </div>
-
-                  <div className="deldg-hero-float deldg-hero-float--a">
-                    <span className="deldg-hero-float-icon">
-                      <FiTrendingUp aria-hidden="true" />
-                    </span>
-                    <p>
-                      <strong>+212% qualified leads</strong>
-                      Home services, New Castle County
-                    </p>
-                  </div>
-
-                  <div className="deldg-hero-float deldg-hero-float--b">
-                    <span className="deldg-hero-float-icon deldg-hero-float-icon--gold">
-                      <FiMapPin aria-hidden="true" />
-                    </span>
-                    <p>
-                      <strong>#1 in the map pack</strong>
-                      &ldquo;near me&rdquo; searches across DE
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="deldg-hero-stats">
-                {HeroStats.map((stat) => (
-                  <div className="deldg-stat" key={stat.label}>
-                    <span className="deldg-stat-icon">{stat.icon}</span>
-                    <div>
-                      <p className="deldg-stat-num">{stat.num}</p>
-                      <p className="deldg-stat-label">{stat.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-            </div>
-          </section>
-
-          {/* 2. The Delaware opportunity */}
-          <section className="deldg-about">
-            <div className="deldg-container">
-              <div className="deldg-about-grid">
-                <div className="deldg-collage">
-                  <div className="deldg-collage-a">
-                    <Image
-                      src="/images/delaware/delaware-digital-agency-workstation.webp"
-                      alt="Digital marketing agency workstation displaying campaign growth analytics"
-                      fill
-                      unoptimized
-                      sizes="(max-width: 991px) 78vw, 36vw"
-                    />
-                  </div>
-                  <div className="deldg-collage-b">
-                    <Image
-                      src="/images/delaware/delaware-campaign-dashboard.webp"
-                      alt="Campaign performance dashboard with lead and search data on a laptop"
-                      fill
-                      unoptimized
-                      sizes="(max-width: 991px) 58vw, 27vw"
-                    />
-                  </div>
-                  <div className="deldg-collage-badge" aria-hidden="true">
-                    <svg viewBox="0 0 120 120">
-                      <defs>
-                        <path
-                          id="deldgBadgeCircle"
-                          d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"
-                        />
-                      </defs>
-                      <text>
-                        <textPath href="#deldgBadgeCircle">
-                          Delaware Digital Marketing • Zonic Media •
-                        </textPath>
-                      </text>
-                    </svg>
-                    <span className="deldg-collage-badge-icon">
-                      <FiTrendingUp aria-hidden="true" />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="deldg-about-copy">
-                  <p className="deldg-eyebrow">The Delaware Opportunity</p>
-                  <h2 className="deldg-h2">
-                    Delaware is a Small State.{" "}
-                    <span className="deldg-hl-text">
-                      The Search Demand is Not.
-                    </span>
-                  </h2>
-                  <p className="deldg-lead">
-                    Just under a million people live between Claymont and
-                    Fenwick Island, and almost every one of them starts a buying
-                    decision the same way — a search on a phone, a glance at the
-                    map results, and a call to one of the first three
-                    businesses listed. Add the I-95 commuter traffic in New
-                    Castle County and the seasonal surge along the Sussex
-                    beaches, and the demand sitting in front of a Delaware
-                    business is far larger than the population suggests.
-                  </p>
-                  <p className="deldg-lead">
-                    The catch is that most of it goes to whoever shows up first.
-                    Our job as a marketing agency in Delaware is to make that
-                    you — through dedicated{" "}
-                    <Link
-                      href="/services/delaware/seo"
-                      className="deldg-inline-link"
-                    >
-                      Delaware SEO
-                    </Link>{" "}
-                    and a properly built Google Business Profile, paid search
-                    that covers the terms worth buying, content that earns
-                    citations in AI answers, and pages that actually ask for the
-                    call.
-                    Every channel tracked, every lead attributed, every month
-                    reported in language you can act on.
-                  </p>
-
-                  <div className="deldg-checks">
-                    {AboutChecks.map((check) => (
-                      <div className="deldg-check" key={check}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {check}
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link href="/about" className="deldg-btn">
-                    More About Zonic Media
-                    <span className="deldg-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* SEO + web design combined block — quick win for
-              "seo website marketing agency in delaware" (#11 -> page 1). */}
-          <section className="deldg-about">
-            <div className="deldg-container">
-              <div className="deldg-about-copy">
-                <p className="deldg-eyebrow">SEO + Web Design, One Agency</p>
-                <h2 className="deldg-h2">
-                  An SEO and Website Marketing Agency in Delaware — Both Jobs,
-                  One Team
-                </h2>
-                <p className="deldg-lead">
-                  The agencies at the top of Delaware&apos;s search results all
-                  have one thing in common: they treat the website and the SEO
-                  as a single system. So do we. Our{" "}
-                  <Link
-                    href="/services/delaware/seo"
-                    className="deldg-inline-link"
-                  >
-                    Delaware SEO program
-                  </Link>{" "}
-                  and our{" "}
-                  <Link
-                    href="/services/delaware/web-design"
-                    className="deldg-inline-link"
-                  >
-                    Delaware web design work
-                  </Link>{" "}
-                  are run by the same in-house team, so the site is built on the
-                  architecture the rankings need and every design decision is
-                  accountable to search performance. One agency, one strategy —
-                  from Wilmington and{" "}
-                  <Link
-                    href="/services/wilmington/digital-marketing"
-                    className="deldg-inline-link"
-                  >
-                    New Castle County
-                  </Link>{" "}
-                  to the Sussex beaches.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* 3. Services */}
-          <section className="deldg-services" id="deldg-services">
-            <div className="deldg-container">
-              <div className="deldg-sec-head">
-                <div>
-                  <p className="deldg-eyebrow">What We Do</p>
-                  <h2 className="deldg-h2">
-                    Every Channel a Delaware Business Needs, Under One Roof
-                  </h2>
-                </div>
-                <Link href="/services" className="deldg-link-arrow">
-                  View all services <FiArrowUpRight aria-hidden="true" />
-                </Link>
-              </div>
-
-              <div className="deldg-cards">
-                {ServiceCards.map((card) => (
-                  <article
-                    className={`deldg-card deldg-card--${card.tone}`}
-                    key={card.title}
-                  >
-                    <span className="deldg-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <span className="deldg-card-line" aria-hidden="true" />
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 4. Blue band + growth console mockup */}
-          <section className="deldg-band">
-            <div className="deldg-band-grid">
-              <div className="deldg-band-content">
-                <p className="deldg-eyebrow">One System, Not Six Invoices</p>
-                <h2 className="deldg-h2">
-                  Channels That Feed Each Other Instead of Competing for Credit
-                </h2>
-                <p className="deldg-lead">
-                  Most agencies sell channels in isolation, so nobody can tell
-                  you which one produced the customer. We run them as one
-                  system: paid search finds the terms that convert, those terms
-                  shape the content and local SEO plan, reviews and profile
-                  activity lift both, and the website turns the traffic all of
-                  it generates into tracked inquiries.
-                </p>
-                <p className="deldg-lead">
-                  Everything lands in a single view — the keywords you rank for,
-                  the searches you are buying, the calls each channel produced,
-                  and what a lead actually cost. If a listing ever gets
-                  suspended, our{" "}
-                  <Link
-                    href="/services/gbp-reinstatement-service"
-                    className="deldg-inline-link"
-                  >
-                    Google Business Profile reinstatement
-                  </Link>{" "}
-                  team gets you back on the map fast.
-                </p>
-                <HashScrollLink
-                  href="#deldg-form"
-                  className="deldg-btn"
-                  offset={120}
-                >
-                  See Where You Stand Today
-                  <span className="deldg-btn-circ">
-                    <FiArrowUpRight aria-hidden="true" />
-                  </span>
-                </HashScrollLink>
-              </div>
-
-              <div className="deldg-console" aria-hidden="true">
-                <div className="deldg-console-head">
-                  <h3>Delaware Growth Console</h3>
-                  <span className="deldg-console-tag">Last 90 days</span>
-                </div>
-
-                <div className="deldg-console-metrics">
-                  <div>
-                    <strong>418</strong>
-                    <span>Tracked leads</span>
-                  </div>
-                  <div>
-                    <strong>$41</strong>
-                    <span>Cost per lead</span>
-                  </div>
-                  <div>
-                    <strong>+186%</strong>
-                    <span>Vs. last quarter</span>
-                  </div>
-                </div>
-
-                <p className="deldg-console-sub">Visibility by channel</p>
-                <div className="deldg-console-bars">
-                  {ChannelBars.map((bar) => (
-                    <div className="deldg-console-bar" key={bar.label}>
-                      <div className="deldg-console-bar-head">
-                        <span>{bar.label}</span>
-                        <span>{bar.val}%</span>
-                      </div>
-                      <div className="deldg-console-track">
-                        <span
-                          className={`deldg-console-fill deldg-console-fill--${bar.tone}`}
-                          style={{ width: `${bar.val}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="deldg-console-foot">
-                  <span className="deldg-console-pill">
-                    <FiMapPin />
-                    Dover · #1
-                  </span>
-                  <span className="deldg-console-pill">
-                    <FiMapPin />
-                    Wilmington · #2
-                  </span>
-                  <span className="deldg-console-pill">
-                    <FaStar />
-                    4.9 · 187 reviews
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 5. Process */}
-          <section className="deldg-process" id="deldg-process">
-            <div className="deldg-container">
-              <div className="deldg-sec-head">
-                <div>
-                  <p className="deldg-eyebrow">How It Works</p>
-                  <h2 className="deldg-h2">
-                    From Guesswork to a Growth Engine in Four Steps
-                  </h2>
-                </div>
-                <HashScrollLink
-                  href="#deldg-form"
-                  className="deldg-link-arrow"
-                  offset={120}
-                >
-                  Start with step one <FiArrowUpRight aria-hidden="true" />
-                </HashScrollLink>
-              </div>
-
-              <div className="deldg-bento">
-                <article className="deldg-bento-card deldg-bento-card--s1">
-                  <div className="deldg-bento-head">
-                    <span className="deldg-bento-num" aria-hidden="true">
-                      01
-                    </span>
-                    <span className="deldg-bento-tag">Week 1</span>
-                  </div>
-                  <h3>Free Delaware Growth Audit</h3>
-                  <p>
-                    We map your rankings, Google Business Profile, ad spend,
-                    website conversion, and the competitors currently taking the
-                    calls you are missing — then show you exactly where the
-                    fastest gains are.
-                  </p>
-                  <div className="deldg-bento-visual" aria-hidden="true">
-                    <p className="deldg-bento-visual-title">
-                      Where Delaware clients typically land after 90 days
-                    </p>
-                    {[
-                      { label: "Local visibility", val: 91 },
-                      { label: "Lead volume", val: 84 },
-                      { label: "Conversion rate", val: 76 },
-                    ].map((bar) => (
-                      <div className="deldg-bento-bar-row" key={bar.label}>
-                        <div className="deldg-bento-bar-head">
-                          <span>{bar.label}</span>
-                          <span>{bar.val}%</span>
-                        </div>
-                        <div className="deldg-bento-bar-track">
-                          <span
-                            className="deldg-bento-bar-fill"
-                            style={{ width: `${bar.val}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-
-                <article className="deldg-bento-card deldg-bento-card--s2">
-                  <div className="deldg-bento-head">
-                    <span className="deldg-bento-num" aria-hidden="true">
-                      02
-                    </span>
-                    <span className="deldg-bento-tag">Weeks 2–4</span>
-                  </div>
-                  <h3>Strategy &amp; Foundation</h3>
-                  <p>
-                    A channel plan built around your margins, then the
-                    groundwork: tracking installed, profile optimized, campaigns
-                    restructured, and the pages that convert rewritten first.
-                  </p>
-                </article>
-
-                <article className="deldg-bento-card deldg-bento-card--s3">
-                  <div className="deldg-bento-head">
-                    <span className="deldg-bento-num" aria-hidden="true">
-                      03
-                    </span>
-                    <span className="deldg-bento-tag">Every month</span>
-                  </div>
-                  <h3>Launch, Test, Compound</h3>
-                  <p>
-                    Campaigns live, content shipping, reviews growing, and
-                    budget shifting toward whatever is producing the cheapest
-                    qualified lead this month.
-                  </p>
-                  <div className="deldg-bento-chips">
-                    {["Local content", "Ad testing", "Review growth"].map(
-                      (chip) => (
-                        <span className="deldg-bento-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ),
-                    )}
-                  </div>
-                  <HashScrollLink
-                    href="#deldg-form"
-                    className="deldg-btn deldg-bento-cta"
-                    offset={120}
-                  >
-                    Start Growing Today
-                    <span className="deldg-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </article>
-
-                <article className="deldg-bento-card deldg-bento-card--s4">
-                  <div className="deldg-bento-s4-copy">
-                    <div className="deldg-bento-head">
-                      <span className="deldg-bento-num" aria-hidden="true">
-                        04
-                      </span>
-                      <span className="deldg-bento-tag">Ongoing</span>
-                    </div>
-                    <h3>Report, Refine, Expand</h3>
-                    <p>
-                      Monthly reporting tied to calls and booked revenue, not
-                      vanity metrics. As the core market locks in, we expand to
-                      more services, more cities, and more channels.
-                    </p>
-                  </div>
-                  <div className="deldg-bento-s4-side">
-                    <div className="deldg-bento-chips">
-                      {[
-                        "Plain-English report",
-                        "New service lines",
-                        "New markets",
-                      ].map((chip) => (
-                        <span className="deldg-bento-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ))}
-                    </div>
-                    <HashScrollLink
-                      href="#deldg-form"
-                      className="deldg-link-arrow"
-                      offset={120}
-                    >
-                      Start with the free audit{" "}
-                      <FiArrowUpRight aria-hidden="true" />
-                    </HashScrollLink>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          {/* 6. Results */}
-          <section className="deldg-results">
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">Real Results</p>
-                <h2 className="deldg-h2">
-                  What Happens When the Channels Finally Work Together
-                </h2>
-                <p className="deldg-lead">
-                  Three Delaware counties, three very different businesses — the
-                  same system we run for our{" "}
-                  <Link
-                    href="/services/philadelphia/local-seo"
-                    className="deldg-inline-link"
-                  >
-                    Philadelphia local SEO
-                  </Link>{" "}
-                  clients, executed month after month.
-                </p>
-              </div>
-
-              <div className="deldg-results-cards">
-                {ResultCards.map((card) => (
-                  <article className="deldg-result-card" key={card.industry}>
-                    <p className="deldg-result-ind">
-                      {card.icon}
-                      {card.industry}
-                    </p>
-                    <p className="deldg-result-metric">{card.metric}</p>
-                    <p className="deldg-result-label">{card.label}</p>
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 7. Local rank tracker band */}
-          <section className="deldg-showcase">
-            <div className="deldg-container">
-              <LocalRankTracker
-                prefix="deldg"
-                scope="Delaware · last 30 days"
-                rows={RankRows}
-                summaryPercent={82}
-                summaryLabel="Of tracked terms sit in the top three"
-                stats={RankStats}
-                footnote="An illustrative view of the local rank board every Delaware client gets — the same screen we walk through with you each month."
-              />
-            </div>
-          </section>
-
-          {/* 8. Comparison */}
-          <section className="deldg-compare">
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">The Difference</p>
-                <h2 className="deldg-h2">
-                  Zonic Media Vs. A Typical Delaware Advertising Agency
-                </h2>
-                <p className="deldg-lead">
-                  Same monthly invoice, very different month. Here is what
-                  working with a local, in-house team actually looks like.
-                </p>
-              </div>
-
-              <div className="deldg-compare-grid">
-                <div className="deldg-compare-col deldg-compare-col--them">
-                  <h3>Typical Agency</h3>
-                  <p className="deldg-compare-sub">
-                    Why most campaigns quietly stall
-                  </p>
-                  <ul>
-                    {CompareThem.map((item) => (
-                      <li key={item}>
-                        <FiX aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="deldg-compare-col deldg-compare-col--us">
-                  <h3>Digital Marketing with Zonic Media</h3>
-                  <p className="deldg-compare-sub">
-                    Built to compound, reported like a P&amp;L
-                  </p>
-                  <ul>
-                    {CompareUs.map((item) => (
-                      <li key={item}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div
-                  className="deldg-compare-col deldg-compare-col--score"
-                  aria-hidden="true"
-                >
-                  <h3>Growth Scorecard</h3>
-                  <p className="deldg-compare-sub">
-                    A typical Delaware client&apos;s first six months
-                  </p>
-                  <div className="deldg-score-rows">
-                    {ScoreRows.map((row) => (
-                      <div key={row.label}>
-                        <div className="deldg-score-head">
-                          <span>{row.label}</span>
-                          <span className="deldg-score-vals">
-                            {row.before}% → <strong>{row.after}%</strong>
-                          </span>
-                        </div>
-                        <div className="deldg-score-track">
-                          <span
-                            className="deldg-score-fill"
-                            style={
-                              { "--w": `${row.after}%` } as React.CSSProperties
-                            }
-                          />
-                          <span
-                            className="deldg-score-before"
-                            style={
-                              { "--b": `${row.before}%` } as React.CSSProperties
-                            }
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="deldg-score-legend">
-                    <span>
-                      <i className="deldg-score-legend-before" />
-                      Before Zonic
-                    </span>
-                    <span>
-                      <i />
-                      After 6 months
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 9. Why us + audit banner */}
-          <section className="deldg-why">
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">Why Zonic Media</p>
-                <h2 className="deldg-h2">
-                  A Dover Digital Marketing Company Built to Be a Growth Partner, Not a Monthly Invoice
-                </h2>
-                <p className="deldg-lead">
-                  Rankings and impressions are the output. Strategy, execution,
-                  and accountability are what you are actually buying.
-                </p>
-              </div>
-
-              <div className="deldg-why-cards">
-                {WhyCards.map((card) => (
-                  <article className="deldg-why-card" key={card.title}>
-                    <span className="deldg-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-
-              <div className="deldg-why-banner">
-                <div className="deldg-why-banner-text">
-                  <p className="deldg-eyebrow">Free Delaware Marketing Audit</p>
-                  <h3>See Exactly Where Your Growth is Leaking</h3>
-                  <p>
-                    We audit your search visibility, ad spend, website
-                    conversion, and competitors — then hand you a 90-day plan
-                    with the numbers behind it. Free, and yours to keep whether
-                    or not we work together.
-                  </p>
-                  <div className="deldg-banner-checks">
-                    {BannerChecks.map((check) => (
-                      <div className="deldg-banner-check" key={check}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {check}
-                      </div>
-                    ))}
-                  </div>
-                  <HashScrollLink
-                    href="#deldg-form"
-                    className="deldg-btn"
-                    offset={120}
-                  >
-                    Claim Your Free Audit
-                    <span className="deldg-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </div>
-
-                <div className="deldg-audit-card" aria-hidden="true">
-                  <div className="deldg-audit-head">
-                    <h4>Growth Readiness Score</h4>
-                    <span className="deldg-audit-tag">After 6 months</span>
-                  </div>
-                  <div className="deldg-audit-ring-wrap">
-                    <div className="deldg-audit-ring">
-                      <span>
-                        91<small>/100</small>
-                      </span>
-                    </div>
-                    <div className="deldg-audit-ring-info">
-                      <strong>Excellent</strong>
-                      <small>
-                        Where our Delaware campaigns typically land after six
-                        months of compounding work
-                      </small>
-                    </div>
-                  </div>
-                  {AuditRows.map((row) => (
-                    <div className="deldg-audit-row" key={row.label}>
-                      <span>{row.label}</span>
-                      <span className="deldg-audit-flag">{row.flag}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 10. Reviews */}
-          <section
-            className="deldg-reviews"
-            aria-labelledby="deldg-reviews-title"
-          >
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">Verified Client Reviews</p>
-                <h2 className="deldg-h2" id="deldg-reviews-title">
-                  Trusted by Small &amp; Mid-Size Businesses Across the US
-                </h2>
-              </div>
-              <div className="deldg-reviews-widget">
-                <ClutchWidget
-                  widgetType="12"
-                  height="375"
-                  primaryColor="#2567e8"
-                  reviews="448872,448007,448005,447416,446728,446721,446714,446262,441531,442062,445226,445524"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* 11. Marquee */}
-          <div className="deldg-marquee" aria-hidden="true">
-            <div className="deldg-marquee-track">
-              {[0, 1].map((copy) => (
-                <span className="deldg-marquee-item" key={copy}>
-                  {MarqueeItems.map((item) => (
-                    <span className="deldg-marquee-item" key={item}>
-                      {item} <FaStar aria-hidden="true" />
-                    </span>
-                  ))}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* 12. Growth engine — services hub */}
-          <section className="deldg-engine-sec">
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">Everything Working Together</p>
-                <h2 className="deldg-h2">
-                  Six Services, One Growth Engine
-                </h2>
-                <p className="deldg-lead">
-                  Nothing here runs in a silo. Each service feeds the next, and
-                  all six point at the same outcome — more qualified inquiries
-                  for your business. We run it the same way from Wilmington and
-                  Newark down through Dover and Milford to the Sussex beach
-                  markets, and across all three counties in between — plus
-                  across the state line for our{" "}
-                  <Link
-                    href="/services/philadelphia/digital-marketing"
-                    className="deldg-inline-link"
-                  >
-                    digital marketing in Philadelphia
-                  </Link>{" "}
-                  clients.
-                </p>
-              </div>
-
-              <div className="deldg-engine">
-                <div className="deldg-engine-orbit" aria-hidden="true" />
-
-                <div className="deldg-engine-core">
-                  <span className="deldg-engine-core-icon" aria-hidden="true">
-                    <FiTrendingUp />
-                  </span>
-                  <strong>Your Delaware business</strong>
-                  <span>One team · one plan · one report</span>
-                  <HashScrollLink
-                    href="#deldg-form"
-                    className="deldg-btn deldg-engine-core-cta"
-                    offset={120}
-                  >
-                    Get Your Free Audit
-                    <span className="deldg-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </div>
-
-                {EngineNodes.map((node) => (
-                  <div
-                    className={`deldg-engine-node deldg-engine-node--${node.tone}`}
-                    style={
-                      {
-                        "--l": node.left,
-                        "--t": node.top,
-                      } as React.CSSProperties
-                    }
-                    key={node.title}
-                  >
-                    <span className="deldg-engine-node-icon">{node.icon}</span>
-                    <span className="deldg-engine-node-txt">
-                      <strong>{node.title}</strong>
-                      <small>{node.outcome}</small>
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="deldg-chips-label">
-                Running this engine for Delaware businesses in
-              </p>
-              <div className="deldg-chips">
-                {IndustryChips.map((chip) => (
-                  <span className="deldg-chip" key={chip}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 13. FAQs */}
-          <section className="deldg-faqs" id="deldg-faqs">
-            <div className="deldg-container">
-              <div className="deldg-split-grid">
-                <div>
-                  <p className="deldg-eyebrow">FAQs</p>
-                  <h2 className="deldg-h2">
-                    Straight Answers About Digital Marketing in Delaware
-                  </h2>
-                  <p className="deldg-lead">
-                    Pricing, timelines, channel choices, and what actually shows
-                    up in the monthly report. If your question is not here, send
-                    it through the form — a strategist answers, not a sales
-                    script.
-                  </p>
-                  <div className="deldg-faq-cta">
-                    <HashScrollLink
-                      href="#deldg-form"
-                      className="deldg-btn"
-                      offset={120}
-                    >
-                      Ask About Your Market
-                      <span className="deldg-btn-circ">
-                        <FiArrowUpRight aria-hidden="true" />
-                      </span>
-                    </HashScrollLink>
-                  </div>
-                </div>
-                <div>
-                  <GmbFaqs items={DelDigitalFaqs} />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 14. Grow further — internal links */}
-          <section className="deldg-grow">
-            <div className="deldg-container">
-              <div className="deldg-sec-head-center">
-                <p className="deldg-eyebrow">Grow Further</p>
-                <h2 className="deldg-h2">
-                  Visibility is Step One. Here is What Multiplies It.
-                </h2>
-              </div>
-              <div className="deldg-grow-cards">
-                {GrowCards.map((card) => (
-                  <Link
-                    href={card.href}
-                    className="deldg-grow-card"
-                    key={card.href}
-                  >
-                    <span className="deldg-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.desc}</p>
-                    <span className="deldg-grow-link">
-                      {card.cta} <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 15. Lead form */}
-          <section className="deldg-form-sec" id="deldg-form">
-            <div className="deldg-container">
-              <div className="deldg-form-grid">
-                <aside className="deldg-form-aside">
-                  <p className="deldg-eyebrow">Get Started</p>
-                  <h2 className="deldg-h2">
-                    Claim Your Free Delaware Marketing Audit
-                  </h2>
-                  <p className="deldg-lead">
-                    Tell us about your business and we will send back a full
-                    audit — search visibility, ad spend, website conversion, and
-                    competitor positions — plus a flat-price plan for the next
-                    90 days.
-                  </p>
-
-                  <div className="deldg-form-contacts">
-                    <a
-                      href={SITE_CONTACT.emailHref}
-                      className="deldg-form-contact"
-                    >
-                      <span className="deldg-form-contact-icon">
-                        <FiMail aria-hidden="true" />
-                      </span>
-                      <span className="deldg-form-contact-txt">
-                        <small>Email us anytime</small>
-                        <strong>{SITE_CONTACT.email}</strong>
-                      </span>
-                    </a>
-                    <a
-                      href={SITE_CONTACT.phoneHref}
-                      className="deldg-form-contact"
-                    >
-                      <span className="deldg-form-contact-icon">
-                        <FiPhoneCall aria-hidden="true" />
-                      </span>
-                      <span className="deldg-form-contact-txt">
-                        <small>Speak with a strategist</small>
-                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
-                      </span>
-                    </a>
-                    <a
-                      href={SITE_CONTACT.mapHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="deldg-form-contact"
-                    >
-                      <span className="deldg-form-contact-icon">
-                        <FiMapPin aria-hidden="true" />
-                      </span>
-                      <span className="deldg-form-contact-txt">
-                        <small>Visit our Dover office</small>
-                        <strong>{SITE_CONTACT.address}</strong>
-                      </span>
-                    </a>
-                    <div className="deldg-form-contact deldg-form-contact--static">
-                      <span className="deldg-form-contact-icon">
-                        <FiMessageCircle aria-hidden="true" />
-                      </span>
-                      <span className="deldg-form-contact-txt">
-                        <small>Prefer to chat?</small>
-                        <strong>
-                          Use the chat bubble — a real strategist replies
-                        </strong>
-                      </span>
-                    </div>
-                  </div>
-                </aside>
-
-                <div className="deldg-form-main">
-                  <ServiceLeadForm
-                    formType="delaware-digital-marketing"
-                    badge="Free Audit"
-                    title="Get your free Delaware marketing audit"
-                    subtitle="No contracts, no pressure — just a clear picture of where your business stands and what it takes to win your market."
-                    submitText="Send My Free Audit"
-                    messageLabel="Tell us about your business"
-                    messagePlaceholder="Your services, the areas you cover, and what you'd like to improve"
-                    defaultServices={["Local SEO", "Pay Per Click (PPC)"]}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-
-      <RelatedServices current="/services/delaware/digital-marketing" />
-      <Footer />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

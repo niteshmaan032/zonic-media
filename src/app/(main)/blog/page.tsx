@@ -1,50 +1,79 @@
-import { permanentRedirect } from "next/navigation";
-import Link from "next/link";
+/*
+ * BLOG LISTING — redesign draft (24 Oct 2026). Markup lives in
+ * src/components/rd/blog/; this route loads the same published posts as the
+ * live /blog and keeps its JSON-LD. Title, description and keywords
+ * re-optimized 24 Oct 2026 (Semrush US: local seo blog, local seo tips,
+ * google business profile help, ai search optimization; the live URL has
+ * no ranking data).
+ * Pages (?page=) and topics (?topic=) are server-rendered URLs. Noindex until the owner approves the swap.
+ */
+
 import type { Metadata } from "next";
-import { FaArrowRightLong } from "react-icons/fa6";
-import Footer from "@/app/components/Footer";
-import BlogListingGrid from "@/app/components/BlogListingGrid";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
+import { BlogIndexPage } from "@/components/rd/blog/BlogIndexPage";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
-import "@/app/style/BlogPage.css";
-import "@/app/style/Blogs.css";
+import { BLOG_SEO_OVERRIDES } from "@/shared/blogSeoOverrides";
 
 export const revalidate = 300;
 
-export const metadata: Metadata = {
-  title: { absolute: "Zonic Media Blog | Local SEO, GBP & Digital Marketing Guides" },
+const BASE_METADATA: Metadata = {
+  title: {
+    absolute: "Local SEO Blog: GBP, Google Maps & AI Search Guides | Zonic",
+  },
   description:
-    "Local SEO guides, Google Business Profile suspension and reinstatement help, Google Maps ranking tips and small-business marketing advice from Zonic Media.",
+    "Local SEO tips and Google Business Profile guides for small businesses: Google Maps rankings, suspension fixes, reviews and AI search, from Zonic Media.",
   keywords: [
     "local seo blog",
     "local seo tips",
+    "local seo guide",
+    "google business profile help",
+    "google business profile guide",
     "google business profile suspended",
-    "google maps ranking",
+    "how to rank on google maps",
+    "ai search optimization",
     "local seo for small business",
-    "what is local seo",
-    "local seo cost",
-    "digital marketing guides",
+    "small business marketing tips",
+    "digital marketing blog",
   ],
-  alternates: {
-    canonical: "/blog",
-  },
+  // Redesign draft: out of the index until it replaces /blog.
 };
 
-type BlogPageProps = {
-  searchParams?: Promise<{ blog?: string }>;
+type Props = {
+  searchParams?: Promise<{ page?: string; topic?: string }>;
 };
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
+const pageOf = (value?: string) => {
+  const n = Number.parseInt(value ?? "1", 10);
+  return Number.isFinite(n) && n > 0 ? n : 1;
+};
+
+/* Paginated pages (?page=2…) are their own canonical URL, as Google
+   recommends for paginated lists; topic views (?topic=…) canonicalise to
+   /blog. Page 1 is /blog, exactly as live. */
+export async function generateMetadata({
+  searchParams,
+}: Props): Promise<Metadata> {
+  const params = await searchParams;
+  const page = pageOf(params?.page);
+  const canonical =
+    params?.topic || page === 1 ? "/blog" : `/blog?page=${page}`;
+  return {
+    ...BASE_METADATA,
+    alternates: { canonical },
+    openGraph: {
+      title: "Local SEO Blog: GBP, Google Maps & AI Search Guides | Zonic",
+      description: BASE_METADATA.description ?? undefined,
+      url: canonical,
+      type: "website",
+      siteName: "Zonic Media",
+      images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Zonic Media local SEO blog" }],
+    },
+  };
+}
+
+export default async function Page({ searchParams }: Props) {
   const params = await searchParams;
   const blogs = await getPublishedBlogs();
-
-  if (params?.blog) {
-    const found = blogs.find((blog) => blog.id === params.blog);
-
-    if (found?.slug) {
-      permanentRedirect(`/blog/${found.slug}`);
-    }
-  }
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", url: "/" },
@@ -74,31 +103,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     inLanguage: "en-US",
   };
 
-  if (blogs.length === 0) {
-    return (
-      <>
-        <script
-          id="blog-breadcrumb-jsonld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-        <div className="bp-wrapper">
-          <div className="bp-container">
-            <section className="bp-empty">
-              <h1>No Published Blogs Yet.</h1>
-              <p>Published admin blogs will appear here automatically.</p>
-              <Link href="/" className="bp-empty-link">
-                <FaArrowRightLong size={12} />
-                Back to Home
-              </Link>
-            </section>
-          </div>
-        </div>
-        <Footer />
-      </>
-    );
-  }
-
   return (
     <>
       <script
@@ -116,50 +120,24 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
       />
-
-      <div className="bp-wrapper">
-        <div className="bp-container">
-          <header className="bp-listing-header">
-            <h1 className="bp-listing-title">
-              Insights from the Zonic Media Team
-            </h1>
-            <p className="bp-listing-sub">
-              Practical guides on digital marketing, local SEO, web design,
-              Google Ads, and growth strategy.
-            </p>
-          </header>
-
-          <BlogListingGrid
-            posts={blogs.map((blog) => ({
-              id: blog.id,
-              slug: blog.slug,
-              blogTitle: blog.blogTitle,
-              authorName: blog.authorName,
-              publishDate: blog.publishDate,
-              featuredImageUrl: blog.featuredImageUrl,
-              excerpt: blog.excerpt,
-            }))}
-          />
-
-          {/* Server-rendered index of every post. The card grid above
-              paginates client-side (6 per page), so without this list only
-              the first six posts had a crawlable link from /blog. */}
-          <section className="bp-index" aria-labelledby="bp-index-heading">
-            <h2 id="bp-index-heading" className="bp-index-heading">
-              All guides
-            </h2>
-            <ul className="bp-index-list">
-              {blogs.map((blog) => (
-                <li key={blog.id}>
-                  <Link href={`/blog/${blog.slug}`}>{blog.blogTitle}</Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </div>
-      </div>
-
-      <Footer />
+      <BlogIndexPage
+        all={blogs.map((blog) => ({
+          id: blog.id,
+          slug: blog.slug,
+          blogTitle: blog.blogTitle,
+          serviceTitle: blog.serviceTitle,
+          authorName: blog.authorName,
+          publishDate: blog.publishDate,
+          featuredImageUrl: blog.featuredImageUrl,
+          // Full-sentence summary (the CMS excerpt is cut mid-word).
+          excerpt:
+            BLOG_SEO_OVERRIDES[blog.slug]?.description ||
+            blog.metaDescription?.trim() ||
+            blog.excerpt,
+        }))}
+        page={pageOf(params?.page)}
+        topic={params?.topic ?? null}
+      />
     </>
   );
 }

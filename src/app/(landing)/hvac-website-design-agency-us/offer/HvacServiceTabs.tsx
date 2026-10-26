@@ -24,12 +24,12 @@ const SERVICES: HvacService[] = [
     id: "ac-repair",
     label: "AC Repair",
     icon: "snowflake",
-    heading: "Turn no-cool searches into booked service calls.",
-    body: "A fast, reassuring repair path that helps uncomfortable homeowners understand the problem, see your availability, and request service without hunting for the next step.",
+    heading: "Turn a no-cool emergency into a booked AC repair.",
+    body: "An AC repair page that calms an overheated homeowner, shows when you can get there and keeps call and booking buttons in easy reach on any phone.",
     bullets: [
-      "Emergency click-to-call actions",
-      "Problem and symptom pathways",
-      "Fast service-request form",
+      "Tap-to-call for no-cool calls",
+      "Symptom-based repair guides",
+      "Quick service request form",
     ],
     ctaLabel: "Build my AC repair pages",
     kicker: "FAST AC REPAIR",
@@ -41,12 +41,12 @@ const SERVICES: HvacService[] = [
     id: "heating",
     label: "Heating",
     icon: "flame",
-    heading: "Make urgent heating help feel close and dependable.",
-    body: "Guide homeowners from furnace trouble to a confident service request with clear repair options, safety signals, financing information, and visible scheduling actions.",
+    heading: "Be the first call when the furnace stops.",
+    body: "Furnace and heating pages that explain repair or replace options, show safety checks, warranties and financing, and keep scheduling buttons in view.",
     bullets: [
-      "Furnace repair and replacement paths",
-      "Safety and warranty proof",
-      "Financing visibility",
+      "Furnace repair and install pages",
+      "Safety checks and warranties",
+      "Financing shown up front",
     ],
     ctaLabel: "Build my heating pages",
     kicker: "HEATING SERVICE",
@@ -58,12 +58,12 @@ const SERVICES: HvacService[] = [
     id: "heat-pumps",
     label: "Heat Pumps",
     icon: "wind",
-    heading: "Explain high-efficiency comfort without losing the lead.",
-    body: "Help homeowners compare heat pump repair, replacement, energy savings, rebates, and comfort benefits while keeping estimate actions beside every major decision.",
+    heading: "Sell high-efficiency heat pumps in plain words.",
+    body: "Help homeowners compare heat pump repair, replacement, energy savings and utility rebates, with estimate buttons placed beside every big decision.",
     bullets: [
-      "Efficiency and rebate education",
-      "Repair versus replacement guidance",
-      "Estimate CTAs beside key choices",
+      "Efficiency and rebate explainers",
+      "Repair or replace guidance",
+      "Estimate buttons at each choice",
     ],
     ctaLabel: "Build my heat pump pages",
     kicker: "HEAT PUMP EXPERTS",
@@ -75,12 +75,12 @@ const SERVICES: HvacService[] = [
     id: "air-quality",
     label: "Indoor Air Quality",
     icon: "leaf",
-    heading: "Connect cleaner air solutions to real household concerns.",
-    body: "Turn questions about allergies, humidity, filtration, ductwork, and ventilation into a clear route toward an indoor air assessment.",
+    heading: "Turn allergy and humidity worries into IAQ jobs.",
+    body: "Air quality pages that link dust, allergies and damp air to filtration, humidifiers and duct work, ending in an assessment request.",
     bullets: [
-      "Concern-led solution pathways",
-      "Filter and air-quality education",
-      "Assessment request actions",
+      "Concern-first solution pages",
+      "Filter and purifier explainers",
+      "Air quality assessment booking",
     ],
     ctaLabel: "Build my air quality pages",
     kicker: "INDOOR AIR QUALITY",
@@ -92,12 +92,12 @@ const SERVICES: HvacService[] = [
     id: "maintenance",
     label: "Maintenance",
     icon: "wrench",
-    heading: "Turn seasonal tune-ups into recurring customer value.",
-    body: "Present maintenance memberships, priority service, efficiency benefits, and preventative care in a simple flow built to increase plan sign-ups.",
+    heading: "Grow maintenance plan members every season.",
+    body: "Maintenance pages that sell tune-ups and memberships with priority service, plan perks and easy sign-up, so slow months still pay.",
     bullets: [
-      "Membership benefit comparison",
-      "Seasonal tune-up pathways",
-      "Recurring-plan conversion",
+      "Membership perks compared",
+      "Spring and fall tune-up booking",
+      "Online plan sign-up",
     ],
     ctaLabel: "Build my maintenance pages",
     kicker: "HVAC MAINTENANCE",
@@ -109,12 +109,12 @@ const SERVICES: HvacService[] = [
     id: "commercial",
     label: "Commercial HVAC",
     icon: "building",
-    heading: "Give facility managers a direct route to your team.",
-    body: "Present commercial service capacity, rooftop systems, maintenance, controls, response times, and account support in a concise B2B experience.",
+    heading: "Show facility managers you can keep them running.",
+    body: "A commercial HVAC path covering rooftop units, preventive maintenance, controls, response times and account support for building owners and managers.",
     bullets: [
-      "System-specific service pages",
-      "Maintenance and emergency paths",
-      "Commercial enquiry qualification",
+      "Rooftop and system pages",
+      "Preventive maintenance programs",
+      "Commercial service request form",
     ],
     ctaLabel: "Build my commercial HVAC pages",
     kicker: "COMMERCIAL HVAC",
@@ -161,7 +161,7 @@ export default function HvacServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> HVAC website path
+                <Icon name={service.icon} /> HVAC booking path
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -253,8 +253,8 @@ export default function HvacServiceTabs() {
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Built to win HVAC calls</strong>
-                  <small>From local search to booked service</small>
+                  <strong>Built to fill the HVAC schedule</strong>
+                  <small>From local search to a booked service call</small>
                 </span>
               </div>
             </div>

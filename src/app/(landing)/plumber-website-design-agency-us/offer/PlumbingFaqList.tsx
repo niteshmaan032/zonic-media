@@ -1,34 +1,34 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the plumbing website really free?",
+    question: "Is the plumber website free, with no build invoice?",
     answer:
-      "The upfront plumbing website design and development fee — $2,000 for a standard build — is waived when your company starts an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes. The $2,000 plumbing website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
   },
   {
-    question: "Which plumbing marketing plans qualify?",
+    question: "Which plumbing marketing plans include the free site?",
     answer:
-      "Qualifying services may include plumbing Google Ads management, Local SEO, Google Business Profile management, emergency-service campaigns, or a combined plumbing growth plan. Zonic confirms eligibility after reviewing your services, territory, and lead goals.",
+      "Local Foundation, Growth and Full Market all qualify. Plans can include plumbing Google Ads, local SEO, Google Business Profile management, emergency campaigns and call tracking. We confirm the fit after reviewing your services, territory and goals.",
   },
   {
-    question: "What is included in the plumbing website?",
+    question: "What should a plumber website have?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, emergency, drain, water heater, sewer, and leak-detection pages, service-area pages, booking forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Ours can include a homepage built for emergency calls, drain cleaning, water heater, sewer line and leak detection pages, city pages, reviews, booking forms, click-to-call, fast mobile pages, SEO basics, tracking and lead routing. Your proposal confirms the exact scope.",
   },
   {
-    question: "Can Zonic replace our existing plumbing website?",
+    question: "We already have a plumbing website. Can you replace it?",
     answer:
-      "Yes. This offer works for plumbing companies with no website, an outdated site, or a website that is not generating enough service calls and estimate requests. We recommend the right replacement or rebuild approach after reviewing the current site.",
+      "Yes. The offer suits plumbers with no website, an old site, or a site that is not bringing in enough service calls and estimate requests. We review your current site first, then recommend a rebuild or a full replacement.",
   },
   {
-    question: "Do you build emergency and service-area pages too?",
+    question: "Do you build emergency and city pages?",
     answer:
-      "Yes. The standard build covers a homepage plus ten pages and up to five city pages, which is where emergency plumbing, drains, water heaters, and your priority service areas usually live. Additional city or service pages can be added under the expanded city-page program on the Full Market plan.",
+      "Yes. The standard build covers a homepage plus ten pages and up to five city pages, which usually holds emergency plumbing, drains, water heaters and your main service areas. More city or service pages can be added through the expanded city-page program on the Full Market plan.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "How long do we commit, and what if we cancel?",
     answer:
-      "Yes. The qualifying plan runs on a six-month minimum term, and that’s what the waived $2,000 build fee is set against. We host the site during those six months; ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website doesn’t transfer. Your written proposal restates all of this before you sign anything.",
+      "You commit to the qualifying plan for a six-month minimum term, and the waived $2,000 build fee is set against that term. We host the site for those six months, then ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer. Your written proposal restates this before you sign.",
   },
 ];
 

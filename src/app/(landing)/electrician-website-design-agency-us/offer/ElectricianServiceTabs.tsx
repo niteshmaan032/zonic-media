@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "emergency-electrical",
     label: "Emergency Electrical",
     icon: "zap",
-    heading: "Turn emergency electrical searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Be the electrician they reach when the power fails.",
+    body: "An emergency electrical page that tells a worried homeowner what is safe to do, shows you respond fast and keeps the call button in reach.",
     bullets: [
-      "Clear emergency electrical value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Tap-to-call for outages and sparks",
+      "Safety steps while they wait",
+      "Service hours shown clearly",
     ],
     ctaLabel: "Build my emergency electrical pages",
-    kicker: "EMERGENCY ELECTRICAL",
-    siteHeading: "Emergency Electrical—done right.",
+    kicker: "EMERGENCY ELECTRICIAN",
+    siteHeading: "Power problems fixed fast and safe.",
     photo: "/images/free-website/free-electrician/emergency-electrical.webp",
     photoAlt: "Electrician service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "panel-upgrades",
     label: "Panel Upgrades",
     icon: "target",
-    heading: "Turn panel upgrades searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn an overloaded panel into a booked upgrade.",
+    body: "Panel upgrade pages that explain warning signs, amp sizes, permits and inspections, with quote buttons next to each step so homeowners can act right away.",
     bullets: [
-      "Clear panel upgrades value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Warning signs and amp guides",
+      "Permit and inspection steps",
+      "Quote buttons at each step",
     ],
-    ctaLabel: "Build my panel upgrades pages",
+    ctaLabel: "Build my panel upgrade pages",
     kicker: "PANEL UPGRADES",
-    siteHeading: "Panel Upgrades—done right.",
+    siteHeading: "More power for a modern home.",
     photo: "/images/free-website/free-electrician/panel-upgrades.webp",
     photoAlt: "Electrician service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "ev-chargers",
     label: "EV Chargers",
     icon: "layers",
-    heading: "Turn ev chargers searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Catch new EV owners shopping for a home charger.",
+    body: "EV charger pages that cover Level 2 installs, panel capacity checks, charger options and local rebates, ending in a simple install quote form.",
     bullets: [
-      "Clear ev chargers value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Level 2 install explainers",
+      "Panel capacity checks",
+      "Rebate and incentive notes",
     ],
-    ctaLabel: "Build my ev chargers pages",
-    kicker: "EV CHARGERS",
-    siteHeading: "EV Chargers—done right.",
+    ctaLabel: "Build my EV charger pages",
+    kicker: "EV CHARGER INSTALLS",
+    siteHeading: "Charge at home, installed right.",
     photo: "/images/free-website/free-electrician/ev-chargers.webp",
     photoAlt: "Electrician service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "whole-home-rewiring",
     label: "Whole-Home Rewiring",
     icon: "users",
-    heading: "Turn whole-home rewiring searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Make a whole-home rewire feel safe to approve.",
+    body: "Rewiring pages that explain old wiring risks, the work process, timelines and financing, so homeowners feel ready to book an assessment.",
     bullets: [
-      "Clear whole-home rewiring value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Old wiring risk guides",
+      "Step-by-step project process",
+      "Financing shown early",
     ],
-    ctaLabel: "Build my whole-home rewiring pages",
+    ctaLabel: "Build my rewiring pages",
     kicker: "WHOLE-HOME REWIRING",
-    siteHeading: "Whole-Home Rewiring—done right.",
+    siteHeading: "Safer wiring for older homes.",
     photo: "/images/free-website/free-electrician/whole-home-rewiring.webp",
     photoAlt: "Electrician service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "lighting-installation",
     label: "Lighting Installation",
     icon: "clipboard",
-    heading: "Turn lighting installation searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show off lighting work that sells the next job.",
+    body: "Lighting pages with project photos for recessed, landscape and fixture installs, plus design ideas and an easy request form for homeowners.",
     bullets: [
-      "Clear lighting installation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Project photo galleries",
+      "Indoor and outdoor lighting paths",
+      "Simple install request form",
     ],
-    ctaLabel: "Build my lighting installation pages",
+    ctaLabel: "Build my lighting pages",
     kicker: "LIGHTING INSTALLATION",
-    siteHeading: "Lighting Installation—done right.",
+    siteHeading: "Light every room the right way.",
     photo: "/images/free-website/free-electrician/lighting-installation.webp",
     photoAlt: "Electrician service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-electrical",
     label: "Commercial Electrical",
     icon: "building",
-    heading: "Turn commercial electrical searches into qualified enquiries.",
-    body: "A focused electrician website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Give businesses a licensed contractor they can trust.",
+    body: "A commercial electrical path covering tenant build-outs, maintenance, code compliance and response times for owners and property managers.",
     bullets: [
-      "Clear commercial electrical value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Build-out and maintenance pages",
+      "License and code compliance proof",
+      "Commercial project quote form",
     ],
     ctaLabel: "Build my commercial electrical pages",
     kicker: "COMMERCIAL ELECTRICAL",
-    siteHeading: "Commercial Electrical—done right.",
+    siteHeading: "Power that keeps business running.",
     photo: "/images/free-website/free-electrician/commercial-electrical.webp",
     photoAlt: "Electrician service image",
   },
@@ -161,7 +161,7 @@ export default function ElectricianServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Electrician website path
+                <Icon name={service.icon} /> Electrical service path
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -203,7 +203,7 @@ export default function ElectricianServiceTabs() {
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Call an electrician
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,15 @@ export default function ElectricianServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Licensed local electricians. Clear quotes. Work done
+                      to code, start to finish.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Book service</b>
+                      <b>View electrical services</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by local homeowners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -249,15 +249,15 @@ export default function ElectricianServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Book service</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made to book electrical jobs</strong>
+                  <small>From a local search to a booked quote</small>
                 </span>
               </div>
             </div>

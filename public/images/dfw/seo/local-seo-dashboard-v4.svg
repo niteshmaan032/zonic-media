@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Local SEO audit dashboard</title>
+  <desc id="desc">A flat illustration of a map, local listing card and ranking chart.</desc>
+  <rect width="800" height="1000" rx="34" fill="#f4f0e8"/>
+  <circle cx="680" cy="126" r="92" fill="#dbe8f5"/>
+  <rect x="58" y="66" width="684" height="806" rx="30" fill="#fffdf9" stroke="#18304a" stroke-width="8"/>
+  <rect x="58" y="66" width="684" height="84" rx="30" fill="#18304a"/>
+  <circle cx="103" cy="108" r="13" fill="#e6bd64"/><circle cx="145" cy="108" r="13" fill="#6fae9d"/>
+  <text x="190" y="117" fill="#fffdf9" font-family="Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="2">LOCAL SEO AUDIT</text>
+  <rect x="92" y="184" width="392" height="318" rx="20" fill="#dce9ef" stroke="#18304a" stroke-width="5"/>
+  <path d="M104 405c88-62 128-12 193-75s104-46 175-91M112 285c72 38 104 15 155 58s111 19 162-24M220 196c25 77 35 161 14 288M382 193c-10 95 23 195 8 300" fill="none" stroke="#fffdf9" stroke-width="12" opacity=".92"/>
+  <path d="M112 450c102-41 192-24 272-61s143-25 186-66" fill="none" stroke="#9bbbc1" stroke-width="5"/>
+  <g fill="#2f6fed" stroke="#fffdf9" stroke-width="7"><path d="M184 278c0-22 17-39 39-39s39 17 39 39c0 31-39 68-39 68s-39-37-39-68Z"/><circle cx="223" cy="278" r="12" fill="#fffdf9" stroke="none"/><path d="M356 385c0-22 17-39 39-39s39 17 39 39c0 31-39 68-39 68s-39-37-39-68Z"/><circle cx="395" cy="385" r="12" fill="#fffdf9" stroke="none"/></g>
+  <text x="110" y="540" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1.5">VISIBILITY BY LOCATION</text>
+  <rect x="92" y="566" width="392" height="222" rx="18" fill="#f4f0e8" stroke="#c8d2d7" stroke-width="3"/>
+  <path d="M126 731 178 701 222 715 280 653 336 670 390 612 448 629" fill="none" stroke="#2f6fed" stroke-width="8"/>
+  <path d="M126 738 178 728 222 735 280 706 336 714 390 681 448 689" fill="none" stroke="#6fae9d" stroke-width="6"/>
+  <path d="M126 752h322" stroke="#c8d2d7" stroke-width="3"/>
+  <g fill="#18304a"><circle cx="178" cy="701" r="6"/><circle cx="280" cy="653" r="6"/><circle cx="390" cy="612" r="6"/></g>
+  <rect x="514" y="184" width="194" height="604" rx="20" fill="#e8eef4" stroke="#18304a" stroke-width="5"/>
+  <circle cx="611" cy="238" r="38" fill="#2f6fed"/><path d="M611 216c-13 0-23 10-23 23 0 17 23 39 23 39s23-22 23-39c0-13-10-23-23-23Z" fill="#fffdf9"/><circle cx="611" cy="239" r="7" fill="#2f6fed"/>
+  <text x="544" y="310" fill="#18304a" font-family="Arial,sans-serif" font-size="19" font-weight="700">PROFILE HEALTH</text>
+  <rect x="544" y="333" width="135" height="12" rx="6" fill="#c8d2d7"/><rect x="544" y="333" width="112" height="12" rx="6" fill="#6fae9d"/>
+  <g font-family="Arial,sans-serif" font-size="15" fill="#18304a"><text x="544" y="384">CATEGORY</text><text x="544" y="430">SERVICES</text><text x="544" y="476">HOURS</text><text x="544" y="522">REVIEWS</text><text x="544" y="568">PHOTOS</text></g>
+  <g fill="#6fae9d"><circle cx="664" cy="378" r="11"/><circle cx="664" cy="424" r="11"/><circle cx="664" cy="470" r="11"/><circle cx="664" cy="516" r="11"/><circle cx="664" cy="562" r="11"/></g>
+  <path d="m659 378 5 5 9-11M659 424l5 5 9-11M659 470l5 5 9-11M659 516l5 5 9-11M659 562l5 5 9-11" fill="none" stroke="#fffdf9" stroke-width="3"/>
+  <rect x="92" y="824" width="616" height="22" rx="11" fill="#e6bd64"/>
+</svg>

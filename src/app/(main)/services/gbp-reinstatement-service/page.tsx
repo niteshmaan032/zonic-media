@@ -13,7 +13,6 @@ import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import ScrollToFormLink from "@/app/components/ScrollToFormLink";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
 } from "@/shared/seoSchemas";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 
@@ -22,11 +21,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "GMB Reinstatement Help", url: "/services/gbp-reinstatement-service" },
 ]);
-
-const localBusinessJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: "/services/gbp-reinstatement-service",
-  areaServed: { type: "Country", name: "United States" },
-});
 
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -136,25 +130,15 @@ const GmbResinstFaqs = [
   },
 ];
 
-// FAQPage markup for the 13 questions rendered in the "Common questions"
-// section below (visible text only — same answers, no schema-only entries).
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: GmbResinstFaqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-  })),
-};
+// FAQPage markup lives once, next to the visible FAQ list further down
+// (id gmb-reinst-faq-schema). A second copy here duplicated it (27 Oct).
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Google Business Profile Reinstatement Service (GBP/GMB) | Zonic Media",
+    absolute: "Google Business Profile Reinstatement Service | GBP & GMB",
   },
   description:
-    "Google Business Profile reinstatement service: we recover suspended and disabled GBP/GMB listings in 5 to 7 business days. 900+ profiles reinstated. Free suspension audit, No Fix, No Charge.",
+    "Google Business Profile reinstatement service for suspended GBP/GMB listings: 900+ reinstated, 5 to 7 business days. Free audit, No Fix, No Charge.",
   keywords: [
     "google business profile reinstatement service",
     "google business profile reinstatement",
@@ -203,14 +187,6 @@ function page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <div id="gmb-reinst-top"></div>
 
@@ -315,7 +291,7 @@ function page() {
 
             <div className="hero-trust">
               <span>
-                <span className="stars">★★★★★</span> <b>4.9</b> client satisfaction
+                <span className="stars">★★★★★</span> <b>5.0</b> client satisfaction
               </span>
               <span>
                 <b>900+</b> profiles reinstated &amp; verified
@@ -330,7 +306,7 @@ function page() {
           {/* Mobile form — shown right after the hero on small screens (the
               sticky right column is desktop-only). Kept OUT of the hero box so
               it isn't double-boxed / congested on mobile. */}
-          <div className="gmb-mob-form d-block d-lg-none js-audit-form">
+          <div id="free-audit" className="gmb-mob-form d-block d-lg-none js-audit-form">
             <GmbAuditForm />
           </div>
 
@@ -453,7 +429,7 @@ function page() {
                 <div className="cap">Average resolution time</div>
               </div>
               <div className="stat">
-                <div className="num">4.9<span>★</span></div>
+                <div className="num">5.0<span>★</span></div>
                 <div className="cap">Client satisfaction rating</div>
               </div>
               <div className="stat">

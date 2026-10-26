@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "interior-painting",
     label: "Interior Painting",
     icon: "wand",
-    heading: "Turn interior painting searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Book more interior repaint jobs, one room at a time.",
+    body: "An interior painting page with finished rooms, prep steps and furniture care details, written for homeowners who want a clean job without the stress.",
     bullets: [
-      "Clear interior painting value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Room-by-room interior photo sets",
+      "Prep, protection and cleanup explained",
+      "Estimate form that asks the right details",
     ],
-    ctaLabel: "Build my interior painting pages",
+    ctaLabel: "Create my interior painting page",
     kicker: "INTERIOR PAINTING",
-    siteHeading: "Interior Painting—done right.",
+    siteHeading: "Rooms that feel brand new.",
     photo: "/images/free-website/free-painting-contractor/interior-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "exterior-painting",
     label: "Exterior Painting",
     icon: "target",
-    heading: "Turn exterior painting searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Capture exterior painting jobs before peak season fills up.",
+    body: "An exterior painting page that covers siding, trim and weather timing, with before-and-after photos and a quick way to request an on-site estimate.",
     bullets: [
-      "Clear exterior painting value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Siding, trim and door makeovers shown",
+      "Weather and timing questions answered",
+      "On-site estimate request form",
     ],
-    ctaLabel: "Build my exterior painting pages",
+    ctaLabel: "Create my exterior painting page",
     kicker: "EXTERIOR PAINTING",
-    siteHeading: "Exterior Painting—done right.",
+    siteHeading: "Curb appeal, one coat at a time.",
     photo: "/images/free-website/free-painting-contractor/exterior-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "cabinet-painting",
     label: "Cabinet Painting",
     icon: "layers",
-    heading: "Turn cabinet painting searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell cabinet painting as the smart kitchen refresh.",
+    body: "A cabinet painting page that compares painting with replacing, shows finish quality up close and explains how long the kitchen is out of use.",
     bullets: [
-      "Clear cabinet painting value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Close-up finish and color photos",
+      "Paint vs replace guidance",
+      "Timeline for spraying and curing",
     ],
-    ctaLabel: "Build my cabinet painting pages",
+    ctaLabel: "Create my cabinet painting page",
     kicker: "CABINET PAINTING",
-    siteHeading: "Cabinet Painting—done right.",
+    siteHeading: "New cabinets, without replacing.",
     photo: "/images/free-website/free-painting-contractor/cabinet-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-painting",
     label: "Commercial Painting",
     icon: "building",
-    heading: "Turn commercial painting searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win commercial painting bids with proof of scale.",
+    body: "A commercial painting page for offices, retail and HOAs, showing larger projects, after-hours scheduling and a direct path to request a bid walk.",
     bullets: [
-      "Clear commercial painting value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Office, retail and HOA project photos",
+      "Off-hours and phased scheduling noted",
+      "Bid walk request for managers",
     ],
-    ctaLabel: "Build my commercial painting pages",
+    ctaLabel: "Create my commercial painting page",
     kicker: "COMMERCIAL PAINTING",
-    siteHeading: "Commercial Painting—done right.",
+    siteHeading: "Clean finishes for busy sites.",
     photo: "/images/free-website/free-painting-contractor/commercial-painting.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "deck-fence-staining",
     label: "Deck & Fence Staining",
     icon: "users",
-    heading: "Turn deck & fence staining searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Fill warm months with deck and fence staining work.",
+    body: "A deck and fence staining page with wood prep, stain types and before-and-after photos, aimed at homeowners searching once the weather warms.",
     bullets: [
-      "Clear deck & fence staining value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Wash, prep and stain steps shown",
+      "Stain colors and finish types listed",
+      "Quick quote by deck or fence size",
     ],
-    ctaLabel: "Build my deck & fence staining pages",
+    ctaLabel: "Create my staining page",
     kicker: "DECK & FENCE STAINING",
-    siteHeading: "Deck & Fence Staining—done right.",
+    siteHeading: "Decks and fences, refreshed.",
     photo: "/images/free-website/free-painting-contractor/deck-amp-fence-staining.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "color-consultation",
     label: "Color Consultation",
     icon: "wrench",
-    heading: "Turn color consultation searches into qualified enquiries.",
-    body: "A focused painting contractor website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Use color consultation to start more paint projects.",
+    body: "A color consultation page that explains how you help owners pick colors, what the visit includes and how it leads into a clear painting estimate.",
     bullets: [
-      "Clear color consultation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "What the color visit includes",
+      "Palette and sample examples",
+      "Consult booking tied to an estimate",
     ],
-    ctaLabel: "Build my color consultation pages",
+    ctaLabel: "Create my color consult page",
     kicker: "COLOR CONSULTATION",
-    siteHeading: "Color Consultation—done right.",
+    siteHeading: "Find the right color first.",
     photo: "/images/free-website/free-painting-contractor/color-consultation.webp",
     photoAlt: "Painting Contractor service image",
   },
@@ -161,7 +161,7 @@ export default function PaintingContractorServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Painting Contractor website path
+                <Icon name={service.icon} /> Painting contractor service page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function PaintingContractorServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Careful prep, clean lines and a crew that respects your home. Get a clear written estimate.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Get an estimate</b>
+                      <b>See our work</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by homeowners nearby</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function PaintingContractorServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> PREP · PRIME · PAINT
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function PaintingContractorServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Get an estimate</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built to win estimates</strong>
+                  <small>From paint search to quote</small>
                 </span>
               </div>
             </div>

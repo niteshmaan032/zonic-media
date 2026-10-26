@@ -246,3 +246,51 @@
     height: 130px;
   } */
 }
+
+/* /home2 redesign draft (Footer badgesBelowContact): badges under the
+   contact details; no CTA row; social links beside the copyright. */
+.footer-wrapper--compact {
+  min-height: 0;
+  padding-bottom: 28px;
+}
+.footer-wrapper--compact .footer-upper-content {
+  gap: 36px;
+}
+.footer-wrapper--compact .footer-contact-info + .d-flex {
+  margin-top: -4px;
+}
+/* Slightly smaller trust badges (owner, 20 Oct): 85 → 70 px, Trustpilot
+   110 → 92 px wide. */
+.footer-wrapper--compact .footer-contact-info + .d-flex img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+.footer-wrapper--compact .footer-contact-info + .d-flex img.footer-trustpilot-badge {
+  width: 92px;
+  height: auto;
+}
+.footer-copyright--row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+.footer-copyright--row .footer-socials ul {
+  margin: 0;
+}
+.footer-copyright--row p {
+  margin: 0;
+}
+
+/* Rounded top corners (24 Oct 2026, owner); sitewide since 26 Oct. */
+.footer-wrapper--rounded {
+  border-radius: 48px 48px 0 0;
+}
+
+@media (max-width: 575.98px) {
+  .footer-wrapper--rounded {
+    border-radius: 28px 28px 0 0;
+  }
+}

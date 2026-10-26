@@ -206,10 +206,9 @@ export default function LawFirmLeadForm() {
         <span>
           <Icon name="mail" /> Free law firm website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
+        <h3>Check Your Firm’s Eligibility.</h3>
         <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
+          A short form so we can review your practice areas and market. Sending it is not a contract.
         </p>
       </div>
 

@@ -1,10 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse, after } from "next/server";
 import Ably from "ably";
 import {
   createOrGetConversation,
   updateLeadStatus,
 } from "@/backend/lib/chat";
 import { checkRateLimit, rateLimitResponse } from "@/backend/lib/rateLimit";
+import { sendLiveChatRequestEmail } from "@/backend/lib/liveChatEmail";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -62,6 +63,7 @@ export async function POST(request: NextRequest) {
     const service = sanitize(body.service, 120);
     const subService = sanitize(body.subService, 120);
     const leadId = sanitize(body.leadId, 50);
+    const sourcePage = sanitize(body.sourcePage, 500);
 
     if (!visitorId || visitorId.length < 4) {
       return NextResponse.json({ success: false, message: "Missing visitorId." }, { status: 400 });
@@ -70,15 +72,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, message: "Missing name." }, { status: 400 });
     }
 
-    const { conversationId, roomName, isNew } = await createOrGetConversation({
-      visitorId,
-      name,
-      email,
-      phone,
-      service,
-      subService,
-      leadId: leadId || null,
-    });
+    const { conversationId, roomName, isNew, notify, status, agentName } =
+      await createOrGetConversation({
+        visitorId,
+        name,
+        email,
+        phone,
+        service,
+        subService,
+        leadId: leadId || null,
+        sourcePage: sourcePage || null,
+      });
 
     // If we have a leadId, mark it as live_chat_started
     if (leadId && isNew) {
@@ -89,7 +93,7 @@ export async function POST(request: NextRequest) {
 
     // Notify admin dashboard via Ably (best-effort)
     const apiKey = process.env.ABLY_API_KEY;
-    if (apiKey && isNew) {
+    if (apiKey && notify) {
       try {
         const rest = new Ably.Rest({ key: apiKey });
         const channel = rest.channels.get("zonic-admin-notifications");
@@ -100,6 +104,7 @@ export async function POST(request: NextRequest) {
           service,
           subService,
           email,
+          returning: !isNew,
           createdAt: new Date().toISOString(),
         });
       } catch (err) {
@@ -107,11 +112,35 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Email the team first (owner, 26 Oct 2026). Runs after the response so
+    // the visitor's "connecting" screen appears at once; failures are logged
+    // and never block the chat.
+    if (notify) {
+      after(async () => {
+        try {
+          await sendLiveChatRequestEmail({
+            conversationId,
+            name,
+            email,
+            phone,
+            service,
+            subService,
+            sourcePage: sourcePage || null,
+            returning: !isNew,
+          });
+        } catch (err) {
+          console.error("[start-live] live chat email failed:", err);
+        }
+      });
+    }
+
     return NextResponse.json({
       success: true,
       conversationId,
       roomName,
       visitorId,
+      status,
+      agentName,
     });
   } catch (err) {
     console.error("[start-live]", err);

@@ -1,55 +1,97 @@
 /*
- * NYC LOCAL SEO — built on the shared location landing system
- * (PhlLocationLanding / philaLanding.css) so it renders identically to the
- * Philadelphia and Delaware location pages. Aug 2026 SEO plan: first page of
- * the NYC geo silo, mirroring the Philadelphia template.
+ * REDESIGN DRAFT (23 Oct 2026) of /services/nyc/local-seo. Same canonical,
+ * schema types and form type as the live page, which stays untouched.
+ * Built on the Dallas–Fort Worth layout template
+ * (src/components/rd/delaware/DelawareLanding.tsx, as the Delaware and
+ * Philadelphia drafts) with this page's own UI (nycSeoUi.tsx).
+ * Noindex until the owner approves it.
+ *
+ * COPY RE-OPTIMIZED 24 Oct 2026 (docs/content-optimization-brief.md): every
+ * heading, sentence and FAQ rewritten (the earlier draft carried the live
+ * FAQs word for word); invented results removed (hero +187% / 5×, the
+ * "after 6 months" console, the client scorecard). Company-wide, verified
+ * numbers only: 1,500+ profiles optimized, 900+ reinstated, 20+ industries,
+ * 5.0 Google rating. Timelines (4–8 weeks to first Map Pack movement, 3–6
+ * months for organic pages) are the ones /services/local-seo-for-small-
+ * business already publishes.
+ *
+ * Live URL ranking terms (Semrush US resource_organic, 24 Oct 2026): local
+ * seo services nyc #17 (480) · local seo optimization in nyc #20 (320) ·
+ * local seo nyc company #27 (260) · local seo nyc #28 (720, KD 17) · new
+ * york local seo services #39 (260) · local seo new york #40 (1,300, KD 24)
+ * · local seo new york city #42 (320) · new york local seo #45 (880, KD 23)
+ * · local seo company in new york #47 (260) · local seo company nyc #56
+ * (390). Earlier research (23 Oct): brooklyn seo 720 (KD 24) · local seo
+ * brooklyn 590 (KD 11) · local seo manhattan 110 · seo agency new york
+ * 3,600 (KD 41, secondary).
+ *
+ * NYC silo: digital-marketing is the hub (broad "digital marketing agency
+ * nyc" terms) and links down to local-seo and web-design; the children link
+ * back with narrow anchors.
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import PhlLocationLanding, {
-  type PhlLandingData,
-} from "@/app/components/PhlLocationLanding";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import { FaStar } from "react-icons/fa";
+import { FaMicrosoft } from "react-icons/fa";
 import {
+  FiAlertOctagon,
   FiBarChart2,
-  FiClock,
   FiFileText,
   FiLink2,
   FiMapPin,
-  FiPhoneCall,
-  FiSearch,
+  FiMic,
+  FiShield,
   FiStar,
   FiTrendingUp,
-  FiZap,
 } from "react-icons/fi";
 import { MdOutlineVerifiedUser } from "react-icons/md";
 import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+import {
+  SiAmazonalexa,
+  SiApple,
+  SiGoogleassistant,
+  SiGooglemaps,
+  SiOpenai,
+  SiWaze,
+} from "react-icons/si";
 
 const PAGE_PATH = "/services/nyc/local-seo";
 
+const TITLE = "Local SEO Services NYC | New York Local SEO Company";
+const DESCRIPTION =
+  "Local SEO services in NYC: Google Business Profile, reviews, citations and neighborhood pages that rank New York businesses in the Map Pack, borough by borough.";
+
 export const metadata: Metadata = {
-  title: { absolute: "Local SEO Company NYC | Local SEO Services New York" },
-  description:
-    "Local SEO company for NYC businesses: Google Business Profile, Map Pack rankings and neighborhood visibility across Manhattan, Brooklyn, Queens and the Bronx.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   keywords: [
     "local seo nyc",
     "local seo new york",
+    "new york local seo",
     "local seo services nyc",
-    "local seo agency nyc",
     "local seo company nyc",
-    "local seo manhattan",
-    "seo services in new york",
-    "seo agency new york",
+    "local seo new york city",
+    "local seo company in new york",
+    "new york local seo services",
+    "local seo optimization in nyc",
     "local seo brooklyn",
+    "brooklyn seo",
     "local seo queens",
+    "local seo manhattan",
+    "google maps seo nyc",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -59,9 +101,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Local SEO Company NYC | Local SEO Services New York",
+    title: TITLE,
     description:
-      "Local SEO for NYC businesses — Google Business Profile, Map Pack rankings and neighborhood-level visibility across all five boroughs.",
+      "Map Pack rankings for New York businesses, planned by a local SEO consultant neighborhood by neighborhood and tracked by ZIP code.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -73,11 +115,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "NYC Local SEO", url: PAGE_PATH },
 ]);
 
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "City", name: "New York" },
-});
-
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
   "@context": "https://schema.org",
@@ -85,8 +122,7 @@ const serviceJsonLd = {
   name: "Local SEO Services in New York City",
   serviceType: "Local Search Engine Optimization",
   url: `${SITE_URL}${PAGE_PATH}`,
-  description:
-    "Local SEO for New York City businesses covering Google Business Profile optimization, citation building, review growth, on-page SEO and borough-level landing pages — built to win the Map Pack in the country's densest market.",
+  description: DESCRIPTION,
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -107,49 +143,51 @@ const serviceJsonLd = {
 
 const NycSeoFaqs = [
   {
-    question: "How is local SEO different in New York City?",
+    question: "What does a local SEO company do for NYC businesses?",
     answer:
-      "Density changes everything. In most cities the Map Pack is contested at the city level; in New York, Google slices results by neighborhood — a Park Slope search shows different businesses than a Williamsburg search two miles away. Winning NYC local SEO means running a portfolio of micro-market campaigns: neighborhood pages, borough-tuned profiles, and review velocity strong enough to break ties in the country's most crowded categories.",
+      "It gets you into the Google Map Pack for the searches your customers make nearby. We complete and update your Business Profile, report spam competitors, grow genuine reviews, fix your directory listings, write neighborhood pages and track rankings by ZIP code. You own every account we work in.",
   },
   {
-    question: "What's included in your NYC local SEO service?",
+    question: "How fast can local SEO get results in New York City?",
     answer:
-      "The full local ranking system: Google Business Profile optimization, citation building and cleanup across New York directories, review growth and response management, on-page SEO, borough and neighborhood landing pages, and monthly reporting tied to calls and direction requests. Nothing is outsourced and you own every account we touch.",
+      "Expect first Map Pack movement in about 4 to 8 weeks after your categories, listings and reviews are cleaned up. Neighborhood and service pages climb more slowly in regular search, typically over 3 to 6 months, and the busiest Manhattan categories take longer still.",
   },
   {
-    question: "How long does local SEO take to work in NYC?",
+    question: "How much are local SEO services in NYC?",
     answer:
-      "Expect measurable Map Pack movement in 60–90 days for most categories, with the most contested Manhattan categories taking longer. NYC timelines run longer than smaller markets because review counts and competitor budgets are higher — but the payoff per position gained is also the largest in the country.",
+      "Local SEO starts at $297 a month, with $750 and $1,500 plans for busier categories, all on month-to-month terms. Which one fits depends on how crowded your category and neighborhoods are, and the free audit shows that before you choose.",
   },
   {
-    question: "How much does local SEO cost in New York?",
+    question: "How do I get my business into the Google Map Pack in NYC?",
     answer:
-      "More than the national average, honestly quoted: thin programs simply do not move rankings in New York. Most single-location NYC engagements land in our Growth or Dominate tiers, with a flat monthly quote issued after a free audit that benchmarks your actual neighborhood competition. No long-term contracts.",
+      "Google ranks local results on relevance, distance and prominence, and you can’t pay for a better spot. So we sharpen relevance with the right categories and services, cover distance with neighborhood pages, and build prominence with reviews, local links and accurate listings.",
   },
   {
-    question: "Can you rank my business in multiple boroughs?",
+    question: "Can one business rank in more than one borough?",
     answer:
-      "Yes — with the right structure. Map Pack rankings are proximity-based, so a Brooklyn address cannot buy its way into the Manhattan pack. What works is a borough-level page architecture plus profile service-area tuning: each borough (often each neighborhood cluster) gets its own landing page and signal set, so you win the organic results everywhere you serve and the Map Pack where you physically are.",
+      "In organic results, yes: give each borough you serve its own strong page. The Map Pack favors businesses close to the searcher, so a Queens address won’t top Manhattan searches by itself. We win Maps near your location first, then widen your reach with pages, reviews and service areas.",
   },
   {
-    question: "My NYC Google Business Profile was suspended. Can you help?",
+    question: "Can you get fake listings that outrank me removed?",
     answer:
-      "Yes — GBP reinstatement is our flagship service, with 900+ recoveries handled. NYC profiles live under the heaviest enforcement in the country because dense markets breed spam and Google's filters sweep up legitimate businesses too. Recovery plus compliance hardening is often where our NYC engagements start.",
+      "We can report them properly. Keyword-stuffed names, fake addresses and duplicate listings break Google’s rules, so we document each one and submit it through Google’s official channels. Google makes the final call, but cleared spam often frees up room for genuine local businesses.",
   },
   {
-    question: "Do you need to be based in NYC to do this well?",
+    question:
+      "What should I do if my NYC Google Business Profile is suspended?",
     answer:
-      "No — most agencies ranking NYC businesses are not on Fifth Avenue either. Rankings are decided by strategy and consistent execution, both of which travel. We are headquartered in Dover, Delaware, run campaigns across the Northeast, and hold strategy calls on video whenever you want them.",
+      "Don’t create a new listing; that usually makes things worse. We’ve reinstated 900+ suspended profiles, so we know what Google asks for. We find the cause, prepare the evidence Google asks for, file the appeal and harden your profile against the next sweep.",
   },
   {
-    question: "Do I need local SEO if I already run Google Ads in NYC?",
+    question:
+      "Can local SEO get my business named by ChatGPT and AI Overviews?",
     answer:
-      "At New York click prices, more than anywhere. Ads buy the top of the page today; local SEO earns Map Pack and organic positions that keep producing after the budget stops. Most NYC clients run both, then shift spend toward SEO as rankings take hold and blended cost per lead drops.",
+      "Yes, it lays the groundwork. AI tools build local recommendations from your Google profile, reviews, website and directory listings, so consistent details and clear service pages make you easier to name. We check what ChatGPT, Gemini and Google’s AI Overviews say about you every month.",
   },
   {
-    question: "How does local SEO work in New York City when competitors are a block away?",
+    question: "Is local SEO worth it if I already pay for Google Ads?",
     answer:
-      "In NYC the Map Pack changes every few blocks, so a single citywide ranking does not exist. What wins is neighborhood-level relevance: reviews that mention the neighborhood, service pages for each area you serve, a primary category chosen against the actual competitors on your street, and photos and posts that keep the profile active. Zonic Media tracks rankings on a grid across the boroughs and builds the program around the neighborhoods that drive your revenue.",
+      "Usually, yes. Ads stop the moment the budget does, while Map Pack and organic rankings keep bringing calls without a cost per click. Many businesses run both, then lean more on SEO as rankings grow and lower their blended cost per lead.",
   },
 ];
 
@@ -164,89 +202,85 @@ const nycSeoFaqJsonLd = {
   })),
 };
 
-const data: PhlLandingData = {
+/* ---------------------------------------------------------------- content */
+
+const hubLeft: HubApp[] = [
+  { icon: SiGooglemaps, name: "Google Maps", tone: "maps" },
+  { icon: SiApple, name: "Apple Maps", tone: "apple" },
+  { icon: SiWaze, name: "Waze", tone: "waze" },
+  { icon: FaMicrosoft, name: "Bing Places", tone: "bing" },
+];
+const hubRight: HubApp[] = [
+  { icon: SiGoogleassistant, name: "Google Assistant", tone: "assistant" },
+  { icon: SiAmazonalexa, name: "Alexa", tone: "alexa" },
+  { icon: FiMic, name: "Siri", tone: "indigo" },
+  { icon: SiOpenai, name: "ChatGPT", tone: "openai" },
+];
+
+const data: DelawareData = {
   hero: {
-    eyebrow: "Local SEO in New York City",
-    h1Start: "NYC Local SEO That Wins the",
-    h1Highlight: "Map Pack",
-    h1End: "Block by Block",
-    sub: (
-      <>
-        New York is the hardest local SEO market in the country — and the one
-        where a Map Pack slot pays the most. Zonic Media builds the full local
-        ranking system for NYC businesses — Google Business Profile, citations,
-        reviews, and neighborhood pages — precise enough to compete where a
-        three-block radius decides who gets the call.
-      </>
-    ),
+    eyebrow: "",
+    h1Start: "NYC Local SEO Company",
+    h1Highlight: "Ranking New York Businesses on Google Maps",
+    sub: "We put New York businesses in the Map Pack with a complete Google profile, spam competitors reported, steady reviews and neighborhood pages that rank from Astoria and the Upper West Side to Park Slope. Every result is tracked by ZIP code.",
     media: {
       src: "/images/geo/nyc-local-seo/nyc-local-seo-storefront-owner.jpg",
       alt: "New York storefront owner checking local search visibility on a phone",
     },
-    floatA: {
-      strong: "Top 3 in the map pack",
-      text: "neighborhood searches across NYC",
-    },
-    floatB: { strong: "+40 reviews", text: "earned this quarter" },
+    floatA: { strong: "", text: "" },
+    floatB: { strong: "", text: "" },
+    // Company-wide, verified numbers only (no NYC client results).
     stats: [
       {
-        icon: <FiTrendingUp aria-hidden="true" />,
-        num: "50+",
-        label: "Local businesses ranked",
+        icon: <FiMapPin aria-hidden="true" />,
+        num: "1,500+",
+        label: "Business profiles tuned for Map Pack reach",
       },
+      // Not shown: the template's Google rating card takes this slot.
       {
-        icon: <FaStar aria-hidden="true" />,
-        num: "4.9/5",
-        label: "Average client rating on Clutch",
-      },
-      {
-        icon: <FiClock aria-hidden="true" />,
-        num: "60–90",
-        label: "Days to measurable movement",
+        icon: <FiStar aria-hidden="true" />,
+        num: "5.0",
+        label: "Rated on Google",
       },
       {
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
         num: "900+",
-        label: "GBP suspensions recovered",
+        label: "Suspended profiles brought back",
+      },
+      {
+        icon: <FiTrendingUp aria-hidden="true" />,
+        num: "20+",
+        label: "Local industries we rank",
       },
     ],
-    proof: "by the local businesses we rank",
-    cta: "Get Your Free NYC SEO Audit",
+    proof: "",
+    cta: "Audit My NYC Rankings",
   },
   about: {
-    eyebrow: "The NYC Search Opportunity",
-    h2Start: "Eight Million Customers Search by Neighborhood.",
-    h2Highlight: "We Make Sure They Find You.",
+    eyebrow: "Local SEO in New York City",
+    h2Start: "Map Pack Results Change",
+    h2Highlight: "Every Few Blocks.",
     leads: [
       <>
-        When a pipe bursts in Astoria or somebody needs a dentist near Union
-        Square, the search happens on a phone and the decision happens in
-        seconds. The Map Pack shows three businesses — and in New York, Google
-        builds a different pack for practically every neighborhood. That is
-        the single highest-intent channel an NYC business has, multiplied
-        across dozens of micro-markets most competitors have never properly
-        worked.
+        Search for a dentist in Williamsburg, then two miles away in Park Slope,
+        and Google shows different businesses. We plan your local SEO around the
+        exact neighborhoods you serve and clear out the spam listings crowding
+        them.
       </>,
       <>
-        Our system captures it street by street: a fully optimized{" "}
+        A dedicated strategist works on your profile every week and reports
+        calls and rankings by ZIP code each month. Need leads before rankings
+        land? Our{" "}
         <Link
-          href="/local-seo-google-business-optimization"
+          href="/services/nyc/digital-marketing"
           className="phl-inline-link"
         >
-          Google Business Profile
-        </Link>
-        , citations that agree with each other everywhere Google checks,
-        reviews arriving steadily in the categories where review count breaks
-        ties, and neighborhood pages built around the searches New Yorkers
-        actually type.
+          New York digital marketing
+        </Link>{" "}
+        team can run Google Ads in the meantime.
       </>,
     ],
-    checks: [
-      "Borough-level ranking strategy",
-      "Profile fully optimized",
-      "Citations cleaned & built",
-      "Reviews growing weekly",
-    ],
+    checks: [],
     collageA: {
       src: "/images/geo/nyc-local-seo/nyc-near-me-mobile-search.jpg",
       alt: "Near me mobile search used on a New York neighborhood street",
@@ -255,455 +289,393 @@ const data: PhlLandingData = {
       src: "/images/geo/nyc-local-seo/nyc-map-pack-rankings-dashboard.jpg",
       alt: "Neighborhood Map Pack rankings dashboard for New York City",
     },
-    badgeText: "New York City Local SEO • Zonic Media •",
+    badgeText: "Local SEO NYC • Zonic Media •",
   },
   services: {
-    eyebrow: "What's Included",
-    h2: "Everything Your NYC Rankings Need, in One System",
+    eyebrow: "",
+    h2: "Local SEO Services That Move NYC Rankings",
+    lead: "The hands-on work behind Map Pack gains in a city where the next competitor is a block away.",
     cards: [
       {
         tone: "blue",
         icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Google Business Profile Optimization",
-        desc: (
-          <>
-            Your profile is the new homepage for local search. We optimize
-            every field, category, photo, service, and post — the same system
-            behind our{" "}
-            <Link
-              href="/local-seo-google-business-optimization"
-              className="phl-inline-link"
-            >
-              GBP optimization service
-            </Link>{" "}
-            — tuned for NYC&apos;s category competition.
-          </>
-        ),
+        title: "Complete Profile Buildout",
+        desc: "Categories, services, photos and weekly posts filled in completely, so Google can match you to more nearby searches.",
+        points: [
+          "Primary and extra categories",
+          "All services listed",
+          "Fresh posts every week",
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Business Profile optimization",
       },
       {
         tone: "gold",
-        icon: <FiSearch aria-hidden="true" />,
-        title: "Neighborhood Keyword & Competitor Research",
-        desc: "We map what New Yorkers actually type, neighborhood by neighborhood — Astoria vs. Park Slope vs. Riverdale — and audit who currently owns those results, then build the plan that takes those positions off them.",
-      },
-      {
-        tone: "blue",
-        icon: <FiLink2 aria-hidden="true" />,
-        title: "Citations & Listing Management",
-        desc: "Consistent name, address, and phone across every directory Google cross-checks — critical in NYC, where address churn and suite-number mismatches quietly kill rankings.",
-      },
-      {
-        tone: "gold",
-        icon: <FiStar aria-hidden="true" />,
-        title: "Review Growth & Reputation",
-        desc: "In New York's crowded categories, review count and recency are the tiebreakers. We build a steady stream of real reviews with responses that show Google — and the next customer — that somebody is home.",
+        icon: <FiAlertOctagon aria-hidden="true" />,
+        title: "Spam Listing Removal",
+        desc: "Fake and keyword-stuffed competitors reported to Google with evidence, so genuine businesses like yours can rise.",
+        points: [
+          "Fake listings reported",
+          "Edits to your profile watched",
+          "Ranks rechecked after removals",
+        ],
+        href: "#de-contact",
+        link: "Ask about spam removal",
       },
       {
         tone: "blue",
         icon: <FiFileText aria-hidden="true" />,
-        title: "Borough & Neighborhood Pages",
-        desc: (
-          <>
-            Landing pages built around real local searches for every borough
-            and neighborhood cluster you serve, with schema and internal links
-            that make each one easier to rank — backed by conversion-first{" "}
-            <Link href="/services/web-design" className="phl-inline-link">
-              website design
-            </Link>{" "}
-            when the site itself is the bottleneck.
-          </>
-        ),
+        title: "Neighborhood Service Pages",
+        desc: "A genuinely useful page for each area and service, written the way locals search for it.",
+        points: [
+          "One page per neighborhood",
+          "Local photos and proof",
+          "Linked from your profile",
+        ],
+        href: "/services/nyc/web-design",
+        link: "Web design in NYC",
+      },
+      {
+        tone: "gold",
+        icon: <FiStar aria-hidden="true" />,
+        title: "Review Growth & Replies",
+        desc: "A steady stream of genuine reviews that mention the service and the neighborhood, with replies drafted for you.",
+        points: [
+          "Requests sent by text",
+          "Replies within a day",
+          "Link on every invoice",
+        ],
+        href: "/services/local-seo-for-home-services",
+        link: "Local SEO for home services",
+      },
+      {
+        tone: "blue",
+        icon: <FiLink2 aria-hidden="true" />,
+        title: "NYC Citations & Local Links",
+        desc: "Matching name, address and phone across directories, plus links from neighborhood sites and business groups.",
+        points: [
+          "Directory listings cleaned",
+          "Duplicates merged",
+          "Local links earned monthly",
+        ],
+        href: "/services/seo-services",
+        link: "Our SEO services",
       },
       {
         tone: "gold",
         icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Tracking & Monthly Reporting",
-        desc: "Rankings, calls, direction requests, and form fills in one plain-English report. You always know what we did, what moved, and what is next.",
+        title: "ZIP-Level Rank Reports",
+        desc: "Map Pack positions by ZIP code, plus calls and direction requests, summed up in a plain-English monthly report.",
+        points: [
+          "ZIP-code rankings",
+          "Calls and directions counted",
+          "Next steps every month",
+        ],
+        href: "#de-contact",
+        link: "See a sample report",
       },
     ],
   },
   band: {
-    eyebrow: "The Map Pack Is The Market",
-    h2: "We Put You in the Top Three — Neighborhood by Neighborhood",
+    eyebrow: "",
+    h2: "Profile Calls and Directions, Counted Monthly",
     leads: [
       <>
-        The Map Pack takes the majority of clicks and nearly all of the phone
-        calls, and in New York it is rebuilt for every few blocks. Every
-        campaign is built around one goal: earning the top spots for the
-        services and neighborhoods that pay you best, then defending them
-        month after month — with{" "}
-        <Link href="/services/nyc/digital-marketing" className="phl-inline-link">
-          NYC digital marketing
-        </Link>{" "}
-        covering the paid side when you want the whole results page. Outside
-        New York, the same playbook runs as our national{" "}
-        <Link href="/services/seo-services" className="phl-inline-link">
-          local SEO services
-        </Link>
-        .
+        Rankings only pay when they ring the phone. We track the calls,
+        direction requests and website clicks your Business Profile earns, and
+        show the trend every month.
       </>,
       <>
-        We work the signals Google actually rewards — proximity, relevance,
-        and prominence. A fully built-out profile tells Google exactly what
-        you do, consistent citations confirm you are who you say you are, and
-        steady reviews plus local content prove customers rate you. If a
-        listing ever gets suspended in NYC&apos;s enforcement-heavy market,
-        our{" "}
+        Want ads and social in one plan? See our{" "}
+        <Link
+          href="/services/nyc/digital-marketing"
+          className="phl-inline-link"
+        >
+          NYC marketing services
+        </Link>
+        . Profile suspended? Our{" "}
         <Link
           href="/services/gbp-reinstatement-service"
           className="phl-inline-link"
         >
-          Google Business Profile reinstatement
+          Business Profile reinstatement
         </Link>{" "}
-        team gets you back on the map fast.
+        specialists have brought back 900+ listings.
       </>,
     ],
-    cta: "See Where You Rank Today",
+    cta: "Check My Profile Results",
+    // Sample report UI, not client data.
     console: {
-      title: "NYC Visibility Console",
-      tag: "After 6 months",
+      title: "Profile insights",
+      tag: "Sample report",
       metrics: [
-        { strong: "312", label: "Calls from profile" },
-        { strong: "#1", label: "Map pack rank" },
-        { strong: "+94%", label: "Direction requests" },
+        { strong: "Calls", label: "Tracked from your profile" },
+        { strong: "Top 3", label: "Map Pack goal by ZIP" },
+        { strong: "Monthly", label: "Plain-English report" },
       ],
-      barsLabel: "Ranking signal strength",
-      bars: [
-        { label: "Map pack visibility", val: 90, tone: "blue" },
-        { label: "Profile completeness", val: 97, tone: "gold" },
-        { label: "Citation accuracy", val: 94, tone: "blue" },
-        { label: "Review velocity", val: 82, tone: "gold" },
-      ],
-      pills: [
-        { icon: "pin", text: "Astoria · #1" },
-        { icon: "pin", text: "Park Slope · #2" },
-        { icon: "star", text: "4.9 · 240 reviews" },
-      ],
+      barsLabel: "",
+      bars: [],
+      pills: [],
     },
   },
   process: {
-    eyebrow: "How It Works",
-    h2: "From Invisible to Unavoidable in Four Steps",
+    eyebrow: "",
+    h2: "Our Four-Step Plan for the NYC Map Pack",
     steps: [
       {
         tag: "Week 1",
-        title: "Free NYC Visibility Audit",
-        desc: "We audit your rankings, profile, citations, reviews, and the competitors actually beating you in your neighborhood's Map Pack — and show you exactly where the calls you are missing are going instead.",
+        title: "Block-by-Block Audit",
+        desc: "We grid-check your rankings across your neighborhoods, review your profile and site, and flag the spam listings in your category.",
       },
       {
         tag: "Weeks 2–4",
-        title: "Strategy & Foundation Fixes",
-        desc: "A keyword-mapped plan for your services and boroughs, then the foundation work: profile optimization, citation cleanup, and on-page fixes.",
+        title: "Clean Up the Basics",
+        desc: "Categories, citations, page titles and markup corrected first, so every later step builds on accurate data.",
       },
       {
-        tag: "Every month",
-        title: "Build Authority Every Month",
-        desc: "Neighborhood content, links, review growth, and profile activity — the compounding signals that move you up the Map Pack in a market where standing still means sliding.",
-        chips: ["Neighborhood content", "Review growth", "Profile activity"],
+        tag: "Monthly",
+        title: "Grow Reviews and Links",
+        desc: "Review requests, new neighborhood pages and local links each month, plus fresh posts on your profile every week.",
+        chips: ["Reviews", "Local links", "Profile posts"],
       },
       {
         tag: "Ongoing",
-        title: "Report, Refine, Expand",
-        desc: "Monthly reporting tied to calls and direction requests, not vanity metrics. As rankings lock in, we expand to more services and more neighborhoods.",
-        chips: ["Plain-English report", "New neighborhoods", "New services"],
+        title: "Win the Next Neighborhood",
+        desc: "Once one area holds the top three, the plan extends to the next neighborhood and borough.",
+        chips: ["Next borough", "ZIP tracking", "Monthly report"],
       },
     ],
-    visualTitle: "Where NYC clients typically land after 90 days",
-    visualBars: [
-      { label: "Profile strength", val: 92 },
-      { label: "Citation accuracy", val: 95 },
-      { label: "Review velocity", val: 80 },
-    ],
-    ctaPrimary: "Start Ranking Today",
+    visualTitle: "",
+    visualBars: [],
+    ctaPrimary: "Audit My NYC Rankings",
   },
-  results: {
-    eyebrow: "Real Results",
-    h2: "What Happens When NYC Local SEO is Done Properly",
-    lead: "Different boroughs, different categories — the same system, executed month after month.",
-    cards: [
-      {
-        icon: <FiPhoneCall aria-hidden="true" />,
-        industry: "Home services · Queens",
-        metric: "+187%",
-        label: "Calls from the map pack",
-        desc: (
-          <>
-            From page-two invisibility to top-three positions for &lsquo;near
-            me&rsquo; searches across the neighborhoods the business covers —
-            the same system as our{" "}
-            <Link
-              href="/services/local-seo-for-home-services"
-              className="phl-inline-link"
-            >
-              local SEO for home services program
-            </Link>
-            .
-          </>
-        ),
-      },
-      {
-        icon: <RiSearchLine aria-hidden="true" />,
-        industry: "Dental practice · Manhattan",
-        metric: "Top 3",
-        label: "Map pack for every core term",
-        desc: "A profile rebuild, citation cleanup, and steady review growth moved the practice from #14 into the top three in one of the city's most contested categories.",
-      },
-      {
-        icon: <FiMapPin aria-hidden="true" />,
-        industry: "Multi-location service · Brooklyn + Queens",
-        metric: "5×",
-        label: "Neighborhoods ranking top three",
-        desc: "Individual neighborhood pages and per-location profile tuning took a single-area business to top-three visibility across five separate service areas.",
-      },
-    ],
-  },
-  showcase: {
-    image: {
-      src: "/images/geo/nyc-local-seo/nyc-neighborhood-storefronts.jpg",
-      alt: "Independent storefronts along an active New York neighborhood corridor",
-    },
-    floats: [
-      { num: "240", label: "Average reviews earned" },
-      { num: "#1", label: "Map pack across 6 NYC neighborhoods" },
-      { num: "+94%", label: "Direction requests" },
-    ],
-  },
+  showcase: undefined,
   compare: {
-    h2: "Zonic vs. a Typical NYC SEO Agency",
-    lead: "Local SEO for local businesses is all we do, and it shows. Here is what working with a dedicated local team looks like.",
-    themTitle: "Typical NYC Agency",
-    themSub: "Why most local campaigns quietly stall",
+    h2: "Weekly Local SEO vs. a Set-and-Forget Agency",
+    lead: "What hands-on work changes for a New York business.",
+    themTitle: "Set-and-Forget SEO",
+    themSub: "Why NYC rankings stall",
     them: [
-      "One citywide campaign ignoring how NYC actually searches",
-      "Reports full of impressions, empty of phone calls",
-      "Offshore link packages and duplicate citations",
-      "One account manager for 80 clients",
-      "12-month contracts before you see a single lead",
+      "One citywide page for every borough",
+      "Spam competitors ignored",
+      "Profile updated once a quarter",
+      "Rankings reported, calls ignored",
+      "A year-long contract up front",
     ],
-    usTitle: "Local SEO with Zonic Media",
-    usSub: "Built to compound, reported like a P&L",
+    usTitle: "Zonic Media Local SEO",
+    usSub: "Hands-on, week after week",
     us: [
-      "Borough-by-borough targeting matched to real search behavior",
-      "Reporting tied to calls, direction requests, and forms",
-      "Hand-built citations and local links that compound",
-      "A dedicated strategist who knows your market",
-      "Month-to-month — we keep you with results, not paperwork",
+      "A plan for each neighborhood",
+      "Spam listings reported to Google",
+      "Weekly posts and profile updates",
+      "Calls and directions in every report",
+      "Month-to-month plans",
     ],
-    scoreTitle: "Local Visibility Scorecard",
-    scoreSub: "A typical NYC client's first six months",
+    scoreTitle: "Sample Map Pack Scorecard",
+    scoreSub: "Illustration of the signals our audit grades",
     scoreRows: [
-      { label: "Profile strength", before: 30, after: 92 },
-      { label: "Citation accuracy", before: 41, after: 95 },
-      { label: "Review velocity", before: 24, after: 82 },
-      { label: "Map pack visibility", before: 14, after: 84 },
+      { label: "Profile completeness", before: 30, after: 92 },
+      { label: "Listing consistency", before: 41, after: 95 },
+      { label: "Review pace", before: 24, after: 82 },
+      { label: "Map Pack coverage", before: 14, after: 84 },
     ],
   },
   why: {
-    h2: "A Local SEO Partner, Not a Monthly Invoice",
-    lead: "Rankings are the output. The inputs are strategy, execution, and accountability — and that is what you are actually buying.",
+    h2: "A Local SEO Agency You Can Watch Working",
+    lead: "The work, the rankings and the calls, visible every month.",
     cards: [
       {
         icon: <RiSearchLine aria-hidden="true" />,
-        title: "Local is the whole practice",
-        desc: (
-          <>
-            We are not a generalist agency dabbling in maps. Local rankings,
-            local calls, and booked jobs for local businesses is what the{" "}
-            <Link href="/" className="phl-inline-link">
-              Zonic Media
-            </Link>{" "}
-            team does every day.
-          </>
-        ),
+        title: "Local search, full stop",
+        desc: "Map Pack rankings and calls for local businesses are our focus.",
       },
       {
-        icon: <FiZap aria-hidden="true" />,
-        title: "Built for NYC Enforcement",
-        desc: "New York profiles get suspended more than anywhere in the country. With 900+ reinstatements handled, we harden your profile against the sweeps — and recover it fast if one hits.",
+        icon: <FiShield aria-hidden="true" />,
+        title: "Guideline-safe profiles",
+        desc: "Every change inside Google’s rules, with spam rivals reported.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,
-        title: "Transparent to a Fault",
-        desc: "You own every account and asset. You see every change in the monthly report. If a number dips you hear it from us first, with the fix already moving.",
+        title: "Calls over vanity ranks",
+        desc: "Reports show calls, directions and bookings from Maps.",
       },
     ],
     banner: {
-      eyebrow: "Free NYC Local SEO Audit",
-      h3: "See Exactly How We'll Grow Your NYC Rankings",
-      p: "We map your profile, citations, reviews, and rankings against the businesses actually beating you in your neighborhood — and show you the clear path to the top three. Free, and yours to keep either way.",
+      eyebrow: "",
+      h3: "Check Where You Rank Across NYC",
+      p: "We grid-check your Map Pack position across your neighborhoods, review your profile and the spam around you, then show the quickest path into the top three. No cost, no obligation.",
       checks: [
-        "Your Map Pack growth plan",
-        "Profile wins ready to unlock",
-        "Citation opportunities mapped",
-        "Review growth roadmap",
+        "ZIP-level ranking map",
+        "Spam listings flagged",
+        "Profile gaps listed",
+        "A review plan for your area",
       ],
-      cta: "Claim Your Free Audit",
+      cta: "Check My NYC Rankings",
       audit: {
-        title: "Local Visibility Score",
-        tag: "After 6 months",
+        title: "",
+        tag: "",
         score: "90",
-        grade: "Excellent",
-        gradeDesc:
-          "Where our NYC local SEO campaigns typically land after six months of compounding work",
-        rows: [
-          { label: "Google Business Profile", flag: "A+ grade" },
-          { label: "Citations & listings", flag: "100% accurate" },
-          { label: "Review velocity", flag: "Ahead of top 3" },
-        ],
+        grade: "",
+        gradeDesc: "",
+        rows: [],
       },
     },
   },
-  marquee: [
-    "NYC Local SEO",
-    "Google Business Profile",
-    "Map Pack Rankings",
-    "Manhattan",
-    "Brooklyn",
-    "Queens",
-    "The Bronx",
-    "Staten Island",
-    "Review Growth",
-  ],
+  // Kept for the type; the platform hub takes the hub slot.
   engine: {
-    eyebrow: "Everything Working Together",
-    h2: "Six Signals, One Ranking Engine",
-    lead: (
-      <>
-        Local rankings are not one lever, they are six working at once. Skip
-        any of them and the Map Pack notices. We run all six every month, from
-        the Financial District up through Harlem and out across Brooklyn,
-        Queens, the Bronx, and Staten Island — and when you need calls before
-        the rankings land, our{" "}
-        <Link href="/services/google-ads" className="phl-inline-link">
-          Google Ads campaigns
-        </Link>{" "}
-        fill the gap.
-      </>
-    ),
-    coreStrong: "Your NYC listing",
-    coreSub: "Top three · every neighborhood you serve",
-    coreCta: "Get Your Free Audit",
-    nodes: [
-      {
-        icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Business Profile",
-        outcome: "Google trusts it",
-        tone: "blue",
-        left: "50%",
-        top: "7%",
-      },
-      {
-        icon: <FiSearch aria-hidden="true" />,
-        title: "Keyword Research",
-        outcome: "Right targets",
-        tone: "gold",
-        left: "82%",
-        top: "28.5%",
-      },
-      {
-        icon: <FiLink2 aria-hidden="true" />,
-        title: "Citations",
-        outcome: "Consistent NAP",
-        tone: "blue",
-        left: "82%",
-        top: "71.5%",
-      },
-      {
-        icon: <FiStar aria-hidden="true" />,
-        title: "Review Growth",
-        outcome: "Chosen first",
-        tone: "gold",
-        left: "50%",
-        top: "93%",
-      },
-      {
-        icon: <FiFileText aria-hidden="true" />,
-        title: "Local Pages",
-        outcome: "Rank per area",
-        tone: "blue",
-        left: "18%",
-        top: "71.5%",
-      },
-      {
-        icon: <RiLineChartLine aria-hidden="true" />,
-        title: "Tracking",
-        outcome: "Proof monthly",
-        tone: "gold",
-        left: "18%",
-        top: "28.5%",
-      },
-    ],
-    chipsLabel: "Ranking local New York businesses in",
+    eyebrow: "",
+    h2: "",
+    lead: null,
+    coreStrong: "",
+    coreSub: "",
+    coreCta: "",
+    nodes: [],
+    chipsLabel: "Industries we rank on Google Maps",
     chips: [
       "Home Services",
-      "Healthcare & Dental",
-      "Legal & Financial",
+      "Dentists & Doctors",
+      "Law Firms",
       "Restaurants & Cafés",
-      "Salons & Wellness",
-      "Auto & Repair",
-      "Retail Storefronts",
-      "Trades & Contractors",
+      "Beauty & Wellness",
+      "Auto Repair",
+      "Retail Shops",
+      "Contractors",
     ],
   },
+  marquee: [],
+  results: { eyebrow: "", h2: "", cards: [] },
+  grow: { eyebrow: "", h2: "", lead: null, cards: [] },
   faqs: {
-    eyebrow: "FAQs",
-    h2: "Straight Answers About Local SEO in New York City",
-    lead: "Pricing, timelines, boroughs, and what actually moves Map Pack rankings in NYC. If your question is not here, send it through the form — a strategist answers, not a sales script.",
-    cta: "Ask About Your Neighborhood",
+    eyebrow: "",
+    h2: "Local SEO in New York: Common Questions",
+    lead: "Timelines, pricing, ranking in several boroughs and AI answers.",
+    cta: "",
     items: NycSeoFaqs,
   },
-  grow: {
-    eyebrow: "Grow Further",
-    h2: "Rankings are Step One. Here is What Multiplies Them.",
-    lead: (
-      <>
-        Local SEO is one channel inside a bigger system — see the full{" "}
-        <Link href="/services/nyc/digital-marketing" className="phl-inline-link">
-          NYC marketing engine
-        </Link>{" "}
-        if you want every channel working together.
-      </>
-    ),
-    cards: [
-      {
-        href: "/local-seo-google-business-optimization",
-        icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-        title: "Google Business Profile Optimization",
-        desc: "Most local buyers pick straight from the map pack. We make sure that pick is you.",
-        cta: "Optimize your profile",
-      },
-      {
-        href: "/services/nyc/digital-marketing",
-        icon: <FiZap aria-hidden="true" />,
-        title: "NYC Digital Marketing",
-        desc: "SEO, ads, and web design as one borough-targeted program with one report.",
-        cta: "See the full program",
-      },
-      {
-        href: "/services/gbp-reinstatement-service",
-        icon: <FiBarChart2 aria-hidden="true" />,
-        title: "Profile Reinstatement",
-        desc: "Suspended listing? We file the appeal with the right evidence and get you back on the map.",
-        cta: "Get reinstated",
-      },
-    ],
-  },
   form: {
-    eyebrow: "Get Started",
-    h2: "Claim Your Free NYC Local SEO Audit",
-    lead: "Tell us about your business and we will send a full local visibility audit — rankings, profile, citations, reviews — plus a flat-price growth plan benchmarked against your actual neighborhood competitors.",
+    eyebrow: "",
+    h2: "Request a Free NYC Local SEO Audit",
+    lead: "Share your services and service area, and we’ll send a ranking audit by ZIP code with a plan to reach the top three.",
     formType: "nyc-local-seo",
     badge: "Free Audit",
-    title: "Get Your Free NYC Local SEO Audit",
+    title: "Get Your Free NYC Rankings Audit",
     subtitle:
-      "No contracts, no pressure — just a clear picture of where you rank today and what it takes to win your neighborhood.",
-    submitText: "Send My Free Audit",
+      "It takes about a minute. We’ll show where you rank today, block by block.",
+    submitText: "Send My Rankings Audit",
     messageLabel: "Tell us about your business",
     messagePlaceholder:
-      "Your services, the boroughs and neighborhoods you cover, and what you'd like to improve",
+      "Your services, the neighborhoods you serve and the searches you want to win",
     defaultServices: ["Local SEO"],
   },
   relatedCurrent: PAGE_PATH,
+};
+
+const extras: DelawareExtras = {
+  kind: "nyc-seo",
+  aboutTitle: ["Map Pack Results", "Change Every", "Few Blocks."],
+  aboutPhoto: {
+    src: "/images/nyc/nyc-local-seo-company-dashboard.webp",
+    alt: "NYC local SEO company dashboard showing Map Pack rankings across Manhattan neighborhoods",
+    // 4:3 image in a wide box: keep the title text at the top in view.
+    position: "50% 0%",
+  },
+  aboutCard: {
+    kicker: "Where we rank you",
+    title: "Top 3 across the boroughs",
+    points: [
+      "Manhattan, Midtown to Harlem",
+      "Brooklyn, Williamsburg to Bay Ridge",
+      "Queens, Astoria to Flushing",
+      "The Bronx and Staten Island",
+    ],
+    foot: "Rankings checked by ZIP code every month",
+  },
+  pillars: ["#be123c", "#d1fae5", "#ede9fe", "#164e63"],
+  features: {
+    h2: "Local SEO in NYC: What Puts You in the Map Pack",
+    lead: "Reach past your own block, categories chosen against rivals and markup Google can read.",
+    items: [
+      {
+        label: "Proximity",
+        title: "Stretch Your Reach Past Your Block",
+        body: "Google leans toward the business nearest each searcher, so many NYC shops rank only on their own street. We build the relevance and review strength that widens your top-three reach, block by block.",
+        points: [
+          { t: "Grid rank checks", d: "Positions mapped across the area." },
+          { t: "Local relevance", d: "Content tied to each neighborhood." },
+          { t: "Review strength", d: "More recent reviews than rivals." },
+          { t: "Reach tracking", d: "Coverage growth, month by month." },
+        ],
+        href: "#de-contact",
+        link: "Check my coverage",
+        ui: "blocks",
+      },
+      {
+        label: "Categories",
+        title: "Categories Chosen Against Your Rivals",
+        body: "Your primary category decides which searches you can appear for. We study what the top-ranked businesses on your streets use, add the missing secondary categories and services, and keep every field complete.",
+        points: [
+          { t: "Category research", d: "Benchmarked on local leaders." },
+          { t: "Services list", d: "Everything you offer, listed." },
+          { t: "Attributes", d: "Hours, access and payments." },
+          { t: "Monthly check", d: "Updated as Google adds options." },
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Google profile optimization",
+        ui: "categories",
+      },
+      {
+        label: "Markup",
+        title: "Schema That Tells Google Who You Are",
+        body: "LocalBusiness markup spells out your name, location, hours and service areas in a format search engines read. It supports your Map Pack listing and helps AI answers describe your business correctly.",
+        points: [
+          { t: "LocalBusiness schema", d: "On every key page." },
+          { t: "Service areas", d: "Boroughs and neighborhoods named." },
+          { t: "Hours and contact", d: "Kept in sync." },
+          { t: "Validated", d: "Tested after each change." },
+        ],
+        href: "/services/seo-services",
+        link: "Technical SEO services",
+        ui: "schema",
+      },
+    ],
+  },
+  platforms: {
+    h2: "Listed Right on Maps, Voice and AI",
+    lead: "New Yorkers look businesses up on Google Maps, Apple Maps and Waze, or simply ask Siri, Alexa or ChatGPT. We keep your listing accurate on every source those answers draw from.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Map apps",
+    rightLabel: "Voice and AI assistants",
+    centerIcon: <FiMapPin aria-hidden="true" />,
+    centerTitle: "Your listing",
+    centerSub: "accurate on every map",
+  },
+  pricing: {
+    title: "Local SEO Pricing for NYC Businesses",
+    lead: "Month-to-month local SEO plans, from a single storefront to several boroughs.",
+    compareTitle: "Compare NYC Local SEO Plans",
+    compareLead: "What each plan covers, line by line.",
+    addOnsTitle: "Add-Ons for NYC Local SEO",
+    addOnsLead: "Extra neighborhood pages, locations or citation work.",
+    customTitle: "Ranking more than one location?",
+    customText: "We’ll scope local SEO for every location and borough.",
+  },
+  phone: "voice",
+  darkUi: "insights",
+  scoreStyle: "dumbbell",
+  noGrow: true,
+  reviewsTitle: "Owners Who Trust Our Work",
+  contact: {
+    before: "Ready to Rank",
+    after: "in Your Neighborhood?",
+    lead: `List your services and the neighborhoods you want to win. You’ll get a free local SEO audit showing your rankings by ZIP code.`,
+  },
+  stepLinks: [
+    "#de-contact",
+    "/local-seo-google-business-optimization",
+    "/services/seo-services",
+    "/services/nyc/digital-marketing",
+  ],
 };
 
 function Page() {
@@ -715,19 +687,13 @@ function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(nycSeoFaqJsonLd) }}
       />
-      <PhlLocationLanding data={data} />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

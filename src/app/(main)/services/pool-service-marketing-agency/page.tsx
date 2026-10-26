@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
+import { IndustryTemplate } from "@/components/rd/industry/IndustryTemplate";
+import { CONTENT } from "@/components/rd/industry/content/pool-service-marketing-agency";
+import { IndustrySchema, draftMetadata } from "@/components/rd/industry/route";
 
-import IndustryMarketingPage from "@/app/components/IndustryMarketingPage";
-import { poolServiceMarketing } from "./pageData";
-import "@/app/style/industryMarketingPages.css";
+export const metadata = draftMetadata(CONTENT);
 
-export const metadata: Metadata = poolServiceMarketing.metadata;
-
-export default function PoolServiceMarketingAgencyPage() {
-  return <IndustryMarketingPage page={poolServiceMarketing.page} />;
+export default function Page() {
+  return (
+    <>
+      <IndustrySchema c={CONTENT} />
+      <IndustryTemplate c={CONTENT} />
+    </>
+  );
 }

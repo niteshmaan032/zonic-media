@@ -1,58 +1,68 @@
-# Pricing — Zonic Media (zonicllc.com)
+# Pricing: Zonic Media (zonicllc.com)
 
-Last updated: 2026-10-05
+Last updated: 2026-10-27
 
-All prices in US dollars. Plans are month-to-month after the initial scope; no long-term contract. Prices are "starting at" — the final quote depends on the number of locations and the market.
+All prices are in US dollars, per month unless noted. Plans can be billed monthly or annually; annual billing lowers the monthly price on Foundation and Authority. There is no long-term contract on monthly billing. Google Ads and Meta Ads spend is paid to the ad platform directly and is not part of the plan price. Human-readable version: https://www.zonicllc.com/pricing
 
-## Starter local SEO plan
-- Price: $297 per month, starting at
-- Who it is for: For single-location businesses in lighter markets — get the local foundation right.
+## Foundation plan
+- Price: $197 per month billed annually, or $297 per month billed monthly
+- For: solo owners and new businesses building local visibility
 - Includes:
-  - Google Business Profile optimization
-  - Local keyword targeting
-  - On-page fixes for key pages
-  - Citation audit & cleanup
-  - Review strategy setup
-  - Rank tracking & monthly report
+  - Google Business Profile audit and optimization
+  - Monthly profile maintenance
+  - 4 Google Business Profile posts per month
+  - On-page SEO for up to 3 existing pages (up to 5 keywords)
+  - NAP audit and citation audit of up to 20 directories
+  - Review monitoring and response guidance
+  - Monthly performance summary
 
-## Growth local SEO plan
-- Price: $750 per month, starting at
-- Who it is for: Everything in Starter plus the monthly work that builds rankings you keep.
-- Includes:
-  - Everything in Starter
-  - Monthly service & location pages
-  - Active review generation
-  - GBP posts & Q&A every month
-  - Local link building
-  - Competitor tracking & reviews
+## Growth plan (most popular)
+- Price: $750 per month
+- For: established businesses ready to generate more direct inquiries
+- Includes everything in Foundation, plus:
+  - Google Search Ads setup or restructuring (1 Google Ads account, up to 2 Search campaigns)
+  - Keyword and negative keyword management, geo-targeting, conversion tracking, weekly campaign checks
+  - Local SEO for up to 3 priority Google Business Profile locations
+  - Optimization of up to 10 existing pages per month
+  - Review workflow setup and monitoring
+  - Monthly lead and performance report, quarterly strategy review
 
-## Dominate local SEO plan
-- Price: $1,500 per month, starting at
-- Who it is for: For multi-location brands and crowded metros like Wilmington, Philly or NYC.
-- Includes:
-  - Everything in Growth, per location
-  - Location-page architecture
-  - Technical SEO & schema sitewide
-  - Digital PR & authority links
-  - Landing-page conversion work
-  - Call tracking by location
+## Authority plan
+- Price: $1,250 per month billed annually, or $1,500 per month billed monthly
+- For: multi-location teams and established firms
+- Includes everything in Growth, plus:
+  - Local SEO planning for up to 5 priority Google Business Profile locations
+  - Local Services Ads account setup
+  - Optimization of up to 8 existing pages per month
+  - Management of up to 2 social platforms, 8 social posts per month
+  - Editing of up to 4 short-form videos per month (client footage)
+  - Meta Ads management for up to 2 campaigns, where appropriate
+  - Quarterly website conversion audit, service-line expansion planning
+  - Monthly lead-source review, monthly strategy meeting and action plan
+
+## Add-ons (any plan)
+- New business website: from $1,000 one-time (typical build time 2 to 3 weeks)
+- Additional service-area landing page: $150 to $250 per page
+- Additional location SEO campaign: from $200 per month
+- Additional Google Ads campaign management: $150 to $300 per month
+- Additional social media content package: from $200 per month
+- Technical SEO or website migration: custom quote based on scope
+
+## Free website offer
+- A professional website is built at no cost when a business starts a qualifying marketing plan through one of the free-website offer pages (for example https://www.zonicllc.com/website-design-agency-us/offer). The offer pages state the qualifying plan and its term.
 
 ## Google Business Profile reinstatement
 - Flat fee quoted after a free suspension audit
-- "No Fix, No Charge": the reinstatement fee is only charged if the profile is reinstated
-- Typical resolution: 5 to 7 business days
+- No Fix, No Charge: the reinstatement fee is only charged if the profile is reinstated
+- Average resolution: 5 to 7 business days; complex cases can take longer
 
 ## Google Business Profile verification help
 - Flat fee quoted after a free review of the failed verification
 
-## Web design
-- Custom quote by scope. A standard small-business build is $2,000.
-- The build fee is waived when the site is started together with a qualifying monthly marketing plan (see the free-website offers linked from https://www.zonicllc.com/llms.txt).
-
-## Google Ads (PPC) management
-- Monthly management fee quoted by budget and number of campaigns; ad spend is paid to Google directly.
+## LaunchPad (new businesses)
+- One-time launch packages for brand-new businesses (brand, website, Google Business Profile and listings): https://www.zonicllc.com/services/launchpad
 
 ## Terms
-- Month-to-month engagements after the initial scope
-- All work done in-house in Dover, Delaware (no outsourcing)
+- Month-to-month on monthly billing; annual billing is optional
+- All work is done in-house by the Zonic Media team in Dover, Delaware
 - Contact: contact@zonicllc.com | +1-302-726-9736 | https://www.zonicllc.com/contact-us

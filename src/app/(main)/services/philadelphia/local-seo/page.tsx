@@ -1,80 +1,89 @@
 /*
- * PHILADELPHIA LOCAL SEO — rebuilt Aug 2026 on the shared Philadelphia landing
- * system (src/app/style/philadelphia/philaLanding.css, scoped .phl-page).
+ * REDESIGN DRAFT (23 Oct 2026) of /services/philadelphia/local-seo, in the Dallas–Fort Worth layout
+ * (src/components/rd/delaware/DelawareLanding.tsx, the same template as
+ * the Delaware drafts). Same schema and form type as the live page, which
+ * stays untouched; this route is noindex. This page's own UI: phlSeoUi.tsx.
  *
- * INTENT SPLIT — this page owns map-pack / Google-Business-Profile / "near me"
- * intent for Philadelphia and nothing broader. It links UP to the
- * /philadelphia/digital-marketing hub with a narrow anchor only, so it never
- * competes with the hub for "digital marketing agency Philadelphia".
+ * Copy re-optimized 24 Oct 2026 (docs/content-optimization-brief.md): fresh
+ * wording, verified numbers only.
+ * Live URL ranks for (Semrush US, Oct 2026): local pack seo services #20 ·
+ * philly seo firm #25 · seo firm philadelphia #33 · philadelphia seo
+ * companies #31 · philadelphia seo results #31 · seo company philadelphia
+ * #32 · philadelphia seo consulting #35 · seo marketing philadelphia #37.
+ * Volumes: seo company philadelphia 1,600 · philadelphia seo company 1,300 ·
+ * philadelphia seo 1,300 · seo philadelphia 1,000 · philadelphia seo
+ * services 880 · seo services philadelphia 720 · philadelphia seo agency 720 ·
+ * seo marketing philadelphia 590 · philadelphia search engine optimization
+ * 480 · local seo philadelphia 320 · philly seo 320 · seo consultant
+ * philadelphia 320 · local seo services philadelphia 260.
  *
- * IMAGES: every photo slot is a `.phl-ph` shimmer skeleton captioned with what
- * belongs there and at which ratio. Replace the skeleton div with
- * <Image src="..." alt="..." fill /> — `Image` is already imported and the
- * wrapper sets position/ratio/radius. Previous photos remain in
- * /public/images/philadelphia/phila-seo.
- *
- * LEADS: submits as "Local SEO" (on the ALLOWED_SERVICES whitelist).
+ * Hub structure kept from the live pages: digital-marketing owns the broad
+ * "digital marketing agency philadelphia" terms and links down to local-seo,
+ * ppc and sem; those link back with narrow anchors only.
  */
 
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import "@/app/style/philadelphia/philaLanding.css";
-import Footer from "@/app/components/Footer";
-import RelatedServices from "@/app/components/RelatedServices";
-import GmbFaqs from "@/app/components/GmbFaqs";
-import HashScrollLink from "@/app/components/HashScrollLink";
-import { SITE_CONTACT } from "@/shared/siteConfig";
+import Link from "next/link";
+import { DelawareLanding } from "@/components/rd/delaware/DelawareLanding";
+import type {
+  DelawareData,
+  DelawareExtras,
+} from "@/components/rd/delaware/types";
+import type { HubApp } from "@/components/rd/dfw-kit/hub";
 import {
   buildBreadcrumbJsonLd,
-  buildLocalBusinessJsonLd,
   SITE_URL,
 } from "@/shared/seoSchemas";
-import Image from "next/image";
-import Link from "next/link";
-import { FaStar } from "react-icons/fa";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FaMicrosoft } from "react-icons/fa";
 import {
-  FiArrowUpRight,
   FiBarChart2,
-  FiClock,
+  FiCpu,
   FiFileText,
   FiLink2,
-  FiMail,
   FiMapPin,
-  FiMessageCircle,
   FiPhoneCall,
   FiSearch,
+  FiShield,
   FiStar,
-  FiTrendingUp,
-  FiX,
+  FiTool,
   FiZap,
 } from "react-icons/fi";
-import { MdOutlineVerifiedUser } from "react-icons/md";
-import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
-
-// Code-split so the widget JavaScript loads after the hero has painted; the
-// server still renders its markup, so nothing changes for users or Google.
-const ClutchWidget = dynamic(() => import("@/app/components/ClutchWidget"));
-const ServiceLeadForm = dynamic(() => import("@/app/components/ServiceLeadForm"));
+import { RiSearchLine } from "react-icons/ri";
+import {
+  SiDuckduckgo,
+  SiGoogle,
+  SiGooglegemini,
+  SiOpenai,
+  SiPerplexity,
+  SiYoutube,
+} from "react-icons/si";
 
 const PAGE_PATH = "/services/philadelphia/local-seo";
 
 export const metadata: Metadata = {
-  title: { absolute: "Philadelphia SEO Company | SEO Services & Local SEO Agency" },
+  title: {
+    absolute: "Philadelphia SEO Company | Local SEO Services & SEO Firm",
+  },
   description:
-    "Philadelphia SEO company and local SEO agency: SEO services, Google Business Profile and Map Pack rankings that turn Philly searches into calls. Free audit.",
+    "Philadelphia SEO company for local SEO, Google Maps rankings and content that turns Philly searches into calls. 1,500+ profiles optimized. Free SEO audit.",
   keywords: [
     "seo company philadelphia",
-    "best seo company in philadelphia",
-    "top seo companies in philadelphia",
-    "best seo agencies in philadelphia",
+    "philadelphia seo company",
+    "philadelphia seo",
+    "seo philadelphia",
     "philadelphia seo services",
+    "seo services philadelphia",
+    "philadelphia seo agency",
     "local seo philadelphia",
-    "seo agency philadelphia",
-    "philly seo company",
-    "small business seo company near me",
+    "local seo services philadelphia",
+    "philly seo",
+    "seo firm philadelphia",
+    "seo consultant philadelphia",
+    "seo marketing philadelphia",
+    "philadelphia search engine optimization",
   ],
   alternates: { canonical: PAGE_PATH },
+  // Redesign draft: keep it out of the index until it replaces the live page.
   openGraph: {
     images: [
       {
@@ -84,9 +93,9 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Best SEO Company in Philadelphia | Philly SEO Services",
+    title: "Philadelphia SEO Company | Philly Local SEO Services",
     description:
-      "Local SEO services in Philadelphia that win the Google map pack — profile optimization, citations, reviews, and neighbourhood pages that turn 'near me' searches into calls.",
+      "Local SEO for Philadelphia businesses: Google Business Profile work, neighborhood pages, local links and reviews that turn near-me searches into calls.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -97,13 +106,6 @@ const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Services", url: "/services" },
   { name: "Philadelphia SEO Company", url: PAGE_PATH },
 ]);
-
-// ProfessionalService node for this geo page (Aug 2026 SEO plan, action 10).
-const professionalServiceJsonLd = buildLocalBusinessJsonLd({
-  pageUrl: PAGE_PATH,
-  areaServed: { type: "City", name: "Philadelphia" },
-});
-
 
 // NOTE: never add aggregateRating to a Service schema — GSC flags it.
 const serviceJsonLd = {
@@ -190,49 +192,45 @@ const serviceJsonLd = {
 
 const PhilaSeoFaqs = [
   {
-    question: "What is local SEO and how is it different from regular SEO?",
+    question: "What does a Philadelphia SEO company do for a local business?",
     answer:
-      "Regular SEO chases national or informational rankings. Local SEO targets the searches that happen with buying intent nearby — 'plumber near me', 'best dentist Fishtown', 'emergency locksmith Center City' — and the map pack those searches produce. The ranking signals are different too: proximity, Google Business Profile completeness, citation consistency, and review velocity matter far more than raw backlink volume.",
+      "The right SEO agency Philadelphia businesses hire gets them found when nearby customers search for what they sell. That means a complete Google Business Profile, accurate listings, reviews, fast pages for each service and area, local links and clear tracking. Our in-house team handles all of it and reports the rankings and calls it produces each month.",
   },
   {
-    question: "What's included in your Philadelphia local SEO service?",
+    question: "Local SEO or regular SEO: which does my business need?",
     answer:
-      "Every campaign covers the full local ranking system: Google Business Profile optimization, citation building and cleanup, review growth, on-page SEO for your service and neighbourhood pages, local content, and a monthly report showing rankings, calls, and direction requests — not vanity metrics. Nothing is outsourced and you own every account we touch.",
+      "If customers come to you, or you travel to them, local SEO comes first. It targets nearby searches and the Map Pack, where distance, your profile, listings and reviews carry the most weight. Regular SEO aims at wider, informational searches. Many Philadelphia businesses need both, with local work leading.",
   },
   {
-    question: "How long does local SEO take to work in Philadelphia?",
+    question: "When will I see my Philadelphia rankings move?",
     answer:
-      "Most Philadelphia businesses see measurable movement within 60 to 90 days — better map pack visibility, more profile actions, and more calls from 'near me' searches. Dense, competitive neighbourhoods like Center City and University City take longer to fully dominate than outer neighbourhoods or suburban service areas, but the trajectory shows in the first monthly report either way.",
+      "Profile and Map Pack changes often show first, because Google picks up profile signals quickly. Competitive organic terms for the city and suburbs take longer and build with steady content and links. Your monthly report covers both, so you can watch early Maps gains while organic rankings climb.",
   },
   {
-    question: "How much does local SEO cost in Philadelphia?",
+    question: "How are your Philadelphia SEO plans priced?",
     answer:
-      "Pricing depends on how many locations you run, how competitive your category is, and how many neighbourhoods you want to rank in. After a free audit we quote a flat monthly price with the scope written out — no long-term contracts and no surprise line items. One location in a low-competition category costs meaningfully less than a multi-location push across the metro.",
+      "Our SEO plans are flat: $297, $750 or $1,500 each month, paid monthly with no annual lock-in. Which one fits depends on your locations, how competitive your trade is and how many neighborhoods you want to rank in. The free audit recommends a plan before you commit to anything.",
   },
   {
-    question: "Do you guarantee first-page Google rankings?",
+    question:
+      "Can one business rank across Center City, the Northeast and the suburbs?",
     answer:
-      "Our track record speaks for itself — most clients reach top-three map pack positions for their core terms, and every campaign is built on the exact signals Google rewards. Because Google's results change daily, no honest agency can promise a fixed position, so we guarantee what we can control: full transparency. You see exactly where you rank, what improved, and what we did each month, with no long-term contract holding you there.",
+      "Yes, with the right setup. Map results lean heavily on distance, so one profile will not rank equally in Port Richmond, Roxborough and Conshohocken. We build area pages, set your profile's service areas and earn local signals in each part of your footprint, then track rankings by ZIP code.",
   },
   {
-    question: "Can you rank me in multiple Philadelphia neighbourhoods?",
+    question: "Can any SEO company promise the #1 spot on Google?",
     answer:
-      "Yes, and this is where most local SEO campaigns fall down. Map pack rankings are heavily proximity-based, so a single profile will not rank equally across South Philly, Manayunk, and King of Prussia. We build service-area and neighbourhood pages, tune the profile's service areas, and grow location-relevant signals so you show up across the footprint you actually cover.",
+      "No honest one can, because Google changes results constantly and controls the ranking. What we promise is the work and the proof: a written plan, the tasks done each month, and rankings, calls and direction requests reported openly. There is no long contract, so we keep earning your business.",
   },
   {
-    question: "What if my Google Business Profile gets suspended?",
+    question: "Can you reinstate a suspended Philadelphia Business Profile?",
     answer:
-      "It happens more than people expect, especially for service-area businesses and after an address or category change. We handle reinstatements as part of the engagement — see our dedicated Google Business Profile reinstatement service. The faster it is filed with the right evidence, the better the outcome, so tell us the day it happens rather than waiting.",
+      "Yes. Our reinstatement team has brought back 900+ suspended profiles. We find the likely cause, gather the right evidence and file the appeal, then fix whatever triggered the suspension so it is less likely to happen again. Tell us the day it happens; quick, well-documented appeals tend to go better.",
   },
   {
-    question: "Do I need local SEO if I already run Google Ads?",
+    question: "Will SEO help me show up in ChatGPT and AI Overviews?",
     answer:
-      "They work best together. Ads buy the top of the page today; local SEO earns the map pack and organic positions that keep producing after you stop paying per click. Many clients start on ads for immediate flow, then shift budget toward local SEO as rankings take hold and cost per lead drops.",
-  },
-  {
-    question: "How long does SEO take to work for a Philadelphia business?",
-    answer:
-      "Google Business Profile and Map Pack improvements typically show within 4 to 8 weeks in Philadelphia because profile signals update quickly. Competitive organic keywords for the city and the suburbs take 3 to 6 months of consistent content and links. Zonic Media reports both tracks every month so you can see the Map Pack gains while the organic rankings build.",
+      "Yes. AI tools build their answers from pages that explain your services plainly, structured data, steady business facts and what reviews say about you. The same work that lifts your Google rankings feeds those answers, so we build it into every SEO plan rather than selling it separately.",
   },
 ];
 
@@ -250,308 +248,478 @@ const philaSeoFaqJsonLd = {
   })),
 };
 
-const HeroStats = [
-  {
-    icon: <FiTrendingUp aria-hidden="true" />,
-    num: "50+",
-    label: "Local businesses ranked",
-  },
-  {
-    icon: <FaStar aria-hidden="true" />,
-    num: "4.9/5",
-    label: "Average client rating on Clutch",
-  },
-  {
-    icon: <FiClock aria-hidden="true" />,
-    num: "60–90",
-    label: "Days to measurable movement",
-  },
-  {
-    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    num: "100%",
-    label: "In-house — nothing outsourced",
-  },
+/* ---------------------------------------------------------------- content */
+
+const CHIPS_LABEL = "Ranking Philadelphia businesses in";
+
+const hubLeft: HubApp[] = [
+  { icon: SiGoogle, name: "Google Search", tone: "google" },
+  { icon: FaMicrosoft, name: "Bing", tone: "bing" },
+  { icon: SiDuckduckgo, name: "DuckDuckGo", tone: "duckduckgo" },
+  { icon: SiYoutube, name: "YouTube search", tone: "youtube" },
+];
+const hubRight: HubApp[] = [
+  { icon: SiOpenai, name: "ChatGPT", tone: "openai" },
+  { icon: SiGooglegemini, name: "Gemini", tone: "gemini" },
+  { icon: SiPerplexity, name: "Perplexity", tone: "perplexity" },
+  { icon: FiCpu, name: "Google AI Overviews", tone: "indigo" },
 ];
 
-const AboutChecks = [
-  "Map pack ranking strategy",
-  "Profile fully optimized",
-  "Citations cleaned & built",
-  "Reviews growing weekly",
-];
-
-const ServiceCards = [
-  {
-    tone: "blue",
-    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Google Business Profile Optimization",
-    desc: (
+const data: DelawareData = {
+  hero: {
+    eyebrow: "",
+    h1Start: "Philadelphia SEO Company for",
+    h1Highlight: "Local SEO, Map Rankings and More Calls",
+    sub: "Zonic Media is an SEO company for Philadelphia businesses. Our in-house team handles local SEO, Google Business Profile work, technical fixes, content and links that move you up Google search and the Map Pack, one neighborhood at a time.",
+    media: {
+      src: "/images/philadelphia/phila-seo/philadelphia-local-seo-workstation.webp",
+      alt: "Philadelphia local SEO workstation with rankings on screen",
+    },
+    floatA: { strong: "", text: "" },
+    floatB: { strong: "", text: "" },
+    // Growth outcomes and verified figures only (owner, 24 Oct 2026).
+    stats: [
+      {
+        icon: <FiMapPin aria-hidden="true" />,
+        num: "Top 3",
+        label: "On Google Maps in the areas you serve",
+      },
+      // Not shown: the template's Google rating card takes this slot.
+      {
+        icon: <FiStar aria-hidden="true" />,
+        num: "5.0",
+        label: "Google rating",
+      },
+      {
+        icon: <FiShield aria-hidden="true" />,
+        num: "900+",
+        label: "Suspended Google profiles reinstated",
+      },
+      {
+        icon: <FiPhoneCall aria-hidden="true" />,
+        num: "1,500+",
+        label: "Business profiles tuned for Maps",
+      },
+    ],
+    proof: "",
+    cta: "See Where My Business Ranks",
+  },
+  about: {
+    eyebrow: "Philadelphia local SEO",
+    h2Start: "Philly SEO Built One Neighborhood",
+    h2Highlight: "at a Time.",
+    leads: [
       <>
-        Your profile is the new homepage for local search. We optimize every
-        field, category, photo, service, and post — the same system behind our{" "}
-        <Link href="/local-seo-google-business-optimization" className="phl-inline-link">
-          GBP optimization service
+        Google ranks local results by distance, relevance and prominence, so a
+        single citywide page rarely wins everywhere. We build pages, listings
+        and profile signals for each Philadelphia neighborhood you serve.
+      </>,
+      <>
+        You get a named SEO consultant, a flat monthly plan and a report showing
+        rankings by ZIP code and the calls they bring. Add our{" "}
+        <Link href="/services/philadelphia/ppc" className="phl-inline-link">
+          Philadelphia PPC management
         </Link>{" "}
-        — so Google trusts it and Philadelphians choose it.
-      </>
-    ),
+        when you need leads while rankings build.
+      </>,
+    ],
+    checks: [],
+    collageA: {
+      src: "/images/philadelphia/phila-seo/philadelphia-near-me-search.webp",
+      alt: "Customer running a near-me search for a Philadelphia business on a phone",
+    },
+    collageB: {
+      src: "/images/philadelphia/phila-seo/philadelphia-map-pack-rankings.webp",
+      alt: "Google Map Pack rankings for Philadelphia neighborhoods on a laptop",
+    },
+    badgeText: "Philadelphia SEO Company • Zonic Media •",
   },
-  {
-    tone: "gold",
-    icon: <FiSearch aria-hidden="true" />,
-    title: "Local Keyword & Competitor Research",
-    desc: "We map what your customers actually type, neighbourhood by neighbourhood, and audit who currently owns those results — then build the plan that takes those positions off them.",
+  services: {
+    eyebrow: "",
+    h2: "Philadelphia SEO Services That Bring Calls",
+    lead: "The monthly work that moves rankings, done by our in-house team and reported in calls as well as positions.",
+    cards: [
+      {
+        tone: "blue",
+        icon: <FiMapPin aria-hidden="true" />,
+        title: "Google Maps & Map Pack SEO",
+        desc: "Win the Map Pack across Philly neighborhoods with a complete Google Business Profile, matching listings and steady reviews.",
+        points: [
+          "Categories and photos set",
+          "Listings matched everywhere",
+          "Reviews asked after each job",
+        ],
+        href: "/local-seo-google-business-optimization",
+        link: "Profile optimization",
+      },
+      {
+        tone: "gold",
+        icon: <FiTool aria-hidden="true" />,
+        title: "Technical SEO Fixes",
+        desc: "Clear the speed, crawl and markup issues holding good pages back, so Google can read and rank every page.",
+        points: [
+          "Core Web Vitals on mobile",
+          "Crawl errors and redirects",
+          "Schema on every page",
+        ],
+        href: "#de-contact",
+        link: "Request a technical audit",
+      },
+      {
+        tone: "blue",
+        icon: <FiFileText aria-hidden="true" />,
+        title: "Pages for Each Neighborhood and Service",
+        desc: "A page for each service and Philadelphia neighborhood you want to win, written around what people there search.",
+        points: [
+          "A keyword for every page",
+          "Local proof on each page",
+          "Pages linked together",
+        ],
+        href: "/services/local-seo-for-home-services",
+        link: "SEO for home service businesses",
+      },
+      {
+        tone: "gold",
+        icon: <FiLink2 aria-hidden="true" />,
+        title: "Links From Philly Websites",
+        desc: "Earn links from Philadelphia news sites, associations and directories that show Google you are a trusted local business.",
+        points: [
+          "Local news and blog mentions",
+          "Association and chamber links",
+          "No paid link schemes",
+        ],
+        href: "/services/seo-services",
+        link: "SEO services",
+      },
+      {
+        tone: "blue",
+        icon: <FiCpu aria-hidden="true" />,
+        title: "Content for AI Answers",
+        desc: "Answer-first content and structured data so Google AI Overviews and ChatGPT can name your business.",
+        points: [
+          "Answer-first FAQs",
+          "FAQ and service schema",
+          "Matching facts everywhere",
+        ],
+        href: "/services/ai-seo-services",
+        link: "AI SEO services",
+      },
+      {
+        tone: "gold",
+        icon: <FiBarChart2 aria-hidden="true" />,
+        title: "Monthly SEO Reports",
+        desc: "One plain-English report each month: rankings by ZIP code, calls, direction requests and the next steps.",
+        points: [
+          "Rankings by neighborhood",
+          "Leads from organic search",
+          "Next month's plan in writing",
+        ],
+        href: "/services/philadelphia/sem",
+        link: "Pair SEO with paid search",
+      },
+    ],
   },
-  {
-    tone: "blue",
-    icon: <FiLink2 aria-hidden="true" />,
-    title: "Citations & Listing Management",
-    desc: "Consistent name, address, and phone across every directory Google cross-checks. We fix the wrong ones, build the missing ones, and keep them synced when you move or rebrand.",
-  },
-  {
-    tone: "gold",
-    icon: <FiStar aria-hidden="true" />,
-    title: "Review Growth & Reputation",
-    desc: "A steady stream of real reviews from real customers, with responses that show Google — and the next person comparing three businesses on their phone — that somebody is home.",
-  },
-  {
-    tone: "blue",
-    icon: <FiFileText aria-hidden="true" />,
-    title: "Neighbourhood & Service-Area Pages",
-    desc: (
+  band: {
+    eyebrow: "",
+    h2: "Rankings Measured Against Your Real Competitors",
+    leads: [
       <>
-        Pages built around real local searches for the neighbourhoods you cover,
-        with schema and internal links that make each one easier to rank —
-        backed by conversion-first{" "}
-        <Link href="/services/web-design" className="phl-inline-link">
-          website design
-        </Link>{" "}
-        when the site itself is the bottleneck.
-      </>
-    ),
-  },
-  {
-    tone: "gold",
-    icon: <RiLineChartLine aria-hidden="true" />,
-    title: "Tracking & Monthly Reporting",
-    desc: "Rankings, calls, direction requests, and form fills in one plain-English report. You always know what we did, what moved, and what is next.",
-  },
-];
-
-const ChannelBars = [
-  { label: "Map pack visibility", val: 92, tone: "blue" },
-  { label: "Profile completeness", val: 97, tone: "gold" },
-  { label: "Citation accuracy", val: 95, tone: "blue" },
-  { label: "Review velocity", val: 78, tone: "gold" },
-];
-
-const ResultCards = [
-  {
-    icon: <FiPhoneCall aria-hidden="true" />,
-    industry: "Home services · South Philly",
-    metric: "+212%",
-    label: "Calls from the map pack",
-    desc: (
+        We track your visibility against the businesses you actually compete
+        with, so you can see the month you pass them and which searches moved.
+      </>,
       <>
-        From page-two invisibility to top-three positions for &lsquo;near
-        me&rsquo; searches across every neighbourhood the business covers,
-        inside one quarter — the same system as our{" "}
+        Want ads and social in the same plan? See our{" "}
         <Link
-          href="/services/local-seo-for-home-services"
+          href="/services/philadelphia/digital-marketing"
           className="phl-inline-link"
         >
-          local SEO for home services program
-        </Link>{" "}
-        and our national{" "}
-        <Link href="/services/seo-services" className="phl-inline-link">
-          local SEO services
+          full-service marketing plan
         </Link>
-        .
-      </>
-    ),
-  },
-  {
-    icon: <RiSearchLine aria-hidden="true" />,
-    industry: "Dental practice · Center City",
-    metric: "Top 3",
-    label: "Map pack for every core term",
-    desc: "A profile rebuild, citation cleanup, and steady review growth moved the practice from #12 into the top three in one of the city's most contested categories.",
-  },
-  {
-    icon: <FiMapPin aria-hidden="true" />,
-    industry: "Multi-location retail · Metro",
-    metric: "6×",
-    label: "Neighbourhoods ranking top three",
-    desc: "Individual location pages and per-branch profile tuning took a single-neighbourhood business to top-three visibility across six separate service areas.",
-  },
-];
-
-const ShowcaseFloats = [
-  { num: "187", label: "Average reviews earned" },
-  { num: "#1", label: "Map pack across 8 Philly ZIPs" },
-  { num: "+86%", label: "Direction requests" },
-];
-
-const CompareThem = [
-  "Set-and-forget profile, updated quarterly at best",
-  "Reports full of impressions, empty of phone calls",
-  "Offshore link packages and duplicate citations",
-  "One account manager for 80 clients",
-  "12-month contracts before you see a single lead",
-];
-
-const CompareUs = [
-  "Profile worked weekly — posts, photos, Q&A, categories",
-  "Reporting tied to calls, direction requests, and forms",
-  "Hand-built citations and local links that compound",
-  "A dedicated strategist who knows the Philly market",
-  "Month-to-month — we keep you with results, not paperwork",
-];
-
-const ScoreRows = [
-  { label: "Profile strength", before: 32, after: 93 },
-  { label: "Citation accuracy", before: 39, after: 96 },
-  { label: "Review velocity", before: 21, after: 78 },
-  { label: "Map pack visibility", before: 17, after: 86 },
-];
-
-const WhyCards = [
-  {
-    icon: <RiSearchLine aria-hidden="true" />,
-    title: "Local is the whole practice",
-    desc: (
-      <>
-        We are not a generalist agency dabbling in maps. Local rankings, local
-        calls, and booked jobs for local businesses is what the{" "}
-        <Link href="/" className="phl-inline-link">
-          Zonic Media
+        . If a suspension ever takes your listing down, our{" "}
+        <Link
+          href="/services/gbp-reinstatement-service"
+          className="phl-inline-link"
+        >
+          Google Business Profile reinstatement
         </Link>{" "}
-        team does every day.
-      </>
-    ),
+        team handles the appeal for you.
+      </>,
+    ],
+    cta: "Check Where I Rank",
+    // Example UI: labels only, no invented results.
+    console: {
+      title: "Search visibility",
+      tag: "Tracked monthly",
+      metrics: [
+        { strong: "Top 3", label: "Map Pack target" },
+        { strong: "ZIP", label: "Rank checks by area" },
+        { strong: "Calls", label: "From your profile" },
+      ],
+      barsLabel: "",
+      bars: [],
+      pills: [],
+    },
   },
-  {
-    icon: <FiZap aria-hidden="true" />,
-    title: "Fast, Compounding Execution",
-    desc: "Foundation fixes ship in the first weeks, not the first quarter. Profile, citations, and on-page work stack month over month rather than resetting.",
+  process: {
+    eyebrow: "",
+    h2: "How We Climb Philadelphia Rankings",
+    steps: [
+      {
+        tag: "Week 1",
+        title: "Rankings and Site Audit",
+        desc: "We crawl your site, check rankings across Philly ZIP codes, review your profile and competitors, and send a ranked plan.",
+      },
+      {
+        tag: "Weeks 2–4",
+        title: "Match Keywords to Areas",
+        desc: "Each service and neighborhood gets its target search, and the audit's technical fixes go live first.",
+      },
+      {
+        tag: "Monthly",
+        title: "Publish Pages, Earn Links",
+        desc: "New neighborhood pages, answer-first content and local links each month, with reviews and profile posts alongside.",
+        chips: ["Area pages", "Local links", "Profile posts"],
+      },
+      {
+        tag: "Ongoing",
+        title: "Build on What Ranks",
+        desc: "Rankings by ZIP code every month, with the next pages chosen from what Search Console shows is working.",
+        chips: ["ZIP rankings", "Search Console", "Next pages"],
+      },
+    ],
+    visualTitle: "",
+    visualBars: [],
+    ctaPrimary: "Get a Free Philly SEO Audit",
   },
-  {
-    icon: <FiBarChart2 aria-hidden="true" />,
-    title: "Transparent to a Fault",
-    desc: "You own every account and asset. You see every change in the monthly report. If a number dips you hear it from us first, with the fix already moving.",
+  showcase: undefined,
+  compare: {
+    h2: "Philly SEO Done In-House vs. Farmed Out",
+    lead: "What changes when the team you hire does the work itself.",
+    themTitle: "Farmed-Out SEO",
+    themSub: "Where rankings stall",
+    them: [
+      "Profile touched once a quarter",
+      "Rank reports with no call data",
+      "Bulk offshore link packages",
+      "One manager juggling many clients",
+      "A year-long contract",
+    ],
+    usTitle: "Philly SEO by Zonic Media",
+    usSub: "Worked weekly, reported in calls",
+    us: [
+      "Profile worked every week",
+      "Reports on calls and directions",
+      "Hand-earned local links",
+      "A consultant who knows Philly",
+      "Flat plans with no hidden fees",
+    ],
+    scoreTitle: "Sample Local SEO Check",
+    scoreSub: "Scores shown for illustration",
+    scoreRows: [
+      { label: "Profile strength", before: 30, after: 91 },
+      { label: "Listing accuracy", before: 41, after: 95 },
+      { label: "Review pace", before: 22, after: 77 },
+      { label: "Map Pack reach", before: 18, after: 84 },
+    ],
   },
-];
+  why: {
+    h2: "An SEO Agency in Philadelphia That Shows Its Work",
+    lead: "Rankings are the outcome. What you pay for is the work, the plan and a team that reports honestly.",
+    cards: [
+      {
+        icon: <RiSearchLine aria-hidden="true" />,
+        title: "Local SEO, in-house",
+        desc: "Every task done by our own team, with nothing outsourced.",
+      },
+      {
+        icon: <FiZap aria-hidden="true" />,
+        title: "Plans with set prices",
+        desc: "Set at $297, $750 or $1,500, scoped after a free audit.",
+      },
+      {
+        icon: <FiBarChart2 aria-hidden="true" />,
+        title: "Ranks by ZIP code",
+        desc: "See where you rank across Philadelphia each month.",
+      },
+    ],
+    banner: {
+      eyebrow: "",
+      h3: "Check Your Rankings in Every Philly Neighborhood",
+      p: "We check your rankings across Philadelphia ZIP codes, review your profile and your top local competitors, and show the quickest route into the top three, with no obligation.",
+      checks: [
+        "Map Pack gaps by ZIP code",
+        "Profile fixes ranked by impact",
+        "Listings to clean up or add",
+        "A plan to grow reviews",
+      ],
+      cta: "Get My Free SEO Audit",
+      audit: {
+        title: "",
+        tag: "",
+        score: "90",
+        grade: "",
+        gradeDesc: "",
+        rows: [],
+      },
+    },
+  },
+  // Kept for the type; the platform hub takes the hub slot.
+  engine: {
+    eyebrow: "",
+    h2: "",
+    lead: null,
+    coreStrong: "",
+    coreSub: "",
+    coreCta: "",
+    nodes: [],
+    chipsLabel: CHIPS_LABEL,
+    chips: [
+      "Plumbing & HVAC",
+      "Dentists",
+      "Law Firms",
+      "Roofers",
+      "Med Spas",
+      "Contractors",
+      "Auto Shops",
+      "Cleaning Services",
+    ],
+  },
+  marquee: [],
+  results: { eyebrow: "", h2: "", cards: [] },
+  grow: { eyebrow: "", h2: "", lead: null, cards: [] },
+  faqs: {
+    eyebrow: "",
+    h2: "Philly SEO Questions We Hear Most",
+    lead: "Rankings, timing, pricing and AI search, answered.",
+    cta: "",
+    items: PhilaSeoFaqs,
+  },
+  form: {
+    eyebrow: "",
+    h2: "Request a Free Philadelphia SEO Audit",
+    lead: "Tell us your services and neighborhoods and we will send a full SEO audit and a flat monthly quote.",
+    formType: "philadelphia-local-seo",
+    badge: "Free Audit",
+    title: "Request your free Philly SEO audit",
+    subtitle:
+      "Find out how you rank right now and the steps to lead your neighborhood.",
+    submitText: "Send My Free Audit",
+    messageLabel: "Tell us about your business",
+    messagePlaceholder:
+      "Your services, the neighborhoods you want to rank in and your goals",
+    defaultServices: ["Local SEO"],
+  },
+  relatedCurrent: PAGE_PATH,
+};
 
-const BannerChecks = [
-  "Your map pack growth plan",
-  "Profile wins ready to unlock",
-  "Citation opportunities mapped",
-  "Review growth roadmap",
-];
-
-const AuditRows = [
-  { label: "Google Business Profile", flag: "A+ grade" },
-  { label: "Citations & listings", flag: "100% accurate" },
-  { label: "Review velocity", flag: "Ahead of top 3" },
-];
-
-const MarqueeItems = [
-  "Philadelphia Local SEO",
-  "Google Business Profile",
-  "Map Pack Rankings",
-  "Near Me Searches",
-  "Review Growth",
-  "Citation Building",
-  "Neighbourhood Pages",
-];
-
-// Centre point of each node on the orbit ellipse (centre 50%/50%, semi-axes
-// 37% × 43% — the figure .phl-engine-orbit draws). Collapses to a grid <992px.
-const EngineNodes = [
-  {
-    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Business Profile",
-    outcome: "Google trusts it",
-    tone: "blue",
-    left: "50%",
-    top: "7%",
+const extras: DelawareExtras = {
+  kind: "phl-seo",
+  aboutTitle: ["Philly SEO Built", "One Neighborhood", "at a Time."],
+  aboutPhoto: {
+    src: "/images/philadelphia/phila-seo/philadelphia-seo-company-dashboard.webp",
+    alt: "Philadelphia SEO company workspace with an SEO performance dashboard overlooking the skyline",
+    // 4:3 image in a wide box: keep the title text at the top in view.
+    position: "50% 0%",
   },
-  {
-    icon: <FiSearch aria-hidden="true" />,
-    title: "Keyword Research",
-    outcome: "Right targets",
-    tone: "gold",
-    left: "82%",
-    top: "28.5%",
+  aboutCard: {
+    kicker: "Local SEO, Philadelphia",
+    title: "Neighborhoods we rank",
+    points: [
+      "Center City and Old City",
+      "Fishtown and Northern Liberties",
+      "South Philly and University City",
+      "Manayunk and the Northeast",
+    ],
+    foot: "Managed by our in-house SEO team",
   },
-  {
-    icon: <FiLink2 aria-hidden="true" />,
-    title: "Citations",
-    outcome: "Consistent NAP",
-    tone: "blue",
-    left: "82%",
-    top: "71.5%",
+  pillars: ["#047857", "#fef9c3", "#e0f2fe", "#7c2d12"],
+  features: {
+    h2: "What Our SEO Company in Philadelphia Fixes First",
+    lead: "A page for every neighborhood, links that build trust and growth you can watch in Search Console.",
+    items: [
+      {
+        label: "Local pages",
+        title: "A Useful Page for Every Neighborhood",
+        body: "One citywide page cannot rank in Fishtown, Manayunk and South Philly at once. We build a genuinely useful page for each neighborhood and service you cover, then track where each one ranks.",
+        points: [
+          { t: "Area research", d: "What people there search." },
+          { t: "Unique pages", d: "Local detail, never copied text." },
+          { t: "Fast indexing", d: "Pages submitted and checked." },
+          { t: "Ranks per page", d: "Each page tracked on its own." },
+        ],
+        href: "/services/local-seo-for-home-services",
+        link: "Home-service SEO playbook",
+        ui: "pages",
+      },
+      {
+        label: "Authority",
+        title: "Links Philadelphia Sites Vouch For",
+        body: "Google trusts businesses that other local sites point to. We earn mentions from neighborhood news, business groups and trade directories, never from paid link farms.",
+        points: [
+          { t: "Local outreach", d: "Real sites in and around Philly." },
+          { t: "Clean profile", d: "Toxic links reviewed and disavowed." },
+          { t: "Steady pace", d: "New links each month." },
+          { t: "Authority tracked", d: "Growth shown in the report." },
+        ],
+        href: "/services/seo-services",
+        link: "SEO services",
+        ui: "links",
+      },
+      {
+        label: "Growth",
+        title: "Search Console Clicks Heading Up",
+        body: "Rankings matter only when they bring visitors. We track clicks, impressions and the queries behind them in Google Search Console, and plan the next pages around what is working.",
+        points: [
+          { t: "Search Console data", d: "Clicks and impressions monthly." },
+          { t: "Query research", d: "New pages from real searches." },
+          { t: "Title rewrites", d: "Snippets written to earn clicks." },
+          { t: "Calls tracked", d: "Visits tied to leads." },
+        ],
+        href: "/services/web-design",
+        link: "Web design",
+        ui: "gsc",
+      },
+    ],
   },
-  {
-    icon: <FiStar aria-hidden="true" />,
-    title: "Review Growth",
-    outcome: "Chosen first",
-    tone: "gold",
-    left: "50%",
-    top: "93%",
+  platforms: {
+    h2: "Seen on Google, Bing and AI Assistants",
+    lead: "People search Google, Bing and DuckDuckGo, and ask ChatGPT, Gemini and Perplexity for recommendations. We structure your site and profile so each of them can find, trust and cite your business.",
+    left: hubLeft,
+    right: hubRight,
+    leftLabel: "Search engines",
+    rightLabel: "AI assistants",
+    centerIcon: <FiSearch aria-hidden="true" />,
+    centerTitle: "Your website",
+    centerSub: "readable by every engine",
   },
-  {
-    icon: <FiFileText aria-hidden="true" />,
-    title: "Local Pages",
-    outcome: "Rank per area",
-    tone: "blue",
-    left: "18%",
-    top: "71.5%",
+  pricing: {
+    title: "SEO Plans for Philadelphia Businesses",
+    lead: "Flat monthly SEO plans for Philly, from Map Pack basics to multi-location growth.",
+    compareTitle: "Compare Philly SEO Plans",
+    compareLead: "What each plan includes, line by line.",
+    addOnsTitle: "SEO Add-Ons",
+    addOnsLead:
+      "Extra neighborhood pages, locations or technical work as you need it.",
+    customTitle: "Ranking several Philly locations?",
+    customText: "Tell us your locations and we will scope local SEO for each.",
   },
-  {
-    icon: <RiLineChartLine aria-hidden="true" />,
-    title: "Tracking",
-    outcome: "Proof monthly",
-    tone: "gold",
-    left: "18%",
-    top: "28.5%",
+  phone: "serp",
+  darkUi: "visibility",
+  scoreStyle: "table",
+  noGrow: true,
+  reviewsTitle: "Hear It From Our Clients",
+  contact: {
+    before: "Ready to Rank",
+    after: "Higher Across Philly?",
+    lead: `Tell us your services and neighborhoods. We will audit your rankings, site and profile for free and send a flat monthly quote.`,
   },
-];
-
-const IndustryChips = [
-  "Home Services",
-  "Healthcare & Dental",
-  "Legal & Financial",
-  "Restaurants & Cafés",
-  "Salons & Wellness",
-  "Auto & Repair",
-  "Retail Storefronts",
-  "Trades & Contractors",
-];
-
-const GrowCards = [
-  {
-    href: "/local-seo-google-business-optimization",
-    icon: <MdOutlineVerifiedUser aria-hidden="true" />,
-    title: "Google Business Profile Optimization",
-    desc: "Most local buyers pick straight from the map pack. We make sure that pick is you.",
-    cta: "Optimize your profile",
-  },
-  {
-    href: "/services/philadelphia/ppc",
-    icon: <FiZap aria-hidden="true" />,
-    title: "PPC & Google Ads",
-    desc: "Pair organic map rankings with paid coverage and own the whole results page.",
-    cta: "See PPC",
-  },
-  {
-    href: "/services/gbp-reinstatement-service",
-    icon: <FiBarChart2 aria-hidden="true" />,
-    title: "Profile Reinstatement",
-    desc: "Suspended listing? We file the appeal with the right evidence and get you back on the map.",
-    cta: "Get reinstated",
-  },
-];
+  stepLinks: [
+    "#de-contact",
+    "/services/seo-services",
+    "/services/local-seo-for-home-services",
+    "/services/philadelphia/sem",
+  ],
+};
 
 function Page() {
   return (
@@ -562,1035 +730,13 @@ function Page() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(professionalServiceJsonLd),
-        }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(philaSeoFaqJsonLd) }}
       />
-
-      <div className="phl-page">
-        <main>
-          {/* 1. Hero */}
-          <section className="phl-hero">
-            <div className="phl-container">
-              <div className="phl-hero-grid">
-                <div className="phl-hero-copy">
-                  <p className="phl-eyebrow">SEO Company in Philadelphia</p>
-                  <h1 className="phl-h1">
-                    The Philadelphia SEO Company That Wins the{" "}
-                    <span className="phl-hl">Map Pack</span>
-                  </h1>
-                  <p className="phl-hero-sub">
-                    Zonic Media is a Philadelphia SEO company and local SEO agency for businesses that need calls, not charts. Our SEO services in Philadelphia cover the whole ranking system —
-                    Google Business Profile, on-page SEO, citations, reviews,
-                    and neighbourhood pages — so when somebody in Philly
-                    searches, the business they call is yours.
-                  </p>
-
-                  <div className="phl-hero-badges" aria-label="Partner badges">
-                    {/* Self-hosted Clutch badge — the live iframe embed sits
-                        behind a Cloudflare challenge and breaks randomly. */}
-                    <a
-                      href="https://clutch.co/profile/zonic-media?badge=11431"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="phl-hero-badge"
-                        width={74}
-                        height={74}
-                        src="/images/clutch-top-company-2026.png"
-                        alt="Top Clutch Digital Marketing Company Delaware 2026"
-                      />
-                    </a>
-                    <Image
-                      className="phl-hero-badge"
-                      width={74}
-                      height={74}
-                      src="/images/Partner.png"
-                      alt="Yelp Advertising Partner"
-                    />
-                    <a
-                      href="https://www.trustpilot.com/review/zonicllc.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        className="phl-hero-badge-trustpilot"
-                        width={104}
-                        height={50}
-                        src="/images/trust-black.png"
-                        alt="Zonic Media reviews on Trustpilot"
-                      />
-                    </a>
-                  </div>
-
-                  <div className="phl-hero-ctas">
-                    <HashScrollLink
-                      href="#phl-form"
-                      className="phl-btn"
-                      offset={120}
-                    >
-                      Get Your Free Local SEO Audit
-                      <span className="phl-btn-circ">
-                        <FiArrowUpRight aria-hidden="true" />
-                      </span>
-                    </HashScrollLink>
-                    <a href={SITE_CONTACT.phoneHref} className="phl-btn-ghost">
-                      <FiPhoneCall aria-hidden="true" />
-                      Call {SITE_CONTACT.phoneDisplay}
-                    </a>
-                  </div>
-
-                  <div className="phl-hero-proof">
-                    <span className="phl-stars" aria-hidden="true">
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                      <FaStar />
-                    </span>
-                    <p>
-                      <strong>Rated 4.9/5</strong> by the local businesses we
-                      rank
-                    </p>
-                  </div>
-                </div>
-
-                <div className="phl-hero-visual">
-                  <div className="phl-hero-media">
-                    <Image
-                      src="/images/philadelphia/phila-seo/philadelphia-local-seo-workstation.webp"
-                      alt="Local SEO workstation displaying Philadelphia map-pack rankings and visibility growth"
-                      fill
-                      priority
-                      unoptimized
-                      sizes="(max-width: 991px) 92vw, 38vw"
-                    />
-                  </div>
-
-                  <div className="phl-hero-float phl-hero-float--a">
-                    <span className="phl-hero-float-icon">
-                      <FiMapPin aria-hidden="true" />
-                    </span>
-                    <p>
-                      <strong>#1 in the map pack</strong>
-                      &ldquo;near me&rdquo; searches in Philly
-                    </p>
-                  </div>
-
-                  <div className="phl-hero-float phl-hero-float--b">
-                    <span className="phl-hero-float-icon phl-hero-float-icon--gold">
-                      <FiStar aria-hidden="true" />
-                    </span>
-                    <p>
-                      <strong>+32 reviews</strong>
-                      earned this quarter
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="phl-hero-stats">
-                {HeroStats.map((stat) => (
-                  <div className="phl-stat" key={stat.label}>
-                    <span className="phl-stat-icon">{stat.icon}</span>
-                    <div>
-                      <p className="phl-stat-num">{stat.num}</p>
-                      <p className="phl-stat-label">{stat.label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 2. The local search opportunity */}
-          <section className="phl-about">
-            <div className="phl-container">
-              <div className="phl-about-grid">
-                <div className="phl-collage">
-                  <div className="phl-collage-a">
-                    <Image
-                      src="/images/philadelphia/phila-seo/philadelphia-near-me-search.webp"
-                      alt="Smartphone showing nearby Philadelphia businesses in local search"
-                      fill
-                      unoptimized
-                      sizes="(max-width: 991px) 72vw, 31vw"
-                    />
-                  </div>
-                  <div className="phl-collage-b">
-                    <Image
-                      src="/images/philadelphia/phila-seo/philadelphia-map-pack-rankings.webp"
-                      alt="Laptop displaying Philadelphia map-pack rankings and local visibility growth"
-                      fill
-                      unoptimized
-                      sizes="(max-width: 991px) 54vw, 23vw"
-                    />
-                  </div>
-                  <div className="phl-collage-badge" aria-hidden="true">
-                    <svg viewBox="0 0 120 120">
-                      <defs>
-                        <path
-                          id="phlBadgeCircle"
-                          d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"
-                        />
-                      </defs>
-                      <text>
-                        <textPath href="#phlBadgeCircle">
-                          Philadelphia Local SEO • Zonic Media •
-                        </textPath>
-                      </text>
-                    </svg>
-                    <span className="phl-collage-badge-icon">
-                      <FiMapPin aria-hidden="true" />
-                    </span>
-                  </div>
-                </div>
-
-                <div className="phl-about-copy">
-                  <p className="phl-eyebrow">The Local Search Opportunity</p>
-                  <h2 className="phl-h2">
-                    Three Results Get the Calls.{" "}
-                    <span className="phl-hl-text">
-                      We Make Sure One is Yours.
-                    </span>
-                  </h2>
-                  <p className="phl-lead">
-                    When a pipe bursts in Fishtown or somebody needs a dentist
-                    near Rittenhouse, the search happens on a phone and the
-                    decision happens in seconds. The map pack shows three
-                    businesses. Those three split almost all of the calls, and
-                    everyone below them competes for the leftovers. That is the
-                    single highest-intent channel a local Philadelphia business
-                    has — and the one most of them have never properly worked.
-                  </p>
-                  <p className="phl-lead">
-                    Our system captures it step by step: a fully optimized
-                    Google Business Profile, citations that agree with each
-                    other everywhere Google checks, reviews arriving steadily
-                    rather than in suspicious bursts, and neighbourhood pages
-                    built around the searches your customers actually type.
-                    Every signal Google rewards, worked every month — that is
-                    how local searches turn into calls that keep compounding.
-                  </p>
-
-                  <div className="phl-checks">
-                    {AboutChecks.map((check) => (
-                      <div className="phl-check" key={check}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {check}
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link href="/about" className="phl-btn">
-                    More About Zonic Media
-                    <span className="phl-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 3. Services */}
-          <section className="phl-services" id="phl-services">
-            <div className="phl-container">
-              <div className="phl-sec-head">
-                <div>
-                  <p className="phl-eyebrow">What&apos;s Included</p>
-                  <h2 className="phl-h2">
-                    Philadelphia SEO Services: Everything Your Local Rankings Need, in One System
-                  </h2>
-                </div>
-                <Link href="/services" className="phl-link-arrow">
-                  View all services <FiArrowUpRight aria-hidden="true" />
-                </Link>
-              </div>
-
-              <div className="phl-cards">
-                {ServiceCards.map((card) => (
-                  <article
-                    className={`phl-card phl-card--${card.tone}`}
-                    key={card.title}
-                  >
-                    <span className="phl-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <span className="phl-card-line" aria-hidden="true" />
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 4. Blue band + local visibility console */}
-          <section className="phl-band">
-            <div className="phl-band-grid">
-              <div className="phl-band-content">
-                <p className="phl-eyebrow">The Map Pack Is The Market</p>
-                <h2 className="phl-h2">
-                  Local SEO in Philadelphia That Puts You in the Top Three — And Keeps You There
-                </h2>
-                <p className="phl-lead">
-                  The map pack takes the majority of clicks and nearly all of
-                  the phone calls, and that is exactly where we specialize.
-                  Every campaign is built around one goal: earning the top spots
-                  for the services and neighbourhoods that pay you best, then
-                  defending them month after month — and when you want paid
-                  coverage planned alongside those rankings, our{" "}
-                  <Link
-                    href="/services/philadelphia/sem"
-                    className="phl-inline-link"
-                  >
-                    Philadelphia search engine marketing
-                  </Link>{" "}
-                  team runs both as one plan.
-                </p>
-                <p className="phl-lead">
-                  We work the signals Google actually rewards — proximity,
-                  relevance, and prominence. A fully built-out profile tells
-                  Google exactly what you do, consistent citations confirm you
-                  are who you say you are, and steady reviews plus local content
-                  prove customers rate you. If a listing ever gets suspended,
-                  our{" "}
-                  <Link
-                    href="/services/gbp-reinstatement-service"
-                    className="phl-inline-link"
-                  >
-                    Google Business Profile reinstatement
-                  </Link>{" "}
-                  team gets you back on the map fast.
-                </p>
-                <HashScrollLink
-                  href="#phl-form"
-                  className="phl-btn"
-                  offset={120}
-                >
-                  See Where You Rank Today
-                  <span className="phl-btn-circ">
-                    <FiArrowUpRight aria-hidden="true" />
-                  </span>
-                </HashScrollLink>
-              </div>
-
-              <div className="phl-console" aria-hidden="true">
-                <div className="phl-console-head">
-                  <h3>Local Visibility Console</h3>
-                  <span className="phl-console-tag">After 6 months</span>
-                </div>
-
-                <div className="phl-console-metrics">
-                  <div>
-                    <strong>284</strong>
-                    <span>Calls from profile</span>
-                  </div>
-                  <div>
-                    <strong>#1</strong>
-                    <span>Map pack rank</span>
-                  </div>
-                  <div>
-                    <strong>+86%</strong>
-                    <span>Direction requests</span>
-                  </div>
-                </div>
-
-                <p className="phl-console-sub">Ranking signal strength</p>
-                <div className="phl-console-bars">
-                  {ChannelBars.map((bar) => (
-                    <div className="phl-console-bar" key={bar.label}>
-                      <div className="phl-console-bar-head">
-                        <span>{bar.label}</span>
-                        <span>{bar.val}%</span>
-                      </div>
-                      <div className="phl-console-track">
-                        <span
-                          className={`phl-console-fill phl-console-fill--${bar.tone}`}
-                          style={{ width: `${bar.val}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="phl-console-foot">
-                  <span className="phl-console-pill">
-                    <FiMapPin />
-                    Center City · #1
-                  </span>
-                  <span className="phl-console-pill">
-                    <FiMapPin />
-                    Manayunk · #2
-                  </span>
-                  <span className="phl-console-pill">
-                    <FaStar />
-                    4.9 · 187 reviews
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 5. Process */}
-          <section className="phl-process" id="phl-process">
-            <div className="phl-container">
-              <div className="phl-sec-head">
-                <div>
-                  <p className="phl-eyebrow">How It Works</p>
-                  <h2 className="phl-h2">
-                    From Invisible to Unavoidable in Four Steps
-                  </h2>
-                </div>
-                <HashScrollLink
-                  href="#phl-form"
-                  className="phl-link-arrow"
-                  offset={120}
-                >
-                  Start with step one <FiArrowUpRight aria-hidden="true" />
-                </HashScrollLink>
-              </div>
-
-              <div className="phl-bento">
-                <article className="phl-bento-card phl-bento-card--s1">
-                  <div className="phl-bento-head">
-                    <span className="phl-bento-num" aria-hidden="true">
-                      01
-                    </span>
-                    <span className="phl-bento-tag">Week 1</span>
-                  </div>
-                  <h3>Free Local Visibility Audit</h3>
-                  <p>
-                    We audit your rankings, profile, citations, reviews, and
-                    competitors — and show you exactly where the calls you are
-                    missing are going instead.
-                  </p>
-                  <div className="phl-bento-visual" aria-hidden="true">
-                    <p className="phl-bento-visual-title">
-                      Where Philly clients typically land after 90 days
-                    </p>
-                    {[
-                      { label: "Profile strength", val: 93 },
-                      { label: "Citation accuracy", val: 96 },
-                      { label: "Review velocity", val: 78 },
-                    ].map((bar) => (
-                      <div className="phl-bento-bar-row" key={bar.label}>
-                        <div className="phl-bento-bar-head">
-                          <span>{bar.label}</span>
-                          <span>{bar.val}%</span>
-                        </div>
-                        <div className="phl-bento-bar-track">
-                          <span
-                            className="phl-bento-bar-fill"
-                            style={{ width: `${bar.val}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-
-                <article className="phl-bento-card phl-bento-card--s2">
-                  <div className="phl-bento-head">
-                    <span className="phl-bento-num" aria-hidden="true">
-                      02
-                    </span>
-                    <span className="phl-bento-tag">Weeks 2–4</span>
-                  </div>
-                  <h3>Strategy &amp; Foundation Fixes</h3>
-                  <p>
-                    A keyword-mapped plan for your services and neighbourhoods,
-                    then the foundation work: profile optimization, citation
-                    cleanup, and on-page fixes.
-                  </p>
-                </article>
-
-                <article className="phl-bento-card phl-bento-card--s3">
-                  <div className="phl-bento-head">
-                    <span className="phl-bento-num" aria-hidden="true">
-                      03
-                    </span>
-                    <span className="phl-bento-tag">Every month</span>
-                  </div>
-                  <h3>Build Authority Every Month</h3>
-                  <p>
-                    Local content, links, review growth, and profile activity —
-                    the compounding signals that move you up the map pack and
-                    keep you there.
-                  </p>
-                  <div className="phl-bento-chips">
-                    {["Local content", "Review growth", "Profile activity"].map(
-                      (chip) => (
-                        <span className="phl-bento-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ),
-                    )}
-                  </div>
-                  <HashScrollLink
-                    href="#phl-form"
-                    className="phl-btn phl-bento-cta"
-                    offset={120}
-                  >
-                    Start Ranking Today
-                    <span className="phl-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </article>
-
-                <article className="phl-bento-card phl-bento-card--s4">
-                  <div className="phl-bento-s4-copy">
-                    <div className="phl-bento-head">
-                      <span className="phl-bento-num" aria-hidden="true">
-                        04
-                      </span>
-                      <span className="phl-bento-tag">Ongoing</span>
-                    </div>
-                    <h3>Report, Refine, Expand</h3>
-                    <p>
-                      Monthly reporting tied to calls and direction requests,
-                      not vanity metrics. As rankings lock in, we expand to more
-                      services and more neighbourhoods.
-                    </p>
-                  </div>
-                  <div className="phl-bento-s4-side">
-                    <div className="phl-bento-chips">
-                      {[
-                        "Plain-English report",
-                        "New neighbourhoods",
-                        "New services",
-                      ].map((chip) => (
-                        <span className="phl-bento-chip" key={chip}>
-                          {chip}
-                        </span>
-                      ))}
-                    </div>
-                    <HashScrollLink
-                      href="#phl-form"
-                      className="phl-link-arrow"
-                      offset={120}
-                    >
-                      Start with the free audit{" "}
-                      <FiArrowUpRight aria-hidden="true" />
-                    </HashScrollLink>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-
-          {/* 6. Results */}
-          <section className="phl-results">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">Real Results</p>
-                <h2 className="phl-h2">
-                  What Happens When Local SEO is Done Properly
-                </h2>
-                <p className="phl-lead">
-                  Different neighbourhoods, different categories — the same
-                  system, executed month after month.
-                </p>
-              </div>
-
-              <div className="phl-results-cards">
-                {ResultCards.map((card) => (
-                  <article className="phl-result-card" key={card.industry}>
-                    <p className="phl-result-ind">
-                      {card.icon}
-                      {card.industry}
-                    </p>
-                    <p className="phl-result-metric">{card.metric}</p>
-                    <p className="phl-result-label">{card.label}</p>
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 7. Showcase image band */}
-          <section className="phl-showcase">
-            <div className="phl-container">
-              <div className="phl-showcase-media">
-                <div className="phl-showcase-photo">
-                  <Image
-                    src="/images/philadelphia/phila-seo/philadelphia-neighborhood-storefronts.webp"
-                    alt="Philadelphia neighborhood corridor lined with independent storefronts"
-                    fill
-                    unoptimized
-                    sizes="(max-width: 991px) 92vw, 80vw"
-                  />
-                </div>
-                <div className="phl-showcase-floats">
-                  {ShowcaseFloats.map((float) => (
-                    <div className="phl-showcase-float" key={float.label}>
-                      <strong>{float.num}</strong>
-                      <span>{float.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 8. Comparison */}
-          <section className="phl-compare">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">The Difference</p>
-                <h2 className="phl-h2">Zonic vs. a Typical Philadelphia SEO Firm</h2>
-                <p className="phl-lead">
-                  Local SEO for local businesses is all we do, and it shows.
-                  Here is what working with a dedicated local team looks like.
-                </p>
-              </div>
-
-              <div className="phl-compare-grid">
-                <div className="phl-compare-col phl-compare-col--them">
-                  <h3>Typical SEO Agency</h3>
-                  <p className="phl-compare-sub">
-                    Why most local campaigns quietly stall
-                  </p>
-                  <ul>
-                    {CompareThem.map((item) => (
-                      <li key={item}>
-                        <FiX aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="phl-compare-col phl-compare-col--us">
-                  <h3>Local SEO with Zonic Media</h3>
-                  <p className="phl-compare-sub">
-                    Built to compound, reported like a P&amp;L
-                  </p>
-                  <ul>
-                    {CompareUs.map((item) => (
-                      <li key={item}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div
-                  className="phl-compare-col phl-compare-col--score"
-                  aria-hidden="true"
-                >
-                  <h3>Local Visibility Scorecard</h3>
-                  <p className="phl-compare-sub">
-                    A typical Philly client&apos;s first six months
-                  </p>
-                  <div className="phl-score-rows">
-                    {ScoreRows.map((row) => (
-                      <div key={row.label}>
-                        <div className="phl-score-head">
-                          <span>{row.label}</span>
-                          <span className="phl-score-vals">
-                            {row.before}% → <strong>{row.after}%</strong>
-                          </span>
-                        </div>
-                        <div className="phl-score-track">
-                          <span
-                            className="phl-score-fill"
-                            style={
-                              { "--w": `${row.after}%` } as React.CSSProperties
-                            }
-                          />
-                          <span
-                            className="phl-score-before"
-                            style={
-                              { "--b": `${row.before}%` } as React.CSSProperties
-                            }
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="phl-score-legend">
-                    <span>
-                      <i className="phl-score-legend-before" />
-                      Before Zonic
-                    </span>
-                    <span>
-                      <i />
-                      After 6 months
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 9. Why us + audit banner */}
-          <section className="phl-why">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">Why Zonic Media</p>
-                <h2 className="phl-h2">
-                  A Philly SEO Agency That Acts Like a Partner, Not a Monthly Invoice
-                </h2>
-                <p className="phl-lead">
-                  Rankings are the output. The inputs are strategy, execution,
-                  and accountability — and that is what you are actually buying.
-                </p>
-              </div>
-
-              <div className="phl-why-cards">
-                {WhyCards.map((card) => (
-                  <article className="phl-why-card" key={card.title}>
-                    <span className="phl-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.desc}</p>
-                  </article>
-                ))}
-              </div>
-
-              <div className="phl-why-banner">
-                <div className="phl-why-banner-text">
-                  <p className="phl-eyebrow">Free Local SEO Audit</p>
-                  <h3>See Exactly How We&apos;ll Grow Your Local Rankings</h3>
-                  <p>
-                    We map your profile, citations, reviews, and rankings — and
-                    show you the clear path to the top three for the searches
-                    that matter in your neighbourhood. Free, and yours to keep
-                    either way.
-                  </p>
-                  <div className="phl-banner-checks">
-                    {BannerChecks.map((check) => (
-                      <div className="phl-banner-check" key={check}>
-                        <FaCircleCheck aria-hidden="true" />
-                        {check}
-                      </div>
-                    ))}
-                  </div>
-                  <HashScrollLink
-                    href="#phl-form"
-                    className="phl-btn"
-                    offset={120}
-                  >
-                    Claim Your Free Audit
-                    <span className="phl-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </div>
-
-                <div className="phl-audit-card" aria-hidden="true">
-                  <div className="phl-audit-head">
-                    <h4>Local Visibility Score</h4>
-                    <span className="phl-audit-tag">After 6 months</span>
-                  </div>
-                  <div className="phl-audit-ring-wrap">
-                    <div className="phl-audit-ring">
-                      <span>
-                        92<small>/100</small>
-                      </span>
-                    </div>
-                    <div className="phl-audit-ring-info">
-                      <strong>Excellent</strong>
-                      <small>
-                        Where our Philadelphia local SEO campaigns typically
-                        land after six months of compounding work
-                      </small>
-                    </div>
-                  </div>
-                  {AuditRows.map((row) => (
-                    <div className="phl-audit-row" key={row.label}>
-                      <span>{row.label}</span>
-                      <span className="phl-audit-flag">{row.flag}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 10. Reviews */}
-          <section className="phl-reviews" aria-labelledby="phl-reviews-title">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">Verified Client Reviews</p>
-                <h2 className="phl-h2" id="phl-reviews-title">
-                  Trusted by Small &amp; Mid-Size Businesses Across the US
-                </h2>
-              </div>
-              <div className="phl-reviews-widget">
-                <ClutchWidget
-                  widgetType="12"
-                  height="375"
-                  primaryColor="#2567e8"
-                  reviews="448872,448007,448005,447416,446728,446721,446714,446262,441531,442062,445226,445524"
-                />
-              </div>
-            </div>
-          </section>
-
-          {/* 11. Marquee */}
-          <div className="phl-marquee" aria-hidden="true">
-            <div className="phl-marquee-track">
-              {[0, 1].map((copy) => (
-                <span className="phl-marquee-item" key={copy}>
-                  {MarqueeItems.map((item) => (
-                    <span className="phl-marquee-item" key={item}>
-                      {item} <FaStar aria-hidden="true" />
-                    </span>
-                  ))}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* 12. Ranking engine — the six local signals */}
-          <section className="phl-engine-sec">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">Everything Working Together</p>
-                <h2 className="phl-h2">Six Signals, One Ranking Engine</h2>
-                <p className="phl-lead">
-                  Local rankings are not one lever, they are six working at
-                  once. Skip any of them and the map pack notices. We run all
-                  six every month, from Center City and Fishtown out through
-                  Montgomery, Bucks, Delaware, and Chester counties — and when
-                  you need calls before the rankings land,{" "}
-                  <Link
-                    href="/services/philadelphia/ppc"
-                    className="phl-inline-link"
-                  >
-                    Philadelphia PPC campaigns
-                  </Link>{" "}
-                  fill the gap.
-                </p>
-              </div>
-
-              <div className="phl-engine">
-                <div className="phl-engine-orbit" aria-hidden="true" />
-
-                <div className="phl-engine-core">
-                  <span className="phl-engine-core-icon" aria-hidden="true">
-                    <FiMapPin />
-                  </span>
-                  <strong>Your Philadelphia listing</strong>
-                  <span>Top three · every neighbourhood</span>
-                  <HashScrollLink
-                    href="#phl-form"
-                    className="phl-btn phl-engine-core-cta"
-                    offset={120}
-                  >
-                    Get Your Free Audit
-                    <span className="phl-btn-circ">
-                      <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </HashScrollLink>
-                </div>
-
-                {EngineNodes.map((node) => (
-                  <div
-                    className={`phl-engine-node phl-engine-node--${node.tone}`}
-                    style={
-                      {
-                        "--l": node.left,
-                        "--t": node.top,
-                      } as React.CSSProperties
-                    }
-                    key={node.title}
-                  >
-                    <span className="phl-engine-node-icon">{node.icon}</span>
-                    <span className="phl-engine-node-txt">
-                      <strong>{node.title}</strong>
-                      <small>{node.outcome}</small>
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="phl-chips-label">
-                Ranking local Philadelphia businesses in
-              </p>
-              <div className="phl-chips">
-                {IndustryChips.map((chip) => (
-                  <span className="phl-chip" key={chip}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 13. FAQs */}
-          <section className="phl-faqs" id="phl-faqs">
-            <div className="phl-container">
-              <div className="phl-split-grid">
-                <div>
-                  <p className="phl-eyebrow">FAQs</p>
-                  <h2 className="phl-h2">
-                    Straight Answers About Local SEO in Philadelphia
-                  </h2>
-                  <p className="phl-lead">
-                    Pricing, timelines, guarantees, and what actually moves map
-                    pack rankings. If your question is not here, send it through
-                    the form — a strategist answers, not a sales script.
-                  </p>
-                  <div className="phl-faq-cta">
-                    <HashScrollLink
-                      href="#phl-form"
-                      className="phl-btn"
-                      offset={120}
-                    >
-                      Ask About Your Neighbourhood
-                      <span className="phl-btn-circ">
-                        <FiArrowUpRight aria-hidden="true" />
-                      </span>
-                    </HashScrollLink>
-                  </div>
-                </div>
-                <div>
-                  <GmbFaqs items={PhilaSeoFaqs} />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 14. Grow further — internal links */}
-          <section className="phl-grow">
-            <div className="phl-container">
-              <div className="phl-sec-head-center">
-                <p className="phl-eyebrow">Grow Further</p>
-                <h2 className="phl-h2">
-                  Rankings are Step One. Here is What Multiplies Them.
-                </h2>
-                <p className="phl-lead">
-                  Local SEO is one channel inside a bigger system — see the full{" "}
-                  <Link
-                    href="/services/philadelphia/digital-marketing"
-                    className="phl-inline-link"
-                  >
-                    Philadelphia marketing engine
-                  </Link>{" "}
-                  if you want every channel working together.
-                </p>
-              </div>
-              <div className="phl-grow-cards">
-                {GrowCards.map((card) => (
-                  <Link
-                    href={card.href}
-                    className="phl-grow-card"
-                    key={card.href}
-                  >
-                    <span className="phl-card-icon">{card.icon}</span>
-                    <h3>{card.title}</h3>
-                    <p>{card.desc}</p>
-                    <span className="phl-grow-link">
-                      {card.cta} <FiArrowUpRight aria-hidden="true" />
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* 15. Lead form */}
-          <section className="phl-form-sec" id="phl-form">
-            <div className="phl-container">
-              <div className="phl-form-grid">
-                <aside className="phl-form-aside">
-                  <p className="phl-eyebrow">Get Started</p>
-                  <h2 className="phl-h2">
-                    Claim Your Free Philadelphia Local SEO Audit
-                  </h2>
-                  <p className="phl-lead">
-                    Tell us about your business and we will send a full local
-                    visibility audit — rankings, profile, citations, reviews —
-                    plus a flat-price growth plan to take you to the top of your
-                    neighbourhood.
-                  </p>
-
-                  <div className="phl-form-contacts">
-                    <a
-                      href={SITE_CONTACT.emailHref}
-                      className="phl-form-contact"
-                    >
-                      <span className="phl-form-contact-icon">
-                        <FiMail aria-hidden="true" />
-                      </span>
-                      <span className="phl-form-contact-txt">
-                        <small>Email us anytime</small>
-                        <strong>{SITE_CONTACT.email}</strong>
-                      </span>
-                    </a>
-                    <a
-                      href={SITE_CONTACT.phoneHref}
-                      className="phl-form-contact"
-                    >
-                      <span className="phl-form-contact-icon">
-                        <FiPhoneCall aria-hidden="true" />
-                      </span>
-                      <span className="phl-form-contact-txt">
-                        <small>Speak with a strategist</small>
-                        <strong>{SITE_CONTACT.phoneDisplay}</strong>
-                      </span>
-                    </a>
-                    <a
-                      href={SITE_CONTACT.mapHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="phl-form-contact"
-                    >
-                      <span className="phl-form-contact-icon">
-                        <FiMapPin aria-hidden="true" />
-                      </span>
-                      <span className="phl-form-contact-txt">
-                        <small>Our office</small>
-                        <strong>{SITE_CONTACT.address}</strong>
-                      </span>
-                    </a>
-                    <div className="phl-form-contact phl-form-contact--static">
-                      <span className="phl-form-contact-icon">
-                        <FiMessageCircle aria-hidden="true" />
-                      </span>
-                      <span className="phl-form-contact-txt">
-                        <small>Prefer to chat?</small>
-                        <strong>
-                          Use the chat bubble — a real strategist replies
-                        </strong>
-                      </span>
-                    </div>
-                  </div>
-                </aside>
-
-                <div className="phl-form-main">
-                  <ServiceLeadForm
-                    formType="philadelphia-local-seo"
-                    badge="Free Audit"
-                    title="Get Your Free Local SEO Audit"
-                    subtitle="No contracts, no pressure — just a clear picture of where you rank today and what it takes to win your neighbourhood."
-                    submitText="Send My Free Audit"
-                    messageLabel="Tell us about your business"
-                    messagePlaceholder="Your services, the neighbourhoods you cover, and what you'd like to improve"
-                    defaultServices={["Local SEO"]}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-
-      <RelatedServices current="/services/philadelphia/local-seo" />
-      <Footer />
+      <DelawareLanding data={data} extras={extras} />
     </>
   );
 }

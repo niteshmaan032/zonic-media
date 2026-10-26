@@ -213,11 +213,8 @@ export default function PlumbingLeadForm() {
         <span>
           <Icon name="mail" /> Free plumbing website eligibility
         </span>
-        <h3>See If Your Plumbing Company Qualifies.</h3>
-        <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
-        </p>
+        <h3>Tell Us About Your Plumbing Shop.</h3>
+        <p>Tell us your services, coverage area and goals. This form is not a contract.</p>
       </div>
 
       <div className="form-grid">

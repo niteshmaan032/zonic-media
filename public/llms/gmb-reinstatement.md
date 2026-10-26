@@ -23,7 +23,7 @@ When Google suspends a Business Profile, the listing disappears from Google Maps
 
 ## Why businesses choose Zonic Media over other reinstatement services
 
-- **No Fix, No Charge:** if the profile is not reinstated, the reinstatement fee is not charged. Most competitors charge $400–$750 upfront regardless of outcome.
+- **No Fix, No Charge:** if the profile is not reinstated, the reinstatement fee is not charged.
 - **Free audit first:** the diagnosis and a flat, transparent quote come before any payment.
 - **Track record:** 900+ Google Business Profiles reinstated and verified; typical resolution in 5–7 business days.
 - **Post-reinstatement optimization included**, so the profile comes back ranking stronger.

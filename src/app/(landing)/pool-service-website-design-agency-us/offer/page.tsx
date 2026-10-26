@@ -71,29 +71,29 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
+  { icon: "layout", label: "Weekly plan signup" },
+  { icon: "smartphone", label: "Mobile layout" },
+  { icon: "mail", label: "Repair request form" },
   { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "search", label: "Pool SEO setup" },
+  { icon: "chart", label: "Lead tracking" },
+  { icon: "layers", label: "Service area pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Call tracking" },
+  { icon: "layers", label: "Opening & closing pages" },
+  { icon: "pin", label: "Equipment pages" },
+  { icon: "gauge", label: "Fast loading" },
+  { icon: "code", label: "Quote forms" },
+  { icon: "target", label: "Tap-to-call" },
+  { icon: "users", label: "Route area pages" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Pool Service Website for Pool Companies | Zonic Media" },
+  title: { absolute: "Free Pool Service Website Design for Pool Companies" },
   description:
-    "Free pool service website, no upfront development fee, when you start a qualifying Zonic marketing plan. Weekly-service signups and repair pages built in.",
+    "Free pool service website for pool cleaning and repair companies: weekly signups, opening and closing pages, repair forms. $0 upfront with a qualifying plan.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
@@ -108,9 +108,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Pool Service Website Offer | Zonic Media",
+    title: "Free Pool Service Website Design for Pool Companies | Zonic Media",
     description:
-      "Free pool service website, no upfront development fee, when you start a qualifying Zonic marketing plan. Weekly-service signups and repair pages built in.",
+      "Free pool service website for pool cleaning and repair companies: weekly signups, opening and closing pages, repair forms. $0 upfront with a qualifying plan.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function PoolServiceOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for pool service companies</span>
+              <span>Free website for pool service companies</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,7 +171,7 @@ export default function PoolServiceOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your pool service company with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we build a pool service website that signs up weekly accounts and takes repair requests, with no upfront development fee.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
@@ -196,7 +196,7 @@ export default function PoolServiceOfferPage() {
                   <Icon name="layers" />
                 </span>
                 <span>
-                  <strong>No upfront fee</strong>
+                  <strong>Zero build fee</strong>
                   <small>Development fee waived</small>
                 </span>
               </div>
@@ -205,8 +205,8 @@ export default function PoolServiceOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Pool Service lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Route signup system</strong>
+                  <small>Weekly accounts and repairs</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -214,7 +214,7 @@ export default function PoolServiceOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Season-ready growth</strong>
+                  <strong>Recurring-revenue growth</strong>
                   <small>Website + pool marketing</small>
                 </span>
               </div>
@@ -223,7 +223,7 @@ export default function PoolServiceOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
+                  <strong>No-surprise terms</strong>
                   <small>Scope agreed in writing</small>
                 </span>
               </div>
@@ -239,8 +239,8 @@ export default function PoolServiceOfferPage() {
                 <Icon name="sparkles" />
               </span>
               <span>
-                <strong>$0 upfront website fee</strong>
-                <small>With a qualifying growth plan</small>
+                <strong>$0 upfront pool website</strong>
+                <small>Included with a qualifying plan</small>
               </span>
             </div>
 
@@ -271,17 +271,17 @@ export default function PoolServiceOfferPage() {
                   <span>Work</span>
                   <span>About</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Start service</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
                   <div className="skeleton-label">POOL SERVICE WEBSITE</div>
-                  <h2>More accounts. More pool service calls.</h2>
-                  <p>A professional pool service website connected to the channels that bring your best prospects.</p>
+                  <h2>Clear pools. Full weekly routes.</h2>
+                  <p>A pool service website that turns local searches into weekly service signups and repair calls.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Start service</span>
+                    <span>See plans</span>
                   </div>
                   <div className="canvas-trust">
                     <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
@@ -296,7 +296,7 @@ export default function PoolServiceOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">SPARKLING CLEAN</div>
                 </div>
               </div>
 
@@ -320,8 +320,8 @@ export default function PoolServiceOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">POOL SERVICE SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">POOL SERVICE</span>
+                <h3>Weekly service, one tap away.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
                   Claim website <Icon name="arrow-up-right" />
@@ -334,8 +334,8 @@ export default function PoolServiceOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for pool service leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Built for route signups</strong>
+                <small>Calls, forms and tracking set</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function PoolServiceOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the pool service website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">From route review to launch</span>
+            <h2>A pool service website with $0 upfront to build.</h2>
+            <p>Pool owners want a reliable tech, a clear weekly plan and fast repair help. We build a site that answers those needs and pair it with marketing in your service area.</p>
           </div>
 
           <div className="process-grid">
@@ -366,27 +366,27 @@ export default function PoolServiceOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your pool service mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Map your routes and services</h3>
+              <p>We review your weekly routes, repair work, service area, current website and where new pool accounts come from today.</p>
+              <small>Route review call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Choose a plan for pool season</h3>
+              <p>Your plan can include Google Ads, Local SEO, Google Business Profile management, tracking and conversion work that builds route density.</p>
+              <small>Ongoing growth service</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
+              <h3>We launch the pool website</h3>
               <p>
-                Zonic creates the agreed pool service lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
+                We build the agreed pool service website with the upfront development fee waived under your marketing plan. It uses the same build standard as{" "}
                 <Link href="/services/pool-service-website-design" className="offer-inlink">
                   our pool service website design service
                 </Link>
@@ -409,26 +409,24 @@ export default function PoolServiceOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every pool service lead in one place.</h2>
+            <span className="section-kicker">Account and repair tracking</span>
+            <h2>See where every new pool account came from.</h2>
             <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which pool service jobs your marketing produced
-              instead of guessing where the phone calls came from.
+              Calls, signup forms and chats land in one dashboard with the source attached, so you can see whether a weekly account or pump repair came from ads, maps or search.
             </p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
+                <Icon name="check" /> Every call, signup form and chat saved
               </li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
+                <Icon name="check" /> Source logged for each pool lead
               </li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
+                <Icon name="check" /> From quote to on the route
               </li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>See the pool lead dashboard</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -470,7 +468,7 @@ export default function PoolServiceOfferPage() {
               </div>
             <div className="leadtrack-row">
               <b>
-                Marcus D.
+                Chris V.
                 <small>Weekly Pool Service</small>
               </b>
               <span>Google Ads</span>
@@ -478,7 +476,7 @@ export default function PoolServiceOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Priya S.
+                Elena D.
                 <small>Pool Repair</small>
               </b>
               <span>Google Business Profile</span>
@@ -486,7 +484,7 @@ export default function PoolServiceOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Dana R.
+                Paul Y.
                 <small>Equipment Upgrades</small>
               </b>
               <span>Organic search</span>
@@ -494,7 +492,7 @@ export default function PoolServiceOfferPage() {
             </div>
             <div className="leadtrack-row">
               <b>
-                Elena V.
+                Tina R.
                 <small>Pool Openings</small>
               </b>
               <span>Call extension</span>
@@ -514,10 +512,10 @@ export default function PoolServiceOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Pool Service website service paths</span>
-              <h2>One pool service website. A clear path for every profitable pool service.</h2>
+              <span className="section-kicker">Pool service website pages</span>
+              <h2>From weekly cleaning to green-pool rescues, a page for every service.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Tap a service to see the copy on the left and the pool service website mockup on the right. Each page answers what pool owners ask before they call you.</p>
           </div>
 
           <PoolServiceServiceTabs />
@@ -525,16 +523,16 @@ export default function PoolServiceOfferPage() {
           <div className="niche-banner">
             <div className="niche-banner-copy">
               <span className="section-kicker section-kicker--dark">
-                Beyond these six
+                Every pool service you offer
               </span>
-              <h3>We build for every pool service service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <h3>Green-to-clean and leak detection have pages too.</h3>
+              <p>Six services are a sample. If pool owners search for a service you provide, we can build the page that wins it.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every pool service service</span>
+              <span className="niche-banner-more">+ every pool service you run</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
               <span>Claim my pool service website</span>
@@ -548,9 +546,9 @@ export default function PoolServiceOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a pool service website handed over and forgotten.</h2>
-            <p>Your pool service website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">Pool site essentials</span>
+            <h2>A pool service website that adds accounts while you run routes.</h2>
+            <p>Your pool service website is part of your marketing plan, with service pages, local structure and tracking built to grow weekly routes and repair calls.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,10 +576,10 @@ export default function PoolServiceOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
+                <small>POOL SITE 01</small>
+                <h3>Ready for pool searches</h3>
                 <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
+                  Service pages, town pages, on-page SEO and schema where it fits help Google match your pool company to local searches. The same structure behind our{" "}
                   <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
                   </Link>
@@ -595,9 +593,9 @@ export default function PoolServiceOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>POOL SITE 02</small>
+                <h3>Signups linked to sources</h3>
+                <p>Signup forms, click-to-call, GA4, Tag Manager, conversion tracking and CRM routing tie every pool enquiry to the channel that brought it.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +603,7 @@ export default function PoolServiceOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my pool service website</span>
+              <span>Get my pool service website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +615,8 @@ export default function PoolServiceOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Pool Service website comes with it.</h2>
+              <span className="section-kicker">Route growth plans</span>
+              <h2>Grow your routes on any plan. The pool website is built in.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -742,12 +740,12 @@ export default function PoolServiceOfferPage() {
           <div className="dark-glow" />
           <div className="dark-copy">
             <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
+              Marketing that fills your routes
             </span>
-            <h2>The website is the foundation. Marketing creates demand for pool companies.</h2>
-            <p>Your plan is selected around your pool service market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <h2>Tight routes save drive time. The plan targets pool owners where you already work.</h2>
+            <p>We build the plan around your pool service area and season. It can combine paid search, local visibility, Google Business Profile growth, tracking and conversion work.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my pool service company</span>
+              <span>Review my pool service area</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,9 +754,9 @@ export default function PoolServiceOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
+              <h3>Ads for pool owners</h3>
               <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
+                Show up for searches like pool cleaning near me or pool pump repair, with ads that go straight to the right page. See our{" "}
                 <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>
@@ -767,9 +765,9 @@ export default function PoolServiceOfferPage() {
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
+              <h3>Maps for your route area</h3>
               <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
+                Rank in local results across the neighborhoods on your routes, with a profile that shows clean pools and real reviews. Backed by{" "}
                 <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
@@ -781,18 +779,18 @@ export default function PoolServiceOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>Turn visitors into accounts</h3>
+              <p>Call and form tracking, page updates and monthly reports show what turns visitors into weekly accounts and repair jobs.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
+                <b>$0</b> fee for the website build
               </span>
               <span>
-                <b>1</b> connected growth system
+                <b>1</b> dashboard for every pool lead
               </span>
               <span>
-                <b>100%</b> clear written scope
+                <b>100%</b> of the scope put in writing
               </span>
             </article>
           </div>
@@ -802,12 +800,12 @@ export default function PoolServiceOfferPage() {
         <section className="section terms-section">
           <div className="terms-main">
             <span className="section-kicker">
-              Clear qualification. Clear terms.
+              How the pool website offer works
             </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront pool service website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <h2>What comes with the free pool service website.</h2>
+            <p>Zonic waives the upfront design and development fee for your pool service website when an eligible business starts a qualifying recurring marketing plan. All terms are agreed in writing first.</p>
             <a className="section-button" href="#contact">
-              <span>See if my pool service company qualifies</span>
+              <span>See if my pool company qualifies</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,16 +815,16 @@ export default function PoolServiceOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
+                <strong>Fee waived</strong>
                 <small>The pool service website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
+                <strong>Plan you need</strong>
                 <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
+                  Any Zonic marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. Ad spend is billed separately by the platform. Also available with{" "}
                   <Link href="/services/pool-service-website-design" className="offer-inlink">
                     our pool service website design service
                   </Link>
@@ -837,18 +835,16 @@ export default function PoolServiceOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
+                <strong>Ownership</strong>
+                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you when month six is complete.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
+                <strong>Cancelling before month six</strong>
                 <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
+                  You keep your domain and any content you supplied. The pool website does not transfer, because the build fee was waived against the full six-month engagement.
                 </small>
               </span>
             </div>
@@ -859,8 +855,8 @@ export default function PoolServiceOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Why the pairing works</span>
+              <h2>Built as one system to grow your routes.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +871,8 @@ export default function PoolServiceOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One pool system</strong>
+                <small>Site · maps · signups</small>
               </p>
             </div>
           </div>
@@ -884,34 +880,34 @@ export default function PoolServiceOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your website, ads and map listing reach the same pool owners with the same message, instead of three vendors each chasing their own goal.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>Same goal</strong>
+                  <small>Planned for your routes</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>The build fee is waived, so your budget goes into reaching pool owners near your routes, with no separate development invoice.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Easy start</strong>
+                  <small>No website invoice</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, signups, campaigns and map actions are measured together, so monthly work focuses on the accounts that stay on your route.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Tracked growth</strong>
+                  <small>Reporting from day one</small>
                 </div>
               </footer>
             </article>
@@ -919,7 +915,7 @@ export default function PoolServiceOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Build my pool service lead system</span>
+              <span>Build my pool lead system</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -930,11 +926,11 @@ export default function PoolServiceOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Pool service FAQ</span>
+            <h2>Straight answers for pool route owners.</h2>
+            <p>What pool service owners ask about eligibility, the pool website scope and the qualifying marketing engagement.</p>
             <a className="section-button" href="#contact">
-              <span>Ask about my pool service market</span>
+              <span>Ask about my pool service area</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -951,19 +947,19 @@ export default function PoolServiceOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
+              Pool website offer, now open
             </span>
-            <h2>Claim your professional pool service website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your pool service company, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <h2>Sign up more weekly accounts with a pool service website and no upfront development fee.</h2>
+            <p>Send the short form. We review your pool service company, current website, route area, service mix and goals, then recommend the qualifying plan that fits.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional pool service lead-generation website
+                <Icon name="check" /> Pool service website with signup and repair pages
               </span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
+                <Icon name="check" /> Marketing plan built for your route area
               </span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
+                <Icon name="check" /> Clear scope and terms before you sign
               </span>
             </div>
 
@@ -1000,7 +996,7 @@ export default function PoolServiceOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Pool Service lead-generation websites connected to the marketing services that grow pool companies.</p>
+            <p>Pool service websites connected to the marketing that brings pool companies weekly accounts and repair calls.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +1024,7 @@ export default function PoolServiceOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Pool Service Website Launch Offer</span>
+            <span>Free Pool Service Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-pool-service-offer-form">

@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the solar website really free?",
     answer:
-      "The upfront solar website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes. The $2,000 solar website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Why not use a solar company website builder?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "A builder gives you templates, but you still write the pages, set up tracking and find the traffic. With this offer we design and build the site for you, connect tracking, and run the marketing that sends homeowners to it.",
   },
   {
-    question: "What is included in the solar website?",
+    question: "What should a solar company website include?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Ours can include pages for residential and commercial solar, battery storage, repair and financing, savings explainers, service-area pages, reviews, quote forms, click-to-call, tracking and lead routing. Your proposal confirms the exact scope.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Can you replace the solar website we have now?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer suits solar companies with no website, an outdated site, or a site that is not producing enough consultation requests. We review your current site first, then recommend a rebuild or a full replacement.",
   },
   {
     question: "Are there commitment or cancellation terms?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "Yes. The qualifying plan has a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and content, but the website does not transfer.",
   },
 ];
 

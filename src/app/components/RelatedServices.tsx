@@ -187,8 +187,11 @@ export default function RelatedServices({ current }: { current: string }) {
   return (
     <section className="relsvc" aria-labelledby="relsvc-heading">
       <style>{`
-        .relsvc { background: #10141a; border-top: 1px solid #1f2630; padding: 40px 0; }
-        .relsvc-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .relsvc { background: #10141a; border-radius: 32px; padding: 40px 0; margin: 0 100px 28px; }
+        .relsvc-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        @media (max-width: 1199.98px) { .relsvc { margin: 0 30px 24px; } }
+        @media (max-width: 991.98px) { .relsvc { margin: 0 40px 24px; } }
+        @media (max-width: 575.98px) { .relsvc { margin: 0 20px 20px; border-radius: 24px; padding: 30px 0; } .relsvc-inner { padding: 0 22px; } }
         .relsvc h2 { color: #f4f4f2; font-size: 1.15rem; margin: 0 0 16px; }
         .relsvc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 12px; }
         .relsvc a { display: inline-block; color: #c4ccd4; font-size: 0.85rem; text-decoration: none; border: 1px solid #2a3340; border-radius: 999px; padding: 7px 14px; }

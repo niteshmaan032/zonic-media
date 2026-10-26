@@ -206,11 +206,8 @@ export default function ElectricianLeadForm() {
         <span>
           <Icon name="mail" /> Free electrician website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
-        <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
-        </p>
+        <h3>Start Your Electrician Website Review.</h3>
+        <p>Tell us about your services, cities and goals. Sending this form is not a contract.</p>
       </div>
 
       <div className="form-grid">

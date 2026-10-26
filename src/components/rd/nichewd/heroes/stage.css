@@ -1,0 +1,59 @@
+/* Niche web design hero stages (26 Oct 2026): small UI motion only — a
+   fade when the example site changes, a looping booking toast and a soft
+   pulse on the booking button. Not scroll reveals. Reduced motion: still. */
+
+.nwd-swap {
+  animation: nwd-swap 0.5s ease-out both;
+}
+@keyframes nwd-swap {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}
+
+.nwd-toast {
+  opacity: 0;
+  animation: nwd-toast 5s ease-in-out 0.6s infinite;
+}
+@keyframes nwd-toast {
+  0%,
+  18% {
+    opacity: 0;
+    translate: 0 -10px;
+  }
+  26%,
+  80% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  88%,
+  100% {
+    opacity: 0;
+    translate: 0 -10px;
+  }
+}
+
+.nwd-pulse {
+  animation: nwd-pulse 2.4s ease-in-out infinite;
+}
+@keyframes nwd-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(12, 21, 38, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nwd-swap,
+  .nwd-toast,
+  .nwd-pulse {
+    animation: none !important;
+  }
+  .nwd-toast {
+    opacity: 0;
+  }
+}

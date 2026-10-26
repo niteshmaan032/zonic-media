@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the chiropractic website really free to build?",
     answer:
-      "The upfront chiropractic website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes, the build is. The upfront chiropractic website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the pages, features and revision limits.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "What plan does my clinic need to qualify?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Qualifying plans can include Google Ads management, Local SEO, Google Business Profile management, a combined ads and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your clinic and local market.",
   },
   {
-    question: "What is included in the chiropractic website?",
+    question: "Can new patients book and fill in forms online?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes. The agreed scope can include booking requests, new patient pages, condition pages, insurance details, click-to-call, mobile layout, SEO basics and tracking. If your practice software offers online scheduling or intake, we can link to it. Your proposal confirms the details.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Can you replace our current chiropractic website?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer works for clinics with no website, an outdated one, or a site that books too few new patients. Zonic reviews your current site and recommends a rebuild or replacement.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What if my clinic wants to cancel?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "The website fee is waived as part of a recurring marketing engagement, so your written agreement covers the minimum term, hosting, revisions, cancellation and website ownership before you approve. If you cancel early, you keep your domain and the content you supplied.",
   },
 ];
 

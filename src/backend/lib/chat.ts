@@ -327,6 +327,9 @@ export function toSafeConversation(doc: ConversationDocument): SafeConversation 
     subService: doc.subService,
     status: doc.status,
     assignedAdminId: doc.assignedAdminId ?? null,
+    assignedAdminName: doc.assignedAdminName ?? null,
+    acceptedAt: doc.acceptedAt?.toISOString() ?? null,
+    sourcePage: doc.sourcePage ?? null,
     lastMessage: doc.lastMessage ?? null,
     lastMessageAt: doc.lastMessageAt?.toISOString() ?? null,
     unreadForAdmin: doc.unreadForAdmin,
@@ -346,11 +349,22 @@ export interface CreateConversationParams {
   service?: string;
   subService?: string;
   leadId?: string | null;
+  sourcePage?: string | null;
 }
 
+/** `notify` is true when the team should be alerted (email + dashboard):
+    a brand-new request, or a visitor coming back to an inactive chat, which
+    has to be accepted again (26 Oct 2026). */
 export async function createOrGetConversation(
   params: CreateConversationParams
-): Promise<{ conversationId: string; roomName: string; isNew: boolean }> {
+): Promise<{
+  conversationId: string;
+  roomName: string;
+  isNew: boolean;
+  notify: boolean;
+  status: ConversationStatus;
+  agentName: string | null;
+}> {
   const collection = await getConversationsCollection();
   const now = new Date();
 
@@ -361,13 +375,17 @@ export async function createOrGetConversation(
   });
 
   if (existing) {
-    // Reactivate if inactive
-    if (existing.status === "inactive") {
+    // Reactivate if inactive: back in the queue until an agent accepts again
+    const reactivated = existing.status === "inactive";
+    if (reactivated) {
       await collection.updateOne(
         { _id: existing._id },
         {
           $set: {
             status: "waiting_agent",
+            acceptedAt: null,
+            assignedAdminId: null,
+            assignedAdminName: null,
             updatedAt: now,
             closedAt: null,
           },
@@ -378,6 +396,9 @@ export async function createOrGetConversation(
       conversationId: existing._id.toHexString(),
       roomName: existing.roomName,
       isNew: false,
+      notify: reactivated,
+      status: reactivated ? "waiting_agent" : existing.status,
+      agentName: reactivated ? null : (existing.assignedAdminName ?? null),
     };
   }
 
@@ -393,6 +414,9 @@ export async function createOrGetConversation(
     subService: params.subService,
     status: "waiting_agent",
     assignedAdminId: null,
+    assignedAdminName: null,
+    acceptedAt: null,
+    sourcePage: params.sourcePage ?? null,
     lastMessage: null,
     lastMessageAt: null,
     unreadForAdmin: 0,
@@ -413,7 +437,14 @@ export async function createOrGetConversation(
     { $set: { roomName } }
   );
 
-  return { conversationId, roomName, isNew: true };
+  return {
+    conversationId,
+    roomName,
+    isNew: true,
+    notify: true,
+    status: "waiting_agent",
+    agentName: null,
+  };
 }
 
 export async function getConversationById(
@@ -444,6 +475,39 @@ export async function updateConversationStatus(
   );
 }
 
+/** Agent presses "Accept": waiting_agent -> active, atomically, so two
+    admins can't both take the same visitor. Returns the updated document,
+    or null when the chat was no longer waiting (already taken or closed). */
+export async function acceptConversation(
+  conversationId: string,
+  adminId: string,
+  adminName: string
+): Promise<ConversationDocument | null> {
+  if (!ObjectId.isValid(conversationId)) return null;
+  const collection = await getConversationsCollection();
+  const now = new Date();
+  const result = await collection.findOneAndUpdate(
+    { _id: new ObjectId(conversationId), status: "waiting_agent" },
+    {
+      $set: {
+        status: "active",
+        acceptedAt: now,
+        assignedAdminId: adminId,
+        assignedAdminName: adminName,
+        updatedAt: now,
+      },
+    },
+    { returnDocument: "after" }
+  );
+  return result ?? null;
+}
+
+/** "josef.m@zonicllc.com" -> "Josef": admins have no name field. */
+export function agentNameFromEmail(email: string): string {
+  const local = (email.split("@")[0] ?? "").split(/[._+-]/)[0] ?? "";
+  return local ? local.charAt(0).toUpperCase() + local.slice(1).toLowerCase() : "Zonic Team";
+}
+
 export async function touchConversationLastMessage(
   conversationId: string,
   text: string,
@@ -451,11 +515,14 @@ export async function touchConversationLastMessage(
 ): Promise<void> {
   const collection = await getConversationsCollection();
   const now = new Date();
+  // Status is no longer forced to "active" here: a chat only becomes active
+  // when an agent accepts it (acceptConversation). Messages sent while the
+  // visitor waits keep it in "waiting_agent"; an accepted chat that went
+  // quiet (waiting_visitor / inactive) is reopened below.
   const setFields = {
     lastMessage: text.slice(0, 120),
     lastMessageAt: now,
     updatedAt: now,
-    status: "active" as ConversationStatus,
   };
 
   if (senderType === "visitor") {
@@ -474,6 +541,15 @@ export async function touchConversationLastMessage(
       { $set: setFields }
     );
   }
+
+  await collection.updateOne(
+    {
+      _id: new ObjectId(conversationId),
+      status: { $in: ["waiting_visitor", "inactive"] },
+      acceptedAt: { $ne: null },
+    },
+    { $set: { status: "active" as ConversationStatus } }
+  );
 }
 
 // ─── Message helpers ──────────────────────────────────────────────────────────

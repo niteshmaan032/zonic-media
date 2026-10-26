@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "What does a pool company pay for the website build?",
     answer:
-      "The upfront pool service website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Nothing upfront. The pool service website design and development fee, $2,000 for a standard build, is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the page count, functionality and revision limits before work begins.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Which services count toward the pool website offer?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and route area.",
   },
   {
-    question: "What is included in the pool service website?",
+    question: "Can the site sell weekly plans and take repairs?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes, within the agreed scope. That can include a conversion-focused homepage, weekly service and repair pages, signup and lead forms, click-to-call, mobile optimization, SEO foundations, tracking and lead routing. Exact page count and features are confirmed in your proposal.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "We have an old pool website. Can it be replaced?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer suits pool companies with no website, an outdated website, or a site that is not bringing in enough enquiries. Zonic will recommend whether to replace or rebuild it.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "Do pool companies sign a minimum term?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "Yes, a six-month minimum term on the qualifying plan. Because the website fee is waived inside that engagement, the written agreement explains hosting, revisions, cancellation and website ownership terms before you approve the project.",
   },
 ];
 

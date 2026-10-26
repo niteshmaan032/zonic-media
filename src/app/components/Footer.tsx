@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot, FaRegClock } from "react-icons/fa6";
-import { BsArrowUpRightCircle } from "react-icons/bs";
 import { Row, Col } from "react-bootstrap";
 import { MdCopyright } from "react-icons/md";
 import {
@@ -13,10 +12,93 @@ import {
   SITE_SOCIAL_LINKS,
 } from "@/shared/siteConfig";
 
+/* Site footer — the /home2 design, sitewide since the 26 Oct 2026 go-live
+   (owner: "new header and footer design … on our complete website"):
+   rounded top corners, trust badges under the contact details, a Free
+   Website link in the Others column (the header has no Free Website menu),
+   and the social links sharing the copyright row. */
 function Footer() {
+  const badges = (
+    <div className="d-flex align-items-center gap-3 flex-wrap">
+      {/* Self-hosted copy of the Clutch badge — the live
+          clutch.co/share/badges iframe sits behind a Cloudflare
+          bot challenge and intermittently renders broken. */}
+      <a
+        className="mt-4"
+        href="https://clutch.co/profile/zonic-media?badge=11431"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          className="footer-clutch-badge"
+          src="/images/clutch-top-company-2026.png"
+          width={85}
+          height={85}
+          alt="Top Clutch Digital Marketing Company Delaware 2026"
+          style={{ objectFit: "contain" }}
+        />
+      </a>
+      <div className="mt-4">
+        <a
+          href="https://businessfirms.co/company/zonic-media"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {/* Local 6.7 KB WebP instead of the 828 KB PNG hot-linked from
+              businessfirms.co, which every page downloaded before the
+              hero painted (Sept 2026 CWV work). Lazy-loaded below the fold. */}
+          <Image
+            width={85}
+            height={85}
+            loading="lazy"
+            alt="BusinessFirms certified digital marketing company badge"
+            src="/images/badges/businessfirms-certified.webp"
+          />
+        </a>
+      </div>
+      <Image
+        className="footer-yelp-badge mt-4"
+        width={85}
+        height={85}
+        src="/images/Partner.png"
+        alt="Yelp Advertising Partner"
+      />
+      <a
+        href="https://www.trustpilot.com/review/zonicllc.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4"
+      >
+        <Image
+          className="footer-trustpilot-badge"
+          width={110}
+          height={51}
+          src="/images/Trustpilot-Logo.png"
+          alt="Trustpilot Reviews"
+        />
+      </a>
+    </div>
+  );
+
+  const socials = (
+    <div className="footer-socials">
+      <ul>
+        {SITE_SOCIAL_LINKS.map((social) => (
+          <li key={social.label}>
+            <Link href={social.href} target="_blank" rel="noopener noreferrer">
+              {social.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <>
-      <div className="footer-wrapper">
+      <div
+        className="footer-wrapper footer-wrapper--compact footer-wrapper--rounded"
+      >
         <div className="footer-upper-content">
           <Row className="justify-content-between g-5 g-lg-0">
             <Col xs={12} lg={5}>
@@ -57,6 +139,7 @@ function Footer() {
                   <span>Mon – Fri &nbsp;|&nbsp; 9 AM – 5 PM</span>
                 </li>
               </ul>
+              {badges}
             </Col>
 
             <Col xs={12} lg={5}>
@@ -127,6 +210,11 @@ function Footer() {
                     <Link href="/services/launchpad">Launchpad</Link>
                   </li>
                   <li>
+                    <Link href="/website-design-agency-us/offer">
+                      Free Website
+                    </Link>
+                  </li>
+                  <li>
                     <Link href={SITE_PATHS.blogs}>Blog</Link>
                   </li>
                   <li>
@@ -153,98 +241,14 @@ function Footer() {
                 </ul>
                 <div></div>
               </div>
-              <div className="d-flex align-items-center gap-3 flex-wrap">
-                {/* Self-hosted copy of the Clutch badge — the live
-                    clutch.co/share/badges iframe sits behind a Cloudflare
-                    bot challenge and intermittently renders broken. */}
-                <a
-                  className="mt-4"
-                  href="https://clutch.co/profile/zonic-media?badge=11431"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    className="footer-clutch-badge"
-                    src="/images/clutch-top-company-2026.png"
-                    width={85}
-                    height={85}
-                    alt="Top Clutch Digital Marketing Company Delaware 2026"
-                    style={{ objectFit: "contain" }}
-                  />
-                </a>
-                <div className="mt-4">
-                  <a
-                    href="https://businessfirms.co/company/zonic-media"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* Local 6.7 KB WebP instead of the 828 KB PNG hot-linked from
-                        businessfirms.co, which every page downloaded before the
-                        hero painted (Sept 2026 CWV work). Lazy-loaded below the fold. */}
-                    <Image
-                      width={85}
-                      height={85}
-                      loading="lazy"
-                      alt="BusinessFirms certified digital marketing company badge"
-                      src="/images/badges/businessfirms-certified.webp"
-                    />
-                  </a>
-                </div>
-                <Image
-                  className="footer-yelp-badge mt-4"
-                  width={85}
-                  height={85}
-                  src="/images/Partner.png"
-                  alt="Yelp Advertising Partner"
-                />
-                <a
-                  href="https://www.trustpilot.com/review/zonicllc.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4"
-                >
-                  <Image
-                    className="footer-trustpilot-badge"
-                    width={110}
-                    height={51}
-                    src="/images/Trustpilot-Logo.png"
-                    alt="Trustpilot Reviews"
-                  />
-                </a>
-              </div>
             </Col>
           </Row>
 
-          <div className="d-flex align-items-center flex-wrap justify-content-between">
-            <div className="footer-socials">
-              <ul>
-                {SITE_SOCIAL_LINKS.map((social) => (
-                  <li key={social.label}>
-                    <Link
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {social.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="footer-cta">
-              <p>
-                Let&apos;s work together <br />
-                <Link href={SITE_CONTACT.bookCallHref}>
-                  Contact Zonic Media <BsArrowUpRightCircle />
-                </Link>
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="footer-copyright mt-4 ">
-          <p className="text-white d-flex align-item-center gap-1 justify-content-lg-end">
+        <div className="footer-copyright footer-copyright--row mt-4">
+          {socials}
+          <p className="text-white d-flex align-item-center gap-1">
             <MdCopyright /> 2026 . All Rights Reserved
           </p>
         </div>

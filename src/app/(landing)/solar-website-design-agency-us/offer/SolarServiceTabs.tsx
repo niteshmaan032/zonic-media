@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "residential-solar",
     label: "Residential Solar",
     icon: "sun",
-    heading: "Turn residential solar searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn homeowner solar research into a booked consult.",
+    body: "Residential solar pages that explain how solar works, what affects savings and what to expect from install day, with a simple quote form beside each answer.",
     bullets: [
-      "Clear residential solar value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Savings and payback explainers",
+      "Install process timeline",
+      "Quote form beside each answer",
     ],
     ctaLabel: "Build my residential solar pages",
     kicker: "RESIDENTIAL SOLAR",
-    siteHeading: "Residential Solar—done right.",
+    siteHeading: "Solar made simple for your home.",
     photo: "/images/free-website/free-solar/residential-solar.webp",
     photoAlt: "Solar service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-solar",
     label: "Commercial Solar",
     icon: "building",
-    heading: "Turn commercial solar searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Show business owners the numbers behind solar.",
+    body: "Commercial solar pages covering energy costs, system sizing, roof and ground mounts, project timelines and the financing options that fit a business.",
     bullets: [
-      "Clear commercial solar value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Project and sizing pages",
+      "Business financing options",
+      "Commercial proposal request form",
     ],
     ctaLabel: "Build my commercial solar pages",
     kicker: "COMMERCIAL SOLAR",
-    siteHeading: "Commercial Solar—done right.",
+    siteHeading: "Cut operating costs with solar.",
     photo: "/images/free-website/free-solar/commercial-solar.webp",
     photoAlt: "Solar service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "battery-storage",
     label: "Battery Storage",
     icon: "target",
-    heading: "Turn battery storage searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell backup power to homeowners tired of outages.",
+    body: "Battery storage pages that explain backup power, pairing with existing panels and what runs during an outage, ending in a battery quote request.",
     bullets: [
-      "Clear battery storage value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Backup power explainers",
+      "Add-on to existing systems",
+      "Battery quote request form",
     ],
     ctaLabel: "Build my battery storage pages",
     kicker: "BATTERY STORAGE",
-    siteHeading: "Battery Storage—done right.",
+    siteHeading: "Keep the lights on in an outage.",
     photo: "/images/free-website/free-solar/battery-storage.webp",
     photoAlt: "Solar service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "solar-repair",
     label: "Solar Repair",
     icon: "layers",
-    heading: "Turn solar repair searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win service calls from owners with idle panels.",
+    body: "Solar repair pages for low output, inverter faults and storm damage, with a quick service form for owners whose original installer is gone.",
     bullets: [
-      "Clear solar repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Common fault explainers",
+      "Inverter and panel repair pages",
+      "Fast repair request form",
     ],
     ctaLabel: "Build my solar repair pages",
     kicker: "SOLAR REPAIR",
-    siteHeading: "Solar Repair—done right.",
+    siteHeading: "Get your panels producing again.",
     photo: "/images/free-website/free-solar/solar-repair.webp",
     photoAlt: "Solar service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "ev-charging",
     label: "EV Charging",
     icon: "zap",
-    heading: "Turn ev charging searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Pair solar with a home EV charger.",
+    body: "EV charging pages that show how solar and a home charger work together, covering panel capacity, charger installs and a combined quote request.",
     bullets: [
-      "Clear ev charging value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Solar plus EV explainers",
+      "Charger install details",
+      "Combined quote request",
     ],
-    ctaLabel: "Build my ev charging pages",
+    ctaLabel: "Build my EV charging pages",
     kicker: "EV CHARGING",
-    siteHeading: "EV Charging—done right.",
+    siteHeading: "Drive on sunshine from your roof.",
     photo: "/images/free-website/free-solar/ev-charging.webp",
     photoAlt: "Solar service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "financing-options",
     label: "Financing Options",
     icon: "wrench",
-    heading: "Turn financing options searches into qualified enquiries.",
-    body: "A focused solar website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Make solar financing easy to understand.",
+    body: "Financing pages that compare cash, loans, leases and power purchase agreements in plain words, so homeowners can pick a path and request a quote.",
     bullets: [
-      "Clear financing options value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Cash, loan and lease compared",
+      "Plain-language payment guides",
+      "Quote request after each option",
     ],
-    ctaLabel: "Build my financing options pages",
-    kicker: "FINANCING OPTIONS",
-    siteHeading: "Financing Options—done right.",
+    ctaLabel: "Build my solar financing pages",
+    kicker: "SOLAR FINANCING",
+    siteHeading: "Go solar on terms that fit.",
     photo: "/images/free-website/free-solar/financing-options.webp",
     photoAlt: "Solar service image",
   },
@@ -161,7 +161,7 @@ export default function SolarServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Solar website path
+                <Icon name={service.icon} /> Solar quote path
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -203,7 +203,7 @@ export default function SolarServiceTabs() {
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Free solar quote
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,15 @@ export default function SolarServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Local solar installers. Honest savings estimates. Clean
+                      installs, done right.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Get a quote</b>
+                      <b>View solar options</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Rated by local homeowners</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -249,15 +249,15 @@ export default function SolarServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Get a quote</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made to book solar consults</strong>
+                  <small>From first research to a signed install</small>
                 </span>
               </div>
             </div>

@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the electrician website free to build?",
     answer:
-      "The upfront electrician website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "Yes. The $2,000 electrician website design and development fee is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Where can I find free advertising for electricians?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Your Google Business Profile, local listings and reviews are the main free options. Every qualifying plan includes Google Business Profile work, and Growth and Full Market add Google Ads. We confirm the right plan after reviewing your market.",
   },
   {
-    question: "What is included in the electrician website?",
+    question: "What should an electrician website include?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Ours can include a homepage built for calls and quotes, pages for panel upgrades, EV chargers, rewiring and emergency work, license proof, city pages, reviews, click-to-call, tracking and lead routing. Your proposal confirms the exact scope.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Can you replace the electrical website we have now?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer suits electricians with no website, an outdated site, or a site that is not bringing in enough quote requests. We review your current site first, then recommend a rebuild or a full replacement.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What are the commitment and cancellation terms?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "The qualifying plan has a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and content, but the website does not transfer.",
   },
 ];
 

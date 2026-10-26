@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "weekly-pool-service",
     label: "Weekly Pool Service",
     icon: "droplets",
-    heading: "Turn weekly pool service searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Turn pool cleaning searches into weekly route accounts.",
+    body: "A weekly service page that lists what every visit covers, from skimming and brushing to chemical balance and filter checks, with a simple signup form.",
     bullets: [
-      "Clear weekly pool service value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Visit checklist for every service day",
+      "Plan options and what each covers",
+      "Signup form that asks pool size and type",
     ],
-    ctaLabel: "Build my weekly pool service pages",
+    ctaLabel: "Set up my weekly service page",
     kicker: "WEEKLY POOL SERVICE",
-    siteHeading: "Weekly Pool Service—done right.",
+    siteHeading: "A clean pool every week.",
     photo: "/images/free-website/free-pool-service/weekly-pool-service.webp",
     photoAlt: "Pool Service service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "pool-repair",
     label: "Pool Repair",
     icon: "target",
-    heading: "Turn pool repair searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Catch urgent pump, filter and heater repair calls.",
+    body: "A pool repair page for pumps, filters, heaters and leaks, with tap-to-call up top and a short form for owners who need help before the weekend.",
     bullets: [
-      "Clear pool repair value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Pump, filter, heater and leak sections",
+      "Tap-to-call fixed on mobile screens",
+      "Short repair form with equipment details",
     ],
-    ctaLabel: "Build my pool repair pages",
+    ctaLabel: "Set up my pool repair page",
     kicker: "POOL REPAIR",
-    siteHeading: "Pool Repair—done right.",
+    siteHeading: "Pool equipment, back running.",
     photo: "/images/free-website/free-pool-service/pool-repair.webp",
     photoAlt: "Pool Service service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "equipment-upgrades",
     label: "Equipment Upgrades",
     icon: "wrench",
-    heading: "Turn equipment upgrades searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell variable-speed pumps, salt systems and automation.",
+    body: "An equipment upgrade page that explains variable-speed pumps, salt systems, heaters and automation in plain words, with a quote form for each upgrade.",
     bullets: [
-      "Clear equipment upgrades value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Pump, salt and automation options",
+      "Energy and upkeep benefits explained",
+      "Upgrade quote request form",
     ],
-    ctaLabel: "Build my equipment upgrades pages",
+    ctaLabel: "Set up my equipment upgrade page",
     kicker: "EQUIPMENT UPGRADES",
-    siteHeading: "Equipment Upgrades—done right.",
+    siteHeading: "Smarter gear, less upkeep.",
     photo: "/images/free-website/free-pool-service/equipment-upgrades.webp",
     photoAlt: "Pool Service service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "pool-openings",
     label: "Pool Openings",
     icon: "layers",
-    heading: "Turn pool openings searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Book spring openings and fall closings before the rush.",
+    body: "An openings and closings page with what each visit includes and when to book, so pool owners can lock in a date and move onto weekly service.",
     bullets: [
-      "Clear pool openings value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Opening and closing checklists",
+      "Booking windows by month",
+      "Path from opening to weekly plan",
     ],
-    ctaLabel: "Build my pool openings pages",
+    ctaLabel: "Set up my pool openings page",
     kicker: "POOL OPENINGS",
-    siteHeading: "Pool Openings—done right.",
+    siteHeading: "Open the pool. Skip the work.",
     photo: "/images/free-website/free-pool-service/pool-openings.webp",
     photoAlt: "Pool Service service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "remodel-resurface",
     label: "Remodel & Resurface",
     icon: "layout",
-    heading: "Turn remodel & resurface searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Win plaster, tile and resurfacing projects online.",
+    body: "A remodel and resurface page with before-and-after photos, finish choices and project steps for owners ready to fix stains, cracks or dated tile.",
     bullets: [
-      "Clear remodel & resurface value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Before-and-after resurfacing photos",
+      "Plaster, pebble and tile choices",
+      "Estimate request for larger projects",
     ],
-    ctaLabel: "Build my remodel & resurface pages",
+    ctaLabel: "Set up my resurfacing page",
     kicker: "REMODEL & RESURFACE",
-    siteHeading: "Remodel & Resurface—done right.",
+    siteHeading: "A like-new pool finish.",
     photo: "/images/free-website/free-pool-service/remodel-amp-resurface.webp",
     photoAlt: "Pool Service service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "commercial-pools",
     label: "Commercial Pools",
     icon: "building",
-    heading: "Turn commercial pools searches into qualified enquiries.",
-    body: "A focused pool service website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Reach HOAs, hotels and gyms that need pool contracts.",
+    body: "A commercial pool page for HOAs, apartments, hotels and gyms, covering service schedules, service logs and a bid request for property managers.",
     bullets: [
-      "Clear commercial pools value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "HOA, hotel and apartment pool service",
+      "Service logs and inspection readiness",
+      "Bid request for property managers",
     ],
-    ctaLabel: "Build my commercial pools pages",
+    ctaLabel: "Set up my commercial pool page",
     kicker: "COMMERCIAL POOLS",
-    siteHeading: "Commercial Pools—done right.",
+    siteHeading: "Pools ready for every guest.",
     photo: "/images/free-website/free-pool-service/commercial-pools.webp",
     photoAlt: "Pool Service service image",
   },
@@ -161,7 +161,7 @@ export default function PoolServiceServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Pool Service website path
+                <Icon name={service.icon} /> Pool service website page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function PoolServiceServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Reliable weekly visits, balanced water and quick help when your pool equipment fails.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Start service</b>
+                      <b>See plans</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Trusted by pool owners nearby</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function PoolServiceServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> CLEAN · BALANCE · REPAIR
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function PoolServiceServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Start service</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made to fill routes</strong>
+                  <small>From pool search to signup</small>
                 </span>
               </div>
             </div>

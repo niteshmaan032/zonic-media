@@ -71,46 +71,46 @@ const MARQUEE_ITEMS = [
 ];
 
 const CAPABILITY_ROW_ONE = [
-  { icon: "layout", label: "Professional design" },
-  { icon: "smartphone", label: "Mobile optimization" },
-  { icon: "mail", label: "Lead forms" },
-  { icon: "phone", label: "Click-to-call" },
-  { icon: "search", label: "SEO foundation" },
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
+  { icon: "layout", label: "Solar-first layouts" },
+  { icon: "smartphone", label: "Mobile consult booking" },
+  { icon: "mail", label: "Consultation forms" },
+  { icon: "phone", label: "Click-to-call for quotes" },
+  { icon: "search", label: "Solar local SEO" },
+  { icon: "chart", label: "Quote source tracking" },
+  { icon: "layers", label: "Panel and battery pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Conversion tracking" },
-  { icon: "layers", label: "Service pages" },
-  { icon: "pin", label: "Professional design" },
-  { icon: "gauge", label: "Mobile optimization" },
-  { icon: "code", label: "Lead forms" },
-  { icon: "target", label: "Click-to-call" },
-  { icon: "users", label: "SEO foundation" },
+  { icon: "chart", label: "Quote source tracking" },
+  { icon: "layers", label: "Panel and battery pages" },
+  { icon: "pin", label: "Utility-area pages" },
+  { icon: "gauge", label: "Lightweight pages" },
+  { icon: "code", label: "Solar schema markup" },
+  { icon: "target", label: "Savings CTAs" },
+  { icon: "users", label: "Sales rep routing" },
 ] as const;
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Solar Website for Solar Installers | Zonic Media" },
+  title: { absolute: "Free Solar Website Design for Solar Installers | Zonic" },
   description:
-    "Free solar company website, no upfront development fee, when you start a qualifying Zonic marketing plan. Savings content and consultation booking built in.",
+    "Free solar website design for installers. Skip the solar company website builder: we build it, no fee, on a qualifying plan, with savings and battery pages.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services page targets so the two do not compete.
   keywords: [
     "free solar website",
+    "solar company website builder",
     "solar website design",
-    "solar company website",
+    "solar installer website",
     "free website for solar companies",
+    "solar company website",
     "solar web design agency",
     "solar marketing plan",
-    "solar installer website",
-    "solar websites",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
-    title: "Free Solar Website Offer | Zonic Media",
+    title: "Free Solar Website Design for Solar Installers | Zonic",
     description:
-      "Free solar company website, no upfront development fee, when you start a qualifying Zonic marketing plan. Savings content and consultation booking built in.",
+      "Free solar website design for installers. Skip the solar company website builder: we build it, no fee, on a qualifying plan, with savings and battery pages.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -154,7 +154,7 @@ export default function SolarOfferPage() {
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="eyebrow__pulse" />
-              <span>Free website offer for solar companies</span>
+              <span>Free solar website for solar installers</span>
               <Icon name="sparkles" />
             </div>
 
@@ -171,19 +171,19 @@ export default function SolarOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic Media marketing plan and we’ll build a professional, conversion-focused website for your solar company with no upfront development fee.</p>
+            <p className="hero-lede">Start a qualifying Zonic marketing plan and we build your solar company website with no development fee, ready to explain savings, financing and batteries and book consultations.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
             <div className="hero-actions">
               <a className="button" href="#contact">
-                <span>Claim my solar website</span>
+                <span>Claim my free solar website</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
               </a>
               <a className="button button--secondary" href="#deliverables">
-                <span>See what’s included</span>
+                <span>See solar website features</span>
                 <span className="button__icon">
                   <Icon name="arrow-up-right" />
                 </span>
@@ -205,8 +205,8 @@ export default function SolarOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Solar lead system</strong>
-                  <small>Built for calls and enquiries</small>
+                  <strong>Consultation booking</strong>
+                  <small>Built for quotes and calls</small>
                 </span>
               </div>
               <div className="proof-item proof-item--green">
@@ -214,8 +214,8 @@ export default function SolarOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Quote-ready growth</strong>
-                  <small>Website + solar marketing</small>
+                  <strong>Savings-first content</strong>
+                  <small>Site + solar marketing</small>
                 </span>
               </div>
               <div className="proof-item proof-item--purple proof-item--mobile">
@@ -223,8 +223,8 @@ export default function SolarOfferPage() {
                   <Icon name="shield" />
                 </span>
                 <span>
-                  <strong>Clear terms</strong>
-                  <small>Scope agreed in writing</small>
+                  <strong>Agreed scope</strong>
+                  <small>Signed off up front</small>
                 </span>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function SolarOfferPage() {
                 </div>
                 <div className="address-bar">solarpros.com</div>
                 <div className="browser-live">
-                  <span /> LIVE CONCEPT
+                  <span /> SOLAR CONCEPT
                 </div>
               </div>
 
@@ -267,25 +267,25 @@ export default function SolarOfferPage() {
                   />
                 </span>
                 <div className="mini-nav">
-                  <span>Services</span>
-                  <span>Work</span>
-                  <span>About</span>
+                  <span>Residential</span>
+                  <span>Batteries</span>
+                  <span>Financing</span>
                 </div>
-                <div className="mini-button">Get a quote</div>
+                <div className="mini-button">Free solar quote</div>
               </div>
 
               <div className="design-canvas">
                 <div className="canvas-copy">
-                  <div className="skeleton-label">SOLAR WEBSITE</div>
-                  <h2>More consultations. More solar installs.</h2>
-                  <p>A professional solar website connected to the channels that bring your best prospects.</p>
+                  <div className="skeleton-label">LOCAL SOLAR INSTALLERS</div>
+                  <h2>Lower bills. Cleaner power at home.</h2>
+                  <p>Solar panels, battery storage and financing options from a trusted local installer.</p>
                   <div className="canvas-actions">
-                    <span>Request service</span>
-                    <span>View services</span>
+                    <span>Get a quote</span>
+                    <span>View solar options</span>
                   </div>
                   <div className="canvas-trust">
-                    <Icon name="check" /> Tracking ready <Icon name="check" />{" "}
-                    Mobile optimized
+                    <Icon name="check" /> Licensed installers <Icon name="check" />{" "}
+                    Financing options
                   </div>
                 </div>
                 <div className="visual-stack industry-visual-stack">
@@ -296,7 +296,7 @@ export default function SolarOfferPage() {
                     sizes="(max-width: 860px) 45vw, 300px"
                     priority
                   />
-                  <div className="visual-chip">YOUR BEST WORK</div>
+                  <div className="visual-chip">POWERED BY SUN</div>
                 </div>
               </div>
 
@@ -320,11 +320,11 @@ export default function SolarOfferPage() {
                 <Icon name="menu" />
               </div>
               <div className="phone-body">
-                <span className="phone-kicker">SOLAR SITE</span>
-                <h3>Built to turn visits into leads.</h3>
+                <span className="phone-kicker">SOLAR SERVICES</span>
+                <h3>See what solar could save you.</h3>
                 <div className="phone-art phone-art--industry" />
                 <div className="phone-cta">
-                  Claim website <Icon name="arrow-up-right" />
+                  Get a quote <Icon name="arrow-up-right" />
                 </div>
               </div>
             </div>
@@ -334,8 +334,8 @@ export default function SolarOfferPage() {
                 <Icon name="target" />
               </span>
               <span>
-                <strong>Built for solar leads</strong>
-                <small>Calls, forms, and tracking included</small>
+                <strong>Made for solar quotes</strong>
+                <small>Consults, forms and tracking</small>
               </span>
             </div>
           </div>
@@ -355,9 +355,9 @@ export default function SolarOfferPage() {
         {/* ───────────── Process ───────────── */}
         <section id="process" className="section process-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">One offer. One connected growth system.</span>
-            <h2>Remove the website cost that holds marketing back.</h2>
-            <p>Zonic combines the solar website your business needs with recurring marketing built to reach qualified prospects in the markets you serve.</p>
+            <span className="section-kicker">From discovery call to live solar site</span>
+            <h2>Solar websites for long sales cycles, minus the build fee.</h2>
+            <p>We pair your solar website with marketing that reaches homeowners while they research panels, batteries and financing, long before they sign.</p>
           </div>
 
           <div className="process-grid">
@@ -366,39 +366,35 @@ export default function SolarOfferPage() {
               <div className="step-icon">
                 <Icon name="quote" />
               </div>
-              <h3>Tell us your growth goals</h3>
-              <p>We review your solar service mix, markets, current website, lead sources, and the channels most likely to create profitable demand.</p>
-              <small>Qualification call</small>
+              <h3>Study your solar market</h3>
+              <p>We look at your services, utility areas, current website, lead sources and the installs you want more of across your territory.</p>
+              <small>Solar strategy call</small>
             </article>
             <article className="process-card--featured">
               <span className="step-number">02</span>
               <div className="step-icon">
                 <Icon name="chart" />
               </div>
-              <h3>Choose a qualifying plan</h3>
-              <p>Your plan may combine Google Ads, Local SEO, Google Business Profile management, tracking, and conversion optimization.</p>
-              <small>Recurring growth service</small>
+              <h3>Pick a solar marketing plan</h3>
+              <p>Your plan can mix solar Google Ads, local SEO, Google Business Profile work, call tracking and consultation-page improvements.</p>
+              <small>Ongoing solar leads</small>
             </article>
             <article>
               <span className="step-number">03</span>
               <div className="step-icon">
                 <Icon name="wand" />
               </div>
-              <h3>We build your website</h3>
-              <p>
-                Zonic creates the agreed solar lead-generation website with the upfront development fee waived under your marketing engagement. Same build standard as{" "}
-                <Link href="/services/solar-website-design" className="offer-inlink">
+              <h3>We build your solar site</h3>
+              <p>We build the agreed solar website in 2–3 weeks with the upfront development fee waived under your marketing plan. Built to the same standard as <Link href="/services/solar-website-design" className="offer-inlink">
                   our solar website design service
-                </Link>
-                .
-              </p>
-              <small>Website fee waived</small>
+                </Link>.</p>
+              <small>Solar build fee waived</small>
             </article>
           </div>
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Check my solar company</span>
+              <span>See if my solar company qualifies</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -409,26 +405,19 @@ export default function SolarOfferPage() {
         {/* ───────────── Lead tracking ───────────── */}
         <section id="lead-tracking" className="section leadtrack-section">
           <div className="leadtrack-copy">
-            <span className="section-kicker">Lead tracking system</span>
-            <h2>Every solar lead in one place.</h2>
-            <p>
-              Calls, forms and chats arrive in one dashboard with the source
-              attached, so you can see which solar jobs your marketing produced
-              instead of guessing where the phone calls came from.
-            </p>
+            <span className="section-kicker">Solar lead tracking</span>
+            <h2>Follow each solar lead to a signed contract.</h2>
+            <p>Calls, quote forms and chats land in one dashboard with the source attached, so you can see which channels bring homeowners who actually book a consultation.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Every call, form and chat captured
-              </li>
+                <Icon name="check" /> Quote requests and calls captured</li>
               <li>
-                <Icon name="check" /> The source recorded against each lead
-              </li>
+                <Icon name="check" /> Channel recorded for every solar lead</li>
               <li>
-                <Icon name="check" /> Status tracked from new to won
-              </li>
+                <Icon name="check" /> Status from consult to signed install</li>
             </ul>
             <a className="section-button" href="#contact">
-              <span>See The Tracking Setup</span>
+              <span>Show me solar tracking</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -514,30 +503,28 @@ export default function SolarOfferPage() {
         <section id="work" className="section niche-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Solar website service paths</span>
-              <h2>One solar website. A clear path for every profitable solar service.</h2>
+              <span className="section-kicker">Built for solar research</span>
+              <h2>Answer every solar buyer question on its own page.</h2>
             </div>
-            <p>Choose a service to see how Zonic keeps the message on the left and the responsive website mockup on the right—aligned around the way your best prospects search.</p>
+            <p>Pick a solar service to see how we shape the message, proof and quote steps for a homeowner or business weighing the switch to solar.</p>
           </div>
 
           <SolarServiceTabs />
 
           <div className="niche-banner">
             <div className="niche-banner-copy">
-              <span className="section-kicker section-kicker--dark">
-                Beyond these six
-              </span>
-              <h3>We build for every solar service.</h3>
-              <p>The tabs are a sample — if customers search for it, we can build the page that wins the enquiry.</p>
+              <span className="section-kicker section-kicker--dark">The full solar lineup</span>
+              <h3>Every solar service you sell, covered.</h3>
+              <p>This is a sample. If buyers near you search for a solar service, we can build the page that earns the consultation.</p>
             </div>
             <div className="niche-banner-tags">
               {MARQUEE_ITEMS.slice(0, 8).map((tag) => (
                 <span key={tag}>{tag.replace(" leads", "")}</span>
               ))}
-              <span className="niche-banner-more">+ every solar service</span>
+              <span className="niche-banner-more">+ any solar service</span>
             </div>
             <a className="section-button section-button--light" href="#contact">
-              <span>Claim my solar website</span>
+              <span>Get my solar website</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -548,9 +535,9 @@ export default function SolarOfferPage() {
         {/* ───────────── What's included ───────────── */}
         <section id="deliverables" className="included-section">
           <div className="section-heading section-heading--center">
-            <span className="section-kicker">Your lead-generation website includes</span>
-            <h2>More than a solar website handed over and forgotten.</h2>
-            <p>Your solar website is built as part of a connected marketing system, with the structure, tracking, and conversion tools needed to support recurring growth.</p>
+            <span className="section-kicker">What your solar site includes</span>
+            <h2>Skip the solar company website builder. We build it for you.</h2>
+            <p>Your solar website is built into a connected marketing system, with the structure, tracking and conversion tools that keep consultation requests coming.</p>
           </div>
 
           <div className="icon-cloud">
@@ -578,15 +565,11 @@ export default function SolarOfferPage() {
                 <Icon name="search" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 01</small>
-                <h3>Search-ready structure</h3>
-                <p>
-                  Service pages, location pathways, on-page SEO, and schema where appropriate help search engines understand your business. The same structure behind our{" "}
-                  <Link href="/services/local-seo-for-home-services" className="offer-inlink">
+                <small>SOLAR STACK 01</small>
+                <h3>Pages that answer solar research</h3>
+                <p>Service pages, utility-area pages, on-page SEO and schema markup help Google match your company to local solar searches. The same structure behind our <Link href="/services/local-seo-for-home-services" className="offer-inlink">
                     local SEO service
-                  </Link>
-                  .
-                </p>
+                  </Link>.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -595,9 +578,9 @@ export default function SolarOfferPage() {
                 <Icon name="target" />
               </span>
               <div>
-                <small>WEBSITE SYSTEM 02</small>
-                <h3>Measurable lead flow</h3>
-                <p>Lead forms, click-to-call, GA4, Tag Manager, conversion tracking, and CRM routing connect marketing activity to real enquiries.</p>
+                <small>SOLAR STACK 02</small>
+                <h3>Consultations you can trace</h3>
+                <p>Quote forms, click-to-call, GA4, Tag Manager, conversion tracking and CRM routing tie your marketing to real solar consultations.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -605,7 +588,7 @@ export default function SolarOfferPage() {
 
           <div className="section-cta-row">
             <a className="button" href="#contact">
-              <span>Claim my solar website</span>
+              <span>Claim my free solar website</span>
               <span className="button__icon">
                 <Icon name="arrow-up-right" />
               </span>
@@ -617,8 +600,8 @@ export default function SolarOfferPage() {
         <section id="pricing" className="section pricing-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Qualifying plans</span>
-              <h2>Pick the growth plan. Your Solar website comes with it.</h2>
+              <span className="section-kicker">Plans for solar installers</span>
+              <h2>Choose a solar plan. The website is installed with it.</h2>
             </div>
             <p>Any plan at $297/month or above on a 6-month term includes the full lead-generation website build at no development fee.</p>
           </div>
@@ -741,13 +724,11 @@ export default function SolarOfferPage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">
-              The qualifying marketing plan
-            </span>
-            <h2>The website is the foundation. Marketing creates demand for solar companies.</h2>
-            <p>Your plan is selected around your solar market and may combine paid search, local visibility, Google Business Profile growth, tracking, and ongoing conversion improvements.</p>
+            <span className="section-kicker section-kicker--dark">Keeping solar buyers close</span>
+            <h2>Solar buyers research for weeks. Marketing keeps you in view.</h2>
+            <p>We build your plan around your solar market. It can mix paid search, local SEO, Google Business Profile growth, call tracking and ongoing page improvements.</p>
             <a className="section-button section-button--light" href="#contact">
-              <span>Check my solar company</span>
+              <span>Plan my solar marketing</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -756,44 +737,33 @@ export default function SolarOfferPage() {
           <div className="dark-grid">
             <article>
               <strong>01</strong>
-              <h3>Google Ads management</h3>
-              <p>
-                Capture high-intent searches with targeted campaigns, focused landing experiences, and measurable lead actions. See our{" "}
-                <Link href="/services/google-ads" className="offer-inlink">
+              <h3>Solar search campaigns</h3>
+              <p>Show up for solar panel, battery and solar financing searches with targeted ads and tracked quotes. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>02</strong>
-              <h3>Local SEO + GBP</h3>
-              <p>
-                Build visibility across services and locations while improving the business signals customers see in local results. Backed by{" "}
-                <Link
+              <h3>Local solar visibility</h3>
+              <p>Build visibility in the cities and utility areas you serve, with reviews and install photos that earn trust. Backed by <Link
                   href="/local-seo-google-business-optimization"
                   className="offer-inlink"
                 >
                   Google Business Profile optimization
-                </Link>
-                .
-              </p>
+                </Link>.</p>
             </article>
             <article>
               <strong>03</strong>
-              <h3>Conversion optimization</h3>
-              <p>Use call and form tracking, landing-page improvements, and reporting to turn more visits into qualified enquiries.</p>
+              <h3>Consultation page improvements</h3>
+              <p>We review calls, quote forms and page behavior, then improve the pages that should book more consultations.</p>
             </article>
             <article className="dark-stat">
               <span>
-                <b>$0</b> upfront development fee
-              </span>
+                <b>$0</b> solar build fee</span>
               <span>
-                <b>1</b> connected growth system
-              </span>
+                <b>1</b> plan covering site and ads</span>
               <span>
-                <b>100%</b> clear written scope
-              </span>
+                <b>100%</b> of the terms in writing</span>
             </article>
           </div>
         </section>
@@ -801,13 +771,11 @@ export default function SolarOfferPage() {
         {/* ───────────── Terms ───────────── */}
         <section className="section terms-section">
           <div className="terms-main">
-            <span className="section-kicker">
-              Clear qualification. Clear terms.
-            </span>
-            <h2>What &ldquo;free website&rdquo; means in this offer.</h2>
-            <p>Zonic waives the upfront solar website design and development fee when an eligible business starts a qualifying recurring marketing engagement. Nothing is left vague before you agree.</p>
+            <span className="section-kicker">Offer details for solar companies</span>
+            <h2>How the solar website fee waiver works.</h2>
+            <p>We waive the solar website design and development fee when a new client starts a qualifying recurring marketing plan. Every term is agreed before you sign.</p>
             <a className="section-button" href="#contact">
-              <span>See if my solar company qualifies</span>
+              <span>Check my solar company</span>
               <i>
                 <Icon name="arrow-up-right" />
               </i>
@@ -817,39 +785,31 @@ export default function SolarOfferPage() {
             <div>
               <Icon name="check" />
               <span>
-                <strong>What&rsquo;s waived</strong>
-                <small>The solar website development fee, valued at $2,000. Your monthly plan is billed at full rate and is not discounted.</small>
+                <strong>Fee we cover</strong>
+                <small>The solar website development fee, valued at $2,000. Your monthly plan is billed at its full rate and is not discounted.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What qualifies you</strong>
-                <small>
-                  Any Zonic marketing plan at $297/month or above — Local Foundation, Growth, or Full Market — on a six-month minimum term. Advertising spend is billed separately by the platform. Also available with{" "}
-                  <Link href="/services/solar-website-design" className="offer-inlink">
+                <strong>Plans that apply</strong>
+                <small>Any Zonic marketing plan at $297/month or above (Local Foundation, Growth or Full Market) on a six-month minimum term. The ad platform bills ad spend separately. Also available with <Link href="/services/solar-website-design" className="offer-inlink">
                     our solar website design service
-                  </Link>
-                  .
-                </small>
+                  </Link>.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>What you own</strong>
-                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term; full ownership of the website and hosting transfers to you at the completion of month six.</small>
+                <strong>What you keep</strong>
+                <small>Your domain is registered in your business’s name from day one. We host and maintain the site during the term, and full ownership of the website and hosting transfers to you once month six is complete.</small>
               </span>
             </div>
             <div>
               <Icon name="check" />
               <span>
-                <strong>If you cancel early</strong>
-                <small>
-                  You keep your domain and any content you supplied. The website
-                  does not transfer, because the build fee was waived against
-                  the full six-month engagement.
-                </small>
+                <strong>Ending the plan early</strong>
+                <small>You keep your domain and any content you supplied. The website does not transfer, because the build fee was waived against the full six-month engagement.</small>
               </span>
             </div>
           </div>
@@ -859,8 +819,8 @@ export default function SolarOfferPage() {
         <section id="reviews" className="section review-section">
           <div className="section-heading section-heading--split">
             <div>
-              <span className="section-kicker">Website + recurring growth</span>
-              <h2>Why the combined offer is stronger.</h2>
+              <span className="section-kicker">Why solar companies bundle</span>
+              <h2>Long solar sales cycles need one connected plan.</h2>
             </div>
             <div className="growth-priority-badge">
               <div>
@@ -875,8 +835,8 @@ export default function SolarOfferPage() {
                 </span>
               </div>
               <p>
-                <strong>One connected system</strong>
-                <small>Website · visibility · tracking</small>
+                <strong>One solar lead system</strong>
+                <small>Site · Maps · quote tracking</small>
               </p>
             </div>
           </div>
@@ -884,34 +844,34 @@ export default function SolarOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your website, ads, local visibility, and tracking are planned around the same audience instead of being handled as unrelated projects.</p>
+              <p>Your website, ads, Google profile and tracking all speak to the same homeowners and businesses in your territory.</p>
               <footer>
                 <span>01</span>
                 <div>
-                  <strong>One strategy</strong>
-                  <small>Built around your market</small>
+                  <strong>One solar strategy</strong>
+                  <small>Planned for your territory</small>
                 </div>
               </footer>
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>The upfront website investment is removed, giving the marketing plan a stronger foundation without adding a separate development bill.</p>
+              <p>With no build invoice, more of your budget goes into the campaigns that keep consultations on the calendar.</p>
               <footer>
                 <span>02</span>
                 <div>
-                  <strong>Lower starting barrier</strong>
-                  <small>Development fee waived</small>
+                  <strong>Budget for consultations</strong>
+                  <small>No upfront site bill</small>
                 </div>
               </footer>
             </article>
             <article>
               <Icon name="target" />
-              <p>Calls, forms, campaigns, and local search actions are measured together so ongoing improvements can focus on qualified leads.</p>
+              <p>Calls, quote forms, ads and local search actions are tracked together, so each change aims at signed installs.</p>
               <footer>
                 <span>03</span>
                 <div>
-                  <strong>Measurable growth</strong>
-                  <small>Tracking connected from launch</small>
+                  <strong>Signed installs you can trace</strong>
+                  <small>Tracking set at launch</small>
                 </div>
               </footer>
             </article>
@@ -930,9 +890,9 @@ export default function SolarOfferPage() {
         {/* ───────────── FAQs ───────────── */}
         <section id="faqs" className="section faq-section">
           <div className="faq-intro">
-            <span className="section-kicker">Frequently asked questions</span>
-            <h2>Understand the offer before you claim it.</h2>
-            <p>These are the details business owners should know about eligibility, website scope, and the qualifying marketing engagement.</p>
+            <span className="section-kicker">Solar website FAQs</span>
+            <h2>Solar website answers, before you commit.</h2>
+            <p>What solar companies ask most about the free website, website builders, qualifying plans and the terms.</p>
             <a className="section-button" href="#contact">
               <span>Ask about my solar market</span>
               <i>
@@ -950,21 +910,16 @@ export default function SolarOfferPage() {
           <div className="cta-orbit cta-orbit--two" />
 
           <div className="cta-content">
-            <span className="section-kicker section-kicker--dark">
-              Zonic Website Launch Offer
-            </span>
-            <h2>Claim your professional solar website with no upfront development fee.</h2>
-            <p>Complete the short eligibility form. Zonic will review your solar company, website needs, service market, and growth goals before recommending a qualifying plan.</p>
+            <span className="section-kicker section-kicker--dark">Solar website launch</span>
+            <h2>Turn solar research into booked consultations.</h2>
+            <p>Fill in the short form. We review your solar company, current website, service area and goals before recommending a qualifying plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Professional solar lead-generation website
-              </span>
+                <Icon name="check" /> Solar website built for consultations</span>
               <span>
-                <Icon name="check" /> Marketing plan matched to your goals
-              </span>
+                <Icon name="check" /> Marketing plan matched to your territory</span>
               <span>
-                <Icon name="check" /> Clear scope and terms before commitment
-              </span>
+                <Icon name="check" /> Scope and terms agreed first</span>
             </div>
 
             <div className="cta-direct">
@@ -1000,7 +955,7 @@ export default function SolarOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Solar lead-generation websites connected to the marketing services that grow solar companies.</p>
+            <p>Solar company websites paired with the marketing that books consultations and installs.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />
@@ -1028,7 +983,7 @@ export default function SolarOfferPage() {
           </div>
 
           <div className="footer-offer">
-            <span>Solar Website Launch Offer</span>
+            <span>Free Solar Website Offer</span>
             <strong>$0 upfront development fee</strong>
             <p>With a qualifying marketing plan at $297/month or above on a six-month term.</p>
             <a href="#ofr-solar-offer-form">

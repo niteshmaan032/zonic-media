@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "How is the painting contractor website free?",
     answer:
-      "The upfront painting contractor website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "We waive the upfront painting contractor website design and development fee, $2,000 for a standard build, when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, functionality and revision limits before work begins.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Do I need Google Ads to qualify as a painter?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Not always. Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your painting goals and market.",
   },
   {
-    question: "What is included in the painting contractor website?",
+    question: "What does a painting contractor website include?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "The agreed scope can include a conversion-focused homepage, pages for each painting service, project galleries, estimate forms, click-to-call, mobile optimization, SEO foundations, tracking and lead routing. Exact page count and functions are confirmed in your proposal.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Can you replace our DIY-builder painter site?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer is open to painters with no website, an outdated website, or a website that is not bringing in enough enquiries. Zonic will recommend whether to replace or rebuild it.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What terms come with the free painter website?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "A six-month minimum term on the qualifying plan. Since the website fee is waived as part of that engagement, the written agreement explains hosting, revisions, cancellation and website ownership terms before you approve the project.",
   },
 ];
 

@@ -213,11 +213,8 @@ export default function HvacLeadForm() {
         <span>
           <Icon name="mail" /> Free HVAC website eligibility
         </span>
-        <h3>See If Your HVAC Company Qualifies.</h3>
-        <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
-        </p>
+        <h3>Start Your HVAC Website Review.</h3>
+        <p>Share your services, cities and goals. Sending this form is not a contract.</p>
       </div>
 
       <div className="form-grid">

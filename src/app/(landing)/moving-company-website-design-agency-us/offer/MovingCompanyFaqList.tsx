@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "How can a moving company website be free?",
     answer:
-      "The upfront moving company website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "The upfront moving company website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work starts.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Which plans unlock the free moving website?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Qualifying plans can include Google Ads management, Local SEO, Google Business Profile management, a combined ads and Local SEO plan, or a wider growth plan. Zonic confirms eligibility after reviewing your routes and goals.",
   },
   {
-    question: "What is included in the moving company website?",
+    question: "Can the site handle local and long-distance quote requests?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes. The agreed scope can include a quote-first homepage, separate local and long-distance pages, city pages, quote forms, click-to-call, mobile layout, SEO basics, tracking and lead routing. Your proposal confirms the exact pages and features.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "We already have a moving website. Can you replace it?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer works for movers with no website, an outdated one, or a site that brings in too few quote requests. Zonic reviews what you have and recommends a rebuild or a full replacement.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "Is there a minimum term or cancellation policy?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "Yes. The website fee is waived as part of a recurring marketing engagement, so your written agreement covers the minimum term, hosting, revisions, cancellation and website ownership before you approve anything.",
   },
 ];
 

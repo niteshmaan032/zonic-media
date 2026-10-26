@@ -24,103 +24,103 @@ const SERVICES: ServicePath[] = [
     id: "personal-injury",
     label: "Personal Injury",
     icon: "scale",
-    heading: "Turn urgent searches into confidential case evaluations.",
-    body: "Lead with empathy, credibility, and a clear next step for people comparing representation after an injury, while keeping consultation actions visible without making outcome promises.",
+    heading: "Help injured people take a clear first step toward a consultation.",
+    body: "Explain injury case types, the process and what to bring to a first meeting, in calm language with consultation actions visible and no outcome promises.",
     bullets: [
-      "Case-type and injury pathways",
-      "Trust-led attorney proof",
-      "Confidential consultation actions",
+      "Injury type pathways",
+      "What-to-expect process steps",
+      "Confidential consultation form",
     ],
     ctaLabel: "Build my personal injury pages",
     kicker: "PERSONAL INJURY COUNSEL",
-    siteHeading: "Focused advocacy when life changes without warning.",
+    siteHeading: "Hurt in an accident? Start with a conversation.",
     photo: "/images/free-website/free-law-firm/consultation.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Attorney consultation with a client",
   },
   {
     id: "family-law",
     label: "Family Law",
     icon: "target",
-    heading: "Make a sensitive first conversation feel easier to begin.",
-    body: "Present divorce, custody, support, and related family matters with calm language, privacy signals, attorney credibility, and a direct consultation route.",
+    heading: "Make divorce and custody enquiries feel easier to start.",
+    body: "Present divorce, custody, support and related matters with calm wording, privacy cues, attorney bios and a low-pressure consultation request.",
     bullets: [
-      "Matter-specific guidance",
-      "Confidentiality and care signals",
-      "Low-friction consultation form",
+      "Matter-by-matter pages",
+      "Privacy and care cues",
+      "Low-pressure consultation form",
     ],
     ctaLabel: "Build my family law pages",
     kicker: "FAMILY LAW",
-    siteHeading: "Practical guidance for difficult family transitions.",
+    siteHeading: "Support for family changes, step by step.",
     photo: "/images/free-website/free-law-firm/case-review.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Family law case review",
   },
   {
     id: "criminal-defense",
     label: "Criminal Defense",
     icon: "layers",
-    heading: "Give urgent legal searches a fast, discreet response path.",
-    body: "Help prospective clients understand your availability, defense focus, process, and next step without fear-based copy or unsupported claims.",
+    heading: "Give people facing charges a fast, discreet way to call.",
+    body: "Show availability, the charges you defend and how the process works, without fear-based copy or claims about results, plus a call button on every screen.",
     bullets: [
-      "Urgent click-to-call placement",
-      "Charge and case-type pathways",
-      "Discreet intake experience",
+      "Click-to-call on every screen",
+      "Charge-type pathways",
+      "Discreet intake form",
     ],
     ctaLabel: "Build my criminal defense pages",
     kicker: "CRIMINAL DEFENSE",
-    siteHeading: "A clear defense strategy starts with a conversation.",
+    siteHeading: "Charged with a crime? Talk to a defense attorney.",
     photo: "/images/free-website/free-law-firm/consultation.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Criminal defense attorney consultation",
   },
   {
     id: "immigration",
     label: "Immigration",
     icon: "pin",
-    heading: "Organize complex immigration needs into clear service pathways.",
-    body: "Guide families, individuals, and employers toward the right consultation through understandable case categories, process education, and multilingual-ready page structure.",
+    heading: "Sort complex immigration needs into clear, simple pathways.",
+    body: "Guide families, workers and employers toward the right consultation with clear case categories, process overviews and pages ready for more than one language.",
     bullets: [
       "Visa and status pathways",
-      "Process-focused education",
+      "Process overview content",
       "Consultation routing by matter",
     ],
     ctaLabel: "Build my immigration pages",
     kicker: "IMMIGRATION LAW",
-    siteHeading: "Clear immigration counsel for every next step.",
+    siteHeading: "Immigration counsel for your next step.",
     photo: "/images/free-website/free-law-firm/case-review.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Immigration case review",
   },
   {
     id: "estate-planning",
     label: "Estate Planning",
     icon: "clipboard",
-    heading: "Connect planning questions to a confident first meeting.",
-    body: "Explain wills, trusts, probate, powers of attorney, and legacy planning in a reassuring flow that encourages clients to schedule before a need becomes urgent.",
+    heading: "Turn will and trust questions into planning consultations.",
+    body: "Explain wills, trusts, powers of attorney and probate in a calm flow that invites people to book a planning meeting before a need becomes urgent.",
     bullets: [
       "Document and goal pathways",
-      "Educational trust content",
-      "Planning consultation actions",
+      "Plain-language planning content",
+      "Planning meeting request",
     ],
     ctaLabel: "Build my estate planning pages",
     kicker: "ESTATE PLANNING",
-    siteHeading: "Protect what matters with a plan built around you.",
+    siteHeading: "Plan ahead for the people you love.",
     photo: "/images/free-website/free-law-firm/client-meeting.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Estate planning client meeting",
   },
   {
     id: "business-law",
     label: "Business Law",
     icon: "building",
-    heading: "Give business owners a direct route to practical counsel.",
-    body: "Present contracts, formation, disputes, employment matters, and ongoing counsel in a concise business-focused experience built for qualified enquiries.",
+    heading: "Give business owners a direct line to counsel.",
+    body: "Present contracts, formation, disputes and ongoing counsel in a short, business-first layout that makes it easy for owners to request a meeting.",
     bullets: [
       "Business-stage service paths",
-      "Counsel and industry credibility",
-      "Qualified consultation routing",
+      "Attorney and industry background",
+      "Business consultation routing",
     ],
     ctaLabel: "Build my business law pages",
     kicker: "BUSINESS COUNSEL",
-    siteHeading: "Legal clarity for the decisions that move business forward.",
+    siteHeading: "Legal support for decisions that grow a business.",
     photo: "/images/free-website/free-law-firm/client-meeting.webp",
-    photoAlt: "Law Firm work in progress",
+    photoAlt: "Business law client meeting",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function LawFirmServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Law Firm website path
+                <Icon name={service.icon} /> Practice-area page plan
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -198,12 +198,12 @@ export default function LawFirmServiceTabs() {
                     />
                   </span>
                   <div className="niche-mini-links">
-                    <span>Services</span>
-                    <span>About</span>
-                    <span>Reviews</span>
+                    <span>Practice Areas</span>
+                    <span>Attorneys</span>
+                    <span>Contact</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Get a quote
+                    <Icon name="phone" /> Consultation
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -211,15 +211,14 @@ export default function LawFirmServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Clear explanations. Direct communication. A simple way to request a consultation.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Request consultation</b>
+                      <b>Practice areas</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Reviews from local clients</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function LawFirmServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> LOCAL · CONFIDENTIAL · CLEAR
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function LawFirmServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Request consultation</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Built for intake</strong>
+                  <small>Clear path from search to consultation</small>
                 </span>
               </div>
             </div>

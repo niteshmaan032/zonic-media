@@ -206,10 +206,9 @@ export default function CleaningCompanyLeadForm() {
         <span>
           <Icon name="mail" /> Free cleaning company website eligibility
         </span>
-        <h3>See If You Qualify.</h3>
+        <h3>See If Your Cleaning Company Fits.</h3>
         <p>
-          A short form to review your market and growth fit. Submitting is not a
-          contract.
+          A short form so we can review your service area and growth fit. Sending it is not a contract.
         </p>
       </div>
 

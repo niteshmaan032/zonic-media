@@ -18,7 +18,9 @@
   --slf-bg-alt: #f8fafc;
   --slf-red: #ef4444;
 
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  /* Site font (Neue Haas Display, from <body>). Inter/Manrope here made every
+     page with the lead form download two extra font families (~75 KB). */
+  font-family: inherit;
   color: var(--slf-navy);
   line-height: 1.6;
 }
@@ -50,7 +52,7 @@
   gap: 8px;
   background: var(--slf-orange-tint);
   color: var(--slf-orange-dark);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: inherit;
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 0.02em;
@@ -65,7 +67,7 @@
   display: block;
 }
 .slf .slf-title {
-  font-family: "Manrope", system-ui, sans-serif;
+  font-family: inherit;
   font-size: 24px;
   font-weight: 600;
   color: var(--slf-navy);
@@ -208,7 +210,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: inherit;
   font-weight: 500;
   font-size: 15px;
   padding: 14px 22px;

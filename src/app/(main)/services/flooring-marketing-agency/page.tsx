@@ -1,11 +1,14 @@
-import type { Metadata } from "next";
+import { IndustryTemplate } from "@/components/rd/industry/IndustryTemplate";
+import { CONTENT } from "@/components/rd/industry/content/flooring-marketing-agency";
+import { IndustrySchema, draftMetadata } from "@/components/rd/industry/route";
 
-import IndustryMarketingPage from "@/app/components/IndustryMarketingPage";
-import { flooringMarketing } from "./pageData";
-import "@/app/style/industryMarketingPages.css";
+export const metadata = draftMetadata(CONTENT);
 
-export const metadata: Metadata = flooringMarketing.metadata;
-
-export default function FlooringMarketingAgencyPage() {
-  return <IndustryMarketingPage page={flooringMarketing.page} />;
+export default function Page() {
+  return (
+    <>
+      <IndustrySchema c={CONTENT} />
+      <IndustryTemplate c={CONTENT} />
+    </>
+  );
 }

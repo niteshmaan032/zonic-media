@@ -7,6 +7,7 @@
    ============================================================ */
 
 /* Hide site-wide navbar on this page */
+body:has(.hia-page) .rh-root,
 body:has(.hia-page) .navbar-wrapper,
 body:has(.hia-page) .navbar-wrapper.show {
   display: none !important;

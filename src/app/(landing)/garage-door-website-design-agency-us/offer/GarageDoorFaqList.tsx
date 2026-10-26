@@ -1,29 +1,29 @@
 /** Exported so the page can emit FAQPage schema from the same source. */
 export const FAQS = [
   {
-    question: "Is the professional website really free?",
+    question: "Is the garage door website free, or just discounted?",
     answer:
-      "The upfront garage door website design and development fee — $2,000 for a standard build — is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal defines the exact page count, functionality, and revision limits before work begins.",
+      "The upfront garage door website design and development fee, $2,000 for a standard build, is fully waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, functionality and revision limits before work begins.",
   },
   {
-    question: "Which marketing plans qualify?",
+    question: "Which plan do I need for the garage door website?",
     answer:
-      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and market.",
+      "Qualifying services may include Google Ads management, Local SEO, Google Business Profile management, a combined PPC and Local SEO plan, or a broader growth plan. Zonic confirms eligibility after reviewing your goals and service area.",
   },
   {
-    question: "What is included in the garage door website?",
+    question: "Will the website be built for emergency repair calls?",
     answer:
-      "The agreed scope can include a conversion-focused homepage, service pages, lead forms, click-to-call actions, mobile optimization, SEO foundations, tracking, and lead routing. Exact page count and functionality are confirmed in your proposal.",
+      "Yes. The agreed scope can include a conversion-focused homepage, pages for repairs and installs, click-to-call on every screen, lead forms, mobile optimization, SEO foundations, call tracking and lead routing. Exact page count and features are confirmed in your proposal.",
   },
   {
-    question: "Can Zonic replace my existing website?",
+    question: "Our door site barely gets calls. Can you rebuild it?",
     answer:
-      "Yes. The offer can be used for businesses with no website, an outdated website, or a website that is not generating enough enquiries. Zonic will recommend the right replacement or rebuild approach.",
+      "Yes. The offer works for garage door companies with no website, an outdated website, or a site that is not producing enough calls and enquiries. Zonic will recommend a replacement or rebuild.",
   },
   {
-    question: "Are there commitment or cancellation terms?",
+    question: "What commitment does the garage door offer require?",
     answer:
-      "Yes. Because the website fee is waived as part of a recurring marketing engagement, the written agreement will explain any minimum commitment, hosting, revision, cancellation, and website ownership terms before you approve the project.",
+      "A qualifying plan on a six-month minimum term. Because the website fee is waived as part of that engagement, the written agreement explains hosting, revisions, cancellation and website ownership terms before you approve the project.",
   },
 ];
 

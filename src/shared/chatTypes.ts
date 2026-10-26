@@ -72,6 +72,12 @@ export interface ConversationDocument {
   subService?: string;
   status: ConversationStatus;
   assignedAdminId?: string | null;
+  /** Display name of the agent who accepted the chat (26 Oct 2026). */
+  assignedAdminName?: string | null;
+  /** When an agent pressed "Accept"; null while the visitor waits. */
+  acceptedAt?: Date | null;
+  /** Page the visitor asked for a live agent from. */
+  sourcePage?: string | null;
   lastMessage?: string | null;
   lastMessageAt?: Date | null;
   unreadForAdmin: number;
@@ -112,6 +118,9 @@ export type SafeConversation = {
   subService?: string;
   status: ConversationStatus;
   assignedAdminId?: string | null;
+  assignedAdminName?: string | null;
+  acceptedAt?: string | null;
+  sourcePage?: string | null;
   lastMessage?: string | null;
   lastMessageAt?: string | null;
   unreadForAdmin: number;

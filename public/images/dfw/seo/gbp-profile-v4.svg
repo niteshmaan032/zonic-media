@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Google Business Profile optimization</title>
+  <desc id="desc">A flat illustration of a completed business profile with categories, services, hours and photos.</desc>
+  <rect width="800" height="1000" rx="34" fill="#f4f0e8"/>
+  <rect x="72" y="66" width="656" height="850" rx="28" fill="#fffdf9" stroke="#18304a" stroke-width="8"/>
+  <rect x="72" y="66" width="656" height="134" rx="28" fill="#2f6fed"/>
+  <circle cx="138" cy="133" r="35" fill="#fffdf9"/><path d="M138 110c-14 0-25 11-25 25 0 19 25 42 25 42s25-23 25-42c0-14-11-25-25-25Z" fill="#2f6fed"/><circle cx="138" cy="135" r="8" fill="#fffdf9"/>
+  <text x="206" y="126" fill="#fffdf9" font-family="Arial,sans-serif" font-size="24" font-weight="700">BUSINESS PROFILE</text><text x="206" y="159" fill="#dce9ef" font-family="Arial,sans-serif" font-size="16">OPTIMIZED FOR LOCAL SEARCH</text>
+  <rect x="114" y="238" width="572" height="108" rx="18" fill="#e8eef4"/><text x="148" y="278" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="700">PROFILE COMPLETENESS</text><rect x="148" y="303" width="418" height="14" rx="7" fill="#c8d2d7"/><rect x="148" y="303" width="374" height="14" rx="7" fill="#6fae9d"/><text x="592" y="316" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="700">92%</text>
+  <g font-family="Arial,sans-serif" fill="#18304a"><text x="134" y="410" font-size="18" font-weight="700">OPTIMIZATION CHECKLIST</text><text x="190" y="471" font-size="18">PRIMARY CATEGORY</text><text x="190" y="548" font-size="18">SERVICES &amp; AREAS</text><text x="190" y="625" font-size="18">HOURS &amp; ATTRIBUTES</text><text x="190" y="702" font-size="18">PHOTOS &amp; POSTS</text><text x="190" y="779" font-size="18">WEBSITE MATCH</text></g>
+  <g fill="#6fae9d"><circle cx="150" cy="464" r="20"/><circle cx="150" cy="541" r="20"/><circle cx="150" cy="618" r="20"/><circle cx="150" cy="695" r="20"/><circle cx="150" cy="772" r="20"/></g>
+  <g fill="none" stroke="#fffdf9" stroke-width="5"><path d="m140 464 8 8 14-17M140 541l8 8 14-17M140 618l8 8 14-17M140 695l8 8 14-17M140 772l8 8 14-17"/></g>
+  <rect x="114" y="824" width="572" height="42" rx="21" fill="#e6bd64"/><text x="285" y="852" fill="#18304a" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1">READY TO BE FOUND</text>
+</svg>

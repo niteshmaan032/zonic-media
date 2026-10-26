@@ -28,7 +28,7 @@ import {
    agency (19 Oct 2026): the about-section card + a before/after redesign
    slider, and one small UI per process step. Card facts come from the page
    (on-page SEO, Core Web Vitals, lead forms and call/form tracking in every
-   build; flat project quote; most sites live in 2–6 weeks). */
+   build; flat project quote; most sites live in 2–3 weeks). */
 
 /* ------------------------------------------------------------ about */
 
@@ -49,7 +49,7 @@ export function BuildCard() {
         "Click-to-call and short quote forms",
         "Call and form tracking at launch",
       ]}
-      foot="Flat project quote. Most sites go live in 2–6 weeks."
+      foot="Flat project quote. Most sites go live in 2–3 weeks."
     />
   );
 }

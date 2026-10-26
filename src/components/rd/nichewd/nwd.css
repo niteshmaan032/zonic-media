@@ -1,0 +1,263 @@
+/* Animated UI components for the niche website design pages (owner, 26 Oct
+   2026: "i want the animated ui components"). Looping UI motion inside
+   cards, not scroll reveals (owner rule). Reduced motion: finished frame. */
+
+/* ---- rank climb: old position → new position, bar fills (6s loop) */
+.nwd-old {
+  animation: nwd-old 6s ease-in-out infinite;
+}
+.nwd-new {
+  animation: nwd-new 6s ease-in-out infinite;
+}
+.nwd-climb {
+  transform-origin: left;
+  animation: nwd-climb 6s cubic-bezier(0.6, 0, 0.2, 1) infinite;
+}
+@keyframes nwd-old {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  40%,
+  94% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes nwd-new {
+  0%,
+  34% {
+    opacity: 0;
+  }
+  44%,
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes nwd-climb {
+  0%,
+  28% {
+    scale: var(--lo, 0.3) 1;
+  }
+  50%,
+  92% {
+    scale: 1 1;
+  }
+  100% {
+    scale: var(--lo, 0.3) 1;
+  }
+}
+
+/* ---- booking phone: tap → slot picked → confirmation (6s loop) */
+.nwd-tap {
+  opacity: 0;
+  animation: nwd-tap 6s ease-out infinite;
+}
+@keyframes nwd-tap {
+  0%,
+  14% {
+    opacity: 0;
+    scale: 1.4;
+  }
+  20% {
+    opacity: 1;
+    scale: 1;
+  }
+  30%,
+  100% {
+    opacity: 0;
+    scale: 0.8;
+  }
+}
+.nwd-press {
+  animation: nwd-press 6s ease-out infinite;
+}
+@keyframes nwd-press {
+  0%,
+  18%,
+  26%,
+  100% {
+    scale: 1;
+  }
+  21% {
+    scale: 0.95;
+  }
+}
+.nwd-slot {
+  animation: nwd-slot 6s ease-out infinite;
+}
+@keyframes nwd-slot {
+  0%,
+  28% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  36%,
+  92% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.nwd-confirm {
+  opacity: 0;
+  animation: nwd-confirm 6s ease-out infinite;
+}
+@keyframes nwd-confirm {
+  0%,
+  44% {
+    opacity: 0;
+    translate: 0 -12px;
+  }
+  52%,
+  88% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    translate: 0 -12px;
+  }
+}
+
+/* ---- AI answer: query types out, lines appear, site cited (7s loop) */
+.nwd-type {
+  animation: nwd-type 7s steps(30, end) infinite;
+}
+@keyframes nwd-type {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  30%,
+  94% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+.nwd-caret {
+  animation: nwd-caret 0.9s steps(1) infinite;
+}
+@keyframes nwd-caret {
+  50% {
+    opacity: 0;
+  }
+}
+.nwd-line {
+  animation: nwd-line 7s ease-out infinite;
+}
+@keyframes nwd-line {
+  0%,
+  34% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  42%,
+  92% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.nwd-cite {
+  animation: nwd-cite 7s ease-out infinite;
+}
+@keyframes nwd-cite {
+  0%,
+  58% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+  64% {
+    box-shadow: 0 0 0 6px rgba(12, 21, 38, 0.12);
+  }
+  72%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+}
+
+/* ---- site map: pages build one by one, hold, reset (9s loop) */
+.nwd-build {
+  animation: nwd-build 9s ease-out infinite;
+}
+@keyframes nwd-build {
+  0%,
+  6% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  12%,
+  84% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  92%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---- process: a progress line runs across the steps (8s loop) */
+.nwd-run {
+  transform-origin: left;
+  animation: nwd-run 8s linear infinite;
+}
+@keyframes nwd-run {
+  0% {
+    scale: 0 1;
+  }
+  85%,
+  100% {
+    scale: 1 1;
+  }
+}
+.nwd-step {
+  animation: nwd-step 8s ease-out infinite;
+}
+@keyframes nwd-step {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+  4% {
+    box-shadow: 0 0 0 10px rgba(12, 21, 38, 0.1);
+  }
+  12% {
+    box-shadow: 0 0 0 0 rgba(12, 21, 38, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nwd-old,
+  .nwd-new,
+  .nwd-climb,
+  .nwd-tap,
+  .nwd-press,
+  .nwd-slot,
+  .nwd-confirm,
+  .nwd-type,
+  .nwd-caret,
+  .nwd-line,
+  .nwd-cite,
+  .nwd-build,
+  .nwd-run,
+  .nwd-step {
+    animation: none !important;
+  }
+  .nwd-old,
+  .nwd-tap,
+  .nwd-confirm {
+    opacity: 0;
+  }
+}

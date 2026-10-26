@@ -24,16 +24,16 @@ const SERVICES: ServicePath[] = [
     id: "landscape-design",
     label: "Landscape Design",
     icon: "leaf",
-    heading: "Turn landscape design searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Attract design-build clients, not just mowing calls.",
+    body: "A landscape design page with full-yard transformations, your design process and a consultation request that filters for the projects you want most.",
     bullets: [
-      "Clear landscape design value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Full-yard before-and-after galleries",
+      "Design process from plan to planting",
+      "Consult form that asks project scope",
     ],
-    ctaLabel: "Build my landscape design pages",
+    ctaLabel: "Plan my landscape design page",
     kicker: "LANDSCAPE DESIGN",
-    siteHeading: "Landscape Design—done right.",
+    siteHeading: "Yards designed to be lived in.",
     photo: "/images/free-website/free-landscaping/landscape-design.webp",
     photoAlt: "Landscaping service image",
   },
@@ -41,16 +41,16 @@ const SERVICES: ServicePath[] = [
     id: "lawn-care",
     label: "Lawn Care",
     icon: "target",
-    heading: "Turn lawn care searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Sell weekly and seasonal lawn care plans online.",
+    body: "A lawn care page that lays out mowing, feeding and weed control plans, so homeowners can compare options and ask to join your route.",
     bullets: [
-      "Clear lawn care value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Weekly and biweekly plan options",
+      "Feeding and weed control explained",
+      "Simple signup or quote request",
     ],
-    ctaLabel: "Build my lawn care pages",
+    ctaLabel: "Plan my lawn care page",
     kicker: "LAWN CARE",
-    siteHeading: "Lawn Care—done right.",
+    siteHeading: "A greener lawn, every week.",
     photo: "/images/free-website/free-landscaping/lawn-care.webp",
     photoAlt: "Landscaping service image",
   },
@@ -58,16 +58,16 @@ const SERVICES: ServicePath[] = [
     id: "hardscaping",
     label: "Hardscaping",
     icon: "layers",
-    heading: "Turn hardscaping searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Rank for patios, walls and walkways in your towns.",
+    body: "A hardscaping page with patio, retaining wall and walkway projects, material choices and build steps for homeowners planning a bigger outdoor upgrade.",
     bullets: [
-      "Clear hardscaping value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Patio, wall and walkway project photos",
+      "Paver and stone choices compared",
+      "Estimate request with project size",
     ],
-    ctaLabel: "Build my hardscaping pages",
+    ctaLabel: "Plan my hardscaping page",
     kicker: "HARDSCAPING",
-    siteHeading: "Hardscaping—done right.",
+    siteHeading: "Patios built for gatherings.",
     photo: "/images/free-website/free-landscaping/hardscaping.webp",
     photoAlt: "Landscaping service image",
   },
@@ -75,16 +75,16 @@ const SERVICES: ServicePath[] = [
     id: "irrigation",
     label: "Irrigation",
     icon: "users",
-    heading: "Turn irrigation searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Capture sprinkler installs and irrigation repair calls.",
+    body: "An irrigation page covering new sprinkler systems, drip lines, repairs and seasonal start-ups, written for owners who want water used well.",
     bullets: [
-      "Clear irrigation value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Install, repair and start-up services",
+      "Drip and smart controller options",
+      "Repair request with tap-to-call",
     ],
-    ctaLabel: "Build my irrigation pages",
+    ctaLabel: "Plan my irrigation page",
     kicker: "IRRIGATION",
-    siteHeading: "Irrigation—done right.",
+    siteHeading: "Water right, every zone.",
     photo: "/images/free-website/free-landscaping/irrigation.webp",
     photoAlt: "Landscaping service image",
   },
@@ -92,16 +92,16 @@ const SERVICES: ServicePath[] = [
     id: "outdoor-lighting",
     label: "Outdoor Lighting",
     icon: "zap",
-    heading: "Turn outdoor lighting searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Light up evening searches for landscape lighting.",
+    body: "An outdoor lighting page with night photos of paths, trees and patios, plus fixture choices and a design visit request for homeowners.",
     bullets: [
-      "Clear outdoor lighting value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Night-time project photo gallery",
+      "Path, uplight and patio options",
+      "Lighting design visit request",
     ],
-    ctaLabel: "Build my outdoor lighting pages",
+    ctaLabel: "Plan my outdoor lighting page",
     kicker: "OUTDOOR LIGHTING",
-    siteHeading: "Outdoor Lighting—done right.",
+    siteHeading: "Your yard, after dark.",
     photo: "/images/free-website/free-landscaping/outdoor-lighting.webp",
     photoAlt: "Landscaping service image",
   },
@@ -109,16 +109,16 @@ const SERVICES: ServicePath[] = [
     id: "seasonal-cleanups",
     label: "Seasonal Cleanups",
     icon: "clipboard",
-    heading: "Turn seasonal cleanups searches into qualified enquiries.",
-    body: "A focused landscaping website path that answers the questions prospects ask, proves your expertise, and makes the next step easy on every screen.",
+    heading: "Book every spring and fall cleanup in advance.",
+    body: "A seasonal cleanup page that lists what each spring and fall visit includes, when to book and how to turn a one-time cleanup into a recurring plan.",
     bullets: [
-      "Clear seasonal cleanups value proposition",
-      "Proof, process, and service-area signals",
-      "Calls, forms, and conversion tracking",
+      "Spring and fall cleanup checklists",
+      "Booking windows shown by season",
+      "Upgrade path to a maintenance plan",
     ],
-    ctaLabel: "Build my seasonal cleanups pages",
+    ctaLabel: "Plan my seasonal cleanup page",
     kicker: "SEASONAL CLEANUPS",
-    siteHeading: "Seasonal Cleanups—done right.",
+    siteHeading: "Spring and fall, handled.",
     photo: "/images/free-website/free-landscaping/seasonal-cleanups.webp",
     photoAlt: "Landscaping service image",
   },
@@ -161,7 +161,7 @@ export default function LandscapingServiceTabs() {
           >
             <div className="niche-content">
               <div className="niche-label">
-                <Icon name={service.icon} /> Landscaping website path
+                <Icon name={service.icon} /> Landscaping service page
               </div>
               <h3>{service.heading}</h3>
               <p>{service.body}</p>
@@ -211,15 +211,14 @@ export default function LandscapingServiceTabs() {
                     <span>{service.kicker}</span>
                     <h4>{service.siteHeading}</h4>
                     <p>
-                      Trusted local expertise. Clear communication. A simple
-                      path to the right solution.
+                      Thoughtful design, tidy crews and a yard that looks good in every season of the year.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Request service</b>
-                      <b>View services</b>
+                      <b>Get a yard quote</b>
+                      <b>See projects</b>
                     </div>
                     <div className="niche-stars">
-                      ★★★★★ <small>Trusted by local customers</small>
+                      ★★★★★ <small>Recommended by neighbors</small>
                     </div>
                   </div>
                   <div className="niche-photo industry-photo">
@@ -230,7 +229,7 @@ export default function LandscapingServiceTabs() {
                       sizes="(max-width: 760px) 45vw, 30vw"
                     />
                     <span>
-                      <Icon name="shield" /> LICENSED · INSURED · LOCAL
+                      <Icon name="shield" /> DESIGN · INSTALL · MAINTAIN
                     </span>
                   </div>
                 </div>
@@ -249,15 +248,15 @@ export default function LandscapingServiceTabs() {
                     className="niche-mobile-image industry-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Request service</div>
+                  <div className="niche-mobile-button">Get a yard quote</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Designed to convert</strong>
-                  <small>Clear path from search to enquiry</small>
+                  <strong>Made to book yard work</strong>
+                  <small>From yard search to estimate</small>
                 </span>
               </div>
             </div>
