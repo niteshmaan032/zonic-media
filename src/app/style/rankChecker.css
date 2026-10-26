@@ -409,25 +409,25 @@
   -webkit-mask-image: linear-gradient(to bottom, #000, transparent 64%);
   mask-image: linear-gradient(to bottom, #000, transparent 64%);
 }
+/* Soft glows as radial gradients, not filter: blur() (27 Oct 2026): large
+   blurred layers made iPhone Safari blank the page while scrolling. */
 .grc .grc-hx__glow {
   position: absolute;
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.15;
   pointer-events: none;
   z-index: -1;
 }
 .grc .grc-hx__glow--one {
-  background: #5070ff;
-  top: 250px;
-  left: -200px;
+  background: radial-gradient(circle, rgba(80, 112, 255, 0.15) 0%, rgba(80, 112, 255, 0.15) 30%, transparent 68%);
+  top: 175px;
+  left: -275px;
 }
 .grc .grc-hx__glow--two {
-  background: #875cff;
-  right: -220px;
-  top: 440px;
+  background: radial-gradient(circle, rgba(135, 92, 255, 0.15) 0%, rgba(135, 92, 255, 0.15) 30%, transparent 68%);
+  right: -295px;
+  top: 365px;
 }
 
 .grc .grc-hx__copy {

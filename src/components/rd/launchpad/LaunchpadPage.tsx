@@ -450,7 +450,7 @@ export function LaunchpadPage() {
                 style={{ background: INDIGO }}
               >
                 <span
-                  className="tw:absolute tw:-right-20 tw:-bottom-24 tw:-z-1 tw:size-[300px] tw:rounded-full tw:bg-[#f97316]/45 tw:blur-3xl"
+                  className="tw:absolute tw:-right-20 tw:-bottom-24 tw:-z-1 tw:size-[300px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(249,115,22,0.45)_0%,rgba(249,115,22,0.45)_35%,transparent_70%)]"
                   aria-hidden="true"
                 />
                 <div>
@@ -522,7 +522,7 @@ export function LaunchpadPage() {
                 style={{ background: INDIGO }}
               >
                 <span
-                  className="tw:absolute tw:-top-28 tw:-right-20 tw:-z-1 tw:size-[340px] tw:rounded-full tw:bg-[#f97316]/40 tw:blur-3xl"
+                  className="tw:absolute tw:-top-28 tw:-right-20 tw:-z-1 tw:size-[340px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(249,115,22,0.40)_0%,rgba(249,115,22,0.40)_35%,transparent_70%)]"
                   aria-hidden="true"
                 />
                 <span className="tw:inline-flex tw:items-center tw:gap-2 tw:rounded-full tw:bg-white/12 tw:px-3.5 tw:py-1.5 tw:text-[13px] tw:font-semibold tw:text-[#fdba74] tw:ring-1 tw:ring-white/15">
@@ -785,7 +785,7 @@ export function LaunchpadPage() {
                 }}
               >
                 <span
-                  className="tw:absolute tw:-right-10 tw:-bottom-28 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[#fdba74]/30 tw:blur-3xl"
+                  className="tw:absolute tw:-right-10 tw:-bottom-28 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(253,186,116,0.30)_0%,rgba(253,186,116,0.30)_35%,transparent_70%)]"
                   aria-hidden="true"
                 />
                 <div>
@@ -874,7 +874,7 @@ export function LaunchpadPage() {
                 >
                   {plan.featured ? (
                     <span
-                      className="tw:absolute tw:-top-24 tw:-right-16 tw:-z-1 tw:size-[260px] tw:rounded-full tw:bg-[#f97316]/45 tw:blur-3xl"
+                      className="tw:absolute tw:-top-24 tw:-right-16 tw:-z-1 tw:size-[260px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(249,115,22,0.45)_0%,rgba(249,115,22,0.45)_35%,transparent_70%)]"
                       aria-hidden="true"
                     />
                   ) : null}

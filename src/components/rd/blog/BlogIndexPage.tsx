@@ -141,7 +141,7 @@ export function BlogIndexPage({
                       {topicOf(featured)}
                     </span>
                   </span>
-                  <h2 className="tw:mt-5 tw:text-[clamp(26px,2.4vw,36px)] tw:leading-[1.15] tw:tracking-[-0.025em] tw:text-balance">
+                  <h2 className="tw:mt-5 tw:text-[clamp(26px,2.4vw,36px)] tw:leading-[1.15] tw:tracking-[-0.025em] tw:text-balance tw:max-bssm:mt-4 tw:max-bssm:line-clamp-2 tw:max-bssm:text-[clamp(18px,5.1vw,21px)]">
                     <Link
                       href={`${BLOG_BASE}/${featured.slug}`}
                       className="tw:after:absolute tw:after:inset-0 tw:after:content-['']"

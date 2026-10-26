@@ -566,11 +566,11 @@ export function HomeServicesSeoPage() {
                 {/* Floating icon tiles (owner, 24 Oct: icons instead of
                     shapes) over two soft glows. Decorative. */}
                 <span
-                  className="tw:absolute tw:-bottom-28 tw:-left-16 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[#ea580c]/25 tw:blur-2xl"
+                  className="tw:absolute tw:-bottom-28 tw:-left-16 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(234,88,12,0.25)_0%,rgba(234,88,12,0.25)_35%,transparent_70%)]"
                   aria-hidden="true"
                 />
                 <span
-                  className="tw:absolute tw:-top-28 tw:-right-16 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[#0d9488]/25 tw:blur-2xl"
+                  className="tw:absolute tw:-top-28 tw:-right-16 tw:-z-1 tw:size-[320px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(13,148,136,0.25)_0%,rgba(13,148,136,0.25)_35%,transparent_70%)]"
                   aria-hidden="true"
                 />
                 {BANNER_ICONS.map(({ icon, tile, pos, delay }) => (

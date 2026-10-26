@@ -226,6 +226,25 @@
   margin: 0;
 }
 
+/* The editor stores fixed column widths inline (e.g. <col style="min-width:
+   25px"> next to <col style="width: 478px">). With overflow-wrap: anywhere
+   that squeezed the first column to one letter per line on phones (owner,
+   27 Oct 2026). Columns now size to their content, words never split, and
+   every cell keeps a readable width, so wide tables scroll sideways inside
+   their box on phones. Applies to every post, past and future. */
+.rd-prose table col,
+.rd-prose table col[style] {
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.rd-prose th,
+.rd-prose td {
+  min-width: 9.5rem;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 @media (max-width: 575.98px) {
   .rd-prose {
     font-size: 17px;

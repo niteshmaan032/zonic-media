@@ -254,8 +254,8 @@ export function DelawareLanding({
           className="tw:relative tw:isolate tw:overflow-clip tw:[background:radial-gradient(circle_at_16%_12%,rgba(49,87,245,0.07),transparent_26%),radial-gradient(circle_at_88%_6%,rgba(110,80,247,0.065),transparent_22%),linear-gradient(180deg,#fdfdff_0%,#f9fbff_60%,#fff_100%)] tw:pt-36 tw:pb-(--sec-y) tw:text-center tw:max-bsmd:pt-[120px]"
           aria-labelledby="de-h1"
         >
-          <span className="tw:pointer-events-none tw:absolute tw:top-[250px] tw:-left-[200px] tw:-z-1 tw:size-[450px] tw:rounded-full tw:bg-[#5070ff] tw:opacity-[0.09] tw:blur-[70px]" />
-          <span className="tw:pointer-events-none tw:absolute tw:top-[440px] tw:-right-[220px] tw:-z-1 tw:size-[450px] tw:rounded-full tw:bg-[#875cff] tw:opacity-[0.09] tw:blur-[70px]" />
+          <span className="tw:pointer-events-none tw:absolute tw:top-[175px] tw:-left-[275px] tw:-z-1 tw:size-[600px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(80,112,255,0.09)_0%,rgba(80,112,255,0.09)_30%,transparent_68%)]" />
+          <span className="tw:pointer-events-none tw:absolute tw:top-[365px] tw:-right-[295px] tw:-z-1 tw:size-[600px] tw:rounded-full tw:bg-[radial-gradient(circle,rgba(135,92,255,0.09)_0%,rgba(135,92,255,0.09)_30%,transparent_68%)]" />
           <span
             className="tw:pointer-events-none tw:absolute tw:inset-0 tw:-z-1 tw:max-bssm:hidden"
             aria-hidden="true"

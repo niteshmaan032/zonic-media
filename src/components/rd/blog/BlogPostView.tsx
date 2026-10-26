@@ -230,13 +230,16 @@ export function BlogPostView({
         </section>
 
         {/* ============================================================ BODY */}
+        {/* Phones: no outer side padding around the article (owner, 27 Oct
+            2026); the article keeps its own inner padding, and the contents
+            box and sidebar keep the usual side margin. */}
         <Section labelledBy="bp-h1">
-          <Wrap>
+          <Wrap flushOnPhone>
             <div className="tw:grid tw:grid-cols-[minmax(0,1fr)_340px] tw:gap-14 tw:max-bsxl:grid-cols-[minmax(0,1fr)_300px] tw:max-bsxl:gap-10 tw:max-bslg:grid-cols-1">
               <div className="tw:min-w-0">
                 {/* Contents on phones and tablets */}
                 {toc.length > 1 ? (
-                  <details className="tw:group tw:mb-8 tw:rounded-[20px] tw:bg-white tw:px-5 tw:py-1 tw:bslg:hidden">
+                  <details className="tw:group tw:mb-8 tw:rounded-[20px] tw:bg-white tw:px-5 tw:py-1 tw:bslg:hidden tw:max-bssm:mx-(--inset)">
                     <summary className="tw:flex tw:cursor-pointer tw:items-center tw:justify-between tw:gap-3 tw:py-3.5 tw:text-[16px] tw:font-medium tw:text-(--ink)">
                       <span className="tw:flex tw:items-center tw:gap-2">
                         <FiList aria-hidden="true" /> On this page
@@ -252,7 +255,7 @@ export function BlogPostView({
                   </details>
                 ) : null}
 
-                <article className="tw:rounded-(--r-xl) tw:bg-white tw:px-12 tw:py-12 tw:max-bsxl:px-10 tw:max-bssm:px-5 tw:max-bssm:py-8">
+                <article className="tw:rounded-(--r-xl) tw:bg-white tw:px-12 tw:py-12 tw:max-bsxl:px-10 tw:max-bssm:rounded-none tw:max-bssm:px-5 tw:max-bssm:py-8">
                   <div
                     className="rd-prose"
                     dangerouslySetInnerHTML={{ __html: introHtml }}
@@ -319,7 +322,7 @@ export function BlogPostView({
                   you read; the contents list scrolls on its own
                   (data-lenis-prevent lets it scroll under Lenis smooth
                   scrolling, owner 24 Oct). Recent guides sit at the foot. */}
-              <aside className="tw:flex tw:flex-col tw:gap-5">
+              <aside className="tw:flex tw:flex-col tw:gap-5 tw:max-bssm:px-(--inset)">
                 {/* The pinned block sticks inside this wrapper, which ends above
                     "Recent guides", so it can never slide over that box. */}
                 <div className="tw:flex-1">
@@ -339,7 +342,7 @@ export function BlogPostView({
 
                     <div className="tw:relative tw:isolate tw:overflow-hidden tw:rounded-[24px] tw:bg-(--ink) tw:p-6 tw:text-white">
                       <span
-                        className="tw:absolute tw:-top-16 tw:-right-12 tw:-z-1 tw:size-44 tw:rounded-full tw:bg-(--blue)/40 tw:blur-2xl"
+                        className="tw:absolute tw:-top-16 tw:-right-12 tw:-z-1 tw:size-44 tw:rounded-full tw:bg-[radial-gradient(circle,rgba(37,103,232,0.4)_0%,rgba(37,103,232,0.4)_35%,transparent_70%)]"
                         aria-hidden="true"
                       />
                       <span className="tw:flex tw:items-center tw:gap-2 tw:text-[13px] tw:font-semibold tw:text-[#c9d4e8]">
