@@ -398,8 +398,8 @@
   margin-bottom: 20px;
 }
 .gmb-reinst-page .hero-badge-widget {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border: 0;
   display: block;
   border-radius: 8px;
@@ -407,7 +407,7 @@
 }
 .gmb-reinst-page .hero-trust-badge {
   width: auto;
-  height: 51px;
+  height: 40px;
   border: 0;
   display: block;
   object-fit: contain;
@@ -462,6 +462,9 @@
 .gmb-reinst-page .hero-trust b {
   color: var(--ink);
   font-weight: 600;
+}
+.gmb-reinst-page .hero-reviews {
+  margin-top: 20px;
 }
 .gmb-reinst-page .hero-visual {
   margin: 28px auto 0;

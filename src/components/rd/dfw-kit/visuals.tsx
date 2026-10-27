@@ -265,27 +265,42 @@ export function GoogleG({ className }: { className?: string }) {
   );
 }
 
-/** "5.0 Google Reviews" pill linking to the Maps listing. */
-export function GoogleRatingBadge({ href }: { href: string }) {
+/** "5.0 Google Reviews" pill linking to the Maps listing. `compact` is the
+    smaller pill for the reinstatement page's logo row. */
+export function GoogleRatingBadge({
+  href,
+  compact = false,
+}: {
+  href: string;
+  compact?: boolean;
+}) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="tw:inline-flex tw:items-center tw:gap-3 tw:rounded-[18px] tw:border tw:border-(--line) tw:bg-white tw:py-2.5 tw:pr-[18px] tw:pl-3 tw:text-left tw:text-(--ink) tw:transition tw:duration-200 tw:hover:-translate-y-0.5 tw:hover:border-[#c9d6ee]"
+      className={cx(
+        "tw:inline-flex tw:items-center tw:border tw:border-(--line) tw:bg-white tw:text-left tw:text-(--ink) tw:transition tw:duration-200 tw:hover:-translate-y-0.5 tw:hover:border-[#c9d6ee]",
+        compact
+          ? "tw:gap-2.5 tw:rounded-[14px] tw:py-2 tw:pr-[14px] tw:pl-2.5"
+          : "tw:gap-3 tw:rounded-[18px] tw:py-2.5 tw:pr-[18px] tw:pl-3",
+      )}
       aria-label="Zonic Media is rated 5.0 on Google. See our Google reviews"
     >
-      <GoogleG className="tw:size-[38px] tw:flex-none" />
+      <GoogleG className={cx("tw:flex-none", compact ? "tw:size-[30px]" : "tw:size-[38px]")} />
       <span className="tw:grid tw:gap-px">
         <span className="tw:flex tw:items-center tw:gap-2">
-          <b className="tw:text-[22px] tw:leading-none tw:font-semibold">5.0</b>
+          <b className={cx("tw:leading-none tw:font-semibold", compact ? "tw:text-[18px]" : "tw:text-[22px]")}>5.0</b>
           <span className="tw:flex tw:gap-0.5" aria-hidden="true">
             {[0, 1, 2, 3, 4].map((n) => (
-              <FiStar key={n} className="tw:size-[15px] tw:fill-[#fbbc05] tw:text-[#fbbc05]" />
+              <FiStar
+                key={n}
+                className={cx("tw:fill-[#fbbc05] tw:text-[#fbbc05]", compact ? "tw:size-3" : "tw:size-[15px]")}
+              />
             ))}
           </span>
         </span>
-        <small className="tw:text-[12.5px] tw:font-medium tw:text-(--muted)">
+        <small className={cx("tw:font-medium tw:text-(--muted)", compact ? "tw:text-[11.5px]" : "tw:text-[12.5px]")}>
           Google Reviews
         </small>
       </span>

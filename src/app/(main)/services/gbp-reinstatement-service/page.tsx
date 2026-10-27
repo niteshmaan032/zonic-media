@@ -15,6 +15,7 @@ import {
   buildBreadcrumbJsonLd,
 } from "@/shared/seoSchemas";
 import { SITE_CONTACT } from "@/shared/siteConfig";
+import { GoogleRatingBadge } from "@/components/rd/dfw-kit/visuals";
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
@@ -259,6 +260,8 @@ function page() {
                   alt="Zonic Media reviews on Trustpilot"
                 />
               </a>
+              {/* same Google badge as the home hero */}
+              <GoogleRatingBadge href={SITE_CONTACT.mapHref} compact />
             </div>
 
             <div className="hero-actions">
@@ -297,6 +300,12 @@ function page() {
                 <b>900+</b> profiles reinstated &amp; verified
               </span>
             </div>
+
+            {/* Google reviews right under the trust line */}
+            <LenisIframeGuard
+              className="hero-reviews"
+              widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c"
+            />
 
             <div className="hero-visual">
               <GmbProfileCard />
