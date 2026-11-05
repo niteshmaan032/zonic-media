@@ -438,7 +438,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do your general contractor marketing plans cost?",
-        a: "$1,500 a month buys our Authority tier, Growth is $750 and Foundation is $297, all billed month to month, and Google invoices your ad spend directly at 0% markup. Contractors running several project types plus Google Ads usually choose Growth or Authority.",
+        a: "$1,500 a month buys our Authority tier, Growth is $950 and Foundation is $297, all billed month to month, and Google invoices your ad spend directly at 0% markup. Contractors running several project types plus Google Ads usually choose Growth or Authority.",
       },
       {
         q: "Can you recover a suspended Business Profile for a contracting company?",

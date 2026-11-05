@@ -507,7 +507,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Every review on our Google profile comes from a real business owner, left as written.",
   },
   pricing: {
-    title: "Plans to Keep Your Repair Website Working Harder",
+    title: "Appliance Repair Website Pricing With No Monthly Fees",
     compareTitle: "What Each Plan Adds for an Appliance Repair Shop",
     addOnsTitle: "Optional Extras for Appliance Repair Websites",
     customTitle: "Covering Several Metro Areas?",
@@ -518,7 +518,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does an appliance repair website cost?",
-        a: "You get one fixed quote after a free call about the appliances, brands and towns you cover, and it stays the same through launch. Pair the build with an eligible monthly growth plan and the website itself is on us, through our free website offer.",
+        a: "An appliance repair website starts at $950, billed one time for development. You pay no monthly hosting and no rent on the site, and you keep full ownership of the domain and pages. Covering many brands or towns? A free call settles one fixed quote. Pair the build with an eligible monthly growth plan and our free website offer covers it.",
       },
       {
         q: "How soon can my appliance repair site go live?",

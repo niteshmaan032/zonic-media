@@ -483,7 +483,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for pest control cost?",
-        a: "There are three plans: $297, $750 and $1,500 a month, all month to month. A single-branch exterminator typically fits the entry plan; operators whose routes cross several counties, or who want managed Google Ads too, lean toward the middle or top tier. Your free audit picks one.",
+        a: "There are three plans: $297, $950 and $1,500 a month, all month to month. A single-branch exterminator typically fits the entry plan; operators whose routes cross several counties, or who want managed Google Ads too, lean toward the middle or top tier. Your free audit picks one.",
       },
       {
         q: "When will pest control SEO start producing calls?",

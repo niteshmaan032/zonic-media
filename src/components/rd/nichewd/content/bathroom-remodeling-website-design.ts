@@ -533,7 +533,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Real, unedited feedback left on our Google profile by business owners.",
   },
   pricing: {
-    title: "Growth Plans for a New Bath Remodeling Site",
+    title: "Bathroom Remodeling Website Pricing, No Rent",
     compareTitle: "Plan Features for Bathroom Remodeler Websites",
     addOnsTitle: "Add-Ons for Shower and Remodel Pages",
     customTitle: "Running Several Bath Showrooms or Brands?",
@@ -544,7 +544,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What will a bathroom remodeling website cost me?",
-        a: "You get one fixed price once we've talked through your services, service area and estimate process on a free call, and it does not change mid-build. Add a growth plan that qualifies, on monthly billing, and the website itself comes free through our website offer.",
+        a: "A bathroom remodeling site starts at $950, charged once for development. Nothing is rented, hosting carries no monthly bill, and your company holds the domain and the finished site. A free call about your services and estimate process locks in a fixed price. Start a qualifying growth plan on monthly billing and the remodeling website comes free.",
       },
       {
         q: "When can my bathroom remodeling site go live?",

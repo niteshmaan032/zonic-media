@@ -488,7 +488,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What do solar SEO plans cost?",
-        a: "There are three: $297, $750 or $1,500 a month, each billed month to month. Single-market installers usually begin on the first; companies selling across several territories, or wanting Google Ads run as well, tend to move up to a larger plan. Your free audit recommends one.",
+        a: "There are three: $297, $950 or $1,500 a month, each billed month to month. Single-market installers usually begin on the first; companies selling across several territories, or wanting Google Ads run as well, tend to move up to a larger plan. Your free audit recommends one.",
       },
       {
         q: "How quickly can SEO bring a solar installer leads?",

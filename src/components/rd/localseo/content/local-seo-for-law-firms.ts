@@ -497,7 +497,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for lawyers cost?",
-        a: "Plans run $297, $750 or $1,500 a month on month-to-month terms. A solo lawyer in one town usually starts with Foundation; firms with several practice areas or offices, or that want Google Ads managed too, tend to need Growth or Authority. Your audit recommends a plan.",
+        a: "Plans run $297, $950 or $1,500 a month on month-to-month terms. A solo lawyer in one town usually starts with Foundation; firms with several practice areas or offices, or that want Google Ads managed too, tend to need Growth or Authority. Your audit recommends a plan.",
       },
       {
         q: "How long does attorney SEO take to show results?",

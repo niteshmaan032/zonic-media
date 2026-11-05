@@ -486,7 +486,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does tree service SEO cost?",
-        a: "Pricing is $297, $750 or $1,500 a month, never locked in. One-crew operators often start small; multi-county outfits, or those who want ads run during storm season, usually go bigger. After the free audit we suggest the plan that matches your area and goals.",
+        a: "Pricing is $297, $950 or $1,500 a month, never locked in. One-crew operators often start small; multi-county outfits, or those who want ads run during storm season, usually go bigger. After the free audit we suggest the plan that matches your area and goals.",
       },
       {
         q: "How fast can a tree company rank after a storm?",

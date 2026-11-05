@@ -209,7 +209,7 @@ const PhilaSeoFaqs = [
   {
     question: "How are your Philadelphia SEO plans priced?",
     answer:
-      "Our SEO plans are flat: $297, $750 or $1,500 each month, paid monthly with no annual lock-in. Which one fits depends on your locations, how competitive your trade is and how many neighborhoods you want to rank in. The free audit recommends a plan before you commit to anything.",
+      "Our SEO plans are flat: $297, $950 or $1,500 each month, paid monthly with no annual lock-in. Which one fits depends on your locations, how competitive your trade is and how many neighborhoods you want to rank in. The free audit recommends a plan before you commit to anything.",
   },
   {
     question:
@@ -534,7 +534,7 @@ const data: DelawareData = {
       {
         icon: <FiZap aria-hidden="true" />,
         title: "Plans with set prices",
-        desc: "Set at $297, $750 or $1,500, scoped after a free audit.",
+        desc: "Set at $297, $950 or $1,500, scoped after a free audit.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,

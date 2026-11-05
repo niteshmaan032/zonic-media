@@ -489,7 +489,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much do SEO services for chiropractors cost?",
-        a: "Our plans run $297, $750 or $1,500 a month with no annual contract. Solo clinics often begin on the first tier; multi-doctor practices, clinics ranking for many conditions or those adding managed Google Ads usually pick the second or third. The audit recommends one.",
+        a: "Our plans run $297, $950 or $1,500 a month with no annual contract. Solo clinics often begin on the first tier; multi-doctor practices, clinics ranking for many conditions or those adding managed Google Ads usually pick the second or third. The audit recommends one.",
       },
       {
         q: "How fast does chiropractor SEO show up in bookings?",

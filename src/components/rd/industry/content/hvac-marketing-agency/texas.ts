@@ -333,7 +333,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Texas HVAC marketing plans cost?",
-        a: "Three tiers are available: $297, $750 or $1,500 monthly, never locked into a contract. Google receives your ad spend with a 0% markup from us. Single-metro shops usually start on the first tier, while multi-metro companies with ads and commercial pages fit the larger ones.",
+        a: "Three tiers are available: $297, $950 or $1,500 monthly, never locked into a contract. Google receives your ad spend with a 0% markup from us. Single-metro shops usually start on the first tier, while multi-metro companies with ads and commercial pages fit the larger ones.",
       },
     ],
   },

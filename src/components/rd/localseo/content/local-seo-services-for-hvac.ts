@@ -485,7 +485,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What does HVAC SEO cost per month?",
-        a: "Our plans are $297, $750 or $1,500 a month, month to month. Single-truck operators in one town usually start on the first; companies spread across a metro, or wanting their Google Ads run by us too, normally need the middle or top plan. The free audit tells you which.",
+        a: "Our plans are $297, $950 or $1,500 a month, month to month. Single-truck operators in one town usually start on the first; companies spread across a metro, or wanting their Google Ads run by us too, normally need the middle or top plan. The free audit tells you which.",
       },
       {
         q: "When will HVAC SEO start bringing calls?",

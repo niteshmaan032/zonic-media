@@ -244,6 +244,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Washington Home Inspector Marketing for Brokers and Homeowners",
+    lead: [
+      "Washington brokerages keep written policies that protect a buyer's free choice of inspector, so our plan leans on direct bookings as much as broker referrals, through ",
+      {
+        href: "/services/home-inspector-marketing",
+        label: "home inspector marketing",
+      },
+      " built for both.",
+    ],
+    lanes: [
+      {
+        audience: "Seattle and Eastside brokers",
+        icon: "agent",
+        pitch:
+          "In hot Seattle markets, brokers need pre-offer inspections done in hours, with a side-sewer scope attached. We show them you can deliver that, plus your DOL license.",
+        query: "Pre-offer inspection in Ballard by tomorrow?",
+        flow: [
+          "Broker sends link",
+          "Pre-offer slot held",
+          "Side sewer scoped",
+          "Findings before offer",
+        ],
+        badge: "Inspected before offer review day",
+        jobs: [
+          {
+            name: "Pre-offer inspection",
+            tactic: "Broker page with same-week availability",
+          },
+          {
+            name: "Side-sewer scope",
+            tactic:
+              "Bundled into pre-offer requests from older Seattle neighborhoods",
+          },
+          {
+            name: "Crawlspace moisture review",
+            tactic: "Puget Sound pages on damp crawlspaces",
+          },
+        ],
+      },
+      {
+        audience: "Washington homeowners and sellers",
+        icon: "sold",
+        pitch:
+          "Sellers on both sides of the Cascades book pre-listing inspections, and Spokane buyers often order radon tests themselves. We rank you wherever those owners search.",
+        query: "radon test spokane valley home",
+        flow: [
+          "Looks up radon",
+          "Reads Spokane reviews",
+          "Adds home inspection",
+          "Picks a morning",
+        ],
+        badge: "Radon and inspection in one trip",
+        jobs: [
+          {
+            name: "Pre-listing inspection for Eastside sellers",
+            tactic: "Seller page with a sample pre-listing report",
+          },
+          {
+            name: "Heating oil tank scan",
+            tactic: "Pages for pre-war Seattle and Tacoma homes",
+          },
+          {
+            name: "Radon testing, Eastern Washington",
+            tactic: "Spokane-area radon pages for owners",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Washington add-on tests brokers and owners want",
+      items: [
+        "Side-sewer scope",
+        "Oil tank locate",
+        "Radon test (Eastern WA)",
+        "Crawlspace moisture check",
+        "Mold sampling",
+        "Infrared camera scan",
+      ],
+    },
+    cta: "Win Washington Brokers",
+  },
   regions: {
     title: "Washington Markets We Cover, Puget Sound to the Palouse",
     lead: "Wet-side and dry-side buyers search differently, which is why every region gets its own pages, service areas and ad settings.",
@@ -333,7 +415,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Washington inspectors pay for marketing with Zonic Media?",
-        a: "Washington pricing tops out at $1,500 a month, with $297 and $750 tiers below it, and every tier can be cancelled any month. You pay Google for ads yourself, at a 0% markup from our side. One-city inspectors usually start on the first tier; teams covering several counties need more.",
+        a: "Washington pricing tops out at $1,500 a month, with $297 and $950 tiers below it, and every tier can be cancelled any month. You pay Google for ads yourself, at a 0% markup from our side. One-city inspectors usually start on the first tier; teams covering several counties need more.",
       },
     ],
   },

@@ -453,7 +453,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does cleaning company marketing cost at Zonic Media?",
-        a: "We offer three plans: $297, $750 or $1,500 monthly, with no long contract. You pay Google for ads yourself, and we charge a 0% markup on that spend. Solo cleaners in a few neighborhoods often start small; companies with several crews and commercial ads usually need a larger plan.",
+        a: "We offer three plans: $297, $950 or $1,500 monthly, with no long contract. You pay Google for ads yourself, and we charge a 0% markup on that spend. Solo cleaners in a few neighborhoods often start small; companies with several crews and commercial ads usually need a larger plan.",
       },
     ],
   },

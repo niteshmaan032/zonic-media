@@ -511,7 +511,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unedited feedback from clients who hired us for their websites and marketing.",
   },
   pricing: {
-    title: "Keep Your Maid Service Website Improving Each Month",
+    title: "House Cleaning Website Pricing With No Rent",
     compareTitle: "Pick the Plan That Fits Your Maid Service",
     addOnsTitle: "Optional Extras for House Cleaning Websites",
     customTitle: "Running Maid Teams in More Than One City?",
@@ -522,7 +522,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a house cleaning website cost?",
-        a: "We price it after a free chat about your clean types, service area and booking tools, and the quote is fixed for the full build, with nothing tacked on later. Add a qualifying monthly growth plan to your maid service and our website offer makes the build free.",
+        a: "A house cleaning website starts at $950, and you pay that development fee once. There's no rent and no monthly hosting charge, and your maid service owns the domain and site. A free chat about clean types, service area and booking tools sets a fixed quote for the full build. Add a qualifying monthly growth plan and our website offer makes it free.",
       },
       {
         q: "How fast can my maid service website launch?",

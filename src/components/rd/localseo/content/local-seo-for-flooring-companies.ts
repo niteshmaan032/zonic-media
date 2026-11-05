@@ -497,7 +497,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does flooring SEO cost?",
-        a: "Plans cost $297, $750 or $1,500 a month on month-to-month terms. Smaller stores tend to fit the entry plan; multi-showroom companies, commercial installers and anyone wanting paid search handled as well usually move up. The free audit points to the plan your local competition calls for.",
+        a: "Plans cost $297, $950 or $1,500 a month on month-to-month terms. Smaller stores tend to fit the entry plan; multi-showroom companies, commercial installers and anyone wanting paid search handled as well usually move up. The free audit points to the plan your local competition calls for.",
       },
       {
         q: "Should a flooring business list as a store or a contractor?",

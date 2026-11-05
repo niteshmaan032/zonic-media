@@ -439,7 +439,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does garage door marketing cost with Zonic Media?",
-        a: "Pick from $297, $750 and $1,500 monthly plans, all billed month to month. You pay Google for ad spend yourself, and we take 0% markup on it. Smaller shops with one or two trucks often begin with the entry plan; companies running several technicians and 24/7 ads usually pick a larger one.",
+        a: "Pick from $297, $950 and $1,500 monthly plans, all billed month to month. You pay Google for ad spend yourself, and we take 0% markup on it. Smaller shops with one or two trucks often begin with the entry plan; companies running several technicians and 24/7 ads usually pick a larger one.",
       },
       {
         q: "Do you handle suspended Google listings for garage door companies?",

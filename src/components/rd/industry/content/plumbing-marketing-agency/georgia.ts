@@ -299,7 +299,7 @@ export const CONTENT: LocationContent = {
   pricing: {
     title: "Georgia Plumbing Marketing Packages",
     lead: [
-      "Plans begin at $297 per month and step up to $750 and $1,500, all month to month, with ad spend at a 0% markup. Need a ",
+      "Plans begin at $297 per month and step up to $950 and $1,500, all month to month, with ad spend at a 0% markup. Need a ",
       { href: "/services/gmb-verification-help", label: "profile verified" },
       "? We handle that too.",
     ],
@@ -338,7 +338,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Georgia plumbing marketing packages cost?",
-        a: "The three Georgia packages sit at $297, $750 and $1,500, billed each month and sized by how many suburbs, pages and ad campaigns you want. There's no long contract, you can stop any month, and Google ad spend carries a 0% markup. We recommend a package after your free audit.",
+        a: "The three Georgia packages sit at $297, $950 and $1,500, billed each month and sized by how many suburbs, pages and ad campaigns you want. There's no long contract, you can stop any month, and Google ad spend carries a 0% markup. We recommend a package after your free audit.",
       },
     ],
   },

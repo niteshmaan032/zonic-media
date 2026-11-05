@@ -473,7 +473,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does local SEO cost for a small business?",
-        a: "Our plans are $297, $750 or $1,500 a month, month to month. Most single-location small businesses start on the first plan; adding Google Ads or more locations moves you up. Your free audit says which plan fits before you commit.",
+        a: "Our plans are $297, $950 or $1,500 a month, month to month. Most single-location small businesses start on the first plan; adding Google Ads or more locations moves you up. Your free audit says which plan fits before you commit.",
       },
       {
         q: "What is included in a small business local SEO audit?",

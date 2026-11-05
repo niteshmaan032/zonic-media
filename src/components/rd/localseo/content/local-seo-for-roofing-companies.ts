@@ -489,7 +489,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for roofing companies cost?",
-        a: "Our three plans are $297, $750 and $1,500 a month, all month to month. A one-crew roofer in a single metro usually starts on the first; contractors covering several counties, or wanting storm-season Google Ads managed, lean toward the larger two. The free audit tells you which fits.",
+        a: "Our three plans are $297, $950 and $1,500 a month, all month to month. A one-crew roofer in a single metro usually starts on the first; contractors covering several counties, or wanting storm-season Google Ads managed, lean toward the larger two. The free audit tells you which fits.",
       },
       {
         q: "How long until a roofer sees SEO results?",

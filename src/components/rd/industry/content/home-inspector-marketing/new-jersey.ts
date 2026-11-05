@@ -261,6 +261,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "NJ Home Inspection Marketing for Realtors and Direct-Booking Buyers",
+    lead: [
+      "Once attorney review ends, New Jersey buyers and their agents need an inspector within days. We make you the obvious call for realtors and the top result for owners searching alone, with help from our ",
+      {
+        href: "/services/local-seo-for-home-services",
+        label: "local SEO for home services",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "New Jersey realtors",
+        icon: "agent",
+        pitch:
+          "North and Central Jersey agents refer inspectors who fit the attorney-review timeline and explain tank or radon findings without alarm. We show agents you're that inspector.",
+        query: "Attorney review closed. Need Edison inspection Monday.",
+        flow: [
+          "Agent request in",
+          "Tank sweep added",
+          "Inspection done",
+          "Repair list for attorney",
+        ],
+        badge: "Scheduled inside the inspection contingency",
+        jobs: [
+          {
+            name: "Buyer inspection after attorney review",
+            tactic: "Agent page listing open days by county",
+          },
+          {
+            name: "Oil tank sweep",
+            tactic: "Bundled into requests from older North Jersey towns",
+          },
+          {
+            name: "Radon test by a certified tester",
+            tactic: "Your NJDEP certification shown in agent updates",
+          },
+        ],
+      },
+      {
+        audience: "Jersey homeowners and sellers",
+        icon: "home",
+        pitch:
+          "Bergen and Monmouth sellers can inspect before listing, and homes on private wells need a water test at sale. We rank you for both searches and book them online.",
+        query: "private well testing act nj home sale",
+        flow: [
+          "Searches the rule",
+          "Reads your page",
+          "Adds water test",
+          "Books a visit",
+        ],
+        badge: "Well sample and inspection, one trip",
+        jobs: [
+          {
+            name: "Seller's pre-listing inspection",
+            tactic: "Listing-prep page for Bergen and Monmouth towns",
+          },
+          {
+            name: "Private well water test",
+            tactic: "Well-testing law explainer that books the sample",
+          },
+          {
+            name: "Septic inspection",
+            tactic: "Hunterdon and Sussex pages for rural buyers",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "New Jersey add-on tests clients ask for",
+      items: [
+        "Oil tank sweep",
+        "Radon test (NJDEP certified)",
+        "Termite / WDI inspection",
+        "Well water sampling",
+        "Septic evaluation",
+        "Sewer scope",
+      ],
+    },
+    cta: "Map My NJ Audiences",
+  },
   regions: {
     title: "New Jersey Counties and Towns We Cover",
     lead: "North Jersey boroughs, Central Jersey suburbs and Shore towns each get pages and ads built for their buyers.",
@@ -349,7 +431,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do your New Jersey home inspector marketing plans cost?",
-        a: "We offer $297, $750 and $1,500 monthly plans, all month to month. Whatever you budget for ads carries a 0% markup. Larger tiers bring more counties, more content and paid campaigns for spring and fall.",
+        a: "We offer $297, $950 and $1,500 monthly plans, all month to month. Whatever you budget for ads carries a 0% markup. Larger tiers bring more counties, more content and paid campaigns for spring and fall.",
       },
     ],
   },
@@ -381,7 +463,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Every county you cover checked",
       "Tank sweep and radon pages reviewed",
-      "$297, $750 and $1,500 monthly tiers",
+      "$297, $950 and $1,500 monthly tiers",
     ],
     form: {
       formType: "home-inspector-marketing-new-jersey",

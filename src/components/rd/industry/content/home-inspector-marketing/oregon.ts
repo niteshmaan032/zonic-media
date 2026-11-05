@@ -250,6 +250,84 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Oregon Home Inspection Marketing to Brokers, Buyers and Sellers",
+    lead: [
+      "Oregon calls its real estate agents brokers, and Portland sellers need a Home Energy Score at listing. We court those brokers and the owners who book alone, with ",
+      { href: "/services/ai-seo-services", label: "AI SEO for inspectors" },
+      " covering research-minded buyers.",
+    ],
+    lanes: [
+      {
+        audience: "Portland and Bend brokers",
+        icon: "agent",
+        pitch:
+          "Oregon brokers refer inspectors who show their OCHI number, scope sewers the same day and keep tank findings in proportion. We put that reliability on display.",
+        query: "Can you scope the sewer at a Sellwood bungalow?",
+        flow: [
+          "Broker sends listing",
+          "Scope added",
+          "Inspection finished",
+          "Findings summarized",
+        ],
+        badge: "Sewer scope and inspection, one visit",
+        jobs: [
+          {
+            name: "Buyer inspection with sewer scope",
+            tactic: "Broker page bundling the scope by default",
+          },
+          {
+            name: "Heating oil tank sweep",
+            tactic: "Older Portland neighborhood pages brokers can share",
+          },
+          {
+            name: "Radon test in high-risk zones",
+            tactic: "North and Northeast Portland radon pages",
+          },
+        ],
+      },
+      {
+        audience: "Oregon homeowners and sellers",
+        icon: "sold",
+        pitch:
+          "Portland sellers need a Home Energy Score, so a pre-listing inspection can share the visit. Rural sellers must test wells after accepting an offer. Your pages rank for both.",
+        query: "home energy score portland seller",
+        flow: [
+          "Seller searches score",
+          "Finds combined visit",
+          "Adds pre-listing check",
+          "Books online",
+        ],
+        badge: "Score and inspection booked together",
+        jobs: [
+          {
+            name: "Home Energy Score",
+            tactic: "Portland seller page, if you're a licensed assessor",
+          },
+          {
+            name: "Pre-listing walk-through",
+            tactic: "Bundled with the energy score on one booking form",
+          },
+          {
+            name: "Well water test at sale",
+            tactic: "Central and Southern Oregon pages for rural sellers",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Oregon add-on tests brokers and owners order",
+      items: [
+        "Sewer line scope",
+        "Oil tank sweep",
+        "Radon testing",
+        "Mold and moisture check",
+        "Home Energy Score",
+        "Well water testing",
+      ],
+    },
+    cta: "Reach Oregon Brokers and Owners",
+  },
   regions: {
     title: "Where We Market Oregon Inspection Companies",
     lead: "Housing and buyers differ from the Coast to the high desert, which is why each region runs its own pages, service areas and ads.",
@@ -331,7 +409,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much do your Oregon marketing plans cost?",
-        a: "The three tiers are $297, $750 and $1,500, billed monthly with no lock-in. You can pay ad platforms directly or through us at a 0% markup. Larger tiers cover more cities, add-on pages and campaigns.",
+        a: "The three tiers are $297, $950 and $1,500, billed monthly with no lock-in. You can pay ad platforms directly or through us at a 0% markup. Larger tiers cover more cities, add-on pages and campaigns.",
       },
       {
         q: "Can you fix a suspended Google listing for my Oregon company?",

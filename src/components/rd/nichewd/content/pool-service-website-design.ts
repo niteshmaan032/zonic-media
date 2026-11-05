@@ -536,7 +536,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Owners from many trades wrote these, and every one is public.",
   },
   pricing: {
-    title: "Keep Your Pool Website Growing: Monthly Plans",
+    title: "Pool Service Website Cost, One Payment Only",
     compareTitle: "Plan Comparison for Pool Service Sites",
     addOnsTitle: "Extras for Pool Sites: Portals, Pages, Forms",
     customTitle: "Managing Routes in Several Markets?",
@@ -547,7 +547,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a pool service website cost?",
-        a: "Book a free call, tell us about your routes, repairs and signup needs, and we send back one fixed quote that covers the full build. When your pool company takes a qualifying monthly growth plan, our free website offer covers that build entirely.",
+        a: "Pool service websites start at $950, a single development fee. Nothing is billed monthly for hosting, the site is never rented, and your pool company owns the domain and pages. Tell us about routes, repairs and signups on a free call and we send one fixed quote for the build. A qualifying monthly growth plan makes that build free.",
       },
       {
         q: "How quickly can you launch a website for my pool company?",

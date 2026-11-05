@@ -8,7 +8,7 @@
    home2 gradient banner. Brief: docs/local-seo-redesign-brief.md. */
 
 import type { IconKey } from "@/components/rd/industry/icons";
-import type { FormCopy, Rich } from "@/components/rd/industry/types";
+import type { AiSearchCopy, FormCopy, Rich } from "@/components/rd/industry/types";
 
 export type { Rich };
 
@@ -161,6 +161,8 @@ export type LocalSeoContent = {
       ];
     };
   };
+  /** Optional AEO + GEO section after the growth rows (5 Nov 2026). */
+  aiSearch?: AiSearchCopy;
   /** "What changes after you hire Zonic" (owner, 26 Oct: a section that
       shows the positive things after taking our service). A growth
       timeline of four milestones, four outcome cards, then the sitewide

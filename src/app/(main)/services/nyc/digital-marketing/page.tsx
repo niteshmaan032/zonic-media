@@ -145,7 +145,7 @@ const NycDmFaqs = [
   {
     question: "What do NYC digital marketing services cost?",
     answer:
-      "We charge a flat $297, $750 or $1,500 each month, and you can stop any month. Ad spend goes straight to the ad platform with 0% markup, so every dollar you approve buys ads. The free audit shows which plan suits your competition and goals before you sign anything.",
+      "We charge a flat $297, $950 or $1,500 each month, and you can stop any month. Ad spend goes straight to the ad platform with 0% markup, so every dollar you approve buys ads. The free audit shows which plan suits your competition and goals before you sign anything.",
   },
   {
     question:

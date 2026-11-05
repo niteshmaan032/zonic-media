@@ -442,7 +442,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does painting contractor marketing cost with Zonic Media?",
-        a: "Monthly plans cost $297, $750 or $1,500, and you can cancel any month. Ad spend is billed to you by Google, and we never mark it up (0%). Smaller residential painters often begin on the first tier, while companies running commercial crews and ads across several towns usually choose a larger plan.",
+        a: "Monthly plans cost $297, $950 or $1,500, and you can cancel any month. Ad spend is billed to you by Google, and we never mark it up (0%). Smaller residential painters often begin on the first tier, while companies running commercial crews and ads across several towns usually choose a larger plan.",
       },
     ],
   },

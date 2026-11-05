@@ -498,7 +498,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unfiltered feedback from owners we've built for, straight from our Google profile.",
   },
   pricing: {
-    title: "Monthly Plans for Agents and Teams",
+    title: "Real Estate Agent Website Pricing, Paid Once",
     compareTitle: "How the Plans Compare for Realtor Sites",
     addOnsTitle: "Add Listing and Area Pages Anytime",
     customTitle: "Need Sites for a Whole Brokerage?",
@@ -509,7 +509,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a real estate agent website cost?",
-        a: "It depends on your pages, IDX needs and how many agents the site covers, so after a short free call you get one fixed quote, and that number doesn't move during the build. Agents who sign on to a qualifying monthly growth plan pay nothing for the build itself, thanks to our realtor website offer.",
+        a: "Real estate agent websites start at $950, paid once to build. You won't pay monthly hosting or rent, and the domain and site are in your name, not your brokerage's. IDX needs, pages and team size shape the final figure, which a short free call turns into one fixed quote. Agents on a qualifying monthly growth plan pay nothing for the build.",
       },
       {
         q: "How long does a realtor website take to build?",

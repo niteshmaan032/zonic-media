@@ -299,7 +299,7 @@ export const CONTENT: LocationContent = {
   pricing: {
     title: "California Plumbing Marketing Pricing",
     lead: [
-      "Plans start at $297 a month, with $750 and $1,500 tiers above it. Stop any month, and your ad spend carries a 0% markup. Dealing with a ",
+      "Plans start at $297 a month, with $950 and $1,500 tiers above it. Stop any month, and your ad spend carries a 0% markup. Dealing with a ",
       { href: "/services/gmb-verification-help", label: "stuck verification" },
       "? We fix those too.",
     ],
@@ -338,7 +338,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What does California plumbing marketing cost with Zonic?",
-        a: "Our three California tiers run $297, $750 and $1,500, and the right one depends on how many metros, pages and campaigns you need. None lock you into a long contract, and we never add a markup to your Google ad spend.",
+        a: "Our three California tiers run $297, $950 and $1,500, and the right one depends on how many metros, pages and campaigns you need. None lock you into a long contract, and we never add a markup to your Google ad spend.",
       },
       {
         q: "Google wants to re-verify my California plumbing listing. Can you help?",

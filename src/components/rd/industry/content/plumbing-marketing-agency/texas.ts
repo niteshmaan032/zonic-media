@@ -325,7 +325,7 @@ export const CONTENT: LocationContent = {
     items: [
       {
         q: "How is Texas plumbing marketing priced?",
-        a: "Three plans are on offer, at $297, $750 and $1,500 monthly, and each stays month to month. Any ad spend is passed through with a 0% markup from us. Larger plans cover more cities and metros.",
+        a: "Three plans are on offer, at $297, $950 and $1,500 monthly, and each stays month to month. Any ad spend is passed through with a 0% markup from us. Larger plans cover more cities and metros.",
       },
       {
         q: "Do you run Spanish-language pages and ads in Texas?",
@@ -361,7 +361,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Every metro and suburb checked",
       "English and Spanish searches tested",
-      "$297, $750 or $1,500 plans, month to month",
+      "$297, $950 or $1,500 plans, month to month",
     ],
     form: {
       formType: "plumbing-marketing-texas",

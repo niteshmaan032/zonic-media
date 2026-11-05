@@ -253,6 +253,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Kentucky Home Inspection Marketing for Agents, Sellers and Owners",
+    lead: [
+      "Kentucky's inspector rules forbid offering anything of value for referrals, so agents have to be won on merit. We do that for Louisville and Lexington teams, and add ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Maps rankings",
+      },
+      " for direct bookings.",
+    ],
+    lanes: [
+      {
+        audience: "Louisville, Lexington and NKY Agents",
+        icon: "handshake",
+        pitch:
+          "Bluegrass agents want an inspector who explains clay sewer lines and radon without scaring buyers. A calm sample report, fast scheduling and a market note keep you on their shortlist.",
+        query: "Can you scope the sewer on a Highlands bungalow Thursday?",
+        flow: [
+          "Agent request lands",
+          "Scope added",
+          "Inspected Thursday",
+          "Calm summary sent",
+        ],
+        badge: "Summary agents can forward",
+        jobs: [
+          {
+            name: "Buyer inspections with sewer scopes",
+            tactic: "Clay-line camera clips on your agent page",
+          },
+          {
+            name: "Military relocation inspections",
+            tactic:
+              "Remote report tours for Fort Knox and Fort Campbell agents",
+          },
+          {
+            name: "Pre-listing inspections in Lexington",
+            tactic: "Seller summary template for listing teams",
+          },
+        ],
+      },
+      {
+        audience: "Kentucky Owners Who Find You on Their Own",
+        icon: "home",
+        pitch:
+          "Owners in Jefferson and Kenton counties book radon checks, Bowling Green buyers ask about karst, and sellers want a clean report before listing. Town and test pages answer them.",
+        query: "radon testing louisville ky",
+        flow: [
+          "Finds county page",
+          "Adds radon",
+          "Chooses a time",
+          "Results emailed",
+        ],
+        badge: "Radon booked from search",
+        jobs: [
+          {
+            name: "Radon tests in Jefferson and Kenton",
+            tactic: "County pages linking to your radon credentials",
+          },
+          {
+            name: "Foundation and karst concerns",
+            tactic: "Bowling Green pages answering sinkhole questions plainly",
+          },
+          {
+            name: "Seller inspections before listing",
+            tactic: "Lexington seller page with a booking link",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Kentucky Add-Ons Clients Pair With Inspections",
+      items: [
+        "Radon testing",
+        "Sewer scope",
+        "Mold sampling",
+        "WDI report",
+        "Thermal imaging",
+        "Well and septic",
+      ],
+    },
+    cta: "Plan My Kentucky Outreach",
+  },
   regions: {
     title: "Kentucky Regions We Market Inspectors In",
     lead: "Louisville, the Bluegrass, Northern Kentucky and the smaller cities each have their own agents and search habits, so each gets its own pages.",
@@ -340,7 +422,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much is a Kentucky home inspector marketing plan?",
-        a: "Kentucky inspectors settle on one tier ($297, $750 or $1,500), paid monthly with nothing long-term to sign, and Google gets your ad spend at a 0% markup. We'll suggest a tier after the free audit, based on how many cities you cover.",
+        a: "Kentucky inspectors settle on one tier ($297, $950 or $1,500), paid monthly with nothing long-term to sign, and Google gets your ad spend at a 0% markup. We'll suggest a tier after the free audit, based on how many cities you cover.",
       },
     ],
   },

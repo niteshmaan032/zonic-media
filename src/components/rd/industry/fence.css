@@ -1,0 +1,155 @@
+/* Fence growth UIs (5 Nov 2026): looping motion inside the cards only,
+   no scroll reveals (owner rule). Reduced motion: the finished frame. */
+
+/* Aerial estimate: the line draws, gates pop in, the request confirms (9s) */
+.fu-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  animation: fu-draw 9s ease-in-out infinite;
+}
+@keyframes fu-draw {
+  0%,
+  6% {
+    stroke-dashoffset: 100;
+    opacity: 1;
+  }
+  42%,
+  92% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+.fu-gate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fu-gate 9s ease-out infinite;
+}
+@keyframes fu-gate {
+  0%,
+  44% {
+    opacity: 0;
+    scale: 0.4;
+  }
+  50%,
+  92% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+}
+.fu-spec {
+  animation: fu-spec 9s ease-out infinite;
+}
+@keyframes fu-spec {
+  0%,
+  46% {
+    opacity: 0.35;
+  }
+  54%,
+  100% {
+    opacity: 1;
+  }
+}
+.fu-toast {
+  animation: fu-toast 9s ease-out infinite;
+}
+@keyframes fu-toast {
+  0%,
+  60% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  66%,
+  94% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 0;
+  }
+}
+
+/* Material searches: rows land in turn, the result chip pops (8s) */
+.fu-row {
+  animation: fu-row 8s ease-out infinite;
+}
+@keyframes fu-row {
+  0%,
+  4% {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  12%,
+  94% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 0;
+  }
+}
+.fu-result {
+  animation: fu-result 8s ease-out infinite;
+}
+@keyframes fu-result {
+  0%,
+  10% {
+    scale: 0.6;
+    opacity: 0;
+  }
+  16% {
+    scale: 1.08;
+    opacity: 1;
+  }
+  20%,
+  94% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}
+
+/* Estimate pipeline: job cards drop into their stage column (8s) */
+.fu-job {
+  animation: fu-job 8s ease-out infinite;
+}
+@keyframes fu-job {
+  0%,
+  6% {
+    opacity: 0;
+    translate: 0 -6px;
+  }
+  14%,
+  94% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fu-draw,
+  .fu-gate,
+  .fu-spec,
+  .fu-toast,
+  .fu-row,
+  .fu-result,
+  .fu-job {
+    animation: none !important;
+  }
+}

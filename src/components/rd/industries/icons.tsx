@@ -33,7 +33,8 @@ export type IndustryIcon =
   | "gutter"
   | "tree"
   | "cannabis"
-  | "travel";
+  | "travel"
+  | "fence";
 
 export function IndustryIconSvg({ name }: { name: IndustryIcon }) {
   const common = {
@@ -46,6 +47,15 @@ export function IndustryIconSvg({ name }: { name: IndustryIcon }) {
     "aria-hidden": true,
   };
   switch (name) {
+    case "fence":
+      return (
+        <svg {...common}>
+          <path d="M4 21V7l2-3 2 3v14" />
+          <path d="M10 21V7l2-3 2 3v14" />
+          <path d="M16 21V7l2-3 2 3v14" />
+          <path d="M2 10h20M2 16h20" />
+        </svg>
+      );
     case "travel":
       return (
         <svg {...common}>

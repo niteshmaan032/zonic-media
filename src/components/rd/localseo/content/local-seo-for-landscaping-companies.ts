@@ -488,7 +488,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What does a landscaping SEO company charge?",
-        a: "We offer three plans at $297, $750 and $1,500 a month, all month to month. A lawn care route in one town usually fits the starter plan; design-build firms working several suburbs, or wanting ads managed as well, tend to need the larger ones. The audit names the right plan.",
+        a: "We offer three plans at $297, $950 and $1,500 a month, all month to month. A lawn care route in one town usually fits the starter plan; design-build firms working several suburbs, or wanting ads managed as well, tend to need the larger ones. The audit names the right plan.",
       },
       {
         q: "How is lawn care SEO different from landscaping SEO?",

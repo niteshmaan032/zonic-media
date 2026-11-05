@@ -438,7 +438,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does solar marketing cost with Zonic Media?",
-        a: "Zonic Media plans run $297, $750 or $1,500 per month, with cancellation open every month. Google bills ad clicks itself, and our markup on that spend is 0%. Single-crew installers often start small; multi-territory teams running ads usually need a larger plan.",
+        a: "Zonic Media plans run $297, $950 or $1,500 per month, with cancellation open every month. Google bills ad clicks itself, and our markup on that spend is 0%. Single-crew installers often start small; multi-territory teams running ads usually need a larger plan.",
       },
       {
         q: "Can you recover a suspended Google Business Profile for a solar company?",

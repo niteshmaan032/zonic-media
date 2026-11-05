@@ -51,6 +51,13 @@ const LIME: [string, string, string, string] = [
   "#ecfccb",
   "#3f6212",
 ];
+/** Cedar wood (fence contractors, 5 Nov 2026). */
+const WOOD: [string, string, string, string] = [
+  "#b45309",
+  "#92400e",
+  "#fdecd3",
+  "#92400e",
+];
 const GREEN: [string, string, string, string] = [
   "#16a34a",
   "#15803d",
@@ -150,6 +157,21 @@ export const PALETTES = {
   redTeal: pal(RED, TEAL),
   /** Travel & tourism (26 Oct 2026): sea teal + sunset rose. */
   tealRose: pal(TEAL, ROSE),
+  /** Fence contractors (5 Nov 2026): cedar wood + lawn green. */
+  woodGreen: pal(WOOD, GREEN),
+  /* Home inspector states added 5 Nov 2026 (hue pairs no page used yet). */
+  skyFuchsia: pal(SKY, FUCHSIA),
+  greenRose: pal(GREEN, ROSE),
+  tealViolet: pal(TEAL, VIOLET),
+  blueFuchsia: pal(BLUE, FUCHSIA),
+  emeraldViolet: pal(EMERALD, VIOLET),
+  cyanRed: pal(CYAN, RED),
+  slateOrange: pal(SLATE, ORANGE),
+  slateRose: pal(SLATE, ROSE),
+  emeraldSky: pal(EMERALD, SKY),
+  violetLime: pal(VIOLET, LIME),
+  /** White label services (5 Nov 2026): agency indigo + teal. */
+  indigoTeal: pal(INDIGO, TEAL),
 } satisfies Record<string, Palette>;
 
 export type PaletteName = keyof typeof PALETTES;

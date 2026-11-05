@@ -258,6 +258,85 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "North Carolina Home Inspector Marketing: Realtor Referrals and Direct Bookings",
+    lead: [
+      "Most North Carolina purchase inspections race the due diligence clock. We court realtors who refer during it and homeowners who book direct, using ",
+      { href: "/services/google-ads", label: "Google Ads for inspectors" },
+      " and Map Pack work statewide.",
+    ],
+    lanes: [
+      {
+        audience: "Charlotte and Triangle realtors",
+        icon: "handshake",
+        pitch:
+          "State rules stop inspectors from rewarding agents for referrals or list spots. So we win NC realtors honestly: quick scheduling, readable reports and reviews from their own clients.",
+        query: "Due diligence ends Friday. Cary home, any slot?",
+        flow: [
+          "Agent books online",
+          "Crawl space checked",
+          "Report by evening",
+          "Summary for repair talks",
+        ],
+        badge: "Booked well inside due diligence",
+        jobs: [
+          {
+            name: "Due diligence buyer inspection",
+            tactic: "Online calendar link agents save to their phones",
+          },
+          {
+            name: "WDIR termite report",
+            tactic: "Offered through your licensed pest credential or partner",
+          },
+          {
+            name: "Re-inspection after repairs",
+            tactic: "One-click rebook link in every agent update",
+          },
+        ],
+      },
+      {
+        audience: "NC homeowners and sellers",
+        icon: "home",
+        pitch:
+          "Families relocating to Raleigh or Wilmington often research inspectors before choosing an agent. We put your crawl space, radon and well expertise in front of them.",
+        query: "crawl space inspection wilmington nc",
+        flow: [
+          "Asks AI for inspectors",
+          "Finds your page",
+          "Reads crawl space FAQ",
+          "Books the visit",
+        ],
+        badge: "Booked before the house hunt starts",
+        jobs: [
+          {
+            name: "Listing-ready inspection",
+            tactic: "Seller page showing a sample crawl space finding",
+          },
+          {
+            name: "Well and septic inspection",
+            tactic: "Rural county pages from the Piedmont to the coast",
+          },
+          {
+            name: "Stucco and EIFS moisture check",
+            tactic: "Coastal pages for older synthetic-stucco homes",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-ons North Carolina buyers and owners order",
+      items: [
+        "WDIR termite report",
+        "Radon testing",
+        "Crawl space moisture review",
+        "Well water test",
+        "Septic inspection",
+        "EIFS / stucco probe",
+      ],
+    },
+    cta: "Get My NC Audience Plan",
+  },
   regions: {
     title: "Regions We Cover for Home Inspectors, Wilmington NC to Asheville",
     lead: "From the mountains to the sounds, each region is handled separately, with matching pages, service areas and ad rules.",
@@ -339,7 +418,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How are your North Carolina marketing plans priced?",
-        a: "The three NC plans are priced at $297, $750 or $1,500 monthly, and you can leave in any month. Ad platforms bill your budget separately, and we add a 0% markup to it. Higher plans add more cities, pages and campaigns.",
+        a: "The three NC plans are priced at $297, $950 or $1,500 monthly, and you can leave in any month. Ad platforms bill your budget separately, and we add a 0% markup to it. Higher plans add more cities, pages and campaigns.",
       },
       {
         q: "What if my NC inspection company's Google listing is suspended?",
@@ -355,7 +434,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Each metro and county checked",
       "WDIR and radon searches reviewed",
-      "$297, $750 and $1,500 plans, no contract",
+      "$297, $950 and $1,500 plans, no contract",
     ],
     form: {
       formType: "home-inspector-marketing-north-carolina",

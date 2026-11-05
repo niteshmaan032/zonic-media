@@ -435,7 +435,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does appliance repair marketing cost with Zonic Media?",
-        a: "Monthly plans cost $297, $750 or $1,500, with no long contract. A single-van shop usually begins on the smallest plan, while multi-tech teams running ads tend to pick the larger ones. Your free audit shows which level fits your area.",
+        a: "Monthly plans cost $297, $950 or $1,500, with no long contract. A single-van shop usually begins on the smallest plan, while multi-tech teams running ads tend to pick the larger ones. Your free audit shows which level fits your area.",
       },
       {
         q: "How long does appliance repair SEO take to work?",

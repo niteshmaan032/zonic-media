@@ -434,7 +434,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does pool service marketing cost at Zonic Media?",
-        a: "Pick from three month-to-month tiers: $297, $750 or $1,500, each billed monthly with no annual commitment. Ad spend goes to Google at a 0% markup. Single-truck operators often begin with the first plan and move up as routes fill. Reinstatement of a suspended profile is included at every tier.",
+        a: "Pick from three month-to-month tiers: $297, $950 or $1,500, each billed monthly with no annual commitment. Ad spend goes to Google at a 0% markup. Single-truck operators often begin with the first plan and move up as routes fill. Reinstatement of a suspended profile is included at every tier.",
       },
     ],
   },

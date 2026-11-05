@@ -1,0 +1,88 @@
+/* AI search section (5 Nov 2026): the assistant tabs take turns (10s
+   loop, 2.5s each), the answer types out after a short dot pause. Motion
+   inside the board only; reduced motion shows the answer and no active
+   tab cycling. */
+
+.ais-tab {
+  animation: ais-tab 10s linear infinite;
+}
+@keyframes ais-tab {
+  0%,
+  24% {
+    background: var(--ais-on);
+    color: var(--ais-ink);
+  }
+  25%,
+  100% {
+    background: transparent;
+    color: var(--ink);
+  }
+}
+
+.ais-dots {
+  animation: ais-dots 10s ease-out infinite;
+}
+@keyframes ais-dots {
+  0%,
+  8% {
+    opacity: 1;
+  }
+  10%,
+  100% {
+    opacity: 0;
+  }
+}
+.ais-dot {
+  animation: ais-dot 0.9s ease-in-out infinite;
+}
+@keyframes ais-dot {
+  50% {
+    translate: 0 -3px;
+    opacity: 0.4;
+  }
+}
+.ais-answer {
+  animation: ais-answer 10s ease-out infinite;
+}
+@keyframes ais-answer {
+  0%,
+  9% {
+    opacity: 0;
+    translate: 0 6px;
+  }
+  14%,
+  96% {
+    opacity: 1;
+    translate: 0 0;
+  }
+  100% {
+    opacity: 0;
+    translate: 0 0;
+  }
+}
+.ais-reason {
+  animation: ais-reason 10s ease-out infinite;
+}
+@keyframes ais-reason {
+  0%,
+  16% {
+    opacity: 0;
+  }
+  22%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ais-tab,
+  .ais-dots,
+  .ais-dot,
+  .ais-answer,
+  .ais-reason {
+    animation: none !important;
+  }
+  .ais-dots {
+    display: none;
+  }
+}

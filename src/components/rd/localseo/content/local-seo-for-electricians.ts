@@ -454,7 +454,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does electrician SEO cost?",
-        a: "Our plans are $297, $750 or $1,500 a month, month to month. Single-location shops usually start on the first plan; contractors covering several towns, or who also want Google Ads managed, tend to pick the second or third. The free audit shows which fits.",
+        a: "Our plans are $297, $950 or $1,500 a month, month to month. Single-location shops usually start on the first plan; contractors covering several towns, or who also want Google Ads managed, tend to pick the second or third. The free audit shows which fits.",
       },
       {
         q: "How long does SEO take for an electrical company?",

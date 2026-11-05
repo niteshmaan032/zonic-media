@@ -492,7 +492,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What do kitchen remodel SEO services cost?",
-        a: "Our three plans are $297, $750 and $1,500 a month, billed month to month. A one-showroom firm often starts with the first; design-build companies covering a metro, or wanting Google Ads handled too, generally choose a larger plan. The free audit names the right fit.",
+        a: "Our three plans are $297, $950 and $1,500 a month, billed month to month. A one-showroom firm often starts with the first; design-build companies covering a metro, or wanting Google Ads handled too, generally choose a larger plan. The free audit names the right fit.",
       },
       {
         q: "How long does SEO for kitchen remodeling take?",

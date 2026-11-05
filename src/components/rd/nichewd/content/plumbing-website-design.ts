@@ -512,7 +512,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Real reviews left by business owners on our Google profile, shown unedited.",
   },
   pricing: {
-    title: "Growth Plans for Your Plumbing Website",
+    title: "Plumbing Website Cost: Pay Once, Own It All",
     compareTitle: "Compare What Each Plan Does for a Plumber",
     addOnsTitle: "Optional Extras for Plumbing Company Sites",
     customTitle: "Running Several Plumbing Locations?",
@@ -523,7 +523,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a plumbing website cost?",
-        a: "We price each plumbing build after a free call to learn your services, service area and booking setup, then give you one fixed quote that won't creep up mid-project. Bundle it with a qualifying growth plan, billed monthly, and you pay nothing for the plumbing website itself under our plumber website offer.",
+        a: "Plumbing websites start at $950 as a one-time development fee. There's no hosting bill each month and no site rental, and you own both the domain and the website. A free call on your services, service area and booking setup gives one fixed quote that won't creep. Bundle a qualifying growth plan, billed monthly, and the plumbing site is free.",
       },
       {
         q: "What is the timeline for a new plumber website?",

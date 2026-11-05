@@ -401,7 +401,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does septic marketing cost with Zonic Media?",
-        a: "Plans run $297 to $1,500 per month, with a middle tier at $750, all on month-to-month terms. Ad spend is paid to Google from your own account, at 0% markup. Operators covering a few towns usually begin on the first tier; multi-truck companies running ads tend to need more.",
+        a: "Plans run $297 to $1,500 per month, with a middle tier at $950, all on month-to-month terms. Ad spend is paid to Google from your own account, at 0% markup. Operators covering a few towns usually begin on the first tier; multi-truck companies running ads tend to need more.",
       },
       {
         q: "My septic company's Google profile was suspended. Can you restore it?",

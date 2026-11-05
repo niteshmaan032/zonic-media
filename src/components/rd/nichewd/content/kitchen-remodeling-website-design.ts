@@ -530,7 +530,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Owners we've worked with left these on our Google profile, unedited.",
   },
   pricing: {
-    title: "Monthly Plans for Your New Kitchen Website",
+    title: "Kitchen Remodeling Website Pricing, One-Time",
     compareTitle: "Kitchen Remodeler Plan Features Side by Side",
     addOnsTitle: "Optional Pages for Cabinets and Countertops",
     customTitle: "Several Showrooms or Design Studios?",
@@ -541,7 +541,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does a kitchen remodeling website cost?",
-        a: "After a free planning call about your services, showroom and booking needs, we put one fixed number in writing, and it stays put until launch. If you also start a qualifying growth plan, billed each month, our free website offer covers the build itself.",
+        a: "For kitchen remodelers, websites start at $950 and the development charge is paid one time. We don't rent sites or bill hosting by the month; the domain and website are your property. After a free planning call about services, showroom and consult booking, we put one fixed number in writing. Start a qualifying growth plan, billed each month, and the kitchen site is free.",
       },
       {
         q: "How long until my kitchen remodeler website is live?",

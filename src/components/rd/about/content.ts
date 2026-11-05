@@ -41,7 +41,7 @@ export const ABOUT_FAQS: { question: string; answer: string }[] = [
   {
     question: "Do I have to sign a long-term contract?",
     answer:
-      "No. Every plan runs month to month, so you are never locked in. Our published plans are $297, $750 and $1,500 a month. Clients stay because the calls keep coming, and that keeps us focused on earning the work every single month.",
+      "No. Every plan runs month to month, so you are never locked in. Our published plans are $297, $950 and $1,500 a month. Clients stay because the calls keep coming, and that keeps us focused on earning the work every single month.",
   },
   {
     question: "What support do you give after launch?",

@@ -121,7 +121,7 @@ const DelWebFaqs = [
   {
     question: "What does a custom website cost in Delaware?",
     answer:
-      "Every build gets one fixed price after a free scoping call, based on the number of pages, features such as booking or online sales, and how much copy you need. The quote holds once agreed, with no hourly billing. Brand-new businesses can also compare our LaunchPad packages, which have published prices.",
+      "Custom websites in Delaware start at $950 for development, paid one time, with no monthly hosting or rental charges, and the domain and site are yours. The fixed price follows a free scoping call, based on pages, features such as booking or online sales, and copy, and it holds with no hourly billing. Brand-new businesses can also compare our LaunchPad packages.",
   },
   {
     question: "Is SEO included in your web design?",
@@ -579,7 +579,7 @@ const data: DelawareData = {
 const extras: DelawareExtras = {
   kind: "web",
   pricing: {
-    title: "Plans to Grow Your Site After Launch",
+    title: "Delaware Website Design Pricing, Paid Once",
     lead: "After launch, these monthly plans keep your new site climbing in search and producing leads.",
     compareTitle: "Post-Launch Plans Compared",
     compareLead: "What each plan adds once your site is live.",

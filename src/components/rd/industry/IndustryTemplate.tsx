@@ -49,6 +49,8 @@ import {
 import { MoreLocations } from "./MoreLocations";
 import "./industry.css";
 import { GradientBanner } from "./GradientBanner";
+import { AiSearchSection } from "./AiSearchSection";
+import { AudienceLanes } from "./AudienceLanes";
 import { VideoHero } from "./VideoHero";
 
 /* ---------------------------------------------------------------------------
@@ -111,6 +113,7 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
     audit: c.steps.audit,
     plan: c.steps.plan,
     launch: c.steps.launch,
+    titles: c.steps.uiTitles,
   });
   const stepBg = [p.a, p.b, "var(--green)"];
   const allLocations = c.locations?.items ?? [];
@@ -313,6 +316,16 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
             ))}
           </Wrap>
         </Section>
+
+        {/* ======================================================= AUDIENCES */}
+        {c.audiences ? (
+          <AudienceLanes id="ind" p={p} c={c.audiences} ctaHref={AUDIT} />
+        ) : null}
+
+        {/* ======================================================= AI SEARCH */}
+        {c.aiSearch ? (
+          <AiSearchSection id="ind" p={p} c={c.aiSearch} ctaHref={AUDIT} />
+        ) : null}
 
         {/* ======================================================= OWN LEADS */}
         {c.ownLeads && (
@@ -642,17 +655,20 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
         </Section>
 
         {/* ========================================================= PRICING */}
-        <PricingSection
-          copy={{
-            title: c.pricing.title,
-            compareTitle: c.pricing.compareTitle,
-            addOnsTitle: c.pricing.addOnsTitle,
-            customTitle: c.pricing.customTitle,
-          }}
-          idPrefix="ind"
-          ctaHref={AUDIT}
-          ctaLabel={c.hero.cta}
-        />
+        {c.pricing ? (
+          <PricingSection
+            path={c.liveUrl}
+            copy={{
+              title: c.pricing.title,
+              compareTitle: c.pricing.compareTitle,
+              addOnsTitle: c.pricing.addOnsTitle,
+              customTitle: c.pricing.customTitle,
+            }}
+            idPrefix="ind"
+            ctaHref={AUDIT}
+            ctaLabel={c.hero.cta}
+          />
+        ) : null}
 
         {/* ============================================================= FAQ */}
         <Section labelledBy="ind-faq-h" tone="white">

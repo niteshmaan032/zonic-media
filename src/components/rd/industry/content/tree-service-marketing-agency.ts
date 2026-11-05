@@ -429,7 +429,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does tree service marketing cost with Zonic Media?",
-        a: "We offer three month-to-month plans, at $297, $750 and $1,500 each month. Ad spend is paid to Google with a 0% markup. Crews that only want map rankings start on the first tier; storm advertising and more towns usually call for a higher one.",
+        a: "We offer three month-to-month plans, at $297, $950 and $1,500 each month. Ad spend is paid to Google with a 0% markup. Crews that only want map rankings start on the first tier; storm advertising and more towns usually call for a higher one.",
       },
       {
         q: "Can you get a suspended tree company listing back on Google?",

@@ -195,7 +195,7 @@ const PhilaDigitalFaqs = [
   {
     question: "What do your Philadelphia marketing plans cost?",
     answer:
-      "Our plans cost $297, $750 or $1,500 monthly at a flat rate, with no long-term contract. The right one depends on how many channels and locations you need, which the free audit makes clear. If you run ads, that spend is billed by Google, with 0% markup from us.",
+      "Our plans cost $297, $950 or $1,500 monthly at a flat rate, with no long-term contract. The right one depends on how many channels and locations you need, which the free audit makes clear. If you run ads, that spend is billed by Google, with 0% markup from us.",
   },
   {
     question:
@@ -546,7 +546,7 @@ const data: DelawareData = {
       {
         icon: <FiZap aria-hidden="true" />,
         title: "Flat monthly plans",
-        desc: "Choose $297, $750 or $1,500 a month, month to month.",
+        desc: "Choose $297, $950 or $1,500 a month, month to month.",
       },
       {
         icon: <FiBarChart2 aria-hidden="true" />,

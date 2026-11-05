@@ -182,7 +182,7 @@ const DelDigitalFaqs = [
   {
     question: "How much do your digital marketing plans cost?",
     answer:
-      "Plans run $297, $750 or $1,500 a month, month to month with no long-term contract. Which fits best comes down to the channels you need and how competitive your towns are. Ad spend is separate and paid by you straight to Google or Meta, with 0% markup. Your free audit tells you which plan makes sense.",
+      "Plans run $297, $950 or $1,500 a month, month to month with no long-term contract. Which fits best comes down to the channels you need and how competitive your towns are. Ad spend is separate and paid by you straight to Google or Meta, with 0% markup. Your free audit tells you which plan makes sense.",
   },
   {
     question: "How soon will I see results from digital marketing?",

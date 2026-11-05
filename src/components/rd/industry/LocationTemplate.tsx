@@ -45,6 +45,7 @@ import {
   softStyle,
 } from "./ui";
 import { GradientBanner } from "./GradientBanner";
+import { AudienceLanes } from "./AudienceLanes";
 
 /* ---------------------------------------------------------------------------
    LOCATION PAGE TEMPLATE (24 Oct 2026) — the Florida HVAC draft's layout,
@@ -309,6 +310,11 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
           </Wrap>
         </Section>
 
+        {/* ======================================================= AUDIENCES */}
+        {c.audiences ? (
+          <AudienceLanes id="loc" p={p} c={c.audiences} ctaHref={AUDIT} />
+        ) : null}
+
         {/* ========================================================= REGIONS */}
         <Section labelledBy="loc-reg-h">
           <Wrap>
@@ -404,6 +410,7 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
 
         {/* ========================================================= PRICING */}
         <PricingSection
+          path={c.liveUrl}
           copy={{
             title: c.pricing.title,
             compareTitle: c.pricing.compareTitle,

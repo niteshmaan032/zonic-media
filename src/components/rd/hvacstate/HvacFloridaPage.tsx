@@ -513,6 +513,7 @@ export function HvacFloridaPage() {
 
         {/* ========================================================= PRICING */}
         <PricingSection
+          path="/services/hvac-marketing-agency/florida"
           copy={{
             title: "Florida HVAC Marketing Pricing",
             lead: (

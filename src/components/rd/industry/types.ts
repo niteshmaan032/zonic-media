@@ -134,6 +134,97 @@ export type DirectBookUi = {
   toastNote: string;
 };
 
+/* Fence growth UIs (5 Nov 2026, fence contractor pages): ./fenceUi.tsx.
+   Example only: no prices, no real addresses or companies. */
+
+/** Online estimate drawn on an aerial yard view: the fence line draws
+    itself around the yard, gates pop in, then the request is sent. */
+export type FenceLineUi = {
+  kind: "fenceLine";
+  /** Card heading, e.g. "Online fence estimate". */
+  title: string;
+  /** Short yard label, e.g. "Backyard · corner lot" (never an address). */
+  yard: string;
+  /** Spec rows shown beside the map: [label, value]. Four rows, e.g.
+      ["Material", "Vinyl privacy"], ["Height", "6 ft"],
+      ["Length", "About 180 ft"], ["Gates", "1 walk + 1 drive"]. */
+  specs: [
+    [string, string],
+    [string, string],
+    [string, string],
+    [string, string],
+  ];
+  toast: string;
+  toastNote: string;
+};
+
+/** One search per fence material, each with where the business shows. */
+export type FenceRankUi = {
+  kind: "fenceRank";
+  title: string;
+  /** [search, material chip, result], e.g.
+      ["vinyl fence installation near me", "Vinyl", "Map Pack #1"]. */
+  rows: [
+    [string, string, string],
+    [string, string, string],
+    [string, string, string],
+    [string, string, string],
+  ];
+  note: string;
+};
+
+/** Estimate pipeline board: four stages, job cards moving to "won". */
+export type QuotePipelineUi = {
+  kind: "quotePipeline";
+  title: string;
+  /** Stage names, e.g. ["New", "Measured", "Quoted", "Won"]. */
+  stages: [string, string, string, string];
+  /** Job cards: first name + job, and the stage index (0–3). */
+  cards: { name: string; job: string; stage: 0 | 1 | 2 | 3 }[];
+  note: string;
+};
+
+/* White label UIs (5 Nov 2026, /services/white-label-services):
+   ./whiteLabelUi.tsx. Example only: "Your Agency", plain client names,
+   rank positions and statuses, no prices or figures. */
+
+/** A client report branded as the reselling agency. */
+export type BrandReportUi = {
+  kind: "brandReport";
+  title: string;
+  /** Example client line, e.g. "Prepared for Lakeside Dental". */
+  client: string;
+  /** Searches climbing: [search, from, to]. */
+  ranks: [
+    [string, number, number],
+    [string, number, number],
+    [string, number, number],
+  ];
+  /** Work shipped this month, 2–5 words each. */
+  done: [string, string, string];
+  note: string;
+};
+
+/** A Business Profile reinstatement case moving to "Reinstated". */
+export type CaseTrackerUi = {
+  kind: "caseTracker";
+  title: string;
+  /** Example client line, e.g. "Client: Ridgeway Roofing". */
+  client: string;
+  steps: [string, string, string, string];
+  toast: string;
+  toastNote: string;
+};
+
+/** Fulfillment queue across several agency clients. */
+export type PartnerQueueUi = {
+  kind: "partnerQueue";
+  title: string;
+  /** [client, task, status] — status one of "Done", "In review", "Live", "Queued". */
+  rows: [string, string, string][];
+  note: string;
+};
+
 export type GrowthUi =
   | MapsUi
   | AiUi
@@ -142,7 +233,13 @@ export type GrowthUi =
   | WebsiteUi
   | TripChatUi
   | ThingsToDoUi
-  | DirectBookUi;
+  | DirectBookUi
+  | FenceLineUi
+  | FenceRankUi
+  | QuotePipelineUi
+  | BrandReportUi
+  | CaseTrackerUi
+  | PartnerQueueUi;
 
 /** One alternating row in the "how we grow you" section. */
 export type GrowthRow = {
@@ -200,6 +297,69 @@ export type PricingCopyData = {
   customText?: string;
 };
 
+/* ------------------------------------------------- audience lanes */
+
+/** One audience the business markets to (home inspectors, 5 Nov 2026:
+    real estate agents vs homeowners). */
+export type AudienceLane = {
+  /** e.g. "Real estate agents". */
+  audience: string;
+  icon: IconKey;
+  /** 20–30 words: what this audience wants and how we win it. */
+  pitch: string;
+  /** Mini UI: a search or request line, e.g. "pre-listing inspection near
+      me" or "Inspection request from an agent". */
+  query: string;
+  /** Mini UI: four steps from first touch to booked, 2–4 words each. */
+  flow: [string, string, string, string];
+  /** Mini UI: result chip, e.g. "Report in 24 hours". */
+  badge: string;
+  /** Three inspection types for this audience and the tactic that sells each. */
+  jobs: [
+    { name: string; tactic: string },
+    { name: string; tactic: string },
+    { name: string; tactic: string },
+  ];
+};
+
+/** "Who we market you to" section: two audience lanes and the add-on
+    services both audiences buy. */
+export type AudiencesCopy = {
+  title: string;
+  lead: Rich;
+  lanes: [AudienceLane, AudienceLane];
+  /** Add-on services both audiences book, e.g. "Radon testing". */
+  addOns: { title: string; items: string[] };
+  cta: string;
+};
+
+/* ------------------------------------------------- AI search (AEO/GEO) */
+
+/** AEO + GEO section (5 Nov 2026): an AI answer board (engines, the
+    customer's question, the answer naming the business and the sources it
+    cites) beside four AEO/GEO tactic cards. Rendered by ./AiSearchSection. */
+export type AiSearchCopy = {
+  title: string;
+  lead: Rich;
+  /** The customer's question to the assistants. */
+  prompt: string;
+  /** Clause before "Your Company", e.g. "For an aluminum pool fence,". */
+  answer: string;
+  /** Three reasons the answer gives, 3–7 words each. */
+  reasons: [string, string, string];
+  /** Four tactic cards; `tag` says which discipline it belongs to. */
+  tactics: [AiTactic, AiTactic, AiTactic, AiTactic];
+  cta: string;
+};
+
+export type AiTactic = {
+  tag: "AEO" | "GEO";
+  icon: IconKey;
+  title: string;
+  /** 18–28 words. */
+  text: string;
+};
+
 /* -------------------------------------------------------- main page */
 
 export type IndustryContent = {
@@ -210,6 +370,13 @@ export type IndustryContent = {
   liveUrl: string;
   /** Short niche name for schema and breadcrumbs, e.g. "Plumbing". */
   niche: string;
+  /** Optional schema overrides for pages that are not "<niche> Marketing
+      Agency" (white label services, 5 Nov 2026). */
+  schema?: {
+    name: string;
+    serviceType: string;
+    parent?: { name: string; url: string };
+  };
   meta: { title: string; description: string; keywords: string[] };
   palette: Palette;
   hero: {
@@ -236,6 +403,10 @@ export type IndustryContent = {
   /** Optional flat background for every growth-row UI panel, replacing
       the palette tints (travel: home2's grey card colour, var(--panel)). */
   growthPanel?: string;
+  /** Optional "who we market you to" lanes (home inspectors). */
+  audiences?: AudiencesCopy;
+  /** Optional AEO + GEO section after the growth rows. */
+  aiSearch?: AiSearchCopy;
   /** Optional dark band: leads you own vs shared leads (home services). */
   ownLeads?: {
     title: string;
@@ -267,6 +438,14 @@ export type IndustryContent = {
     plan: string[];
     /** Step 3 UI checklist. */
     launch: string[];
+    /** Optional step UI card titles (default: free audit / growth plan /
+        launch checklist). */
+    uiTitles?: {
+      audit: string;
+      auditChip: string;
+      plan: string;
+      launch: string;
+    };
   };
   /** Only for niches with location pages. */
   locations?: {
@@ -276,7 +455,9 @@ export type IndustryContent = {
     other: string;
   };
   reviews: { title: string; lead: string };
-  pricing: PricingCopyData;
+  /** Monthly-plan section headings. Optional: the white label page (sold
+      to agencies) leaves the retail plans out. */
+  pricing?: PricingCopyData;
   faq: { title: string; lead: string; items: { q: string; a: string }[] };
   audit: {
     title: string;
@@ -318,6 +499,8 @@ export type LocationContent = {
     items: ServiceCard[];
   };
   growth: { title: string; lead: string; rows: GrowthRow[] };
+  /** Optional "who we market you to" lanes (home inspectors). */
+  audiences?: AudiencesCopy;
   regions: {
     title: string;
     lead: string;

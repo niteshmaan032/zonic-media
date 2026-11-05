@@ -527,7 +527,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does plumbing marketing cost with Zonic Media?",
-        a: "Our plans are $297, $750 or $1,500 a month, all month to month. Ad spend goes straight to Google with a 0% markup. The right plan depends on how many services and towns you want to cover and whether you run ads.",
+        a: "Our plans are $297, $950 or $1,500 a month, all month to month. Ad spend goes straight to Google with a 0% markup. The right plan depends on how many services and towns you want to cover and whether you run ads.",
       },
       {
         q: "Can you fix a suspended Google Business Profile for my plumbing company?",

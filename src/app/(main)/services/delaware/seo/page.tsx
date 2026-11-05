@@ -130,7 +130,7 @@ const DelSeoFaqs = [
   {
     question: "How much do your Delaware SEO plans cost?",
     answer:
-      "Our SEO plans are priced at $297, $750 and $1,500 a month, all month to month. The right one depends on how many locations you have and how hard your towns are to win; Wilmington terms usually take more work than Kent or Sussex. You get a recommendation and a fixed monthly price after a free audit.",
+      "Our SEO plans are priced at $297, $950 and $1,500 a month, all month to month. The right one depends on how many locations you have and how hard your towns are to win; Wilmington terms usually take more work than Kent or Sussex. You get a recommendation and a fixed monthly price after a free audit.",
   },
   {
     question: "How long does local SEO take in Delaware?",

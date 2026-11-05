@@ -252,6 +252,89 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "California Home Inspection Marketing for Buyer's Agents and Homeowners",
+    lead: [
+      "California law treats paying agents for referrals as an unfair practice, so trust has to do the selling. We build that trust with agents and reach homeowners through ",
+      {
+        href: "/services/google-ads",
+        label: "Google Ads for inspectors",
+      },
+      " and local search.",
+    ],
+    lanes: [
+      {
+        audience: "California Buyer's and Listing Agents",
+        icon: "agent",
+        pitch:
+          "Escrows move fast, and California agents remember the inspector whose report explained seismic and sewer issues calmly. We put that proof on your agent page and in their inbox.",
+        query:
+          "Can you fit a Pasadena hillside home in before contingency removal?",
+        flow: [
+          "Agent requests slot",
+          "Booked online",
+          "Lateral scoped",
+          "Escrow-ready summary",
+        ],
+        badge: "Ready before contingency removal",
+        jobs: [
+          {
+            name: "Hillside and older-home inspections",
+            tactic: "LA County sample report with foundation and seismic notes",
+          },
+          {
+            name: "Sewer lateral video scopes",
+            tactic: "East Bay pages agents share with buyers in escrow",
+          },
+          {
+            name: "Seller disclosure pre-inspections",
+            tactic: "Listing-agent emails timed to spring inventory",
+          },
+        ],
+      },
+      {
+        audience: "California Homeowners Who Search First",
+        icon: "home",
+        pitch:
+          "Inland Empire new-build owners, Bay Area movers and Spanish-speaking buyers in the Central Valley often choose an inspector themselves. Neighborhood pages, bilingual booking and reviews win those searches.",
+        query: "home inspection with pool riverside ca",
+        flow: [
+          "Neighborhood page found",
+          "Pool add-on ticked",
+          "Booked tonight",
+          "Report next morning",
+        ],
+        badge: "Booked straight from search",
+        jobs: [
+          {
+            name: "Pool and spa inspections",
+            tactic: "Riverside and Temecula pages with pool photo galleries",
+          },
+          {
+            name: "Builder warranty walk-throughs",
+            tactic: "New-community pages for Irvine and Roseville owners",
+          },
+          {
+            name: "Moisture and mold checks",
+            tactic: "Coastal pages for San Diego homeowners",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "California Add-Ons Buyers and Sellers Request",
+      items: [
+        "Sewer lateral scope",
+        "Termite report via licensed operator",
+        "Pool and spa",
+        "Chimney review",
+        "Mold sampling",
+        "Seismic strapping check",
+      ],
+    },
+    cta: "Map My Agent Outreach",
+  },
   regions: {
     title: "California Regions, From San Diego to Sacramento",
     lead: "Each metro searches in its own way, so we match pages, ads and service areas to how buyers there look for inspectors.",
@@ -334,7 +417,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "Which Zonic Media plan fits a California inspection company?",
-        a: "Pick the $297, $750 or $1,500 monthly tier based on how many metros you cover; none needs a long contract. Google bills ad spend directly and we add no markup. Higher tiers bring more pages and full campaign management.",
+        a: "Pick the $297, $950 or $1,500 monthly tier based on how many metros you cover; none needs a long contract. Google bills ad spend directly and we add no markup. Higher tiers bring more pages and full campaign management.",
       },
     ],
   },

@@ -527,7 +527,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Reviews from business owners we have built for, shown exactly as posted on Google.",
   },
   pricing: {
-    title: "Plans That Keep Your Pediatric Site Growing",
+    title: "Pediatric Website Pricing, Paid a Single Time",
     compareTitle: "How the Plans Compare for Pediatric Offices",
     addOnsTitle: "Extras for Pediatric Practice Websites",
     customTitle: "A Pediatric Group With Several Offices?",
@@ -538,7 +538,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does a pediatric website design project cost?",
-        a: "Expect one fixed price, set once a free call has covered your visit types, providers and booking setup. Choose a qualifying monthly growth plan for pediatric offices and the website is included at no cost under our website offer, leaving more room to reach new families.",
+        a: "A pediatric website starts at $950, charged one time for the build. Your practice owns the domain and website, and there are no monthly hosting fees or rental costs. A free call about visit types, providers and booking sets one fixed price. With a qualifying monthly growth plan for pediatric offices, the website is included at no cost.",
       },
       {
         q: "How quickly can our new pediatric website launch?",

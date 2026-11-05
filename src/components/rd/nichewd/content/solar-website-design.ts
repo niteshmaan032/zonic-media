@@ -506,7 +506,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Posted in public by clients we've worked with; nothing is edited.",
   },
   pricing: {
-    title: "Solar Website Plans Built Around Growth",
+    title: "Solar Website Design Pricing, One-Time Build",
     compareTitle: "Side-by-Side Plan Features for Solar Sites",
     addOnsTitle: "Add-Ons for Solar and Battery Installers",
     customTitle: "Selling Solar Across Several States?",
@@ -517,7 +517,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a solar website cost?",
-        a: "We quote it after a free call about your products, markets and booking setup. You get one fixed figure for the whole build, not an hourly estimate. Add a qualifying monthly growth plan for solar, and the website build is covered by our free website program.",
+        a: "Solar websites start at $950, charged once for development rather than by the hour. Hosting carries no monthly bill, you never rent the site, and the domain and pages are yours. Products, markets and booking setup are covered on a free call before one fixed figure for the build. Join one of our qualifying monthly growth plans for solar and the build is free.",
       },
       {
         q: "How long does a solar website take to build?",

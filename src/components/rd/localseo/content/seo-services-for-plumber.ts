@@ -487,7 +487,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does plumbing SEO cost with Zonic Media?",
-        a: "Plans are $297, $750 or $1,500 a month and run month to month. A solo plumber in one city usually begins with the first; shops with several vans, more cities or managed Google Ads tend to land on the second or third. Your free audit points to the right fit.",
+        a: "Plans are $297, $950 or $1,500 a month and run month to month. A solo plumber in one city usually begins with the first; shops with several vans, more cities or managed Google Ads tend to land on the second or third. Your free audit points to the right fit.",
       },
       {
         q: "How soon does SEO for plumbers bring calls?",

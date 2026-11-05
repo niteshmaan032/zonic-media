@@ -504,7 +504,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Each one is posted publicly on our Google profile.",
   },
   pricing: {
-    title: "Plans That Keep a Tree Service Website Growing",
+    title: "Tree Service Website Cost You Pay Just Once",
     compareTitle: "Side-by-Side Plans for Tree Care Sites",
     addOnsTitle: "Tree Service Add-Ons and Extra Pages",
     customTitle: "Multiple Yards or Crews Across Regions?",
@@ -515,7 +515,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much should a tree service website cost?",
-        a: "Once a free call covers your services, towns and booking needs, we quote one flat price that holds from kickoff to launch. Add a qualifying monthly growth plan and our website offer covers the build, so the site costs you nothing up front.",
+        a: "Our tree service websites start at $950, a development fee paid once. No hosting bill arrives each month, nothing is rented, and you hold the domain and site. Once a free call covers your tree work, towns and booking needs, you get one flat price that holds to launch. Tree companies that add a qualifying monthly growth plan have the build covered by our offer.",
       },
       {
         q: "How long until my tree service website is live?",

@@ -32,8 +32,8 @@ Last updated: ${TODAY}
 - Flagship service: Google Business Profile reinstatement for suspended and disabled profiles, with a free suspension audit, an average resolution of 5 to 7 business days, and a No Fix, No Charge policy on the reinstatement fee
 - Track record: 900+ Google Business Profiles reinstated and verified; 1,500+ profiles optimized; 20+ industries served
 - Ratings: 5.0 on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 17 reviews), 5.0 on Clutch (https://clutch.co/profile/zonic-media, 21 reviews), 9 five-star reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com)
-- Monthly plans: Foundation $297/month ($197/month billed annually), Growth $750/month, Authority $1,500/month ($1,250/month billed annually). Details: ${SITE}/pricing.md
-- Website builds: from $1,000 one-time, typically live in 2 to 3 weeks; free with a qualifying plan through the free-website offers
+- Monthly plans: Foundation $297/month ($197/month billed annually), Growth $950/month ($750/month billed annually), Authority $1,500/month ($1,250/month billed annually). Details: ${SITE}/pricing.md
+- Website builds: from $950 one-time (no monthly hosting or rental fees; the client owns the domain and site), typically live in 2 to 3 weeks; free with a qualifying plan through the free-website offers
 - Terms: month-to-month on monthly billing, no long-term contract; all work done in-house by the Dover team; ad spend is paid to Google or Meta directly
 - Machine-readable files: ${SITE}/llms-full.txt (full text), ${SITE}/pricing.md (pricing)
 

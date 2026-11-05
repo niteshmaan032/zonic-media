@@ -508,7 +508,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Straight from our Google profile, written by business owners we've built for.",
   },
   pricing: {
-    title: "Monthly Plans for Your Landscaping Website",
+    title: "Landscaping Website Pricing With Full Ownership",
     compareTitle: "Compare Plans for a Landscaper Site",
     addOnsTitle: "Landscaping Add-Ons: Pages, Forms and More",
     customTitle: "Multiple Branches or a Franchise Territory?",
@@ -519,7 +519,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does a landscaping company website cost?",
-        a: "We price the build once, on a free call where you walk us through crews, services and your territory, and surprise add-on charges never follow. Landscapers who add a qualifying monthly growth plan see the site folded into our free website offer.",
+        a: "A landscaping company website starts at $950, and that development fee is paid only once. No monthly hosting charge, no rent, and the domain and site stay yours. Walk us through crews, services and territory on a free call and we price the build once, with no add-ons later. Landscapers on a qualifying monthly growth plan get the site free.",
       },
       {
         q: "When could my new landscaping website be live?",

@@ -488,7 +488,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does garage door SEO cost?",
-        a: "Plans are $297, $750 or $1,500 a month with no long contract. A one-van door company usually starts on the entry plan; outfits spread across a wider metro, or pairing SEO with managed Google Ads, usually need plan two or three. The audit settles which one fits your crews.",
+        a: "Plans are $297, $950 or $1,500 a month with no long contract. A one-van door company usually starts on the entry plan; outfits spread across a wider metro, or pairing SEO with managed Google Ads, usually need plan two or three. The audit settles which one fits your crews.",
       },
       {
         q: "When does garage door SEO start paying off?",

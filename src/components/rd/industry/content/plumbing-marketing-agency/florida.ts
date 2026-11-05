@@ -345,7 +345,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What are your plumbing marketing plan prices in Florida?",
-        a: "Foundation is $297 a month, Growth is $750 and Authority is $1,500. Each one runs month to month without a long contract, and Google ad spend passes through at a 0% markup. Your free audit shows which tier suits your Florida service area.",
+        a: "Foundation is $297 a month, Growth is $950 and Authority is $1,500. Each one runs month to month without a long contract, and Google ad spend passes through at a 0% markup. Your free audit shows which tier suits your Florida service area.",
       },
     ],
   },

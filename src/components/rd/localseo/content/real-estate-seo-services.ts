@@ -496,7 +496,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How are your real estate SEO services priced?",
-        a: "There are three plans: $297, $750 and $1,500 a month, all month to month, so even the affordable entry plan has no lock-in. A solo agent farming one market often begins with Foundation, while teams across several towns, or those adding Google Ads, lean toward Growth or Authority.",
+        a: "There are three plans: $297, $950 and $1,500 a month, all month to month, so even the affordable entry plan has no lock-in. A solo agent farming one market often begins with Foundation, while teams across several towns, or those adding Google Ads, lean toward Growth or Authority.",
       },
       {
         q: "How long does SEO for realtors take to work?",

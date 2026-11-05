@@ -259,6 +259,89 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Arkansas Home Inspection Marketing for Realtors, Sellers and Owners",
+    lead: [
+      "In Arkansas, inspectors can't reward agents for sending work, so we help you earn it: quick slots, clear summaries and a page agents can share. Then ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Maps optimization",
+      },
+      " brings homeowners who never asked for a referral.",
+    ],
+    lanes: [
+      {
+        audience: "Arkansas Agents From Bentonville to Little Rock",
+        icon: "agent",
+        pitch:
+          "Northwest Arkansas agents juggle relocating buyers and tight closings, and central Arkansas teams want calm, readable reports. We show them both on an agent page, in reviews and monthly emails.",
+        query: "Need a Rogers inspection plus a termite letter this week",
+        flow: [
+          "Agent sends address",
+          "Time chosen online",
+          "Crawlspace documented",
+          "Summary in inbox",
+        ],
+        badge: "Termite letter booked alongside",
+        jobs: [
+          {
+            name: "Relocation inspections in NWA",
+            tactic: "Video report walk-through for out-of-state buyers",
+          },
+          {
+            name: "Termite letters with a licensed partner",
+            tactic: "Combined booking, partner firm named on the page",
+          },
+          {
+            name: "Re-inspections after repairs",
+            tactic: "One-tap rebook link inside every agent summary",
+          },
+        ],
+      },
+      {
+        audience: "Arkansas Homeowners and Direct Buyers",
+        icon: "home",
+        pitch:
+          "Buyers in Benton and Bryant often pick their own inspector, lake-home shoppers need wells checked, and NWA owners book before warranties end. Town pages and reviews catch each search.",
+        query: "home inspection hot springs ar lake house",
+        flow: [
+          "Finds lake-home page",
+          "Reads reviews",
+          "Adds well test",
+          "Booked online",
+        ],
+        badge: "Direct booking, no referral needed",
+        jobs: [
+          {
+            name: "Lake and retirement home inspections",
+            tactic: "Hot Springs and Mountain Home pages for remote buyers",
+          },
+          {
+            name: "11-month builder warranty checks",
+            tactic:
+              "Bentonville and Rogers new-build pages with reminder posts",
+          },
+          {
+            name: "Pre-listing inspections for sellers",
+            tactic: "Little Rock seller page promoted each spring",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-On Tests Arkansas Clients Ask For",
+      items: [
+        "Termite letter via partner",
+        "Crawlspace moisture",
+        "Radon testing",
+        "Well water and septic",
+        "Sewer scope",
+        "Mold testing",
+      ],
+    },
+    cta: "Plan My Arkansas Outreach",
+  },
   regions: {
     title: "Arkansas Regions Where Buyers Look for Inspectors",
     lead: "Each corner of the state searches differently, from new subdivisions in Benton County to lake homes near Hot Springs.",
@@ -353,7 +436,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Every town you inspect, checked",
       "NWA and central Arkansas searches tested",
-      "Month-to-month: $297, $750 or $1,500 tiers",
+      "Month-to-month: $297, $950 or $1,500 tiers",
     ],
     form: {
       formType: "home-inspector-marketing-arkansas",

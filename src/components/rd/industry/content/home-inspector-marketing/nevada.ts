@@ -244,6 +244,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Nevada Inspection Marketing for Realtors and New-Home Owners",
+    lead: [
+      "Las Vegas and Reno agents send buyers on tight timelines, while owners of new builds hunt for phase and warranty checks themselves. ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Business Profile work",
+      },
+      " and agent outreach cover both sides of your calendar.",
+    ],
+    lanes: [
+      {
+        audience: "Las Vegas and Reno realtors",
+        icon: "handshake",
+        pitch:
+          "Nevada agents juggle remote buyers and short contingency periods. They refer the certified inspector who confirms quickly, reports clearly and can walk an out-of-state client through findings.",
+        query: "Buyer flies in Friday. Any Henderson openings?",
+        flow: [
+          "Request from agent",
+          "Time confirmed",
+          "Video call recap",
+          "Report emailed",
+        ],
+        badge: "Remote buyer booked, no phone tag",
+        jobs: [
+          {
+            name: "Resale buyer inspection",
+            tactic: "Agent landing page with your certificate number and slots",
+          },
+          {
+            name: "Remote-buyer walkthrough",
+            tactic: "Sample video recap agents can forward to clients",
+          },
+          {
+            name: "Pool and spa inspection",
+            tactic: "Shown as an add-on in every agent email update",
+          },
+        ],
+      },
+      {
+        audience: "Nevada homeowners and new-build buyers",
+        icon: "construction",
+        pitch:
+          "Buyers in Summerlin, Henderson and Skye Canyon often book builder-phase and warranty inspections without an agent. We rank you for those searches and show what each visit covers.",
+        query: "11 month warranty inspection las vegas",
+        flow: [
+          "Searches warranty check",
+          "Compares visit scope",
+          "Chooses a date",
+          "Builder punch list sent",
+        ],
+        badge: "Booked ahead of the warranty deadline",
+        jobs: [
+          {
+            name: "New-construction phase visits",
+            tactic: "Pages for each master-planned community you cover",
+          },
+          {
+            name: "11-month builder warranty check",
+            tactic: "Posts and ads aimed at first-year owners",
+          },
+          {
+            name: "Radon test up north",
+            tactic: "Reno, Carson City and Douglas County radon pages",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Nevada add-ons buyers and owners request",
+      items: [
+        "Pool and spa check",
+        "Radon test for northern Nevada",
+        "Infrared thermal scan",
+        "Sewer line scope",
+        "Pre-drywall visit",
+        "Mold swab or air test",
+      ],
+    },
+    cta: "Build My Nevada Plan",
+  },
   regions: {
     title: "Nevada Areas We Market, North and South",
     lead: "Southern Nevada's master-planned communities and Northern Nevada's valleys have different buyers, so we plan them apart.",
@@ -332,7 +413,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Nevada home inspector marketing plans cost?",
-        a: "Nevada plans: $297, $750 or $1,500 every month you stay, billed month to month. Advertising budgets get a 0% markup from us, and larger plans add more communities, more content and coverage of both Nevada markets.",
+        a: "Nevada plans: $297, $950 or $1,500 every month you stay, billed month to month. Advertising budgets get a 0% markup from us, and larger plans add more communities, more content and coverage of both Nevada markets.",
       },
     ],
   },

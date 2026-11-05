@@ -14,7 +14,7 @@
    The volumes above guided the copy but are not shown on the page (owner,
    25 Oct: no Semrush figures, CPCs or prices outside the plan FAQ). The
    only figures are the sitewide verified numbers (900+ reinstated,
-   $297 / $750 / $1,500 plans, 0% ad-spend markup). No third-party company is named in a claim. "HVAC SEO"
+   $297 / $950 / $1,500 plans, 0% ad-spend markup). No third-party company is named in a claim. "HVAC SEO"
    is left to /services/industry/local-seo-services-for-hvac (linked, not
    targeted here) so the two pages don't compete. */
 
@@ -182,7 +182,7 @@ export const FAQS = [
   },
   {
     q: "How much does HVAC marketing cost?",
-    a: "Our HVAC marketing plans are $297, $750 and $1,500 a month, month to month. Ad spend is paid separately with a 0% markup, and every plan covers Google Business Profile reinstatement.",
+    a: "Our HVAC marketing plans are $297, $950 and $1,500 a month, month to month. Ad spend is paid separately with a 0% markup, and every plan covers Google Business Profile reinstatement.",
   },
   {
     q: "How long until HVAC marketing brings more calls?",

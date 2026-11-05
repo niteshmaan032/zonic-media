@@ -519,7 +519,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Business owners we've worked with wrote these on our Google profile.",
   },
   pricing: {
-    title: "Monthly Plans for a Growing Chiropractic Site",
+    title: "Chiropractic Website Pricing You Pay One Time",
     compareTitle: "Plan Features Side by Side for Clinics",
     addOnsTitle: "Add-Ons for Extra Clinic Pages and Tools",
     customTitle: "Several Clinic Locations to Cover?",
@@ -530,7 +530,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a chiropractic website cost?",
-        a: "We start with a free call about the conditions you treat, your towns and booking needs, then give a single fixed quote that won't move before launch day. If the clinic also signs a qualifying monthly growth plan for chiropractors, our website offer covers the site build, so the spend goes toward reaching patients.",
+        a: "Chiropractic websites begin at $950 as a single development fee. The clinic owns its domain and site, with no hosting invoice each month and no lease to renew. A free call about conditions, towns and booking gives one fixed quote. Sign a qualifying monthly growth plan for chiropractors and our offer covers the build, so spend goes toward reaching patients.",
       },
       {
         q: "What is the timeline for a chiropractor website build?",

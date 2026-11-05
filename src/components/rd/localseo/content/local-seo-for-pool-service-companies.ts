@@ -497,7 +497,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does pool company SEO cost?",
-        a: "There are three plans: $297, $750 and $1,500 a month, with no long contract. A single-route cleaner usually fits the first, while builders or multi-town service companies that want ads handled as well often need a larger plan. Your audit ends with a recommendation.",
+        a: "There are three plans: $297, $950 and $1,500 a month, with no long contract. A single-route cleaner usually fits the first, while builders or multi-town service companies that want ads handled as well often need a larger plan. Your audit ends with a recommendation.",
       },
       {
         q: "Is pool builder SEO different from pool service SEO?",

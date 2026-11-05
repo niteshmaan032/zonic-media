@@ -511,7 +511,7 @@ export const CONTENT: NicheWebContent = {
     lead: "What business owners have said about us, straight from our Google profile.",
   },
   pricing: {
-    title: "Contractor Website Plans for Steady Growth",
+    title: "Contractor Website Pricing for a Site You Own",
     compareTitle: "Builder Plans Compared Line by Line",
     addOnsTitle: "Add Bid, Careers and Market Pages",
     customTitle: "A Builder With Multiple Offices or Divisions?",
@@ -522,7 +522,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a general contractor website cost?",
-        a: "Pricing is a fixed, single quote given after a free call about your project types, markets and the pages you need, with no surprise add-ons later. Firms that add a qualifying growth plan, paid month to month, can have the build paid for through our free website offer.",
+        a: "General contractor websites start at $950, billed once as a development fee. No monthly hosting, no rental contract, and the domain and site are owned by your firm. Bigger builds covering many project types or markets are priced in a single fixed quote following a free call, with no surprise add-ons. Add a qualifying growth plan, paid month to month, and the build is free.",
       },
       {
         q: "How quickly can a contractor website be built?",

@@ -451,7 +451,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do Zonic Media's roofing marketing plans cost?",
-        a: "Roofers choose from three tiers: $297, $750 or $1,500 monthly, with no long-term contract. Google bills ad spend to you directly, and we add 0% markup on top. The right tier comes down to the number of services and towns to cover, and whether storm ads are included.",
+        a: "Roofers choose from three tiers: $297, $950 or $1,500 monthly, with no long-term contract. Google bills ad spend to you directly, and we add 0% markup on top. The right tier comes down to the number of services and towns to cover, and whether storm ads are included.",
       },
     ],
   },

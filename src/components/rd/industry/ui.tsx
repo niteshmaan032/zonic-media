@@ -25,6 +25,12 @@ import { cx } from "@/components/rd/dfw-kit/primitives";
 import { Chip, UI_CARD, UiHead } from "@/components/rd/dfw-kit/ui";
 import { Icon } from "./icons";
 import { DirectBookCard, ThingsToDoCard, TripChatCard } from "./travelUi";
+import { FenceLineCard, FenceRankCard, QuotePipelineCard } from "./fenceUi";
+import {
+  BrandReportCard,
+  CaseTrackerCard,
+  PartnerQueueCard,
+} from "./whiteLabelUi";
 import type {
   AiUi,
   CallsUi,
@@ -900,6 +906,18 @@ export function GrowthUiView({ p, ui }: { p: Palette; ui: GrowthUi }) {
       return <ThingsToDoCard p={p} ui={ui} />;
     case "directBook":
       return <DirectBookCard p={p} ui={ui} />;
+    case "fenceLine":
+      return <FenceLineCard p={p} ui={ui} />;
+    case "fenceRank":
+      return <FenceRankCard p={p} ui={ui} />;
+    case "quotePipeline":
+      return <QuotePipelineCard p={p} ui={ui} />;
+    case "brandReport":
+      return <BrandReportCard p={p} ui={ui} />;
+    case "caseTracker":
+      return <CaseTrackerCard p={p} ui={ui} />;
+    case "partnerQueue":
+      return <PartnerQueueCard p={p} ui={ui} />;
   }
 }
 
@@ -921,11 +939,15 @@ export function StepUis({
   audit,
   plan,
   launch,
+  titles,
 }: {
   p: Palette;
   audit: [string, "gap" | "behind" | "open" | "good"][];
   plan: string[];
   launch: string[];
+  /** Card titles and the first card's chip, when the default audit / plan
+      / launch wording doesn't fit the page (white label onboarding). */
+  titles?: { audit: string; auditChip: string; plan: string; launch: string };
 }) {
   return [
     <div
@@ -935,8 +957,8 @@ export function StepUis({
       <UiHead
         icon={<FiFileText />}
         tone="gold"
-        title="Free marketing audit"
-        right={<Chip tone="blue">Free</Chip>}
+        title={titles?.audit ?? "Free marketing audit"}
+        right={<Chip tone="blue">{titles?.auditChip ?? "Free"}</Chip>}
       />
       <ul className="tw:grid tw:gap-1.5">
         {audit.map(([k, v]) => (
@@ -956,7 +978,7 @@ export function StepUis({
     >
       <UiHead
         icon={<FiSearch />}
-        title="Your growth plan"
+        title={titles?.plan ?? "Your growth plan"}
         right={<Chip tone="green">Approved</Chip>}
       />
       <span className="tw:text-[11px] tw:font-semibold tw:tracking-[0.06em] tw:text-(--muted) tw:uppercase">
@@ -981,7 +1003,7 @@ export function StepUis({
       <UiHead
         icon={<FiCheckCircle />}
         tone="green"
-        title="Launch checklist"
+        title={titles?.launch ?? "Launch checklist"}
         right={<Chip tone="blue">Live</Chip>}
       />
       <ul className="tw:grid tw:gap-1.5">

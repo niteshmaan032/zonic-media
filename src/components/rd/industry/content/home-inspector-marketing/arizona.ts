@@ -263,6 +263,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Arizona Home Inspection Marketing That Wins Agents and Homebuyers",
+    lead: [
+      "Arizona's conduct rules prohibit referral fees to real estate agents, so every referral has to be earned. We earn them with speed and clear reports, and reach Phoenix and Tucson buyers directly through Maps and ",
+      {
+        href: "/services/ai-seo-services",
+        label: "AI search optimization",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Phoenix and Tucson Real Estate Agents",
+        icon: "handshake",
+        pitch:
+          "Agents need the report back while there is still time to write the BINSR. Fast online booking, a pool-and-spa sample report and clean summaries make you their easy first call.",
+        query: "Can you inspect a Gilbert resale with a pool on Monday?",
+        flow: [
+          "Request from agent",
+          "Pool added online",
+          "Same-day photo report",
+          "BINSR summary ready",
+        ],
+        badge: "Back before the BINSR deadline",
+        jobs: [
+          {
+            name: "Resale inspections with pool and spa",
+            tactic: "Agent booking link with the pool add-on ready to tick",
+          },
+          {
+            name: "Pre-listing inspections in Scottsdale",
+            tactic: "Luxury-home sample report shared with listing teams",
+          },
+          {
+            name: "Termite reports through a pest partner",
+            tactic: "One booking for both, with the licensed partner named",
+          },
+        ],
+      },
+      {
+        audience: "Arizona Owners, Sellers and Self-Directed Buyers",
+        icon: "home",
+        pitch:
+          "East Valley owners chasing builder deadlines, winter visitors buying from afar and sellers prepping a listing search on their own. We put your pages and booking in their path.",
+        query: "pre drywall inspection queen creek az",
+        flow: [
+          "Finds your page",
+          "Picks a phase",
+          "Books online",
+          "Phase report sent",
+        ],
+        badge: "Phase inspection on the calendar",
+        jobs: [
+          {
+            name: "Pre-drywall and final-walk inspections",
+            tactic: "Builder-community pages for Queen Creek and Buckeye",
+          },
+          {
+            name: "11-month warranty inspections",
+            tactic: "Search ads timed to the first year in new subdivisions",
+          },
+          {
+            name: "Snowbird purchase inspections",
+            tactic: "Video report pages for Tucson buyers out of state",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Extras Arizona Clients Add at Booking",
+      items: [
+        "Pool and spa inspection",
+        "Termite report via partner",
+        "Sewer scope",
+        "Stucco moisture check",
+        "Solar panel review",
+        "Well and septic up north",
+      ],
+    },
+    cta: "Plan My Phoenix Outreach",
+  },
   regions: {
     title: "Where in Arizona We Grow Inspection Companies",
     lead: "Metro Phoenix returns separate map results for each city, so every region gets its own pages and service areas.",

@@ -65,20 +65,22 @@ function faqLd(url: string, items: { q: string; a: string }[]) {
 }
 
 export function IndustrySchema({ c }: { c: IndustryContent }) {
+  const name = c.schema?.name ?? `${c.niche} Marketing Agency`;
   return (
     <LdScripts
       id="ind-schema"
       items={[
         buildBreadcrumbJsonLd([
           { name: "Home", url: "/" },
-          { name: `${c.niche} Marketing Agency`, url: c.liveUrl },
+          ...(c.schema?.parent ? [c.schema.parent] : []),
+          { name, url: c.liveUrl },
         ]),
         faqLd(c.liveUrl, c.faq.items),
         buildServiceJsonLd({
-          name: `${c.niche} Marketing Agency`,
+          name,
           description: c.meta.description,
           pageUrl: c.liveUrl,
-          serviceType: `${c.niche} Marketing`,
+          serviceType: c.schema?.serviceType ?? `${c.niche} Marketing`,
           areaServed: "United States",
         }),
       ]}

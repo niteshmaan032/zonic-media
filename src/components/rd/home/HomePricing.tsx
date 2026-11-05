@@ -18,7 +18,7 @@ import {
   Wrap,
   cx,
 } from "@/components/rd/dfw-kit/primitives";
-import { ADD_ONS } from "./pricing";
+import { ADD_ONS, planWhoFor } from "./pricing";
 import { PricingPlans } from "./PricingPlans";
 
 /* Pricing (owner, 23 Oct 2026; layout after the owner's reference image):
@@ -76,7 +76,9 @@ export function TrustPoints({ className }: { className?: string }) {
             {item.icon}
           </span>
           <span className="tw:text-[13.5px]/[1.35] tw:text-(--text) tw:max-bssm:text-[12.5px]/[1.35]">
-            <b className="tw:block tw:text-[15px] tw:text-(--ink) tw:max-bssm:text-[13.5px]">{item.t}</b>
+            <b className="tw:block tw:text-[15px] tw:text-(--ink) tw:max-bssm:text-[13.5px]">
+              {item.t}
+            </b>
             {item.d}
           </span>
         </li>
@@ -201,12 +203,15 @@ export function PricingSection({
   label,
   ctaHref,
   ctaLabel,
+  path,
 }: {
   copy: PricingCopy;
   idPrefix: string;
   label?: string;
   ctaHref: string;
   ctaLabel: string;
+  /** The page's URL; niche pages name their own audience in the cards. */
+  path?: string;
 }) {
   return (
     <Section id="pricing" labelledBy={`${idPrefix}-price-h`}>
@@ -218,6 +223,7 @@ export function PricingSection({
         <TrustPoints className="tw:-mt-4 tw:mb-10" />
 
         <PricingPlans
+          who={path ? planWhoFor(path) : undefined}
           ctaHref={ctaHref}
           compareId={`${idPrefix}-compare-h`}
           compareTitle={copy.compareTitle}

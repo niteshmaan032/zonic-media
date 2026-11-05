@@ -333,7 +333,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What does Arizona HVAC marketing cost per month?",
-        a: "Pricing comes in three tiers, $297, $750 or $1,500 billed monthly, with no long contract and a 0% markup on ad spend. A single-city shop often starts on the first plan; Valley-wide companies running ads, memberships and Tucson pages need more coverage.",
+        a: "Pricing comes in three tiers, $297, $950 or $1,500 billed monthly, with no long contract and a 0% markup on ad spend. A single-city shop often starts on the first plan; Valley-wide companies running ads, memberships and Tucson pages need more coverage.",
       },
     ],
   },

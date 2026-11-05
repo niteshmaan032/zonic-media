@@ -489,7 +489,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much is gutter SEO with Zonic Media?",
-        a: "Plans are $297, $750 or $1,500 a month, month to month. A single-crew gutter business usually starts with the first; companies covering several cities, or wanting storm-week Google Ads handled too, often choose the larger plans. Your free review shows which one makes sense.",
+        a: "Plans are $297, $950 or $1,500 a month, month to month. A single-crew gutter business usually starts with the first; companies covering several cities, or wanting storm-week Google Ads handled too, often choose the larger plans. Your free review shows which one makes sense.",
       },
       {
         q: "How fast can a gutter company climb on Google Maps?",

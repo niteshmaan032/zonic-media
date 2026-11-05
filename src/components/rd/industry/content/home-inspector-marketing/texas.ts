@@ -258,6 +258,85 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Texas Home Inspector Marketing That Wins Realtors and Direct Buyers",
+    lead: [
+      "TREC rules let you advertise but bar paying for referrals or preferred-vendor lists. So we earn Texas realtors with speed and clarity, and reach buyers on their own through ",
+      { href: "/services/ai-seo-services", label: "AI search optimization" },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Houston, DFW and Austin realtors",
+        icon: "agent",
+        pitch:
+          "Texas agents work against the option period. They refer inspectors who book within a day, write the REI 7-6 cleanly and explain foundation notes without scaring buyers.",
+        query: "Option period ends Friday. Katy inspection?",
+        flow: [
+          "Realtor grabs a slot",
+          "REI 7-6 drafted",
+          "Foundation noted",
+          "Report same day",
+        ],
+        badge: "Inspected well inside the option period",
+        jobs: [
+          {
+            name: "Option-period buyer inspection",
+            tactic: "Agent page with live slots by metro",
+          },
+          {
+            name: "WDI report (TDA licensed)",
+            tactic: "Offered on agent forms under your SPCS license",
+          },
+          {
+            name: "Pool and spa inspection",
+            tactic: "Gulf Coast and Hill Country pool pages",
+          },
+        ],
+      },
+      {
+        audience: "Texas buyers and new-build owners",
+        icon: "inspect",
+        pitch:
+          "Texas buyers who skip the agent's list search for inspectors by metro, and new-build owners in Frisco and Leander book pre-pour, pre-drywall and final visits. We cover each phase.",
+        query: "pre drywall inspection frisco tx",
+        flow: [
+          "Builder schedule shared",
+          "Pre-pour visit",
+          "Pre-drywall visit",
+          "Final walk booked",
+        ],
+        badge: "Every phase booked in one checkout",
+        jobs: [
+          {
+            name: "Phase inspections on new builds",
+            tactic: "Pages for Frisco, Leander and Katy subdivisions",
+          },
+          {
+            name: "Foundation-focused resale inspection",
+            tactic: "Clay-soil explainer for Houston and DFW buyers",
+          },
+          {
+            name: "Builder 11-month warranty check",
+            tactic: "Warranty explainer page ranking in fast-growing suburbs",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Texas add-ons buyers and agents order",
+      items: [
+        "WDI report (SPCS licensed)",
+        "Pool, spa and equipment",
+        "Sewer line video scope",
+        "Foundation elevation readings",
+        "Infrared moisture scan",
+        "Pre-pour foundation visit",
+      ],
+    },
+    cta: "Book More Texas Inspections",
+  },
   regions: {
     title: "Texas Metros Where We Grow Inspection Companies",
     lead: "Each metro has its own soil, builders and buyer habits, so pages, service areas and ads are set per market.",
@@ -347,7 +426,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How are Texas home inspector marketing plans priced?",
-        a: "The three Texas tiers cost $297, $750 and $1,500; each renews monthly and can be cancelled any month. Ad budgets go straight to Google at a 0% markup. Single-metro inspectors tend to start lower, while multi-metro teams need more pages and campaigns.",
+        a: "The three Texas tiers cost $297, $950 and $1,500; each renews monthly and can be cancelled any month. Ad budgets go straight to Google at a 0% markup. Single-metro inspectors tend to start lower, while multi-metro teams need more pages and campaigns.",
       },
     ],
   },

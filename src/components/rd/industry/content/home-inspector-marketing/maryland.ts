@@ -263,6 +263,89 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Maryland Home Inspector Marketing That Reaches Agents and Homeowners",
+    lead: [
+      "Montgomery County single-family sales need a radon test, Baltimore agents juggle rowhome and condo deals, and rural buyers want wells checked. We reach each group, backed by ",
+      {
+        href: "/services/local-seo-for-home-services",
+        label: "local SEO for home services",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Maryland Agents From Bethesda to Bel Air",
+        icon: "handshake",
+        pitch:
+          "Agents want radon, WDI and the home inspection arranged in one booking, with photos their buyers can follow. We show that convenience on an agent page and in reviews.",
+        query:
+          "Rockville single-family. Need inspection and the county radon test",
+        flow: [
+          "Agent requests bundle",
+          "Radon monitor set",
+          "Inspection complete",
+          "Results to both sides",
+        ],
+        badge: "County radon test handled",
+        jobs: [
+          {
+            name: "Montgomery County radon tests",
+            tactic: "Agent page explaining the county radon requirement",
+          },
+          {
+            name: "Rowhome and condo inspections in Baltimore",
+            tactic: "Sample report covering party walls and roof decks",
+          },
+          {
+            name: "WDI reports for lenders",
+            tactic: "One-click add-on on your agent booking form",
+          },
+        ],
+      },
+      {
+        audience: "Maryland Owners, Sellers and Country Buyers",
+        icon: "key",
+        pitch:
+          "Frederick and Carroll County buyers want wells and septic tested, Annapolis sellers want a clean pre-listing report, and townhouse owners book maintenance visits. Town pages and Maps reach each one.",
+        query: "well and septic inspection frederick md",
+        flow: [
+          "Searches Frederick",
+          "Well test added",
+          "Slot picked",
+          "Lab results sent",
+        ],
+        badge: "Well and septic on one visit",
+        jobs: [
+          {
+            name: "Well water and septic checks",
+            tactic: "Frederick, Carroll and Harford pages for country buyers",
+          },
+          {
+            name: "Pre-listing inspections in Annapolis",
+            tactic: "Waterfront seller page with your sample report",
+          },
+          {
+            name: "Annual townhouse maintenance visits",
+            tactic: "Past-client emails before winter in Columbia and Bowie",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Maryland Add-Ons Clients Book Together",
+      items: [
+        "Radon testing",
+        "WDI report",
+        "Well water testing",
+        "Septic inspection",
+        "Sewer scope",
+        "Mold sampling",
+      ],
+    },
+    cta: "Plan My Maryland Agent Outreach",
+  },
   regions: {
     title: "Maryland Counties and Cities We Cover",
     lead: "Baltimore, the DC suburbs, the Bay and the rural west and east search in different ways, so we build each region separately.",
@@ -354,7 +437,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Maryland plans cost?",
-        a: "Maryland inspectors pick from $297, $750 and $1,500 tiers, billed monthly with no long contract. Ad budgets go to Google with a 0% markup. Inspectors covering several counties usually need a larger plan for the extra pages.",
+        a: "Maryland inspectors pick from $297, $950 and $1,500 tiers, billed monthly with no long contract. Ad budgets go to Google with a 0% markup. Inspectors covering several counties usually need a larger plan for the extra pages.",
       },
     ],
   },

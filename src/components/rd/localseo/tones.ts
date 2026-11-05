@@ -66,6 +66,8 @@ const SETS: Record<string, [HueKey, HueKey, HueKey, HueKey]> = {
   ],
   "local-seo-for-painting-contractors": ["violet", "gold", "coral", "cyan"],
   "local-seo-for-landscaping-companies": ["lime", "violet", "orange", "cyan"],
+  /* Fence contractors (5 Nov 2026). */
+  "fence-company-seo": ["teal", "coral", "navy", "gold"],
   "local-seo-for-tree-service-companies": [
     "emerald",
     "orange",

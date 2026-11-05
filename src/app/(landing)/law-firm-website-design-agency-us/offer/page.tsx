@@ -666,7 +666,7 @@ export default function LawFirmOfferPage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $750 <span>/ month</span>
+                $950 <span>/ month</span>
               </div>
               <p>Combine local legal visibility with paid search, practice-page improvements, and consultation tracking.</p>
               <ul>

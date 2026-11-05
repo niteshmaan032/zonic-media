@@ -62,7 +62,7 @@ import {
   Sparks,
   TrustLogos,
 } from "@/components/rd/dfw-kit/visuals";
-import { PricingSection } from "@/components/rd/home/HomePricing";
+import { WebsitePricing } from "@/components/rd/home/WebsitePricing";
 import { Stage } from "@/components/rd/delaware/uiBits";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
@@ -880,19 +880,11 @@ export function WebDesignPage() {
         </Section>
 
         {/* ========================================================= PRICING */}
-        <PricingSection
-          copy={{
-            title: "Monthly Plans to Grow Your New Website",
-            lead: "Add local SEO, Google profile work and ads once your site is live.",
-            compareTitle: "What Each Plan Adds After Launch",
-            compareLead: "Side by side, from profile work to ads.",
-            addOnsTitle: "Add Pages, Booking and More",
-            addOnsLead:
-              "Extra landing pages, booking tools or new sections, whenever you need them.",
-            customTitle: "Planning a multi-location site?",
-            customText: "Share the scope and we'll send a flat-price quote.",
-          }}
+        {/* One-time website price (owner, 5 Nov 2026), not the monthly plans. */}
+        <WebsitePricing
           idPrefix="wd"
+          title="Website Design Pricing: One Fee, Yours to Keep"
+          customTitle="Planning a multi-location site?"
           ctaHref={CONTACT}
           ctaLabel={CTA}
         />

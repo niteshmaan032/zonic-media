@@ -457,7 +457,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do landscaping marketing plans cost with Zonic Media?",
-        a: "Landscaping plans cost $297, $750 or $1,500 per month, billed monthly with no lock-in contract. Ad spend goes to Google with a 0% markup. Most landscapers choose a tier by how many services, suburbs and ad campaigns they want running. Snow or spring campaigns can be added for peak weeks.",
+        a: "Landscaping plans cost $297, $950 or $1,500 per month, billed monthly with no lock-in contract. Ad spend goes to Google with a 0% markup. Most landscapers choose a tier by how many services, suburbs and ad campaigns they want running. Snow or spring campaigns can be added for peak weeks.",
       },
     ],
   },

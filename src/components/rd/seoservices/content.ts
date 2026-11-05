@@ -310,7 +310,7 @@ export const FAQ = {
     },
     {
       q: "How much do your SEO services cost?",
-      a: "Our SEO plans are $297, $750 or $1,500 a month with no long-term contract. Which plan fits comes down to how many services and locations you want ranked, and the free audit shows that before you commit.",
+      a: "Our SEO plans are $297, $950 or $1,500 a month with no long-term contract. Which plan fits comes down to how many services and locations you want ranked, and the free audit shows that before you commit.",
     },
     {
       q: "How long does SEO take to work?",

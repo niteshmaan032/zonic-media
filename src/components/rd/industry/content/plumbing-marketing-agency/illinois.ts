@@ -309,7 +309,7 @@ export const CONTENT: LocationContent = {
     items: [
       {
         q: "How much does plumbing marketing cost in Illinois?",
-        a: "Pricing is $297, $750 or $1,500 monthly, with no long contract. Ad spend is billed at cost with a 0% markup. Which plan suits you comes down to how many Illinois cities you serve and whether you want ads alongside Maps and SEO.",
+        a: "Pricing is $297, $950 or $1,500 monthly, with no long contract. Ad spend is billed at cost with a 0% markup. Which plan suits you comes down to how many Illinois cities you serve and whether you want ads alongside Maps and SEO.",
       },
       {
         q: "Can you rank my company in Chicago and the suburbs at the same time?",

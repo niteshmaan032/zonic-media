@@ -663,7 +663,7 @@ export default function PlumbingOfferPage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $750 <span>/ month</span>
+                $950 <span>/ month</span>
               </div>
               <p>Combine local plumbing visibility with paid search, service-page improvements, and estimate tracking.</p>
               <ul>

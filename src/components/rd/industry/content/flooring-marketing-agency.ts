@@ -409,7 +409,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How are Zonic Media's flooring marketing plans priced?",
-        a: "Pricing starts at $297 per month for Foundation, with Growth at $750 and Authority at $1,500. Billing is month to month, and ad spend carries 0% markup. Single-location stores often start with Foundation; stores adding ads or a commercial push usually move up. Commercial-focused companies sometimes start on Growth so Google Ads run from day one.",
+        a: "Pricing starts at $297 per month for Foundation, with Growth at $950 and Authority at $1,500. Billing is month to month, and ad spend carries 0% markup. Single-location stores often start with Foundation; stores adding ads or a commercial push usually move up. Commercial-focused companies sometimes start on Growth so Google Ads run from day one.",
       },
     ],
   },

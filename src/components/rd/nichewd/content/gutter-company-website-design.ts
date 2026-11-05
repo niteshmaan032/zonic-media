@@ -502,7 +502,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Read them on our public Google profile before you pick a web partner.",
   },
   pricing: {
-    title: "Growth Plans for Gutter Company Websites",
+    title: "Gutter Company Website Cost, Paid Up Front Once",
     compareTitle: "Plan-by-Plan Features for Gutter Sites",
     addOnsTitle: "Extras for Gutter Installers and Cleaners",
     customTitle: "Covering Several Metro Areas With Gutter Crews?",
@@ -513,7 +513,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does gutter company website design cost?",
-        a: "It depends on your services, service area and features such as cleaning plan sign-ups. After a short free call you receive one fixed price for the full build, with no surprise add-ons. Choose a qualifying monthly growth plan and the gutter site is built free through our website offer.",
+        a: "Gutter company website design starts at $950, a single payment for the build. Hosting adds no monthly fee, there's nothing to rent, and you own the domain and site. Extras such as cleaning plan sign-ups or more service towns are priced in one fixed quote after a short free call. On a qualifying monthly growth plan, we build the gutter site free.",
       },
       {
         q: "How long until my gutter website is live?",

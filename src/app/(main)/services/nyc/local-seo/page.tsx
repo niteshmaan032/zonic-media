@@ -155,7 +155,7 @@ const NycSeoFaqs = [
   {
     question: "How much are local SEO services in NYC?",
     answer:
-      "Local SEO starts at $297 a month, with $750 and $1,500 plans for busier categories, all on month-to-month terms. Which one fits depends on how crowded your category and neighborhoods are, and the free audit shows that before you choose.",
+      "Local SEO starts at $297 a month, with $950 and $1,500 plans for busier categories, all on month-to-month terms. Which one fits depends on how crowded your category and neighborhoods are, and the free audit shows that before you choose.",
   },
   {
     question: "How do I get my business into the Google Map Pack in NYC?",

@@ -498,7 +498,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for cleaning companies cost?",
-        a: "We offer three plans at $297, $750 and $1,500 per month, with no annual term. A janitorial firm with one office typically begins with the first; operators bidding across several cities, or who want Google Ads managed too, often move to the second or third. Your audit recommends a fit.",
+        a: "We offer three plans at $297, $950 and $1,500 per month, with no annual term. A janitorial firm with one office typically begins with the first; operators bidding across several cities, or who want Google Ads managed too, often move to the second or third. Your audit recommends a fit.",
       },
       {
         q: "How long does cleaning company SEO take to produce leads?",

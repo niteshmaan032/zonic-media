@@ -260,6 +260,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Virginia Inspection Marketing for Agents, Military Buyers and Owners",
+    lead: [
+      "Virginia agents refer licensed inspectors, military families book from afar and owners of new homes need an inspector with the NRS specialty. Our ",
+      {
+        href: "/services/local-seo-for-home-services",
+        label: "local SEO work",
+      },
+      " reaches each group in its own county or city.",
+    ],
+    lanes: [
+      {
+        audience: "NoVA and Hampton Roads agents",
+        icon: "agent",
+        pitch:
+          "Virginia agents need an inspector who can arrange NPMA-33 termite forms for VA loans, books fast around deployments and shows a DPOR license. We put each front and center.",
+        query: "PCS move, buyer overseas. Norfolk inspection?",
+        flow: [
+          "Agent shares address",
+          "Video call booked",
+          "Inspection recorded",
+          "Report to buyer abroad",
+        ],
+        badge: "Report ready before the buyer lands",
+        jobs: [
+          {
+            name: "Military buyer inspection",
+            tactic: "Hampton Roads page with video-call walkthroughs",
+          },
+          {
+            name: "NPMA-33 termite report",
+            tactic: "Arranged on the agent form for VA loans",
+          },
+          {
+            name: "Radon test in high-risk counties",
+            tactic: "Pages for Shenandoah Valley and NoVA counties",
+          },
+        ],
+      },
+      {
+        audience: "Virginia owners, buyers and sellers",
+        icon: "home",
+        pitch:
+          "New-home owners in Loudoun and Chesterfield book NRS phase inspections themselves, and rural owners need well and septic checks. We rank you in each county and independent city.",
+        query: "new construction home inspector loudoun county",
+        flow: [
+          "Searches NRS inspector",
+          "Checks license",
+          "Picks phase visits",
+          "Books online",
+        ],
+        badge: "NRS phase visits on the calendar",
+        jobs: [
+          {
+            name: "New-construction (NRS) inspections",
+            tactic: "Loudoun and Chesterfield pages naming your NRS specialty",
+          },
+          {
+            name: "Well and septic evaluation",
+            tactic: "Rural Piedmont and Valley county pages",
+          },
+          {
+            name: "Seller's pre-market inspection",
+            tactic: "Fairfax and Arlington pages for sellers listing soon",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Virginia add-ons both audiences book",
+      items: [
+        "NPMA-33 termite report",
+        "Radon testing",
+        "Well flow and water test",
+        "Septic system check",
+        "Sewer scope",
+        "Indoor mold test",
+      ],
+    },
+    cta: "Reach Virginia Agents and Owners",
+  },
   regions: {
     title: "Where We Run Home Inspector Marketing: Virginia Regions",
     lead: "Virginia mixes counties and independent cities, so every region gets service areas and pages that match its jurisdictions.",
@@ -351,7 +433,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Virginia home inspector marketing plans cost?",
-        a: "Virginia pricing runs from $297 a month up to $1,500, with a $750 tier between, and no long-term contract. Google bills your ad clicks directly and we add nothing on top. Inspectors in one region often start small, while teams covering NoVA and Hampton Roads need more pages and campaigns.",
+        a: "Virginia pricing runs from $297 a month up to $1,500, with a $950 tier between, and no long-term contract. Google bills your ad clicks directly and we add nothing on top. Inspectors in one region often start small, while teams covering NoVA and Hampton Roads need more pages and campaigns.",
       },
     ],
   },

@@ -398,7 +398,7 @@ const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
   [
     {
       q: "How much does it cost to design a website in Dallas?",
-      a: "Most custom small-business websites from US agencies cost $2,500 to $10,000, depending on page count, custom design and integrations. Zonic Media quotes a flat project fee after a free strategy call, and every build includes on-page SEO, Core Web Vitals optimization and lead forms. For service businesses we can also bundle a website with no upfront fee into a qualifying marketing plan.",
+      a: "Dallas website design with Zonic Media starts at $950, a one-time development fee. No monthly hosting charge or site rental applies, and your business keeps the domain and finished site. Every build includes on-page SEO, Core Web Vitals optimization and lead forms; larger projects get a flat quote after a free strategy call. Service businesses can also bundle a site into a qualifying marketing plan, with no upfront fee.",
       link: {
         href: "/website-design-agency-us/offer",
         label: "See our free website offer",

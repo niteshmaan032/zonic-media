@@ -256,6 +256,84 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Wisconsin Inspection Marketing Aimed at Realtors and Homeowners",
+    lead: [
+      "Wisconsin statutes bar inspectors from paying or taking referral fees from anyone outside the trade. So we earn realtor trust with fast reports and win owners through ",
+      { href: "/services/google-ads", label: "seasonal Google Ads" },
+      " and Maps.",
+    ],
+    lanes: [
+      {
+        audience: "Milwaukee and Madison realtors",
+        icon: "handshake",
+        pitch:
+          "Wisconsin agents refer DSPS-registered inspectors who know freeze-thaw foundations, test wells correctly and keep spring closings moving. We put that track record where agents look.",
+        query: "Wauwatosa buyer, radon and sewer scope Friday?",
+        flow: [
+          "Realtor texts the address",
+          "Radon test started",
+          "Lateral scoped",
+          "Photo report sent",
+        ],
+        badge: "Radon test running before the walk ends",
+        jobs: [
+          {
+            name: "Buyer inspection, Milwaukee suburbs",
+            tactic: "Agent page listing your DSPS registration",
+          },
+          {
+            name: "Well water sampling",
+            tactic: "Explainer realtors send to rural buyers",
+          },
+          {
+            name: "Sewer scope, older Milwaukee homes",
+            tactic: "Bundled on requests from pre-war neighborhoods",
+          },
+        ],
+      },
+      {
+        audience: "Wisconsin homeowners and lake-home buyers",
+        icon: "home",
+        pitch:
+          "Cabin buyers in the Dells and Northwoods book well, septic and full inspections themselves, and city owners can test radon in the slow season. We rank you for each season.",
+        query: "well and septic inspection minocqua wi",
+        flow: [
+          "Searches lake town",
+          "Sees septic credential",
+          "Adds well test",
+          "Books the cabin visit",
+        ],
+        badge: "Cabin, well and septic on one visit",
+        jobs: [
+          {
+            name: "Septic (POWTS) inspection",
+            tactic: "Listed when you hold the POWTS credential",
+          },
+          {
+            name: "Lake-home inspection",
+            tactic: "Northwoods and Dells pages for cabin buyers",
+          },
+          {
+            name: "Winter radon test",
+            tactic: "Slow-season posts that keep owners booking",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Wisconsin add-ons buyers and owners book",
+      items: [
+        "Radon testing",
+        "Well water bacteria and nitrate",
+        "POWTS septic inspection",
+        "Sewer lateral scope",
+        "Basement moisture check",
+        "Ice dam and attic review",
+      ],
+    },
+    cta: "Plan My Wisconsin Year",
+  },
   regions: {
     title: "Wisconsin Regions Where We Grow Inspection Companies",
     lead: "City, suburb and lake-country buyers don't search alike, so every region is set up with dedicated pages, service areas and ad timing.",
@@ -347,7 +425,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much does marketing cost for a Wisconsin inspection company?",
-        a: "Wisconsin plans are priced at $297, $750 and $1,500, renewing monthly with no annual contract. Ad spend is charged to you by Google itself, marked up 0%. One-metro inspectors often begin on the first tier and add towns or spring campaigns as bookings climb.",
+        a: "Wisconsin plans are priced at $297, $950 and $1,500, renewing monthly with no annual contract. Ad spend is charged to you by Google itself, marked up 0%. One-metro inspectors often begin on the first tier and add towns or spring campaigns as bookings climb.",
       },
     ],
   },

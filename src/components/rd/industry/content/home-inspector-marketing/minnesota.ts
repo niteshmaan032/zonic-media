@@ -249,6 +249,90 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Minnesota Home Inspection Marketing to Realtors, Sellers and Cabin Buyers",
+    lead: [
+      "City sellers in Minneapolis and St. Paul book TISH evaluations before listing, cabin buyers face septic and well questions, and agents want reports they trust. We market to each, backed by ",
+      {
+        href: "/services/google-ads",
+        label: "inspection search ads",
+      },
+      " and Maps.",
+    ],
+    lanes: [
+      {
+        audience: "Twin Cities Realtors and Lake-Country Agents",
+        icon: "agent",
+        pitch:
+          "Edina and Woodbury agents want an inspector who handles radon, attic frost and ice-dam findings calmly. Online booking, a winter sample report and reviews from their buyers keep you recommended.",
+        query:
+          "Woodbury buyer needs radon and an inspection before the deadline",
+        flow: [
+          "Agent request",
+          "Radon monitor placed",
+          "Attic and roof checked",
+          "Agent gets summary",
+        ],
+        badge: "Radon results with the report",
+        jobs: [
+          {
+            name: "Winter buyer inspections",
+            tactic: "Sample report showing ice-dam and attic frost findings",
+          },
+          {
+            name: "North Shore cabin inspections",
+            tactic: "Video walk-through pages for Duluth-area agents",
+          },
+          {
+            name: "New-construction inspections in Lakeville",
+            tactic: "Phase checklist sent to south metro buyer's agents",
+          },
+        ],
+      },
+      {
+        audience: "Minnesota Sellers, Owners and Cabin Buyers",
+        icon: "home",
+        pitch:
+          "Sellers search for TISH evaluators, buyers order radon tests, and lake-country shoppers need well and septic answers. Each search gets a page that books.",
+        query: "tish evaluation minneapolis",
+        flow: [
+          "Seller searches TISH",
+          "Books evaluation",
+          "Report filed",
+          "Ready to list",
+        ],
+        badge: "TISH done before listing",
+        jobs: [
+          {
+            name: "TISH evaluations",
+            tactic:
+              "Minneapolis and St. Paul pages if you hold the city license",
+          },
+          {
+            name: "Radon tests for Twin Cities buyers",
+            tactic: "Radon page that names your licensed tester",
+          },
+          {
+            name: "Cabin well and septic checks",
+            tactic: "Brainerd and Alexandria pages for lake-country buyers",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Minnesota Add-Ons Buyers and Sellers Order",
+      items: [
+        "Radon testing",
+        "Septic compliance check",
+        "Well water testing",
+        "Sewer scope",
+        "Attic and ice-dam review",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Twin Cities Outreach",
+  },
   regions: {
     title: "Where We Grow Home Inspectors, MN Metro to Lake Country",
     lead: "Metro suburbs, river towns and lake country each search differently, so each gets its own pages and ad settings.",
@@ -337,7 +421,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much does Minnesota home inspector marketing cost?",
-        a: "Plans come in at $297, $750 or $1,500, each billed month to month. We never mark up ad spend, so you pay Google exactly what the clicks cost. Bigger plans cover more cities, more pages and paid campaigns across the metro and outstate.",
+        a: "Plans come in at $297, $950 or $1,500, each billed month to month. We never mark up ad spend, so you pay Google exactly what the clicks cost. Bigger plans cover more cities, more pages and paid campaigns across the metro and outstate.",
       },
     ],
   },

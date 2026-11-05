@@ -12,7 +12,7 @@ export const WEB_FAQS: { question: string; answer: string }[] = [
   {
     question: "How much does a website design company charge?",
     answer:
-      "Every build gets one fixed price, set after a free consultation and based on pages, features and content. It is agreed before work starts and does not change. Service businesses on a qualifying monthly plan can get their site through our free website offer.",
+      "Website builds start at $950. That is a one-time development fee, not a subscription: no monthly hosting charges, no rental fees, and the site and its domain are yours. The final fixed price depends on pages, features and content and is agreed after a free consultation, before work starts. Service businesses on a qualifying monthly plan can get the site through our free website offer.",
   },
   {
     question: "Will a website redesign hurt my Google rankings?",

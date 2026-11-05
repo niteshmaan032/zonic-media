@@ -397,7 +397,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What are your kitchen remodeling marketing plan prices?",
-        a: "You choose from three tiers: $297, $750 or $1,500 per month, with no annual contract. Your ad budget is paid straight to Google, and we add 0% markup. Remodelers starting with Maps and SEO often begin on the first tier; those adding Google Ads and follow-up usually need Growth or higher. You can change tiers as your crews and goals change.",
+        a: "You choose from three tiers: $297, $950 or $1,500 per month, with no annual contract. Your ad budget is paid straight to Google, and we add 0% markup. Remodelers starting with Maps and SEO often begin on the first tier; those adding Google Ads and follow-up usually need Growth or higher. You can change tiers as your crews and goals change.",
       },
     ],
   },
@@ -416,7 +416,7 @@ export const CONTENT: IndustryContent = {
       " in total.",
     ],
     points: [
-      "Three tiers: $297, $750, $1,500",
+      "Three tiers: $297, $950, $1,500",
       "Ad spend with 0% markup",
       "No annual contract",
       "Suspended listings reinstated",

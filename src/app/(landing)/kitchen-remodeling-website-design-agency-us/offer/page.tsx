@@ -662,7 +662,7 @@ export default function KitchenRemodelingOfferPage() {
               </div>
               <h3>Growth</h3>
               <div className="plan-price">
-                $750 <span>/ month</span>
+                $950 <span>/ month</span>
               </div>
               <p>Combine local visibility with paid search, landing-page improvements, and lead tracking.</p>
               <ul>

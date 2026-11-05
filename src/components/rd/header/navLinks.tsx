@@ -7,6 +7,7 @@ import {
   FaUserDoctor,
 } from "react-icons/fa6";
 import {
+  MdFence,
   MdGavel,
   MdOutlineBathtub,
   MdOutlineCarCrash,
@@ -279,6 +280,15 @@ const seoServiceLinks: NicheLink[] = [
     group: "Outdoor & Property Care",
   },
   {
+    id: "fence-company-seo",
+    title: "Fence Company SEO",
+    description:
+      "Rank in Google Maps for fence installation, repair, and gate searches.",
+    link: "/services/industry/fence-company-seo",
+    icon: <MdFence />,
+    group: "Outdoor & Property Care",
+  },
+  {
     id: "local-seo-for-tree-service-companies",
     title: "Local SEO for Tree Service Companies",
     description:
@@ -540,6 +550,15 @@ const webDesignLinks: NicheLink[] = [
     group: "Outdoor & Property Care",
   },
   {
+    id: "fence-company-website-design",
+    title: "Fence Company Website Design",
+    description:
+      "Fence websites with an instant estimate form, style gallery, and quote follow-up.",
+    link: "/services/fence-company-website-design",
+    icon: <MdFence />,
+    group: "Outdoor & Property Care",
+  },
+  {
     id: "tree-service-website-design",
     title: "Tree Service Website Design",
     description:
@@ -796,6 +815,15 @@ const industryLinks: NicheLink[] = [
       "Local search, ads, and recurring-service leads for landscaping companies.",
     link: "/services/landscaping-marketing-agency",
     icon: <MdOutlineGrass />,
+    group: "Outdoor & Property Care",
+  },
+  {
+    id: "fence-company-marketing-agency",
+    title: "Fence Company Marketing",
+    description:
+      "Estimate requests for wood, vinyl, aluminum, and chain link fence installs.",
+    link: "/services/fence-company-marketing-agency",
+    icon: <MdFence />,
     group: "Outdoor & Property Care",
   },
   {

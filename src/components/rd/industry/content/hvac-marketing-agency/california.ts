@@ -352,7 +352,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How are California HVAC marketing plans priced?",
-        a: "Choose one of three month-to-month plans: $297, $750 or $1,500. Ad spend is paid to Google directly with a 0% markup. One-metro shops usually start small; companies covering several counties with ads and Spanish pages need the larger plans.",
+        a: "Choose one of three month-to-month plans: $297, $950 or $1,500. Ad spend is paid to Google directly with a 0% markup. One-metro shops usually start small; companies covering several counties with ads and Spanish pages need the larger plans.",
       },
     ],
   },

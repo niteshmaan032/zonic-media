@@ -441,7 +441,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does a towing marketing company cost at Zonic Media?",
-        a: "Plans run $297, $750 or $1,500 monthly with no long contract to sign, and ad spend is billed at a 0% markup. One-truck operators often start on the first tier; fleets running ads across several towns usually need more.",
+        a: "Plans run $297, $950 or $1,500 monthly with no long contract to sign, and ad spend is billed at a 0% markup. One-truck operators often start on the first tier; fleets running ads across several towns usually need more.",
       },
       {
         q: "Can you bring in heavy-duty and semi recovery work?",

@@ -532,7 +532,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Owners who hired us left these reviews on Google, word for word.",
   },
   pricing: {
-    title: "Growth Plans for Commercial Cleaning Websites",
+    title: "Commercial Cleaning Website Cost, Paid Once",
     compareTitle: "How the Plans Differ for Janitorial Firms",
     addOnsTitle: "Extra Pages for New Facilities and Markets",
     customTitle: "Contracts Spread Across Several Regions?",
@@ -543,7 +543,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a commercial cleaning website cost?",
-        a: "Scope drives the number: facility types, markets and how your bid process works. We talk it through on a free call, then send a firm, fixed quote that won't creep before launch. There's also a free website offer for janitorial firms that sign onto a qualifying monthly growth plan: the build is then on us.",
+        a: "Commercial cleaning sites start from $950, paid once. There is no rental agreement and no recurring hosting charge, and your janitorial firm owns the domain and website. Facility types, markets and the bid process can add scope, so a free call ends in a firm, fixed quote. Commit to a qualifying monthly growth plan and your janitorial build is on us.",
       },
       {
         q: "How long does a janitorial website take to build?",

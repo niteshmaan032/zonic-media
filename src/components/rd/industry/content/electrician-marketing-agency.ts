@@ -461,7 +461,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do your electrician marketing plans cost?",
-        a: "Pricing is simple: $297, $750 and $1,500 per month, and you can cancel any month. We add 0% markup to the ad spend you pay Google. The best fit comes down to your service list, your towns and whether you want ads managed for you.",
+        a: "Pricing is simple: $297, $950 and $1,500 per month, and you can cancel any month. We add 0% markup to the ad spend you pay Google. The best fit comes down to your service list, your towns and whether you want ads managed for you.",
       },
       {
         q: "What happens if Google suspends my electrical business listing?",
@@ -479,7 +479,7 @@ export const CONTENT: IndustryContent = {
     points: [
       "Cancel any month",
       "0% markup on your ad spend",
-      "$297, $750 or $1,500 plans",
+      "$297, $950 or $1,500 plans",
       "Reinstatement on all plans",
     ],
     form: {

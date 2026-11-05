@@ -14,7 +14,15 @@ import {
   FiX,
 } from "react-icons/fi";
 import { Pill, cx } from "@/components/rd/dfw-kit/primitives";
-import { COMPARE, PLANS, usd, type Billing, type Cell } from "./pricing";
+import {
+  COMPARE,
+  PLANS,
+  planAudience,
+  usd,
+  type Billing,
+  type Cell,
+  type PlanWho,
+} from "./pricing";
 
 /* Billing toggle, plan cards and the comparison table (23 Oct 2026).
    Annual is selected first (the lower price); the toggle is two buttons
@@ -53,7 +61,11 @@ function CellView({ cell, dark }: { cell: Cell; dark?: boolean }) {
         )}
       />
     );
-  return <span className="tw:text-[14px] tw:font-medium tw:max-bssm:text-[12.5px]">{cell}</span>;
+  return (
+    <span className="tw:text-[14px] tw:font-medium tw:max-bssm:text-[12.5px]">
+      {cell}
+    </span>
+  );
 }
 
 /** The plan comparison table; prices follow the billing toggle. */
@@ -71,140 +83,148 @@ function CompareTable({
 }) {
   return (
     <>
-    {/* Phones: the plans sit side by side under each deliverable, so the
+      {/* Phones: the plans sit side by side under each deliverable, so the
         whole comparison is readable without sideways scrolling (owner,
         27 Oct 2026). Same rows and cells as the table. */}
-    <div
-      className={cx(
-        "tw:overflow-clip tw:rounded-[22px] tw:border tw:border-(--line) tw:bg-white tw:bsmd:hidden",
-        className,
-      )}
-      role="group"
-      aria-labelledby={labelledBy}
-    >
       <div
-        className="tw:sticky tw:z-1 tw:grid tw:grid-cols-3 tw:border-b tw:border-(--line) tw:bg-white"
-        style={{ top: stickyTop }}
-      >
-        {PLANS.map((plan) => (
-          <div
-            key={plan.id}
-            className={cx(
-              "tw:px-1.5 tw:py-3 tw:text-center",
-              plan.featured ? "tw:bg-(--ink) tw:text-white" : "",
-            )}
-          >
-            <b className={cx("tw:block tw:text-[14.5px]", plan.featured && "tw:text-white")}>
-              {plan.name}
-            </b>
-            <span
-              className={cx(
-                "tw:text-[12.5px] tw:font-medium",
-                plan.featured ? "tw:text-(--gold)" : "tw:text-(--muted)",
-              )}
-            >
-              {usd(plan.price[billing])}/mo
-            </span>
-          </div>
-        ))}
-      </div>
-      <ul>
-        {COMPARE.map((row) => (
-          <li key={row.label} className="tw:border-b tw:border-(--line) tw:last:border-b-0">
-            <p className="tw:bg-(--panel) tw:px-4 tw:py-2 tw:text-[13px] tw:font-semibold tw:text-(--ink-2)">
-              {row.label}
-            </p>
-            <div className="tw:grid tw:grid-cols-3">
-              {row.cells.map((cell, i) => (
-                <div
-                  key={i}
-                  className={cx(
-                    "tw:flex tw:items-center tw:justify-center tw:px-1.5 tw:py-2.5 tw:text-center tw:text-[12.5px]/[1.35]",
-                    PLANS[i].featured ? "tw:bg-(--ink)/[0.035]" : "",
-                  )}
-                >
-                  <span className="tw:sr-only">{PLANS[i].name}: </span>
-                  <CellView cell={cell} />
-                </div>
-              ))}
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div
-      className={cx(
-        "tw:overflow-x-auto tw:rounded-[28px] tw:border tw:border-(--line) tw:bg-white tw:max-bsmd:hidden",
-        className,
-      )}
-    >
-      <table
-        className="tw:w-full tw:min-w-[720px] tw:border-collapse tw:text-left tw:max-bssm:min-w-[560px]"
+        className={cx(
+          "tw:overflow-clip tw:rounded-[22px] tw:border tw:border-(--line) tw:bg-white tw:bsmd:hidden",
+          className,
+        )}
+        role="group"
         aria-labelledby={labelledBy}
       >
-        <thead>
-          <tr>
-            <th
-              scope="col"
-              className="tw:sticky tw:left-0 tw:z-1 tw:bg-white tw:px-6 tw:py-5 tw:text-[13px] tw:font-semibold tw:tracking-[0.1em] tw:text-(--muted) tw:uppercase tw:max-bssm:w-[150px] tw:max-bssm:px-4"
+        <div
+          className="tw:sticky tw:z-1 tw:grid tw:grid-cols-3 tw:border-b tw:border-(--line) tw:bg-white"
+          style={{ top: stickyTop }}
+        >
+          {PLANS.map((plan) => (
+            <div
+              key={plan.id}
+              className={cx(
+                "tw:px-1.5 tw:py-3 tw:text-center",
+                plan.featured ? "tw:bg-(--ink) tw:text-white" : "",
+              )}
             >
-              Service / deliverable
-            </th>
-            {PLANS.map((plan) => (
-              <th
-                key={plan.id}
-                scope="col"
+              <b
                 className={cx(
-                  "tw:w-[22%] tw:px-4 tw:py-5 tw:text-center tw:max-bssm:w-[26%] tw:max-bssm:px-2",
-                  plan.featured ? "tw:bg-(--ink) tw:text-white" : "",
+                  "tw:block tw:text-[14.5px]",
+                  plan.featured && "tw:text-white",
                 )}
               >
-                <b
-                  className={cx(
-                    "tw:block tw:text-[17px]",
-                    plan.featured && "tw:text-white",
-                  )}
-                >
-                  {plan.name}
-                </b>
-                <span
-                  className={cx(
-                    "tw:text-[13.5px] tw:font-medium",
-                    plan.featured ? "tw:text-(--gold)" : "tw:text-(--muted)",
-                  )}
-                >
-                  {usd(plan.price[billing])}/mo
-                </span>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {COMPARE.map((row) => (
-            <tr key={row.label} className="tw:border-t tw:border-(--line)">
-              {/* First column stays put while the table scrolls on phones. */}
-              <th
-                scope="row"
-                className="tw:sticky tw:left-0 tw:z-1 tw:bg-white tw:px-6 tw:py-3.5 tw:text-[15px] tw:font-medium tw:text-(--ink-2) tw:max-bssm:w-[150px] tw:max-bssm:px-4 tw:max-bssm:text-[13.5px] tw:max-bssm:shadow-[6px_0_10px_-8px_rgba(12,21,38,0.25)]"
+                {plan.name}
+              </b>
+              <span
+                className={cx(
+                  "tw:text-[12.5px] tw:font-medium",
+                  plan.featured ? "tw:text-(--gold)" : "tw:text-(--muted)",
+                )}
               >
+                {usd(plan.price[billing])}/mo
+              </span>
+            </div>
+          ))}
+        </div>
+        <ul>
+          {COMPARE.map((row) => (
+            <li
+              key={row.label}
+              className="tw:border-b tw:border-(--line) tw:last:border-b-0"
+            >
+              <p className="tw:bg-(--panel) tw:px-4 tw:py-2 tw:text-[13px] tw:font-semibold tw:text-(--ink-2)">
                 {row.label}
+              </p>
+              <div className="tw:grid tw:grid-cols-3">
+                {row.cells.map((cell, i) => (
+                  <div
+                    key={i}
+                    className={cx(
+                      "tw:flex tw:items-center tw:justify-center tw:px-1.5 tw:py-2.5 tw:text-center tw:text-[12.5px]/[1.35]",
+                      PLANS[i].featured ? "tw:bg-(--ink)/[0.035]" : "",
+                    )}
+                  >
+                    <span className="tw:sr-only">{PLANS[i].name}: </span>
+                    <CellView cell={cell} />
+                  </div>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div
+        className={cx(
+          "tw:overflow-x-auto tw:rounded-[28px] tw:border tw:border-(--line) tw:bg-white tw:max-bsmd:hidden",
+          className,
+        )}
+      >
+        <table
+          className="tw:w-full tw:min-w-[720px] tw:border-collapse tw:text-left tw:max-bssm:min-w-[560px]"
+          aria-labelledby={labelledBy}
+        >
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                className="tw:sticky tw:left-0 tw:z-1 tw:bg-white tw:px-6 tw:py-5 tw:text-[13px] tw:font-semibold tw:tracking-[0.1em] tw:text-(--muted) tw:uppercase tw:max-bssm:w-[150px] tw:max-bssm:px-4"
+              >
+                Service / deliverable
               </th>
-              {row.cells.map((cell, i) => (
-                <td
-                  key={i}
+              {PLANS.map((plan) => (
+                <th
+                  key={plan.id}
+                  scope="col"
                   className={cx(
-                    "tw:px-4 tw:py-3.5 tw:text-center tw:max-bssm:px-2",
-                    PLANS[i].featured ? "tw:bg-(--ink)/[0.035]" : "",
+                    "tw:w-[22%] tw:px-4 tw:py-5 tw:text-center tw:max-bssm:w-[26%] tw:max-bssm:px-2",
+                    plan.featured ? "tw:bg-(--ink) tw:text-white" : "",
                   )}
                 >
-                  <CellView cell={cell} />
-                </td>
+                  <b
+                    className={cx(
+                      "tw:block tw:text-[17px]",
+                      plan.featured && "tw:text-white",
+                    )}
+                  >
+                    {plan.name}
+                  </b>
+                  <span
+                    className={cx(
+                      "tw:text-[13.5px] tw:font-medium",
+                      plan.featured ? "tw:text-(--gold)" : "tw:text-(--muted)",
+                    )}
+                  >
+                    {usd(plan.price[billing])}/mo
+                  </span>
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {COMPARE.map((row) => (
+              <tr key={row.label} className="tw:border-t tw:border-(--line)">
+                {/* First column stays put while the table scrolls on phones. */}
+                <th
+                  scope="row"
+                  className="tw:sticky tw:left-0 tw:z-1 tw:bg-white tw:px-6 tw:py-3.5 tw:text-[15px] tw:font-medium tw:text-(--ink-2) tw:max-bssm:w-[150px] tw:max-bssm:px-4 tw:max-bssm:text-[13.5px] tw:max-bssm:shadow-[6px_0_10px_-8px_rgba(12,21,38,0.25)]"
+                >
+                  {row.label}
+                </th>
+                {row.cells.map((cell, i) => (
+                  <td
+                    key={i}
+                    className={cx(
+                      "tw:px-4 tw:py-3.5 tw:text-center tw:max-bssm:px-2",
+                      PLANS[i].featured ? "tw:bg-(--ink)/[0.035]" : "",
+                    )}
+                  >
+                    <CellView cell={cell} />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
@@ -215,9 +235,12 @@ export function PricingPlans({
   compareTitle = "Compare Plans Side by Side",
   compareLead = "See exactly what each plan includes.",
   compare = "modal",
+  who,
 }: {
   /** Table as a pop-up behind a "Compare plans" button, or inline. */
   compare?: "modal" | "inline";
+  /** The page's niche nouns for the audience lines (planWhoFor). */
+  who?: PlanWho;
   ctaHref?: string;
   compareId?: string;
   compareTitle?: string;
@@ -352,7 +375,7 @@ export function PricingPlans({
                   dark ? "tw:text-white/70" : "tw:text-(--text)",
                 )}
               >
-                {plan.audience}
+                {planAudience(plan, who)}
               </p>
 
               <p className="tw:mt-6 tw:flex tw:items-baseline tw:gap-1.5">
@@ -417,7 +440,10 @@ export function PricingPlans({
                     {plan.includesFrom}
                   </p>
                 ) : null}
-                <ul className="tw:grid tw:gap-2.5" id={`plan-${plan.id}-features`}>
+                <ul
+                  className="tw:grid tw:gap-2.5"
+                  id={`plan-${plan.id}-features`}
+                >
                   {plan.features.map((f, i) => (
                     <li
                       key={f}

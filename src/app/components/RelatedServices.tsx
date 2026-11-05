@@ -22,6 +22,11 @@ const CORE_LINKS: RelLink[] = [
 
 /** First matching keyword in the current path picks the vertical trio. */
 const VERTICALS: { match: string[]; links: RelLink[] }[] = [
+  { match: ["fence"], links: [
+    { href: "/services/industry/fence-company-seo", label: "Fence Company SEO" },
+    { href: "/services/fence-company-marketing-agency", label: "Fence Company Marketing Agency" },
+    { href: "/services/fence-company-website-design", label: "Fence Company Website Design" },
+  ]},
   { match: ["roofing"], links: [
     { href: "/services/industry/local-seo-for-roofing-companies", label: "Local SEO for Roofing Companies" },
     { href: "/services/roofing-marketing-agency", label: "Roofing Marketing Agency" },

@@ -249,6 +249,84 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Tennessee Inspection Marketing to Realtors, Buyers and Owners",
+    lead: [
+      "From Memphis to Knoxville, Tennessee agents refer the inspectors they trust and owners search for the rest. ",
+      { href: "/services/google-ads", label: "Search ads for home inspectors" },
+      " and a steady agent newsletter put your name on both lists.",
+    ],
+    lanes: [
+      {
+        audience: "Nashville and Knoxville agents",
+        icon: "agent",
+        pitch:
+          "Tennessee agents value same-day reports, a WDI letter ready for VA loans and an inspector who explains radon plainly. We make those strengths visible to every agent in your area.",
+        query: "VA buyer in Clarksville. Need WDI and inspection.",
+        flow: [
+          "Agent sends request",
+          "WDI letter added",
+          "Radon placed",
+          "Same-day report",
+        ],
+        badge: "Report delivered the same evening",
+        jobs: [
+          {
+            name: "VA-loan buyer inspection",
+            tactic: "Fort Campbell-area page for Clarksville agents",
+          },
+          {
+            name: "WDI / termite letter",
+            tactic: "Shown on agent forms when your pest license covers it",
+          },
+          {
+            name: "Radon test, Middle and East TN",
+            tactic: "Knoxville and Nashville radon pages for agents",
+          },
+        ],
+      },
+      {
+        audience: "Tennessee homeowners and new-build buyers",
+        icon: "inspectList",
+        pitch:
+          "Buyers of new homes in Spring Hill and Murfreesboro book phase inspections on their own, and long-time owners schedule maintenance checks. We rank you for both.",
+        query: "new construction inspection murfreesboro tn",
+        flow: [
+          "Finds phase package",
+          "Reads sample report",
+          "Picks foundation stage",
+          "Books online",
+        ],
+        badge: "Every build stage on one calendar",
+        jobs: [
+          {
+            name: "New-construction phase inspections",
+            tactic: "Spring Hill and Murfreesboro subdivision pages",
+          },
+          {
+            name: "11-month builder warranty visit",
+            tactic: "Warranty checklist page buyers find before month eleven",
+          },
+          {
+            name: "Annual maintenance inspection",
+            tactic: "Seasonal reminders to past clients each spring",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Tennessee add-on tests clients choose",
+      items: [
+        "Radon testing",
+        "WDI / termite letter",
+        "Sewer line scope",
+        "Crawl space inspection",
+        "Mold air test",
+        "Well and septic check",
+      ],
+    },
+    cta: "Grow My Tennessee Bookings",
+  },
   regions: {
     title: "Home Inspector Marketing, Tennessee City by City",
     lead: "West, Middle and East Tennessee buy homes differently, so we set pages, service areas and ads for each market you serve.",
@@ -335,7 +413,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What will home inspector marketing in Tennessee cost me?",
-        a: "Tennessee inspectors start at $297 a month, with $750 and $1,500 tiers for larger territories, and none requires a long contract. Tennessee ad budgets go to Google at a 0% markup. Most solo inspectors start with one metro and add counties as the calendar fills.",
+        a: "Tennessee inspectors start at $297 a month, with $950 and $1,500 tiers for larger territories, and none requires a long contract. Tennessee ad budgets go to Google at a 0% markup. Most solo inspectors start with one metro and add counties as the calendar fills.",
       },
     ],
   },

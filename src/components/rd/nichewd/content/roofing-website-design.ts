@@ -506,7 +506,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unfiltered feedback from owners of the businesses we build for, all public on Google.",
   },
   pricing: {
-    title: "Roofing Website Plans for Steady Growth",
+    title: "Roofing Website Pricing: One Fee, No Hosting Bill",
     compareTitle: "Compare What Each Plan Does for a Roofing Site",
     addOnsTitle: "Add-Ons Roofers Ask For Most",
     customTitle: "Running Crews in Several Roofing Markets?",
@@ -517,7 +517,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a roofing website cost?",
-        a: "Roofing sites differ in how many roof types, towns and tools they need, so pricing starts with a free call. After it, you get a single fixed quote that holds until launch. With a qualifying monthly growth plan in place, the roofing website itself costs nothing under our offer.",
+        a: "Roofing websites start at $950 for a one-time build. No monthly hosting fee, no rental charge, and the domain and website are yours to keep. Sites with more roof types, towns or tools get a single fixed quote after a free call, and it holds until launch. With a qualifying monthly growth plan, the roofing website costs nothing.",
       },
       {
         q: "How many weeks does a roofing website build take?",

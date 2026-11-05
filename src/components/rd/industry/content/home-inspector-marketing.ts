@@ -309,6 +309,89 @@ export const CONTENT: IndustryContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "How SEO Helps Home Inspectors Book Jobs With Buyers, Sellers, and Agents",
+    lead: [
+      "Every booking starts with an agent whose client is under contract or a homeowner searching on their own. We market you to both, and where state law limits agent referrals, as in ",
+      {
+        href: "/services/home-inspector-marketing/massachusetts",
+        label: "Massachusetts",
+      },
+      ", we lean harder on direct bookings.",
+    ],
+    lanes: [
+      {
+        audience: "Real Estate Agents With Buyers Under Contract",
+        icon: "agent",
+        pitch:
+          "Agents refer the inspector who answers fast, books online and writes reports clients can follow. We show them that proof everywhere they look, without ever paying for referrals.",
+        query: "Can you inspect for my buyer before the contingency ends?",
+        flow: [
+          "Agent request arrives",
+          "Slot picked online",
+          "Inspection and report",
+          "Agent gets the summary",
+        ],
+        badge: "Report out the same evening",
+        jobs: [
+          {
+            name: "Buyer's home inspections",
+            tactic: "Agent booking page with live calendar slots",
+          },
+          {
+            name: "Inspections for listing agents",
+            tactic: "Seller-friendly sample report agents can pass along",
+          },
+          {
+            name: "Re-inspections after repairs",
+            tactic: "Quick rebook link in every agent update",
+          },
+        ],
+      },
+      {
+        audience: "Buyers, Sellers and Owners Who Book Direct",
+        icon: "home",
+        pitch:
+          "Many buyers pick their own inspector, sellers want problems found before listing, and owners book warranty or maintenance checks. Search, Maps and AI answers bring them straight to you.",
+        query: "home inspector near me open saturday",
+        flow: [
+          "Searches on Google",
+          "Compares reviews",
+          "Books with add-ons",
+          "Report delivered",
+        ],
+        badge: "Booked with no referral",
+        jobs: [
+          {
+            name: "Pre-listing inspections",
+            tactic: "Seller pages ranked for pre-listing searches",
+          },
+          {
+            name: "11-month builder warranty inspections",
+            tactic: "Reminder campaigns timed before the warranty ends",
+          },
+          {
+            name: "Annual home maintenance inspections",
+            tactic: "Seasonal emails and Google posts to past clients",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-On Tests Buyers, Sellers and Agents Request",
+      items: [
+        "Radon testing",
+        "Sewer scope",
+        "Mold and air sampling",
+        "Termite and WDI",
+        "Well and septic",
+        "Thermal imaging",
+        "Pool and spa",
+      ],
+    },
+    cta: "Plan My Agent Outreach",
+  },
   ownLeads: {
     title: "Home Inspector Lead Generation Beyond Agent Referrals",
     body: [
@@ -425,7 +508,7 @@ export const CONTENT: IndustryContent = {
     ],
   },
   locations: {
-    title: "Local Home Inspector Marketing in 31 States",
+    title: "Local Home Inspector Marketing in 41 States",
     lead: [
       "Every state page covers local licensing rules, the busiest metros and how buyers there search. Starting in the Sunshine State? See our plan for ",
       {
@@ -461,6 +544,16 @@ export const CONTENT: IndustryContent = {
         cities: "Denver · Colorado Springs · Fort Collins",
       },
       {
+        name: "Connecticut Home Inspector Marketing",
+        href: "/services/home-inspector-marketing/connecticut",
+        cities: "Hartford · New Haven · Stamford",
+      },
+      {
+        name: "Home Inspection Marketing in Delaware",
+        href: "/services/home-inspector-marketing/delaware",
+        cities: "Wilmington · Dover · Lewes",
+      },
+      {
         name: "Florida Home Inspection Marketing",
         href: "/services/home-inspector-marketing/florida",
         cities: "Jacksonville · Orlando · Tampa",
@@ -469,6 +562,11 @@ export const CONTENT: IndustryContent = {
         name: "Georgia Home Inspector Marketing",
         href: "/services/home-inspector-marketing/georgia",
         cities: "Atlanta · Savannah · Athens",
+      },
+      {
+        name: "Idaho Home Inspector Marketing",
+        href: "/services/home-inspector-marketing/idaho",
+        cities: "Boise · Meridian · Coeur d'Alene",
       },
       {
         name: "Home Inspector Marketing in Illinois",
@@ -481,6 +579,16 @@ export const CONTENT: IndustryContent = {
         cities: "Indianapolis · Fort Wayne · Evansville",
       },
       {
+        name: "Home Inspector Marketing in Iowa",
+        href: "/services/home-inspector-marketing/iowa",
+        cities: "Des Moines · Cedar Rapids · Davenport",
+      },
+      {
+        name: "Kansas Home Inspection Marketing",
+        href: "/services/home-inspector-marketing/kansas",
+        cities: "Wichita · Overland Park · Topeka",
+      },
+      {
         name: "Kentucky Home Inspector Marketing",
         href: "/services/home-inspector-marketing/kentucky",
         cities: "Louisville · Lexington · Bowling Green",
@@ -489,6 +597,11 @@ export const CONTENT: IndustryContent = {
         name: "Home Inspector Marketing in Louisiana",
         href: "/services/home-inspector-marketing/louisiana",
         cities: "New Orleans · Baton Rouge · Shreveport",
+      },
+      {
+        name: "Maine Home Inspector Marketing",
+        href: "/services/home-inspector-marketing/maine",
+        cities: "Portland · Bangor · Lewiston",
       },
       {
         name: "Maryland Home Inspection Marketing",
@@ -511,9 +624,19 @@ export const CONTENT: IndustryContent = {
         cities: "Minneapolis · St. Paul · Rochester",
       },
       {
+        name: "Home Inspector Marketing in Mississippi",
+        href: "/services/home-inspector-marketing/mississippi",
+        cities: "Jackson · Gulfport · Southaven",
+      },
+      {
         name: "Missouri Home Inspector Marketing",
         href: "/services/home-inspector-marketing/missouri",
         cities: "Kansas City · St. Louis · Springfield",
+      },
+      {
+        name: "Nebraska Home Inspector Marketing",
+        href: "/services/home-inspector-marketing/nebraska",
+        cities: "Omaha · Lincoln · Grand Island",
       },
       {
         name: "Home Inspector Marketing in Nevada",
@@ -521,9 +644,19 @@ export const CONTENT: IndustryContent = {
         cities: "Las Vegas · Henderson · Reno",
       },
       {
+        name: "New Hampshire Home Inspection Marketing",
+        href: "/services/home-inspector-marketing/new-hampshire",
+        cities: "Manchester · Nashua · Portsmouth",
+      },
+      {
         name: "New Jersey Home Inspection Marketing",
         href: "/services/home-inspector-marketing/new-jersey",
         cities: "Newark · Jersey City · Toms River",
+      },
+      {
+        name: "Home Inspector Marketing in New Mexico",
+        href: "/services/home-inspector-marketing/new-mexico",
+        cities: "Albuquerque · Santa Fe · Las Cruces",
       },
       {
         name: "New York Home Inspector Marketing",
@@ -655,7 +788,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does home inspector marketing cost at Zonic Media?",
-        a: "Three plans: $297, $750 and $1,500 monthly, with no annual contract. Google bills your ad spend directly, with a 0% markup from us. Solo inspectors covering a few towns usually start on the first tier; firms with several inspectors, add-on services and ad campaigns tend to need more.",
+        a: "Three plans: $297, $950 and $1,500 monthly, with no annual contract. Google bills your ad spend directly, with a 0% markup from us. Solo inspectors covering a few towns usually start on the first tier; firms with several inspectors, add-on services and ad campaigns tend to need more.",
       },
       {
         q: "How long does home inspection marketing take to show results?",

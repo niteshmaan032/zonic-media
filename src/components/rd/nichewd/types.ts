@@ -12,7 +12,12 @@
    data: a two-mode switch restyles the example homepage. */
 
 import type { IconKey } from "@/components/rd/industry/icons";
-import type { FormCopy, HeroBento, Rich } from "@/components/rd/industry/types";
+import type {
+  AiSearchCopy,
+  FormCopy,
+  HeroBento,
+  Rich,
+} from "@/components/rd/industry/types";
 import type { BrandTone } from "@/components/rd/seoservices/seoUi";
 
 export type { Rich };
@@ -73,8 +78,9 @@ export type StageMode = {
 /** Example site shown in the showcase section (example copy only). */
 export type SiteStageData = {
   /** Conversion widget on the example homepage: calendar booking, estimate
-      request, tow dispatch, case review or home valuation. */
-  widget: "book" | "quote" | "dispatch" | "case" | "valuation";
+      request, tow dispatch, case review, home valuation or a fence
+      estimator (fence type, length slider, gates; 5 Nov 2026). */
+  widget: "book" | "quote" | "dispatch" | "case" | "valuation" | "estimate";
   /** aria-label of the two-mode switch. */
   switchLabel: string;
   /** e.g. "Your HVAC Co." — never a real company. */
@@ -164,6 +170,8 @@ export type NicheWebContent = {
       bullets: [string, string, string];
     };
   };
+  /** Optional AEO + GEO section after the growth rows (5 Nov 2026). */
+  aiSearch?: AiSearchCopy;
   /** Animated page tree of the site we build. */
   sitemap: {
     title: string;

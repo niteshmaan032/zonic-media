@@ -246,6 +246,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Illinois Home Inspection Marketing That Reaches Brokers and Buyers",
+    lead: [
+      "Chicago brokers juggle attorney review and tight inspection windows, while suburban owners and two-flat buyers search for themselves. We court both, starting with ",
+      {
+        href: "/services/ai-seo-services",
+        label: "AI search optimization",
+      },
+      " and Maps.",
+    ],
+    lanes: [
+      {
+        audience: "Illinois Brokers in Chicago and the Collar Counties",
+        icon: "handshake",
+        pitch:
+          "State rules forbid paying brokers for referrals, so your report has to earn them. A sample two-flat report, online booking and reviews from Naperville to Evanston make recommending you simple.",
+        query:
+          "Inspection needed during attorney review on a Logan Square two-flat",
+        flow: [
+          "Broker sends unit",
+          "Booked same day",
+          "Both units inspected",
+          "Repair list drafted",
+        ],
+        badge: "Ready for attorney review",
+        jobs: [
+          {
+            name: "Two-flat and three-flat inspections",
+            tactic: "Multi-unit sample report on your broker page",
+          },
+          {
+            name: "Condo inspections in Chicago",
+            tactic: "High-rise checklist emailed to city brokers",
+          },
+          {
+            name: "Radon tests during the contract",
+            tactic: "Broker page showing your IEMA-licensed tester",
+          },
+        ],
+      },
+      {
+        audience: "Illinois Homeowners, Sellers and Self-Booking Buyers",
+        icon: "home",
+        pitch:
+          "Sellers in DuPage and Lake County order pre-listing checks, buyers add radon after reading the seller's radon disclosure, and Fox Valley new-build owners need warranty walks. Town pages capture each.",
+        query: "sewer scope inspection naperville",
+        flow: [
+          "Finds sewer page",
+          "Adds radon",
+          "Picks a slot",
+          "Video plus report",
+        ],
+        badge: "Booked from a Naperville search",
+        jobs: [
+          {
+            name: "Sewer and lateral line scopes",
+            tactic: "Older-suburb pages with camera footage clips",
+          },
+          {
+            name: "Pre-listing inspections in DuPage",
+            tactic: "Spring seller campaign across Wheaton and Naperville",
+          },
+          {
+            name: "Warranty inspections for new builds",
+            tactic: "Fox Valley subdivision pages and reminder emails",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Illinois Add-Ons for Buyers, Sellers and Brokers",
+      items: [
+        "Radon by a licensed tester",
+        "Sewer lateral scope",
+        "Mold sampling",
+        "Well and septic",
+        "Termite and WDI",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Broker Outreach",
+  },
   regions: {
     title: "Where We Market Home Inspectors: Chicago Suburbs and Downstate",
     lead: "Chicago, its collar counties and the downstate cities each lean on different agents and housing, so pages and service areas follow those lines.",
@@ -331,7 +413,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Illinois inspectors pay for your plans?",
-        a: "The $297, $750 and $1,500 tiers each bill monthly. Nothing is locked beyond the current month, and any Google Ads budget is billed at a 0% markup. Covering extra suburbs or downstate cities simply means a larger tier.",
+        a: "The $297, $950 and $1,500 tiers each bill monthly. Nothing is locked beyond the current month, and any Google Ads budget is billed at a 0% markup. Covering extra suburbs or downstate cities simply means a larger tier.",
       },
     ],
   },

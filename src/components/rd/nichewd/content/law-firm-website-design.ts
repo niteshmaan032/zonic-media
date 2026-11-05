@@ -526,7 +526,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Real, unedited reviews from business owners who hired us, on our Google profile.",
   },
   pricing: {
-    title: "Choose a Growth Plan for Your Firm's Website",
+    title: "Law Firm Website Cost With No Ongoing Rent",
     compareTitle: "Side by Side: What Each Plan Gives Attorneys",
     addOnsTitle: "Optional Extras for Legal Websites",
     customTitle: "Multiple Offices or Practice Groups?",
@@ -537,7 +537,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a law firm website cost?",
-        a: "Scope drives the price: the number of practice areas, offices and attorney bios. After a free call we give your firm one fixed quote, and it won't creep up mid-project. Choose one of our qualifying growth plans, billed monthly, and the build itself comes at no charge under our free website offer.",
+        a: "Our law firm websites start at $950, which is a one-time development fee. The firm owns its domain and site outright, with no monthly hosting bill and no rental arrangement. Practice areas, offices and attorney bios set the final scope, and a free call produces one fixed quote that won't creep. Firms that choose a qualifying growth plan, paid monthly, get the build itself at no charge.",
       },
       {
         q: "When can our new attorney website be live?",

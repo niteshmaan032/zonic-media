@@ -503,7 +503,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unfiltered feedback from the owners we have built for, straight from Google.",
   },
   pricing: {
-    title: "Monthly Plans That Keep a Pest Control Site Growing",
+    title: "Pest Control Website Pricing, One Build Fee",
     compareTitle: "Compare Plan Features for Pest Control Sites",
     addOnsTitle: "Add-Ons for Swarm Season and Beyond",
     customTitle: "Multiple Pest Control Branches to Cover?",
@@ -514,7 +514,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a pest control website cost?",
-        a: "Price depends on how many pests, plans and towns the site covers. After a free scoping call you get a single locked quote for the whole build. And if your pest company joins one of our qualifying monthly growth plans, the build itself is covered by our free website offer.",
+        a: "Pest control websites start at $950, one fee for development with nothing recurring. You don't rent the site or pay hosting each month, and the domain and website belong to your company. More pests, plans or towns add scope, so a free scoping call ends with a single locked quote. Join a qualifying monthly growth plan and the pest site is covered by our offer.",
       },
       {
         q: "What's the timeline for a pest control website build?",

@@ -437,7 +437,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do law firm marketing plans cost at Zonic Media?",
-        a: "Our three law firm tiers cost $297, $750 or $1,500 each month, with no annual contract. Ad clicks are billed by Google to your firm, with zero markup added by us. Solo attorneys often start on the first tier; firms running ads in several practice areas usually need more.",
+        a: "Our three law firm tiers cost $297, $950 or $1,500 each month, with no annual contract. Ad clicks are billed by Google to your firm, with zero markup added by us. Solo attorneys often start on the first tier; firms running ads in several practice areas usually need more.",
       },
     ],
   },

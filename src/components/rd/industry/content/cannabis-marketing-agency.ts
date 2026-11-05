@@ -395,7 +395,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does a cannabis marketing company like Zonic Media cost?",
-        a: "Plans are priced at $297, $750 and $1,500 each month, all month to month. Most single-store dispensaries start on the first or second tier; groups with several locations and loyalty programs usually need the third. Grand openings can be added as a short campaign, and your free audit shows which tier fits.",
+        a: "Plans are priced at $297, $950 and $1,500 each month, all month to month. Most single-store dispensaries start on the first or second tier; groups with several locations and loyalty programs usually need the third. Grand openings can be added as a short campaign, and your free audit shows which tier fits.",
       },
     ],
   },

@@ -528,7 +528,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Owners from many industries left these on our Google profile, word for word.",
   },
   pricing: {
-    title: "Growth Plans for Your Dental Website",
+    title: "Dental Website Design Pricing, One Flat Fee",
     compareTitle: "Compare What Each Plan Adds for Dentists",
     addOnsTitle: "Add Pages for New Treatments or Dentists",
     customTitle: "Running Several Dental Offices?",
@@ -539,7 +539,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a dental website design company charge?",
-        a: "Pricing is a single fixed quote, given once we've had a free call covering your treatments, offices and booking setup, and it won't creep up mid-build. Enroll in a qualifying monthly growth plan for dental practices and our website offer makes the site itself free, leaving more budget for attracting patients.",
+        a: "We charge from $950 for a dental website, as a one-off development fee. Your practice owns the domain and site, and there is no monthly hosting cost or website rent. Treatments, offices and booking setup are reviewed on a free call before you get one fixed quote. Enroll in a dental growth plan that qualifies, billed monthly, and the site itself is free.",
       },
       {
         q: "How many weeks until our new dental practice website is live?",

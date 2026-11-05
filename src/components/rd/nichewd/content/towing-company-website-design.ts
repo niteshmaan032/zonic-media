@@ -513,7 +513,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Every review is unedited and posted publicly on our Google profile.",
   },
   pricing: {
-    title: "Pick a Plan That Keeps the Tow Calls Coming",
+    title: "Towing Website Pricing Without Monthly Charges",
     compareTitle: "Plan Features for Towing Companies",
     addOnsTitle: "Extra Coverage Pages and Tools",
     customTitle: "Running Trucks Out of Several Yards?",
@@ -524,7 +524,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does a towing company website cost?",
-        a: "Every tow business is different, so we talk through your trucks, services and coverage on a free call, then send one firm quote that doesn't change once work starts. And if you choose one of our qualifying plans, billed monthly, the build costs nothing under our free towing website offer.",
+        a: "Towing company websites cost from $950, a one-time fee to develop the site. You don't rent it, hosting has no monthly charge, and your company keeps the domain and website. Trucks, services and coverage are talked through on a free call before one firm quote that won't change. On a qualifying plan billed monthly, the towing website build is free.",
       },
       {
         q: "How quickly can my towing website go live?",

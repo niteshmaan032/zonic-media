@@ -271,6 +271,85 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "New York Home Inspector Marketing Aimed at Agents, Buyers and Sellers",
+    lead: [
+      "New York law bars inspectors from paying agents for referrals, so trust has to be earned. We win realtors with speed and clear reports, and win owners through ",
+      { href: "/services/ai-seo-services", label: "AI search visibility" },
+      " and Maps.",
+    ],
+    lanes: [
+      {
+        audience: "Long Island and NYC agents",
+        icon: "agent",
+        pitch:
+          "Downstate buyers usually inspect before the contract is signed, so agents need an inspector free this week. We show your openings, sample reports and co-op experience.",
+        query: "Accepted offer in Huntington. Free Wednesday?",
+        flow: [
+          "Agent sends address",
+          "Slot confirmed",
+          "Inspection walked",
+          "Report before contract",
+        ],
+        badge: "Inspected before the contract signing",
+        jobs: [
+          {
+            name: "Pre-contract buyer inspection",
+            tactic: "Agent page with this week's openings by county",
+          },
+          {
+            name: "Co-op and condo unit inspection",
+            tactic: "Manhattan and Brooklyn pages agents can share",
+          },
+          {
+            name: "Termite inspection on Long Island",
+            tactic: "Paired with the buyer inspection on agent forms",
+          },
+        ],
+      },
+      {
+        audience: "New York homeowners",
+        icon: "home",
+        pitch:
+          "Upstate buyers in Buffalo and Syracuse often search for radon themselves, and Long Island sellers book pre-listing visits. We rank you where those owners look first.",
+        query: "radon testing buffalo ny home",
+        flow: [
+          "Searches radon test",
+          "Sees your county page",
+          "Bundles inspection",
+          "Books online",
+        ],
+        badge: "Radon canisters placed same visit",
+        jobs: [
+          {
+            name: "Pre-listing inspection for sellers",
+            tactic: "Long Island seller page with a sample report",
+          },
+          {
+            name: "Brownstone and older-home inspection",
+            tactic: "Brooklyn and Queens pages on aging systems",
+          },
+          {
+            name: "Cesspool and septic check",
+            tactic: "Suffolk County pages for homes off sewer",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-on tests New York clients book",
+      items: [
+        "Radon testing upstate",
+        "Termite / WDI",
+        "Oil tank scan",
+        "Lead paint check",
+        "Sewer line scope",
+        "Cesspool inspection",
+      ],
+    },
+    cta: "Start My NY Inspector Plan",
+  },
   regions: {
     title: "New York Regions and Towns We Market You In",
     lead: "Search habits shift between the city, the Island and upstate, so we fit each region's pages, service areas and ads to its housing.",

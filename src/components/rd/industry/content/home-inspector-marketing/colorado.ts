@@ -256,6 +256,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Colorado Home Inspector Marketing to Realtors, Buyers and Sellers",
+    lead: [
+      "Front Range agents want the report before the inspection objection deadline, while homeowners research radon and sewer questions on their own. We serve both, and our ",
+      {
+        href: "/google-maps-business-ranking-tool-online",
+        label: "free Maps rank checker",
+      },
+      " shows your starting point.",
+    ],
+    lanes: [
+      {
+        audience: "Denver and Front Range Agents",
+        icon: "handshake",
+        pitch:
+          "Colorado has no state inspector license, so agents judge you by credentials, sample reports and reviews. We put all three on an agent page and keep you in their inbox.",
+        query: "Buyer under contract in Arvada. Can you scope the sewer too?",
+        flow: [
+          "Agent shares contract",
+          "Radon and scope added",
+          "Inspected that week",
+          "Objection list ready",
+        ],
+        badge: "Ready before the objection deadline",
+        jobs: [
+          {
+            name: "Buyer inspections with radon",
+            tactic: "Agent page noting your licensed radon tester",
+          },
+          {
+            name: "Sewer scopes for older Denver homes",
+            tactic: "Short camera clips agents can forward",
+          },
+          {
+            name: "Pre-listing inspections in Douglas County",
+            tactic: "Listing-team emails before the spring market",
+          },
+        ],
+      },
+      {
+        audience: "Colorado Homeowners and Sellers Booking Direct",
+        icon: "home",
+        pitch:
+          "Owners in Castle Rock and Windsor book builder-phase checks, mountain buyers need wells and septic covered, and sellers want hail-worn roofs judged early. Pages for each bring them in.",
+        query: "radon test fort collins co",
+        flow: [
+          "Radon page found",
+          "Test booked",
+          "Monitor placed",
+          "Results explained",
+        ],
+        badge: "Radon booked without an agent",
+        jobs: [
+          {
+            name: "New-construction phase inspections",
+            tactic:
+              "Pages for Castle Rock, Parker and Windsor builder communities",
+          },
+          {
+            name: "Mountain-home well and septic checks",
+            tactic: "Summit County and Western Slope pages for remote buyers",
+          },
+          {
+            name: "Hail and roof condition reviews",
+            tactic: "Storm-season posts and seller pages along the Front Range",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-On Tests Colorado Clients Order",
+      items: [
+        "Radon testing",
+        "Sewer line scope",
+        "Mold air sampling",
+        "Well water testing",
+        "Septic inspection",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Front Range Outreach",
+  },
   regions: {
     title: "Colorado Regions, From the Front Range to the Western Slope",
     lead: "Metro suburbs, mountain towns and the Western Slope each search differently, so pages and service areas match each one.",
@@ -351,7 +433,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Each Front Range town you serve, reviewed",
       "Radon and sewer scope searches run",
-      "Three plans: $297, $750 or $1,500 monthly",
+      "Three plans: $297, $950 or $1,500 monthly",
     ],
     form: {
       formType: "home-inspector-marketing-colorado",

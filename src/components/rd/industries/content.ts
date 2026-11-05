@@ -1,7 +1,7 @@
 import type { IndustryIcon } from "./icons";
 
 /* Industries hub redesign (23 Oct 2026; copy re-optimized 24 Oct 2026):
-   the 31 industries grouped like the header's Industries menu (same order,
+   the industries grouped like the header's Industries menu (same order,
    same names, same links). Taglines and FAQs are new wording (none from the
    live /industries page), outcome-led, with no prices and no company names. */
 
@@ -155,6 +155,14 @@ export const INDUSTRY_GROUPS: IndustryGroup[] = [
         tagline:
           "Sign design projects and year-round maintenance clients across your territory.",
         icon: "landscape",
+      },
+      {
+        id: "fence",
+        name: "Fence Contractors",
+        href: "/services/fence-company-marketing-agency",
+        tagline:
+          "Fill the install calendar with wood, vinyl, aluminum and chain link fence estimates.",
+        icon: "fence",
       },
       {
         id: "tree-service",
@@ -358,6 +366,6 @@ export const INDUSTRY_FAQS: { question: string; answer: string }[] = [
   {
     question: "Which marketing plan suits a contractor or local business?",
     answer:
-      "Foundation, at $297 a month, suits a business building its Google Maps presence. Growth, at $750, adds Google Search Ads and deeper local SEO. Authority, at $1,500, covers several locations plus social media and Meta Ads. Every plan runs month to month with 0% ad-spend markup.",
+      "Foundation, at $297 a month, suits a business building its Google Maps presence. Growth, at $950, adds Google Search Ads and deeper local SEO. Authority, at $1,500, covers several locations plus social media and Meta Ads. Every plan runs month to month with 0% ad-spend markup.",
   },
 ];

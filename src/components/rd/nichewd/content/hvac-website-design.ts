@@ -511,7 +511,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Business owners posted these on our Google profile, unedited.",
   },
   pricing: {
-    title: "Plans to Grow Your HVAC Site After Launch",
+    title: "HVAC Website Cost: One Payment, No Hosting Fees",
     compareTitle: "What Each Plan Adds to an HVAC Website",
     addOnsTitle: "Extra Pages and Tools for HVAC Sites",
     customTitle: "Building Sites for Several HVAC Branches?",
@@ -522,7 +522,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does it cost to build an HVAC website?",
-        a: "You get a single flat quote after a free call about your services, towns and booking needs, and that number holds for the whole build. If your HVAC company joins a qualifying monthly growth plan, the site itself can come free through our website offer.",
+        a: "Building an HVAC website starts at $950, paid one time for development. You'll see no monthly hosting line and no site rental, and your company owns the domain and website. A free call on services, towns and booking needs gives a flat quote that holds for the whole build. If your HVAC company joins a qualifying monthly growth plan, the site can come free.",
       },
       {
         q: "How soon can my new HVAC website go live?",

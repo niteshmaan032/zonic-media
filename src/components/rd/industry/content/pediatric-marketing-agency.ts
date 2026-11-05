@@ -415,7 +415,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do pediatric marketing plans cost at Zonic Media?",
-        a: "Pricing starts at $297 a month, with $750 and $1,500 tiers for practices that want more channels or offices. All plans run month to month, and ad spend goes to Google with a 0% markup. Most single-office practices begin on the first tier.",
+        a: "Pricing starts at $297 a month, with $950 and $1,500 tiers for practices that want more channels or offices. All plans run month to month, and ad spend goes to Google with a 0% markup. Most single-office practices begin on the first tier.",
       },
     ],
   },

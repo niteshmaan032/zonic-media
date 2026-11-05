@@ -497,7 +497,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does bathroom remodeling SEO cost?",
-        a: "Plans are $297, $750 or $1,500 a month with no annual term. One-showroom shops often begin with the entry plan; firms remodeling across a metro, or adding managed Google Ads, usually need more hours. Your free audit recommends a plan based on how crowded your local results are.",
+        a: "Plans are $297, $950 or $1,500 a month with no annual term. One-showroom shops often begin with the entry plan; firms remodeling across a metro, or adding managed Google Ads, usually need more hours. Your free audit recommends a plan based on how crowded your local results are.",
       },
       {
         q: "How long until SEO for bathroom remodeling shows results?",

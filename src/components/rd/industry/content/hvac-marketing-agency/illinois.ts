@@ -352,7 +352,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do your Illinois HVAC plans cost?",
-        a: "You can choose $297, $750 or $1,500 monthly. Every plan runs month to month. Any ad spend goes to Google at a 0% markup. Shops serving one suburb often start small, while multi-county crews usually pick a plan with ads and more town pages.",
+        a: "You can choose $297, $950 or $1,500 monthly. Every plan runs month to month. Any ad spend goes to Google at a 0% markup. Shops serving one suburb often start small, while multi-county crews usually pick a plan with ads and more town pages.",
       },
     ],
   },

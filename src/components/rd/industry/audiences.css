@@ -1,0 +1,52 @@
+/* Audience lanes (5 Nov 2026): the four steps light up in turn, then the
+   result chip pulses (8s loop). Motion inside the mini UI only; reduced
+   motion shows every step lit. */
+
+.aud-step {
+  animation: aud-step 8s ease-out infinite;
+}
+@keyframes aud-step {
+  0%,
+  4% {
+    filter: grayscale(1) brightness(1.6);
+    scale: 0.85;
+  }
+  10%,
+  94% {
+    filter: none;
+    scale: 1;
+  }
+  100% {
+    filter: grayscale(1) brightness(1.6);
+    scale: 0.85;
+  }
+}
+.aud-badge {
+  animation: aud-badge 8s ease-out infinite;
+}
+@keyframes aud-badge {
+  0%,
+  34% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+    scale: 1.05;
+  }
+  46%,
+  94% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0.25;
+    scale: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aud-step,
+  .aud-badge {
+    animation: none !important;
+  }
+}

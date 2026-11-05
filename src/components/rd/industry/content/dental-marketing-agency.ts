@@ -422,7 +422,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do your dental marketing plans cost?",
-        a: "Zonic Media's dental plans run $297, $750 or $1,500 per month with no long contract. Google charges your ad spend at cost, since our markup on it is 0%. Single-office practices often start on the first tier; groups adding ads or more offices usually need a larger one.",
+        a: "Zonic Media's dental plans run $297, $950 or $1,500 per month with no long contract. Google charges your ad spend at cost, since our markup on it is 0%. Single-office practices often start on the first tier; groups adding ads or more offices usually need a larger one.",
       },
     ],
   },

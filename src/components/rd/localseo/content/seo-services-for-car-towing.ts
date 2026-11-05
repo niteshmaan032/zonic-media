@@ -490,7 +490,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does towing company SEO cost?",
-        a: "Our three plans cost $297, $750 or $1,500 each month, and you can stop any month. One-truck operators usually start small; fleets covering several towns, or wanting Google Ads run alongside, choose a bigger plan. The free audit shows which one matches your coverage.",
+        a: "Our three plans cost $297, $950 or $1,500 each month, and you can stop any month. One-truck operators usually start small; fleets covering several towns, or wanting Google Ads run alongside, choose a bigger plan. The free audit shows which one matches your coverage.",
       },
       {
         q: "How fast can SEO for towing bring more calls?",

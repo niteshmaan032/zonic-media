@@ -47,10 +47,40 @@
   }
 }
 
+/* Fence estimator (5 Nov 2026): the length slider eases to its value. */
+.nwd-slide {
+  animation: nwd-slide 6s ease-in-out infinite;
+}
+@keyframes nwd-slide {
+  0%,
+  8% {
+    width: 22%;
+  }
+  40%,
+  100% {
+    width: 58%;
+  }
+}
+.nwd-knob {
+  animation: nwd-knob 6s ease-in-out infinite;
+}
+@keyframes nwd-knob {
+  0%,
+  8% {
+    left: 22%;
+  }
+  40%,
+  100% {
+    left: 58%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nwd-swap,
   .nwd-toast,
-  .nwd-pulse {
+  .nwd-pulse,
+  .nwd-slide,
+  .nwd-knob {
     animation: none !important;
   }
   .nwd-toast {

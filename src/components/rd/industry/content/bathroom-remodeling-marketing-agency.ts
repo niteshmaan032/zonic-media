@@ -430,7 +430,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do your remodeling contractor marketing plans include?",
-        a: "Foundation runs $297 a month and covers Business Profile work, on-page SEO and citations. Growth, at $750, adds Google Ads management, conversion tracking and a review workflow. Authority, at $1,500, adds Local Services Ads setup, social media and more. All plans are month to month with 0% ad-spend markup.",
+        a: "Foundation runs $297 a month and covers Business Profile work, on-page SEO and citations. Growth, at $950, adds Google Ads management, conversion tracking and a review workflow. Authority, at $1,500, adds Local Services Ads setup, social media and more. All plans are month to month with 0% ad-spend markup.",
       },
       {
         q: "What happens if Google suspends my remodeling company's listing?",

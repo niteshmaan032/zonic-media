@@ -140,7 +140,7 @@ const WilmFaqs = [
   {
     question: "What do your Wilmington marketing plans cost?",
     answer:
-      "You can choose a $297, $750 or $1,500 monthly plan, all month to month, and ad spend stays separate with 0% markup. Which plan fits depends on your services, your suburbs and how much competition you face. We recommend one after a free audit, with no percentage-of-spend fees.",
+      "You can choose a $297, $950 or $1,500 monthly plan, all month to month, and ad spend stays separate with 0% markup. Which plan fits depends on your services, your suburbs and how much competition you face. We recommend one after a free audit, with no percentage-of-spend fees.",
   },
   {
     question: "Which towns around Wilmington do you cover?",

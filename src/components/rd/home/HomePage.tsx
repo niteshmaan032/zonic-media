@@ -490,7 +490,7 @@ const faqs: { q: string; a: string; node?: ReactNode }[] = [
   },
   {
     q: "How much does a digital marketing agency cost for a small business?",
-    a: "Plans are published at $297, $750 or $1,500 per month, each month to month with no long-term contract. Google Ads management comes with 0% ad-spend markup, and a new website is quoted as a one-time project. A free strategy call shows which plan fits your goals.",
+    a: "Plans are published at $297, $950 or $1,500 per month, each month to month with no long-term contract. Google Ads management comes with 0% ad-spend markup, and a new website is quoted as a one-time project. A free strategy call shows which plan fits your goals.",
   },
   {
     q: "How long does digital marketing take to work?",

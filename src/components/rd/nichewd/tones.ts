@@ -58,6 +58,8 @@ const SETS: Record<string, [HueKey, HueKey, HueKey, HueKey]> = {
   "window-and-door-website-design": ["cyan", "violet", "gold", "emerald"],
   "painting-contractor-website-design": ["fuchsia", "sky", "gold", "lime"],
   "landscaping-website-design": ["green", "orange", "sky", "violet"],
+  /* Fence contractors (5 Nov 2026): cedar coral + navy. */
+  "fence-company-website-design": ["coral", "navy", "lime", "gold"],
   "tree-service-website-design": ["teal", "orange", "navy", "lime"],
   "pool-service-website-design": ["cyan", "gold", "indigo", "pink"],
   "pest-control-website-design": ["orange", "emerald", "navy", "rose"],

@@ -459,7 +459,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does window and door marketing cost at Zonic Media?",
-        a: "Plans run $297, $750 or $1,500 per month, with no annual term. Google bills your ad spend, and we charge no markup on it (0%). Single-showroom companies often start on a smaller plan; firms running several product lines and ads across many towns usually need more.",
+        a: "Plans run $297, $950 or $1,500 per month, with no annual term. Google bills your ad spend, and we charge no markup on it (0%). Single-showroom companies often start on a smaller plan; firms running several product lines and ads across many towns usually need more.",
       },
     ],
   },

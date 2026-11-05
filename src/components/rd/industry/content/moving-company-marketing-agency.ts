@@ -425,7 +425,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does a moving company marketing company charge at Zonic Media?",
-        a: "Plans cost $297, $750 or $1,500 each month, all month to month, with ad spend billed at a 0% markup. Smaller local movers usually begin on the first tier; companies running long-distance routes and seasonal ads tend to need more.",
+        a: "Plans cost $297, $950 or $1,500 each month, all month to month, with ad spend billed at a 0% markup. Smaller local movers usually begin on the first tier; companies running long-distance routes and seasonal ads tend to need more.",
       },
       {
         q: "When should movers start marketing for peak season?",

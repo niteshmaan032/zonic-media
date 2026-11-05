@@ -69,7 +69,13 @@ import {
   MdConstruction,
   MdDoorFront,
   MdElectricalServices,
+  MdDeck,
   MdFence,
+  MdOutlineAgriculture,
+  MdOutlineHandshake,
+  MdRealEstateAgent,
+  MdSell,
+  MdStraighten,
   MdFormatPaint,
   MdFoundation,
   MdGarage,
@@ -103,7 +109,7 @@ import {
   MdBeachAccess,
   MdOutlineHolidayVillage,
 } from "react-icons/md";
-import { TbDental, TbTruckDelivery } from "react-icons/tb";
+import { TbDental, TbFence, TbTruckDelivery } from "react-icons/tb";
 
 /* Icon registry for the industry templates: content files name icons by
    key, so agents can only pick icons that exist. */
@@ -211,6 +217,14 @@ const ICONS = {
   beach: <MdBeachAccess />,
   ticket: <LuTicket />,
   rental: <MdOutlineHolidayVillage />,
+  /* fence contractors and home inspectors (5 Nov 2026) */
+  ruler: <MdStraighten />,
+  gate: <TbFence />,
+  deck: <MdDeck />,
+  farm: <MdOutlineAgriculture />,
+  handshake: <MdOutlineHandshake />,
+  agent: <MdRealEstateAgent />,
+  sold: <MdSell />,
 } satisfies Record<string, ReactNode>;
 
 export type IconKey = keyof typeof ICONS;

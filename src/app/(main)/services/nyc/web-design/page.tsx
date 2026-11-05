@@ -143,7 +143,7 @@ const NycWebFaqs = [
   {
     question: "How much does a small business website cost in NYC?",
     answer:
-      "The price depends on page count, features such as booking or an online store, and how much copy we write. You get a fixed quote after a free review, with no hourly billing, and you own the finished site. Optional monthly plans after launch are $297, $750 or $1,500.",
+      "Small business websites in NYC start at $950, paid once as a development fee. You don't pay for hosting each month or rent the site, and both the domain and the finished build belong to you. Page count, booking or an online store, and copywriting set the final figure, given as a fixed quote after a free review, never billed hourly. Monthly plans after launch are optional.",
   },
   {
     question: "How long does a new website take to build?",
@@ -642,7 +642,7 @@ const extras: DelawareExtras = {
     centerSub: "booking and payments built in",
   },
   pricing: {
-    title: "Monthly Plans to Pair With Your NYC Website",
+    title: "NYC Web Design Pricing With No Monthly Rent",
     lead: "Keep a new site bringing in customers with a month-to-month plan for local SEO, ads and updates.",
     compareTitle: "Post-Launch Plans, Compared",
     compareLead: "What each plan adds once your site is live.",

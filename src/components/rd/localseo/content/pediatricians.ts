@@ -501,7 +501,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What does a pediatrics SEO company charge?",
-        a: "Our three plans are $297, $750 and $1,500 a month, month to month. Single-office practices often start with the first; groups with several pediatricians or offices, or those adding managed Google Ads, tend to choose the second or third. Your audit will name the best fit.",
+        a: "Our three plans are $297, $950 and $1,500 a month, month to month. Single-office practices often start with the first; groups with several pediatricians or offices, or those adding managed Google Ads, tend to choose the second or third. Your audit will name the best fit.",
       },
       {
         q: "How soon do pediatric practices see SEO results?",

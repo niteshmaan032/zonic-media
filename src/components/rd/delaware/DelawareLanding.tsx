@@ -34,6 +34,7 @@ import {
 import { BannerLoops, GRAIN } from "@/components/rd/dfw-kit/banner";
 import { PlatformHub } from "@/components/rd/dfw-kit/hub";
 import { PricingSection } from "@/components/rd/home/HomePricing";
+import { WebsitePricing } from "@/components/rd/home/WebsitePricing";
 import { AboutCard } from "@/components/rd/dfw-kit/ui";
 import {
   AvatarPh,
@@ -1331,7 +1332,17 @@ export function DelawareLanding({
 
         {/* ========================================================= PRICING */}
         {/* Same plans as /home2, headings written for this page (owner, 23 Oct). */}
-        {extras.pricing ? (
+        {/* Web design pages show the one-time website price instead
+            (owner, 5 Nov 2026). */}
+        {extras.pricing && kind === "web" ? (
+          <WebsitePricing
+            idPrefix="de"
+            title={extras.pricing.title}
+            customTitle={extras.pricing.customTitle}
+            ctaHref={CONTACT}
+            ctaLabel={hero.cta}
+          />
+        ) : extras.pricing ? (
           <PricingSection
             copy={extras.pricing}
             idPrefix="de"

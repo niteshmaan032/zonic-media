@@ -264,6 +264,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Ohio Inspection Marketing That Reaches Realtors and Homeowners",
+    lead: [
+      "Ohio agents who suggest inspectors must give buyers at least three names, and owners often pick on their own. ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Maps optimization",
+      },
+      " and agent outreach keep you on both short lists.",
+    ],
+    lanes: [
+      {
+        audience: "Columbus, Cleveland and Cincinnati agents",
+        icon: "agent",
+        pitch:
+          "Ohio rules forbid paying an agent for a referral or a spot on a vendor list, so making their three-name list takes proof: quick booking, clean reports and steady reviews.",
+        query: "Need a Dublin inspection with radon, Tuesday?",
+        flow: [
+          "Agent picks a slot",
+          "Radon monitor set",
+          "Sewer line scoped",
+          "Summary for buyer",
+        ],
+        badge: "Picked from the agent's three names",
+        jobs: [
+          {
+            name: "Buyer's inspection with radon",
+            tactic: "Your Ohio radon license on the agent page",
+          },
+          {
+            name: "Sewer scope for older suburbs",
+            tactic: "Cleveland and Cincinnati pages agents can forward",
+          },
+          {
+            name: "Wood-destroying insect report",
+            tactic: "Listed with your ODA pest license on request forms",
+          },
+        ],
+      },
+      {
+        audience: "Ohio homeowners and sellers",
+        icon: "home",
+        pitch:
+          "Because agents must offer choices, many Ohio buyers compare inspectors online before they book. Sellers do too. We make your reviews, add-ons and booking page win that comparison.",
+        query: "home inspection with radon columbus ohio",
+        flow: [
+          "Compares three names",
+          "Checks your reviews",
+          "Adds sewer scope",
+          "Books online",
+        ],
+        badge: "Chosen after an online comparison",
+        jobs: [
+          {
+            name: "Seller pre-inspection",
+            tactic: "Point-of-sale prep pages for Cleveland suburbs",
+          },
+          {
+            name: "Basement water and mold check",
+            tactic: "Clay-soil pages for Columbus and Dayton owners",
+          },
+          {
+            name: "Annual home maintenance inspection",
+            tactic: "Yearly reminder emails to past clients",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Ohio add-on tests buyers and sellers pick",
+      items: [
+        "Radon test (ODH licensed)",
+        "Sewer scope",
+        "Termite / WDI (ODA licensed)",
+        "Mold sampling",
+        "Well and septic review",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Shape My Ohio Plan",
+  },
   regions: {
     title: "Ohio Metros We Cover, From Toledo to Cincinnati",
     lead: "Ohio has six big metros and dozens of growing suburbs, so each one is treated as its own market with separate pages and ads.",
@@ -361,7 +442,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Each Ohio metro and suburb checked",
       "Radon and sewer scope demand measured",
-      "Pick a $297, $750 or $1,500 plan, month to month",
+      "Pick a $297, $950 or $1,500 plan, month to month",
     ],
     form: {
       formType: "home-inspector-marketing-ohio",

@@ -1,8 +1,8 @@
 # Pricing: Zonic Media (zonicllc.com)
 
-Last updated: 2026-10-27
+Last updated: 2026-11-05
 
-All prices are in US dollars, per month unless noted. Plans can be billed monthly or annually; annual billing lowers the monthly price on Foundation and Authority. There is no long-term contract on monthly billing. Google Ads and Meta Ads spend is paid to the ad platform directly and is not part of the plan price. Human-readable version: https://www.zonicllc.com/pricing
+All prices are in US dollars, per month unless noted. Plans can be billed monthly or annually; annual billing lowers the monthly price on every plan. There is no long-term contract on monthly billing. Google Ads and Meta Ads spend is paid to the ad platform directly and is not part of the plan price. Human-readable version: https://www.zonicllc.com/pricing
 
 ## Foundation plan
 - Price: $197 per month billed annually, or $297 per month billed monthly
@@ -10,38 +10,39 @@ All prices are in US dollars, per month unless noted. Plans can be billed monthl
 - Includes:
   - Google Business Profile audit and optimization
   - Monthly profile maintenance
-  - 4 Google Business Profile posts per month
+  - 7 Google Business Profile posts per month
   - On-page SEO for up to 3 existing pages (up to 5 keywords)
   - NAP audit and citation audit of up to 20 directories
   - Review monitoring and response guidance
   - Monthly performance summary
 
 ## Growth plan (most popular)
-- Price: $750 per month
+- Price: $750 per month billed annually, or $950 per month billed monthly
 - For: established businesses ready to generate more direct inquiries
 - Includes everything in Foundation, plus:
-  - Google Search Ads setup or restructuring (1 Google Ads account, up to 2 Search campaigns)
-  - Keyword and negative keyword management, geo-targeting, conversion tracking, weekly campaign checks
-  - Local SEO for up to 3 priority Google Business Profile locations
+  - Google Ads setup or restructuring (1 Google Ads account, up to 2 campaigns)
+  - Keyword and negative keyword management, conversion tracking, weekly campaign checks
+  - Up to 20 Google Business Profile posts per month, geotagged images
+  - Local SEO for up to 2 priority Google Business Profile locations
   - Optimization of up to 10 existing pages per month
   - Review workflow setup and monitoring
-  - Monthly lead and performance report, quarterly strategy review
+  - Monthly lead and performance report, monthly strategy review
 
 ## Authority plan
 - Price: $1,250 per month billed annually, or $1,500 per month billed monthly
 - For: multi-location teams and established firms
 - Includes everything in Growth, plus:
-  - Local SEO planning for up to 5 priority Google Business Profile locations
-  - Local Services Ads account setup
-  - Optimization of up to 8 existing pages per month
-  - Management of up to 2 social platforms, 8 social posts per month
+  - Local SEO planning for up to 3 priority Google Business Profile locations
+  - Local Services Ads (LSA) account setup
+  - Optimization of up to 15 existing pages per month
+  - Management of up to 2 social platforms, 15 social posts per month
   - Editing of up to 4 short-form videos per month (client footage)
-  - Meta Ads management for up to 2 campaigns, where appropriate
-  - Quarterly website conversion audit, service-line expansion planning
+  - Meta Ads or LSA management for up to 2 campaigns, where appropriate
+  - Monthly website conversion audit
   - Monthly lead-source review, monthly strategy meeting and action plan
 
 ## Add-ons (any plan)
-- New business website: from $1,000 one-time (typical build time 2 to 3 weeks)
+- New business website: from $950 one-time, with no monthly hosting or rental fees; you own the domain and the site (typical build time 2 to 3 weeks)
 - Additional service-area landing page: $150 to $250 per page
 - Additional location SEO campaign: from $200 per month
 - Additional Google Ads campaign management: $150 to $300 per month

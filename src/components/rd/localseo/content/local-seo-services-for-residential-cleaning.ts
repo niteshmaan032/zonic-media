@@ -490,7 +490,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does maid service SEO cost?",
-        a: "Plans are priced at $297, $750 or $1,500 monthly and can be cancelled any month. Solo owners and small teams usually begin with the first; companies serving several suburbs or adding Google Ads management move up a tier. Your audit suggests the right starting point.",
+        a: "Plans are priced at $297, $950 or $1,500 monthly and can be cancelled any month. Solo owners and small teams usually begin with the first; companies serving several suburbs or adding Google Ads management move up a tier. Your audit suggests the right starting point.",
       },
       {
         q: "How soon will residential cleaning SEO bring bookings?",

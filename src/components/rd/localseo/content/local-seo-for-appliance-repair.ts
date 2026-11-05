@@ -488,7 +488,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What do appliance repair SEO services cost?",
-        a: "Our plans are $297, $750 or $1,500 a month on a month-to-month basis. One-van shops in a single town usually start with the first plan; multi-tech companies, wider routes or managed Google Ads usually call for a bigger plan. Your audit will suggest one.",
+        a: "Our plans are $297, $950 or $1,500 a month on a month-to-month basis. One-van shops in a single town usually start with the first plan; multi-tech companies, wider routes or managed Google Ads usually call for a bigger plan. Your audit will suggest one.",
       },
       {
         q: "When will appliance repair SEO show results?",

@@ -498,7 +498,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What do your cannabis SEO plans cost?",
-        a: "We offer $297, $750 and $1,500 monthly plans, billed month to month. For dispensaries only the SEO, Maps and listing work applies, since THC ads are off limits. A single store usually fits Foundation; multi-store groups get a scope per location after the free audit.",
+        a: "We offer $297, $950 and $1,500 monthly plans, billed month to month. For dispensaries only the SEO, Maps and listing work applies, since THC ads are off limits. A single store usually fits Foundation; multi-store groups get a scope per location after the free audit.",
       },
       {
         q: "How long until dispensary SEO shows results?",

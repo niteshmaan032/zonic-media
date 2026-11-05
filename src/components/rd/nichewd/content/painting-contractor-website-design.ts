@@ -517,7 +517,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unfiltered feedback from owners we've worked with, live on our Google profile.",
   },
   pricing: {
-    title: "Growth Plans for a Painting Contractor Website",
+    title: "Painting Contractor Website Pricing, No Rental",
     compareTitle: "Plan Features for Painting Company Sites",
     addOnsTitle: "Add-Ons for Painters: Pages, Galleries, Tools",
     customTitle: "Running Paint Crews in Several Cities?",
@@ -528,7 +528,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a painting contractor website cost?",
-        a: "Your price is set once, after a free call where we go over your crews, service towns and how you handle estimates, and it stays put through launch. On a qualifying monthly growth plan? Then our free website offer waives the build itself.",
+        a: "Painting contractor websites start at $950, paid once for development. Hosting has no monthly fee, the site isn't leased, and your business owns the domain and pages. A free call about crews, service towns and estimates sets your price, and it stays put through launch. On a qualifying monthly growth plan? Our free website offer waives the build.",
       },
       {
         q: "How many weeks does a website for a painting business take?",

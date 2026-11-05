@@ -529,7 +529,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Honest reviews from business owners, shown live from our Google profile.",
   },
   pricing: {
-    title: "Keep Your Flooring Site Growing Each Month",
+    title: "Flooring Website Pricing: One Fee, Yours to Own",
     compareTitle: "Which Plan Fits Your Flooring Store?",
     addOnsTitle: "Extras for Showrooms and Install Crews",
     customTitle: "More Than One Flooring Location?",
@@ -540,7 +540,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a flooring website cost?",
-        a: "You'll get one fixed quote after a short, free call about your store, materials and service area, and it won't change once work starts. Choose a qualifying growth plan with monthly billing, and the flooring site itself costs nothing under our free website offer.",
+        a: "Flooring websites start at $950, one development fee and done. You won't rent the site or pay monthly for hosting, and the domain plus every page stays in your name. A short free call on your store, materials and service area sets a fixed quote. Choose a qualifying growth plan with monthly billing and the flooring site costs nothing.",
       },
       {
         q: "When will my new flooring website be ready?",

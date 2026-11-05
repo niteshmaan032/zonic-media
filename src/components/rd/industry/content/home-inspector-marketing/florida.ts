@@ -260,6 +260,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Florida Home Inspection Leads From Realtors and Homeowners",
+    lead: [
+      "Florida law bars inspectors from rewarding agents for referrals, so we win agents fairly with speed and clear reports. Insurance-driven owners come direct, through ",
+      {
+        href: "/services/local-seo-for-home-services",
+        label: "local SEO built for home services",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Florida Realtors Working Tight Inspection Windows",
+        icon: "agent",
+        pitch:
+          "Agents need the buyer inspection, a 4-point and a wind mitigation form back before the insurance quote stalls the closing. Bundled booking and quick turnaround make you their first call.",
+        query: "Need inspection, 4-point and wind mit on a Tampa ranch",
+        flow: [
+          "Agent books bundle",
+          "Single visit",
+          "Insurance forms ready",
+          "Agent gets summary",
+        ],
+        badge: "Insurance forms in one visit",
+        jobs: [
+          {
+            name: "Buyer inspection plus insurance forms",
+            tactic: "One-visit bundle on your agent booking page",
+          },
+          {
+            name: "WDO reports through a pest partner",
+            tactic: "Lender-ready add-on with the licensed firm named",
+          },
+          {
+            name: "Condo inspections in South Florida",
+            tactic: "Bilingual sample report for Miami and Broward agents",
+          },
+        ],
+      },
+      {
+        audience: "Florida Homeowners, Snowbirds and Sellers",
+        icon: "home",
+        pitch:
+          "Owners shopping insurance want wind mitigation and 4-point reports, snowbirds book from out of state, and Orlando new-construction owners book warranty checks. We give each one its own page.",
+        query: "wind mitigation inspection near me cape coral",
+        flow: [
+          "Searches wind mit",
+          "Books online",
+          "Form completed",
+          "Sent to insurer",
+        ],
+        badge: "Wind mit booked direct",
+        jobs: [
+          {
+            name: "Wind mitigation inspections",
+            tactic: "Coastal town pages ranked before renewal season",
+          },
+          {
+            name: "4-point inspections for older homes",
+            tactic: "Jacksonville and St. Pete pages for insurance searches",
+          },
+          {
+            name: "Pre-drywall and 11-month warranty checks",
+            tactic:
+              "Central Florida builder-community pages and email reminders",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-On Reports Florida Clients Need",
+      items: [
+        "Wind mitigation",
+        "4-point report",
+        "Roof certification",
+        "WDO via pest partner",
+        "Pool and spa",
+        "Sewer scope",
+      ],
+    },
+    cta: "Plan My Florida Agent Outreach",
+  },
   regions: {
     title: "Florida Regions and Cities on Our Map",
     lead: "Panhandle beaches to Miami high-rises: we shape pages and service areas around how each region searches.",
@@ -347,7 +429,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do Florida inspectors pay for Zonic Media plans?",
-        a: "You can pick $297, $750 or $1,500 each month, all month to month. We add no markup to the ad spend Google bills you. More cities, report pages and campaigns come with the higher plans.",
+        a: "You can pick $297, $950 or $1,500 each month, all month to month. We add no markup to the ad spend Google bills you. More cities, report pages and campaigns come with the higher plans.",
       },
     ],
   },

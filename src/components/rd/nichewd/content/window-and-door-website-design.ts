@@ -507,7 +507,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Business owners left these on our Google profile; we don't edit or filter them.",
   },
   pricing: {
-    title: "Window and Door Website Plans",
+    title: "Window and Door Website Pricing, Yours to Keep",
     compareTitle: "Features by Plan for Window Company Sites",
     addOnsTitle: "Extra Tools for Window and Door Dealers",
     customTitle: "Several Showrooms or Install Regions?",
@@ -518,7 +518,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much do web design services for window and door companies cost?",
-        a: "After a free discovery call about your product lines, showrooms and towns, we send one fixed quote covering design, copy and development. That price stays put until go-live. Window and door dealers on a qualifying monthly growth plan get the website itself free.",
+        a: "Web design for window and door companies starts at $950, one fee for the build. There's no monthly hosting cost or rental fee, and the domain and the website stay with your business. Product lines, showrooms and towns are reviewed on a free discovery call, then one fixed quote covers design, copy and development. Dealers who add a qualifying monthly plan receive the website itself free.",
       },
       {
         q: "How long does a window company website take?",

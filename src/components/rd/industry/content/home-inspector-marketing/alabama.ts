@@ -261,6 +261,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Alabama Home Inspection Marketing to Realtors and Homeowners",
+    lead: [
+      "Huntsville relocation agents, Birmingham listing teams and Gulf Coast buyers each book you differently. We court agents with fast, clear reports and win homeowners on Google, then ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "tune your Business Profile",
+      },
+      " so both find you.",
+    ],
+    lanes: [
+      {
+        audience: "Alabama Realtors and Relocation Agents",
+        icon: "agent",
+        pitch:
+          "Agents moving engineers into Huntsville or military families into Montgomery need an inspector who books quickly and reports plainly. Your agent page proves it, with no referral fees.",
+        query: "Buyer is out of state. Can you inspect in Madison Thursday?",
+        flow: [
+          "Agent texts request",
+          "Slot booked online",
+          "Radon kit placed",
+          "Summary emailed",
+        ],
+        badge: "Agent summary sent tonight",
+        jobs: [
+          {
+            name: "Relocation buyer inspections",
+            tactic: "Video walk-throughs agents can send to remote buyers",
+          },
+          {
+            name: "Crawlspace and moisture checks",
+            tactic: "Photo-rich findings agents forward to nervous buyers",
+          },
+          {
+            name: "Pre-listing inspections in Hoover",
+            tactic: "Quarterly email to Over-the-Mountain listing teams",
+          },
+        ],
+      },
+      {
+        audience: "Alabama Homeowners Booking on Their Own",
+        icon: "home",
+        pitch:
+          "Coastal owners want roof and wind checks, Tennessee Valley buyers ask about radon, and new-build owners need a warranty walk. Each search lands on a page built for it.",
+        query: "11 month warranty inspection huntsville al",
+        flow: [
+          "Searches Huntsville",
+          "Reads local reviews",
+          "Books online",
+          "Photo report sent",
+        ],
+        badge: "Booked before the builder deadline",
+        jobs: [
+          {
+            name: "11-month builder warranty walks",
+            tactic: "Madison and Limestone new-build pages with reminder ads",
+          },
+          {
+            name: "Roof and wind-condition reviews",
+            tactic: "Mobile Bay pages for insurance-minded owners",
+          },
+          {
+            name: "Seller pre-listing inspections",
+            tactic: "Birmingham seller page linked from your Google profile",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-Ons Alabama Buyers and Sellers Book",
+      items: [
+        "Radon testing",
+        "Termite letter via pest partner",
+        "Crawlspace moisture check",
+        "Mold sampling",
+        "Well water testing",
+        "Sewer camera scope",
+      ],
+    },
+    cta: "Plan My Alabama Outreach",
+  },
   regions: {
     title: "Alabama Markets We Cover, Huntsville to the Gulf Coast",
     lead: "Each part of the state books inspections in its own way, and our pages, ads and service areas follow suit.",
@@ -357,7 +438,7 @@ export const CONTENT: LocationContent = {
     points: [
       "Every Alabama town on your route checked",
       "Radon and add-on searches included",
-      "Month-to-month tiers: $297, $750, $1,500",
+      "Month-to-month tiers: $297, $950, $1,500",
     ],
     form: {
       formType: "home-inspector-marketing-alabama",

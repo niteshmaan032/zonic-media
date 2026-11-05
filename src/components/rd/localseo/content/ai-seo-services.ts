@@ -489,7 +489,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "What do AI SEO services cost per month?",
-        a: "Our plans run $297, $750 or $1,500 a month, month to month. Each covers the profile, page and listing work AI engines rely on. The free check shows which plan fits your market and whether extra AI work is worth adding.",
+        a: "Our plans run $297, $950 or $1,500 a month, month to month. Each covers the profile, page and listing work AI engines rely on. The free check shows which plan fits your market and whether extra AI work is worth adding.",
       },
       {
         q: "How long until AI tools start naming my business?",

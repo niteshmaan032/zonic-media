@@ -29,7 +29,8 @@ import {
   cx,
 } from "@/components/rd/dfw-kit/primitives";
 import { AvatarPh, Sparks, TrustLogos } from "@/components/rd/dfw-kit/visuals";
-import { PricingSection } from "@/components/rd/home/HomePricing";
+import { WebsitePricing } from "@/components/rd/home/WebsitePricing";
+import { AiSearchSection } from "@/components/rd/industry/AiSearchSection";
 import { GradientBanner } from "@/components/rd/industry/GradientBanner";
 import { Icon } from "@/components/rd/industry/icons";
 import type { Palette } from "@/components/rd/industry/types";
@@ -399,6 +400,11 @@ export function NicheWebTemplate({ c }: { c: NicheWebContent }) {
           </Wrap>
         </Section>
 
+        {/* ======================================================= AI SEARCH */}
+        {c.aiSearch ? (
+          <AiSearchSection id="seo" p={p} c={c.aiSearch} ctaHref={CONSULT} />
+        ) : null}
+
         {/* ========================================================= SITEMAP */}
         <Section labelledBy="seo-map-h">
           <Wrap>
@@ -567,9 +573,11 @@ export function NicheWebTemplate({ c }: { c: NicheWebContent }) {
         </Section>
 
         {/* ========================================================= PRICING */}
-        <PricingSection
-          copy={c.pricing}
+        {/* One-time website price (owner, 5 Nov 2026), not the monthly plans. */}
+        <WebsitePricing
           idPrefix="seo"
+          title={c.pricing.title}
+          customTitle={c.pricing.customTitle}
           ctaHref={CONSULT}
           ctaLabel={c.hero.cta}
         />

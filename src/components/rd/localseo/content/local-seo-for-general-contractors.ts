@@ -500,7 +500,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for general contractors cost?",
-        a: "Monthly plans are $297, $750 or $1,500, and none require a yearly commitment. A firm working one county often starts on the first; contractors with commercial divisions, several offices or managed Google Ads usually step up to a larger tier. Your free audit picks the fit by how crowded your county's results are.",
+        a: "Monthly plans are $297, $950 or $1,500, and none require a yearly commitment. A firm working one county often starts on the first; contractors with commercial divisions, several offices or managed Google Ads usually step up to a larger tier. Your free audit picks the fit by how crowded your county's results are.",
       },
       {
         q: "Does construction SEO work for commercial contractors?",

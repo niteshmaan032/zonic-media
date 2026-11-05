@@ -493,7 +493,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does window company SEO cost?",
-        a: "We offer three plans, $297, $750 and $1,500 a month, with no long contract. A single showroom often fits the first; companies with several showrooms or a wide install area, or that want Google Ads handled, usually pick a larger plan. The free audit points to one.",
+        a: "We offer three plans, $297, $950 and $1,500 a month, with no long contract. A single showroom often fits the first; companies with several showrooms or a wide install area, or that want Google Ads handled, usually pick a larger plan. The free audit points to one.",
       },
       {
         q: "How long does SEO take for a window replacement company?",

@@ -271,6 +271,85 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Oklahoma Home Inspector Marketing for Realtors and New-Build Buyers",
+    lead: [
+      "Tulsa and OKC realtors refer buyers on a short inspection period, and owners of new Edmond or Mustang homes book builder-phase checks on their own. A ",
+      { href: "/services/web-design", label: "booking website" },
+      " plus agent outreach covers both groups.",
+    ],
+    lanes: [
+      {
+        audience: "OKC and Tulsa realtors",
+        icon: "handshake",
+        pitch:
+          "Oklahoma agents want an inspector who explains foundation movement calmly and handles the ODAFF-1 termite form when the loan needs it. We prove you do both.",
+        query: "Edmond buyer, inspection period ends Monday",
+        flow: [
+          "Agent request lands",
+          "Booked same day",
+          "Foundation notes added",
+          "Report to buyer",
+        ],
+        badge: "Booked before the inspection period closes",
+        jobs: [
+          {
+            name: "Buyer's home inspection",
+            tactic: "Agent page with open slots across the metro",
+          },
+          {
+            name: "Foundation and slab review",
+            tactic: "Clay-soil explainer agents can send to buyers",
+          },
+          {
+            name: "Termite (ODAFF-1) report",
+            tactic: "Offered on the agent form for loans that need it",
+          },
+        ],
+      },
+      {
+        audience: "Oklahoma new-build and resale owners",
+        icon: "construction",
+        pitch:
+          "Families buying new in Edmond, Mustang and Norman book pre-drywall, final and 11-month visits on their own. Phase pages and warranty reminders win those bookings.",
+        query: "11 month warranty inspection edmond ok",
+        flow: [
+          "Searches warranty visit",
+          "Sees phase packages",
+          "Picks a date",
+          "List for builder",
+        ],
+        badge: "Warranty list ready for the builder",
+        jobs: [
+          {
+            name: "Pre-drywall phase inspection",
+            tactic: "Pages for each growing OKC suburb",
+          },
+          {
+            name: "Builder's 11-month warranty check",
+            tactic: "Email reminders to past new-build clients",
+          },
+          {
+            name: "Annual home check-up",
+            tactic: "Posts after hail season inviting owner bookings",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Oklahoma add-ons clients ask about",
+      items: [
+        "Termite / ODAFF-1 report",
+        "Foundation elevation survey",
+        "Sewer camera scope",
+        "Pre-drywall visit",
+        "Pool inspection",
+        "Mold testing",
+      ],
+    },
+    cta: "Plan My Oklahoma Outreach",
+  },
   regions: {
     title: "Oklahoma Regions and Towns We Cover",
     lead: "Oklahoma's growth is split between two metros and a ring of suburbs, so we treat each area as its own market for pages and ads.",

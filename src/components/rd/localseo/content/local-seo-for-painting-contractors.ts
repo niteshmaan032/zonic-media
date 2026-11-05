@@ -492,7 +492,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does painting contractor SEO cost?",
-        a: "Our three plans run $297, $750 and $1,500 a month with no contract. Owner-operators with one crew often begin on the entry plan, while painting companies spread over several suburbs, or wanting Google Ads handled too, usually need more. Your free audit recommends one.",
+        a: "Our three plans run $297, $950 and $1,500 a month with no contract. Owner-operators with one crew often begin on the entry plan, while painting companies spread over several suburbs, or wanting Google Ads handled too, usually need more. Your free audit recommends one.",
       },
       {
         q: "How soon will a painting company see SEO results?",

@@ -336,7 +336,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much do your Arizona plumbing marketing plans cost?",
-        a: "Arizona plans come in three tiers, $297, $750 and $1,500 per month, sized by how many cities and channels you want covered. All of them run month to month with no long contract, and ad spend is paid to Google at a 0% markup. We suggest a tier after your free audit.",
+        a: "Arizona plans come in three tiers, $297, $950 and $1,500 per month, sized by how many cities and channels you want covered. All of them run month to month with no long contract, and ad spend is paid to Google at a 0% markup. We suggest a tier after your free audit.",
       },
       {
         q: "My Arizona plumbing profile was suspended. Can you get it back?",

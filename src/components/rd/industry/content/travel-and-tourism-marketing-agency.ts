@@ -472,7 +472,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What does travel and tourism marketing cost at Zonic Media?",
-        a: "Plans cost $297, $750 or $1,500 each month, all month to month, with ad spend billed at a 0% markup. A single tour or rental usually starts on the first tier; operators with several products or markets tend to need more.",
+        a: "Plans cost $297, $950 or $1,500 each month, all month to month, with ad spend billed at a 0% markup. A single tour or rental usually starts on the first tier; operators with several products or markets tend to need more.",
       },
       {
         q: "How long before a travel business sees more bookings?",

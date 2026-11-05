@@ -386,7 +386,7 @@ const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
     },
     {
       q: "How much does a digital marketing agency in Dallas cost?",
-      a: "Most agencies charge small businesses somewhere between $1,000 and $5,000 a month, depending on the channels. Our local SEO plans are $297, $750 and $1,500 a month, Google Ads management is priced on ad spend, and websites are a one-time project fee. Every engagement starts with a free audit and a flat quote.",
+      a: "Most agencies charge small businesses somewhere between $1,000 and $5,000 a month, depending on the channels. Our local SEO plans are $297, $950 and $1,500 a month, Google Ads management is priced on ad spend, and websites are a one-time project fee. Every engagement starts with a free audit and a flat quote.",
     },
     {
       q: "How long does it take to see results?",
@@ -406,7 +406,7 @@ const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
     },
     {
       q: "Do you offer local SEO in Dallas and Fort Worth?",
-      a: "Yes. Local SEO is the core of most of our DFW plans: Google Business Profile optimization, consistent listings, links from local sites and a page for each city you serve. We check your rankings from cities across the Metroplex every month, and plans are $297, $750 or $1,500 a month.",
+      a: "Yes. Local SEO is the core of most of our DFW plans: Google Business Profile optimization, consistent listings, links from local sites and a page for each city you serve. We check your rankings from cities across the Metroplex every month, and plans are $297, $950 or $1,500 a month.",
       link: { href: "/services/local-seo-packages", label: "See our local SEO packages" },
     },
     {

@@ -92,7 +92,7 @@ const ServiceLeadForm = dynamic(
    day). Other files under /public/images/dfw/seo/ are unused and stay until
    the final clean-up.
 
-   FACTS come from existing pages only: plans from $297 / $750 / $1,500 a
+   FACTS come from existing pages only: plans from $297 / $950 / $1,500 a
    month, month to month, flat quote after a free audit (/services/local-
    seo-packages); Map Pack movement typically in 4–8 weeks, organic rankings
    in 3–6 months (/services/local-seo-for-small-business); 5.0 on Google;
@@ -501,7 +501,7 @@ const plans = [
   {
     kicker: "Compounding growth",
     name: "Growth",
-    price: "$750",
+    price: "$950",
     badge: "Best fit for most DFW markets",
     subtitle:
       "Everything in Foundation, plus the monthly work that builds rankings you keep.",
@@ -535,7 +535,7 @@ const faqs: { q: string; a: string; link?: { href: string; label: string } }[] =
   [
     {
       q: "What do local SEO services cost in Dallas?",
-      a: "Plans begin at $297, with $750 and $1,500 tiers for busier markets, all billed monthly with no contract. A free audit comes first, then one flat quote based on how competitive your category and suburbs are.",
+      a: "Plans begin at $297, with $950 and $1,500 tiers for busier markets, all billed monthly with no contract. A free audit comes first, then one flat quote based on how competitive your category and suburbs are.",
       link: {
         href: "/services/local-seo-packages",
         label: "Compare our local SEO packages",

@@ -1964,3 +1964,28 @@ Report: https://claude.ai/artifact/Mzta5sA4zF238r9rhzS8sY
 - 27 Oct (later, owner): plan cards show the first 5 features on phones/tablets with a "View all N features" toggle (rest stays in the HTML); blog tables back to sideways scrolling on phones (fit-to-width removed); plan comparison opens full screen on ≤767px (fixed title bar, comparison scrolls); pricing trust points vertically centred on phones; phone H1 line-height 1.16 on redesigned pages.
 - 27 Oct (later): blog tables — editor's inline col widths overridden and words no longer split (first column was squeezed to one letter); cells keep ≥9.5rem and wide tables scroll sideways. Blog post body has no outer side padding on phones (article edge to edge, inner padding kept). Blog index featured card title is 18–21px and 2 lines on phones.
 - 27 Oct (later): flicker root cause found from the owner's screen recording — the whole screen went white for ~1–1.5 s as the hero left/re-entered view, only on pages whose hero has two 450px `filter: blur(70px)` glows (home, DelawareLanding city pages, 3 DFW pages, rank checker). Large blur filters make iPhone Safari drop and re-rasterize the layer. All replaced with radial-gradient glows (same look); smaller blurs on LaunchPad, home services SEO and the blog sidebar converted too. No `filter: blur` left in redesigned pages except the desktop-only header dropdown.
+
+## 5 November 2026 — fence pages, 10 home inspector states, web design pricing, white label redesign
+- **Research:** Semrush web app via Chrome (API units out), Search Console via Chrome, GA4. Notes are in `reports/research/` (fence, home inspector states, white label).
+- **Fence contractors** (3 new live pages, no keyword overlap):
+  - `/services/fence-company-marketing-agency`: fence company marketing, leads and ads.
+  - `/services/industry/fence-company-seo`: fence company seo, 590/mo, KD 2.
+  - `/services/fence-company-website-design`: fence company websites. The example site uses the owner's two photos and a new fence estimator widget.
+  - New UIs: yard fence-line estimate, ranking by fence material, estimate pipeline.
+  - New AEO/GEO section (AI answer board + 4 AEO/GEO tactic cards), used on the SEO and web design pages.
+- **Home inspectors:**
+  - 10 new states: CT, DE, ID, IA, KS, ME, MS, NE, NH, NM. Each has its own palette and sourced licensing facts. The hub now lists 41 states.
+  - New "realtors vs homeowners" section on the hub and all 41 states: agent lane, homeowner lane and state-specific add-on tests. It respects state rules on paying agents for referrals.
+  - 0 of 861 page pairs share a 7-word run.
+- **Web design pricing:** every web design page now shows a one-time $950 starting price with the owner's 5 points, plus a custom-plan card. That covers 27 niche pages, /services/web-design, Delaware and NYC. The cost FAQs say so too. The website add-on reads "From $950" everywhere.
+- **Plans (owner's revised sheet):**
+  - Foundation: 7 GBP posts.
+  - Growth: $950 monthly / $750 annual, up to 20 GBP posts, geotagged images, 2 locations, monthly review.
+  - Authority: 3 locations, LSA setup, 15 pages and 15 posts, monthly audit.
+  - Plan audience lines now name each page's niche ("For solo home inspectors…").
+  - Sitewide copy changed from "$297, $750 and $1,500" to "$297, $950 and $1,500".
+- **White label services:** `/services/white-label-services` rebuilt in the new layout with fresh copy led by the Search Console and Semrush data.
+  - New UIs: branded agency report, reinstatement case tracker, partner work queue.
+  - Also uses the audience lanes and the AI search section.
+  - The old form and visuals components were removed.
+- **Checks:** tsc clean; production build passes (219 pages); all 202 sitemap URLs return 200 and are indexable; llms.txt and llms-full.txt rebuilt; sitemap lastmod regenerated.

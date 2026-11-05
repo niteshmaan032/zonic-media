@@ -526,7 +526,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Every review comes from a business owner we worked with, and none are edited.",
   },
   pricing: {
-    title: "Plans That Keep Your Electrician Site Growing",
+    title: "Electrician Website Pricing Without Hosting Bills",
     compareTitle: "Side by Side: What Each Plan Adds for Electricians",
     addOnsTitle: "Extras for Electrical Contractor Websites",
     customTitle: "Multiple Electrical Branches or Crews?",
@@ -537,7 +537,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "What does an electrician website cost?",
-        a: "We scope your services, licenses and must-have features on a free consultation, then quote one fixed price that won't change mid-build. Sign a monthly growth plan that qualifies and the electrician website itself is free under our offer. Either way, you know the full cost before work begins.",
+        a: "Electrician websites start at $950 for the build, a fee you pay one time. No hosting is billed monthly, no rental fee applies, and the domain and site belong to you. Services, licenses and features are scoped on a free consultation, then priced at one fixed figure. Sign a monthly growth plan that qualifies and the electrician site is free under our offer.",
       },
       {
         q: "How long until my electrician website is live?",

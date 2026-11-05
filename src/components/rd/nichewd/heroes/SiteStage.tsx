@@ -368,8 +368,70 @@ function ValuationWidget({ stage, s, t, ink }: W) {
   );
 }
 
+/** The estimator's length slider and gate picker (fence companies). */
+function LengthAndGates({ t, small }: { t: BrandTone; small?: boolean }) {
+  return (
+    <>
+      <span className={cx("tw:block", small ? "tw:mt-3" : "tw:mt-3.5")}>
+        <span className="tw:flex tw:items-center tw:justify-between tw:text-[11px] tw:font-semibold tw:text-(--ink-2)">
+          Approx. length
+          <span style={{ color: t.softText }}>About 150 ft</span>
+        </span>
+        <span className="tw:relative tw:mt-2 tw:block tw:h-1.5 tw:rounded-full tw:bg-(--panel)">
+          <span
+            className="nwd-slide tw:absolute tw:inset-y-0 tw:left-0 tw:w-[58%] tw:rounded-full"
+            style={{ background: t.solid }}
+          />
+          <span
+            className="nwd-knob tw:absolute tw:top-1/2 tw:left-[58%] tw:size-4 tw:-translate-x-1/2 tw:-translate-y-1/2 tw:rounded-full tw:bg-white tw:ring-[3px]"
+            style={{ ["--tw-ring-color" as string]: t.solid }}
+          />
+        </span>
+      </span>
+      <span className="tw:mt-3 tw:flex tw:items-center tw:gap-2 tw:text-[11px] tw:font-semibold tw:text-(--ink-2)">
+        Gates
+        <span className="tw:ml-auto tw:grid tw:grid-cols-3 tw:gap-1 tw:text-center">
+          {["None", "1", "2+"].map((g, i) => (
+            <span
+              key={g}
+              className="tw:rounded-[8px] tw:px-2.5 tw:py-1"
+              style={
+                i === 1
+                  ? { background: t.solid, color: t.onSolid }
+                  : { background: "var(--panel)" }
+              }
+            >
+              {g}
+            </span>
+          ))}
+        </span>
+      </span>
+    </>
+  );
+}
+
+/** Fence estimator: fence-type chips, a length slider and a gate picker
+    (fence contractors). */
+function EstimateWidget({ stage, s, t, ink }: W) {
+  return (
+    <div className={BOX}>
+      <WidgetHead
+        icon={<FiFileText />}
+        title={stage.bookTitle}
+        t={t}
+        ink={ink}
+      />
+      <Chips items={s.book} t={t} />
+      <LengthAndGates t={t} small />
+      <Confirm label={stage.confirm} t={t} />
+    </div>
+  );
+}
+
 function Widget(p: W) {
   switch (p.stage.widget) {
+    case "estimate":
+      return <EstimateWidget {...p} />;
     case "quote":
       return <QuoteWidget {...p} />;
     case "dispatch":
@@ -421,6 +483,11 @@ const FORM: Record<
     fields: ["Property address", "Full name", "Phone"],
     select: "I'm interested in",
     wideFirst: true,
+  },
+  estimate: {
+    note: "Free on-site measure, no obligation",
+    fields: ["Full name", "Phone"],
+    select: "Fence type",
   },
 };
 
@@ -531,6 +598,17 @@ function PhotoSite({ stage, s, t }: W) {
             <span className="tw:mt-0.5 tw:block tw:text-[11.5px] tw:text-(--muted)">
               {FORM[stage.widget].note}
             </span>
+            {stage.widget === "estimate" ? (
+              <>
+                <span className="tw:mt-3.5 tw:block tw:text-[11px] tw:font-semibold tw:text-(--ink-2)">
+                  {FORM.estimate.select}
+                </span>
+                <span className="tw:-mt-1 tw:block">
+                  <Chips items={s.book} t={t} />
+                </span>
+                <LengthAndGates t={t} />
+              </>
+            ) : null}
             <span className="tw:mt-3.5 tw:grid tw:grid-cols-2 tw:gap-2 tw:text-[11px]">
               {FORM[stage.widget].fields.map((f, k) => (
                 <span
@@ -547,14 +625,16 @@ function PhotoSite({ stage, s, t }: W) {
                 </span>
               ))}
             </span>
-            <span className="tw:mt-2 tw:grid tw:gap-1 tw:text-[11px]">
-              <span className="tw:font-semibold tw:text-(--ink-2)">
-                {FORM[stage.widget].select}
+            {stage.widget !== "estimate" ? (
+              <span className="tw:mt-2 tw:grid tw:gap-1 tw:text-[11px]">
+                <span className="tw:font-semibold tw:text-(--ink-2)">
+                  {FORM[stage.widget].select}
+                </span>
+                <span className="tw:flex tw:h-8 tw:items-center tw:justify-between tw:rounded-[8px] tw:border tw:border-(--line) tw:px-2.5 tw:text-[11.5px]">
+                  {s.book[0]} <FiChevronDown className="tw:text-(--muted)" />
+                </span>
               </span>
-              <span className="tw:flex tw:h-8 tw:items-center tw:justify-between tw:rounded-[8px] tw:border tw:border-(--line) tw:px-2.5 tw:text-[11.5px]">
-                {s.book[0]} <FiChevronDown className="tw:text-(--muted)" />
-              </span>
-            </span>
+            ) : null}
             <span
               className="nwd-pulse tw:mt-3.5 tw:flex tw:items-center tw:justify-center tw:gap-1.5 tw:rounded-[10px] tw:py-2.5 tw:text-[13px] tw:font-semibold"
               style={{ background: t.solid, color: t.onSolid }}

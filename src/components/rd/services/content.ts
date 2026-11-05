@@ -155,7 +155,7 @@ export const SERVICES_FAQS: { question: string; answer: string }[] = [
   {
     question: "What does a digital marketing plan cost each month?",
     answer:
-      "Plans are $297, $750 and $1,500 a month, each with fixed deliverables. Websites are a fixed-price project and add-ons are priced separately. Ad budgets go straight to Google or Meta with 0% ad-spend markup.",
+      "Plans are $297, $950 and $1,500 a month, each with fixed deliverables. Websites are a fixed-price project and add-ons are priced separately. Ad budgets go straight to Google or Meta with 0% ad-spend markup.",
   },
   {
     question: "How long does SEO take to bring in calls?",

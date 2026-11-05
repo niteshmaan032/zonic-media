@@ -431,7 +431,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much is pest control marketing with Zonic Media?",
-        a: "Pick a plan at $297, $750 or $1,500 each month and cancel whenever you like. Google bills ad spend straight to you, and we add nothing on top (0% markup). Which tier fits depends on how many pests, towns and channels you want covered. Seasonal campaigns can be added when demand spikes.",
+        a: "Pick a plan at $297, $950 or $1,500 each month and cancel whenever you like. Google bills ad spend straight to you, and we add nothing on top (0% markup). Which tier fits depends on how many pests, towns and channels you want covered. Seasonal campaigns can be added when demand spikes.",
       },
       {
         q: "Can you recover a suspended Google profile for a pest company?",

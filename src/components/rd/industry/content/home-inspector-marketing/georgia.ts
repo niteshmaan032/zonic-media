@@ -242,6 +242,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Georgia Home Inspector Marketing for Agent Referrals and Direct Bookings",
+    lead: [
+      "Atlanta agents still steer many buyer inspections, yet sellers and new-build owners increasingly search on their own. With no state license number to show, your ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Business Profile",
+      },
+      " and reviews carry the proof for both.",
+    ],
+    lanes: [
+      {
+        audience: "Metro Atlanta Agents and Listing Teams",
+        icon: "agent",
+        pitch:
+          "Agents in Alpharetta, Marietta and Decatur favor inspectors who book online, deliver photo-rich reports quickly and explain crawlspace findings without alarm. We spotlight exactly that, then stay in touch monthly.",
+        query: "Can you add a termite letter to the Marietta inspection?",
+        flow: [
+          "Agent request in",
+          "Termite partner looped",
+          "Report with photos",
+          "Findings explained calmly",
+        ],
+        badge: "Agent-ready summary attached",
+        jobs: [
+          {
+            name: "Buyer inspections with termite letters",
+            tactic: "Partner pest firm named on your agent page",
+          },
+          {
+            name: "Crawlspace and moisture findings",
+            tactic: "Plain-language sample report agents can forward",
+          },
+          {
+            name: "New-construction inspections for buyer's agents",
+            tactic: "Phase checklist PDF emailed to North Fulton agents",
+          },
+        ],
+      },
+      {
+        audience: "Georgia Homeowners and Sellers Who Search Themselves",
+        icon: "home",
+        pitch:
+          "Forsyth and Gwinnett owners book pre-drywall and warranty checks, Savannah buyers want moisture answers, and sellers order inspections before listing. Maps rankings and town pages reach them first.",
+        query: "radon testing marietta ga",
+        flow: [
+          "Town page found",
+          "Radon added",
+          "Booked for Tuesday",
+          "Results walked through",
+        ],
+        badge: "Radon add-on booked online",
+        jobs: [
+          {
+            name: "Pre-drywall and final new-build inspections",
+            tactic: "Forsyth and Gwinnett subdivision pages with booking",
+          },
+          {
+            name: "Radon tests in Cobb, Fulton and DeKalb",
+            tactic: "County radon pages with an add-on checkbox",
+          },
+          {
+            name: "Seller pre-listing inspections",
+            tactic: "Intown seller page promoted in late winter",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Georgia Add-Ons Both Audiences Order",
+      items: [
+        "Wood infestation report via partner",
+        "Radon testing",
+        "Sewer scope",
+        "Crawlspace moisture",
+        "Mold sampling",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Atlanta Agent Outreach",
+  },
   regions: {
     title: "Georgia Markets We Cover, From North Fulton to the Coast",
     lead: "Metro Atlanta acts like several markets, and the coast and mid-state cities have their own agents, so each gets its own pages.",
@@ -328,7 +410,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do your Georgia plans cost?",
-        a: "You can start at $297, step up to $750 or go to $1,500 each month with no contract, and ad budgets pass straight through at a 0% markup. Many start small and add suburbs later.",
+        a: "You can start at $297, step up to $950 or go to $1,500 each month with no contract, and ad budgets pass straight through at a 0% markup. Many start small and add suburbs later.",
       },
     ],
   },

@@ -261,6 +261,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "South Carolina Home Inspection Marketing: Realtors, Buyers, Sellers",
+    lead: [
+      "Charleston and Upstate agents refer buyers inside short inspection windows, while transplants and coastal owners book on their own. We reach both groups through ",
+      {
+        href: "/services/home-inspector-marketing",
+        label: "our inspector marketing",
+      },
+      " and reviews that name your towns.",
+    ],
+    lanes: [
+      {
+        audience: "Charleston and Greenville realtors",
+        icon: "handshake",
+        pitch:
+          "South Carolina agents refer inspectors who confirm fast, coordinate the CL-100 with a licensed pest firm and write reports out-of-state buyers can follow. We showcase exactly that.",
+        query: "Mount Pleasant listing, buyer flying in. Thursday?",
+        flow: [
+          "Agent asks for slot",
+          "CL-100 coordinated",
+          "Inspection with video",
+          "Report shared",
+        ],
+        badge: "Remote buyer inspected, report in hand",
+        jobs: [
+          {
+            name: "Relocation buyer inspection",
+            tactic: "Video-summary sample on your agent page",
+          },
+          {
+            name: "Wind mitigation report",
+            tactic: "Coastal insurance explainer agents can forward",
+          },
+          {
+            name: "Four-point insurance inspection",
+            tactic: "Offered on agent forms for older coastal homes",
+          },
+        ],
+      },
+      {
+        audience: "South Carolina homeowners",
+        icon: "construction",
+        pitch:
+          "New-build buyers in Summerville, Fort Mill and Bluffton book pre-drywall and 11-month warranty visits themselves, and sellers want pre-listing checks. Your pages and reviews meet each search.",
+        query: "pre drywall inspection bluffton sc",
+        flow: [
+          "Searches phase visit",
+          "Reads checklist page",
+          "Picks date",
+          "Gets builder list",
+        ],
+        badge: "Phase visit booked before drywall",
+        jobs: [
+          {
+            name: "Pre-drywall inspection",
+            tactic: "Community pages for Summerville and Bluffton subdivisions",
+          },
+          {
+            name: "11-month warranty inspection",
+            tactic: "Reminder emails to first-year owners you inspected",
+          },
+          {
+            name: "Mold and moisture check",
+            tactic: "Humid-coast pages for crawl space homes",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "South Carolina add-ons buyers and owners book",
+      items: [
+        "CL-100 via licensed pest partner",
+        "Mold sampling",
+        "Wind mitigation form",
+        "Pool and spa check",
+        "Crawl space review",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Fill My SC Calendar",
+  },
   regions: {
     title: "South Carolina Regions Where We Grow Inspectors",
     lead: "Coastal retirees, Upstate transplants and Charlotte commuters all look for inspectors in their own way, so every region has dedicated pages and ads.",
@@ -348,7 +430,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How is South Carolina home inspector marketing priced?",
-        a: "The entry plan is $297 a month, the middle plan $750 and the top plan $1,500, all without a contract. Any ad spend carries a 0% markup. A solo inspector in one town often starts on the first tier, while teams covering several regions need more pages and campaigns.",
+        a: "The entry plan is $297 a month, the middle plan $950 and the top plan $1,500, all without a contract. Any ad spend carries a 0% markup. A solo inspector in one town often starts on the first tier, while teams covering several regions need more pages and campaigns.",
       },
     ],
   },

@@ -332,7 +332,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much is HVAC marketing in Georgia each month?",
-        a: "Plans begin at $297 a month, and the $750 and $1,500 options add more cities, ads and pages. Every plan is month to month, and ad budgets reach Google at a 0% markup. Most owners begin with the metro area they know best and add towns later.",
+        a: "Plans begin at $297 a month, and the $950 and $1,500 options add more cities, ads and pages. Every plan is month to month, and ad budgets reach Google at a 0% markup. Most owners begin with the metro area they know best and add towns later.",
       },
     ],
   },

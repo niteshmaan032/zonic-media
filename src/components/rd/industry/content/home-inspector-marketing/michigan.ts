@@ -261,6 +261,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Michigan Home Inspector Marketing for Realtors and Homeowners",
+    lead: [
+      "Michigan doesn't license home inspectors, so agents and buyers lean on reviews, credentials and sample reports. We put that proof where both look, and a ",
+      {
+        href: "/services/web-design",
+        label: "booking-ready website",
+      },
+      " turns their interest into a scheduled slot.",
+    ],
+    lanes: [
+      {
+        audience: "Michigan Realtors From Detroit to Grand Rapids",
+        icon: "agent",
+        pitch:
+          "Oakland County and West Michigan agents want quick slots, sewer and radon handled in one visit, and summaries their buyers grasp. An agent page and seasonal emails keep you remembered.",
+        query: "Royal Oak bungalow. Can you add a sewer scope Friday?",
+        flow: [
+          "Agent sends request",
+          "Sewer scope added",
+          "One-visit inspection",
+          "Summary for buyers",
+        ],
+        badge: "Sewer and radon in one visit",
+        jobs: [
+          {
+            name: "Buyer inspections for older Detroit-area homes",
+            tactic: "Sample report flagging sewer and wiring findings",
+          },
+          {
+            name: "Pre-listing inspections in Oakland County",
+            tactic: "Spring email to Troy and Novi listing teams",
+          },
+          {
+            name: "Lakefront cottage inspections",
+            tactic: "Agent page for Traverse City and Petoskey second homes",
+          },
+        ],
+      },
+      {
+        audience: "Michigan Homeowners Who Book Without an Agent",
+        icon: "home",
+        pitch:
+          "Buyers in counties with time-of-transfer rules need septic and well evaluations, Ann Arbor owners test for radon, and Kent County new-build owners book warranty walks. Separate pages capture each search.",
+        query: "radon test ann arbor mi",
+        flow: [
+          "Searches radon",
+          "Finds your page",
+          "Adds inspection",
+          "Booked online",
+        ],
+        badge: "Found you without a referral",
+        jobs: [
+          {
+            name: "Septic and well evaluations",
+            tactic: "Pages explaining your county's time-of-sale rules",
+          },
+          {
+            name: "Radon tests in Washtenaw County",
+            tactic: "Ann Arbor radon page linked from your profile",
+          },
+          {
+            name: "First-year new-build inspections",
+            tactic: "Kent County subdivision pages with warranty reminders",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Michigan Add-On Tests Worth Promoting",
+      items: [
+        "Sewer scope",
+        "Radon testing",
+        "Septic evaluation",
+        "Well water testing",
+        "Mold sampling",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Michigan Outreach",
+  },
   regions: {
     title: "Michigan Markets We Cover, Lower Peninsula to the U.P.",
     lead: "Each market is planned separately, with city pages and ad settings built around its housing and buyers.",
@@ -349,7 +430,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much do your Michigan marketing plans cost?",
-        a: "Each Michigan plan is billed monthly at $297, $750 or $1,500, with no long-term contract. Ad spend carries a 0% markup, so every ad dollar reaches Google. Larger plans add more cities, more content and paid campaigns for busy seasons.",
+        a: "Each Michigan plan is billed monthly at $297, $950 or $1,500, with no long-term contract. Ad spend carries a 0% markup, so every ad dollar reaches Google. Larger plans add more cities, more content and paid campaigns for busy seasons.",
       },
     ],
   },

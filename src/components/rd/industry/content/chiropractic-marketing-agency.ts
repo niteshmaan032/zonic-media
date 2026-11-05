@@ -419,7 +419,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "What do your chiropractic marketing plans cost?",
-        a: "We offer a $297 plan, a $750 plan and a $1,500 plan, each billed monthly and free of lock-ins. You pay Google for ad clicks yourself, and we never mark that spend up. A single clinic often starts on the first plan; clinics running ads or several locations usually choose more.",
+        a: "We offer a $297 plan, a $950 plan and a $1,500 plan, each billed monthly and free of lock-ins. You pay Google for ad clicks yourself, and we never mark that spend up. A single clinic often starts on the first plan; clinics running ads or several locations usually choose more.",
       },
     ],
   },

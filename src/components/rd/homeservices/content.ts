@@ -13,7 +13,7 @@
    - every internal link is kept (anchor text rewritten), the FAQ count stays
      at 11 and the FAQPage JSON-LD is built from HS_FAQS;
    - verified numbers only (1,500+ GBPs optimized, 900+ reinstated, 5.0
-     Google rating, 20+ industries, 0% ad-spend markup, the $297 / $750 /
+     Google rating, 20+ industries, 0% ad-spend markup, the $297 / $950 /
      $1,500 plans, month to month). No budgets, no invented results, no other
      company named. */
 
@@ -62,7 +62,7 @@ export const HS_FAQS: { question: string; answer: string }[] = [
   {
     question: "What does home services SEO cost with Zonic Media?",
     answer:
-      "We publish three plans: $297, $750 or $1,500 per month, billed month to month. The right one depends on how many services, towns and locations you want to rank, and a free audit shows which fits.",
+      "We publish three plans: $297, $950 or $1,500 per month, billed month to month. The right one depends on how many services, towns and locations you want to rank, and a free audit shows which fits.",
   },
   {
     question: "What makes Zonic Media SEO experts for home services?",

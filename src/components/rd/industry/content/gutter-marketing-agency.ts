@@ -442,7 +442,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much is gutter marketing with Zonic Media?",
-        a: "Plans cost $297, $750 or $1,500 per month, and you can leave any month. Ad money is charged by Google to your own account at 0% markup. Most single-crew gutter companies start small and add ads or more towns once estimates pick up.",
+        a: "Plans cost $297, $950 or $1,500 per month, and you can leave any month. Ad money is charged by Google to your own account at 0% markup. Most single-crew gutter companies start small and add ads or more towns once estimates pick up.",
       },
     ],
   },

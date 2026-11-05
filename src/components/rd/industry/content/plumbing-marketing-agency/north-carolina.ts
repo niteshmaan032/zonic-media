@@ -321,7 +321,7 @@ export const CONTENT: LocationContent = {
     items: [
       {
         q: "What does plumbing marketing cost in North Carolina?",
-        a: "You choose from three plans at $297, $750 or $1,500 per month, and each runs month to month, so you can stop whenever you like. Ad spend is separate and carries a 0% markup. A single-metro shop can begin on the first plan and add cities later.",
+        a: "You choose from three plans at $297, $950 or $1,500 per month, and each runs month to month, so you can stop whenever you like. Ad spend is separate and carries a 0% markup. A single-metro shop can begin on the first plan and add cities later.",
       },
       {
         q: "Can you help my plumbing company get calls from rural North Carolina?",

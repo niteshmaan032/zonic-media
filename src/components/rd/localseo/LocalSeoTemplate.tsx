@@ -46,6 +46,7 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { LeadsCard, RankClimbCard } from "./growthUi";
 import { LocalSeoHeroUi } from "./heroUi";
 import { toneSetFor } from "./tones";
+import { AiSearchSection } from "@/components/rd/industry/AiSearchSection";
 import type { LocalSeoContent } from "./types";
 
 /* ---------------------------------------------------------------------------
@@ -343,6 +344,11 @@ export function LocalSeoTemplate({ c }: { c: LocalSeoContent }) {
           </Wrap>
         </Section>
 
+        {/* ======================================================= AI SEARCH */}
+        {c.aiSearch ? (
+          <AiSearchSection id="seo" p={p} c={c.aiSearch} ctaHref={AUDIT} />
+        ) : null}
+
         {/* ========================================================= RESULTS */}
         {c.results ? <ResultsSection c={c} tones={tones} /> : null}
 
@@ -528,6 +534,7 @@ export function LocalSeoTemplate({ c }: { c: LocalSeoContent }) {
 
         {/* ========================================================= PRICING */}
         <PricingSection
+          path={c.liveUrl}
           copy={c.pricing}
           idPrefix="seo"
           ctaHref={AUDIT}

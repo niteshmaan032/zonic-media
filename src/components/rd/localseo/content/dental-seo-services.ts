@@ -487,7 +487,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for dentists cost with Zonic Media?",
-        a: "Plans are $297, $750 or $1,500 a month, billed month to month. A single office usually begins on the first plan; practices with several dentists, more treatments to rank or a need for managed Google Ads often choose the second or third. The audit will point to the right one.",
+        a: "Plans are $297, $950 or $1,500 a month, billed month to month. A single office usually begins on the first plan; practices with several dentists, more treatments to rank or a need for managed Google Ads often choose the second or third. The audit will point to the right one.",
       },
       {
         q: "When do dentists usually see SEO results?",

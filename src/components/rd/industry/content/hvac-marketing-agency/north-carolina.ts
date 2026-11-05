@@ -342,7 +342,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What's the monthly cost of HVAC marketing in North Carolina?",
-        a: "Plans cost $297, $750 or $1,500, with monthly billing; none needs a long contract, and ad spend reaches Google with a 0% markup. Single-metro shops often start on the first plan, while companies covering Charlotte and the Triangle usually need more pages and ads.",
+        a: "Plans cost $297, $950 or $1,500, with monthly billing; none needs a long contract, and ad spend reaches Google with a 0% markup. Single-metro shops often start on the first plan, while companies covering Charlotte and the Triangle usually need more pages and ads.",
       },
     ],
   },

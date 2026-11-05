@@ -391,7 +391,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much does a non-profit marketing company like Zonic Media cost?",
-        a: "Nonprofits choose $297, $750 or $1,500 plans, billed monthly with no annual contract. For eligible charities, Google Ad Grants covers the search ad spend, and any paid ads we run carry a 0% markup. Smaller groups usually start on the first plan, and we recommend one after your free audit.",
+        a: "Nonprofits choose $297, $950 or $1,500 plans, billed monthly with no annual contract. For eligible charities, Google Ad Grants covers the search ad spend, and any paid ads we run carry a 0% markup. Smaller groups usually start on the first plan, and we recommend one after your free audit.",
       },
     ],
   },

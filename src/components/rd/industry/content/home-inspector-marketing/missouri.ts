@@ -251,6 +251,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Home Inspection Marketing to Missouri Realtors and Homeowners",
+    lead: [
+      "With no state license to point to, Missouri buyers and agents judge you on proof. Our ",
+      {
+        href: "/services/home-inspector-marketing",
+        label: "home inspector marketing program",
+      },
+      " courts both: realtors who refer inside the contract window and owners who book on their own.",
+    ],
+    lanes: [
+      {
+        audience: "St. Louis and Kansas City agents",
+        icon: "agent",
+        pitch:
+          "Agents on both sides of the state line want an inspector who answers fast, writes plainly and keeps deals calm. We put that proof where they look.",
+        query: "Can you inspect in Kirkwood Thursday morning?",
+        flow: [
+          "Agent texts a date",
+          "Slot held online",
+          "Walkthrough with photos",
+          "Plain-English summary",
+        ],
+        badge: "Booked inside the inspection period",
+        jobs: [
+          {
+            name: "Buyer's pre-purchase inspection",
+            tactic: "Agent page with live openings and a sample report",
+          },
+          {
+            name: "First-time buyer inspection",
+            tactic:
+              "Short explainer videos agents can share with nervous buyers",
+          },
+          {
+            name: "Termite (WDI) report",
+            tactic: "Offered on the same request form agents already use",
+          },
+        ],
+      },
+      {
+        audience: "Missouri buyers, sellers and owners",
+        icon: "home",
+        pitch:
+          "Plenty of Missourians pick their own inspector, especially first-time buyers and sellers prepping a listing. We reach them on Maps, in AI answers and through reviews.",
+        query: "pre-listing home inspection st charles mo",
+        flow: [
+          "Finds you on Maps",
+          "Reads your reviews",
+          "Picks add-on tests",
+          "Books online",
+        ],
+        badge: "Booked with radon and a sewer scope",
+        jobs: [
+          {
+            name: "Pre-listing inspection",
+            tactic: "Seller page on fixing issues before buyers find them",
+          },
+          {
+            name: "Sewer lateral scope",
+            tactic: "Pages for older St. Louis neighborhoods and suburbs",
+          },
+          {
+            name: "Well and septic check",
+            tactic: "Ozarks and lake-area pages for acreage buyers",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-ons Missouri clients book most",
+      items: [
+        "Termite / WDI report",
+        "Radon testing",
+        "Sewer camera scope",
+        "Private well water test",
+        "Septic evaluation",
+        "Mold air sampling",
+      ],
+    },
+    cta: "Plan My Missouri Lanes",
+  },
   regions: {
     title: "Missouri Metros and Towns We Market For",
     lead: "St. Louis municipalities, Kansas City suburbs and Ozarks towns each get their own pages and ad settings.",
@@ -336,7 +418,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What do your Missouri home inspector marketing plans cost?",
-        a: "Three tiers at $297, $750 and $1,500, each month to month. Media spend passes through to Google at a 0% markup. Higher tiers reach more Missouri cities with more content, more reviews work and paid campaigns.",
+        a: "Three tiers at $297, $950 and $1,500, each month to month. Media spend passes through to Google at a 0% markup. Higher tiers reach more Missouri cities with more content, more reviews work and paid campaigns.",
       },
     ],
   },

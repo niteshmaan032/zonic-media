@@ -512,7 +512,7 @@ export const CONTENT: NicheWebContent = {
     lead: "Unedited reviews from the owners we've built sites and campaigns for.",
   },
   pricing: {
-    title: "Monthly Plans Built for Garage Door Websites",
+    title: "Garage Door Website Cost With No Monthly Rent",
     compareTitle: "Plan Features for Garage Door Companies",
     addOnsTitle: "Extras for Door Repair and Install Sites",
     customTitle: "More Than One Garage Door Location?",
@@ -523,7 +523,7 @@ export const CONTENT: NicheWebContent = {
     items: [
       {
         q: "How much does a garage door website cost?",
-        a: "Pricing is one fixed number, agreed on a free call where we learn your repair and install mix, door lines and towns, and it holds through launch. Choose a growth plan that qualifies, billed monthly, and the garage door website comes free through our offer.",
+        a: "Garage door sites start at $950, with development paid as a one-time fee. Hosting is free of monthly charges, the site is never rented back to you, and you keep the domain. Your repair and install mix, door lines and towns are covered on a free call that ends with a fixed number. Add a qualifying growth plan on monthly terms and the garage door website comes free.",
       },
       {
         q: "How quickly can a garage door website go live?",

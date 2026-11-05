@@ -258,6 +258,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Pennsylvania Home Inspector Marketing for Agents and Homeowners",
+    lead: [
+      "Pennsylvania's home inspection law makes paying agents for referrals an unfair practice, so honest proof wins. We market you to realtors and homeowners alike, backed by ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Business Profile optimization",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Philadelphia and Pittsburgh agents",
+        icon: "agent",
+        pitch:
+          "Pennsylvania agents look for proof of association membership, insurance and, in Philadelphia, a city license. We surface those credentials, plus quick slots and stucco know-how, wherever agents check.",
+        query: "Stucco home in Media. Inspection Thursday?",
+        flow: [
+          "Agent request",
+          "Seller consent noted",
+          "Moisture probes taken",
+          "Report with photos",
+        ],
+        badge: "Stucco testing cleared with the seller",
+        jobs: [
+          {
+            name: "Buyer inspection, Philly suburbs",
+            tactic: "Agent page with credentials and open dates",
+          },
+          {
+            name: "Invasive stucco testing",
+            tactic: "Consent-form explainer agents can pass to sellers",
+          },
+          {
+            name: "Radon test (DEP certified)",
+            tactic: "Lehigh Valley and central PA radon pages",
+          },
+        ],
+      },
+      {
+        audience: "Pennsylvania homeowners",
+        icon: "home",
+        pitch:
+          "Many Pennsylvania owners book without an agent: buyers on rural acreage, sellers prepping stucco homes and longtime owners checking radon. We rank you for each search.",
+        query: "radon testing lancaster pa",
+        flow: [
+          "Looks for radon test",
+          "Finds county page",
+          "Adds full inspection",
+          "Books a time",
+        ],
+        badge: "Radon and inspection booked together",
+        jobs: [
+          {
+            name: "Pre-listing stucco check",
+            tactic: "Bucks and Chester County seller pages",
+          },
+          {
+            name: "Private well and septic review",
+            tactic: "Rural township pages across central PA",
+          },
+          {
+            name: "Sewer line camera scope",
+            tactic: "Allegheny County pages for older laterals",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Pennsylvania add-ons buyers and sellers book",
+      items: [
+        "Radon test (DEP certified)",
+        "Stucco moisture testing",
+        "Termite / WDI report",
+        "Sewer camera scope",
+        "Well water analysis",
+        "Septic inspection",
+      ],
+    },
+    cta: "Win PA Agents and Owners",
+  },
   regions: {
     title: "Where We Market Home Inspections, PA Region by Region",
     lead: "Pennsylvania buyers search by township and borough, so we build pages and service areas at that level in every region.",

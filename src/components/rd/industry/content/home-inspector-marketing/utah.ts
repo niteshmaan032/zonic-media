@@ -255,6 +255,88 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Utah Home Inspector Marketing to Agents, Buyers and New-Build Owners",
+    lead: [
+      "Utah's new state license gives agents and owners a fresh way to vet you. We turn it into referrals from Wasatch Front realtors and direct bookings from owners, using ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google profile optimization",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "Wasatch Front agents",
+        icon: "handshake",
+        pitch:
+          "Utah agents want a DOPL-licensed inspector who can add radon, meth screening and a sewer scope to one visit. We show them your license, add-ons and openings.",
+        query: "Lehi buyer wants radon and meth. Monday?",
+        flow: [
+          "Agent texts",
+          "Add-ons chosen",
+          "Samples collected",
+          "Lab results posted",
+        ],
+        badge: "Results tracked in one report",
+        jobs: [
+          {
+            name: "Buyer inspection, Utah County",
+            tactic: "Agent page listing your DOPL license number",
+          },
+          {
+            name: "Meth residue screening",
+            tactic: "Explainer agents can send before buyers ask",
+          },
+          {
+            name: "Military move inspection",
+            tactic: "Hill Air Force Base pages for Davis County agents",
+          },
+        ],
+      },
+      {
+        audience: "Utah homeowners and new-build buyers",
+        icon: "home",
+        pitch:
+          "Families buying new in Saratoga Springs and Eagle Mountain book phase and 11-month visits themselves, while Park City owners check second homes. We rank you for those searches.",
+        query: "new construction inspection saratoga springs utah",
+        flow: [
+          "Searches by town",
+          "Sees phase list",
+          "Adds radon",
+          "Books the first visit",
+        ],
+        badge: "Phase plan booked from frame to warranty",
+        jobs: [
+          {
+            name: "Pre-drywall and final walk",
+            tactic: "Saratoga Springs and Eagle Mountain pages",
+          },
+          {
+            name: "Builder warranty walk-through",
+            tactic: "Checklist page for first-year owners in Lehi",
+          },
+          {
+            name: "Second-home check",
+            tactic: "Park City and Heber pages for absentee owners",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Utah add-on tests buyers and owners request",
+      items: [
+        "Radon test",
+        "Meth residue screening",
+        "Sewer lateral scope",
+        "Infrared scan",
+        "Mold check",
+        "Well water test",
+      ],
+    },
+    cta: "Start My Utah Plan",
+  },
   regions: {
     title: "Utah Counties and Cities We Cover",
     lead: "From Cache Valley to Washington County, each area gets pages and ads matched to its buyers and seasons.",
@@ -341,7 +423,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "How much is home inspector marketing for Utah companies?",
-        a: "Our Utah pricing has three levels, $297, $750 and $1,500, each billed monthly and never locked in. Google invoices ad spend itself, and our markup on it is 0%. One-county inspectors usually start small, then add counties or seasonal ads as bookings grow.",
+        a: "Our Utah pricing has three levels, $297, $950 and $1,500, each billed monthly and never locked in. Google invoices ad spend itself, and our markup on it is 0%. One-county inspectors usually start small, then add counties or seasonal ads as bookings grow.",
       },
     ],
   },

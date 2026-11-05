@@ -459,7 +459,7 @@ export const CONTENT: LocalSeoContent = {
     items: [
       {
         q: "How much do your local SEO packages cost?",
-        a: "Foundation is $297 a month, Growth $750 and Authority $1,500, billed month to month, with a lower rate on Foundation and Authority if you pay annually. The free audit tells you which package your market needs before you spend anything.",
+        a: "Foundation is $297 a month, Growth $950 and Authority $1,500, billed month to month, with a lower rate on Foundation and Authority if you pay annually. The free audit tells you which package your market needs before you spend anything.",
       },
       {
         q: "Which local SEO package do I need?",

@@ -262,6 +262,89 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Indiana Home Inspector Marketing for Realtor Referrals and Homeowner Bookings",
+    lead: [
+      "Indianapolis agents send buyer work, while Hamilton County owners and rural buyers often book without an agent. We cover both groups, and a ",
+      {
+        href: "/services/web-design",
+        label: "website built to take bookings",
+      },
+      " turns more of those visits into scheduled inspections.",
+    ],
+    lanes: [
+      {
+        audience: "Indiana Realtors From Carmel to Fort Wayne",
+        icon: "agent",
+        pitch:
+          "Indiana's inspector ethics code rules out paying agents or buying a spot on their lists. So we win agents with quick slots, readable reports and praise from buyers they sent.",
+        query: "Can you inspect in Fishers and add radon before Friday?",
+        flow: [
+          "Agent sends listing",
+          "Radon added online",
+          "Inspection done",
+          "Clear summary sent",
+        ],
+        badge: "Summary before the response deadline",
+        jobs: [
+          {
+            name: "Buyer inspections plus radon",
+            tactic: "State-licensed radon tester named on your agent page",
+          },
+          {
+            name: "WDI inspections with state credentials",
+            tactic: "Lender-ready add-on agents can request in one click",
+          },
+          {
+            name: "Pre-listing inspections in Hamilton County",
+            tactic:
+              "Seller checklist emailed to Carmel and Fishers listing agents",
+          },
+        ],
+      },
+      {
+        audience: "Indiana Homeowners and Rural Buyers",
+        icon: "home",
+        pitch:
+          "Westfield and Noblesville owners book builder-warranty walks, rural buyers need well and septic checks, and Indianapolis sellers want surprises found early. Pages and ads match each search.",
+        query: "well and septic inspection near me indiana",
+        flow: [
+          "Rural page found",
+          "Water test added",
+          "Booked online",
+          "Lab results shared",
+        ],
+        badge: "Rural booking, no agent involved",
+        jobs: [
+          {
+            name: "Well water and septic inspections",
+            tactic: "County pages for buyers outside Indianapolis",
+          },
+          {
+            name: "Builder warranty inspections",
+            tactic: "Hamilton County subdivision pages with timed emails",
+          },
+          {
+            name: "Sewer scopes for older city homes",
+            tactic: "Irvington and Broad Ripple pages with camera clips",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Extra Tests Indiana Clients Add On",
+      items: [
+        "Radon testing",
+        "WDI inspection",
+        "Sewer scope",
+        "Well water testing",
+        "Septic evaluation",
+        "Mold sampling",
+      ],
+    },
+    cta: "Plan My Indiana Outreach",
+  },
   regions: {
     title: "Where We Grow Home Inspection: Indiana Metros and Towns",
     lead: "Central Indiana, the north, the south and the college towns differ in agents and housing, so we treat every region as its own market.",

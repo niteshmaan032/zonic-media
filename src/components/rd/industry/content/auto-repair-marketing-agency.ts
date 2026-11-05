@@ -400,7 +400,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much do auto repair marketing companies charge?",
-        a: "Ours has three tiers: $297, $750 or $1,500 per month, with no annual contract and a 0% ad-spend markup. One-location shops focused on the map and reviews usually start on the first tier; multi-bay shops running ads need more.",
+        a: "Ours has three tiers: $297, $950 or $1,500 per month, with no annual contract and a 0% ad-spend markup. One-location shops focused on the map and reviews usually start on the first tier; multi-bay shops running ads need more.",
       },
       {
         q: "Can AI assistants recommend my repair shop to drivers?",

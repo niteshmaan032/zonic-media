@@ -245,6 +245,87 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title: "Louisiana Home Inspector Marketing to Realtors and Homebuyers",
+    lead: [
+      "Louisiana's code of ethics forbids paying agents for referrals or a place on their lists, so you win them on merit. Buyers and owners who search on their own find you through our ",
+      {
+        href: "/services/home-inspector-marketing",
+        label: "national inspector marketing plan",
+      },
+      ".",
+    ],
+    lanes: [
+      {
+        audience: "New Orleans and Baton Rouge Realtors",
+        icon: "agent",
+        pitch:
+          "Agents need WDI paperwork, moisture findings and roof notes explained before the inspection period closes. A bundled booking page and plain summaries make you their dependable call.",
+        query: "Raised Metairie home. Can you add the WDI with your partner?",
+        flow: [
+          "Agent books online",
+          "Pest partner added",
+          "Crawl and attic done",
+          "Summary to both agents",
+        ],
+        badge: "WDI and report together",
+        jobs: [
+          {
+            name: "Raised-home and slab inspections",
+            tactic: "Sample report showing piers, sills and moisture readings",
+          },
+          {
+            name: "WDI reports through a licensed operator",
+            tactic: "Formosan termite page naming your pest partner",
+          },
+          {
+            name: "Re-inspections after storm repairs",
+            tactic: "Quick rebook button for listing agents",
+          },
+        ],
+      },
+      {
+        audience: "Louisiana Homebuyers and Owners Searching Direct",
+        icon: "home",
+        pitch:
+          "Owners want hurricane mitigation surveys for insurance discounts, Northshore buyers pick inspectors themselves, and sellers in Lafayette book early checks. Dedicated pages and ads meet each one.",
+        query: "wind mitigation inspection baton rouge",
+        flow: [
+          "Finds survey page",
+          "Books a visit",
+          "Survey completed",
+          "Form ready for insurer",
+        ],
+        badge: "Survey booked direct",
+        jobs: [
+          {
+            name: "Wind mitigation surveys",
+            tactic: "Insurance-discount pages for Baton Rouge and Lake Charles",
+          },
+          {
+            name: "Mold and moisture inspections",
+            tactic: "Humid-season posts and Northshore owner pages",
+          },
+          {
+            name: "Sewer and water line camera checks",
+            tactic: "Pages for shifting-soil neighborhoods in New Orleans",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Add-Ons Louisiana Clients Book Most",
+      items: [
+        "WDI via licensed operator",
+        "Wind mitigation survey",
+        "Mold and moisture",
+        "Sewer camera scope",
+        "Pool and spa",
+        "Thermal imaging",
+      ],
+    },
+    cta: "Plan My Louisiana Outreach",
+  },
   regions: {
     title: "Louisiana Regions and Parishes We Cover",
     lead: "From the river parishes to the Arkansas line, each region has its own agents, housing and weather, so pages and service areas follow suit.",

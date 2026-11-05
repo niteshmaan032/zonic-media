@@ -444,7 +444,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How much do real estate marketing companies in USA cities charge?",
-        a: "With us, plans start at $297 a month, with $750 and $1,500 tiers for bigger goals, and none of them lock you in. Ad spend passes through to Google at 0% markup. Solo agents covering a few neighborhoods usually start small; teams running ads across several areas need more.",
+        a: "With us, plans start at $297 a month, with $950 and $1,500 tiers for bigger goals, and none of them lock you in. Ad spend passes through to Google at 0% markup. Solo agents covering a few neighborhoods usually start small; teams running ads across several areas need more.",
       },
       {
         q: "How long does real estate marketing take to bring inquiries?",

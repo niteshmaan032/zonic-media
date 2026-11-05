@@ -241,6 +241,89 @@ export const CONTENT: LocationContent = {
       },
     ],
   },
+  audiences: {
+    title:
+      "Massachusetts Home Inspection Marketing When Listing Agents Can't Refer",
+    lead: [
+      "Massachusetts bars listing agents from recommending a specific inspector, and only buyer's agents may name you. So this plan leans on homeowners and buyers searching themselves, with ",
+      {
+        href: "/local-seo-google-business-optimization",
+        label: "Google Business Profile work",
+      },
+      " leading.",
+    ],
+    lanes: [
+      {
+        audience: "Buyer's Agents in Massachusetts",
+        icon: "handshake",
+        pitch:
+          "Only buyer's agents may recommend an inspector here, and they choose carefully. We give them a shareable page, sample report and Boston-area reviews, with no referral payments.",
+        query: "My buyer asked for a name. Can you do Somerville Saturday?",
+        flow: [
+          "Buyer's agent asks",
+          "Client books online",
+          "Inspected Saturday",
+          "Report to buyer",
+        ],
+        badge: "Booked through the buyer's agent",
+        jobs: [
+          {
+            name: "Buyer inspections for agent clients",
+            tactic: "Share page buyer's agents can text in seconds",
+          },
+          {
+            name: "Condo and triple-decker inspections",
+            tactic: "Sample report for Somerville and Worcester buyers",
+          },
+          {
+            name: "Radon and water tests on contract",
+            tactic: "Add-on checkboxes on the page agents forward",
+          },
+        ],
+      },
+      {
+        audience: "Massachusetts Homebuyers, Sellers and Owners",
+        icon: "home",
+        pitch:
+          "Many Massachusetts clients pick an inspector through search, not a listing agent. Cape sellers need Title 5 septic inspections, older homes raise radon questions, and owners book maintenance visits.",
+        query: "pre listing home inspection newton ma",
+        flow: [
+          "Seller searches",
+          "Reads reviews",
+          "Books online",
+          "Report before listing",
+        ],
+        badge: "Seller booked without a referral",
+        jobs: [
+          {
+            name: "Pre-listing inspections in Greater Boston",
+            tactic: "Seller pages for Newton, Cambridge and Quincy",
+          },
+          {
+            name: "Title 5 septic inspections",
+            tactic: "Cape Cod pages, shown only if you hold DEP approval",
+          },
+          {
+            name: "Annual maintenance inspections",
+            tactic: "Fall emails to past clients in older colonials",
+          },
+        ],
+      },
+    ],
+    addOns: {
+      title: "Tests Massachusetts Clients Add to an Inspection",
+      items: [
+        "Radon testing",
+        "Title 5 septic",
+        "Private well water",
+        "Lead paint testing",
+        "Oil tank check",
+        "Wood-destroying insects",
+        "Sewer scope",
+      ],
+    },
+    cta: "Plan My Buyer-Side Marketing",
+  },
   regions: {
     title: "Massachusetts Regions Where We Book Inspections",
     lead: "Each region gets its own town pages, service areas and ads, matched to its housing and the way its buyers search.",
@@ -330,7 +413,7 @@ export const CONTENT: LocationContent = {
       },
       {
         q: "What does home inspector marketing in Massachusetts cost with Zonic?",
-        a: "Pricing runs $297, $750 or $1,500 monthly, all month to month. Your ad budget is paid to Google directly, and we add a 0% markup. The right tier depends on how many towns, inspectors and add-on services you want to grow this year.",
+        a: "Pricing runs $297, $950 or $1,500 monthly, all month to month. Your ad budget is paid to Google directly, and we add a 0% markup. The right tier depends on how many towns, inspectors and add-on services you want to grow this year.",
       },
     ],
   },

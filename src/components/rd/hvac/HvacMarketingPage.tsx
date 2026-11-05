@@ -321,8 +321,8 @@ export function HvacMarketingPage() {
                   size="heroWide"
                   className="tw:text-balance tw:bssm:text-[clamp(36px,3.85vw,56px)]"
                 >
-                  HVAC <InlineThermostat /> Marketing Agency for
-                  Contractors Who Want More Calls &amp; Booked Jobs
+                  HVAC <InlineThermostat /> Marketing Agency for Contractors Who
+                  Want More Calls &amp; Booked Jobs
                 </Strip>
                 <p
                   className={cx(
@@ -794,6 +794,7 @@ export function HvacMarketingPage() {
 
         {/* ========================================================= PRICING */}
         <PricingSection
+          path="/services/hvac-marketing-agency"
           copy={{
             title: "HVAC Marketing Plans, Month to Month",
             lead: (
