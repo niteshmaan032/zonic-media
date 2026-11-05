@@ -273,7 +273,12 @@ export const CONTENT: NicheWebContent = {
           href: "/local-seo-google-business-optimization",
           label: "Google profile optimization",
         },
-        " for map pack visibility.",
+        " for map pack visibility, or our ",
+        {
+          href: "/services/google-business-profile-services-real-estate-agents",
+          label: "Google Business Profile services for real estate agents",
+        },
+        ".",
       ],
       points: [
         "Neighborhood keyword map",

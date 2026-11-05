@@ -627,7 +627,15 @@ function Page() {
               <p className="lp-lead">
                 A profile can be complete, verified and well filled in and still
                 sit outside the pack. When it does, it is almost always one of
-                these — and none of them are fixed by adding more photos.
+                these — and none of them are fixed by adding more photos. (For
+                what photos do help, see{" "}
+                <Link
+                  href="/blog/how-many-photos-should-your-google-business-profile-have"
+                  className="lp-link"
+                >
+                  how many photos a Google Business Profile should have
+                </Link>
+                .)
               </p>
             </div>
             <div className="lp-grid-2">
@@ -883,7 +891,14 @@ function Page() {
                 >
                   local SEO for HVAC companies
                 </Link>
-                . Once the calls start, a{" "}
+                . Our guide on{" "}
+                <Link
+                  href="/blog/how-to-turn-google-map-pack-views-into-phone-calls"
+                  className="lp-link"
+                >
+                  turning Google Map Pack views into phone calls
+                </Link>{" "}
+                shows what gets a searcher to tap call. Once the calls start, a{" "}
                 <Link href="/services/web-design" className="lp-link">
                   conversion-focused website
                 </Link>{" "}
