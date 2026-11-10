@@ -118,6 +118,8 @@ const nextConfig: NextConfig = {
         ["/services/philadelphia/g-ads", "/services/philadelphia/ppc"],
         ["/gmb/reinstatement", "/services/gbp-reinstatement-service"],
         ["/pest-control-marketing", "/services/pest-control-marketing-agency"],
+        // 404 in GA4 (ChatGPT referral) + Semrush GA orphans, 10 Nov 2026.
+        ["/services/seo-for-plumbers", "/services/industry/seo-services-for-plumber"],
       ].map(([source, destination]) => ({ source, destination, permanent: true })),
       // Old WordPress-style blog pagination -> the real ?page= URLs.
       {
@@ -155,7 +157,7 @@ const nextConfig: NextConfig = {
         destination: "/services/web-design",
         permanent: true,
       },
-      { source: "/service/social-media", destination: "/", permanent: true },
+      { source: "/service/social-media", destination: "/services", permanent: true },
       {
         source: "/service/search-engine-marketing",
         destination: "/services/philadelphia/sem",
@@ -163,7 +165,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/service/search-engine-optimization",
-        destination: "/services/local-seo-for-home-services",
+        destination: "/services/seo-services",
         permanent: true,
       },
       {
@@ -187,14 +189,14 @@ const nextConfig: NextConfig = {
 
       // Company URL changes
       { source: "/company/about-us", destination: "/about", permanent: true },
-      { source: "/company/our-partners", destination: "/", permanent: true },
+      { source: "/company/our-partners", destination: "/about", permanent: true },
       {
         source: "/company/casual-appointment",
         destination: "/contact-us",
         permanent: true,
       },
-      { source: "/company/white-label", destination: "/", permanent: true },
-      { source: "/company/reviews", destination: "/", permanent: true },
+      { source: "/company/white-label", destination: "/services/white-label-services", permanent: true },
+      { source: "/company/reviews", destination: "/about", permanent: true },
       { source: "/company", destination: "/about", permanent: true },
 
       // Blog redirects
@@ -210,6 +212,9 @@ const nextConfig: NextConfig = {
       },
 
       // Who we help / healthcare
+      // 10 Nov 2026: old URLs that went to the homepage or a loosely related
+      // trade now go to the closest live page (industries hub, electricians,
+      // general contractors, plumbers, white label, pricing, blog).
       {
         source: "/who-we-help/healthcare/chiropractors",
         destination: "/services/industry/chiropractor-local-seo-services",
@@ -227,12 +232,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/healthcare/veterinary",
-        destination: "/services/industry/pediatricians",
+        destination: "/industries",
         permanent: true,
       },
       {
         source: "/who-we-help/healthcare",
-        destination: "/services/industry/dental-seo-services",
+        destination: "/industries",
         permanent: true,
       },
 
@@ -242,32 +247,32 @@ const nextConfig: NextConfig = {
         destination: "/services/industry/pediatricians",
         permanent: true,
       },
-      { source: "/who-we-help/medical/med-spas", destination: "/", permanent: true },
+      { source: "/who-we-help/medical/med-spas", destination: "/industries", permanent: true },
       {
         source: "/who-we-help/medical/plastic-surgeons",
-        destination: "/",
+        destination: "/industries",
         permanent: true,
       },
       {
         source: "/who-we-help/medical",
-        destination: "/services/industry/dental-seo-services",
+        destination: "/industries",
         permanent: true,
       },
 
       // Who we help / service-providers
       {
         source: "/who-we-help/service-providers/contractors",
-        destination: "/services/industry/local-seo-for-roofing-companies",
+        destination: "/services/industry/local-seo-for-general-contractors",
         permanent: true,
       },
       {
         source: "/who-we-help/service-providers/construction-companies",
-        destination: "/services/industry/local-seo-for-roofing-companies",
+        destination: "/services/industry/local-seo-for-general-contractors",
         permanent: true,
       },
       {
         source: "/who-we-help/service-providers/electricians",
-        destination: "/services/industry/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-for-electricians",
         permanent: true,
       },
       {
@@ -287,19 +292,19 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/service-providers",
-        destination: "/services",
+        destination: "/industries",
         permanent: true,
       },
 
       // Who we help / home-service
       {
         source: "/who-we-help/home-service/construction-companies",
-        destination: "/services/industry/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-for-general-contractors",
         permanent: true,
       },
       {
         source: "/who-we-help/home-service/plumbers",
-        destination: "/",
+        destination: "/services/industry/seo-services-for-plumber",
         permanent: true,
       },
       {
@@ -309,7 +314,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/home-service/electricians",
-        destination: "/services/industry/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-for-electricians",
         permanent: true,
       },
       {
@@ -319,15 +324,15 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/who-we-help/home-service/contractors",
-        destination: "/services/industry/local-seo-services-for-hvac",
+        destination: "/services/industry/local-seo-for-general-contractors",
         permanent: true,
       },
       {
         source: "/who-we-help/home-service",
-        destination: "/services/industry/local-seo-services-for-residential-cleaning",
+        destination: "/services/local-seo-for-home-services",
         permanent: true,
       },
-      { source: "/who-we-help", destination: "/", permanent: true },
+      { source: "/who-we-help", destination: "/industries", permanent: true },
 
       // Legal
       {
@@ -437,24 +442,24 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/white-label-seo",
-        destination: "/services/local-seo-for-home-services",
+        destination: "/services/white-label-services",
         permanent: true,
       },
-      { source: "/price", destination: "/", permanent: true },
+      { source: "/price", destination: "/pricing", permanent: true },
       {
         source: "/category/all/digital-marketing",
-        destination: "/",
+        destination: "/blog",
         permanent: true,
       },
-      { source: "/category/all", destination: "/", permanent: true },
+      { source: "/category/all", destination: "/blog", permanent: true },
 
       // Cleanup / legacy URLs
-      { source: "/service/web-desing", destination: "/", permanent: true },
-      { source: "/blog/author/zonic_llc", destination: "/", permanent: true },
+      { source: "/service/web-desing", destination: "/services/web-design", permanent: true },
+      { source: "/blog/author/zonic_llc", destination: "/blog", permanent: true },
       { source: "/elementor-1720", destination: "/", permanent: true },
-      { source: "/hello-world", destination: "/", permanent: true },
-      { source: "/author/zonic_llc", destination: "/", permanent: true },
-      { source: "/reviews", destination: "/", permanent: true },
+      { source: "/hello-world", destination: "/blog", permanent: true },
+      { source: "/author/zonic_llc", destination: "/blog", permanent: true },
+      { source: "/reviews", destination: "/about", permanent: true },
     ];
   },
 };

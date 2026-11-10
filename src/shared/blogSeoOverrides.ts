@@ -15,6 +15,14 @@ export type BlogSeoOverride = {
 };
 
 export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
+  // 10 Nov 2026: CMS title was identical to the H1 (Semrush "duplicate H1 and
+  // title tags"); H1 kept, title reworded around the queries the post gets
+  // (towing company seo, google maps seo for towing). Description = CMS copy.
+  "seo-for-towing-companies": {
+    title: "Towing Company SEO: Rank on Google Maps and Get More Calls",
+    description:
+      "Learn how towing SEO can improve Google Maps visibility, service-area pages, highway coverage content, reviews, and emergency call conversion.",
+  },
   // 27 Oct 2026: title differed from nothing but the H1 (Semrush "duplicate
   // content in h1 and title"); same keywords, distinct wording.
   "google-ads-cost-philadelphia": {

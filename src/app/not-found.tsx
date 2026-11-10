@@ -5,7 +5,8 @@ import "@/app/style/notFound.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 – Page Not Found | Zonic Media",
+  // Absolute: the root layout template would add a second "| Zonic Media".
+  title: { absolute: "404 – Page Not Found | Zonic Media" },
   description:
     "The page you're looking for doesn't exist. Return to Zonic Media's homepage or contact us for help.",
 };

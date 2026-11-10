@@ -11,8 +11,7 @@ import "@/app/style/google-fonts.css";
 // src/components/rd — cannot affect un-migrated pages. See style/tailwind.css.
 import "@/app/style/tailwind.css";
 import localFont from "next/font/local";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
+import VercelInsights from "@/app/components/VercelInsights";
 import GhlExternalTracking from "@/app/components/GhlExternalTracking";
 import Loader from "@/app/components/Loader";
 import SmoothScroll from "@/app/components/SmoothScroll";
@@ -247,8 +246,7 @@ export default function RootLayout({
             globally here would put the widget on the same pages as our lead
             forms and trigger a "multiple opt-in sources" rejection. */}
         <SiteFloatingWidgets />
-        <SpeedInsights />
-        <Analytics />
+        <VercelInsights />
       </body>
     </html>
   );

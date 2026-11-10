@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import FloatingPhone from "@/app/components/FloatingPhone";
 import ChatBot from "@/app/components/ChatBot";
+import { isAdminPath } from "@/shared/adminPaths";
 
 // Pages where the GHL (LeadConnector) chat widget should be the active chat.
 // On every other page we show our own floating ChatBot instead.
@@ -107,7 +108,9 @@ export default function SiteFloatingWidgets() {
     return () => document.body.classList.remove(cls);
   }, [isGhlPage]);
 
-  if (pathname.startsWith("/admindashboard")) {
+  // Every owner-only route, including /admin-login and the password pages
+  // (until 10 Nov 2026 only /admindashboard hid the chat bubble and call button).
+  if (isAdminPath(pathname)) {
     return null;
   }
 

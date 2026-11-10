@@ -75,9 +75,13 @@ export function BlogIndexPage({
   const pool = active
     ? all.filter((p) => topicSlug(topicOf(p)) === active.slug)
     : all.slice(1);
-  const pages = Math.max(1, Math.ceil(pool.length / PER_PAGE));
+  // A topic lists all of its guides on one page. Topic views canonicalise to
+  // /blog, and at 6 a page a two-page topic's page 2 was linked only from
+  // page 1 (Semrush "only one incoming internal link", 10 Nov 2026).
+  const perPage = active ? Math.max(1, pool.length) : PER_PAGE;
+  const pages = Math.max(1, Math.ceil(pool.length / perPage));
   const page = Math.min(Math.max(1, requested), pages);
-  const pagePosts = pool.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const pagePosts = pool.slice((page - 1) * perPage, page * perPage);
   const showFeatured = Boolean(featured) && !active && page === 1;
 
   return (
