@@ -22,7 +22,7 @@ import {
 } from "react-icons/fi";
 import { IoDesktopOutline } from "react-icons/io5";
 import { LuPlaneTakeoff } from "react-icons/lu";
-import { RiMapPinLine, RiRadarLine } from "react-icons/ri";
+import { RiChatCheckLine, RiMapPinLine, RiRadarLine } from "react-icons/ri";
 import {
   SiFacebook,
   SiGoogleads,
@@ -118,6 +118,13 @@ const SERVICES: {
     href: "/services/local-seo-for-home-services",
     icon: <RiMapPinLine />,
     tone: "tw:bg-(--green) tw:text-white",
+  },
+  {
+    title: "Claim Business in ChatGPT",
+    desc: "Claim, verify and manage your business profile in ChatGPT's new Business Hub.",
+    href: "/services/chatgpt-business-profile",
+    icon: <RiChatCheckLine />,
+    tone: "tw:bg-[#1d8bf1] tw:text-white",
   },
   {
     title: "Travel & Tourism Marketing",
@@ -236,7 +243,8 @@ function ServicesPanel() {
             </span>
           </Link>
         ))}
-        <div className="tw:flex tw:items-start tw:gap-3.5 tw:rounded-[20px] tw:p-3.5">
+        {/* Full row since the ChatGPT page made the service list even. */}
+        <div className="tw:col-span-2 tw:flex tw:items-start tw:gap-3.5 tw:rounded-[20px] tw:p-3.5">
           <span
             className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[18px] tw:text-(--blue)"
             aria-hidden="true"

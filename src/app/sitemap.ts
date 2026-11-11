@@ -198,6 +198,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // SEO-plan pages (Aug 2026)
   { url: `${BASE_URL}/services/seo-services`,               changeFrequency: "monthly", priority: 0.9 },
   { url: `${BASE_URL}/services/ai-seo-services`,            changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/services/chatgpt-business-profile`, changeFrequency: "weekly", priority: 0.9 },
   { url: `${BASE_URL}/services/local-seo-for-small-business`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-packages`,         changeFrequency: "monthly", priority: 0.8 },
 

@@ -1,0 +1,126 @@
+/*
+ * Claim Business in ChatGPT page (11 Nov 2026).
+ *
+ * Owner brief: same colour theory as openai.com/business/businesses-in-chatgpt
+ * (sky hero, black feature bands, dark-grey steps band, navy closing banner),
+ * animated UI components instead of videos, the site header and footer.
+ * Layout and spacing come from the dfw-kit (.dk-root); this file only holds
+ * the page tokens, the hero scene and keyframes that utilities can't express.
+ */
+
+.cg-root {
+  --bg: #000;
+  --sky: #95d3f7;
+  --sky-ink: #0b3a5c;
+  --check: #1d8bf1;
+  --navy: #0c274a;
+  --band: #161616;
+  --dim: rgba(255, 255, 255, 0.72);
+  --hair: rgba(255, 255, 255, 0.14);
+  background: #000;
+}
+
+/* ------------------------------------------------------------------ hero */
+
+/* Scene for the orbiting icons. Height follows the reference page; the
+   lower part of the ring fades out behind the copy and the demo card. */
+.cg-scene {
+  position: absolute;
+  inset: 0 0 auto;
+  height: max(min(100svh, 1133px), 840px);
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(#000 0, #000 60%, transparent calc(60% + 160px));
+  mask-image: linear-gradient(#000 0, #000 60%, transparent calc(60% + 160px));
+}
+.cg-toy {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--toy, 99px);
+  height: var(--toy, 99px);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.cg-toy > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 600% 400%;
+  will-change: translate;
+}
+
+/* Sky backdrop: the supplied texture over the base sky colour, fading to
+   white where the demo card sits. */
+.cg-sky {
+  position: absolute;
+  inset: 0 0 auto;
+  height: calc(100% - 150px);
+  background: var(--sky) url("/images/chatgpt/claim-business-in-chatgpt-sky.webp") left bottom / cover no-repeat;
+  -webkit-mask-image: linear-gradient(#000 72%, transparent);
+  mask-image: linear-gradient(#000 72%, transparent);
+}
+
+/* Sky panels that hold the white UI cards (the reference page's video and
+   demo frames). */
+.cg-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(160deg, #6cc1f8 0%, #2f9ff3 45%, #0a7fe8 100%);
+}
+/* Cloud streaks from the supplied sky texture, screened over the blue. */
+.cg-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/chatgpt/claim-business-in-chatgpt-sky.webp") center / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.32;
+}
+
+/* ------------------------------------------------------------- keyframes */
+
+@keyframes cg-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes cg-pop {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { opacity: 1; transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes cg-dot {
+  0%, 80%, 100% { opacity: 0.25; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+@keyframes cg-draw { to { stroke-dashoffset: 0; } }
+@keyframes cg-grow { from { transform: scaleX(0); } }
+@keyframes cg-fill { from { width: 0; } }
+@keyframes cg-ring {
+  0% { box-shadow: 0 0 0 0 rgba(29, 139, 241, 0.45); }
+  100% { box-shadow: 0 0 0 14px rgba(29, 139, 241, 0); }
+}
+@keyframes cg-tap {
+  0% { opacity: 0; transform: scale(0.3); }
+  30% { opacity: 1; transform: scale(0.7); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+@keyframes cg-shine { 55%, 100% { transform: translateX(110%); } }
+
+.cg-in { animation: cg-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.cg-pop { animation: cg-pop 0.5s cubic-bezier(0.3, 0.7, 0.3, 1.2) both; }
+.cg-dot { animation: cg-dot 1s ease-in-out infinite; }
+.cg-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: cg-draw 1.6s ease-out 0.2s forwards; }
+.cg-grow { transform-origin: left; animation: cg-grow 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.cg-fill { animation: cg-fill 1s ease-out both; }
+.cg-ring { animation: cg-ring 1.4s ease-out infinite; }
+.cg-tap { animation: cg-tap 0.7s ease-out both; }
+
+/* Reduced motion: the kit already stops CSS animation; the timeline demos
+   show their finished state and the icon ring stays still (see hooks.ts). */
+@media (prefers-reduced-motion: reduce) {
+  .cg-draw { stroke-dashoffset: 0; }
+}

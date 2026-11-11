@@ -42,6 +42,10 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
       },
       { label: "AI SEO services", href: "/services/ai-seo-services" },
       {
+        label: "Claim your business in ChatGPT",
+        href: "/services/chatgpt-business-profile",
+      },
+      {
         label: "Local SEO packages and pricing",
         href: "/services/local-seo-packages",
       },
