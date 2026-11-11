@@ -177,12 +177,12 @@ function NicheTiles() {
           <li className="tw:max-bssm:col-span-2">
             <Link
               href={NICHES.more.href}
-              className="cg-panel tw:flex tw:h-full tw:min-h-[150px] tw:flex-col tw:items-center tw:justify-center tw:gap-2 tw:rounded-[20px] tw:px-3 tw:py-5 tw:text-center tw:text-white tw:transition tw:duration-200 tw:hover:-translate-y-1"
+              className="tw:flex tw:h-full tw:min-h-[150px] tw:flex-col tw:items-center tw:justify-center tw:gap-2 tw:rounded-[20px] tw:bg-(--demo) tw:px-3 tw:py-5 tw:text-center tw:text-(--ink) tw:transition tw:duration-200 tw:hover:-translate-y-1 tw:hover:bg-white"
             >
               <b className="tw:text-[18px]/[1.3] tw:font-medium">
                 {NICHES.more.label}
               </b>
-              <span className="tw:inline-flex tw:items-center tw:gap-1.5 tw:rounded-full tw:bg-white tw:px-3.5 tw:py-1.5 tw:text-[13.5px] tw:font-medium tw:text-(--navy)">
+              <span className="tw:inline-flex tw:items-center tw:gap-1.5 tw:rounded-full tw:bg-(--check) tw:px-3.5 tw:py-1.5 tw:text-[13.5px] tw:font-medium tw:text-white">
                 {NICHES.more.sub} <FiArrowRight aria-hidden="true" />
               </span>
             </Link>
@@ -387,11 +387,9 @@ export function ChatgptBusinessPage() {
         {/* ========================================================== BANNER */}
         <section aria-labelledby="cg-banner-h" className="tw:bg-black tw:pb-[clamp(40px,5vw,72px)]">
           <Wrap flushOnPhone>
-            <div className="tw:relative tw:overflow-hidden tw:rounded-[28px] tw:bg-(--navy) tw:px-6 tw:py-[clamp(64px,7vw,104px)] tw:text-center tw:max-bssm:rounded-none">
-              <span
-                className="tw:pointer-events-none tw:absolute tw:top-[-40%] tw:left-1/2 tw:size-[520px] tw:-translate-x-1/2 tw:rounded-full tw:bg-[#1d8bf1] tw:opacity-25 tw:blur-[90px]"
-                aria-hidden="true"
-              />
+            {/* The glow is a plain gradient: the earlier 90px blur filter
+                was too slow to paint on iPhones (white flashes, 11 Nov). */}
+            <div className="cg-banner tw:relative tw:overflow-hidden tw:rounded-[28px] tw:px-6 tw:py-[clamp(64px,7vw,104px)] tw:text-center tw:max-bssm:rounded-none">
               <MdVerified
                 className="tw:relative tw:mx-auto tw:size-16 tw:text-(--check) tw:drop-shadow-[0_10px_24px_rgba(29,139,241,0.55)]"
                 aria-hidden="true"

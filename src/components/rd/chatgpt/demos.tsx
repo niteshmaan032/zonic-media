@@ -21,7 +21,8 @@ import { span, useInView, useTimeline } from "./hooks";
    state. Business names are fictional; no prices or invented results.
 --------------------------------------------------------------------------- */
 
-/** Sky panel + white card, sized like the reference page's demo frames. */
+/** Light-grey panel + white card, sized like the reference page's demo
+    frames (owner, 11 Nov: grey below the hero; only the hero stays sky). */
 export function DemoFrame({
   label,
   children,
@@ -40,11 +41,11 @@ export function DemoFrame({
       role="img"
       aria-label={label}
       className={cx(
-        "cg-panel tw:grid tw:min-h-[470px] tw:place-items-center tw:rounded-[20px] tw:p-[clamp(14px,4.4vw,56px)]",
+        "tw:grid tw:min-h-[470px] tw:grid-cols-[minmax(0,1fr)] tw:place-items-center tw:rounded-[20px] tw:bg-(--demo) tw:p-[clamp(14px,4.4vw,56px)]",
         className,
       )}
     >
-      <div className="tw:w-full tw:max-w-[560px] tw:rounded-[18px] tw:bg-white tw:p-5 tw:text-(--ink) tw:[box-shadow:0_30px_60px_-30px_rgba(6,48,90,0.55)] tw:max-bssm:p-4">
+      <div className="tw:w-full tw:max-w-[560px] tw:min-w-0 tw:rounded-[18px] tw:bg-white tw:p-5 tw:text-(--ink) tw:ring-1 tw:ring-black/5 tw:shadow-[0_24px_48px_-28px_rgba(12,21,38,0.35)] tw:max-bssm:p-4">
         {children}
       </div>
     </div>

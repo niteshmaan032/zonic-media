@@ -134,7 +134,7 @@ function CheckUi() {
             className="cg-in tw:flex tw:items-center tw:justify-between tw:gap-3 tw:rounded-[12px] tw:px-3.5 tw:py-2.5 tw:text-[13px] tw:ring-1 tw:ring-(--line)"
             style={{ animationDelay: `${0.3 + i * 0.45}s` }}
           >
-            <span className="tw:truncate">“{r.q}”</span>
+            <span className="tw:min-w-0 tw:truncate">“{r.q}”</span>
             <span
               className={cx(
                 "cg-pop tw:inline-flex tw:flex-none tw:items-center tw:gap-1 tw:rounded-full tw:px-2.5 tw:py-0.5 tw:text-[11.5px]",
