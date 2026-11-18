@@ -10,9 +10,11 @@ import type { Metadata } from "next";
 import { ChatgptBusinessPage } from "@/components/rd/chatgpt/ChatgptBusinessPage";
 import {
   FAQ,
+  HOWTO,
   META,
   PAGE_URL,
   SERVICE_NAME,
+  UPDATED,
   plain,
 } from "@/components/rd/chatgpt/content";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
@@ -82,6 +84,33 @@ const SCHEMA = [
         itemOffered: { "@type": "Service", name },
       })),
     },
+  },
+  // Publish and update dates: the feature is in beta, and AI answers and
+  // Google favour the freshest guide (18 Nov 2026).
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: META.title,
+    description: META.description,
+    datePublished: UPDATED.published,
+    dateModified: UPDATED.iso,
+    inLanguage: "en-US",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: HOWTO.name,
+    url,
+    step: HOWTO.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
   },
   {
     "@context": "https://schema.org",

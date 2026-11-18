@@ -104,17 +104,6 @@ export default async function Page({ params }: Props) {
       post.excerpt,
   }));
 
-  const recent = publishedBlogs
-    .filter((post) => post.slug !== slug)
-    .slice(0, 3)
-    .map((post) => ({
-      id: post.id,
-      slug: post.slug,
-      blogTitle: post.blogTitle,
-      publishDate: post.publishDate,
-      featuredImageUrl: post.featuredImageUrl,
-    }));
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -232,7 +221,6 @@ export default async function Page({ params }: Props) {
         minutes={readMinutes(blog.descriptionHtml)}
         faqs={blog.faqs}
         related={related}
-        recent={recent}
       />
     </>
   );

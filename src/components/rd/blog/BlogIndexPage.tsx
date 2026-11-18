@@ -27,9 +27,11 @@ import BlogGrid, { type BlogCardPost } from "./BlogGrid";
 import {
   BLOG_BASE,
   PER_PAGE,
+  blogTopics,
   formatBlogDate,
   initials,
   toneOf,
+  topicCopy,
   topicOf,
   topicSlug,
 } from "./blogBits";
@@ -61,15 +63,10 @@ export function BlogIndexPage({
 }) {
   const [featured] = all;
 
-  const counts = new Map<string, number>();
-  for (const p of all) {
-    const t = topicOf(p);
-    counts.set(t, (counts.get(t) ?? 0) + 1);
-  }
-  const topics = [...counts.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([label, count]) => ({ slug: topicSlug(label), label, count }));
+  // Only topics with their own page get a topic link (see blogTopics).
+  const topics = blogTopics(all);
   const active = topics.find((t) => t.slug === topic) ?? null;
+  const activeCopy = active ? topicCopy(active) : null;
 
   // Pool for the grid: one topic, or everything after the featured guide.
   const pool = active
@@ -99,7 +96,9 @@ export function BlogIndexPage({
               size="heroWide"
               className="tw:mx-auto tw:max-w-[900px] tw:text-balance"
             >
-              Local SEO Tips and Google Business Profile Guides
+              {activeCopy
+                ? activeCopy.h1
+                : "Local SEO Tips and Google Business Profile Guides"}
             </Strip>
             <p
               className={cx(
@@ -107,13 +106,15 @@ export function BlogIndexPage({
                 "tw:mx-auto tw:mt-6 tw:max-w-[640px] tw:text-balance",
               )}
             >
-              Plain-English help for small business owners: ranking on Google
-              Maps, fixing a suspended profile, earning reviews, showing up in
-              AI search and turning your website and ads into booked calls.
+              {activeCopy
+                ? activeCopy.intro
+                : "Plain-English help for small business owners: ranking on Google Maps, fixing a suspended profile, earning reviews, showing up in AI search and turning your website and ads into booked calls."}
             </p>
             <span className="tw:mt-7 tw:inline-flex tw:items-center tw:gap-2 tw:rounded-full tw:border tw:border-(--line) tw:bg-white tw:px-4 tw:py-2 tw:text-[14px] tw:font-medium tw:text-(--ink-2)">
               <FiBookOpen aria-hidden="true" className="tw:text-(--blue)" />
-              {all.length} guides · {topics.length} topics
+              {active
+                ? `${active.count} guides`
+                : `${all.length} guides · ${topics.length} topics`}
             </span>
           </Wrap>
 
@@ -187,7 +188,7 @@ export function BlogIndexPage({
             <div className="tw:mb-9 tw:grid tw:grid-cols-[minmax(0,1fr)_minmax(0,440px)] tw:items-start tw:gap-12 tw:max-bslg:grid-cols-1 tw:max-bslg:gap-5">
               <Strip id="bl-latest-h">
                 {active
-                  ? `${active.label} Guides`
+                  ? `All ${active.label} Guides`
                   : "New Local SEO and Small Business Marketing Guides"}
               </Strip>
               <p className={cx(LEAD, "tw:max-w-[460px] tw:bslg:pt-2")}>

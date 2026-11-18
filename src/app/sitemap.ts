@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
+import { blogTopics, topicOf, topicSlug } from "@/components/rd/blog/blogBits";
 import lastmodJson from "@/data/sitemapLastmod.generated.json";
 import blogRedirectsJson from "@/data/blogRedirects.json";
 
@@ -265,6 +266,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
+    // Blog topic pages (same rule as /blog: blogTopics). Last modified = the
+    // newest change to any guide in the topic.
+    blogEntries.push(
+      ...blogTopics(blogs).map((topic) => ({
+        url: `${BASE_URL}/blog?topic=${topic.slug}`,
+        lastModified: blogs
+          .filter((blog) => topicSlug(topicOf(blog)) === topic.slug)
+          .map((blog) => blog.updatedAt)
+          .sort()
+          .at(-1),
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      })),
+    );
   } catch {
     // If the DB is unreachable during sitemap generation, skip blog entries
   }

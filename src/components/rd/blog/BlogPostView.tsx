@@ -39,18 +39,10 @@ import { BLOG_BASE, formatShortDate } from "./blogBits";
    (the route builds the HTML; this only lays it out), the same FAQ, Article
    and breadcrumb JSON-LD, and the same mid-article reinstatement CTA rule.
    New: header with author, date and reading time; "On this page" contents
-   from the article's H2s; a sticky sidebar (contents, free-audit card,
-   recent guides); FAQs as native <details>; author box; related guides as
-   cards; light closing banner.
+   from the article's H2s; a sticky sidebar (contents, free-audit card);
+   FAQs as native <details>; author box; related guides as cards; light
+   closing banner.
 --------------------------------------------------------------------------- */
-
-type RecentPost = {
-  id: string;
-  slug: string;
-  blogTitle: string;
-  publishDate: string;
-  featuredImageUrl: string;
-};
 
 export type BlogPostViewProps = {
   blog: {
@@ -69,7 +61,6 @@ export type BlogPostViewProps = {
   minutes: number;
   faqs: FaqItem[];
   related: BlogCardPost[];
-  recent: RecentPost[];
 };
 
 /** "On this page" list (sidebar on desktop, folded panel on phones). */
@@ -142,7 +133,6 @@ export function BlogPostView({
   minutes,
   faqs,
   related,
-  recent,
 }: BlogPostViewProps) {
   return (
     <>
@@ -321,10 +311,10 @@ export function BlogPostView({
               {/* Sidebar. The contents and the audit card stay pinned while
                   you read; the contents list scrolls on its own
                   (data-lenis-prevent lets it scroll under Lenis smooth
-                  scrolling, owner 24 Oct). Recent guides sit at the foot. */}
+                  scrolling, owner 24 Oct). The "Recent guides" box was removed
+                  on 18 Nov 2026 (owner): the related-guides slider below the
+                  article already lists more guides. */}
               <aside className="tw:flex tw:flex-col tw:gap-5 tw:max-bssm:px-(--inset)">
-                {/* The pinned block sticks inside this wrapper, which ends above
-                    "Recent guides", so it can never slide over that box. */}
                 <div className="tw:flex-1">
                   <div className="tw:grid tw:gap-5 tw:bslg:sticky tw:bslg:top-28">
                     {toc.length > 1 ? (
@@ -375,40 +365,6 @@ export function BlogPostView({
                     </div>
                   </div>
                 </div>
-
-                {recent.length ? (
-                  <div className="tw:rounded-[24px] tw:bg-white tw:p-5">
-                    <p className="tw:mb-4 tw:px-1 tw:text-[13px] tw:font-semibold tw:tracking-[0.12em] tw:text-(--muted) tw:uppercase">
-                      Recent guides
-                    </p>
-                    <ul className="tw:grid tw:gap-4 tw:max-bslg:grid-cols-3 tw:max-bsmd:grid-cols-1">
-                      {recent.map((post) => (
-                        <li key={post.id}>
-                          <Link
-                            href={`${BLOG_BASE}/${post.slug}`}
-                            className="tw:group tw:block tw:rounded-[16px] tw:p-1.5 tw:hover:bg-(--panel)"
-                          >
-                            <span className="tw:relative tw:block tw:aspect-[16/9] tw:overflow-hidden tw:rounded-[12px] tw:bg-(--panel)">
-                              <Image
-                                src={post.featuredImageUrl}
-                                alt=""
-                                fill
-                                sizes="(max-width: 991px) 90vw, 320px"
-                                className="tw:object-contain"
-                              />
-                            </span>
-                            <span className="tw:mt-3 tw:block tw:px-1 tw:text-[15.5px]/[1.4] tw:font-medium tw:text-(--ink) tw:group-hover:text-(--blue)">
-                              {post.blogTitle}
-                            </span>
-                            <span className="tw:mt-1 tw:block tw:px-1 tw:text-[13px] tw:text-(--muted)">
-                              {formatShortDate(post.publishDate)}
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
               </aside>
             </div>
           </Wrap>

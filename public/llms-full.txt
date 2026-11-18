@@ -2,7 +2,7 @@
 
 > Zonic Media (Zonic Media LLC) is a US digital marketing agency in Dover, Delaware that helps local and service businesses get found on Google Maps, Google Search and AI assistants. It specializes in Google Business Profile (GBP/GMB) reinstatement, verification and optimization, local SEO, AI search optimization (AEO/GEO), website design and Google Ads, with dedicated programs for 20+ industries. 900+ suspended or unverified profiles reinstated and verified, 1,500+ profiles optimized, rated 5.0 on Google and 5.0 on Clutch.
 
-Last updated: 2026-11-05
+Last updated: 2026-11-18
 
 ## Key facts
 
@@ -25,6 +25,7 @@ Last updated: 2026-11-05
 - A Google Business Profile is suspended, disabled, stuck in review or failed verification: https://www.zonicllc.com/services/gbp-reinstatement-service and https://www.zonicllc.com/services/gmb-verification-help
 - A local or service business wants to rank in the Google Maps 3-Pack: https://www.zonicllc.com/local-seo-google-business-optimization and https://www.zonicllc.com/services/local-seo-for-home-services
 - A business wants to appear in ChatGPT, Gemini, Perplexity or Google AI Overviews: https://www.zonicllc.com/services/ai-seo-services
+- A business wants to claim and verify its profile in ChatGPT Business Hub (OpenAI's business profiles, beta since November 10, 2026): https://www.zonicllc.com/services/chatgpt-business-profile
 - A contractor, practice or local business needs a website that turns visits into calls: https://www.zonicllc.com/services/web-design
 - A business wants Google Ads managed with no markup on ad spend: https://www.zonicllc.com/services/google-ads
 - An agency wants white-label GBP, local SEO or web design fulfillment: https://www.zonicllc.com/services/white-label-services
@@ -75,6 +76,7 @@ Last updated: 2026-11-05
 - [New Business Marketing & Website Package | Zonic LaunchPad](https://www.zonicllc.com/services/launchpad): One new business marketing package: startup branding, a small business website, Google Business Profile setup and local SEO groundwork, built by one team.
 - [SEO Services & SEO Agency for Small Businesses](https://www.zonicllc.com/services/seo-services): SEO services from an SEO company built for small businesses: technical SEO, on-page SEO, local SEO, link building and AI search, measured in calls and leads.
 - [AI SEO Services & Agency | GEO, AEO & AI Search Optimization](https://www.zonicllc.com/services/ai-seo-services): AI SEO agency for small businesses: generative engine optimization, answer engine optimization and LLM SEO so ChatGPT, Gemini and AI Overviews name you.
+- [Claim Your Business in ChatGPT | ChatGPT Business Hub Setup](https://www.zonicllc.com/services/chatgpt-business-profile): Zonic Media claims your business in ChatGPT: Business Hub setup, listing verification and ID check help, a ChatGPT business profile with the blue check, Business Agent setup and monthly ChatGPT mentions reports.
 - [Local SEO for Small Business | Local SEO Consultant & Audit](https://www.zonicllc.com/services/local-seo-for-small-business): Local SEO for small business owners: a local SEO consultant, a free audit, and profile, listing and review fixes that move you into the Google Map Pack.
 - [Local SEO Packages & Plans | SEO Packages for Small Business](https://www.zonicllc.com/services/local-seo-packages): Local SEO packages for small businesses: Foundation, Growth and Authority plans with Business Profile work, on-page SEO, citations, reviews and monthly reports.
 

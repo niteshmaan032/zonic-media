@@ -15,11 +15,32 @@
    guarantee placement; the owner passes the ID check; local businesses
    claim an existing US listing; Business Agents are for eligible US
    ecommerce and online service businesses. Links use [label](href).
+
+   18 Nov 2026 optimization (GSC 9–15 Nov: 28 impressions, avg position 20;
+   "claim" queries at 8–12, "how to claim…" at 53–64, no "business hub"
+   impressions). Semrush US: openai business 260, get business recommended
+   by chatgpt 140, chatgpt maps 70 (spiking), how to get my business on
+   chatgpt 30 (rising); Business Hub terms too new for volume. Added
+   keyword-led H2s, the real claim steps, a verification-problems section,
+   a Business Hub vs Google Business Profile table, the sources ChatGPT
+   reads, 5 FAQs and an "Updated" date. Facts from OpenAI's help article
+   and launch coverage (BrightLocal, GrowthX, Velut): service-area
+   businesses "coming soon", Persona ID check, ownership disputes,
+   "Contact support" listings. "chatgpt seo" and "how to rank in chatgpt"
+   stay with /services/ai-seo-services.
 --------------------------------------------------------------------------- */
 
 export const PAGE_URL = "/services/chatgpt-business-profile";
 export const SERVICE_NAME = "Claim Business in ChatGPT Help";
 export const CONTACT_ID = "cg-contact";
+
+/** Shown under the hero and used as dateModified. Update with each copy
+    change: the feature is in beta and changes week to week. */
+export const UPDATED = {
+  iso: "2026-11-18",
+  label: "Updated November 18, 2026",
+  published: "2026-11-11",
+};
 
 export const META = {
   // Google Trends (US, 7 days to 11 Nov): "chatgpt business hub" +3,200%,
@@ -27,7 +48,7 @@ export const META = {
   // "chatgpt business profile(s)" +450%.
   title: "Claim Your Business in ChatGPT | ChatGPT Business Hub Setup",
   description:
-    "Zonic Media helps you claim your business on ChatGPT: Business Hub setup, verification and a ChatGPT business profile with the blue check. Get a free check.",
+    "Zonic Media claims your business in ChatGPT: Business Hub setup, listing verification and ID check help, and a ChatGPT business profile with the blue check.",
   keywords: [
     "claim your business in chatgpt",
     "claim your business on chatgpt",
@@ -41,13 +62,18 @@ export const META = {
     "chatgpt business agent",
     "chatgpt visibility",
     "get business recommended by chatgpt",
+    "chatgpt business verification",
+    "openai business hub",
+    "chatgpt maps",
+    "how to get my business on chatgpt",
+    "chatgpt business hub vs google business profile",
   ],
 };
 
 export const HERO = {
   // Two balanced lines so the first one clears the icon ring.
   h1: ["Claim your business in", "ChatGPT with Zonic Media"],
-  lead: "OpenAI’s new Businesses in ChatGPT lets you claim a verified profile, and Zonic Media does the work for you, in any niche. We claim and verify your business, keep your details accurate and build the reviews and listings ChatGPT reads, so customers asking for a business like yours find you.",
+  lead: "OpenAI’s ChatGPT Business Hub, in beta since November 10, 2026, lets you claim a verified business profile in ChatGPT. Zonic Media does the work for you, in any niche: we claim and verify your listing, keep your details accurate and build the reviews and listings ChatGPT reads, so customers asking for a business like yours find you.",
   cta: "Help me claim my business",
 };
 
@@ -62,8 +88,8 @@ export type Feature = {
 export const FEATURES: Feature[] = [
   {
     id: "cg-claim",
-    title: "We claim and verify your business in ChatGPT for you",
-    body: "Our team finds your ChatGPT business listing in Business Hub, claims it with the right method (business phone, email or a DNS record on your website) and walks you through the ID check. Once approved, your ChatGPT business profile shows the blue check.",
+    title: "ChatGPT Business Hub setup: we claim and verify your business",
+    body: "Our team finds your ChatGPT business listing in Business Hub, claims it with the right method (a code to your business phone or email, a DNS record on your website or your Shopify store) and walks you through the ID check. Once approved, your ChatGPT business profile shows the blue check.",
     points: [
       "ChatGPT Business Hub setup done for you",
       "Phone, email or DNS verification handled",
@@ -73,8 +99,8 @@ export const FEATURES: Feature[] = [
   },
   {
     id: "cg-facts",
-    title: "We shape how your business shows up in ChatGPT",
-    body: "ChatGPT answers from your profile, your website and the listings and reviews around the web. Zonic Media writes your description, categories and policies, then matches the same facts on your [Google Business Profile](/local-seo-google-business-optimization) and directories.",
+    title: "ChatGPT business profile management that matches every listing",
+    body: "ChatGPT answers from your profile, your website and the listings and reviews around the web, including the local results it shows on a map. Zonic Media writes your description, categories and policies, then matches the same facts on your [Google Business Profile](/local-seo-google-business-optimization), Bing, Apple and directories.",
     points: [
       "Description, logo and categories",
       "Matching hours, phone and address",
@@ -84,7 +110,7 @@ export const FEATURES: Feature[] = [
   },
   {
     id: "cg-agent",
-    title: "We set up a Business Agent that turns questions into sales",
+    title: "ChatGPT Business Agent setup that turns questions into sales",
     body: "Eligible US online stores and online service businesses can publish a ChatGPT Business Agent that answers from their own product and policy details. Zonic Media writes its guidelines, tests the answers and keeps it current as your offers change.",
     points: [
       "Guidelines written and tested",
@@ -95,7 +121,7 @@ export const FEATURES: Feature[] = [
   },
   {
     id: "cg-insights",
-    title: "We show you how customers find you in ChatGPT",
+    title: "ChatGPT business insights: mentions, clicks and discovery topics",
     body: "Business Hub reports mentions, website clicks and the discovery topics where your business appears. Zonic Media reviews them with you each month, tags ChatGPT visits in your analytics and traces them to calls and form leads.",
     points: [
       "Mentions and website clicks",
@@ -158,35 +184,137 @@ export const NICHES = {
   more: { label: "Your niche too", sub: "See all industries", href: "/industries" },
 };
 
-export const STEPS = {
-  title: "How to claim your business in ChatGPT with Zonic Media",
-  lead: "Three steps, and you keep ownership of your profile. Our team handles the setup, the fixes and the follow-up.",
+/** "Where ChatGPT gets your business information" (after the features). */
+export const SOURCES = {
+  title: "Where ChatGPT gets your business information",
+  lead: "Claiming your profile fixes what ChatGPT shows about you. Whether it recommends you depends on everything else it reads, so we work on every source.",
   items: [
     {
-      title: "Free ChatGPT visibility check",
-      body: "We ask ChatGPT the questions your customers ask, record whether your business is named and note which sources it trusts.",
+      title: "Your Business Hub profile",
+      body: "The verified description, category, hours and contact details you publish in ChatGPT.",
     },
     {
-      title: "Claim, verify and publish",
-      body: "We claim your listing in Business Hub, you complete the short ID check, and we publish a complete, accurate profile.",
+      title: "Your website",
+      body: "Service and location pages ChatGPT can read and quote. We build them through our [website design](/services/web-design) team.",
     },
     {
-      title: "Grow your mentions every month",
-      body: "We fix weak sources, earn reviews and add answer-ready pages through our [AI SEO services](/services/ai-seo-services), then report what changed.",
+      title: "Listings and directories",
+      body: "Yelp, Bing Places, Apple Business Connect and industry directories, which feed the local results ChatGPT shows on a map.",
+    },
+    {
+      title: "Reviews",
+      body: "Recent reviews on Google, Yelp and industry sites that describe the work you actually do.",
+    },
+    {
+      title: "Mentions on other sites",
+      body: "Articles, roundups and community answers that name your business and link to it.",
+    },
+    {
+      title: "Matching details everywhere",
+      body: "One name, address, phone and set of hours on every site, starting with your [Google Business Profile](/local-seo-google-business-optimization).",
     },
   ],
+};
+
+export const STEPS = {
+  title: "How to claim your business in ChatGPT, step by step",
+  lead: "Claiming a ChatGPT business profile takes three steps in Business Hub. Zonic Media runs each one with you, and you keep ownership of the profile.",
+  items: [
+    {
+      title: "Find your business listing in Business Hub",
+      body: "Sign in to ChatGPT, open Business Hub from the sidebar and search for your business. Local stores claim an existing US listing; online businesses can add theirs. We first check what ChatGPT already says about you.",
+    },
+    {
+      title: "Verify ownership and pass the ID check",
+      body: "Verify with a code sent to your business phone or email, a DNS record on your website or your Shopify store. After OpenAI approves the claim, the owner completes a short ID check.",
+    },
+    {
+      title: "Publish your profile and grow your mentions",
+      body: "We publish your description, categories, hours and logo, match them across your listings, then earn reviews and add answer-ready pages through our [AI SEO services](/services/ai-seo-services).",
+    },
+  ],
+};
+
+/** The claim process in detail, for the HowTo schema. */
+export const HOWTO = {
+  name: "How to claim your business in ChatGPT",
+  steps: [
+    { name: "Open Business Hub", text: "Sign in to ChatGPT and open Business Hub from the sidebar." },
+    { name: "Find your listing", text: "Search for your business and select the matching listing. Local stores claim an existing US listing; online businesses can add theirs." },
+    { name: "Verify ownership", text: "Verify with a code sent to your business phone or email, a DNS record on your website or a Shopify connection." },
+    { name: "Complete the ID check", text: "After OpenAI approves the claim, the owner or an authorized representative completes an identity check." },
+    { name: "Edit and publish your profile", text: "Add your description, category, hours, contact details and logo, then publish the profile." },
+  ],
+};
+
+/** Verification problems and fixes (after the steps). */
+export const TROUBLE = {
+  title: "Why ChatGPT business verification fails, and how we fix it",
+  lead: "Most stuck claims come down to a handful of issues. These are the ones we see, and what we do about each.",
+  items: [
+    {
+      problem: "Your business isn’t in Business Hub",
+      fix: "Local stores can only claim a listing ChatGPT already has. We search former names and spellings, fix the details on the sites ChatGPT reads, and add online businesses directly.",
+    },
+    {
+      problem: "The listing says “Contact support”",
+      fix: "Some listings can’t be claimed from the search screen. We prepare your proof of ownership and take the request through OpenAI support.",
+    },
+    {
+      problem: "The verification code never arrives",
+      fix: "Codes go to the phone or email already on the listing. We update that contact on your other listings or switch you to DNS verification on your website.",
+    },
+    {
+      problem: "The DNS record won’t verify",
+      fix: "A new DNS record can take hours to appear. We add it at your domain host, confirm it is live, then retry the claim.",
+    },
+    {
+      problem: "The ID check was rejected",
+      fix: "The legal name and address must match your ID and business registration. We line up those records before the owner tries again.",
+    },
+    {
+      problem: "Someone else already claimed it",
+      fix: "An old agency, a former employee or a lookalike business may hold the profile. We help you dispute the ownership with OpenAI and recover access.",
+    },
+    {
+      problem: "You serve customers at their location",
+      fix: "Service-area businesses are listed as coming soon. We prepare your profile and listings now and claim as soon as access opens.",
+    },
+    {
+      problem: "You run several locations or brands",
+      fix: "Each location and each brand is claimed on its own. We claim them one by one and keep the details identical across all of them.",
+    },
+  ],
+};
+
+/** ChatGPT Business Hub vs Google Business Profile (after the problems). */
+export const COMPARE = {
+  title: "ChatGPT Business Hub vs Google Business Profile",
+  lead: "Both are free business profiles that put your details in front of customers. Most businesses need both, kept identical.",
+  columns: ["ChatGPT Business Hub", "Google Business Profile"],
+  rows: [
+    ["Where it shows", "ChatGPT answers, including local results with a map", "Google Search, Google Maps and AI Overviews"],
+    ["Status", "Beta since November 10, 2026", "Established, used by most local businesses"],
+    ["Who can claim now", "Online businesses where ChatGPT is available; local stores claim existing US listings", "Storefronts and service-area businesses in most countries"],
+    ["How you verify", "A code to your business phone or email, a DNS record or Shopify, then an ID check", "Video, phone, text, email or postcard, depending on the business"],
+    ["What you control", "Description, category, contact details, hours, logo and products", "Categories, hours, services, photos, posts, products and attributes"],
+    ["Reviews", "No review system announced; ChatGPT reads reviews from other sites", "Google reviews on your profile, with owner replies"],
+    ["Insights", "Mentions, website clicks and discovery topics", "Views, searches, calls, directions and website clicks"],
+    ["Cost", "Free to claim; ChatGPT ads are separate", "Free; Google Ads are separate"],
+  ] as [string, string, string][],
+  note: "Zonic Media manages both: ChatGPT Business Hub setup on this page, and [Google Business Profile optimization](/local-seo-google-business-optimization) for Google.",
 };
 
 export const FAQ = {
   title: "Claiming your business in ChatGPT: common questions",
   items: [
     {
-      q: "What does it mean to claim your business in ChatGPT?",
-      a: "OpenAI’s Business Hub lets an owner or authorized representative take control of a business profile in ChatGPT. After verification you can update your details, see insights and get a blue check that shows customers the profile is managed by the business itself.",
+      q: "What is ChatGPT Business Hub?",
+      a: "ChatGPT Business Hub is OpenAI’s free tool for claiming a business profile in ChatGPT, in beta since November 10, 2026. An owner or authorized representative verifies the business, then updates the details ChatGPT shows, sees mentions and clicks, and gets a blue check that shows customers the profile is managed by the business itself.",
     },
     {
       q: "How do I claim my business on ChatGPT?",
-      a: "Sign in to ChatGPT, open Business Hub from the sidebar and search for your business. Verify it by business phone, business email, a DNS record on your website or a Shopify connection. After OpenAI reviews the claim, the owner completes an ID check, and the profile can then be edited and published. Zonic Media can run every step with you.",
+      a: "Sign in to ChatGPT, open Business Hub from the sidebar and search for your business. Verify it with a code sent to your business phone or email, a DNS record on your website or a Shopify connection. After OpenAI reviews the claim, the owner completes an ID check, and the profile can then be edited and published. Zonic Media can run every step with you.",
     },
     {
       q: "Can Zonic Media claim my business in ChatGPT for me?",
@@ -202,7 +330,19 @@ export const FAQ = {
     },
     {
       q: "Which businesses can claim a profile in ChatGPT right now?",
-      a: "The beta opened on November 10, 2026. Eligible businesses with a website can claim, depending on industry, location and OpenAI’s verification checks. Local stores currently claim an existing US ChatGPT business listing, and some business types are still marked as coming soon, so we prepare those profiles and claim as soon as access opens.",
+      a: "Online businesses can claim in any country where ChatGPT is available, depending on industry and OpenAI’s verification checks. Local stores and restaurants currently claim an existing US listing, one location at a time, and some business types are still marked as coming soon, so we prepare those profiles and claim as soon as access opens.",
+    },
+    {
+      q: "Why did my ChatGPT business verification fail?",
+      a: "The usual causes are a code sent to an old phone number or email on the listing, a DNS record that hasn’t gone live yet, or an ID check where the legal name and address don’t match your business records. Zonic Media fixes the mismatch and retries the claim; the section above lists every common problem.",
+    },
+    {
+      q: "Someone else already claimed my business in ChatGPT. What can I do?",
+      a: "You can dispute the ownership with OpenAI when another person or company holds the claim. Zonic Media gathers your proof of ownership, files the dispute and recovers access, then checks every detail the other claimant changed.",
+    },
+    {
+      q: "Can service-area businesses claim a ChatGPT business profile?",
+      a: "Not yet in most cases. Service-area businesses such as plumbers and cleaners are listed as coming soon. Zonic Media gets your listings, reviews and website ready now, so your profile can be claimed and completed as soon as OpenAI opens access.",
     },
     {
       q: "How do I get my business recommended by ChatGPT?",
@@ -215,6 +355,14 @@ export const FAQ = {
     {
       q: "Will claiming my business make it rank higher in ChatGPT?",
       a: "Not on its own. OpenAI says claiming does not guarantee higher placement. It makes sure the details ChatGPT shows are accurate and gives you insights; how often you are recommended still depends on the quality and consistency of everything written about you.",
+    },
+    {
+      q: "What are ChatGPT Maps?",
+      a: "When someone asks ChatGPT for a local business, it can answer with a list of places and a map showing ratings and details. Those results draw on ChatGPT’s business listings and sources such as Yelp and business directories, so a claimed profile and consistent listings help your details appear correctly.",
+    },
+    {
+      q: "How is a ChatGPT business profile different from a Google Business Profile?",
+      a: "A Google Business Profile powers Google Search, Maps and AI Overviews and collects Google reviews. A ChatGPT business profile controls what ChatGPT shows about you and reports ChatGPT mentions and clicks. They are separate and free, and best kept identical; Zonic Media manages both, including your [Google Business Profile](/local-seo-google-business-optimization).",
     },
     {
       q: "What is a ChatGPT Business Agent?",

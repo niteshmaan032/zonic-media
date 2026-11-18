@@ -157,7 +157,7 @@ export const CONTENT: LocalSeoContent = {
       {
         icon: "layers",
         title: "Entity Consistency for AI Models",
-        desc: "Your name, category, services and hours made identical on Google, Bing, Apple and key directories, so models see one clear business.",
+        desc: "Your name, category, services and hours made identical on Google, Bing, Apple, ChatGPT and key directories, so models see one clear business.",
         points: [
           "Profile and listing sync",
           "Category alignment",
@@ -171,6 +171,11 @@ export const CONTENT: LocalSeoContent = {
           {
             href: "/services/gmb-verification-help",
             label: "Verification support",
+          },
+          // 18 Nov 2026: in-content link to the ChatGPT Business Hub page.
+          {
+            href: "/services/chatgpt-business-profile",
+            label: "ChatGPT business profile",
           },
         ],
       },

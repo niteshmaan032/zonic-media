@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
+  FiAlertTriangle,
   FiArrowRight,
   FiCheck,
   FiMail,
@@ -21,6 +22,7 @@ import { Wrap, cx } from "@/components/rd/dfw-kit/primitives";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import {
   BANNER,
+  COMPARE,
   CONTACT,
   CONTACT_ID,
   FAQ,
@@ -28,8 +30,11 @@ import {
   HERO,
   NICHES,
   PAGE_URL,
+  SOURCES,
   SPRITE,
   STEPS,
+  TROUBLE,
+  UPDATED,
   type Feature,
 } from "./content";
 import { AgentUi, ClaimUi, FactsUi, InsightsUi } from "./demos";
@@ -47,9 +52,11 @@ import { Steps } from "./Steps";
    band, black FAQ and a navy closing banner. Animated UI components take
    the place of the reference videos. Site header (layout) and footer.
 
-   Order: hero + chat demo → claim → facts → agent → insights → 3 steps →
-   FAQ → banner → contact (phone, email, address beside the form) →
-   related services → footer. Copy and research notes in ./content.ts.
+   Order: hero + chat demo → claim → facts → agent → insights → sources
+   ChatGPT reads → niches → 3 steps → verification problems → Business Hub
+   vs Google Business Profile → FAQ → banner → contact (phone, email,
+   address beside the form) → related services → footer. Copy and research
+   notes in ./content.ts (sources, problems and comparison added 18 Nov).
 --------------------------------------------------------------------------- */
 
 const ServiceLeadForm = dynamic(
@@ -193,6 +200,141 @@ function NicheTiles() {
   );
 }
 
+/** Section heading + lead, centred, white on the dark bands. */
+function BandHeading({ id, title, lead }: { id: string; title: string; lead: string }) {
+  return (
+    <div className="tw:mx-auto tw:mb-[clamp(32px,4vw,52px)] tw:max-w-[760px] tw:text-center">
+      <h2
+        id={id}
+        className="tw:text-[clamp(30px,3vw,44px)] tw:leading-[1.15] tw:tracking-[-0.02em] tw:text-balance tw:text-white"
+      >
+        {title}
+      </h2>
+      <p className="tw:mt-4 tw:text-[17px]/[1.65] tw:text-white/80">{lead}</p>
+    </div>
+  );
+}
+
+/** The sources ChatGPT reads, as light panels on black. */
+function SourcesGrid() {
+  return (
+    <section
+      id="cg-sources"
+      aria-labelledby="cg-sources-h"
+      className="tw:bg-black tw:py-[clamp(56px,6vw,96px)]"
+    >
+      <Wrap>
+        <BandHeading id="cg-sources-h" title={SOURCES.title} lead={SOURCES.lead} />
+        <ul className="tw:grid tw:grid-cols-3 tw:gap-4 tw:max-bslg:grid-cols-2 tw:max-bssm:grid-cols-1">
+          {SOURCES.items.map((s) => (
+            <li key={s.title} className="tw:rounded-[20px] tw:bg-(--demo) tw:p-6">
+              <h3 className="tw:flex tw:items-center tw:gap-2.5 tw:text-[18px]/[1.35] tw:font-medium tw:text-(--ink)">
+                <FiCheck
+                  className="tw:size-5 tw:flex-none tw:rounded-full tw:bg-(--check) tw:p-1 tw:text-white tw:[stroke-width:3.5]"
+                  aria-hidden="true"
+                />
+                {s.title}
+              </h3>
+              <p className="tw:mt-3 tw:text-[15.5px]/[1.6] tw:text-(--ink-2)">
+                <Rich text={s.body} />
+              </p>
+            </li>
+          ))}
+        </ul>
+      </Wrap>
+    </section>
+  );
+}
+
+/** Verification problems, each with what we do about it. */
+function TroubleGrid() {
+  return (
+    <section
+      id="cg-problems"
+      aria-labelledby="cg-problems-h"
+      className="tw:bg-black tw:py-[clamp(64px,7vw,104px)]"
+    >
+      <Wrap>
+        <BandHeading id="cg-problems-h" title={TROUBLE.title} lead={TROUBLE.lead} />
+        <ul className="tw:grid tw:grid-cols-2 tw:gap-4 tw:max-bsmd:grid-cols-1">
+          {TROUBLE.items.map((t) => (
+            <li
+              key={t.problem}
+              className="tw:grid tw:grid-cols-[auto_minmax(0,1fr)] tw:gap-4 tw:rounded-[20px] tw:bg-white/[0.05] tw:p-6 tw:ring-1 tw:ring-white/10"
+            >
+              <span
+                className="tw:grid tw:size-10 tw:place-items-center tw:rounded-full tw:bg-(--check)/15 tw:text-[18px] tw:text-(--sky)"
+                aria-hidden="true"
+              >
+                <FiAlertTriangle />
+              </span>
+              <div>
+                <h3 className="tw:text-[18px]/[1.4] tw:font-medium tw:text-white">
+                  {t.problem}
+                </h3>
+                <p className="tw:mt-2 tw:text-[15.5px]/[1.65] tw:text-white/70">{t.fix}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Wrap>
+    </section>
+  );
+}
+
+/** ChatGPT Business Hub vs Google Business Profile. The table scrolls
+    sideways on its own on phones. */
+function CompareTable() {
+  return (
+    <section
+      id="cg-compare"
+      aria-labelledby="cg-compare-h"
+      className="tw:bg-(--band) tw:py-[clamp(64px,7vw,104px)]"
+    >
+      <Wrap>
+        <BandHeading id="cg-compare-h" title={COMPARE.title} lead={COMPARE.lead} />
+        <div className="tw:mx-auto tw:max-w-[1040px] tw:overflow-x-auto tw:rounded-[22px] tw:bg-black tw:ring-1 tw:ring-white/10">
+          <table className="tw:w-full tw:min-w-[640px] tw:border-collapse tw:text-left tw:text-[15.5px]/[1.55]">
+            <thead>
+              <tr className="tw:border-b tw:border-(--hair)">
+                <th scope="col" className="tw:w-[22%] tw:px-6 tw:py-5">
+                  <span className="tw:sr-only">Feature</span>
+                </th>
+                <th scope="col" className="tw:px-6 tw:py-5 tw:font-medium tw:text-white">
+                  <span className="tw:inline-flex tw:items-center tw:gap-2">
+                    <MdVerified className="tw:size-5 tw:text-(--check)" aria-hidden="true" />
+                    {COMPARE.columns[0]}
+                  </span>
+                </th>
+                <th scope="col" className="tw:px-6 tw:py-5 tw:font-medium tw:text-white">
+                  {COMPARE.columns[1]}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {COMPARE.rows.map(([label, hub, gbp]) => (
+                <tr key={label} className="tw:border-b tw:border-(--hair) tw:last:border-b-0">
+                  <th scope="row" className="tw:px-6 tw:py-4 tw:align-top tw:font-medium tw:text-white">
+                    {label}
+                  </th>
+                  <td className="tw:px-6 tw:py-4 tw:align-top tw:text-white/85">{hub}</td>
+                  <td className="tw:px-6 tw:py-4 tw:align-top tw:text-white/65">{gbp}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="tw:mx-auto tw:mt-6 tw:max-w-[760px] tw:text-center tw:text-[15.5px]/[1.65] tw:text-white/75">
+          <Rich
+            text={COMPARE.note}
+            linkClass="tw:text-white tw:underline tw:decoration-1 tw:underline-offset-[3px] tw:hover:opacity-75"
+          />
+        </p>
+      </Wrap>
+    </section>
+  );
+}
+
 function FeatureRow({ f, flip }: { f: Feature; flip: boolean }) {
   const headingId = `${f.id}-h`;
   return (
@@ -298,6 +440,10 @@ export function ChatgptBusinessPage() {
             <p className="tw:mx-auto tw:mt-6 tw:max-w-[640px] tw:text-[17px]/[1.65] tw:text-black">
               {HERO.lead}
             </p>
+            {/* Freshness: the feature is in beta and changes week to week. */}
+            <p className="tw:mt-4 tw:text-[14px] tw:text-black/60">
+              <time dateTime={UPDATED.iso}>{UPDATED.label}</time>
+            </p>
             <div className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-center tw:gap-3">
               <CtaPill href={CONTACT_HREF} tone="black">
                 {HERO.cta}
@@ -314,6 +460,9 @@ export function ChatgptBusinessPage() {
         {FEATURES.map((f, i) => (
           <FeatureRow key={f.id} f={f} flip={i % 2 === 1} />
         ))}
+
+        {/* ======================================================== SOURCES */}
+        <SourcesGrid />
 
         {/* ========================================================= NICHES */}
         <NicheTiles />
@@ -339,6 +488,12 @@ export function ChatgptBusinessPage() {
             <Steps items={STEPS.items} />
           </Wrap>
         </section>
+
+        {/* ======================================================= PROBLEMS */}
+        <TroubleGrid />
+
+        {/* ======================================================== COMPARE */}
+        <CompareTable />
 
         {/* ============================================================= FAQ */}
         <section
