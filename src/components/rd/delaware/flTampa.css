@@ -1,0 +1,139 @@
+/* Tampa digital marketing page (18 Nov 2026): town pings on the bay-split
+   map (3.2s), the water line rolling on the tide gauges (3s), the call
+   sheet sliding up on the pool-builder phone and the tap ring on its Call
+   button (8s, in step with the de-* loops), and the tracking switches
+   flipping on in turn (8s). Resting state: no pings or ring, sheet up,
+   switches on. Reduced motion: still. */
+
+.tpa-ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: tpa-ping 3.2s ease-out infinite both;
+}
+@keyframes tpa-ping {
+  0% {
+    opacity: 0.5;
+    scale: 0.5;
+  }
+  75%,
+  100% {
+    opacity: 0;
+    scale: 2.6;
+  }
+}
+
+.tpa-wave {
+  animation: tpa-wave 3s linear infinite;
+}
+@keyframes tpa-wave {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tpa-sheet {
+  animation: tpa-sheet 8s ease infinite both;
+}
+@keyframes tpa-sheet {
+  0%,
+  60% {
+    transform: translateY(110%);
+  }
+  68%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(110%);
+  }
+}
+
+.tpa-tap {
+  opacity: 0;
+  animation: tpa-tap 8s ease-out infinite both;
+}
+@keyframes tpa-tap {
+  0%,
+  50% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  53% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  60%,
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+/* Switch knobs, timed with de-dot-1…4 (the track colour). */
+@keyframes tpa-knob-1 {
+  0%,
+  14% {
+    transform: none;
+  }
+  18%,
+  94% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes tpa-knob-2 {
+  0%,
+  24% {
+    transform: none;
+  }
+  28%,
+  94% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes tpa-knob-3 {
+  0%,
+  34% {
+    transform: none;
+  }
+  38%,
+  94% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes tpa-knob-4 {
+  0%,
+  44% {
+    transform: none;
+  }
+  48%,
+  94% {
+    transform: translateX(12px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tpa-ping,
+  .tpa-wave,
+  .tpa-sheet,
+  .tpa-tap,
+  .tpa-knob {
+    animation: none !important;
+  }
+  .tpa-ping,
+  .tpa-tap {
+    opacity: 0;
+  }
+}

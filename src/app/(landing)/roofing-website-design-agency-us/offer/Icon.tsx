@@ -45,7 +45,7 @@ const ICON_PATHS = {
   code: '<path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/>',
   users:
     '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
-  // Roofing addition: the inspection-form capability tile
+  // Roofing addition: the estimate-form capability tile
   clipboard:
     '<rect width="12" height="16" x="6" y="4" rx="2"/><path d="M9 4V3h6v1"/><path d="M9.5 11h5M9.5 15h3"/>',
 } as const;

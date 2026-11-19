@@ -668,7 +668,7 @@ export default function DallasFortWorthWebDesignPage() {
             <Strip
               as="h1"
               id="dfw-h1"
-              className="dw-hero-title tw:min-bssm:[&.dw-hero-title]:[font-size:clamp(38px,_5vw,_76px)] tw:max-bssm:[&.dw-hero-title]:[font-size:clamp(36px,_10.25vw,_44px)] tw:min-bsmd:[&.dw-hero-title]:[line-height:1.12] tw:max-bsmd:[&.dw-hero-title]:[line-height:1.16]!"
+              className="dw-hero-title tw:min-bssm:[&.dw-hero-title]:[font-size:clamp(38px,_4.3vw,_64px)] tw:[margin-inline:auto] tw:[max-width:1060px] tw:[text-wrap:balance] tw:max-bssm:[&.dw-hero-title]:[font-size:clamp(36px,_10.25vw,_44px)] tw:min-bsmd:[&.dw-hero-title]:[line-height:1.12] tw:max-bsmd:[&.dw-hero-title]:[line-height:1.16]!"
             >
               Dallas–Fort Worth <InlinePin /> Web Design{" "}
               <br className="dw-hero-br tw:max-bssm:[display:none]" />

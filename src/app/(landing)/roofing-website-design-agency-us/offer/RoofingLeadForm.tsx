@@ -44,7 +44,7 @@ const ROOFING_SERVICES = [
   "Emergency Roofing",
   "Gutters",
   "Siding",
-  "Roof Inspections & Maintenance",
+  "Roof Maintenance & Tune-Ups",
   "Mix of the above",
 ];
 

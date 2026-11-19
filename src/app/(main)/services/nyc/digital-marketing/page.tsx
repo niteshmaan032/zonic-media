@@ -576,7 +576,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["Every Borough", "Searches Differently.", "We Plan for Each."],
   aboutPhoto: {
     src: "/images/nyc/nyc-digital-marketing-agency-office.webp",
-    alt: "New York digital marketing agency workspace with a campaign dashboard and the Manhattan skyline",
+    alt: "New York digital marketing campaign dashboard with the Manhattan skyline",
   },
   aboutCard: {
     kicker: "One plan for New York",

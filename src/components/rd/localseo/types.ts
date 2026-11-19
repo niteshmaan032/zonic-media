@@ -58,7 +58,26 @@ export type GrowthHero = {
   tabs: [GrowthTab, GrowthTab, GrowthTab];
 };
 
-export type HeroUi = GrowthHero;
+/** AI SEO hero (/services/ai-seo-services, owner 18 Nov 2026): same shell
+    as GrowthHero, but the three tabs show the service itself: a ChatGPT
+    answer that names the business, a Google AI Overview that quotes and
+    cites its page, and a monthly check across AI engines. */
+export type AiSeoHero = {
+  kind: "aiseo";
+  /** Example business, e.g. "Your Company". */
+  business: string;
+  /** Example site shown as the cited source, e.g. "yourcompany.com". */
+  domain: string;
+  /** Question asked in ChatGPT. */
+  prompt: string;
+  /** Google search that shows the AI Overview. */
+  query: string;
+  /** Sentence the AI Overview quotes from the business page. */
+  quote: string;
+  tabs: [GrowthTab, GrowthTab, GrowthTab];
+};
+
+export type HeroUi = GrowthHero | AiSeoHero;
 
 /* ----------------------------------------------------------------- blocks */
 

@@ -1,0 +1,41 @@
+/* Sarasota digital marketing page (18 Nov 2026): the ripple drifting
+   across the water in the pool request tiles (4s loop) and the glow
+   around the sun on the scorecard arcs and the welcome-back email (3s
+   loop). Resting state: still water, no glow. Reduced motion: still. */
+
+.srq-wave {
+  animation: srq-wave 4s linear infinite;
+}
+@keyframes srq-wave {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.srq-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: srq-glow 3s ease-out infinite both;
+}
+@keyframes srq-glow {
+  0% {
+    opacity: 0.55;
+    scale: 0.8;
+  }
+  75%,
+  100% {
+    opacity: 0;
+    scale: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .srq-wave,
+  .srq-glow {
+    animation: none !important;
+  }
+  .srq-glow {
+    opacity: 0;
+  }
+}

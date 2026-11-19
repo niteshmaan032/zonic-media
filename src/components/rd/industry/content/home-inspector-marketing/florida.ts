@@ -94,6 +94,7 @@ export const CONTENT: LocationContent = {
             href: "/local-seo-google-business-optimization",
             label: "Upgrade my Google profile",
           },
+          { href: "/services/florida/local-seo", label: "Florida SEO company" },
         ],
       },
       {
@@ -123,6 +124,7 @@ export const CONTENT: LocationContent = {
         ],
         links: [
           { href: "/services/google-ads", label: "Florida ad management" },
+          { href: "/services/florida/ppc", label: "PPC agency in Florida" },
         ],
       },
       {
@@ -136,6 +138,10 @@ export const CONTENT: LocationContent = {
         ],
         links: [
           { href: "/services/web-design", label: "Inspection website design" },
+          {
+            href: "/services/florida/web-design",
+            label: "Florida web design company",
+          },
         ],
       },
       {
@@ -147,7 +153,13 @@ export const CONTENT: LocationContent = {
           "Agent booking link",
           "Owner replies written",
         ],
-        links: [{ href: "/services", label: "Our full range of services" }],
+        links: [
+          { href: "/services", label: "Our full range of services" },
+          {
+            href: "/services/florida/digital-marketing",
+            label: "Florida digital marketing agency",
+          },
+        ],
       },
       {
         icon: "shield",

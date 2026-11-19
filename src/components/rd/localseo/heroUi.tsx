@@ -8,9 +8,11 @@
 
    Every page renders the GrowthHero card (heroes/GrowthHero.tsx): Maps /
    AI / growth tabs, each with several designs, combined differently per
-   page. */
+   page. The AI SEO page has its own card (heroes/AiSeoHero.tsx, 18 Nov
+   2026): ChatGPT, AI Overviews and an AI engine check. */
 
 import type { BrandTone } from "@/components/rd/seoservices/seoUi";
+import { AiSeoHero } from "./heroes/AiSeoHero";
 import { GrowthHero } from "./heroes/GrowthHero";
 import type { HeroUi } from "./types";
 
@@ -21,5 +23,9 @@ export function LocalSeoHeroUi({
   ui: HeroUi;
   tones: [BrandTone, BrandTone, BrandTone, BrandTone];
 }) {
-  return <GrowthHero ui={ui} tones={tones} />;
+  return ui.kind === "aiseo" ? (
+    <AiSeoHero ui={ui} tones={tones} />
+  ) : (
+    <GrowthHero ui={ui} tones={tones} />
+  );
 }

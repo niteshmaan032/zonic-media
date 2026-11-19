@@ -566,7 +566,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["Web Design for", "New York’s", "Phone-First City."],
   aboutPhoto: {
     src: "/images/nyc/nyc-web-design-agency-studio.webp",
-    alt: "NYC web design agency studio with a new website on a laptop and phone above the Manhattan skyline",
+    alt: "NYC web design: a new website on a laptop and phone above the Manhattan skyline",
     // 4:3 image in a wide box: keep the title text at the top in view.
     position: "50% 0%",
   },

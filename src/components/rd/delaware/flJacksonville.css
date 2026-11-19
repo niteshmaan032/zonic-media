@@ -1,0 +1,42 @@
+/* Jacksonville digital marketing page (18 Nov 2026): the current drifting
+   down the St. Johns on the dark-card river map (3s loop) and the pulse
+   around the shop pin in the drive-time planner (2.6s loop). Resting state:
+   still dashes, no pulse. Reduced motion: still. */
+
+.jx-flow {
+  stroke-dasharray: 2 9;
+  animation: jx-flow 3s linear infinite;
+}
+@keyframes jx-flow {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+
+.jx-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: jx-pulse 2.6s ease-out infinite both;
+}
+@keyframes jx-pulse {
+  0% {
+    opacity: 0.5;
+    scale: 0.6;
+  }
+  80%,
+  100% {
+    opacity: 0;
+    scale: 2.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jx-flow,
+  .jx-pulse {
+    animation: none !important;
+  }
+  .jx-pulse {
+    opacity: 0;
+  }
+}

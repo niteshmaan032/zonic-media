@@ -1,0 +1,119 @@
+/* Florida digital marketing page (18 Nov 2026): metro pins on the
+   statewide lead map pulse in turn (4s loop). Reduced motion: still. */
+
+.fl-ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: fl-ping 4s ease-out infinite both;
+}
+@keyframes fl-ping {
+  0% {
+    opacity: 0.55;
+    scale: 0.6;
+  }
+  70%,
+  100% {
+    opacity: 0;
+    scale: 2.4;
+  }
+}
+
+/* Hub city directory (18 Nov 2026): hovering or focusing a city card lifts
+   its pin on the map and darkens the label. */
+.fl-pin {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: scale 0.25s ease;
+}
+.fl-pin-label {
+  transition: fill 0.25s ease;
+}
+.fl-cities:has([data-city="jacksonville"]:is(:hover, :focus-within))
+  [data-pin="jacksonville"]
+  .fl-pin,
+.fl-cities:has([data-city="orlando"]:is(:hover, :focus-within))
+  [data-pin="orlando"]
+  .fl-pin,
+.fl-cities:has([data-city="tampa"]:is(:hover, :focus-within))
+  [data-pin="tampa"]
+  .fl-pin,
+.fl-cities:has([data-city="st-petersburg"]:is(:hover, :focus-within))
+  [data-pin="st-petersburg"]
+  .fl-pin,
+.fl-cities:has([data-city="sarasota"]:is(:hover, :focus-within))
+  [data-pin="sarasota"]
+  .fl-pin,
+.fl-cities:has([data-city="fort-myers"]:is(:hover, :focus-within))
+  [data-pin="fort-myers"]
+  .fl-pin,
+.fl-cities:has([data-city="fort-lauderdale"]:is(:hover, :focus-within))
+  [data-pin="fort-lauderdale"]
+  .fl-pin,
+.fl-cities:has([data-city="miami"]:is(:hover, :focus-within))
+  [data-pin="miami"]
+  .fl-pin {
+  scale: 1.4;
+}
+.fl-cities:has([data-city="jacksonville"]:is(:hover, :focus-within))
+  [data-pin="jacksonville"]
+  .fl-pin-label,
+.fl-cities:has([data-city="orlando"]:is(:hover, :focus-within))
+  [data-pin="orlando"]
+  .fl-pin-label,
+.fl-cities:has([data-city="tampa"]:is(:hover, :focus-within))
+  [data-pin="tampa"]
+  .fl-pin-label,
+.fl-cities:has([data-city="st-petersburg"]:is(:hover, :focus-within))
+  [data-pin="st-petersburg"]
+  .fl-pin-label,
+.fl-cities:has([data-city="sarasota"]:is(:hover, :focus-within))
+  [data-pin="sarasota"]
+  .fl-pin-label,
+.fl-cities:has([data-city="fort-myers"]:is(:hover, :focus-within))
+  [data-pin="fort-myers"]
+  .fl-pin-label,
+.fl-cities:has([data-city="fort-lauderdale"]:is(:hover, :focus-within))
+  [data-pin="fort-lauderdale"]
+  .fl-pin-label,
+.fl-cities:has([data-city="miami"]:is(:hover, :focus-within))
+  [data-pin="miami"]
+  .fl-pin-label {
+  fill: var(--fl-accent);
+}
+
+/* Hub city pop-up (19 Nov 2026): rises in when the "more cities" card is
+   pressed, and the page behind it stops scrolling while it is open. */
+.fl-city-dialog[open] {
+  animation: fl-city-pop 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.fl-city-dialog[open]::backdrop {
+  animation: fl-city-fade 0.32s ease;
+}
+@keyframes fl-city-pop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+}
+@keyframes fl-city-fade {
+  from {
+    opacity: 0;
+  }
+}
+:root:has(.fl-city-dialog[open]) {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-city-dialog[open],
+  .fl-city-dialog[open]::backdrop {
+    animation: none;
+  }
+  .fl-ping {
+    animation: none !important;
+  }
+  .fl-pin {
+    transition: none;
+  }
+}

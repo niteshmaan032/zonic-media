@@ -171,7 +171,7 @@ const seoServiceLinks: NicheLink[] = [
     id: "local-seo-for-roofing-companies",
     title: "Local SEO for Roofing Companies",
     description:
-      "Show up when homeowners search for roof repair, replacement, or inspections nearby.",
+      "Show up when homeowners search for roof repair, replacement, or a roofer nearby.",
     link: "/services/industry/local-seo-for-roofing-companies",
     icon: <MdRoofing />,
     group: "Repair & Installation",
@@ -441,7 +441,7 @@ const webDesignLinks: NicheLink[] = [
     id: "roofing-website-design",
     title: "Roofing Website Design",
     description:
-      "Roofing websites with storm-damage funnels and free-inspection lead capture.",
+      "Roofing websites with repair and re-roof pages and photo estimate forms.",
     link: "/services/roofing-website-design",
     icon: <MdRoofing />,
     group: "Repair & Installation",
@@ -700,7 +700,7 @@ const industryLinks: NicheLink[] = [
     id: "roofing-marketing-agency",
     title: "Roofing Marketing",
     description:
-      "Storm, repair, and replacement leads for residential roofing companies.",
+      "Repair and replacement leads for residential roofing companies.",
     link: "/services/roofing-marketing-agency",
     icon: <MdRoofing />,
     group: "Repair & Installation",

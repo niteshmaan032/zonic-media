@@ -91,6 +91,7 @@ export const CONTENT: LocationContent = {
             href: "/local-seo-google-business-optimization",
             label: "Maps profile management",
           },
+          { href: "/services/florida/local-seo", label: "Florida SEO company" },
         ],
       },
       {
@@ -124,6 +125,7 @@ export const CONTENT: LocationContent = {
         ],
         links: [
           { href: "/services/google-ads", label: "Google Ads for plumbers" },
+          { href: "/services/florida/ppc", label: "PPC agency in Florida" },
         ],
       },
       {
@@ -154,6 +156,10 @@ export const CONTENT: LocationContent = {
         ],
         links: [
           { href: "/services/ai-seo-services", label: "AI search visibility" },
+          {
+            href: "/services/florida/digital-marketing",
+            label: "Florida digital marketing agency",
+          },
         ],
       },
       {

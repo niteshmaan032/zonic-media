@@ -811,7 +811,12 @@ export default function DallasFortWorthLocalSeoPage() {
           </span>
 
           <Wrap>
-            <Strip as="h1" id="dfw-h1" size="hero">
+            <Strip
+              as="h1"
+              id="dfw-h1"
+              size="hero"
+              className="tw:mx-auto tw:max-w-[1060px] tw:text-balance tw:bssm:text-[clamp(38px,4.3vw,64px)]"
+            >
               Dallas &amp; Fort Worth <InlinePin id="dk-pin-hero" /> Local SEO{" "}
               <br className="tw:max-bssm:hidden" />
               That Wins the Map Pack

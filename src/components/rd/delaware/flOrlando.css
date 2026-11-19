@@ -1,0 +1,176 @@
+/* Orlando digital marketing page (18 Nov 2026), flOrlandoUi.tsx only.
+   - flo-wipe: the language-mix bars wiping in from the left (8s loop);
+     resting = full bar.
+   - flo-step-1…6: the scorecard staircase, one step rising after
+     another (8s loop, absolute percentages so the steps stay in order);
+     resting = every step up.
+   - flo-sheet: the booking sheet sliding up on the phone (8s loop);
+     resting = open.
+   - flo-ring: the pulse around the phone's Book button (2.4s loop).
+   Reduced motion: everything still, resting states shown. */
+
+.flo-wipe {
+  animation: flo-wipe 8s ease infinite both;
+}
+@keyframes flo-wipe {
+  0%,
+  8% {
+    clip-path: inset(0 100% 0 0);
+  }
+  36%,
+  94% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.flo-step-1,
+.flo-step-2,
+.flo-step-3,
+.flo-step-4,
+.flo-step-5,
+.flo-step-6 {
+  transform-origin: bottom;
+}
+.flo-step-1 {
+  animation: flo-step-1 8s ease infinite both;
+}
+.flo-step-2 {
+  animation: flo-step-2 8s ease infinite both;
+}
+.flo-step-3 {
+  animation: flo-step-3 8s ease infinite both;
+}
+.flo-step-4 {
+  animation: flo-step-4 8s ease infinite both;
+}
+.flo-step-5 {
+  animation: flo-step-5 8s ease infinite both;
+}
+.flo-step-6 {
+  animation: flo-step-6 8s ease infinite both;
+}
+@keyframes flo-step-1 {
+  0%,
+  4% {
+    transform: scaleY(0);
+  }
+  10%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes flo-step-2 {
+  0%,
+  10% {
+    transform: scaleY(0);
+  }
+  16%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes flo-step-3 {
+  0%,
+  16% {
+    transform: scaleY(0);
+  }
+  22%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes flo-step-4 {
+  0%,
+  22% {
+    transform: scaleY(0);
+  }
+  28%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes flo-step-5 {
+  0%,
+  28% {
+    transform: scaleY(0);
+  }
+  34%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes flo-step-6 {
+  0%,
+  34% {
+    transform: scaleY(0);
+  }
+  42%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.flo-sheet {
+  animation: flo-sheet 8s ease infinite both;
+}
+@keyframes flo-sheet {
+  0%,
+  22% {
+    transform: translateY(105%);
+  }
+  30%,
+  94% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(105%);
+  }
+}
+
+.flo-ring {
+  animation: flo-ring 2.4s ease-out infinite both;
+}
+@keyframes flo-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.45);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 9px rgba(109, 40, 217, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flo-wipe,
+  .flo-step-1,
+  .flo-step-2,
+  .flo-step-3,
+  .flo-step-4,
+  .flo-step-5,
+  .flo-step-6,
+  .flo-sheet,
+  .flo-ring {
+    animation: none !important;
+  }
+}

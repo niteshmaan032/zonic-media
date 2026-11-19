@@ -25,11 +25,11 @@ const SERVICES: RoofingService[] = [
     label: "Roof Repair",
     icon: "wrench",
     heading: "Catch leak searches while the ceiling still drips.",
-    body: "A roof repair page that tells a worried homeowner what to do next, shows you can come out fast and keeps the inspection request in view.",
+    body: "A roof repair page that tells a worried homeowner what to do next, shows you can come out fast and keeps the estimate request in view.",
     bullets: [
       "Leak and damage symptom guides",
       "Tap-to-call on every screen",
-      "Short inspection request form",
+      "Short estimate request form",
     ],
     ctaLabel: "Build my roof repair pages",
     kicker: "LOCAL ROOF REPAIR",
@@ -55,21 +55,21 @@ const SERVICES: RoofingService[] = [
     photoAlt: "Roofing crew installing architectural shingles on a suburban home",
   },
   {
-    id: "storm",
-    label: "Storm Damage",
-    icon: "wind",
-    heading: "Be the roofer they find once the hail stops.",
-    body: "Storm damage pages for sudden local demand, with inspection booking, insurance claim help and tracking ready before the next storm.",
+    id: "claims",
+    label: "Insurance Claims",
+    icon: "shield",
+    heading: "Make the roof insurance claim easy to follow.",
+    body: "Claim pages that explain damage photos, adjuster visits and next steps in plain words, with the estimate request close by.",
     bullets: [
-      "Storm damage landing pages",
-      "Insurance claim walkthroughs",
-      "Campaign-ready call tracking",
+      "Claim process walkthroughs",
+      "Damage photo checklists",
+      "Estimate request on every page",
     ],
-    ctaLabel: "Build my storm damage pages",
-    kicker: "STORM RESPONSE TEAM",
-    siteHeading: "Storm damage help starts here.",
+    ctaLabel: "Build my insurance claim pages",
+    kicker: "INSURANCE CLAIM HELP",
+    siteHeading: "Roof claim help, step by step.",
     photo: "/images/free-website/free-roof/storm-damage.webp",
-    photoAlt: "Roof inspector documenting storm damage on a shingle roof",
+    photoAlt: "Roofer photographing roof damage for an insurance claim",
   },
   {
     id: "shingle",
@@ -93,7 +93,7 @@ const SERVICES: RoofingService[] = [
     label: "Commercial",
     icon: "building",
     heading: "Win the flat-roof work property managers need done.",
-    body: "A clear commercial path covering membrane systems, maintenance programs, inspections, safety standards and crew capacity for building owners.",
+    body: "A clear commercial path covering membrane systems, maintenance programs, repairs, safety standards and crew capacity for building owners.",
     bullets: [
       "Pages for each roof system",
       "Maintenance program details",
@@ -103,7 +103,7 @@ const SERVICES: RoofingService[] = [
     kicker: "COMMERCIAL ROOFING",
     siteHeading: "Flat roof systems, maintained properly.",
     photo: "/images/free-website/free-roof/commercial-roofing.webp",
-    photoAlt: "Commercial roofers inspecting a flat membrane roof on a city building",
+    photoAlt: "Commercial roofers working on a flat membrane roof on a city building",
   },
   {
     id: "gutter-siding",
@@ -203,7 +203,7 @@ export default function RoofingServiceTabs() {
                     <span>Reviews</span>
                   </div>
                   <div className="niche-mini-call">
-                    <Icon name="phone" /> Free inspection
+                    <Icon name="phone" /> Free estimate
                   </div>
                 </div>
                 <div className="niche-site-hero">
@@ -215,7 +215,7 @@ export default function RoofingServiceTabs() {
                       built to protect your property.
                     </p>
                     <div className="niche-site-actions">
-                      <b>Book inspection</b>
+                      <b>Get an estimate</b>
                       <b>View roofing services</b>
                     </div>
                     <div className="niche-stars">
@@ -249,14 +249,14 @@ export default function RoofingServiceTabs() {
                     className="niche-mobile-image roofing-mobile-image"
                     style={{ backgroundImage: `url(${service.photo})` }}
                   />
-                  <div className="niche-mobile-button">Book inspection</div>
+                  <div className="niche-mobile-button">Get an estimate</div>
                 </div>
               </div>
 
               <div className="niche-result-card">
                 <Icon name="building" />
                 <span>
-                  <strong>Made to book roof inspections</strong>
+                  <strong>Made to book roof estimates</strong>
                   <small>From a local search to a signed job</small>
                 </span>
               </div>

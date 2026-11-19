@@ -617,7 +617,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["Philly SEO Built", "One Neighborhood", "at a Time."],
   aboutPhoto: {
     src: "/images/philadelphia/phila-seo/philadelphia-seo-company-dashboard.webp",
-    alt: "Philadelphia SEO company workspace with an SEO performance dashboard overlooking the skyline",
+    alt: "Philadelphia SEO performance dashboard overlooking the city skyline",
     // 4:3 image in a wide box: keep the title text at the top in view.
     position: "50% 0%",
   },

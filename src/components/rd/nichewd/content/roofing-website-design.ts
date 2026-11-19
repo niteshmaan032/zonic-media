@@ -10,15 +10,36 @@
    - Semrush US: roofing website design 1,000 (KD 19) · roofing web design
      720 (19) · roofing websites 480 (16) · roofer website design 210 (18)
      · roofing company website 110 (29).
-   - Web research (roofing site guides and roofer sites, 2026): a storm
-     and insurance-claim page with plain claim steps (inspection,
-     documentation, adjuster meeting), short estimate forms with photo
-     upload, before-and-after galleries grouped by material and town,
-     a financing page for cost worries, licence/insurance/warranty badges
-     near the buttons, town pages that are more than a swapped city name.
+   - Web research (roofing site guides and roofer sites, 2026): short
+     estimate forms with photo upload, before-and-after galleries grouped
+     by material and town, a financing page for cost worries, an
+     insurance claim guide, licence/insurance/warranty badges near the
+     buttons, town pages that are more than a swapped city name.
      Instant-price tools are treated as preliminary, so the copy offers
      estimate requests, not prices. Sites owned by the roofer are compared
      with shared-lead services, a common alternative for roofers.
+   Copy pass, 19 Nov 2026 (owner: drop "inspection", it reads as our home
+   inspection service; storm-led headings such as "Shifts With the
+   Weather" are not relevant):
+   - Search Console, 3 months: roofing web design agency 919 (pos 31.4) ·
+     roofing website design agency 636 (23.6) · roofing web design company
+     428 · roofing company web design services 272 · roofing web design
+     services 247 · website design roofing company 169 · roofing company
+     website design 112 · siding company web design 75 · roofer website
+     design agency 54 · roofing website redesign 26. No query contains
+     "inspection" or "storm".
+   - Semrush US: roofing websites 590 · best roofing websites 480 (KD 7) ·
+     web design for roofers 320 · roofing company website design 320 ·
+     roofing website templates 320 · best roofing website design 210 ·
+     roofing website builder 210 · websites for roofers 170 · roofing
+     contractor websites 140. Storm terms are homeowner searches (storm
+     damage roof repair 9,900); roofers hiring a designer don't search
+     them (storm damage roofing marketing 0), so storm stays as one page
+     a roofer's site needs, not a theme. "roofing leads" belongs to the
+     roofing marketing page and stays out of headings here.
+   - SERP for roofing website design: example galleries, templates,
+     builder reviews and agencies, hence the example-site and "best
+     roofing websites" wording.
    Rules kept: build time 2–3 weeks (owner), no prices except the locked
    pricing section, no company named, verified numbers only, every live
    content link kept. */
@@ -33,17 +54,17 @@ export const CONTENT: NicheWebContent = {
     switchLabel: "Preview the example site by roofing job",
     business: "Your Roofing Co.",
     domain: "yourroofingco.com",
-    nav: ["Repairs", "Replacement", "Storm help", "Financing"],
+    nav: ["Repairs", "Replacement", "Our roofs", "Financing"],
     call: "Call a roofer",
-    primary: "Free inspection",
+    primary: "Free estimate",
     secondary: "See finished roofs",
     proof: "Trusted on roofs across town",
     bookTitle: "Get a free estimate",
     confirm: "Send my request",
-    serviceSubs: ["Free inspection", "Photo estimate", "Written warranty"],
+    serviceSubs: ["Free estimate", "Licensed and insured", "Written warranty"],
     toast: "Request received",
-    toastNote: "Inspection tomorrow",
-    phoneCta: "Inspect",
+    toastNote: "Estimate tomorrow",
+    phoneCta: "Quote",
     modes: [
       {
         label: "Roof replacement",
@@ -59,34 +80,34 @@ export const CONTENT: NicheWebContent = {
         },
       },
       {
-        label: "Storm damage",
-        icon: "storm",
-        badge: "Hail & wind · Claim help",
-        headline: "Storm Hit Your Roof? Get It Checked Today.",
-        sub: "Free damage inspections, emergency tarping and help with your insurance claim.",
-        services: ["Hail damage", "Emergency tarping", "Claim support"],
-        book: ["Hail damage", "Wind damage", "Active leak"],
+        label: "Roof repair",
+        icon: "repair",
+        badge: "Leaks & shingles · Fast reply",
+        headline: "Roof Leak? Get It Fixed Before It Spreads.",
+        sub: "Leak, flashing and shingle repairs, emergency tarping and storm damage repair, with a written warranty.",
+        services: ["Leak repair", "Shingle repair", "Emergency tarping"],
+        book: ["Active leak", "Missing shingles", "Storm damage"],
         img: {
-          src: "/images/free-website/free-roof/storm-damage.webp",
+          src: "/images/free-website/free-roof/roof-repair.webp",
           position: "50% 45%",
         },
       },
     ],
     legend: [
       "One-tap roofer call button",
-      "Storm and re-roof landing pages",
+      "Repair and re-roof service pages",
       "Roof photo estimate form",
       "Pinned call bar on phones",
     ],
   },
-  // Indigo re-roof, red storm, then gold and teal (tones.ts).
+  // Indigo re-roof, red repair, then gold and teal (tones.ts).
   tones: tonesFor("roofing-website-design"),
   serviceName: "Roofing Website Design",
   audience: "roofers and roofing contractors",
   meta: {
     title: "Roofing Website Design Agency | Roofing Web Design Company",
     description:
-      "Roofing website design for roofers who want more inspections: storm damage pages, photo estimate forms and town pages built to rank and win roof jobs.",
+      "Roofing website design and web design services for roofers: repair, replacement and town pages, photo estimate forms and fast sites built to win roof jobs.",
     keywords: [
       "roofing website design",
       "roofing web design",
@@ -99,17 +120,23 @@ export const CONTENT: NicheWebContent = {
       "roofing company web design services",
       "roofing website design services",
       "website design roofing company",
+      "roofing company website design",
+      "web design for roofers",
+      "websites for roofers",
+      "best roofing websites",
+      "roofing contractor websites",
+      "roofing website redesign",
       "siding company website design",
     ],
   },
   hero: {
     h1Lead: "Roofing Website Design",
-    h1Rest: "That Fills Your Inspection Calendar",
+    h1Rest: "That Books More Roof Estimates",
     icon: "roof",
     lead: [
-      "We design roofing websites that answer storm calls fast, show the roofs you've already replaced and turn a homeowner's first visit into an inspection request. Every ",
+      "We design roofing websites that show the roofs you've already replaced, answer homeowners' questions on materials and cost, and turn a first visit into an estimate request. Every ",
       { href: "/services/web-design", label: "custom website" },
-      " we build for roofers launches in 2–3 weeks, complete with storm-season pages for every town you roof.",
+      " we build for roofers launches in 2–3 weeks, with repair, replacement and town pages ready to rank.",
     ],
     cta: "Get My Free Roofing Site Mockup",
     bento: {
@@ -121,7 +148,7 @@ export const CONTENT: NicheWebContent = {
       },
       cardA: {
         icon: "roof",
-        title: "More Roof Inspections Booked",
+        title: "More Roof Estimates Booked",
         sub: "Estimate forms homeowners finish on phones",
       },
       photoB: {
@@ -130,18 +157,18 @@ export const CONTENT: NicheWebContent = {
         query: "roofers near me",
       },
       cardB: {
-        icon: "storm",
-        title: "First Call After the Storm",
-        sub: "Hail and wind pages ready in advance",
+        icon: "pin",
+        title: "Found in Every Town You Roof",
+        sub: "Town pages built for roofer searches",
       },
     },
   },
   showcase: {
-    title: "A Roofing Company Website That Shifts With the Weather",
-    lead: "Flip between re-roof and storm mode and see the offer, the estimate request and the mobile layout adapt to each job.",
+    title: "See a Roofing Website Example Built for Repairs and Re-Roofs",
+    lead: "Switch between roof replacement and roof repair and watch the offer, the estimate form and the phone layout change for each job.",
   },
   services: {
-    title: "Roofing Web Design Agency Work,\nFrom Shingles to Storm Claims",
+    title: "Roofing Web Design Agency Services,\nFrom Shingle Roofs to Siding",
     lead: "Our roofing website design services cover design, copy, forms and upkeep for residential and commercial roofers, handled by one team.",
     cta: "Plan My Roofing Website",
     items: [
@@ -166,13 +193,13 @@ export const CONTENT: NicheWebContent = {
         links: [],
       },
       {
-        icon: "storm",
-        title: "Storm Response and Claim Pages",
-        desc: "Hail and wind pages that explain inspections, damage photos and adjuster meetings, switched on the moment a storm rolls through.",
+        icon: "repair",
+        title: "Roof Repair and Replacement Pages",
+        desc: "Pages for leak repair, re-roofing and storm damage repair, written around what homeowners search, and each one ready to work as a landing page for your roofing ads.",
         points: [
-          "Hail and wind pages",
-          "Claim steps explained",
-          "Storm ad pages",
+          "Leak and repair pages",
+          "Re-roof pages",
+          "Ad landing pages",
         ],
         links: [
           { href: "/services/google-ads", label: "Google Ads for roofers" },
@@ -180,7 +207,7 @@ export const CONTENT: NicheWebContent = {
       },
       {
         icon: "clipboard",
-        title: "Estimate and Inspection Forms",
+        title: "Roof Estimate and Quote Forms",
         desc: "Short step-by-step forms ask for roof type, the problem and a few photos, then pass the request to your CRM with its source.",
         points: ["Photo uploads", "CRM handoff", "Text alerts to you"],
         links: [],
@@ -203,8 +230,8 @@ export const CONTENT: NicheWebContent = {
       },
       {
         icon: "tool",
-        title: "Hosting and Storm-Season Edits",
-        desc: "Managed hosting, security updates and fast edits, including new storm banners and town pages when you expand.",
+        title: "Hosting, Updates and Fast Edits",
+        desc: "Managed hosting, security updates and quick edits, including seasonal offers and new town pages when you expand.",
         points: ["Managed hosting", "Same-week edits", "Backups and SSL"],
         links: [
           {
@@ -217,7 +244,7 @@ export const CONTENT: NicheWebContent = {
   },
   features: {
     title: "What Every Roofer Website Ships With",
-    lead: "Built-in parts that move a homeowner from a roof search to a signed inspection.",
+    lead: "Built-in parts that move a homeowner from a roof search to a booked estimate.",
     items: [
       {
         icon: "phone",
@@ -230,9 +257,9 @@ export const CONTENT: NicheWebContent = {
         text: "Finished jobs sorted by material and town, with the roof type named.",
       },
       {
-        icon: "storm",
-        title: "A Storm Banner You Switch On",
-        text: "Hail and wind messaging goes live the morning after a storm.",
+        icon: "sparkle",
+        title: "Offers You Switch On in Minutes",
+        text: "Financing deals and seasonal promos go live across the site at once.",
       },
       {
         icon: "clipboard",
@@ -252,7 +279,7 @@ export const CONTENT: NicheWebContent = {
       {
         icon: "bolt",
         title: "Fast Loads on Weak Signal",
-        text: "Lean pages open quickly, even in a storm-hit neighborhood.",
+        text: "Lean pages open quickly on a phone standing in the driveway.",
       },
       {
         icon: "search",
@@ -262,12 +289,12 @@ export const CONTENT: NicheWebContent = {
     ],
   },
   growth: {
-    title: "How a Roofing Website Wins More Inspections",
+    title: "How a Roofing Website Wins More Roof Jobs",
     lead: "Show up in each town you roof, convert phone visits and get named in AI answers.",
     rank: {
       title: "Show Up When Homeowners Look for a Roofer",
       body: [
-        "We build pages around what homeowners search after a leak or a hailstorm, from roof repair to a full tear-off, and check where each one ranks every week. Add ",
+        "We build pages around what homeowners search, from a small leak repair to a full tear-off and metal re-roof, and check where each one ranks every week. Add ",
         {
           href: "/services/industry/local-seo-for-roofing-companies",
           label: "roofing local SEO",
@@ -289,14 +316,14 @@ export const CONTENT: NicheWebContent = {
       keywords: [
         ["roof replacement + your city", 24, 3],
         ["roof repair near me", 31, 4],
-        ["hail damage roof inspection", 27, 2],
+        ["roofing company near me", 27, 2],
         ["metal roofing contractor", 19, 5],
       ],
     },
     convert: {
-      title: "Turn Phone Visits Into Inspection Requests",
+      title: "Turn Phone Visits Into Roof Estimate Requests",
       body: [
-        "Photo upload in a short estimate flow, a pinned call button and fast-loading pages turn more roof shoppers into inspections, and every request is stamped with the page it came from. Pair it with our ",
+        "Photo upload in a short estimate flow, a pinned call button and fast-loading pages turn more roof shoppers into estimate requests, and every request is stamped with the page it came from. Pair it with our ",
         {
           href: "/services/roofing-marketing-agency",
           label: "roofing marketing agency",
@@ -311,8 +338,8 @@ export const CONTENT: NicheWebContent = {
       ],
       cta: "Show Me the Estimate Flow",
       url: "yourroofingco.com",
-      headline: "Roof Leak? Get a Free Inspection",
-      services: ["Roof repair", "Storm damage", "Replacement", "Metal roofs"],
+      headline: "Roof Leak? Get a Free Estimate",
+      services: ["Roof repair", "Replacement", "Metal roofs", "Gutters"],
     },
     ai: {
       title: "Be the Roofer AI Answers Recommend",
@@ -328,12 +355,12 @@ export const CONTENT: NicheWebContent = {
         "AI mention tracking",
       ],
       cta: "Test My AI Visibility",
-      query: "who fixes hail damage on roofs near me",
-      intro: "For hail damage roof repair nearby,",
+      query: "who is the best roofer near me for a roof replacement",
+      intro: "For a roof replacement nearby,",
       bullets: [
-        "Free storm inspections",
-        "Help with insurance claims",
+        "Free written estimates",
         "Photo-backed roof reports",
+        "Help with insurance claims",
       ],
     },
   },
@@ -360,13 +387,13 @@ export const CONTENT: NicheWebContent = {
       {
         name: "Where You Roof",
         icon: "pin",
-        pages: ["Home city", "Surrounding towns", "Storm-hit suburbs"],
+        pages: ["Home city", "Surrounding towns", "County pages"],
       },
     ],
   },
   results: {
     title: "From Launch Day to a Fuller Roofing Pipeline",
-    lead: "Expect roofing leads to build in stages: indexing first, then reviews, then storm-season surges.",
+    lead: "Expect roofing leads to build in stages: indexing first, then reviews, then steady estimate requests from every town you serve.",
     cta: "See My Launch Roadmap",
     milestones: [
       {
@@ -385,21 +412,21 @@ export const CONTENT: NicheWebContent = {
         text: "With fresh reviews and project photos, town pages climb toward page one for roofer searches.",
       },
       {
-        when: "Storm season",
-        title: "Ready When the Hail Hits",
-        text: "Storm pages and the claim guide catch the rush of inspection requests after severe weather.",
+        when: "Peak roofing season",
+        title: "Pages Ready for the Busy Months",
+        text: "Repair and replacement pages are already ranking when spring and summer roof work picks up.",
       },
     ],
     wins: [
       {
         icon: "calendar",
-        title: "Inspections Requested Overnight",
-        text: "Homeowners send photos and book inspections after hours, ready for your morning.",
+        title: "Estimates Requested Overnight",
+        text: "Homeowners send photos and request estimates after hours, ready for your morning.",
       },
       {
         icon: "shield",
         title: "Claim Help That Builds Trust",
-        text: "A plain claim guide shows storm victims you'll handle the paperwork with them.",
+        text: "A plain insurance claim guide shows homeowners you'll handle the paperwork with them.",
       },
       {
         icon: "layers",
@@ -415,8 +442,8 @@ export const CONTENT: NicheWebContent = {
     band: [
       {
         icon: "trend",
-        value: "Storm Season Leads",
-        label: "Damage pages ready before the hail hits",
+        value: "Steady Roof Estimates",
+        label: "Repair and replacement pages working all year",
       },
       {
         icon: "award",
@@ -436,7 +463,7 @@ export const CONTENT: NicheWebContent = {
     ],
   },
   process: {
-    title: "Storm-Season Ready: Your Roofing Website in 2–3 Weeks",
+    title: "Our Roofing Website Design Process: Live in 2–3 Weeks",
     lead: "Roofers get one kickoff call, a no-cost homepage design and a fixed go-live date.",
     items: [
       {
@@ -447,7 +474,7 @@ export const CONTENT: NicheWebContent = {
       {
         when: "Weeks 1–2",
         h: "Copy Built on Your Job Photos",
-        p: "Our writers draft repair, replacement and storm pages around your own job photos.",
+        p: "Our writers draft repair, replacement and material pages around your own job photos.",
       },
       {
         when: "Weeks 2–3",
@@ -456,14 +483,14 @@ export const CONTENT: NicheWebContent = {
       },
       {
         when: "Launch",
-        h: "Live Site and Storm Prep",
-        p: "The site goes live, and storm pages sit ready for the next severe-weather week.",
+        h: "Live Site, Sent to Google",
+        p: "The site goes live, the sitemap goes to Google and your town pages start getting crawled.",
       },
     ],
   },
   compare: {
     title: "Owning a Roofing Website vs. Buying Shared Leads",
-    lead: "Lead services rent you attention. A site you own keeps working after every storm.",
+    lead: "Lead services rent you attention. A site you own keeps working every month you're in business.",
     otherLabel: "Shared lead service",
     rows: [
       {
@@ -472,10 +499,9 @@ export const CONTENT: NicheWebContent = {
         zonic: "Every request comes to you alone, straight from your own site.",
       },
       {
-        topic: "Storm demand",
-        other: "Lead costs tend to climb when every roofer wants storm work.",
-        zonic:
-          "Your storm pages rank and convert without bidding against rivals.",
+        topic: "Busy-season demand",
+        other: "Lead costs tend to climb when every roofer wants the same jobs.",
+        zonic: "Your pages rank and convert without bidding against rivals.",
       },
       {
         topic: "Your reputation",
@@ -484,7 +510,7 @@ export const CONTENT: NicheWebContent = {
       },
       {
         topic: "Claim and adjuster questions",
-        other: "No room to explain inspections, adjusters or claim steps.",
+        other: "No room to explain adjuster visits or claim steps.",
         zonic: "A claim guide answers questions before the first phone call.",
       },
       {
@@ -513,7 +539,7 @@ export const CONTENT: NicheWebContent = {
   },
   faq: {
     title: "Common Questions About Roofing Websites",
-    lead: "Roofers ask us about cost, timing, storm pages and protecting search positions.",
+    lead: "Roofers ask us about cost, timing, the pages to build and protecting search positions.",
     items: [
       {
         q: "How much does a roofing website cost?",
@@ -521,15 +547,15 @@ export const CONTENT: NicheWebContent = {
       },
       {
         q: "How many weeks does a roofing website build take?",
-        a: "Roofing builds run 2–3 weeks end to end. Week one is your mockup review, copy, photos and storm pages come next, and estimate forms, call tracking and redirects get tested last, right before go-live. Storm pages can be switched on from launch day.",
+        a: "Roofing builds run 2–3 weeks end to end. Week one is your mockup review, then copy, project photos and the repair, replacement and town pages, and estimate forms, call tracking and redirects get tested last, right before go-live.",
       },
       {
         q: "What pages should a roofing company website have?",
         a: "Start with repair and replacement pages, one page per roofing material, a storm damage and insurance claim guide, financing and warranty pages, a before-and-after gallery and reviews. Then build out town pages for every area you roof in, and link all of them to a short photo estimate form.",
       },
       {
-        q: "Can my website capture storm damage and insurance leads?",
-        a: "Yes. We build hail and wind pages that explain free inspections and how insurance claims work, then pair them with a photo estimate form. After severe weather you can switch on a sitewide storm banner, and the same pages work as landing pages for storm ads.",
+        q: "What do the best roofing websites have in common?",
+        a: "They load fast on phones, show real roofs the company has finished and keep the phone number and a short estimate form on every page. Each service and roofing material gets its own page, licence, insurance and warranty details sit near the buttons, and town pages cover every area served.",
       },
       {
         q: "Will redesigning my roofing website hurt my Google rankings?",
@@ -545,7 +571,7 @@ export const CONTENT: NicheWebContent = {
       },
       {
         q: "Should a roofer use a website builder or hire a web design agency?",
-        a: "A builder template can get a new roofer online, but it rarely ranks across several towns or handles storm surges well. A custom roofing website adds town pages, claim content, tracked estimate forms and the page speed that templates struggle to reach on phones.",
+        a: "A website builder or roofing website template can get a new roofer online, but it rarely ranks across several towns or turns phone visits into estimates well. A custom roofing website adds town pages, claim content, tracked estimate forms and the page speed that templates struggle to reach on phones.",
       },
     ],
   },
@@ -572,7 +598,7 @@ export const CONTENT: NicheWebContent = {
     ],
     points: [
       "Free homepage design",
-      "Storm and re-roof page plan",
+      "Repair and re-roof page plan",
       "Estimate form advice",
       "Live in 2–3 weeks",
     ],
@@ -588,7 +614,7 @@ export const CONTENT: NicheWebContent = {
     },
   },
   banner: {
-    title: "Turn Storm Searches Into Signed Roofing Jobs",
-    lead: "Storm pages, photo estimate forms and a call button that's never out of reach.",
+    title: "Turn Roof Searches Into Signed Roofing Jobs",
+    lead: "Service pages, photo estimate forms and a call button that's never out of reach.",
   },
 };

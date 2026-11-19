@@ -1,0 +1,37 @@
+/* Florida PPC page (18 Nov 2026): the sponsored pin on the Maps phone
+   pulses and the conversion-sync icon on the dark card turns.
+   Reduced motion: both stay still. */
+
+.fl-ppc-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: fl-ppc-pulse 2.8s ease-out infinite both;
+}
+@keyframes fl-ppc-pulse {
+  0% {
+    opacity: 0.5;
+    scale: 0.5;
+  }
+  80%,
+  100% {
+    opacity: 0;
+    scale: 2.3;
+  }
+}
+
+.fl-ppc-spin {
+  animation: fl-ppc-spin 3.2s linear infinite;
+}
+@keyframes fl-ppc-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-ppc-pulse,
+  .fl-ppc-spin {
+    animation: none !important;
+  }
+}

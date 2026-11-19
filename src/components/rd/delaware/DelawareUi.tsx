@@ -75,6 +75,31 @@ import {
   SiteEditorUi,
   nycWebStepUis,
 } from "./nycWebUi";
+import {
+  AiCitiesUi,
+  FloridaSeasonsUi,
+  StormModeUi,
+  flMarketingStepUis,
+} from "./flMarketingUi";
+import {
+  FlSeoFeature1,
+  FlSeoFeature2,
+  FlSeoFeature3,
+  flSeoStepUis,
+} from "./flSeoUi";
+import {
+  FlPpcFeature1,
+  FlPpcFeature2,
+  FlPpcFeature3,
+  flPpcStepUis,
+} from "./flPpcUi";
+import {
+  FlWebFeature1,
+  FlWebFeature2,
+  FlWebFeature3,
+  flWebStepUis,
+} from "./flWebUi";
+import { cityUi } from "./flCities";
 import { photoAlt } from "@/components/rd/photoAlt";
 
 /* New UI components for the Delaware redesign drafts (22 Oct 2026). None
@@ -1059,6 +1084,12 @@ export function stepUis(
   if (kind === "nyc-marketing") return nycMarketingStepUis(process);
   if (kind === "nyc-seo") return nycSeoStepUis(process);
   if (kind === "nyc-web") return nycWebStepUis(process);
+  if (kind === "fl-marketing") return flMarketingStepUis(process);
+  if (kind === "fl-seo") return flSeoStepUis(process);
+  if (kind === "fl-ppc") return flPpcStepUis(process);
+  if (kind === "fl-web") return flWebStepUis(process);
+  const city = cityUi(kind);
+  if (city) return city.stepUis(process);
   const [, s2, s3, s4] = process.steps;
   const gap = 1 - Number(audit.score) / 100;
   return [
@@ -1533,10 +1564,14 @@ function AiAnswerUi() {
 export function FeaturePanel({
   ui,
   flip,
+  kind,
 }: {
   ui: DelawareFeature["ui"];
   flip?: boolean;
+  /** Needed for the Florida city panels (city-1…3). */
+  kind?: DelawareKind;
 }) {
+  const city = kind ? cityUi(kind) : null;
   const panel = {
     towns: <TownsMapUi />,
     ads: <AdsUi />,
@@ -1571,6 +1606,21 @@ export function FeaturePanel({
     a11y: <AccessibilityUi />,
     editor: <SiteEditorUi />,
     waterfall: <LoadWaterfallUi />,
+    seasons: <FloridaSeasonsUi />,
+    storm: <StormModeUi />,
+    aicities: <AiCitiesUi />,
+    "fl-seo-1": <FlSeoFeature1 />,
+    "fl-seo-2": <FlSeoFeature2 />,
+    "fl-seo-3": <FlSeoFeature3 />,
+    "fl-ppc-1": <FlPpcFeature1 />,
+    "fl-ppc-2": <FlPpcFeature2 />,
+    "fl-ppc-3": <FlPpcFeature3 />,
+    "fl-web-1": <FlWebFeature1 />,
+    "fl-web-2": <FlWebFeature2 />,
+    "fl-web-3": <FlWebFeature3 />,
+    "city-1": city ? <city.Feature1 /> : null,
+    "city-2": city ? <city.Feature2 /> : null,
+    "city-3": city ? <city.Feature3 /> : null,
   }[ui];
   return <Stage flip={flip}>{panel}</Stage>;
 }

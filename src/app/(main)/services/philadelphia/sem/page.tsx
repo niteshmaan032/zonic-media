@@ -630,7 +630,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["SEO and Ads", "Sharing One", "Keyword Plan."],
   aboutPhoto: {
     src: "/images/philadelphia/phila-sem/philadelphia-sem-agency-dashboard.webp",
-    alt: "Philadelphia SEM agency desk with a paid search performance dashboard and City Hall in view",
+    alt: "Philadelphia SEM paid search performance dashboard with City Hall in view",
     // 4:3 image in a wide box: keep the title text at the top in view.
     position: "50% 0%",
   },

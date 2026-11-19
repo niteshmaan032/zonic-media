@@ -16,7 +16,25 @@ import type { IndustryContent } from "../types";
    near me", "roof replacement near me", "storm damage roof repair" and
    "hail damage roof inspection".
    Fresh wording only: nothing reused from the live page or other drafts.
-   No estimate figures, budgets or job prices anywhere. */
+   No estimate figures, budgets or job prices anywhere.
+
+   Copy pass, 19 Nov 2026 (owner: no "inspection", it reads as our home
+   inspection service; storm is not the theme):
+   - Search Console, 3 months: roofing marketing agency 1,501 impressions
+     (pos 45.8) · roofing company marketing agency 415 · roofing marketing
+     services 369 · roofing digital marketing agency 199 · roofing
+     marketing agency near me 131 · roofing social media agency 108 ·
+     roofing advertising agency 100. No query contains inspection, storm
+     or leads.
+   - Semrush US: roofing marketing agency 2,400 · roofing leads 1,900
+     (KD 3) · digital marketing for roofers 1,300 · roofing lead
+     generation 1,000 · roofer marketing 1,000 · roofing digital
+     marketing 880 · roofing ppc 720 · google ads for roofers 480 ·
+     roofing advertising 390 · exclusive roofing leads 320 · how to get
+     roofing leads 320. Storm marketing terms have no demand (storm damage
+     roofing marketing 0), so storm stays as one job type only.
+   - SERP: agencies (SEO, PPC, GBP, reviews, AI) and "best roofing
+     marketing companies" lists. */
 
 export const CONTENT: IndustryContent = {
   draftSlug: "roofing-marketing-agency-2",
@@ -25,7 +43,7 @@ export const CONTENT: IndustryContent = {
   meta: {
     title: "Roofing Marketing Agency USA | Roofing SEO, Ads & Leads",
     description:
-      "Zonic Media is a roofing marketing agency for US roofers: roofing SEO, Google Maps rankings, storm-season Google Ads and reviews that win more roof replacements.",
+      "Zonic Media is a roofing marketing agency for US roofers: roofing SEO, Google Maps rankings, roofing PPC and reviews that bring in exclusive roofing leads.",
     keywords: [
       "roofing marketing agency",
       "roofing marketing agency in usa",
@@ -44,6 +62,12 @@ export const CONTENT: IndustryContent = {
       "marketing for roofers",
       "roofing google ads",
       "roofing leads",
+      "exclusive roofing leads",
+      "roofing marketing services",
+      "roofing ppc",
+      "roofing advertising",
+      "digital marketing for roofers",
+      "roofer marketing",
     ],
   },
   palette: PALETTES.redSlate,
@@ -52,30 +76,30 @@ export const CONTENT: IndustryContent = {
     h1Icon: "roof",
     h1Rest: "Marketing Agency That Books More Roof Replacements",
     lead: [
-      "After a hailstorm, homeowners search “roof repair near me” and call whoever looks most trustworthy. We make that your company with roofing SEO, ",
+      "When a roof leaks or wears out, homeowners search “roof repair near me” and call whoever looks most trustworthy. We make that your company with roofing SEO, ",
       {
         href: "/local-seo-google-business-optimization",
         label: "Google Business Profile optimization",
       },
-      ", storm-ready Google Ads and ",
+      ", roofing PPC and ",
       {
         href: "/services/roofing-website-design",
         label: "roofing website design",
       },
-      " built to book inspections.",
+      " built to book estimates.",
     ],
     cta: "Get My Free Roofing Audit",
     bento: {
       kind: "photos",
       photoA: {
-        src: "/images/free-website/free-roof/storm-damage.webp",
+        src: "/images/free-website/free-roof/roof-repair.webp",
         position: "46% 50%",
-        query: "storm damage roof repair near me",
+        query: "roof leak repair near me",
       },
       cardA: {
-        icon: "storm",
-        title: "More storm repair calls",
-        sub: "Hail, wind and leak jobs",
+        icon: "repair",
+        title: "More roof repair calls",
+        sub: "Leak, shingle and flashing jobs",
       },
       cardB: {
         icon: "roof",
@@ -97,7 +121,7 @@ export const CONTENT: IndustryContent = {
       {
         icon: "pin",
         title: "Roofing Google Business Profile",
-        desc: "We set categories, services, service areas and storm-work photos so your listing climbs Google Maps whenever roofs get damaged nearby.",
+        desc: "We set categories, services, service areas and fresh job photos so your listing climbs Google Maps for roofer searches in every town you cover.",
         points: [
           "Roofer categories set right",
           "Before-and-after job photos",
@@ -117,7 +141,7 @@ export const CONTENT: IndustryContent = {
       {
         icon: "search",
         title: "Roofing SEO by Town",
-        desc: "A page for each roofing job and every town on your list, with citations and technical fixes, so you outrank out-of-town storm chasers.",
+        desc: "A page for each roofing job and every town on your list, with citations and technical fixes, so you outrank the roofers above you today.",
         points: [
           "Repair and replacement pages",
           "City and suburb pages",
@@ -136,10 +160,10 @@ export const CONTENT: IndustryContent = {
       },
       {
         icon: "target",
-        title: "Storm-Season Google Ads",
-        desc: "Search and Local Services Ads switched on in the zip codes a storm hits, with DIY and job-seeker clicks kept out.",
+        title: "Roofing PPC and Google Ads",
+        desc: "Search and Local Services Ads aimed at repair and replacement searches in your zip codes, with DIY and job-seeker clicks kept out.",
         points: [
-          "Zip-code storm targeting",
+          "Zip-code targeting",
           "Call-only mobile ads",
           "Ad spend passed through at cost",
         ],
@@ -149,10 +173,10 @@ export const CONTENT: IndustryContent = {
       },
       {
         icon: "monitor",
-        title: "Roofing Websites That Book Inspections",
-        desc: "Fast, mobile-first roofing sites with tap-to-call on every screen, inspection request forms and project galleries that build trust.",
+        title: "Roofing Websites That Book Estimates",
+        desc: "Fast, mobile-first roofing sites with tap-to-call on every screen, estimate request forms and project galleries that build trust.",
         points: [
-          "Inspection request form",
+          "Estimate request form",
           "Project photo galleries",
           "Calls and forms tracked",
         ],
@@ -169,7 +193,7 @@ export const CONTENT: IndustryContent = {
         title: "Roofing Reviews & Reputation",
         desc: "A review request goes out when the crew packs up, and we draft the replies, so homeowners see a long record of local roofs done well.",
         points: [
-          "Text requests after each job",
+          "SMS review requests after each job",
           "Owner replies drafted",
           "Ratings embedded on your site",
         ],
@@ -192,7 +216,7 @@ export const CONTENT: IndustryContent = {
   },
   growth: {
     title: "How a Roofing Company Marketing Agency Wins You Jobs",
-    lead: "Map rankings, AI answers and storm-ready ads, each built to reach homeowners before the next roofer does.",
+    lead: "Map rankings, AI answers and roofing ads, each built to reach homeowners before the next roofer does.",
     rows: [
       {
         title: "Own the Map When Homeowners Search “Roofer Near Me”",
@@ -215,52 +239,52 @@ export const CONTENT: IndustryContent = {
           kind: "maps",
           query: "roofer near me",
           city: "Dallas",
-          category: "Roofing contractor · Storm repair",
+          category: "Roofing contractor · Roof repair",
         },
       },
       {
-        title: "Be the Roofer ChatGPT Recommends After a Storm",
+        title: "Be the Roofer ChatGPT Recommends",
         body: [
-          "Homeowners now ask ChatGPT, Gemini and AI Overviews who handles hail damage nearby. Our ",
+          "Homeowners now ask ChatGPT, Gemini and AI Overviews which roofer to trust nearby. Our ",
           { href: "/services/ai-seo-services", label: "AI search work" },
           " gives those tools verified facts: identical listings, reviews that name real roof jobs, visible licensing and a clear answer on every service page.",
         ],
         points: [
           "Identical business listings",
-          "Reviews that mention hail repairs",
+          "Reviews that mention real roof jobs",
           "Licenses shown clearly",
           "FAQ answers AI can cite",
         ],
         cta: "Audit My Roofing AI Visibility",
         ui: {
           kind: "ai",
-          query: "who should i call for hail damage on my roof in fort worth",
-          intro: "For hail damage repair around Fort Worth,",
+          query: "who is the best roofing company in fort worth for a new roof",
+          intro: "For a roof replacement around Fort Worth,",
           bullets: [
-            "Storm damage inspections",
+            "Free written estimates",
             "Photo reports for insurance claims",
             "Licensed, insured roofing crews",
           ],
         },
       },
       {
-        title: "Storm Ads From a Roofing Advertising Agency",
+        title: "Roofing Google Ads From a Roofing Advertising Agency",
         body: [
-          "Hail and wind damage arrive without warning. We keep paused storm campaigns ready for your zip codes, switch them on as soon as a storm passes, filter out DIY and job-hunting clicks, and trace each call back to the search behind it.",
+          "Homeowners comparing roofers click the first ad that matches their job. We build roofing PPC campaigns around repair, replacement and material searches in your zip codes, filter out DIY and job-hunting clicks, and trace each call back to the search behind it.",
         ],
         points: [
-          "Pre-built storm campaigns",
+          "Repair and replacement campaigns",
           "Zip-code targeting",
-          "Insurance-claim keywords",
+          "Local Services Ads",
           "Every call recorded",
         ],
-        cta: "Plan My Storm Ads",
+        cta: "Plan My Roofing Ads",
         ui: {
           kind: "calls",
-          title: "Calls after Tuesday's hailstorm",
+          title: "Roofing calls on Wednesday",
           calls: [
             {
-              service: "Hail damage inspection",
+              service: "Metal roof estimate",
               source: "Google Ads · Call",
               when: "Wed 7:12 AM",
             },
@@ -282,9 +306,9 @@ export const CONTENT: IndustryContent = {
   ownLeads: {
     title: "Roofing Lead Generation That Stays Exclusive to You",
     body: [
-      "Lead marketplaces hand one homeowner to several roofers, and storm chasers flood the same streets. Our ",
+      "Lead marketplaces hand one homeowner to several roofers at once. Our ",
       { href: "/services", label: "full-service marketing team" },
-      " builds roofing leads that call only you, from rankings, ads and reviews you keep. When hail hits, those channels ring your phone, not a marketplace's.",
+      " builds roofing leads that call only you, from rankings, ads and reviews you keep. When a homeowner is ready, those channels ring your phone, not a marketplace's.",
     ],
     cta: "Get Exclusive Roofing Leads",
     colShared: "Shared roofing leads",
@@ -296,9 +320,9 @@ export const CONTENT: IndustryContent = {
         "Nobody but your team",
       ],
       [
-        "Right after a storm",
-        "A race against out-of-town crews",
-        "Locals find your reviews first",
+        "When homeowners compare roofers",
+        "A race to call back first",
+        "They find your reviews first",
       ],
       [
         "What your money buys",
@@ -307,15 +331,15 @@ export const CONTENT: IndustryContent = {
       ],
       ["Whose brand they remember", "A directory's logo", "Your company name"],
       [
-        "When the next storm rolls in",
-        "Start from zero again",
+        "When you stop paying",
+        "The leads stop that day",
         "Rankings and reviews carry over",
       ],
     ],
   },
   specialties: {
     title: "A Roofing Contractor Marketing Agency for Every Job You Sell",
-    lead: "Storm repairs, full replacements and commercial roofs sell to different buyers with different worries, so each one is marketed on its own terms.",
+    lead: "Repairs, full replacements and commercial roofs sell to different buyers with different worries, so each one is marketed on its own terms.",
     photo: {
       src: "/images/free-website/free-roof/commercial-roofing.webp",
       alt: "Two roofers sealing seams on a flat commercial roof",
@@ -324,14 +348,14 @@ export const CONTENT: IndustryContent = {
     },
     items: [
       {
-        icon: "storm",
-        name: "Storm & Hail Damage Repair",
-        tactic: "Storm-triggered ads and hail damage pages by zip",
+        icon: "repair",
+        name: "Roof Repair Jobs",
+        tactic: "Repair pages and ads for shingle, flashing and leak fixes",
       },
       {
         icon: "roof",
         name: "Full Roof Replacements",
-        tactic: "Replacement pages with financing and inspection forms",
+        tactic: "Replacement pages with financing and estimate forms",
       },
       {
         icon: "waterDamage",
@@ -342,7 +366,7 @@ export const CONTENT: IndustryContent = {
         icon: "file",
         name: "Insurance Claim Roofing",
         tactic:
-          "Claim-process pages explaining inspections and adjuster visits",
+          "Claim-process pages explaining photo reports and adjuster visits",
       },
       {
         icon: "home",
@@ -350,9 +374,9 @@ export const CONTENT: IndustryContent = {
         tactic: "Material pages matched to what your area searches",
       },
       {
-        icon: "inspect",
-        name: "Roof Inspection Requests",
-        tactic: "Inspection offers that open bigger repair conversations",
+        icon: "storm",
+        name: "Storm Damage Repair",
+        tactic: "Wind and hail damage pages ranked before the busy season",
       },
       {
         icon: "layers",
@@ -370,15 +394,15 @@ export const CONTENT: IndustryContent = {
   },
   steps: {
     title: "Three Steps to Working With Our Roofing Marketing Company",
-    lead: "Map and ad fixes usually move first; organic rankings build steadily after that, ahead of the next storm season.",
+    lead: "Map and ad fixes usually move first; organic rankings build steadily after that, month by month.",
     items: [
       {
         h: "A Free Roofing Visibility Audit",
-        p: "We search repair, replacement and storm terms across your towns, then show where you rank, which roofers beat you and the fixes worth doing first.",
+        p: "We search repair, replacement and roofer terms across your towns, then show where you rank, which roofers beat you and the fixes worth doing first.",
       },
       {
-        h: "Your Storm-Ready Roofing Plan",
-        p: "Together we decide which jobs and towns come first, and we build storm ads ahead of time so they can launch the day hail hits.",
+        h: "Your Roofing Marketing Plan",
+        p: "Together we decide which jobs and towns come first, which ads to run and which pages to build or fix.",
       },
       {
         h: "Roofing Campaigns Go Live",
@@ -387,15 +411,15 @@ export const CONTENT: IndustryContent = {
     ],
     audit: [
       ["Map Pack spot for roofer near me", "behind"],
-      ["Storm damage service pages", "gap"],
+      ["Roof repair service pages", "gap"],
       ["Reviews vs local roofers", "behind"],
       ["Insurance claim content", "open"],
     ],
-    plan: ["Storm repair", "Replacements", "Dallas", "Plano", "Hail ads"],
+    plan: ["Roof repair", "Replacements", "Dallas", "Plano", "Search ads"],
     launch: [
       "Profile categories fixed",
       "Town pages published",
-      "Storm ads on standby",
+      "Search ads live",
       "Review texts switched on",
     ],
   },
@@ -406,28 +430,28 @@ export const CONTENT: IndustryContent = {
   pricing: {
     title: "Month-to-Month Roofing Marketing Plans",
     compareTitle: "Compare Roofing Plans Side by Side",
-    addOnsTitle: "Add Storm Campaigns When You Need Them",
+    addOnsTitle: "Add Roofing Ad Campaigns When You Need Them",
     customTitle: "Running roofing crews in several cities?",
   },
   faq: {
     title: "What Roofers Ask Before Hiring Us",
-    lead: "Leads, storms, insurance work, costs and AI search, in plain English.",
+    lead: "Leads, ads, insurance work, costs and AI search, in plain English.",
     items: [
       {
         q: "What does a roofing marketing agency handle for roofers?",
-        a: "It gets homeowners calling you instead of the next roofer. That covers your Google Business Profile and Maps rankings, roofing SEO pages for each service and town, search and Local Services Ads campaigns, a site that books inspections, and a steady flow of reviews. A good agency also shows which channel produced each signed job.",
+        a: "It gets homeowners calling you instead of the next roofer. That covers your Google Business Profile and Maps rankings, roofing SEO pages for each service and town, search and Local Services Ads campaigns, a site that books estimates, and a steady flow of reviews. A good agency also shows which channel produced each signed job.",
       },
       {
         q: "Which roofing marketing ideas bring in the most jobs?",
-        a: "The ones that meet homeowners where they already look. Rank in the Map Pack, publish pages for repair, replacement and storm work in each town, run ads on urgent searches, answer calls fast and collect a review from every customer. These beat cold canvassing because the homeowner calls you.",
+        a: "The ones that meet homeowners where they already look. Rank in the Map Pack, publish pages for repair, replacement and metal roof work in each town, run ads on urgent searches, answer calls fast and collect a review from every customer. These beat cold canvassing because the homeowner calls you.",
       },
       {
-        q: "How do roofers get storm damage and hail leads?",
-        a: "By preparing before the weather turns. We build hail and wind damage pages for your service area, keep ad campaigns paused and ready by zip code, and make sure your profile lists storm repair. When a storm passes, the campaigns go live and your listing is already in place. Afterward, review requests reach every storm customer, strengthening your profile before the next event.",
+        q: "How do roofers get more roofing leads without buying shared leads?",
+        a: "By owning the channels homeowners already use: a Google Business Profile that ranks in the Map Pack, repair and town pages on your own site, search ads on repair and replacement terms, and a review request after every job. Every call and form is tracked, so you can see which channel produced each signed roof.",
       },
       {
         q: "Can you help my roofing company win insurance claim jobs?",
-        a: "Yes. We publish clear pages on how you inspect damage, document it with photos and work alongside the homeowner's insurance adjuster. Showing licenses, insurance and manufacturer certifications builds the trust these jobs need. We never promise claim outcomes; we make your process easy to understand.",
+        a: "Yes. We publish clear pages on how you assess damage, document it with photos and work alongside the homeowner's insurance adjuster. Showing licenses, insurance and manufacturer certifications builds the trust these jobs need. We never promise claim outcomes; we make your process easy to understand.",
       },
       {
         q: "Is roofing internet marketing worth it for a smaller crew?",
@@ -435,7 +459,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "How long does it take for roofing SEO to show results?",
-        a: "Paid ads and Google profile updates often produce calls in the first few weeks. Organic roofing rankings take longer, typically several months, and depend on local competition and your site's current strength. You see progress in a report every month, and starting before storm season gives new pages time to rank.",
+        a: "Paid ads and Google profile updates often produce calls in the first few weeks. Organic roofing rankings take longer, typically several months, and depend on local competition and your site's current strength. You see progress in a report every month, and starting before your busy season gives new pages time to rank.",
       },
       {
         q: "Can ChatGPT and Google AI Overviews recommend my roofing company?",
@@ -447,18 +471,18 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "Is a roofing marketing agency near me better than one serving the whole USA?",
-        a: "Not necessarily. Rankings depend on your profile, pages, reviews and ads, not on where the agency's office is. We work remotely with roofers in every state, meet over video, research your towns in detail and report each month on calls and rankings. What matters is a team that understands storm seasons and how homeowners choose a roofer.",
+        a: "Not necessarily. Rankings depend on your profile, pages, reviews and ads, not on where the agency's office is. We work remotely with roofers in every state, meet over video, research your towns in detail and report each month on calls and rankings. What matters is a team that understands roofing seasons and how homeowners choose a roofer.",
       },
       {
         q: "What do Zonic Media's roofing marketing plans cost?",
-        a: "Roofers choose from three tiers: $297, $950 or $1,500 monthly, with no long-term contract. Google bills ad spend to you directly, and we add 0% markup on top. The right tier comes down to the number of services and towns to cover, and whether storm ads are included.",
+        a: "Roofers choose from three tiers: $297, $950 or $1,500 monthly, with no long-term contract. Google bills ad spend to you directly, and we add 0% markup on top. The right tier comes down to the number of services and towns to cover, and whether Google Ads are included.",
       },
     ],
   },
   audit: {
     title: "Find Out Where Your Roofing Calls Are Going",
     lead: [
-      "We check your Maps rank for repair, replacement and storm searches, review your Google profile and its ",
+      "We check your Maps rank for repair, replacement and roofer searches, review your Google profile and its ",
       {
         href: "/services/gmb-verification-help",
         label: "verification status",
@@ -472,7 +496,7 @@ export const CONTENT: IndustryContent = {
     ],
     points: [
       "Month-to-month agreement",
-      "Storm campaigns planned ahead",
+      "Ad campaigns planned with you",
       "Plans start at $297 a month",
       "Zero markup on Google ad spend",
     ],
@@ -484,12 +508,12 @@ export const CONTENT: IndustryContent = {
       submitText: "Send My Roofing Audit",
       messageLabel: "Your service area and roofing services",
       messagePlaceholder:
-        "Towns you cover, the jobs you want more of, and whether you take storm or insurance work",
+        "Towns you cover, the jobs you want more of, and whether you take insurance work",
     },
   },
   banner: {
-    title: "Be the Roofer Homeowners Call When the Storm Clears",
+    title: "Be the Roofer Homeowners Call First",
     lead: "Book a free roofing audit and get a clear list of what to fix first.",
-    icons: ["roof", "storm"],
+    icons: ["roof", "repair"],
   },
 };

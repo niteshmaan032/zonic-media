@@ -74,6 +74,13 @@ import {
   VoiceSearchPhone,
 } from "./nycSeoUi";
 import { BookingPhone, RelaunchUi, ScoreNeedlesUi } from "./nycWebUi";
+import { FloridaMapUi, ScoreThermoUi, StormPrepPhone } from "./flMarketingUi";
+import { FlSeoDarkUi, FlSeoPhone, FlSeoScore } from "./flSeoUi";
+import { FlPpcDarkUi, FlPpcPhone, FlPpcScore } from "./flPpcUi";
+import { FlWebDarkUi, FlWebPhone, FlWebScore } from "./flWebUi";
+import { cityUi } from "./flCities";
+import { FlCitiesSection } from "./flCitiesSection";
+import { FlCityLinks } from "./flCityLinks";
 import type { DelawareData, DelawareExtras, DelawareKind } from "./types";
 
 const ServiceLeadForm = dynamic(
@@ -118,6 +125,18 @@ const PLACE: Record<DelawareKind, string> = {
   "nyc-marketing": "NYC",
   "nyc-seo": "NYC",
   "nyc-web": "NYC",
+  "fl-marketing": "Florida",
+  "fl-seo": "Florida",
+  "fl-ppc": "Florida",
+  "fl-web": "Florida",
+  "fl-tampa": "Tampa",
+  "fl-orlando": "Orlando",
+  "fl-miami": "Miami",
+  "fl-jacksonville": "Jacksonville",
+  "fl-fort-lauderdale": "Fort Lauderdale",
+  "fl-sarasota": "Sarasota",
+  "fl-st-petersburg": "St. Petersburg",
+  "fl-fort-myers": "Fort Myers",
 };
 
 function withPin(line: string, place: string) {
@@ -237,6 +256,7 @@ export function DelawareLanding({
     form,
   } = data;
   const { kind } = extras;
+  const city = cityUi(kind);
   const steps = stepUis(kind, process, why.banner.audit);
   const pillarBg = extras.pillars;
   const ring = pillarBg?.[0] ?? PILLAR_RING;
@@ -244,6 +264,11 @@ export function DelawareLanding({
     pillarBg ? { backgroundColor: pillarBg[i] } : undefined;
   // hero.stats[1] is the live page's Clutch rating; the Google rating replaces it.
   const [s0, , s2, s3] = hero.stats;
+  const heroChips = extras.heroChips ?? {
+    label: engine.chipsLabel,
+    items: engine.chips.slice(0, 5),
+    more: true,
+  };
   const aboutPhoto =
     extras.aboutPhoto ?? data.showcase?.image ?? about.collageB;
 
@@ -276,11 +301,23 @@ export function DelawareLanding({
           </span>
 
           <Wrap>
-            <Strip as="h1" id="de-h1" size="hero">
+            {/* Centred, with room at the sides (owner, 18 Nov 2026: the old
+                76px heading "looks too big … taking the whole screen").
+                Phones keep the shared hero size. */}
+            <Strip
+              as="h1"
+              id="de-h1"
+              size="hero"
+              className="tw:mx-auto tw:max-w-[1060px] tw:text-balance tw:bssm:text-[clamp(38px,4.3vw,64px)]"
+            >
               {withPin(hero.h1Start, PLACE[kind])}{" "}
               <br className="tw:max-bssm:hidden" />
-              {hero.h1Highlight}
-              {hero.h1End ? ` ${hero.h1End}` : null}
+              {/* Its own box on wider screens so a long second half wraps
+                  into even lines instead of leaving one word alone. */}
+              <span className="tw:bssm:inline-block tw:bssm:text-balance">
+                {hero.h1Highlight}
+                {hero.h1End ? ` ${hero.h1End}` : null}
+              </span>
             </Strip>
             <p
               className={cx(
@@ -407,12 +444,13 @@ export function DelawareLanding({
               <p className="tw:mt-4 tw:max-w-[13ch] tw:text-[clamp(19px,1.6vw,24px)]/[1.3]">
                 {s3.label}
               </p>
-              {/* First five industries; the full list sits under the hub. */}
+              {/* First five industries (the full list sits under the hub), or
+                  the page's own place chips. */}
               <ul
                 className="tw:absolute tw:right-[22px] tw:bottom-[22px] tw:left-[22px] tw:flex tw:flex-wrap tw:content-end tw:gap-x-1.5 tw:gap-y-[7px] tw:max-bssm:right-[18px] tw:max-bssm:bottom-[18px] tw:max-bssm:left-[18px]"
-                aria-label={engine.chipsLabel}
+                aria-label={heroChips.label}
               >
-                {engine.chips.slice(0, 5).map((chip, i) => (
+                {heroChips.items.map((chip, i) => (
                   <li
                     key={chip}
                     className={cx(TAG, TAG_TONES[i % TAG_TONES.length])}
@@ -420,14 +458,16 @@ export function DelawareLanding({
                     {chip}
                   </li>
                 ))}
-                <li
-                  className={cx(
-                    TAG,
-                    "tw:border tw:border-dashed tw:border-white/45 tw:text-white/85",
-                  )}
-                >
-                  + more
-                </li>
+                {heroChips.more ? (
+                  <li
+                    className={cx(
+                      TAG,
+                      "tw:border tw:border-dashed tw:border-white/45 tw:text-white/85",
+                    )}
+                  >
+                    + more
+                  </li>
+                ) : null}
               </ul>
             </div>
           </div>
@@ -616,6 +656,16 @@ export function DelawareLanding({
           </Wrap>
         </Section>
 
+        {/* ========================================================== CITIES */}
+        {/* Florida hub: links each city page (owner, 18 Nov 2026). */}
+        {extras.cities ? (
+          <FlCitiesSection
+            cities={extras.cities}
+            accent={ring}
+            leadClassName={LINKS}
+          />
+        ) : null}
+
         {/* ======================================================= HOW WE WIN */}
         {extras.features ? (
           /* Dallas features pattern: label, title, body, four points, link
@@ -633,7 +683,7 @@ export function DelawareLanding({
                     i > 0 && "tw:mt-16 tw:max-bslg:mt-[72px]",
                   )}
                 >
-                  <FeaturePanel ui={f.ui} flip={i % 2 === 1} />
+                  <FeaturePanel ui={f.ui} flip={i % 2 === 1} kind={kind} />
                   <div>
                     <Label>{f.label}</Label>
                     <h3 className="tw:text-[clamp(30px,3.4vw,52px)] tw:leading-[1.06] tw:tracking-[-0.03em] tw:text-balance">
@@ -804,6 +854,16 @@ export function DelawareLanding({
                   <VoiceSearchPhone />
                 ) : extras.phone === "booking" ? (
                   <BookingPhone />
+                ) : extras.phone === "stormprep" ? (
+                  <StormPrepPhone />
+                ) : extras.phone === "city" && city ? (
+                  <city.Phone />
+                ) : extras.phone === "fl-seo" ? (
+                  <FlSeoPhone />
+                ) : extras.phone === "fl-ppc" ? (
+                  <FlPpcPhone />
+                ) : extras.phone === "fl-web" ? (
+                  <FlWebPhone />
                 ) : data.showcase && extras.phone !== "leads" ? (
                   <ResultsPhone
                     kind={kind}
@@ -970,6 +1030,16 @@ export function DelawareLanding({
                     <ProfileInsightsUi console={band.console} />
                   ) : extras.darkUi === "relaunch" ? (
                     <RelaunchUi console={band.console} />
+                  ) : extras.darkUi === "statewide" ? (
+                    <FloridaMapUi console={band.console} />
+                  ) : extras.darkUi === "city" && city ? (
+                    <city.DarkUi console={band.console} />
+                  ) : extras.darkUi === "fl-seo" ? (
+                    <FlSeoDarkUi console={band.console} />
+                  ) : extras.darkUi === "fl-ppc" ? (
+                    <FlPpcDarkUi console={band.console} />
+                  ) : extras.darkUi === "fl-web" ? (
+                    <FlWebDarkUi console={band.console} />
                   ) : (
                     <ConsoleUi
                       console={band.console}
@@ -1321,6 +1391,16 @@ export function DelawareLanding({
                     <ScoreDumbbellUi rows={compare.scoreRows} />
                   ) : extras.scoreStyle === "needles" ? (
                     <ScoreNeedlesUi rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "thermo" ? (
+                    <ScoreThermoUi rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "city" && city ? (
+                    <city.Score rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "fl-seo" ? (
+                    <FlSeoScore rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "fl-ppc" ? (
+                    <FlPpcScore rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "fl-web" ? (
+                    <FlWebScore rows={compare.scoreRows} />
                   ) : (
                     <ScoreUi rows={compare.scoreRows} web={kind === "web"} />
                   )}
@@ -1334,7 +1414,8 @@ export function DelawareLanding({
         {/* Same plans as /home2, headings written for this page (owner, 23 Oct). */}
         {/* Web design pages show the one-time website price instead
             (owner, 5 Nov 2026). */}
-        {extras.pricing && kind === "web" ? (
+        {extras.pricing &&
+        (kind === "web" || kind === "nyc-web" || kind === "fl-web") ? (
           <WebsitePricing
             idPrefix="de"
             title={extras.pricing.title}
@@ -1387,6 +1468,7 @@ export function DelawareLanding({
                 </details>
               ))}
             </div>
+            <FlCityLinks kind={kind} />
           </Wrap>
         </Section>
 
@@ -1455,16 +1537,19 @@ export function DelawareLanding({
                   {SITE_CONTACT.email}
                 </Pill>
                 {/* Owner rule (24 Oct 2026): every contact block shows
-                    phone, email and address. */}
-                <Pill
-                  href={SITE_CONTACT.mapHref}
-                  tone="outline"
-                  size="md"
-                  fullOnPhone
-                >
-                  <FiMapPin aria-hidden="true" className="tw:size-[17px]" />
-                  {SITE_CONTACT.address}
-                </Pill>
+                    phone, email and address, except on the Florida pages
+                    (owner, 18 Nov 2026), which have no Florida address. */}
+                {kind.startsWith("fl-") ? null : (
+                  <Pill
+                    href={SITE_CONTACT.mapHref}
+                    tone="outline"
+                    size="md"
+                    fullOnPhone
+                  >
+                    <FiMapPin aria-hidden="true" className="tw:size-[17px]" />
+                    {SITE_CONTACT.address}
+                  </Pill>
+                )}
               </div>
               <div className="tw:mx-auto tw:mt-[34px] tw:max-w-[760px] tw:text-left">
                 <ServiceLeadForm

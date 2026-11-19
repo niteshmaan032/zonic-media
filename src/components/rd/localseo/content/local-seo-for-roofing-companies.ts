@@ -21,7 +21,23 @@
      became its own service card and FAQ; AI answers lean on hail-damage,
      repair-vs-replace and warranty explanations, which shaped the AI row.
    - Title keeps "Local SEO for Roofing Companies" (live title + GSC) and
-     adds "Roofing SEO Services"; H1 leads with the head term. */
+     adds "Roofing SEO Services"; H1 leads with the head term.
+
+   Copy pass, 19 Nov 2026 (owner: no "inspection", it reads as our home
+   inspection service; storm is not the theme):
+   - Search Console, 3 months (16K impressions): roofing seo 1,471 (pos
+     44.9) · seo for roofing companies 1,431 · roofing seo services 876 ·
+     seo for roofing company 763 · roofing company seo 701 · local seo for
+     roofing companies 681 · seo for roofing contractors 594 · local seo
+     for roofers 379 · best roofing seo companies 269 · best roofing seo
+     267 · best roofing seo company 228. None of 232 queries contains
+     inspection or storm.
+   - Semrush US: roofing seo 4,400 · seo for roofers 2,400 · roofer seo
+     1,900 · roofing seo company 1,900 · roofing seo keywords 1,300 (KD 9)
+     · roofing seo agency 880. Homeowner examples swapped to searches with
+     volume: emergency roof repair 14,800, storm damage roof repair 9,900
+     (kept once), roof replacement cost 27,100, roof replacement
+     financing 1,900. */
 
 import type { LocalSeoContent } from "../types";
 
@@ -32,7 +48,7 @@ export const CONTENT: LocalSeoContent = {
   meta: {
     title: "Roofing SEO Services | Local SEO for Roofing Companies",
     description:
-      "Roofing SEO services for roofers who want more inspections: Google Maps rankings, storm and town pages, reviews and AI answers, with calls traced to each job.",
+      "Roofing SEO services and local SEO for roofers: Google Maps rankings, repair and town pages, reviews and AI answers, with every call traced to the job.",
     keywords: [
       "roofing seo",
       "seo for roofers",
@@ -44,19 +60,24 @@ export const CONTENT: LocalSeoContent = {
       "local seo for roofing companies",
       "roofing company seo",
       "roofing local seo",
+      "roofer seo",
+      "roofing seo agency",
+      "roofing seo keywords",
+      "seo for roofing contractors",
+      "best roofing seo company",
     ],
   },
   hero: {
     h1Lead: "Roofing SEO Services",
-    h1Rest: "That Fill Your Inspection Schedule",
+    h1Rest: "That Keep Your Roofing Crews Busy",
     icon: "roof",
     lead: [
-      "We do SEO for roofers who want the call when shingles blow off, not a week later. Your ",
+      "We do SEO for roofers who want the call when a homeowner spots a leak, not a week later. Your ",
       {
         href: "/local-seo-google-business-optimization",
         label: "Google Business Profile",
       },
-      " gets tuned for repair, replacement and inspection searches, every town you cover gets its own page, and reviews start naming the work.",
+      " gets tuned for repair and replacement searches, every town you cover gets its own page, and reviews start naming the work.",
     ],
     cta: "Book a Free Roofing SEO Audit",
     ui: {
@@ -68,12 +89,12 @@ export const CONTENT: LocalSeoContent = {
       category: "Roofing contractor",
       query: "roof repair near me",
       growthLabel: "New roofing leads",
-      aiPrompt: "Who should I call for hail damage on my roof?",
-      aiReasons: ["Storm and hail repair pages", "Steady homeowner reviews"],
+      aiPrompt: "Which roofing company near me fixes leaks fast?",
+      aiReasons: ["Clear leak repair pages", "Steady homeowner reviews"],
       leads: [
-        ["Roof inspection booked", "Google Maps"],
-        ["Hail damage call", "AI Overview link"],
-        ["Replacement quote request", "Storm repair page"],
+        ["Roof repair estimate booked", "Google Maps"],
+        ["Leak repair call", "AI Overview link"],
+        ["Replacement quote request", "Roof replacement page"],
       ],
       tabs: [
         {
@@ -86,13 +107,13 @@ export const CONTENT: LocalSeoContent = {
           label: "AI answers",
           badge: "Top pick",
           title: "Named When Homeowners Ask AI",
-          text: "ChatGPT, Gemini and Google AI suggest your company for storm and leak repairs.",
+          text: "ChatGPT, Gemini and Google AI suggest your company for leak repairs and new roofs.",
         },
         {
           label: "Leads",
           badge: "More calls",
-          title: "Inspections Booked Straight From Search",
-          text: "Calls and quote requests arrive from Maps, AI answers and your storm pages.",
+          title: "Estimates Booked Straight From Search",
+          text: "Calls and quote requests arrive from Maps, AI answers and your town pages.",
         },
       ],
     },
@@ -102,13 +123,13 @@ export const CONTENT: LocalSeoContent = {
     lead: "Each phrase below gets a page, a profile signal or both, so your crew shows up from the first drip to the final estimate.",
     groups: [
       {
-        icon: "storm",
-        label: "Storm and leak roof searches",
+        icon: "repair",
+        label: "Roof repair and leak searches",
         terms: [
           "roof leak repair near me",
-          "emergency roof tarp",
-          "hail damage roof inspection",
-          "wind damage shingles",
+          "emergency roof repair",
+          "storm damage roof repair",
+          "missing shingles repair",
           "water stain on ceiling after rain",
           "roof leaking around chimney",
         ],
@@ -119,7 +140,7 @@ export const CONTENT: LocalSeoContent = {
         terms: [
           "roof replacement near me",
           "metal roofing contractors near me",
-          "standing seam metal roof",
+          "roof replacement cost",
           "flat roof repair",
           "tile roof contractor",
           "new roof estimate",
@@ -133,7 +154,7 @@ export const CONTENT: LocalSeoContent = {
           "best roofer near me",
           "roofers in (your town)",
           "insurance claim roofer",
-          "roof inspection for home sale",
+          "roof replacement financing",
           "commercial roofing contractor near me",
         ],
       },
@@ -141,16 +162,16 @@ export const CONTENT: LocalSeoContent = {
   },
   services: {
     title: "What Our Roofing SEO Company\nHandles Each Month",
-    lead: "Six workstreams, each aimed at the roofs you most want to sell: repairs, full replacements, storm work and commercial flat roofs.",
+    lead: "Six workstreams, each aimed at the roofs you most want to sell: repairs, full replacements, metal roofs and commercial flat roofs.",
     cta: "Review My Roofing Site Free",
     items: [
       {
         icon: "pin",
         title: "Google Business Profile Tuning for Roofers",
-        desc: "Roofing contractor as the primary category, inspection and repair services listed, service towns set, and fresh tear-off photos posted every week.",
+        desc: "Roofing contractor as the primary category, every repair, replacement and material service listed, service towns set, and fresh tear-off photos posted every week.",
         points: [
           "Roofing contractor category",
-          "Inspection services listed",
+          "Every roof service listed",
           "Weekly tear-off photos",
         ],
         links: [
@@ -165,13 +186,13 @@ export const CONTENT: LocalSeoContent = {
         ],
       },
       {
-        icon: "storm",
-        title: "Storm Damage Pages for Roofers",
-        desc: "Hail, wind and leak pages written before storm season, ready to publish and promote the week a storm rolls through your area.",
+        icon: "search",
+        title: "Roofing SEO Keyword Research",
+        desc: "We size every roofing search in your towns, from leak repair to metal roof installs, and map each one to a page, a profile signal or both.",
         points: [
-          "Hail and wind pages",
-          "Insurance claim FAQs",
-          "Storm-week Google posts",
+          "Roofing keyword map",
+          "Searches sized by town",
+          "Job value per search",
         ],
         links: [],
       },
@@ -221,10 +242,10 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         icon: "sparkle",
-        title: "Roof Damage Answers in AI Search",
-        desc: "Plain answers on hail damage, repair versus replace and shingle warranties, so AI Overviews and ChatGPT name your roofing crew.",
+        title: "Roofing Answers in AI Search",
+        desc: "Plain answers on repair versus replace, roof costs and shingle warranties, so AI Overviews and ChatGPT name your roofing crew.",
         points: [
-          "Hail and warranty answers",
+          "Repair and warranty answers",
           "Same roofer facts everywhere",
           "Roof query checks monthly",
         ],
@@ -239,65 +260,65 @@ export const CONTENT: LocalSeoContent = {
   },
   growth: {
     title: "How Local SEO for Roofers Turns Searches Into Signed Roofs",
-    lead: "Higher roofer Maps placement, your name in AI replies about roof damage, and inspection calls tied to the page that earned them.",
+    lead: "Higher roofer Maps placement, your name in AI replies about roofing, and estimate calls tied to the page that earned them.",
     rank: {
       title: "Climb for Roof Repair and Replacement Searches",
       body: [
-        "We sort roofing searches by job value and town, then write or repair whichever roof page has the best shot at each. Repair, replacement, storm and commercial terms get watched every week, so you see which towns move first and where a rival still sits above you.",
+        "We sort roofing searches by job value and town, then write or repair whichever roof page has the best shot at each. Repair, replacement, metal and commercial terms get watched every week, so you see which towns move first and where a rival still sits above you.",
       ],
       points: [
         "Keywords sorted by job value",
         "Weekly town tracking",
-        "Storm term watchlist",
+        "Roofing keyword watchlist",
         "Competitor page gaps",
       ],
       cta: "Show My Roofing Keyword Gaps",
       keywords: [
         ["roof repair near me", 24, 3],
         ["roof replacement + your town", 31, 4],
-        ["hail damage roof inspection", 18, 2],
+        ["emergency roof repair", 18, 2],
         ["metal roof installers", 37, 5],
       ],
     },
     ai: {
-      title: "Show Up in AI Answers About Roof Damage",
+      title: "Show Up in AI Answers About Roofing",
       body: [
-        "AI Overviews and ChatGPT pull from pages that answer roofing questions plainly: is this hail damage, repair or replace, what the warranty covers. We write those answers, mark them up and keep your listings consistent, as part of our ",
+        "AI Overviews and ChatGPT pull from pages that answer roofing questions plainly: repair or replace, what a new roof involves, what the warranty covers. We write those answers, mark them up and keep your listings consistent, as part of our ",
         { href: "/services/ai-seo-services", label: "AI SEO work" },
         ".",
       ],
       points: [
-        "Hail and wind FAQs",
+        "Repair-or-replace FAQs",
         "Warranty and material facts",
         "Matching listings everywhere",
         "AI mention tracking",
       ],
       cta: "Check My Roofing AI Mentions",
-      query: "who should inspect my roof after hail",
-      intro: "For a hail inspection near you,",
+      query: "should I repair or replace my roof",
+      intro: "For an honest repair-or-replace answer near you,",
       bullets: [
-        "Storm damage page with photos",
-        "Recent reviews naming hail work",
+        "Repair vs replace guide with photos",
+        "Recent reviews naming roof work",
         "Clear warranty details",
       ],
     },
     leads: {
       title: "Trace Every Roofing Call to Its Source",
       body: [
-        "A ranking only pays when the phone rings. Each call and inspection request is tagged by page, town and search, your quote forms get shorter, and ",
+        "A ranking only pays when the phone rings. Each call and estimate request is tagged by page, town and search, your quote forms get shorter, and ",
         { href: "/services/google-ads", label: "Google Ads for roofers" },
-        " can cover the weeks right after a storm.",
+        " can cover your busiest weeks.",
       ],
       points: [
         "Calls tagged by town",
-        "Short inspection forms",
+        "Short estimate forms",
         "Tap-to-call on mobile",
         "Monthly source report",
       ],
       cta: "See Where My Roofing Calls Start",
       items: [
         ["Leak repair call", "Google Maps", "Mon 6:52 AM"],
-        ["Inspection request", "Hail damage page", "Mon 11:20 AM"],
+        ["Estimate request", "Roof repair page", "Mon 11:20 AM"],
         ["Replacement estimate", "Town page", "Tue 9:02 AM"],
         ["Flat roof call", "AI Overview link", "Wed 2:35 PM"],
       ],
@@ -305,7 +326,7 @@ export const CONTENT: LocalSeoContent = {
   },
   results: {
     title: "What a Roofing Company Gains With Zonic SEO",
-    lead: "The usual order for roofers: profile first, storm-ready pages next, then steadier inspection calls.",
+    lead: "The usual order for roofers: profile first, roof and town pages next, then steadier estimate calls.",
     cta: "Map Out My Roofing Growth",
     milestones: [
       {
@@ -315,8 +336,8 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         when: "Month 1",
-        title: "Roof and Storm Pages Publish",
-        text: "Repair, replacement and hail pages go live, giving each roofing search a page that can start ranking.",
+        title: "Roof and Town Pages Publish",
+        text: "Repair, replacement and town pages go live, giving each roofing search a page that can start ranking.",
       },
       {
         when: "Months 2–4",
@@ -324,9 +345,9 @@ export const CONTENT: LocalSeoContent = {
         text: "Post-job texts bring in more reviews naming roof types, and your listing moves toward the top three.",
       },
       {
-        when: "Storm season onward",
+        when: "Busy season onward",
         title: "Busier Roofing Crews",
-        text: "Storm and replacement calls tend to pick up, each one tagged so you can see which page earned it.",
+        text: "Repair and replacement calls tend to pick up, each one tagged so you can see which page earned it.",
       },
     ],
     wins: [
@@ -336,9 +357,9 @@ export const CONTENT: LocalSeoContent = {
         text: "Homeowners planning a new roof land on your replacement pages instead of a shared lead site.",
       },
       {
-        icon: "storm",
-        title: "Ready When Hail Hits Your Area",
-        text: "Storm pages and posts already in place mean your crew is visible the week damage happens.",
+        icon: "pin",
+        title: "Seen Across Your Whole Service Area",
+        text: "Town pages and weekly profile posts keep your crew visible in every suburb you cover.",
       },
       {
         icon: "star",
@@ -348,7 +369,7 @@ export const CONTENT: LocalSeoContent = {
       {
         icon: "sparkle",
         title: "Roofing Answers AI Tools Quote",
-        text: "Clear hail, warranty and repair-or-replace pages give ChatGPT and AI Overviews a reason to mention your company.",
+        text: "Clear cost, warranty and repair-or-replace pages give ChatGPT and AI Overviews a reason to mention your company.",
       },
     ],
   },
@@ -357,11 +378,11 @@ export const CONTENT: LocalSeoContent = {
     lead: "Where roofers usually feel the difference between a general SEO firm and our roofing local SEO team.",
     rows: [
       {
-        topic: "Storm and hail pages",
+        topic: "Roofing keyword research",
         other:
-          "Usually missing, so storm searches go to whoever prepared ahead of time.",
+          "Often a generic keyword list borrowed from another trade.",
         zonic:
-          "Hail, wind and leak pages written before the season, then promoted the week weather hits.",
+          "Roof searches sized by town and job value, each mapped to its own page.",
       },
       {
         topic: "Insurance claim content for roofers",
@@ -385,16 +406,16 @@ export const CONTENT: LocalSeoContent = {
           "A text after every job asks homeowners to mention the roof type and their town.",
       },
       {
-        topic: "Storm-week ad spend",
+        topic: "Busy-season ad spend",
         other:
-          "Agency fees tied to spend can climb right when storm budgets peak.",
+          "Agency fees tied to spend can climb right when budgets peak.",
         zonic:
-          "Google Ads for storm weeks with a 0% markup on every dollar you spend.",
+          "Google Ads with a 0% markup on every dollar you spend.",
       },
       {
         topic: "Roofing contract length",
         other:
-          "Often a long agreement signed before any storm season proves the work.",
+          "Often a long agreement signed before the work proves itself.",
         zonic:
           "Billed month to month; your profile, site and listings stay in your name.",
       },
@@ -409,37 +430,37 @@ export const CONTENT: LocalSeoContent = {
         p: "We check your profile, site and the roofers above you in each town, then rank the searches worth chasing by job value.",
       },
       {
-        h: "Build Roof Pages Before Storm Season",
-        p: "Profile and speed fixes land in week one; repair, replacement and storm pages follow, along with the post-job review texts.",
+        h: "Build Roof Pages Before Your Busy Season",
+        p: "Profile and speed fixes land in week one; repair, replacement and town pages follow, along with the post-job review texts.",
       },
       {
         h: "Report Roofing Leads and Double Down",
-        p: "Your monthly roofing report splits rankings, calls and inspection requests by town and roof type, and effort shifts toward whatever books jobs.",
+        p: "Your monthly roofing report splits rankings, calls and estimate requests by town and roof type, and effort shifts toward whatever books jobs.",
       },
     ],
     audit: [
       ["Maps rank by town", "behind"],
-      ["Storm pages", "gap"],
+      ["Roof service pages", "gap"],
       ["Roof review asks", "open"],
       ["Phone page speed", "behind"],
     ],
     plan: [
       "Repair pages",
-      "Hail page",
+      "Metal roof page",
       "Town pages",
       "Review texts",
       "Supplier links",
     ],
     launch: [
       "Category fixed",
-      "Storm pages ready",
+      "Roof pages live",
       "Reviews coming in",
       "Calls tagged",
     ],
   },
   explore: {
     title: "More Ways to Grow a Roofing Company",
-    lead: "Local SEO for roofing companies works harder next to a quick website and paid ads for storm weeks.",
+    lead: "Local SEO for roofing companies works harder next to a fast website and paid ads for your busy weeks.",
     items: [
       {
         name: "Roofing Marketing",
@@ -455,7 +476,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         name: "Google Ads",
-        sub: "Ads for the week after a storm",
+        sub: "Ads on repair and replacement searches",
         href: "/services/google-ads",
         icon: "target",
       },
@@ -476,12 +497,12 @@ export const CONTENT: LocalSeoContent = {
   pricing: {
     title: "Roofing SEO Plans Without Long Contracts",
     compareTitle: "Compare Plans for Roofing Contractors",
-    addOnsTitle: "Storm Season Add-Ons for Roofers",
+    addOnsTitle: "Extra Services for Roofing Contractors",
     customTitle: "Roofing in Several Metros?",
   },
   faq: {
     title: "Roofing SEO Questions From Contractors",
-    lead: "Timelines, costs, Map Pack tactics and storm season, answered plainly for roofers.",
+    lead: "Timelines, costs, keywords and Map Pack tactics, answered plainly for roofers.",
     items: [
       {
         q: "What is roofing SEO?",
@@ -489,23 +510,23 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "How much does SEO for roofing companies cost?",
-        a: "Our three plans are $297, $950 and $1,500 a month, all month to month. A one-crew roofer in a single metro usually starts on the first; contractors covering several counties, or wanting storm-season Google Ads managed, lean toward the larger two. The free audit tells you which fits.",
+        a: "Our three plans are $297, $950 and $1,500 a month, all month to month. A one-crew roofer in a single metro usually starts on the first; contractors covering several counties, or wanting Google Ads managed, lean toward the larger two. The free audit tells you which fits.",
       },
       {
         q: "How long until a roofer sees SEO results?",
-        a: "Profile fixes and fresh roof repair pages can lift Maps placement within a few weeks. Head searches in a crowded metro can take six months or more. Launching storm pages a season early means they are already indexed when demand spikes, and your monthly report shows the movement.",
+        a: "Profile fixes and fresh roof repair pages can lift Maps placement within a few weeks. Head searches in a crowded metro can take six months or more. Launching pages before your busy season means they are already indexed when demand climbs, and your monthly report shows the movement.",
       },
       {
-        q: "Which keywords should a roofing contractor target?",
-        a: "Start with the money jobs plus your towns: roof repair near me, roof replacement with your city, hail or storm damage inspection, metal roof installer and flat roof repair if you do commercial work. Each one is sized in your audit, and only the ones that lead to signed contracts get a page.",
+        q: "What roofing SEO keywords should a roofer target?",
+        a: "Start with the money jobs plus your towns: roof repair near me, roof replacement with your city, emergency roof repair, metal roof installation and flat roof repair if you do commercial work. Each one is sized in your audit, and only the ones that lead to signed contracts get a page.",
       },
       {
         q: "What gets a roofing company into the top three on Google Maps?",
         a: "The right primary category, every service and town listed, real job photos, weekly posts and a steady flow of reviews that mention the work. Consistent listings on other directories and a dedicated page per service on your website do the rest.",
       },
       {
-        q: "Can roofing SEO help after a hail or wind storm?",
-        a: "Yes, if the groundwork is ready before the storm. We build hail, wind and leak pages ahead of the season, then post updates and push review requests the week weather hits, so your listing is visible while homeowners are still checking for damage.",
+        q: "What makes the best roofing SEO company?",
+        a: "Roofing-specific work and plain reporting. Look for a team that bills month to month, tracks calls and booked jobs rather than traffic, builds real town pages instead of copies, and keeps your profile and website in your name. Ask to see a sample monthly report before you sign.",
       },
       {
         q: "Do roofers need a separate page for each town?",
@@ -513,7 +534,7 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         q: "Should a roofing website answer insurance claim questions?",
-        a: "Yes. Homeowners look up how claims, adjusters and deductibles work before they call anyone. Plain, accurate answers on a storm or claims page earn those searches and AI citations. We keep them general and never promise what an insurer will pay.",
+        a: "Yes. Homeowners look up how claims, adjusters and deductibles work before they call anyone. Plain, accurate answers on a claims page earn those searches and AI citations. We keep them general and never promise what an insurer will pay.",
       },
       {
         q: "Do you handle local SEO for roofers doing commercial work?",
@@ -552,7 +573,7 @@ export const CONTENT: LocalSeoContent = {
     },
   },
   banner: {
-    title: "Own the Map Before the Next Storm",
-    lead: "Stronger town-by-town rankings and storm-ready pages, reported in plain numbers each month.",
+    title: "Own the Map for Roofer Searches Near You",
+    lead: "Stronger town-by-town rankings and roof pages that convert, reported in plain numbers each month.",
   },
 };

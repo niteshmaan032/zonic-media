@@ -64,7 +64,7 @@ const faqJsonLd = {
 const MARQUEE_ITEMS = [
   "Roof Repair leads",
   "Roof Replacement leads",
-  "Storm Damage leads",
+  "Roof Leak leads",
   "Shingle Roofing leads",
   "Commercial Roofing leads",
   "Emergency Roofing leads",
@@ -77,15 +77,15 @@ const MARQUEE_ITEMS = [
 const CAPABILITY_ROW_ONE = [
   { icon: "layout", label: "Roofer-built layouts" },
   { icon: "smartphone", label: "Mobile estimate flow" },
-  { icon: "clipboard", label: "Free inspection forms" },
+  { icon: "clipboard", label: "Free estimate forms" },
   { icon: "phone", label: "Leak-call buttons" },
   { icon: "search", label: "Roofing local SEO base" },
-  { icon: "chart", label: "Storm lead tracking" },
+  { icon: "chart", label: "Roofing lead tracking" },
   { icon: "layers", label: "Roof service pages" },
 ] as const;
 
 const CAPABILITY_ROW_TWO = [
-  { icon: "chart", label: "Storm lead tracking" },
+  { icon: "chart", label: "Roofing lead tracking" },
   { icon: "layers", label: "Roof service pages" },
   { icon: "pin", label: "City roofing pages" },
   { icon: "gauge", label: "Fast page loads" },
@@ -99,17 +99,17 @@ const EXTRA_SERVICES = [
   "Flat Roofing",
   "Tile Roofing",
   "Emergency Tarping",
-  "Roof Inspections",
+  "Storm Damage Repair",
   "Skylights",
   "Chimney Flashing",
   "Attic Ventilation",
-  "Insurance Claims",
+  "Roof Maintenance",
 ];
 
 export const metadata: Metadata = {
   title: { absolute: "Free Roofing Website Design for Roofers | Zonic Media" },
   description:
-    "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Inspection booking, storm damage pages and project galleries.",
+    "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Estimate forms, roof service pages and project galleries.",
   // Offer-intent terms, kept disjoint from the head terms the matching
   // /services/*-website-design page targets so the two do not compete.
   keywords: [
@@ -119,14 +119,14 @@ export const metadata: Metadata = {
     "roofing company website",
     "roofer website",
     "roofing contractor website",
-    "storm damage roofing website",
+    "free website for roofers",
     "roofing marketing plan",
   ],
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Free Roofing Website Design for Roofers | Zonic Media",
     description:
-      "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Inspection booking, storm damage pages and project galleries.",
+      "Free roofing website design for roofers, with no build fee on a qualifying Zonic plan. Estimate forms, roof service pages and project galleries.",
     url: PAGE_PATH,
     type: "website",
     images: [
@@ -187,7 +187,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               </span>
             </h1>
 
-            <p className="hero-lede">Start a qualifying Zonic roofing marketing plan and we build your roofing company website with no development fee, ready with inspection booking, storm damage pages and project galleries that turn local searches into signed roof jobs.</p>
+            <p className="hero-lede">Start a qualifying Zonic roofing marketing plan and we build your roofing company website with no development fee, ready with estimate forms, roof repair and replacement pages and project galleries that turn local searches into signed roof jobs.</p>
 
             <HeroTrustBadges trustpilotSrc="/images/trust-black.png" />
 
@@ -221,7 +221,7 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <Icon name="monitor" />
                 </span>
                 <span>
-                  <strong>Inspection booking</strong>
+                  <strong>Estimate booking</strong>
                   <small>Calls and estimate forms</small>
                 </span>
               </div>
@@ -230,7 +230,7 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <Icon name="chart" />
                 </span>
                 <span>
-                  <strong>Storm season ready</strong>
+                  <strong>Ready from day one</strong>
                   <small>Site + roofing campaigns</small>
                 </span>
               </div>
@@ -285,9 +285,9 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <div className="mini-nav">
                   <span>Roof Repair</span>
                   <span>Replacement</span>
-                  <span>Storm Damage</span>
+                  <span>Financing</span>
                 </div>
-                <div className="mini-button">Free inspection</div>
+                <div className="mini-button">Free estimate</div>
               </div>
 
               <div className="design-canvas">
@@ -295,11 +295,11 @@ export default function FreeRoofingWebsiteOfferPage() {
                   <div className="skeleton-label">LOCAL ROOFING EXPERTS</div>
                   <h2>Protect your home with a roof built to last.</h2>
                   <p>
-                    Roof repair, replacement, and storm response from a trusted
+                    Roof repair, replacement, and leak response from a trusted
                     local crew.
                   </p>
                   <div className="canvas-actions">
-                    <span>Book free inspection</span>
+                    <span>Get a free estimate</span>
                     <span>View roofing services</span>
                   </div>
                   <div className="canvas-trust">
@@ -343,7 +343,7 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <h3>Fast help when your roof needs it.</h3>
                 <div className="phone-art phone-art--roofing" />
                 <div className="phone-cta">
-                  Book inspection <Icon name="arrow-up-right" />
+                  Get an estimate <Icon name="arrow-up-right" />
                 </div>
               </div>
             </div>
@@ -354,7 +354,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               </span>
               <span>
                 <strong>Made for roofing leads</strong>
-                <small>Inspections, estimates and tracking</small>
+                <small>Calls, estimates and tracking</small>
               </span>
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <Icon name="quote" />
               </div>
               <h3>Walk us through your territory</h3>
-              <p>We look at your roof services, cities, storm seasons, current lead sources and the jobs you want more of.</p>
+              <p>We look at your roof services, cities, busy seasons, current lead sources and the jobs you want more of.</p>
               <small>Roofing strategy call</small>
             </article>
             <article className="process-card--featured">
@@ -395,7 +395,7 @@ export default function FreeRoofingWebsiteOfferPage() {
                 <Icon name="chart" />
               </div>
               <h3>Pick a roofing marketing plan</h3>
-              <p>Your plan can combine roofing Google Ads, local SEO, Google Business Profile work, storm campaigns, call tracking and page improvements.</p>
+              <p>Your plan can combine roofing Google Ads, local SEO, Google Business Profile work, review requests, call tracking and page improvements.</p>
               <small>Ongoing roofing leads</small>
             </article>
             <article>
@@ -426,14 +426,14 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="leadtrack-copy">
             <span className="section-kicker">Roofing lead tracking</span>
             <h2>See which roof jobs came from which channel.</h2>
-            <p>Inspection calls, estimate forms and chats land in one dashboard with the source attached, so you know whether a replacement came from ads, Google Maps or a storm campaign.</p>
+            <p>Calls, estimate forms and chats land in one dashboard with the source attached, so you know whether a replacement came from ads, Google Maps or organic search.</p>
             <ul className="leadtrack-points">
               <li>
-                <Icon name="check" /> Inspection calls and forms logged</li>
+                <Icon name="check" /> Calls and estimate forms logged</li>
               <li>
-                <Icon name="check" /> Ad, Maps or storm source on each lead</li>
+                <Icon name="check" /> Ad, Maps or search source on each lead</li>
               <li>
-                <Icon name="check" /> Status from inspection to signed job</li>
+                <Icon name="check" /> Status from estimate to signed job</li>
             </ul>
             <a className="section-button" href="#contact">
               <span>Show me roofing tracking</span>
@@ -495,7 +495,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             <div className="leadtrack-row">
               <b>
                 Dana R.
-                <small>Storm Damage / Insurance</small>
+                <small>Insurance Claim Repair</small>
               </b>
               <span>Organic search</span>
               <span className="leadtrack-pill leadtrack-pill--quoted">Quoted</span>
@@ -525,7 +525,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               <span className="section-kicker">Roof problems, mapped to pages</span>
               <h2>A page for every roof problem a homeowner searches.</h2>
             </div>
-            <p>Pick a roofing service to see how we shape the message, proof and estimate path for a homeowner facing a leak, a storm or an old roof.</p>
+            <p>Pick a roofing service to see how we shape the message, proof and estimate path for a homeowner facing a leak, an insurance claim or an old roof.</p>
           </div>
 
           <RoofingServiceTabs />
@@ -556,7 +556,7 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="section-heading section-heading--center">
             <span className="section-kicker">What your roofing website includes</span>
             <h2>A roofing website that keeps working long after launch.</h2>
-            <p>Your site runs alongside your ads, Google Business Profile, storm campaigns, call tracking and estimate follow-up as one connected system.</p>
+            <p>Your site runs alongside your ads, Google Business Profile, reviews, call tracking and estimate follow-up as one connected system.</p>
           </div>
 
           <div className="icon-cloud">
@@ -586,7 +586,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               <div>
                 <small>ROOF SITE LAYER 01</small>
                 <h3>Roof service and city pages</h3>
-                <p>Repair, replacement, material, storm damage and city pages show Google and homeowners exactly what you do and where. The same structure behind our <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
+                <p>Repair, replacement, material, insurance claim and city pages show Google and homeowners exactly what you do and where. The same structure behind our <Link href="/services/industry/local-seo-for-roofing-companies" className="offer-inlink">
                     local SEO for roofing companies
                   </Link>.</p>
               </div>
@@ -599,7 +599,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               <div>
                 <small>ROOF SITE LAYER 02</small>
                 <h3>Estimate requests you can trace</h3>
-                <p>Inspection forms, click-to-call, call tracking, conversion events and CRM routing tie each roofing campaign to real estimate requests.</p>
+                <p>Estimate forms, click-to-call, call tracking, conversion events and CRM routing tie each roofing campaign to real estimate requests.</p>
               </div>
               <Icon name="arrow-up-right" />
             </article>
@@ -757,9 +757,9 @@ export default function FreeRoofingWebsiteOfferPage() {
         <section id="why" className="dark-section">
           <div className="dark-glow" />
           <div className="dark-copy">
-            <span className="section-kicker section-kicker--dark">Behind every booked inspection</span>
+            <span className="section-kicker section-kicker--dark">Behind every booked estimate</span>
             <h2>A roofing site gets found when marketing runs behind it.</h2>
-            <p>We build your plan around your roofing territory. It can mix paid search, local SEO, Google Business Profile growth, storm response campaigns, call tracking and ongoing page improvements.</p>
+            <p>We build your plan around your roofing territory. It can mix paid search, local SEO, Google Business Profile growth, review requests, call tracking and ongoing page improvements.</p>
             <a className="section-button section-button--light" href="#contact">
               <span>Plan my roofing marketing</span>
               <i>
@@ -771,7 +771,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             <article>
               <strong>01</strong>
               <h3>Roof repair search ads</h3>
-              <p>Reach homeowners searching for roof repair, replacement and inspections with service-led ads and tracked estimate requests. See our <Link href="/services/google-ads" className="offer-inlink">
+              <p>Reach homeowners searching for roof repair, replacement and new roofs with service-led ads and tracked estimate requests. See our <Link href="/services/google-ads" className="offer-inlink">
                   Google Ads management
                 </Link>.</p>
             </article>
@@ -789,8 +789,8 @@ export default function FreeRoofingWebsiteOfferPage() {
             </article>
             <article>
               <strong>03</strong>
-              <h3>Storm response campaigns</h3>
-              <p>After hail, wind or heavy rain, launch location-based campaigns fast and track every inspection call they bring in.</p>
+              <h3>Reviews that win roof jobs</h3>
+              <p>A review request goes out after every finished roof, so homeowners comparing roofers see recent, local proof first.</p>
             </article>
             <article className="dark-stat">
               <span>
@@ -871,7 +871,7 @@ export default function FreeRoofingWebsiteOfferPage() {
               </div>
               <p>
                 <strong>One roofing lead system</strong>
-                <small>Site · Maps · storm tracking</small>
+                <small>Site · Maps · call tracking</small>
               </p>
             </div>
           </div>
@@ -879,7 +879,7 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="review-grid">
             <article>
               <Icon name="users" />
-              <p>Your roofing website, ads, Google profile, storm campaigns and tracking all target the same homeowners and the same service area.</p>
+              <p>Your roofing website, ads, Google profile, reviews and tracking all target the same homeowners and the same service area.</p>
               <footer>
                 <span>01</span>
                 <div>
@@ -890,7 +890,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             </article>
             <article className="review-featured">
               <Icon name="wand" />
-              <p>No upfront build bill means more budget for the campaigns that fill your inspection calendar from the first month.</p>
+              <p>No upfront build bill means more budget for the campaigns that fill your estimate calendar from the first month.</p>
               <footer>
                 <span>02</span>
                 <div>
@@ -901,7 +901,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             </article>
             <article>
               <Icon name="target" />
-              <p>Inspection calls, estimate forms, ads and Maps actions are measured together, so each change focuses on the jobs that pay.</p>
+              <p>Calls, estimate forms, ads and Maps actions are measured together, so each change focuses on the jobs that pay.</p>
               <footer>
                 <span>03</span>
                 <div>
@@ -927,7 +927,7 @@ export default function FreeRoofingWebsiteOfferPage() {
           <div className="faq-intro">
             <span className="section-kicker">Roofer FAQs</span>
             <h2>Roofing contractor questions, answered.</h2>
-            <p>What roofers ask most about the free roofing website, storm damage pages, qualifying plans and the six-month term.</p>
+            <p>What roofers ask most about the free roofing website, roof service pages, qualifying plans and the six-month term.</p>
             <a className="section-button" href="#contact">
               <span>Ask about my roofing market</span>
               <i>
@@ -946,13 +946,13 @@ export default function FreeRoofingWebsiteOfferPage() {
 
           <div className="cta-content">
             <span className="section-kicker section-kicker--dark">Roofing website launch</span>
-            <h2>Put a new roofing website to work before storm season.</h2>
+            <h2>Put a new roofing website to work before your busy season.</h2>
             <p>Fill in the short form. We review your roofing services, territory, current website and lead goals, then recommend a qualifying roofing marketing plan.</p>
             <div className="contact-points">
               <span>
-                <Icon name="check" /> Roofing website built for inspections</span>
+                <Icon name="check" /> Roofing website built for estimates</span>
               <span>
-                <Icon name="check" /> Plan matched to your storm territory</span>
+                <Icon name="check" /> Plan matched to your territory</span>
               <span>
                 <Icon name="check" /> Scope and terms in writing first</span>
             </div>
@@ -990,7 +990,7 @@ export default function FreeRoofingWebsiteOfferPage() {
             >
               Zonic Media
             </a>
-            <p>Roofing company websites paired with the marketing that books inspections and roof jobs.</p>
+            <p>Roofing company websites paired with the marketing that books estimates and roof jobs.</p>
             <div className="footer-contact">
               <a href={SITE_CONTACT.phoneHref}>
                 {SITE_CONTACT.phoneDisplay} <Icon name="arrow-up-right" />

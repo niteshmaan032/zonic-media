@@ -181,6 +181,16 @@ const LOCATIONS: {
     ],
   },
   {
+    title: "Digital Marketing Agency in Florida",
+    href: "/services/florida/digital-marketing",
+    desc: "Google Maps, ads and AI search for businesses across Florida.",
+    tags: [
+      { label: "Florida SEO Company", href: "/services/florida/local-seo" },
+      { label: "PPC Agency Florida", href: "/services/florida/ppc" },
+      { label: "Florida Web Design", href: "/services/florida/web-design" },
+    ],
+  },
+  {
     title: "Dallas–Fort Worth Digital Marketing",
     href: "/services/dallas-fort-worth/digital-marketing-agency",
     desc: "Marketing, web design and local SEO across the DFW metroplex.",

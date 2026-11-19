@@ -621,7 +621,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["Ads That Reach", "Philly Buyers,", "Not Browsers."],
   aboutPhoto: {
     src: "/images/philadelphia/phila-ppc/philadelphia-ppc-agency-dashboard.webp",
-    alt: "Philadelphia PPC agency office with a Google Ads dashboard and the Ben Franklin Bridge behind",
+    alt: "Philadelphia PPC Google Ads dashboard with the Ben Franklin Bridge behind",
     // 4:3 image in a wide box: keep the title text at the top in view.
     position: "50% 0%",
   },

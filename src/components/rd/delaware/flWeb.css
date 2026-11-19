@@ -1,0 +1,116 @@
+/* Florida web design page (18 Nov 2026), flWebUi.tsx only.
+   - flw-ph1/2/3: the homepage mode switcher (everyday → storm watch →
+     snowbird), 12s loop; resting state = storm watch.
+   - flw-seg: scorecard segments lighting up in turn (staggered by
+     animation-delay); resting = lit.
+   - flw-lift: the dragged homepage section bobbing.
+   - flw-blink: the terminal cursor.
+   Reduced motion: everything still, resting states shown. */
+
+.flw-ph1 {
+  opacity: 0;
+  animation: flw-ph1 12s ease infinite both;
+}
+.flw-ph2 {
+  opacity: 1;
+  animation: flw-ph2 12s ease infinite both;
+}
+.flw-ph3 {
+  opacity: 0;
+  animation: flw-ph3 12s ease infinite both;
+}
+@keyframes flw-ph1 {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  33%,
+  97% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flw-ph2 {
+  0%,
+  30% {
+    opacity: 0;
+  }
+  33%,
+  63% {
+    opacity: 1;
+  }
+  66%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes flw-ph3 {
+  0%,
+  63% {
+    opacity: 0;
+  }
+  66%,
+  97% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.flw-seg {
+  animation: flw-seg 8s ease infinite both;
+}
+@keyframes flw-seg {
+  0%,
+  10% {
+    background: #e6ebf2;
+  }
+  18%,
+  94% {
+    background: var(--c);
+  }
+  100% {
+    background: #e6ebf2;
+  }
+}
+
+.flw-lift {
+  animation: flw-lift 4s ease-in-out infinite both;
+}
+@keyframes flw-lift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.2deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-1.2deg);
+  }
+}
+
+.flw-blink {
+  animation: flw-blink 1.1s steps(1) infinite both;
+}
+@keyframes flw-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flw-ph1,
+  .flw-ph2,
+  .flw-ph3,
+  .flw-seg,
+  .flw-lift,
+  .flw-blink {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,185 @@
+/* St. Petersburg digital marketing page (18 Nov 2026): the pulse on the
+   busiest town pins of the Pinellas map (3.2s), and on the review-request
+   phone the review sheet sliding up, its five stars filling in turn, the
+   review text appearing and the Post button pressed (8s, in step with the
+   de-* loops). Resting state: no pulse, sheet up, stars gold, text shown.
+   Reduced motion: still. */
+
+.stp-ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: stp-ping 3.2s ease-out infinite both;
+}
+@keyframes stp-ping {
+  0% {
+    opacity: 0.45;
+    scale: 0.6;
+  }
+  75%,
+  100% {
+    opacity: 0;
+    scale: 2.4;
+  }
+}
+
+.stp-sheet {
+  animation: stp-sheet 8s ease infinite both;
+}
+@keyframes stp-sheet {
+  0%,
+  30% {
+    transform: translateY(110%);
+  }
+  37%,
+  95% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(110%);
+  }
+}
+
+.stp-star {
+  color: #f4b400;
+}
+.stp-star-1 {
+  animation: stp-star-1 8s ease infinite both;
+}
+.stp-star-2 {
+  animation: stp-star-2 8s ease infinite both;
+}
+.stp-star-3 {
+  animation: stp-star-3 8s ease infinite both;
+}
+.stp-star-4 {
+  animation: stp-star-4 8s ease infinite both;
+}
+.stp-star-5 {
+  animation: stp-star-5 8s ease infinite both;
+}
+@keyframes stp-star-1 {
+  0%,
+  41% {
+    color: #d5dce7;
+    transform: none;
+  }
+  43% {
+    color: #f4b400;
+    transform: scale(1.25);
+  }
+  45%,
+  100% {
+    color: #f4b400;
+    transform: none;
+  }
+}
+@keyframes stp-star-2 {
+  0%,
+  44% {
+    color: #d5dce7;
+    transform: none;
+  }
+  46% {
+    color: #f4b400;
+    transform: scale(1.25);
+  }
+  48%,
+  100% {
+    color: #f4b400;
+    transform: none;
+  }
+}
+@keyframes stp-star-3 {
+  0%,
+  47% {
+    color: #d5dce7;
+    transform: none;
+  }
+  49% {
+    color: #f4b400;
+    transform: scale(1.25);
+  }
+  51%,
+  100% {
+    color: #f4b400;
+    transform: none;
+  }
+}
+@keyframes stp-star-4 {
+  0%,
+  50% {
+    color: #d5dce7;
+    transform: none;
+  }
+  52% {
+    color: #f4b400;
+    transform: scale(1.25);
+  }
+  54%,
+  100% {
+    color: #f4b400;
+    transform: none;
+  }
+}
+@keyframes stp-star-5 {
+  0%,
+  53% {
+    color: #d5dce7;
+    transform: none;
+  }
+  55% {
+    color: #f4b400;
+    transform: scale(1.25);
+  }
+  57%,
+  100% {
+    color: #f4b400;
+    transform: none;
+  }
+}
+
+.stp-txt {
+  animation: stp-txt 8s ease infinite both;
+}
+@keyframes stp-txt {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  61%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.stp-press {
+  display: inline-block;
+  animation: stp-press 8s ease infinite both;
+}
+@keyframes stp-press {
+  0%,
+  63% {
+    transform: none;
+  }
+  64.5% {
+    transform: scale(0.9);
+  }
+  66%,
+  100% {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stp-ping,
+  .stp-sheet,
+  .stp-star,
+  .stp-txt,
+  .stp-press {
+    animation: none !important;
+  }
+  .stp-ping {
+    opacity: 0;
+  }
+}

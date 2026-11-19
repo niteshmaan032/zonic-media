@@ -629,7 +629,7 @@ const extras: DelawareExtras = {
   aboutTitle: ["Marketing Built", "Around How Philly", "Actually Searches."],
   aboutPhoto: {
     src: "/images/philadelphia/phila-digital/philadelphia-digital-marketing-agency-office.webp",
-    alt: "Philadelphia digital marketing agency office with a marketing performance dashboard and the city skyline",
+    alt: "Philadelphia digital marketing performance dashboard with the city skyline",
     // 4:3 image in a wide box: keep the title text at the top in view.
     position: "50% 0%",
   },

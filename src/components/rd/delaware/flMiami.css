@@ -1,0 +1,53 @@
+/* Miami digital marketing page (18 Nov 2026): the coral ring that pulses
+   around each neighborhood's peak hour on the ad-schedule grid (3.2s loop)
+   and the typing dots in the Instagram DM phone (1.2s loop). Reduced
+   motion: still (the halo hides, the solid ring and the dots stay). */
+
+.mia-peak {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mia-peak 3.2s ease-out infinite both;
+}
+@keyframes mia-peak {
+  0% {
+    opacity: 0.75;
+    scale: 0.85;
+  }
+  70%,
+  100% {
+    opacity: 0;
+    scale: 1.7;
+  }
+}
+
+.mia-dot {
+  animation: mia-dot 1.2s ease-in-out infinite both;
+}
+.mia-dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.mia-dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes mia-dot {
+  0%,
+  60%,
+  100% {
+    transform: none;
+    opacity: 0.45;
+  }
+  30% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mia-peak,
+  .mia-dot {
+    animation: none !important;
+  }
+  .mia-peak {
+    opacity: 0;
+  }
+}

@@ -783,7 +783,7 @@ const extras: DelawareExtras = {
   },
   aboutPhoto: {
     src: "/images/delaware/delaware-digital-marketing-team.webp",
-    alt: "Zonic Media's Delaware digital marketing team planning SEO, social media, web design and ad campaigns, with the Wilmington riverfront behind them",
+    alt: "Zonic Media's Delaware digital marketing team planning SEO, social media, web design and ad campaigns",
     // Keep the "Delaware Digital Marketing Agency" wall sign in frame.
     position: "50% 18%",
   },

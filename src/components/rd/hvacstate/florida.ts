@@ -128,6 +128,7 @@ export const FL_SERVICES: {
         href: "/local-seo-google-business-optimization",
         label: "Google profile optimization",
       },
+      { href: "/services/florida/local-seo", label: "Florida SEO company" },
     ],
   },
   {
@@ -155,7 +156,10 @@ export const FL_SERVICES: {
     ],
     title: "Leaner Google Ads",
     body: "Call-only and Local Services Ads with tight service areas and negative keywords, so pricey Florida clicks turn into booked jobs.",
-    links: [{ href: "/services/google-ads", label: "Google Ads management" }],
+    links: [
+      { href: "/services/google-ads", label: "Google Ads management" },
+      { href: "/services/florida/ppc", label: "PPC agency in Florida" },
+    ],
   },
   {
     key: "web",
@@ -166,7 +170,10 @@ export const FL_SERVICES: {
     ],
     title: "Websites Built for Phone Calls",
     body: "Quick mobile sites with click-to-call, a storm-service banner you can switch on, and a page for every city and service.",
-    links: [{ href: "/services/web-design", label: "Website design" }],
+    links: [
+      { href: "/services/web-design", label: "Website design" },
+      { href: "/services/florida/web-design", label: "Florida web design company" },
+    ],
   },
   {
     key: "reviews",
@@ -181,6 +188,10 @@ export const FL_SERVICES: {
       {
         href: "/services/local-seo-for-home-services",
         label: "Home services local SEO",
+      },
+      {
+        href: "/services/florida/digital-marketing",
+        label: "Florida digital marketing agency",
       },
     ],
   },

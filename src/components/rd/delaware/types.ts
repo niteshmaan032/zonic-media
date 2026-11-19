@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ComponentType, ReactNode } from "react";
 import type {
   PhlImage,
   PhlLandingData,
@@ -26,7 +26,47 @@ export type DelawareKind =
   | "phl-sem"
   | "nyc-marketing"
   | "nyc-seo"
-  | "nyc-web";
+  | "nyc-web"
+  /** Florida pages (18 Nov 2026). */
+  | "fl-marketing"
+  | "fl-seo"
+  | "fl-ppc"
+  | "fl-web"
+  | FlCityKind;
+
+/** Florida city digital marketing pages (18 Nov 2026). Each city's UIs come
+    from its own file through the registry in flCities.tsx. */
+export type FlCityKind =
+  | "fl-tampa"
+  | "fl-orlando"
+  | "fl-miami"
+  | "fl-jacksonville"
+  | "fl-fort-lauderdale"
+  | "fl-sarasota"
+  | "fl-st-petersburg"
+  | "fl-fort-myers";
+
+export type FlCityName =
+  | "Jacksonville"
+  | "Orlando"
+  | "Tampa"
+  | "St. Petersburg"
+  | "Sarasota"
+  | "Fort Myers"
+  | "Fort Lauderdale"
+  | "Miami";
+
+/** One Florida city page's UI set: the three feature panels, the journey
+    phone, the dark band card, the compare scorecard and the 4 step cards. */
+export type FlCityUi = {
+  Feature1: ComponentType;
+  Feature2: ComponentType;
+  Feature3: ComponentType;
+  Phone: ComponentType;
+  DarkUi: ComponentType<{ console: DelawareData["band"]["console"] }>;
+  Score: ComponentType<{ rows: DelawareData["compare"]["scoreRows"] }>;
+  stepUis: (process: DelawareData["process"]) => ReactNode[];
+};
 
 type ServiceCard = PhlLandingData["services"]["cards"][number] & {
   points?: string[];
@@ -91,7 +131,23 @@ export type DelawareFeature = {
     | "schema"
     | "a11y"
     | "editor"
-    | "waterfall";
+    | "waterfall"
+    | "seasons"
+    | "storm"
+    | "aicities"
+    | "fl-seo-1"
+    | "fl-seo-2"
+    | "fl-seo-3"
+    | "fl-ppc-1"
+    | "fl-ppc-2"
+    | "fl-ppc-3"
+    | "fl-web-1"
+    | "fl-web-2"
+    | "fl-web-3"
+    /** Florida city pages: the city's own Feature1–3. */
+    | "city-1"
+    | "city-2"
+    | "city-3";
 };
 
 export type DelawareExtras = {
@@ -155,6 +211,41 @@ export type DelawareExtras = {
   noGrow?: boolean;
   /** Testimonial heading (default "Real Reviews, Real Results"). */
   reviewsTitle?: string;
+  /** City directory under the services (Florida hub, 18 Nov 2026): a map
+      with a pin per city and a card linking each city page. */
+  cities?: {
+    h2: string;
+    lead: ReactNode;
+    items: {
+      /** Must match a pin in flCitiesSection.tsx. */
+      name: FlCityName;
+      href: string;
+      region: string;
+      desc: string;
+      /** Anchor text: the city page's lead search term. */
+      link: string;
+    }[];
+    /** Show the first `shown` cities, then a card that opens the rest in
+        a pop-up (owner, 19 Nov 2026). Without it every city shows. */
+    more?: {
+      shown: number;
+      /** Chip on the "more" card. */
+      region: string;
+      /** "More" card heading. */
+      title: string;
+      /** "More" card button. */
+      open: string;
+      /** Pop-up heading and line under it. */
+      dialogTitle: string;
+      dialogLead: string;
+      /** Last tile in the pop-up, for cities without a page. */
+      elsewhere: { title: string; body: string; href: string; link: string };
+    };
+  };
+  /** Chips on the last hero card when its stat isn't the industry count
+      (Florida pages, 19 Nov 2026: county or town names). `more` adds the
+      "+ more" chip; leave it off when the list is complete. */
+  heroChips?: { label: string; items: string[]; more?: boolean };
   /** Hero pillar backgrounds, a → d (a and d take white text, b and c
       ink). Every page gets its own set (owner, 22 Oct). */
   pillars?: [string, string, string, string];
@@ -170,7 +261,12 @@ export type DelawareExtras = {
     | "radar"
     | "slope"
     | "dumbbell"
-    | "needles";
+    | "needles"
+    | "thermo"
+    | "fl-seo"
+    | "fl-ppc"
+    | "fl-web"
+    | "city";
   /** Journey phone (default: Business Profile with the showcase stats when
       the page has a showcase, else the leads lock screen). */
   phone?:
@@ -184,7 +280,12 @@ export type DelawareExtras = {
     | "semreport"
     | "textback"
     | "voice"
-    | "booking";
+    | "booking"
+    | "stormprep"
+    | "fl-seo"
+    | "fl-ppc"
+    | "fl-web"
+    | "city";
   /** UI on the dark band card (default: the console). */
   darkUi?:
     | "console"
@@ -196,7 +297,12 @@ export type DelawareExtras = {
     | "blended"
     | "boroughs"
     | "insights"
-    | "relaunch";
+    | "relaunch"
+    | "statewide"
+    | "fl-seo"
+    | "fl-ppc"
+    | "fl-web"
+    | "city";
   /** Photo on the journey phone (default: the showcase photo). */
   phoneImage?: PhlImage;
 };
