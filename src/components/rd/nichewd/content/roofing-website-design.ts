@@ -612,6 +612,11 @@ export const CONTENT: NicheWebContent = {
       messagePlaceholder:
         "Company name, current site (if any), the roof types you install and the towns you cover",
     },
+    ghlForm: {
+      formId: "trG9tdO69GaZvycBKLA7",
+      formName: "Roofing Website Leads",
+      height: 980,
+    },
   },
   banner: {
     title: "Turn Roof Searches Into Signed Roofing Jobs",

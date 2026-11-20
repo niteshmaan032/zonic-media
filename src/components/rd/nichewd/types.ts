@@ -225,6 +225,9 @@ export type NicheWebContent = {
     lead: Rich;
     points: [string, string, string, string];
     form: FormCopy;
+    /** GoHighLevel form shown in place of our own form (roofing, owner,
+        20 Nov 2026). `form` stays as the fallback if it's removed. */
+    ghlForm?: { formId: string; formName: string; height: number };
   };
   banner: { title: string; lead: string };
 };

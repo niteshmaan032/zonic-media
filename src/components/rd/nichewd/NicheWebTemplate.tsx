@@ -16,6 +16,7 @@ import "@/components/rd/delaware/delaware.css";
 import "@/components/rd/industry/industry.css";
 
 import Footer from "@/app/components/Footer";
+import GhlFormEmbed from "@/app/components/GhlFormEmbed";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import RelatedServices from "@/app/components/RelatedServices";
 import {
@@ -686,7 +687,11 @@ export function NicheWebTemplate({ c }: { c: NicheWebContent }) {
                 </ul>
               </div>
               <div className="tw:w-full">
-                <ServiceLeadForm {...c.consult.form} />
+                {c.consult.ghlForm ? (
+                  <GhlFormEmbed {...c.consult.ghlForm} />
+                ) : (
+                  <ServiceLeadForm {...c.consult.form} />
+                )}
               </div>
             </div>
           </Wrap>
