@@ -8,6 +8,7 @@ import {
   injectScriptOnce,
   runOnFirstInteractionOrAfter,
 } from "@/shared/deferUntilInteraction";
+import { META_PIXEL_SDK_SRC, trackMetaPageView } from "@/shared/metaPixel";
 import {
   OPENAI_ADS_SDK_SRC,
   openaiAdsBootstrapSnippet,
@@ -58,8 +59,9 @@ export default function AnalyticsProvider() {
     );
   }, []);
 
-  // The GTM container (which also carries the Facebook pixel and Microsoft
-  // Clarity) is the heaviest script on the site: ~340 KB transfer and most of
+  // The GTM container (which also carries Microsoft Clarity, and had a copy
+  // of the Meta pixel until it moved into the code in Nov 2026) is the
+  // heaviest script on the site: ~340 KB transfer and most of
   // the main-thread time PageSpeed attributes to third parties. It loads on
   // the visitor's first interaction (a mouse move counts), or 60 s after load
   // if they never touch the page — long enough to stay outside lab traces. Every event GTM records (scroll, click, form submit) is itself
@@ -84,6 +86,13 @@ export default function AnalyticsProvider() {
 
     return runOnFirstInteractionOrAfter(loadGtm, GTM_DELAY_AFTER_LOAD_MS);
   }, [isMainDomain, onAdminRoute, onLeadConfirmation]);
+
+  // Meta pixel: one PageView per page, client-side navigations included.
+  // Calls queue until fbevents.js (loaded below) arrives.
+  useEffect(() => {
+    if (!isMainDomain || onAdminRoute) return;
+    trackMetaPageView();
+  }, [isMainDomain, onAdminRoute, pathname]);
 
   // Owner-only routes: no marketing tags at all (see shared/adminPaths.ts).
   if (!isMainDomain || onAdminRoute) return null;
@@ -153,6 +162,10 @@ export default function AnalyticsProvider() {
         src={OPENAI_ADS_SDK_SRC}
         strategy="lazyOnload"
       />
+
+      {/* Meta (Facebook) pixel — site-wide, outside the admin. PageViews are
+          queued by the effect above (see shared/metaPixel.ts). */}
+      <Script id="meta-pixel-sdk" src={META_PIXEL_SDK_SRC} strategy="lazyOnload" />
     </>
   );
 }
