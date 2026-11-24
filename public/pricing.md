@@ -1,6 +1,6 @@
 # Pricing: Zonic Media (zonicllc.com)
 
-Last updated: 2026-11-05
+Last updated: 2026-11-24
 
 All prices are in US dollars, per month unless noted. Plans can be billed monthly or annually; annual billing lowers the monthly price on every plan. There is no long-term contract on monthly billing. Google Ads and Meta Ads spend is paid to the ad platform directly and is not part of the plan price. Human-readable version: https://www.zonicllc.com/pricing
 
@@ -53,12 +53,23 @@ All prices are in US dollars, per month unless noted. Plans can be billed monthl
 - A professional website is built at no cost when a business starts a qualifying marketing plan through one of the free-website offer pages (for example https://www.zonicllc.com/website-design-agency-us/offer). The offer pages state the qualifying plan and its term.
 
 ## Google Business Profile reinstatement
-- Flat fee quoted after a free suspension audit
-- No Fix, No Charge: the reinstatement fee is only charged if the profile is reinstated
+- Free suspension audit (same day)
+- $400 flat per profile, charged only after Google reinstates the profile (live on Search and Maps and manageable by the owner again)
+- No Fix, No Charge: if the profile is not reinstated, no reinstatement fee is charged
+- Agencies and multi-location brands: bulk quote on request
 - Average resolution: 5 to 7 business days; complex cases can take longer
+- Details: https://www.zonicllc.com/services/gbp-reinstatement-service
 
 ## Google Business Profile verification help
-- Flat fee quoted after a free review of the failed verification
+- Free verification audit
+- No charge for the verification work if the profile is not verified
+- Details: https://www.zonicllc.com/services/gmb-verification-help
+
+## Google Business Profile optimization (Map Pack)
+- Grid Scan & Diagnosis: free, one per business
+- Map Pack Growth: $597/month, month to month, no lock-in (profile build-out, weekly posts, review requests and replies, citation cleanup, monthly geo-grid re-scan and report)
+- Multi-Location: $397 per location per month (minimum 3 locations)
+- Details: https://www.zonicllc.com/local-seo-google-business-optimization
 
 ## LaunchPad (new businesses)
 - One-time launch packages for brand-new businesses (brand, website, Google Business Profile and listings): https://www.zonicllc.com/services/launchpad

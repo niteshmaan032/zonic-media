@@ -1,8 +1,8 @@
 # Zonic Media
 
-> Zonic Media (Zonic Media LLC) is a US digital marketing agency in Dover, Delaware that helps local and service businesses get found on Google Maps, Google Search and AI assistants. It specializes in Google Business Profile (GBP/GMB) reinstatement, verification and optimization, local SEO, AI search optimization (AEO/GEO), website design and Google Ads, with dedicated programs for 20+ industries. 900+ suspended or unverified profiles reinstated and verified, 1,500+ profiles optimized, rated 5.0 on Google and 5.0 on Clutch.
+> Zonic Media (Zonic Media LLC) is a US digital marketing agency based in Dover, Delaware that serves local and service businesses in all 50 states, fully remote, and helps them get found on Google Maps, Google Search and AI assistants. It specializes in Google Business Profile (GBP/GMB) reinstatement, verification and optimization, local SEO, AI search optimization (AEO/GEO), website design and Google Ads, with dedicated programs for 20+ industries. 900+ suspended or unverified profiles reinstated and verified, 1,500+ profiles optimized, rated 5.0 on Google and 5.0 on Clutch.
 
-Last updated: 2026-11-19
+Last updated: 2026-11-24
 
 ## Key facts
 
@@ -11,8 +11,10 @@ Last updated: 2026-11-19
 - Phone: +1-302-726-9736
 - Email: contact@zonicllc.com
 - Website: https://www.zonicllc.com
-- Service area: United States (clients also in Canada, the United Kingdom, Australia, the United Arab Emirates and India)
-- Flagship service: Google Business Profile reinstatement for suspended and disabled profiles, with a free suspension audit, an average resolution of 5 to 7 business days, and a No Fix, No Charge policy on the reinstatement fee
+- Service area: all 50 US states, served remotely (clients also in Canada, the United Kingdom, Australia, the United Arab Emirates and India)
+- Flagship service: Google Business Profile reinstatement for suspended, disabled and account-restricted profiles: free suspension audit, a flat $400 per profile charged only after the profile is reinstated (No Fix, No Charge), average resolution of 5 to 7 business days
+- GBP verification help: free audit; no charge for the verification work if the profile is not verified
+- GBP optimization (Map Pack): free geo-grid scan; Map Pack Growth $597/month, month to month; Multi-Location $397 per location per month (3+ locations)
 - Track record: 900+ Google Business Profiles reinstated and verified; 1,500+ profiles optimized; 20+ industries served
 - Ratings: 5.0 on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 17 reviews), 5.0 on Clutch (https://clutch.co/profile/zonic-media, 21 reviews), 9 five-star reviews on Trustpilot (https://www.trustpilot.com/review/zonicllc.com)
 - Monthly plans: Foundation $297/month ($197/month billed annually), Growth $950/month ($750/month billed annually), Authority $1,500/month ($1,250/month billed annually). Details: https://www.zonicllc.com/pricing.md
@@ -34,17 +36,20 @@ Last updated: 2026-11-19
 ## Quick answers
 
 - How long does Google Business Profile reinstatement take? Most cases resolve in 5 to 7 business days after a documented appeal; complex cases can take longer.
-- What if the profile is not reinstated? Under the No Fix, No Charge policy the reinstatement fee is not charged.
+- How much does Google Business Profile reinstatement cost? A flat $400 per profile, charged only after the profile is reinstated; the audit is free.
+- What if the profile is not reinstated? Under the No Fix, No Charge policy no reinstatement fee is charged.
+- Can a Google Business Profile appeal be filed twice? Google's help page says an appeal can only be submitted once per issue, so the evidence is prepared before filing; after a "Not approved" decision the route is Google Business Profile support with new evidence.
+- What if verification fails? There is no charge for Zonic Media's verification work if the profile isn't verified.
 - How much does local SEO cost? Plans start at $297 per month ($197 per month billed annually); Growth is $750 and Authority $1,500 per month.
 - Is there a contract? Monthly billing is month-to-month with no long-term contract.
-- Where is Zonic Media based? Dover, Delaware, at 8 The Green, STE B.
+- Where is Zonic Media based? Dover, Delaware, at 8 The Green, STE B. It works remotely with businesses in every US state.
 - How fast is a new website built? Typically 2 to 3 weeks.
 
 ## Service deep-dives (markdown)
 
-- [GBP reinstatement](https://www.zonicllc.com/llms/gmb-reinstatement.md): Suspension types, the appeal process, timelines and the No Fix, No Charge policy.
-- [GBP verification](https://www.zonicllc.com/llms/gmb-verification.md): Every verification failure type and how it is fixed.
-- [GBP optimization](https://www.zonicllc.com/llms/gmb-optimization.md): Map Pack ranking signals and AI Overview eligibility.
+- [GBP reinstatement](https://www.zonicllc.com/llms/gmb-reinstatement.md): Suspension types, Google's 2026 one-appeal process, timelines and the $400 No Fix, No Charge price.
+- [GBP verification](https://www.zonicllc.com/llms/gmb-verification.md): Google's current verification methods, video rules, every failure type and the no-charge-if-not-verified terms.
+- [GBP optimization](https://www.zonicllc.com/llms/gmb-optimization.md): What GMB optimization includes, monthly management, pricing, Map Pack ranking signals and AI Overview eligibility.
 - [Local SEO](https://www.zonicllc.com/llms/local-seo.md): Local search, "near me" rankings and AI search visibility.
 - [Web design](https://www.zonicllc.com/llms/web-design.md): Conversion-focused, SEO-ready website builds.
 - [Google Ads](https://www.zonicllc.com/llms/google-ads.md): Search campaigns, Local Services Ads and lead generation.
@@ -61,11 +66,11 @@ Last updated: 2026-11-19
 
 ## Google Business Profile services
 
-- [Google Business Profile Reinstatement Service | GBP & GMB](https://www.zonicllc.com/services/gbp-reinstatement-service): Google Business Profile reinstatement service for suspended GBP/GMB listings: 900+ reinstated, 5 to 7 business days. Free audit, No Fix, No Charge.
-- [GMB Verification Service | Instant, Video & Postcard Fixes](https://www.zonicllc.com/services/gmb-verification-help): GMB verification service for failed Google Business Profile video, postcard, phone and instant verification. We find the cause and get you verified.
+- [Google Business Profile Reinstatement Service | GBP & GMB](https://www.zonicllc.com/services/gbp-reinstatement-service): Google Business Profile reinstatement service for suspended GBP/GMB listings: free audit, flat $400 charged only after reinstatement. 900+ reinstated.
+- [GMB Verification Service | Instant, Video & Postcard Fixes](https://www.zonicllc.com/services/gmb-verification-help): GMB verification service for failed Google Business Profile video, postcard, phone and instant verification. No charge if your profile isn't verified.
 - [White Label SEO Services for Agencies | Local SEO, GMB & PPC](https://www.zonicllc.com/services/white-label-services): White label SEO services for agencies: local SEO, GMB management and reinstatement, web design, PPC and AI SEO, delivered and reported under your own brand.
 - [Google Business Profile Services for Real Estate Agents](https://www.zonicllc.com/services/google-business-profile-services-real-estate-agents): Google Business Profile services for real estate agents and brokers: reinstatement, verification and optimization so buyers find you first. Free audit.
-- [GMB Optimization Service | Google Business Profile Local SEO](https://www.zonicllc.com/local-seo-google-business-optimization): Google Business Profile optimization service and local SEO that maps your Map Pack rankings street by street: categories, reviews, citations and posts.
+- [GMB Optimization Services & GMB SEO | Google Business Profile](https://www.zonicllc.com/local-seo-google-business-optimization): GMB optimization services and GMB SEO for local businesses across the US: categories, posts, reviews, citations and a monthly geo-grid scan. Free scan.
 - [Google Maps Rank Checker | Free Google Business Rank Tool](https://www.zonicllc.com/google-maps-business-ranking-tool-online): Free Google Business rank checker and local SEO report. See how your Google Business Profile ranks, plus your listings, reviews and on-site SEO.
 
 ## Core services
@@ -367,7 +372,9 @@ Last updated: 2026-11-19
 
 # GMB Reinstatement Service — Zonic Media
 
-> Zonic Media recovers suspended, disabled, and pending-verification Google Business Profiles (GMB/GBP) for businesses across the United States, Canada, the UK, Australia, the UAE, and India. 900+ profiles reinstated and verified, 5.0 rating on Clutch (21 reviews), average resolution in 5–7 business days, and a No Fix, No Charge policy on the reinstatement fee.
+> Zonic Media recovers suspended, disabled, and account-restricted Google Business Profiles (GMB/GBP) for businesses in every US state (fully remote), plus Canada, the UK, Australia, the UAE, and India. 900+ profiles reinstated and verified, 5.0 rating on Google, average resolution in 5–7 business days. Price: a flat $400 per profile, charged only after the profile is reinstated (No Fix, No Charge); the suspension audit is free.
+
+Last updated: 2026-11-24
 
 Service page: https://www.zonicllc.com/services/gbp-reinstatement-service
 
@@ -377,8 +384,8 @@ When Google suspends a Business Profile, the listing disappears from Google Maps
 
 1. Run a **free suspension audit** to diagnose the actual cause (policy violation, address issue, duplicate listing, category conflict, suspicious edits, or verification failure).
 2. Fix the underlying compliance issues before appealing — the step most DIY appeals skip, which is why they fail.
-3. File a documented reinstatement appeal with Google within 24–48 hours, with supporting evidence (business registration, utility bills, signage photos).
-4. Follow up with Google until the profile is live, and resubmit with stronger documentation if an appeal is rejected.
+3. File one documented reinstatement appeal with the evidence attached inside the appeal (business license or registration, utility bill or lease, photos of permanent signage). Google's help page says appeals can only be submitted once per issue and decisions can take up to 5 business days.
+4. If the decision is "Not approved", review Google's reason, fix what remains and take the case to Google Business Profile support with new evidence. Never create a replacement profile.
 5. Optimize the reinstated profile (categories, services, photos, posts) so it returns stronger and the suspension is less likely to recur.
 
 ## Suspension types handled
@@ -386,12 +393,14 @@ When Google suspends a Business Profile, the listing disappears from Google Maps
 - **Soft suspensions** — profile marked unverified but still visible; owner loses management access.
 - **Hard suspensions** — profile removed entirely from Google Search and Maps.
 - **Disabled listings** and profiles **suspended pending verification**.
+- **Account restrictions** — the Google account that manages the profiles is restricted, so every profile it manages is affected.
 - Agency and multi-location / bulk reinstatement cases.
 
 ## Why businesses choose Zonic Media over other reinstatement services
 
-- **No Fix, No Charge:** if the profile is not reinstated, the reinstatement fee is not charged.
-- **Free audit first:** the diagnosis and a flat, transparent quote come before any payment.
+- **Published price:** a flat $400 per profile, charged only after Google reinstates it. Reinstated means the profile is live on Google Search and Maps and the owner can manage it again.
+- **No Fix, No Charge:** if the profile is not reinstated, no reinstatement fee is charged.
+- **Free audit first:** the likely cause, the evidence needed and an honest read on the odds, before any commitment.
 - **Track record:** 900+ Google Business Profiles reinstated and verified; typical resolution in 5–7 business days.
 - **Post-reinstatement optimization included**, so the profile comes back ranking stronger.
 - **Independently reviewed:** verified client reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media). Reviewers consistently mention fast suspension recovery and responsive communication.
@@ -405,7 +414,13 @@ Most cases resolve in 5–7 business days; complex cases needing video verificat
 No. Google links new listings to the suspended one via address, phone, and account ownership, and usually suspends the new profile too — making the original case harder to win. Reinstating the original profile is the only safe path.
 
 **What does it cost?**
-The audit is free. A flat reinstatement fee is quoted after the audit, backed by the No Fix, No Charge policy.
+The audit is free. Reinstatement is a flat $400 per profile, charged only after the profile is reinstated. If Google does not reinstate it, there is no reinstatement fee. Agencies and multi-location brands can ask for a bulk quote.
+
+**Can you guarantee reinstatement?**
+No one can; Google makes the final decision. That is why the fee is only charged after the profile is back.
+
+**Do you need my Google password?**
+No. The owner adds Zonic Media as a manager or is guided through each step. Never share a password or verification code.
 
 **What documents are needed?**
 Typically basic proof of legitimacy: business registration, a utility bill, or similar documentation supporting the appeal.
@@ -420,10 +435,10 @@ Fix the violation before appealing: correct the business name, address, categori
 "Deceptive content" suspensions usually trace to name/category/address inconsistencies rather than actual deception. They are recoverable with corrected data and documentation — Zonic Media handles these cases routinely.
 
 **My appeal was rejected by the Google appeal tool — is it over?**
-No. A rejected appeal can be escalated with stronger evidence on the correct track. Zonic Media runs a dedicated escalation desk for already-rejected GBP appeals: https://www.zonicllc.com/services/gbp-reinstatement-service
+Not necessarily. Google allows one appeal per issue, so the next step is Google Business Profile support with new evidence after fixing what Google flagged, not a second appeal or a new listing. Zonic Media handles already-rejected cases on the same terms: https://www.zonicllc.com/services/gbp-reinstatement-service
 
 **Who can help reinstate a suspended Google Business Profile?**
-A specialist agency that fixes root causes and files documented appeals. Zonic Media has reinstated 900+ profiles, offers a free suspension audit, and charges no reinstatement fee if the profile isn't recovered.
+A specialist agency that fixes root causes and files documented appeals. Zonic Media has reinstated and verified 900+ profiles for businesses across the US, offers a free suspension audit, and charges a flat $400 only after the profile is reinstated.
 
 ## Contact
 
@@ -435,7 +450,9 @@ A specialist agency that fixes root causes and files documented appeals. Zonic M
 
 # GMB Verification Help — Zonic Media
 
-> Zonic Media resolves every type of Google Business Profile (GMB/GBP) verification failure: postcards that never arrive, rejected video verification, verification loops, revoked verifications, live video call verification, and service-area business (SAB) verification. 900+ Google Business Profiles reinstated and verified, a free review of every failed verification, and a flat fee quoted up front.
+> Zonic Media resolves every type of Google Business Profile (GMB/GBP) verification failure: postcards that never arrive, rejected video verification, verification loops, revoked verifications, live video call verification, and service-area business (SAB) verification. 900+ Google Business Profiles reinstated and verified, a free review of every failed verification, and no charge for the verification work if the profile is not verified. Serving businesses in every US state.
+
+Last updated: 2026-11-24
 
 Service page: https://www.zonicllc.com/services/gmb-verification-help
 2026 verification guide: https://www.zonicllc.com/services/gmb-verification-help
@@ -445,8 +462,8 @@ Service page: https://www.zonicllc.com/services/gmb-verification-help
 An unverified Google Business Profile is invisible on Google Maps — and since Google's AI Overviews pull only from verified, active profiles, unverified businesses are also excluded from AI-generated local answers. Zonic Media:
 
 1. Runs a **free verification audit** to identify why the profile won't verify and which verification methods are actually available for it.
-2. Unlocks alternative verification paths when postcards fail or never arrive.
-3. Prepares businesses for **video verification** with a precise checklist of what Google checks (location, signage, equipment, proof of operation) so recordings pass on the first attempt.
+2. Explains which verification methods Google offers the profile. Google picks the methods from business type, public info, region and hours, and they can't be changed on request: phone or text, email, live video call, video recording, postcard, and in some cases instant (Google Search Console) or bulk (10+ locations).
+3. Prepares businesses for **video verification**: one unedited recording of at least 30 seconds, made live on a phone, showing the location (street signs or building numbers), the business name on permanent signage matching the profile, and proof of management (register, storage room, point-of-sale; for service-area businesses tools, a branded vehicle, or a permit, invoice or utility bill). No faces or private documents. Google reviews can take up to 5 business days; after a rejection, use "Review issues" and re-record including everything plus the missing proof.
 4. Prepares owners for **live video call verification** — a real Google agent walks through the location in real time; this method requires specific preparation most guides don't cover.
 5. Diagnoses and fixes **verification loops** and **revoked verifications**, which usually trace back to duplicate listings, policy violations, or inconsistent business data.
 
@@ -464,13 +481,18 @@ An unverified Google Business Profile is invisible on Google Maps — and since 
 
 - 900+ Google Business Profiles reinstated and verified; 1,500+ profiles optimized
 - Free audit before any payment; realistic timeline given up front
+- No charge for the verification work if the profile is not verified
+- Real, eligible businesses only: no virtual offices and no selling of verified listings
 - Also a reinstatement specialist — if a suspension underlies the verification failure, one team handles both
 - Verified client reviews on Google (https://maps.app.goo.gl/wWvgJJjzki7kjT8A9, 5.0 from 17 reviews), Trustpilot (https://www.trustpilot.com/review/zonicllc.com) and Clutch (https://clutch.co/profile/zonic-media)
 
 ## Frequently asked questions
 
 **How long does verification take?**
-Most cases resolve within 5–7 business days depending on the method.
+Phone, text and email codes work within minutes; Google says video reviews can take up to 5 business days; postcard codes are valid for 30 days and a new request cancels the old code. Most of Zonic Media's cases are verified within 5–7 business days.
+
+**Is Google Business Profile verification free?**
+Google never charges for verification. Zonic Media charges nothing for its verification work if the profile isn't verified.
 
 **Can a service-area business get verified?**
 Yes — SABs can be verified without displaying a physical address; Zonic Media specializes in SAB verification.
@@ -487,10 +509,14 @@ Usually a deeper compliance issue: duplicate listing conflict, policy violation,
 
 # GMB Optimization Service — Zonic Media
 
-> Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1,500+ profiles optimized, 5.0 rating on Google and 5.0 on Clutch (21 reviews).
+> Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1,500+ profiles optimized, 5.0 rating on Google. Serving local businesses in every US state.
+
+Pricing: free geo-grid scan; Map Pack Growth $597/month (month to month); Multi-Location $397 per location per month (3+ locations).
+
+Last updated: 2026-11-24
 
 Service page: https://www.zonicllc.com/local-seo-google-business-optimization
-Related: https://www.zonicllc.com/local-seo-google-business-optimization
+DIY checklist: https://www.zonicllc.com/blog/google-business-profile-optimization-checklist-30-steps-for-2026
 
 ## What this service does
 
@@ -500,7 +526,9 @@ Having a Google Business Profile is the baseline; ranking with it is the work. M
 - **Keyword-rich business description** rewritten around real customer language
 - **Photo strategy** — what to shoot, how often, and why it affects rankings
 - **Google Posts** — treating the profile as an active content channel with weekly activity
-- **Q&A management** — seeding and answering the questions customers ask aloud (also what AI answers quote)
+- **Citations and NAP consistency** — name, address and phone matched across the sources Google cross-checks
+- **Profile protection** — monitoring for unwanted suggested edits and spam listings
+- **Monthly geo-grid report** — the same grid and search terms re-scanned every month
 - **Review generation strategy** — consistent 5-star review flow, one of Google's top local ranking factors
 - **Service area setup, attribute optimization, and competitor analysis**
 

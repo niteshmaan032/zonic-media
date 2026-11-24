@@ -52,7 +52,7 @@ const serviceJsonLd = {
   ],
   serviceType: "Google Business Profile Verification",
   description:
-    "GMB verification service for failed video, postcard and instant verification: get your Google Business Profile verified fast, even without a postcard.",
+    "GMB verification service for failed video, postcard and instant verification: get your Google Business Profile verified, even without a postcard. No charge if the profile is not verified.",
   url: "https://www.zonicllc.com/services/gmb-verification-help",
   provider: {
     "@type": "Organization",
@@ -72,7 +72,7 @@ const serviceJsonLd = {
     price: "0",
     priceCurrency: "USD",
     description:
-      "Free verification audit identifying why your Google Business Profile won't verify and the fastest available verification path.",
+      "Free verification audit identifying why your Google Business Profile won't verify and the method Google offers you. No charge for the verification work if the profile is not verified.",
   },
 };
 
@@ -80,17 +80,17 @@ const GmbVerifiFaqs = [
   {
     question: "What Verification Methods Does Google Offer?",
     answer:
-      "Google offers several methods depending on your business type: postcard by mail, video recording, phone call, email, and in some cases instant verification. We'll identify which options are available for your specific profile and guide you through the right one.",
+      "Google's current methods are phone or text, email, a live video call with a Google support rep, a recorded video, a postcard by mail, and in some cases instant verification through Google Search Console or bulk verification for 10+ locations. Google picks which methods you see based on your business type, public info, region and hours, and they can't be changed on request. We check which ones your profile is offered and prepare you for that exact method.",
   },
   {
     question: "My Postcard Keeps Getting Lost - What Can I Do?",
     answer:
-      "We help businesses unlock alternative verification methods so you're not stuck waiting on a postcard that never arrives. In most cases, we can get you verified without a postcard at all.",
+      "Postcards aren't offered to every business anymore, codes expire after 30 days, and requesting a new code cancels the old one, so don't keep re-requesting. We check which other methods Google offers your profile and, in most cases, get you verified without a postcard through video, phone, text or email instead.",
   },
   {
     question: "What Does Video Verification Involve?",
     answer:
-      "Google requires a short video showing your business location, signage, equipment, and proof of operation. We give you a precise checklist of exactly what to film so it gets approved first time.",
+      "Google asks for one unedited, unbroken recording of at least 30 seconds, made live on a phone. It must show where you are (street signs or building numbers), your business name on permanent signage that matches the profile, and proof you manage the business, such as a register, storage room or point-of-sale system. Service-area businesses show their tools, a branded vehicle, or a permit, invoice or utility bill in the profile name. We give you a shot list for your business type and review the clip before you upload it.",
   },
   {
     question: "My Verification Got Revoked After Passing - Why?",
@@ -104,19 +104,44 @@ const GmbVerifiFaqs = [
       "Yes. Service area businesses can be verified without displaying a physical address. We specialize in SAB verification and know exactly how to get these listings live on Google Maps.",
   },
   {
-    question: "How Long Does Verification Take?",
+    question: "How Long Does Google Business Profile Verification Take?",
     answer:
-      "Typical cases are resolved within 5-7 business days depending on the verification method, though final approval timing is always controlled by Google. We'll give you a realistic timeline after your free audit.",
+      "Phone, text and email codes work within minutes. Google says reviews of a video can take up to 5 business days, and a postcard depends on the mail. Most of our cases are verified within 5–7 business days of the free audit, though the final approval is always Google's.",
   },
   {
     question: "What Makes Zonic Media One of the Best GMB Verification Services?",
     answer:
-      "Zonic Media has verified and restored 1500+ Google Business Profile listings with a 95% success rate and a 48-hour average resolution time. The team handles every failure type — postcard, video, phone, email, verification loops, and revoked verifications — and starts with a free audit so you know the exact path before paying anything. Independent client reviews are published on Trustpilot and Clutch.",
+      "Zonic Media has reinstated and verified 900+ Google Business Profiles for businesses across the United States and holds a 5.0 rating on Google. We handle every failure type (postcard, video, phone, email, verification loops and revoked verifications), we only work with real, eligible businesses, and there is no charge for the verification work if your profile isn't verified.",
   },
   {
     question: "Why does Google Business Profile video verification keep failing in 2026?",
     answer:
-      "Video is now Google's default verification method, and most failures come from the recording itself: it does not show the street signage, the business name on permanent signage, the interior workspace, or proof of control such as unlocking the door or handling tools and inventory. Service-area businesses often fail because they film a home office without showing branded vehicles or equipment. We tell you exactly what to film for your business type, review the clip before you submit it, and escalate through support when Google's automated review rejects a valid video.",
+      "Most failures come from the recording itself: it is edited or cut, it is shorter than 30 seconds, it does not show the street or building number, the business name on permanent signage, or proof you manage the place, or it shows people's faces or private documents. Service-area businesses often fail by filming a home office without tools, a branded vehicle or a business document. We give you the shot list for your business type and review the clip before you submit it.",
+  },
+  {
+    question: "Is Google Business Profile verification free?",
+    answer:
+      "Yes, Google never charges for verification. You pay us for the expertise of getting it done right the first time, and there is no charge for our verification work if your profile isn't verified.",
+  },
+  {
+    question: "Can a home-based business get verified?",
+    answer:
+      "Yes. Set it up as a service-area business with the home address hidden, then verify with whatever method Google offers. For video, show your tools or equipment, a branded vehicle, or a permit, invoice or utility bill in the business name.",
+  },
+  {
+    question: "Do you need my password or verification code?",
+    answer:
+      "No. You stay the owner, add us as a manager if needed, and record or enter codes yourself while we guide you. Never share your password or a verification code with anyone.",
+  },
+  {
+    question: "Should I retry after a failed video?",
+    answer:
+      "Not blindly. Open \"Review issues\" in your Business Profile, read what Google says was missing, then record a new video that includes everything from the first one plus the missing proof. Repeated weak attempts only add to the listing's history.",
+  },
+  {
+    question: "Does changing my address mean verifying again?",
+    answer:
+      "Often, yes. Google can ask for verification again after important edits such as a new address or business name. Make the change once, with matching documents and signage ready, so the new verification passes on the first try.",
   },
 ];
 
@@ -136,7 +161,7 @@ const GmbVeriFormHead = {
 export const metadata: Metadata = {
   title: { absolute: "GMB Verification Service | Instant, Video & Postcard Fixes" },
   description:
-    "GMB verification service for failed Google Business Profile video, postcard, phone and instant verification. We find the cause and get you verified.",
+    "GMB verification service for failed Google Business Profile video, postcard, phone and instant verification. No charge if your profile isn't verified.",
   keywords: [
     "google business profile verification help",
     "google business profile verification support",
@@ -179,7 +204,7 @@ function page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
-      <div className="gmb-verify-page">
+      <main className="gmb-verify-page">
       <div id="gmb-reinst-top"></div>
       <div className="gmb-reinst-main-wrapper">
         {/*gmb-content-wrapper left-content*/}
@@ -298,22 +323,29 @@ function page() {
               </span>
             </HashScrollLink>
 
+            {/* Stats aligned with the sitewide verified figures (24 Nov 2026):
+                the old 1500+ / 95% / 48hrs set contradicted 900+ and the
+                5–7 day turnaround stated everywhere else. */}
             <div className="gmb-reinst-sec-1-stats">
               <p>
-                <span> 1500+ </span>
-                Listings Verified & Restored
+                <span> 900+ </span>
+                Profiles Reinstated & Verified
               </p>
 
               <p>
-                <span> 95% </span>
-                Success Rate
+                <span> No Charge </span>
+                If Your Profile Isn&apos;t Verified
               </p>
 
               <p>
-                <span> 48hrs </span>
-                Average Resolution Time
+                <span> 5.0 </span>
+                Google Rating
               </p>
             </div>
+            <p className="gmb-verify-updated">
+              Updated <time dateTime="2026-11-24">November 24, 2026</time> ·
+              Serving businesses in every US state
+            </p>
 
             {/*--gmb-reinst-mob-form--*/}
             <div className="gmb-reinst-mob-form d-block d-lg-none">
@@ -343,7 +375,7 @@ function page() {
                 height={20}
                 alt="Five-star rating icon"
               ></Image>{" "}
-              5 Client Satisfaction Rating
+              5.0 Rating on Google
             </p>
             <p>
               <Image
@@ -361,7 +393,7 @@ function page() {
                 height={20}
                 alt="Trust and security shield icon"
               ></Image>{" "}
-              1500+ Listings Successfully Restored
+              900+ Profiles Reinstated &amp; Verified
             </p>
           </div>
 
@@ -395,10 +427,11 @@ function page() {
                   Postcard Never Arrives
                 </h3>
                 <p className="gmb-reinst-card-descrp">
-                  Google&apos;s verification postcard can take weeks - and often
-                  gets lost, sent to the wrong address, or expires before you
-                  can use it. We help businesses navigate alternative
-                  verification paths and get the process moving again.
+                  Google&apos;s verification postcard can take weeks and often
+                  gets lost or sent to the wrong address. Codes expire after 30
+                  days, and requesting a new one cancels the old code. We help
+                  you verify without a postcard whenever Google offers another
+                  method.
                 </p>
               </div>
 
@@ -428,9 +461,10 @@ function page() {
                 </h3>
                 <p className="gmb-reinst-card-descrp">
                   Some businesses find phone and email verification options
-                  simply don&apos;t appear in their dashboard. This is often
-                  tied to profile age, business category, or flagged activity.
-                  Our specialists know how to unlock these options.
+                  simply don&apos;t appear in their dashboard. Google picks the
+                  methods from your business type, public info, region and
+                  hours, and they can&apos;t be changed on request. We fix the
+                  details Google sees and prepare you for the method you get.
                 </p>
               </div>
 
@@ -499,6 +533,189 @@ function page() {
             </div>
           </div>
 
+          {/* VERIFICATION METHODS — Google's current list and timings
+              (support.google.com/business/answer/7107242, read 24 Nov 2026). */}
+          <div className="gmb-reinst-common-sec gmb-verify-methods">
+            <div className="gmb-reinst-common-sec-head">
+              <p className="label-head">
+                <FaGear /> Google&apos;s current options
+              </p>
+              <h2 className="gmb-reinst-sec-heading">
+                Google Business Profile Verification Methods and How Long Each
+                Takes
+              </h2>
+              <p className="gmb-reinst-descrp">
+                Google decides which methods your profile is offered, based on
+                business type, public info, region and hours, and the choice
+                can&apos;t be changed on request. Knowing what each one needs is
+                how you pass on the first try. Source:{" "}
+                <a
+                  href="https://support.google.com/business/answer/7107242"
+                  className="gmb-inline-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Business Profile Help
+                </a>
+                .
+              </p>
+            </div>
+            <div className="gmb-verify-table-wrap">
+              <table className="gmb-verify-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Method</th>
+                    <th scope="col">How it works</th>
+                    <th scope="col">Typical timing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Phone or text</th>
+                    <td>A code by call or SMS to the business number (it won&apos;t reach an automated phone menu)</td>
+                    <td>Minutes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Email</th>
+                    <td>A code sent to an email address tied to the business</td>
+                    <td>Minutes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Live video call</th>
+                    <td>A video call with a Google support rep during business hours</td>
+                    <td>Same session</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Video recording</th>
+                    <td>One unedited recording of 30+ seconds, uploaded from a phone</td>
+                    <td>Up to 5 business days</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Postcard</th>
+                    <td>A 5-digit code mailed to the business address; a new request cancels the old code</td>
+                    <td>Mail time; code valid 30 days</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Instant or bulk</th>
+                    <td>Instant through Google Search Console in some cases; bulk for 10+ locations</td>
+                    <td>Instant to a few days</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* VIDEO VERIFICATION SHOT LIST — Google's video rules
+              (support.google.com/business/answer/14271705). */}
+          <div className="gmb-reinst-common-sec gmb-verify-video">
+            <div className="gmb-reinst-common-sec-head">
+              <p className="label-head">
+                <FaVideo /> Video verification help
+              </p>
+              <h2 className="gmb-reinst-sec-heading">
+                Google Business Profile Video Verification: What to Show on
+                Camera
+              </h2>
+              <p className="gmb-reinst-descrp">
+                Google wants one unedited, unbroken recording of at least 30
+                seconds, made live on a phone. We send you a shot list for your
+                business type and review the clip before you upload it. Source:{" "}
+                <a
+                  href="https://support.google.com/business/answer/14271705"
+                  className="gmb-inline-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Business Profile Help
+                </a>
+                .
+              </p>
+            </div>
+            <div className="gmb-reinst-cards">
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Storefront &amp; Hybrid Businesses</h3>
+                <ul className="gmb-verify-list">
+                  <li>Street signs, the building number or nearby businesses that confirm the address</li>
+                  <li>Your business name on permanent signage, matching the profile name</li>
+                  <li>Something only staff can open: a register, kitchen, storage room or point-of-sale system</li>
+                </ul>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Service-Area &amp; Home-Based Businesses</h3>
+                <ul className="gmb-verify-list">
+                  <li>Street signs or landmarks near your business address</li>
+                  <li>The tools, equipment or products you work with</li>
+                  <li>A branded vehicle, or a permit, invoice or utility bill in the profile name</li>
+                </ul>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Never Show on Camera</h3>
+                <ul className="gmb-verify-list">
+                  <li>Other people&apos;s faces</li>
+                  <li>Bank, tax or ID numbers and other private details</li>
+                  <li>Cuts, edits or a pre-recorded clip</li>
+                </ul>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">If Google Rejects the Video</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Open &quot;Review issues&quot; in your Business Profile, read
+                  what was missing, and record a new video that includes
+                  everything from the first one plus the missing proof. We do
+                  that review with you before you try again.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* VERIFICATION BY BUSINESS TYPE */}
+          <div className="gmb-reinst-common-sec gmb-verify-types">
+            <div className="gmb-reinst-common-sec-head">
+              <p className="label-head">
+                <FaMapSigns /> Every business type
+              </p>
+              <h2 className="gmb-reinst-sec-heading">
+                Google My Business Verification Services for Every Business
+                Type
+              </h2>
+            </div>
+            <div className="gmb-reinst-cards">
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Storefronts and Offices</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Shops, clinics, restaurants and offices that serve customers
+                  at their address. Permanent signage and a matching address
+                  everywhere online are what get these verified.
+                </p>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Home-Based Businesses</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Verified as a service-area business with the home address
+                  hidden. Equipment, a branded vehicle or business documents
+                  stand in for a storefront sign.
+                </p>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Multi-Location Brands and Agencies</h3>
+                <p className="gmb-reinst-card-descrp">
+                  Chains, franchises and agencies with 10+ locations can apply
+                  for bulk verification. We prepare the location data so the
+                  request is accepted the first time.
+                </p>
+              </div>
+              <div className="gmb-reinst-card-wrapper">
+                <h3 className="gmb-reinst-card-heading">Real, Eligible Businesses Only</h3>
+                <p className="gmb-reinst-card-descrp">
+                  We don&apos;t create or sell verified listings, and we
+                  don&apos;t verify virtual offices or businesses that
+                  aren&apos;t eligible. That&apos;s what keeps our clients&apos;
+                  profiles verified long term.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/*gmb-reinst-section-4*/}
           <div className="gmb-reinst-sec-4 gmb-reinst-common-sec">
             <div className="gmb-reinst-common-sec-head">
@@ -546,7 +763,8 @@ function page() {
                 <p className="gmb-reinst-card-descrp">
                   Our specialists map out the right verification method for your
                   specific business type - whether that&apos;s postcard, video,
-                  phone, email, or a direct escalation to Google support.
+                  a live video call, phone, email, or Google Business Profile
+                  support when the options run out.
                 </p>
               </div>
 
@@ -794,8 +1012,14 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                GMB Verification Service Packages: Simple and Transparent
+                GMB Verification Service Packages: No Charge If You&apos;re Not
+                Verified
               </h2>
+              <p className="gmb-reinst-descrp">
+                Every package starts with a free verification audit, and if
+                your Google Business Profile isn&apos;t verified, you pay
+                nothing for our verification work.
+              </p>
             </div>
 
             <div className="gmb-reinst-cards">
@@ -948,6 +1172,65 @@ function page() {
               <h2 className="gmb-reinst-sec-heading">
                 Successful Google Business Profile Verification Cases
               </h2>
+              <p className="gmb-reinst-descrp">
+                Excerpts from our Google reviews (5.0), plus more client
+                reviews on Clutch below.
+              </p>
+            </div>
+
+            {/* Plain-text excerpts of real Google reviews so search engines
+                and AI tools can read them — the Clutch widget is script-only. */}
+            <div className="gmb-reinst-cards gmb-verify-quotes">
+              <figure className="gmb-reinst-card-wrapper gmb-verify-quote">
+                <blockquote>
+                  <p>
+                    &ldquo;My business account got suspended due to a change of
+                    address. I found out just how hard it is to get it
+                    &lsquo;verified&rsquo; myself… The price was fair, the
+                    communication was good, and everything is back up and
+                    running!&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption>
+                  <b>Gaines R.</b> · Address change · Google review
+                </figcaption>
+              </figure>
+              <figure className="gmb-reinst-card-wrapper gmb-verify-quote">
+                <blockquote>
+                  <p>
+                    &ldquo;They handled my Google listing and my website,
+                    process was smooth and easy. Very reasonably priced as
+                    well.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption>
+                  <b>Johnny R.</b> · Google listing and website · Google review
+                </figcaption>
+              </figure>
+              <figure className="gmb-reinst-card-wrapper gmb-verify-quote">
+                <blockquote>
+                  <p>
+                    &ldquo;…if you are looking for skilled and fast help with
+                    Google business verification reinstatement, and digital
+                    marketing, SEO and GMB optimization.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption>
+                  <b>Marco d.</b> · Agency partner · Google review
+                </figcaption>
+              </figure>
+              <figure className="gmb-reinst-card-wrapper gmb-verify-quote">
+                <blockquote>
+                  <p>
+                    &ldquo;Our Google presence is in much better shape than it
+                    was before we started working with Zonic Media… They&apos;re
+                    knowledgeable, communicative, and easy to work with.&rdquo;
+                  </p>
+                </blockquote>
+                <figcaption>
+                  <b>Amie G.</b> · Google presence · Google review
+                </figcaption>
+              </figure>
             </div>
 
             <div className="gmb-reinst-testimonial-wrapper">
@@ -970,7 +1253,7 @@ function page() {
               </p>
 
               <h2 className="gmb-reinst-sec-heading">
-                Three Guarantee Pillars
+                Our GMB Verification Guarantee
               </h2>
             </div>
 
@@ -979,27 +1262,29 @@ function page() {
                 <li>
                   <h3>
                     <FaArrowRight />
-                    Money-Back Guarantee
+                    No Charge If You&apos;re Not Verified
                   </h3>
                   <p>
-                    If your profile is suspended rather than unverified, our{" "}
+                    If we can&apos;t get your Google Business Profile verified,
+                    you pay nothing for our verification work. If the profile
+                    turns out to be suspended rather than unverified, our{" "}
                     <Link href="/services/gbp-reinstatement-service" className="gmb-inline-link">
                       suspended Google Business Profile recovery
                     </Link>{" "}
-                    steps in — and if we can&apos;t get your listing reinstated,
-                    you pay nothing. We only win when you win.
+                    takes over on the same No Fix, No Charge terms.
                   </p>
                 </li>
 
                 <li>
                   <h3>
                     <FaArrowRight />
-                    No Long Waits
+                    A Clear Timeline From Day One
                   </h3>
                   <p>
-                    Our average reinstatement time is 5-7 business days. We
-                    follow up aggressively so Google doesn&apos;t leave your
-                    case idle.
+                    Most profiles are verified within 5–7 business days of the
+                    audit. You know which method Google is offering you and
+                    what happens next at every step, including Google&apos;s own
+                    review time of up to 5 business days for a video.
                   </p>
                 </li>
 
@@ -1142,7 +1427,7 @@ function page() {
           </HashScrollLink>
         </div>
       </div>
-      </div>
+      </main>
 
       <RelatedServices current="/services/gmb-verification-help" />
       <Footer />

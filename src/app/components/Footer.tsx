@@ -96,7 +96,7 @@ function Footer() {
 
   return (
     <>
-      <div
+      <footer
         className="footer-wrapper footer-wrapper--compact footer-wrapper--rounded"
       >
         <div className="footer-upper-content">
@@ -252,7 +252,7 @@ function Footer() {
             <MdCopyright /> 2026 . All Rights Reserved
           </p>
         </div>
-      </div>
+      </footer>
     </>
   );
 }

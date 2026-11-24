@@ -145,6 +145,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
+      <main>
       <div className="conditions-head-wrapper">
         <h1 className="conditions-heading">{pageData.title}</h1>
       </div>
@@ -183,6 +184,7 @@ export default async function Page({ params }: PageProps) {
           </div>
         </Col>
       </div>
+      </main>
 
       <Footer />
     </>

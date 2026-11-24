@@ -446,7 +446,7 @@ function Page() {
           </div>
         </nav>
 
-        <div className="hia-main-wrapper">
+        <main className="hia-main-wrapper">
           <div className="hia-row">
             {/* LEFT: CONTENT */}
             <div className="hia-content-col">
@@ -930,7 +930,7 @@ function Page() {
               </div>
             </div>
           </div>
-        </div>
+        </main>
 
         {/* FINAL CTA */}
         <section className="hia-final-cta">

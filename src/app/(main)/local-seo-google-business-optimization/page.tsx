@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import "@/app/style/gbpLanding.css";
 import "@/app/style/localOpt.css";
 
+import Footer from "@/app/components/Footer";
 import MapPackLeadForm from "@/app/components/MapPackLeadForm";
 import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
@@ -12,32 +13,39 @@ import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
 
 /* ---------------------------------------------------------------------------
-   POSITIONING — read this before editing the copy.
+   POSITIONING (updated 24 Nov 2026, keyword research across GSC, Semrush,
+   Bing and ~35 competitor pages) — read this before editing the copy.
 
-   /local-seo-google-business-optimization owns the head term "Google Business Profile
-   optimization" and the deliverables list (categories, description, photos,
-   posts, Q&A, review generation). Do not restate that list here.
+   This is the GBP optimization SERVICE page. It targets the buying terms
+   whose Google top 10 are service pages:
+     · gmb optimization service(s), google my business optimization services
+     · google business profile optimization service(s), gbp optimization services
+     · gmb seo service / gmb seo company / gmb seo, google business profile
+       management services, google maps seo
+   It keeps the Map Pack ranking-mechanics content (proximity, relevance,
+   prominence, geo-grid) that already ranks.
 
-   This page owns the *ranking mechanics* query set:
-
-     · "how to rank in the Google Map Pack" / "local 3-pack ranking"
-     · "Google Maps ranking factors" / proximity, relevance, prominence
-     · "why am I not showing up on Google Maps"
-     · geo-grid rank tracking and "near me" visibility
-
-   Always link UP to /local-seo-google-business-optimization using the head term as anchor
-   text so it consolidates on the hub instead of splitting across two URLs.
+   The informational head term "google business profile optimization" (4,400/mo)
+   and "how to optimize google business profile" are all how-to guides on
+   Google — they belong to the blog checklist post, which this page links to.
 
    CHROME + base type come from gbpLanding.css (.gbp-lp); localOpt.css re-themes
-   it to the /services/gbp-reinstatement-service palette and type scale.
+   it to the /services/gbp-reinstatement-service palette and type scale. The
+   page keeps its own top bar (Meta-ads landing) but uses the site Footer.
 --------------------------------------------------------------------------- */
 
 export const metadata: Metadata = {
-  title: { absolute: "GMB Optimization Service | Google Business Profile Local SEO" },
+  title: { absolute: "GMB Optimization Services & GMB SEO | Google Business Profile" },
   description:
-    "Google Business Profile optimization service and local SEO that maps your Map Pack rankings street by street: categories, reviews, citations and posts.",
+    "GMB optimization services and GMB SEO for local businesses across the US: categories, posts, reviews, citations and a monthly geo-grid scan. Free scan.",
   keywords: [
     "gmb optimization service",
+    "gmb optimization services",
+    "google my business optimization services",
+    "gmb seo service",
+    "gmb seo company",
+    "gbp optimization services",
+    "google business profile management services",
     "local seo agency",
     "google business profile optimization service",
     "google business profile optimization services",
@@ -66,24 +74,24 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
+    title: "GMB Optimization Services & GMB SEO | Zonic Media",
     description:
-      "Proximity, relevance and prominence — what actually decides the local 3-Pack, which levers you control, and a free geo-grid scan of your service area.",
+      "Google Business Profile optimization and management for local businesses across the US, with a free geo-grid scan of your service area.",
     url: "/local-seo-google-business-optimization",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Rank in the Google Map Pack | Local 3-Pack SEO",
+    title: "GMB Optimization Services & GMB SEO | Zonic Media",
     description:
-      "Why you rank here and vanish three miles away — and which Map Pack ranking factors you can actually move.",
+      "Google Business Profile optimization and management, tracked on a monthly geo-grid scan. Free scan to start.",
   },
 };
 
 const breadcrumbJsonLd = buildBreadcrumbJsonLd([
   { name: "Home", url: "/" },
   {
-    name: "Google Map Pack Ranking",
+    name: "Google Business Profile Optimization",
     url: "/local-seo-google-business-optimization",
   },
 ]);
@@ -93,15 +101,18 @@ const serviceJsonLd = {
   "@type": "Service",
   "@id":
     "https://www.zonicllc.com/local-seo-google-business-optimization#service",
-  name: "Google Map Pack Ranking & Local Visibility",
+  name: "GMB Optimization Service",
   alternateName: [
+    "Google Business Profile Optimization Service",
+    "Google My Business Optimization Services",
+    "GMB SEO Service",
+    "Google Business Profile Management",
+    "Google Maps SEO",
     "Local 3-Pack ranking service",
-    "Google Maps ranking service",
-    "Geo-grid rank tracking",
   ],
-  serviceType: "Local Map Pack ranking",
+  serviceType: "Google Business Profile Optimization",
   description:
-    "Zonic Media improves Google Map Pack visibility across a whole service area rather than at a single pin: geo-grid rank scanning to find where a business actually ranks, diagnosis against Google's proximity, relevance and prominence factors, and work on the levers a business can move — service-area configuration, category and service alignment, review velocity and local link prominence.",
+    "Zonic Media optimizes and manages Google Business Profiles for local businesses across the United States: categories, services, description, photos, posts, review requests and replies, citation consistency and profile protection, with a monthly geo-grid scan showing Map Pack rankings across the whole service area.",
   url: "https://www.zonicllc.com/local-seo-google-business-optimization",
   provider: {
     "@type": "Organization",
@@ -115,19 +126,38 @@ const serviceJsonLd = {
     "@type": "BusinessAudience",
     name: "Local and service-area businesses that are verified on Google but not ranking in the Map Pack",
   },
-  isRelatedTo: {
-    "@type": "Service",
-    "@id": "https://www.zonicllc.com/local-seo-google-business-optimization#service",
-    name: "Google Business Profile Optimization",
-  },
-  offers: {
-    "@type": "Offer",
-    name: "Free geo-grid rank scan",
-    price: "0",
-    priceCurrency: "USD",
-    description:
-      "A free geo-grid scan showing where the business ranks in the Map Pack across every part of its service area.",
-  },
+  // Same figures as the visible pricing cards below.
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free geo-grid rank scan",
+      price: "0",
+      priceCurrency: "USD",
+      description:
+        "A free geo-grid scan showing where the business ranks in the Map Pack across every part of its service area.",
+    },
+    {
+      "@type": "Offer",
+      name: "Map Pack Growth (Google Business Profile optimization and management)",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "597",
+        priceCurrency: "USD",
+        unitText: "month",
+      },
+      description: "Month to month, no lock-in.",
+    },
+    {
+      "@type": "Offer",
+      name: "Multi-Location (3+ locations)",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "397",
+        priceCurrency: "USD",
+        unitText: "location per month",
+      },
+    },
+  ],
 };
 
 /* ----------------------------------------------------------------- content */
@@ -139,11 +169,11 @@ const tickerItems = [
     <b>1500+</b> Google Business Profiles optimized
   </>,
   <>
-    ★ <b>5.0</b> rating on Clutch
+    ★ <b>5.0</b> rating on Google
   </>,
   <>Free geo-grid scan of your service area</>,
   <>No long-term contracts</>,
-  <>US-based specialists · Dover, DE</>,
+  <>Serving businesses in every US state</>,
   <>Map Pack, &ldquo;near me&rdquo; and AI local answers</>,
 ];
 
@@ -337,8 +367,28 @@ const faqs = [
     a: "Relevance changes move fastest — a corrected primary category or a properly built service list often shows up within two to four weeks. Coverage changes from service-area work land in a similar window. Prominence is the slow one: review velocity and local links compound over three to six months. Anyone promising top-three across a whole metro in thirty days is describing the proximity effect at a single point, not a real ranking change.",
   },
   {
-    q: "Is this the same as Google Business Profile optimization?",
-    a: "They overlap but they answer different questions. Google Business Profile optimization is about building the profile itself out properly — categories, description, photos, posts, Q&A and reviews. This page is about where that profile ranks geographically and what moves it: measuring coverage across the area, then working proximity, relevance and prominence against the competitors in each part of it. Most businesses need the profile built out first, then the ranking work on top.",
+    q: "What is Google Business Profile optimization?",
+    a: "It is the work of making your Google Business Profile complete, accurate and active so it ranks in the Map Pack for the searches that bring you jobs: the right primary and secondary categories, a full services list, a clear description, real photos, regular posts, steady reviews with replies, and the same name, address and phone everywhere online. Our GMB optimization services do that work and then measure where the profile ranks across your whole service area with a geo-grid scan.",
+  },
+  {
+    q: "Is GBP optimization a one-time fix or monthly?",
+    a: "Both parts matter. The build-out (categories, services, description, photos) happens in the first month. After that, rankings decay without fresh posts, new reviews and consistency checks, because competitors keep working on theirs. Our Map Pack Growth plan covers both at $597 a month, month to month with no lock-in, and the geo-grid scan to start is free.",
+  },
+  {
+    q: "Do I need a website to rank on Google Maps?",
+    a: "No, a Business Profile can rank without one. A website does help: it supports relevance for the services you list and turns profile views into calls. If you don't have one, our web design team can build it alongside the profile work.",
+  },
+  {
+    q: "Do I keep ownership of my Google Business Profile?",
+    a: "Always. You stay the owner, and we are added as a manager, so you can remove our access at any time. We never need your Google password.",
+  },
+  {
+    q: "Do you guarantee a #1 ranking on Google Maps?",
+    a: "No honest agency can, because Google decides rankings and proximity is outside anyone's control. What we commit to is the work and the proof: the build-out, monthly maintenance and the same geo-grid re-run every month, so you can see exactly where coverage grows.",
+  },
+  {
+    q: "Does my Google Business Profile show up in ChatGPT and Google's AI answers?",
+    a: "Often, yes. Google's AI Overviews and AI Mode pull local businesses straight from Maps and Business Profiles, and ChatGPT draws on business websites, listings and reviews. A complete, consistent profile with recent reviews is the base for both. For more, see our AI SEO services and ChatGPT business profile setup.",
   },
   {
     q: "Do I need to be verified before any of this works?",
@@ -355,7 +405,71 @@ const faqs = [
   {
     q: "What does a Google Business Profile optimization service actually do each month?",
     a:
-      "It keeps every ranking signal Google reads current: the primary and secondary categories, the services list with descriptions, the business description, photos and videos, weekly posts, Q&A, and a steady flow of replied-to reviews. It also checks that name, address and phone match across the citations Google cross-references, and tracks rankings on a geo-grid so you can see how far from your address the profile still ranks. Zonic Media has optimized more than 1,500 profiles and reports the grid every month.",
+      "It keeps every ranking signal Google reads current: the primary and secondary categories, the services list with descriptions, the business description, photos and videos, weekly posts, and a steady flow of replied-to reviews. It also checks that name, address and phone match across the citations Google cross-references, watches for unwanted suggested edits, and tracks rankings on a geo-grid so you can see how far from your address the profile still ranks. Zonic Media has optimized more than 1,500 profiles and reports the grid every month.",
+  },
+];
+
+/* What the service includes (24 Nov 2026: 4 of 4 ranking competitors list
+   this; the page only described ranking mechanics). Items match the pricing
+   cards and the monthly FAQ — no new promises. */
+const included = [
+  {
+    title: "Categories, Services & Products",
+    body: "The primary category set to your highest-value search, secondary categories that widen coverage, and a full services list written the way customers search.",
+  },
+  {
+    title: "Description & Business Details",
+    body: "A clear, compliant description, accurate hours and attributes, and links tagged so calls and clicks from the profile show up in your reports.",
+  },
+  {
+    title: "Photos & Video",
+    body: "Real photos of your work, team and location, added on a schedule, because a profile that looks active earns more clicks.",
+  },
+  {
+    title: "Google Posts & Offers",
+    body: "Weekly posts about your services, offers and recent jobs, so the profile shows fresh activity and gives searchers a reason to call.",
+  },
+  {
+    title: "Reviews: Requests & Replies",
+    body: "A repeatable request flow that brings reviews in steadily, and a reply to every review, good or bad.",
+  },
+  {
+    title: "Citations & NAP Consistency",
+    body: "Your name, address and phone matched across the directories and data sources Google cross-checks.",
+  },
+  {
+    title: "Profile Protection",
+    body: "Monitoring for unwanted suggested edits, wrong category changes and spam listings that push you down the pack.",
+  },
+  {
+    title: "Monthly Geo-Grid Report",
+    body: "The same grid and search terms re-scanned every month, so you see coverage grow square by square across your service area.",
+  },
+];
+
+const cadence = [
+  { task: "Google posts", when: "Weekly" },
+  { task: "Review replies and review requests", when: "Ongoing" },
+  { task: "New photos and profile details check", when: "Monthly" },
+  { task: "Citation and NAP consistency cleanup", when: "Monthly" },
+  { task: "Suggested-edit and spam monitoring", when: "Ongoing" },
+  { task: "Geo-grid re-scan and report", when: "Monthly" },
+];
+
+const optimizationQuotes = [
+  {
+    name: "Amie G.",
+    quote:
+      "Our Google presence is in much better shape than it was before we started working with Zonic Media. They helped clean things up, visibility in local search - which is necessary, and took a lot off our plate.",
+  },
+  {
+    name: "Johnny R.",
+    quote:
+      "They handled my Google listing and my website, process was smooth and easy. Very reasonably priced as well. Highly recommend",
+  },
+  {
+    name: "Jacob B.",
+    quote: "Performed everything I asked for and delivered on what they promised!",
   },
 ];
 
@@ -384,6 +498,7 @@ const onDarkCard = {
 
 function Page() {
   return (
+    <>
     <div className="gbp-lp lo-page">
       <script
         id="lo-breadcrumb-schema"
@@ -457,27 +572,32 @@ function Page() {
         </HashScrollLink>
       </div>
 
+      <main className="lo-main">
       <div className="lp-wrap">
         {/* ========================= LEFT: CONTENT ========================= */}
         <div className="lp-col">
           {/* ------------------------------ HERO ------------------------------ */}
           <section className="lo-hero">
-            <span className="lp-eyebrow">Local SEO services</span>
+            <span className="lp-eyebrow">GMB SEO service</span>
 
+            {/* Keyword-led H1 (owner, 24 Nov 2026). Keeps the exact
+                "Google Business Profile Optimization" phrase that ranks and
+                adds the buying term "GMB optimization services". */}
             <h1 className="lp-h1">
-              Google Business Profile Optimization Service:{" "}
-              <span className="lp-accent">
-                Rank #1 Outside Your Front Door — and Three Miles Away.
-              </span>
+              GMB Optimization Services That Rank Your{" "}
+              <span className="lp-accent">Google Business Profile</span>
             </h1>
 
             <p className="lp-lead">
-              Our local SEO services start from a truth most local SEO
-              companies skip: Google builds a different Map Pack for every
-              searcher, weighted heavily by how close they are standing. So
-              there is no single ranking to chase — there is a map of them. We
-              scan yours, show you where the green stops, and work the factors
-              that widen it.
+              Our Google Business Profile optimization service builds out your
+              categories, services, photos, posts and reviews, then measures
+              where you rank with a geo-grid scan, not one rank number. Google
+              builds a different Map Pack for every searcher, so we show you
+              where the green stops and work the factors that widen it.
+            </p>
+            <p className="lp-small" style={{ marginTop: 12 }}>
+              Updated <time dateTime="2026-11-24">November 24, 2026</time> ·
+              For local businesses in every US state
             </p>
 
             <div
@@ -573,8 +693,37 @@ function Page() {
                 <div className="lp-stat-num">
                   5.0<span>★</span>
                 </div>
-                <p className="lp-stat-cap">Rating on Clutch</p>
+                <p className="lp-stat-cap">Rating on Google</p>
               </div>
+            </div>
+          </section>
+
+          {/* --------------------------- WHAT'S INCLUDED --------------------------- */}
+          <section className="lp-panel" id="lo-included">
+            <div className="lp-head">
+              <span className="lp-eyebrow">The deliverables</span>
+              <h2 className="lp-h2">
+                What&apos;s Included in Our GMB Optimization Services
+              </h2>
+              <p className="lp-lead">
+                Every part of the profile Google reads, built out properly and
+                kept current. Prefer to do it yourself? Work through our{" "}
+                <Link
+                  href="/blog/google-business-profile-optimization-checklist-30-steps-for-2026"
+                  className="lp-link"
+                >
+                  Google Business Profile optimization checklist
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="lp-grid-2">
+              {included.map((item) => (
+                <div className="lp-card" key={item.title}>
+                  <h3 className="lp-h3">{item.title}</h3>
+                  <p className="lp-body">{item.body}</p>
+                </div>
+              ))}
             </div>
           </section>
 
@@ -658,8 +807,7 @@ function Page() {
                 Ranking work is sequenced, not bundled. Relevance first because
                 it moves fastest, coverage next, prominence last because it
                 compounds slowly. If the profile itself still needs building
-                out, that belongs with Google Business Profile optimization
-                before any of this.
+                out, we do that first.
               </p>
             </div>
             <div className="lo-levers">
@@ -672,6 +820,39 @@ function Page() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* ------------------------- MONTHLY MANAGEMENT ------------------------- */}
+          <section className="lp-panel" id="lo-monthly">
+            <div className="lp-head">
+              <span className="lp-eyebrow">Ongoing GMB SEO</span>
+              <h2 className="lp-h2">
+                Google Business Profile Management, Month by Month
+              </h2>
+              <p className="lp-lead">
+                Rankings decay without maintenance, because competitors keep
+                working on their profiles. This is the routine behind our Map
+                Pack Growth plan.
+              </p>
+            </div>
+            <div className="lo-cadence-wrap">
+              <table className="lo-cadence">
+                <thead>
+                  <tr>
+                    <th scope="col">Task</th>
+                    <th scope="col">How often</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cadence.map((row) => (
+                    <tr key={row.task}>
+                      <td>{row.task}</td>
+                      <td>{row.when}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
 
@@ -695,8 +876,8 @@ function Page() {
                   Not Verified Yet
                 </h3>
                 <p className="lp-body">
-                  Video is the default method now and the rules changed twice
-                  since 2024 — see the{" "}
+                  Google picks the verification method for each profile, and
+                  video verification has strict rules — see the{" "}
                   <Link
                     href="/services/gmb-verification-help"
                     className="lp-link"
@@ -733,13 +914,14 @@ function Page() {
                   Appeal Already Rejected
                 </h3>
                 <p className="lp-body">
-                  If Google has already turned down an appeal, that&apos;s a
-                  different job —{" "}
+                  Google reviews one appeal per issue, so a rejected appeal
+                  needs new evidence through Google support, not a second try.
+                  Our{" "}
                   <Link
                     href="/services/gbp-reinstatement-service"
                     className="lp-link"
                   >
-                    the escalation desk
+                    GBP reinstatement service
                   </Link>{" "}
                   picks it up from there.
                 </p>
@@ -751,7 +933,7 @@ function Page() {
           <section className="lp-panel" id="lo-pricing">
             <div className="lp-head">
               <span className="lp-eyebrow">Engagements</span>
-              <h2 className="lp-h2">Start with the Scan — It Costs Nothing</h2>
+              <h2 className="lp-h2">GMB Optimization &amp; GMB SEO Pricing</h2>
               <p className="lp-lead">
                 The scan and the diagnosis are free because they&apos;re how
                 both of us find out whether there&apos;s work worth doing.
@@ -814,6 +996,23 @@ function Page() {
             <div className="lp-head">
               <span className="lp-eyebrow">Client results</span>
               <h2 className="lp-h2">What Clients Say About the Work</h2>
+              <p className="lp-lead">
+                Excerpts from our Google reviews (5.0).
+              </p>
+            </div>
+            {/* Plain-text excerpts of real Google reviews so search engines
+                and AI tools can read them — the widget is script-only. */}
+            <div className="lp-grid-3 lo-quotes">
+              {optimizationQuotes.map((r) => (
+                <figure className="lp-card lo-quote" key={r.name}>
+                  <blockquote>
+                    <p className="lp-body">&ldquo;{r.quote}&rdquo;</p>
+                  </blockquote>
+                  <figcaption className="lp-small">
+                    <b>{r.name}</b> · Google review
+                  </figcaption>
+                </figure>
+              ))}
             </div>
             <LenisIframeGuard
               className="lo-reviews-widget"
@@ -825,7 +1024,9 @@ function Page() {
           <section className="lp-panel" id="lo-faq">
             <div className="lp-head">
               <span className="lp-eyebrow">Map Pack questions</span>
-              <h2 className="lp-h2">What Owners Ask About Local Rankings</h2>
+              <h2 className="lp-h2">
+                Google Business Profile Optimization FAQs
+              </h2>
             </div>
 
             {faqs.map((faq, index) => (
@@ -868,28 +1069,65 @@ function Page() {
           {/* ------------------------- RELATED SERVICES ------------------------- */}
           <section className="lp-panel">
             <div className="lp-head">
-              <span className="lp-eyebrow">Related work</span>
-              <h2 className="lp-h2">Where This Sits in the Rest of It</h2>
+              <span className="lp-eyebrow">By industry</span>
+              <h2 className="lp-h2">
+                GMB Optimization Services for Contractors and Home Services
+              </h2>
               <p className="lp-lead">
-                Ranking work assumes a profile that is already built out —
-                that&apos;s{" "}
-                <Link href="/local-seo-google-business-optimization" className="lp-link">
-                  Google Business Profile optimization
-                </Link>
-                . For trades specifically, most of the coverage problems on this
-                page show up inside{" "}
+                Service-area trades feel the coverage problem most, because
+                their customers search from every corner of the area. We run the
+                same profile work inside{" "}
                 <Link
                   href="/services/local-seo-for-home-services"
                   className="lp-link"
                 >
                   local SEO for home services
-                </Link>{" "}
-                and{" "}
+                </Link>
+                , with dedicated programs for{" "}
                 <Link
                   href="/services/industry/local-seo-services-for-hvac"
                   className="lp-link"
                 >
-                  local SEO for HVAC companies
+                  HVAC companies
+                </Link>
+                ,{" "}
+                <Link
+                  href="/services/industry/seo-services-for-plumber"
+                  className="lp-link"
+                >
+                  plumbers
+                </Link>
+                ,{" "}
+                <Link
+                  href="/services/industry/local-seo-for-roofing-companies"
+                  className="lp-link"
+                >
+                  roofers
+                </Link>
+                ,{" "}
+                <Link
+                  href="/services/industry/local-seo-for-electricians"
+                  className="lp-link"
+                >
+                  electricians
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/services/industry/local-seo-for-general-contractors"
+                  className="lp-link"
+                >
+                  general contractors
+                </Link>
+                . To show up in AI answers as well, see our{" "}
+                <Link href="/services/ai-seo-services" className="lp-link">
+                  AI SEO services
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/services/chatgpt-business-profile"
+                  className="lp-link"
+                >
+                  ChatGPT business profile setup
                 </Link>
                 . Our guide on{" "}
                 <Link
@@ -948,152 +1186,14 @@ function Page() {
             </span>
             <span>
               <CheckIcon />
-              Dover, DE · serving the US
+              Serving businesses in every US state
             </span>
           </div>
         </div>
       </section>
 
-      {/* ============================= FOOTER ============================= */}
-      <footer className="lp-footer">
-        <div className="lp-footer-top">
-          <div className="lp-footer-brand">
-            <Link
-              href="/"
-              className="lp-footer-logo"
-              aria-label="Zonic Media home"
-            >
-              <Image
-                src="/images/logo.webp"
-                width={132}
-                height={50}
-                alt="Zonic Media"
-              />
-            </Link>
-            <p className="lp-footer-blurb">
-              A Delaware digital marketing agency specialising in Google
-              Business Profile work — Map Pack ranking, optimization,
-              verification and reinstatement — for local and service-area
-              businesses across the United States.
-            </p>
-            <div className="lp-footer-contact">
-              <span>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                8 The Green, STE B, Dover, DE 19901
-              </span>
-              <a href={SITE_CONTACT.phoneHref}>
-                <PhoneIcon />
-                {SITE_CONTACT.phoneDisplay}
-              </a>
-              <a href={SITE_CONTACT.emailHref}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m2 7 10 6 10-6" />
-                </svg>
-                {SITE_CONTACT.email}
-              </a>
-            </div>
-          </div>
+      </main>
 
-          <div className="lp-footer-col">
-            <h3>Google Business Profile</h3>
-            <ul>
-              <li>
-                <Link href="/local-seo-google-business-optimization">
-                  Profile optimization
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/gbp-reinstatement-service">
-                  GMB reinstatement service
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/gbp-reinstatement-service">
-                  Rejected appeal help
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/gmb-verification-help">
-                  GMB verification help
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/gmb-verification-help">
-                  2026 verification rules
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="lp-footer-col">
-            <h3>More Services</h3>
-            <ul>
-              <li>
-                <Link href="/services/local-seo-for-home-services">
-                  Local SEO for home services
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/google-ads">Google Ads management</Link>
-              </li>
-              <li>
-                <Link href="/services/web-design">Web design</Link>
-              </li>
-              <li>
-                <Link href="/services/white-label-services">
-                  White-label for agencies
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">All services</Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="lp-footer-col">
-            <h3>Company</h3>
-            <ul>
-              <li>
-                <Link href="/about">About Zonic Media</Link>
-              </li>
-              <li>
-                <Link href="/contact-us">Contact</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="/industries">Industries we serve</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="lp-footer-bottom">
-          <span>
-            © {new Date().getFullYear()} Zonic Media LLC. All rights reserved.
-          </span>
-          <div className="lp-footer-legal">
-            <Link href="/legal/privacy-policy">Privacy policy</Link>
-            <Link href="/legal/refund-policy">Refund policy</Link>
-            <Link href="/legal/terms-conditions">Terms &amp; conditions</Link>
-          </div>
-        </div>
-      </footer>
 
       {/* =========================== STICKY CTA =========================== */}
       <div className="lp-sticky-bar">
@@ -1112,6 +1212,11 @@ function Page() {
         </div>
       </div>
     </div>
+
+    {/* Site footer (owner, 24 Nov 2026) instead of the page's own
+        lp-footer; kept outside .gbp-lp so the landing styles don't touch it. */}
+    <Footer />
+    </>
   );
 }
 

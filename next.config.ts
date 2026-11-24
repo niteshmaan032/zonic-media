@@ -21,10 +21,13 @@ const nextConfig: NextConfig = {
   // memoization payoff matters) but skip it in `next dev` so page compiles are
   // fast. Dev/prod behavior stays identical — the compiler only adds memoization.
   reactCompiler: process.env.NODE_ENV === "production",
-  // Inline the page CSS into the HTML instead of ~10 render-blocking
-  // stylesheet requests (mobile FCP/LCP waited on them, SEO checkup 27 Oct).
+  // inlineCss (27 Oct) was switched off on 24 Nov 2026: Next copied the whole
+  // site CSS into every page twice (<style> in <head> plus the RSC payload),
+  // ~900 KB of a 1.3–1.6 MB page. Bing flagged "HTML size is too long" and AI
+  // crawlers had to wade through it before the content. Stylesheets are now
+  // separate cached files.
   experimental: {
-    inlineCss: true,
+    inlineCss: false,
   },
   images: {
     remotePatterns: [

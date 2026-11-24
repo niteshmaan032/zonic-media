@@ -1,9 +1,13 @@
 # GMB Optimization Service — Zonic Media
 
-> Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1,500+ profiles optimized, 5.0 rating on Google and 5.0 on Clutch (21 reviews).
+> Zonic Media optimizes Google Business Profiles (GMB/GBP) to rank in the local 3-Pack on Google Maps and to be cited in Google's AI Overviews for local searches. 1,500+ profiles optimized, 5.0 rating on Google. Serving local businesses in every US state.
+
+Pricing: free geo-grid scan; Map Pack Growth $597/month (month to month); Multi-Location $397 per location per month (3+ locations).
+
+Last updated: 2026-11-24
 
 Service page: https://www.zonicllc.com/local-seo-google-business-optimization
-Related: https://www.zonicllc.com/local-seo-google-business-optimization
+DIY checklist: https://www.zonicllc.com/blog/google-business-profile-optimization-checklist-30-steps-for-2026
 
 ## What this service does
 
@@ -13,7 +17,9 @@ Having a Google Business Profile is the baseline; ranking with it is the work. M
 - **Keyword-rich business description** rewritten around real customer language
 - **Photo strategy** — what to shoot, how often, and why it affects rankings
 - **Google Posts** — treating the profile as an active content channel with weekly activity
-- **Q&A management** — seeding and answering the questions customers ask aloud (also what AI answers quote)
+- **Citations and NAP consistency** — name, address and phone matched across the sources Google cross-checks
+- **Profile protection** — monitoring for unwanted suggested edits and spam listings
+- **Monthly geo-grid report** — the same grid and search terms re-scanned every month
 - **Review generation strategy** — consistent 5-star review flow, one of Google's top local ranking factors
 - **Service area setup, attribute optimization, and competitor analysis**
 

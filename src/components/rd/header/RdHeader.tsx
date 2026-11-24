@@ -756,6 +756,12 @@ export function RdHeader() {
   const [open, setOpen] = useState<MenuKey | null>(null);
   const [mobile, setMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  /* The desktop mega-menu panels (~140 links, ~150 KB of markup) mount once
+     the page is idle instead of being server-rendered (24 Nov 2026). In the
+     raw HTML they sat before every page's H1, so AI crawlers that don't run
+     JavaScript read the whole menu first. Google renders JS and still sees
+     the links; visitors can't open a panel before hydration anyway. */
+  const [panelsReady, setPanelsReady] = useState(false);
   const closeTimer = useRef<number | null>(null);
 
   const cancelClose = () => {
@@ -773,6 +779,16 @@ export function RdHeader() {
     closeTimer.current = window.setTimeout(() => setOpen(null), 160);
   };
   const closeMobile = useCallback(() => setMobile(false), []);
+
+  useEffect(() => {
+    const mount = () => setPanelsReady(true);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(mount, { timeout: 2000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const id = window.setTimeout(mount, 200);
+    return () => window.clearTimeout(id);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -890,7 +906,7 @@ export function RdHeader() {
                       {label}
                     </button>
                   )}
-                  {item.key ? (
+                  {item.key && panelsReady ? (
                     /* Panel spans the whole bar; the padding bridges the gap
                        so the pointer can travel from the label into it. */
                     <div

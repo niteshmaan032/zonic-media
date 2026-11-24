@@ -2270,3 +2270,38 @@
     border-radius: 28px;
   }
 }
+
+/* Google review excerpts as plain text (24 Nov 2026) — sit above the
+   Trustindex widget in "Real Businesses, Real Reinstatements". */
+.gmb-reinst-page .review-quotes {
+  margin-bottom: 22px;
+}
+.gmb-reinst-page .review-quote {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.gmb-reinst-page .review-quote blockquote {
+  margin: 0;
+}
+.gmb-reinst-page .review-quote blockquote p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.gmb-reinst-page .review-quote figcaption {
+  margin-top: auto;
+  font-size: 14px;
+  color: var(--muted, #5b6478);
+}
+.gmb-reinst-page .review-quote figcaption b {
+  color: var(--ink);
+  font-weight: 500;
+}
+@media (max-width: 767.98px) {
+  .gmb-reinst-page .review-quotes {
+    grid-template-columns: 1fr;
+  }
+}

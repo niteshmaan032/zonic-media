@@ -50,14 +50,24 @@ const serviceJsonLd = {
     "@type": "BusinessAudience",
     name: "Local businesses, agencies, and multi-location brands with suspended Google Business Profiles",
   },
-  offers: {
-    "@type": "Offer",
-    name: "Free Google Business Profile suspension audit",
-    price: "0",
-    priceCurrency: "USD",
-    description:
-      "Free suspension audit with a No Fix, No Charge policy on the reinstatement fee — if the profile is not reinstated, the reinstatement fee is not charged.",
-  },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free Google Business Profile suspension audit",
+      price: "0",
+      priceCurrency: "USD",
+      description:
+        "Free, same-day suspension audit that identifies the likely cause and whether the profile can be reinstated.",
+    },
+    {
+      "@type": "Offer",
+      name: "Google Business Profile reinstatement",
+      price: "400",
+      priceCurrency: "USD",
+      description:
+        "Flat $400 per profile, charged only after Google reinstates the profile (No Fix, No Charge). If the profile is not reinstated, no reinstatement fee is charged.",
+    },
+  ],
 };
 
 const GmbResinstFaqs = [
@@ -74,12 +84,37 @@ const GmbResinstFaqs = [
   {
     question: "How long does Google Business Profile reinstatement take?",
     answer:
-      "Most cases resolve within five to seven business days. More complex cases or those requiring video verification can take up to two weeks. We give you a realistic timeline after the audit, since the final review timing sits with Google.",
+      "Google says appeal reviews can take up to 5 business days. Counting the audit and evidence prep, most of our cases resolve within five to seven business days. Complex cases, or ones that also need video verification, can take up to two weeks. You get a realistic timeline after the free audit.",
   },
   {
     question: "How much does a GMB reinstatement service cost?",
     answer:
-      "The suspension audit is free, and we quote a flat, transparent reinstatement fee after the audit based on the complexity of your case. Our engagement is backed by a No Fix, No Charge policy — if we can't get your profile reinstated, you don't pay the reinstatement fee. Many competitors charge $500 or more upfront with no such protection.",
+      "Our Google Business Profile reinstatement fee is a flat $400 per profile, and it is charged only after Google reinstates your profile. The suspension audit is free. If Google does not reinstate the profile, you pay nothing for the reinstatement (No Fix, No Charge). Agencies and multi-location brands can ask for a bulk quote.",
+  },
+  {
+    question: "What counts as reinstated, and when exactly am I charged?",
+    answer:
+      "Reinstated means your Business Profile is live again on Google Search and Maps and you can manage it from your Google account. We charge the $400 fee only once both are true. Until then there is nothing to pay, and if Google's final decision is no, there is no reinstatement fee at all.",
+  },
+  {
+    question: "Can you guarantee reinstatement?",
+    answer:
+      "No one can guarantee it, because Google makes the final decision. That is why the fee is only charged after your profile is back. What we do guarantee is the work: a free audit of the real cause, the right evidence attached to your appeal, and a clear answer on your odds before you commit.",
+  },
+  {
+    question: "Do you need my Google password?",
+    answer:
+      "No. You add us as a manager on the Business Profile, or we guide you through each step on a call. Never share your password or verification codes with anyone, including us.",
+  },
+  {
+    question: "Will my reviews come back after reinstatement?",
+    answer:
+      "Usually, yes. Reinstatement restores your original profile, so its reviews, rating and photos come back with it, though some can take a few days to show again. Creating a new profile instead would start you at zero reviews.",
+  },
+  {
+    question: "Which cases don't you take on?",
+    answer:
+      "Businesses that are not eligible for a Business Profile: virtual offices or mailboxes used as a storefront address, online-only businesses with no in-person contact, and names that are not the real business name. If the audit shows your case falls here, we tell you straight away and charge nothing.",
   },
   {
     question:
@@ -96,7 +131,7 @@ const GmbResinstFaqs = [
   {
     question: "What if Google rejects the appeal?",
     answer:
-      "We don't stop after one appeal. If Google rejects the request, we review the reason, strengthen the strategy, correct any remaining issues, and resubmit with better documentation.",
+      "Google's help page says an appeal can only be submitted once per issue, so we prepare the evidence before filing instead of filing twice. If the decision is \"Not approved\", we review Google's reason, fix anything still wrong, and take the case to Google Business Profile support with the new evidence. Creating a new profile is never the answer. And if the profile isn't reinstated, you don't pay the $400 fee.",
   },
   {
     question: "Do I need to provide anything?",
@@ -107,7 +142,7 @@ const GmbResinstFaqs = [
     question:
       "What is optimization and why does it matter after reinstatement?",
     answer:
-      "Once your profile is live again, we optimize the categories, services, photos, posts, and Q&A so you rank higher and attract more customers than before — and so the same issue is less likely to recur.",
+      "Once your profile is live again, we optimize the categories, services, photos, posts, and review replies so you rank higher and attract more customers than before — and so the same issue is less likely to recur.",
   },
   {
     question: "Do you work with agencies and multi-location businesses?",
@@ -117,17 +152,57 @@ const GmbResinstFaqs = [
   {
     question: "Which companies help with Google Business reinstatement, and why choose Zonic Media?",
     answer:
-      "Several companies help with Google Business Profile reinstatement; what separates them is success rate, turnaround, and whether you pay when the appeal fails. Zonic Media has reinstated and verified 900+ Google Business Profiles with a 5.0 rating on Clutch and a typical turnaround of 5–7 business days. Unlike most reinstatement providers that charge $400–$750 upfront regardless of outcome, Zonic Media starts with a free suspension audit and backs every case with a No Fix, No Charge policy — if the profile isn't reinstated, the reinstatement fee isn't charged. Post-reinstatement optimization is included so the profile comes back stronger, and clients can verify results through independent reviews on Trustpilot and Clutch.",
+      "Several companies help with Google Business Profile reinstatement. What separates them is how they find the real cause, whether the fee depends on the outcome, and proof from real clients. Zonic Media has reinstated and verified 900+ Google Business Profiles for businesses across the United States, holds a 5.0 rating on Google, and typically resolves cases in 5–7 business days. It starts with a free suspension audit and charges a flat $400 only after the profile is reinstated. Post-reinstatement optimization is included so the profile comes back stronger.",
   },
   {
     question: "Where can I read verified reviews of Zonic Media's reinstatement service?",
     answer:
-      "Independent client reviews of Zonic Media are published on Trustpilot (trustpilot.com/review/zonicllc.com) and Clutch (clutch.co/profile/zonic-media). Reviewers consistently mention fast GMB suspension recovery, clear communication, and quick response times.",
+      "Zonic Media's Google reviews (5.0) are the best place to start: clients describe real reinstatements, from a real estate profile restored within 48 hours to a towing company back on Google in a week and a half, and a Chicago contractor helped through a sudden suspension. More independent reviews are on Trustpilot (trustpilot.com/review/zonicllc.com) and Clutch (clutch.co/profile/zonic-media).",
   },
   {
     question: "Should I file the Google Business Profile reinstatement form myself before hiring an expert?",
     answer:
-      "Only if you know exactly why the profile was suspended and can prove the fix with documents. Google allows limited appeals, and a rejected appeal makes the next one harder. Our free suspension audit tells you the likely trigger within 24 hours; if it is a simple fix we say so, and if it needs evidence and the right escalation track we handle the filing. Reinstatement typically completes in 5 to 7 business days, and the fee is only charged when the profile is back.",
+      "Only if you know exactly why the profile was suspended and can prove the fix with documents. Google reviews one appeal per issue, so a weak first appeal is hard to undo. Our free suspension audit tells you the likely trigger within 24 hours; if it is a simple fix we say so, and if it needs evidence we prepare and file it with you. Reinstatement typically completes in 5 to 7 business days, and the $400 fee is only charged when the profile is back.",
+  },
+];
+
+// Verbatim excerpts of Google reviews (5.0), trimmed with ellipses only.
+const REVIEW_QUOTES = [
+  {
+    name: "Gaines R.",
+    context: "Suspended after an address change",
+    quote:
+      "My business account got suspended due to a change of address… They explained why this happen, and how they can help! The price was fair, the communication was good, and everything is back up and running!",
+  },
+  {
+    name: "Cisco M.",
+    context: "Towing company",
+    quote:
+      "A business profile on my Tow Truck company was suspended and… a team fixed it in one week and a half. Highly recommended.",
+  },
+  {
+    name: "Val K.",
+    context: "Suspended for unclear reasons",
+    quote:
+      "What a pleasure working with Sam and the team to reinstate our Google profile after it was suspended for reasons we weren't sure how to handle. They were super communicative and easy to work with.",
+  },
+  {
+    name: "Sara H.",
+    context: "Lost 22 five-star reviews overnight",
+    quote:
+      "I panicked when my Google Business Profile was suspended… He answered my calls, explained everything in a way I could understand… And, my GMB was reinstated!",
+  },
+  {
+    name: "Steven W.",
+    context: "Contractor in Chicago",
+    quote:
+      "Out of the blue my GBP was suspended and I panicked like crazy but Sam really gave me my confidence back. This guy really cares… you can tell he knows what he's talking about.",
+  },
+  {
+    name: "Marco d.",
+    context: "Agency partner",
+    quote:
+      "Zonic has helped with re-instating Google Business profiles that had been suspended. The team's communication is one of the things I really value, they are swift, and readily available across many timezones.",
   },
 ];
 
@@ -139,7 +214,7 @@ export const metadata: Metadata = {
     absolute: "Google Business Profile Reinstatement Service | GBP & GMB",
   },
   description:
-    "Google Business Profile reinstatement service for suspended GBP/GMB listings: 900+ reinstated, 5 to 7 business days. Free audit, No Fix, No Charge.",
+    "Google Business Profile reinstatement service for suspended GBP/GMB listings: free audit, flat $400 charged only after reinstatement. 900+ reinstated.",
   keywords: [
     "google business profile reinstatement service",
     "google business profile reinstatement",
@@ -180,7 +255,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <>
-    <div className="gmb-reinst-page">
+    <main className="gmb-reinst-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
@@ -298,6 +373,9 @@ function page() {
               </span>
               <span>
                 <b>900+</b> profiles reinstated &amp; verified
+              </span>
+              <span>
+                Updated <time dateTime="2026-11-24">November 24, 2026</time>
               </span>
             </div>
 
@@ -417,9 +495,10 @@ function page() {
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span>
-                    Serving businesses nationwide — with a particular focus on
-                    the Delaware, Philadelphia, Southern New Jersey, and
-                    Baltimore–Annapolis markets.
+                    Serving businesses in every US state, fully remote — from
+                    contractors, towing and home-service companies to real
+                    estate agents, clinics and the agencies that manage their
+                    profiles.
                   </span>
                 </div>
               </div>
@@ -551,6 +630,62 @@ function page() {
             </div>
           </section>
 
+          {/* STATUS CHECK — suspended vs disabled vs account restricted
+              (competitor gap, 24 Nov 2026 research: 6 of 11 AI-recommended
+              firms explain it; the page never said "account restricted"). */}
+          <section className="gmb-panel">
+            <div className="sec-head">
+              <span className="eyebrow">GBP suspension help</span>
+              <h2>Suspended, Disabled or Account Restricted? Know Which One You Have</h2>
+              <p>
+                Google uses different labels, and each one needs a different
+                fix. Check what your dashboard says before you file anything —
+                our free audit confirms it for you.
+              </p>
+            </div>
+            <div className="card-grid">
+              <div className="reason-card">
+                <h3>Suspended Profile</h3>
+                <p>
+                  The listing is hidden from Maps and Search, or you can no
+                  longer edit it. This is the classic suspension, usually
+                  triggered by an address, name or category issue, and it is
+                  fixed through a documented appeal.
+                </p>
+              </div>
+              <div className="reason-card">
+                <h3>Disabled Profile</h3>
+                <p>
+                  Google has turned the profile off for a policy reason. It
+                  stays off Maps until the cause is fixed and an appeal with
+                  evidence is approved. Never create a replacement listing
+                  while you wait.
+                </p>
+              </div>
+              <div className="reason-card">
+                <h3>Account Restricted</h3>
+                <p>
+                  The Google account that manages the profile is restricted, so
+                  every profile it manages can be affected. The appeal is about
+                  the account, not one listing, and agencies are often hit by
+                  this one.
+                </p>
+              </div>
+              <div className="reason-card">
+                <h3>Needs Verification</h3>
+                <p>
+                  A &quot;Get verified&quot; prompt or a rejected video is not a
+                  suspension. It needs our{" "}
+                  <Link href="/services/gmb-verification-help" className="gmb-inline-link">
+                    GMB verification service
+                  </Link>{" "}
+                  instead of an appeal, and filing an appeal for it wastes your
+                  one appeal.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* ===== BAND 1 — animated suspension audit scanner ===== */}
           <GmbAuditScanner />
 
@@ -602,6 +737,67 @@ function page() {
                   Once you&apos;re live, we optimize categories, keywords, photos,
                   and posts — and harden the profile so the issue is less likely to
                   return.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* GOOGLE'S 2026 APPEAL PROCESS — facts from Google's help page
+              (support.google.com/business/answer/13597551, read 24 Nov 2026):
+              one appeal per issue, evidence attached inside the appeal,
+              decisions in up to 5 business days. */}
+          <section className="gmb-panel">
+            <div className="sec-head">
+              <span className="eyebrow">Google&apos;s current rules</span>
+              <h2>How a Google Business Profile Reinstatement Appeal Works in 2026</h2>
+              <p>
+                Google changed the appeal flow in 2026. Knowing the rules is the
+                difference between a profile that comes back and one that
+                stays down. Source:{" "}
+                <a
+                  href="https://support.google.com/business/answer/13597551"
+                  className="gmb-inline-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Business Profile Help
+                </a>
+                .
+              </p>
+            </div>
+            <div className="card-grid">
+              <div className="after-card">
+                <h3>One Appeal per Issue</h3>
+                <p>
+                  Google&apos;s help page says appeals can only be submitted
+                  once. A rushed appeal with the wrong evidence is hard to undo,
+                  so we fix the cause before anything is filed.
+                </p>
+              </div>
+              <div className="after-card">
+                <h3>Evidence Goes Inside the Appeal</h3>
+                <p>
+                  Documents are attached in the appeal itself: business
+                  license, utility bill or lease, and photos of permanent
+                  signage. Every file has to match the name and address on the
+                  profile.
+                </p>
+              </div>
+              <div className="after-card">
+                <h3>A Decision in Up to 5 Business Days</h3>
+                <p>
+                  Google says reviews can take up to 5 business days. Filing
+                  again or editing the profile while you wait only slows
+                  things down.
+                </p>
+              </div>
+              <div className="after-card">
+                <h3>If the Answer Is &quot;Not Approved&quot;</h3>
+                <p>
+                  The route is Google Business Profile support with new
+                  evidence, not a second appeal and never a new listing. We
+                  take that step with you, and you still pay nothing unless
+                  the profile comes back.
                 </p>
               </div>
             </div>
@@ -676,10 +872,10 @@ function page() {
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                   </svg>
                 </div>
-                <h3>Google Posts &amp; Q&amp;A</h3>
+                <h3>Google Posts &amp; Profile Updates</h3>
                 <p>
-                  Ongoing posts and seeded Q&amp;A that keep your profile active —
-                  a signal Google and customers both reward.
+                  Ongoing posts, offers and fresh details that keep your profile
+                  active — a signal Google and customers both reward.
                 </p>
               </div>
               <div className="after-card">
@@ -828,6 +1024,57 @@ function page() {
             </ScrollToFormLink>
           </section>
 
+          {/* PRICING — owner set $400 after successful reinstatement (24 Nov
+              2026). 9 of 11 AI-recommended firms publish a price, and AI
+              answers are built as price tables. */}
+          <section className="gmb-panel" id="reinstatement-cost">
+            <div className="sec-head">
+              <span className="eyebrow">Pricing</span>
+              <h2>GMB Reinstatement Cost: What You Pay, and When</h2>
+              <p>
+                One flat fee, charged only when your profile is back. No hourly
+                billing and no surprise add-ons.
+              </p>
+            </div>
+            <div className="pillars-grid">
+              <div className="pillar">
+                <h3>$0 · Free Suspension Audit</h3>
+                <p>
+                  A same-day review of your profile: the likely cause, what
+                  evidence Google will want, and an honest read on your odds.
+                  No obligation.
+                </p>
+              </div>
+              <div className="pillar">
+                <h3>$400 · Only After Reinstatement</h3>
+                <p>
+                  A flat $400 per profile, charged only once your profile is
+                  live again on Google Search and Maps and you can manage it
+                  from your account.
+                </p>
+              </div>
+              <div className="pillar">
+                <h3>$0 · If Google Says No</h3>
+                <p>
+                  If the profile is not reinstated, there is no reinstatement
+                  fee. If we decline the case after the audit, you pay nothing
+                  either. See our{" "}
+                  <Link href="/legal/refund-policy">refund policy</Link>.
+                </p>
+              </div>
+            </div>
+            <div className="after-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <path d="m9 11 3 3L22 4" />
+              </svg>
+              <span>
+                Agencies and multi-location brands: ask for a bulk quote for
+                several suspended profiles or a restricted account.
+              </span>
+            </div>
+          </section>
+
           {/* GUARANTEE PILLARS */}
           <section className="gmb-panel">
             <div className="sec-head">
@@ -891,6 +1138,25 @@ function page() {
             <div className="sec-head">
               <span className="eyebrow">Client results</span>
               <h2>Real Businesses, Real Reinstatements</h2>
+              <p>
+                Excerpts from our Google reviews (5.0), written by business
+                owners whose profiles we brought back.
+              </p>
+            </div>
+            {/* Plain-text excerpts of real Google reviews (Trustindex feed,
+                24 Nov 2026) so search engines and AI tools can read the
+                proof — the widget below loads by script only. */}
+            <div className="card-grid review-quotes">
+              {REVIEW_QUOTES.map((r) => (
+                <figure className="reason-card review-quote" key={r.name}>
+                  <blockquote>
+                    <p>&ldquo;{r.quote}&rdquo;</p>
+                  </blockquote>
+                  <figcaption>
+                    <b>{r.name}</b> · {r.context} · Google review
+                  </figcaption>
+                </figure>
+              ))}
             </div>
             <LenisIframeGuard
               className="gmb-reinst-google-reviews"
@@ -994,7 +1260,7 @@ function page() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
     <RelatedServices current="/services/gbp-reinstatement-service" />
     <Footer />
