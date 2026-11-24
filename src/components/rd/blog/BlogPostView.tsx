@@ -104,8 +104,8 @@ function MidCta() {
         </p>
         <p className="tw:mt-2 tw:text-[17px]/[1.6] tw:text-[#d5deee]">
           We recover suspended Google Business Profiles for a living — 900+
-          reinstatements handled. Get a free case review before you file another
-          appeal on your own.
+          reinstatements handled. Google reviews one appeal per issue, so get a
+          free case review before you file yours. No Fix, No Charge.
         </p>
         <div className="tw:mt-5 tw:flex tw:flex-wrap tw:items-center tw:gap-3">
           <Pill href="/services/gbp-reinstatement-service" tone="white">
