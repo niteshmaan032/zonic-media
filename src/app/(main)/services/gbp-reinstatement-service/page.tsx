@@ -374,9 +374,6 @@ function page() {
               <span>
                 <b>900+</b> profiles reinstated &amp; verified
               </span>
-              <span>
-                Updated <time dateTime="2026-11-24">November 24, 2026</time>
-              </span>
             </div>
 
             {/* Google reviews right under the trust line */}

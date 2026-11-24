@@ -343,7 +343,6 @@ function page() {
               </p>
             </div>
             <p className="gmb-verify-updated">
-              Updated <time dateTime="2026-11-24">November 24, 2026</time> ·
               Serving businesses in every US state
             </p>
 

@@ -34,7 +34,6 @@ import {
   SPRITE,
   STEPS,
   TROUBLE,
-  UPDATED,
   type Feature,
 } from "./content";
 import { AgentUi, ClaimUi, FactsUi, InsightsUi } from "./demos";
@@ -439,10 +438,6 @@ export function ChatgptBusinessPage() {
             </h1>
             <p className="tw:mx-auto tw:mt-6 tw:max-w-[640px] tw:text-[17px]/[1.65] tw:text-black">
               {HERO.lead}
-            </p>
-            {/* Freshness: the feature is in beta and changes week to week. */}
-            <p className="tw:mt-4 tw:text-[14px] tw:text-black/60">
-              <time dateTime={UPDATED.iso}>{UPDATED.label}</time>
             </p>
             <div className="tw:mt-8 tw:flex tw:flex-wrap tw:items-center tw:justify-center tw:gap-3">
               <CtaPill href={CONTACT_HREF} tone="black">

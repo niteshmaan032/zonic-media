@@ -186,10 +186,13 @@ export function rewriteRetiredBlogLinks(html: string) {
 const REINSTATEMENT_SERVICE_PATH = "/services/gbp-reinstatement-service";
 
 // Phrases the reinstatement posts already use. Alternatives are ordered so the
-// earliest, longest phrase wins ("GBP reinstatement process" before a bare
-// "reinstatement"; "get reinstated" before "reinstated").
+// earliest, longest phrase wins ("GBP reinstatement service" before a bare
+// "reinstatement"; "get reinstated" before "reinstated"). "process" and
+// "request" are left out of the anchor (24 Nov 2026): those are the blog's own
+// informational terms, so "GBP reinstatement process" now links only
+// "GBP reinstatement" to the service page.
 const REINSTATEMENT_PHRASE =
-  /\b(?:(?:google business profile|google my business|gbp|gmb)\s+(?:reinstatement|suspension)(?:\s+(?:service|services|appeal|appeals|process|request|support|help|experts?))?|reinstatement(?:\s+(?:service|services|appeal|appeals|process|request|support|help))?|(?:get|gets|getting|be|been|being|was|were)\s+reinstated|reinstat(?:e|ed|ing))\b/i;
+  /\b(?:(?:google business profile|google my business|gbp|gmb)\s+(?:reinstatement|suspension)(?:\s+(?:service|services|appeal|appeals|support|help|experts?))?|reinstatement(?:\s+(?:service|services|appeal|appeals|support|help))?|(?:get|gets|getting|be|been|being|was|were)\s+reinstated|reinstat(?:e|ed|ing))\b/i;
 
 /** Wrap the first phrase match that sits outside any existing <a> in a link. */
 function linkFirstPhrase(paragraphHtml: string, href: string) {

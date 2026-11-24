@@ -596,7 +596,6 @@ function Page() {
               where the green stops and work the factors that widen it.
             </p>
             <p className="lp-small" style={{ marginTop: 12 }}>
-              Updated <time dateTime="2026-11-24">November 24, 2026</time> ·
               For local businesses in every US state
             </p>
 
