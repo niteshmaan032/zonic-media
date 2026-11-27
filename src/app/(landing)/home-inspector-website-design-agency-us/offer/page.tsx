@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free Home Inspector Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $950, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -106,6 +106,9 @@ export const metadata: Metadata = {
     "free website for home inspectors",
     "home inspector marketing plan",
   ],
+  // Kept live for ads and visitors but out of the search index (owner,
+  // 27 Nov 2026); only /website-design-agency-us/offer stays indexable.
+  robots: { index: false, follow: true },
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Free Home Inspector Website Design | Zonic Media",
@@ -786,7 +789,7 @@ export default function HomeInspectorOfferPage() {
               <Icon name="check" />
               <span>
                 <strong>Waived at signup</strong>
-                <small>The home inspector website development fee, valued at $2,000. Your monthly plan is billed at its full rate and is not discounted.</small>
+                <small>The home inspector website development fee, valued at $950. Your monthly plan is billed at its full rate and is not discounted.</small>
               </span>
             </div>
             <div>
@@ -1015,7 +1018,7 @@ export default function HomeInspectorOfferPage() {
 
         <div className="footer-bottom">
           <small>
-            <strong>OFFER TERMS.</strong> Home Inspector website development fee, valued at $2,000, is
+            <strong>OFFER TERMS.</strong> Home Inspector website development fee, valued at $950, is
             waived for new clients who start a qualifying Zonic Media marketing
             plan at $297 per month or above on a six-month minimum term. Client
             owns and registers the domain from the start of the engagement.

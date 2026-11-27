@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "What does ’free’ mean for our law firm website?",
     answer:
-      "It means the upfront law firm website design and development fee, valued at $2,000 for a standard build, is waived when your firm starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work begins.",
+      "It means the upfront law firm website design and development fee, valued at $950 for a standard build, is waived when your firm starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work begins.",
   },
   {
     question: "Which plans make our firm eligible?",

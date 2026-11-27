@@ -63,7 +63,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/bathroom-remodeling-website-design",
         label: "bath remodeling website",
       },
-      " built around your project gallery.",
+      " built around your project gallery. Bathroom remodels are a careful buy, and our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " gives homeowners the proof to choose you.",
     ],
     cta: "Get My Free Bath Remodel Audit",
     bento: {

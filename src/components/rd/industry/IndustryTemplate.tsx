@@ -96,14 +96,6 @@ const CONTACT_TILES = [
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    which: "ink" as const,
-    small: "Our office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 export function IndustryTemplate({ c }: { c: IndustryContent }) {
@@ -454,26 +446,48 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
                     : "tw:grid-cols-4 tw:max-bsxl:grid-cols-2",
                 )}
               >
-                {c.specialties.items.map((it, i) => (
-                  <li
-                    key={it.name}
-                    className="tw:flex tw:items-center tw:gap-4 tw:rounded-[22px] tw:bg-(--panel) tw:px-5 tw:py-4"
-                  >
-                    <span
-                      className="tw:grid tw:size-12 tw:flex-none tw:place-items-center tw:rounded-[14px] tw:text-[22px]"
-                      style={softStyle(p, i)}
-                      aria-hidden="true"
-                    >
-                      <Icon name={it.icon} />
-                    </span>
-                    <span className="tw:min-w-0">
-                      <h3 className="tw:text-[17.5px]/[1.3]">{it.name}</h3>
-                      <span className="tw:mt-1 tw:block tw:text-[14.5px]/[1.45] tw:text-(--text)">
-                        {it.tactic}
+                {c.specialties.items.map((it, i) => {
+                  const body = (
+                    <>
+                      <span
+                        className="tw:grid tw:size-12 tw:flex-none tw:place-items-center tw:rounded-[14px] tw:text-[22px]"
+                        style={softStyle(p, i)}
+                        aria-hidden="true"
+                      >
+                        <Icon name={it.icon} />
                       </span>
-                    </span>
-                  </li>
-                ))}
+                      <span className="tw:min-w-0 tw:flex-1">
+                        <h3 className="tw:text-[17.5px]/[1.3]">{it.name}</h3>
+                        <span className="tw:mt-1 tw:block tw:text-[14.5px]/[1.45] tw:text-(--text)">
+                          {it.tactic}
+                        </span>
+                      </span>
+                    </>
+                  );
+                  const box =
+                    "tw:flex tw:items-center tw:gap-4 tw:rounded-[22px] tw:bg-(--panel) tw:px-5 tw:py-4";
+                  return (
+                    <li key={it.name} className={it.href ? undefined : box}>
+                      {it.href ? (
+                        <Link
+                          href={it.href}
+                          className={cx(
+                            box,
+                            "tw:group tw:h-full tw:transition tw:hover:-translate-y-0.5",
+                          )}
+                        >
+                          {body}
+                          <FiArrowRight
+                            aria-hidden="true"
+                            className="tw:flex-none tw:text-(--muted) tw:transition-transform tw:group-hover:translate-x-[3px] tw:group-hover:text-(--blue)"
+                          />
+                        </Link>
+                      ) : (
+                        body
+                      )}
+                    </li>
+                  );
+                })}
                 <li
                   className={cx(
                     "tw:max-bssm:col-span-1",
@@ -727,31 +741,22 @@ export function IndustryTemplate({ c }: { c: IndustryContent }) {
                     </li>
                   ))}
                 </ul>
-                {/* Contact details (owner rule: every contact block lists
-                    phone, email and address on the left). */}
+                {/* Contact details: phone and email (owner, 26 Nov 2026: the
+                    address stays in the footer and on the contact page). */}
                 <ul className="tw:mt-9 tw:grid tw:grid-cols-2 tw:gap-3 tw:max-bsxl:grid-cols-1 tw:max-bslg:grid-cols-2 tw:max-bssm:grid-cols-1">
-                  {CONTACT_TILES.map((t, i) => (
+                  {CONTACT_TILES.map((t) => (
                     <li
                       key={t.small}
-                      className={cx(
-                        i === CONTACT_TILES.length - 1 &&
-                          "tw:col-span-2 tw:max-bsxl:col-span-1 tw:max-bslg:col-span-2 tw:max-bssm:col-span-1",
-                      )}
                     >
                       <a
                         href={t.href}
                         className="tw:flex tw:h-full tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-white tw:p-4 tw:ring-1 tw:ring-(--line) tw:transition tw:hover:-translate-y-0.5 tw:hover:ring-[#cbd5e1]"
-                        {...(t.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:text-[18px] tw:text-white"
                           style={{
                             background:
-                              t.which === "ink"
-                                ? "linear-gradient(135deg,#334155,#0c1526)"
-                                : grad(p, t.which),
+                              grad(p, t.which),
                           }}
                           aria-hidden="true"
                         >

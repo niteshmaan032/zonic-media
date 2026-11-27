@@ -19,7 +19,7 @@
  * the city pages as each goes live (owner builds them one at a time). City
  * names appear in the copy, never in the title or H1, so the city pages own
  * them. Fresh wording only; company-wide verified numbers only; no Florida
- * office is implied (we serve Florida from Dover, Delaware).
+ * office is implied (we serve Florida remotely).
  */
 
 import type { Metadata } from "next";
@@ -143,7 +143,7 @@ const FlDmFaqs = [
   {
     question: "Which parts of Florida do you work in?",
     answer:
-      "All of it. We plan campaigns for the Panhandle, North Florida, Central Florida, Tampa Bay, Southwest Florida and South Florida, and target only the cities and ZIP codes you actually serve. Our team works remotely from Dover, Delaware, with video calls whenever you need them.",
+      "All of it. We plan campaigns for the Panhandle, North Florida, Central Florida, Tampa Bay, Southwest Florida and South Florida, and target only the cities and ZIP codes you actually serve. Our team works remotely, with video calls whenever you need them.",
   },
   {
     question: "When should a Florida business prepare for snowbird season?",
@@ -173,7 +173,7 @@ const FlDmFaqs = [
   {
     question: "Does my agency need to be based in Florida?",
     answer:
-      "No. Map Pack positions, ads and websites come from steady, well-planned work, not a local address. Our in-house team serves Florida businesses from Dover, Delaware, meets on video and puts every result in a written monthly report.",
+      "No. Map Pack positions, ads and websites come from steady, well-planned work, not a local address. Our in-house team serves Florida businesses remotely, meets on video and puts every result in a written monthly report.",
   },
 ];
 
@@ -581,7 +581,7 @@ const extras: DelawareExtras = {
       "AI search visibility and reviews",
       "Websites built to win calls",
     ],
-    foot: "Planned by our in-house team in Dover, DE",
+    foot: "Planned by our in-house team",
   },
   // Florida palette: Gulf teal, sunset peach, palm green, night indigo.
   pillars: ["#0e7490", "#fed7aa", "#bbf7d0", "#1e1b4b"],

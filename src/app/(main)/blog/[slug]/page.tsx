@@ -5,9 +5,13 @@
  * Noindex, canonical to the live post, until the owner approves the swap.
  */
 
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
-import { getPublishedBlogBySlug, getPublishedBlogs } from "@/backend/lib/blogs";
+import {
+  getBlogSlugRedirect,
+  getPublishedBlogBySlug,
+  getPublishedBlogs,
+} from "@/backend/lib/blogs";
 import { BlogPostView } from "@/components/rd/blog/BlogPostView";
 import { addHeadingIds, readMinutes } from "@/components/rd/blog/blogBits";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
@@ -47,7 +51,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     rawDescription.length > 160
       ? `${rawDescription.slice(0, 157).replace(/\s+\S*$/, "")}…`
       : rawDescription;
-  const title = seoTitle.length + 14 > 60 ? { absolute: seoTitle } : seoTitle;
+  // A title that repeats the H1 word for word keeps the " | Zonic Media"
+  // suffix even when long, so new posts never trigger Semrush's "duplicate
+  // H1 and title tags" (27 Nov 2026).
+  const sameAsH1 =
+    seoTitle.trim().toLowerCase() === blog.blogTitle.trim().toLowerCase();
+  const title =
+    seoTitle.length + 14 > 60 && !sameAsH1 ? { absolute: seoTitle } : seoTitle;
 
   return {
     title,
@@ -83,6 +93,15 @@ export default async function Page({ params }: Props) {
   ]);
 
   if (!blog) {
+    // An address the post had before its slug was changed in the admin. If
+    // the lookup itself fails, this is still a plain 404, never a 500.
+    let moved: string | null = null;
+    try {
+      moved = await getBlogSlugRedirect(slug);
+    } catch {
+      moved = null;
+    }
+    if (moved && moved !== slug) permanentRedirect(`/blog/${moved}`);
     notFound();
   }
 

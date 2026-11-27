@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the electrician website free to build?",
     answer:
-      "Yes. The $2,000 electrician website design and development fee is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
+      "Yes. The $950 electrician website design and development fee is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
   },
   {
     question: "Where can I find free advertising for electricians?",
@@ -23,7 +23,7 @@ export const FAQS = [
   {
     question: "What are the commitment and cancellation terms?",
     answer:
-      "The qualifying plan has a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and content, but the website does not transfer.",
+      "The qualifying plan has a six-month minimum term, and the waived $950 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and content, but the website does not transfer.",
   },
 ];
 

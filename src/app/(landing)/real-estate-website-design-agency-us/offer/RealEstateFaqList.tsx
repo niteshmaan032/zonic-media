@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "How is the real estate website free?",
     answer:
-      "The upfront real estate website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work begins.",
+      "The upfront real estate website design and development fee, valued at $950 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work begins.",
   },
   {
     question: "Which plans qualify an agent or team?",

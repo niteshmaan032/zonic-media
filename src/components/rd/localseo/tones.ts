@@ -44,6 +44,8 @@ type HueKey = keyof typeof HUES;
 /** Four hues per page, keyed by the live URL's last segment. */
 const SETS: Record<string, [HueKey, HueKey, HueKey, HueKey]> = {
   "ai-seo-services": ["violet", "cyan", "pink", "gold"],
+  /* Contractor hub page (26 Nov 2026): navy + safety orange. */
+  "seo-for-contractors": ["navy", "orange", "sky", "gold"],
   "local-seo-for-small-business": ["emerald", "coral", "sky", "gold"],
   "local-seo-packages": ["indigo", "gold", "teal", "rose"],
   "local-seo-services-for-hvac": ["teal", "orange", "indigo", "gold"],

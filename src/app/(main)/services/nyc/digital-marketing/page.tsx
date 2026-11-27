@@ -187,7 +187,7 @@ const NycDmFaqs = [
   {
     question: "Does my marketing agency need an office in New York?",
     answer:
-      "No. Map Pack rankings, ads and websites depend on strategy and steady weekly work, not a Manhattan lease. Our team works with New York businesses from Dover, Delaware, holds strategy calls on video whenever you like and reports every result in writing.",
+      "No. Map Pack rankings, ads and websites depend on strategy and steady weekly work, not a Manhattan lease. Our team works with New York businesses remotely, holds strategy calls on video whenever you like and reports every result in writing.",
   },
 ];
 

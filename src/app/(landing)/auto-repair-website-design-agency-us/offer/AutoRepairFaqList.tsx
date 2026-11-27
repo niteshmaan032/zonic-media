@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is there a catch with the free auto repair website?",
     answer:
-      "Only that it comes with a marketing plan. The upfront auto repair website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying plan at $297/month or above on a six-month term. Your written proposal sets the pages, features and revision limits.",
+      "Only that it comes with a marketing plan. The upfront auto repair website design and development fee, valued at $950 for a standard build, is waived when you start a qualifying plan at $297/month or above on a six-month term. Your written proposal sets the pages, features and revision limits.",
   },
   {
     question: "Which plans qualify my shop?",

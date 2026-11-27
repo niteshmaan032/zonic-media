@@ -11,6 +11,7 @@ import HashScrollLink from "@/app/components/HashScrollLink";
 import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { SITE_CONTACT } from "@/shared/siteConfig";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { GoogleRatingBadge } from "@/components/rd/dfw-kit/visuals";
 
 /* ---------------------------------------------------------------------------
    POSITIONING (updated 24 Nov 2026, keyword research across GSC, Semrush,
@@ -599,9 +600,48 @@ function Page() {
               For local businesses in every US state
             </p>
 
+            {/* Trust logos above the CTA, the same set as the GBP
+                reinstatement and verification heroes (owner, 26 Nov 2026). */}
+            <div className="lo-badges">
+              <a
+                href="https://clutch.co/profile/zonic-media?badge=11431"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="lo-badge"
+                  width={90}
+                  height={90}
+                  src="/images/clutch-top-company-2026.png"
+                  alt="Top Clutch Digital Marketing Company Delaware 2026"
+                />
+              </a>
+              <Image
+                className="lo-badge"
+                width={90}
+                height={90}
+                src="/images/Partner.webp"
+                alt="Yelp Advertising Partner"
+              />
+              <a
+                href="https://www.trustpilot.com/review/zonicllc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="lo-badge-trust"
+                  width={121}
+                  height={56}
+                  src="/images/trust-black.png"
+                  alt="Zonic Media reviews on Trustpilot"
+                />
+              </a>
+              <GoogleRatingBadge href={SITE_CONTACT.mapHref} compact />
+            </div>
+
             <div
               className="lp-final-actions"
-              style={{ justifyContent: "flex-start", marginTop: 28 }}
+              style={{ justifyContent: "flex-start", marginTop: 24 }}
             >
               <HashScrollLink href="#lo-scan-form" className="lp-btn">
                 Get a free grid scan

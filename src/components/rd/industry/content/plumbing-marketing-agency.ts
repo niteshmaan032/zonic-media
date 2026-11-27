@@ -59,7 +59,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/plumbing-website-design",
         label: "plumbing website design",
       },
-      " that converts mobile visitors into scheduled jobs.",
+      " that converts mobile visitors into scheduled jobs. As a ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " team, we treat plumbing like the emergency trade it is.",
     ],
     cta: "Book a Free Plumbing Audit",
     bento: {

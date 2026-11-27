@@ -58,7 +58,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/solar-website-design",
         label: "solar website design",
       },
-      " that turns careful readers into booked consultations.",
+      " that turns careful readers into booked consultations. Solar sits on the home improvement side of our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      ", next to roofing.",
     ],
     cta: "Get My Free Solar Audit",
     bento: {

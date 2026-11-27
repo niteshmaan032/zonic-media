@@ -18,10 +18,10 @@ import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
    owns "digital marketing agency for small business". */
 export const metadata: Metadata = {
   title: {
-    absolute: "About Zonic Media | Local Marketing Agency in Dover, DE",
+    absolute: "About Zonic Media | Local Marketing Agency for Small Business",
   },
   description:
-    "Meet Zonic Media, a small business marketing agency in Dover, Delaware. One in-house team for local SEO, Google profiles, web design and Google Ads, US-wide.",
+    "Meet Zonic Media, a small business marketing agency. One in-house team for local SEO, Google profiles, web design and Google Ads, for businesses US-wide.",
   keywords: [
     "about zonic media",
     "zonic media",
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     "digital marketing agency in delaware",
     "marketing agency delaware",
     "delaware marketing agency",
-    "digital marketing agency dover de",
     "google business profile agency",
   ],
   alternates: { canonical: "/about" },
@@ -45,12 +44,12 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Zonic Media, a small business marketing agency in Dover, Delaware",
+        alt: "Zonic Media, a small business marketing agency",
       },
     ],
-    title: "About Zonic Media | Local Marketing Agency in Dover, DE",
+    title: "About Zonic Media | Local Marketing Agency for Small Business",
     description:
-      "Who we are: a senior, in-house marketing team in Dover, Delaware growing small and mid-size US businesses with local SEO, Google profiles, websites and ads.",
+      "Who we are: a senior, in-house marketing team growing small and mid-size US businesses with local SEO, Google profiles, websites and ads.",
     url: "/about",
     type: "website",
   },
@@ -70,7 +69,7 @@ const aboutPageJsonLd = {
   url: `${SITE_URL}/about`,
   name: "About Zonic Media",
   description:
-    "Zonic Media is a small business marketing agency in Dover, Delaware. Its in-house team grows small and mid-size US businesses with local SEO, Google Business Profile management, AI search optimization, website design and Google Ads.",
+    "Zonic Media is a small business marketing agency. Its in-house team grows small and mid-size US businesses with local SEO, Google Business Profile management, AI search optimization, website design and Google Ads.",
   inLanguage: "en-US",
   mainEntity: { "@id": `${SITE_URL}/#organization` },
   about: { "@id": `${SITE_URL}/#organization` },

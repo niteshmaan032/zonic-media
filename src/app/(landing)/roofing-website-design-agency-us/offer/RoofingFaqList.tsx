@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the roofing website free, or is there a catch?",
     answer:
-      "The $2,000 roofing website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. There is no separate build invoice. Your written proposal sets the page count, features and revision rounds before work begins.",
+      "The $950 roofing website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. There is no separate build invoice. Your written proposal sets the page count, features and revision rounds before work begins.",
   },
   {
     question: "Which roofing marketing plans qualify for the free site?",
@@ -28,7 +28,7 @@ export const FAQS = [
   {
     question: "How long is the commitment, and what if we cancel?",
     answer:
-      "The qualifying plan has a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during those six months, and ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website does not transfer. Your written proposal restates all of this before you sign anything.",
+      "The qualifying plan has a six-month minimum term, and the waived $950 build fee is set against it. We host the site during those six months, and ownership of the site and hosting transfers to you at the end of month six. If you cancel before then, you keep your domain and your content, but the website does not transfer. Your written proposal restates all of this before you sign anything.",
   },
 ];
 

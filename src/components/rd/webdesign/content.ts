@@ -44,6 +44,11 @@ export const WEB_FAQS: { question: string; answer: string }[] = [
     answer:
       "Yes. We work with businesses in 20+ industries, from home services and healthcare to law firms and real estate. Each site is planned around how your customers pick a provider, with the proof and calls to action your field needs.",
   },
+  {
+    question: "Do you design websites for contractors?",
+    answer:
+      "Yes. Contractor website design is one of our specialties: roofing, HVAC, plumbing, electrical and remodeling companies get sites built to turn searches into calls and quote requests, with a page for every service and town. Other home service businesses, such as cleaning, landscaping and pest control, get the same approach.",
+  },
 ];
 
 /* Tags are stage names, not weeks; the build time (2–3 weeks) is in the

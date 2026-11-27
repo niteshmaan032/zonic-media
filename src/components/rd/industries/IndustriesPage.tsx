@@ -7,7 +7,6 @@ import {
   FiBookOpen,
   FiCheck,
   FiMail,
-  FiMapPin,
   FiMessageCircle,
   FiPhone,
   FiPlus,
@@ -308,14 +307,6 @@ const CONTACT_ITEMS: {
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    tone: "tw:bg-(--ink) tw:text-white",
-    small: "Visit our Dover office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 function ContactList() {
@@ -326,9 +317,6 @@ function ContactList() {
           <a
             href={t.href}
             className="tw:flex tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-(--panel) tw:p-4 tw:transition tw:hover:-translate-y-0.5"
-            {...(t.external
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
           >
             <span
               className={cx(
@@ -393,8 +381,7 @@ export function IndustriesPage() {
                   size="hero"
                   className="tw:text-balance tw:bssm:text-[clamp(34px,3.8vw,60px)]"
                 >
-                  Home Services Marketing Agency for Contractors and Local
-                  Businesses
+                  Industries We Serve, From Contractors to Clinics and Law Firms
                 </Strip>
                 <p className={cx(LEAD, "tw:mt-7 tw:max-w-[600px]")}>
                   Every trade wins work differently. We plan local SEO, Google
@@ -809,7 +796,7 @@ export function IndustriesPage() {
               </div>
               <div>
                 <Strip id="in-band-h" size="card" className="tw:text-white">
-                  Home Services Marketing Built From Local Experience
+                  Industry Marketing Built From Local Experience
                 </Strip>
                 <p className="tw:mt-6 tw:max-w-[56ch] tw:text-lg/[1.65] tw:text-[#b7c4dd]">
                   Each industry page sets out the searches, pages, trust signals
@@ -822,7 +809,11 @@ export function IndustriesPage() {
                     "tw:mt-6 tw:max-w-[56ch] tw:text-lg/[1.65] tw:text-[#b7c4dd]",
                   )}
                 >
-                  Need one service rather than a full plan? Browse our{" "}
+                  Run a trade business? See our{" "}
+                  <Link href="/">
+                    home services marketing agency
+                  </Link>{" "}
+                  plan. Need one service rather than a full plan? Browse our{" "}
                   <Link href="/services">digital marketing services</Link>,
                   begin with{" "}
                   <Link href="/services/local-seo-for-home-services">

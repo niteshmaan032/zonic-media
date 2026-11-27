@@ -28,6 +28,8 @@ import LenisIframeGuard from "@/app/components/LenisIframeGuard";
 import { MdLocalOffer } from "react-icons/md";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { buildBreadcrumbJsonLd } from "@/shared/seoSchemas";
+import { SITE_CONTACT } from "@/shared/siteConfig";
+import { GoogleRatingBadge } from "@/components/rd/dfw-kit/visuals";
 
 // Code-split so the widget JavaScript loads after the hero has painted; the
 // server still renders its markup, so nothing changes for users or Google.
@@ -274,6 +276,8 @@ function page() {
                   alt="Zonic Media reviews on Trustpilot"
                 />
               </a>
+              {/* same Google badge as the reinstatement hero */}
+              <GoogleRatingBadge href={SITE_CONTACT.mapHref} compact />
             </div>
 
             <div className="gmb-reinst-sec-1-box">
@@ -395,6 +399,13 @@ function page() {
               900+ Profiles Reinstated &amp; Verified
             </p>
           </div>
+
+          {/* Google reviews widget, as on the reinstatement page (owner,
+              26 Nov 2026). */}
+          <LenisIframeGuard
+            className="gmb-verify-google-reviews"
+            widgetScriptSrc="https://cdn.trustindex.io/loader.js?bedc2ba73f755349bf36a19f52c"
+          />
 
           {/*gmb-reinst-section-3*/}
           <div className="gmb-reinst-sec-3 gmb-reinst-common-sec">

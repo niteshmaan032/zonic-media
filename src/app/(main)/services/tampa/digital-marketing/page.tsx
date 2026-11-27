@@ -19,7 +19,7 @@
  * "Pinellas" and "St. Pete" as terms (Pinellas appears here only as the
  * other side of the bay). No "florida digital marketing agency" head term
  * (the hub's). Fresh wording only; company-wide verified numbers only; no
- * Tampa office is implied (we serve Tampa from Dover, Delaware).
+ * Tampa office is implied (we serve Tampa remotely).
  */
 
 import type { Metadata } from "next";
@@ -142,7 +142,7 @@ const TampaDmFaqs = [
   {
     question: "Is there a Zonic Media office in Tampa?",
     answer:
-      "No. We’re based in Dover, Delaware, and hold Tampa client meetings over video. Rankings, ads and websites come from consistent work and honest reporting, not a street address, and a written report lands in your inbox monthly.",
+      "No. We work remotely and hold Tampa client meetings over video. Rankings, ads and websites come from consistent work and honest reporting, not a street address, and a written report lands in your inbox monthly.",
   },
   {
     question: "Which parts of Tampa and Hillsborough do you cover?",
@@ -606,7 +606,7 @@ const extras: DelawareExtras = {
       "Pages for every service and area",
       "AI answer checks and review replies",
     ],
-    foot: "Run remotely from Dover, DE, with video calls",
+    foot: "Run remotely, with video calls",
   },
   // Tampa palette: Gasparilla rose, sand, bay lilac, slate.
   pillars: ["#9f1239", "#fef3c7", "#e0e7ff", "#1f2937"],

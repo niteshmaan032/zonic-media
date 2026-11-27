@@ -421,7 +421,9 @@ export type IndustryContent = {
     title: string;
     lead: string;
     photo?: { src: string; alt: string; caption: string; sub: string };
-    items: { icon: IconKey; name: string; tactic: string }[];
+    /** `href` turns a card into a link (home services hub: one card per
+        trade page). */
+    items: { icon: IconKey; name: string; tactic: string; href?: string }[];
     more: string;
   };
   steps: {

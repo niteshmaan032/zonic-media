@@ -431,8 +431,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Run electrical plus other trades? Ask about one plan that covers them all.",
+    other: [
+      "Run electrical plus other trades? Ask about ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO" },
+      " that covers them all in one plan.",
+    ],
   },
   reviews: {
     title: "Why Contractors Rate Our Local SEO Team 5.0 on Google",

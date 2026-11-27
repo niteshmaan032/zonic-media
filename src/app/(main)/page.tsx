@@ -14,30 +14,32 @@ import { HomePage } from "@/components/rd/home/HomePage";
 
 const PAGE_PATH = "/";
 
-/* Title, description and keywords re-targeted 24 Oct 2026 (Semrush US):
-   digital marketing agency 74K, digital marketing agency for small business
-   2.9K, plus the brand ("zonic" 2.9K, the only term the live "/" ranks
-   for). Notes on the copy are in HomePage.tsx. */
+/* 27 Nov 2026 (owner and SEO expert): the homepage targets home services
+   and contractors. It earned only brand clicks as "for Small Business"
+   (Aug–Nov: 76 brand clicks, 0 non-brand). The separate home services page
+   was folded in before launch, so one URL owns these searches: digital
+   marketing agency for home services 480 (KD 16), home services digital
+   marketing agency 720 (KD 14), home services marketing agency 1,900
+   (KD 17). Notes on the copy are in HomePage.tsx. */
 export const metadata: Metadata = {
   title: {
-    absolute: "Digital Marketing Agency for Small Business | Zonic Media",
+    absolute: "Digital Marketing Agency for Home Services & Contractors | Zonic",
   },
   description:
-    "Zonic Media helps small and mid-size businesses win more calls from Google Maps, AI search and ads: local SEO, web design, Google Business Profile and PPC.",
+    "Digital marketing agency for home service businesses and contractors: local SEO, Google Business Profile, AI search, websites and Google Ads that book jobs.",
   keywords: [
+    "digital marketing agency for home services",
+    "home services digital marketing agency",
+    "home services marketing agency",
+    "home service marketing agency",
+    "home services digital marketing",
+    "digital marketing for contractors",
+    "contractor marketing agency",
     "digital marketing agency",
-    "digital marketing agency for small business",
-    "full service digital marketing agency",
-    "digital marketing company",
-    "digital marketing services",
     "local seo services",
-    "local seo agency",
-    "ai seo agency",
-    "google ads agency",
-    "ppc agency",
     "google business profile management",
-    "website design for small business",
-    "digital marketing agency near me",
+    "google ads agency",
+    "ai seo agency",
     "zonic media",
   ],
   alternates: { canonical: PAGE_PATH },
@@ -47,12 +49,12 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
+        alt: "Zonic Media — Digital Marketing Agency for Home Services & Contractors",
       },
     ],
-    title: "Digital Marketing Agency for Small Business | Zonic Media",
+    title: "Digital Marketing Agency for Home Services & Contractors | Zonic",
     description:
-      "Zonic Media helps small and mid-size businesses win more calls from Google Maps, AI search and ads: local SEO, web design, Google Business Profile and PPC.",
+      "Digital marketing agency for home service businesses and contractors: local SEO, Google Business Profile, AI search, websites and Google Ads that book jobs.",
     url: "/",
     type: "website",
   },

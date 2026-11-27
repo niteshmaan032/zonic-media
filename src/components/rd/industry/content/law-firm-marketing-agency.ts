@@ -433,7 +433,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "Law firm marketing Philadelphia: do you work with local firms?",
-        a: "Yes. Our team is based in Delaware, close to Philadelphia, and we market firms across the city and its suburbs as well as nationwide. Each plan targets the neighborhoods, counties and practice areas your firm serves, with Maps and search positions tracked locally.",
+        a: "Yes. We market Philadelphia law firms across the city and its suburbs, as well as firms nationwide. Each plan targets the neighborhoods, counties and practice areas your firm serves, with Maps and search positions tracked locally.",
       },
       {
         q: "What do law firm marketing plans cost at Zonic Media?",

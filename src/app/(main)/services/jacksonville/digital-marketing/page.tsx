@@ -18,7 +18,7 @@
  *
  * Rules: the hub owns the Florida-wide terms; no other city's terms here.
  * Fresh wording only; company-wide verified numbers only; no Jacksonville
- * office is implied (we serve the city from Dover, Delaware).
+ * office is implied (we serve the city remotely).
  */
 
 import type { Metadata } from "next";
@@ -163,7 +163,7 @@ const JaxDmFaqs = [
   {
     question: "Do I need a Jacksonville-based agency to rank locally?",
     answer:
-      "No. Zonic Media is based in Dover, Delaware, and our in-house team meets Jacksonville clients on video calls, with a written report every month. Map Pack rankings depend on your business address, your profile and the work done on both, not on where your agency sits.",
+      "No. Our in-house team works remotely and meets Jacksonville clients on video calls, with a written report every month. Map Pack rankings depend on your business address, your profile and the work done on both, not on where your agency sits.",
   },
   {
     question: "Which areas around Jacksonville do you cover?",
@@ -615,7 +615,7 @@ const extras: DelawareExtras = {
       "Review requests and AI checks",
       "A website that books jobs",
     ],
-    foot: "Managed from Dover, DE, on video calls",
+    foot: "Managed remotely, on video calls",
   },
   // Jacksonville palette: river blue, marsh mint, sand peach, night navy.
   pillars: ["#1d4ed8", "#dcfce7", "#ffedd5", "#0f172a"],

@@ -17,7 +17,7 @@
  * names appear in the copy only, never in the title or H1. Pricing is the
  * one-time $950 website card (template, kind "fl-web"). Build time 2–3
  * weeks (sitewide fact). Company-wide verified numbers only; no Florida
- * office is implied (we serve Florida from Dover, Delaware). The about
+ * office is implied (we serve Florida remotely). The about
  * photo is the owner's web design studio image.
  */
 
@@ -147,7 +147,7 @@ const FlWebFaqs = [
   {
     question: "Do I need a web designer based in Florida?",
     answer:
-      "No. What matters is a designer who understands how Floridians search, when the seasons turn and what storms do to demand. Our in-house team works from Dover, Delaware, runs each project over video calls and shared previews, and you approve every page on your own phone before it goes live.",
+      "No. What matters is a designer who understands how Floridians search, when the seasons turn and what storms do to demand. Our in-house team works remotely, runs each project over video calls and shared previews, and you approve every page on your own phone before it goes live.",
   },
   {
     question: "Will my new site appear in Google and in AI answers?",
@@ -245,8 +245,7 @@ const data: DelawareData = {
         only what you need.
       </>,
       <>
-        As a website design company serving the whole state from Dover,
-        Delaware, we build each site around the regions, services and seasons
+        As a website design company serving the whole state, we build each site around the regions, services and seasons
         you actually sell into. Pair it with{" "}
         <Link href="/services/florida/local-seo" className="phl-inline-link">
           Florida local SEO
@@ -585,7 +584,7 @@ const extras: DelawareExtras = {
       "Pages for each region you serve",
       "WCAG 2.2 AA accessibility checks",
     ],
-    foot: "Designed and built in-house in Dover, DE",
+    foot: "Designed and built by our in-house team",
   },
   // Florida web palette: hibiscus pink, sea-glass mint, shell rose, deep
   // mangrove teal.

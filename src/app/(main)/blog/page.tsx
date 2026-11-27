@@ -5,20 +5,16 @@
  * re-optimized 24 Oct 2026 (Semrush US: local seo blog, local seo tips,
  * google business profile help, ai search optimization; the live URL has
  * no ranking data).
- * Pages (?page=) and topics (?topic=) are server-rendered URLs. Each is its
- * own canonical, indexable page; topic rules live in blogBits (blogTopics).
+ * Pages (?page=) are server-rendered URLs, each its own canonical page.
+ * Topic filters were removed on 27 Nov 2026 (owner): any ?topic= URL, old or
+ * new, 308s to /blog, so the blog never creates filter URLs again.
  */
 
 import type { Metadata } from "next";
-import { permanentRedirect } from "next/navigation";
+import { permanentRedirect, redirect } from "next/navigation";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
 import { BlogIndexPage } from "@/components/rd/blog/BlogIndexPage";
-import {
-  blogTopics,
-  topicCopy,
-  topicOf,
-  topicSlug,
-} from "@/components/rd/blog/blogBits";
+import { PER_PAGE } from "@/components/rd/blog/blogBits";
 import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 import { BLOG_SEO_OVERRIDES } from "@/shared/blogSeoOverrides";
 
@@ -47,47 +43,29 @@ const BASE_METADATA: Metadata = {
 };
 
 type Props = {
-  searchParams?: Promise<{ page?: string; topic?: string }>;
+  searchParams?: Promise<{
+    page?: string | string[];
+    topic?: string | string[];
+  }>;
 };
 
-const pageOf = (value?: string) => {
-  const n = Number.parseInt(value ?? "1", 10);
+const pageOf = (value?: string | string[]) => {
+  const raw = Array.isArray(value) ? value[0] : value;
+  const n = Number.parseInt(raw ?? "1", 10);
   return Number.isFinite(n) && n > 0 ? n : 1;
 };
 
 /* Paginated pages (?page=2…) are their own canonical URL, as Google
-   recommends for paginated lists, and so are topic pages (?topic=…, one page
-   per topic). Page 1 is /blog, exactly as live. */
+   recommends for paginated lists. Page 1 is /blog, exactly as live. */
 export async function generateMetadata({
   searchParams,
 }: Props): Promise<Metadata> {
   const params = await searchParams;
-  const topic = params?.topic
-    ? blogTopics(await getPublishedBlogs()).find((t) => t.slug === params.topic)
-    : undefined;
-  if (topic) {
-    const copy = topicCopy(topic);
-    const url = `/blog?topic=${topic.slug}`;
-    return {
-      ...BASE_METADATA,
-      title: { absolute: copy.title },
-      description: copy.description,
-      alternates: { canonical: url },
-      openGraph: {
-        title: copy.title,
-        description: copy.description,
-        url,
-        type: "website",
-        siteName: "Zonic Media",
-        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: copy.h1 }],
-      },
-    };
-  }
   const page = pageOf(params?.page);
   const canonical = page === 1 ? "/blog" : `/blog?page=${page}`;
   // Pages 2+ are their own canonical URLs, so each needs its own title and
   // description (Semrush flagged ?page=2…11 as duplicates of /blog, 26 Oct).
-  const paged = !params?.topic && page > 1;
+  const paged = page > 1;
   const title = paged
     ? `Local SEO Blog (Page ${page}): GBP, Maps & AI Guides | Zonic`
     : "Local SEO Blog: GBP, Google Maps & AI Search Guides | Zonic";
@@ -112,30 +90,36 @@ export async function generateMetadata({
 
 export default async function Page({ searchParams }: Props) {
   const params = await searchParams;
+
+  // Topic filters are gone (27 Nov 2026): every old ?topic= link, with or
+  // without a page number, goes to the blog home.
+  if (params?.topic) permanentRedirect("/blog");
+
   const blogs = await getPublishedBlogs();
 
-  // A topic without its own page (too few guides, or renamed) and the old
-  // per-topic pages (?topic=…&page=2) have no page of their own: 308 them so
-  // no extra canonicalised URL is left for Google to report.
-  const topic = params?.topic
-    ? blogTopics(blogs).find((t) => t.slug === params.topic)
-    : undefined;
-  if (params?.topic && !topic) permanentRedirect("/blog");
-  if (topic && params?.page) permanentRedirect(`/blog?topic=${topic.slug}`);
-  const listed = topic
-    ? blogs.filter((blog) => topicSlug(topicOf(blog)) === topic.slug)
-    : blogs;
+  // One URL per listing page: /blog, then /blog?page=2, ?page=3… Every other
+  // spelling is redirected, so pagination never leaves a second URL for the
+  // same page for Google to report as a canonical or duplicate issue.
+  const pages = Math.max(1, Math.ceil((blogs.length - 1) / PER_PAGE));
+  if (params?.page !== undefined) {
+    const page = pageOf(params.page);
+    // Past the end (guides removed, or an old link): temporary, because the
+    // page comes back once enough guides are published.
+    if (page > pages) redirect(pages > 1 ? `/blog?page=${pages}` : "/blog");
+    // ?page=1, ?page=0, ?page=abc → /blog; ?page=02, ?page=2&page=3 → ?page=2.
+    if (page === 1) permanentRedirect("/blog");
+    if (params.page !== String(page)) permanentRedirect(`/blog?page=${page}`);
+  }
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: "Home", url: "/" },
     { name: "Blog", url: "/blog" },
-    ...(topic ? [{ name: topic.label, url: `/blog?topic=${topic.slug}` }] : []),
   ]);
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: listed.map((blog, index) => ({
+    itemListElement: blogs.map((blog, index) => ({
       "@type": "ListItem",
       position: index + 1,
       url: `${SITE_URL}/blog/${blog.slug}`,
@@ -188,7 +172,6 @@ export default async function Page({ searchParams }: Props) {
             blog.excerpt,
         }))}
         page={pageOf(params?.page)}
-        topic={topic?.slug ?? null}
       />
     </>
   );

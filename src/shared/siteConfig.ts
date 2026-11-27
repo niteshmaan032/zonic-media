@@ -3,7 +3,10 @@ export const SITE_CONTACT = {
   emailHref: "mailto:contact@zonicllc.com",
   phoneDisplay: "(302) 726-9736",
   phoneHref: "tel:+13027269736",
-  address: "8 The Green, STE B Dover, DE 19901 United States",
+  // State spelled out (27 Nov 2026): the footer sentence no longer names a
+  // location, and the address is now the only place "Delaware" appears on
+  // /services/local-seo-for-home-services (GSC: "seo company delaware").
+  address: "8 The Green, STE B, Dover, Delaware 19901, United States",
   mapHref: "https://maps.app.goo.gl/wWvgJJjzki7kjT8A9",
   bookCallHref: "/contact-us",
 } as const;

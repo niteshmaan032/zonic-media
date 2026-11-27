@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the home inspector website free?",
     answer:
-      "Yes. The $2,000 home inspector website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
+      "Yes. The $950 home inspector website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds first.",
   },
   {
     question: "What is the best website builder for home inspectors?",
@@ -23,7 +23,7 @@ export const FAQS = [
   {
     question: "How long is the term, and can I cancel?",
     answer:
-      "The qualifying plan runs on a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer.",
+      "The qualifying plan runs on a six-month minimum term, and the waived $950 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer.",
   },
 ];
 

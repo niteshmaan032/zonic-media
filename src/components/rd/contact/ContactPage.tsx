@@ -81,7 +81,7 @@ const CHANNELS: Channel[] = [
   {
     icon: <FiMapPin />,
     tone: "tw:bg-[#ea4335] tw:text-white",
-    small: "Office in Dover, Delaware",
+    small: "Registered address",
     strong: SITE_CONTACT.address,
     href: SITE_CONTACT.mapHref,
     external: true,

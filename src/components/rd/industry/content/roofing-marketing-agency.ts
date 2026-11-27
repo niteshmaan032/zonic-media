@@ -86,7 +86,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/roofing-website-design",
         label: "roofing website design",
       },
-      " built to book estimates.",
+      " built to book estimates. Roofers get ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " built around high-value replacements, not just repair calls.",
     ],
     cta: "Get My Free Roofing Audit",
     bento: {

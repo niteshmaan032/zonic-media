@@ -1,0 +1,402 @@
+/* Generative Engine Optimization page (26 Nov 2026). Motion for the UI
+   cards only (owner: no section reveals). Text stays in the HTML at full
+   strength; animations only fade and lift it. AnimationGate pauses the
+   loops of off-screen sections; reduced-motion visitors get the finished
+   state. */
+
+/* Readable body copy floor (owner, 26 Nov 2026): darker body grey. */
+.geo-root {
+  --text: #3b475f;
+}
+
+/* ------------------------------------------------------------- hero card */
+
+/* Each answer row reads as "writing": a shimmer line holds the place,
+   then the answer and its status pill appear at the row's --d delay. */
+.geo-hero .geo-pop,
+.geo-hero .geo-chip {
+  animation: geo-pop 0.45s ease-out both;
+}
+
+.geo-hero .geo-type {
+  animation: geo-pop 0.4s ease-out var(--d) both;
+}
+
+.geo-hero .geo-pill {
+  animation: geo-pill 0.35s ease-out calc(var(--d) + 0.15s) both;
+}
+
+.geo-hero .geo-skel {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 78%;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #e8ecf3 0%, #f6f8fb 50%, #e8ecf3 100%);
+  background-size: 200% 100%;
+  opacity: 0;
+  animation:
+    geo-shimmer 1.1s linear infinite,
+    geo-skel 0.25s ease-out var(--d) backwards;
+}
+
+/* Time left on the current trade; the tab advances when it ends, so
+   hover (and the off-screen gate) pause it naturally. */
+.geo-hero .geo-progress {
+  position: absolute;
+  right: 12px;
+  bottom: 3px;
+  left: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--blue);
+  transform-origin: left;
+  animation: geo-progress 8s linear both;
+}
+
+.geo-hero:hover .geo-progress {
+  animation-play-state: paused;
+}
+
+.geo-hero.geo-still .geo-pop,
+.geo-hero.geo-still .geo-chip,
+.geo-hero.geo-still .geo-type,
+.geo-hero.geo-still .geo-pill {
+  animation: none;
+}
+
+.geo-hero.geo-still .geo-skel {
+  display: none;
+}
+
+@keyframes geo-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes geo-pill {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Visible until the row's delay, then gone (the 0% frame is held during
+   the delay by the backwards fill). */
+@keyframes geo-skel {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes geo-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes geo-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------ what-is bento */
+
+/* Tiles: def (definition), f1–f3 (facts), flow (query fan-out). Phones
+   follow the reading order; wider screens pair the tiles up. */
+.geo-bento {
+  display: grid;
+  gap: 16px;
+  grid-template-areas: "def" "f1" "f2" "f3" "flow";
+}
+
+@media (min-width: 768px) {
+  .geo-bento {
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "def def" "f1 f2" "f3 f3" "flow flow";
+  }
+}
+
+@media (min-width: 992px) {
+  .geo-bento {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "def def def" "f1 f2 f3" "flow flow flow";
+  }
+}
+
+@media (min-width: 1200px) {
+  .geo-bento {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-areas: "def f1" "flow f2" "flow f3";
+  }
+}
+
+/* Fan-out tree from 768px: step 1 branches into steps 2 and 3, which
+   meet again in step 4 (lines sit in the 28px row gaps, 16px column
+   gap). Phones get a short link between the stacked cards instead. */
+.geo-fan > li {
+  --geo-wire: rgba(37, 103, 232, 0.35);
+}
+
+@media (min-width: 768px) {
+  .geo-fan > li:nth-child(1)::after,
+  .geo-fan > li:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 14px;
+    background: var(--geo-wire);
+  }
+  .geo-fan > li:nth-child(1)::after {
+    top: 100%;
+  }
+  .geo-fan > li:nth-child(4)::before {
+    bottom: 100%;
+  }
+  .geo-fan > li:nth-child(2)::before,
+  .geo-fan > li:nth-child(3)::before,
+  .geo-fan > li:nth-child(2)::after,
+  .geo-fan > li:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    width: calc(50% + 8px);
+    height: 14px;
+    border: 0 solid var(--geo-wire);
+  }
+  .geo-fan > li:nth-child(2)::before,
+  .geo-fan > li:nth-child(3)::before {
+    bottom: 100%;
+    border-top-width: 2px;
+  }
+  .geo-fan > li:nth-child(2)::after,
+  .geo-fan > li:nth-child(3)::after {
+    top: 100%;
+    border-bottom-width: 2px;
+  }
+  .geo-fan > li:nth-child(2)::before,
+  .geo-fan > li:nth-child(2)::after {
+    left: calc(50% - 1px);
+    border-left-width: 2px;
+  }
+  .geo-fan > li:nth-child(3)::before,
+  .geo-fan > li:nth-child(3)::after {
+    right: calc(50% - 1px);
+    border-right-width: 2px;
+  }
+  .geo-fan > li:nth-child(2)::before {
+    border-top-left-radius: 10px;
+  }
+  .geo-fan > li:nth-child(3)::before {
+    border-top-right-radius: 10px;
+  }
+  .geo-fan > li:nth-child(2)::after {
+    border-bottom-left-radius: 10px;
+  }
+  .geo-fan > li:nth-child(3)::after {
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .geo-fan > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 29px;
+    width: 2px;
+    height: 12px;
+    background: var(--geo-wire);
+  }
+}
+
+/* All four steps stay on screen; each step (number and card) lights up
+   for its quarter of an 8s cycle (negative delays stagger them). */
+.geo-flow .geo-step {
+  animation: geo-step 8s ease-in-out infinite both;
+}
+
+.geo-flow .geo-card {
+  box-shadow: 0 1px 2px rgba(12, 21, 38, 0.06);
+  animation: geo-card 8s ease-in-out infinite both;
+}
+
+@keyframes geo-card {
+  0%,
+  22% {
+    box-shadow:
+      0 0 0 2px rgba(37, 103, 232, 0.55),
+      0 14px 28px -16px rgba(37, 103, 232, 0.5);
+  }
+  30%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(37, 103, 232, 0),
+      0 1px 2px rgba(12, 21, 38, 0.06);
+  }
+}
+
+@keyframes geo-step {
+  0%,
+  22% {
+    background: var(--blue);
+    box-shadow: 0 0 0 6px rgba(37, 103, 232, 0.14);
+  }
+  30%,
+  100% {
+    background: var(--ink);
+    box-shadow: 0 0 0 0 rgba(37, 103, 232, 0);
+  }
+}
+
+/* ------------------------------------------------------- report board */
+
+.geo-report .geo-grow {
+  transform-origin: left;
+  animation: geo-grow 9s ease-in-out infinite both;
+}
+
+@keyframes geo-grow {
+  0% {
+    transform: scaleX(0);
+  }
+  12%,
+  90% {
+    transform: none;
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/* ----------------------------------------------------- looping UI cards */
+
+/* Each piece fades in at its own delay, holds, and fades out near the end
+   of an 9s cycle, so the card replays like a short clip. */
+.geo-loop .geo-in {
+  animation: geo-cycle 9s ease-in-out infinite both;
+}
+
+.geo-loop .geo-dot {
+  background: #d7dee9;
+  animation: geo-dot 9s ease-in-out infinite both;
+}
+
+.geo-loop .geo-tick {
+  color: #fff;
+  background: var(--geo-c, var(--blue));
+  animation: geo-tick-cycle 9s ease-in-out infinite both;
+}
+
+.geo-loop .geo-bar {
+  transform-origin: bottom;
+  animation: geo-bar 9s ease-in-out infinite both;
+}
+
+@keyframes geo-cycle {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  6%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes geo-dot {
+  0%,
+  4% {
+    background: #d7dee9;
+  }
+  8%,
+  88% {
+    background: var(--geo-c);
+  }
+  96%,
+  100% {
+    background: #d7dee9;
+  }
+}
+
+@keyframes geo-tick-cycle {
+  0%,
+  3% {
+    transform: scale(0.5);
+    background: #d7dee9;
+  }
+  8%,
+  88% {
+    transform: none;
+    background: var(--geo-c, var(--blue));
+  }
+  96%,
+  100% {
+    transform: none;
+    background: #d7dee9;
+  }
+}
+
+@keyframes geo-bar {
+  0% {
+    transform: scaleY(0.15);
+  }
+  14%,
+  88% {
+    transform: none;
+  }
+  100% {
+    transform: scaleY(0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geo-hero .geo-pop,
+  .geo-hero .geo-chip,
+  .geo-hero .geo-type,
+  .geo-hero .geo-pill,
+  .geo-flow .geo-step,
+  .geo-flow .geo-card,
+  .geo-report .geo-grow,
+  .geo-loop .geo-in,
+  .geo-loop .geo-dot,
+  .geo-loop .geo-tick,
+  .geo-loop .geo-bar {
+    animation: none;
+  }
+  .geo-loop .geo-dot {
+    background: var(--geo-c);
+  }
+  .geo-loop .geo-tick {
+    background: var(--geo-c, var(--blue));
+  }
+  .geo-hero .geo-skel {
+    display: none;
+  }
+}

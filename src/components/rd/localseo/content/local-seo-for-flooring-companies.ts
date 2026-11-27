@@ -474,8 +474,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Sell cabinets or countertops too? One plan can rank every product line.",
+    other: [
+      "Sell cabinets or countertops too? Our ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO services" },
+      " can rank every product line in one plan.",
+    ],
   },
   reviews: {
     title: "A 5.0 Google Rating Earned One Client at a Time",

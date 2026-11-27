@@ -1486,7 +1486,7 @@ export default function GoogleMapsRankCheckerPage() {
                   Built by a Local SEO Team That Reads These Grids Every Week
                 </h2>
                 <p className="grc-copy">
-                  Zonic Media is a US marketing agency based in Dover, Delaware.
+                  Zonic Media is a US marketing agency.
                   Geo-grid scans are part of how we diagnose{" "}
                   <Link href="/services/local-seo-for-small-business">
                     local SEO for small business
@@ -1514,8 +1514,8 @@ export default function GoogleMapsRankCheckerPage() {
                       <FiMapPin />
                     </span>
                     <div>
-                      <strong>Dover, Delaware</strong>
-                      <span>US-based team, clients nationwide</span>
+                      <strong>Serving the US</strong>
+                      <span>Clients nationwide, worked remotely</span>
                     </div>
                   </li>
                   <li>
@@ -1556,7 +1556,7 @@ export default function GoogleMapsRankCheckerPage() {
                     21 reviews on Clutch
                   </p>
                   <p className="grc-profile__cat">
-                    Marketing agency · Dover, Delaware
+                    Marketing agency · Serving the US
                   </p>
                   <div className="grc-profile__actions">
                     <a href={SITE_CONTACT.phoneHref}>
@@ -1572,14 +1572,11 @@ export default function GoogleMapsRankCheckerPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FiNavigation aria-hidden="true" />
-                      Directions
+                      <FiStar aria-hidden="true" />
+                      Reviews
                     </a>
                   </div>
                   <ul className="grc-profile__facts">
-                    <li>
-                      <FiMapPin aria-hidden="true" /> {SITE_CONTACT.address}
-                    </li>
                     <li>
                       <FiPhone aria-hidden="true" /> {SITE_CONTACT.phoneDisplay}
                     </li>
@@ -1682,7 +1679,7 @@ export default function GoogleMapsRankCheckerPage() {
                 <span className="grc-final__stars" aria-hidden="true">
                   ★★★★★
                 </span>
-                5.0 on Clutch from 21 reviews · Based in Dover, Delaware
+                5.0 on Clutch from 21 reviews · Serving the US
               </p>
             </div>
 

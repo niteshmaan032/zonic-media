@@ -30,7 +30,14 @@
      and a remodeling-contractor FAQ for the live GSC terms.
    - Title keeps "General Contractor SEO" (live title) and adds
      "Construction SEO" and "SEO for Contractors" (head terms); H1 joins
-     "contractor seo" with "seo for general contractors". */
+     "contractor seo" with "seo for general contractors".
+   - 26 Nov 2026: the generic phrases (contractor seo, seo for contractors,
+     seo company for contractors) moved to the new /services/seo-for-contractors
+     hub (they share 5 of 10 Google results with each other but only 2–3 with
+     "general contractor seo"). This page keeps every general contractor,
+     construction, home builder and remodeling phrase from its Search Console
+     list; title, H1, FAQ title and two FAQ questions now say "general
+     contractor", and the explore band links up to the hub. */
 
 import type { LocalSeoContent } from "../types";
 
@@ -39,28 +46,26 @@ export const CONTENT: LocalSeoContent = {
   audience: "General contractors, home builders and construction companies",
   serviceName: "Local SEO for General Contractors",
   meta: {
-    title: "General Contractor SEO | Construction SEO for Contractors",
+    title: "General Contractor SEO | Construction & Home Builder SEO",
     description:
-      "Contractor SEO for general contractors and home builders: Google Maps, project pages, reviews and AI answers that bring additions, remodels and build-outs.",
+      "SEO for general contractors and home builders: Google Maps, project pages, reviews and AI answers that bring additions, remodels and build-outs.",
     keywords: [
-      "contractor seo",
-      "seo for contractors",
       "construction seo",
       "general contractor seo",
       "seo for general contractors",
       "local seo for general contractors",
       "general contractor seo company",
       "home builder seo",
-      "seo company for contractors",
+      "general contractor seo services",
       "local seo for remodeling contractors",
     ],
   },
   hero: {
-    h1Lead: "Contractor SEO for General Contractors",
+    h1Lead: "SEO for General Contractors",
     h1Rest: "That Wins More Bids",
     icon: "construction",
     lead: [
-      "Our SEO for contractors gets your firm into the Map Pack, onto page one and into AI answers when owners search for additions, whole-home remodels and build-outs. We tighten your ",
+      "Our general contractor SEO gets your firm into the Map Pack, onto page one and into AI answers when owners search for additions, whole-home remodels and build-outs. We tighten your ",
       {
         href: "/local-seo-google-business-optimization",
         label: "Business Profile",
@@ -477,8 +482,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Run remodeling, roofing or restoration divisions too? We can cover them in one plan.",
+    other: [
+      "Run remodeling, roofing or restoration divisions too? Our ",
+      { href: "/services/seo-for-contractors", label: "SEO for contractors" },
+      " covers every trade in one plan.",
+    ],
   },
   reviews: {
     title: "Read the Reviews Behind Our 5.0 Google Rating",
@@ -491,12 +499,12 @@ export const CONTENT: LocalSeoContent = {
     customTitle: "Contracting Offices in Several Markets?",
   },
   faq: {
-    title: "Common Questions About SEO for Contractors",
+    title: "Common Questions About General Contractor SEO",
     lead: "Costs, timelines, commercial work, home builders and how construction SEO fits a referral business.",
     items: [
       {
-        q: "What is contractor SEO?",
-        a: "Contractor SEO is the work that helps owners and businesses find your firm when they search for a builder: Business Profile upkeep, a page per project type and per town, case studies, reviews and links. It is measured in bid requests and signed jobs, not traffic alone.",
+        q: "What is general contractor SEO?",
+        a: "General contractor SEO is the work that helps owners and businesses find your firm when they search for a builder: Business Profile upkeep, a page per project type and per town, case studies, reviews and links. It is measured in bid requests and signed jobs, not traffic alone.",
       },
       {
         q: "How much does SEO for general contractors cost?",
@@ -531,8 +539,8 @@ export const CONTENT: LocalSeoContent = {
         a: "Yes. Remodeling contractors and residential remodelers get the same groundwork with pages built around kitchens, baths, basements and whole-home work. If you run separate remodeling and new-build divisions, each gets its own pages and tracking so leads land with the right team.",
       },
       {
-        q: "What should you expect from an SEO company for contractors?",
-        a: "From a general contractor SEO company, expect clear reporting, full ownership and no lock-in. Our plans renew month to month, every account stays in your company's name, and each report details the work done and the bid requests it produced. If results stall, you can stop at any time.",
+        q: "What should you expect from a general contractor SEO company?",
+        a: "Expect clear reporting, full ownership and no lock-in. Our plans renew month to month, every account stays in your company's name, and each report details the work done and the bid requests it produced. If results stall, you can stop at any time.",
       },
     ],
   },

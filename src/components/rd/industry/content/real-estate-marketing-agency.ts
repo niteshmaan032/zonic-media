@@ -440,7 +440,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "Is there a real estate marketing agency near me, or do you work remotely?",
-        a: "Our team is based in Delaware and serves agents and brokerages nationwide. Everything runs through shared reports, calls and screen shares, and we research your local market before any work begins, so distance never slows things down.",
+        a: "Our team works remotely and serves agents and brokerages nationwide. Everything runs through shared reports, calls and screen shares, and we research your local market before any work begins, so distance never slows things down.",
       },
       {
         q: "How much do real estate marketing companies in USA cities charge?",

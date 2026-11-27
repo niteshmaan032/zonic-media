@@ -5,8 +5,8 @@
    agency" questions). Answers only state what the site already says:
    replies within one business day (every lead form), a free no-obligation
    review, no long-term contracts / month to month, 0% ad-spend markup,
-   you own every account, 900+ reinstated, 5.0 Google rating, a Dover
-   office serving the whole US. Shared with the FAQPage JSON-LD. */
+   you own every account, 900+ reinstated, 5.0 Google rating, registered in
+   Dover, serving the whole US. Shared with the FAQPage JSON-LD. */
 
 export const CONTACT_FAQS: { question: string; answer: string }[] = [
   {
@@ -27,7 +27,7 @@ export const CONTACT_FAQS: { question: string; answer: string }[] = [
   {
     question: "Can you work with my business if I'm not in Delaware?",
     answer:
-      "Yes. We're based in Dover, Delaware and work with small and mid-size businesses across the US, from New York and Philadelphia to Dallas–Fort Worth.",
+      "Yes. Our registered address is in Dover, Delaware, and we work remotely with small and mid-size businesses across the US, from New York and Philadelphia to Dallas–Fort Worth.",
   },
   {
     question: "Is there a long-term contract or minimum term?",

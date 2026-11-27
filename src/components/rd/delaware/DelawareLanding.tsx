@@ -66,7 +66,7 @@ import { MapPackBoardUi, ReportPhone, ScoreRingsUi } from "./wilmingtonUi";
 import { ChannelMixUi, ScoreDeltaUi, SocialPostPhone } from "./phlMarketingUi";
 import { OrganicSerpPhone, ScoreTableUi, VisibilityRaceUi } from "./phlSeoUi";
 import { CallAdPhone, RoasBoardUi, ScoreBulletUi } from "./phlPpcUi";
-import { BlendedBoardUi, ScoreRadarUi, SemReportPhone } from "./phlSemUi";
+import { BlendedBoardUi, ScoreCoverageUi, SemReportPhone } from "./phlSemUi";
 import { BoroughBoardUi, ScoreSlopeUi, TextBackPhone } from "./nycMarketingUi";
 import {
   ProfileInsightsUi,
@@ -81,6 +81,7 @@ import { FlWebDarkUi, FlWebPhone, FlWebScore } from "./flWebUi";
 import { cityUi } from "./flCities";
 import { FlCitiesSection } from "./flCitiesSection";
 import { FlCityLinks } from "./flCityLinks";
+import { PhlAreasSection } from "./phlAreasSection";
 import type { DelawareData, DelawareExtras, DelawareKind } from "./types";
 
 const ServiceLeadForm = dynamic(
@@ -1190,6 +1191,16 @@ export function DelawareLanding({
           </Section>
         )}
 
+        {/* ===================================================== AREAS SERVED */}
+        {/* Philadelphia SEM: Greater Philadelphia tiles (26 Nov 2026). */}
+        {extras.areas ? (
+          <PhlAreasSection
+            areas={extras.areas}
+            accent={ring}
+            leadClassName={LINKS}
+          />
+        ) : null}
+
         {/* ========================================================= REVIEWS */}
         <Section labelledBy="de-love-h">
           <Wrap>
@@ -1383,8 +1394,8 @@ export function DelawareLanding({
                     <ScoreTableUi rows={compare.scoreRows} />
                   ) : extras.scoreStyle === "bullet" ? (
                     <ScoreBulletUi rows={compare.scoreRows} />
-                  ) : extras.scoreStyle === "radar" ? (
-                    <ScoreRadarUi rows={compare.scoreRows} />
+                  ) : extras.scoreStyle === "coverage" ? (
+                    <ScoreCoverageUi />
                   ) : extras.scoreStyle === "slope" ? (
                     <ScoreSlopeUi rows={compare.scoreRows} />
                   ) : extras.scoreStyle === "dumbbell" ? (
@@ -1536,20 +1547,9 @@ export function DelawareLanding({
                   <FiMail aria-hidden="true" className="tw:size-[17px]" />
                   {SITE_CONTACT.email}
                 </Pill>
-                {/* Owner rule (24 Oct 2026): every contact block shows
-                    phone, email and address, except on the Florida pages
-                    (owner, 18 Nov 2026), which have no Florida address. */}
-                {kind.startsWith("fl-") ? null : (
-                  <Pill
-                    href={SITE_CONTACT.mapHref}
-                    tone="outline"
-                    size="md"
-                    fullOnPhone
-                  >
-                    <FiMapPin aria-hidden="true" className="tw:size-[17px]" />
-                    {SITE_CONTACT.address}
-                  </Pill>
-                )}
+                {/* Phone and email only on every page (owner, 26 Nov 2026:
+                    the address stays in the footer and on the contact
+                    page). */}
               </div>
               <div className="tw:mx-auto tw:mt-[34px] tw:max-w-[760px] tw:text-left">
                 <ServiceLeadForm

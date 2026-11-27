@@ -18,7 +18,7 @@
  * web design pages are linked with keyword anchors; city names stay out of
  * the title and H1 (the city pages will own them). Fresh wording only;
  * company-wide verified numbers only; no Florida office is implied (we serve
- * Florida from Dover, Delaware). About photo: the owner's SEO office image.
+ * Florida remotely). About photo: the owner's SEO office image.
  */
 
 import type { Metadata } from "next";
@@ -174,7 +174,7 @@ const FlSeoFaqs = [
   {
     question: "Do you have an office in Florida?",
     answer:
-      "No. Zonic Media is headquartered in Dover, Delaware, and the same in-house staff serve every Florida client remotely, with video calls and a written report each month. Map Pack positions depend on your business’s location and signals, not on where your SEO team sits.",
+      "No. The same in-house staff serve every Florida client remotely, with video calls and a written report each month. Map Pack positions depend on your business’s location and signals, not on where your SEO team sits.",
   },
 ];
 
@@ -581,7 +581,7 @@ const extras: DelawareExtras = {
       "Review requests and owner replies",
       "Rank grids for each town you serve",
     ],
-    foot: "Managed from Dover, Delaware, by our own staff",
+    foot: "Managed remotely by our own staff",
   },
   // Florida SEO palette: palm green, sand, shallow-water aqua, deep gulf.
   pillars: ["#15803d", "#fde68a", "#cffafe", "#0c4a6e"],

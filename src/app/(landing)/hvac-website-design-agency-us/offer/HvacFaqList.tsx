@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Does the free HVAC website cost anything upfront?",
     answer:
-      "No. The $2,000 HVAC website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal lists the page count, features and revision rounds before any work begins.",
+      "No. The $950 HVAC website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal lists the page count, features and revision rounds before any work begins.",
   },
   {
     question: "What is in your HVAC marketing packages?",
@@ -28,7 +28,7 @@ export const FAQS = [
   {
     question: "What is the minimum term, and what if we cancel?",
     answer:
-      "The qualifying plan runs on a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site for those six months, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and your content, but the website does not transfer. Your written proposal restates this before you sign.",
+      "The qualifying plan runs on a six-month minimum term, and the waived $950 build fee is set against it. We host the site for those six months, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and your content, but the website does not transfer. Your written proposal restates this before you sign.",
   },
 ];
 

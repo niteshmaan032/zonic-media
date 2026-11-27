@@ -14,7 +14,6 @@ import {
   FiKey,
   FiLayout,
   FiMail,
-  FiMapPin,
   FiMonitor,
   FiPercent,
   FiPhone,
@@ -324,14 +323,6 @@ const CONTACT_TILES = [
     small: "Email us",
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
-  },
-  {
-    icon: <FiMapPin />,
-    tone: "tw:bg-[#fbbc04] tw:text-(--ink)",
-    small: "Our office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
   },
 ];
 
@@ -1005,20 +996,13 @@ export function GoogleAdsPage() {
               <div className="tw:mx-auto tw:mt-[34px] tw:grid tw:max-w-[1080px] tw:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] tw:items-start tw:gap-8 tw:text-left tw:max-bslg:max-w-[760px] tw:max-bslg:grid-cols-1">
                 <div>
                   <ul className="tw:grid tw:gap-3 tw:max-bslg:grid-cols-2 tw:max-bssm:grid-cols-1">
-                    {CONTACT_TILES.map((t, i) => (
+                    {CONTACT_TILES.map((t) => (
                       <li
                         key={t.small}
-                        className={cx(
-                          i === CONTACT_TILES.length - 1 &&
-                            "tw:max-bslg:col-span-2 tw:max-bssm:col-span-1",
-                        )}
                       >
                         <a
                           href={t.href}
                           className="tw:flex tw:h-full tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-(--panel) tw:p-4 tw:transition tw:hover:-translate-y-0.5 tw:hover:bg-[#fef3c7]"
-                          {...(t.external
-                            ? { target: "_blank", rel: "noopener noreferrer" }
-                            : {})}
                         >
                           <span
                             className={cx(

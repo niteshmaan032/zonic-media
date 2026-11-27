@@ -123,6 +123,11 @@ const nextConfig: NextConfig = {
         ["/pest-control-marketing", "/services/pest-control-marketing-agency"],
         // 404 in GA4 (ChatGPT referral) + Semrush GA orphans, 10 Nov 2026.
         ["/services/seo-for-plumbers", "/services/industry/seo-services-for-plumber"],
+        // Still 404 on 27 Nov 2026: "/google ads" (a ChatGPT link with a space,
+        // Semrush GA orphan), its hyphenated form, and a mistyped llms.txt.
+        ["/google%20ads", "/services/google-ads"],
+        ["/google-ads", "/services/google-ads"],
+        ["/llm.txt", "/llms.txt"],
       ].map(([source, destination]) => ({ source, destination, permanent: true })),
       // Old WordPress-style blog pagination -> the real ?page= URLs.
       {
@@ -139,6 +144,13 @@ const nextConfig: NextConfig = {
       },
 
       // Service URL changes
+      // 27 Nov 2026: the home services page was folded into the homepage
+      // before it went live (the homepage now targets home services).
+      {
+        source: "/services/home-services-marketing-agency",
+        destination: "/",
+        permanent: true,
+      },
       // DFW page moved 15 Oct 2026; the old URL was already indexed in GSC.
       {
         source: "/services/dallas-fort-worth-marketing-agency",

@@ -20,8 +20,8 @@
  * Rules: the hub owns "florida" / "south florida digital marketing
  * agency"; Miami owns Miami-Dade. Customers search in English and Spanish,
  * but the page never claims Spanish content or Spanish campaigns (owner
- * hasn't confirmed). No Fort Lauderdale office: served from Dover,
- * Delaware. Company-wide verified numbers only; no aggregateRating.
+ * hasn't confirmed). No Fort Lauderdale office: served remotely.
+ * Company-wide verified numbers only; no aggregateRating.
  */
 
 import type { Metadata } from "next";
@@ -154,7 +154,7 @@ const FtlDmFaqs = [
   {
     question: "Can a remote team market a Fort Lauderdale business?",
     answer:
-      "Yes. We work remotely as an in-house team in Dover, Delaware, and hold Fort Lauderdale meetings over video. Rankings, campaigns and sites get better through consistent effort, which a street address in town doesn’t change, and a written report each month shows which work moved your calls.",
+      "Yes. We work remotely as an in-house team and hold Fort Lauderdale meetings over video. Rankings, campaigns and sites get better through consistent effort, which a street address in town doesn’t change, and a written report each month shows which work moved your calls.",
   },
   {
     question: "Is SEO in Fort Lauderdale worth it for a small business?",
@@ -652,7 +652,7 @@ const extras: DelawareExtras = {
       "AI answers that cite your business",
       "A fast site with tap-to-call",
     ],
-    foot: "Strategy and reporting from Dover, DE",
+    foot: "Remote strategy and monthly reporting",
   },
   // Fort Lauderdale palette: sunset magenta, Intracoastal sky, palm lime,
   // deep navy.

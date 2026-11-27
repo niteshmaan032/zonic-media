@@ -22,7 +22,7 @@
  * (Naples is saved for its own page and isn't mentioned). Storm recovery
  * is written about plainly, with no figures. Fresh wording only;
  * company-wide verified numbers only; no Fort Myers office is implied (we
- * serve Lee County from Dover, Delaware).
+ * serve Lee County remotely).
  */
 
 import type { Metadata } from "next";
@@ -149,7 +149,7 @@ const FmDmFaqs = [
   {
     question: "Does Zonic Media have a Fort Myers office?",
     answer:
-      "No. Our base is Dover, Delaware, and Lee County clients meet us over video. Your Map Pack position comes from your own address, service area and reviews, so where your agency sits makes no difference to it.",
+      "No. We work remotely, and Lee County clients meet us over video. Your Map Pack position comes from your own address, service area and reviews, so where your agency sits makes no difference to it.",
   },
   {
     question: "Which Lee County communities do you serve?",
@@ -621,7 +621,7 @@ const extras: DelawareExtras = {
       "Estimate follow-ups and reviews",
       "A website built to book jobs",
     ],
-    foot: "Run from Dover, DE, with video check-ins",
+    foot: "Run remotely, with video check-ins",
   },
   // Fort Myers palette: royal poinciana rust, mangrove mint, evening lilac,
   // deep pine.

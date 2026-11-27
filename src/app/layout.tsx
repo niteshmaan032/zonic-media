@@ -88,7 +88,7 @@ const organizationJsonLd = {
   legalName: "Zonic Media LLC",
   alternateName: ["Zonic Media LLC", "Zonic LLC", "zonicllc.com"],
   description:
-    "Full-service digital marketing agency and SEO company (internet marketing, online advertising and lead generation) for businesses of every size: local SEO, Google Business Profile reinstatement and optimization, web design, Google Ads and AI search optimization (AEO/GEO). Headquartered in Dover, Delaware; serving clients across the United States.",
+    "Full-service digital marketing agency and SEO company (internet marketing, online advertising and lead generation) for businesses of every size: local SEO, Google Business Profile reinstatement and optimization, web design, Google Ads and AI search optimization (AEO/GEO). Serving clients across the United States.",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",

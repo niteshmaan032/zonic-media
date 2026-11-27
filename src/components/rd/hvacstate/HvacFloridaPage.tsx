@@ -163,14 +163,6 @@ const CONTACT_ROWS: {
     value: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    color: "#0c1526",
-    label: "Head office",
-    value: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 /* Teal / coral alternating soft tones. */
@@ -636,9 +628,6 @@ export function HvacFloridaPage() {
                       <a
                         href={c.href}
                         className="tw:group tw:flex tw:items-center tw:gap-4 tw:py-4"
-                        {...(c.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-[14px] tw:text-[18px] tw:text-white"

@@ -487,8 +487,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Also install gutters or siding? One plan can cover every exterior trade you sell.",
+    other: [
+      "Also install gutters or siding? Our ",
+      { href: "/services/seo-for-contractors", label: "SEO services for contractors" },
+      " cover every exterior trade you sell in one plan.",
+    ],
   },
   reviews: {
     title: "Roofers, See Why Owners Rate Our Team 5.0 on Google",

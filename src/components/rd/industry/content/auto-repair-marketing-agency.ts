@@ -392,7 +392,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         q: "Do I need an automotive marketing agency near me, or is a remote team fine?",
-        a: "Distance isn't a problem: our Delaware team markets shops all over the U.S. We study your local market first, then handle everything through calls, screen shares and monthly reports, so you get the attention a local agency would give.",
+        a: "Distance isn't a problem: our team markets shops all over the U.S. We study your local market first, then handle everything through calls, screen shares and monthly reports, so you get the attention a local agency would give.",
       },
       {
         q: "What should I look for in an auto shop marketing agency?",
@@ -414,7 +414,7 @@ export const CONTENT: IndustryContent = {
       "Tell us about your shop. We check how you rank for your top repairs, how your profile, ",
       { href: "/services/web-design", label: "website" },
       " and reviews stack up against nearby shops, and what to fix first. We're a ",
-      { href: "/about", label: "Delaware-based team" },
+      { href: "/about", label: "remote-first team" },
       " marketing shops nationwide, along with the other ",
       { href: "/industries", label: "industries we serve" },
       ".",

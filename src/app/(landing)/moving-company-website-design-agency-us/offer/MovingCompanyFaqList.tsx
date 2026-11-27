@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "How can a moving company website be free?",
     answer:
-      "The upfront moving company website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work starts.",
+      "The upfront moving company website design and development fee, valued at $950 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision limits before work starts.",
   },
   {
     question: "Which plans unlock the free moving website?",

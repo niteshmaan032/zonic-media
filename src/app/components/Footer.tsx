@@ -39,22 +39,19 @@ function Footer() {
         />
       </a>
       <div className="mt-4">
-        <a
-          href="https://businessfirms.co/company/zonic-media"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* Local 6.7 KB WebP instead of the 828 KB PNG hot-linked from
-              businessfirms.co, which every page downloaded before the
-              hero painted (Sept 2026 CWV work). Lazy-loaded below the fold. */}
-          <Image
-            width={85}
-            height={85}
-            loading="lazy"
-            alt="BusinessFirms certified digital marketing company badge"
-            src="/images/badges/businessfirms-certified.webp"
-          />
-        </a>
+        {/* Not linked: businessfirms.co/company/zonic-media returns 500, and
+            this footer link counted as 289 broken external links in Semrush
+            (27 Nov 2026). Local 6.7 KB WebP instead of the 828 KB PNG
+            hot-linked from businessfirms.co, which every page downloaded
+            before the hero painted (Sept 2026 CWV work). Lazy-loaded below
+            the fold. */}
+        <Image
+          width={85}
+          height={85}
+          loading="lazy"
+          alt="BusinessFirms certified digital marketing company badge"
+          src="/images/badges/businessfirms-certified.webp"
+        />
       </div>
       <Image
         className="footer-yelp-badge mt-4"
@@ -102,13 +99,16 @@ function Footer() {
         <div className="footer-upper-content">
           <Row className="justify-content-between g-5 g-lg-0">
             <Col xs={12} lg={5}>
+              {/* No office location here; the registered address stays in
+                  the contact list below (owner, 27 Nov 2026). Matches the
+                  homepage's home services and contractors positioning. */}
               <p className="footer-zonic-desc">
-                Zonic Media is a results-driven digital marketing agency in
-                Dover, Delaware providing web design, local SEO, Google Business
-                Profile optimization, and PPC services for businesses across the
-                United States. We create user-friendly digital experiences that
-                strengthen brands, increase visibility, generate leads, and
-                deliver long-term measurable growth.
+                Zonic Media is a results-driven digital marketing agency for
+                home services businesses and contractors across the United
+                States, providing web design, local SEO, Google Business Profile
+                optimization, and PPC services. We create user-friendly digital
+                experiences that strengthen brands, increase visibility,
+                generate leads, and deliver long-term measurable growth.
               </p>
 
               <ul className="footer-contact-info">

@@ -17,16 +17,19 @@ import type { IndustryContent } from "../types";
    Angle vs sibling remodel drafts: work beyond referrals, whole-home
    remodels, additions and commercial build-outs. No niche photos, so
    the hero uses tiles.
-   Fresh wording only: nothing reused from the live page or other drafts. */
+   Fresh wording only: nothing reused from the live page or other drafts.
+   26 Nov 2026: "Contractor SEO" left the title (generic contractor-SEO
+   phrases now belong to /services/seo-for-contractors; this page had no
+   Search Console impressions in 3 months). The SEO card links that hub. */
 
 export const CONTENT: IndustryContent = {
   draftSlug: "general-contractor-marketing-agency-2",
   liveUrl: "/services/general-contractor-marketing-agency",
   niche: "General Contractor",
   meta: {
-    title: "General Contractor Marketing Agency | Contractor SEO & Leads",
+    title: "General Contractor Marketing Agency | Remodel & Build Leads",
     description:
-      "Zonic Media is a general contractor marketing agency: contractor SEO, Google Maps rankings and Google Ads that win whole-home remodels, additions and build-outs.",
+      "General contractor marketing agency for GCs and builders: SEO, Google Maps rankings and Google Ads that win whole-home remodels, additions and build-outs.",
     keywords: [
       "general contractor marketing agency",
       "marketing agency for contractors",
@@ -34,7 +37,6 @@ export const CONTENT: IndustryContent = {
       "marketing for general contractors",
       "marketing company for contractors",
       "construction marketing agency",
-      "contractor seo",
       "contractor lead generation",
       "general contractor marketing company",
       "general contractor advertising agency",
@@ -51,7 +53,7 @@ export const CONTENT: IndustryContent = {
     h1Icon: "construction",
     h1Rest: "Marketing Agency for Bigger, Steadier Projects",
     lead: [
-      "Referrals are great until they slow down. We give general contractors a second source of work with contractor SEO, Google Ads, ",
+      "Referrals are great until they slow down. We give general contractors a second source of work with general contractor SEO, Google Ads, ",
       {
         href: "/local-seo-google-business-optimization",
         label: "Business Profile management",
@@ -61,7 +63,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/general-contractor-website-design",
         label: "contractor website",
       },
-      " that shows homeowners and property owners why you can be trusted with a big build.",
+      " that shows homeowners and property owners why you can be trusted with a big build. Remodels and additions are the high end of our work as a ",
+      {
+        href: "/",
+        label: "home services marketing agency",
+      },
+      ".",
     ],
     cta: "Get My Free Contractor Audit",
     bento: {
@@ -115,7 +122,7 @@ export const CONTENT: IndustryContent = {
       },
       {
         icon: "search",
-        title: "Contractor SEO",
+        title: "General Contractor SEO",
         desc: "Pages for additions, whole-home remodels, basements and commercial work in every town you build in, plus citations and link building.",
         points: [
           "Project-type pages",
@@ -130,6 +137,10 @@ export const CONTENT: IndustryContent = {
           {
             href: "/services/local-seo-for-home-services",
             label: "Local SEO across home trades",
+          },
+          {
+            href: "/services/seo-for-contractors",
+            label: "Contractor SEO services",
           },
         ],
       },

@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the garage door website free, or just discounted?",
     answer:
-      "The upfront garage door website design and development fee, $2,000 for a standard build, is fully waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, functionality and revision limits before work begins.",
+      "The upfront garage door website design and development fee, $950 for a standard build, is fully waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, functionality and revision limits before work begins.",
   },
   {
     question: "Which plan do I need for the garage door website?",

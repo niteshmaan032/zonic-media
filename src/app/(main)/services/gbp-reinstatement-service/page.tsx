@@ -1252,7 +1252,7 @@ function page() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
-              Dover, DE · serving the US
+              Serving businesses across the US
             </span>
           </div>
         </div>

@@ -469,8 +469,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Remodel baths, basements and additions too? We can plan SEO across every service line.",
+    other: [
+      "Remodel baths, basements and additions too? We can plan ",
+      { href: "/services/seo-for-contractors", label: "SEO for contractors" },
+      " across every service line.",
+    ],
   },
   reviews: {
     title: "Owners Rate Our Search Work 5.0 on Google",

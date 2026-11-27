@@ -22,10 +22,17 @@ const CORE_LINKS: RelLink[] = [
 
 /** First matching keyword in the current path picks the vertical trio. */
 const VERTICALS: { match: string[]; links: RelLink[] }[] = [
-  { match: ["chatgpt", "ai-seo"], links: [
+  { match: ["chatgpt", "ai-seo", "generative"], links: [
+    { href: "/services/generative-engine-optimization", label: "Generative Engine Optimization" },
     { href: "/services/chatgpt-business-profile", label: "Claim Your Business in ChatGPT" },
-    { href: "/services/ai-seo-services", label: "AI SEO (AEO & GEO)" },
+    { href: "/services/ai-seo-services", label: "AI SEO Services" },
     { href: "/services/local-seo-for-small-business", label: "Local SEO for Small Business" },
+  ]},
+  // Contractor SEO hub (26 Nov 2026).
+  { match: ["seo-for-contractors"], links: [
+    { href: "/services/industry/local-seo-for-general-contractors", label: "Local SEO for General Contractors" },
+    { href: "/services/general-contractor-marketing-agency", label: "General Contractor Marketing Agency" },
+    { href: "/services/local-seo-for-home-services", label: "Local SEO for Home Services" },
   ]},
   { match: ["fence"], links: [
     { href: "/services/industry/fence-company-seo", label: "Fence Company SEO" },
@@ -85,7 +92,7 @@ const VERTICALS: { match: string[]; links: RelLink[] }[] = [
   { match: ["cannabis"], links: [
     { href: "/services/industry/local-seo-for-cannabis-dispensaries", label: "Local SEO for Cannabis Dispensaries" },
     { href: "/services/cannabis-marketing-agency", label: "Cannabis Marketing Agency" },
-    { href: "/services/ai-seo-services", label: "AI SEO (AEO & GEO)" },
+    { href: "/services/ai-seo-services", label: "AI SEO Services" },
   ]},
   { match: ["solar"], links: [
     { href: "/services/industry/local-seo-for-solar-companies", label: "Local SEO for Solar Companies" },
@@ -167,6 +174,7 @@ const VERTICALS: { match: string[]; links: RelLink[] }[] = [
     { href: "/services/industry/local-seo-for-general-contractors", label: "Local SEO for General Contractors" },
     { href: "/services/general-contractor-marketing-agency", label: "General Contractor Marketing Agency" },
     { href: "/services/general-contractor-website-design", label: "General Contractor Website Design" },
+    { href: "/services/seo-for-contractors", label: "SEO for Contractors" },
   ]},
   { match: ["home-inspector"], links: [
     { href: "/services/home-inspector-marketing", label: "Home Inspector Marketing" },

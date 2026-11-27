@@ -338,9 +338,9 @@ export const INDUSTRY_FAQS: { question: string; answer: string }[] = [
       "Buyers in each field search and decide differently. A homeowner with a flooded basement phones whichever plumber tops Google Maps; a patient compares dentists' reviews for days. A plan built for your industry targets the right searches, proof and timing.",
   },
   {
-    question: "What does home services marketing include?",
+    question: "What does marketing for contractors include?",
     answer:
-      "Usually local SEO and Google Maps rankings, a fully optimized Google Business Profile, a website that turns visits into calls, Google Ads and Local Services Ads, steady review requests and monthly reports on calls and booked jobs, mixed to suit your trade.",
+      "Usually Google Maps rankings and a well-kept Business Profile, a website that turns visits into calls, Google Ads or Local Services Ads, steady review requests and monthly reports on calls and booked jobs, mixed to suit the trade.",
   },
   {
     question:
@@ -361,7 +361,7 @@ export const INDUSTRY_FAQS: { question: string; answer: string }[] = [
   {
     question: "Can you market a business outside Delaware?",
     answer:
-      "Yes. Our office is in Dover, Delaware, and we work remotely with local businesses across the United States, building each plan around the towns you cover.",
+      "Yes. We work remotely with local businesses across the United States, building each plan around the towns you cover.",
   },
   {
     question: "Which marketing plan suits a contractor or local business?",

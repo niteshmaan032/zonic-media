@@ -453,7 +453,7 @@ const faqs: { q: string; a: string; node?: ReactNode }[] = [
   },
   {
     q: "Do you work with businesses outside Delaware?",
-    a: "Yes. Our office is in Dover, Delaware, and the team works remote-first, so we serve clients in all 50 states. The work runs through Google and your own website and ad platforms, so distance never slows a project down.",
+    a: "Yes. Our team works remote-first, so we serve clients in all 50 states. The work runs through Google and your own website and ad platforms, so distance never slows a project down.",
   },
   {
     q: "What is the difference between local SEO and regular SEO?",
@@ -546,9 +546,8 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
 
           <Wrap>
             {/* Two lines on tablet and up (owner, 19 Oct), broken after the
-                head term; phones wrap naturally. "Local business", not
-                "small business" (owner, 25 Oct); the <title> keeps the
-                searched "for small business" phrase. */}
+                head term; phones wrap naturally. Home services H1 (owner and
+                SEO expert, 27 Nov 2026); the title adds contractors. */}
             <Strip
               as="h1"
               id="home-h1"
@@ -556,14 +555,17 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
               className="tw:mx-auto tw:max-bsmd:text-balance"
             >
               Digital Marketing Agency <br className="tw:max-bsmd:hidden" />
-              for Local Business Growth
+              for Home Services Businesses
             </Strip>
+            {/* The lead names contractors and the other industries we serve,
+                so clinics and law firms still see the page is for them. */}
             <p className={cx(LEAD, "tw:mx-auto tw:mt-7 tw:max-w-[820px]")}>
-              Zonic Media helps small and mid-size businesses get found and get
-              booked. Our Dover, Delaware team runs local SEO, AI search
-              optimization, Google Business Profile management, website design
-              and Google Ads as one plan, so more nearby customers see you, call
-              you and choose you.
+              Zonic Media helps small and mid-size home service businesses and
+              contractors get found and get booked, and we also work with
+              clinics, law firms and other local businesses. Our team runs
+              local SEO, AI search optimization,
+              Google Business Profile management, website design and Google Ads
+              as one plan, so more nearby customers call you and choose you.
             </p>
             <TrustLogos
               mapHref={SITE_CONTACT.mapHref}
@@ -712,8 +714,8 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
                 <p className={LEAD}>
                   We are a digital marketing company for small and mid-size
                   businesses that grow through calls, quote requests and booked
-                  jobs. From Dover, Delaware, our in-house team works with
-                  clients across all 50 states and judges every campaign by the
+                  jobs. Our in-house team works with clients across all 50
+                  states and judges every campaign by the
                   leads it brings in.
                 </p>
                 <ul className="tw:mt-6 tw:grid tw:gap-3.5">
@@ -756,7 +758,7 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
 
             <div className="tw:relative tw:mt-10 tw:grid tw:grid-cols-[minmax(0,1fr)_minmax(0,2.1fr)] tw:gap-6 tw:max-bslg:mt-[96px] tw:max-bssm:mt-14 tw:max-bssm:grid-cols-1">
               <RatingBadge
-                text="5.0 STARS ON GOOGLE • ZONIC MEDIA • DOVER •"
+                text="5.0 STARS ON GOOGLE • ZONIC MEDIA • USA •"
                 className="tw:absolute tw:-top-24 tw:left-[calc(32%-96px)] tw:z-2 tw:max-bslg:-top-[75px] tw:max-bslg:left-[calc(32%-75px)] tw:max-bssm:-top-16 tw:max-bssm:right-6 tw:max-bssm:left-auto"
               />
               <div className="tw:relative tw:h-[460px] tw:overflow-hidden tw:rounded-(--r-xl) tw:max-bsxl:h-[420px] tw:max-bssm:h-auto">
@@ -896,9 +898,8 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
               id="home-hub-h"
               title="Trusted on Every Platform You Check"
             >
-              Client reviews sit on Google, Clutch and Trustpilot, our Dover
-              office is pinned on Google Maps, and the team shares its work on
-              social media. Tap any icon to check us out.
+              Client reviews sit on Google, Clutch and Trustpilot, and the team
+              shares its work on social media. Tap any icon to check us out.
             </CenterHead>
             <PlatformHub
               left={hubLeft}
@@ -1249,7 +1250,7 @@ export function HomePage({ blogs }: { blogs: HomeBlog[] }) {
                 {[
                   "Free call, no obligation",
                   "Month-to-month plans",
-                  "Dover, DE office · clients nationwide",
+                  "Clients nationwide",
                 ].map((t) => (
                   <li key={t} className="tw:flex tw:items-center tw:gap-2">
                     <FiCheck aria-hidden="true" className="tw:text-(--gold)" />

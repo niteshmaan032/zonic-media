@@ -37,7 +37,7 @@ import {
   MdOutlineWaterDrop,
   MdRoofing,
 } from "react-icons/md";
-import { RiLineChartLine, RiSearchLine } from "react-icons/ri";
+import { RiLineChartLine, RiSearchLine, RiSparkling2Line } from "react-icons/ri";
 
 /* ---------------------------------------------------------------------------
    SITE NAVIGATION LINKS (moved 26 Oct 2026 from the retired
@@ -114,11 +114,21 @@ const seoServiceLinks: NicheLink[] = [
   },
   {
     id: "ai-seo-services",
-    title: "AI SEO (AEO & GEO)",
+    title: "AI SEO Services",
     description:
       "Get cited in ChatGPT, AI Overviews, AI Mode and Perplexity — not just ranked.",
     link: "/services/ai-seo-services",
     icon: <RiSearchLine />,
+    group: "Core SEO Services",
+  },
+  // GEO page (26 Nov 2026); owns the GEO terms, AI SEO keeps the rest.
+  {
+    id: "generative-engine-optimization",
+    title: "Generative Engine Optimization (GEO)",
+    description:
+      "Get your business named and cited in ChatGPT, Gemini, Copilot and Google AI answers.",
+    link: "/services/generative-engine-optimization",
+    icon: <RiSparkling2Line />,
     group: "Core SEO Services",
   },
   {
@@ -137,6 +147,17 @@ const seoServiceLinks: NicheLink[] = [
       "Three flat-scope plans with deliverables you can read before you pay.",
     link: "/services/local-seo-packages",
     icon: <RiLineChartLine />,
+    group: "Core SEO Services",
+  },
+  // Contractor hub (26 Nov 2026): owns "seo for contractors" / "contractor
+  // seo"; each trade page below links up to it.
+  {
+    id: "seo-for-contractors",
+    title: "SEO for Contractors",
+    description:
+      "Map Pack spots, service pages and reviews for every trade, measured in calls.",
+    link: "/services/seo-for-contractors",
+    icon: <MdOutlineEngineering />,
     group: "Core SEO Services",
   },
   // Repair & Installation

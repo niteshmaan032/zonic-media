@@ -123,8 +123,7 @@ export function FlCitiesSection({
               })}
             </svg>
             <p className="tw:mt-4 tw:border-t tw:border-(--line) tw:pt-4 tw:text-[14.5px]/[1.55] tw:text-(--muted)">
-              One in-house team plans every city from Dover, Delaware, so each
-              page shares the same reporting and the same people.
+              One in-house team plans every city, so each page shares the same reporting and the same people.
             </p>
           </div>
           <FlCityCards

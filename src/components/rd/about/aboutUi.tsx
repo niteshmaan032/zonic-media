@@ -670,7 +670,7 @@ export function CoverageMapUi({
             />
           </g>
         ))}
-        {/* Head office: Dover, DE */}
+        {/* Delaware market marker (no office claim, owner 26 Nov 2026) */}
         <circle
           cx="791.7"
           cy="212.1"
@@ -711,7 +711,7 @@ export function CoverageMapUi({
           fontWeight="600"
           fill="#fff"
         >
-          Dover HQ
+          Delaware
         </text>
         <line
           x1="451.2"

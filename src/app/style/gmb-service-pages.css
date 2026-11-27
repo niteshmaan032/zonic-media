@@ -23,7 +23,7 @@
   --gold: #fdc115;
   --gold-dark: #d9a303;
   --gold-soft: #fff6db;
-  --text: #47546e;
+  --text: #3b475f; /* was #47546e; darker so body copy reads less thin (owner, 26 Nov 2026) */
   --muted: #7a869e;
   --line: #e3e9f7;
   --bg-soft: #f5f8fd;
@@ -211,7 +211,7 @@
   margin: 14px 0 12px;
 }
 .gmb-verify-page .gmb-reinst-descrp {
-  font-size: 16.5px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.72;
   color: var(--text);
@@ -254,7 +254,7 @@
   line-height: 1.2;
 }
 .gmb-verify-page .gmb-reinst-sec-1 > .gmb-reinst-descrp {
-  font-size: clamp(16px, 1.5vw, 17.5px);
+  font-size: clamp(17px, 1.6vw, 19px);
 }
 
 /* trust badges — same sizes as the reinstatement hero */
@@ -279,6 +279,12 @@
   border: 0;
   object-fit: contain;
 }
+/* Google rating badge: no global link underline (as on the reinstatement
+   page, whose link reset this page doesn't have). */
+.gmb-verify-page .hero-badges a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* "Need immediate help? Call now" note */
 .gmb-verify-page .gmb-reinst-sec-1-box {
@@ -288,7 +294,7 @@
   border-radius: var(--radius);
 }
 .gmb-verify-page .gmb-reinst-sec-1-box p {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--deep);
@@ -298,7 +304,7 @@
   align-items: center;
   gap: 9px;
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.4;
@@ -334,7 +340,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 500;
   line-height: 1.55;
   color: var(--text);
@@ -361,7 +367,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.45;
   color: var(--deep);
@@ -411,15 +417,15 @@
   height: 22px;
 }
 .gmb-verify-page .gmb-reinst-card-heading {
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: -0.01em;
   line-height: 1.35;
   margin-bottom: 9px;
 }
 .gmb-verify-page .gmb-reinst-card-descrp {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--text);
 }
 
@@ -444,10 +450,10 @@
   letter-spacing: 0.02em;
 }
 .gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-heading {
-  font-size: 16.5px;
+  font-size: 19.5px;
 }
 .gmb-verify-page .gmb-reinst-sec-4 .gmb-reinst-card-descrp {
-  font-size: 13.5px;
+  font-size: 16px;
 }
 
 /* why choose — full-colour icon images on a neutral tile */
@@ -560,13 +566,13 @@
   letter-spacing: 0.02em;
 }
 .gmb-verify-page .gmb-reinst-price-heading {
-  font-size: 19px;
+  font-size: 21px;
   letter-spacing: -0.01em;
   line-height: 1.35;
   margin: 0 0 6px;
 }
 .gmb-verify-page .gmb-reinst-price-card-wrapper .gmb-reinst-descrp {
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.6;
 }
 .gmb-verify-page .gmb-reinst-price-list {
@@ -582,7 +588,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 14.5px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.55;
   color: var(--deep);
@@ -638,7 +644,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: -0.01em;
   line-height: 1.35;
   margin-bottom: 10px;
@@ -653,7 +659,7 @@
   color: var(--blue-dark);
 }
 .gmb-verify-page .gmb-reinst-sec-8-content p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text);
@@ -677,7 +683,7 @@
   padding: 20px 22px;
   background: transparent;
   color: var(--ink);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.45;
@@ -703,7 +709,7 @@
 }
 .gmb-verify-page .gmb-reinst-faqs-wrapper .accordion-body {
   padding: 0 22px 20px;
-  font-size: 15px;
+  font-size: 16.5px;
   font-weight: 400;
   line-height: 1.75;
   color: var(--text);
@@ -822,7 +828,7 @@
 }
 .gmb-verify-page .gmb-reisnt-banner-3-descrp {
   max-width: 620px;
-  font-size: 16.5px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.72;
   color: var(--on-dark);
@@ -986,7 +992,7 @@
    --------------------------------------------------------------- */
 .gmb-verify-page .gmb-verify-updated {
   margin: 14px 0 0;
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--muted);
 }
 .gmb-verify-page .gmb-verify-table-wrap {
@@ -998,7 +1004,7 @@
   width: 100%;
   min-width: 560px;
   border-collapse: collapse;
-  font-size: 15px;
+  font-size: 16px;
 }
 .gmb-verify-page .gmb-verify-table th,
 .gmb-verify-page .gmb-verify-table td {
@@ -1012,7 +1018,7 @@
 .gmb-verify-page .gmb-verify-table thead th {
   background: var(--bg-soft);
   color: var(--ink);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1032,7 +1038,7 @@
   display: grid;
   gap: 8px;
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
 }
 .gmb-verify-page .gmb-verify-quotes {
@@ -1050,12 +1056,12 @@
 .gmb-verify-page .gmb-verify-quote blockquote p {
   margin: 0;
   color: var(--ink);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
 }
 .gmb-verify-page .gmb-verify-quote figcaption {
   margin-top: auto;
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--muted);
 }
 .gmb-verify-page .gmb-verify-quote figcaption b {

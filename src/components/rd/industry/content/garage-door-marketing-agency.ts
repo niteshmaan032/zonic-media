@@ -63,7 +63,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/garage-door-website-design",
         label: "garage door website",
       },
-      " built for quick calls.",
+      " built for quick calls. Garage door calls are among the most urgent ",
+      {
+        href: "/",
+        label: "home services",
+      },
+      " we market, so speed shapes every campaign.",
     ],
     cta: "Get My Free Garage Door Audit",
     bento: {

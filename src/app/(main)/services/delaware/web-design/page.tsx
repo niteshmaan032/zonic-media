@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     absolute: "Web Design Delaware | Custom Website Design in Dover, DE",
   },
   description:
-    "Delaware web design company in Dover: custom, SEO-ready websites for New Castle, Kent and Sussex County businesses, built fast, mobile-first and to convert.",
+    "Delaware web design company for Dover, Wilmington and Lewes: custom, SEO-ready websites for businesses in all three counties, built fast and mobile-first.",
   keywords: [
     "web design delaware",
     "delaware web design",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     ],
     title: "Web Design Delaware | Custom Website Design in Dover, DE",
     description:
-      "Custom website design and development for Delaware businesses: fast, SEO-ready sites from a Dover-based agency.",
+      "Custom website design and development for Delaware businesses: fast, SEO-ready sites for Dover, Wilmington and the whole state.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -100,7 +100,7 @@ const serviceJsonLd = {
   serviceType: "Web Design",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Custom website design and development for Delaware businesses: conversion-focused, SEO-ready and tested against Core Web Vitals, from a Dover-based agency.",
+    "Custom website design and development for Delaware businesses: conversion-focused, SEO-ready and tested against Core Web Vitals, from a Delaware web design agency.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -136,7 +136,7 @@ const DelWebFaqs = [
   {
     question: "Do you design websites across all of Delaware?",
     answer:
-      "Yes, statewide. We build for businesses in Wilmington, Newark and Middletown, in Dover, Smyrna and Milford, and in Lewes, Rehoboth Beach and Seaford, as well as Delaware firms selling into Maryland and Pennsylvania. Most of the work runs remotely, and you are welcome to meet us at our Dover office.",
+      "Yes, statewide. We build for businesses in Wilmington, Newark and Middletown, in Dover, Smyrna and Milford, and in Lewes, Rehoboth Beach and Seaford, as well as Delaware firms selling into Maryland and Pennsylvania. The work runs remotely, with video calls at each step.",
   },
   {
     question: "How quickly can my Delaware website go live?",
@@ -202,7 +202,7 @@ const data: DelawareData = {
     eyebrow: "",
     h1Start: "Delaware Web Design Company",
     h1Highlight: "Building Custom, SEO-Ready Websites",
-    sub: "From our office in Dover, Zonic Media designs and builds custom sites for Delaware companies. Each site is fast on phones, structured for search and built around one goal: turning visitors from Wilmington to Rehoboth Beach into calls and quote requests.",
+    sub: "Zonic Media designs and builds custom sites for Delaware companies. Each site is fast on phones, structured for search and built around one goal: turning visitors from Wilmington to Rehoboth Beach into calls and quote requests.",
     media: {
       src: "/images/geo/delaware-web-design/delaware-web-design-studio.webp",
       alt: "Web designer building a Delaware service business website in a sunlit studio",
@@ -397,7 +397,7 @@ const data: DelawareData = {
         { label: "Accessibility", val: 92, tone: "gold" },
       ],
       pills: [
-        { icon: "pin", text: "Designed in Dover" },
+        { icon: "pin", text: "Designed for Delaware" },
         { icon: "star", text: "5.0 Google rating" },
         { icon: "pin", text: "All three counties" },
       ],
@@ -592,7 +592,7 @@ const extras: DelawareExtras = {
   },
   aboutTitle: ["Custom Website", "Design for Delaware", "Businesses."],
   aboutCard: {
-    kicker: "Designed in Dover, DE",
+    kicker: "Designed for Delaware businesses",
     title: "What each build includes",
     points: [
       "Custom design, never a resold template",
@@ -600,7 +600,7 @@ const extras: DelawareExtras = {
       "Speed tested on real phones",
       "Training so your team can edit",
     ],
-    foot: "8 The Green, STE B, Dover, DE 19901",
+    foot: "Wilmington · Dover · Lewes",
   },
   // Own pillar colours (owner: a different set on every page).
   pillars: ["#be185d", "#ecfccb", "#ede9fe", "#0c4a6e"],

@@ -219,8 +219,10 @@ export type LocalSeoContent = {
   explore: {
     title: string;
     lead: string;
-    items: [ExploreItem, ExploreItem, ExploreItem, ExploreItem];
-    other: string;
+    /** Four cards on niche pages; the contractor hub lists every trade. */
+    items: [ExploreItem, ExploreItem, ExploreItem, ExploreItem, ...ExploreItem[]];
+    /** Closing band; Rich when it links to the contractor hub. */
+    other: string | Rich;
   };
   reviews: { title: string; lead: string };
   pricing: {

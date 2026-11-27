@@ -65,7 +65,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/painting-contractor-website-design",
         label: "painting contractor website",
       },
-      " that shows off your best work.",
+      " that shows off your best work. Photos sell painting jobs before the estimate, so our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " leads with your work.",
     ],
     cta: "Get My Free Painting Audit",
     bento: {

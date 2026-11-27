@@ -19,7 +19,7 @@
  * other city's terms are targeted. Customers search in English, Spanish
  * and Portuguese here, but the page never claims we write or run
  * campaigns in Spanish or Portuguese (not confirmed by the owner). No
- * Orlando office: we serve the city from Dover, Delaware. Company-wide
+ * Orlando office: we serve the city remotely. Company-wide
  * verified numbers only.
  */
 
@@ -145,7 +145,7 @@ const OrlDmFaqs = [
   {
     question: "How do you work with Orlando clients without a local office?",
     answer:
-      "We serve Orlando remotely from our base in Dover, Delaware, and meet clients on video calls. Map rankings, ad accounts and websites are built through steady weekly work, not a desk on Orange Avenue, and every result shows up in your monthly report.",
+      "We serve Orlando remotely and meet clients on video calls. Map rankings, ad accounts and websites are built through steady weekly work, not a desk on Orange Avenue, and every result shows up in your monthly report.",
   },
   {
     question: "How do you separate tourist searches from local customers?",
@@ -633,7 +633,7 @@ const extras: DelawareExtras = {
       "AI answers and review growth",
       "A website that books the job",
     ],
-    foot: "From Dover, DE, over video calls",
+    foot: "Run remotely, over video calls",
   },
   // Orlando palette: violet, blossom pink, mint, night navy.
   pillars: ["#6d28d9", "#fce7f3", "#d1fae5", "#172554"],

@@ -242,6 +242,20 @@ export type DelawareExtras = {
       elsewhere: { title: string; body: string; href: string; link: string };
     };
   };
+  /** Greater Philadelphia service areas (Philadelphia SEM, 26 Nov 2026):
+      text tiles placed like a map, shown after the platform hub. */
+  areas?: {
+    h2: string;
+    lead: ReactNode;
+    items: {
+      /** Grid spot in phlAreas.css. */
+      spot: "city1" | "city2" | "mont" | "bucks" | "west" | "nj";
+      region: string;
+      name: string;
+      towns: string[];
+      desc: string;
+    }[];
+  };
   /** Chips on the last hero card when its stat isn't the industry count
       (Florida pages, 19 Nov 2026: county or town names). `more` adds the
       "+ more" chip; leave it off when the list is complete. */
@@ -258,7 +272,7 @@ export type DelawareExtras = {
     | "delta"
     | "table"
     | "bullet"
-    | "radar"
+    | "coverage"
     | "slope"
     | "dumbbell"
     | "needles"

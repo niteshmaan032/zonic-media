@@ -462,8 +462,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Also run plumbing or electrical crews? One plan can cover every trade on your trucks.",
+    other: [
+      "Also run plumbing or electrical crews? Our ",
+      { href: "/services/seo-for-contractors", label: "SEO for contractors" },
+      " covers every trade on your trucks in one plan.",
+    ],
   },
   reviews: {
     title: "Rated 5.0 on Google by the Trades We Rank",

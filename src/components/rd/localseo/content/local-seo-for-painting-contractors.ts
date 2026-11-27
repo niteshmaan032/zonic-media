@@ -469,8 +469,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Also run drywall or epoxy crews? Those service lines can share a single plan.",
+    other: [
+      "Also run drywall or epoxy crews? Our ",
+      { href: "/services/seo-for-contractors", label: "SEO services for contractors" },
+      " let those lines share a single plan.",
+    ],
   },
   reviews: {
     title: "Read the 5.0 Google Reviews Behind Our Painter SEO",

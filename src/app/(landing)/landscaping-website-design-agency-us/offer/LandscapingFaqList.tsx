@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Why is the landscaping website build free?",
     answer:
-      "We waive the landscaping website design and development fee, $2,000 for a standard build, when you start an eligible recurring marketing plan at $297/month or above on a six-month term. The written proposal sets the exact page count, functionality and revision limits before work begins.",
+      "We waive the landscaping website design and development fee, $950 for a standard build, when you start an eligible recurring marketing plan at $297/month or above on a six-month term. The written proposal sets the exact page count, functionality and revision limits before work begins.",
   },
   {
     question: "Which landscaping marketing plans qualify?",

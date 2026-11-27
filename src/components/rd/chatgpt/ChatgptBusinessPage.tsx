@@ -6,7 +6,6 @@ import {
   FiArrowRight,
   FiCheck,
   FiMail,
-  FiMapPin,
   FiMinus,
   FiPhone,
   FiPlus,
@@ -407,13 +406,6 @@ export function ChatgptBusinessPage() {
       strong: SITE_CONTACT.email,
       href: SITE_CONTACT.emailHref,
     },
-    {
-      icon: <FiMapPin />,
-      small: "Our office",
-      strong: SITE_CONTACT.address,
-      href: SITE_CONTACT.mapHref,
-      external: true,
-    },
   ];
 
   return (
@@ -598,19 +590,15 @@ export function ChatgptBusinessPage() {
                     </li>
                   ))}
                 </ul>
-                {/* Contact details beside the form (owner rule, 24 Oct). */}
+                {/* Contact details beside the form: phone and email (owner,
+                    26 Nov 2026: the address stays in the footer and on the
+                    contact page). */}
                 <ul className="tw:mt-9 tw:grid tw:grid-cols-2 tw:gap-3 tw:max-bssm:grid-cols-1">
-                  {contactTiles.map((c, i) => (
-                    <li
-                      key={c.small}
-                      className={cx(i === 2 && "tw:col-span-2 tw:max-bssm:col-span-1")}
-                    >
+                  {contactTiles.map((c) => (
+                    <li key={c.small}>
                       <a
                         href={c.href}
                         className="tw:flex tw:h-full tw:items-center tw:gap-3.5 tw:rounded-[18px] tw:bg-white/[0.06] tw:p-4 tw:ring-1 tw:ring-white/10 tw:transition tw:hover:bg-white/10"
-                        {...(c.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-white tw:text-[18px] tw:text-black"

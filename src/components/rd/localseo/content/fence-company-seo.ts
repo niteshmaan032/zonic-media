@@ -514,8 +514,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "sparkle",
       },
     ],
-    other:
-      "Also build decks or pergolas? One plan can cover every outdoor service your crew sells.",
+    other: [
+      "Also build decks or pergolas? Our ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO services" },
+      " cover every outdoor service your crew sells in one plan.",
+    ],
   },
   reviews: {
     title: "Fence Contractors, See Why Clients Rate Us 5.0 on Google",

@@ -59,7 +59,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/flooring-website-design",
         label: "flooring website",
       },
-      " that books measures and store visits.",
+      " that books measures and store visits. Flooring is a home improvement buy, and our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " treats it like one.",
     ],
     cta: "Get My Free Flooring Audit",
     bento: {

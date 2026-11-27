@@ -16,21 +16,19 @@ import { buildBreadcrumbJsonLd, SITE_URL } from "@/shared/seoSchemas";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Industries | Home Services & Contractor Marketing Agency",
+    // 26 Nov 2026: the home services phrases moved off this hub; since
+    // 27 Nov the homepage owns them. The hub keeps its "industries we
+    // serve" job and the contractor marketing wording.
+    absolute: "Industries We Serve | Marketing for Contractors & Trades",
   },
   description:
-    "Marketing for contractors, home services and local businesses: Google Maps rankings, AI recommendations, reviews, websites and Google Ads planned for your industry.",
+    "Industries we serve, from contractors and home services to clinics and law firms: Google Maps, AI answers, reviews, websites and ads built for each.",
   keywords: [
-    "home services marketing agency",
-    "home services marketing",
-    "contractor marketing agency",
-    "marketing for contractors",
-    "digital marketing for contractors",
-    "local business marketing",
-    "home improvement marketing",
-    "home service business marketing",
     "industries we serve",
+    "marketing for contractors",
+    "contractor marketing agency",
+    "digital marketing for contractors",
+    "marketing by industry",
   ],
   alternates: { canonical: "/industries" },
   // Redesign draft: out of the index until it replaces /industries.
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
         alt: "Zonic Media — Marketing Agency for Small & Mid-Size Businesses",
       },
     ],
-    title: "Industries We Serve | Home Services & Contractor Marketing",
+    title: "Industries We Serve | Marketing for Contractors & Trades",
     description:
       "Local SEO, Google Maps, reviews, websites and ads planned around how customers in your trade search, from roofing and HVAC to dental, legal and real estate.",
     url: "/industries",

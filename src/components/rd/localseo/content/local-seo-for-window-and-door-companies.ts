@@ -470,8 +470,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Selling blinds, shutters or glass repair too? Each line can get its own pages in one plan.",
+    other: [
+      "Selling blinds, shutters or glass repair too? Each line can get its own pages in one ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO" },
+      " plan.",
+    ],
   },
   reviews: {
     title: "Home Improvement Owners Rate Our Work 5.0",

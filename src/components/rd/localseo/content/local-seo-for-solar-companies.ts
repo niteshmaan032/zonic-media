@@ -465,8 +465,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Selling roofing or EV chargers alongside solar? Ask how one plan can rank every line.",
+    other: [
+      "Selling roofing or EV chargers alongside solar? Ask how our ",
+      { href: "/services/seo-for-contractors", label: "SEO for contractors" },
+      " can rank every line in one plan.",
+    ],
   },
   reviews: {
     title: "For Solar Installers: Our 5.0 Google Rating in Full",

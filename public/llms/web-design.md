@@ -39,5 +39,5 @@ Yes — clients across the US, Canada, UK, Australia, UAE, and India.
 
 ## Contact
 
-- Company: Zonic Media LLC, 8 The Green, STE B, Dover, DE 19901, United States
+- Company: Zonic Media LLC (registered address: 8 The Green, STE B, Dover, DE 19901, United States)
 - Phone: +1-302-726-9736 · Email: contact@zonicllc.com

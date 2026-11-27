@@ -57,7 +57,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/appliance-repair-website-design",
         label: "appliance repair website design",
       },
-      " built for fast bookings.",
+      " built for fast bookings. Appliance repair is booked like any urgent ",
+      {
+        href: "/",
+        label: "home service",
+      },
+      ": the fastest trusted answer wins.",
     ],
     cta: "Get My Free Repair Audit",
     bento: {

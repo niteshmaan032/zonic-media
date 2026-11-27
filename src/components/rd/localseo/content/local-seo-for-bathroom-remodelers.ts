@@ -474,8 +474,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Remodel kitchens and basements too? One plan can cover every room you build.",
+    other: [
+      "Remodel kitchens and basements too? Our ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO" },
+      " can cover every room you build in one plan.",
+    ],
   },
   reviews: {
     title: "Our 5.0 Google Rating, Written by Business Owners",

@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the chiropractic website really free to build?",
     answer:
-      "Yes, the build is. The upfront chiropractic website design and development fee, valued at $2,000 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the pages, features and revision limits.",
+      "Yes, the build is. The upfront chiropractic website design and development fee, valued at $950 for a standard build, is waived when you start a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the pages, features and revision limits.",
   },
   {
     question: "What plan does my clinic need to qualify?",

@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the flooring website truly free for my company?",
     answer:
-      "The upfront flooring website design and development fee, $2,000 for a standard build, is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal confirms the page count, functionality and revision limits before work begins.",
+      "The upfront flooring website design and development fee, $950 for a standard build, is waived when you start an eligible recurring marketing plan at $297/month or above on a six-month term. Your written proposal confirms the page count, functionality and revision limits before work begins.",
   },
   {
     question: "Which marketing plans unlock the flooring website?",

@@ -295,7 +295,7 @@ const HUB_LEFT: HubApp[] = [
   },
   {
     icon: SiGooglemaps,
-    name: "Directions to our Dover office",
+    name: "Our Google Business Profile",
     tone: "maps",
     href: SITE_CONTACT.mapHref,
   },
@@ -390,8 +390,8 @@ export function AboutPage() {
                   </span>
                 </Strip>
                 <p className={cx(LEAD, LINKS, "tw:mt-7 tw:max-w-[620px]")}>
-                  Zonic Media is a digital marketing agency in Dover, Delaware.
-                  Our in-house team helps small and mid-size businesses across
+                  Zonic Media is a digital marketing agency for small and
+                  mid-size businesses. Our in-house team helps businesses across
                   the US get found on Google and turn searches into calls, with
                   local SEO, Google Business Profile,{" "}
                   <Link href="/services/web-design">website design</Link> and{" "}
@@ -504,10 +504,10 @@ export function AboutPage() {
                     </span>
                     <div>
                       <span className="tw:block tw:text-[12px] tw:font-semibold tw:tracking-[0.12em] tw:text-white/60 tw:uppercase">
-                        Head office
+                        Where we work
                       </span>
                       <b className="tw:mt-1 tw:block tw:text-[clamp(22px,2vw,28px)] tw:leading-tight tw:font-medium">
-                        Dover, Delaware
+                        Across the US
                       </b>
                       <p className="tw:mt-2.5 tw:text-[15px]/[1.45] tw:text-white/75">
                         Serving small and mid-size businesses in all 50 states
@@ -541,7 +541,7 @@ export function AboutPage() {
                 <Label>Who we are</Label>
                 <p className={cx(LEAD, "tw:mb-6")}>
                   We are a small business marketing agency run by a senior,
-                  in-house team in Dover, Delaware. Our clients are small and
+                  in-house team. Our clients are small and
                   mid-size businesses that want more calls and bookings from
                   Google, from single-location trades to multi-location firms.
                 </p>
@@ -558,7 +558,7 @@ export function AboutPage() {
 
             <div className="tw:relative tw:mt-[110px] tw:grid tw:grid-cols-[minmax(0,1fr)_minmax(0,2.1fr)] tw:gap-6 tw:max-bssm:mt-[84px] tw:max-bssm:grid-cols-1">
               <RatingBadge
-                text="ABOUT ZONIC MEDIA • DOVER, DELAWARE •"
+                text="ABOUT ZONIC MEDIA • SERVING THE US •"
                 className="tw:absolute tw:-top-24 tw:left-[calc(32%-96px)] tw:z-2 tw:max-bslg:-top-[75px] tw:max-bslg:left-[calc(32%-75px)] tw:max-bssm:-top-16 tw:max-bssm:right-6 tw:max-bssm:left-auto"
               />
               <div className="tw:relative tw:h-[460px] tw:overflow-hidden tw:rounded-(--r-xl) tw:max-bsxl:h-[420px] tw:max-bssm:h-auto">
@@ -572,10 +572,10 @@ export function AboutPage() {
                       <FiMapPin />
                     </span>
                   }
-                  kicker="Head office"
-                  title="Dover, Delaware"
+                  kicker="Where we work"
+                  title="Remote-first, US-wide"
                   points={[
-                    "8 The Green, STE B, Dover, DE 19901",
+                    "Clients in every US state",
                     "Remote-first team, US-wide clients",
                     "Small and mid-size businesses",
                     "Month to month, no lock-in",
@@ -799,7 +799,7 @@ export function AboutPage() {
               <div className="tw:w-full tw:max-bslg:max-w-[520px] tw:max-bslg:justify-self-center">
                 <CoverageMapUi
                   facts={[
-                    { strong: "Dover, DE", label: "Head office" },
+                    { strong: "Remote", label: "Team setup" },
                     { strong: "5", label: "Local market pages" },
                     { strong: "50", label: "States served" },
                   ]}
@@ -807,12 +807,11 @@ export function AboutPage() {
               </div>
               <div>
                 <Strip id="ab-where-h" size="card" className="tw:text-white">
-                  Based in Dover, Working Across the US
+                  Working With Businesses Across the US
                 </Strip>
                 <p className="tw:mt-6 tw:max-w-[56ch] tw:text-lg/[1.65] tw:text-[#b7c4dd]">
-                  You&apos;ll find our head office on The Green in Dover,
-                  Delaware. Because the team works remote-first, we take on
-                  small and mid-size businesses in every US state, with clients
+                  Our team works remote-first, so we take on small and
+                  mid-size businesses in every US state, with clients
                   as far away as Canada, the UK and Australia.
                 </p>
                 <p
@@ -861,8 +860,8 @@ export function AboutPage() {
         <Section labelledBy="ab-found-h" tone="white">
           <Wrap>
             <CenterHead id="ab-found-h" title="Check Us Out Anywhere">
-              See what clients say on Google, Clutch and Trustpilot, get
-              directions to our Dover office, and follow our work on LinkedIn,
+              See what clients say on Google, Clutch and Trustpilot, see our
+              Google Business Profile, and follow our work on LinkedIn,
               Facebook, Instagram and YouTube.
             </CenterHead>
             <PlatformHub
@@ -998,21 +997,8 @@ export function AboutPage() {
                   <FiMail aria-hidden="true" className="tw:size-[17px]" />
                   {SITE_CONTACT.email}
                 </Pill>
-                {/* Office address beside phone and email (owner, 24 Oct:
-                    every contact block lists all three). Outline-pill look;
-                    the Maps link opens in a new tab. */}
-                <a
-                  href={SITE_CONTACT.mapHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="tw:inline-flex tw:min-h-14 tw:items-center tw:justify-center tw:gap-[9px] tw:rounded-full tw:border-[1.5px] tw:border-(--ink) tw:px-7 tw:py-3 tw:text-center tw:text-base tw:font-medium tw:text-(--ink) tw:transition tw:duration-200 tw:hover:-translate-y-0.5 tw:hover:bg-(--ink) tw:hover:text-white tw:max-bssm:w-full"
-                >
-                  <FiMapPin
-                    aria-hidden="true"
-                    className="tw:size-[17px] tw:flex-none"
-                  />
-                  8 The Green, STE B, Dover, DE 19901
-                </a>
+                {/* Phone and email only (owner, 26 Nov 2026: the address
+                    stays in the footer and on the contact page). */}
               </div>
               <div className="tw:mx-auto tw:mt-[34px] tw:max-w-[760px] tw:text-left">
                 <ServiceLeadForm
@@ -1077,7 +1063,7 @@ export function AboutPage() {
                   "Free, no obligation",
                   "Month to month",
                   "In-house team",
-                  "Based in Dover, DE",
+                  "Clients in every US state",
                 ].map((t) => (
                   <li key={t} className="tw:flex tw:items-center tw:gap-2">
                     <FiCheck aria-hidden="true" className="tw:text-(--green)" />

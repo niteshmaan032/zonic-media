@@ -336,6 +336,10 @@ export const FAQ = {
       q: "Do you provide SEO services for small businesses?",
       a: "That is most of our work. We serve small and mid-size businesses across 20+ industries, from home services to clinics and law firms, and focus on the local and service searches that turn into real customers.",
     },
+    {
+      q: "Do you offer SEO for contractors?",
+      a: "Yes. SEO for contractors and home service businesses is a large part of our work. HVAC, plumbing, roofing, electrical and remodeling companies get service and town pages, a tuned Google Business Profile and steady reviews, measured in calls and booked jobs. Cleaning, landscaping and pest control companies get the same local approach.",
+    },
   ],
 };
 

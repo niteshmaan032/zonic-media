@@ -117,14 +117,6 @@ const CONTACT_TILES = [
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    which: "ink" as const,
-    small: "Our office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 export function SeoServicesPage() {
@@ -528,31 +520,22 @@ export function SeoServicesPage() {
                     </li>
                   ))}
                 </ul>
-                {/* Contact details (owner rule: every contact block lists
-                    phone, email and address on the left). */}
+                {/* Contact details: phone and email (owner, 26 Nov 2026: the
+                    address stays in the footer and on the contact page). */}
                 <ul className="tw:mt-9 tw:grid tw:grid-cols-2 tw:gap-3 tw:max-bsxl:grid-cols-1 tw:max-bslg:grid-cols-2 tw:max-bssm:grid-cols-1">
-                  {CONTACT_TILES.map((t, i) => (
+                  {CONTACT_TILES.map((t) => (
                     <li
                       key={t.small}
-                      className={cx(
-                        i === CONTACT_TILES.length - 1 &&
-                          "tw:col-span-2 tw:max-bsxl:col-span-1 tw:max-bslg:col-span-2 tw:max-bssm:col-span-1",
-                      )}
                     >
                       <a
                         href={t.href}
                         className="tw:flex tw:h-full tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-white tw:p-4 tw:ring-1 tw:ring-(--line) tw:transition tw:hover:-translate-y-0.5 tw:hover:ring-[#cbd5e1]"
-                        {...(t.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:text-[18px] tw:text-white"
                           style={{
                             background:
-                              t.which === "ink"
-                                ? "linear-gradient(135deg,#334155,#0c1526)"
-                                : grad(p, t.which),
+                              grad(p, t.which),
                           }}
                           aria-hidden="true"
                         >

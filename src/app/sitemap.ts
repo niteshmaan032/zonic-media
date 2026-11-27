@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { getPublishedBlogs } from "@/backend/lib/blogs";
-import { blogTopics, topicOf, topicSlug } from "@/components/rd/blog/blogBits";
 import lastmodJson from "@/data/sitemapLastmod.generated.json";
 import blogRedirectsJson from "@/data/blogRedirects.json";
 
@@ -109,28 +108,9 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/local-seo-google-business-optimization`,        changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/google-maps-business-ranking-tool-online`,      changeFrequency: "monthly", priority: 0.8 },
 
-  // Free-website offer landers
+  // Free-website offer: only the generic page is indexed. The 20 trade
+  // landers are noindex and stay out of the sitemap (owner, 27 Nov 2026).
   { url: `${BASE_URL}/website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/roofing-website-design-agency-us/offer`,              changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/hvac-website-design-agency-us/offer`,                 changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/plumber-website-design-agency-us/offer`,              changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/auto-repair-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/bathroom-remodeling-website-design-agency-us/offer`,  changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/chiropractic-website-design-agency-us/offer`,         changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/cleaning-company-website-design-agency-us/offer`,     changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/electrician-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/flooring-website-design-agency-us/offer`,             changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/garage-door-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/home-inspector-website-design-agency-us/offer`,       changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/kitchen-remodeling-website-design-agency-us/offer`,   changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/landscaping-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/law-firm-website-design-agency-us/offer`,             changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/moving-company-website-design-agency-us/offer`,       changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/painting-contractor-website-design-agency-us/offer`,  changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/pool-service-website-design-agency-us/offer`,         changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/real-estate-website-design-agency-us/offer`,          changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/solar-website-design-agency-us/offer`,                changeFrequency: "monthly", priority: 0.8 },
-  { url: `${BASE_URL}/towing-website-design-agency-us/offer`,               changeFrequency: "monthly", priority: 0.8 },
 
   // Home inspector marketing
   { url: `${BASE_URL}/services/home-inspector-marketing`,                changeFrequency: "monthly", priority: 0.8 },
@@ -199,9 +179,13 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   // SEO-plan pages (Aug 2026)
   { url: `${BASE_URL}/services/seo-services`,               changeFrequency: "monthly", priority: 0.9 },
   { url: `${BASE_URL}/services/ai-seo-services`,            changeFrequency: "monthly", priority: 0.9 },
+  { url: `${BASE_URL}/services/generative-engine-optimization`, changeFrequency: "monthly", priority: 0.9 },
   { url: `${BASE_URL}/services/chatgpt-business-profile`, changeFrequency: "weekly", priority: 0.9 },
   { url: `${BASE_URL}/services/local-seo-for-small-business`, changeFrequency: "monthly", priority: 0.8 },
   { url: `${BASE_URL}/services/local-seo-packages`,         changeFrequency: "monthly", priority: 0.8 },
+  // Contractor SEO hub (26 Nov 2026); lastmod approved by the owner on 27 Nov.
+  // The home services page was folded into the homepage (27 Nov).
+  { url: `${BASE_URL}/services/seo-for-contractors`,        changeFrequency: "monthly", priority: 0.9 },
 
   // Locations
   { url: `${BASE_URL}/services/delaware/digital-marketing`,     changeFrequency: "monthly", priority: 0.8 },
@@ -278,20 +262,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     }));
-    // Blog topic pages (same rule as /blog: blogTopics). Last modified = the
-    // newest change to any guide in the topic.
-    blogEntries.push(
-      ...blogTopics(blogs).map((topic) => ({
-        url: `${BASE_URL}/blog?topic=${topic.slug}`,
-        lastModified: blogs
-          .filter((blog) => topicSlug(topicOf(blog)) === topic.slug)
-          .map((blog) => blog.updatedAt)
-          .sort()
-          .at(-1),
-        changeFrequency: "weekly" as const,
-        priority: 0.6,
-      })),
-    );
+    // Blog topic pages were removed on 27 Nov 2026; /blog 308s ?topic= URLs.
   } catch {
     // If the DB is unreachable during sitemap generation, skip blog entries
   }

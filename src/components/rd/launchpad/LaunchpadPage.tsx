@@ -114,14 +114,6 @@ const CONTACT_TILES: {
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    tone: "tw:bg-[#ea4335] tw:text-white",
-    small: "Our office in Dover, Delaware",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 /* The six launch pieces (links kept from the live page, anchors new). */
@@ -1051,7 +1043,7 @@ export function LaunchpadPage() {
                 {/* Contact details (owner, 24 Oct: so the column isn't plain
                     white). */}
                 <ul className="tw:mt-8 tw:grid tw:grid-cols-2 tw:gap-3 tw:max-bssm:grid-cols-1">
-                  {CONTACT_TILES.map((t, i) => {
+                  {CONTACT_TILES.map((t) => {
                     const inner = (
                       <>
                         <span
@@ -1078,10 +1070,6 @@ export function LaunchpadPage() {
                     return (
                       <li
                         key={t.small}
-                        className={cx(
-                          i === CONTACT_TILES.length - 1 &&
-                            "tw:col-span-2 tw:max-bssm:col-span-1",
-                        )}
                       >
                         {t.href ? (
                           <a
@@ -1090,9 +1078,6 @@ export function LaunchpadPage() {
                               box,
                               "tw:hover:-translate-y-0.5 tw:hover:bg-[#ede9fe]",
                             )}
-                            {...(t.external
-                              ? { target: "_blank", rel: "noopener noreferrer" }
-                              : {})}
                           >
                             {inner}
                           </a>

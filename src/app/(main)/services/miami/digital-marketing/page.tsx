@@ -17,7 +17,7 @@
  * Rules: the hub owns "florida" / "south florida digital marketing
  * agency"; Fort Lauderdale owns Broward. Customers search in English and
  * Spanish, but the page never claims Spanish content or Spanish campaigns
- * (owner hasn't confirmed). No Miami office: served from Dover, Delaware.
+ * (owner hasn't confirmed). No Miami office: served remotely.
  * Company-wide verified numbers only; no aggregateRating.
  */
 
@@ -150,7 +150,7 @@ const MiamiDmFaqs = [
   {
     question: "Is Zonic Media based in Miami?",
     answer:
-      "No. We are a remote, in-house team based in Dover, Delaware, and we meet Miami clients over video. Rankings, ads and websites depend on consistent work rather than a street address in town, and each month you get a written report of what changed and what it brought in.",
+      "No. We are a remote, in-house team, and we meet Miami clients over video. Rankings, ads and websites depend on consistent work rather than a street address in town, and each month you get a written report of what changed and what it brought in.",
   },
   {
     question: "Can social media marketing in Miami bring in real leads?",
@@ -623,7 +623,7 @@ const extras: DelawareExtras = {
       "Instagram and Facebook that start chats",
       "AI answers that name your business",
     ],
-    foot: "Run by our in-house team from Dover, DE",
+    foot: "Run remotely by our in-house team",
   },
   // Miami palette: Biscayne teal, flamingo pink, deco lavender, deep wine.
   pillars: ["#0f766e", "#fecaca", "#ede9fe", "#4c0519"],

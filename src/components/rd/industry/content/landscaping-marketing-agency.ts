@@ -62,7 +62,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/landscaping-website-design",
         label: "landscaping website design",
       },
-      " that shows off your best projects.",
+      " that shows off your best projects. Your busy seasons set the pace of our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " for landscapers.",
     ],
     cta: "Get My Free Landscaping Audit",
     bento: {

@@ -23,7 +23,12 @@
      llms.txt and Google's rules.
    - Title keeps "AI SEO Services" (top GSC term) and the live title's
      "AI Search Optimization, GEO & AEO"; H1 leads with "AI SEO Services".
-     "seo services / agency / company" stay with /services/seo-services. */
+     "seo services / agency / company" stay with /services/seo-services.
+   - 26 Nov 2026 keyword split: GEO terms ("generative engine optimization
+     services / agency / company", "geo agency") moved to the new
+     /services/generative-engine-optimization page. This page keeps "ai seo
+     services / agency / company", AEO, LLM SEO and ChatGPT SEO; GEO left
+     the title, the services H2, the description, keywords and FAQ. */
 
 import type { LocalSeoContent } from "../types";
 
@@ -32,20 +37,18 @@ export const CONTENT: LocalSeoContent = {
   audience: "Small and local businesses",
   serviceName: "AI SEO Services",
   meta: {
-    title: "AI SEO Services & Agency | GEO, AEO & AI Search Optimization",
+    title: "AI SEO Services & Agency | AEO & AI Search Optimization",
     description:
-      "AI SEO agency for small businesses: generative engine optimization, answer engine optimization and LLM SEO so ChatGPT, Gemini and AI Overviews name you.",
+      "AI SEO agency for small businesses: answer engine optimization, LLM SEO and AI search optimization so ChatGPT, Gemini and AI Overviews name you.",
     keywords: [
       "ai seo services",
       "ai seo agency",
       "ai seo company",
       "ai search optimization",
-      "generative engine optimization services",
       "answer engine optimization services",
       "llm seo",
       "chatgpt seo",
       "ai seo consultant",
-      "geo seo services",
     ],
   },
   hero: {
@@ -76,7 +79,7 @@ export const CONTENT: LocalSeoContent = {
           label: "ChatGPT",
           badge: "Named first",
           title: "Recommended by Name in ChatGPT",
-          text: "Generative engine optimization lines up your facts, reviews and mentions so ChatGPT names you first.",
+          text: "AI SEO lines up your facts, reviews and mentions so ChatGPT names you first.",
         },
         {
           label: "AI Overviews",
@@ -133,7 +136,7 @@ export const CONTENT: LocalSeoContent = {
     ],
   },
   services: {
-    title: "Generative Engine Optimization\nServices, Month by Month",
+    title: "AI SEO Services,\nMonth by Month",
     lead: "Six workstreams our AI SEO agency runs to decide whether a model trusts your business enough to name it.",
     cta: "Audit My AI Mentions",
     items: [
@@ -344,7 +347,7 @@ export const CONTENT: LocalSeoContent = {
   },
   compare: {
     title: "Zonic vs. a Typical Agency on AI Search Visibility",
-    lead: "Where our AI search work differs from what businesses are often sold under the GEO label.",
+    lead: "Where our AI search work differs from what businesses are often sold as AI SEO.",
     rows: [
       {
         topic: "How AI visibility is measured",
@@ -431,10 +434,10 @@ export const CONTENT: LocalSeoContent = {
         icon: "search",
       },
       {
-        name: "NYC Local SEO",
-        sub: "Map Pack work across the boroughs",
-        href: "/services/nyc/local-seo",
-        icon: "building",
+        name: "Generative Engine Optimization",
+        sub: "Get named and cited in AI answers",
+        href: "/services/generative-engine-optimization",
+        icon: "sparkle",
       },
       {
         name: "Philadelphia Local SEO",
@@ -444,13 +447,13 @@ export const CONTENT: LocalSeoContent = {
       },
       {
         name: "Delaware SEO",
-        sub: "Statewide search from our home base",
+        sub: "Statewide search across Delaware",
         href: "/services/delaware/seo",
         icon: "home",
       },
     ],
     other:
-      "Several brands or locations? Our GEO SEO services can cover each one under one plan.",
+      "Several brands or locations? Our AI SEO services can cover each one under one plan.",
   },
   reviews: {
     title: "Read the 5.0-Star Reviews Owners Left Us on Google",
@@ -463,7 +466,7 @@ export const CONTENT: LocalSeoContent = {
     customTitle: "Need AI SEO for Several Brands?",
   },
   faq: {
-    title: "Your AI SEO, GEO and AEO Questions, in Plain English",
+    title: "Your AI SEO and AEO Questions, in Plain English",
     lead: "What the terms mean, how AI picks a business, cost, timing and tracking.",
     items: [
       {
@@ -471,8 +474,8 @@ export const CONTENT: LocalSeoContent = {
         a: "AI SEO services make your business easy for AI tools to find, trust and recommend. That means accurate profiles and listings, pages that answer questions directly, schema, reviews and outside mentions, all checked against what ChatGPT, Gemini, Perplexity and Google AI Overviews actually say.",
       },
       {
-        q: "What is the difference between GEO and AEO in AI search?",
-        a: "Answer engine optimization (AEO) formats a page so a search engine or assistant can quote one clear answer from it. Generative engine optimization (GEO) builds the outside proof, such as listings, reviews and mentions, that persuades an AI model to recommend you. They overlap, so we run them as one program.",
+        q: "What is answer engine optimization (AEO)?",
+        a: "Answer engine optimization (AEO) formats a page so a search engine or AI assistant can quote one clear answer from it: a direct reply up front, short sections and plain FAQs. It is part of our AI SEO work. The outside proof that persuades AI to recommend you, such as listings, reviews and mentions, is covered by our generative engine optimization service.",
       },
       {
         q: "Is LLM SEO just another name for AI SEO?",

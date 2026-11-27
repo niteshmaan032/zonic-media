@@ -20,7 +20,7 @@
  * belongs to the Tampa page and is never used here. No "florida digital
  * marketing agency" head term (the hub's; it appears only as the hub link's
  * anchor). Fresh wording only; company-wide verified numbers only; no St.
- * Petersburg office is implied (we serve Pinellas from Dover, Delaware).
+ * Petersburg office is implied (we serve Pinellas remotely).
  */
 
 import type { Metadata } from "next";
@@ -145,7 +145,7 @@ const StPeteDmFaqs = [
   {
     question: "Where is your team, and how do St. Pete clients meet you?",
     answer:
-      "Our team works from Dover, Delaware, and meets St. Pete clients on video calls. Map positions, ads and websites improve through steady weekly work and clear reporting, not a local street address, and you receive a written summary each month.",
+      "Our team works remotely and meets St. Pete clients on video calls. Map positions, ads and websites improve through steady weekly work and clear reporting, not a local street address, and you receive a written summary each month.",
   },
   {
     question: "Which Pinellas County towns do you cover?",
@@ -611,7 +611,7 @@ const extras: DelawareExtras = {
       "Weekly Google posts and review replies",
       "AI answer checks every month",
     ],
-    foot: "Managed remotely from Dover, DE, over video calls",
+    foot: "Managed remotely, over video calls",
   },
   // St. Pete palette: mangrove green, Gulf sky, orchid, deep channel teal.
   pillars: ["#4d7c0f", "#e0f2fe", "#fae8ff", "#164e63"],

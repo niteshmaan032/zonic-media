@@ -63,7 +63,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/pest-control-website-design",
         label: "pest control website design",
       },
-      ", then turn those first visits into ongoing service plans.",
+      ", then turn those first visits into ongoing service plans. Pest control earns on renewals, so our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " keeps customers as well as finding them.",
     ],
     cta: "Get My Free Pest Control Audit",
     bento: {

@@ -17,6 +17,11 @@
  * sem agency 3,600 · search engine marketing services 3,600 · what is sem
  * 2,400 · seo and ppc agency 1,300 · seo sem agency 1,000.
  *
+ * 26 Nov 2026 (SEO expert's ranking-gap audit, checked against GSC and the
+ * live SERP): H1 and meta use the full "search engine marketing" phrase,
+ * Greater Philadelphia area tiles, four new FAQs, no "flat" fee wording.
+ * Title kept: the "sem agency/company philadelphia" terms bring the clicks.
+ *
  * Hub structure kept from the live pages: digital-marketing owns the broad
  * "digital marketing agency philadelphia" terms and links down to local-seo,
  * ppc and sem; those link back with narrow anchors only.
@@ -64,7 +69,7 @@ export const metadata: Metadata = {
     absolute: "SEM Agency Philadelphia | Search Engine Marketing Company",
   },
   description:
-    "Philadelphia search engine marketing agency running SEO and Google Ads from one keyword plan, so you show up in ads, Maps and organic results. Free SEM audit.",
+    "Philadelphia search engine marketing agency running Google Ads and SEO from one keyword plan. Serving Center City, Bucks & Montgomery County. Free SEM audit.",
   keywords: [
     "sem agency philadelphia",
     "sem agencies philadelphia",
@@ -128,14 +133,23 @@ const serviceJsonLd = {
       addressCountry: "US",
     },
   },
-  areaServed: {
-    "@type": "City",
-    name: "Philadelphia",
-    containedInPlace: {
-      "@type": "State",
-      name: "Pennsylvania",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Philadelphia",
+      containedInPlace: { "@type": "State", name: "Pennsylvania" },
     },
-  },
+    ...["Bucks", "Montgomery", "Delaware", "Chester"].map((county) => ({
+      "@type": "AdministrativeArea",
+      name: `${county} County`,
+      containedInPlace: { "@type": "State", name: "Pennsylvania" },
+    })),
+    {
+      "@type": "AdministrativeArea",
+      name: "Camden County",
+      containedInPlace: { "@type": "State", name: "New Jersey" },
+    },
+  ],
   audience: {
     "@type": "BusinessAudience",
     name: "Small and mid-size businesses in Philadelphia and the Delaware Valley",
@@ -191,9 +205,19 @@ const PhilaSemFaqs = [
       "SEM is the work of winning space on search results pages through paid ads and organic rankings together. Pay per click buys the top spots today; SEO earns the free listings and Map Pack places that keep bringing calls. Run as one plan, the two share keyword data and cost less than two separate projects.",
   },
   {
+    question: "What's the difference between SEM, SEO and PPC?",
+    answer:
+      "SEM is the whole job of getting found on search engines, paid and organic. PPC is the paid part: Google Ads and Microsoft Ads, where you pay per click. SEO is the organic part: ranking in the Map Pack and the regular results without paying per click. We run both from one keyword plan, so ad data shows which searches convert before SEO pages are built for them.",
+  },
+  {
     question: "Is SEM the same thing as Google Ads?",
     answer:
       "No. Google Ads is one part of SEM. Search engine marketing covers every way you appear on a results page: paid ads, the Map Pack, organic listings and AI answers. We plan all of them from one keyword list, so your ads and your SEO stop competing for the same searches.",
+  },
+  {
+    question: "How much does search engine marketing cost in Philadelphia?",
+    answer:
+      "SEM cost has two parts: our monthly plan and your ad budget. The plans are listed in the pricing section above. Your ad budget is billed to you directly by Google or Microsoft with 0% markup, and the right amount depends on your industry and how many businesses bid on the same searches. We suggest a starting budget after the free SEM audit, based on real data for your terms.",
   },
   {
     question: "Should a Philadelphia business run SEO and ads at once?",
@@ -211,9 +235,19 @@ const PhilaSemFaqs = [
       "The paid side can bring calls soon after Google approves your ads, while the organic side builds over the following months as pages and your profile gain ground. We report both together each month, so you can see paid leads carry you while organic rankings climb.",
   },
   {
-    question: "What does a free SEM audit include?",
+    question: "What do your SEM audit services include?",
     answer:
-      "We check which of your money keywords show your ads, your organic pages and your Map Pack listing, and where you are missing. We flag ad spend on terms you already rank for, gaps a new page could fill and tracking problems, then send a 90-day plan you can keep.",
+      "Our free SEM audit checks which of your money keywords show your ads, your organic pages and your Map Pack listing, and where you are missing. We flag ad spend on terms you already rank for, gaps a new page could fill and tracking problems, then send a 90-day plan you can keep.",
+  },
+  {
+    question: "Which areas around Philadelphia do you serve?",
+    answer:
+      "We run search engine marketing for businesses across Philadelphia, from Center City and University City to Fishtown and South Philly, plus Bucks, Montgomery, Delaware and Chester County and South Jersey, including Cherry Hill. Each area can get its own campaign and landing pages, so you see results by area, not one regional total.",
+  },
+  {
+    question: "Do I need a Philadelphia-based SEM company?",
+    answer:
+      "No. What matters is that your agency targets your real service area and reports results by area. Zonic Media manages Philadelphia-area campaigns remotely, with audits, reports and strategy calls done online. Your ads account and data stay in your name the whole time.",
   },
   {
     question: "Does SEM help with Google AI Overviews and ChatGPT?",
@@ -261,9 +295,9 @@ const hubRight: HubApp[] = [
 const data: DelawareData = {
   hero: {
     eyebrow: "",
-    h1Start: "Philadelphia SEM Agency for",
-    h1Highlight: "Paid and Organic Search on One Plan",
-    sub: "Zonic Media runs search engine marketing for Philadelphia businesses, pairing SEO with Google Ads from a single keyword plan. Ads bring calls now, rankings take over the searches that convert, and your business fills more of the same results page.",
+    h1Start: "Philadelphia SEM Agency:",
+    h1Highlight: "Search Engine Marketing for Paid and Organic Search",
+    sub: "Zonic Media is a search engine marketing company serving Philadelphia, Bucks, Montgomery, Delaware and Chester County businesses. We run Google Ads and SEO from one keyword plan, so every dollar and every page works toward the same searches.",
     media: {
       src: "/images/philadelphia/phila-sem/philadelphia-sem-strategist.webp",
       alt: "Philadelphia SEM strategist reviewing paid and organic search data",
@@ -524,10 +558,11 @@ const data: DelawareData = {
       "Credit given lead by lead",
       "Google bills ad spend to you",
       "Ad data shapes SEO from month one",
-      "Flat plans, cancel any month",
+      "Plans you can cancel any month",
     ],
     scoreTitle: "Sample Coverage Check",
-    scoreSub: "Example scores, out of 100",
+    // The coverage grid draws its own example searches; scoreRows unused.
+    scoreSub: "Example: one HVAC company’s top searches",
     scoreRows: [
       { label: "Page-one share", before: 20, after: 92 },
       { label: "Lead cost control", before: 31, after: 86 },
@@ -552,7 +587,7 @@ const data: DelawareData = {
       {
         icon: <FiPercent aria-hidden="true" />,
         title: "Spend at cost",
-        desc: "Ad spend goes straight to Google; our plan fee stays flat.",
+        desc: "Ad spend goes straight to Google, never marked up.",
       },
     ],
     banner: {
@@ -610,7 +645,7 @@ const data: DelawareData = {
   form: {
     eyebrow: "",
     h2: "Request a Free Philadelphia SEM Audit",
-    lead: "Tell us about your business and we will send a paid and organic search audit with a flat-priced plan.",
+    lead: "Tell us about your business and we will send a paid and organic search audit with a 90-day plan.",
     formType: "philadelphia-sem",
     badge: "Free Audit",
     title: "Request your free SEM audit",
@@ -705,9 +740,58 @@ const extras: DelawareExtras = {
     centerTitle: "Your keywords",
     centerSub: "one plan, two channels",
   },
+  // No office claims: Zonic serves the region remotely (owner, 26 Nov 2026).
+  areas: {
+    h2: "Search Engine Marketing Across Greater Philadelphia",
+    lead: "Zonic Media runs search engine marketing for businesses across the Philadelphia region remotely. Campaigns follow the areas you actually serve, not one metro-wide ad group.",
+    items: [
+      {
+        spot: "city1",
+        region: "Philadelphia",
+        name: "Center City and University City",
+        towns: ["Rittenhouse", "Old City", "University City"],
+        desc: "Clinics, firms and restaurants compete on every search here. We tighten ad radius and schedules, and build pages for near-me searches.",
+      },
+      {
+        spot: "city2",
+        region: "Philadelphia",
+        name: "Fishtown, Northern Liberties and South Philly",
+        towns: ["Fishtown", "Northern Liberties", "South Philly", "Manayunk"],
+        desc: "Searchers often add the neighborhood name. Those searches get their own ad groups and page sections.",
+      },
+      {
+        spot: "bucks",
+        region: "Pennsylvania",
+        name: "Bucks County",
+        towns: ["Doylestown", "Newtown", "Langhorne"],
+        desc: "Homeowners search by town, mostly on phones. Bucks County runs as its own campaign, reported apart from the city.",
+      },
+      {
+        spot: "mont",
+        region: "Pennsylvania",
+        name: "Montgomery County",
+        towns: ["King of Prussia", "Conshohocken", "Lansdale", "Norristown"],
+        desc: "Regional brands bid on the same terms. Ads test which searches convert, then SEO pages go after the ones worth owning.",
+      },
+      {
+        spot: "west",
+        region: "Pennsylvania",
+        name: "Delaware and Chester County",
+        towns: ["Media", "Springfield", "West Chester", "Exton"],
+        desc: "Service businesses here cover several towns from one base. We set service-area targeting and town pages that don't copy each other.",
+      },
+      {
+        spot: "nj",
+        region: "New Jersey",
+        name: "South Jersey",
+        towns: ["Cherry Hill", "Haddonfield", "Voorhees"],
+        desc: "Many Philadelphia businesses also serve Camden County. New Jersey runs as its own campaign with its own report.",
+      },
+    ],
+  },
   pricing: {
     title: "Search Engine Marketing Plans in Philadelphia",
-    lead: "SEO and paid search management at a flat monthly price, with ad spend billed to you by Google.",
+    lead: "SEO and paid search management in one monthly plan, with ad spend billed to you by Google.",
     compareTitle: "Compare SEM Plans",
     compareLead: "What each plan covers across paid and organic.",
     addOnsTitle: "SEM Add-Ons",
@@ -718,13 +802,13 @@ const extras: DelawareExtras = {
   },
   phone: "semreport",
   darkUi: "blended",
-  scoreStyle: "radar",
+  scoreStyle: "coverage",
   noGrow: true,
   reviewsTitle: "What Business Owners Say",
   contact: {
     before: "Let’s Map",
     after: "Your Search Plan",
-    lead: `Tell us your services and the searches you want to win. We will send a free paid and organic audit and a flat-priced plan.`,
+    lead: `Tell us your services and the searches you want to win. We will send a free paid and organic audit and a 90-day plan.`,
   },
   stepLinks: [
     "#de-contact",

@@ -465,8 +465,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Also install gates or overhead doors? Those jobs can sit in the same garage door plan.",
+    other: [
+      "Also install gates or overhead doors? Those jobs fit the same plan, like every trade in our ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO services" },
+      ".",
+    ],
   },
   reviews: {
     title: "What Owners Wrote About Our SEO Team on Google",

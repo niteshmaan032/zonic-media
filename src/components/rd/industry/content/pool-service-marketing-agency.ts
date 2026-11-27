@@ -56,7 +56,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/pool-service-website-design",
         label: "pool service websites",
       },
-      " built to sign recurring customers.",
+      " built to sign recurring customers. Pool service follows the swim season, and our ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " follows it with you.",
     ],
     cta: "Get My Free Pool Audit",
     bento: {

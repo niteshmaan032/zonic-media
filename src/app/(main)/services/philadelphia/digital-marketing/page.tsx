@@ -399,7 +399,7 @@ const data: DelawareData = {
           "Both channels reported together",
         ],
         href: "/services/philadelphia/sem",
-        link: "SEM services",
+        link: "Search engine marketing agency",
       },
       {
         tone: "blue",
@@ -642,7 +642,7 @@ const extras: DelawareExtras = {
       "Instagram, Facebook and TikTok",
       "Websites and landing pages",
     ],
-    foot: "8 The Green, STE B, Dover, DE 19901",
+    foot: "Philadelphia and the Delaware Valley",
   },
   pillars: ["#a21caf", "#cffafe", "#fce7f3", "#1e1b4b"],
   features: {

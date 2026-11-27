@@ -24,7 +24,7 @@ const contactPageJsonLd = {
   name: "Contact Zonic Media",
   url: "https://www.zonicllc.com/contact-us",
   description:
-    "Contact Zonic Media, a digital marketing agency in Dover, Delaware, for a free local SEO audit, Google Business Profile help, website design, Google Ads and AI search optimization.",
+    "Contact Zonic Media, a digital marketing agency registered in Dover, Delaware, for a free local SEO audit, Google Business Profile help, website design, Google Ads and AI search optimization.",
   about: { "@id": "https://www.zonicllc.com/#organization" },
   inLanguage: "en-US",
 };
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     absolute: "Contact Zonic Media | Digital Marketing Agency & Free Audit",
   },
   description:
-    "Contact Zonic Media, a US digital marketing agency in Dover, DE. Call (302) 726-9736 or request a free local SEO audit. We reply within one business day.",
+    "Contact Zonic Media, a US digital marketing agency registered in Dover, DE. Call (302) 726-9736 or request a free local SEO audit. We reply in one business day.",
   keywords: [
     "contact digital marketing agency",
     "digital marketing agency contact",

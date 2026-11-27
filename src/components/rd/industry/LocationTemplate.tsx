@@ -116,14 +116,6 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
       value: SITE_CONTACT.email,
       href: SITE_CONTACT.emailHref,
     },
-    {
-      icon: <FiMapPin />,
-      color: "#0c1526",
-      label: "Head office",
-      value: SITE_CONTACT.address,
-      href: SITE_CONTACT.mapHref,
-      external: true,
-    },
   ];
 
   return (
@@ -491,8 +483,8 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
                     </li>
                   ))}
                 </ul>
-                {/* Contact details (owner rule: every contact block lists
-                    phone, email and address on the left). */}
+                {/* Contact details: phone and email (owner, 26 Nov 2026: the
+                    address stays in the footer and on the contact page). */}
                 <ul className="tw:mt-8 tw:rounded-[24px] tw:bg-(--panel) tw:px-5 tw:py-1.5 tw:max-bssm:px-4">
                   {contactRows.map((r, i) => (
                     <li
@@ -505,9 +497,6 @@ export function LocationTemplate({ c }: { c: LocationContent }) {
                       <a
                         href={r.href}
                         className="tw:group tw:flex tw:items-center tw:gap-4 tw:py-4"
-                        {...(r.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-[14px] tw:text-[18px] tw:text-white"

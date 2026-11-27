@@ -411,7 +411,7 @@ const data: DelawareData = {
           "History kept in your account",
         ],
         href: "/services/philadelphia/sem",
-        link: "Run ads alongside SEO",
+        link: "Search engine marketing in Philadelphia",
       },
     ],
   },

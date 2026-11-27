@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the plumber website free, with no build invoice?",
     answer:
-      "Yes. The $2,000 plumbing website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
+      "Yes. The $950 plumbing website design and development fee is waived when your company starts a qualifying marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
   },
   {
     question: "Which plumbing marketing plans include the free site?",
@@ -28,7 +28,7 @@ export const FAQS = [
   {
     question: "How long do we commit, and what if we cancel?",
     answer:
-      "You commit to the qualifying plan for a six-month minimum term, and the waived $2,000 build fee is set against that term. We host the site for those six months, then ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer. Your written proposal restates this before you sign.",
+      "You commit to the qualifying plan for a six-month minimum term, and the waived $950 build fee is set against that term. We host the site for those six months, then ownership of the site and hosting transfers to you at the end of month six. If you cancel sooner, you keep your domain and content, but the website does not transfer. Your written proposal restates this before you sign.",
   },
 ];
 

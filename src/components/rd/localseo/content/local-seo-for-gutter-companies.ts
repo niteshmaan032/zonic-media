@@ -466,8 +466,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Do roofing or siding too? We can fold each exterior service into a single plan.",
+    other: [
+      "Do roofing or siding too? As a ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO company" },
+      ", we fold each exterior service into a single plan.",
+    ],
   },
   reviews: {
     title: "Gutter Company Owners: Our 5.0 Google Rating, Unfiltered",

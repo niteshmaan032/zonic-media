@@ -174,7 +174,7 @@ const FlPpcFaqs = [
   {
     question: "Can a team outside Florida manage my Florida ads?",
     answer:
-      "Yes. Good targeting comes from search data and steady testing, not a local office. Our in-house team runs Florida accounts from Dover, Delaware, studies the searches in each region and meets you on video whenever you want to walk through results.",
+      "Yes. Good targeting comes from search data and steady testing, not a local office. Our in-house team runs Florida accounts remotely, studies the searches in each region and meets you on video whenever you want to walk through results.",
   },
 ];
 
@@ -571,7 +571,7 @@ const extras: DelawareExtras = {
       "Call ads scheduled for open hours",
       "Call, form and text tracking",
     ],
-    foot: "Your account team works from Dover, DE",
+    foot: "Your account team works with you over video",
   },
   // PPC palette: burnt orange, sky, lemon, indigo.
   pillars: ["#c2410c", "#e0f2fe", "#fef9c3", "#312e81"],

@@ -56,7 +56,12 @@ export const CONTENT: IndustryContent = {
       },
       ", seasonal ads and a ",
       { href: "/services/web-design", label: "website built for quotes" },
-      ".",
+      ". Moving is a ",
+      {
+        href: "/",
+        label: "home service",
+      },
+      " people buy rarely, so trust and quick quotes decide it.",
     ],
     cta: "Get My Free Mover Audit",
     bento: {

@@ -464,8 +464,11 @@ export const CONTENT: LocalSeoContent = {
         icon: "home",
       },
     ],
-    other:
-      "Run HVAC or drain crews too? One plan can rank every service you offer.",
+    other: [
+      "Run HVAC or drain crews too? Our ",
+      { href: "/services/seo-for-contractors", label: "contractor SEO services" },
+      " rank every service you offer in one plan.",
+    ],
   },
   reviews: {
     title: "Why Service Owners Rate Our SEO Work 5.0",

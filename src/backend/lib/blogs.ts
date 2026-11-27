@@ -35,6 +35,8 @@ export type BlogDocument = {
   serviceTitle: string;
   blogTitle: string;
   slug?: string;
+  // Earlier public slugs; they 308 to the current one (see blogSlugs.ts).
+  previousSlugs?: string[];
   metaTitle?: string;
   metaDescription?: string;
   publishDate: string;
@@ -491,6 +493,16 @@ async function getPublishedBlogBySlugUncached(
   return blog ? toPublicBlog(blog) : null;
 }
 
+/** Current slug of the published post that used to live at `slug`, if any. */
+async function getBlogSlugRedirectUncached(
+  slug: string,
+): Promise<string | null> {
+  await ensureBlogIndexes();
+  const blogs = await getBlogsCollection();
+  const blog = await blogs.findOne({ previousSlugs: slug, status: "published" });
+  return blog ? (blog.slug ?? toSlug(blog.blogTitle)) : null;
+}
+
 const getCachedPublishedBlogs = unstable_cache(
   getPublishedBlogsUncached,
   ["published-blogs"],
@@ -515,6 +527,19 @@ export async function getPublishedBlogs(limit?: number) {
 
 export async function getPublishedBlogBySlug(slug: string) {
   return getCachedPublishedBlogBySlug(slug);
+}
+
+const getCachedBlogSlugRedirect = unstable_cache(
+  getBlogSlugRedirectUncached,
+  ["blog-slug-redirect"],
+  {
+    revalidate: PUBLIC_BLOG_REVALIDATE_SECONDS,
+    tags: [PUBLIC_BLOG_CACHE_TAG],
+  },
+);
+
+export async function getBlogSlugRedirect(slug: string) {
+  return getCachedBlogSlugRedirect(slug);
 }
 
 export function revalidatePublicBlogCache(slug?: string) {

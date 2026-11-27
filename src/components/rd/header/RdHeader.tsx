@@ -14,14 +14,19 @@ import { FaStore } from "react-icons/fa6";
 import {
   FiArrowRight,
   FiArrowUpRight,
+  FiBookOpen,
+  FiBriefcase,
   FiChevronDown,
+  FiGift,
+  FiInfo,
   FiMenu,
+  FiMessageCircle,
   FiPhone,
   FiStar,
   FiX,
 } from "react-icons/fi";
 import { IoDesktopOutline } from "react-icons/io5";
-import { LuPlaneTakeoff } from "react-icons/lu";
+import { LuPlaneTakeoff, LuRocket } from "react-icons/lu";
 import { RiChatCheckLine, RiMapPinLine, RiRadarLine } from "react-icons/ri";
 import {
   SiFacebook,
@@ -51,10 +56,9 @@ import {
    src/app/(main)/layout.tsx).
 
    Menus read their links from ./navLinks.tsx (the former Navbar's link
-   data). No Free Website
-   menu (owner, 24 Oct: it moved to the footer's Others column; its
-   landers are noindex per the growth plan) and a Pricing link instead, in
-   the redesign's look: a floating white bar inside the kit's
+   data). The last item is a small "Others" dropdown (owner, 26 Nov 2026:
+   About Us, Launchpad, Free Website, White Label Services, Blog, Contact
+   Us; it replaced the Pricing link). In the redesign's look: a floating white bar inside the kit's
    insets, and large white dropdown panels. Every desktop panel stays in the
    HTML when closed (hidden, not unmounted) so crawlers keep seeing every
    link, as the live Navbar does; the mobile menu mounts only while open.
@@ -69,7 +73,7 @@ type NicheItem = {
   icon: ReactNode;
 };
 type NicheGroup = { group: string; items: NicheItem[] };
-type MenuKey = "services" | "seo" | "web" | "locations" | "industries";
+type MenuKey = "services" | "seo" | "web" | "locations" | "industries" | "others";
 
 /* GMB links without the rank checker (owner, 23 Oct): it has its own card
    in the Services panel. The live Navbar keeps its list as it is. */
@@ -86,9 +90,8 @@ const NAV: { key: MenuKey | null; label: string; href?: string }[] = [
   },
   { key: "locations", label: "Locations" },
   { key: "industries", label: "Industries", href: SITE_PATHS.industries },
-  // Owner, 24 Oct: "Free Website" moved to the footer's Others column;
-  // Pricing takes its place here.
-  { key: null, label: "Pricing", href: "/pricing" },
+  // Owner, 26 Nov 2026: "Others" dropdown in place of the Pricing link.
+  { key: "others", label: "Others" },
 ];
 
 const SERVICES: {
@@ -207,11 +210,43 @@ const LOCATIONS: {
   },
 ];
 
-const COMPANY = [
-  { label: "Launchpad", href: "/services/launchpad" },
-  { label: "About", href: SITE_PATHS.about },
-  { label: "Blog", href: SITE_PATHS.blogs },
-  { label: "Contact", href: SITE_PATHS.contact },
+const OTHERS: { label: string; href: string; desc: string; icon: ReactNode }[] = [
+  {
+    label: "About Us",
+    href: SITE_PATHS.about,
+    desc: "Who we are and how we work with local businesses.",
+    icon: <FiInfo />,
+  },
+  {
+    label: "Launchpad",
+    href: "/services/launchpad",
+    desc: "Brand, website and Google profile for new businesses.",
+    icon: <LuRocket />,
+  },
+  {
+    label: "Free Website",
+    href: "/website-design-agency-us/offer",
+    desc: "Our free website offer for service businesses.",
+    icon: <FiGift />,
+  },
+  {
+    label: "White Label Services",
+    href: "/services/white-label-services",
+    desc: "SEO, GMB and web work for agencies, under your brand.",
+    icon: <FiBriefcase />,
+  },
+  {
+    label: "Blog",
+    href: SITE_PATHS.blogs,
+    desc: "Guides on local SEO, Google profiles and AI search.",
+    icon: <FiBookOpen />,
+  },
+  {
+    label: "Contact Us",
+    href: SITE_PATHS.contact,
+    desc: "Call, email or send us a message.",
+    icon: <FiMessageCircle />,
+  },
 ];
 
 const SOCIAL_ICON: Record<string, ReactNode> = {
@@ -546,6 +581,37 @@ function LocationsPanel() {
   );
 }
 
+/** Small dropdown under the "Others" label, not a full-width panel. */
+function OthersPanel() {
+  return (
+    <ul className="tw:grid tw:gap-0.5 tw:p-2">
+      {OTHERS.map((o) => (
+        <li key={o.href}>
+          <Link
+            href={o.href}
+            className="tw:flex tw:items-center tw:gap-3.5 tw:rounded-[18px] tw:px-3 tw:py-2.5 tw:transition tw:duration-150 tw:hover:bg-(--panel)"
+          >
+            <span
+              className="tw:grid tw:size-10 tw:flex-none tw:place-items-center tw:rounded-full tw:bg-(--blue-soft) tw:text-[17px] tw:text-(--blue)"
+              aria-hidden="true"
+            >
+              {o.icon}
+            </span>
+            <span>
+              <b className="tw:block tw:text-[15.5px] tw:font-medium tw:leading-snug">
+                {o.label}
+              </b>
+              <span className="tw:mt-0.5 tw:block tw:text-[13.5px]/[1.45] tw:text-(--text)">
+                {o.desc}
+              </span>
+            </span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function panelFor(key: MenuKey) {
   switch (key) {
     case "services":
@@ -558,6 +624,8 @@ function panelFor(key: MenuKey) {
       return <LocationsPanel />;
     case "industries":
       return <ListPanel card={SIDE_CARDS.industries} groups={industryGroups} />;
+    case "others":
+      return <OthersPanel />;
   }
 }
 
@@ -701,17 +769,8 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
           <MobileSection title="Industries">
             <MobileNiche groups={industryGroups} />
           </MobileSection>
-          <li className="tw:border-b tw:border-(--line)">
-            <Link
-              href="/pricing"
-              onClick={onClose}
-              className="tw:block tw:py-4 tw:text-[18px] tw:font-medium"
-            >
-              Pricing
-            </Link>
-          </li>
-          <MobileSection title="Company">
-            <MobileLinks links={COMPANY} />
+          <MobileSection title="Others">
+            <MobileLinks links={OTHERS} />
           </MobileSection>
         </ul>
         <div className="tw:mt-6 tw:grid tw:gap-3">
@@ -856,6 +915,8 @@ export function RdHeader() {
           <ul className="tw:flex tw:items-center tw:gap-0.5">
             {NAV.map((item) => {
               const isOpen = item.key !== null && open === item.key;
+              // "Others" is a small dropdown under its label; the rest span the bar.
+              const compact = item.key === "others";
               const label = (
                 <>
                   {item.label}
@@ -879,6 +940,7 @@ export function RdHeader() {
               return (
                 <li
                   key={item.label}
+                  className={compact ? "tw:relative" : undefined}
                   onMouseEnter={() =>
                     item.key ? openMenu(item.key) : closeSoon()
                   }
@@ -911,7 +973,10 @@ export function RdHeader() {
                        so the pointer can travel from the label into it. */
                     <div
                       className={cx(
-                        "tw:absolute tw:inset-x-0 tw:top-full tw:pt-3 tw:transition tw:duration-150",
+                        "tw:absolute tw:top-full tw:pt-3 tw:transition tw:duration-150",
+                        compact
+                          ? "tw:left-1/2 tw:w-[360px] tw:-translate-x-1/2"
+                          : "tw:inset-x-0",
                         isOpen
                           ? "tw:visible tw:translate-y-0 tw:opacity-100"
                           : "tw:pointer-events-none tw:invisible tw:-translate-y-1 tw:opacity-0",

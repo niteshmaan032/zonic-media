@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free HVAC Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $950, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -122,6 +122,9 @@ export const metadata: Metadata = {
     "free hvac advertising",
     "free website for hvac companies",
   ],
+  // Kept live for ads and visitors but out of the search index (owner,
+  // 27 Nov 2026); only /website-design-agency-us/offer stays indexable.
+  robots: { index: false, follow: true },
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Free HVAC Website + HVAC Marketing Packages | Zonic",
@@ -805,7 +808,7 @@ export default function HvacOfferPage() {
               <Icon name="check" />
               <span>
                 <strong>Fee waived</strong>
-                <small>The HVAC website development fee, valued at $2,000. Your monthly plan is billed at the full rate, with no discount.</small>
+                <small>The HVAC website development fee, valued at $950. Your monthly plan is billed at the full rate, with no discount.</small>
               </span>
             </div>
             <div>
@@ -1034,7 +1037,7 @@ export default function HvacOfferPage() {
 
         <div className="footer-bottom">
           <small>
-            <strong>OFFER TERMS.</strong> HVAC website development fee, valued at $2,000, is
+            <strong>OFFER TERMS.</strong> HVAC website development fee, valued at $950, is
             waived for new clients who start a qualifying Zonic Media marketing
             plan at $297 per month or above on a six-month minimum term. Client
             owns and registers the domain from the start of the engagement.

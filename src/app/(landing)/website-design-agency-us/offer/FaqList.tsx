@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the small business website actually free?",
     answer:
-      "Yes, the build is. The $2,000 design and development fee is waived when you start a qualifying recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work starts.",
+      "Yes, the build is. The $950 design and development fee is waived when you start a qualifying recurring marketing plan at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work starts.",
   },
   {
     question: "What kinds of businesses can claim the free website?",
@@ -23,7 +23,7 @@ export const FAQS = [
   {
     question: "What happens if I cancel before six months?",
     answer:
-      "The qualifying plan has a six-month minimum term, which the waived $2,000 build fee is set against. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and your content, but the website does not transfer. Your proposal states all of this before you sign anything.",
+      "The qualifying plan has a six-month minimum term, which the waived $950 build fee is set against. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. If you cancel earlier, you keep your domain and your content, but the website does not transfer. Your proposal states all of this before you sign anything.",
   },
 ];
 

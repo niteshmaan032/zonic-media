@@ -57,7 +57,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/tree-service-website-design",
         label: "tree service websites",
       },
-      " that show your insurance, crew and finished work.",
+      " that show your insurance, crew and finished work. Tree work is one of the ",
+      {
+        href: "/",
+        label: "home services",
+      },
+      " where a crew's safety record wins the job.",
     ],
     cta: "Get My Free Tree Service Audit",
     bento: {

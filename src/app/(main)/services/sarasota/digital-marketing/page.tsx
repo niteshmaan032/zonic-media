@@ -18,7 +18,7 @@
  *
  * Rules: the hub owns "florida digital marketing agency"; Tampa owns
  * "Tampa Bay" (never used here); St. Petersburg owns Pinellas / St. Pete.
- * No Sarasota office: served from Dover, Delaware. Company-wide verified
+ * No Sarasota office: served remotely. Company-wide verified
  * numbers only; no aggregateRating.
  */
 
@@ -155,7 +155,7 @@ const SarasotaDmFaqs = [
   {
     question: "Is your agency based in Sarasota?",
     answer:
-      "No. Our team is in-house but remote, based in Dover, Delaware, and Sarasota owners meet us on video calls. Map rankings, ads and websites depend on steady work, not an address on Main Street, and a plain monthly report lists the work done and the leads it produced.",
+      "No. Our team is in-house but remote, and Sarasota owners meet us on video calls. Map rankings, ads and websites depend on steady work, not an address on Main Street, and a plain monthly report lists the work done and the leads it produced.",
   },
   {
     question: "Do you offer digital marketing for Sarasota pool companies?",
@@ -656,7 +656,7 @@ const extras: DelawareExtras = {
       "Welcome-back email and social",
       "AI answers that name you",
     ],
-    foot: "Run remotely from Dover, Delaware",
+    foot: "Run remotely by our in-house team",
   },
   // Sarasota palette: Gulf gold, Gulf sky, sunset pink, banyan green.
   pillars: ["#a16207", "#dbeafe", "#fce7f3", "#14532d"],

@@ -462,7 +462,7 @@ export function ReportPhone() {
             </span>
           </span>
           <span className="tw:flex tw:items-center tw:gap-1 tw:rounded-full tw:bg-(--green-soft) tw:px-2 tw:py-1 tw:text-[9.5px] tw:font-semibold tw:text-[#1f7a3a]">
-            <FiShield className="tw:size-3" /> Dover, DE
+            <FiShield className="tw:size-3" /> Wilmington, DE
           </span>
         </div>
 

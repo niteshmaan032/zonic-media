@@ -52,7 +52,7 @@ const PAGE_PATH = "/services/delaware/seo";
 export const metadata: Metadata = {
   title: { absolute: "SEO Company in Delaware | SEO Services in Dover, DE" },
   description:
-    "Delaware SEO company in Dover. Local SEO, Google Business Profile, technical SEO and content that help businesses in Wilmington, Dover and Lewes rank higher.",
+    "Delaware SEO company for Wilmington, Dover and Lewes: local SEO, Google Business Profile, technical SEO and content that help Delaware businesses rank higher.",
   keywords: [
     "seo company in delaware",
     "seo company delaware",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     ],
     title: "SEO Company in Delaware | SEO Services in Dover, DE",
     description:
-      "Dover-based SEO company for Delaware businesses: local SEO, Google Business Profile, technical fixes and content. Free audit.",
+      "SEO company for Delaware businesses in Dover, Wilmington and Lewes: local SEO, Google Business Profile, technical fixes and content. Free audit.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -101,7 +101,7 @@ const serviceJsonLd = {
   serviceType: "Search Engine Optimization",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Local SEO, Google Business Profile optimization, technical SEO and content for Delaware businesses, from a Dover-based SEO company serving Wilmington, Newark, Dover and Sussex County.",
+    "Local SEO, Google Business Profile optimization, technical SEO and content for Delaware businesses, from a Delaware SEO company serving Wilmington, Newark, Dover and Sussex County.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -145,7 +145,7 @@ const DelSeoFaqs = [
   {
     question: "What sets your SEO company apart from others in Delaware?",
     answer:
-      "Three things. We are an SEO company Delaware owners can visit, with an office on The Green in Dover. We specialize in Google Business Profiles, with 1,500+ optimized and 900+ suspended profiles reinstated. And our reports focus on calls and booked work rather than keyword positions alone.",
+      "Three things. We plan SEO county by county, from Wilmington to the beach towns. We specialize in Google Business Profiles, with 1,500+ optimized and 900+ suspended profiles reinstated. And our reports focus on calls and booked work rather than keyword positions alone.",
   },
   {
     question: "Can SEO be built into a new website?",
@@ -170,7 +170,7 @@ const DelSeoFaqs = [
   {
     question: "How do I pick the best SEO company in Delaware?",
     answer:
-      "Look for three things: Delaware clients and reviews you can check, reports built on calls and leads rather than rankings alone, and a plan written for your towns. We are based in Dover, show our 5.0 Google rating openly and price every plan after a free audit.",
+      "Look for three things: Delaware clients and reviews you can check, reports built on calls and leads rather than rankings alone, and a plan written for your towns. We show our 5.0 Google rating openly and price every plan after a free audit.",
   },
 ];
 
@@ -203,12 +203,12 @@ const data: DelawareData = {
     eyebrow: "",
     h1Start: "SEO Company in Delaware",
     h1Highlight: "Built to Rank You on Google and Maps",
-    sub: "Zonic Media is a Delaware SEO company with its office in Dover. We use local SEO, technical fixes, content and Google Business Profile work to lift you in search and Maps, so customers in Wilmington, Dover and Lewes find you first.",
+    sub: "Zonic Media is a Delaware SEO company. We use local SEO, technical fixes, content and Google Business Profile work to lift you in search and Maps, so customers in Wilmington, Dover and Lewes find you first.",
     media: {
       src: "/images/geo/delaware-seo/delaware-seo-strategy.webp",
-      alt: "Delaware business owner reviewing local SEO rankings with a strategist near Dover Green",
+      alt: "Delaware business owner reviewing local SEO rankings with a strategist",
     },
-    floatA: { strong: "8 The Green, Dover", text: "our Delaware office" },
+    floatA: { strong: "Delaware SEO", text: "statewide" },
     floatB: { strong: "5.0 on Google", text: "from client reviews" },
     stats: [
       {
@@ -254,9 +254,8 @@ const data: DelawareData = {
         season. Your SEO plan should follow those patterns.
       </>,
       <>
-        Our Dover office gives Google the local proof it looks for: a real
-        Delaware address, Delaware reviews and Delaware citations. Need ads and
-        social as well? Our{" "}
+        Google looks for local proof: Delaware reviews, Delaware citations and
+        pages for the towns you serve. Need ads and social as well? Our{" "}
         <Link
           href="/services/delaware/digital-marketing"
           className="phl-inline-link"
@@ -466,20 +465,20 @@ const data: DelawareData = {
   },
   compare: {
     h2: "How to Compare SEO Companies in Delaware",
-    lead: "Here is what changes when your SEO team is based in the state.",
-    themTitle: "The Remote Rate-Card Agency",
+    lead: "Here is what changes when your SEO plan is built around Delaware's counties.",
+    themTitle: "The Rate-Card Agency",
     themSub: "Why many 'Delaware' campaigns stall",
     them: [
-      "A Delaware page but no Delaware presence",
+      "A generic plan copied from other states",
       "One campaign stretched over three counties",
       "Reports with impressions and no calls",
       "Bulk links and duplicate listings",
       "Year-long contracts before any leads",
     ],
     usTitle: "Zonic Media's Delaware SEO",
-    usSub: "Run from Dover, reported in calls",
+    usSub: "Planned by county, reported in calls",
     us: [
-      "An office on The Green in Dover",
+      "A registered Delaware company",
       "County-level plans, Wilmington to the beaches",
       "Reports on calls, directions and forms",
       "Hand-built citations and local links",
@@ -495,13 +494,13 @@ const data: DelawareData = {
     ],
   },
   why: {
-    h2: "An SEO Company in Delaware You Can Visit",
+    h2: "An SEO Company in Delaware That Shows Its Work",
     lead: "Rankings follow the work. You get the plan, the work itself and full visibility into both.",
     cards: [
       {
         icon: <RiSearchLine aria-hidden="true" />,
         title: "Local Search Is Our Specialty",
-        desc: "We focus on Maps, local search and the calls they bring, starting with businesses in our home state.",
+        desc: "We focus on Maps, local search and the calls they bring, starting with businesses across Delaware.",
       },
       {
         icon: <FiZap aria-hidden="true" />,
@@ -714,7 +713,7 @@ const extras: DelawareExtras = {
   },
   aboutTitle: ["Delaware SEO", "Planned Around", "Each County."],
   aboutCard: {
-    kicker: "SEO from our Dover office",
+    kicker: "SEO for every Delaware county",
     title: "A plan for each county",
     points: [
       "New Castle: Wilmington, Newark and suburbs",
@@ -722,7 +721,7 @@ const extras: DelawareExtras = {
       "Sussex: Lewes and the beach towns",
       "Reports on calls, not just rankings",
     ],
-    foot: "8 The Green, STE B, Dover, DE 19901",
+    foot: "New Castle, Kent and Sussex County",
   },
   features: {
     h2: "How Our Delaware SEO Company Earns Rankings",

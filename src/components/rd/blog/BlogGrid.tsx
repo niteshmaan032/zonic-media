@@ -2,7 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useTransition,
+  type ReactNode,
+} from "react";
 import {
   FiArrowLeft,
   FiArrowRight,
@@ -115,20 +123,36 @@ export function BlogCard({
   );
 }
 
+// 40px on phones (with 6px gaps) so the arrows and five numbers fit one row
+// at 360px.
 const NUM =
-  "tw:grid tw:size-11 tw:place-items-center tw:rounded-full tw:text-[15px] tw:font-medium tw:transition-colors";
+  "tw:grid tw:size-11 tw:place-items-center tw:rounded-full tw:text-[15px] tw:font-medium tw:transition-colors tw:max-bssm:size-10";
+
+/* Puts the top of the guides list just under the fixed header (88px) in one
+   jump. A #guides hash link let Lenis animate from the pager up to the grid
+   after the new cards had already swapped in, and left the top of the list
+   under the header (the pagination "glitch", owner 27 Nov 2026). */
+function jumpTo(el: HTMLElement | null) {
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - 112;
+  if (window.__appLenis) window.__appLenis.scrollTo(top, { immediate: true });
+  else window.scrollTo({ top, behavior: "instant" });
+}
 
 /** Numbered pagination. With `href` the pages are real links (crawlable,
-    work without JavaScript); with `onPick` they are buttons (search). */
+    work without JavaScript; `onGo` takes over plain clicks); with `onPick`
+    they are buttons (search). */
 function Pager({
   page,
   pages,
   href,
+  onGo,
   onPick,
 }: {
   page: number;
   pages: number;
   href?: (n: number) => string;
+  onGo?: (n: number) => void;
   onPick?: (n: number) => void;
 }) {
   if (pages < 2) return null;
@@ -143,6 +167,21 @@ function Pager({
       <Link
         key={key}
         href={href(n)}
+        scroll={false}
+        onClick={(e) => {
+          // New tab, new window and the like keep the browser's default.
+          if (
+            !onGo ||
+            e.button !== 0 ||
+            e.metaKey ||
+            e.ctrlKey ||
+            e.shiftKey ||
+            e.altKey
+          )
+            return;
+          e.preventDefault();
+          onGo(n);
+        }}
         className={cls}
         aria-label={aria}
         aria-current={!aria && n === page ? "page" : undefined}
@@ -170,7 +209,7 @@ function Pager({
   return (
     <nav
       aria-label="Blog pages"
-      className="tw:mt-12 tw:flex tw:flex-wrap tw:items-center tw:justify-center tw:gap-2"
+      className="tw:mt-12 tw:flex tw:flex-wrap tw:items-center tw:justify-center tw:gap-2 tw:max-bssm:gap-1.5"
     >
       {item(
         "prev",
@@ -179,27 +218,17 @@ function Pager({
         edge(page > 1),
         "Previous page",
       )}
-      {pageList(page, pages).map((n, i) =>
-        n === null ? (
-          <span
-            key={`gap-${i}`}
-            className="tw:px-1 tw:text-(--muted)"
-            aria-hidden="true"
-          >
-            …
-          </span>
-        ) : (
-          item(
-            `p${n}`,
-            n,
-            n,
-            cx(
-              NUM,
-              n === page
-                ? "tw:bg-(--ink) tw:text-white"
-                : "tw:border tw:border-(--line) tw:bg-white tw:text-(--ink) tw:hover:border-(--ink)",
-            ),
-          )
+      {pageList(page, pages).map((n) =>
+        item(
+          `p${n}`,
+          n,
+          n,
+          cx(
+            NUM,
+            n === page
+              ? "tw:bg-(--ink) tw:text-white"
+              : "tw:border tw:border-(--line) tw:bg-white tw:text-(--ink) tw:hover:border-(--ink)",
+          ),
         ),
       )}
       {item(
@@ -214,28 +243,44 @@ function Pager({
 }
 
 /** Blog listing grid (owner, 24 Oct): 6 cards a page with numbered
-    pagination. Topics and pages are real URLs (?topic=, ?page=) rendered on
-    the server, so every guide is reachable by crawlable links; search runs
-    in the browser over all guides with its own pages. */
+    pagination. Pages are real URLs (?page=) rendered on the server, so every
+    guide is reachable by crawlable links; search runs in the browser over
+    all guides with its own pages. Topic filters were removed (27 Nov 2026). */
 export default function BlogGrid({
   all,
   posts,
   page,
   pages,
-  topic,
-  topics,
-  total,
 }: {
   all: BlogCardPost[];
   posts: BlogCardPost[];
   page: number;
   pages: number;
-  topic: string | null;
-  topics: { slug: string; label: string; count: number }[];
-  total: number;
 }) {
   const [query, setQuery] = useState("");
   const [searchPage, setSearchPage] = useState(1);
+  const router = useRouter();
+  const [loading, startLoading] = useTransition();
+  const [target, setTarget] = useState<number | null>(null);
+
+  // The #guides hash only matters when a page link opens in a new tab.
+  const pageHref = (n: number) =>
+    `${BLOG_BASE}${n > 1 ? `?page=${n}` : ""}#guides`;
+
+  // The clicked page lights up and the cards dim straight away; once the
+  // new page has rendered, jump to the top of the list.
+  const topRef = useRef<HTMLDivElement>(null);
+  const shownPage = useRef(page);
+  useEffect(() => {
+    if (shownPage.current === page) return;
+    shownPage.current = page;
+    jumpTo(topRef.current);
+  }, [page]);
+  const goToPage = (n: number) => {
+    if (n === page) return;
+    setTarget(n);
+    startLoading(() => router.push(pageHref(n), { scroll: false }));
+  };
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -247,50 +292,14 @@ export default function BlogGrid({
     );
   }, [all, query]);
 
-  const pageHref = (n: number) => {
-    const params = new URLSearchParams();
-    if (topic) params.set("topic", topic);
-    if (n > 1) params.set("page", String(n));
-    const qs = params.toString();
-    return `${BLOG_BASE}${qs ? `?${qs}` : ""}#guides`;
-  };
-
-  const chip = (active: boolean) =>
-    cx(
-      "tw:inline-flex tw:items-center tw:gap-2 tw:rounded-full tw:border tw:px-4 tw:py-2 tw:text-[14px] tw:font-medium tw:transition-colors",
-      active
-        ? "tw:border-(--ink) tw:bg-(--ink) tw:text-white"
-        : "tw:border-(--line) tw:bg-white tw:text-(--ink-2) tw:hover:border-(--ink)",
-    );
-
   const searchPages = results ? Math.ceil(results.length / PER_PAGE) : 0;
   const shown = results
     ? results.slice((searchPage - 1) * PER_PAGE, searchPage * PER_PAGE)
     : posts;
 
   return (
-    <div>
-      <div className="tw:flex tw:flex-wrap tw:items-center tw:justify-between tw:gap-4">
-        <nav
-          aria-label="Guide topics"
-          className="tw:flex tw:flex-wrap tw:gap-2"
-        >
-          <Link href={`${BLOG_BASE}#guides`} className={chip(!topic)}>
-            All guides
-            <span className="tw:text-[12px] tw:opacity-70">{total}</span>
-          </Link>
-          {topics.map((t) => (
-            <Link
-              key={t.slug}
-              href={`${BLOG_BASE}?topic=${t.slug}#guides`}
-              className={chip(topic === t.slug)}
-              aria-current={topic === t.slug ? "page" : undefined}
-            >
-              {t.label}
-              <span className="tw:text-[12px] tw:opacity-70">{t.count}</span>
-            </Link>
-          ))}
-        </nav>
+    <div ref={topRef}>
+      <div className="tw:flex tw:items-center">
         <label className="tw:relative tw:flex tw:w-full tw:max-w-[320px] tw:items-center tw:max-bsmd:max-w-none">
           <span className="tw:sr-only">Search guides</span>
           <FiSearch
@@ -328,7 +337,13 @@ export default function BlogGrid({
       ) : null}
 
       {shown.length ? (
-        <div className="tw:mt-8 tw:grid tw:grid-cols-3 tw:gap-6 tw:max-bsxl:grid-cols-2 tw:max-bsmd:grid-cols-1 tw:max-bssm:mt-6 tw:max-bssm:gap-4">
+        <div
+          className={cx(
+            "tw:mt-8 tw:grid tw:grid-cols-3 tw:gap-6 tw:transition-opacity tw:max-bsxl:grid-cols-2 tw:max-bsmd:grid-cols-1 tw:max-bssm:mt-6 tw:max-bssm:gap-4",
+            loading && "tw:opacity-50",
+          )}
+          aria-busy={loading || undefined}
+        >
           {shown.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}
@@ -345,13 +360,16 @@ export default function BlogGrid({
           pages={searchPages}
           onPick={(n) => {
             setSearchPage(n);
-            document
-              .getElementById("guides")
-              ?.scrollIntoView({ behavior: "smooth" });
+            jumpTo(topRef.current);
           }}
         />
       ) : (
-        <Pager page={page} pages={pages} href={pageHref} />
+        <Pager
+          page={loading && target ? target : page}
+          pages={pages}
+          href={pageHref}
+          onGo={goToPage}
+        />
       )}
     </div>
   );

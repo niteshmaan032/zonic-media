@@ -76,5 +76,5 @@ All prices are in US dollars, per month unless noted. Plans can be billed monthl
 
 ## Terms
 - Month-to-month on monthly billing; annual billing is optional
-- All work is done in-house by the Zonic Media team in Dover, Delaware
+- All work is done in-house by the Zonic Media team
 - Contact: contact@zonicllc.com | +1-302-726-9736 | https://www.zonicllc.com/contact-us

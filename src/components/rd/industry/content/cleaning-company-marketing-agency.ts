@@ -70,7 +70,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/commercial-cleaning-website-design",
         label: "commercial cleaning crews",
       },
-      ".",
+      ". House cleaning follows our ",
+      {
+        href: "/",
+        label: "home services",
+      },
+      " playbook, and office accounts get a plan of their own.",
     ],
     cta: "Get My Free Cleaning Audit",
     /* Tiles, not photos: the cleaning photo folder holds one shot only

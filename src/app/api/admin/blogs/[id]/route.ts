@@ -9,8 +9,10 @@ import {
   isSlugTaken,
   revalidatePublicBlogCache,
   toSafeBlog,
+  toSlug,
   updateBlogSchema,
 } from "@/backend/lib/blogs";
+import { nextPreviousSlugs } from "@/backend/lib/blogSlugs";
 import {
   deleteCloudinaryAsset,
   uploadBufferToCloudinary,
@@ -291,6 +293,20 @@ export async function PATCH(
       setFields.metaDescription = parsed.data.metaDescription;
     } else {
       unsetFields.metaDescription = "";
+    }
+
+    // A published post that moves to a new address keeps the old one, which
+    // then redirects to it (blog/[slug] page) instead of returning a 404.
+    const previousSlugs = nextPreviousSlugs(
+      existing.previousSlugs,
+      existing.slug || toSlug(existing.blogTitle),
+      parsed.data.slug,
+      existing.status === "published" || Boolean(existing.publishedAt),
+    );
+    if (previousSlugs.length > 0) {
+      setFields.previousSlugs = previousSlugs;
+    } else {
+      unsetFields.previousSlugs = "";
     }
 
     const updateOps: Record<string, unknown> = { $set: setFields };

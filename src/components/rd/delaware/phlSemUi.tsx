@@ -1,6 +1,7 @@
-import type { CSSProperties, ReactNode } from "react";
+import { type CSSProperties, Fragment, type ReactNode } from "react";
 import {
   FiArrowRight,
+  FiCheck,
   FiGitMerge,
   FiGrid,
   FiLayers,
@@ -20,7 +21,7 @@ import { CARD, Flip, Slot, TICK_AT, inAt, run } from "./uiBits";
    on another page. Feature panels (whole-page share, paid ↔ organic
    keyword loop, budget split by return), the four process steps, the
    paid + organic report phone, the blended board on the dark card and the
-   radar scorecard. Illustrations: "Your Business"; figures are examples. */
+   coverage scorecard. Illustrations: "Your Business"; figures are examples. */
 
 /* ------------------------------------------------------ feature panels */
 
@@ -566,77 +567,112 @@ export function BlendedBoardUi({
 
 /* --------------------------------------------------------- scorecard */
 
-/** Radar: the before shape and the after shape on four axes. */
-export function ScoreRadarUi({
-  rows,
-}: {
-  rows: DelawareData["compare"]["scoreRows"];
-}) {
-  const r = 70;
-  const cx0 = 110;
-  const cy0 = 96;
-  const pts = (key: "before" | "after") =>
-    rows
-      .slice(0, 4)
-      .map((row, i) => {
-        const a = (Math.PI / 2) * i - Math.PI / 2;
-        const d = (row[key] / 100) * r;
-        return `${cx0 + d * Math.cos(a)},${cy0 + d * Math.sin(a)}`;
-      })
-      .join(" ");
-  const axis = [
-    [cx0, cy0 - r - 10, "middle"],
-    [cx0 + r + 10, cy0 + 4, "start"],
-    [cx0, cy0 + r + 16, "middle"],
-    [cx0 - r - 10, cy0 + 4, "end"],
-  ] as const;
+/* One "held" state per slot: at the start, won by the one plan, or still
+   open. Example searches for one sample business across the Greater
+   Philadelphia areas on the page; no figures beyond slot counts. */
+type Held = "start" | "won" | "open";
+const COVERAGE: { q: string; area: string; slots: [Held, Held, Held] }[] = [
+  { q: "hvac repair philadelphia", area: "Center City", slots: ["start", "won", "won"] },
+  { q: "ac repair fishtown", area: "Fishtown", slots: ["won", "start", "won"] },
+  { q: "furnace repair doylestown", area: "Bucks County", slots: ["won", "won", "open"] },
+  { q: "hvac king of prussia", area: "Montgomery County", slots: ["start", "won", "won"] },
+  { q: "ac repair cherry hill", area: "South Jersey", slots: ["won", "open", "won"] },
+];
+const COVERAGE_COLS = ["Ads", "Maps", "Organic"];
+
+function HeldCell({ held, i }: { held: Held; i: number }) {
+  if (held === "open") {
+    return (
+      <i className="tw:block tw:size-[26px] tw:justify-self-center tw:rounded-[8px] tw:border-[1.5px] tw:border-dashed tw:border-[#cbd5e1]" />
+    );
+  }
+  return (
+    <i
+      className="tw:grid tw:size-[26px] tw:place-items-center tw:justify-self-center tw:rounded-[8px] tw:text-[13px] tw:text-white"
+      style={
+        held === "start"
+          ? { background: "#94a3b8" }
+          : { background: "var(--blue)", ...inAt(i) }
+      }
+    >
+      <FiCheck className="tw:[stroke-width:3]" />
+    </i>
+  );
+}
+
+/** Coverage check: which results-page slots one business holds on its top
+    searches, before and with one SEM plan (replaced the radar, owner,
+    26 Nov 2026). */
+export function ScoreCoverageUi() {
+  const total = COVERAGE.length * COVERAGE_COLS.length;
+  const all = COVERAGE.flatMap((r) => r.slots);
+  const start = all.filter((h) => h === "start").length;
+  const held = all.filter((h) => h !== "open").length;
   return (
     <div aria-hidden="true">
-      <svg
-        viewBox="0 0 220 196"
-        className="tw:mx-auto tw:block tw:w-full tw:max-w-[300px] tw:overflow-visible"
-      >
-        {[0.33, 0.66, 1].map((f) => (
-          <polygon
-            key={f}
-            points={`${cx0},${cy0 - r * f} ${cx0 + r * f},${cy0} ${cx0},${cy0 + r * f} ${cx0 - r * f},${cy0}`}
-            fill="none"
-            stroke="#e3e9f2"
-          />
-        ))}
-        <polygon
-          points={pts("before")}
-          fill="rgba(148,163,184,0.25)"
-          stroke="#94a3b8"
-          strokeWidth="1.5"
-        />
-        <polygon
-          points={pts("after")}
-          fill="rgba(37,103,232,0.18)"
-          stroke="var(--blue)"
-          strokeWidth="2"
-          style={inAt(2)}
-        />
-        {rows.slice(0, 4).map((row, i) => (
-          <text
-            key={row.label}
-            x={axis[i][0]}
-            y={axis[i][1]}
-            textAnchor={axis[i][2]}
-            className="tw:fill-(--ink-2) tw:text-[9px] tw:font-medium"
-          >
-            {row.label}
-          </text>
-        ))}
-      </svg>
-      <p className="tw:mt-3 tw:flex tw:flex-wrap tw:justify-center tw:gap-x-5 tw:gap-y-2 tw:text-[13px] tw:text-(--muted)">
-        <span className="tw:flex tw:items-center tw:gap-2">
-          <i className="tw:block tw:size-3 tw:rounded-[3px] tw:bg-[#94a3b8]/60" />{" "}
-          Example: starting point
+      <div className="tw:grid tw:grid-cols-[minmax(0,1fr)_repeat(3,44px)] tw:items-center tw:gap-y-2.5">
+        <span className="tw:text-[12px] tw:font-medium tw:text-(--muted)">
+          Search
         </span>
-        <span className="tw:flex tw:items-center tw:gap-2">
-          <i className="tw:block tw:size-3 tw:rounded-[3px] tw:bg-(--blue)" />{" "}
-          Example: goal
+        {COVERAGE_COLS.map((c) => (
+          <span
+            key={c}
+            className="tw:text-center tw:text-[12px] tw:font-medium tw:text-(--muted)"
+          >
+            {c}
+          </span>
+        ))}
+        {COVERAGE.map((row, r) => (
+          <Fragment key={row.q}>
+            <span className="tw:min-w-0 tw:border-t tw:border-(--line) tw:pt-2.5">
+              <b className="tw:block tw:text-[13.5px]/[1.3] tw:font-medium tw:break-words tw:text-(--ink)">
+                {row.q}
+              </b>
+              <span className="tw:block tw:text-[11.5px]/[1.3] tw:text-(--muted)">
+                {row.area}
+              </span>
+            </span>
+            {row.slots.map((h, c) => (
+              <span
+                key={COVERAGE_COLS[c]}
+                className="tw:grid tw:h-full tw:items-center tw:border-t tw:border-(--line) tw:pt-2.5"
+              >
+                <HeldCell held={h} i={r + 1} />
+              </span>
+            ))}
+          </Fragment>
+        ))}
+      </div>
+      <div className="tw:mt-5 tw:rounded-[14px] tw:bg-(--panel) tw:p-3.5">
+        <span className="tw:flex tw:items-baseline tw:justify-between tw:gap-3 tw:text-[12.5px] tw:font-medium tw:text-(--ink-2)">
+          Page-one slots held
+          <b className="tw:text-[15px] tw:tracking-[-0.01em] tw:text-(--ink)">
+            {start} → {held} of {total}
+          </b>
+        </span>
+        <span className="tw:mt-2.5 tw:flex tw:h-2 tw:overflow-hidden tw:rounded-full tw:bg-white">
+          <i
+            className="tw:block tw:h-full tw:bg-[#94a3b8]"
+            style={{ width: `${(start / total) * 100}%` }}
+          />
+          <i
+            className="tw:block tw:h-full tw:bg-(--blue)"
+            style={{ width: `${((held - start) / total) * 100}%` }}
+          />
+        </span>
+      </div>
+      <p className="tw:mt-3.5 tw:flex tw:flex-wrap tw:gap-x-4 tw:gap-y-1.5 tw:text-[12px] tw:text-(--muted)">
+        <span className="tw:flex tw:items-center tw:gap-1.5">
+          <i className="tw:block tw:size-2.5 tw:rounded-[3px] tw:bg-[#94a3b8]" />
+          Held at the start
+        </span>
+        <span className="tw:flex tw:items-center tw:gap-1.5">
+          <i className="tw:block tw:size-2.5 tw:rounded-[3px] tw:bg-(--blue)" />
+          Won with one plan
+        </span>
+        <span className="tw:flex tw:items-center tw:gap-1.5">
+          <i className="tw:block tw:size-2.5 tw:rounded-[3px] tw:border tw:border-dashed tw:border-[#94a3b8]" />
+          Still open
         </span>
       </p>
     </div>

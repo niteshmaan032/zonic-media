@@ -69,7 +69,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/fence-company-website-design",
         label: "fence company website design",
       },
-      " built to book measure visits.",
+      " built to book measure visits. Fence builders get ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " planned around spring quotes and project photos.",
     ],
     cta: "Get My Free Fence Marketing Audit",
     bento: {

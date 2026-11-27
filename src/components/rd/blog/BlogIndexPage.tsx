@@ -4,7 +4,6 @@ import {
   FiArrowRight,
   FiBookOpen,
   FiMail,
-  FiMapPin,
   FiPhone,
 } from "react-icons/fi";
 
@@ -27,13 +26,10 @@ import BlogGrid, { type BlogCardPost } from "./BlogGrid";
 import {
   BLOG_BASE,
   PER_PAGE,
-  blogTopics,
   formatBlogDate,
   initials,
   toneOf,
-  topicCopy,
   topicOf,
-  topicSlug,
 } from "./blogBits";
 
 /* ---------------------------------------------------------------------------
@@ -44,42 +40,30 @@ import {
    maps, ai search optimization, small business marketing tips): new H1,
    intro, grid heading and closing banner; post titles and summaries come
    from the CMS untouched. The audit banner lists phone, email and address
-   (copy brief rule 9). Featured card for the newest guide (page 1,
-   no topic), then 6 cards a page with numbered pagination. Pages and
-   topics are real URLs (?page=, ?topic=) rendered on the server, so every
-   guide keeps a crawlable link from the blog; that replaces the long
-   "All guides" list (removed at the owner's request, 24 Oct). Search runs
-   in the browser over all guides. Light closing banner.
+   (copy brief rule 9). Featured card for the newest guide (page 1 only),
+   then 6 cards a page with numbered pagination. Pages are
+   real URLs (?page=) rendered on the server, so every guide keeps a
+   crawlable link from the blog; that replaces the long "All guides" list
+   (removed at the owner's request, 24 Oct). Topic filters were removed on
+   27 Nov 2026 (owner). Search runs in the browser over all guides. Light
+   closing banner.
 --------------------------------------------------------------------------- */
 
 export function BlogIndexPage({
   all,
   page: requested,
-  topic,
 }: {
   all: BlogCardPost[];
   page: number;
-  topic: string | null;
 }) {
   const [featured] = all;
 
-  // Only topics with their own page get a topic link (see blogTopics).
-  const topics = blogTopics(all);
-  const active = topics.find((t) => t.slug === topic) ?? null;
-  const activeCopy = active ? topicCopy(active) : null;
-
-  // Pool for the grid: one topic, or everything after the featured guide.
-  const pool = active
-    ? all.filter((p) => topicSlug(topicOf(p)) === active.slug)
-    : all.slice(1);
-  // A topic lists all of its guides on one page. Topic views canonicalise to
-  // /blog, and at 6 a page a two-page topic's page 2 was linked only from
-  // page 1 (Semrush "only one incoming internal link", 10 Nov 2026).
-  const perPage = active ? Math.max(1, pool.length) : PER_PAGE;
-  const pages = Math.max(1, Math.ceil(pool.length / perPage));
+  // The grid lists everything after the featured guide, 6 a page.
+  const pool = all.slice(1);
+  const pages = Math.max(1, Math.ceil(pool.length / PER_PAGE));
   const page = Math.min(Math.max(1, requested), pages);
-  const pagePosts = pool.slice((page - 1) * perPage, page * perPage);
-  const showFeatured = Boolean(featured) && !active && page === 1;
+  const pagePosts = pool.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const showFeatured = Boolean(featured) && page === 1;
 
   return (
     <>
@@ -96,9 +80,7 @@ export function BlogIndexPage({
               size="heroWide"
               className="tw:mx-auto tw:max-w-[900px] tw:text-balance"
             >
-              {activeCopy
-                ? activeCopy.h1
-                : "Local SEO Tips and Google Business Profile Guides"}
+              Local SEO Tips and Google Business Profile Guides
             </Strip>
             <p
               className={cx(
@@ -106,15 +88,13 @@ export function BlogIndexPage({
                 "tw:mx-auto tw:mt-6 tw:max-w-[640px] tw:text-balance",
               )}
             >
-              {activeCopy
-                ? activeCopy.intro
-                : "Plain-English help for small business owners: ranking on Google Maps, fixing a suspended profile, earning reviews, showing up in AI search and turning your website and ads into booked calls."}
+              Plain-English help for small business owners: ranking on Google
+              Maps, fixing a suspended profile, earning reviews, showing up in
+              AI search and turning your website and ads into booked calls.
             </p>
             <span className="tw:mt-7 tw:inline-flex tw:items-center tw:gap-2 tw:rounded-full tw:border tw:border-(--line) tw:bg-white tw:px-4 tw:py-2 tw:text-[14px] tw:font-medium tw:text-(--ink-2)">
               <FiBookOpen aria-hidden="true" className="tw:text-(--blue)" />
-              {active
-                ? `${active.count} guides`
-                : `${all.length} guides · ${topics.length} topics`}
+              {`${all.length} guides`}
             </span>
           </Wrap>
 
@@ -182,30 +162,11 @@ export function BlogIndexPage({
         </section>
 
         {/* ============================================================ GRID */}
-        <Section id="guides" labelledBy="bl-latest-h">
+        {/* The grid heading and intro were removed (owner, 27 Nov 2026); the
+            section is labelled by the page H1. */}
+        <Section id="guides" labelledBy="bl-h1">
           <Wrap>
-            {/* Heading left, intro beside it (owner, 26 Oct 2026). */}
-            <div className="tw:mb-9 tw:grid tw:grid-cols-[minmax(0,1fr)_minmax(0,440px)] tw:items-start tw:gap-12 tw:max-bslg:grid-cols-1 tw:max-bslg:gap-5">
-              <Strip id="bl-latest-h">
-                {active
-                  ? `All ${active.label} Guides`
-                  : "New Local SEO and Small Business Marketing Guides"}
-              </Strip>
-              <p className={cx(LEAD, "tw:max-w-[460px] tw:bslg:pt-2")}>
-                {active
-                  ? `${active.count} guides on ${active.label.toLowerCase()}, newest first.`
-                  : "Browse by topic or search every guide: Google Business Profile, Google Maps rankings, AI search, websites and Google Ads."}
-              </p>
-            </div>
-            <BlogGrid
-              all={all}
-              posts={pagePosts}
-              page={page}
-              pages={pages}
-              topic={active?.slug ?? null}
-              topics={topics}
-              total={all.length}
-            />
+            <BlogGrid all={all} posts={pagePosts} page={page} pages={pages} />
           </Wrap>
         </Section>
 
@@ -251,8 +212,9 @@ export function BlogIndexPage({
                   {SITE_CONTACT.phoneDisplay}
                 </a>
               </div>
-              {/* Compact contact list (copy brief rule 9: phone, email and
-                  address on every audit block; the phone is the button). */}
+              {/* Compact contact list: email (the phone is the button). The
+                  address stays in the footer and on the contact page
+                  (owner, 26 Nov 2026). */}
               <ul className="tw:mt-7 tw:flex tw:flex-wrap tw:items-center tw:justify-center tw:gap-x-6 tw:gap-y-2 tw:text-[15px] tw:text-(--ink-2)">
                 <li>
                   <a
@@ -261,17 +223,6 @@ export function BlogIndexPage({
                   >
                     <FiMail aria-hidden="true" />
                     {SITE_CONTACT.email}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={SITE_CONTACT.mapHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="tw:inline-flex tw:items-center tw:gap-2 tw:underline-offset-[3px] tw:hover:underline"
-                  >
-                    <FiMapPin aria-hidden="true" />
-                    {SITE_CONTACT.address}
                   </a>
                 </li>
               </ul>

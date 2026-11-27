@@ -180,7 +180,7 @@ export function PricingPage() {
                 {[
                   "Free, no-obligation call",
                   "Monthly or annual billing",
-                  "Based in Dover, DE · serving the US",
+                  "Serving businesses across the US",
                 ].map((t) => (
                   <li key={t} className="tw:flex tw:items-center tw:gap-2">
                     <FiCheck aria-hidden="true" className="tw:text-(--gold)" />

@@ -3,7 +3,7 @@ export const FAQS = [
   {
     question: "Is the solar website really free?",
     answer:
-      "Yes. The $2,000 solar website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
+      "Yes. The $950 solar website design and development fee is waived when you start a qualifying marketing plan (Local Foundation, Growth or Full Market) at $297/month or above on a six-month term. Your written proposal sets the page count, features and revision rounds before work begins.",
   },
   {
     question: "Why not use a solar company website builder?",
@@ -23,7 +23,7 @@ export const FAQS = [
   {
     question: "Are there commitment or cancellation terms?",
     answer:
-      "Yes. The qualifying plan has a six-month minimum term, and the waived $2,000 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and content, but the website does not transfer.",
+      "Yes. The qualifying plan has a six-month minimum term, and the waived $950 build fee is set against it. We host the site during the term, and ownership of the site and hosting transfers to you at the end of month six. Cancel earlier and you keep your domain and content, but the website does not transfer.",
   },
 ];
 

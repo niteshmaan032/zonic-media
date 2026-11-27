@@ -168,14 +168,6 @@ const CONTACT_TILES = [
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    bg: "linear-gradient(135deg,#334155,#0c1526)",
-    small: "Our office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 /* "+" marks in the hero, the same spots as the /about-2 hero ([left %,
@@ -340,7 +332,11 @@ export function HvacMarketingPage() {
                   <Link href="/services/hvac-website-design">
                     HVAC websites built to get calls
                   </Link>
-                  .
+                  . Heating and cooling run on seasons, and our{" "}
+                  <Link href="/">
+                    home services marketing agency
+                  </Link>{" "}
+                  plans each one ahead.
                 </p>
                 <div className="tw:mt-8 tw:flex tw:flex-wrap tw:justify-center tw:gap-3">
                   <Pill href={AUDIT} fullOnPhone>
@@ -890,20 +886,13 @@ export function HvacMarketingPage() {
                   ))}
                 </ul>
                 <ul className="tw:mt-9 tw:grid tw:grid-cols-2 tw:gap-3 tw:max-bsxl:grid-cols-1 tw:max-bslg:grid-cols-2 tw:max-bssm:grid-cols-1">
-                  {CONTACT_TILES.map((t, i) => (
+                  {CONTACT_TILES.map((t) => (
                     <li
                       key={t.small}
-                      className={cx(
-                        i === CONTACT_TILES.length - 1 &&
-                          "tw:col-span-2 tw:max-bsxl:col-span-1 tw:max-bslg:col-span-2 tw:max-bssm:col-span-1",
-                      )}
                     >
                       <a
                         href={t.href}
                         className="tw:flex tw:h-full tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-white tw:p-4 tw:ring-1 tw:ring-(--line) tw:transition tw:hover:-translate-y-0.5 tw:hover:ring-[#cbd5e1] tw:hover:[box-shadow:0_18px_36px_-26px_rgba(12,21,38,0.45)]"
-                        {...(t.external
-                          ? { target: "_blank", rel: "noopener noreferrer" }
-                          : {})}
                       >
                         <span
                           className="tw:grid tw:size-11 tw:flex-none tw:place-items-center tw:rounded-full tw:text-[18px] tw:text-white"

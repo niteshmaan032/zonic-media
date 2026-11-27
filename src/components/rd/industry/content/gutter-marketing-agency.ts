@@ -57,6 +57,11 @@ export const CONTENT: IndustryContent = {
         href: "/services/gutter-company-website-design",
         label: "gutter websites that book estimates",
       },
+      ". Gutter work pairs naturally with roofing in our ",
+      {
+        href: "/",
+        label: "home service marketing",
+      },
       ".",
     ],
     cta: "Get My Free Gutter Audit",

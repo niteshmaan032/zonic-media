@@ -95,7 +95,7 @@ const serviceJsonLd = {
   serviceType: "Digital Marketing",
   url: `${SITE_URL}${PAGE_PATH}`,
   description:
-    "Search engine optimization, Google Business Profile management, Google Ads and web design for Wilmington, Delaware businesses, from a Dover-based Delaware agency.",
+    "Search engine optimization, Google Business Profile management, Google Ads and web design for Wilmington, Delaware businesses, from a Delaware agency.",
   provider: {
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
@@ -118,9 +118,9 @@ const serviceJsonLd = {
    with the answer, published plan prices only. */
 const WilmFaqs = [
   {
-    question: "Can a Dover-based agency market a Wilmington business?",
+    question: "Can a remote agency market a Wilmington business?",
     answer:
-      "Yes. Wilmington is a short drive up Route 1 from our Dover office and one of our main markets. Strategy calls run on video or face to face, and the day-to-day work can happen from anywhere. What helps your rankings is a genuine Delaware footprint, and ours carries straight into Wilmington campaigns.",
+      "Yes. Wilmington is one of our main markets. Strategy calls run on video, and the day-to-day work happens inside your Google profile, website and ad accounts. What helps your rankings is a genuine Delaware footprint for your business: reviews, citations and pages for the suburbs you serve.",
   },
   {
     question: "Is SEO harder in Wilmington than in the rest of Delaware?",
@@ -202,12 +202,12 @@ const data: DelawareData = {
     eyebrow: "",
     h1Start: "Wilmington Digital Marketing Agency",
     h1Highlight: "Growing New Castle County Businesses",
-    sub: "Zonic Media helps Wilmington businesses win local search with SEO, Google Business Profile work, Google Ads and websites. We are a Delaware company based in Dover, planning your marketing suburb by suburb, from downtown to Newark, Hockessin and Middletown.",
+    sub: "Zonic Media helps Wilmington businesses win local search with SEO, Google Business Profile work, Google Ads and websites. We are a Delaware company, planning your marketing suburb by suburb, from downtown to Newark, Hockessin and Middletown.",
     media: {
       src: "/images/geo/wilmington-digital-marketing/wilmington-riverfront-business-owner.webp",
       alt: "Wilmington business owner using a phone along the Christina Riverfront",
     },
-    floatA: { strong: "Delaware HQ", text: "in Dover, DE" },
+    floatA: { strong: "Delaware company", text: "statewide" },
     floatB: { strong: "5.0 on Google", text: "client rating" },
     stats: [
       {
@@ -247,8 +247,8 @@ const data: DelawareData = {
         We plan for that suburb by suburb.
       </>,
       <>
-        We are a registered Delaware business on The Green in Dover, so you can
-        check our address and reviews before you call. See how this fits our
+        We are a registered Delaware business, so you can check our company
+        details and reviews before you call. See how this fits our
         statewide{" "}
         <Link href="/services/delaware/seo" className="phl-inline-link">
           Delaware SEO
@@ -447,7 +447,7 @@ const data: DelawareData = {
     usTitle: "Zonic Media in Wilmington",
     usSub: "Answerable in Delaware",
     us: [
-      "A Delaware office you can visit",
+      "A registered Delaware company",
       "Targeting by suburb, Newark to Claymont",
       "Each call and form traced to its source",
       "Ads shown only where you work",
@@ -463,13 +463,13 @@ const data: DelawareData = {
     ],
   },
   why: {
-    h2: "A Delaware Team Wilmington Can Hold to Account",
-    lead: "Plenty of agencies that show up for Wilmington searches sell the city from out of state. You can see exactly where we are.",
+    h2: "A Delaware Company Wilmington Can Hold to Account",
+    lead: "Plenty of agencies sell Wilmington searches with one generic plan. We plan by suburb and report every lead back to you.",
     cards: [
       {
         icon: <FiMapPin aria-hidden="true" />,
-        title: "Headquartered in Delaware",
-        desc: "Our office is on The Green in Dover, a short drive down Route 1 from downtown Wilmington.",
+        title: "Registered in Delaware",
+        desc: "Zonic Media is a registered Delaware company, and Wilmington is one of our main markets.",
       },
       {
         icon: <FiZap aria-hidden="true" />,
@@ -582,7 +582,7 @@ const extras: DelawareExtras = {
       "Hockessin, Greenville and the Brandywine Valley",
       "Claymont, New Castle and Middletown",
     ],
-    foot: "Delaware HQ: 8 The Green, STE B, Dover",
+    foot: "Wilmington and New Castle County",
   },
   // Own pillar colours (owner: a different set on every page).
   pillars: ["#0e7490", "#ffe4e6", "#e2e8f0", "#4c1d95"],

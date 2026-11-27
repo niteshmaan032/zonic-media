@@ -306,5 +306,10 @@ export function canonicalizeHostLinks(html: string) {
         /href="tel[:;]?\s*\+?1?\s*\(?(\d{3})\)?[\s.-]*(\d{3})[\s.-]*(\d{4})"/gi,
         'href="tel:+1$1$2$3"',
       )
+      // The editor can leave empty links behind (<a href="…"></a>). They are
+      // invisible but crawlers report "links with no anchor text" (Semrush,
+      // 27 Nov 2026), so drop them. Anchors with an id or name stay as
+      // jump targets.
+      .replace(/<a\b(?=[^>]*\bhref=)(?![^>]*\b(?:id|name)=)[^>]*>(?:\s|&nbsp;)*<\/a>/gi, "")
   );
 }

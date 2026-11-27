@@ -1,0 +1,110 @@
+/* Greater Philadelphia area tiles (phlAreasSection.tsx, 26 Nov 2026).
+   Desktop places the tiles like a map; tablet pairs them; phone stacks. */
+
+.phl-areas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "mont city1 bucks"
+    "west city2 nj";
+}
+
+.phl-area {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border-radius: 28px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.phl-area__chip {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--phl-accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.phl-area__name {
+  margin: 4px 0 0;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+.phl-area__towns {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.phl-area__desc {
+  margin: 0;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* The two city tiles carry the page colour. */
+.phl-area--city {
+  background: var(--phl-accent);
+  color: #fff;
+}
+.phl-area--city .phl-area__chip {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+.phl-area--city .phl-area__name {
+  color: #fff;
+}
+.phl-area--city .phl-area__towns {
+  color: rgba(255, 255, 255, 0.78);
+}
+.phl-area--city .phl-area__desc {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 991.98px) {
+  .phl-areas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "city1 city2"
+      "mont bucks"
+      "west nj";
+  }
+}
+
+@media (max-width: 575.98px) {
+  .phl-areas {
+    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "city1"
+      "city2"
+      "bucks"
+      "mont"
+      "west"
+      "nj";
+  }
+  .phl-area {
+    padding: 22px;
+    border-radius: 22px;
+  }
+  .phl-area__name {
+    font-size: 21px;
+  }
+}

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     absolute: "Digital Marketing Agency in Delaware | Zonic Media, Dover DE",
   },
   description:
-    "Delaware digital marketing agency based in Dover. Local SEO, Google Ads, social media and web design for businesses in New Castle, Kent and Sussex County.",
+    "Delaware digital marketing agency for businesses in Dover, Wilmington and beyond: local SEO, Google Ads, social media and web design in all three counties.",
   keywords: [
     "digital marketing agency in delaware",
     "digital marketing agency delaware",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     ],
     title: "Digital Marketing Agency in Delaware | Zonic Media",
     description:
-      "Dover-based digital marketing agency for Delaware businesses: local SEO, Google Ads, social media, AI search and websites, reported in calls and leads.",
+      "Digital marketing agency for Delaware businesses in Dover, Wilmington and beyond: local SEO, Google Ads, social media, AI search and websites, reported in calls and leads.",
     url: PAGE_PATH,
     type: "website",
   },
@@ -198,7 +198,7 @@ const DelDigitalFaqs = [
     question:
       "Do you work with businesses in Sussex County and New Castle County?",
     answer:
-      "Yes. From our Dover office we market businesses in all three counties, from Wilmington, Newark and Middletown to Smyrna, Milford, Lewes, Rehoboth Beach and Seaford. We also work with companies across the Mid-Atlantic, including Philadelphia. Audits, strategy calls and reporting all work remotely, or you can drop by our Dover office.",
+      "Yes. We market businesses in all three counties, from Wilmington, Newark and Middletown to Smyrna, Milford, Lewes, Rehoboth Beach and Seaford. We also work with companies across the Mid-Atlantic, including Philadelphia. Audits, strategy calls and reporting all run remotely.",
   },
   {
     question: "How do I choose the right marketing agency in Delaware?",
@@ -413,8 +413,8 @@ const ScoreRows = [
 const WhyCards = [
   {
     icon: <FiMapPin aria-hidden="true" />,
-    title: "Based on The Green in Dover",
-    desc: "A Delaware company with a real office, marketing businesses in New Castle, Kent and Sussex County.",
+    title: "A Registered Delaware Company",
+    desc: "Zonic Media is registered in Delaware and markets businesses in New Castle, Kent and Sussex County.",
   },
   {
     icon: <FiZap aria-hidden="true" />,
@@ -563,7 +563,7 @@ const data: DelawareData = {
     eyebrow: "",
     h1Start: "Digital Marketing Agency in Delaware",
     h1Highlight: "That Turns Searches Into Customers",
-    sub: "Zonic Media is a Delaware digital marketing agency on The Green in Dover. We combine local SEO, Google Ads, social media and websites into one plan that puts your business in front of buyers from New Castle County to Sussex County.",
+    sub: "Zonic Media is a Delaware digital marketing agency. We combine local SEO, Google Ads, social media and websites into one plan that puts your business in front of buyers from New Castle County to Sussex County.",
     media: {
       src: "/images/delaware/delaware-digital-marketing-hero.webp",
       alt: "Zonic Media strategists reviewing a campaign plan with a Delaware small-business owner",
@@ -791,7 +791,7 @@ const extras: DelawareExtras = {
   // removed "SEO + Web Design" banner used to hold.
   aboutTitle: ["Your SEO, Website", "& Marketing Agency", "in Delaware."],
   aboutCard: {
-    kicker: "Headquartered in Dover, DE",
+    kicker: "Marketing for Delaware businesses",
     title: "Marketing all three counties",
     points: [
       // Wilmington link kept here after the "SEO + Web Design" banner was
@@ -827,7 +827,7 @@ const extras: DelawareExtras = {
         </Link>
       </>,
     ],
-    foot: "8 The Green, STE B, Dover, DE 19901",
+    foot: "New Castle, Kent and Sussex County",
   },
   features: {
     h2: "Three Ways We Grow Delaware Businesses Online",

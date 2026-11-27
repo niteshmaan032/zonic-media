@@ -97,7 +97,8 @@ const ServiceLeadForm = dynamic(
    seo-packages); Map Pack movement typically in 4–8 weeks, organic rankings
    in 3–6 months (/services/local-seo-for-small-business); 5.0 on Google;
    1,500+ profiles optimized; 20+ industries. Never claim a Dallas office
-   or address (the contact block shows the Dover, DE head office).
+   or address (the contact block shows phone and email only, owner 26 Nov
+   2026).
 
    COPY RE-OPTIMIZED 24 Oct 2026 (docs/content-optimization-brief.md):
    headings, body and FAQs rewritten so nothing repeats the live DFW
@@ -1556,16 +1557,8 @@ export default function DallasFortWorthLocalSeoPage() {
                   <FiMail aria-hidden="true" className="tw:size-[17px]" />
                   {SITE_CONTACT.email}
                 </Pill>
-                {/* Head-office address (content brief rule 9); not a DFW office. */}
-                <Pill
-                  href={SITE_CONTACT.mapHref}
-                  tone="outline"
-                  size="md"
-                  fullOnPhone
-                >
-                  <FiMapPin aria-hidden="true" className="tw:size-[17px]" />
-                  {SITE_CONTACT.address}
-                </Pill>
+                {/* Phone and email only (owner, 26 Nov 2026: the address
+                    stays in the footer and on the contact page). */}
               </div>
               <div className="tw:mx-auto tw:mt-[34px] tw:max-w-[760px] tw:text-left">
                 <ServiceLeadForm

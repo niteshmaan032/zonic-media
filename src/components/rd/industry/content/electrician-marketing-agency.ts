@@ -60,7 +60,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/electrical-website-design",
         label: "electrical website design",
       },
-      " that turns visits into booked calls.",
+      " that turns visits into booked calls. For a licensed trade like yours, our ",
+      {
+        href: "/",
+        label: "home service marketing",
+      },
+      " puts credentials and fast answers up front.",
     ],
     cta: "Get My Free Electrician Audit",
     bento: {

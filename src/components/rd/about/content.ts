@@ -16,7 +16,7 @@ export const ABOUT_FAQS: { question: string; answer: string }[] = [
   {
     question: "Where is Zonic Media located?",
     answer:
-      "You'll find us at 8 The Green, STE B, Dover, DE 19901. Our team works remote-first, so we take on clients in every US state and a few abroad. We work directly inside your Google profile, website and ad accounts, so your location is never a barrier, and every task stays with our own in-house staff.",
+      "Zonic Media works remote-first, so we take on clients in every US state and a few abroad. Our registered business address is on our contact page. We work directly inside your Google profile, website and ad accounts, so your location is never a barrier, and every task stays with our own in-house staff.",
   },
   {
     question: "What marketing services does Zonic Media offer?",

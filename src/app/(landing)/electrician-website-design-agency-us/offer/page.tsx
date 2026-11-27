@@ -42,7 +42,7 @@ const serviceJsonLd = {
     "@type": "Offer",
     name: "Free Electrician Website Offer",
     description:
-      "The website development fee, valued at $2,000, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
+      "The website development fee, valued at $950, is waived for new clients who start a qualifying Zonic Media marketing plan at $297 per month or above on a six-month minimum term.",
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
@@ -106,6 +106,9 @@ export const metadata: Metadata = {
     "electrical company website",
     "electrician marketing plan",
   ],
+  // Kept live for ads and visitors but out of the search index (owner,
+  // 27 Nov 2026); only /website-design-agency-us/offer stays indexable.
+  robots: { index: false, follow: true },
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: "Free Electrician Website Design for Electricians | Zonic",
@@ -786,7 +789,7 @@ export default function ElectricianOfferPage() {
               <Icon name="check" />
               <span>
                 <strong>The waived fee</strong>
-                <small>The electrician website development fee, valued at $2,000. Your monthly plan is charged at its full rate and is not discounted.</small>
+                <small>The electrician website development fee, valued at $950. Your monthly plan is charged at its full rate and is not discounted.</small>
               </span>
             </div>
             <div>
@@ -1015,7 +1018,7 @@ export default function ElectricianOfferPage() {
 
         <div className="footer-bottom">
           <small>
-            <strong>OFFER TERMS.</strong> Electrician website development fee, valued at $2,000, is
+            <strong>OFFER TERMS.</strong> Electrician website development fee, valued at $950, is
             waived for new clients who start a qualifying Zonic Media marketing
             plan at $297 per month or above on a six-month minimum term. Client
             owns and registers the domain from the start of the engagement.

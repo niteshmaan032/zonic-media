@@ -58,7 +58,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/kitchen-remodeling-website-design",
         label: "kitchen remodeling website",
       },
-      " that turns your portfolio into booked consultations.",
+      " that turns your portfolio into booked consultations. Kitchen remodelers get ",
+      {
+        href: "/",
+        label: "home services marketing",
+      },
+      " paced for long research and design visits.",
     ],
     cta: "Get My Free Kitchen Audit",
     bento: {

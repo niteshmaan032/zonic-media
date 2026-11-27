@@ -155,15 +155,17 @@ const HUB_RIGHT: HubApp[] = [
   { icon: SiMeta, name: "Meta ads", tone: "meta" },
 ];
 
+/* Each chip links its industry page (27 Nov 2026): the auto repair and
+   nonprofit pages had a single inbound link (Semrush). */
 const INDUSTRIES = [
-  "Home Services",
-  "Healthcare & Dental",
-  "Legal & Financial",
-  "Real Estate",
-  "Cleaning",
-  "Auto & Towing",
-  "Solar & Energy",
-  "Nonprofits",
+  { label: "Home Services", href: "/" },
+  { label: "Healthcare & Dental", href: "/services/dental-marketing-agency" },
+  { label: "Legal & Financial", href: "/services/law-firm-marketing-agency" },
+  { label: "Real Estate", href: "/services/real-estate-marketing-agency" },
+  { label: "Cleaning", href: "/services/cleaning-company-marketing-agency" },
+  { label: "Auto & Towing", href: "/services/auto-repair-marketing-agency" },
+  { label: "Solar & Energy", href: "/services/solar-marketing-agency" },
+  { label: "Nonprofits", href: "/services/non-profit-marketing-agency" },
 ];
 
 const REVIEWS_WIDGET =
@@ -237,14 +239,6 @@ const CONTACT_ITEMS: {
     strong: SITE_CONTACT.email,
     href: SITE_CONTACT.emailHref,
   },
-  {
-    icon: <FiMapPin />,
-    tone: "tw:bg-(--ink) tw:text-white",
-    small: "Head office",
-    strong: SITE_CONTACT.address,
-    href: SITE_CONTACT.mapHref,
-    external: true,
-  },
 ];
 
 function ContactList() {
@@ -255,9 +249,6 @@ function ContactList() {
           <a
             href={t.href}
             className="tw:flex tw:items-center tw:gap-3.5 tw:rounded-[20px] tw:bg-(--panel) tw:p-4 tw:transition tw:hover:-translate-y-0.5"
-            {...(t.external
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
           >
             <span
               className={cx(
@@ -605,7 +596,7 @@ export function ServicesPage() {
                     "Web design and Google Ads",
                     "Branding, UI/UX and automation",
                   ]}
-                  foot="Head office: Dover, Delaware"
+                  foot="Serving businesses across the US"
                 />
               </div>
               <div className="tw:relative tw:h-[460px] tw:overflow-hidden tw:rounded-(--r-xl) tw:max-bsxl:h-[420px] tw:max-bssm:h-[280px]">
@@ -871,11 +862,15 @@ export function ServicesPage() {
                   ,{" "}
                   <Link href="/services/nyc/digital-marketing">
                     New York City
-                  </Link>{" "}
-                  and{" "}
+                  </Link>
+                  ,{" "}
                   <Link href="/services/dallas-fort-worth/digital-marketing-agency">
                     Dallas–Fort Worth
-                  </Link>
+                  </Link>{" "}
+                  and{" "}
+                  {/* Florida added 27 Nov 2026: without it the Florida hub and
+                      its 8 city pages sat 4–5 clicks deep (Semrush). */}
+                  <Link href="/services/florida/digital-marketing">Florida</Link>
                   .
                 </p>
                 <Pill
@@ -918,11 +913,13 @@ export function ServicesPage() {
               </p>
               <ul className="tw:mx-auto tw:mt-5 tw:flex tw:max-w-[980px] tw:flex-wrap tw:justify-center tw:gap-2.5">
                 {INDUSTRIES.map((chip) => (
-                  <li
-                    key={chip}
-                    className="tw:rounded-full tw:bg-(--panel) tw:px-4 tw:py-2 tw:text-[15px] tw:font-medium tw:text-(--ink-2)"
-                  >
-                    {chip}
+                  <li key={chip.href}>
+                    <Link
+                      href={chip.href}
+                      className="tw:block tw:rounded-full tw:bg-(--panel) tw:px-4 tw:py-2 tw:text-[15px] tw:font-medium tw:text-(--ink-2) tw:transition-colors tw:hover:bg-(--ink) tw:hover:text-white"
+                    >
+                      {chip.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

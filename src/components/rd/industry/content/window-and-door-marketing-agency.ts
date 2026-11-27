@@ -66,7 +66,12 @@ export const CONTENT: IndustryContent = {
         href: "/services/window-and-door-website-design",
         label: "window and door website",
       },
-      " built to schedule consultations.",
+      " built to schedule consultations. Windows and doors are among the larger ",
+      {
+        href: "/",
+        label: "home improvement",
+      },
+      " purchases we market.",
     ],
     cta: "Get My Free Window Audit",
     bento: {

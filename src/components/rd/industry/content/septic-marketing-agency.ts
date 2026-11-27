@@ -54,7 +54,12 @@ export const CONTENT: IndustryContent = {
       },
       ", Google Ads and a ",
       { href: "/services/web-design", label: "septic website" },
-      " that books service.",
+      " that books service. Septic is a ",
+      {
+        href: "/",
+        label: "home service",
+      },
+      " people put off, so being easy to find matters more.",
     ],
     cta: "Get My Free Septic Audit",
     bento: {
